@@ -1,0 +1,935 @@
+{
+  "files": {
+    "FabioIdle.png": {
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "c49c4275e841817fa288fc8da9059915f97c7cef361edb8595fbc2ccacb7d84e",
+      "alphaMin": 0,
+      "alphaMax": 254,
+      "frames": [
+        {
+          "name": "S_0",
+          "action": "idle",
+          "rectBottomLeft": [
+            31,
+            525,
+            349,
+            461
+          ],
+          "edgeOpaquePixels": 62,
+          "contentHash": "e0bcfd4742e561beb384100a1369cd169fbc57990126342b422e73dbc8aba030"
+        },
+        {
+          "name": "SW_0",
+          "action": "idle",
+          "rectBottomLeft": [
+            413,
+            519,
+            326,
+            464
+          ],
+          "edgeOpaquePixels": 59,
+          "contentHash": "0c9782b94462218642bd6d4a50adb1d854330a5caa8ec4fade4ca281c64d8d2d"
+        },
+        {
+          "name": "W_0",
+          "action": "idle",
+          "rectBottomLeft": [
+            773,
+            516,
+            297,
+            458
+          ],
+          "edgeOpaquePixels": 52,
+          "contentHash": "5dffa1e50d5b44660c8e5295ac3da3fa823814fa3840f17ce9fe85cf3871f15f"
+        },
+        {
+          "name": "N_0",
+          "action": "idle",
+          "rectBottomLeft": [
+            104,
+            44,
+            343,
+            456
+          ],
+          "edgeOpaquePixels": 62,
+          "contentHash": "e3c35d2219f5eb82f037749e18130352e71afaf80b1bbd79145ad9ffcfacb009"
+        },
+        {
+          "name": "NE_0",
+          "action": "idle",
+          "rectBottomLeft": [
+            485,
+            43,
+            334,
+            453
+          ],
+          "edgeOpaquePixels": 32,
+          "contentHash": "a981967b6bf115ba49590107063d02ae198f8b5e1f3ae898fe8f2709f8fc7455"
+        },
+        {
+          "name": "E_0",
+          "action": "idle",
+          "rectBottomLeft": [
+            854,
+            39,
+            276,
+            457
+          ],
+          "edgeOpaquePixels": 62,
+          "contentHash": "05614ac1456ad28b3ee3dca66b7d4e5f9e35b5dfbeab9e6d110966da82dec3ec"
+        },
+        {
+          "name": "SE_0",
+          "action": "idle",
+          "rectBottomLeft": [
+            1210,
+            40,
+            241,
+            456
+          ],
+          "edgeOpaquePixels": 83,
+          "contentHash": "93668708ad44a19a66f6f491a30301ab35e96320edadcde688e8965d898a481b"
+        }
+      ]
+    },
+    "FabioWalk.png": {
+      "sourceDimensions": [
+        887,
+        1774
+      ],
+      "mode": "RGBA",
+      "sha256": "b54a0a86e226ac2dedfa0e7095d85135bf86bf31e601f86a455c0c609f0b0600",
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "frames": [
+        {
+          "name": "NW_0",
+          "action": "idle",
+          "rectBottomLeft": [
+            69,
+            894,
+            180,
+            218
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "b8af10f33eca21172b1a4480ebbff170fc0ff7f8a4f0eccc190a2631a10f269c"
+        },
+        {
+          "name": "S_0",
+          "action": "walk",
+          "rectBottomLeft": [
+            23,
+            1547,
+            166,
+            216
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "88a4a91b1c3d5a54204dd5919cd076cc6fb2a9adb722c6f797491b02bfd891a7"
+        },
+        {
+          "name": "S_1",
+          "action": "walk",
+          "rectBottomLeft": [
+            243,
+            1547,
+            160,
+            216
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "6e9c7c02dc7ac1088c9bc75b67c308eaf59407a9129a5584f22c95910f70188a"
+        },
+        {
+          "name": "S_2",
+          "action": "walk",
+          "rectBottomLeft": [
+            449,
+            1547,
+            163,
+            216
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "10dd6db7002e2c0e34ff8323d69270b7d8917cb3500b54f6b841aec7a070478e"
+        },
+        {
+          "name": "S_3",
+          "action": "walk",
+          "rectBottomLeft": [
+            666,
+            1547,
+            156,
+            215
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "b094566739b9932ce3868c19a3b25b56692641987a0596497e871caa93bf2310"
+        },
+        {
+          "name": "SW_0",
+          "action": "walk",
+          "rectBottomLeft": [
+            20,
+            1330,
+            169,
+            214
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "0539b9eb37982c1b3d626dea58cf33a6812ae465be49c13bbb9929c67a86386d"
+        },
+        {
+          "name": "SW_1",
+          "action": "walk",
+          "rectBottomLeft": [
+            237,
+            1330,
+            167,
+            214
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "5f73043868cbae1780298fe35ed02206f93bb2297de0250a957c5ced4edb0076"
+        },
+        {
+          "name": "SW_2",
+          "action": "walk",
+          "rectBottomLeft": [
+            447,
+            1330,
+            168,
+            214
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "a394fefb89827694edfda46bdc727408347843d8c88f83bf7a18f9dc3eac656c"
+        },
+        {
+          "name": "SW_3",
+          "action": "walk",
+          "rectBottomLeft": [
+            662,
+            1330,
+            164,
+            214
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "1cdc242f7bd912df8861d68ffc1d6172d5439d14df58b5cb307f79958b964905"
+        },
+        {
+          "name": "W_0",
+          "action": "walk",
+          "rectBottomLeft": [
+            10,
+            1118,
+            188,
+            212
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "6d5039fecc5d0e7c60c1099fe20b97ec126431a466feb1d79f586a4c297cd48d"
+        },
+        {
+          "name": "W_1",
+          "action": "walk",
+          "rectBottomLeft": [
+            227,
+            1118,
+            188,
+            213
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "c5fda80a4522bb7c0c41951404cf9e194c48fa9ef97fa6289ded937b1f63455c"
+        },
+        {
+          "name": "W_2",
+          "action": "walk",
+          "rectBottomLeft": [
+            444,
+            1118,
+            182,
+            213
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "4e01bf8c4887f89731b787fb848d7fa1d2d3ea40f913ac74f0587be27bd56431"
+        },
+        {
+          "name": "W_3",
+          "action": "walk",
+          "rectBottomLeft": [
+            655,
+            1117,
+            184,
+            213
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "9763238b6906b11d1e636181d292846642e0e110715f6ecad17763bf71e42afb"
+        },
+        {
+          "name": "NW_0",
+          "action": "walk",
+          "rectBottomLeft": [
+            69,
+            894,
+            180,
+            218
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "b8af10f33eca21172b1a4480ebbff170fc0ff7f8a4f0eccc190a2631a10f269c"
+        },
+        {
+          "name": "NW_1",
+          "action": "walk",
+          "rectBottomLeft": [
+            285,
+            895,
+            176,
+            218
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "51b1398dce23772f55d6dff5008becf1b405f9605303e85119920dfd5e8eff0b"
+        },
+        {
+          "name": "NW_2",
+          "action": "walk",
+          "rectBottomLeft": [
+            507,
+            892,
+            172,
+            221
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "304956b74502f8cb187096ab5aee5f4197b6fc38d90d1f4bea16820ce57a565b"
+        },
+        {
+          "name": "NW_3",
+          "action": "walk",
+          "rectBottomLeft": [
+            717,
+            891,
+            170,
+            222
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "5bbb18165a54b3a0a92022da2bf57dad3a39d5a528460a887ffbffe1a7f131ce"
+        },
+        {
+          "name": "N_0",
+          "action": "walk",
+          "rectBottomLeft": [
+            64,
+            666,
+            178,
+            223
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "ee316d1fcafaea3afd61881414f6589d493508975fb79325a4f142770cf15de6"
+        },
+        {
+          "name": "N_1",
+          "action": "walk",
+          "rectBottomLeft": [
+            279,
+            665,
+            176,
+            223
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "393af01cbb198372cd3d64c156f86ae75e0ae2174059ff6b607a7263d90ddd46"
+        },
+        {
+          "name": "N_2",
+          "action": "walk",
+          "rectBottomLeft": [
+            488,
+            665,
+            176,
+            223
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "a11327aa462873d7a30995d361eaf02997e989cdd11f0389e33b37e9e7cd81d0"
+        },
+        {
+          "name": "N_3",
+          "action": "walk",
+          "rectBottomLeft": [
+            704,
+            666,
+            174,
+            222
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "6877ed3f023a1ad40ead4ee7dafcf834f2225e52bdae86266bd1a01468f874a9"
+        },
+        {
+          "name": "NE_0",
+          "action": "walk",
+          "rectBottomLeft": [
+            59,
+            456,
+            181,
+            210
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "139b593538814d6baf51d29510fa2e8354d8b32ca09ac2ad625a6405ce5e6b18"
+        },
+        {
+          "name": "NE_1",
+          "action": "walk",
+          "rectBottomLeft": [
+            271,
+            454,
+            186,
+            211
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "f114f12dcb8f7865806f1d5e00214c13f93d58765a8b0d6ac001674ddde7d58a"
+        },
+        {
+          "name": "NE_2",
+          "action": "walk",
+          "rectBottomLeft": [
+            486,
+            456,
+            182,
+            210
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "ed4516c5c4faf82be2d165f6831b5554301d5b60a3bf247e70dfaeed9f6ea7df"
+        },
+        {
+          "name": "NE_3",
+          "action": "walk",
+          "rectBottomLeft": [
+            696,
+            455,
+            182,
+            211
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "7092c027ac0d03cab3446484341be4fa047ec967cb970a22241b875416fef4ce"
+        },
+        {
+          "name": "E_0",
+          "action": "walk",
+          "rectBottomLeft": [
+            52,
+            232,
+            187,
+            216
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "f64c6eb162c489de92e995b8ff303f8838aabe63ec885ea67a9dfd108e2bfe79"
+        },
+        {
+          "name": "E_1",
+          "action": "walk",
+          "rectBottomLeft": [
+            270,
+            234,
+            185,
+            214
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "d6077788f9b33435f19f06013173f823c8ec8c7a3b862ca2f5c154281e4b6622"
+        },
+        {
+          "name": "E_2",
+          "action": "walk",
+          "rectBottomLeft": [
+            491,
+            232,
+            174,
+            216
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "d1551f4ceedce3a7d83c4e073dc9c362e785723829ebfe80a3b52a0316783c31"
+        },
+        {
+          "name": "E_3",
+          "action": "walk",
+          "rectBottomLeft": [
+            697,
+            234,
+            181,
+            213
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "bafef0bdde28246200cfb85df029e1284e53a18cd6bdd6be31915e7230828792"
+        },
+        {
+          "name": "SE_0",
+          "action": "walk",
+          "rectBottomLeft": [
+            64,
+            13,
+            125,
+            218
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "3d8d0a7b2b29c665f85fc58df420950c8340819f0f0bcd3e493a36de01cf8534"
+        },
+        {
+          "name": "SE_1",
+          "action": "walk",
+          "rectBottomLeft": [
+            278,
+            13,
+            118,
+            215
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "b09a8cf7872d2e3e7549b9b0b23f5ebbd759d56a88383b358a77aff92a365d79"
+        },
+        {
+          "name": "SE_2",
+          "action": "walk",
+          "rectBottomLeft": [
+            489,
+            10,
+            121,
+            218
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "28c79b220e916253360306d8de3048ab9a0b83d21ab943c87a3b7e84aa6bdf4e"
+        },
+        {
+          "name": "SE_3",
+          "action": "walk",
+          "rectBottomLeft": [
+            699,
+            10,
+            126,
+            218
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "6eec74fecd9d5afd8445cab75b940efd14f89ca65f796fe1152a6434f0469ab9"
+        }
+      ]
+    },
+    "FabioSlash.png": {
+      "sourceDimensions": [
+        887,
+        1774
+      ],
+      "mode": "RGBA",
+      "sha256": "0ef55c5330b571dc7e9b15f1d0fd4a0b78393c43500925a533894f8a303b3d7c",
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "frames": [
+        {
+          "name": "S_0",
+          "action": "slash",
+          "rectBottomLeft": [
+            51,
+            1556,
+            144,
+            198
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "fbbb20f14e274e062cce2a96f8bbcec7be1b209ce0de4effb3dc8171da3327a5"
+        },
+        {
+          "name": "S_1",
+          "action": "slash",
+          "rectBottomLeft": [
+            259,
+            1558,
+            168,
+            175
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "ec32c113a153ab99f2fac88f863287ede70306adf2292c5dc0fc6fab748d63ee"
+        },
+        {
+          "name": "S_2",
+          "action": "slash",
+          "rectBottomLeft": [
+            485,
+            1557,
+            184,
+            177
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "2c7a2f44a7bfa4813d4c63aa73ab6ce32ecd67d287e1c6c7ff6bbcac3d857c0c"
+        },
+        {
+          "name": "S_3",
+          "action": "slash",
+          "rectBottomLeft": [
+            694,
+            1556,
+            167,
+            176
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "705a3467b06b2570c599eb0be3cdca40635905df2d0b71b52636e699440260dd"
+        },
+        {
+          "name": "SW_0",
+          "action": "slash",
+          "rectBottomLeft": [
+            37,
+            1340,
+            154,
+            203
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "01d2c74e2427bfc0be86809536b4bfa0c998e9a199c7d916a8199e27c26da0e2"
+        },
+        {
+          "name": "SW_1",
+          "action": "slash",
+          "rectBottomLeft": [
+            259,
+            1342,
+            166,
+            177
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "15440ef9ceec8147eb4e72e8de0bac75b6277e2877180d5a8bf0a55d9eb78e39"
+        },
+        {
+          "name": "SW_2",
+          "action": "slash",
+          "rectBottomLeft": [
+            469,
+            1336,
+            210,
+            178
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "65b84705d3702190915685517ee58c83cc3eba4c59bdab4e6b1cf80705e77001"
+        },
+        {
+          "name": "SW_3",
+          "action": "slash",
+          "rectBottomLeft": [
+            726,
+            1340,
+            145,
+            174
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "bb8f6dd400a7a840c2219411fc96bfb59fa1a3785be3dfc22b53146d1556f25f"
+        },
+        {
+          "name": "W_0",
+          "action": "slash",
+          "rectBottomLeft": [
+            41,
+            1113,
+            161,
+            215
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "fc90f0c524a38a8c252648c5c0c818542e11d5e06ddd1dfe1c6f82c371d48272"
+        },
+        {
+          "name": "W_1",
+          "action": "slash",
+          "rectBottomLeft": [
+            247,
+            1121,
+            209,
+            192
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "6ffcc0e240351fa9cb7637ec09e04dce859315aafa0f88a327f7614010677303"
+        },
+        {
+          "name": "W_2",
+          "action": "slash",
+          "rectBottomLeft": [
+            476,
+            1124,
+            193,
+            179
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "06710edb60509d08538356883c06cc4790d52c37b0aa1c4801c4fb7ad6b1bbc7"
+        },
+        {
+          "name": "W_3",
+          "action": "slash",
+          "rectBottomLeft": [
+            695,
+            1119,
+            174,
+            185
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "d66df5ea5a869f60bb6a33aca91072ab278fa844f01dd6f17275592c5cc13d11"
+        },
+        {
+          "name": "NW_0",
+          "action": "slash",
+          "rectBottomLeft": [
+            30,
+            896,
+            162,
+            203
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "c48d2e727af864363721252e5d0f401bc161ef0589cd8ea6e43b92cd26d96a25"
+        },
+        {
+          "name": "NW_1",
+          "action": "slash",
+          "rectBottomLeft": [
+            252,
+            903,
+            175,
+            190
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "7e65308b6da7d731cfbb6d3d4702f7b72618bc84bd67b3953cadfc75369289f6"
+        },
+        {
+          "name": "NW_2",
+          "action": "slash",
+          "rectBottomLeft": [
+            484,
+            896,
+            193,
+            190
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "7cd9eb96ea2affaa9eaffbd4a6cc0d7a5871f1c75baa3fedc1e923f6e4ede90d"
+        },
+        {
+          "name": "NW_3",
+          "action": "slash",
+          "rectBottomLeft": [
+            727,
+            895,
+            134,
+            190
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "fd8b4fcb8c4428fda33641407dbb8373fb38b3fe086a6925b09ad7268ee33f43"
+        },
+        {
+          "name": "N_0",
+          "action": "slash",
+          "rectBottomLeft": [
+            44,
+            661,
+            139,
+            217
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "8a319edf40056695026b05e4e71bb0f8e7b7d561e36d5ed5b9af6e2337ac8f15"
+        },
+        {
+          "name": "N_1",
+          "action": "slash",
+          "rectBottomLeft": [
+            275,
+            658,
+            142,
+            222
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "c5e076d54d8cbfb93eaa7c6b2c3a1494206d91ee269c9f53f0479732f6c5b965"
+        },
+        {
+          "name": "N_2",
+          "action": "slash",
+          "rectBottomLeft": [
+            489,
+            657,
+            185,
+            200
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "7f7c226d61ff74898ded96240357e830b3591adc7a014d1d492c667cc84a3444"
+        },
+        {
+          "name": "N_3",
+          "action": "slash",
+          "rectBottomLeft": [
+            720,
+            653,
+            150,
+            214
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "535fb90129da6959c88355026d7a2cb926b67aae2d0d279339182a64bb442188"
+        },
+        {
+          "name": "NE_0",
+          "action": "slash",
+          "rectBottomLeft": [
+            43,
+            443,
+            162,
+            195
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "6c86d374d04eb1b5180f574ddf02f63395456de9b7cc705b89895cd130554704"
+        },
+        {
+          "name": "NE_1",
+          "action": "slash",
+          "rectBottomLeft": [
+            253,
+            442,
+            194,
+            179
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "abfbe729896f1eeada0c527053e4d391b55979ffa5ce7b8df1da65869ee6efbe"
+        },
+        {
+          "name": "NE_2",
+          "action": "slash",
+          "rectBottomLeft": [
+            471,
+            438,
+            205,
+            165
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "24de2e4dc866561b061d3d0d239bdd40fd2d6e78ffd058c33db8093db0e99a95"
+        },
+        {
+          "name": "NE_3",
+          "action": "slash",
+          "rectBottomLeft": [
+            717,
+            442,
+            142,
+            185
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "61e52102d5e58a092d14a87a185c319706411ada48651531f1834eb72d9d2ce0"
+        },
+        {
+          "name": "E_0",
+          "action": "slash",
+          "rectBottomLeft": [
+            42,
+            225,
+            134,
+            205
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "05584b37a5e4b71d2cbf7d7475e1d32efc988542963a066b5a807cdf0ad45c12"
+        },
+        {
+          "name": "E_1",
+          "action": "slash",
+          "rectBottomLeft": [
+            235,
+            225,
+            189,
+            190
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "ee2e3f3b898ada6657439a006801aebf1cdf8b6037922d3932b18e86f198bffb"
+        },
+        {
+          "name": "E_2",
+          "action": "slash",
+          "rectBottomLeft": [
+            470,
+            230,
+            204,
+            182
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "874a1a6ceeb440e0f7cd52debb248bb0d9987942061733bc42c4e6a1d9b1a032"
+        },
+        {
+          "name": "E_3",
+          "action": "slash",
+          "rectBottomLeft": [
+            707,
+            226,
+            165,
+            186
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "d7486f23d08a847e0636a7b63fc17cbefd44b2d11cf5df1bf1656e2dc0ae6742"
+        },
+        {
+          "name": "SE_0",
+          "action": "slash",
+          "rectBottomLeft": [
+            34,
+            15,
+            151,
+            206
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "0333e8a7a8d774351b4d186d99a32be02ff7ead79880689b1769a27d0458e006"
+        },
+        {
+          "name": "SE_1",
+          "action": "slash",
+          "rectBottomLeft": [
+            246,
+            31,
+            175,
+            169
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "812c518cb6301cd3802fb94ac471effc98df2dd29a0998c4010895d74db1a2de"
+        },
+        {
+          "name": "SE_2",
+          "action": "slash",
+          "rectBottomLeft": [
+            463,
+            24,
+            209,
+            172
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "1911162bf825f8caf78a402c9936ca4f39c17acbc17a726840a4fcdd4c2376c3"
+        },
+        {
+          "name": "SE_3",
+          "action": "slash",
+          "rectBottomLeft": [
+            689,
+            15,
+            169,
+            184
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "67fcaf1c692bad192d88c9b4ebee93f0e86133697674d4ae1cd02011ff957cbf"
+        }
+      ]
+    },
+    "TrainingDummy.png": {
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "258f1133a468325d1a9ecb59aea700a9829258eb1b23938bb06321a5a0768e4d",
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "frames": [
+        {
+          "name": "Dummy",
+          "action": "dummy",
+          "rectBottomLeft": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "edgeOpaquePixels": 0,
+          "contentHash": "8b7cb377351c01ac2a6317b3af97ab5a586960d398526f8c44225e7b391e60b9"
+        }
+      ]
+    }
+  },
+  "method": "Read-only pixel and importer metadata inspection; source PNGs preserved.",
+  "notes": [
+    "NW idle slot uses corrected NW walk contact pose; approved original is preserved.",
+    "Rendered edges use a shader alpha cutoff of 0.65; this is not source PNG cleanup.",
+    "Generated four-frame slash is reused across attack profiles; distinct heavy/charge/dodge/parry animations remain future art work.",
+    "Raw frames are distinct; this does not establish final animation polish."
+  ]
+}

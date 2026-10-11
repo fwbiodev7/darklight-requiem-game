@@ -1,0 +1,192 @@
+{
+  "Summary": {
+    "Total": 25,
+    "Passed": 25,
+    "Failed": 0,
+    "Skipped": 0,
+    "Inconclusive": 0
+  },
+  "Results": [
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.BufferChainsAndSuspensionClearsIt",
+      "Status": "Passed",
+      "Duration": 0.0187854,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.ContactIsUniqueAndWindupCannotDamage",
+      "Status": "Passed",
+      "Duration": 0.001046,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.DeathCancelsAttackAndFutureInputs",
+      "Status": "Passed",
+      "Duration": 0.0004615,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract(0,-1,0)",
+      "Status": "Passed",
+      "Duration": 0.0005404,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract(-1,-1,1)",
+      "Status": "Passed",
+      "Duration": 0.0002487,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract(-1,0,2)",
+      "Status": "Passed",
+      "Duration": 0.0001551,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract(-1,1,3)",
+      "Status": "Passed",
+      "Duration": 0.0001769,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract(0,1,4)",
+      "Status": "Passed",
+      "Duration": 0.0001952,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract(1,1,5)",
+      "Status": "Passed",
+      "Duration": 0.0001721,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract(1,0,6)",
+      "Status": "Passed",
+      "Duration": 0.0001335,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract(1,-1,7)",
+      "Status": "Passed",
+      "Duration": 0.0001307,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.DodgeHasLimitedInvulnerabilityAndCooldown",
+      "Status": "Passed",
+      "Duration": 0.0007377,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.DodgeOnlyCancelsDuringRecovery",
+      "Status": "Passed",
+      "Duration": 0.0003044,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.HeavyFinishesALightCombo",
+      "Status": "Passed",
+      "Duration": 0.0041098,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.HoldingHeavyChoosesTheChargedProfile(0.1f,Heavy)",
+      "Status": "Passed",
+      "Duration": 0.0004972,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.HoldingHeavyChoosesTheChargedProfile(0.7f,Charged)",
+      "Status": "Passed",
+      "Duration": 0.0001744,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.LargeFrameCrossesContactWithoutLosingTheHit",
+      "Status": "Passed",
+      "Duration": 0.0002877,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.LateParryDoesNotDefend",
+      "Status": "Passed",
+      "Duration": 0.0003609,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.ParryCannotProtectTheCharactersBack",
+      "Status": "Passed",
+      "Duration": 0.0006538,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.ParryOpensCounterThenExpires",
+      "Status": "Passed",
+      "Duration": 0.0002921,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.PauseFreezesWindowsAndCannotQueueAttack",
+      "Status": "Passed",
+      "Duration": 0.0009871,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.SkillCooldownCannotBeBypassedWithRepeatedInputs",
+      "Status": "Passed",
+      "Duration": 0.0003265,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightCombatTests.ThreeLightsThenResetAfterInactivity",
+      "Status": "Passed",
+      "Duration": 0.0002951,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightInputTests.RemovingControllerRestoresKeyboardDeviceState",
+      "Status": "Passed",
+      "Duration": 0.1211438,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Darklight.Tests.DarklightInputTests.XInputAttackAndPauseMapDoNotLeakAcrossMenus",
+      "Status": "Passed",
+      "Duration": 0.0053615,
+      "Message": null,
+      "StackTrace": null
+    }
+  ],
+  "Duration": 1.12,
+  "StatusPath": null,
+  "Mode": "EditMode",
+  "FilterApplied": "assembly: Darklight.EditModeTests",
+  "success": true,
+  "result": null
+}

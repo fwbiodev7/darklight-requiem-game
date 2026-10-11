@@ -1,0 +1,1464 @@
+{
+    "frames": [
+        {
+            "action": "idle",
+            "name": "S_0",
+            "direction": "S",
+            "source": "Assets/Darklight/Art/FabioIdle.png",
+            "index": 0,
+            "sourceWidth": 1536,
+            "sourceHeight": 1024,
+            "pixelsPerUnit": 232.0,
+            "rectBottomLeft": [
+                31.0,
+                525.0,
+                349.0,
+                461.0
+            ],
+            "pivotPixels": [
+                238.0,
+                0.0
+            ]
+        },
+        {
+            "action": "idle",
+            "name": "SW_0",
+            "direction": "SW",
+            "source": "Assets/Darklight/Art/FabioIdle.png",
+            "index": 1,
+            "sourceWidth": 1536,
+            "sourceHeight": 1024,
+            "pixelsPerUnit": 232.0,
+            "rectBottomLeft": [
+                413.0,
+                519.0,
+                326.0,
+                464.0
+            ],
+            "pivotPixels": [
+                200.00001525878906,
+                0.0
+            ]
+        },
+        {
+            "action": "idle",
+            "name": "W_0",
+            "direction": "W",
+            "source": "Assets/Darklight/Art/FabioIdle.png",
+            "index": 2,
+            "sourceWidth": 1536,
+            "sourceHeight": 1024,
+            "pixelsPerUnit": 232.0,
+            "rectBottomLeft": [
+                773.0,
+                516.0,
+                297.0,
+                458.0
+            ],
+            "pivotPixels": [
+                197.0,
+                0.0
+            ]
+        },
+        {
+            "action": "idle",
+            "name": "NW_0",
+            "direction": "NW",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 3,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                69.0,
+                894.0,
+                180.0,
+                218.0
+            ],
+            "pivotPixels": [
+                52.000003814697266,
+                3.0
+            ]
+        },
+        {
+            "action": "idle",
+            "name": "N_0",
+            "direction": "N",
+            "source": "Assets/Darklight/Art/FabioIdle.png",
+            "index": 4,
+            "sourceWidth": 1536,
+            "sourceHeight": 1024,
+            "pixelsPerUnit": 232.0,
+            "rectBottomLeft": [
+                104.0,
+                44.0,
+                343.0,
+                456.0
+            ],
+            "pivotPixels": [
+                118.0,
+                0.0
+            ]
+        },
+        {
+            "action": "idle",
+            "name": "NE_0",
+            "direction": "NE",
+            "source": "Assets/Darklight/Art/FabioIdle.png",
+            "index": 5,
+            "sourceWidth": 1536,
+            "sourceHeight": 1024,
+            "pixelsPerUnit": 232.0,
+            "rectBottomLeft": [
+                485.0,
+                43.0,
+                334.0,
+                453.0
+            ],
+            "pivotPixels": [
+                119.0,
+                0.0
+            ]
+        },
+        {
+            "action": "idle",
+            "name": "E_0",
+            "direction": "E",
+            "source": "Assets/Darklight/Art/FabioIdle.png",
+            "index": 6,
+            "sourceWidth": 1536,
+            "sourceHeight": 1024,
+            "pixelsPerUnit": 232.0,
+            "rectBottomLeft": [
+                854.0,
+                39.0,
+                276.0,
+                457.0
+            ],
+            "pivotPixels": [
+                104.0,
+                0.0
+            ]
+        },
+        {
+            "action": "idle",
+            "name": "SE_0",
+            "direction": "SE",
+            "source": "Assets/Darklight/Art/FabioIdle.png",
+            "index": 7,
+            "sourceWidth": 1536,
+            "sourceHeight": 1024,
+            "pixelsPerUnit": 232.0,
+            "rectBottomLeft": [
+                1210.0,
+                40.0,
+                241.0,
+                456.0
+            ],
+            "pivotPixels": [
+                127.00000762939453,
+                0.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "S_0",
+            "direction": "S",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 0,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                23.0,
+                1547.0,
+                166.0,
+                216.0
+            ],
+            "pivotPixels": [
+                109.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "S_1",
+            "direction": "S",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 1,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                243.0,
+                1547.0,
+                160.0,
+                216.0
+            ],
+            "pivotPixels": [
+                102.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "S_2",
+            "direction": "S",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 2,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                449.0,
+                1547.0,
+                163.0,
+                216.0
+            ],
+            "pivotPixels": [
+                106.99999237060547,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "S_3",
+            "direction": "S",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 3,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                666.0,
+                1547.0,
+                156.0,
+                215.0
+            ],
+            "pivotPixels": [
+                97.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "SW_0",
+            "direction": "SW",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 4,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                20.0,
+                1330.0,
+                169.0,
+                214.0
+            ],
+            "pivotPixels": [
+                107.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "SW_1",
+            "direction": "SW",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 5,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                237.0,
+                1330.0,
+                167.0,
+                214.0
+            ],
+            "pivotPixels": [
+                105.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "SW_2",
+            "direction": "SW",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 6,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                447.0,
+                1330.0,
+                168.0,
+                214.0
+            ],
+            "pivotPixels": [
+                109.00000762939453,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "SW_3",
+            "direction": "SW",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 7,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                662.0,
+                1330.0,
+                164.0,
+                214.0
+            ],
+            "pivotPixels": [
+                103.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "W_0",
+            "direction": "W",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 8,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                10.0,
+                1118.0,
+                188.0,
+                212.0
+            ],
+            "pivotPixels": [
+                109.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "W_1",
+            "direction": "W",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 9,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                227.0,
+                1118.0,
+                188.0,
+                213.0
+            ],
+            "pivotPixels": [
+                106.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "W_2",
+            "direction": "W",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 10,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                444.0,
+                1118.0,
+                182.0,
+                213.0
+            ],
+            "pivotPixels": [
+                103.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "W_3",
+            "direction": "W",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 11,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                655.0,
+                1117.0,
+                184.0,
+                213.0
+            ],
+            "pivotPixels": [
+                106.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "NW_0",
+            "direction": "NW",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 12,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                69.0,
+                894.0,
+                180.0,
+                218.0
+            ],
+            "pivotPixels": [
+                52.000003814697266,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "NW_1",
+            "direction": "NW",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 13,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                285.0,
+                895.0,
+                176.0,
+                218.0
+            ],
+            "pivotPixels": [
+                58.000003814697266,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "NW_2",
+            "direction": "NW",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 14,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                507.0,
+                892.0,
+                172.0,
+                221.0
+            ],
+            "pivotPixels": [
+                47.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "NW_3",
+            "direction": "NW",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 15,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                717.0,
+                891.0,
+                170.0,
+                222.0
+            ],
+            "pivotPixels": [
+                55.0,
+                4.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "N_0",
+            "direction": "N",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 16,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                64.0,
+                666.0,
+                178.0,
+                223.0
+            ],
+            "pivotPixels": [
+                62.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "N_1",
+            "direction": "N",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 17,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                279.0,
+                665.0,
+                176.0,
+                223.0
+            ],
+            "pivotPixels": [
+                61.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "N_2",
+            "direction": "N",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 18,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                488.0,
+                665.0,
+                176.0,
+                223.0
+            ],
+            "pivotPixels": [
+                65.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "N_3",
+            "direction": "N",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 19,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                704.0,
+                666.0,
+                174.0,
+                222.0
+            ],
+            "pivotPixels": [
+                60.0,
+                4.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "NE_0",
+            "direction": "NE",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 20,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                59.0,
+                456.0,
+                181.0,
+                210.0
+            ],
+            "pivotPixels": [
+                75.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "NE_1",
+            "direction": "NE",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 21,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                271.0,
+                454.0,
+                186.0,
+                211.0
+            ],
+            "pivotPixels": [
+                75.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "NE_2",
+            "direction": "NE",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 22,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                486.0,
+                456.0,
+                182.0,
+                210.0
+            ],
+            "pivotPixels": [
+                75.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "NE_3",
+            "direction": "NE",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 23,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                696.0,
+                455.0,
+                182.0,
+                211.0
+            ],
+            "pivotPixels": [
+                77.0,
+                4.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "E_0",
+            "direction": "E",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 24,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                52.0,
+                232.0,
+                187.0,
+                216.0
+            ],
+            "pivotPixels": [
+                78.0,
+                4.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "E_1",
+            "direction": "E",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 25,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                270.0,
+                234.0,
+                185.0,
+                214.0
+            ],
+            "pivotPixels": [
+                73.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "E_2",
+            "direction": "E",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 26,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                491.0,
+                232.0,
+                174.0,
+                216.0
+            ],
+            "pivotPixels": [
+                62.999996185302734,
+                5.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "E_3",
+            "direction": "E",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 27,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                697.0,
+                234.0,
+                181.0,
+                213.0
+            ],
+            "pivotPixels": [
+                72.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "SE_0",
+            "direction": "SE",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 28,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                64.0,
+                13.0,
+                125.0,
+                218.0
+            ],
+            "pivotPixels": [
+                67.0,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "SE_1",
+            "direction": "SE",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 29,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                278.0,
+                13.0,
+                118.0,
+                215.0
+            ],
+            "pivotPixels": [
+                61.999996185302734,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "SE_2",
+            "direction": "SE",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 30,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                489.0,
+                10.0,
+                121.0,
+                218.0
+            ],
+            "pivotPixels": [
+                60.999996185302734,
+                3.0
+            ]
+        },
+        {
+            "action": "walk",
+            "name": "SE_3",
+            "direction": "SE",
+            "source": "Assets/Darklight/Art/FabioWalk.png",
+            "index": 31,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 107.5,
+            "rectBottomLeft": [
+                699.0,
+                10.0,
+                126.0,
+                218.0
+            ],
+            "pivotPixels": [
+                69.0,
+                3.999999761581421
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "S_0",
+            "direction": "S",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 0,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                51.0,
+                1556.0,
+                144.0,
+                198.0
+            ],
+            "pivotPixels": [
+                60.0,
+                8.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "S_1",
+            "direction": "S",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 1,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                259.0,
+                1558.0,
+                168.0,
+                175.0
+            ],
+            "pivotPixels": [
+                69.0,
+                4.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "S_2",
+            "direction": "S",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 2,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                485.0,
+                1557.0,
+                184.0,
+                177.0
+            ],
+            "pivotPixels": [
+                99.0,
+                9.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "S_3",
+            "direction": "S",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 3,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                694.0,
+                1556.0,
+                167.0,
+                176.0
+            ],
+            "pivotPixels": [
+                103.0,
+                5.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "SW_0",
+            "direction": "SW",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 4,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                37.0,
+                1340.0,
+                154.0,
+                203.0
+            ],
+            "pivotPixels": [
+                61.0,
+                23.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "SW_1",
+            "direction": "SW",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 5,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                259.0,
+                1342.0,
+                166.0,
+                177.0
+            ],
+            "pivotPixels": [
+                75.0,
+                4.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "SW_2",
+            "direction": "SW",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 6,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                469.0,
+                1336.0,
+                210.0,
+                178.0
+            ],
+            "pivotPixels": [
+                120.00000762939453,
+                3.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "SW_3",
+            "direction": "SW",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 7,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                726.0,
+                1340.0,
+                145.0,
+                174.0
+            ],
+            "pivotPixels": [
+                62.0,
+                22.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "W_0",
+            "direction": "W",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 8,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                41.0,
+                1113.0,
+                161.0,
+                215.0
+            ],
+            "pivotPixels": [
+                58.0,
+                14.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "W_1",
+            "direction": "W",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 9,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                247.0,
+                1121.0,
+                209.0,
+                192.0
+            ],
+            "pivotPixels": [
+                110.99999237060547,
+                6.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "W_2",
+            "direction": "W",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 10,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                476.0,
+                1124.0,
+                193.0,
+                179.0
+            ],
+            "pivotPixels": [
+                106.00000762939453,
+                3.000000238418579
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "W_3",
+            "direction": "W",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 11,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                695.0,
+                1119.0,
+                174.0,
+                185.0
+            ],
+            "pivotPixels": [
+                88.0,
+                11.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "NW_0",
+            "direction": "NW",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 12,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                30.0,
+                896.0,
+                162.0,
+                203.0
+            ],
+            "pivotPixels": [
+                61.000003814697266,
+                6.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "NW_1",
+            "direction": "NW",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 13,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                252.0,
+                903.0,
+                175.0,
+                190.0
+            ],
+            "pivotPixels": [
+                63.000003814697266,
+                4.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "NW_2",
+            "direction": "NW",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 14,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                484.0,
+                896.0,
+                193.0,
+                190.0
+            ],
+            "pivotPixels": [
+                82.0,
+                24.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "NW_3",
+            "direction": "NW",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 15,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                727.0,
+                895.0,
+                134.0,
+                190.0
+            ],
+            "pivotPixels": [
+                54.999996185302734,
+                10.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "N_0",
+            "direction": "N",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 16,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                44.0,
+                661.0,
+                139.0,
+                217.0
+            ],
+            "pivotPixels": [
+                63.0,
+                12.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "N_1",
+            "direction": "N",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 17,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                275.0,
+                658.0,
+                142.0,
+                222.0
+            ],
+            "pivotPixels": [
+                68.0,
+                24.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "N_2",
+            "direction": "N",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 18,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                489.0,
+                657.0,
+                185.0,
+                200.0
+            ],
+            "pivotPixels": [
+                102.0,
+                18.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "N_3",
+            "direction": "N",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 19,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                720.0,
+                653.0,
+                150.0,
+                214.0
+            ],
+            "pivotPixels": [
+                81.0,
+                13.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "NE_0",
+            "direction": "NE",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 20,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                43.0,
+                443.0,
+                162.0,
+                195.0
+            ],
+            "pivotPixels": [
+                93.0,
+                16.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "NE_1",
+            "direction": "NE",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 21,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                253.0,
+                442.0,
+                194.0,
+                179.0
+            ],
+            "pivotPixels": [
+                119.0,
+                13.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "NE_2",
+            "direction": "NE",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 22,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                471.0,
+                438.0,
+                205.0,
+                165.0
+            ],
+            "pivotPixels": [
+                119.0,
+                3.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "NE_3",
+            "direction": "NE",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 23,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                717.0,
+                442.0,
+                142.0,
+                185.0
+            ],
+            "pivotPixels": [
+                80.0,
+                5.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "E_0",
+            "direction": "E",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 24,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                42.0,
+                225.0,
+                134.0,
+                205.0
+            ],
+            "pivotPixels": [
+                65.0,
+                29.999998092651367
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "E_1",
+            "direction": "E",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 25,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                235.0,
+                225.0,
+                189.0,
+                190.0
+            ],
+            "pivotPixels": [
+                90.0,
+                5.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "E_2",
+            "direction": "E",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 26,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                470.0,
+                230.0,
+                204.0,
+                182.0
+            ],
+            "pivotPixels": [
+                75.0,
+                4.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "E_3",
+            "direction": "E",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 27,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                707.0,
+                226.0,
+                165.0,
+                186.0
+            ],
+            "pivotPixels": [
+                73.0,
+                8.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "SE_0",
+            "direction": "SE",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 28,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                34.0,
+                15.0,
+                151.0,
+                206.0
+            ],
+            "pivotPixels": [
+                64.0,
+                27.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "SE_1",
+            "direction": "SE",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 29,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                246.0,
+                31.0,
+                175.0,
+                169.0
+            ],
+            "pivotPixels": [
+                83.0,
+                21.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "SE_2",
+            "direction": "SE",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 30,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                463.0,
+                24.0,
+                209.0,
+                172.0
+            ],
+            "pivotPixels": [
+                84.0,
+                4.0
+            ]
+        },
+        {
+            "action": "slash",
+            "name": "SE_3",
+            "direction": "SE",
+            "source": "Assets/Darklight/Art/FabioSlash.png",
+            "index": 31,
+            "sourceWidth": 887,
+            "sourceHeight": 1774,
+            "pixelsPerUnit": 98.5,
+            "rectBottomLeft": [
+                689.0,
+                15.0,
+                169.0,
+                184.0
+            ],
+            "pivotPixels": [
+                98.0,
+                19.0
+            ]
+        },
+        {
+            "action": "dummy",
+            "name": "Dummy",
+            "direction": "S",
+            "source": "Assets/Darklight/Art/TrainingDummy.png",
+            "index": 0,
+            "sourceWidth": 1254,
+            "sourceHeight": 1254,
+            "pixelsPerUnit": 724.0,
+            "rectBottomLeft": [
+                0.0,
+                0.0,
+                1254.0,
+                1254.0
+            ],
+            "pivotPixels": [
+                507.0000305175781,
+                89.0
+            ]
+        }
+    ]
+}

@@ -1,0 +1,69 @@
+{
+  "file": "HudAprovado.png",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alphaMin": 0,
+  "alphaMax": 254,
+  "sha256": "25ef08051e99bb2cdf00c099c5db0221e8a7ad5a36839df291cdf19c1daef8ac",
+  "coordinateOrigin": "top-left",
+  "frames": [
+    {
+      "name": "Health",
+      "rect": [
+        31,
+        124,
+        856,
+        286
+      ]
+    },
+    {
+      "name": "Skill",
+      "rect": [
+        904,
+        154,
+        601,
+        227
+      ]
+    },
+    {
+      "name": "Katana",
+      "rect": [
+        319,
+        454,
+        229,
+        221
+      ]
+    },
+    {
+      "name": "Parry",
+      "rect": [
+        1034,
+        454,
+        230,
+        221
+      ]
+    },
+    {
+      "name": "Dodge",
+      "rect": [
+        319,
+        707,
+        236,
+        221
+      ]
+    },
+    {
+      "name": "Target",
+      "rect": [
+        960,
+        767,
+        477,
+        97
+      ]
+    }
+  ],
+  "method": "Read-only alpha >=166 bounds with 3px padding; no pixel modification."
+}

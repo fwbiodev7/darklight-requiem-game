@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="16" result="Failed(Child)" total="16" passed="6" failed="10" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0,2270321">
+  <test-suite type="TestSuite" id="1000" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="235" result="Failed" site="Child" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.227032" total="16" passed="6" failed="10" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1276" name="GameEditModeTests.dll" fullname="C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem/Library/ScriptAssemblies/GameEditModeTests.dll" runstate="Runnable" testcasecount="235" result="Failed" site="Child" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.214804" total="16" passed="6" failed="10" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="16704" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1277" name="Game" fullname="Game" runstate="Runnable" testcasecount="235" result="Failed" site="Child" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.201574" total="16" passed="6" failed="10" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1278" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="235" result="Failed" site="Child" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.196552" total="16" passed="6" failed="10" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1279" name="EditMode" fullname="Game.Tests.EditMode" runstate="Runnable" testcasecount="235" result="Failed" site="Child" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.192837" total="16" passed="6" failed="10" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1148" name="VarginhaCameraFramingTests" fullname="Game.Tests.EditMode.VarginhaCameraFramingTests" classname="Game.Tests.EditMode.VarginhaCameraFramingTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.064570" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="ParameterizedMethod" id="1152" name="ViewportStaysInsideMapAtCornersAndAfterResizing" fullname="Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing" classname="Game.Tests.EditMode.VarginhaCameraFramingTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.059163" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1149" name="ViewportStaysInsideMapAtCornersAndAfterResizing(&quot;FaseTopView_Varginha&quot;,-9.0f,-7.0f,27.0f,7.0f,3.8f)" fullname="Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing(&quot;FaseTopView_Varginha&quot;,-9.0f,-7.0f,27.0f,7.0f,3.8f)" methodname="ViewportStaysInsideMapAtCornersAndAfterResizing" classname="Game.Tests.EditMode.VarginhaCameraFramingTests" runstate="Runnable" seed="700595893" result="Passed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.037346" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing("FaseTopView_Varginha",-9.0f,-7.0f,27.0f,7.0f,3.8f)
+QA test: Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing("FaseTopView_Varginha",-9.0f,-7.0f,27.0f,7.0f,3.8f)
+QA result: Passed Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing("FaseTopView_Varginha",-9.0f,-7.0f,27.0f,7.0f,3.8f)
+QA result: Passed Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing("FaseTopView_Varginha",-9.0f,-7.0f,27.0f,7.0f,3.8f)
+]]></output>
+                </test-case>
+                <test-case id="1150" name="ViewportStaysInsideMapAtCornersAndAfterResizing(&quot;Fase2_Escola_Resgate&quot;,-12.3f,-14.0f,12.3f,6.0f,4.2f)" fullname="Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing(&quot;Fase2_Escola_Resgate&quot;,-12.3f,-14.0f,12.3f,6.0f,4.2f)" methodname="ViewportStaysInsideMapAtCornersAndAfterResizing" classname="Game.Tests.EditMode.VarginhaCameraFramingTests" runstate="Runnable" seed="1194693849" result="Passed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.004242" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing("Fase2_Escola_Resgate",-12.3f,-14.0f,12.3f,6.0f,4.2f)
+QA test: Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing("Fase2_Escola_Resgate",-12.3f,-14.0f,12.3f,6.0f,4.2f)
+QA result: Passed Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing("Fase2_Escola_Resgate",-12.3f,-14.0f,12.3f,6.0f,4.2f)
+QA result: Passed Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing("Fase2_Escola_Resgate",-12.3f,-14.0f,12.3f,6.0f,4.2f)
+]]></output>
+                </test-case>
+                <test-case id="1151" name="ViewportStaysInsideMapAtCornersAndAfterResizing(&quot;Fase3_Igreja_Guardiao&quot;,-8.5f,-6.5f,9.5f,6.5f,4.0f)" fullname="Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing(&quot;Fase3_Igreja_Guardiao&quot;,-8.5f,-6.5f,9.5f,6.5f,4.0f)" methodname="ViewportStaysInsideMapAtCornersAndAfterResizing" classname="Game.Tests.EditMode.VarginhaCameraFramingTests" runstate="Runnable" seed="1812001433" result="Passed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.001019" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing("Fase3_Igreja_Guardiao",-8.5f,-6.5f,9.5f,6.5f,4.0f)
+QA test: Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing("Fase3_Igreja_Guardiao",-8.5f,-6.5f,9.5f,6.5f,4.0f)
+QA result: Passed Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing("Fase3_Igreja_Guardiao",-8.5f,-6.5f,9.5f,6.5f,4.0f)
+QA result: Passed Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing("Fase3_Igreja_Guardiao",-8.5f,-6.5f,9.5f,6.5f,4.0f)
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+            <test-suite type="TestFixture" id="1256" name="VarginhaStudentSpriteTests" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" testcasecount="13" result="Failed" site="Child" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.118808" total="13" passed="3" failed="10" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-suite type="ParameterizedMethod" id="1271" name="BriefNameVariantsResolveToTheExistingStudent" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.045412" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1269" name="BriefNameVariantsResolveToTheExistingStudent(&quot;Anna Tavares&quot;,&quot;Ana Tavares&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent(&quot;Anna Tavares&quot;,&quot;Ana Tavares&quot;)" methodname="BriefNameVariantsResolveToTheExistingStudent" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1731867074" result="Passed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.039439" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Anna Tavares","Ana Tavares")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Anna Tavares","Ana Tavares")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Anna Tavares","Ana Tavares")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Anna Tavares","Ana Tavares")
+]]></output>
+                </test-case>
+                <test-case id="1270" name="BriefNameVariantsResolveToTheExistingStudent(&quot;Luis Messias&quot;,&quot;Luis Miguel Messias&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent(&quot;Luis Messias&quot;,&quot;Luis Miguel Messias&quot;)" methodname="BriefNameVariantsResolveToTheExistingStudent" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="425435153" result="Passed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.003429" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Luis Messias","Luis Miguel Messias")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Luis Messias","Luis Miguel Messias")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Luis Messias","Luis Miguel Messias")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Luis Messias","Luis Miguel Messias")
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1266" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" testcasecount="9" result="Failed" site="Child" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.059684" total="9" passed="0" failed="9" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <failure>
+                  <message><![CDATA[One or more child tests had errors]]></message>
+                </failure>
+                <test-case id="1257" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Yasmin&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Yasmin&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1291784808" result="Failed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.015087" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Yasmin precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\Documents\Codex\2026-10-10\f\darklight-requiem\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Yasmin")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Yasmin")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Yasmin")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Yasmin")
+]]></output>
+                </test-case>
+                <test-case id="1258" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Pedro&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Pedro&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1368783599" result="Failed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.005567" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Pedro precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\Documents\Codex\2026-10-10\f\darklight-requiem\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Pedro")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Pedro")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Pedro")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Pedro")
+]]></output>
+                </test-case>
+                <test-case id="1259" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Matias&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Matias&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="553011178" result="Failed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.002837" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Matias precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\Documents\Codex\2026-10-10\f\darklight-requiem\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Matias")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Matias")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Matias")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Matias")
+]]></output>
+                </test-case>
+                <test-case id="1260" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Marcos&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Marcos&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1758025905" result="Failed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.004192" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Marcos precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\Documents\Codex\2026-10-10\f\darklight-requiem\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Marcos")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Marcos")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Marcos")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Marcos")
+]]></output>
+                </test-case>
+                <test-case id="1261" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Anna Sabia&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Anna Sabia&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1103147881" result="Failed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.004930" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Anna Sabia precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\Documents\Codex\2026-10-10\f\darklight-requiem\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Anna Sabia")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Anna Sabia")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Anna Sabia")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Anna Sabia")
+]]></output>
+                </test-case>
+                <test-case id="1262" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Ana Tavares&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Ana Tavares&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="267988906" result="Failed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.000799" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Ana Tavares precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\Documents\Codex\2026-10-10\f\darklight-requiem\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Ana Tavares")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Ana Tavares")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Ana Tavares")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Ana Tavares")
+]]></output>
+                </test-case>
+                <test-case id="1263" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Luis Miguel Messias&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Luis Miguel Messias&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1074367325" result="Failed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.003820" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Luis Miguel Messias precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\Documents\Codex\2026-10-10\f\darklight-requiem\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Miguel Messias")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Miguel Messias")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Miguel Messias")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Miguel Messias")
+]]></output>
+                </test-case>
+                <test-case id="1264" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Luis Martins&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Luis Martins&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="958840115" result="Failed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.008758" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Luis Martins precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\Documents\Codex\2026-10-10\f\darklight-requiem\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Martins")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Martins")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Martins")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Martins")
+]]></output>
+                </test-case>
+                <test-case id="1265" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Fabio&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Fabio&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="843993550" result="Failed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.003307" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Fabio precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\Documents\Codex\2026-10-10\f\darklight-requiem\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Fabio")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Fabio")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Fabio")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Fabio")
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-case id="1267" name="FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons" methodname="FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="2044099397" result="Passed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.003803" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons
+]]></output>
+              </test-case>
+              <test-case id="1268" name="ShortAnnaAndTallAnaKeepDifferentHeights" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights" methodname="ShortAnnaAndTallAnaKeepDifferentHeights" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="6598881" result="Failed" start-time="2026-10-10 17:42:26Z" end-time="2026-10-10 17:42:26Z" duration="0.001726" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: greater than or equal to 4
+  But was:  -2
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights () [0x0004d] in C:\Users\Usuario\Documents\Codex\2026-10-10\f\darklight-requiem\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:93
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

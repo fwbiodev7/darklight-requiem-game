@@ -1,0 +1,68 @@
+{
+  "stage": "00",
+  "status": "audit_completed_with_baseline_findings",
+  "baselineImportExitCode": 0,
+  "diagnosticExitCode": 0,
+  "effectivePipeline": "BuiltIn",
+  "editMode": {
+    "cliExitCode": 8,
+    "result": "Failed(Child)",
+    "total": 16,
+    "passed": 6,
+    "failed": 10,
+    "failures": [
+      {
+        "name": "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Yasmin\")",
+        "message": "Yasmin precisa manter os pés alinhados.\n  Expected: 6\n  But was:  4"
+      },
+      {
+        "name": "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Pedro\")",
+        "message": "Pedro precisa manter os pés alinhados.\n  Expected: 6\n  But was:  4"
+      },
+      {
+        "name": "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Matias\")",
+        "message": "Matias precisa manter os pés alinhados.\n  Expected: 6\n  But was:  4"
+      },
+      {
+        "name": "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Marcos\")",
+        "message": "Marcos precisa manter os pés alinhados.\n  Expected: 6\n  But was:  4"
+      },
+      {
+        "name": "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Anna Sabia\")",
+        "message": "Anna Sabia precisa manter os pés alinhados.\n  Expected: 6\n  But was:  4"
+      },
+      {
+        "name": "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Ana Tavares\")",
+        "message": "Ana Tavares precisa manter os pés alinhados.\n  Expected: 6\n  But was:  4"
+      },
+      {
+        "name": "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Luis Miguel Messias\")",
+        "message": "Luis Miguel Messias precisa manter os pés alinhados.\n  Expected: 6\n  But was:  4"
+      },
+      {
+        "name": "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Luis Martins\")",
+        "message": "Luis Martins precisa manter os pés alinhados.\n  Expected: 6\n  But was:  4"
+      },
+      {
+        "name": "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Fabio\")",
+        "message": "Fabio precisa manter os pés alinhados.\n  Expected: 6\n  But was:  4"
+      },
+      {
+        "name": "Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights",
+        "message": "Expected: greater than or equal to 4\n  But was:  -2"
+      }
+    ]
+  },
+  "trackedAssetsPackagesSettingsDiffExitCode": 0,
+  "sourceFingerprintChangesDuringAudit": [],
+  "sourceHeadObserved": "df2b0911fb0fceee70bdbd8cc7d0333acee5f382",
+  "sourceReadOnly": true,
+  "physicalGamepadTested": false,
+  "newControllerMappingImplemented": false,
+  "artGenerated": false,
+  "campaignTested": false,
+  "windowsBuildProduced": false,
+  "fpsMeasured": false,
+  "remoteConfigured": false,
+  "commitsMadeByThisTask": false
+}

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14512db5806f8ae458a54385d4c258ea, type: 3}
+  m_Name: Requiem
+  m_EditorClassIdentifier: Darklight.Runtime::Darklight.WeaponDefinition
+  id: 0
+  displayName: REQUIEM
+  unlockAfterChapter: -1
+  loadout:
+    lights:
+    - {fileID: 11400000, guid: 8e5e52ce4de0fae4187117d36f051391, type: 2}
+    - {fileID: 11400000, guid: 91bfd25f967b73241b2d970f77f63c8e, type: 2}
+    - {fileID: 11400000, guid: 57703b03374b4da458e7be1214892983, type: 2}
+    heavy: {fileID: 11400000, guid: f5eaae6cdb10d474d8da6bedbead23c2, type: 2}
+    charged: {fileID: 11400000, guid: 1a9980a356470e047b35291289f16c2c, type: 2}
+    counter: {fileID: 11400000, guid: b0f626c0f0b53a64b86b2da072994fe7, type: 2}
+    skill: {fileID: 11400000, guid: 291f5a4fd3379dd47aab54c5276a9f6d, type: 2}
+    aerial: {fileID: 11400000, guid: f0eaa5a0f8a509f4aabf175dcab2544c, type: 2}
+    weaponSpecial: {fileID: 0}
+  requiemPoses: []
+  rockPoses: []
+  icon: {fileID: 5412906950569185311, guid: 1acbfb46e64453a4285295316f6c7105, type: 3}

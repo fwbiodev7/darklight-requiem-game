@@ -1,0 +1,3298 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca39c522aaa6cb47be286b5007a577f, type: 3}
+  m_Name: Appearance
+  m_EditorClassIdentifier: Darklight.Runtime::Darklight.CharacterAppearanceProfile
+  startingAge: 17
+  chapterDays: 000000004900000092000000db000000240100006d010000i
+  stages:
+  - name: INICIAL
+    minimumNarrativeDays: 0
+    hair: 0
+    facialHair: 0
+    physique: 0
+    heightVariant: 0
+  - name: DESENVOLVIMENTO
+    minimumNarrativeDays: 60
+    hair: 1
+    facialHair: 1
+    physique: 0
+    heightVariant: 0
+  - name: INTERMEDIARIO
+    minimumNarrativeDays: 120
+    hair: 2
+    facialHair: 2
+    physique: 1
+    heightVariant: 0
+  - name: AVANCADO
+    minimumNarrativeDays: 240
+    hair: 3
+    facialHair: 3
+    physique: 1
+    heightVariant: 0
+  - name: FINAL
+    minimumNarrativeDays: 365
+    hair: 4
+    facialHair: 4
+    physique: 2
+    heightVariant: 0
+  hair:
+  - {fileID: 4987084704783730984, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -7675947586299988685, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -5122898060978108742, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: 2603427288183930209, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -466280785537780052, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: 2300753676501544572, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -6120867195524952459, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -5030233413971531543, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -7807876294894940622, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -7248972723664131539, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: 4662338746448950287, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -8767621480461715337, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: 987346344632745474, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -2151689113657807917, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -6789400311886292037, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: 6121689072766862689, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -3706623192414971500, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -2321896894027265274, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: 6128511817524638703, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -766869167730536143, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -1718322697274784106, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -3809051106673240910, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: 3195810160157917567, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: 6088068048913818838, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -7444111819341133394, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: 8361703211704357303, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: 8583220652050099541, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -7514375782526501388, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: 8471125277488790142, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -999193825217448029, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -1591365617, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  - {fileID: -408724822, guid: 92f6a57a02ada3841bad43bf919bbf98, type: 3}
+  windHair:
+  - {fileID: -5804703529637604879, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: 8138775543007897299, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: 8761586761993802251, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -2289219195545266874, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: 779416006904118744, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -5938657639288889923, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: 3921295472295038732, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -2077533021781793933, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -3146937536017360839, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: 1626968306845868401, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -7825237471388688435, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -32217769201641973, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -2822027157478273313, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -3063186879440514203, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -900316714994380645, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: 5303942626334393760, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -3496465826028473748, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -8897175793724453644, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: 2980614334902040429, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -188767559874697328, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: 1292330402132801566, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -687790913234294651, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -3463052586723080598, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: 1356928969739057937, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -4348364498253640850, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -3040597509269754597, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -3920186845747177764, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -2828940234570616210, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: -5019720430125861133, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: 6154918429317723987, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: 935341213256115074, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  - {fileID: 7905393843114472247, guid: c7fa058bd9883a4448e82c76f1933292, type: 3}
+  facialHair:
+  - {fileID: -6142393377754922997, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: 8177963877610731540, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: -4426651296696357840, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: 7526868501239601206, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: 5709282261841984114, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: 7999625502070044548, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: -4959701594617725596, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: -2824276037479562018, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: 2558829574205016241, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: -7697476436393700357, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: -6972794636371778946, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: 978133929665529526, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: -3043133820554508088, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: -1091884836231214801, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: 178527423248414278, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: -5389421484476291700, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: 2598837704731335067, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: -5744208772424315184, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: -4764140083237286256, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  - {fileID: -1588342236163806079, guid: 311f875616b4bf944b30d7f1067457b4, type: 3}
+  shoulders:
+  - {fileID: -8034998826627102419, guid: c3c9d713ff999984583090524e736a74, type: 3}
+  - {fileID: -2738026211436962453, guid: c3c9d713ff999984583090524e736a74, type: 3}
+  - {fileID: -7616711427919280838, guid: c3c9d713ff999984583090524e736a74, type: 3}
+  - {fileID: -6614191510850023994, guid: c3c9d713ff999984583090524e736a74, type: 3}
+  - {fileID: -248572133758138434, guid: c3c9d713ff999984583090524e736a74, type: 3}
+  - {fileID: -778825222116734315, guid: c3c9d713ff999984583090524e736a74, type: 3}
+  - {fileID: -4879963173440343611, guid: c3c9d713ff999984583090524e736a74, type: 3}
+  - {fileID: 8728150830062585356, guid: c3c9d713ff999984583090524e736a74, type: 3}
+  - {fileID: 5857067793493391224, guid: c3c9d713ff999984583090524e736a74, type: 3}
+  - {fileID: 3725154711673810788, guid: c3c9d713ff999984583090524e736a74, type: 3}
+  - {fileID: -431640154742215846, guid: c3c9d713ff999984583090524e736a74, type: 3}
+  - {fileID: 8828627013902844937, guid: c3c9d713ff999984583090524e736a74, type: 3}
+  - {fileID: -6243783891757813794, guid: c3c9d713ff999984583090524e736a74, type: 3}
+  - {fileID: -5687079108719656585, guid: c3c9d713ff999984583090524e736a74, type: 3}
+  - {fileID: -2467633722961977364, guid: c3c9d713ff999984583090524e736a74, type: 3}
+  - {fileID: -4134021155710302664, guid: c3c9d713ff999984583090524e736a74, type: 3}
+  attachments:
+  - source: {fileID: -536914690, guid: 79e342a8a01010543b3c6e5e2a51b2d3, type: 3}
+    crown: {x: -0.0021551724, y: 1.9698275}
+    upperLip: {x: -0.0021551724, y: 1.4913793}
+    shoulders: {x: -0.0021551724, y: 1.4134482}
+    headWidth: 0.62068963
+    shoulderWidth: 0.69517237
+  - source: {fileID: 381555238, guid: 79e342a8a01010543b3c6e5e2a51b2d3, type: 3}
+    crown: {x: -0.015086273, y: 1.9784483}
+    upperLip: {x: -0.015086273, y: 1.510345}
+    shoulders: {x: -0.015086273, y: 1.4184483}
+    headWidth: 0.63793105
+    shoulderWidth: 0.7144828
+  - source: {fileID: -413376843, guid: 79e342a8a01010543b3c6e5e2a51b2d3, type: 3}
+    crown: {x: -0.11853448, y: 1.9612069}
+    upperLip: {x: -0.11853448, y: 1.4918965}
+    shoulders: {x: -0.11853448, y: 1.4084483}
+    headWidth: 0.5948276
+    shoulderWidth: 0.6662069
+  - source: {fileID: 1049557893, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: -0.20930237, y: 1.9627907}
+    upperLip: {x: -0.20930237, y: 1.4857671}
+    shoulders: {x: -0.20930237, y: 1.3949764}
+    headWidth: 0.7627907
+    shoulderWidth: 0.8543256
+  - source: {fileID: -717304519, guid: 79e342a8a01010543b3c6e5e2a51b2d3, type: 3}
+    crown: {x: 0.0021551724, y: 1.9482758}
+    upperLip: {x: 0.0021551724, y: 1.5748277}
+    shoulders: {x: 0.0021551724, y: 1.3979311}
+    headWidth: 0.57758623
+    shoulderWidth: 0.6468966
+  - source: {fileID: -867952364, guid: 79e342a8a01010543b3c6e5e2a51b2d3, type: 3}
+    crown: {x: 0.17456897, y: 1.9353448}
+    upperLip: {x: 0.17456897, y: 1.5356896}
+    shoulders: {x: 0.17456897, y: 1.3886207}
+    headWidth: 0.5948276
+    shoulderWidth: 0.6662069
+  - source: {fileID: -1657518104, guid: 79e342a8a01010543b3c6e5e2a51b2d3, type: 3}
+    crown: {x: 0.125, y: 1.9482758}
+    upperLip: {x: 0.125, y: 1.4987931}
+    shoulders: {x: 0.125, y: 1.3967242}
+    headWidth: 0.6034483
+    shoulderWidth: 0.6758621
+  - source: {fileID: -1294924750, guid: 79e342a8a01010543b3c6e5e2a51b2d3, type: 3}
+    crown: {x: 0.021551691, y: 1.9568965}
+    upperLip: {x: 0.021551691, y: 1.4887931}
+    shoulders: {x: 0.021551691, y: 1.4065517}
+    headWidth: 0.6336207
+    shoulderWidth: 0.70965517
+  - source: {fileID: 2119866760, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: -0.009302326, y: 1.9348837}
+    upperLip: {x: -0.009302326, y: 1.4262321}
+    shoulders: {x: -0.009302326, y: 1.3722793}
+    headWidth: 0.7255814
+    shoulderWidth: 0.81265116
+  - source: {fileID: 1258009461, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0, y: 1.9348837}
+    upperLip: {x: 0, y: 1.452279}
+    shoulders: {x: 0, y: 1.3722793}
+    headWidth: 0.74418604
+    shoulderWidth: 0.83348835
+  - source: {fileID: 1929725455, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0.00000007097111, y: 1.9348837}
+    upperLip: {x: 0.00000007097111, y: 1.4262321}
+    shoulders: {x: 0.00000007097111, y: 1.3722793}
+    headWidth: 0.7348837
+    shoulderWidth: 0.82306975
+  - source: {fileID: 10969487, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0, y: 1.9348837}
+    upperLip: {x: 0, y: 1.4195347}
+    shoulders: {x: 0, y: 1.3748841}
+    headWidth: 0.7162791
+    shoulderWidth: 0.80223256
+  - source: {fileID: -1314690825, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: -0.037209302, y: 1.9162791}
+    upperLip: {x: -0.037209302, y: 1.4466978}
+    shoulders: {x: -0.037209302, y: 1.3588833}
+    headWidth: 0.7627907
+    shoulderWidth: 0.8543256
+  - source: {fileID: -1397171195, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: -0.046511628, y: 1.9255813}
+    upperLip: {x: -0.046511628, y: 1.4284656}
+    shoulders: {x: -0.046511628, y: 1.3681856}
+    headWidth: 0.75348836
+    shoulderWidth: 0.843907
+  - source: {fileID: -1267628938, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: -0.0465117, y: 1.9255813}
+    upperLip: {x: -0.0465117, y: 1.4310695}
+    shoulders: {x: -0.0465117, y: 1.3681856}
+    headWidth: 0.7627907
+    shoulderWidth: 0.8543256
+  - source: {fileID: -1179000198, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: -0.041860465, y: 1.9255813}
+    upperLip: {x: -0.041860465, y: 1.4258608}
+    shoulders: {x: -0.041860465, y: 1.3681856}
+    headWidth: 0.75348836
+    shoulderWidth: 0.843907
+  - source: {fileID: -45317645, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: -0.08372093, y: 1.9069767}
+    upperLip: {x: -0.08372093, y: 1.4165584}
+    shoulders: {x: -0.08372093, y: 1.3547908}
+    headWidth: 0.7348837
+    shoulderWidth: 0.82306975
+  - source: {fileID: -221402129, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: -0.0883721, y: 1.9069767}
+    upperLip: {x: -0.0883721, y: 1.4206508}
+    shoulders: {x: -0.0883721, y: 1.352186}
+    headWidth: 0.772093
+    shoulderWidth: 0.8647442
+  - source: {fileID: -1121369963, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: -0.08372093, y: 1.9162791}
+    upperLip: {x: -0.08372093, y: 1.4258608}
+    shoulders: {x: -0.08372093, y: 1.3614882}
+    headWidth: 0.74418604
+    shoulderWidth: 0.83348835
+  - source: {fileID: -1602242492, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: -0.1255814, y: 1.9069767}
+    upperLip: {x: -0.1255814, y: 1.418046}
+    shoulders: {x: -0.1255814, y: 1.352186}
+    headWidth: 0.7348837
+    shoulderWidth: 0.82306975
+  - source: {fileID: -2034970384, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: -0.20930237, y: 1.9534883}
+    upperLip: {x: -0.20930237, y: 1.4764649}
+    shoulders: {x: -0.20930237, y: 1.385674}
+    headWidth: 0.7813954
+    shoulderWidth: 0.87516284
+  - source: {fileID: -725690294, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: -0.2139535, y: 1.9813954}
+    upperLip: {x: -0.2139535, y: 1.5043718}
+    shoulders: {x: -0.2139535, y: 1.4057674}
+    headWidth: 0.80930233
+    shoulderWidth: 0.9064186
+  - source: {fileID: 625080018, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: -0.21860465, y: 1.9813954}
+    upperLip: {x: -0.21860465, y: 1.4976745}
+    shoulders: {x: -0.21860465, y: 1.4031625}
+    headWidth: 0.7627907
+    shoulderWidth: 0.8543256
+  - source: {fileID: -1074505713, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0.004651163, y: 2}
+    upperLip: {x: 0.004651163, y: 1.6058605}
+    shoulders: {x: 0.004651163, y: 1.4191628}
+    headWidth: 0.7069768
+    shoulderWidth: 0.79181397
+  - source: {fileID: -2000909160, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0.08372093, y: 2.0093024}
+    upperLip: {x: 0.08372093, y: 1.6151628}
+    shoulders: {x: 0.08372093, y: 1.4284651}
+    headWidth: 0.7348837
+    shoulderWidth: 0.82306975
+  - source: {fileID: 1490687436, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0, y: 2.0093024}
+    upperLip: {x: 0, y: 1.6151628}
+    shoulders: {x: 0, y: 1.4284651}
+    headWidth: 0.7348837
+    shoulderWidth: 0.82306975
+  - source: {fileID: -652723167, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0, y: 1.9906976}
+    upperLip: {x: 0, y: 1.5983256}
+    shoulders: {x: 0, y: 1.4124653}
+    headWidth: 0.75348836
+    shoulderWidth: 0.843907
+  - source: {fileID: -14474141, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0.11162791, y: 1.8790698}
+    upperLip: {x: 0.11162791, y: 1.4087442}
+    shoulders: {x: 0.11162791, y: 1.3320931}
+    headWidth: 0.75348836
+    shoulderWidth: 0.843907
+  - source: {fileID: 1014328600, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0.2139535, y: 1.8976744}
+    upperLip: {x: 0.2139535, y: 1.4280932}
+    shoulders: {x: 0.2139535, y: 1.3480929}
+    headWidth: 0.7627907
+    shoulderWidth: 0.8543256
+  - source: {fileID: -1210659968, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0.11627907, y: 1.8790698}
+    upperLip: {x: 0.11627907, y: 1.4020462}
+    shoulders: {x: 0.11627907, y: 1.3320931}
+    headWidth: 0.7627907
+    shoulderWidth: 0.8543256
+  - source: {fileID: 188748719, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0.19534884, y: 1.8883721}
+    upperLip: {x: 0.19534884, y: 1.4120929}
+    shoulders: {x: 0.19534884, y: 1.3387905}
+    headWidth: 0.7813954
+    shoulderWidth: 0.87516284
+  - source: {fileID: 303271423, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0.093023255, y: 1.9255813}
+    upperLip: {x: 0.093023255, y: 1.4273489}
+    shoulders: {x: 0.093023255, y: 1.3629767}
+    headWidth: 0.772093
+    shoulderWidth: 0.8647442
+  - source: {fileID: 1546971983, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0.10697675, y: 1.9162791}
+    upperLip: {x: 0.10697675, y: 1.3920001}
+    shoulders: {x: 0.10697675, y: 1.3588836}
+    headWidth: 0.7813954
+    shoulderWidth: 0.87516284
+  - source: {fileID: -1694243218, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0.1162791, y: 1.9162791}
+    upperLip: {x: 0.1162791, y: 1.3972094}
+    shoulders: {x: 0.1162791, y: 1.3536743}
+    headWidth: 0.7627907
+    shoulderWidth: 0.8543256
+  - source: {fileID: -1045686590, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0.12093023, y: 1.9069767}
+    upperLip: {x: 0.12093023, y: 1.399814}
+    shoulders: {x: 0.12093023, y: 1.352186}
+    headWidth: 0.7906977
+    shoulderWidth: 0.88558143
+  - source: {fileID: 899503125, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0.046511628, y: 1.9534883}
+    upperLip: {x: 0.046511628, y: 1.4433489}
+    shoulders: {x: 0.046511628, y: 1.3856745}
+    headWidth: 0.7813954
+    shoulderWidth: 0.87516284
+  - source: {fileID: 1275464641, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0.03720934, y: 1.9255813}
+    upperLip: {x: 0.03720934, y: 1.403907}
+    shoulders: {x: 0.03720934, y: 1.3655814}
+    headWidth: 0.7813954
+    shoulderWidth: 0.87516284
+  - source: {fileID: 700565725, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0.051162828, y: 1.9534883}
+    upperLip: {x: 0.051162828, y: 1.4485581}
+    shoulders: {x: 0.051162828, y: 1.3856745}
+    headWidth: 0.7813954
+    shoulderWidth: 0.87516284
+  - source: {fileID: 1716928242, guid: 83522fc18b2fc0745868db607e0e9b9f, type: 3}
+    crown: {x: 0.037209302, y: 1.9441861}
+    upperLip: {x: 0.037209302, y: 1.4314419}
+    shoulders: {x: 0.037209302, y: 1.3763721}
+    headWidth: 0.7813954
+    shoulderWidth: 0.87516284
+  - source: {fileID: -8405239923841109983, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 0.78125, y: 3.8820834}
+    upperLip: {x: 0.78125, y: 2.9970837}
+    shoulders: {x: 0.78125, y: 2.5870826}
+    headWidth: 1.8958334
+    shoulderWidth: 2.1233335
+  - source: {fileID: -6274241352107854681, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 0, y: 4.465417}
+    upperLip: {x: 0, y: 3.5866656}
+    shoulders: {x: 0, y: 3.1704159}
+    headWidth: 1.48
+    shoulderWidth: 1.6576
+  - source: {fileID: -7948715229156923990, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: -0.35416666, y: 3.8195834}
+    upperLip: {x: -0.35416666, y: 3.0787487}
+    shoulders: {x: -0.35416666, y: 2.5245826}
+    headWidth: 1.9375
+    shoulderWidth: 2.17
+  - source: {fileID: 2685508823527512815, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 0.84375, y: 3.8404167}
+    upperLip: {x: 0.84375, y: 3.0787487}
+    shoulders: {x: 0.84375, y: 2.5454159}
+    headWidth: 1.8958334
+    shoulderWidth: 2.1233335
+  - source: {fileID: -4712748173106441667, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: -2.0104167, y: 4.42375}
+    upperLip: {x: -2.0104167, y: 3.544999}
+    shoulders: {x: -2.0104167, y: 3.1287494}
+    headWidth: 2.035
+    shoulderWidth: 2.2792
+  - source: {fileID: 8540389264341079959, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: -0.47916666, y: 3.8195834}
+    upperLip: {x: -0.47916666, y: 3.0612495}
+    shoulders: {x: -0.47916666, y: 2.5245826}
+    headWidth: 1.9791666
+    shoulderWidth: 2.2166667
+  - source: {fileID: -4459537503008123744, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 0.27083334, y: 3.986875}
+    upperLip: {x: 0.27083334, y: 3.1285427}
+    shoulders: {x: 0.27083334, y: 2.6977081}
+    headWidth: 1.9583334
+    shoulderWidth: 2.1933334
+  - source: {fileID: -3990408722369966922, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: -0.8333333, y: 3.2160416}
+    upperLip: {x: -0.8333333, y: 2.3412502}
+    shoulders: {x: -0.8333333, y: 1.9268749}
+    headWidth: 1.2083334
+    shoulderWidth: 1.3533334
+  - source: {fileID: -3349104618263179970, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: -0.48958334, y: 3.986875}
+    upperLip: {x: -0.48958334, y: 3.1285427}
+    shoulders: {x: -0.48958334, y: 2.6977081}
+    headWidth: 2
+    shoulderWidth: 2.24
+  - source: {fileID: 2743697437983609103, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 0.114583336, y: 4.027917}
+    upperLip: {x: 0.114583336, y: 3.148751}
+    shoulders: {x: 0.114583336, y: 2.7329159}
+    headWidth: 1.8125
+    shoulderWidth: 2.03
+  - source: {fileID: -9094671049760809093, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 1.2395834, y: 3.23625}
+    upperLip: {x: 1.2395834, y: 2.3575}
+    shoulders: {x: 1.2395834, y: 1.9412506}
+    headWidth: 1.1875
+    shoulderWidth: 1.33
+  - source: {fileID: 1220739520878289237, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: -0.5208333, y: 4.027917}
+    upperLip: {x: -0.5208333, y: 3.1079159}
+    shoulders: {x: -0.5208333, y: 2.7329159}
+    headWidth: 2.035
+    shoulderWidth: 2.2792
+  - source: {fileID: -943524823842476547, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 0.4375, y: 4.17375}
+    upperLip: {x: 0.4375, y: 3.742084}
+    shoulders: {x: 0.4375, y: 2.8787506}
+    headWidth: 1.875
+    shoulderWidth: 2.1
+  - source: {fileID: -8009856010274251736, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 0.7604167, y: 3.2570834}
+    upperLip: {x: 0.7604167, y: 2.3783336}
+    shoulders: {x: 0.7604167, y: 1.9620839}
+    headWidth: 1.1875
+    shoulderWidth: 1.33
+  - source: {fileID: -3572085557053777734, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: -0.17708333, y: 4.17375}
+    upperLip: {x: -0.17708333, y: 3.742084}
+    shoulders: {x: -0.17708333, y: 2.8787506}
+    headWidth: 1.875
+    shoulderWidth: 2.1
+  - source: {fileID: -8147714629339545288, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 1.0208334, y: 4.2160416}
+    upperLip: {x: 1.0208334, y: 3.1477077}
+    shoulders: {x: 1.0208334, y: 2.9268749}
+    headWidth: 1.7916666
+    shoulderWidth: 2.0066667
+  - source: {fileID: -7624432579636840498, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 1.0208334, y: 3.5910416}
+    upperLip: {x: 1.0208334, y: 3.2010422}
+    shoulders: {x: 1.0208334, y: 2.3018749}
+    headWidth: 1.7916666
+    shoulderWidth: 2.0066667
+  - source: {fileID: -1424688714036915049, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 0.19791667, y: 4.2160416}
+    upperLip: {x: 0.19791667, y: 3.140208}
+    shoulders: {x: 0.19791667, y: 2.9268749}
+    headWidth: 1.9375
+    shoulderWidth: 2.17
+  - source: {fileID: -6597232565541417525, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 0.42708334, y: 4.340417}
+    upperLip: {x: 0.42708334, y: 3.28125}
+    shoulders: {x: 0.42708334, y: 3.0454166}
+    headWidth: 1.8333334
+    shoulderWidth: 2.0533333
+  - source: {fileID: 7529903829134422214, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 1.2083334, y: 3.29875}
+    upperLip: {x: 1.2083334, y: 2.95625}
+    shoulders: {x: 1.2083334, y: 2.0037498}
+    headWidth: 2.035
+    shoulderWidth: 2.2792
+  - source: {fileID: 8048315539659812533, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 0.29166666, y: 4.3820834}
+    upperLip: {x: 0.29166666, y: 3.2479167}
+    shoulders: {x: 0.29166666, y: 3.0870833}
+    headWidth: 1.8958334
+    shoulderWidth: 2.1233335
+  - source: {fileID: 5502201856938215581, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 0.7083333, y: 4.402917}
+    upperLip: {x: 0.7083333, y: 3.2537498}
+    shoulders: {x: 0.7083333, y: 3.1079166}
+    headWidth: 1.9583334
+    shoulderWidth: 2.1933334
+  - source: {fileID: 4669634742392255280, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 0.8229167, y: 3.42375}
+    upperLip: {x: 0.8229167, y: 2.545}
+    shoulders: {x: 0.8229167, y: 2.1287498}
+    headWidth: 1.6875
+    shoulderWidth: 1.89
+  - source: {fileID: -7792688515302224319, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+    crown: {x: 0.26041666, y: 4.402917}
+    upperLip: {x: 0.26041666, y: 3.26875}
+    shoulders: {x: 0.26041666, y: 3.1079166}
+    headWidth: 2.035
+    shoulderWidth: 2.2792
+  - source: {fileID: -7814885851622180520, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: 0.5687204, y: 1.4607583}
+    upperLip: {x: 0.5687204, y: 1.0888152}
+    shoulders: {x: 0.5687204, y: 1.0281515}
+    headWidth: 0.6798104
+    shoulderWidth: 0.76138765
+  - source: {fileID: 100665763937561807, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: -0.22748815, y: 1.718199}
+    upperLip: {x: -0.22748815, y: 1.2954504}
+    shoulders: {x: -0.22748815, y: 1.2112797}
+    headWidth: 0.79658777
+    shoulderWidth: 0.8921783
+  - source: {fileID: 4491553773363795640, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: -0.34123224, y: 1.5708057}
+    upperLip: {x: -0.34123224, y: 1.1704266}
+    shoulders: {x: -0.34123224, y: 1.1036965}
+    headWidth: 0.7109005
+    shoulderWidth: 0.79620856
+  - source: {fileID: -2235351154195819768, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: 0.45971563, y: 0.82322276}
+    upperLip: {x: 0.45971563, y: 0.6341237}
+    shoulders: {x: 0.45971563, y: 0.5445495}
+    headWidth: 0.4379147
+    shoulderWidth: 0.49046448
+  - source: {fileID: 3916232957686723048, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: 0.6066351, y: 1.4696683}
+    upperLip: {x: 0.6066351, y: 1.0727013}
+    shoulders: {x: 0.6066351, y: 1.031754}
+    headWidth: 0.68815166
+    shoulderWidth: 0.77072984
+  - source: {fileID: 406406788635312267, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: -0.31753555, y: 1.7917535}
+    upperLip: {x: -0.31753555, y: 1.3432232}
+    shoulders: {x: -0.31753555, y: 1.2636021}
+    headWidth: 0.8299526
+    shoulderWidth: 0.9295469
+  - source: {fileID: -6293200311382605835, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: -0.34123224, y: 1.6354502}
+    upperLip: {x: -0.34123224, y: 1.1880573}
+    shoulders: {x: -0.34123224, y: 1.1524174}
+    headWidth: 0.6919431
+    shoulderWidth: 0.7749763
+  - source: {fileID: -2377506269105671767, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: 0.109004736, y: 0.77781993}
+    upperLip: {x: 0.109004736, y: 0.60132706}
+    shoulders: {x: 0.109004736, y: 0.51772565}
+    headWidth: 0.40872034
+    shoulderWidth: 0.4577668
+  - source: {fileID: -2196887503453913412, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: 0.45023698, y: 1.4972512}
+    upperLip: {x: 0.45023698, y: 1.1067303}
+    shoulders: {x: 0.45023698, y: 1.0513741}
+    headWidth: 0.7006635
+    shoulderWidth: 0.78474313
+  - source: {fileID: -5163550334645799892, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: -0.2985782, y: 1.8371564}
+    upperLip: {x: -0.2985782, y: 1.4155452}
+    shoulders: {x: -0.2985782, y: 1.290426}
+    headWidth: 0.85914695
+    shoulderWidth: 0.9622446
+  - source: {fileID: 8404264110080747497, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: -0.30805686, y: 1.7179147}
+    upperLip: {x: -0.30805686, y: 1.2834127}
+    shoulders: {x: -0.30805686, y: 1.2083411}
+    headWidth: 0.6635071
+    shoulderWidth: 0.74312794
+  - source: {fileID: -6026028494965505834, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: 0.19905214, y: 0.86170614}
+    upperLip: {x: 0.19905214, y: 0.67620903}
+    shoulders: {x: 0.19905214, y: 0.58834153}
+    headWidth: 0.42957348
+    shoulderWidth: 0.4811223
+  - source: {fileID: -2590680193381940852, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: 0.3127962, y: 1.4699526}
+    upperLip: {x: 0.3127962, y: 1.0509951}
+    shoulders: {x: 0.3127962, y: 1.034692}
+    headWidth: 0.6635071
+    shoulderWidth: 0.74312794
+  - source: {fileID: 1191500906121422154, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: -0.3222749, y: 1.7822748}
+    upperLip: {x: -0.3222749, y: 1.4603795}
+    shoulders: {x: -0.3222749, y: 1.2541234}
+    headWidth: 0.8299526
+    shoulderWidth: 0.9295469
+  - source: {fileID: 2883591642290014917, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: -0.18957347, y: 1.6995261}
+    upperLip: {x: -0.18957347, y: 1.196019}
+    shoulders: {x: -0.18957347, y: 1.1952611}
+    headWidth: 0.6824645
+    shoulderWidth: 0.76436025
+  - source: {fileID: -7105190929462786365, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: 0.1042654, y: 0.8628436}
+    upperLip: {x: 0.1042654, y: 0.6845498}
+    shoulders: {x: 0.1042654, y: 0.6000951}
+    headWidth: 0.412891
+    shoulderWidth: 0.46243793
+  - source: {fileID: 5513592116166098441, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: 0.061611373, y: 1.58}
+    upperLip: {x: 0.061611373, y: 1.2612321}
+    shoulders: {x: 0.061611373, y: 1.110237}
+    headWidth: 0.6445498
+    shoulderWidth: 0.72189575
+  - source: {fileID: -3814736788216332360, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: -0.3744076, y: 1.911564}
+    upperLip: {x: -0.3744076, y: 1.5024647}
+    shoulders: {x: -0.3744076, y: 1.3515638}
+    headWidth: 0.88
+    shoulderWidth: 0.9856
+  - source: {fileID: 6849944551741741434, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: -0.1943128, y: 1.8466351}
+    upperLip: {x: -0.1943128, y: 1.4756397}
+    shoulders: {x: -0.1943128, y: 1.2999053}
+    headWidth: 0.6255924
+    shoulderWidth: 0.7006635
+  - source: {fileID: -4833718048075988696, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: 0.42180094, y: 0.844455}
+    upperLip: {x: 0.42180094, y: 0.6697631}
+    shoulders: {x: 0.42180094, y: 0.5870145}
+    headWidth: 0.40454972
+    shoulderWidth: 0.45309567
+  - source: {fileID: -9112010657012640662, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: 0.4549763, y: 1.5708057}
+    upperLip: {x: 0.4549763, y: 1.1218959}
+    shoulders: {x: 0.4549763, y: 1.1036965}
+    headWidth: 0.6824645
+    shoulderWidth: 0.76436025
+  - source: {fileID: 8818182985857940694, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: -0.009478673, y: 1.6897631}
+    upperLip: {x: -0.009478673, y: 1.2981042}
+    shoulders: {x: -0.009478673, y: 1.1828438}
+    headWidth: 0.7965877
+    shoulderWidth: 0.89217824
+  - source: {fileID: 6055458240627907178, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: -0.033175357, y: 1.7733649}
+    upperLip: {x: -0.033175357, y: 1.2948817}
+    shoulders: {x: -0.033175357, y: 1.2505215}
+    headWidth: 0.7109005
+    shoulderWidth: 0.79620856
+  - source: {fileID: -3879413778065359031, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: 0.1421801, y: 0.8999052}
+    upperLip: {x: 0.1421801, y: 0.71620846}
+    shoulders: {x: 0.1421801, y: 0.6291943}
+    headWidth: 0.42540285
+    shoulderWidth: 0.4764512
+  - source: {fileID: -5140017130653498456, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: 0.123222746, y: 1.5159242}
+    upperLip: {x: 0.123222746, y: 1.0772512}
+    shoulders: {x: 0.123222746, y: 1.0673933}
+    headWidth: 0.70483404
+    shoulderWidth: 0.7894141
+  - source: {fileID: 5849752216738373405, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: -0.047393367, y: 1.6906161}
+    upperLip: {x: -0.047393367, y: 1.2746919}
+    shoulders: {x: -0.047393367, y: 1.1916586}
+    headWidth: 0.78407586
+    shoulderWidth: 0.87816495
+  - source: {fileID: -7338714354979724455, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: -0.07582939, y: 1.8101422}
+    upperLip: {x: -0.07582939, y: 1.3460665}
+    shoulders: {x: -0.07582939, y: 1.2766825}
+    headWidth: 0.6919431
+    shoulderWidth: 0.7749763
+  - source: {fileID: 7655107201393026003, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: 0.45971563, y: 0.77952605}
+    upperLip: {x: 0.45971563, y: 0.61383873}
+    shoulders: {x: 0.45971563, y: 0.5353553}
+    headWidth: 0.38369668
+    shoulderWidth: 0.42974028
+  - source: {fileID: 1572291214889076198, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: 0.42180094, y: 1.5156398}
+    upperLip: {x: 0.42180094, y: 1.0837915}
+    shoulders: {x: 0.42180094, y: 1.0644549}
+    headWidth: 0.7090047
+    shoulderWidth: 0.79408526
+  - source: {fileID: -6960586385347457337, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: -0.15165877, y: 1.7911848}
+    upperLip: {x: -0.15165877, y: 1.3722275}
+    shoulders: {x: -0.15165877, y: 1.2577251}
+    headWidth: 0.8382938
+    shoulderWidth: 0.938889
+  - source: {fileID: -481680312061163011, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: -0.014218009, y: 1.7730806}
+    upperLip: {x: -0.014218009, y: 1.3025593}
+    shoulders: {x: -0.014218009, y: 1.2475829}
+    headWidth: 0.7488152
+    shoulderWidth: 0.838673
+  - source: {fileID: 2186446345093203682, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+    crown: {x: 0.521327, y: 0.86606634}
+    upperLip: {x: 0.521327, y: 0.6481517}
+    shoulders: {x: 0.521327, y: 0.5449289}
+    headWidth: 0.5046446
+    shoulderWidth: 0.56520194
+  - source: {fileID: 474297955, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.035532996, y: 1.8781726}
+    upperLip: {x: -0.035532996, y: 1.4322838}
+    shoulders: {x: -0.035532996, y: 1.3153305}
+    headWidth: 0.884467
+    shoulderWidth: 0.990603
+  - source: {fileID: -1968339973, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.09137056, y: 1.6852791}
+    upperLip: {x: -0.09137056, y: 1.2479192}
+    shoulders: {x: -0.09137056, y: 1.1878172}
+    headWidth: 0.7817259
+    shoulderWidth: 0.875533
+  - source: {fileID: -2057850062, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.005076142, y: 1.6548223}
+    upperLip: {x: -0.005076142, y: 1.200406}
+    shoulders: {x: -0.005076142, y: 1.1516745}
+    headWidth: 0.7906599
+    shoulderWidth: 0.8855391
+  - source: {fileID: -1727043923, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.005076142, y: 1.6852791}
+    upperLip: {x: -0.005076142, y: 1.2337058}
+    shoulders: {x: -0.005076142, y: 1.1849743}
+    headWidth: 0.7817259
+    shoulderWidth: 0.875533
+  - source: {fileID: -1802173657, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.10152284, y: 1.786802}
+    upperLip: {x: -0.10152284, y: 1.3189852}
+    shoulders: {x: -0.10152284, y: 1.2097466}
+    headWidth: 0.90680206
+    shoulderWidth: 1.0156183
+  - source: {fileID: 383688244, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.035532996, y: 1.7055838}
+    upperLip: {x: -0.035532996, y: 1.2682238}
+    shoulders: {x: -0.035532996, y: 1.202436}
+    headWidth: 0.7715736
+    shoulderWidth: 0.86416245
+  - source: {fileID: -1460835232, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.04568536, y: 1.7258884}
+    upperLip: {x: -0.04568536, y: 1.2641627}
+    shoulders: {x: -0.04568536, y: 1.2198988}
+    headWidth: 0.7715736
+    shoulderWidth: 0.86416245
+  - source: {fileID: -1815876720, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.020304568, y: 1.4923857}
+    upperLip: {x: -0.020304568, y: 1.0623351}
+    shoulders: {x: -0.020304568, y: 0.9977668}
+    headWidth: 0.75126904
+    shoulderWidth: 0.8414213
+  - source: {fileID: 71606684, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.020304568, y: 1.9898477}
+    upperLip: {x: -0.020304568, y: 1.4972587}
+    shoulders: {x: -0.020304568, y: 1.3786807}
+    headWidth: 0.9604061
+    shoulderWidth: 1.0756549
+  - source: {fileID: 1070536854, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.49746186, y: 1.8375634}
+    upperLip: {x: -0.49746186, y: 1.3510655}
+    shoulders: {x: -0.49746186, y: 1.2917765}
+    headWidth: 0.80203044
+    shoulderWidth: 0.8982741
+  - source: {fileID: -624512737, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.096446775, y: 1.7258884}
+    upperLip: {x: -0.096446775, y: 1.294213}
+    shoulders: {x: -0.096446775, y: 1.2170559}
+    headWidth: 0.7715736
+    shoulderWidth: 0.86416245
+  - source: {fileID: -1279050970, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.055837564, y: 1.715736}
+    upperLip: {x: -0.055837564, y: 1.273502}
+    shoulders: {x: -0.055837564, y: 1.1898472}
+    headWidth: 0.74111676
+    shoulderWidth: 0.83005077
+  - source: {fileID: -513235168, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.040609177, y: 1.9593909}
+    upperLip: {x: -0.040609177, y: 1.4858881}
+    shoulders: {x: -0.040609177, y: 1.3823354}
+    headWidth: 0.90680206
+    shoulderWidth: 1.0156183
+  - source: {fileID: 760794742, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.27918786, y: 1.7563452}
+    upperLip: {x: -0.27918786, y: 1.3409133}
+    shoulders: {x: -0.27918786, y: 1.2162441}
+    headWidth: 0.8487309
+    shoulderWidth: 0.95057863
+  - source: {fileID: -1604528192, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.39593908, y: 1.5431472}
+    upperLip: {x: -0.39593908, y: 1.2251782}
+    shoulders: {x: -0.39593908, y: 1.0030456}
+    headWidth: 0.8487309
+    shoulderWidth: 0.95057863
+  - source: {fileID: -986671008, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.16243652, y: 1.7664975}
+    upperLip: {x: -0.16243652, y: 1.342538}
+    shoulders: {x: -0.16243652, y: 1.2263964}
+    headWidth: 0.8487309
+    shoulderWidth: 0.95057863
+  - source: {fileID: -263089075, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.11675127, y: 2.0304568}
+    upperLip: {x: -0.11675127, y: 1.5248733}
+    shoulders: {x: -0.11675127, y: 1.413604}
+    headWidth: 0.8629442
+    shoulderWidth: 0.9664975
+  - source: {fileID: -142352311, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.30964467, y: 1.8477157}
+    upperLip: {x: -0.30964467, y: 1.4550254}
+    shoulders: {x: -0.30964467, y: 1.21665}
+    headWidth: 0.822335
+    shoulderWidth: 0.9210152
+  - source: {fileID: -724091886, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: 0.1573604, y: 1.715736}
+    upperLip: {x: 0.1573604, y: 1.3876141}
+    shoulders: {x: 0.1573604, y: 1.1472081}
+    headWidth: 0.89340097
+    shoulderWidth: 1.000609
+  - source: {fileID: -44185956, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: 0.2538071, y: 1.6954315}
+    upperLip: {x: 0.2538071, y: 1.4972587}
+    shoulders: {x: 0.2538071, y: 1.0871068}
+    headWidth: 0.95593905
+    shoulderWidth: 1.0706518
+  - source: {fileID: 2063954772, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: 0.13705584, y: 1.6649746}
+    upperLip: {x: 0.13705584, y: 1.3717766}
+    shoulders: {x: 0.13705584, y: 1.1106602}
+    headWidth: 0.8710659
+    shoulderWidth: 0.9755938
+  - source: {fileID: -1047150012, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: 0.32994923, y: 1.5736041}
+    upperLip: {x: 0.32994923, y: 1.2097459}
+    shoulders: {x: 0.32994923, y: 1.0647717}
+    headWidth: 0.79959387
+    shoulderWidth: 0.8955451
+  - source: {fileID: 1120468971, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: 0.24873096, y: 1.5837563}
+    upperLip: {x: 0.24873096, y: 1.1744162}
+    shoulders: {x: 0.24873096, y: 1.1147207}
+    headWidth: 0.7370558
+    shoulderWidth: 0.82550246
+  - source: {fileID: -1402020409, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: 0.2284264, y: 1.6142132}
+    upperLip: {x: 0.2284264, y: 1.3600003}
+    shoulders: {x: 0.2284264, y: 1.088325}
+    headWidth: 0.8263959
+    shoulderWidth: 0.92556345
+  - source: {fileID: 1460969503, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: 0.04568528, y: 1.7360406}
+    upperLip: {x: 0.04568528, y: 1.2523856}
+    shoulders: {x: 0.04568528, y: 1.1532996}
+    headWidth: 0.915736
+    shoulderWidth: 1.0256244
+  - source: {fileID: 1536416451, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: 0.4111675, y: 1.8274112}
+    upperLip: {x: 0.4111675, y: 1.3336039}
+    shoulders: {x: 0.4111675, y: 1.2873095}
+    headWidth: 0.8121827
+    shoulderWidth: 0.90964466
+  - source: {fileID: 838092844, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: 0.13197969, y: 1.7563452}
+    upperLip: {x: 0.13197969, y: 1.2974617}
+    shoulders: {x: 0.13197969, y: 1.2389848}
+    headWidth: 0.7715736
+    shoulderWidth: 0.86416245
+  - source: {fileID: -558472878, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: 0.08121827, y: 1.7461929}
+    upperLip: {x: 0.08121827, y: 1.297056}
+    shoulders: {x: 0.08121827, y: 1.2174621}
+    headWidth: 0.8121827
+    shoulderWidth: 0.90964466
+  - source: {fileID: -1096106508, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: -0.08121827, y: 1.7563452}
+    upperLip: {x: -0.08121827, y: 1.2986802}
+    shoulders: {x: -0.08121827, y: 1.1707615}
+    headWidth: 0.92020303
+    shoulderWidth: 1.0306274
+  - source: {fileID: 1003457371, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: 0.035532996, y: 1.4517766}
+    upperLip: {x: 0.035532996, y: 1.0290356}
+    shoulders: {x: 0.035532996, y: 0.97137046}
+    headWidth: 0.7549238
+    shoulderWidth: 0.84551466
+  - source: {fileID: 1127196727, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: 0.060913704, y: 1.6548223}
+    upperLip: {x: 0.060913704, y: 1.236142}
+    shoulders: {x: 0.060913704, y: 1.1658883}
+    headWidth: 0.7683249
+    shoulderWidth: 0.8605239
+  - source: {fileID: 1272646294, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+    crown: {x: 0.020304568, y: 1.6243654}
+    upperLip: {x: 0.020304568, y: 1.1622335}
+    shoulders: {x: 0.020304568, y: 1.1013198}
+    headWidth: 0.80203044
+    shoulderWidth: 0.8982741
+  - source: {fileID: 5313522736226388174, guid: 87fd385cfc00dbc438e334a90673989a, type: 3}
+    crown: {x: 0.27801725, y: 1.9741379}
+    upperLip: {x: 0.27801725, y: 1.4955174}
+    shoulders: {x: 0.27801725, y: 1.412931}
+    headWidth: 0.7112069
+    shoulderWidth: 0.79655176
+  - source: {fileID: 3754445801136585864, guid: 87fd385cfc00dbc438e334a90673989a, type: 3}
+    crown: {x: 0.22844827, y: 2.0086207}
+    upperLip: {x: 0.22844827, y: 1.5212069}
+    shoulders: {x: 0.22844827, y: 1.4401724}
+    headWidth: 0.6810345
+    shoulderWidth: 0.7627587
+  - source: {fileID: 5958848851885137126, guid: 87fd385cfc00dbc438e334a90673989a, type: 3}
+    crown: {x: 0.2262931, y: 1.9655173}
+    upperLip: {x: 0.2262931, y: 1.4881034}
+    shoulders: {x: 0.2262931, y: 1.4067241}
+    headWidth: 0.60775864
+    shoulderWidth: 0.6806897
+  - source: {fileID: 2127731975873489125, guid: 87fd385cfc00dbc438e334a90673989a, type: 3}
+    crown: {x: -0.23060344, y: 2}
+    upperLip: {x: -0.23060344, y: 1.5236206}
+    shoulders: {x: -0.23060344, y: 1.4315517}
+    headWidth: 0.625
+    shoulderWidth: 0.7
+  - source: {fileID: 5691888340913294880, guid: 87fd385cfc00dbc438e334a90673989a, type: 3}
+    crown: {x: -0.10560345, y: 1.9439656}
+    upperLip: {x: -0.10560345, y: 1.4727585}
+    shoulders: {x: -0.10560345, y: 1.391207}
+    headWidth: 0.6896552
+    shoulderWidth: 0.7724138
+  - source: {fileID: -5500254944107877642, guid: 87fd385cfc00dbc438e334a90673989a, type: 3}
+    crown: {x: 0.08189655, y: 1.9655173}
+    upperLip: {x: 0.08189655, y: 1.4910345}
+    shoulders: {x: 0.08189655, y: 1.409138}
+    headWidth: 0.64224136
+    shoulderWidth: 0.71931034
+  - source: {fileID: -832048789789323048, guid: 87fd385cfc00dbc438e334a90673989a, type: 3}
+    crown: {x: 0.10560345, y: 1.9655173}
+    upperLip: {x: 0.10560345, y: 1.4974138}
+    shoulders: {x: 0.10560345, y: 1.3886207}
+    headWidth: 0.61206895
+    shoulderWidth: 0.68551725
+  - source: {fileID: -1127534826174694016, guid: 87fd385cfc00dbc438e334a90673989a, type: 3}
+    crown: {x: -0.004310345, y: 1.9655173}
+    upperLip: {x: -0.004310345, y: 1.4953449}
+    shoulders: {x: -0.004310345, y: 1.4067241}
+    headWidth: 0.70689654
+    shoulderWidth: 0.79172415
+  - source: {fileID: 6279428711994198027, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: 0.5729167, y: 3.4791667}
+    upperLip: {x: 0.5729167, y: 2.594167}
+    shoulders: {x: 0.5729167, y: 2.4700012}
+    headWidth: 1.5858333
+    shoulderWidth: 1.7761333
+  - source: {fileID: 3867611651140057404, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: 0.6145833, y: 2.375}
+    upperLip: {x: 0.6145833, y: 1.7950007}
+    shoulders: {x: 0.6145833, y: 1.6750005}
+    headWidth: 1.1
+    shoulderWidth: 1.232
+  - source: {fileID: -6810706592416429989, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: 0.19791667, y: 3.4791667}
+    upperLip: {x: 0.19791667, y: 2.6175003}
+    shoulders: {x: 0.19791667, y: 2.4700012}
+    headWidth: 1.5858333
+    shoulderWidth: 1.7761333
+  - source: {fileID: 6552669789029872768, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: -0.020833334, y: 3.9375}
+    upperLip: {x: -0.020833334, y: 3.034167}
+    shoulders: {x: -0.020833334, y: 2.8174999}
+    headWidth: 1.76
+    shoulderWidth: 1.9712
+  - source: {fileID: -5300255243337090337, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: -1.90625, y: 3.9375}
+    upperLip: {x: -1.90625, y: 3.7541656}
+    shoulders: {x: -1.90625, y: 2.8174999}
+    headWidth: 1.3333334
+    shoulderWidth: 1.4933333
+  - source: {fileID: -5700936102615547138, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: -0.29166666, y: 3.9166667}
+    upperLip: {x: -0.29166666, y: 3.034167}
+    shoulders: {x: -0.29166666, y: 2.7966664}
+    headWidth: 1.76
+    shoulderWidth: 1.9712
+  - source: {fileID: -8543810006780978883, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: -0.083333336, y: 3.8125}
+    upperLip: {x: -0.083333336, y: 3.034167}
+    shoulders: {x: -0.083333336, y: 2.6924999}
+    headWidth: 1.76
+    shoulderWidth: 1.9712
+  - source: {fileID: -2153822292572021976, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: -1.3333334, y: 3.9583333}
+    upperLip: {x: -1.3333334, y: 3.8291676}
+    shoulders: {x: -1.3333334, y: 2.8383331}
+    headWidth: 1.7083334
+    shoulderWidth: 1.9133334
+  - source: {fileID: 8552646910841459929, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: -0.15625, y: 3.7916667}
+    upperLip: {x: -0.15625, y: 3.0491664}
+    shoulders: {x: -0.15625, y: 2.6716664}
+    headWidth: 1.76
+    shoulderWidth: 1.9712
+  - source: {fileID: -7383684540169410097, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: 0.6875, y: 3.7708333}
+    upperLip: {x: 0.6875, y: 2.9583333}
+    shoulders: {x: 0.6875, y: 2.6508331}
+    headWidth: 1.76
+    shoulderWidth: 1.9712
+  - source: {fileID: -7017042496898654829, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: -0.7291667, y: 3.9583333}
+    upperLip: {x: -0.7291667, y: 3.7691662}
+    shoulders: {x: -0.7291667, y: 2.8383331}
+    headWidth: 1.76
+    shoulderWidth: 1.9712
+  - source: {fileID: 7837587503038082115, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: -0.072916664, y: 3.9791667}
+    upperLip: {x: -0.072916664, y: 2.9641674}
+    shoulders: {x: -0.072916664, y: 2.8591664}
+    headWidth: 1.76
+    shoulderWidth: 1.9712
+  - source: {fileID: -6705756733912159768, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: -0.45833334, y: 3.8958333}
+    upperLip: {x: -0.45833334, y: 3.034167}
+    shoulders: {x: -0.45833334, y: 2.7758331}
+    headWidth: 1.76
+    shoulderWidth: 1.9712
+  - source: {fileID: -723794157546723627, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: 0.15625, y: 3.8125}
+    upperLip: {x: 0.15625, y: 3.7691662}
+    shoulders: {x: 0.15625, y: 2.6924999}
+    headWidth: 1.76
+    shoulderWidth: 1.9712
+  - source: {fileID: -2978541085581800714, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: -0.114583336, y: 3.9791667}
+    upperLip: {x: -0.114583336, y: 3.034167}
+    shoulders: {x: -0.114583336, y: 2.8591664}
+    headWidth: 1.76
+    shoulderWidth: 1.9712
+  - source: {fileID: -846051781, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: 0.23958333, y: 3.9166667}
+    upperLip: {x: 0.23958333, y: 3.0766666}
+    shoulders: {x: 0.23958333, y: 2.7966664}
+    headWidth: 1.76
+    shoulderWidth: 1.9712
+  - source: {fileID: 984564751, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: -1.1145834, y: 3.8958333}
+    upperLip: {x: -1.1145834, y: 3.1358337}
+    shoulders: {x: -1.1145834, y: 2.7758331}
+    headWidth: 0.72
+    shoulderWidth: 0.80640006
+  - source: {fileID: 1798538694, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: 0.6458333, y: 3.875}
+    upperLip: {x: 0.6458333, y: 3.034167}
+    shoulders: {x: 0.6458333, y: 2.7549999}
+    headWidth: 1.76
+    shoulderWidth: 1.9712
+  - source: {fileID: 1492967588, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: 0.8541667, y: 3.9583333}
+    upperLip: {x: 0.8541667, y: 3.043333}
+    shoulders: {x: 0.8541667, y: 2.8383331}
+    headWidth: 1.76
+    shoulderWidth: 1.9712
+  - source: {fileID: 970911305, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: -1.875, y: 3.8958333}
+    upperLip: {x: -1.875, y: 3.86}
+    shoulders: {x: -1.875, y: 2.7758331}
+    headWidth: 1.76
+    shoulderWidth: 1.9712
+  - source: {fileID: 298583096, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: 0.34375, y: 3.9791667}
+    upperLip: {x: 0.34375, y: 3.0166664}
+    shoulders: {x: 0.34375, y: 2.8591664}
+    headWidth: 1.76
+    shoulderWidth: 1.9712
+  - source: {fileID: 309981979, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: -0.32291666, y: 3.8333333}
+    upperLip: {x: -0.32291666, y: 2.9183333}
+    shoulders: {x: -0.32291666, y: 2.7541666}
+    headWidth: 1.6958333
+    shoulderWidth: 1.8993334
+  - source: {fileID: -802694947, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: -0.33333334, y: 2.6458333}
+    upperLip: {x: -0.33333334, y: 1.9699999}
+    shoulders: {x: -0.33333334, y: 1.8816667}
+    headWidth: 1.2008333
+    shoulderWidth: 1.3449333
+  - source: {fileID: -1459681983, guid: 06c9f891723d86548a06018ad36231b5, type: 3}
+    crown: {x: -0.42708334, y: 3.8125}
+    upperLip: {x: -0.42708334, y: 2.8975}
+    shoulders: {x: -0.42708334, y: 2.7391665}
+    headWidth: 1.6866666
+    shoulderWidth: 1.8890666
+  - source: {fileID: 4518723917606419137, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: 0.4170616, y: 1.5260663}
+    upperLip: {x: 0.4170616, y: 1.151469}
+    shoulders: {x: 0.4170616, y: 1.0881522}
+    headWidth: 0.68815166
+    shoulderWidth: 0.77072984
+  - source: {fileID: -681320032773290903, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: -0.14691943, y: 1.7630332}
+    upperLip: {x: -0.14691943, y: 1.3645494}
+    shoulders: {x: -0.14691943, y: 1.2534596}
+    headWidth: 0.80075824
+    shoulderWidth: 0.8968492
+  - source: {fileID: 2202245728880164866, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: -0.1421801, y: 1.6398104}
+    upperLip: {x: -0.1421801, y: 1.2405688}
+    shoulders: {x: -0.1421801, y: 1.1700468}
+    headWidth: 0.73819906
+    shoulderWidth: 0.82678294
+  - source: {fileID: -945699331825400734, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: 0.2606635, y: 0.90047395}
+    upperLip: {x: 0.2606635, y: 0.67526054}
+    shoulders: {x: 0.2606635, y: 0.62445503}
+    headWidth: 0.43374407
+    shoulderWidth: 0.48579335
+  - source: {fileID: -6732714279618930654, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: 0.44549763, y: 1.5165877}
+    upperLip: {x: 0.44549763, y: 1.1446446}
+    shoulders: {x: 0.44549763, y: 1.0813266}
+    headWidth: 0.68398106
+    shoulderWidth: 0.7660588
+  - source: {fileID: -6491499087496570030, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: -0.22274882, y: 1.8104266}
+    upperLip: {x: -0.22274882, y: 1.3808535}
+    shoulders: {x: -0.22274882, y: 1.2928913}
+    headWidth: 0.81327015
+    shoulderWidth: 0.91086257
+  - source: {fileID: -6873224529910344925, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: -0.1563981, y: 1.6682464}
+    upperLip: {x: -0.1563981, y: 1.2621804}
+    shoulders: {x: -0.1563981, y: 1.1878668}
+    headWidth: 0.7548815
+    shoulderWidth: 0.84546727
+  - source: {fileID: -7013897024844222023, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: 0.3649289, y: 0.8341232}
+    upperLip: {x: 0.3649289, y: 0.6252129}
+    shoulders: {x: 0.3649289, y: 0.57933646}
+    headWidth: 0.40037912
+    shoulderWidth: 0.4484246
+  - source: {fileID: -5340133624331067209, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: 0.39810428, y: 1.563981}
+    upperLip: {x: 0.39810428, y: 1.1772507}
+    shoulders: {x: 0.39810428, y: 1.1127964}
+    headWidth: 0.7090047
+    shoulderWidth: 0.79408526
+  - source: {fileID: 7986391594562057891, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: -0.1800948, y: 1.8483412}
+    upperLip: {x: -0.1800948, y: 1.4214214}
+    shoulders: {x: -0.1800948, y: 1.3122269}
+    headWidth: 0.84246445
+    shoulderWidth: 0.9435602
+  - source: {fileID: 4656495663337077847, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: 0.109004736, y: 1.7535545}
+    upperLip: {x: 0.109004736, y: 1.3217056}
+    shoulders: {x: 0.109004736, y: 1.2519428}
+    headWidth: 0.78824645
+    shoulderWidth: 0.88283604
+  - source: {fileID: 5487801324482138831, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: 0.34123224, y: 0.9099526}
+    upperLip: {x: 0.34123224, y: 0.71886224}
+    shoulders: {x: 0.34123224, y: 0.6445498}
+    headWidth: 0.4170616
+    shoulderWidth: 0.467109
+  - source: {fileID: 7053665626427345394, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: 0.19905214, y: 1.5450237}
+    upperLip: {x: 0.19905214, y: 1.1715637}
+    shoulders: {x: 0.19905214, y: 1.1018008}
+    headWidth: 0.6964929
+    shoulderWidth: 0.78007203
+  - source: {fileID: 5588591942763843068, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: -0.1421801, y: 1.8483412}
+    upperLip: {x: -0.1421801, y: 1.403981}
+    shoulders: {x: -0.1421801, y: 1.3175355}
+    headWidth: 0.8341232
+    shoulderWidth: 0.934218
+  - source: {fileID: 4158882993653972359, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: -0.06635071, y: 1.7535545}
+    upperLip: {x: -0.06635071, y: 1.3296685}
+    shoulders: {x: -0.06635071, y: 1.2492895}
+    headWidth: 0.79241705
+    shoulderWidth: 0.8875071
+  - source: {fileID: 4595687503702374193, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: 0.5829384, y: 0.91943127}
+    upperLip: {x: 0.5829384, y: 0.73753554}
+    shoulders: {x: 0.5829384, y: 0.6513741}
+    headWidth: 0.42123222
+    shoulderWidth: 0.4717801
+  - source: {fileID: 2650420252620324121, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: -0.0047393367, y: 1.6587678}
+    upperLip: {x: -0.0047393367, y: 1.2352607}
+    shoulders: {x: -0.0047393367, y: 1.1863505}
+    headWidth: 0.74236965
+    shoulderWidth: 0.83145404
+  - source: {fileID: 9068539346135534454, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: -0.04265403, y: 1.9526067}
+    upperLip: {x: -0.04265403, y: 1.4889101}
+    shoulders: {x: -0.04265403, y: 1.3952608}
+    headWidth: 0.8758294
+    shoulderWidth: 0.98092896
+  - source: {fileID: -8502286209702807984, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: -0.24170616, y: 1.9052132}
+    upperLip: {x: -0.24170616, y: 1.432417}
+    shoulders: {x: -0.24170616, y: 1.3637915}
+    headWidth: 0.8056872
+    shoulderWidth: 0.9023697
+  - source: {fileID: -1735492791431341851, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: 0.5687204, y: 0.90047395}
+    upperLip: {x: 0.5687204, y: 0.72834146}
+    shoulders: {x: 0.5687204, y: 0.6377254}
+    headWidth: 0.412891
+    shoulderWidth: 0.46243793
+  - source: {fileID: 9090354227190518899, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: 0.37914693, y: 1.6492891}
+    upperLip: {x: 0.37914693, y: 1.2379144}
+    shoulders: {x: 0.37914693, y: 1.1768718}
+    headWidth: 0.74236965
+    shoulderWidth: 0.83145404
+  - source: {fileID: -4998921602696412058, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: -0.037914693, y: 1.8009479}
+    upperLip: {x: -0.037914693, y: 1.3766824}
+    shoulders: {x: -0.037914693, y: 1.2860663}
+    headWidth: 0.8090995
+    shoulderWidth: 0.90619147
+  - source: {fileID: 5777345433481562030, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: -0.17061612, y: 1.7630332}
+    upperLip: {x: -0.17061612, y: 1.3418009}
+    shoulders: {x: -0.17061612, y: 1.2561139}
+    headWidth: 0.7965877
+    shoulderWidth: 0.89217824
+  - source: {fileID: -8329703435042528231, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: 0.47393364, y: 0.93838865}
+    upperLip: {x: 0.47393364, y: 0.7673936}
+    shoulders: {x: 0.47393364, y: 0.6623697}
+    headWidth: 0.43374407
+    shoulderWidth: 0.48579335
+  - source: {fileID: -7589360409550992510, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: 0.25118482, y: 1.563981}
+    upperLip: {x: 0.25118482, y: 1.1704266}
+    shoulders: {x: 0.25118482, y: 1.1181042}
+    headWidth: 0.7006635
+    shoulderWidth: 0.78474313
+  - source: {fileID: 1162274276226014081, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: -0.16587678, y: 1.7725118}
+    upperLip: {x: -0.16587678, y: 1.3539336}
+    shoulders: {x: -0.16587678, y: 1.2629383}
+    headWidth: 0.80075824
+    shoulderWidth: 0.8968492
+  - source: {fileID: -6582094128458419436, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: -0.22748815, y: 1.8578199}
+    upperLip: {x: -0.22748815, y: 1.406635}
+    shoulders: {x: -0.22748815, y: 1.3270142}
+    headWidth: 0.8341232
+    shoulderWidth: 0.934218
+  - source: {fileID: 8500589839561858934, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: 0.3886256, y: 0.79620856}
+    upperLip: {x: 0.3886256, y: 0.63696694}
+    shoulders: {x: 0.3886256, y: 0.5467298}
+    headWidth: 0.39203793
+    shoulderWidth: 0.43908247
+  - source: {fileID: -8791279697794696790, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: 0.3127962, y: 1.5734597}
+    upperLip: {x: 0.3127962, y: 1.1893839}
+    shoulders: {x: 0.3127962, y: 1.1196208}
+    headWidth: 0.71317536
+    shoulderWidth: 0.7987564
+  - source: {fileID: -8120982646779821958, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: -0.11374407, y: 1.8009479}
+    upperLip: {x: -0.11374407, y: 1.375545}
+    shoulders: {x: -0.11374407, y: 1.2834122}
+    headWidth: 0.81327015
+    shoulderWidth: 0.91086257
+  - source: {fileID: 4162438205537428103, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: -0.23696682, y: 1.7819905}
+    upperLip: {x: -0.23696682, y: 1.3300475}
+    shoulders: {x: -0.23696682, y: 1.2697631}
+    headWidth: 0.8049289
+    shoulderWidth: 0.9015204
+  - source: {fileID: -1828565110903951727, guid: df475aa8fa7eb2449831488f1b0c559e, type: 3}
+    crown: {x: 0.11848341, y: 0.9099526}
+    upperLip: {x: 0.11848341, y: 0.72796214}
+    shoulders: {x: 0.11848341, y: 0.6127014}
+    headWidth: 0.46710902
+    shoulderWidth: 0.5231621
+  - source: {fileID: -7188167581485489867, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: -0.12182741, y: 1.9593909}
+    upperLip: {x: -0.12182741, y: 1.5236543}
+    shoulders: {x: -0.12182741, y: 1.390863}
+    headWidth: 0.89340097
+    shoulderWidth: 1.000609
+  - source: {fileID: -1437170539859815307, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: -0.21827412, y: 1.7664975}
+    upperLip: {x: -0.21827412, y: 1.3116746}
+    shoulders: {x: -0.21827412, y: 1.260508}
+    headWidth: 0.7951269
+    shoulderWidth: 0.89054215
+  - source: {fileID: 2369917420227477356, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: 0.20812182, y: 1.7664975}
+    upperLip: {x: 0.20812182, y: 1.3031471}
+    shoulders: {x: 0.20812182, y: 1.260508}
+    headWidth: 0.7951269
+    shoulderWidth: 0.89054215
+  - source: {fileID: -7443684382499092020, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: 0.20812182, y: 1.7461929}
+    upperLip: {x: 0.20812182, y: 1.2873101}
+    shoulders: {x: 0.20812182, y: 1.245888}
+    headWidth: 0.7861929
+    shoulderWidth: 0.880536
+  - source: {fileID: 5971147658053335393, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: -0.23350254, y: 2}
+    upperLip: {x: -0.23350254, y: 1.5524877}
+    shoulders: {x: -0.23350254, y: 1.4229445}
+    headWidth: 0.90680206
+    shoulderWidth: 1.0156183
+  - source: {fileID: 7168516214989131718, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: 0.005076142, y: 1.7664975}
+    upperLip: {x: 0.005076142, y: 1.3189852}
+    shoulders: {x: 0.005076142, y: 1.257665}
+    headWidth: 0.79959387
+    shoulderWidth: 0.8955451
+  - source: {fileID: 1198944167958829415, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: -0.23857868, y: 1.7563452}
+    upperLip: {x: -0.23857868, y: 1.3145176}
+    shoulders: {x: -0.23857868, y: 1.2503557}
+    headWidth: 0.7951269
+    shoulderWidth: 0.89054215
+  - source: {fileID: -1840461542055268937, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: -0.13197969, y: 1.7360406}
+    upperLip: {x: -0.13197969, y: 1.294213}
+    shoulders: {x: -0.13197969, y: 1.2385787}
+    headWidth: 0.7817259
+    shoulderWidth: 0.875533
+  - source: {fileID: 3561169306021149668, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: -0.15228426, y: 2.101523}
+    upperLip: {x: -0.15228426, y: 1.6393907}
+    shoulders: {x: -0.15228426, y: 1.4903558}
+    headWidth: 0.9604061
+    shoulderWidth: 1.0756549
+  - source: {fileID: -8875848874535408971, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: -0.2893401, y: 1.8883249}
+    upperLip: {x: -0.2893401, y: 1.4127922}
+    shoulders: {x: -0.2893401, y: 1.3482238}
+    headWidth: 0.8487309
+    shoulderWidth: 0.95057863
+  - source: {fileID: 267677573488050870, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: 0.065989845, y: 1.786802}
+    upperLip: {x: 0.065989845, y: 1.3490356}
+    shoulders: {x: 0.065989845, y: 1.2751267}
+    headWidth: 0.80406094
+    shoulderWidth: 0.9005483
+  - source: {fileID: 4094931103392391097, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: 0.040609136, y: 1.8781726}
+    upperLip: {x: 0.040609136, y: 1.4156339}
+    shoulders: {x: 0.040609136, y: 1.3409133}
+    headWidth: 0.80203044
+    shoulderWidth: 0.8982741
+  - source: {fileID: 4696377556503305304, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: -0.2538071, y: 2.0203047}
+    upperLip: {x: -0.2538071, y: 1.5541112}
+    shoulders: {x: -0.2538071, y: 1.4404061}
+    headWidth: 0.911269
+    shoulderWidth: 1.0206213
+  - source: {fileID: -7137718659119645307, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: -0.42131978, y: 1.8274112}
+    upperLip: {x: -0.42131978, y: 1.525279}
+    shoulders: {x: -0.42131978, y: 1.253198}
+    headWidth: 0.90233505
+    shoulderWidth: 1.0106152
+  - source: {fileID: -4415295500634778022, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: -0.25888324, y: 1.7766497}
+    upperLip: {x: -0.25888324, y: 1.4615225}
+    shoulders: {x: -0.25888324, y: 1.2365481}
+    headWidth: 0.8487309
+    shoulderWidth: 0.95057863
+  - source: {fileID: 5312073589415766990, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: 0.05076142, y: 1.8477157}
+    upperLip: {x: 0.05076142, y: 1.457056}
+    shoulders: {x: 0.05076142, y: 1.3047718}
+    headWidth: 0.853198
+    shoulderWidth: 0.9555818
+  - source: {fileID: -2525796112024059952, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: -0.07106599, y: 2.111675}
+    upperLip: {x: -0.07106599, y: 1.6105585}
+    shoulders: {x: -0.07106599, y: 1.5090357}
+    headWidth: 0.94700503
+    shoulderWidth: 1.0606457
+  - source: {fileID: 6998818197579131434, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: -0.20812182, y: 1.9390863}
+    upperLip: {x: -0.20812182, y: 1.6353301}
+    shoulders: {x: -0.20812182, y: 1.3222334}
+    headWidth: 0.7817259
+    shoulderWidth: 0.875533
+  - source: {fileID: 267558039914595939, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: 0.24873096, y: 1.6954315}
+    upperLip: {x: 0.24873096, y: 1.3868018}
+    shoulders: {x: 0.24873096, y: 1.1667004}
+    headWidth: 0.83086294
+    shoulderWidth: 0.9305665
+  - source: {fileID: 4065600601067408853, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: -0.04568528, y: 1.7055838}
+    upperLip: {x: -0.04568528, y: 1.5394925}
+    shoulders: {x: -0.04568528, y: 1.1313705}
+    headWidth: 0.90233505
+    shoulderWidth: 1.0106152
+  - source: {fileID: 5037643610757449118, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: 0.1928934, y: 1.7766497}
+    upperLip: {x: 0.1928934, y: 1.5886292}
+    shoulders: {x: 0.1928934, y: 1.1569545}
+    headWidth: 0.9738071
+    shoulderWidth: 1.0906639
+  - source: {fileID: 8787919916700032407, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: 0.43654823, y: 1.6852791}
+    upperLip: {x: 0.43654823, y: 1.5894417}
+    shoulders: {x: 0.43654823, y: 1.0542135}
+    headWidth: 0.65989846
+    shoulderWidth: 0.7390863
+  - source: {fileID: 3990191869927893060, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: 0.08629441, y: 1.5634518}
+    upperLip: {x: 0.08629441, y: 1.1352285}
+    shoulders: {x: 0.08629441, y: 0.93238604}
+    headWidth: 0.4467005
+    shoulderWidth: 0.5003046
+  - source: {fileID: 486458268585029981, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: 0.39593908, y: 1.6243654}
+    upperLip: {x: 0.39593908, y: 1.5906599}
+    shoulders: {x: 0.39593908, y: 0.9932998}
+    headWidth: 0.7715736
+    shoulderWidth: 0.86416245
+  - source: {fileID: -4682883994221787740, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: 0, y: 2.071066}
+    upperLip: {x: 0, y: 1.5829443}
+    shoulders: {x: 0, y: 1.479797}
+    headWidth: 0.929137
+    shoulderWidth: 1.0406334
+  - source: {fileID: 5274823897106117525, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: 0.25888324, y: 1.8781726}
+    upperLip: {x: 0.25888324, y: 1.4099493}
+    shoulders: {x: 0.25888324, y: 1.3409135}
+    headWidth: 0.844264
+    shoulderWidth: 0.94557565
+  - source: {fileID: -8783574464246500436, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: -0.21827412, y: 1.8071066}
+    upperLip: {x: -0.21827412, y: 1.5301523}
+    shoulders: {x: -0.21827412, y: 1.1902537}
+    headWidth: 0.80203044
+    shoulderWidth: 0.8982741
+  - source: {fileID: -7228311306099619025, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: 0.18781726, y: 1.8477157}
+    upperLip: {x: 0.18781726, y: 1.3823351}
+    shoulders: {x: 0.18781726, y: 1.3218275}
+    headWidth: 0.8121827
+    shoulderWidth: 0.90964466
+  - source: {fileID: -7299060350793554677, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: -0.17258883, y: 1.9695431}
+    upperLip: {x: -0.17258883, y: 1.5654823}
+    shoulders: {x: -0.17258883, y: 1.3868021}
+    headWidth: 0.915736
+    shoulderWidth: 1.0256244
+  - source: {fileID: 8545127472796323417, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: 0.05076142, y: 1.6954315}
+    upperLip: {x: 0.05076142, y: 1.2767512}
+    shoulders: {x: 0.05076142, y: 1.2093401}
+    headWidth: 0.76385784
+    shoulderWidth: 0.8555208
+  - source: {fileID: 3530343612846239564, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: -0.18781726, y: 1.7258884}
+    upperLip: {x: -0.18781726, y: 1.2998984}
+    shoulders: {x: -0.18781726, y: 1.231269}
+    headWidth: 0.7772589
+    shoulderWidth: 0.87052995
+  - source: {fileID: -1720914409801098091, guid: 9d74ab52086814e448fcad9f90fff9d0, type: 3}
+    crown: {x: 0.2893401, y: 1.7969543}
+    upperLip: {x: 0.2893401, y: 1.3348223}
+    shoulders: {x: 0.2893401, y: 1.2824366}
+    headWidth: 0.8085279
+    shoulderWidth: 0.90555125
+  - source: {fileID: -151888157753275134, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: 0.33333334, y: 1.825045}
+    upperLip: {x: 0.33333334, y: 1.3551348}
+    shoulders: {x: 0.33333334, y: 1.2852248}
+    headWidth: 0.7657658
+    shoulderWidth: 0.8576577
+  - source: {fileID: 2801344051716206506, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: -0.09009009, y: 1.825045}
+    upperLip: {x: -0.09009009, y: 1.3172975}
+    shoulders: {x: -0.09009009, y: 1.2852248}
+    headWidth: 0.7477477
+    shoulderWidth: 0.83747745
+  - source: {fileID: -5513189206745262669, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: 0.24324325, y: 1.6989189}
+    upperLip: {x: 0.24324325, y: 1.3198202}
+    shoulders: {x: 0.24324325, y: 1.1590987}
+    headWidth: 0.6396396
+    shoulderWidth: 0.7163964
+  - source: {fileID: -81799406, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: 0.2792793, y: 1.9219819}
+    upperLip: {x: 0.2792793, y: 1.3717121}
+    shoulders: {x: 0.2792793, y: 1.3619816}
+    headWidth: 0.7927928
+    shoulderWidth: 0.88792795
+  - source: {fileID: -1106403875, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: -0.14414415, y: 1.9219819}
+    upperLip: {x: -0.14414415, y: 1.4549552}
+    shoulders: {x: -0.14414415, y: 1.3619816}
+    headWidth: 0.7297297
+    shoulderWidth: 0.8172973
+  - source: {fileID: 1017902804, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: 0.17567568, y: 1.9219819}
+    upperLip: {x: 0.17567568, y: 1.3490093}
+    shoulders: {x: 0.17567568, y: 1.3619816}
+    headWidth: 0.4774775
+    shoulderWidth: 0.5347748
+  - source: {fileID: -1145365069, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: 0.2027027, y: 1.8681982}
+    upperLip: {x: 0.2027027, y: 1.4206301}
+    shoulders: {x: 0.2027027, y: 1.3107207}
+    headWidth: 0.7567568
+    shoulderWidth: 0.8475676
+  - source: {fileID: 1807051006, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: -0.11261261, y: 1.8591892}
+    upperLip: {x: -0.11261261, y: 1.4206301}
+    shoulders: {x: -0.11261261, y: 1.3017117}
+    headWidth: 0.7117117
+    shoulderWidth: 0.7971171
+  - source: {fileID: -534834695, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: 0.117117114, y: 1.633964}
+    upperLip: {x: 0.117117114, y: 1.3954055}
+    shoulders: {x: 0.117117114, y: 1.0764865}
+    headWidth: 0.3583784
+    shoulderWidth: 0.40138382
+  - source: {fileID: 262382602, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: -0.22522523, y: 1.9039639}
+    upperLip: {x: -0.22522523, y: 1.5239635}
+    shoulders: {x: -0.22522523, y: 1.3439636}
+    headWidth: 0.7027027
+    shoulderWidth: 0.787027
+  - source: {fileID: 1538165506, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: 0.009009009, y: 1.8949549}
+    upperLip: {x: 0.009009009, y: 1.5149544}
+    shoulders: {x: 0.009009009, y: 1.3349546}
+    headWidth: 0.7027027
+    shoulderWidth: 0.787027
+  - source: {fileID: -1347016491, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: 0, y: 1.9309909}
+    upperLip: {x: 0, y: 1.5509905}
+    shoulders: {x: 0, y: 1.3709906}
+    headWidth: 0.64
+    shoulderWidth: 0.7168
+  - source: {fileID: 1647550536, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: -0.22972973, y: 1.9309909}
+    upperLip: {x: -0.22972973, y: 1.550991}
+    shoulders: {x: -0.22972973, y: 1.3709912}
+    headWidth: 0.7297297
+    shoulderWidth: 0.8172973
+  - source: {fileID: -2137068988, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: 0, y: 1.9309909}
+    upperLip: {x: 0, y: 1.550991}
+    shoulders: {x: 0, y: 1.3709912}
+    headWidth: 0.7027027
+    shoulderWidth: 0.787027
+  - source: {fileID: -497023765, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: 0.067567565, y: 1.9129729}
+    upperLip: {x: 0.067567565, y: 1.532973}
+    shoulders: {x: 0.067567565, y: 1.3529732}
+    headWidth: 0.36
+    shoulderWidth: 0.40320003
+  - source: {fileID: -1713227884, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: -0.009009009, y: 1.9222523}
+    upperLip: {x: -0.009009009, y: 1.472162}
+    shoulders: {x: -0.009009009, y: 1.3647747}
+    headWidth: 0.7747748
+    shoulderWidth: 0.8677478
+  - source: {fileID: 185843136, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: 0.1981982, y: 1.9132433}
+    upperLip: {x: 0.1981982, y: 1.466036}
+    shoulders: {x: 0.1981982, y: 1.3557657}
+    headWidth: 0.7477477
+    shoulderWidth: 0.83747745
+  - source: {fileID: -1575674039, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: 0.08558559, y: 1.9222523}
+    upperLip: {x: 0.08558559, y: 1.4494597}
+    shoulders: {x: 0.08558559, y: 1.3647747}
+    headWidth: 0.3963964
+    shoulderWidth: 0.44396397
+  - source: {fileID: -186310055, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: -0.11261261, y: 1.9309909}
+    upperLip: {x: -0.11261261, y: 1.4045045}
+    shoulders: {x: -0.11261261, y: 1.370991}
+    headWidth: 0.7747748
+    shoulderWidth: 0.8677478
+  - source: {fileID: -618344534, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: 0.13063063, y: 1.9309909}
+    upperLip: {x: 0.13063063, y: 1.3994595}
+    shoulders: {x: 0.13063063, y: 1.370991}
+    headWidth: 0.7387387
+    shoulderWidth: 0.8273874
+  - source: {fileID: 1405766967, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: -0.1981982, y: 1.8859459}
+    upperLip: {x: -0.1981982, y: 1.391892}
+    shoulders: {x: -0.1981982, y: 1.325946}
+    headWidth: 0.6936937
+    shoulderWidth: 0.77693695
+  - source: {fileID: 1166295302, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: -0.14414415, y: 1.8436036}
+    upperLip: {x: -0.14414415, y: 1.3567568}
+    shoulders: {x: -0.14414415, y: 1.3088288}
+    headWidth: 0.8378378
+    shoulderWidth: 0.93837833
+  - source: {fileID: 1177014017, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: 0.067567565, y: 1.8436036}
+    upperLip: {x: 0.067567565, y: 1.3491892}
+    shoulders: {x: 0.067567565, y: 1.3088288}
+    headWidth: 0.7387387
+    shoulderWidth: 0.8273874
+  - source: {fileID: 188626876, guid: 570c30980cd465a46ad5800de5670688, type: 3}
+    crown: {x: -0.24324325, y: 1.6721622}
+    upperLip: {x: -0.24324325, y: 1.3352252}
+    shoulders: {x: -0.24324325, y: 1.1348649}
+    headWidth: 0.7027027
+    shoulderWidth: 0.787027
+  - source: {fileID: -5091455533855283910, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: 0.36180905, y: 1.959799}
+    upperLip: {x: 0.36180905, y: 1.4757786}
+    shoulders: {x: 0.36180905, y: 1.3997993}
+    headWidth: 0.88
+    shoulderWidth: 0.9856
+  - source: {fileID: 2011731309988356163, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: -0.12562814, y: 1.9497488}
+    upperLip: {x: -0.12562814, y: 1.4757786}
+    shoulders: {x: -0.12562814, y: 1.3925635}
+    headWidth: 0.87557787
+    shoulderWidth: 0.9806472
+  - source: {fileID: -4206898806764278395, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: -0.0050251256, y: 1.8994975}
+    upperLip: {x: -0.0050251256, y: 1.4279393}
+    shoulders: {x: -0.0050251256, y: 1.3423121}
+    headWidth: 0.8241206
+    shoulderWidth: 0.92301506
+  - source: {fileID: -2752445535267491598, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: 0.2562814, y: 1.8693467}
+    upperLip: {x: 0.2562814, y: 1.4126639}
+    shoulders: {x: 0.2562814, y: 1.3346739}
+    headWidth: 0.84020096
+    shoulderWidth: 0.9410251
+  - source: {fileID: -2020927676, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: -0.24623115, y: 1.879397}
+    upperLip: {x: -0.24623115, y: 1.3929646}
+    shoulders: {x: -0.24623115, y: 1.344724}
+    headWidth: 0.84020096
+    shoulderWidth: 0.9410251
+  - source: {fileID: 679817590, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: -0.03517588, y: 1.8693467}
+    upperLip: {x: -0.03517588, y: 1.3563815}
+    shoulders: {x: -0.03517588, y: 1.3346739}
+    headWidth: 0.84020096
+    shoulderWidth: 0.9410251
+  - source: {fileID: 819057944, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: 0.2763819, y: 1.8994975}
+    upperLip: {x: 0.2763819, y: 1.42995}
+    shoulders: {x: 0.2763819, y: 1.3563815}
+    headWidth: 0.85346735
+    shoulderWidth: 0.95588344
+  - source: {fileID: 1444288709, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: -0.26130652, y: 1.8994975}
+    upperLip: {x: -0.26130652, y: 1.42995}
+    shoulders: {x: -0.26130652, y: 1.3563815}
+    headWidth: 0.85346735
+    shoulderWidth: 0.95588344
+  - source: {fileID: -517123776, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: -0.03517588, y: 1.879397}
+    upperLip: {x: -0.03517588, y: 1.3821107}
+    shoulders: {x: -0.03517588, y: 1.3362811}
+    headWidth: 0.85346735
+    shoulderWidth: 0.95588344
+  - source: {fileID: -1187189769, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: -0.04522613, y: 1.9095477}
+    upperLip: {x: -0.04522613, y: 1.6377891}
+    shoulders: {x: -0.04522613, y: 1.3720605}
+    headWidth: 0.8446231
+    shoulderWidth: 0.94597787
+  - source: {fileID: -808117941, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: 0.04522613, y: 1.8894472}
+    upperLip: {x: 0.04522613, y: 1.6494472}
+    shoulders: {x: 0.04522613, y: 1.35196}
+    headWidth: 0.8446231
+    shoulderWidth: 0.94597787
+  - source: {fileID: -721101124, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: -0.38693467, y: 1.8190955}
+    upperLip: {x: -0.38693467, y: 1.454372}
+    shoulders: {x: -0.38693467, y: 1.2816082}
+    headWidth: 0.8241206
+    shoulderWidth: 0.92301506
+  - source: {fileID: -34763588, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: -0.055276383, y: 1.8894472}
+    upperLip: {x: -0.055276383, y: 1.7053266}
+    shoulders: {x: -0.055276383, y: 1.3491457}
+    headWidth: 0.8490452
+    shoulderWidth: 0.95093066
+  - source: {fileID: -1825166047, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: 0.09045226, y: 1.8894472}
+    upperLip: {x: 0.09045226, y: 1.7053266}
+    shoulders: {x: 0.09045226, y: 1.3491457}
+    headWidth: 0.8490452
+    shoulderWidth: 0.95093066
+  - source: {fileID: 202748480, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: -0.3316583, y: 1.5778894}
+    upperLip: {x: -0.3316583, y: 1.2112565}
+    shoulders: {x: -0.3316583, y: 1.0375879}
+    headWidth: 0.8490452
+    shoulderWidth: 0.95093066
+  - source: {fileID: 890131280, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: 0.10050251, y: 1.9497488}
+    upperLip: {x: 0.10050251, y: 1.4986935}
+    shoulders: {x: 0.10050251, y: 1.4010049}
+    headWidth: 0.8623116
+    shoulderWidth: 0.965789
+  - source: {fileID: -360132627, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: 0.26130652, y: 1.9497488}
+    upperLip: {x: 0.26130652, y: 1.4874371}
+    shoulders: {x: 0.26130652, y: 1.4010049}
+    headWidth: 0.8623116
+    shoulderWidth: 0.965789
+  - source: {fileID: 1554339724, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: -0.16080402, y: 1.7788944}
+    upperLip: {x: -0.16080402, y: 1.4424119}
+    shoulders: {x: -0.16080402, y: 1.2301507}
+    headWidth: 0.85427135
+    shoulderWidth: 0.9567839
+  - source: {fileID: 486210624, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: 0.040201005, y: 2.2110553}
+    upperLip: {x: 0.040201005, y: 1.6791959}
+    shoulders: {x: 0.040201005, y: 1.5750754}
+    headWidth: 0.999397
+    shoulderWidth: 1.1193246
+  - source: {fileID: 418645684, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: 0.16080402, y: 2.2110553}
+    upperLip: {x: 0.16080402, y: 1.6735678}
+    shoulders: {x: 0.16080402, y: 1.5750754}
+    headWidth: 0.999397
+    shoulderWidth: 1.1193246
+  - source: {fileID: 137385640, guid: aa62707ed11714945812c952ff2d1a30, type: 3}
+    crown: {x: -0.2763819, y: 2.201005}
+    upperLip: {x: -0.2763819, y: 1.6285428}
+    shoulders: {x: -0.2763819, y: 1.5650251}
+    headWidth: 0.96482414
+    shoulderWidth: 1.080603
+  - source: {fileID: 5220887682753811182, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.2, y: 1.9466667}
+    upperLip: {x: 0.2, y: 1.422933}
+    shoulders: {x: 0.2, y: 1.3866667}
+    headWidth: 0.7866667
+    shoulderWidth: 0.8810667
+  - source: {fileID: 7094568037727631335, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.48666668, y: 1.8133334}
+    upperLip: {x: 0.48666668, y: 1.3520004}
+    shoulders: {x: 0.48666668, y: 1.2906673}
+    headWidth: 0.82133335
+    shoulderWidth: 0.9198934
+  - source: {fileID: -8910946346363079334, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.54, y: 1.7866666}
+    upperLip: {x: 0.54, y: 1.2975993}
+    shoulders: {x: 0.54, y: 1.2677327}
+    headWidth: 0.81546664
+    shoulderWidth: 0.9133226
+  - source: {fileID: 8867096411610625302, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: -0.053333335, y: 1.64}
+    upperLip: {x: -0.053333335, y: 1.204266}
+    shoulders: {x: -0.053333335, y: 1.1621338}
+    headWidth: 0.75093335
+    shoulderWidth: 0.8410454
+  - source: {fileID: 3145325425045067442, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.29333332, y: 1.6}
+    upperLip: {x: 0.29333332, y: 1.164266}
+    shoulders: {x: 0.29333332, y: 1.1370671}
+    headWidth: 0.72746664
+    shoulderWidth: 0.81476265
+  - source: {fileID: -1089558799, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.52, y: 1.6266667}
+    upperLip: {x: 0.52, y: 1.1946664}
+    shoulders: {x: 0.52, y: 1.1562663}
+    headWidth: 0.7392
+    shoulderWidth: 0.827904
+  - source: {fileID: -577658055, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.24, y: 1.96}
+    upperLip: {x: 0.24, y: 1.4938672}
+    shoulders: {x: 0.24, y: 1.3962662}
+    headWidth: 0.88586664
+    shoulderWidth: 0.99217063
+  - source: {fileID: 1862971548, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.28666666, y: 1.5333333}
+    upperLip: {x: 0.28666666, y: 1.0943995}
+    shoulders: {x: 0.28666666, y: 1.0890673}
+    headWidth: 0.69813335
+    shoulderWidth: 0.78190935
+  - source: {fileID: -20370236, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0, y: 1.88}
+    upperLip: {x: 0, y: 1.498667}
+    shoulders: {x: 0, y: 1.2938672}
+    headWidth: 0.81333333
+    shoulderWidth: 0.9109333
+  - source: {fileID: -1922438522, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.16666667, y: 1.8}
+    upperLip: {x: 0.16666667, y: 1.4127995}
+    shoulders: {x: 0.16666667, y: 1.2138672}
+    headWidth: 0.82666665
+    shoulderWidth: 0.92586666
+  - source: {fileID: -1051528705, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.25333333, y: 1.8}
+    upperLip: {x: 0.25333333, y: 1.4501334}
+    shoulders: {x: 0.25333333, y: 1.2138672}
+    headWidth: 0.8
+    shoulderWidth: 0.896
+  - source: {fileID: -1197322248, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: -0.06666667, y: 1.6533333}
+    upperLip: {x: -0.06666667, y: 1.4352002}
+    shoulders: {x: -0.06666667, y: 1.0671997}
+    headWidth: 0.92106664
+    shoulderWidth: 1.0315946
+  - source: {fileID: 1994485125, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.19333333, y: 1.6266667}
+    upperLip: {x: 0.19333333, y: 1.3941342}
+    shoulders: {x: 0.19333333, y: 1.0405331}
+    headWidth: 0.70666665
+    shoulderWidth: 0.79146665
+  - source: {fileID: -904674880, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.31333333, y: 1.6266667}
+    upperLip: {x: 0.31333333, y: 1.3904004}
+    shoulders: {x: 0.31333333, y: 1.0405331}
+    headWidth: 0.68
+    shoulderWidth: 0.7616
+  - source: {fileID: -83186404, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.02, y: 1.92}
+    upperLip: {x: 0.02, y: 1.4762663}
+    shoulders: {x: 0.02, y: 1.3338672}
+    headWidth: 0.92106664
+    shoulderWidth: 1.0315946
+  - source: {fileID: 1779976931, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: -0.42, y: 1.5066667}
+    upperLip: {x: -0.42, y: 1.3978662}
+    shoulders: {x: -0.42, y: 0.92053306}
+    headWidth: 0.92106664
+    shoulderWidth: 1.0315946
+  - source: {fileID: -570299298, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.06666667, y: 1.96}
+    upperLip: {x: 0.06666667, y: 1.4266666}
+    shoulders: {x: 0.06666667, y: 1.3962662}
+    headWidth: 0.84
+    shoulderWidth: 0.94079995
+  - source: {fileID: 1915267542, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.14666666, y: 1.88}
+    upperLip: {x: 0.14666666, y: 1.4234668}
+    shoulders: {x: 0.14666666, y: 1.3050667}
+    headWidth: 0.8666667
+    shoulderWidth: 0.9706667
+  - source: {fileID: 1887095186, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.16, y: 1.8533334}
+    upperLip: {x: 0.16, y: 1.3525333}
+    shoulders: {x: 0.16, y: 1.319467}
+    headWidth: 0.81333333
+    shoulderWidth: 0.9109333
+  - source: {fileID: 1431292484, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: -0.093333334, y: 1.7866666}
+    upperLip: {x: -0.093333334, y: 1.4501334}
+    shoulders: {x: -0.093333334, y: 1.200533}
+    headWidth: 0.92106664
+    shoulderWidth: 1.0315946
+  - source: {fileID: -379536052, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.06666667, y: 1.7333333}
+    upperLip: {x: 0.06666667, y: 1.4015999}
+    shoulders: {x: 0.06666667, y: 1.1471997}
+    headWidth: 0.7866667
+    shoulderWidth: 0.8810667
+  - source: {fileID: -173243320, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.17333333, y: 1.7466667}
+    upperLip: {x: 0.17333333, y: 1.4053336}
+    shoulders: {x: 0.17333333, y: 1.1605331}
+    headWidth: 0.76
+    shoulderWidth: 0.8512
+  - source: {fileID: -674152385, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.5933333, y: 2.08}
+    upperLip: {x: 0.5933333, y: 1.5712004}
+    shoulders: {x: 0.5933333, y: 1.4938663}
+    headWidth: 0.92106664
+    shoulderWidth: 1.0315946
+  - source: {fileID: 238022941, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.12, y: 1.5866667}
+    upperLip: {x: 0.12, y: 1.457067}
+    shoulders: {x: 0.12, y: 1.000533}
+    headWidth: 0.6666667
+    shoulderWidth: 0.74666667
+  - source: {fileID: 861118821, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.053333335, y: 1.9866667}
+    upperLip: {x: 0.053333335, y: 1.5965332}
+    shoulders: {x: 0.053333335, y: 1.4117334}
+    headWidth: 0.7866667
+    shoulderWidth: 0.8810667
+  - source: {fileID: -393143559, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.28666666, y: 1.88}
+    upperLip: {x: 0.28666666, y: 1.5126668}
+    shoulders: {x: 0.28666666, y: 1.338667}
+    headWidth: 0.81333333
+    shoulderWidth: 0.9109333
+  - source: {fileID: -1005089061, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.33333334, y: 1.88}
+    upperLip: {x: 0.33333334, y: 1.677867}
+    shoulders: {x: 0.33333334, y: 1.338667}
+    headWidth: 0.7733333
+    shoulderWidth: 0.86613333
+  - source: {fileID: 1833271523, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.61333334, y: 1.6933334}
+    upperLip: {x: 0.61333334, y: 1.4176002}
+    shoulders: {x: 0.61333334, y: 1.2042668}
+    headWidth: 0.76853335
+    shoulderWidth: 0.86075735
+  - source: {fileID: -619925260, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.19333333, y: 1.6666666}
+    upperLip: {x: 0.19333333, y: 1.268933}
+    shoulders: {x: 0.19333333, y: 1.080533}
+    headWidth: 0.7733333
+    shoulderWidth: 0.86613333
+  - source: {fileID: 1949047435, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.7, y: 1.7333333}
+    upperLip: {x: 0.7, y: 1.2410669}
+    shoulders: {x: 0.7, y: 1.2330664}
+    headWidth: 0.7861333
+    shoulderWidth: 0.88046926
+  - source: {fileID: 1395069169, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.8466667, y: 1.9866667}
+    upperLip: {x: 0.8466667, y: 1.5866667}
+    shoulders: {x: 0.8466667, y: 1.4266666}
+    headWidth: 0.88
+    shoulderWidth: 0.9856
+  - source: {fileID: -252757478, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.11333334, y: 1.6533333}
+    upperLip: {x: 0.11333334, y: 1.2555997}
+    shoulders: {x: 0.11333334, y: 1.0671997}
+    headWidth: 0.73333335
+    shoulderWidth: 0.82133335
+  - source: {fileID: 1649244960, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.16, y: 1.8666667}
+    upperLip: {x: 0.16, y: 1.4714664}
+    shoulders: {x: 0.16, y: 1.2842667}
+    headWidth: 0.7866667
+    shoulderWidth: 0.8810667
+  - source: {fileID: -1724637232, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.41333333, y: 1.7466667}
+    upperLip: {x: 0.41333333, y: 1.3514664}
+    shoulders: {x: 0.41333333, y: 1.1642667}
+    headWidth: 0.7733333
+    shoulderWidth: 0.86613333
+  - source: {fileID: -1096664715, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.4, y: 1.8133334}
+    upperLip: {x: 0.4, y: 1.4181331}
+    shoulders: {x: 0.4, y: 1.2309334}
+    headWidth: 0.7733333
+    shoulderWidth: 0.86613333
+  - source: {fileID: 2064568797, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.88666666, y: 1.6533333}
+    upperLip: {x: 0.88666666, y: 1.2581332}
+    shoulders: {x: 0.88666666, y: 1.0709335}
+    headWidth: 0.8933333
+    shoulderWidth: 1.0005333
+  - source: {fileID: 1799693314, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.26666668, y: 1.6533333}
+    upperLip: {x: 0.26666668, y: 1.2581332}
+    shoulders: {x: 0.26666668, y: 1.0709335}
+    headWidth: 0.73333335
+    shoulderWidth: 0.82133335
+  - source: {fileID: 1970216016, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.29333332, y: 1.6533333}
+    upperLip: {x: 0.29333332, y: 1.2581332}
+    shoulders: {x: 0.29333332, y: 1.0709335}
+    headWidth: 0.74666667
+    shoulderWidth: 0.8362667
+  - source: {fileID: 1470518291, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.3, y: 2.0133333}
+    upperLip: {x: 0.3, y: 1.5263997}
+    shoulders: {x: 0.3, y: 1.4346664}
+    headWidth: 0.9093333
+    shoulderWidth: 1.0184532
+  - source: {fileID: 372311557, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.12666667, y: 1.5333333}
+    upperLip: {x: 0.12666667, y: 1.1381332}
+    shoulders: {x: 0.12666667, y: 0.95093346}
+    headWidth: 0.5466667
+    shoulderWidth: 0.61226666
+  - source: {fileID: -1580895917, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.48, y: 1.8666667}
+    upperLip: {x: 0.48, y: 1.4090666}
+    shoulders: {x: 0.48, y: 1.2805334}
+    headWidth: 0.85333335
+    shoulderWidth: 0.95573336
+  - source: {fileID: -967352885, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.45333335, y: 1.76}
+    upperLip: {x: 0.45333335, y: 1.3622669}
+    shoulders: {x: 0.45333335, y: 1.1738667}
+    headWidth: 0.8
+    shoulderWidth: 0.896
+  - source: {fileID: -1881572251, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.44, y: 1.76}
+    upperLip: {x: 0.44, y: 1.3622669}
+    shoulders: {x: 0.44, y: 1.1738667}
+    headWidth: 0.8
+    shoulderWidth: 0.896
+  - source: {fileID: 200019303, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.34, y: 1.7066667}
+    upperLip: {x: 0.34, y: 1.3089335}
+    shoulders: {x: 0.34, y: 1.1205335}
+    headWidth: 0.7866667
+    shoulderWidth: 0.8810667
+  - source: {fileID: 1533555626, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.28666666, y: 1.5866667}
+    upperLip: {x: 0.28666666, y: 1.1889335}
+    shoulders: {x: 0.28666666, y: 1.0005335}
+    headWidth: 0.6666667
+    shoulderWidth: 0.74666667
+  - source: {fileID: 369792530, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.30666667, y: 1.6133333}
+    upperLip: {x: 0.30666667, y: 1.2156001}
+    shoulders: {x: 0.30666667, y: 1.0272001}
+    headWidth: 0.72
+    shoulderWidth: 0.80640006
+  - source: {fileID: 2057514307, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.026666667, y: 1.9066666}
+    upperLip: {x: 0.026666667, y: 1.488}
+    shoulders: {x: 0.026666667, y: 1.3504}
+    headWidth: 0.87413335
+    shoulderWidth: 0.97902936
+  - source: {fileID: 1648906929, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: -0.093333334, y: 1.4933333}
+    upperLip: {x: -0.093333334, y: 1.0956001}
+    shoulders: {x: -0.093333334, y: 0.9072001}
+    headWidth: 0.52
+    shoulderWidth: 0.58239996
+  - source: {fileID: 538062595, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.33333334, y: 1.84}
+    upperLip: {x: 0.33333334, y: 1.4650668}
+    shoulders: {x: 0.33333334, y: 1.2538666}
+    headWidth: 0.84
+    shoulderWidth: 0.94079995
+  - source: {fileID: -1194178554, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.58666664, y: 1.7733333}
+    upperLip: {x: 0.58666664, y: 1.4202665}
+    shoulders: {x: 0.58666664, y: 1.1872}
+    headWidth: 0.82666665
+    shoulderWidth: 0.92586666
+  - source: {fileID: 1533808758, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.54, y: 1.76}
+    upperLip: {x: 0.54, y: 1.4352002}
+    shoulders: {x: 0.54, y: 1.1738666}
+    headWidth: 0.8
+    shoulderWidth: 0.896
+  - source: {fileID: -252132576, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: -0.046666667, y: 1.56}
+    upperLip: {x: -0.046666667, y: 1.3903999}
+    shoulders: {x: -0.046666667, y: 0.9738666}
+    headWidth: 0.84
+    shoulderWidth: 0.94079995
+  - source: {fileID: -810974630, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.30666667, y: 1.6}
+    upperLip: {x: 0.30666667, y: 1.2022667}
+    shoulders: {x: 0.30666667, y: 1.0138665}
+    headWidth: 0.68
+    shoulderWidth: 0.7616
+  - source: {fileID: 265529188, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.45333335, y: 1.5866667}
+    upperLip: {x: 0.45333335, y: 1.1889333}
+    shoulders: {x: 0.45333335, y: 1.0005332}
+    headWidth: 0.6933333
+    shoulderWidth: 0.7765333
+  - source: {fileID: -1775406101, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.6, y: 1.9333333}
+    upperLip: {x: 0.6, y: 1.5098666}
+    shoulders: {x: 0.6, y: 1.3472002}
+    headWidth: 0.92106664
+    shoulderWidth: 1.0315946
+  - source: {fileID: -48876324, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.11333334, y: 1.4933333}
+    upperLip: {x: 0.11333334, y: 1.0956}
+    shoulders: {x: 0.11333334, y: 0.9071999}
+    headWidth: 0.53333336
+    shoulderWidth: 0.5973334
+  - source: {fileID: 2013991455, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.26, y: 2.0266666}
+    upperLip: {x: 0.26, y: 1.4570667}
+    shoulders: {x: 0.26, y: 1.4554666}
+    headWidth: 0.8666667
+    shoulderWidth: 0.9706667
+  - source: {fileID: -733757393, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.46666667, y: 1.8666667}
+    upperLip: {x: 0.46666667, y: 1.4533334}
+    shoulders: {x: 0.46666667, y: 1.2954667}
+    headWidth: 0.8933333
+    shoulderWidth: 1.0005333
+  - source: {fileID: 41932174, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.42, y: 1.8266667}
+    upperLip: {x: 0.42, y: 1.3242667}
+    shoulders: {x: 0.42, y: 1.3002666}
+    headWidth: 0.8272
+    shoulderWidth: 0.926464
+  - source: {fileID: 535200144, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.1, y: 1.6666666}
+    upperLip: {x: 0.1, y: 1.4266666}
+    shoulders: {x: 0.1, y: 1.1066667}
+    headWidth: 0.88
+    shoulderWidth: 0.9856
+  - source: {fileID: -66937269, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.52666664, y: 1.68}
+    upperLip: {x: 0.52666664, y: 1.3504}
+    shoulders: {x: 0.52666664, y: 1.1125333}
+    headWidth: 0.81333333
+    shoulderWidth: 0.9109333
+  - source: {fileID: 1154203100, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.49333334, y: 1.7066667}
+    upperLip: {x: 0.49333334, y: 1.3728}
+    shoulders: {x: 0.49333334, y: 1.1392001}
+    headWidth: 0.81333333
+    shoulderWidth: 0.9109333
+  - source: {fileID: -1276731779, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.34, y: 1.92}
+    upperLip: {x: 0.34, y: 1.4357333}
+    shoulders: {x: 0.34, y: 1.3637333}
+    headWidth: 0.87413335
+    shoulderWidth: 0.97902936
+  - source: {fileID: -1848077976, guid: cc5c9cd8793bc534face5be9fd91abf9, type: 3}
+    crown: {x: 0.2, y: 1.56}
+    upperLip: {x: 0.2, y: 1.1724}
+    shoulders: {x: 0.2, y: 0.9887999}
+    headWidth: 0.6933333
+    shoulderWidth: 0.7765333
+  - source: {fileID: 7223862197704582745, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.20567375, y: 1.9432625}
+    upperLip: {x: 0.20567375, y: 1.4485105}
+    shoulders: {x: 0.20567375, y: 1.3832626}
+    headWidth: 0.88
+    shoulderWidth: 0.9856
+  - source: {fileID: 1433499492298491147, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.29078013, y: 1.8723404}
+    upperLip: {x: 0.29078013, y: 1.4156035}
+    shoulders: {x: 0.29078013, y: 1.3321992}
+    headWidth: 0.8487943
+    shoulderWidth: 0.9506496
+  - source: {fileID: 6108219534072549091, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.32624114, y: 1.8865248}
+    upperLip: {x: 0.32624114, y: 1.3741845}
+    shoulders: {x: 0.32624114, y: 1.3424115}
+    headWidth: 0.8550355
+    shoulderWidth: 0.95763975
+  - source: {fileID: 8214786306508225708, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.09219858, y: 1.929078}
+    upperLip: {x: 0.09219858, y: 1.4961699}
+    shoulders: {x: 0.09219858, y: 1.3690783}
+    headWidth: 0.88
+    shoulderWidth: 0.9856
+  - source: {fileID: -2227737693399621886, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.29787233, y: 1.716312}
+    upperLip: {x: 0.29787233, y: 1.2845398}
+    shoulders: {x: 0.29787233, y: 1.2198582}
+    headWidth: 0.78014183
+    shoulderWidth: 0.87375885
+  - source: {fileID: 6809183613255458582, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.24822696, y: 1.6737589}
+    upperLip: {x: -0.24822696, y: 1.2782978}
+    shoulders: {x: -0.24822696, y: 1.1852491}
+    headWidth: 0.7676596
+    shoulderWidth: 0.85977876
+  - source: {fileID: -3953691898288353227, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.12765957, y: 2.070922}
+    upperLip: {x: 0.12765957, y: 1.5971627}
+    shoulders: {x: 0.12765957, y: 1.4751773}
+    headWidth: 0.9361702
+    shoulderWidth: 1.0485107
+  - source: {fileID: -1802324708588181421, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.18439716, y: 1.3191489}
+    upperLip: {x: -0.18439716, y: 0.94184434}
+    shoulders: {x: -0.18439716, y: 0.9299299}
+    headWidth: 0.6116312
+    shoulderWidth: 0.68502694
+  - source: {fileID: -325598952817952521, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.120567374, y: 2.1702127}
+    upperLip: {x: 0.120567374, y: 1.5529075}
+    shoulders: {x: 0.120567374, y: 1.5466672}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: -2115869509, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.29787233, y: 2.1702127}
+    upperLip: {x: -0.29787233, y: 1.7429788}
+    shoulders: {x: -0.29787233, y: 1.5466672}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: 765565627, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.15602838, y: 2.212766}
+    upperLip: {x: 0.15602838, y: 1.5387231}
+    shoulders: {x: 0.15602838, y: 1.5892204}
+    headWidth: 0.8794326
+    shoulderWidth: 0.98496455
+  - source: {fileID: -2077951300, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.19148937, y: 1.9007093}
+    upperLip: {x: -0.19148937, y: 1.5903546}
+    shoulders: {x: -0.19148937, y: 1.2771636}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: -9511480, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.11347517, y: 2.1702127}
+    upperLip: {x: -0.11347517, y: 1.7470928}
+    shoulders: {x: -0.11347517, y: 1.5466672}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: -676088003, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.10638298, y: 2.1560283}
+    upperLip: {x: -0.10638298, y: 1.7329084}
+    shoulders: {x: -0.10638298, y: 1.5324829}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: 1329624899, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.16312057, y: 2.1843972}
+    upperLip: {x: 0.16312057, y: 1.6141851}
+    shoulders: {x: 0.16312057, y: 1.5608516}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: 1878348830, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0, y: 2.212766}
+    upperLip: {x: 0, y: 1.789646}
+    shoulders: {x: 0, y: 1.5892204}
+    headWidth: 0.71262413
+    shoulderWidth: 0.79813904
+  - source: {fileID: -319798645, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.15602838, y: 2.212766}
+    upperLip: {x: 0.15602838, y: 1.5217025}
+    shoulders: {x: 0.15602838, y: 1.5892196}
+    headWidth: 0.822695
+    shoulderWidth: 0.9214184
+  - source: {fileID: 1028931904, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.35460994, y: 2.0992908}
+    upperLip: {x: -0.35460994, y: 1.6817021}
+    shoulders: {x: -0.35460994, y: 1.4757444}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: 72043636, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0, y: 1.7446809}
+    upperLip: {x: 0, y: 1.5455322}
+    shoulders: {x: 0, y: 1.1211344}
+    headWidth: 0.85106385
+    shoulderWidth: 0.9531915
+  - source: {fileID: -1158691599, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.18439716, y: 1.6737589}
+    upperLip: {x: -0.18439716, y: 1.6351777}
+    shoulders: {x: -0.18439716, y: 1.0502125}
+    headWidth: 0.5673759
+    shoulderWidth: 0.63546103
+  - source: {fileID: 305504122, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.021276595, y: 1.4893616}
+    upperLip: {x: 0.021276595, y: 1.0662409}
+    shoulders: {x: 0.021276595, y: 0.8658153}
+    headWidth: 0.4008511
+    shoulderWidth: 0.44895324
+  - source: {fileID: -1071034288, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.32624114, y: 2.212766}
+    upperLip: {x: -0.32624114, y: 1.7896452}
+    shoulders: {x: -0.32624114, y: 1.5892196}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: 442672912, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.32624114, y: 2.0141845}
+    upperLip: {x: 0.32624114, y: 1.6221274}
+    shoulders: {x: 0.32624114, y: 1.390638}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: 635543590, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.68085104, y: 2.113475}
+    upperLip: {x: 0.68085104, y: 1.6903543}
+    shoulders: {x: 0.68085104, y: 1.4899287}
+    headWidth: 0.4008511
+    shoulderWidth: 0.44895324
+  - source: {fileID: -1439243027, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.78014183, y: 2.212766}
+    upperLip: {x: 0.78014183, y: 2.065816}
+    shoulders: {x: 0.78014183, y: 1.5892196}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: -37455746, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.4326241, y: 2.1985815}
+    upperLip: {x: 0.4326241, y: 1.6618435}
+    shoulders: {x: 0.4326241, y: 1.5750351}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: 389832333, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.19148937, y: 2.1843972}
+    upperLip: {x: 0.19148937, y: 1.7612764}
+    shoulders: {x: 0.19148937, y: 1.5608507}
+    headWidth: 0.83687943
+    shoulderWidth: 0.937305
+  - source: {fileID: 1470847880, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.19148937, y: 2.0567377}
+    upperLip: {x: -0.19148937, y: 1.5358869}
+    shoulders: {x: -0.19148937, y: 1.4331912}
+    headWidth: 0.9361702
+    shoulderWidth: 1.0485107
+  - source: {fileID: 178681725, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.59574467, y: 2.0141845}
+    upperLip: {x: 0.59574467, y: 1.5910636}
+    shoulders: {x: 0.59574467, y: 1.390638}
+    headWidth: 0.4008511
+    shoulderWidth: 0.44895324
+  - source: {fileID: 1643558709, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0, y: 2.212766}
+    upperLip: {x: 0, y: 1.7896452}
+    shoulders: {x: 0, y: 1.5892196}
+    headWidth: 0.71262413
+    shoulderWidth: 0.79813904
+  - source: {fileID: 241868387, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.24113475, y: 2.0851064}
+    upperLip: {x: 0.24113475, y: 1.610213}
+    shoulders: {x: 0.24113475, y: 1.46156}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: -962649620, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.22695035, y: 2.212766}
+    upperLip: {x: 0.22695035, y: 2.1617024}
+    shoulders: {x: 0.22695035, y: 1.5892196}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: 966596717, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.9716312, y: 2.0425532}
+    upperLip: {x: 0.9716312, y: 2.0544684}
+    shoulders: {x: 0.9716312, y: 1.4229789}
+    headWidth: 0.973617
+    shoulderWidth: 1.0904511
+  - source: {fileID: -860906696, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.9361702, y: 2.1702127}
+    upperLip: {x: -0.9361702, y: 2.072057}
+    shoulders: {x: -0.9361702, y: 1.5506384}
+    headWidth: 0.973617
+    shoulderWidth: 1.0904511
+  - source: {fileID: -1090135853, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.31914893, y: 2.113475}
+    upperLip: {x: -0.31914893, y: 1.6930494}
+    shoulders: {x: -0.31914893, y: 1.4939008}
+    headWidth: 0.973617
+    shoulderWidth: 1.0904511
+  - source: {fileID: 1206441866, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.18439716, y: 1.531915}
+    upperLip: {x: 0.18439716, y: 1.1114892}
+    shoulders: {x: 0.18439716, y: 0.9123405}
+    headWidth: 0.39829788
+    shoulderWidth: 0.44609362
+  - source: {fileID: -541874287, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0, y: 2.1985815}
+    upperLip: {x: 0, y: 1.7781558}
+    shoulders: {x: 0, y: 1.5790071}
+    headWidth: 0.70808506
+    shoulderWidth: 0.7930553
+  - source: {fileID: -2045551078, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.78723407, y: 2.0141845}
+    upperLip: {x: -0.78723407, y: 1.5937587}
+    shoulders: {x: -0.78723407, y: 1.39461}
+    headWidth: 0.39829788
+    shoulderWidth: 0.44609362
+  - source: {fileID: 1757119652, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.42553192, y: 2}
+    upperLip: {x: 0.42553192, y: 1.6646806}
+    shoulders: {x: 0.42553192, y: 1.3804257}
+    headWidth: 0.973617
+    shoulderWidth: 1.0904511
+  - source: {fileID: -1822933138, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -1, y: 2.1985815}
+    upperLip: {x: -1, y: 2.106667}
+    shoulders: {x: -1, y: 1.5790071}
+    headWidth: 0.973617
+    shoulderWidth: 1.0904511
+  - source: {fileID: 1689793430, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.8652482, y: 2.212766}
+    upperLip: {x: -0.8652482, y: 1.9784399}
+    shoulders: {x: -0.8652482, y: 1.5892199}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: 1605268870, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -1, y: 2.212766}
+    upperLip: {x: -1, y: 1.9449645}
+    shoulders: {x: -1, y: 1.5892199}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: -1166252694, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 1.0283688, y: 2.1843972}
+    upperLip: {x: 1.0283688, y: 2.0402837}
+    shoulders: {x: 1.0283688, y: 1.5608512}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: 336996620, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.06382979, y: 2.212766}
+    upperLip: {x: -0.06382979, y: 1.9574468}
+    shoulders: {x: -0.06382979, y: 1.5892199}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: 240828819, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -1, y: 2.212766}
+    upperLip: {x: -1, y: 1.9546098}
+    shoulders: {x: -1, y: 1.5892199}
+    headWidth: 0.71262413
+    shoulderWidth: 0.79813904
+  - source: {fileID: 604382951, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.5319149, y: 1.6737589}
+    upperLip: {x: 0.5319149, y: 1.2506385}
+    shoulders: {x: 0.5319149, y: 1.0502129}
+    headWidth: 0.4008511
+    shoulderWidth: 0.44895324
+  - source: {fileID: 1901411894, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0, y: 2.212766}
+    upperLip: {x: 0, y: 1.7896456}
+    shoulders: {x: 0, y: 1.5892199}
+    headWidth: 0.71262413
+    shoulderWidth: 0.79813904
+  - source: {fileID: -1843444409, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.28368795, y: 2.212766}
+    upperLip: {x: 0.28368795, y: 1.9982979}
+    shoulders: {x: 0.28368795, y: 1.5892199}
+    headWidth: 0.964539
+    shoulderWidth: 1.0802836
+  - source: {fileID: -71193807, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.15602838, y: 2.212766}
+    upperLip: {x: 0.15602838, y: 1.732766}
+    shoulders: {x: 0.15602838, y: 1.5892199}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: 542802358, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.19148937, y: 2.212766}
+    upperLip: {x: 0.19148937, y: 1.9676596}
+    shoulders: {x: 0.19148937, y: 1.5892199}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: 262447802, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.71631205, y: 2.212766}
+    upperLip: {x: 0.71631205, y: 1.9370213}
+    shoulders: {x: 0.71631205, y: 1.5892199}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: -1925201147, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.80851066, y: 2.212766}
+    upperLip: {x: 0.80851066, y: 2.1617022}
+    shoulders: {x: 0.80851066, y: 1.5892199}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: -1772781157, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.14184397, y: 2.212766}
+    upperLip: {x: -0.14184397, y: 2.049362}
+    shoulders: {x: -0.14184397, y: 1.5892199}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: 510845581, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.83687943, y: 2.212766}
+    upperLip: {x: 0.83687943, y: 2.2025533}
+    shoulders: {x: 0.83687943, y: 1.5892199}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: 1503914487, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 1.0070922, y: 2.1560283}
+    upperLip: {x: 1.0070922, y: 1.4831206}
+    shoulders: {x: 1.0070922, y: 1.5324824}
+    headWidth: 0.4008511
+    shoulderWidth: 0.44895324
+  - source: {fileID: 1141768877, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.014184397, y: 2.212766}
+    upperLip: {x: 0.014184397, y: 1.8757446}
+    shoulders: {x: 0.014184397, y: 1.5892199}
+    headWidth: 0.97985816
+    shoulderWidth: 1.0974412
+  - source: {fileID: 822217437, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.09929078, y: 1.4893616}
+    upperLip: {x: 0.09929078, y: 1.131915}
+    shoulders: {x: 0.09929078, y: 1.0683688}
+    headWidth: 0.6615603
+    shoulderWidth: 0.74094754
+  - source: {fileID: 282221638, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.17730497, y: 1.4326241}
+    upperLip: {x: 0.17730497, y: 1.0956029}
+    shoulders: {x: 0.17730497, y: 1.0275178}
+    headWidth: 0.6365957
+    shoulderWidth: 0.71298724
+  - source: {fileID: 331170460, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.17021276, y: 1.5035461}
+    upperLip: {x: 0.17021276, y: 1.1665249}
+    shoulders: {x: 0.17021276, y: 1.0785816}
+    headWidth: 0.6678014
+    shoulderWidth: 0.74793756
+  - source: {fileID: 174914395, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.19858156, y: 1.4184397}
+    upperLip: {x: 0.19858156, y: 1.0814185}
+    shoulders: {x: 0.19858156, y: 1.017305}
+    headWidth: 0.6303546
+    shoulderWidth: 0.7059971
+  - source: {fileID: -1711487829, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.31914893, y: 1.5460993}
+    upperLip: {x: 0.31914893, y: 1.1784397}
+    shoulders: {x: 0.31914893, y: 1.1092198}
+    headWidth: 0.6865248
+    shoulderWidth: 0.7689078
+  - source: {fileID: 652797372, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: 0.3617021, y: 1.5177305}
+    upperLip: {x: 0.3617021, y: 1.2215602}
+    shoulders: {x: 0.3617021, y: 1.0887944}
+    headWidth: 0.6740426
+    shoulderWidth: 0.7549277
+  - source: {fileID: -1360971209, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.16312057, y: 1.4751773}
+    upperLip: {x: -0.16312057, y: 1.1892198}
+    shoulders: {x: -0.16312057, y: 1.058156}
+    headWidth: 0.6553191
+    shoulderWidth: 0.7339574
+  - source: {fileID: -1223240853, guid: 4a587a67ba1633b4b8fb4c52505ed809, type: 3}
+    crown: {x: -0.27659574, y: 1.6879432}
+    upperLip: {x: -0.27659574, y: 1.2817022}
+    shoulders: {x: -0.27659574, y: 1.2113476}
+    headWidth: 0.7489362
+    shoulderWidth: 0.83880854
+  - source: {fileID: 304376028783601074, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.26984128, y: 1.9523809}
+    upperLip: {x: 0.26984128, y: 1.4266667}
+    shoulders: {x: 0.26984128, y: 1.3923805}
+    headWidth: 0.8095238
+    shoulderWidth: 0.9066667
+  - source: {fileID: -790086788362934593, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.14285715, y: 1.8253968}
+    upperLip: {x: -0.14285715, y: 1.3695242}
+    shoulders: {x: -0.14285715, y: 1.2965088}
+    headWidth: 0.8311111
+    shoulderWidth: 0.9308444
+  - source: {fileID: 1086112599455776577, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.023809524, y: 1.9047619}
+    upperLip: {x: -0.023809524, y: 1.4215882}
+    shoulders: {x: -0.023809524, y: 1.3536513}
+    headWidth: 0.7936508
+    shoulderWidth: 0.8888889
+  - source: {fileID: 3365040932538379433, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.08730159, y: 1.8888888}
+    upperLip: {x: 0.08730159, y: 1.4171433}
+    shoulders: {x: 0.08730159, y: 1.3422232}
+    headWidth: 0.8590476
+    shoulderWidth: 0.9621333
+  - source: {fileID: -3810468859368899157, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.4920635, y: 1.8095238}
+    upperLip: {x: -0.4920635, y: 1.366984}
+    shoulders: {x: -0.4920635, y: 1.2850788}
+    headWidth: 0.82412696
+    shoulderWidth: 0.9230222
+  - source: {fileID: -8360503832118694409, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.015873017, y: 1.7619047}
+    upperLip: {x: -0.015873017, y: 1.335238}
+    shoulders: {x: -0.015873017, y: 1.2507944}
+    headWidth: 0.80317456
+    shoulderWidth: 0.8995555
+  - source: {fileID: -4916946931230400572, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.04761905, y: 2.3333333}
+    upperLip: {x: 0.04761905, y: 1.7809516}
+    shoulders: {x: 0.04761905, y: 1.6577768}
+    headWidth: 1.0615873
+    shoulderWidth: 1.1889778
+  - source: {fileID: -949668271795412438, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.31746033, y: 2.2857144}
+    upperLip: {x: -0.31746033, y: 1.6939678}
+    shoulders: {x: -0.31746033, y: 1.6190476}
+    headWidth: 1.047619
+    shoulderWidth: 1.1733333
+  - source: {fileID: 3302192806478338127, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.65873015, y: 2.4761906}
+    upperLip: {x: -0.65873015, y: 2.3161912}
+    shoulders: {x: -0.65873015, y: 1.7784133}
+    headWidth: 1.0965079
+    shoulderWidth: 1.2280889
+  - source: {fileID: 2680803182429377189, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.3015873, y: 1.6984127}
+    upperLip: {x: -0.3015873, y: 1.2249204}
+    shoulders: {x: -0.3015873, y: 1.0006346}
+    headWidth: 0.44857144
+    shoulderWidth: 0.50240004
+  - source: {fileID: -3023737896698927836, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.46825397, y: 1.7142857}
+    upperLip: {x: -0.46825397, y: 1.2407933}
+    shoulders: {x: -0.46825397, y: 1.0165076}
+    headWidth: 0.47619048
+    shoulderWidth: 0.53333336
+  - source: {fileID: 8166353629113992270, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.4920635, y: 2.3968253}
+    upperLip: {x: -0.4920635, y: 1.923334}
+    shoulders: {x: -0.4920635, y: 1.6990483}
+    headWidth: 1.0965079
+    shoulderWidth: 1.2280889
+  - source: {fileID: -5562662060922910393, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0, y: 2.4761906}
+    upperLip: {x: 0, y: 2.0026991}
+    shoulders: {x: 0, y: 1.7784133}
+    headWidth: 0.7974603
+    shoulderWidth: 0.8931556
+  - source: {fileID: 8094278140350038464, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0, y: 2.4761906}
+    upperLip: {x: 0, y: 2.0026991}
+    shoulders: {x: 0, y: 1.7784133}
+    headWidth: 0.7974603
+    shoulderWidth: 0.8931556
+  - source: {fileID: 4870091673314597119, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.23015873, y: 2.0317461}
+    upperLip: {x: 0.23015873, y: 1.7352372}
+    shoulders: {x: 0.23015873, y: 1.3339689}
+    headWidth: 1.0965079
+    shoulderWidth: 1.2280889
+  - source: {fileID: 5258989362451041079, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.071428575, y: 2.4761906}
+    upperLip: {x: 0.071428575, y: 1.8819057}
+    shoulders: {x: 0.071428575, y: 1.7784133}
+    headWidth: 1.0965079
+    shoulderWidth: 1.2280889
+  - source: {fileID: -6348187324195982183, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.6825397, y: 2.4603174}
+    upperLip: {x: -0.6825397, y: 2.273016}
+    shoulders: {x: -0.6825397, y: 1.7625394}
+    headWidth: 1.0965079
+    shoulderWidth: 1.2280889
+  - source: {fileID: 4477988108336722247, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.84126985, y: 2.4126985}
+    upperLip: {x: -0.84126985, y: 2.3346035}
+    shoulders: {x: -0.84126985, y: 1.7149203}
+    headWidth: 0.44857144
+    shoulderWidth: 0.50240004
+  - source: {fileID: -5704079077361838678, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.71428573, y: 2.4603174}
+    upperLip: {x: 0.71428573, y: 2.3688886}
+    shoulders: {x: 0.71428573, y: 1.7625394}
+    headWidth: 1.0965079
+    shoulderWidth: 1.2280889
+  - source: {fileID: -1081133761927583028, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.61904764, y: 2.3650794}
+    upperLip: {x: -0.61904764, y: 1.6914285}
+    shoulders: {x: -0.61904764, y: 1.6673013}
+    headWidth: 1.0965079
+    shoulderWidth: 1.2280889
+  - source: {fileID: -4594076398881273462, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -1.1904762, y: 2.3968253}
+    upperLip: {x: -1.1904762, y: 1.923333}
+    shoulders: {x: -1.1904762, y: 1.6990473}
+    headWidth: 0.44857144
+    shoulderWidth: 0.50240004
+  - source: {fileID: 964009143, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.8174603, y: 2.4126985}
+    upperLip: {x: -0.8174603, y: 1.9392061}
+    shoulders: {x: -0.8174603, y: 1.7149203}
+    headWidth: 0.71428573
+    shoulderWidth: 0.8
+  - source: {fileID: -1406906785, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.32539684, y: 2.1269841}
+    upperLip: {x: -0.32539684, y: 1.7885714}
+    shoulders: {x: -0.32539684, y: 1.429206}
+    headWidth: 1.0965079
+    shoulderWidth: 1.2280889
+  - source: {fileID: 1389518244, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.25396827, y: 2.3809524}
+    upperLip: {x: 0.25396827, y: 1.900317}
+    shoulders: {x: 0.25396827, y: 1.6831743}
+    headWidth: 1.0965079
+    shoulderWidth: 1.2280889
+  - source: {fileID: 349383211, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.71428573, y: 2.3968253}
+    upperLip: {x: -0.71428573, y: 2.2120633}
+    shoulders: {x: -0.71428573, y: 1.6990473}
+    headWidth: 0.50793654
+    shoulderWidth: 0.5688889
+  - source: {fileID: 1562900088, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.75396824, y: 2.4761906}
+    upperLip: {x: -0.75396824, y: 2.1707938}
+    shoulders: {x: -0.75396824, y: 1.7784123}
+    headWidth: 1.0476191
+    shoulderWidth: 1.1733334
+  - source: {fileID: -28157962, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.5793651, y: 2.2857144}
+    upperLip: {x: 0.5793651, y: 1.812222}
+    shoulders: {x: 0.5793651, y: 1.5879362}
+    headWidth: 0.44857144
+    shoulderWidth: 0.50240004
+  - source: {fileID: -1435718707, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.3809524, y: 2.4444444}
+    upperLip: {x: -0.3809524, y: 1.9709522}
+    shoulders: {x: -0.3809524, y: 1.7466663}
+    headWidth: 0.44857144
+    shoulderWidth: 0.50240004
+  - source: {fileID: 1048081978, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0, y: 2.4761906}
+    upperLip: {x: 0, y: 2.0026982}
+    shoulders: {x: 0, y: 1.7784123}
+    headWidth: 0.7974603
+    shoulderWidth: 0.8931556
+  - source: {fileID: 607887439, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.08730159, y: 2.3015873}
+    upperLip: {x: 0.08730159, y: 1.828095}
+    shoulders: {x: 0.08730159, y: 1.6038091}
+    headWidth: 1.0965079
+    shoulderWidth: 1.2280889
+  - source: {fileID: 1134042456, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.26190478, y: 1.7936507}
+    upperLip: {x: 0.26190478, y: 1.3201585}
+    shoulders: {x: 0.26190478, y: 1.0958726}
+    headWidth: 0.61904764
+    shoulderWidth: 0.6933334
+  - source: {fileID: -622496398, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.14285715, y: 2.3809524}
+    upperLip: {x: 0.14285715, y: 1.864127}
+    shoulders: {x: 0.14285715, y: 1.6831743}
+    headWidth: 1.0965079
+    shoulderWidth: 1.2280889
+  - source: {fileID: -1967614268, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.6666667, y: 2.4603174}
+    upperLip: {x: 0.6666667, y: 1.989841}
+    shoulders: {x: 0.6666667, y: 1.7669842}
+    headWidth: 1.0895238
+    shoulderWidth: 1.2202667
+  - source: {fileID: -420932710, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0, y: 2.4603174}
+    upperLip: {x: 0, y: 1.989841}
+    shoulders: {x: 0, y: 1.7669842}
+    headWidth: 0.792381
+    shoulderWidth: 0.8874667
+  - source: {fileID: 825934758, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.78571427, y: 2.3809524}
+    upperLip: {x: 0.78571427, y: 2.2419045}
+    shoulders: {x: 0.78571427, y: 1.6876192}
+    headWidth: 0.44571432
+    shoulderWidth: 0.49920005
+  - source: {fileID: 964747563, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.04761905, y: 2.047619}
+    upperLip: {x: -0.04761905, y: 1.5771426}
+    shoulders: {x: -0.04761905, y: 1.3542858}
+    headWidth: 1.0895238
+    shoulderWidth: 1.2202667
+  - source: {fileID: -413014294, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0, y: 2.4603174}
+    upperLip: {x: 0, y: 1.989841}
+    shoulders: {x: 0, y: 1.7669842}
+    headWidth: 0.792381
+    shoulderWidth: 0.8874667
+  - source: {fileID: -1480153039, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0, y: 2.4603174}
+    upperLip: {x: 0, y: 1.989841}
+    shoulders: {x: 0, y: 1.7669842}
+    headWidth: 0.792381
+    shoulderWidth: 0.8874667
+  - source: {fileID: -1974889671, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.04761905, y: 1.8253968}
+    upperLip: {x: 0.04761905, y: 1.3549204}
+    shoulders: {x: 0.04761905, y: 1.1320636}
+    headWidth: 1.0895238
+    shoulderWidth: 1.2202667
+  - source: {fileID: -1001311669, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.82539684, y: 2.4603174}
+    upperLip: {x: 0.82539684, y: 2.1238093}
+    shoulders: {x: 0.82539684, y: 1.7669842}
+    headWidth: 0.6666667
+    shoulderWidth: 0.74666667
+  - source: {fileID: -1869506125, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.6666667, y: 2.4761906}
+    upperLip: {x: 0.6666667, y: 2.0190477}
+    shoulders: {x: 0.6666667, y: 1.7784128}
+    headWidth: 1.0965079
+    shoulderWidth: 1.2280889
+  - source: {fileID: -757311339, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0, y: 2.4761906}
+    upperLip: {x: 0, y: 2.0026987}
+    shoulders: {x: 0, y: 1.7784128}
+    headWidth: 0.7974603
+    shoulderWidth: 0.8931556
+  - source: {fileID: 709266637, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.6825397, y: 2.3492064}
+    upperLip: {x: -0.6825397, y: 1.8757145}
+    shoulders: {x: -0.6825397, y: 1.6514287}
+    headWidth: 0.44857144
+    shoulderWidth: 0.50240004
+  - source: {fileID: -1123298541, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0, y: 2.4761906}
+    upperLip: {x: 0, y: 2.0026987}
+    shoulders: {x: 0, y: 1.7784128}
+    headWidth: 0.7974603
+    shoulderWidth: 0.8931556
+  - source: {fileID: 173145388, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.25396827, y: 2.1746032}
+    upperLip: {x: 0.25396827, y: 1.7011113}
+    shoulders: {x: 0.25396827, y: 1.4768255}
+    headWidth: 0.44857144
+    shoulderWidth: 0.50240004
+  - source: {fileID: 2002410224, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.6825397, y: 2.4761906}
+    upperLip: {x: -0.6825397, y: 2.4533334}
+    shoulders: {x: -0.6825397, y: 1.7784128}
+    headWidth: 1.0965079
+    shoulderWidth: 1.2280889
+  - source: {fileID: -1227625206, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.023809524, y: 2.2063491}
+    upperLip: {x: 0.023809524, y: 1.6774602}
+    shoulders: {x: 0.023809524, y: 1.5085715}
+    headWidth: 0.82539684
+    shoulderWidth: 0.92444444
+  - source: {fileID: -603244594, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0, y: 2.4761906}
+    upperLip: {x: 0, y: 2.0026987}
+    shoulders: {x: 0, y: 1.7784128}
+    headWidth: 0.7974603
+    shoulderWidth: 0.8931556
+  - source: {fileID: -191499103, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.055555556, y: 2.4761906}
+    upperLip: {x: -0.055555556, y: 1.9847621}
+    shoulders: {x: -0.055555556, y: 1.7784128}
+    headWidth: 1.0965079
+    shoulderWidth: 1.2280889
+  - source: {fileID: 420365359, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.7380952, y: 2.4761906}
+    upperLip: {x: -0.7380952, y: 1.8698411}
+    shoulders: {x: -0.7380952, y: 1.7784128}
+    headWidth: 0.47619048
+    shoulderWidth: 0.53333336
+  - source: {fileID: -1889509864, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.56349206, y: 2.4761906}
+    upperLip: {x: -0.56349206, y: 2.4419048}
+    shoulders: {x: -0.56349206, y: 1.7784128}
+    headWidth: 0.46031746
+    shoulderWidth: 0.51555556
+  - source: {fileID: 1838482298, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0, y: 2.4761906}
+    upperLip: {x: 0, y: 2.0026987}
+    shoulders: {x: 0, y: 1.7784128}
+    headWidth: 0.7974603
+    shoulderWidth: 0.8931556
+  - source: {fileID: -1791396087, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 1.1825397, y: 2.4761906}
+    upperLip: {x: 1.1825397, y: 2.4533334}
+    shoulders: {x: 1.1825397, y: 1.7784128}
+    headWidth: 1.0965079
+    shoulderWidth: 1.2280889
+  - source: {fileID: 1410546133, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.04761905, y: 2.4285715}
+    upperLip: {x: -0.04761905, y: 1.9550796}
+    shoulders: {x: -0.04761905, y: 1.7307938}
+    headWidth: 1.0965079
+    shoulderWidth: 1.2280889
+  - source: {fileID: 139677168, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0, y: 2.4761906}
+    upperLip: {x: 0, y: 2.0026987}
+    shoulders: {x: 0, y: 1.7784128}
+    headWidth: 0.7974603
+    shoulderWidth: 0.8931556
+  - source: {fileID: -2122674422, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 1, y: 2.4126985}
+    upperLip: {x: 1, y: 2.0203176}
+    shoulders: {x: 1, y: 1.7149208}
+    headWidth: 0.44857144
+    shoulderWidth: 0.50240004
+  - source: {fileID: 1791908492, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.12698413, y: 1.3968254}
+    upperLip: {x: 0.12698413, y: 1.0914285}
+    shoulders: {x: 0.12698413, y: 0.97015876}
+    headWidth: 0.6704762
+    shoulderWidth: 0.75093335
+  - source: {fileID: 2012999244, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.03968254, y: 1.4603175}
+    upperLip: {x: -0.03968254, y: 1.191111}
+    shoulders: {x: -0.03968254, y: 1.0469842}
+    headWidth: 0.6495238
+    shoulderWidth: 0.72746664
+  - source: {fileID: -111584266, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.0952381, y: 1.5238096}
+    upperLip: {x: 0.0952381, y: 1.3180951}
+    shoulders: {x: 0.0952381, y: 1.0926983}
+    headWidth: 0.6774603
+    shoulderWidth: 0.75875556
+  - source: {fileID: 1062385678, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.34126985, y: 1.3809524}
+    upperLip: {x: -0.34126985, y: 1.1720635}
+    shoulders: {x: -0.34126985, y: 0.94095236}
+    headWidth: 0.69142854
+    shoulderWidth: 0.7744
+  - source: {fileID: -731189357, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.41269842, y: 1.5396825}
+    upperLip: {x: -0.41269842, y: 1.2793652}
+    shoulders: {x: -0.41269842, y: 1.0907937}
+    headWidth: 0.70539683
+    shoulderWidth: 0.7900444
+  - source: {fileID: 1890634783, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: -0.20634921, y: 1.5873016}
+    upperLip: {x: -0.20634921, y: 1.255873}
+    shoulders: {x: -0.20634921, y: 1.1384127}
+    headWidth: 0.70539683
+    shoulderWidth: 0.7900444
+  - source: {fileID: -1348253459, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.13492064, y: 1.6190476}
+    upperLip: {x: 0.13492064, y: 1.2304763}
+    shoulders: {x: 0.13492064, y: 1.1612699}
+    headWidth: 0.71936506
+    shoulderWidth: 0.80568886
+  - source: {fileID: 434070984, guid: 3fd8904ca7818d04f8a1f4429d7e4894, type: 3}
+    crown: {x: 0.5873016, y: 1.4285715}
+    upperLip: {x: 0.5873016, y: 1.2342856}
+    shoulders: {x: 0.5873016, y: 0.96190476}
+    headWidth: 0.3968254
+    shoulderWidth: 0.44444445
+  - source: {fileID: -105615159576303980, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.29166666, y: 1.9583334}
+    upperLip: {x: 0.29166666, y: 1.4344449}
+    shoulders: {x: 0.29166666, y: 1.398334}
+    headWidth: 0.75
+    shoulderWidth: 0.84000003
+  - source: {fileID: 582277572096760835, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.25, y: 1.8333334}
+    upperLip: {x: 0.25, y: 1.3316667}
+    shoulders: {x: 0.25, y: 1.304445}
+    headWidth: 0.8311111
+    shoulderWidth: 0.9308444
+  - source: {fileID: 5243278420646076779, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.097222224, y: 1.8472222}
+    upperLip: {x: 0.097222224, y: 1.3494449}
+    shoulders: {x: 0.097222224, y: 1.3144447}
+    headWidth: 0.8055556
+    shoulderWidth: 0.9022223
+  - source: {fileID: -6945479840380388731, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.15972222, y: 1.8472222}
+    upperLip: {x: 0.15972222, y: 1.3611112}
+    shoulders: {x: 0.15972222, y: 1.3144447}
+    headWidth: 0.8372222
+    shoulderWidth: 0.9376889
+  - source: {fileID: -4606515898614829937, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.27083334, y: 1.7361112}
+    upperLip: {x: 0.27083334, y: 1.258333}
+    shoulders: {x: 0.27083334, y: 1.2383338}
+    headWidth: 0.7822222
+    shoulderWidth: 0.87608886
+  - source: {fileID: -787634670996998374, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.090277776, y: 1.7777778}
+    upperLip: {x: -0.090277776, y: 1.3038889}
+    shoulders: {x: -0.090277776, y: 1.264445}
+    headWidth: 0.8066667
+    shoulderWidth: 0.9034667
+  - source: {fileID: -9168991918356374442, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.0625, y: 2.0972223}
+    upperLip: {x: 0.0625, y: 1.5061103}
+    shoulders: {x: 0.0625, y: 1.4983335}
+    headWidth: 0.9411111
+    shoulderWidth: 1.0540444
+  - source: {fileID: 398950408333474374, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.1388889, y: 2.0416667}
+    upperLip: {x: -0.1388889, y: 1.5250007}
+    shoulders: {x: -0.1388889, y: 1.4583334}
+    headWidth: 0.9166666
+    shoulderWidth: 1.0266666
+  - source: {fileID: -3881283954275236883, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.1875, y: 1.9861112}
+    upperLip: {x: 0.1875, y: 1.4622226}
+    shoulders: {x: 0.1875, y: 1.414444}
+    headWidth: 0.7638889
+    shoulderWidth: 0.8555556
+  - source: {fileID: 7746436650042698922, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.06944445, y: 1.9444444}
+    upperLip: {x: 0.06944445, y: 1.4749993}
+    shoulders: {x: 0.06944445, y: 1.3883328}
+    headWidth: 0.8738889
+    shoulderWidth: 0.9787556
+  - source: {fileID: -41511727044709033, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.027777778, y: 1.9166666}
+    upperLip: {x: 0.027777778, y: 1.4649997}
+    shoulders: {x: 0.027777778, y: 1.3644443}
+    headWidth: 0.86777776
+    shoulderWidth: 0.9719111
+  - source: {fileID: -599163889397448269, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.4236111, y: 1.9027778}
+    upperLip: {x: -0.4236111, y: 1.431666}
+    shoulders: {x: -0.4236111, y: 1.3583341}
+    headWidth: 0.85555553
+    shoulderWidth: 0.9582222
+  - source: {fileID: 5331920940168455929, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.07638889, y: 1.8333334}
+    upperLip: {x: -0.07638889, y: 1.3627777}
+    shoulders: {x: -0.07638889, y: 1.304445}
+    headWidth: 0.7638889
+    shoulderWidth: 0.8555556
+  - source: {fileID: -784456689016241696, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.097222224, y: 1.8055556}
+    upperLip: {x: 0.097222224, y: 1.4872216}
+    shoulders: {x: 0.097222224, y: 1.1950005}
+    headWidth: 0.7638889
+    shoulderWidth: 0.8555556
+  - source: {fileID: 2255472209820459166, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.4861111, y: 1.9444444}
+    upperLip: {x: 0.4861111, y: 1.5027771}
+    shoulders: {x: 0.4861111, y: 1.3338895}
+    headWidth: 0.95944446
+    shoulderWidth: 1.0745778
+  - source: {fileID: -7883397457626492729, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.090277776, y: 1.9305556}
+    upperLip: {x: -0.090277776, y: 1.5533328}
+    shoulders: {x: -0.090277776, y: 1.3200005}
+    headWidth: 0.95944446
+    shoulderWidth: 1.0745778
+  - source: {fileID: 7487444806214720, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.055555556, y: 1.9861112}
+    upperLip: {x: 0.055555556, y: 1.4961107}
+    shoulders: {x: 0.055555556, y: 1.4105555}
+    headWidth: 0.7638889
+    shoulderWidth: 0.8555556
+  - source: {fileID: 5238554535971679562, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.020833334, y: 1.9444444}
+    upperLip: {x: 0.020833334, y: 1.4500003}
+    shoulders: {x: 0.020833334, y: 1.3844444}
+    headWidth: 0.8194444
+    shoulderWidth: 0.9177778
+  - source: {fileID: -8149921202248346396, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.2361111, y: 1.875}
+    upperLip: {x: -0.2361111, y: 1.3983332}
+    shoulders: {x: -0.2361111, y: 1.3344446}
+    headWidth: 0.84944445
+    shoulderWidth: 0.9513778
+  - source: {fileID: 1476065771577226189, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.104166664, y: 1.9027778}
+    upperLip: {x: -0.104166664, y: 1.4533335}
+    shoulders: {x: -0.104166664, y: 1.3544447}
+    headWidth: 0.8616667
+    shoulderWidth: 0.9650667
+  - source: {fileID: -4502302623513483363, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.1736111, y: 1.8055556}
+    upperLip: {x: 0.1736111, y: 1.3255556}
+    shoulders: {x: 0.1736111, y: 1.2844442}
+    headWidth: 0.8188889
+    shoulderWidth: 0.91715556
+  - source: {fileID: -2374349411306797674, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.020833334, y: 1.7777778}
+    upperLip: {x: -0.020833334, y: 1.3194444}
+    shoulders: {x: -0.020833334, y: 1.2644441}
+    headWidth: 0.7777778
+    shoulderWidth: 0.87111115
+  - source: {fileID: -1978122866324430990, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.38194445, y: 1.8888888}
+    upperLip: {x: 0.38194445, y: 1.4222226}
+    shoulders: {x: 0.38194445, y: 1.3366666}
+    headWidth: 0.86777776
+    shoulderWidth: 0.9719111
+  - source: {fileID: 8689770482923432985, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.1388889, y: 1.9444444}
+    upperLip: {x: -0.1388889, y: 1.5261111}
+    shoulders: {x: -0.1388889, y: 1.3338885}
+    headWidth: 0.95944446
+    shoulderWidth: 1.0745778
+  - source: {fileID: 1359070178783180977, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.3125, y: 1.8888888}
+    upperLip: {x: -0.3125, y: 1.4700004}
+    shoulders: {x: -0.3125, y: 1.3444443}
+    headWidth: 0.8055556
+    shoulderWidth: 0.9022223
+  - source: {fileID: -1004307807, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.18055555, y: 1.8888888}
+    upperLip: {x: -0.18055555, y: 1.3655556}
+    shoulders: {x: -0.18055555, y: 1.3444443}
+    headWidth: 0.8055556
+    shoulderWidth: 0.9022223
+  - source: {fileID: -641671920, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.013888889, y: 1.9027778}
+    upperLip: {x: -0.013888889, y: 1.3755553}
+    shoulders: {x: -0.013888889, y: 1.3544447}
+    headWidth: 0.8472222
+    shoulderWidth: 0.9488889
+  - source: {fileID: -459257790, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.1875, y: 1.8611112}
+    upperLip: {x: -0.1875, y: 1.3516668}
+    shoulders: {x: -0.1875, y: 1.3244443}
+    headWidth: 0.8433333
+    shoulderWidth: 0.9445333
+  - source: {fileID: -2081056448, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.20833333, y: 1.8611112}
+    upperLip: {x: 0.20833333, y: 1.2872221}
+    shoulders: {x: 0.20833333, y: 1.3283335}
+    headWidth: 0.8372222
+    shoulderWidth: 0.9376889
+  - source: {fileID: -2099808845, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.0069444445, y: 1.8194444}
+    upperLip: {x: 0.0069444445, y: 1.3161112}
+    shoulders: {x: 0.0069444445, y: 1.2944446}
+    headWidth: 0.825
+    shoulderWidth: 0.92399997
+  - source: {fileID: -1578370930, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.375, y: 2.0972223}
+    upperLip: {x: 0.375, y: 1.6000001}
+    shoulders: {x: 0.375, y: 1.4866663}
+    headWidth: 0.95944446
+    shoulderWidth: 1.0745778
+  - source: {fileID: -1025704404, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.020833334, y: 1.9722222}
+    upperLip: {x: -0.020833334, y: 1.5533338}
+    shoulders: {x: -0.020833334, y: 1.3616663}
+    headWidth: 0.95944446
+    shoulderWidth: 1.0745778
+  - source: {fileID: -29242646, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.11111111, y: 1.9722222}
+    upperLip: {x: -0.11111111, y: 1.5869446}
+    shoulders: {x: -0.11111111, y: 1.4044443}
+    headWidth: 0.7638889
+    shoulderWidth: 0.8555556
+  - source: {fileID: 1468971431, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.11805555, y: 1.9166666}
+    upperLip: {x: -0.11805555, y: 1.3094449}
+    shoulders: {x: -0.11805555, y: 1.3644443}
+    headWidth: 0.7222222
+    shoulderWidth: 0.80888885
+  - source: {fileID: -1026874742, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.0069444445, y: 1.9305556}
+    upperLip: {x: -0.0069444445, y: 1.3272222}
+    shoulders: {x: -0.0069444445, y: 1.3744447}
+    headWidth: 0.7638889
+    shoulderWidth: 0.8555556
+  - source: {fileID: 1501701595, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.2638889, y: 1.8888888}
+    upperLip: {x: -0.2638889, y: 1.4161115}
+    shoulders: {x: -0.2638889, y: 1.3444443}
+    headWidth: 0.85555553
+    shoulderWidth: 0.9582222
+  - source: {fileID: 353851907, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.027777778, y: 1.8888888}
+    upperLip: {x: 0.027777778, y: 1.295556}
+    shoulders: {x: 0.027777778, y: 1.3444443}
+    headWidth: 0.7222222
+    shoulderWidth: 0.80888885
+  - source: {fileID: -376013230, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.2847222, y: 1.7916666}
+    upperLip: {x: 0.2847222, y: 1.4406942}
+    shoulders: {x: 0.2847222, y: 1.2744446}
+    headWidth: 0.7361111
+    shoulderWidth: 0.8244444
+  - source: {fileID: 1894191644, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.7361111, y: 1.9166666}
+    upperLip: {x: 0.7361111, y: 1.4861112}
+    shoulders: {x: 0.7361111, y: 1.3333334}
+    headWidth: 0.9166666
+    shoulderWidth: 1.0266666
+  - source: {fileID: -478034257, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.07638889, y: 2.0416667}
+    upperLip: {x: -0.07638889, y: 1.5844446}
+    shoulders: {x: -0.07638889, y: 1.4350001}
+    headWidth: 0.9533334
+    shoulderWidth: 1.0677334
+  - source: {fileID: -651461722, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.104166664, y: 1.9305556}
+    upperLip: {x: -0.104166664, y: 1.4272224}
+    shoulders: {x: -0.104166664, y: 1.3783332}
+    headWidth: 0.7916667
+    shoulderWidth: 0.8866667
+  - source: {fileID: 392103690, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.034722224, y: 1.8888888}
+    upperLip: {x: 0.034722224, y: 1.3655556}
+    shoulders: {x: 0.034722224, y: 1.3444443}
+    headWidth: 0.7777778
+    shoulderWidth: 0.87111115
+  - source: {fileID: -501213112, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.2777778, y: 1.875}
+    upperLip: {x: -0.2777778, y: 1.4755554}
+    shoulders: {x: -0.2777778, y: 1.2644446}
+    headWidth: 0.75
+    shoulderWidth: 0.84000003
+  - source: {fileID: -475048133, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.18055555, y: 1.8472222}
+    upperLip: {x: -0.18055555, y: 1.3377779}
+    shoulders: {x: -0.18055555, y: 1.3144447}
+    headWidth: 0.8372222
+    shoulderWidth: 0.9376889
+  - source: {fileID: -1858537700, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.3472222, y: 1.7916666}
+    upperLip: {x: -0.3472222, y: 1.3388888}
+    shoulders: {x: -0.3472222, y: 1.2744446}
+    headWidth: 0.75
+    shoulderWidth: 0.84000003
+  - source: {fileID: 427290475, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.11805555, y: 1.75}
+    upperLip: {x: 0.11805555, y: 1.3356947}
+    shoulders: {x: 0.11805555, y: 1.1394446}
+    headWidth: 0.7222222
+    shoulderWidth: 0.80888885
+  - source: {fileID: -723537478, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.24305555, y: 2.0277777}
+    upperLip: {x: 0.24305555, y: 1.5061111}
+    shoulders: {x: 0.24305555, y: 1.4327779}
+    headWidth: 0.935
+    shoulderWidth: 1.0472
+  - source: {fileID: -150929742, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.1388889, y: 1.9861112}
+    upperLip: {x: -0.1388889, y: 1.5338889}
+    shoulders: {x: -0.1388889, y: 1.3755556}
+    headWidth: 0.95944446
+    shoulderWidth: 1.0745778
+  - source: {fileID: -640845275, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.14583333, y: 1.9583334}
+    upperLip: {x: 0.14583333, y: 1.4544444}
+    shoulders: {x: 0.14583333, y: 1.3944443}
+    headWidth: 0.7777778
+    shoulderWidth: 0.87111115
+  - source: {fileID: 684411304, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.027777778, y: 1.8472222}
+    upperLip: {x: 0.027777778, y: 1.365}
+    shoulders: {x: 0.027777778, y: 1.3144444}
+    headWidth: 0.7777778
+    shoulderWidth: 0.87111115
+  - source: {fileID: 1997729687, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.027777778, y: 1.8333334}
+    upperLip: {x: 0.027777778, y: 1.3433334}
+    shoulders: {x: 0.027777778, y: 1.3044444}
+    headWidth: 0.7638889
+    shoulderWidth: 0.8555556
+  - source: {fileID: 1977628457, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.14583333, y: 1.8194444}
+    upperLip: {x: -0.14583333, y: 1.3705554}
+    shoulders: {x: -0.14583333, y: 1.2944444}
+    headWidth: 0.825
+    shoulderWidth: 0.92399997
+  - source: {fileID: 839106174, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.4027778, y: 1.7222222}
+    upperLip: {x: 0.4027778, y: 1.2622223}
+    shoulders: {x: 0.4027778, y: 1.2244445}
+    headWidth: 0.7822222
+    shoulderWidth: 0.87608886
+  - source: {fileID: -1307936313, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.2013889, y: 1.7777778}
+    upperLip: {x: -0.2013889, y: 1.3077779}
+    shoulders: {x: -0.2013889, y: 1.2644444}
+    headWidth: 0.8066667
+    shoulderWidth: 0.9034667
+  - source: {fileID: 1238643706, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.47916666, y: 2.125}
+    upperLip: {x: 0.47916666, y: 1.607778}
+    shoulders: {x: 0.47916666, y: 1.5144446}
+    headWidth: 0.95944446
+    shoulderWidth: 1.0745778
+  - source: {fileID: 403742590, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.1388889, y: 2}
+    upperLip: {x: 0.1388889, y: 1.5766665}
+    shoulders: {x: 0.1388889, y: 1.3894446}
+    headWidth: 0.95944446
+    shoulderWidth: 1.0745778
+  - source: {fileID: -688722813, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.11111111, y: 1.9861112}
+    upperLip: {x: 0.11111111, y: 1.4933333}
+    shoulders: {x: 0.11111111, y: 1.4144444}
+    headWidth: 0.8333333
+    shoulderWidth: 0.93333334
+  - source: {fileID: -1493251831, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.11111111, y: 1.9444444}
+    upperLip: {x: 0.11111111, y: 1.4461112}
+    shoulders: {x: 0.11111111, y: 1.3844445}
+    headWidth: 0.875
+    shoulderWidth: 0.98
+  - source: {fileID: -1404715631, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.097222224, y: 1.9166666}
+    upperLip: {x: 0.097222224, y: 1.395}
+    shoulders: {x: 0.097222224, y: 1.3644444}
+    headWidth: 0.86777776
+    shoulderWidth: 0.9719111
+  - source: {fileID: 1137254001, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.06944445, y: 1.8888888}
+    upperLip: {x: -0.06944445, y: 1.4433333}
+    shoulders: {x: -0.06944445, y: 1.3444445}
+    headWidth: 0.85555553
+    shoulderWidth: 0.9582222
+  - source: {fileID: 936256652, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.20833333, y: 1.8472222}
+    upperLip: {x: -0.20833333, y: 1.3627778}
+    shoulders: {x: -0.20833333, y: 1.3183333}
+    headWidth: 0.8311111
+    shoulderWidth: 0.9308444
+  - source: {fileID: 1525707343, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.055555556, y: 1.8055556}
+    upperLip: {x: 0.055555556, y: 1.3255556}
+    shoulders: {x: 0.055555556, y: 1.2844445}
+    headWidth: 0.8188889
+    shoulderWidth: 0.91715556
+  - source: {fileID: 50817193, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: 0.16666667, y: 1.8472222}
+    upperLip: {x: 0.16666667, y: 1.435}
+    shoulders: {x: 0.16666667, y: 1.2716666}
+    headWidth: 0.90444446
+    shoulderWidth: 1.0129778
+  - source: {fileID: 1851993801, guid: ecbcbba79961f2f47adb4ec787995223, type: 3}
+    crown: {x: -0.11111111, y: 2.0972223}
+    upperLip: {x: -0.11111111, y: 1.5783334}
+    shoulders: {x: -0.11111111, y: 1.4944444}
+    headWidth: 0.9472222
+    shoulderWidth: 1.0608889
+  bodyVariants: []
+  allowHeightVariants: 0

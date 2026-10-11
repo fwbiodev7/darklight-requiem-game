@@ -1,0 +1,183 @@
+--- main/Assets/Scripts/Game/Varginha/VarginhaInputRuntime.cs
++++ varginha-local/Assets/Scripts/Game/Varginha/VarginhaInputRuntime.cs
+@@ -28,10 +28,16 @@
+         public static string JournalLabel => UsingGamepad ? VarginhaGamepadBindings.Label("Journal") : "TAB";
+         public static string InventoryLabel => UsingGamepad ? VarginhaGamepadBindings.Label("Inventory") : "G";
+         public static string PauseLabel => UsingGamepad ? "START" : "ESC";
++        public static string ActionLabel(VarginhaInputAction action)=>UsingGamepad?PadLabel(action):VarginhaInputBindings.DisplayName(action,false);
++        public static string MoveLabel=>UsingGamepad?"ANALÓGICO / D-PAD":string.Join(" / ",new[]{
++            ActionLabel(VarginhaInputAction.MoveUp),ActionLabel(VarginhaInputAction.MoveLeft),
++            ActionLabel(VarginhaInputAction.MoveDown),ActionLabel(VarginhaInputAction.MoveRight)});
++        public static string NavigationLabel=>UsingGamepad?"ANALÓGICO / D-PAD":"SETAS";
++        public static string SubmitLabel=>UsingGamepad?"A":"ENTER";
+         public static string Prompt(string text)
+         {
+             if(string.IsNullOrEmpty(text))return text;
+-            text=text.Replace("[E]","["+InteractLabel+"]");
++            text=text.Replace("E / A",InteractLabel).Replace("W / A",CarLabel).Replace("[E]","["+InteractLabel+"]");
+             if(!UsingGamepad)return text;
+             string result=text.Replace("WASD / SETAS","ANALÓGICO / D-PAD").Replace("WASD","ANALÓGICO / D-PAD")
+                 .Replace("[W]","["+CarLabel+"]").Replace("[G]","["+InventoryLabel+"]").Replace("[V]","["+VarginhaGamepadBindings.Label("Flashlight")+"]").Replace("[ESPAÇO]","["+InteractLabel+"]")
+--- main/Assets/Scripts/Game/Varginha/VarginhaGamepadUI.cs
++++ varginha-local/Assets/Scripts/Game/Varginha/VarginhaGamepadUI.cs
+@@ -10,28 +10,37 @@
+         private sealed class Node
+         { public int id; public Rect rect, local; public bool slider, car; public int scroll; }
+         private sealed class Context
+-        { public string key; public int priority, frame, selected; public bool carOnly; public readonly List<Node> nodes = new(); public Node selection; }
++        { public string key; public int priority, frame, selected; public bool carOnly, verticalRows; public readonly List<Node> nodes = new(); public Node selection; }
+         private static readonly Dictionary<string, Context> Contexts = new();
+         private static Context _current, _active, _pressed;
+-        private static int _pressedId, _pressedFrame = -1, _usedFrame = -1, _sliderUsed = -1;
++        private static int _pressedId, _pressedFrame = -1, _usedFrame = -1, _sliderUsed = -1, _sliderId;
+         private static float _repeatAt, _sliderDelta;
+         private static Vector2 _lastNav;
+         private static int _scroll;
++        private static bool _showSelection;
+         public static bool HasSelection => _active?.selection != null;
+         public static string ActiveContext => _active?.key;
+-        public static void Reset() { Contexts.Clear(); _current = _active = _pressed = null; _pressedFrame = -1; _lastNav = Vector2.zero; _sliderDelta = 0; }
+-        public static void Begin(string key, bool interactive = true, int priority = 0, bool carOnly = false)
++        public static string CurrentContext => _current?.key;
++        public static bool PointerActive { get; private set; }=true;
++        public static void Reset() { Contexts.Clear(); _current = _active = _pressed = null; _pressedFrame = -1; _lastNav = Vector2.zero; _sliderDelta = 0; _sliderUsed = _usedFrame = -1; _repeatAt = 0; _showSelection = false; PointerActive=true; Game.UI.PixelButtonHover.Reset(); }
++        public static void Begin(string key, bool interactive = true, int priority = 0, bool carOnly = false, bool verticalRows = false, Rect? initialSelection = null)
+         {
+             _scroll = 0;
+             if (!interactive) { _current = null; return; }
+-            if (!Contexts.TryGetValue(key, out _current)) Contexts[key] = _current = new Context { key = key };
++            if (!Contexts.TryGetValue(key, out _current)) Contexts[key] = _current = new Context { key = key, selected = initialSelection?.GetHashCode() ?? 0 };
+             _current.frame = Time.frameCount; _current.priority = priority;
+             _current.carOnly=carOnly;
++            _current.verticalRows=verticalRows;
+             if (Event.current?.type == EventType.Repaint) _current.nodes.Clear();
+         }
+         public static void End() { _current = null; _scroll = 0; }
+         public static void Tick()
+         {
++            var mouse=UnityEngine.InputSystem.Mouse.current;
++            if(mouse?.delta.ReadValue().sqrMagnitude>.25f||mouse?.leftButton.wasPressedThisFrame==true)PointerActive=true;
++            else if(VarginhaInputActions.UI("Navigate").ReadValue<Vector2>().sqrMagnitude>.16f
++                ||VarginhaInputActions.UI("Submit").WasPressedThisFrame())PointerActive=false;
++            var previous = _active;
+             _active = null;
+             if(VarginhaGamepadBindings.Suspended) return;
+             foreach (var context in Contexts.Values)
+@@ -41,13 +50,15 @@
+                 if (context.frame >= Time.frameCount - 1 && context.selection != null && (_active == null || context.priority > _active.priority)) _active = context;
+             }
+             if (_active == null) return;
++            if (_active != previous) { _sliderDelta = 0; _lastNav = Vector2.zero; _repeatAt = 0; }
+             var value = VarginhaInputActions.UI("Navigate").ReadValue<Vector2>();
+             Vector2 direction = Mathf.Abs(value.x) > Mathf.Abs(value.y) ? new Vector2(Mathf.Sign(value.x), 0) : new Vector2(0, -Mathf.Sign(value.y));
+             if (value.sqrMagnitude < .16f) { _lastNav = Vector2.zero; }
+             else if (_lastNav != direction || Time.unscaledTime >= _repeatAt)
+             {
++                _showSelection = true;
+                 _repeatAt = Time.unscaledTime + (_lastNav == direction ? .12f : .32f); _lastNav = direction;
+-                if (_active.selection.slider && direction.x != 0) _sliderDelta = direction.x * .05f;
++                if (_active.selection.slider && direction.x != 0) { _sliderDelta = direction.x * .05f; _sliderId = _active.selected; }
+                 else Navigate(direction);
+             }
+             bool submit = _active.selection.car ? VarginhaInputActions.CarPressed : VarginhaInputActions.UI("Submit").WasPressedThisFrame();
+@@ -63,7 +74,8 @@
+                 Vector2 delta = node.rect.center - _active.selection.rect.center;
+                 float along = Vector2.Dot(delta, direction); if (along <= 1) continue;
+                 float across = Mathf.Abs(delta.x * direction.y - delta.y * direction.x);
+-                float cost = along + across * 3;
++                // Settings follow rows, so a nearby slider wins over a distant footer.
++                float cost = _active.verticalRows && direction.y != 0 ? along + across * .001f : along + across * 3;
+                 if (cost < score) { score = cost; best = node; }
+             }
+             if (best == null)
+@@ -85,30 +97,43 @@
+             int id = rect.GetHashCode();
+             var screen = GUIUtility.GUIToScreenPoint(rect.position); var corner = GUIUtility.GUIToScreenPoint(rect.max);
+             var node = new Node { id = id, local = rect, rect = new Rect(screen, corner - screen), slider = slider, car = car || _current.carOnly, scroll = _scroll };
+-            if (_current.nodes.FindIndex(n => n.id == id) < 0) _current.nodes.Add(node);
+-            if (_current.selection == null || _current.selected == id)
++            int index=_current.nodes.FindIndex(n=>n.id==id);
++            if(index<0)_current.nodes.Add(node);
++            else
++            {
++                // Focus queries re-register the same rectangle: retain its special binding.
++                node.car|=_current.nodes[index].car;node.slider|=_current.nodes[index].slider;
++                _current.nodes[index]=node;
++            }
++            if (_current.selected == 0 || _current.selected == id)
+             { _current.selected = id; _current.selection = node; }
+             GUI.SetNextControlName(_current.key + id);
+             return node;
+         }
+-        public static bool Selected(Rect rect)
++        public static bool Selected(Rect rect, bool includeKeyboard = false)
+         {
+             var node = Register(rect);
+-            return node != null && _current.selected == node.id && VarginhaInputActions.UsingGamepad;
++            return node != null && _current.selected == node.id && (VarginhaInputActions.UsingGamepad || includeKeyboard && _showSelection);
+         }
+         public static bool Button(Rect rect, string text, GUIStyle style = null) => Button(rect, new GUIContent(text), style);
+-        public static bool Button(Rect rect, GUIContent text, GUIStyle style = null)
++        public static bool Button(Rect rect, GUIContent text, GUIStyle style = null, bool highlight = true)
+         {
+-            var node = Register(rect); Highlight(rect, node);
++            var node = Register(rect);
++            float hover=highlight?Game.UI.PixelButtonHover.Amount(rect,Game.UI.PixelButtonHover.Focused(rect)):0;
++            var drawingStyle=highlight?Game.UI.PixelButtonHover.SmoothStyle(style,hover):style??GUI.skin.button;
+             bool clicked=false;
+-            if(node?.car==true)GUI.Box(rect,new GUIContent("["+VarginhaInputActions.CarLabel+"] "+text.text),style??GUI.skin.button);
+-            else clicked = GUI.Button(rect, text, style ?? GUI.skin.button);
++            if(node?.car==true)GUI.Box(rect,new GUIContent("["+VarginhaInputActions.CarLabel+"] "+text.text),drawingStyle);
++            else clicked = GUI.Button(rect, text, drawingStyle);
++            if(highlight)Game.UI.PixelButtonHover.Decorate(rect,hover);
++            if (clicked && node != null) { _current.selected = node.id; _current.selection = node; _showSelection = false; }
+             Focus(node); return clicked || Pressed(node);
+         }
+         public static bool CarButton(Rect rect, string text, GUIStyle style = null)
+         {
+-            var node = Register(rect, car: true); Highlight(rect, node);
+-            GUI.Box(rect, "[" + VarginhaInputActions.CarLabel + "] " + text, style ?? GUI.skin.button);
++            var node = Register(rect, car: true);
++            float hover=Game.UI.PixelButtonHover.Amount(rect,Game.UI.PixelButtonHover.Focused(rect));
++            GUI.Box(rect, "[" + VarginhaInputActions.CarLabel + "] " + text, Game.UI.PixelButtonHover.SmoothStyle(style,hover));
++            Game.UI.PixelButtonHover.Decorate(rect,hover);
+             return Pressed(node);
+         }
+         private static bool Pressed(Node node)
+@@ -120,7 +145,7 @@
+         { if (node != null && _current.selected == node.id && VarginhaInputActions.UsingGamepad) GUI.FocusControl(_current.key + node.id); }
+         private static void Highlight(Rect rect, Node node)
+         {
+-            if (node == null || _current.selected != node.id || (!VarginhaInputActions.UsingGamepad && !node.car)) return;
++            if (node == null || _current.selected != node.id || (!VarginhaInputActions.UsingGamepad && !_showSelection && !node.car)) return;
+             var before = GUI.color; GUI.color = new Color(.76f, .81f, .59f);
+             GUI.DrawTexture(new Rect(rect.x - 2, rect.y - 2, rect.width + 4, 2), Texture2D.whiteTexture);
+             GUI.DrawTexture(new Rect(rect.x - 2, rect.yMax, rect.width + 4, 2), Texture2D.whiteTexture);
+@@ -130,9 +155,14 @@
+         public static float HorizontalSlider(Rect rect, float value, float min, float max)
+         {
+             var node = Register(rect, slider: true); Highlight(rect, node);
+-            if (node != null && _current == _active && _current.selected == node.id && _sliderDelta != 0 && _sliderUsed != Time.frameCount)
++            if (node != null && Event.current.type == EventType.MouseDown && rect.Contains(Event.current.mousePosition))
++            { _current.selected = node.id; _current.selection = node; _showSelection = false; }
++            if (node != null && _current == _active && _current.selected == node.id && _sliderId == node.id && _sliderDelta != 0 && _sliderUsed != Time.frameCount)
+             { value = Mathf.Clamp(value + _sliderDelta * (max - min), min, max); _sliderDelta = 0; _sliderUsed = Time.frameCount; }
+-            float result = GUI.HorizontalSlider(rect, value, min, max); Focus(node); return result;
++            // Navigation owns keyboard increments too; avoid a second native IMGUI step.
++            if (node != null && _current == _active && _current.selected == node.id && Event.current.type == EventType.KeyDown &&
++                (Event.current.keyCode == KeyCode.LeftArrow || Event.current.keyCode == KeyCode.RightArrow)) Event.current.Use();
++            float result = GUI.HorizontalSlider(rect, value, min, max); return result;
+         }
+         public static Vector2 BeginScrollView(Rect viewport, Vector2 position, Rect content)
+         {
+--- main/Assets/Tests/PlayMode/CampaignControllerRemapTests.cs
++++ varginha-local/Assets/Tests/PlayMode/CampaignControllerRemapTests.cs
+@@ -13,7 +13,7 @@
+ 
+ namespace Game.Tests.PlayMode
+ {
+-    public class CampaignControllerRemapTests : InputTestFixture
++    [Category("HudPuzzles")] public class CampaignControllerRemapTests : InputTestFixture
+     {
+         readonly Dictionary<string,string> _preferences=new();
+         const string Prefix="Varginha.Controls.Gamepad.";

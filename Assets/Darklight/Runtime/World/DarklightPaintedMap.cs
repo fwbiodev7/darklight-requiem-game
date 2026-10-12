@@ -11,7 +11,8 @@ namespace Darklight
         {
             var owner=root.gameObject.AddComponent<DarklightPaintedMap>();
             var ground=new GameObject("MapaIlustrado").AddComponent<SpriteRenderer>();ground.transform.SetParent(root,false);
-            ground.sprite=image;ground.sharedMaterial=material;ground.sortingOrder=-200;
+            ground.sprite=image;ground.transform.localScale=Vector3.one*(image.pixelsPerUnit/map.Art.pixelsPerUnit);ground.sharedMaterial=material;ground.sortingOrder=-200;
+            var details=DarklightMapDetails.Create(root,map,image,material);
             foreach(var region in map.Art.foreground)
             {
                 var foot=map.Art.World(region.foot);var obj=new GameObject(region.name);obj.transform.SetParent(root,false);obj.transform.localPosition=foot;
@@ -20,12 +21,22 @@ namespace Darklight
                 // All six authored maps use rectangular foreground cutouts. FullRect sprites
                 // reject OverrideGeometry; cropping at creation keeps each piece from covering
                 // the entire opaque map, without requiring readable textures or duplicate PNGs.
-                var crop=new Rect(image.rect.x+left,image.rect.y+map.Art.height-bottom,right-left,bottom-top);
-                var pivot=new Vector2((region.foot.x-left)/crop.width,(bottom-region.foot.y)/crop.height);
-                var sprite=Sprite.Create(image.texture,crop,pivot,map.Art.pixelsPerUnit,0,SpriteMeshType.FullRect);owner.temporary.Add(sprite);
-                var renderer=obj.AddComponent<SpriteRenderer>();renderer.sprite=sprite;renderer.sharedMaterial=material;renderer.sortingOrder=100-Mathf.RoundToInt(foot.y*10);
-                var fade=obj.AddComponent<DarklightMapOcclusion>();fade.width=renderer.bounds.size.x;fade.height=renderer.bounds.size.y;
+                if(details!=null)
+                {
+                    var source=Rect.MinMaxRect(left,top,right,bottom);
+                    foreach(var part in details.Partition(source)){var sprite=details.Foreground(image,map,part);owner.temporary.Add(sprite);var piece=new GameObject("TrechoFrontal");piece.transform.SetParent(obj.transform,false);piece.transform.position=map.Art.World(new Vector2(part.center.x,part.yMax));var renderer=piece.AddComponent<SpriteRenderer>();renderer.sprite=sprite;renderer.sharedMaterial=material;renderer.sortingOrder=100-Mathf.RoundToInt(foot.y*10);}
+                    var fade=obj.AddComponent<DarklightMapOcclusion>();fade.width=(right-left)/map.Art.pixelsPerUnit;fade.height=(bottom-top)/map.Art.pixelsPerUnit;
+                }
+                else
+                {
+                    var crop=new Rect(image.rect.x+left,image.rect.y+map.Art.height-bottom,right-left,bottom-top);var pivot=new Vector2((region.foot.x-left)/crop.width,(bottom-region.foot.y)/crop.height);
+                    var sprite=Sprite.Create(image.texture,crop,pivot,map.Art.pixelsPerUnit,0,SpriteMeshType.FullRect);owner.temporary.Add(sprite);var renderer=obj.AddComponent<SpriteRenderer>();renderer.sprite=sprite;renderer.sharedMaterial=material;renderer.sortingOrder=100-Mathf.RoundToInt(foot.y*10);var fade=obj.AddComponent<DarklightMapOcclusion>();fade.width=renderer.bounds.size.x;fade.height=renderer.bounds.size.y;
+                }
             }
+            BuildGeometry(root,map);
+        }
+        internal static void BuildGeometry(Transform root,DarklightMapDefinition map)
+        {
             // Merge closed navigation cells into runs, then merge identical runs vertically.
             // This keeps collision aligned to the image while avoiding one object per blocked cell.
             var active=new Dictionary<(int x,int width),RectInt>();var grid=map.GridBounds;

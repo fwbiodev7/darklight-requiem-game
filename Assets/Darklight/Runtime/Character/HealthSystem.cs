@@ -38,7 +38,7 @@ namespace Darklight
         private void Update()
         {
             if (_invincibilityTimer > 0f)
-                _invincibilityTimer -= Time.deltaTime;
+                _invincibilityTimer -= DarklightCombatLab.Instance==null?Time.deltaTime:DarklightCombatLab.Instance.CombatDelta;
         }
 
         // ─── Public API ───────────────────────────────────────────────────────
@@ -118,3 +118,4 @@ namespace Darklight
         }
     }
 }
+

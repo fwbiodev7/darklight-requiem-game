@@ -22,8 +22,8 @@ namespace Darklight.Tests
             var view=lab.Player.GetComponent<DarklightCharacterView>();
             Assert.That(view.walk.Length,Is.EqualTo(32));Assert.That(view.slash.Length,Is.EqualTo(32));Assert.That(view.idle.Length,Is.EqualTo(8));
             Assert.That(lab.Input.Asset.name,Is.EqualTo("DarklightInputs"));
-            Assert.That(lab.WorldCamera.targetTexture.width,Is.EqualTo(640));
-            Assert.That(lab.WorldCamera.targetTexture.height,Is.EqualTo(360));
+            Assert.That(lab.WorldCamera.targetTexture.width,Is.EqualTo(1280));
+            Assert.That(lab.WorldCamera.targetTexture.height,Is.EqualTo(720));
             yield return null;
         }
         [UnityTest] public IEnumerator KatanaDamagesOneTargetOnlyOnceWithDuplicateHurtboxes()

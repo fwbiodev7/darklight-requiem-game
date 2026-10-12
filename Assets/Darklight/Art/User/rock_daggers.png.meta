@@ -72,10 +72,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 70.5
+  spritePixelsToUnits: 80
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,7 +98,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -129,12 +129,12 @@ TextureImporter:
       name: rock_daggers_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 1098
-        width: 140
-        height: 141
+        x: 32
+        y: 1704
+        width: 168
+        height: 157
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.52380955, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -151,12 +151,12 @@ TextureImporter:
       name: rock_daggers_1
       rect:
         serializedVersion: 2
-        x: 156
-        y: 1098
-        width: 157
-        height: 136
+        x: 304
+        y: 1704
+        width: 137
+        height: 151
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.41240877, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -173,12 +173,12 @@ TextureImporter:
       name: rock_daggers_2
       rect:
         serializedVersion: 2
-        x: 313
-        y: 1098
-        width: 157
-        height: 137
+        x: 548
+        y: 1704
+        width: 138
+        height: 151
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.3768116, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -195,12 +195,12 @@ TextureImporter:
       name: rock_daggers_3
       rect:
         serializedVersion: 2
-        x: 470
-        y: 1098
-        width: 157
-        height: 141
+        x: 786
+        y: 1704
+        width: 127
+        height: 157
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.42913386, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -217,12 +217,12 @@ TextureImporter:
       name: rock_daggers_4
       rect:
         serializedVersion: 2
-        x: 627
-        y: 1098
-        width: 156
-        height: 125
+        x: 1008
+        y: 1704
+        width: 152
+        height: 140
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.47697368, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -239,12 +239,12 @@ TextureImporter:
       name: rock_daggers_5
       rect:
         serializedVersion: 2
-        x: 783
-        y: 1098
-        width: 157
-        height: 123
+        x: 1250
+        y: 1704
+        width: 162
+        height: 140
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.43209878, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -261,12 +261,12 @@ TextureImporter:
       name: rock_daggers_6
       rect:
         serializedVersion: 2
-        x: 940
-        y: 1098
-        width: 157
-        height: 150
+        x: 1514
+        y: 1704
+        width: 96
+        height: 153
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.484375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -283,12 +283,12 @@ TextureImporter:
       name: rock_daggers_7
       rect:
         serializedVersion: 2
-        x: 1097
-        y: 1098
-        width: 150
-        height: 98
+        x: 1706
+        y: 1704
+        width: 172
+        height: 112
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.5494186, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -305,12 +305,12 @@ TextureImporter:
       name: rock_daggers_8
       rect:
         serializedVersion: 2
-        x: 9
-        y: 941
-        width: 147
-        height: 157
+        x: 40
+        y: 1464
+        width: 164
+        height: 155
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.4847561, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -327,12 +327,12 @@ TextureImporter:
       name: rock_daggers_9
       rect:
         serializedVersion: 2
-        x: 156
-        y: 941
-        width: 157
-        height: 157
+        x: 300
+        y: 1464
+        width: 138
+        height: 147
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.4347826, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -349,12 +349,12 @@ TextureImporter:
       name: rock_daggers_10
       rect:
         serializedVersion: 2
-        x: 313
-        y: 941
-        width: 157
-        height: 157
+        x: 548
+        y: 1464
+        width: 134
+        height: 148
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.38432837, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -371,12 +371,12 @@ TextureImporter:
       name: rock_daggers_11
       rect:
         serializedVersion: 2
-        x: 470
-        y: 941
-        width: 157
-        height: 157
+        x: 786
+        y: 1464
+        width: 139
+        height: 155
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.38848922, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -393,12 +393,12 @@ TextureImporter:
       name: rock_daggers_12
       rect:
         serializedVersion: 2
-        x: 627
-        y: 941
-        width: 156
-        height: 157
+        x: 994
+        y: 1464
+        width: 143
+        height: 137
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.5979021, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -415,12 +415,12 @@ TextureImporter:
       name: rock_daggers_13
       rect:
         serializedVersion: 2
-        x: 783
-        y: 941
-        width: 157
-        height: 157
+        x: 1235
+        y: 1464
+        width: 169
+        height: 137
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.3964497, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -437,12 +437,12 @@ TextureImporter:
       name: rock_daggers_14
       rect:
         serializedVersion: 2
-        x: 940
-        y: 941
-        width: 157
-        height: 157
+        x: 1511
+        y: 1464
+        width: 96
+        height: 152
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.5104167, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -459,12 +459,12 @@ TextureImporter:
       name: rock_daggers_15
       rect:
         serializedVersion: 2
-        x: 1097
-        y: 941
-        width: 145
-        height: 157
+        x: 1708
+        y: 1464
+        width: 163
+        height: 113
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.5674847, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -481,12 +481,12 @@ TextureImporter:
       name: rock_daggers_16
       rect:
         serializedVersion: 2
-        x: 11
-        y: 784
-        width: 145
-        height: 157
+        x: 48
+        y: 1224
+        width: 137
+        height: 154
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.5218978, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -503,12 +503,12 @@ TextureImporter:
       name: rock_daggers_17
       rect:
         serializedVersion: 2
-        x: 156
-        y: 784
-        width: 156
-        height: 157
+        x: 310
+        y: 1224
+        width: 116
+        height: 151
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.43534482, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -525,12 +525,12 @@ TextureImporter:
       name: rock_daggers_18
       rect:
         serializedVersion: 2
-        x: 357
-        y: 784
-        width: 113
-        height: 157
+        x: 550
+        y: 1224
+        width: 111
+        height: 154
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.44594595, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -547,12 +547,12 @@ TextureImporter:
       name: rock_daggers_19
       rect:
         serializedVersion: 2
-        x: 499
-        y: 784
-        width: 128
-        height: 157
+        x: 777
+        y: 1224
+        width: 142
+        height: 151
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.44366196, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -569,12 +569,12 @@ TextureImporter:
       name: rock_daggers_20
       rect:
         serializedVersion: 2
-        x: 627
-        y: 784
-        width: 156
-        height: 157
+        x: 1022
+        y: 1224
+        width: 138
+        height: 136
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.42028984, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -591,12 +591,12 @@ TextureImporter:
       name: rock_daggers_21
       rect:
         serializedVersion: 2
-        x: 793
-        y: 784
-        width: 147
-        height: 157
+        x: 1234
+        y: 1224
+        width: 171
+        height: 139
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.43274853, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -613,12 +613,12 @@ TextureImporter:
       name: rock_daggers_22
       rect:
         serializedVersion: 2
-        x: 940
-        y: 784
-        width: 149
+        x: 1502
+        y: 1224
+        width: 113
         height: 157
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.5176991, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -635,12 +635,12 @@ TextureImporter:
       name: rock_daggers_23
       rect:
         serializedVersion: 2
-        x: 1097
-        y: 784
-        width: 148
-        height: 157
+        x: 1736
+        y: 1224
+        width: 144
+        height: 117
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.44444445, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -657,10 +657,10 @@ TextureImporter:
       name: rock_daggers_24
       rect:
         serializedVersion: 2
-        x: 16
-        y: 627
-        width: 140
-        height: 157
+        x: 45
+        y: 984
+        width: 150
+        height: 154
       alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -679,12 +679,12 @@ TextureImporter:
       name: rock_daggers_25
       rect:
         serializedVersion: 2
-        x: 177
-        y: 627
-        width: 136
+        x: 288
+        y: 984
+        width: 139
         height: 157
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.5179856, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -701,12 +701,12 @@ TextureImporter:
       name: rock_daggers_26
       rect:
         serializedVersion: 2
-        x: 313
-        y: 627
-        width: 157
-        height: 157
+        x: 540
+        y: 984
+        width: 127
+        height: 152
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.47244096, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -723,12 +723,12 @@ TextureImporter:
       name: rock_daggers_27
       rect:
         serializedVersion: 2
-        x: 470
-        y: 627
-        width: 157
-        height: 157
+        x: 780
+        y: 984
+        width: 156
+        height: 150
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.38141027, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -745,12 +745,12 @@ TextureImporter:
       name: rock_daggers_28
       rect:
         serializedVersion: 2
-        x: 627
-        y: 627
-        width: 145
-        height: 157
+        x: 1036
+        y: 984
+        width: 117
+        height: 138
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.3803419, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -767,12 +767,12 @@ TextureImporter:
       name: rock_daggers_29
       rect:
         serializedVersion: 2
-        x: 790
-        y: 627
-        width: 150
-        height: 157
+        x: 1254
+        y: 984
+        width: 155
+        height: 142
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.42258066, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -789,12 +789,12 @@ TextureImporter:
       name: rock_daggers_30
       rect:
         serializedVersion: 2
-        x: 940
-        y: 627
-        width: 139
+        x: 1506
+        y: 984
+        width: 104
         height: 157
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.5144231, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -811,12 +811,12 @@ TextureImporter:
       name: rock_daggers_31
       rect:
         serializedVersion: 2
-        x: 1099
-        y: 627
-        width: 147
-        height: 157
+        x: 1710
+        y: 984
+        width: 167
+        height: 112
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.5419162, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -833,10 +833,10 @@ TextureImporter:
       name: rock_daggers_32
       rect:
         serializedVersion: 2
-        x: 12
-        y: 471
-        width: 144
-        height: 156
+        x: 36
+        y: 744
+        width: 167
+        height: 164
       alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -855,12 +855,12 @@ TextureImporter:
       name: rock_daggers_33
       rect:
         serializedVersion: 2
-        x: 156
-        y: 471
-        width: 157
-        height: 156
+        x: 290
+        y: 744
+        width: 136
+        height: 165
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.5183824, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -877,12 +877,12 @@ TextureImporter:
       name: rock_daggers_34
       rect:
         serializedVersion: 2
-        x: 313
-        y: 471
-        width: 157
-        height: 156
+        x: 534
+        y: 744
+        width: 139
+        height: 165
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.47482014, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -899,12 +899,12 @@ TextureImporter:
       name: rock_daggers_35
       rect:
         serializedVersion: 2
-        x: 470
-        y: 471
-        width: 157
-        height: 156
+        x: 780
+        y: 744
+        width: 142
+        height: 164
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.4225352, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -921,12 +921,12 @@ TextureImporter:
       name: rock_daggers_36
       rect:
         serializedVersion: 2
-        x: 627
-        y: 471
-        width: 156
-        height: 156
+        x: 1004
+        y: 744
+        width: 131
+        height: 141
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.5763359, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -943,12 +943,12 @@ TextureImporter:
       name: rock_daggers_37
       rect:
         serializedVersion: 2
-        x: 805
-        y: 471
-        width: 135
-        height: 156
+        x: 1237
+        y: 744
+        width: 165
+        height: 144
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.36666667, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -965,12 +965,12 @@ TextureImporter:
       name: rock_daggers_38
       rect:
         serializedVersion: 2
-        x: 940
-        y: 471
-        width: 157
-        height: 156
+        x: 1507
+        y: 744
+        width: 102
+        height: 171
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.51960784, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -987,12 +987,12 @@ TextureImporter:
       name: rock_daggers_39
       rect:
         serializedVersion: 2
-        x: 1097
-        y: 471
-        width: 153
-        height: 156
+        x: 1742
+        y: 744
+        width: 146
+        height: 111
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.39726028, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1009,12 +1009,12 @@ TextureImporter:
       name: rock_daggers_40
       rect:
         serializedVersion: 2
-        x: 3
-        y: 314
-        width: 153
-        height: 157
+        x: 44
+        y: 504
+        width: 141
+        height: 163
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.53900707, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1031,12 +1031,12 @@ TextureImporter:
       name: rock_daggers_41
       rect:
         serializedVersion: 2
-        x: 156
-        y: 314
-        width: 157
-        height: 157
+        x: 306
+        y: 504
+        width: 120
+        height: 163
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.44583333, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1053,12 +1053,12 @@ TextureImporter:
       name: rock_daggers_42
       rect:
         serializedVersion: 2
-        x: 313
-        y: 314
-        width: 157
-        height: 157
+        x: 522
+        y: 504
+        width: 134
+        height: 163
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.57835823, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1075,12 +1075,12 @@ TextureImporter:
       name: rock_daggers_43
       rect:
         serializedVersion: 2
-        x: 470
-        y: 314
-        width: 157
-        height: 157
+        x: 757
+        y: 504
+        width: 165
+        height: 163
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.34242424, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1097,12 +1097,12 @@ TextureImporter:
       name: rock_daggers_44
       rect:
         serializedVersion: 2
-        x: 627
-        y: 314
-        width: 156
-        height: 157
+        x: 1000
+        y: 504
+        width: 160
+        height: 144
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.628125, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1119,12 +1119,12 @@ TextureImporter:
       name: rock_daggers_45
       rect:
         serializedVersion: 2
-        x: 783
-        y: 314
-        width: 157
-        height: 157
+        x: 1231
+        y: 504
+        width: 178
+        height: 146
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.40449437, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1141,12 +1141,12 @@ TextureImporter:
       name: rock_daggers_46
       rect:
         serializedVersion: 2
-        x: 940
-        y: 314
-        width: 144
-        height: 157
+        x: 1518
+        y: 504
+        width: 90
+        height: 168
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.4611111, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1163,12 +1163,12 @@ TextureImporter:
       name: rock_daggers_47
       rect:
         serializedVersion: 2
-        x: 1101
-        y: 314
-        width: 143
-        height: 157
+        x: 1707
+        y: 504
+        width: 169
+        height: 116
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.5502958, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1185,12 +1185,12 @@ TextureImporter:
       name: rock_daggers_48
       rect:
         serializedVersion: 2
-        x: 17
-        y: 157
-        width: 139
-        height: 157
+        x: 44
+        y: 264
+        width: 141
+        height: 163
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.53900707, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1207,12 +1207,12 @@ TextureImporter:
       name: rock_daggers_49
       rect:
         serializedVersion: 2
-        x: 156
-        y: 157
-        width: 157
-        height: 157
+        x: 306
+        y: 264
+        width: 120
+        height: 163
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.44583333, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1229,12 +1229,12 @@ TextureImporter:
       name: rock_daggers_50
       rect:
         serializedVersion: 2
-        x: 330
-        y: 157
-        width: 138
-        height: 157
+        x: 522
+        y: 264
+        width: 134
+        height: 163
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.57835823, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1251,12 +1251,12 @@ TextureImporter:
       name: rock_daggers_51
       rect:
         serializedVersion: 2
-        x: 494
-        y: 157
-        width: 133
-        height: 157
+        x: 757
+        y: 264
+        width: 165
+        height: 163
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.34242424, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1273,12 +1273,12 @@ TextureImporter:
       name: rock_daggers_52
       rect:
         serializedVersion: 2
-        x: 627
-        y: 157
-        width: 156
-        height: 157
+        x: 1000
+        y: 264
+        width: 160
+        height: 144
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.628125, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1295,12 +1295,12 @@ TextureImporter:
       name: rock_daggers_53
       rect:
         serializedVersion: 2
-        x: 783
-        y: 157
-        width: 157
-        height: 157
+        x: 1231
+        y: 264
+        width: 178
+        height: 146
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.40449437, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1317,12 +1317,12 @@ TextureImporter:
       name: rock_daggers_54
       rect:
         serializedVersion: 2
-        x: 940
-        y: 157
-        width: 157
-        height: 157
+        x: 1518
+        y: 264
+        width: 90
+        height: 168
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.4611111, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1339,12 +1339,12 @@ TextureImporter:
       name: rock_daggers_55
       rect:
         serializedVersion: 2
-        x: 1097
-        y: 157
-        width: 151
-        height: 157
+        x: 1707
+        y: 264
+        width: 169
+        height: 116
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.5502958, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1361,12 +1361,12 @@ TextureImporter:
       name: rock_daggers_56
       rect:
         serializedVersion: 2
-        x: 7
-        y: 51
-        width: 149
-        height: 106
+        x: 32
+        y: 24
+        width: 168
+        height: 175
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.5208333, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1383,12 +1383,12 @@ TextureImporter:
       name: rock_daggers_57
       rect:
         serializedVersion: 2
-        x: 156
-        y: 55
-        width: 157
-        height: 102
+        x: 312
+        y: 24
+        width: 116
+        height: 169
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.41379312, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1405,12 +1405,12 @@ TextureImporter:
       name: rock_daggers_58
       rect:
         serializedVersion: 2
-        x: 313
-        y: 50
-        width: 157
-        height: 107
+        x: 526
+        y: 24
+        width: 140
+        height: 173
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.5285714, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1427,12 +1427,12 @@ TextureImporter:
       name: rock_daggers_59
       rect:
         serializedVersion: 2
-        x: 470
-        y: 56
-        width: 157
-        height: 101
+        x: 779
+        y: 24
+        width: 152
+        height: 169
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.40131578, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1449,12 +1449,12 @@ TextureImporter:
       name: rock_daggers_60
       rect:
         serializedVersion: 2
-        x: 627
-        y: 47
-        width: 156
-        height: 110
+        x: 1014
+        y: 24
+        width: 152
+        height: 159
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.43421054, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1471,12 +1471,12 @@ TextureImporter:
       name: rock_daggers_61
       rect:
         serializedVersion: 2
-        x: 783
-        y: 49
-        width: 157
-        height: 108
+        x: 1230
+        y: 24
+        width: 180
+        height: 156
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.3638889, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1493,12 +1493,12 @@ TextureImporter:
       name: rock_daggers_62
       rect:
         serializedVersion: 2
-        x: 940
-        y: 52
-        width: 157
-        height: 105
+        x: 1500
+        y: 24
+        width: 111
+        height: 183
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.545045, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1515,12 +1515,12 @@ TextureImporter:
       name: rock_daggers_63
       rect:
         serializedVersion: 2
-        x: 1097
-        y: 37
-        width: 150
-        height: 120
+        x: 1724
+        y: 24
+        width: 158
+        height: 123
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.48101267, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

@@ -197,7 +197,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -668,7 +668,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1423,7 +1423,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2716,7 +2716,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -4459,7 +4459,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -7720,7 +7720,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -7953,7 +7953,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -9133,6 +9133,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Darklight.Runtime::Darklight.DarklightLabCamera
   target: {fileID: 1457825021}
+  followOffset: {x: 0, y: 0}
+  bounds:
+    serializedVersion: 2
+    x: -10
+    y: -6
+    width: 20
+    height: 11.8
 --- !u!81 &761599993
 AudioListener:
   m_ObjectHideFlags: 0
@@ -10162,7 +10169,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -10525,7 +10532,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -12164,7 +12171,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -12535,7 +12542,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -12956,7 +12963,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -14281,7 +14288,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -14468,7 +14475,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -19110,6 +19117,8 @@ MonoBehaviour:
     charged: {fileID: 11400000, guid: 1a9980a356470e047b35291289f16c2c, type: 2}
     counter: {fileID: 11400000, guid: b0f626c0f0b53a64b86b2da072994fe7, type: 2}
     skill: {fileID: 11400000, guid: 291f5a4fd3379dd47aab54c5276a9f6d, type: 2}
+    aerial: {fileID: 0}
+    weaponSpecial: {fileID: 0}
 --- !u!114 &1457825016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19290,6 +19299,64 @@ MonoBehaviour:
   - {fileID: 1003457371, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
   - {fileID: 1127196727, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
   - {fileID: 1272646294, guid: 204831cad3c0bd741bd9b611c82ecf35, type: 3}
+  actions:
+  - {fileID: -7814885851622180520, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: 100665763937561807, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: 4491553773363795640, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: -2235351154195819768, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: 3916232957686723048, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: 406406788635312267, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: -6293200311382605835, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: -2377506269105671767, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: -2196887503453913412, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: -5163550334645799892, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: 8404264110080747497, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: -6026028494965505834, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: -2590680193381940852, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: 1191500906121422154, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: 2883591642290014917, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: -7105190929462786365, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: 5513592116166098441, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: -3814736788216332360, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: 6849944551741741434, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: -4833718048075988696, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: -9112010657012640662, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: 8818182985857940694, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: 6055458240627907178, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: -3879413778065359031, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: -5140017130653498456, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: 5849752216738373405, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: -7338714354979724455, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: 7655107201393026003, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: 1572291214889076198, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: -6960586385347457337, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: -481680312061163011, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  - {fileID: 2186446345093203682, guid: 96af8cf4f9dc89846b5999b5ce110349, type: 3}
+  motion:
+  - {fileID: -8405239923841109983, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: -6274241352107854681, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: -7948715229156923990, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: 2685508823527512815, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: -4712748173106441667, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: 8540389264341079959, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: -4459537503008123744, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: -3990408722369966922, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: -3349104618263179970, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: 2743697437983609103, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: -9094671049760809093, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: 1220739520878289237, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: -943524823842476547, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: -8009856010274251736, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: -3572085557053777734, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: -8147714629339545288, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: -7624432579636840498, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: -1424688714036915049, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: -6597232565541417525, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: 7529903829134422214, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: 8048315539659812533, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: 5502201856938215581, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: 4669634742392255280, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
+  - {fileID: -7792688515302224319, guid: 1e87982642bead6479b8a7e976efe026, type: 3}
 --- !u!4 &1457825021
 Transform:
   m_ObjectHideFlags: 0
@@ -21266,7 +21333,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -25144,7 +25211,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -26304,7 +26371,7 @@ MonoBehaviour:
     m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0

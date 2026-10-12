@@ -21,6 +21,7 @@ namespace Darklight
         }
         public bool FindPath(Vector2 from,Vector2 to,List<Vector2> route)
         {
+            route.Clear();if(map==null)return false;
             if(!cached)
             {
                 // Scenery is static for a chapter. Physics queries are paid once, not every enemy repath.
@@ -33,7 +34,7 @@ namespace Darklight
                 }
                 cached=true;
             }
-            route.Clear();var start=Cell(from);var end=Cell(to);parents.Clear();queue.Clear();
+            var start=ConnectedCell(from);var end=ConnectedCell(to);parents.Clear();queue.Clear();
             if(map==null||!map.Walkable(start)||!map.Walkable(end))return false;
             parents[start]=start;queue.Enqueue(start);
             while(queue.Count>0)
@@ -49,6 +50,22 @@ namespace Darklight
                 }
             }
             return false;
+        }
+        Vector2Int ConnectedCell(Vector2 point)
+        {
+            var cell=Cell(point);
+            if(links.TryGetValue(cell,out var direct)&&direct.Count>0&&Clear(point,Center(cell)))return cell;
+            var best=cell;float distance=float.MaxValue;
+            // A clear position near a wall can belong to a cell whose center is too
+            // close to that wall. Join a nearby node only across a physical clear path.
+            for(int y=-2;y<=2;y++)for(int x=-2;x<=2;x++)
+            {
+                var candidate=cell+new Vector2Int(x,y);var center=Center(candidate);
+                float d=(center-point).sqrMagnitude;
+                if(d<distance&&links.TryGetValue(candidate,out var neighbours)&&neighbours.Count>0&&Clear(point,center))
+                {best=candidate;distance=d;}
+            }
+            return best;
         }
         public static void SafeStep(Rigidbody2D body,Vector2 delta,float radius=.3f)
         {

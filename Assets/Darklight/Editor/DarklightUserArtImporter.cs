@@ -32,7 +32,7 @@ namespace Darklight.Editor
             importer.textureType=TextureImporterType.Sprite;importer.spriteImportMode=mode;
             importer.spritePixelsPerUnit=ppu;importer.filterMode=FilterMode.Point;importer.mipmapEnabled=false;
             importer.alphaIsTransparency=transparent;importer.textureCompression=TextureImporterCompression.Uncompressed;
-            importer.maxTextureSize=2048;importer.isReadable=false;importer.SaveAndReimport();return importer;
+            importer.maxTextureSize=4096;importer.isReadable=false;importer.SaveAndReimport();return importer;
         }
         static void Single(string path,float ppu,bool transparent)=>Configure(path,ppu,transparent,SpriteImportMode.Single);
         public static Sprite[] Slice(string name,bool actor)

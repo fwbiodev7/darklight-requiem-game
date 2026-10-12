@@ -14,10 +14,10 @@ namespace Darklight
         public RectInt GridBounds { get; private set; }
         public float CellSize {get;private set;}=DarklightMapLayout.TileSize;
         public DarklightMapArt Art {get;private set;}
-        static readonly DarklightMapDefinition[] authored=new DarklightMapDefinition[6];
+        static readonly DarklightMapDefinition[] authored=new DarklightMapDefinition[10];
         DarklightMapDefinition(DarklightMapArt art)
         {
-            Art=art;CellSize=.5f;Spawn=art.World(art.spawn);Ally=art.World(art.ally);Relic=art.World(art.relic);Portal=art.World(art.portal);
+            art.pixelsPerUnit/=DarklightWorldScale.Environment;Art=art;CellSize=.5f*DarklightWorldScale.Environment;Spawn=art.World(art.spawn);Ally=art.World(art.ally);Relic=art.World(art.relic);Portal=art.World(art.portal);
             Arenas=Array.ConvertAll(art.arenas,art.World);Checkpoints=Array.ConvertAll(art.checkpoints,art.World);
             Bounds=new Rect(-art.width/art.pixelsPerUnit*.5f,-art.height/art.pixelsPerUnit*.5f,art.width/art.pixelsPerUnit,art.height/art.pixelsPerUnit);
             int x0=Mathf.FloorToInt(Bounds.xMin/CellSize),y0=Mathf.FloorToInt(Bounds.yMin/CellSize);
@@ -70,14 +70,15 @@ namespace Darklight
             if(distance==float.MaxValue)throw new InvalidOperationException("No clear spawn near "+point);
             return best;
         }
-        public bool InArena(int index,Vector2 p)=>Vector2.Distance(p,Arenas[index])<3.8f;
+        public bool InArena(int index,Vector2 p)=>Vector2.Distance(p,Arenas[index])<3.8f*DarklightWorldScale.Environment;
         static Vector2Int V(int x,int y)=>new Vector2Int(x,y);
         public static DarklightMapDefinition ForChapter(int chapter)
         {
-            chapter=Mathf.Clamp(chapter,0,5);
+            chapter=Mathf.Clamp(chapter,0,9);
             if(authored[chapter]!=null)return authored[chapter];
             var data=Resources.Load<TextAsset>("Darklight/Maps/Map"+(chapter+1)+"Data");
             if(data!=null)return authored[chapter]=new DarklightMapDefinition(JsonUtility.FromJson<DarklightMapArt>(data.text));
+            if(chapter>=6)throw new InvalidOperationException("Missing authored region map "+(chapter+1));
             Vector2Int[][] centers={
                 new[]{V(-13,-6),V(-5,-5),V(0,5),V(9,-3),V(13,7),V(-9,5)},
                 new[]{V(-12,0),V(-5,-6),V(3,1),V(10,-6),V(12,7),V(-5,7)},

@@ -1,32 +1,31 @@
 # DARKLIGHT: REQUIEM
 
-RPG 2D pixel art hack 'n' slash de Fábio Ronaldo. **Alpha 0.1 — em desenvolvimento.**
+RPG 2D em pixel art de Fábio Ronaldo. **Alpha em desenvolvimento.**
 
-Um eclipse abre fendas em Vespera. A katana Requiem escolhe Fábio como seu Portador; Lyra e Kael o acompanham pelos sinais do Projeto Eclipse até o destino da ponte para o Véu.
+Um eclipse abre fendas em Vespera. Fábio, Lyra e Kael atravessam a cidade e o Véu, enfrentando as consequências do Projeto Eclipse.
 
-- Campanha em seis capítulos, encontros, chefes, memórias, diálogos, progressão e dois finais.
-- Katana Requiem, adagas Presas do Véu e corrente Laço da Ruptura, com desbloqueios na campanha.
-- Skins Requiem e Rock, compatíveis com as três transformações.
-- Evolução física em cinco estágios durante um ano narrativo, dos 17 aos 18 anos, com cabelo, cavanhaque discreto e físico proporcional nas duas skins.
-- Dark Resonance opcional; HUD e menus góticos; teclado/mouse e controle XInput.
-- Mapas ilustrados com colisões, navegação e oclusão. Renderização do mundo em 1280×720 com filtro Point e enquadramento mais amplo; UI em coordenadas lógicas 640×360.
+## Versão pública e desenvolvimento atual
+
+A [Alpha 0.1 para Windows](https://github.com/fwbiodev7/darklight-requiem-game/releases/tag/v0.1.0-alpha) é o lançamento anterior. O código deste repositório está mais avançado e **não representa um novo executável validado**.
+
+O desenvolvimento atual inclui dez regiões e a base narrativa dos dez capítulos, três armas, duas skins, progressão, poderes vampíricos, minimapa com exploração e objetivos, diálogo gradual com retrato, HUD gótico e novos menus de pausa/opções. A campanha expandida, o catálogo envelhecido e o polimento continuam em produção. As novas posturas da katana ainda estão pendentes.
+
+Leia [o feedback, as correções e as limitações de 11/10](Docs/Darklight/Feedback/FEEDBACK-2026-10-11.md). A dificuldade de orientação, colisões no Jardim/Observatório e a troca de idade entre animações foram registradas. Foram aplicados ajustes de piso e orientação e uma mitigação de aparência coerente; **não foram executados testes nesta etapa**, por solicitação do criador.
+
+Enquanto o catálogo envelhecido estiver incompleto, a gameplay usa o conjunto inicial inteiro para evitar mudança de idade entre repouso, caminhada e combate. A idade narrativa permanece salva. As artes envelhecidas continuam disponíveis como prévias e serão habilitadas em gameplay quando seus conjuntos estiverem completos.
 
 ## Jogar
 
-Baixe [a Alpha 0.1 para Windows 64 bits](https://github.com/fwbiodev7/darklight-requiem-game/releases/tag/v0.1.0-alpha), extraia o pacote completo e abra `Windows/DarklightRequiem.exe`.
+Baixe a Alpha 0.1, extraia o pacote completo e abra `Windows/DarklightRequiem.exe`. Consulte [o guia específico dessa versão](ALPHA-0.1.md). [Site do jogo](https://darklight-requiem.zfabiobrronaldo.chatgpt.site).
 
-Leia [os comandos, desbloqueios e transformações](ALPHA-0.1.md). [Site do jogo](https://darklight-requiem.zfabiobrronaldo.chatgpt.site).
+Os comandos do código atual podem ser remapeados: WASD/analógico esquerdo para mover; mouse esquerdo/X para ataque leve; mouse direito/Y para pesado; Espaço/B para esquiva; Q/LB para parry; E/A para interação; V/LS para trocar arma; H/analógico direito cima para poder vampírico; K/analógico direito baixo para escolher poder; T/LT para transformar; Tab/Select para mapa; Esc/Start para pausa. As teclas desta versão em desenvolvimento podem diferir da Alpha publicada. O personagem não segue o cursor do mouse.
 
-## Abrir o projeto
+## Abrir na Unity
 
-Unity **6000.6.0f1**, Input System atual. Abra esta pasta na Unity Hub e carregue `Assets/Darklight/Scenes/DarklightCampaign.unity`. O laboratório de combate continua disponível separadamente. Dependências no diretório `Packages`.
+Unity **6000.6.0f1**, dependências em `Packages`. Abra `Assets/Darklight/Scenes/DarklightCampaign.unity`. Importar e compilar não comprova gameplay, campanha completa ou controle físico.
 
-Para montar e gerar a build, use o método de editor `Darklight.Editor.DarklightCampaignBuilder.AssembleAndBuild`. A saída fica em `../outputs/campanha/Windows`. Não há arquivos de cache da Unity ou histórico do projeto de origem neste repositório.
+`Darklight.Editor.DarklightPlaytestBuilder.Build` produz uma montagem local em `../outputs/teste-vampiro/Windows`. O argumento `--requiem-playtest` abre uma sessão temporária no Jardim dos Ecos com seis poderes e três armas, sem gravar campanha/exploração. Pausa → Ferramentas de teste permite reabastecer recursos e reiniciar o jardim. Não iniciar testes, gameplay ou áudio automaticamente enquanto a restrição do criador estiver vigente.
 
-## Verificação e limites da Alpha
+## Recursos e licenças
 
-A compilação foi verificada. As capturas do site são renderizações das cenas e interfaces reais na Unity em **modo de edição**, sem gameplay ou áudio. Conforme solicitado pelo criador, não foram executados testes de gameplay ou de controle físico nesta entrega. Balanceamento, campanha completa e navegação precisam de avaliação manual.
-
-Menu musical ES_Metal, configurações completas de áudio/vídeo/acessibilidade e demais propostas cinematográficas permanecem em planejamento separado. A fonte das formas Rock possui sete orientações distintas; o corpo voltado a leste usa a pose direcional Rock com os efeitos da transformação, enquanto as asas usam a projeção mais próxima. As ações das armas possuem folhas direcionais próprias.
-
-Arte original, fontes e importadores preservados. A fonte Press Start 2P acompanha sua licença OFL. Os cinco arquivos de música foram fornecidos pelo criador para o protótipo. Não há concessão de licença de redistribuição para recursos de terceiros implícita neste repositório.
+Arte, fontes e metadados de importação preservados. Press Start 2P acompanha sua licença OFL; novos efeitos e ambientes CC0 têm manifesto em `Assets/Darklight/Resources/DarklightAudio/AUDIO-LICENSES.json`. As músicas fornecidas pelo criador não recebem licença de redistribuição por estarem neste protótipo. Não incluir caches da Unity, builds, credenciais ou saves pessoais nos commits.

@@ -21,9 +21,14 @@ namespace Darklight
     {
         public string name;public Vector2 foot;public Vector2[] outline;
     }
+    [Serializable] public sealed class DarklightMapArea
+    {
+        public string name,description;public Vector2 point;
+    }
     [Serializable] public sealed class DarklightMapArt
     {
         public int width,height;public float pixelsPerUnit=24;
+        public string title,chapterTitle,description;public DarklightMapArea[] areas;
         public Vector2 spawn,ally,relic,portal;public Vector2[] arenas,checkpoints;
         public DarklightMapShape[] walk,blocked;public DarklightMapForeground[] foreground;
         public Vector2 World(Vector2 p)=>new Vector2(p.x-width*.5f,height*.5f-p.y)/pixelsPerUnit;

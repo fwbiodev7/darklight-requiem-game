@@ -22,7 +22,7 @@ namespace Darklight
         CombatLoadout loadout;
         int hitPulse=-1;float aerialReady,weaponSpecialReady;
         bool pendingAerial,pendingWeaponSpecial;
-        public bool CanEquip=>State==CombatState.Neutral||(State==CombatState.Attack&&StateTime>=Attack.startup+Attack.active+Attack.recovery*.35f);
+        public bool CanEquip=>State==CombatState.Neutral||(State==CombatState.Attack&&!ActiveThisTick&&StateTime>=Attack.startup+Attack.active+Attack.recovery*Attack.recoveryChainFraction);
         public float WeaponSpecialRemaining=>Mathf.Max(0,weaponSpecialReady-Clock);
         public float AerialRemaining=>Mathf.Max(0,aerialReady-Clock);
         public bool Equip(CombatLoadout next){if(!CanEquip||next?.lights==null||next.lights.Length==0)return false;loadout=next;return true;}
@@ -32,7 +32,8 @@ namespace Darklight
         float queueUntil, comboUntil, dodgeReady, skillReady, counterUntil;
         Vector2 dodgeDirection; float hurtDuration=.18f;
         bool pendingDodge,pendingParry,pendingSkill;
-        float pendingUntil;
+        public const float DefenseBuffer=.22f, AttackBuffer=.32f;
+        float dodgeUntil,parryUntil,skillUntil,aerialUntil,specialUntil;
 
         public CombatModel(CombatLoadout loadout) { this.loadout = loadout; }
 
@@ -41,15 +42,17 @@ namespace Darklight
             ActiveThisTick = false;
             if (State != CombatState.Dead)
             {
-                if(input.lightPressed)Queue(StrikeKind.Light);
-                if(input.heavyPressed && State==CombatState.Attack)Queue(StrikeKind.Heavy);
-                pendingDodge |= input.dodgePressed; pendingParry |= input.parryPressed; pendingSkill |= input.skillPressed;
-                pendingAerial|=input.aerialPressed;pendingWeaponSpecial|=input.weaponSpecialPressed;
-                if(input.dodgePressed||input.parryPressed||input.skillPressed||input.aerialPressed||input.weaponSpecialPressed)pendingUntil=Clock+.2f;
+                if(input.lightPressed)Queue(StrikeKind.Light,delta);
+                if(input.heavyPressed && State==CombatState.Attack)Queue(StrikeKind.Heavy,delta);
+                Buffer(ref pendingDodge,ref dodgeUntil,input.dodgePressed,delta);
+                Buffer(ref pendingParry,ref parryUntil,input.parryPressed,delta);
+                Buffer(ref pendingSkill,ref skillUntil,input.skillPressed,delta);
+                Buffer(ref pendingAerial,ref aerialUntil,input.aerialPressed,delta);
+                Buffer(ref pendingWeaponSpecial,ref specialUntil,input.weaponSpecialPressed,delta);
             }
             if (delta <= 0 || State == CombatState.Dead) { Motion = Vector2.zero; return; }
             Clock += delta;
-            if(Clock>pendingUntil)ClearPending();
+            Expire(ref pendingDodge,dodgeUntil);Expire(ref pendingParry,parryUntil);Expire(ref pendingSkill,skillUntil);Expire(ref pendingAerial,aerialUntil);Expire(ref pendingWeaponSpecial,specialUntil);
             if (State == CombatState.Neutral && Clock > comboUntil) ComboCount = 0;
             if (State == CombatState.Attack)
             {
@@ -66,7 +69,8 @@ namespace Darklight
                 // Recovery cancellation only: wind-up and contact remain committed.
                 if (previous >= Attack.startup + Attack.active && pendingDodge && Clock >= dodgeReady)
                 { BeginDodge(input); return; }
-                if(previous >= Attack.startup + Attack.active + Attack.recovery*.35f && hasQueue && Clock<=queueUntil)
+                if(!ActiveThisTick && StateTime>=Attack.startup+Attack.active && pendingParry){Face(input);BeginParry();return;}
+                if(previous >= Attack.startup + Attack.active + Attack.recovery*Attack.recoveryChainFraction && hasQueue && Clock<=queueUntil)
                 { Face(input); ConsumeQueue(); return; }
                 if (StateTime >= Attack.Duration) { State = CombatState.Neutral; StateTime = 0; comboUntil = Clock + .55f; }
                 return;
@@ -86,8 +90,8 @@ namespace Darklight
             Motion = Vector2.ClampMagnitude(input.move, 1);
             Face(input);
             if (pendingDodge && Clock >= dodgeReady) { BeginDodge(input); return; }
-            if (pendingParry) { State = CombatState.Parry; StateTime = 0; ClearQueue(); ClearPending(); return; }
-            if (pendingSkill && Clock >= skillReady) { BeginAttack(loadout.skill); skillReady = Clock + 3f; ClearPending(); return; }
+            if (pendingParry) { BeginParry(); return; }
+            if (pendingSkill && Clock >= skillReady) { BeginAttack(loadout.skill); skillReady = Clock + 3f; ClearPending();ClearQueue(); return; }
             if(pendingWeaponSpecial&&loadout.weaponSpecial!=null&&Clock>=weaponSpecialReady){BeginAttack(loadout.weaponSpecial);weaponSpecialReady=Clock+Mathf.Max(1,loadout.weaponSpecial.cooldown);ClearPending();ClearQueue();return;}
             if(pendingAerial&&loadout.aerial!=null&&Clock>=aerialReady){BeginAttack(loadout.aerial);aerialReady=Clock+Mathf.Max(.5f,loadout.aerial.cooldown);ClearPending();ClearQueue();return;}
             if (input.heavyPressed) { State = CombatState.Charging; StateTime = 0; ClearQueue(); return; }
@@ -106,7 +110,10 @@ namespace Darklight
             else if(Clock<counterUntil){BeginAttack(loadout.counter);counterUntil=0;}
             else {ComboCount=ComboCount%loadout.lights.Length+1;BeginAttack(loadout.lights[ComboCount-1]);}
         }
-        void Queue(StrikeKind kind) { queued = kind; hasQueue = true; queueUntil = Clock + .45f; }
+        void Queue(StrikeKind kind,float delta) { queued = kind; hasQueue = true; queueUntil = Clock + Mathf.Max(0,delta) + AttackBuffer; }
+        void Buffer(ref bool flag,ref float expiry,bool pressed,float delta){if(pressed){flag=true;expiry=Clock+Mathf.Max(0,delta)+DefenseBuffer;}}
+        void Expire(ref bool flag,float expiry){if(Clock>expiry)flag=false;}
+        void BeginParry(){State=CombatState.Parry;StateTime=0;Motion=Vector2.zero;ClearQueue();ClearPending();}
         void ClearPending() { pendingDodge=pendingParry=pendingSkill=pendingAerial=pendingWeaponSpecial=false; }
         void ClearQueue() { hasQueue = false; }
         void EnterNeutral() { State = CombatState.Neutral; StateTime = 0; Motion = Vector2.zero; }
@@ -120,7 +127,7 @@ namespace Darklight
         {
             if (attack == null) return;
             Attack = attack; State = CombatState.Attack; StateTime = 0;
-            AttackSerial++; struck.Clear();hitPulse=-1; ActiveThisTick = false;
+            ClearPending();AttackSerial++; struck.Clear();hitPulse=-1; ActiveThisTick = false;
         }
         public bool RegisterHit(object target) => target != null && ActiveThisTick && struck.Add(target);
         public bool Defend()
@@ -139,3 +146,4 @@ namespace Darklight
         public void SuspendInput() { ClearQueue(); ClearPending(); if (State == CombatState.Charging) EnterNeutral(); }
     }
 }
+

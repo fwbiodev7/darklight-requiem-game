@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec62be670f3b494899bbd8786e881f8, type: 3}
+  m_Name: PresasContraAtaque
+  m_EditorClassIdentifier: Darklight.Runtime::Darklight.AttackDefinition
+  displayName: PresasContraAtaque
+  kind: 3
+  startup: 0.035
+  active: 0.17
+  recovery: 0.12
+  damage: 9
+  range: 1.55
+  angle: 115
+  knockback: 0.2
+  hitPulses: 3
+  lungeSpeed: 0.6
+  cooldown: 0
+  pullTarget: 0
+  blink: 0
+  recoveryChainFraction: 0.18

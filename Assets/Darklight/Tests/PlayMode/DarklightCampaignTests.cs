@@ -26,18 +26,23 @@ namespace Darklight.Tests
         }
         [UnityTearDown] public IEnumerator RestoreInputSettings(){InputSystem.settings.backgroundBehavior=oldBackground;InputSystem.settings.editorInputBehaviorInPlayMode=oldEditorInput;yield return null;}
         void AssertSilent(){foreach(var a in Object.FindObjectsByType<AudioSource>(FindObjectsSortMode.None))Assert.That(a.isPlaying,Is.False,"Automation started audio");}
-        [UnityTest] public IEnumerator SixMapsHavePhysicalRoutesClearSpawnsAndBoundedKnockback()
+        [UnityTest] public IEnumerator TenMapsHavePhysicalRoutesClearSpawnsAndBoundedKnockback()
         {
             var path=new List<Vector2>();
-            for(int i=0;i<6;i++)
+            for(int i=0;i<DarklightStory.Chapters.Length;i++)
             {
                 game.PreviewChapter(i);yield return null;yield return null;Physics2D.SyncTransforms();
                 foreach(var point in game.Map.Arenas)Assert.That(DarklightNavigation.Instance.FindPath(game.Map.Spawn,point,path),Is.True,"Arena route: chapter "+i);
-                foreach(var point in new[]{game.Map.Ally,game.Map.Relic,game.Map.Portal})Assert.That(DarklightNavigation.Instance.FindPath(game.Map.Spawn,point,path),Is.True,"Exploration route: chapter "+i);
+                foreach(var point in new[]{game.Map.Ally,game.Map.Relic,game.Map.Portal})
+                {
+                    var approach=game.Map.SafeSpawn(point);
+                    Assert.That(Vector2.Distance(approach,point),Is.LessThan(1.7f),"Interaction out of reach: chapter "+i);
+                    Assert.That(DarklightNavigation.Instance.FindPath(game.Map.Spawn,approach,path),Is.True,"Exploration route: chapter "+i+" target "+point+" approach "+approach);
+                }
                 var body=lab.Player.GetComponent<Rigidbody2D>();DarklightNavigation.SafeStep(body,Vector2.left*100);Physics2D.SyncTransforms();
                 Assert.That(game.Map.Bounds.Contains(body.position),Is.True,"Knockback escaped map");
                 var camera=lab.WorldCamera.GetComponent<DarklightLabCamera>();Assert.That(camera.bounds,Is.EqualTo(game.Map.Bounds));
-                Assert.That(lab.WorldCamera.orthographicSize,Is.EqualTo(3.75f).Within(.01f));AssertSilent();
+                Assert.That(lab.WorldCamera.orthographicSize,Is.EqualTo(DarklightLabCamera.GameplayHalfHeight).Within(.01f));AssertSilent();
             }
         }
         [UnityTest] public IEnumerator MovementPauseAndDodgeUseActualPhysics()
@@ -48,8 +53,13 @@ namespace Darklight.Tests
             Assert.That(lab.Player.transform.position.x-start.x,Is.GreaterThan(.45f));
             InputSystem.QueueStateEvent(keyboard,new KeyboardState(Key.D,Key.Space));yield return new WaitForSeconds(.1f);
             Assert.That(lab.Player.Model.State,Is.EqualTo(CombatState.Dodge));
-            Invoke(game,"Open","Pause");Vector2 paused=lab.Player.transform.position;yield return new WaitForSeconds(.1f);
+            Invoke(game,"Open","Pause");Vector2 paused=lab.Player.transform.position;
+            var body=lab.Player.GetComponent<Rigidbody2D>();Vector2 pausedPhysics=body.position;
+            Vector3 pausedCamera=lab.WorldCamera.transform.position;yield return new WaitForSeconds(.1f);
             Assert.That(Vector2.Distance(paused,lab.Player.transform.position),Is.LessThan(.03f));Assert.That(lab.Input.Gameplay.enabled,Is.False);
+            Assert.That(Vector2.Distance(pausedPhysics,body.position),Is.LessThan(.001f));
+            Assert.That(Vector3.Distance(pausedCamera,lab.WorldCamera.transform.position),Is.LessThan(.001f));
+            Invoke(game,"Close");Assert.That(body.interpolation,Is.EqualTo(RigidbodyInterpolation2D.Interpolate));
             InputSystem.QueueStateEvent(keyboard,new KeyboardState());InputSystem.RemoveDevice(keyboard);AssertSilent();
         }
         [UnityTest] public IEnumerator AllPowersApplyGameplayAndKeepFormsIndependent()
@@ -76,12 +86,12 @@ namespace Darklight.Tests
             Assert.That(Get<string>(game,"panel"),Is.EqualTo("Pause"));Assert.That(lab.Input.Action("Interact").WasPressedThisFrame(),Is.False);
             InputSystem.QueueStateEvent(pad,new GamepadState());yield return null;
             Invoke(game,"Open","Main");yield return null;Canvas.ForceUpdateCanvases();
-            var options=game.transform.root;var hud=lab.PixelHUD.transform.Find("HUD640x360/Menus/Painel/Botao2") as RectTransform;
+            var options=game.transform.root;var hud=lab.PixelHUD.transform.Find("HUD640x360/Menus/Painel/Botao3") as RectTransform;
             var mouse=InputSystem.AddDevice<Mouse>();Vector2 point=RectTransformUtility.WorldToScreenPoint(null,hud.TransformPoint(hud.rect.center));
             InputSystem.QueueStateEvent(mouse,new MouseState{position=point,buttons=1});yield return null;yield return null;
             Assert.That(Get<string>(game,"panel"),Is.EqualTo("Options"));
             InputSystem.QueueStateEvent(mouse,new MouseState{position=point});yield return null;
-            Invoke(game,"Open","Main");Assert.That(Get<int>(game,"selection"),Is.EqualTo(2));
+            Invoke(game,"Open","Main");Assert.That(Get<int>(game,"selection"),Is.EqualTo(3));
             InputSystem.RemoveDevice(mouse);InputSystem.RemoveDevice(pad);AssertSilent();
         }
         [UnityTest] public IEnumerator SupplementaryFramesAreDistinctAndPixelFiltered()
@@ -98,3 +108,5 @@ namespace Darklight.Tests
         }
     }
 }
+
+

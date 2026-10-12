@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec62be670f3b494899bbd8786e881f8, type: 3}
+  m_Name: LacoContraAtaque
+  m_EditorClassIdentifier: Darklight.Runtime::Darklight.AttackDefinition
+  displayName: LacoContraAtaque
+  kind: 3
+  startup: 0.06
+  active: 0.09
+  recovery: 0.21
+  damage: 28
+  range: 3.25
+  angle: 90
+  knockback: 0.2
+  hitPulses: 1
+  lungeSpeed: 0
+  cooldown: 0
+  pullTarget: 1
+  blink: 0
+  recoveryChainFraction: 0.45

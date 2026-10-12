@@ -12,22 +12,24 @@ namespace Darklight
         public Sprite[] floorTiles, architecture, enemyFrames, bossFrames, enemyAttacks, bossAttacks, extras; public Sprite enemyBarFrame;
         public Sprite[] uiArt,hudArt,icaroFrames,lyraFrames;public Sprite menuBackground;
         public AudioClip[] tracks;
+        public AudioClip menuMusic;
+        public AudioSource MenuMusicSource {get;private set;}
         public float[] beatsPerMinute={120,120,190,190,123};
         public float[] beatOffsets={0,0,0,0,0};
         public Material pixelMaterial;
         public DarklightProgress Progress {get;private set;}=new DarklightProgress();
-        public float Energy {get;private set;}
+        public float Energy {get=>Blood.Amount;private set=>Blood.Set(value);}
         public int Form {get;private set;}
         public float FormTime {get;private set;}
         public string Rank => new[]{"D","C","B","A","S","SS","SSS"}[Mathf.Clamp((int)(style/65),0,6)];
-        public float DamageMultiplier => Progress.Damage*(Form==0?1:Form==1?1.35f:Form==2?1.65f:2)*Resonance.Damage;
-        public float AttackSpeed => (Form>0?1.12f:1)*Resonance.Speed;
+        public float DamageMultiplier => Progress.Damage*(Form==0?1:Form==1?1.35f:Form==2?1.65f:2)*Resonance.Damage*(Blood.FrenzyRemaining>0?1.1f:1);
+        public float AttackSpeed => Mathf.Min(1.65f,(Form>0?1.12f:1)*Resonance.Speed*(Blood.FrenzyRemaining>0?1.2f:1));
         public float MovementSpeed => (Form>0?1.12f:1)*Resonance.Agility;
-        public float IncomingMultiplier => Form==3?.75f:1;
+        public float IncomingMultiplier => (Form==3?.75f:1)*(Resonance.Active==1?.9f:1);
         public bool WearingHeadphones => phonesTime>0;
         public bool Active => panel=="";
         public string Objective {get;private set;}="";
-        public DarklightEnemy CurrentBoss => enemies.Find(e=>e!=null&&!e.Health.IsDead&&e.Boss);
+        public DarklightEnemy CurrentBoss => enemies.Find(e=>e!=null&&!e.Health.IsDead&&!e.Resolved&&e.Boss);
         readonly List<DarklightEnemy> enemies=new();
         DarklightCombatLab lab; HealthSystem health; Transform levelRoot; SpriteRenderer aura;
         AudioSource music,sfx,ambient; SpriteRenderer headphones; float nextStep; AudioClip[] tones;
@@ -52,18 +54,20 @@ namespace Darklight
             music=gameObject.AddComponent<AudioSource>();music.playOnAwake=false;music.loop=false;music.spatialBlend=0;music.volume=MusicVolume;
             sfx=gameObject.AddComponent<AudioSource>();sfx.playOnAwake=false;sfx.spatialBlend=0;
             ambient=gameObject.AddComponent<AudioSource>();ambient.playOnAwake=false;ambient.loop=true;ambient.spatialBlend=0;
+            MenuMusicSource=gameObject.AddComponent<AudioSource>();MenuMusicSource.playOnAwake=false;MenuMusicSource.loop=true;MenuMusicSource.spatialBlend=0;MenuMusicSource.volume=MusicVolume;MenuMusicSource.clip=menuMusic;
             tones=new[]{Tone(880,.075f),Tone(170,.11f),Tone(110,.18f),Tone(650,.3f)};
         }
         void Start()
         {
-            health=lab.Player.GetComponent<HealthSystem>();InitializeWeapons();SelectSkin(PlayerPrefs.GetInt("Darklight.Skin",0),false);CreateUI();LoadMap(0);Open("Main");
-            lab.PixelHUD.death.gameObject.SetActive(false);ambient.clip=tracks[1];ambient.volume=MusicVolume*.65f;
+            health=lab.Player.GetComponent<HealthSystem>();InitializeWeapons();SelectSkin(PlayerPrefs.GetInt("Darklight.Skin",0),false);CreateUI();InitializeAtlas();InitializeSoundDesign();LoadMap(0);Open("Main");
+            lab.PixelHUD.death.gameObject.SetActive(false);ambient.clip=null;ambient.volume=0;ApplySavedVideoPreferences();StartRequestedLocation();
         }
         void Update()
         {
-            TickUI(); if(!Active)return;
+            if(MenuMusicSource!=null)MenuMusicSource.volume=MusicVolume;
+            TickUI(); if(!Active||MenuDismissedThisFrame)return;
             float dt=lab.CombatDelta;if(dt<=0)return;
-            noticeTime=Mathf.Max(0,noticeTime-dt); idleStyle+=dt;
+            TickVampire(dt);noticeTime=Mathf.Max(0,noticeTime-dt); idleStyle+=dt;
             if(idleStyle>2)style=Mathf.Max(0,style-dt*9);
             if(health.IsDead){StopPower();SaveCheckpoint();Open("Death");return;}
             slowTime=Mathf.Max(0,slowTime-dt);
@@ -80,7 +84,7 @@ namespace Darklight
             }
             if(resonance>=0)
             {
-                if(resonance==0)health.Heal(health.MaxHealth*.014f*dt);
+                if(resonance==0)health.Heal(Blood.AllowHealing(health.MaxHealth*.014f*dt,health.MaxHealth));
             }
             if(lab.Player.Model.State==CombatState.Attack&&lab.Player.Model.Attack.kind==StrikeKind.Skill&&lab.Player.Model.AttackSerial!=lastSkillSerial&&lab.Player.Model.ActiveThisTick){lastSkillSerial=lab.Player.Model.AttackSerial;FormAbility();}
             if(lab.Input.Action("Transform").WasPressedThisFrame())TransformPlayer();
@@ -88,13 +92,15 @@ namespace Darklight
             if(lab.Input.Action("Potion").WasPressedThisFrame())UsePotion();
             if(lab.Input.Action("Journal").WasPressedThisFrame()){Open("Journal");return;}
             if(lab.Input.Action("Interact").WasPressedThisFrame())Interact();
+            if(ExploringNewRegion){UpdateRegionExploration();UpdateAura();return;}
             if(!encounterStarted&&!chapterCleared&&Map.InArena(encounter,lab.Player.transform.position)){StartEncounter();return;}
-            if(encounterStarted&&enemies.TrueForAll(e=>e==null||e.Health.IsDead))ClearEncounter();
+            if(encounterStarted&&enemies.TrueForAll(e=>e==null||e.Health.IsDead||e.Resolved))ClearEncounter();
             UpdateAura();
-            if(lab.Player.Model.Motion.sqrMagnitude>.3f&&lab.Player.Model.Clock>=nextStep){nextStep=lab.Player.Model.Clock+.32f;if(!DarklightAutomation.Silent)sfx.PlayOneShot(tones[2],EffectsVolume*.035f);}
+            if(lab.Player.Model.Motion.sqrMagnitude>.3f&&lab.Player.Model.Clock>=nextStep){nextStep=lab.Player.Model.Clock+.32f;AudioFootstep();}
         }
         void LoadMap(int chapter)
         {
+            exploredRegion=-1;notice="";noticeTime=0;
             if(levelRoot!=null){levelRoot.gameObject.SetActive(false);Destroy(levelRoot.gameObject);}
             foreach(var shot in FindObjectsByType<DarklightProjectile>(FindObjectsSortMode.None))Destroy(shot.gameObject);
             enemies.Clear();levelRoot=new GameObject(DarklightStory.Places[chapter]).transform;
@@ -107,31 +113,43 @@ namespace Darklight
             Weapons.Restore();RestoreAppearance();health.SetMaxHealth(Progress.MaxHealth,false);
             var mapCamera=lab.WorldCamera.GetComponent<DarklightLabCamera>();mapCamera.bounds=Map.Bounds;mapCamera.followOffset=new Vector2(0,.75f);
             lab.WorldCamera.transform.position=start+new Vector3(0,.75f,-10);
-            Form=0;FormTime=0;slowTime=0;lastSkillSerial=-1;phonesTime=0;resonance=-1;Resonance.Restore(Progress);resonanceCooldown=Resonance.Recovery[Resonance.Selected];Energy=0;style=0;
+            Form=0;FormTime=0;slowTime=0;lastSkillSerial=-1;phonesTime=0;resonance=-1;Resonance.Restore(Progress);resonanceCooldown=Resonance.Recovery[Resonance.Selected];RestoreVampire();style=0;
             if(aura==null)
             {aura=new GameObject("AuraRequiem").AddComponent<SpriteRenderer>();aura.transform.SetParent(lab.Player.transform,false);aura.transform.localPosition=Vector3.up*.6f;aura.sharedMaterial=pixelMaterial;aura.sortingOrder=75;}
             aura.sprite=extras[4];aura.enabled=false;
-            AddProp("Checkpoint",extras[3],Map.Spawn+Vector2.up*1.8f,1.3f);
-            AddProp("Fragmento",extras[5],Map.Relic,.7f);
+            AddProp("Checkpoint",Resources.Load<Sprite>("Darklight/Props/CheckpointShrine")??extras[3],Map.Spawn+Vector2.up*1.8f,1.3f);
+            if(!Progress.relics[chapter])AddProp("Fragmento",extras[5],Map.Relic,.7f);
             if(chapter==1)AddProp("IcaroNox",extras[0],Map.Ally,1.8f);
-            if(chapter==0||chapter==2||chapter==5)AddProp("LyraMoreau",extras[1],Map.Ally,1.8f);
-            if(chapter==3||chapter==4)AddProp("KaelAliado",bossFrames[0],Map.Ally,1.8f);
+            if(chapter==0||chapter==2||chapter==5||chapter==6||chapter==8)AddProp("LyraMoreau",extras[1],Map.Ally,1.8f);
+            if(chapter==3||chapter==4||chapter==7||chapter==9)AddProp("KaelAliado",bossFrames[0],Map.Ally,1.8f);
             if(chapterCleared)AddProp("Portal",extras[3],Map.Portal,2.5f);
-            Objective=Goal();music.Stop();ambient.clip=tracks[chapter%5];ambient.volume=MusicVolume*.4f;
+            PrepareNarrativeMap();Objective=Goal();music.Stop();ambient.clip=null;ambient.volume=0;AudioDirector?.Region(chapter);
         }
         void AddProp(string name,Sprite sprite,Vector2 position,float height)
-        {var obj=new GameObject(name);obj.transform.SetParent(levelRoot,false);obj.transform.position=position;var r=obj.AddComponent<SpriteRenderer>();r.sprite=sprite;r.sharedMaterial=pixelMaterial;obj.transform.localScale=Vector3.one*height/sprite.bounds.size.y;r.sortingOrder=100-Mathf.RoundToInt(position.y*10);if(name=="IcaroNox"||name=="LyraMoreau"){var view=obj.AddComponent<DarklightNPCView>();view.frames=name=="IcaroNox"?icaroFrames:lyraFrames;}else if(name=="KaelAliado")obj.AddComponent<DarklightActorIdle>();}
-        string Goal()=>chapterCleared?"PORTAL LIBERTO - INTERAGIR PARA AVANCAR":(encounter==3?"ENFRENTE "+DarklightStory.Bosses[Progress.chapter]:"ENCONTRE O SELO "+(encounter+1)+" / 3");
+        {
+            if(name=="IcaroNox"&&icaroFrames?.Length==8)sprite=icaroFrames[0];
+            else if(name=="LyraMoreau"&&lyraFrames?.Length==8)sprite=lyraFrames[0];
+            position=InteractionAnchor(position);
+            height=name=="LyraMoreau"?2.5f:name=="IcaroNox"?2.7f:name=="KaelAliado"?2.85f:height*DarklightWorldScale.Environment;
+            var obj=new GameObject(name);obj.transform.SetParent(levelRoot,false);obj.transform.position=position;var r=obj.AddComponent<SpriteRenderer>();r.sprite=sprite;r.sharedMaterial=pixelMaterial;obj.transform.localScale=Vector3.one*height/sprite.bounds.size.y;r.sortingOrder=100-Mathf.RoundToInt(position.y*10);if(name=="IcaroNox"||name=="LyraMoreau"){var view=obj.AddComponent<DarklightNPCView>();view.frames=name=="IcaroNox"?icaroFrames:lyraFrames;}else if(name=="KaelAliado")obj.AddComponent<DarklightActorIdle>();}
+        string Goal()=>chapterCleared?"PORTAL LIBERTO - INTERAGIR PARA AVANCAR":ExpandedChapter?MissionTitle:(encounter==3?"ENFRENTE "+DarklightStory.Bosses[Progress.chapter]:"ENCONTRE O SELO "+(encounter+1)+" / 3");
         public void PreviewCampaign() { Progress=new DarklightProgress();LoadMap(0);Close(); }
-        public void PreviewChapter(int chapter) { Progress=new DarklightProgress{chapter=Mathf.Clamp(chapter,0,5)};LoadMap(Progress.chapter);Close(); }
+        public void PreviewChapter(int chapter) { Progress=new DarklightProgress{chapter=Mathf.Clamp(chapter,0,DarklightStory.Chapters.Length-1)};LoadMap(Progress.chapter);Close(); }
         public void NewGame()
-        {Progress=new DarklightProgress();LoadMap(0);SaveCheckpoint();Speak(DarklightStory.Introductions[0]);}
+        {StopMenuMusic();atlas?.ResetCampaign();Progress=new DarklightProgress();LoadMap(0);SaveCheckpoint();Speak(DarklightStory.Introductions[0]);}
         public void ContinueGame()
-        {var data=DarklightProgress.Load();if(data==null){Notice("Nenhum save valido");return;}Progress=data;if(data.completed){Open("Victory");return;}LoadMap(Progress.chapter);Close();}
+        {var data=DarklightProgress.Load();if(data==null){Notice("Nenhum save valido");return;}StopMenuMusic();Progress=data;if(data.completed){Open("Victory");return;}LoadMap(Progress.chapter);Close();}
+        void StartMenuMusic()
+        {
+            if(MenuMusicSource==null)return;
+            MenuMusicSource.clip=menuMusic;MenuMusicSource.volume=MusicVolume;
+            if(!DarklightAutomation.Silent&&menuMusic!=null&&!MenuMusicSource.isPlaying)MenuMusicSource.Play();
+        }
+        void StopMenuMusic(){if(MenuMusicSource!=null)MenuMusicSource.Stop();}
         void StartEncounter()
         {
-            encounterStarted=true;Objective=encounter==3?"DERROTE "+DarklightStory.Bosses[Progress.chapter]:"LIMPE O SELO "+(encounter+1)+" / 3";
-            if(encounter==3)Speak(DarklightStory.BossLines[Progress.chapter],()=>{ambient.clip=tracks[2];ambient.volume=MusicVolume*.6f;Spawn((RequiemEnemyKind)(5+Progress.chapter),Map.Arenas[3],false);});
+            if(BeginNarrativeEncounter())return;encounterStarted=true;Objective=encounter==3?"DERROTE "+DarklightStory.Bosses[Progress.chapter]:"LIMPE O SELO "+(encounter+1)+" / 3";
+            if(encounter==3)Speak(DarklightStory.BossLines[Progress.chapter],()=>{ambient.clip=null;Spawn((RequiemEnemyKind)(5+Progress.chapter),Map.Arenas[3],false);});
             else
             {
                 int count=3+Mathf.Min(Progress.chapter,3);
@@ -144,46 +162,30 @@ namespace Darklight
         {
             pos=Map.SafeSpawn(pos,kind==RequiemEnemyKind.Armored?.45f:.32f);
             var obj=new GameObject(kind.ToString());obj.transform.SetParent(levelRoot,false);obj.transform.position=pos;
-            Sprite[] frames=new Sprite[4];Array.Copy((int)kind<5?enemyFrames:bossFrames,((int)kind%((int)kind<5?5:6))*4,frames,0,4);
-            // Boss array begins at Kael; enums begin at five.
-            if((int)kind>=5)Array.Copy(bossFrames,((int)kind-5)*4,frames,0,4);
+            Sprite[] frames=new Sprite[4];
+            if((int)kind>=11)Array.Copy(ExpandedBossFrames,((int)kind-11)*8,frames,0,4);
+            else Array.Copy((int)kind<5?enemyFrames:bossFrames,((int)kind<5?(int)kind:(int)kind-5)*4,frames,0,4);
             var art=new GameObject("Sprite").AddComponent<SpriteRenderer>();art.transform.SetParent(obj.transform,false);art.sprite=frames[0];art.sharedMaterial=pixelMaterial;
-            float height=(int)kind>=5?2.15f:kind==RequiemEnemyKind.Armored?2.1f:1.65f;
+            float height=DarklightWorldScale.EnemyHeight(kind);
             art.transform.localScale=Vector3.one*height/frames[0].bounds.size.y;
             var rigid=obj.AddComponent<Rigidbody2D>();rigid.gravityScale=0;rigid.freezeRotation=true;rigid.collisionDetectionMode=CollisionDetectionMode2D.Continuous;
             var collider=obj.AddComponent<CircleCollider2D>();collider.radius=kind==RequiemEnemyKind.Armored?.42f:.28f;collider.offset=Vector2.up*.18f;
             var hp=obj.AddComponent<HealthSystem>();obj.AddComponent<DarklightCombatant>();
-            var foe=obj.AddComponent<DarklightEnemy>();foe.kind=kind;foe.elite=elite;foe.poses=frames;foe.attackFrames=new Sprite[4];Array.Copy(foe.Boss?bossAttacks:enemyAttacks,(foe.Boss?(int)kind-5:(int)kind)*4,foe.attackFrames,0,4);
-            hp.SetMaxHealth((foe.Boss?260+Progress.chapter*65:kind==RequiemEnemyKind.Armored?90:50+Progress.chapter*7)*(elite?1.45f:1),false);enemies.Add(foe);AddEnemyBar(foe);
+            var foe=obj.AddComponent<DarklightEnemy>();foe.kind=kind;foe.elite=elite;foe.poses=frames;foe.attackFrames=new Sprite[4];if((int)kind>=11)Array.Copy(ExpandedBossFrames,((int)kind-11)*8+4,foe.attackFrames,0,4);else Array.Copy(foe.Boss?bossAttacks:enemyAttacks,(foe.Boss?(int)kind-5:(int)kind)*4,foe.attackFrames,0,4);
+            hp.SetMaxHealth((foe.Boss?260+Progress.chapter*65:kind==RequiemEnemyKind.Armored?90:50+Progress.chapter*7)*(elite?1.45f:1),false);if(foe.ExpandedBoss)foe.RestorePhase(Progress.bossPhase);enemies.Add(foe);AddEnemyBar(foe);
         }
         void ClearEncounter()
         {
-            encounterStarted=false;
+            if(FinishNarrativeCombat())return;encounterStarted=false;
             if(encounter==3)
             {
-                chapterCleared=true;Progress.checkpoint=4;Progress.formsUnlocked=Mathf.Max(Progress.formsUnlocked,Progress.chapter>=5?3:Progress.chapter>=3?2:1);Progress.potions=Mathf.Min(9,Progress.potions+2);Progress.points++;Energy=100;health.FullHeal();
+                chapterCleared=true;Progress.checkpoint=4;Progress.formsUnlocked=Mathf.Max(Progress.formsUnlocked,Progress.chapter>=9?3:Progress.chapter>=3?2:1);Progress.potions=Mathf.Min(9,Progress.potions+2);Progress.points++;Energy=100;health.FullHeal();
                 AddProp("Portal",extras[3],Map.Portal,2.5f);Objective=Goal();
-                UnlockWeaponReward();SaveCheckpoint();Speak(DarklightStory.Conclusions[Progress.chapter]);if(Progress.chapter!=0&&Progress.chapter!=2)Notice("CAPITULO CONCLUIDO");
+                ExpandedChapterReward();Progress.bossPhase=1;VampireChapterReward();UnlockWeaponReward();SaveCheckpoint();Speak(DarklightStory.Conclusions[Progress.chapter]);if(Progress.chapter!=0&&Progress.chapter!=2)Notice("CAPITULO CONCLUIDO");
             }
-            else {encounter++;Progress.checkpoint=encounter;health.Heal(health.MaxHealth*.18f);Energy=Mathf.Min(100,Energy+15);Objective=Goal();SaveCheckpoint();Notice("SELO LIBERTO - CHECKPOINT SALVO");}
+            else {encounter++;Progress.checkpoint=encounter;Progress.missionWave=0;health.Heal(health.MaxHealth*.18f);Energy=Mathf.Min(100,Energy+15);Objective=Goal();SaveCheckpoint();Notice("SELO LIBERTO - CHECKPOINT SALVO");}
         }
-        void Interact()
-        {
-            Vector2 p=lab.Player.transform.position;
-            if(chapterCleared&&Vector2.Distance(p,Map.Portal)<2){if(Progress.chapter==5){Open("Ending");return;}StopPower();SaveCheckpoint();Progress.chapter++;Progress.checkpoint=0;LoadMap(Progress.chapter);SaveCheckpoint();Speak(DarklightStory.Introductions[Progress.chapter]);return;}
-            if(!Progress.relics[Progress.chapter]&&Vector2.Distance(p,Map.Relic)<1.7f)
-            {Progress.relics[Progress.chapter]=true;Progress.shards++;Progress.Award(45);health.SetMaxHealth(Progress.MaxHealth);Progress.potions=Mathf.Min(9,Progress.potions+1);Notice("MEMORIA RECUPERADA: +45 XP, +1 ELIXIR");SaveCheckpoint();return;}
-            if(Progress.chapter==1&&Vector2.Distance(p,Map.Ally)<2)
-            {
-                if(Progress.mp3Unlocked)Speak(new[]{"ICARO NOX|A musica vem de voce. O aparelho so abre o caminho. M ou SELECT abre seu MP3. C / RS ativa; 1-2 / direcional escolhe."});
-                else if(Progress.mp3Quest==0){Progress.mp3Quest=1;Speak(new[]{"ICARO NOX|Meu MP3 capta o Veu. Os Ecos levaram tres componentes. Derrote-os e traga-os para mim.","FABIO|Vou recuperar seu equipamento. Quero saber o que essas frequencias escondem."});SaveCheckpoint();}
-                else if(Progress.mp3Quest>=4){Progress.mp3Unlocked=true;Speak(new[]{"ICARO NOX|Aqui esta. Escolha a frequencia: Love regenera, Thrash concentra, Heavy fortalece.","FABIO|Vou usar o que me fortalece sem deixar de ser eu."});SaveCheckpoint();Sound(3);}
-                else Speak(new[]{"ICARO NOX|Ainda faltam "+(4-Progress.mp3Quest)+" componentes. Os Ecos desta rua carregam as pecas."});return;
-            }
-            if(Progress.chapter!=1&&Vector2.Distance(p,Map.Ally)<2){Speak(new[]{(Progress.chapter==3||Progress.chapter==4?"KAEL|":"LYRA|")+"Siga os selos. "+Objective});return;}
-            if(Vector2.Distance(p,Map.Spawn)<2&&!encounterStarted){health.FullHeal();SaveCheckpoint();Notice("CHECKPOINT SALVO - VIDA RESTAURADA");return;}
-            Notice("Aproxime-se de um fragmento, aliado ou portal");
-        }
+        void Interact(){if(!TryInteract())Notice("APROXIME-SE DE UM NPC, MEMÓRIA OU CHECKPOINT");}
         public bool RequestAttack(DarklightEnemy enemy)
         {float now=lab.Player.Model.Clock;if(now<attackPermit)return false;attackPermit=now+(enemy.Boss?.35f:.45f);return true;}
         public void EnemyDefeated(DarklightEnemy enemy)
@@ -193,15 +195,15 @@ namespace Darklight
             if(previous!=Progress.level){health.SetMaxHealth(Progress.MaxHealth);health.FullHeal();Notice("NIVEL "+Progress.level+" - +1 PONTO");Sound(3);}
         }
         public void Strike(StrikeKind kind)
-        {bool varied=(int)kind!=lastAttack;style=Mathf.Min(450,style+(varied?24:7));lastAttack=(int)kind;idleStyle=0;Resonance.Gain(varied?2:1);Energy=Mathf.Min(100,Energy+(varied?5:2)*(resonance==2?1.2f:1));Sound(1);}
-        public void BossPhaseTwo(){ambient.clip=tracks[3];}
-        public void Defended(){style=Mathf.Min(450,style+40);Energy=Mathf.Min(100,Energy+8);idleStyle=0;Sound(0);}
-        public void Damaged(){style=Mathf.Max(0,style-65);phonesTime=0;Sound(2);}
+        {if(!Blood.RewardStrike(kind,lab.Player.Model.AttackSerial))return;bool varied=(int)kind!=lastAttack;style=Mathf.Min(450,style+(varied?24:7));lastAttack=(int)kind;idleStyle=0;Resonance.Gain(varied?2:1);RecordWeaponTrial();}
+        public void BossPhaseTwo(){AudioDirector?.EnemyWarning(true,lab.Player.transform.position);}
+        public void Defended(){if(!Blood.RewardParry())return;style=Mathf.Min(450,style+40);idleStyle=0;AudioDirector?.Play("impact-impactMetal_light",DarklightAudioCategory.Combat,.45f);}
+        public void Damaged(){CancelVampireCast();style=Mathf.Max(0,style-65);phonesTime=0;AudioDirector?.Play("impact-impactPunch_heavy",DarklightAudioCategory.Character,.3f);}
         void TransformPlayer()
         {
             if(Form>0){EndForm();return;}int unlocked=Progress.FormUnlocked;
             if(unlocked==0){Notice("RUPTURA DESPERTA APOS KAEL");return;}
-            if(Energy<60){Notice("TRANSFORMACAO: PRECISA 60 DE ENERGIA");return;}
+            if(Energy<60){Notice("TRANSFORMACAO: PRECISA 60 DE SANGUE");return;}
             Form=Progress.preferredForm>0?Mathf.Min(unlocked,Progress.preferredForm):unlocked;Energy-=60;FormTime=12+Progress.mastery*2;Notice(new[]{"","RUPTURA","ECLIPSE","ABSOLUTO"}[Form]);Sound(3);
         }
         void EndForm(){Form=0;FormTime=0;slowTime=0;}
@@ -255,12 +257,12 @@ namespace Darklight
             if(!DarklightAutomation.Silent&&music.clip!=null){music.time=0;music.Play();}
             Sound(resonance==0?0:resonance==1?2:3);Notice(DarklightResonance.Names[resonance]);
         }
-        void StopPower(){Resonance.Stop();resonance=-1;phonesTime=0;EndForm();music.Stop();}
+        void StopPower(){StopVampire();Resonance.Stop();resonance=-1;phonesTime=0;EndForm();music.Stop();}
         void UpdateAura()
         {
             if(aura==null)return;
-            if(headphones==null){headphones=new GameObject("Fones").AddComponent<SpriteRenderer>();headphones.transform.SetParent(lab.Player.transform,false);headphones.sprite=extras[8];headphones.sharedMaterial=pixelMaterial;headphones.transform.localScale=Vector3.one*.37f/headphones.sprite.bounds.size.y;}
-            headphones.enabled=phonesTime>0||resonance>=0;headphones.sortingOrder=lab.Player.GetComponentInChildren<SpriteRenderer>().sortingOrder+1;headphones.transform.localPosition=Vector3.up*Mathf.Lerp(.75f,1.65f,1-Mathf.Clamp01(phonesTime/.28f));aura.enabled=Form>0||resonance>=0||phonesTime>0;
+            if(headphones==null){headphones=new GameObject("Fones").AddComponent<SpriteRenderer>();headphones.transform.SetParent(lab.Player.transform,false);headphones.sprite=extras[8];headphones.sharedMaterial=pixelMaterial;headphones.transform.localScale=Vector3.one*(.37f*DarklightCharacterView.WorldVisualScale)/headphones.sprite.bounds.size.y;}
+            headphones.enabled=phonesTime>0||resonance>=0;headphones.sortingOrder=lab.Player.GetComponentInChildren<SpriteRenderer>().sortingOrder+1;headphones.transform.localPosition=Vector3.up*DarklightCharacterView.WorldVisualScale*Mathf.Lerp(.75f,1.65f,1-Mathf.Clamp01(phonesTime/.28f));aura.enabled=Form>0||resonance>=0||phonesTime>0;
             float bpm=beatsPerMinute[selectedTrack];
             float beat=music.isPlaying?Mathf.Sin((music.time-beatOffsets[selectedTrack])*bpm/60*Mathf.PI*2):Mathf.Sin(lab.Player.Model.Clock*5);
             if(music.isPlaying && !DarklightAutomation.Silent)
@@ -269,7 +271,7 @@ namespace Darklight
                 rhythmEnvelope=Mathf.Lerp(rhythmEnvelope,peak,Mathf.Clamp01(Time.deltaTime*18));beat=Mathf.Clamp01(rhythmEnvelope*5);
             }
             resonanceBlock ??= new MaterialPropertyBlock();resonanceBlock.SetFloat("_ResonanceTint",1);aura.SetPropertyBlock(resonanceBlock);
-            float pulse=ReducedFlashes?1:1+.08f*beat;aura.transform.localScale=Vector3.one*(2.5f/aura.sprite.bounds.size.y)*pulse;
+            float pulse=ReducedFlashes?1:1+.08f*beat;aura.transform.localScale=Vector3.one*(2.5f*DarklightCharacterView.WorldVisualScale/aura.sprite.bounds.size.y)*pulse;
             aura.color=phonesTime>0?new Color(.6f,.7f,1,.45f):Form==3?new Color(1,.9f,.65f,.65f):Form==2?new Color(.7f,.3f,1,.7f):resonance>=0?new Color(DarklightResonance.Colors[resonance].r,DarklightResonance.Colors[resonance].g,DarklightResonance.Colors[resonance].b,.6f):new Color(1,.2f,.3f,.6f);
         }
         public void Fire(Vector3 position,Vector2 direction,float damage,float speed)
@@ -278,12 +280,13 @@ namespace Darklight
         {var obj=new GameObject("Aviso");obj.transform.SetParent(levelRoot,false);obj.transform.position=position+(Vector3)(area?Vector2.zero:direction*.65f);var sprite=obj.AddComponent<SpriteRenderer>();sprite.sprite=extras[4];sprite.sharedMaterial=pixelMaterial;sprite.sortingOrder=80;sprite.color=new Color(1,.13f,.2f,.48f);obj.transform.localScale=Vector3.one*(radius/sprite.sprite.bounds.size.y);Destroy(obj,.04f);}
         public void Notice(string message){notice=message;noticeTime=3.5f;}
         void SaveCheckpoint()
-        {if(DarklightAutomation.Silent)return;Resonance.Store(Progress);try{Progress.Save();}catch(Exception e){Notice("NAO FOI POSSIVEL SALVAR");Debug.LogError(e);}}
-        void Speak(string[] lines,Action done=null){dialogue=lines;dialogueIndex=0;dialogueDone=done;Open("Dialogue");}
+        {SaveMapExploration();if(DarklightAutomation.Silent||ExploringNewRegion||PlaytestSession)return;Resonance.Store(Progress);Blood.Store(Progress);try{Progress.Save();}catch(Exception e){Notice("NAO FOI POSSIVEL SALVAR");Debug.LogError(e);}}
+        void Speak(string[] lines,Action done=null){dialogue=PrepareDialogueLines(lines);dialogueIndex=0;dialogueDone=done;Open("Dialogue");}
         void NextDialogue(){if(++dialogueIndex<dialogue.Length){RefreshPanel();return;}Close();var done=dialogueDone;dialogueDone=null;done?.Invoke();}
-        public void Sound(int index){if(DarklightAutomation.Silent||tones==null||EffectsVolume<=0)return;sfx.PlayOneShot(tones[index],EffectsVolume*.2f);}
+        public void Sound(int index){AudioDirector?.Play(index==1?"rpg-knifeSlice":index==2?"impact-impactPunch_heavy":"interface-confirmation_",index==1?DarklightAudioCategory.Combat:index==2?DarklightAudioCategory.Character:DarklightAudioCategory.Interface,index==3?.23f:.18f);}
         static AudioClip Tone(float frequency,float duration)
         {int count=(int)(22050*duration);var data=new float[count];for(int i=0;i<count;i++){float t=i/22050f;data[i]=Mathf.Sin(t*frequency*Mathf.PI*2)*Mathf.Pow(1-(float)i/count,2)*.3f;}var clip=AudioClip.Create("RequiemSFX",count,1,22050,false);clip.SetData(data,0);return clip;}
         void OnDestroy(){if(Instance==this)Instance=null;rebinding?.Dispose();foreach(var tone in tones)if(tone!=null)Destroy(tone);}
     }
 }
+

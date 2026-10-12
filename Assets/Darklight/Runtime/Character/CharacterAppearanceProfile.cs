@@ -29,6 +29,10 @@ namespace Darklight
         public int startingAge=17;
         public int[] chapterDays={0,73,146,219,292,365};
         public AppearanceStage[] stages;
+        // Enable an age only after both skins have complete movement, weapon actions and forms.
+        // An incomplete bundle must never switch the character's age between animation states.
+        public bool[] completeAnimationStages={true,false,false,false,false};
+        public bool HasCompleteAnimations(int stage)=>stage==0||completeAnimationStages!=null&&stage>=0&&stage<completeAnimationStages.Length&&completeAnimationStages[stage];
         public Sprite[] hair, windHair, facialHair, shoulders;
         public AppearanceAttachment[] attachments;
         public AppearanceBodyVariant[] bodyVariants;

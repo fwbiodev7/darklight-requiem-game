@@ -57,6 +57,24 @@ namespace Darklight.Tests
         { model.Tick(.01f,new CombatInput { parryPressed=true,aim=Vector2.right });Assert.That(model.Defend(Vector2.left),Is.False);Assert.That(model.Defend(Vector2.right),Is.True); }
         [Test] public void SkillCooldownCannotBeBypassedWithRepeatedInputs()
         { model.Tick(.01f,new CombatInput { skillPressed=true });model.Tick(.5f,default);model.Tick(.01f,new CombatInput { skillPressed=true });Assert.That(model.State,Is.EqualTo(CombatState.Neutral));model.Tick(3f,default);model.Tick(.01f,new CombatInput { skillPressed=true });Assert.That(model.State,Is.EqualTo(CombatState.Attack)); }
+        [Test] public void DifferentCommandsCannotExtendAnOldDodge()
+        {
+            assets[0].active=.18f;Light();model.Tick(.01f,new CombatInput{dodgePressed=true});model.Tick(.19f,default);
+            model.Tick(.01f,new CombatInput{skillPressed=true});model.Tick(.08f,default);model.Tick(.01f,default);
+            Assert.That(model.State,Is.EqualTo(CombatState.Attack),"An old dodge was refreshed by another action");
+        }
+        [Test] public void ParryCancelsRecoveryButNeverDeletesTheContactFrame()
+        {
+            Light();model.Tick(.05f,new CombatInput{parryPressed=true});Assert.That(model.State,Is.EqualTo(CombatState.Attack));
+            model.Tick(.07f,default);Assert.That(model.RegisterHit("target"),Is.True);
+            model.Tick(.09f,new CombatInput{parryPressed=true});Assert.That(model.State,Is.EqualTo(CombatState.Attack));Assert.That(model.ActiveThisTick,Is.True);
+            model.Tick(.01f,default);Assert.That(model.State,Is.EqualTo(CombatState.Parry));Assert.That(model.RegisterHit("another"),Is.False);
+        }
+        [Test] public void SkillsDoNotCarryAnUnwantedQueuedLightIntoRecovery()
+        {
+            model.Tick(.01f,new CombatInput{lightPressed=true,skillPressed=true});Assert.That(model.Attack.kind,Is.EqualTo(StrikeKind.Skill));
+            model.Tick(.4f,default);model.Tick(.01f,default);Assert.That(model.State,Is.EqualTo(CombatState.Neutral));
+        }
         [Test] public void DeathCancelsAttackAndFutureInputs()
         { Light();model.Hurt(true);model.Tick(1,new CombatInput { lightPressed=true,dodgePressed=true });Assert.That(model.State,Is.EqualTo(CombatState.Dead));Assert.That(model.RegisterHit(1),Is.False); }
         [TestCase(0,-1,0)] [TestCase(-1,-1,1)] [TestCase(-1,0,2)] [TestCase(-1,1,3)]

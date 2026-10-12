@@ -9,7 +9,7 @@ namespace Darklight.Editor
 {
     public static class DarklightAppearanceBuilder
     {
-        public static void Apply(DarklightCampaign game,DarklightFighter player)
+        public static void Apply(DarklightCampaign game,DarklightFighter player,bool rebuildBindings=false)
         {
             const string path="Assets/Darklight/Data/Appearance.asset";
             var profile=AssetDatabase.LoadAssetAtPath<CharacterAppearanceProfile>(path);
@@ -37,7 +37,7 @@ namespace Darklight.Editor
             }
             foreach(var image in images.Values)UnityEngine.Object.DestroyImmediate(image);
             // Preserve manually corrected attachment points when rebuilding the delivery scene.
-            var previous=profile.attachments?.Where(a=>a.source!=null).ToDictionary(a=>a.source);
+            var previous=rebuildBindings?null:profile.attachments?.Where(a=>a.source!=null).ToDictionary(a=>a.source);
             profile.attachments=attachments.Select(a=>previous!=null&&previous.TryGetValue(a.source,out var old)?old:a).ToArray();
             var system=player.GetComponent<CharacterAppearanceSystem>()??player.gameObject.AddComponent<CharacterAppearanceSystem>();system.profile=profile;
             EditorUtility.SetDirty(profile);Debug.Log("Appearance: "+all.Count+" frame attachments, 5 stages, 100 shared layer sprites; age 17 to 18 over 365 narrative days.");

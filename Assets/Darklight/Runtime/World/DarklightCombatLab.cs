@@ -30,6 +30,9 @@ namespace Darklight
         float hitstopUntil, rumbleUntil, nextNavigate;
         int menuSelection, suppressThrough;
         Gamepad rumbling;
+        DarklightLabPauseMenu pauseMenu;
+        Rigidbody2D pausedBody;
+        RigidbodyInterpolation2D resumeInterpolation;
 
         void Awake()
         {
@@ -40,12 +43,22 @@ namespace Darklight
             WorldCamera.aspect = 1280f / 720f;WorldCamera.allowHDR=false;WorldCamera.allowMSAA=false;WorldCamera.allowDynamicResolution=false;QualitySettings.antiAliasing=0;QualitySettings.anisotropicFiltering=AnisotropicFiltering.Disable;
             InputSystem.onDeviceChange += OnDeviceChange;
         }
+        public DarklightCombatCoach Coach {get;private set;}
+        void Start()
+        {
+            Coach=gameObject.AddComponent<DarklightCombatCoach>();Coach.Initialize(this);
+            if(PixelHUD!=null&&DarklightCampaign.Instance==null)
+            {
+                pauseMenu=gameObject.AddComponent<DarklightLabPauseMenu>();pauseMenu.Initialize(this,PixelHUD);
+            }
+        }
         void Update()
         {
             if (DarklightCampaign.Instance != null) { if (rumbling != null && Time.unscaledTime >= rumbleUntil) StopRumble(); return; }
             if (Input.Menu("Pause").WasPressedThisFrame()) { SetPaused(!Paused); return; }
             if (Paused)
             {
+                if(pauseMenu!=null&&pauseMenu.ReadPointer(ref menuSelection,out int clicked)&&clicked>=0){SelectMenu(clicked);return;}
                 float axis = Input.Menu("Navigate").ReadValue<Vector2>().y;
                 if (Mathf.Abs(axis) < .4f) nextNavigate = 0;
                 else if (Time.unscaledTime >= nextNavigate)
@@ -57,10 +70,31 @@ namespace Darklight
         }
         public void SetPaused(bool value)
         {
+            if (value != Paused)
+            {
+                if (value && Player != null)
+                {
+                    pausedBody = Player.GetComponent<Rigidbody2D>();
+                    if (pausedBody != null)
+                    {
+                        resumeInterpolation = pausedBody.interpolation;
+                        pausedBody.linearVelocity = Vector2.zero;
+                        pausedBody.interpolation = RigidbodyInterpolation2D.None;
+                        var p = pausedBody.transform.position;
+                        pausedBody.transform.position = new Vector3(pausedBody.position.x, pausedBody.position.y, p.z);
+                    }
+                }
+                else if (pausedBody != null)
+                {
+                    pausedBody.interpolation = resumeInterpolation;
+                    pausedBody = null;
+                }
+            }
             Paused = value; Input.SetGameplay(!value);
             Player?.Model?.SuspendInput(); suppressThrough = Time.frameCount + 1;
             menuSelection = 0; nextNavigate = 0; StopRumble();
         }
+        public int PauseSelection=>menuSelection;
         void SelectMenu(int index)
         {
             if (index == 0) SetPaused(false);
@@ -108,9 +142,9 @@ namespace Darklight
                 GUI.Label(new Rect(p.x - 42, 360 - p.y, 100, 25), target.Health.IsDead ? "Concluído" : Mathf.CeilToInt(target.Health.CurrentHealth) + " / 150");
             }
             GUI.Label(new Rect(16, 312, 620, 20), Input.UsingGamepad ? "X leve · Y pesado · B esquiva · LB parry · RB onda · START pausa" : "Mouse: leve / pesado · Espaço esquiva · Q parry · F onda · Esc pausa");
-            GUI.Label(new Rect(16, 332, 620, 20), Input.UsingGamepad ? "Analógicos: mover / mirar · A reinicia o treino" : "WASD: mover · Cursor: mirar · E reinicia o treino");
+            GUI.Label(new Rect(16, 332, 620, 20), Input.UsingGamepad ? "Analógico esquerdo: mover · A reinicia o treino" : "WASD: mover · E reinicia o treino");
             }
-            if (DarklightCampaign.Instance != null || !Paused) return;
+            if (DarklightCampaign.Instance != null || !Paused || pauseMenu!=null) return;
             GUI.Box(new Rect(202, 100, 236, 210), "PAUSA");
             string[] labels = { "Retomar", "Reiniciar treino", "Alternar treino de defesa", "Menu principal" };
             for (int i = 0; i < labels.Length; i++)

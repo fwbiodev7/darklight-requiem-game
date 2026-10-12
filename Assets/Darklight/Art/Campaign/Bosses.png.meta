@@ -51,10 +51,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 48
+  spritePixelsToUnits: 125.5
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,12 +108,12 @@ TextureImporter:
       name: Bosses_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1319
-        width: 196
-        height: 206
+        x: 36
+        y: 1864
+        width: 192
+        height: 195
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.6901042, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -130,12 +130,12 @@ TextureImporter:
       name: Bosses_1
       rect:
         serializedVersion: 2
-        x: 282
-        y: 1319
-        width: 186
-        height: 206
+        x: 414
+        y: 1864
+        width: 182
+        height: 190
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.49725273, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -152,12 +152,12 @@ TextureImporter:
       name: Bosses_2
       rect:
         serializedVersion: 2
-        x: 526
-        y: 1319
-        width: 242
-        height: 206
+        x: 742
+        y: 1864
+        width: 178
+        height: 194
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.5477528, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -174,12 +174,12 @@ TextureImporter:
       name: Bosses_3
       rect:
         serializedVersion: 2
-        x: 768
-        y: 1326
-        width: 235
-        height: 195
+        x: 1060
+        y: 1864
+        width: 234
+        height: 191
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.49786323, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -197,11 +197,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 1067
-        width: 216
+        y: 1496
+        width: 215
         height: 252
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.59534883, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: Bosses_5
       rect:
         serializedVersion: 2
-        x: 256
-        y: 1064
-        width: 230
-        height: 255
+        x: 417
+        y: 1496
+        width: 173
+        height: 254
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.50289017, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -240,12 +240,12 @@ TextureImporter:
       name: Bosses_6
       rect:
         serializedVersion: 2
-        x: 516
-        y: 1064
-        width: 252
-        height: 255
+        x: 736
+        y: 1496
+        width: 173
+        height: 254
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.6040462, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -262,12 +262,12 @@ TextureImporter:
       name: Bosses_7
       rect:
         serializedVersion: 2
-        x: 768
-        y: 1060
-        width: 240
-        height: 258
+        x: 1042
+        y: 1496
+        width: 268
+        height: 255
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.630597, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -284,12 +284,12 @@ TextureImporter:
       name: Bosses_8
       rect:
         serializedVersion: 2
-        x: 22
-        y: 825
-        width: 229
-        height: 234
+        x: 44
+        y: 1128
+        width: 225
+        height: 222
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.55333334, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -306,12 +306,12 @@ TextureImporter:
       name: Bosses_9
       rect:
         serializedVersion: 2
-        x: 300
-        y: 825
-        width: 186
-        height: 233
+        x: 411
+        y: 1128
+        width: 182
+        height: 227
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.510989, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -328,12 +328,12 @@ TextureImporter:
       name: Bosses_10
       rect:
         serializedVersion: 2
-        x: 520
-        y: 825
-        width: 248
-        height: 234
+        x: 750
+        y: 1128
+        width: 184
+        height: 226
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.4918478, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -350,12 +350,12 @@ TextureImporter:
       name: Bosses_11
       rect:
         serializedVersion: 2
-        x: 768
-        y: 825
-        width: 253
-        height: 223
+        x: 1034
+        y: 1128
+        width: 283
+        height: 214
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.66784453, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -372,12 +372,12 @@ TextureImporter:
       name: Bosses_12
       rect:
         serializedVersion: 2
-        x: 12
-        y: 574
-        width: 231
-        height: 251
+        x: 40
+        y: 760
+        width: 227
+        height: 255
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.561674, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -394,12 +394,12 @@ TextureImporter:
       name: Bosses_13
       rect:
         serializedVersion: 2
-        x: 289
-        y: 574
-        width: 223
-        height: 251
+        x: 422
+        y: 760
+        width: 220
+        height: 242
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.37045455, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -416,12 +416,12 @@ TextureImporter:
       name: Bosses_14
       rect:
         serializedVersion: 2
-        x: 546
-        y: 574
-        width: 222
-        height: 251
+        x: 723
+        y: 760
+        width: 233
+        height: 247
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.32403433, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -438,12 +438,12 @@ TextureImporter:
       name: Bosses_15
       rect:
         serializedVersion: 2
-        x: 768
-        y: 577
-        width: 250
-        height: 248
+        x: 1046
+        y: 760
+        width: 238
+        height: 254
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.54831934, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -460,12 +460,12 @@ TextureImporter:
       name: Bosses_16
       rect:
         serializedVersion: 2
-        x: 14
-        y: 277
-        width: 237
-        height: 297
+        x: 70
+        y: 392
+        width: 233
+        height: 303
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.42060086, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -482,12 +482,12 @@ TextureImporter:
       name: Bosses_17
       rect:
         serializedVersion: 2
-        x: 261
-        y: 276
-        width: 251
-        height: 298
+        x: 420
+        y: 392
+        width: 217
+        height: 309
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.38940093, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -504,12 +504,12 @@ TextureImporter:
       name: Bosses_18
       rect:
         serializedVersion: 2
-        x: 512
-        y: 280
-        width: 256
-        height: 294
+        x: 728
+        y: 392
+        width: 223
+        height: 300
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.6591928, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -526,12 +526,12 @@ TextureImporter:
       name: Bosses_19
       rect:
         serializedVersion: 2
-        x: 768
-        y: 276
-        width: 241
-        height: 295
+        x: 1036
+        y: 392
+        width: 271
+        height: 290
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.51660514, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -548,12 +548,12 @@ TextureImporter:
       name: Bosses_20
       rect:
         serializedVersion: 2
-        x: 69
-        y: 23
-        width: 154
-        height: 253
+        x: 93
+        y: 24
+        width: 150
+        height: 250
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -570,12 +570,12 @@ TextureImporter:
       name: Bosses_21
       rect:
         serializedVersion: 2
-        x: 299
-        y: 25
-        width: 179
-        height: 251
+        x: 431
+        y: 24
+        width: 175
+        height: 245
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.41714287, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -592,12 +592,12 @@ TextureImporter:
       name: Bosses_22
       rect:
         serializedVersion: 2
-        x: 512
-        y: 25
-        width: 256
-        height: 251
+        x: 741
+        y: 24
+        width: 182
+        height: 247
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.54395604, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -614,12 +614,12 @@ TextureImporter:
       name: Bosses_23
       rect:
         serializedVersion: 2
-        x: 768
-        y: 23
-        width: 241
-        height: 253
+        x: 1041
+        y: 24
+        width: 269
+        height: 261
       alignment: 9
-      pivot: {x: 0.5, y: 0.03}
+      pivot: {x: 0.57992566, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

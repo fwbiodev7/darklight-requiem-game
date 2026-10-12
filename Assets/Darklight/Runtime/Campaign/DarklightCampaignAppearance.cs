@@ -3,7 +3,7 @@ namespace Darklight
     public sealed partial class DarklightCampaign
     {
         public CharacterAppearanceSystem Appearance=>lab?.Player?.GetComponent<CharacterAppearanceSystem>();
-        void RestoreAppearance()=>Appearance?.Restore(Progress);
+        void RestoreAppearance(){Appearance?.Restore(Progress);if(PlaytestSession)Appearance?.PreviewStage(0);}
         void RefreshAppearancePortrait()
         {
             if(portrait==null)return;

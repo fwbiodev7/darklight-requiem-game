@@ -112,3 +112,56 @@ A campanha completa exige, além disso, seis capítulos integrados, progressão 
 ## Revisão aprovada de jogabilidade — 10/10/2026
 
 Seis layouts modulares com exploração e encontros posicionais, combos rápidos com buffer no hitstop, navegação/cancelamentos e colisões, 68 quadros complementares, três poderes próprios e HUD/menu compactos. GUIA ATUAL: outputs/melhorias/LEIA-ME.md. 35 testes de lógica e 9 de cena distintos aprovados. Compilação sem erros; áudio e controle físico não testados. NPCs, formas e algumas ações ainda usam poses individuais. Música de menu e configurações/cinemática adicionais aguardam aprovação do novo plano.
+
+## Correções autorizadas de sprites e menu — 11/10/2026
+
+Reconstruídas 16 folhas e 544 entradas de animação, preservando a arte aprovada. Células com pelo menos 24 pixels de margem, pivôs e escala corrigidos, importação sem compressão, filtro Point e vínculos de aparência atualizados. A captura do personagem de costas na Unity está livre dos fragmentos da pose vizinha.
+
+A música de menu agora é ES_Metal in the Night — Def Lev, arquivo enviado pelo usuário. Loop próprio, volume de música e parada ao iniciar/retomar campanha; testes automáticos silenciosos. A reprodução audível será verificada no teste manual solicitado.
+
+A pausa agora interrompe imediatamente o movimento e mantém a câmera parada. Ajustadas passagens e a base de um obstáculo do capítulo 3; navegação conecta pontos próximos à parede somente através de passagem física livre. Permanecem poses direcionais compartilhadas nas fontes com sete direções distintas.
+
+Verificação: 17/17 testes de importação e 12/13 testes de cena aprovados, total 29/30. Todos os 21 testes específicos de sprites, formas e configuração de música passaram. Há uma falha de navegação para uma arena do capítulo 4; corrigir antes de declarar a campanha validada. Nenhuma afirmação de balanceamento, 60 FPS, reprodução audível ou controle físico foi feita.
+
+O novo arco vampiresco e a campanha de dez capítulos estão descritos no documento PLANO-EXPANSAO-10-CAPITULOS.md e aguardam a aprovação exigida pelo prompt fornecido. Esta revisão registra somente as correções e a música autorizadas diretamente.
+
+
+# Revisão aprovada — menu, regiões e tamanho de Fábio
+
+11/10/2026. O usuário aprovou expressamente a substituição do menu, TROCAR SKIN e as duas poses. Cenário original de Vespera com eclipse vermelho, nuvens, névoa, luzes e partículas discretas. Interface à esquerda com bordas finas e seleção carmesim; personagem à direita troca entre Réquiem e Rock e possui quatro quadros de vento. A arte de Varginha serviu como referência de composição.
+
+Menu: CONTINUAR, NOVO JOGO, CARREGAR JOGO, CONFIGURAÇÕES, TROCAR SKIN, CRÉDITOS e SAIR. Continuar apresenta capítulo, local e progresso do save real e fica desabilitado sem save válido. Carregar oferece o save atual e a cópia anterior, usando a validação existente. Configurações mantém volume, controles/remapeamento e extras. Sons de navegação discretos; teclado, mouse e controle simulados verificados. A faixa ES_Metal in the Night — Def Lev permanece no loop do menu.
+
+A orientação acompanha o movimento. Cursor e alavanca direita não giram Fábio. O zoom de jogo usa meia altura de 5 unidades. Após nova solicitação do usuário, o tamanho visual de Fábio aumentou separadamente em 32,5%: aproximadamente 2,65 unidades de altura em vez de 2. Esse tamanho é comum às duas skins e aos estágios, sem progressão por escala. Pivô dos pés mantido, assim como atributos, tempos de combate e colisores existentes.
+
+Quatro cenários novos possuem quatro áreas descritivas, memórias e portal de retorno. Acesso por CONFIGURAÇÕES → EXTRAS → EXPLORAR NOVAS REGIÕES. A exploração preserva capítulo, checkpoint, armas, atributos e arquivos de save. As regiões correspondem às propostas 7–10; adicionar esses mapas não implementa a narrativa completa de dez capítulos. Descrições detalhadas estão em NOVOS-MAPAS-DESCRICOES.md.
+
+Na quarta fase existente, o ponto da primeira arena foi deslocado de (1157,507) para (1122,510) pixels, saindo da base física de um console. O teste de caminhos das seis fases passou após esse ajuste. As quatro regiões novas passaram na verificação de caminhos com raio físico, pontos de interação, limites, empurrões, pausa e preservação de progresso.
+
+Verificações específicas: três testes do menu, um teste das quatro regiões, um teste de orientação por movimento e quatro testes de apresentação de sprites aprovados. A apresentação percorreu 1.440 combinações de skins, armas, direções, estágios e estados, além das formas temporárias. Capturas reais registram as duas poses, o seletor e os quatro mapas com Fábio maior. O controle físico, o balanceamento e o desempenho sustentado não foram medidos.
+
+As cinco aparências completas das duas skins foram aprovadas. A produção de suas animações permanece em andamento: as variantes de repouso foram refeitas com maior separação; folhas com arma incorreta, cortes ou direções incompletas não foram integradas. As camadas antigas só serão removidas após cobertura válida de todas as ações. As correções de tamanho, controle, menu e mapas acima já estão integradas.
+
+
+## Atualização de gameplay e reconstrução visual — 11/10/2026
+
+Minimapa com exploração, objetivos, inimigos detectados, rotas conhecidas, destinos e persistência. SELECT abre o mapa completo; TAB e controles são configuráveis. Mapa e pausa congelam os temporizadores do combate. Navegação por teclado, mouse e Gamepad simulado verificada; o G808 físico ainda não foi testado.
+
+Interação E/A ou botão na tela em NPCs, itens, checkpoints e saídas. NPCs usam caixa inferior gótica com retrato, texto gradual, pausas de pontuação e paginação. Primeiro avanço completa a frase; o seguinte muda de página. Fechar o diálogo não dispara combate nem abre a interação novamente no mesmo frame. Props e marcadores compartilham posições acessíveis. Checkpoint possui pedestal com chama verde e o portal de saída conserva sua arte violeta distinta.
+
+Contra-ataques das armas têm funções diferentes: katana precisa, adagas rápidas com três pulsos e corrente com alcance e puxão. Avisos distinguem ataques aparáveis, perigos em área e projéteis. Buffers e cancelamentos foram corrigidos, ataques respeitam paredes e os acertos suportam grupos densos. Treino contextual pode ser desligado/reiniciado. Mira assistida foi dispensada pelo usuário; orientação continua pelo movimento.
+
+Os cinco estágios Rock possuem caminhada completa nas oito direções e três armas, com quatro passos por direção: 480 quadros separados, margem24, pivôs nos pés e filtro Point. O combate aprovado foi preservado. O restante do catálogo completo das aparências continua em produção; não considerar a remoção das camadas antigas concluída.
+
+Os dez mapas usam a composição e as colisões existentes, com quatro grandes regiões redesenhadas por mapa em densidade nativa2×. A entrada da primeira região contém dois detalhes adicionais4× aprovados. Manifestos de trechos alimentam solo e recortes frontais na mesma coordenada; áreas sem detalhes continuam com a composição original. Importação Point, sem mipmaps/sem compressão; originais preservados. A meia altura da câmera passou de5 para4,96875 para ampliar os pixels por uma razão inteira em720p, com alteração de enquadramento de0,6%.
+
+Validação desta revisão:58 testes de lógica e35 de gameplay aprovados, incluindo coordenadas/densidade de todos os dez mapas, rotas, recortes, animações, interações, controle simulado, saves e combate. Capturas e relatório da reconstrução permanecem na pasta map-rebuild-stage do chat.
+
+As quatro regiões posteriores continuam disponíveis para exploração. A narrativa dos capítulos7–10, chefes finais, habilidades/formas e finais ainda requer implementação; a reconstrução dos cenários não completa esse conteúdo.
+
+
+
+Ajuste final do HUD: minimapa no canto superior direito; Onda do Véu abaixo dele, seguida pelo objetivo acompanhado. Conferidos clique, controle e cinco resoluções após reposicionamento.
+
+HUD compacto inspirado nas referências do usuário: retrato em losango que acompanha a skin, barras de vida/energia, progresso, arma e atalhos, elixires e interação contextual. Minimap direito com comando TAB/SELECT, seguido por Onda do Véu e cartão do objetivo acompanhado. Dados reais de gameplay e bindings preservados; arte das molduras reaproveitada da folha fornecida, sem texto estático no atlas. Conferidas ambas as skins, cinco resoluções, diálogo, pausa, mapa completo e gamepad simulado. 58/58 testes de lógica e35/35 de gameplay aprovados. Sessão solicitada pode abrir no Jardim dos Ecos com --requiem-start-map=4; carregar essa sessão não sobrescreve a campanha no início.
+

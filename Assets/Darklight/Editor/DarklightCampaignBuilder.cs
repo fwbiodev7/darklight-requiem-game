@@ -12,8 +12,8 @@ namespace Darklight.Editor
     public static class DarklightCampaignBuilder
     {
         const string Root="Assets/Darklight/";
-        [Serializable] class Frame {public float[] rect;}
-        [Serializable] class Frames {public Frame[] frames;}
+        [Serializable] class Frame {public float[] rect,pivot;}
+        [Serializable] class Frames {public Frame[] frames;public float pixelsPerUnit;}
         public static void AssembleAndBuild()
         {
             Assemble();BuildWindows();
@@ -49,6 +49,9 @@ namespace Darklight.Editor
                 game.tracks[i]=AssetDatabase.LoadAssetAtPath<AudioClip>(path);
                 if(game.tracks[i]==null||game.tracks[i].loadType!=AudioClipLoadType.Streaming)throw new InvalidOperationException("Music import failed: "+path);
             }
+            game.menuMusic=AssetDatabase.LoadAssetAtPath<AudioClip>(Root+"Audio/Music/metal-in-the-night-def-lev.mp3");
+            var menuImporter=AssetImporter.GetAtPath(Root+"Audio/Music/metal-in-the-night-def-lev.mp3") as AudioImporter;
+            if(menuImporter!=null){var settings=menuImporter.defaultSampleSettings;settings.loadType=AudioClipLoadType.Streaming;settings.compressionFormat=AudioCompressionFormat.Vorbis;settings.quality=.7f;settings.preloadAudioData=false;menuImporter.defaultSampleSettings=settings;menuImporter.forceToMono=false;menuImporter.loadInBackground=true;menuImporter.SaveAndReimport();}
             // Retiming uses Unity assets, preserving their GUIDs and references.
             string[] attackNames={"Leve1","Leve2","Leve3","Pesado","Carregado","ContraAtaque","OndaDoVeu"};
             float[] startups={.055f,.065f,.08f,.10f,.15f,.035f,.085f},actives={.075f,.08f,.10f,.11f,.14f,.09f,.12f},recoveries={.14f,.15f,.18f,.20f,.23f,.13f,.18f};
@@ -75,7 +78,7 @@ namespace Darklight.Editor
         static Sprite[] Slice(string name,bool transparent)
         {
             string path=Root+"Art/Campaign/"+name+".png";
-            var frames=JsonUtility.FromJson<Frames>(File.ReadAllText(Root+"Art/Campaign/"+name+"Rects.json")).frames;
+            var sheet=JsonUtility.FromJson<Frames>(File.ReadAllText(Root+"Art/Campaign/"+name+"Rects.json"));var frames=sheet.frames;
             var importer=AssetImporter.GetAtPath(path) as TextureImporter;
             importer.textureType=TextureImporterType.Sprite;importer.spriteImportMode=SpriteImportMode.Multiple;importer.filterMode=FilterMode.Point;importer.mipmapEnabled=false;
             importer.alphaIsTransparency=transparent;importer.textureCompression=TextureImporterCompression.Uncompressed;importer.maxTextureSize=4096;importer.spritePixelsPerUnit=48;importer.isReadable=false;importer.SaveAndReimport();
@@ -84,8 +87,9 @@ namespace Darklight.Editor
             if(cap==null||!cap.GetEditCapability().HasCapability(EEditCapability.CreateAndDeleteSprite | EEditCapability.EditSpriteRect | EEditCapability.EditPivot | EEditCapability.EditSpriteName | EEditCapability.EditBorder))throw new InvalidOperationException("Sprite importer capability unavailable.");
             var namesProvider=provider.GetDataProvider<ISpriteNameFileIdDataProvider>();if(namesProvider==null)throw new InvalidOperationException("Sprite name provider unavailable.");
             var old=provider.GetSpriteRects().ToDictionary(r=>r.name,r=>r.spriteID);var texture=AssetDatabase.LoadAssetAtPath<Texture2D>(path);int height=texture.height;
-            var rects=frames.Select((f,i)=>new SpriteRect{name=name+"_"+i,spriteID=old.TryGetValue(name+"_"+i,out var id)?id:GUID.Generate(),rect=new Rect(f.rect[0],height-f.rect[1]-f.rect[3],f.rect[2],f.rect[3]),alignment=SpriteAlignment.Custom,border=name=="Extras" && (i==6||i==7)?(i==6?new Vector4(80,80,80,80):new Vector4(60,60,60,60)):Vector4.zero,pivot=name=="ArchitectureV2"?new Vector2(.5f,0):transparent&&name!="Extras"?new Vector2(.5f,.03f):Vector2.one*.5f}).ToArray();
+            var rects=frames.Select((f,i)=>new SpriteRect{name=name+"_"+i,spriteID=old.TryGetValue(name+"_"+i,out var id)?id:GUID.Generate(),rect=new Rect(f.rect[0],height-f.rect[1]-f.rect[3],f.rect[2],f.rect[3]),alignment=SpriteAlignment.Custom,border=name=="Extras" && (i==6||i==7)?(i==6?new Vector4(80,80,80,80):new Vector4(60,60,60,60)):Vector4.zero,pivot=f.pivot?.Length==2?new Vector2(f.pivot[0],f.pivot[1]):name=="ArchitectureV2"?new Vector2(.5f,0):transparent&&name!="Extras"?new Vector2(.5f,.03f):Vector2.one*.5f}).ToArray();
             provider.SetSpriteRects(rects);namesProvider.SetNameFileIdPairs(rects.Select(r=>new SpriteNameFileIdPair(r.name,r.spriteID)));provider.Apply();if(name=="FloorTilesV2")importer.spritePixelsPerUnit=168;if(name=="ArchitectureV2")importer.spritePixelsPerUnit=192;if(name=="Forms")importer.spritePixelsPerUnit=frames.Max(f=>f.rect[3])/2;if(name=="Actions")importer.spritePixelsPerUnit=frames.Where((f,i)=>i%4==1).Max(f=>f.rect[3])/2;importer.SaveAndReimport();
+            if(sheet.pixelsPerUnit>0){importer.spritePixelsPerUnit=sheet.pixelsPerUnit;importer.SaveAndReimport();}
             var sprites=AssetDatabase.LoadAllAssetsAtPath(path).OfType<Sprite>().ToDictionary(s=>s.name,s=>s);
             return rects.Select(r=>sprites[r.name]).ToArray();
         }

@@ -14,6 +14,7 @@ namespace Darklight
         [Min(1)] public int hitPulses=1;
         public float lungeSpeed, cooldown;
         public bool pullTarget,blink;
+        [Range(0,1)] public float recoveryChainFraction=.35f;
         public float Duration => startup + active + recovery;
     }
 

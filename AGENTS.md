@@ -13,3 +13,4 @@
 - Powers, minimapa e menus têm implementações em desenvolvimento. Dez regiões não comprovam campanha concluída. Posturas da katana e catálogo envelhecido completo continuam pendentes.
 - Há mitigação de aparência coerente: só habilitar um estágio de gameplay após completar ambas as skins em todas as ações, armas e formas. Nunca trocar idade narrativa salva para esconder lacunas.
 - Ler Docs/Darklight/Feedback/FEEDBACK-2026-10-11.md antes de continuar; não publicar novos binários como validados sem verificação autorizada.
+- Próxima etapa: iniciar a lista pendente e seus testes somente após o comando do criador faça o que ficou pendente, previsto para 12/10/2026. Não retomar automaticamente por heartbeat.

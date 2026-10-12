@@ -28,4 +28,4 @@ Unity **6000.6.0f1**, dependências em `Packages`. Abra `Assets/Darklight/Scenes
 
 ## Recursos e licenças
 
-Arte, fontes e metadados de importação preservados. Press Start 2P acompanha sua licença OFL; novos efeitos e ambientes CC0 têm manifesto em `Assets/Darklight/Resources/DarklightAudio/AUDIO-LICENSES.json`. As músicas fornecidas pelo criador não recebem licença de redistribuição por estarem neste protótipo. Não incluir caches da Unity, builds, credenciais ou saves pessoais nos commits.
+Arte, fontes e metadados de importação preservados. Press Start 2P acompanha sua licença OFL; novos efeitos e ambientes CC0 têm manifesto em `Assets/Darklight/Resources/Darklight/Audio/AUDIO-LICENSES.json`. As músicas fornecidas pelo criador não recebem licença de redistribuição por estarem neste protótipo. Não incluir caches da Unity, builds, credenciais ou saves pessoais nos commits.

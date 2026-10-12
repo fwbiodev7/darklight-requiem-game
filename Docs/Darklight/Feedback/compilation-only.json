@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "return new {compiling=UnityEditor.EditorApplication.isCompiling,playing=UnityEditor.EditorApplication.isPlaying,updatedAssemblyLoaded=typeof(Darklight.CharacterAppearanceSystem).GetProperty(\"RenderingStage\")!=null&&typeof(Darklight.CharacterAppearanceProfile).GetField(\"completeAnimationStages\")!=null};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "compiling": false,
+        "playing": false,
+        "updatedAssemblyLoaded": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -9,7 +9,7 @@ namespace Darklight.Tests
     public sealed class DarklightCompleteAppearanceTests
     {
         [UnitySetUp] public IEnumerator Setup(){DarklightAutomation.Silent=true;yield return SceneManager.LoadSceneAsync("Assets/Darklight/Scenes/DarklightCampaign.unity");yield return null;yield return null;}
-        [UnityTest] public IEnumerator AgedKatanaIdleUsesWholeBodiesForBothSkinsAndEveryDirection()
+        [UnityTest] public IEnumerator AuthoredAgedIdleAndIncompleteBundleGatePreserveIdentityForBothSkins()
         {
             var game=DarklightCampaign.Instance;var lab=DarklightCombatLab.Instance;game.Progress.equippedWeapon=0;game.Weapons.Restore();
             var view=lab.Player.GetComponent<DarklightCharacterView>();var age=lab.Player.GetComponent<CharacterAppearanceSystem>();
@@ -18,10 +18,15 @@ namespace Darklight.Tests
             {
                 game.SelectSkin(skin,false);age.PreviewStage(stage);
                 var facing=(Vector2)(Quaternion.Euler(0,0,-d*45)*Vector2.down);var model=new CombatModel(lab.Player.loadout);model.Tick(.01f,new CombatInput{aim=facing});view.Present(model,Vector2.zero);
-                Assert.That(art.sprite,Is.EqualTo(age.IdleBody(skin,d,model.Clock)),"The authored aged pose was replaced by a younger body");
-                Assert.That(art.sprite.name,Does.StartWith(skin==0?"RequiemIdleStage":"RockIdleStage"));
-                Assert.That(art.sprite.texture.filterMode,Is.EqualTo(FilterMode.Point));
-                Assert.That(art.sprite.bounds.size.y,Is.InRange(1.75f,2.25f));
+                var authored=age.IdleBody(skin,d,model.Clock);
+                Assert.That(authored.name,Does.StartWith(skin==0?"RequiemIdleStage":"RockIdleStage"));
+                Assert.That(authored.texture.filterMode,Is.EqualTo(FilterMode.Point));
+                Assert.That(authored.bounds.size.y,Is.InRange(1.75f,2.25f));
+                Assert.That(age.Stage,Is.EqualTo(stage));
+                var today=DarklightSpriteExpectations.Today(skin,stage,0,d,model,Vector2.zero);
+                Assert.That(art.sprite,Is.EqualTo(today??authored));
+                if(today!=null){Assert.That(art.flipX,Is.False);Assert.That(view.UsesCompleteAgeSprite,Is.True);}
+                
                 Assert.That(age.IdleBody(skin,d,.51f),Is.Not.EqualTo(age.IdleBody(skin,d,0)),"Missing second breathing pose");
             }
             yield return null;

@@ -101,7 +101,8 @@ namespace Darklight
             if(Mouse.current!=null)
             {
                 Vector2 mouse=Mouse.current.position.ReadValue();bool click=Mouse.current.leftButton.wasPressedThisFrame;
-                for(int i=0;i<buttons.Count;i++)if(RectTransformUtility.RectangleContainsScreenPoint(buttons[i].rect,mouse))
+                bool dragging=TickAudioDrag(mouse);
+                if(!dragging)for(int i=0;i<buttons.Count;i++)if(RectTransformUtility.RectangleContainsScreenPoint(buttons[i].rect,mouse))
                 {if(buttons[i].enabled&&(click||Mouse.current.delta.ReadValue().sqrMagnitude>0)&&selection!=i){selection=i;MenuSound();}if(!TickSettingsPointer(i,mouse,click)&&click){Activate(i);break;}}
             }
             int first=Mathf.Max(0,selection-7);
@@ -148,7 +149,7 @@ namespace Darklight
         {
             if(panel=="Dialogue"){ShowDialogue();return;}
             if(dialogueRoot!=null)dialogueRoot.gameObject.SetActive(false);
-            menuRoot.gameObject.SetActive(true);ClearButtons();settingsSliders.Clear();SetHUDVisible(!(panel=="Main"||panel=="Skins"||panel=="ConfirmNew"||((panel=="Options"||panel=="Controls"||panel=="Credits"||panel=="BindingDevice")&&returnPanel=="Main")));overlay.gameObject.SetActive(true);portrait.gameObject.SetActive(false);
+            menuRoot.gameObject.SetActive(true);FlushAudioPreferences();draggedAudioSlider=-1;ClearButtons();settingsSliders.Clear();SetHUDVisible(!(panel=="Main"||panel=="Skins"||panel=="ConfirmNew"||((panel=="Options"||panel=="Controls"||panel=="Credits"||panel=="BindingDevice")&&returnPanel=="Main")));overlay.gameObject.SetActive(true);portrait.gameObject.SetActive(false);
             bool front=CinematicFront;
             menuRoot.Find("Moldura").GetComponent<Image>().color=front?new Color(1,1,1,.72f):Color.white;heading.fontSize=10;heading.rectTransform.sizeDelta=new Vector2(548,24);heading.alignment=TextAnchor.UpperLeft;
             menuBackdrop.sprite=front?menuBackground:null;menuBackdrop.color=front&&menuBackground!=null?Color.white:new Color(.02f,.02f,.04f,.88f);

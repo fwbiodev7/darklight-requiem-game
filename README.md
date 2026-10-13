@@ -6,13 +6,13 @@ Um eclipse abre fendas em Vespera. Fábio, Lyra e Kael atravessam a cidade e o V
 
 ## Versão pública e desenvolvimento atual
 
-A [Alpha 0.1 para Windows](https://github.com/fwbiodev7/darklight-requiem-game/releases/tag/v0.1.0-alpha) é o lançamento anterior. O código deste repositório está mais avançado e **não representa um novo executável validado**.
+A [Alpha 0.1 para Windows](https://github.com/fwbiodev7/darklight-requiem-game/releases/tag/v0.1.0-alpha) continua sendo o download público anterior. Em 13/10/2026 foi gerado e verificado um executável local atualizado; este commit contém seu código e recursos, sem substituir o pacote público da Alpha.
 
-O desenvolvimento atual inclui dez regiões e a base narrativa dos dez capítulos, três armas, duas skins, progressão, poderes vampíricos, minimapa com exploração e objetivos, diálogo gradual com retrato, HUD gótico e novos menus de pausa/opções. A campanha expandida, o catálogo envelhecido e o polimento continuam em produção. As novas posturas da katana ainda estão pendentes.
+Correções verificadas: idade 0–4 preservada durante caminhada, combate e troca de armas; fallback da mesma skin/idade/arma; deslizamento em paredes com colliders originais; três transformações; sete volumes de áudio, temas por skin, nove superfícies e 82 efeitos originais. Animações inteiras aprovadas foram preservadas. Importadas 29 folhas/432 quadros completos de caminhada. Posturas da Katana foram canceladas.
 
-Leia [o feedback, as correções e as limitações de 11/10](Docs/Darklight/Feedback/FEEDBACK-2026-10-11.md). A dificuldade de orientação, colisões no Jardim/Observatório e a troca de idade entre animações foram registradas. Foram aplicados ajustes de piso e orientação e uma mitigação de aparência coerente; **não foram executados testes nesta etapa**, por solicitação do criador.
+Validação: 85 verificações EditMode, 87 PlayMode, reconferências físicas finais e 672 capturas reais do executável. Saves preservados, testes silenciosos. A cobertura inclui 4.800 combinações de identidade e rotas dos dez mapas; isso não é uma partida manual completa nem teste com controle físico.
 
-Enquanto o catálogo envelhecido estiver incompleto, a gameplay usa o conjunto inicial inteiro para evitar mudança de idade entre repouso, caminhada e combate. A idade narrativa permanece salva. As artes envelhecidas continuam disponíveis como prévias e serão habilitadas em gameplay quando seus conjuntos estiverem completos.
+Algumas ações envelhecidas ainda mantêm uma pose completa da idade e arma atuais quando falta uma folha específica. Essas animações, artes próprias de poderes e polimento continuam pendentes. Leia [o relatório de 13/10](Docs/CORRECOES-20261013.md) e [a expansão de áudio](Docs/AUDIO-EXPANSION-20261013.md).
 
 ## Jogar
 

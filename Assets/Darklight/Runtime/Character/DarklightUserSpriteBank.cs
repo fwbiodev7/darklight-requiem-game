@@ -21,8 +21,12 @@ namespace Darklight
         public static Texture2D Mask(Sprite sprite)
         {
             if(sprite==null)return Texture2D.blackTexture;
+            string textureName=sprite.texture.name;Sprite[] known=null;
+            for(int skin=0;skin<2;skin++)for(int weapon=0;weapon<3;weapon++)
+                if(string.Equals(Names[skin,weapon],textureName,StringComparison.Ordinal))known=Page(skin,weapon);
+            if(known==null||known.Length==0||known[0].texture!=sprite.texture)return Texture2D.blackTexture;
             if(!Masks.TryGetValue(sprite.texture,out var mask))
-            {mask=Resources.Load<Texture2D>("Darklight/UserWholeMasks/"+sprite.texture.name+"_mask");Masks[sprite.texture]=mask;}
+            {mask=Resources.Load<Texture2D>("Darklight/UserWholeMasks/"+textureName+"_mask");if(mask!=null)Masks[sprite.texture]=mask;}
             return mask??Texture2D.blackTexture;
         }
         static Sprite[] standaloneAuras;
@@ -55,8 +59,9 @@ namespace Darklight
         public static Sprite Resolve(int skin,int age,int weapon,CombatModel model,Vector2 movement)
         {
             // Preserve narrative aging until complete whole-character age sheets exist.
-            if(age!=0)return null;
+            if(age!=0||model.State==CombatState.Neutral&&!model.ActiveThisTick&&movement.sqrMagnitude>.01f)return null;
             var page=Page(skin,weapon);return page.Length==8?page[Pose(model,movement)]:null;
         }
     }
 }
+

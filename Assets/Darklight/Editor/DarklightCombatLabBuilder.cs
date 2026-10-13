@@ -72,7 +72,7 @@ namespace Darklight.Editor
             var view = player.AddComponent<DarklightCharacterView>(); view.idle = idle; view.walk = walk; view.slash = slash;
             var rigid = player.AddComponent<Rigidbody2D>(); rigid.gravityScale = 0; rigid.freezeRotation = true;
             rigid.collisionDetectionMode = CollisionDetectionMode2D.Continuous; rigid.interpolation = RigidbodyInterpolation2D.Interpolate;
-            var feet = player.AddComponent<CapsuleCollider2D>(); feet.size = new Vector2(.42f,.28f); feet.offset = new Vector2(0,.14f);
+            var feet = player.AddComponent<CapsuleCollider2D>(); feet.size = new Vector2(.42f,.28f); feet.offset = new Vector2(0,.14f); feet.sharedMaterial = DarklightNavigation.Frictionless;
             player.AddComponent<HealthSystem>(); var fighter = player.AddComponent<DarklightFighter>(); fighter.loadout = loadout;
             player.AddComponent<DarklightCombatant>().player = true; lab.Player = fighter;
             camera.transform.position = player.transform.position + new Vector3(0,0,-10);
@@ -238,7 +238,7 @@ namespace Darklight.Editor
             }
             // Persist the pixel texture/sprite so the scene can reopen in a clean Editor.
             foreach(var rect in new[] { new Rect(-10,-6,20,.3f),new Rect(-10,5.5f,20,.3f),new Rect(-10,-6,.3f,12),new Rect(9.7f,-6,.3f,12) })
-            { var wall=new GameObject("LimiteDoTreino");wall.transform.position=rect.center;var collider=wall.AddComponent<BoxCollider2D>();collider.size=rect.size; }
+            { var wall=new GameObject("LimiteDoTreino");wall.transform.position=rect.center;var collider=wall.AddComponent<BoxCollider2D>();collider.size=rect.size;collider.sharedMaterial=DarklightNavigation.Frictionless; }
         }
     }
 }

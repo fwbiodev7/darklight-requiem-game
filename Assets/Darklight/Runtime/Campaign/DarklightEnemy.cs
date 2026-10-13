@@ -86,7 +86,7 @@ namespace Darklight
         void Perform(DarklightCampaign game,DarklightCombatLab lab,float range,bool ranged)
         {
             float damage=(Boss?14:kind==RequiemEnemyKind.Armored?15:8)+game.Progress.chapter*1.3f;
-            if(elite)damage*=1.3f;game.Sound(2);
+            if(elite)damage*=1.3f;game.AudioDirector?.EnemyIdentity(kind,AreaAttack?"heavy":"attack",transform.position);
             if(PerformExpanded(game,lab,damage,range))return;
             if(ranged)
             {

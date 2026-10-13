@@ -18,9 +18,11 @@ namespace Darklight.Tests
                 var definition=game.weaponDefinitions[weapon];var m=new CombatModel(definition.loadout);Vector2 aim=Quaternion.Euler(0,0,-d*45)*Vector2.down,move=action==0?aim:Vector2.zero;
                 m.Tick(.001f,new CombatInput{aim=aim,move=move,lightPressed=action==1,parryPressed=action==2,dodgePressed=action==3});m.Tick(.05f,new CombatInput{aim=aim,move=move});
                 view.PresentPreview(m,move,skin,age,0,definition);var original=body.sprite;var state=m.State;var clock=m.Clock;
-                Assert.That(DarklightWholeCharacterBank.Mask(original)!=null||catalog.Find(original)!=null,Is.True,"Unrecognized complete frame: "+original.name);
-                if(weapon==0&&skin==0&&age<=3&&action==0)Assert.That(original.name.StartsWith("Whole_RequiemWalkStage"+age+"_"),Is.True);
-                if(weapon==0&&skin==1&&action==1)Assert.That(original.name.StartsWith("Whole_RockAttackStage"+age+"_"),Is.True);
+                var today=DarklightSpriteExpectations.Today(skin,age,weapon,d,m,move);
+                Assert.That(TodayCharacterBank.Mask(original)!=null||DarklightWholeCharacterBank.Mask(original)!=null||catalog.Find(original)!=null,Is.True,"Unrecognized complete frame: "+original.name);
+                if(today!=null)Assert.That(original,Is.SameAs(today));
+                if(today==null&&weapon==0&&skin==0&&age<=3&&action==0)Assert.That(original.name.StartsWith("Whole_RequiemWalkStage"+age+"_"),Is.True);
+                if(weapon==0&&skin==1&&action==1)Assert.That(original.name.StartsWith("Whole_RockAttackStage"+age+"_"),Is.True,"Approved Rock katana attack was replaced");
                 for(int form=1;form<=3;form++)
                 {
                     view.PresentPreview(m,move,skin,age,form,definition);

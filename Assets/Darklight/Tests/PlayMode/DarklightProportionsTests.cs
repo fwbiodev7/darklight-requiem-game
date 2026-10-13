@@ -28,7 +28,12 @@ namespace Darklight.Tests
                     for(int f=0;f<4;f++)
                     {
                         model.Tick(f==0?.01f:.1f,new CombatInput{move=move,aim=move});view.Present(model,move);
-                        if(stage==0)
+                        var today=DarklightSpriteExpectations.Today(1,stage,weapon,d,model,move);
+                        if(today!=null)
+                        {
+                            Assert.That(art.sprite,Is.SameAs(today));Assert.That(view.UsesCompleteAgeSprite,Is.True);Assert.That(art.flipX,Is.False);
+                        }
+                        else if(stage==0&&view.UsesUserWholeSprite)
                         {
                             var supplied=DarklightUserSpriteBank.Page(1,weapon);Assert.That(supplied.Length,Is.EqualTo(8));
                             Assert.That(art.sprite==supplied[0]||art.sprite==supplied[1],Is.True);Assert.That(view.UsesUserWholeSprite,Is.True);
@@ -36,16 +41,17 @@ namespace Darklight.Tests
                         }
                         else
                         {
-                            Assert.That(art.sprite.name,Does.StartWith("RockWalk"+new[]{"Katana","Daggers","Chain"}[weapon]+"Stage"+stage+"_"));
+                            Assert.That(art.sprite.name,Does.StartWith("RockWalk"+new[]{"Katana","Daggers","Chain"}[weapon]+(stage==0?"":"Stage"+stage)+"_"));
                             int index=int.Parse(art.sprite.name.Substring(art.sprite.name.LastIndexOf('_')+1));Assert.That(index/4,Is.EqualTo(d));
                         }
                         frames.Add(art.sprite);
                         var block=new MaterialPropertyBlock();art.GetPropertyBlock(block);Assert.That(block.GetFloat("_Physique"),Is.Zero,"Whole body walking was deformed a second time");
                         Assert.That(art.transform.localScale,Is.EqualTo(Vector3.one*1.325f));Assert.That(art.sprite.texture.filterMode,Is.EqualTo(FilterMode.Point));
                     }
-                    Assert.That(frames.Count,Is.EqualTo(stage==0?2:4),"Walking must use the available distinct authored steps");
+                    bool todayWalk=TodayCharacterBank.Page(1,stage,weapon,d,"Walk")!=null;
+                    Assert.That(frames.Count,Is.EqualTo(stage==0&&!todayWalk&&view.UsesUserWholeSprite?2:4),"Walking must use the available distinct authored steps");
                     model.Tick(.01f,new CombatInput{aim=move,lightPressed=true});view.Present(model,move);
-                    Assert.That(art.sprite.name,Does.Not.StartWith("RockWalk"),"Walking replaced accepted combat art");
+                    if(view.UsesAgePoseFallback)DarklightAgeWeaponRegressionTests.AssertIdentity(art.sprite,1,stage,weapon);else Assert.That(art.sprite.name,Does.Not.StartWith("RockWalk"),"Walking replaced accepted combat art");
                     Assert.That(model.State,Is.EqualTo(CombatState.Attack));
                 }
             }
@@ -86,3 +92,7 @@ namespace Darklight.Tests
         }
     }
 }
+
+
+
+

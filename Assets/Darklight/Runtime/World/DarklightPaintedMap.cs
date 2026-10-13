@@ -67,8 +67,9 @@ namespace Darklight
             var nav=root.gameObject.AddComponent<DarklightNavigation>();nav.Initialize(map);
         }
         static void Collider(Transform root,RectInt rect,float size)=>Wall(root,(new Vector2(rect.x,rect.y)+new Vector2(rect.width,rect.height)*.5f)*size,new Vector2(rect.width,rect.height)*size);
+        static PhysicsMaterial2D WallMaterial => DarklightNavigation.Frictionless;
         static void Wall(Transform root,Vector2 point,Vector2 size)
-        {var obj=new GameObject("LimiteDoCenario");obj.transform.SetParent(root,false);obj.transform.localPosition=point;obj.AddComponent<BoxCollider2D>().size=size;}
+        {var obj=new GameObject("LimiteDoCenario");obj.transform.SetParent(root,false);obj.transform.localPosition=point;var box=obj.AddComponent<BoxCollider2D>();box.size=size;box.sharedMaterial=WallMaterial;}
         void OnDestroy(){foreach(var sprite in temporary)if(sprite!=null){if(Application.isPlaying)Destroy(sprite);else DestroyImmediate(sprite);}}
     }
 }

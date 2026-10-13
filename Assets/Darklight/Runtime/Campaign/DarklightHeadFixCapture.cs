@@ -7,7 +7,7 @@ namespace Darklight
 {
     public sealed partial class DarklightDeliveryCapture
     {
-        [Serializable] class HeadProof {public string file,sprite;public int skin,age,weapon,direction,form,action;public bool whole,separateHead;public float erase;}
+        [Serializable] class HeadProof {public string file,sprite;public int skin,age,weapon,direction,form,action;public bool whole,separateHead,fallback;public float erase;}
         [Serializable] class HeadProofs {public string status;public List<HeadProof> captures=new();}
         IEnumerator CaptureHeadFix(string folder)
         {
@@ -28,8 +28,8 @@ namespace Darklight
                 m.Tick(.001f,new CombatInput{aim=aim,move=move,lightPressed=action==1});m.Tick(action==1?m.Attack.startup+.02f:.15f,new CombatInput{aim=aim,move=move});view.Present(m,move);yield return new WaitForEndOfFrame();
                 var layers=view.GetComponent<DarklightOriginalVampireView>();display.GetPropertyBlock(block);
                 string file=$"{(skin==0?"Requiem":"Rock")}-idade-{age}-arma-{weapon}-direcao-{d}-{(action==0?"caminhar":"ataque")}-forma-{form}.png";
-                Capture(Path.Combine(folder,file));bool whole=DarklightWholeCharacterBank.Mask(display.sprite)!=null||catalog.Find(display.sprite)!=null;
-                result.captures.Add(new HeadProof{file=file,sprite=display.sprite.name,skin=skin,age=age,weapon=weapon,direction=d,form=form,action=action,whole=whole,separateHead=layers.HasAgeHead,erase=block.GetFloat("_EraseHead")});
+                Capture(Path.Combine(folder,file));bool whole=TodayCharacterBank.Mask(display.sprite)!=null||DarklightWholeCharacterBank.Mask(display.sprite)!=null||catalog.Find(display.sprite)!=null;
+                result.captures.Add(new HeadProof{file=file,sprite=display.sprite.name,skin=skin,age=age,weapon=weapon,direction=d,form=form,action=action,whole=whole,fallback=view.UsesAgePoseFallback,separateHead=layers.HasAgeHead,erase=block.GetFloat("_EraseHead")});
                 if(!whole||layers.HasAgeHead||display.transform.Find("IdadeOriginal")!=null||block.GetFloat("_EraseHead")!=0)
                 {result.status="FAILED: "+file;File.WriteAllText(Path.Combine(folder,"verificacao.json"),JsonUtility.ToJson(result,true));Application.Quit(7);yield break;}
             }
@@ -38,3 +38,4 @@ namespace Darklight
         }
     }
 }
+

@@ -11,7 +11,7 @@ namespace Darklight
         DarklightCharacterView view;
         DarklightWeaponController weapons;
         readonly Collider2D[] contacts = new Collider2D[128];
-        void Awake() { Model = new CombatModel(loadout); body = GetComponent<Rigidbody2D>(); view = GetComponent<DarklightCharacterView>();weapons=GetComponent<DarklightWeaponController>(); }
+        void Awake() { Model = new CombatModel(loadout); body = GetComponent<Rigidbody2D>(); view = GetComponent<DarklightCharacterView>();weapons=GetComponent<DarklightWeaponController>(); var col=GetComponent<Collider2D>(); if(col!=null&&col.sharedMaterial==null) col.sharedMaterial=DarklightNavigation.Frictionless; }
         void Update()
         {
             var lab = DarklightCombatLab.Instance;
@@ -33,7 +33,8 @@ namespace Darklight
         public void ResetModel() { Model = new CombatModel(loadout); body.linearVelocity = Vector2.zero; }
         void FixedUpdate()
         {
-            body.linearVelocity = DarklightCombatLab.Instance?.CombatDelta > 0 && DarklightCampaign.Instance?.Transforming!=true ? Model.Motion * 4.5f * (DarklightCampaign.Instance?.MovementSpeed ?? 1) : Vector2.zero;
+            var requested=DarklightCombatLab.Instance?.CombatDelta > 0 && DarklightCampaign.Instance?.Transforming!=true ? Model.Motion * 4.5f * (DarklightCampaign.Instance?.MovementSpeed ?? 1) : Vector2.zero;
+            body.linearVelocity=DarklightNavigation.SlidingVelocity(body,requested,Time.fixedDeltaTime);
         }
         void ResolveStrike()
         {

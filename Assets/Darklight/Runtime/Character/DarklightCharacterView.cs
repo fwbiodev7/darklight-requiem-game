@@ -20,7 +20,6 @@ namespace Darklight
             {
                 var frames=Resources.LoadAll<Sprite>("Darklight/Walking/"+(rock?"Rock":"Requiem")+"Walk"+new[]{"Katana","Daggers","Chain"}[weapon]+(stage==0?"":"Stage"+stage));
                 System.Array.Sort(frames,(a,b)=>int.Parse(a.name.Substring(a.name.LastIndexOf('_')+1)).CompareTo(int.Parse(b.name.Substring(b.name.LastIndexOf('_')+1))));
-                if(frames.Length!=32&&stage>0) { frames=Resources.LoadAll<Sprite>("Darklight/Walking/"+(rock?"Rock":"Requiem")+"Walk"+new[]{"Katana","Daggers","Chain"}[weapon]); System.Array.Sort(frames,(a,b)=>int.Parse(a.name.Substring(a.name.LastIndexOf('_')+1)).CompareTo(int.Parse(b.name.Substring(b.name.LastIndexOf('_')+1)))); }
                 rockWalking[weapon]=frames;
             }
             return rockWalking[weapon];
@@ -29,7 +28,7 @@ namespace Darklight
         {
             baseIdle??=idle;baseWalk??=walk;baseSlash??=slash;baseActions??=actions;baseMotion??=motion;
             rock=index==1;idle=rock?skinIdle:baseIdle;motion=rock?skinMotion:baseMotion;actions=rock?skinActions:baseActions;slash=rock?skinSlash:baseSlash;walk=rock?null:baseWalk;
-            if(display!=null){display.sprite=idle[0];display.transform.localScale=RenderScale;}
+            if(display!=null){if((appearance?.Stage??0)==0&&idle?.Length>0)display.sprite=idle[0];display.transform.localScale=RenderScale;}
         }
         readonly DarklightAnimationCatalog catalog=new();
         int trailSerial=-1;float nextTrail,airHeight;
@@ -38,6 +37,7 @@ namespace Darklight
         DarklightOriginalVampireView originalForms;
         public bool UsesUserWholeSprite {get;private set;}
         public bool UsesCompleteAgeSprite {get;private set;}
+        public bool UsesAgePoseFallback {get;private set;}
         bool previewing;int previewAge,previewForm;WeaponDefinition previewWeapon;
         public void PresentPreview(CombatModel model,Vector2 movement,int skin,int age,int form,WeaponDefinition weapon)
         {
@@ -88,6 +88,7 @@ namespace Darklight
                 display.transform.localScale=RenderScale;
             }
             var equipped=previewing?previewWeapon:DarklightCampaign.Instance?.Weapons?.Equipped;
+            bool isAged=(previewing?previewAge:appearance?.Stage??0)>0;
             if(equipped!=null&&equipped.id!=DarklightWeaponId.Katana)
             {
                 var poses=equipped.Poses(rock?1:0);
@@ -97,42 +98,64 @@ namespace Darklight
                     if(model.State==CombatState.Attack||model.ActiveThisTick)frame=model.Attack.kind==StrikeKind.Aerial?6:model.Attack.kind==StrikeKind.WeaponSpecial||model.Attack.kind==StrikeKind.Skill?7:model.Attack.kind==StrikeKind.Heavy||model.Attack.kind==StrikeKind.Charged?5:model.ActiveThisTick?4:3;
                     if(model.State==CombatState.Parry)frame=3;if(model.State==CombatState.Dodge)frame=2;
                     if(model.State==CombatState.Hurt||model.State==CombatState.Dead)frame=0;
-                    if(DarklightCampaign.Instance.Weapons.Swapping)frame=3;
+                    if(DarklightCampaign.Instance!=null&&DarklightCampaign.Instance.Weapons.Swapping&&!isAged)frame=3;
                     display.sprite=poses[direction*8+frame];display.transform.localScale=RenderScale;
                 }
             }
             display.transform.localRotation=model.State==CombatState.Dead&&equipped!=null&&equipped.id!=DarklightWeaponId.Katana?Quaternion.Euler(0,0,-75):Quaternion.identity;
             // True walking is selected after weapon poses so equipment cannot restore attack stances.
-            if((rock||(appearance?.Stage??0)>0)&&model.State==CombatState.Neutral&&!model.ActiveThisTick&&movement.sqrMagnitude>.01f&&!(DarklightCampaign.Instance?.Weapons?.Swapping??false))
+            if((rock||isAged)&&model.State==CombatState.Neutral&&!model.ActiveThisTick&&movement.sqrMagnitude>.01f&&!(DarklightCampaign.Instance?.Weapons?.Swapping??false))
             {
                 var steps=AuthoredWalking(equipped==null?0:(int)equipped.id);
-                if(steps.Length==32){display.sprite=steps[direction*4+(int)(model.Clock*10f)%4];display.transform.localScale=RenderScale;}
+                if(steps!=null&&steps.Length==32){display.sprite=steps[direction*4+(int)(model.Clock*10f)%4];display.transform.localScale=RenderScale;}
             }
             // Whole aged bodies replace only their matching authored pose; never paint extra hair or shoulders.
-            if(appearance!=null&&model.State==CombatState.Neutral&&!model.ActiveThisTick&&movement.sqrMagnitude<.01f&&!(DarklightCampaign.Instance?.Weapons?.Swapping??false)&&(equipped==null||equipped.id==DarklightWeaponId.Katana))
+            if(appearance!=null&&isAged&&model.State==CombatState.Neutral&&!model.ActiveThisTick&&movement.sqrMagnitude<.01f&&(equipped==null||equipped.id==DarklightWeaponId.Katana))
             {
                 var body=appearance.IdleBody(rock?1:0,direction,model.Clock,false);
                 if(body!=null)display.sprite=body;
             }
-            var exact=catalog.Parry(rock?1:0,previewing?previewAge:appearance?.Stage??0,equipped==null?0:(int)equipped.id,direction,model)??catalog.Dodge(rock?1:0,previewing?previewAge:appearance?.Stage??0,equipped==null?0:(int)equipped.id,direction,model)??catalog.Light(rock?1:0,previewing?previewAge:appearance?.Stage??0,equipped==null?0:(int)equipped.id,direction,model);
-            if(exact!=null){display.sprite=exact;display.transform.localScale=RenderScale;}
+            int visualAge=previewing?previewAge:appearance?.Stage??0;
+            int visualSkin=rock?1:0,visualWeapon=equipped==null?0:(int)equipped.id;
             var campaign=DarklightCampaign.Instance;
-            if(appearance!=null)display.sprite=appearance.ResolveBody(display.sprite);
-            var userSprite=DarklightUserSpriteBank.Resolve(rock?1:0,previewing?previewAge:appearance?.Stage??0,equipped==null?0:(int)equipped.id,model,movement);
-            UsesUserWholeSprite=userSprite!=null;
-            display.flipX=false;
-            if(UsesUserWholeSprite)
+            var approved=DarklightWholeCharacterBank.Resolve(visualSkin,visualAge,visualWeapon,direction,model,movement);
+            var exact=catalog.Parry(visualSkin,visualAge,visualWeapon,direction,model)??catalog.Dodge(visualSkin,visualAge,visualWeapon,direction,model)??catalog.Light(visualSkin,visualAge,visualWeapon,direction,model);
+            // Keep the reviewed whole Rock attacks; exact Requiem combos/parry/dodge retain priority.
+            var selected=visualSkin==1&&approved!=null?approved:exact??approved;
+            selected??=TodayCharacterBank.Resolve(visualSkin,visualAge,visualWeapon,direction,model,movement);
+            if(selected==null&&model.State==CombatState.Neutral&&!model.ActiveThisTick&&movement.sqrMagnitude>.01f)
             {
-                display.sprite=userSprite;display.transform.localScale=RenderScale;
-                display.flipX=model.Facing.x<-.1f;
-                display.transform.localRotation=model.State==CombatState.Dead?Quaternion.Euler(0,0,-75):Quaternion.identity;
+                var authoredSteps=AuthoredWalking(visualWeapon);
+                if(authoredSteps?.Length==32)selected=authoredSteps[direction*4+(int)(model.Clock*10f)%4];
             }
-            UsesCompleteAgeSprite=false;
-            if(!UsesUserWholeSprite)
+            UsesUserWholeSprite=false;UsesCompleteAgeSprite=false;UsesAgePoseFallback=false;
+            if(selected==null&&visualAge>0)
             {
-                var complete=DarklightWholeCharacterBank.Resolve(rock?1:0,previewing?previewAge:appearance?.Stage??0,equipped==null?0:(int)equipped.id,direction,model,movement);
-                if(complete!=null){display.sprite=complete;UsesCompleteAgeSprite=true;}
+                // A missing action holds a complete pose of THIS age and THIS weapon.
+                // Never substitute a juvenile sheet or another equipped weapon.
+                if(visualWeapon==0)selected=appearance?.IdleBody(visualSkin,direction,model.Clock,false);
+                selected??=TodayCharacterBank.StablePose(visualSkin,visualAge,visualWeapon,direction);
+                if(selected==null)
+                {
+                    var matching=AuthoredWalking(visualWeapon);
+                    if(matching?.Length==32)selected=matching[direction*4];
+                }
+                UsesAgePoseFallback=selected!=null;
             }
+
+            if(selected==null&&visualAge==0)
+            {
+                selected=DarklightUserSpriteBank.Resolve(visualSkin,visualAge,visualWeapon,model,movement);
+                UsesUserWholeSprite=selected!=null;
+            }
+            if(selected!=null)
+            {
+                display.sprite=selected;display.transform.localScale=RenderScale;
+                display.flipX=UsesUserWholeSprite&&model.Facing.x<-.1f;
+                display.transform.localRotation=UsesUserWholeSprite&&model.State==CombatState.Dead?Quaternion.Euler(0,0,-75):Quaternion.identity;
+                UsesCompleteAgeSprite=!UsesUserWholeSprite;
+            }
+            else display.flipX=false;
             display.color = model.State == CombatState.Hurt ? new Color(1, .4f, .4f) : model.State == CombatState.Parry ? new Color(.7f, .8f, 1) : Color.white;
             display.sortingOrder = 100 - Mathf.RoundToInt(transform.position.y * 10f);
             appearance?.Present(display,direction,rock?1:0,campaign?.Form??0,model);
@@ -146,4 +169,5 @@ namespace Darklight
         }
     }
 }
+
 

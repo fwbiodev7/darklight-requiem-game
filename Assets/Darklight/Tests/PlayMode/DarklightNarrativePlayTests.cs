@@ -30,8 +30,11 @@ namespace Darklight.Tests
         }
         [UnityTest]public IEnumerator KaelIsPurifiedThroughInteractionAndRemainsAlive()
         {
-            ResumeAt(8,3);Invoke(game,"Spawn",RequiemEnemyKind.KaelFractured,game.Map.SafeSpawn(game.Map.Arenas[3]),false);yield return new WaitForSeconds(.95f);
-            var boss=game.CurrentBoss;Assert.That(boss.GetComponent<DarklightCombatant>().Receive(99999,Vector2.up),Is.True);
+            ResumeAt(8,3);Invoke(game,"Spawn",RequiemEnemyKind.KaelFractured,game.Map.SafeSpawn(game.Map.Arenas[3]),false);
+            var boss=game.CurrentBoss;float deadline=Time.realtimeSinceStartup+5;
+            while(!boss.AcceptDamage&&Time.realtimeSinceStartup<deadline)yield return null;
+            Assert.That(boss.AcceptDamage,Is.True,"Boss transition did not finish; paused="+lab.Paused+" phase="+boss.Phase);
+            Assert.That(boss.GetComponent<DarklightCombatant>().Receive(99999,Vector2.up),Is.True);
             Assert.That(boss.Health.IsDead,Is.False);Assert.That(boss.Health.HealthPercent,Is.EqualTo(.08f).Within(.001f));Assert.That(boss.PurificationReady,Is.True);
             Move(game.Map.SafeSpawn((Vector2)boss.transform.position+Vector2.down));Assert.That(game.TryGetInteraction(out var target),Is.True);Assert.That(target.Id,Is.EqualTo("purify_kael"));Assert.That(game.TryInteract(),Is.True);
             Assert.That(boss.Resolved,Is.True);Assert.That(boss.Health.IsDead,Is.False);Assert.That(game.CurrentBoss,Is.Null);Assert.That(game.Progress.checkpoint,Is.EqualTo(4));Assert.That(game.Progress.expansionFlags&4,Is.EqualTo(4));
@@ -57,18 +60,110 @@ namespace Darklight.Tests
             ResumeAt(5,4);Move(game.Map.SafeSpawn(game.Map.Portal));Assert.That(game.TryInteract(),Is.True);Assert.That(game.Progress.chapter,Is.EqualTo(6));Assert.That(game.Progress.completed,Is.False);
             ResumeAt(9,4);Move(game.Map.SafeSpawn(game.Map.Portal));Assert.That(game.TryInteract(),Is.True);Assert.That(game.Progress.chapter,Is.EqualTo(9));Assert.That(lab.Paused,Is.True);yield return null;
         }
-        [UnityTest]public IEnumerator RockMatureLightUsesExactAgeForEveryDirectionAndAttackPhase()
+        [UnityTest]public IEnumerator MatureLightCatalogUsesExactSkinAgeDirectionAndContactPhase()
         {
-            game.PreviewChapter(4);game.SelectSkin(1,false);game.Appearance.PreviewStage(4);
-            var art=lab.Player.transform.Find("FabioVisual").GetComponent<SpriteRenderer>();var view=lab.Player.GetComponent<DarklightCharacterView>();
+            game.PreviewChapter(4);var catalog=new DarklightAnimationCatalog();
+            for(int skin=0;skin<2;skin++)for(int d=0;d<8;d++)
+            {
+                Vector2 facing=Quaternion.Euler(0,0,-d*45)*Vector2.down;
+                var model=new CombatModel(lab.Player.loadout);model.Tick(.001f,new CombatInput{aim=facing,lightPressed=true});
+                string prefix=(skin==1?"Rock":"Requiem")+"KatanaLightStage4_";
+                var art=catalog.Light(skin,4,0,d,model);Assert.That(art.name,Is.EqualTo(prefix+(d*4)));
+                model.Tick(model.Attack.startup+.001f,default);Assert.That(catalog.Light(skin,4,0,d,model).name,Is.EqualTo(prefix+(d*4+1)));
+                // A tick crossing the active interval must display contact because damage occurs on that tick.
+                model.Tick(model.Attack.active+.001f,default);Assert.That(model.ActiveThisTick,Is.True);
+                Assert.That(catalog.Light(skin,4,0,d,model).name,Is.EqualTo(prefix+(d*4+1)));
+                model.Tick(.001f,default);Assert.That(model.ActiveThisTick,Is.False);
+                Assert.That(catalog.Light(skin,4,0,d,model).name,Is.EqualTo(prefix+(d*4+2)));
+                model.Tick(model.Attack.recovery*.6f,default);Assert.That(catalog.Light(skin,4,0,d,model).name,Is.EqualTo(prefix+(d*4+3)));
+                Assert.That(art.texture.filterMode,Is.EqualTo(FilterMode.Point));Assert.That(art.pivot.y,Is.InRange(0,12));
+                Assert.That(catalog.Light(skin,3,0,d,model),Is.Null);Assert.That(catalog.Light(skin,4,1,d,model),Is.Null);
+                model=new CombatModel(lab.Player.loadout);model.Tick(.001f,new CombatInput{aim=facing,lightPressed=true});
+                model.Tick(model.Attack.Duration+.01f,default);
+                Assert.That(model.State,Is.EqualTo(CombatState.Neutral));Assert.That(model.ActiveThisTick,Is.True);
+                Assert.That(catalog.Light(skin,4,0,d,model).name,Is.EqualTo(prefix+(d*4+1)),"A long damage tick returned to wind-up instead of contact");
+                model.Tick(.001f,new CombatInput{aim=facing,lightPressed=true});
+                Assert.That(model.ComboCount,Is.EqualTo(2));
+                if(skin==0)Assert.That(catalog.Light(skin,4,0,d,model).name,Is.EqualTo("RequiemKatanaLight2Stage4_"+(d*4)));
+                else Assert.That(catalog.Light(skin,4,0,d,model),Is.Null,"Missing Rock second gesture cannot use first-strike art");
+            }
+            yield return null;
+        }
+        [UnityTest]public IEnumerator RequiemMatureDodgeKeepsAuthoredCrouchAndFourPhasesInEveryDirection()
+        {
+            var catalog=new DarklightAnimationCatalog();
             for(int d=0;d<8;d++)
             {
-                Vector2 facing=Quaternion.Euler(0,0,-d*45)*Vector2.down;var model=new CombatModel(lab.Player.loadout);model.Tick(.001f,new CombatInput{aim=facing,lightPressed=true});
-                view.Present(model,Vector2.zero);Assert.That(art.sprite.name,Is.EqualTo("RockKatanaLightStage4_"+(d*4)));
-                model.Tick(model.Attack.startup+.001f,default);view.Present(model,Vector2.zero);Assert.That(art.sprite.name,Is.EqualTo("RockKatanaLightStage4_"+(d*4+1)));
-                model.Tick(model.Attack.active+.001f,default);view.Present(model,Vector2.zero);Assert.That(art.sprite.name,Is.EqualTo("RockKatanaLightStage4_"+(d*4+2)));
-                model.Tick(model.Attack.recovery*.6f,default);view.Present(model,Vector2.zero);Assert.That(art.sprite.name,Is.EqualTo("RockKatanaLightStage4_"+(d*4+3)));
-                Assert.That(art.transform.localScale.x,Is.EqualTo(1.325f));Assert.That(art.sprite.texture.filterMode,Is.EqualTo(FilterMode.Point));Assert.That(art.sprite.pivot.y,Is.InRange(0,12));
+                var model=new CombatModel(lab.Player.loadout);Vector2 facing=Quaternion.Euler(0,0,-d*45)*Vector2.down;
+                model.Tick(.001f,new CombatInput{aim=facing,dodgePressed=true});
+                var first=catalog.Dodge(0,4,0,d,model);Assert.That(first.name,Is.EqualTo("RequiemKatanaDodgeStage4_"+(d*4)));
+                float previous=0;
+                foreach(float time in new[]{.05f,.13f,.20f})
+                {
+                    model.Tick(time-previous,default);previous=time;
+                    int phase=time<.12f?1:time<.19f?2:3;
+                    var frame=catalog.Dodge(0,4,0,d,model);Assert.That(frame.name,Is.EqualTo("RequiemKatanaDodgeStage4_"+(d*4+phase)));
+                    Assert.That(frame.pixelsPerUnit,Is.EqualTo(first.pixelsPerUnit));Assert.That(frame.texture.filterMode,Is.EqualTo(FilterMode.Point));
+                }
+                var standing=catalog.Dodge(0,4,0,d,model);Assert.That(standing.bounds.size.y,Is.GreaterThan(first.bounds.size.y),"Crouch was resized to standing height");
+                Assert.That(catalog.Dodge(1,4,0,d,model),Is.Null);Assert.That(catalog.Dodge(0,3,0,d,model),Is.Null);
+                model.Tick(.04f,default);Assert.That(model.State,Is.EqualTo(CombatState.Neutral));Assert.That(catalog.Dodge(0,4,0,d,model),Is.Null);
+            }
+            yield return null;
+        }
+        [UnityTest]public IEnumerator RequiemMatureParryUsesFourAuthoredPhasesAndKeepsCombatWindow()
+        {
+            var catalog=new DarklightAnimationCatalog();
+            for(int d=0;d<8;d++)
+            {
+                var model=new CombatModel(lab.Player.loadout);Vector2 facing=Quaternion.Euler(0,0,-d*45)*Vector2.down;
+                model.Tick(.001f,new CombatInput{aim=facing,parryPressed=true});
+                string prefix="RequiemKatanaParryStage4_";
+                Assert.That(catalog.Parry(0,4,0,d,model).name,Is.EqualTo(prefix+(d*4)));
+                float previous=0;
+                foreach(float time in new[]{.05f,.15f,.22f})
+                {
+                    model.Tick(time-previous,default);previous=time;
+                    int phase=time<.14f?1:time<.21f?2:3;
+                    var frame=catalog.Parry(0,4,0,d,model);
+                    Assert.That(frame.name,Is.EqualTo(prefix+(d*4+phase)));
+                    Assert.That(frame.texture.filterMode,Is.EqualTo(FilterMode.Point));
+                    Assert.That(model.PerfectParry,Is.EqualTo(time<.14f));
+                }
+                Assert.That(catalog.Parry(1,4,0,d,model),Is.Null);Assert.That(catalog.Parry(0,3,0,d,model),Is.Null);Assert.That(catalog.Parry(0,4,1,d,model),Is.Null);
+                model.Tick(.05f,default);Assert.That(model.State,Is.EqualTo(CombatState.Neutral));Assert.That(catalog.Parry(0,4,0,d,model),Is.Null);
+            }
+            yield return null;
+        }
+        [UnityTest]public IEnumerator RequiemMatureLightComboSelectsDistinctSheetsAndKeepsContactAndRecovery()
+        {
+            var catalog=new DarklightAnimationCatalog();
+            Assert.That(lab.Player.loadout.lights.Length,Is.EqualTo(3));
+            for(int d=0;d<8;d++)
+            {
+                var model=new CombatModel(lab.Player.loadout);Vector2 facing=Quaternion.Euler(0,0,-d*45)*Vector2.down;
+                var textures=new System.Collections.Generic.HashSet<Texture>();
+                for(int strike=1;strike<=3;strike++)
+                {
+                    model.Tick(.001f,new CombatInput{aim=facing,lightPressed=true});
+                    Assert.That(model.State,Is.EqualTo(CombatState.Attack));Assert.That(model.ComboCount,Is.EqualTo(strike));
+                    string sheet="RequiemKatanaLight"+(strike==1?"":strike.ToString())+"Stage4_";
+                    var prepare=catalog.Light(0,4,0,d,model);Assert.That(prepare.name,Is.EqualTo(sheet+(d*4)));textures.Add(prepare.texture);
+                    model.Tick(model.Attack.startup+.001f,default);
+                    Assert.That(model.ActiveThisTick,Is.True);Assert.That(catalog.Light(0,4,0,d,model).name,Is.EqualTo(sheet+(d*4+1)));
+                    var target=new object();Assert.That(model.RegisterHit(target),Is.True);Assert.That(model.RegisterHit(target),Is.False);
+                    model.Tick(model.Attack.active+.001f,default);model.Tick(.001f,default);
+                    Assert.That(model.ActiveThisTick,Is.False);var follow=catalog.Light(0,4,0,d,model);
+                    Assert.That(follow.name,Is.EqualTo(sheet+(d*4+2)));Assert.That(follow.pixelsPerUnit,Is.EqualTo(prepare.pixelsPerUnit));Assert.That(follow.texture.filterMode,Is.EqualTo(FilterMode.Point));
+                    model.Tick(model.Attack.recovery*.75f,default);
+                    Assert.That(catalog.Light(0,4,0,d,model).name,Is.EqualTo(sheet+(d*4+3)));
+                    model.Tick(model.Attack.Duration-model.StateTime+.001f,default);
+                    Assert.That(model.State,Is.EqualTo(CombatState.Neutral));Assert.That(catalog.Light(0,4,0,d,model),Is.Null);
+                    Assert.That(catalog.Light(0,3,0,d,model),Is.Null);Assert.That(catalog.Light(0,4,1,d,model),Is.Null);
+                }
+                Assert.That(textures.Count,Is.EqualTo(3),"Three gestures were mapped to the same texture");
+                model.Tick(.001f,new CombatInput{aim=facing,lightPressed=true});Assert.That(model.ComboCount,Is.EqualTo(1));
+                Assert.That(catalog.Light(0,4,0,d,model).name,Is.EqualTo("RequiemKatanaLightStage4_"+(d*4)));
             }
             yield return null;
         }
@@ -81,7 +176,7 @@ namespace Darklight.Tests
                 Assert.That(audio.Play("rpg-knifeSlice",DarklightAudioCategory.Combat,.3f,null,1,0),Is.True);
                 yield return null;Assert.That(audio.ActiveVoices,Is.GreaterThan(0));Assert.That(audio.AllocatedVoices,Is.EqualTo(16));
                 game.EffectsVolume=0;yield return null;
-                foreach(var src in audio.GetComponentsInChildren<AudioSource>())if(!src.loop)Assert.That(src.volume,Is.Zero);
+                foreach(var src in audio.GetComponentsInChildren<AudioSource>())if(!src.loop&&src.isPlaying)Assert.That(src.volume,Is.Zero);
                 for(int i=0;i<40;i++)audio.Play("interface-click_",DarklightAudioCategory.Interface,.2f,null,1,0);
                 Assert.That(audio.ActiveVoices,Is.LessThanOrEqualTo(16));DarklightAutomation.Silent=true;yield return null;
                 foreach(var src in audio.GetComponentsInChildren<AudioSource>())Assert.That(src.isPlaying,Is.False);

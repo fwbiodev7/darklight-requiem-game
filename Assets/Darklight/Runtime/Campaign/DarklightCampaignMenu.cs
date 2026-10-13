@@ -127,17 +127,17 @@ namespace Darklight
         void StyleCinematicButton(int i,int first)
         {
             if(panel=="Pause"||panel=="Options")first=0;var b=buttons[i];b.rect.gameObject.SetActive(panel=="Options"||panel=="Pause"?true:i>=first&&i<first+8);
-            if(!CinematicFront&&!CinematicPause)
+            if(!CinematicFront&&!CinematicPause&&panel!="Options")
             {
                 b.rect.anchoredPosition=new Vector2(22,-(62+(i-first)*28));b.image.sprite=UIArt(!b.enabled?3:i==selection?2:1,extras[7]);b.image.color=Color.white;b.text.color=b.enabled?new Color(.96f,.9f,.86f):Color.gray;return;
             }
             bool tall=panel=="Main"&&i==0||panel=="LoadGames"&&i<2;
             float y=CinematicPause?96+(i-first)*23:panel=="Main"?(i==0?137:176+(i-1)*26):panel=="LoadGames"?116+(i-first)*41:116+(i-first)*27;
             float width=panel=="Pause"?214:260;float h=panel=="Pause"?20:tall?34:22;
-            if(panel=="Options"){width=i<6?178:372;y=i<6?101+i*27:101+(i-6)*30;}
+            if(panel=="Options"){width=i<6?178:372;y=i<6?101+i*27:101+(i-6)*(optionsCategory==1?29:30);if(settingsSliders.ContainsKey(i))h=26;}
             if(panel=="Skins"){width=208;y=108+(i-first)*32;h=26;}
             b.rect.anchoredPosition=new Vector2(panel=="Options"&&i>=6?236:28,-y);b.rect.sizeDelta=new Vector2(width,h);
-            b.text.rectTransform.sizeDelta=new Vector2(width-28,tall?20:h);
+            b.text.rectTransform.sizeDelta=new Vector2(width-28,tall?20:h);LayoutAudioSlider(i,width);
             bool focused=b.enabled&&(i==selection||panel=="Options"&&i==optionsCategory);
             b.image.color=Color.Lerp(b.image.color,focused?new Color(.19f,.035f,.06f,.76f):new Color(.025f,.03f,.045f,.8f),Mathf.Min(1,Time.unscaledDeltaTime*14));
             b.text.color=b.enabled?new Color(.91f,.89f,.83f):new Color(.38f,.4f,.42f);

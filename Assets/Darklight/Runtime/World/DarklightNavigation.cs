@@ -67,13 +67,68 @@ namespace Darklight
             }
             return best;
         }
+        const float CastSkin=.008f;
+        static readonly RaycastHit2D[] movementHits=new RaycastHit2D[64];
+        static PhysicsMaterial2D frictionless;
+        public static PhysicsMaterial2D Frictionless { get { if(frictionless==null)frictionless=new PhysicsMaterial2D("DarklightSemAtrito") {friction=0,bounciness=0};return frictionless; } }
+        static bool Blocks(RaycastHit2D hit,Vector2 direction,Rigidbody2D owner)
+        {
+            if(hit.collider==null||hit.collider.isTrigger||hit.rigidbody==owner||hit.collider.GetComponentInParent<DarklightCombatant>()!=null)return false;
+            // Touching a wall while moving parallel to it or away from it is not a new impact.
+            return Vector2.Dot(direction,hit.normal)<-.0001f;
+        }
+        static float CircleTravel(Rigidbody2D owner,Vector2 origin,float radius,Vector2 delta,out Vector2 normal)
+        {
+            normal=Vector2.zero;float length=delta.magnitude,allowed=length;
+            if(length<.00001f)return 0;var direction=delta/length;
+            // A dash/pull must not escape through a solid region from an invalid overlapping origin.
+            foreach(var overlap in Physics2D.OverlapCircleAll(origin,radius))
+                if(!overlap.isTrigger&&overlap.attachedRigidbody!=owner&&overlap.GetComponentInParent<DarklightCombatant>()==null&&Vector2.Distance(overlap.ClosestPoint(origin),origin)<radius-.015f)
+                {normal=-direction;return 0;}
+            foreach(var hit in Physics2D.CircleCastAll(origin,radius,direction,length+CastSkin))
+                if(Blocks(hit,direction,owner)&&hit.distance-CastSkin<allowed)
+                {allowed=Mathf.Max(0,hit.distance-CastSkin);normal=hit.normal;}
+            return allowed;
+        }
         public static void SafeStep(Rigidbody2D body,Vector2 delta,float radius=.3f)
         {
-            float distance=delta.magnitude;
-            foreach(var hit in Physics2D.CircleCastAll(body.position,radius,delta.normalized,distance))
-                if(!hit.collider.isTrigger&&hit.collider.GetComponentInParent<DarklightCombatant>()==null)distance=Mathf.Min(distance,Mathf.Max(0,hit.distance-.03f));
-            body.position+=delta.normalized*distance;
+            if(body==null||delta.sqrMagnitude<.00000001f)return;
+            var origin=body.position;float travel=CircleTravel(body,origin,radius,delta,out var normal);
+            var advanced=delta.normalized*travel;
+            var residual=delta-advanced;
+            if(normal!=Vector2.zero)residual-=normal*Mathf.Min(0,Vector2.Dot(residual,normal));
+            else residual=Vector2.zero;
+            // Cast again from the advanced position: sliding may encounter a second wall at a corner.
+            float slide=CircleTravel(body,origin+advanced,radius,residual,out _);
+            body.position=origin+advanced+(residual.sqrMagnitude>.00000001f?residual.normalized*slide:Vector2.zero);
+        }
+        static float BodyTravel(Rigidbody2D body,Vector2 delta,out Vector2 normal)
+        {
+            normal=Vector2.zero;float length=delta.magnitude,allowed=length;
+            if(length<.00001f)return 0;var direction=delta/length;
+            int count=body.Cast(direction,new ContactFilter2D {useTriggers=false,useLayerMask=false},movementHits,length+CastSkin);
+            for(int i=0;i<count;i++)
+            {
+                var hit=movementHits[i];
+                if(Blocks(hit,direction,body)&&hit.distance-CastSkin<allowed)
+                {allowed=Mathf.Max(0,hit.distance-CastSkin);normal=hit.normal;}
+            }
+            return allowed;
+        }
+        public static Vector2 SlidingVelocity(Rigidbody2D body,Vector2 velocity,float step)
+        {
+            if(body==null||step<=0||velocity.sqrMagnitude<.00000001f)return Vector2.zero;
+            var delta=velocity*step;
+            float travel=BodyTravel(body,delta,out var normal);
+            if(normal==Vector2.zero)return velocity;
+            var advanced=delta.normalized*travel;
+            var residual=delta-advanced;residual-=normal*Mathf.Min(0,Vector2.Dot(residual,normal));
+            // Use the actual capsule and its existing offset for ordinary physics movement.
+            // The second cast is conservative from the current position, avoiding teleportation.
+            float slide=BodyTravel(body,residual,out _);
+            return (advanced+(residual.sqrMagnitude>.00000001f?residual.normalized*slide:Vector2.zero))/step;
         }
         void OnDestroy(){if(Instance==this)Instance=null;}
     }
 }
+

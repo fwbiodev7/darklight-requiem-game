@@ -46,3 +46,21 @@ work/
 outputs/
 *.zip
 *.tar.gz
+
+# Unity and local delivery caches
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Rr]ecordings/
+[Mm]emoryCaptures/
+[Cc]rashReports/
+[Ee]xportedObj/
+node_modules/
+.env
+.env.local
+*.log
+*.bak
+*.tmp.meta
+

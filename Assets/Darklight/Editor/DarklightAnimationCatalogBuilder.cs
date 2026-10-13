@@ -10,11 +10,14 @@ namespace Darklight.Editor
     {
         [Serializable] class Frame {public string name;public float[] rect,pivot;}
         [Serializable] class Sheet {public Frame[] frames;public float pixelsPerUnit;}
-        public static void Import()
+        public static void Import() => ImportSheets(null);
+        public static void ImportOnly(string name) => ImportSheets(name);
+        static void ImportSheets(string onlyName)
         {
             foreach(string manifest in Directory.GetFiles("Assets/Darklight/Resources/Darklight/AnimationCatalog","*Rects.json"))
             {
                 string name=Path.GetFileNameWithoutExtension(manifest).Replace("Rects","");
+                if(onlyName!=null && name!=onlyName)continue;
                 string path="Assets/Darklight/Resources/Darklight/AnimationCatalog/"+name+".png";
                 var sheet=JsonUtility.FromJson<Sheet>(File.ReadAllText(path.Replace(".png","Rects.json")));
                 var importer=AssetImporter.GetAtPath(path) as TextureImporter;if(importer==null)throw new InvalidOperationException(path);
@@ -32,5 +35,6 @@ namespace Darklight.Editor
         }
     }
 }
+
 
 

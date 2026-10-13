@@ -18,7 +18,7 @@ namespace Darklight
             if(!firstAwakeningMusicPending||!Active||Resonance.Active>=0)return;
             firstAwakeningMusicPending=false;
             StopMenuMusic();music.Stop();music.clip=firstAwakeningTrack;
-            music.loop=false;music.volume=MusicVolume;
+            music.loop=false;music.volume=DarklightAutomation.Silent?MusicVolume:0;SkinMusic?.BeginEvent();
             if(!DarklightAutomation.Silent)music.Play();
         }
     }

@@ -32,7 +32,7 @@ namespace Darklight
         public DarklightEnemy CurrentBoss => enemies.Find(e=>e!=null&&!e.Health.IsDead&&!e.Resolved&&e.Boss);
         readonly List<DarklightEnemy> enemies=new();
         DarklightCombatLab lab; HealthSystem health; Transform levelRoot; SpriteRenderer aura;
-        AudioSource music,sfx,ambient; SpriteRenderer headphones; float nextStep; AudioClip[] tones;
+        AudioSource music,sfx,ambient; SpriteRenderer headphones; AudioClip[] tones;
         int encounter, lastAttack=-1, kills, selectedTrack, resonance=-1;
         bool encounterStarted, chapterCleared; float slowTime; int lastSkillSerial=-1;
         
@@ -73,7 +73,7 @@ namespace Darklight
             slowTime=Mathf.Max(0,slowTime-dt);
             if(Form>0){FormTime-=dt;if(FormTime<=0)EndForm();}
             int previousPower=Resonance.Active;Resonance.Tick(dt);resonance=Resonance.Active;resonanceTime=Resonance.Remaining;resonanceCooldown=Resonance.Recovery[Resonance.Selected];
-            if(previousPower>=0 && resonance<0){music.Stop();Notice("DARK RESONANCE: recarga do modo");}
+            if(previousPower>=0 && resonance<0){FinishMusicEvent();Notice("DARK RESONANCE: recarga do modo");}
             if(lab.Input.Action("PowerNext").WasPressedThisFrame())Resonance.Cycle(1);
             if(lab.Input.Action("PowerPrevious").WasPressedThisFrame())Resonance.Cycle(-1);
             if(lab.Input.Action("Power").WasPressedThisFrame())TryActivatePower();
@@ -96,7 +96,7 @@ namespace Darklight
             if(!encounterStarted&&!chapterCleared&&Map.InArena(encounter,lab.Player.transform.position)){StartEncounter();return;}
             if(encounterStarted&&enemies.TrueForAll(e=>e==null||e.Health.IsDead||e.Resolved))ClearEncounter();
             UpdateAura();
-            if(lab.Player.Model.Motion.sqrMagnitude>.3f&&lab.Player.Model.Clock>=nextStep){nextStep=lab.Player.Model.Clock+.32f;AudioFootstep();}
+            // Walking contacts are emitted in TodayCampaignSoundDesign after movement presentation.
         }
         void LoadMap(int chapter)
         {
@@ -172,7 +172,7 @@ namespace Darklight
             var collider=obj.AddComponent<CircleCollider2D>();collider.radius=kind==RequiemEnemyKind.Armored?.42f:.28f;collider.offset=Vector2.up*.18f;
             var hp=obj.AddComponent<HealthSystem>();obj.AddComponent<DarklightCombatant>();
             var foe=obj.AddComponent<DarklightEnemy>();foe.kind=kind;foe.elite=elite;foe.poses=frames;foe.attackFrames=new Sprite[4];if((int)kind>=11)Array.Copy(ExpandedBossFrames,((int)kind-11)*8+4,foe.attackFrames,0,4);else Array.Copy(foe.Boss?bossAttacks:enemyAttacks,(foe.Boss?(int)kind-5:(int)kind)*4,foe.attackFrames,0,4);
-            hp.SetMaxHealth((foe.Boss?260+Progress.chapter*65:kind==RequiemEnemyKind.Armored?90:50+Progress.chapter*7)*(elite?1.45f:1),false);if(foe.ExpandedBoss)foe.RestorePhase(Progress.bossPhase);enemies.Add(foe);AddEnemyBar(foe);
+            hp.SetMaxHealth((foe.Boss?260+Progress.chapter*65:kind==RequiemEnemyKind.Armored?90:50+Progress.chapter*7)*(elite?1.45f:1),false);if(foe.ExpandedBoss)foe.RestorePhase(Progress.bossPhase);enemies.Add(foe);AddEnemyBar(foe);obj.AddComponent<TodayEnemyAudio>();
         }
         void ClearEncounter()
         {
@@ -197,7 +197,7 @@ namespace Darklight
         public void Strike(StrikeKind kind)
         {if(!Blood.RewardStrike(kind,lab.Player.Model.AttackSerial))return;bool varied=(int)kind!=lastAttack;style=Mathf.Min(450,style+(varied?24:7));lastAttack=(int)kind;idleStyle=0;Resonance.Gain(varied?2:1);RecordWeaponTrial();}
         public void BossPhaseTwo(){AudioDirector?.EnemyWarning(true,lab.Player.transform.position);}
-        public void Defended(){if(!Blood.RewardParry())return;style=Mathf.Min(450,style+40);idleStyle=0;AudioDirector?.Play("impact-impactMetal_light",DarklightAudioCategory.Combat,.45f);}
+        public void Defended(){if(!Blood.RewardParry())return;style=Mathf.Min(450,style+40);idleStyle=0;AudioDirector?.Play("dl-power-parry",DarklightAudioCategory.Combat,.38f);}
         public void Damaged(){CancelVampireCast();style=Mathf.Max(0,style-65);phonesTime=0;AudioDirector?.Play("impact-impactPunch_heavy",DarklightAudioCategory.Character,.3f);}
         void TransformPlayer()=>TryTransformPlayer();
         void EndForm(bool present=true)
@@ -252,11 +252,11 @@ namespace Darklight
             if(resonance==0 && selectedTrack>1)selectedTrack=0;
             if(resonance==1)selectedTrack=4;
             if(resonance==2 && (selectedTrack<2||selectedTrack>3))selectedTrack=2;
-            ambient.Pause();music.clip=tracks[selectedTrack];music.volume=MusicVolume;
+            ambient.Pause();music.Stop();music.clip=tracks[selectedTrack];music.volume=0;SkinMusic?.BeginEvent();
             if(!DarklightAutomation.Silent&&music.clip!=null){music.time=0;music.Play();}
             Sound(resonance==0?0:resonance==1?2:3);Notice(DarklightResonance.Names[resonance]);
         }
-        void StopPower(){firstAwakeningMusicPending=false;StopVampire();Resonance.Stop();resonance=-1;phonesTime=0;EndForm(false);music.Stop();}
+        void StopPower(){firstAwakeningMusicPending=false;StopVampire();Resonance.Stop();resonance=-1;phonesTime=0;EndForm(false);FinishMusicEvent();}
         void UpdateAura()
         {
             if(aura==null)return;

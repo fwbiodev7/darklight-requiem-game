@@ -65,9 +65,9 @@ namespace Darklight
         void Update()
         {
             if(MenuMusicSource!=null)MenuMusicSource.volume=MusicVolume;
-            TickUI(); if(!Active||MenuDismissedThisFrame)return;
+            TickUI(); if(!Active||MenuDismissedThisFrame)return;TryStartFirstAwakeningMusic();
             float dt=lab.CombatDelta;if(dt<=0)return;
-            TickVampire(dt);noticeTime=Mathf.Max(0,noticeTime-dt); idleStyle+=dt;
+            TickFormPresentation(dt);TickVampire(dt);noticeTime=Mathf.Max(0,noticeTime-dt); idleStyle+=dt;
             if(idleStyle>2)style=Mathf.Max(0,style-dt*9);
             if(health.IsDead){StopPower();SaveCheckpoint();Open("Death");return;}
             slowTime=Mathf.Max(0,slowTime-dt);
@@ -113,7 +113,7 @@ namespace Darklight
             Weapons.Restore();RestoreAppearance();health.SetMaxHealth(Progress.MaxHealth,false);
             var mapCamera=lab.WorldCamera.GetComponent<DarklightLabCamera>();mapCamera.bounds=Map.Bounds;mapCamera.followOffset=new Vector2(0,.75f);
             lab.WorldCamera.transform.position=start+new Vector3(0,.75f,-10);
-            Form=0;FormTime=0;slowTime=0;lastSkillSerial=-1;phonesTime=0;resonance=-1;Resonance.Restore(Progress);resonanceCooldown=Resonance.Recovery[Resonance.Selected];RestoreVampire();style=0;
+            ClearFormPresentation();Form=0;FormTime=0;slowTime=0;lastSkillSerial=-1;phonesTime=0;resonance=-1;Resonance.Restore(Progress);resonanceCooldown=Resonance.Recovery[Resonance.Selected];RestoreVampire();style=0;
             if(aura==null)
             {aura=new GameObject("AuraRequiem").AddComponent<SpriteRenderer>();aura.transform.SetParent(lab.Player.transform,false);aura.transform.localPosition=Vector3.up*.6f;aura.sharedMaterial=pixelMaterial;aura.sortingOrder=75;}
             aura.sprite=extras[4];aura.enabled=false;
@@ -123,7 +123,7 @@ namespace Darklight
             if(chapter==0||chapter==2||chapter==5||chapter==6||chapter==8)AddProp("LyraMoreau",extras[1],Map.Ally,1.8f);
             if(chapter==3||chapter==4||chapter==7||chapter==9)AddProp("KaelAliado",bossFrames[0],Map.Ally,1.8f);
             if(chapterCleared)AddProp("Portal",extras[3],Map.Portal,2.5f);
-            PrepareNarrativeMap();Objective=Goal();music.Stop();ambient.clip=null;ambient.volume=0;AudioDirector?.Region(chapter);
+            PrepareNarrativeMap();Objective=Goal();firstAwakeningMusicPending=false;music.Stop();ambient.clip=null;ambient.volume=0;AudioDirector?.Region(chapter);
         }
         void AddProp(string name,Sprite sprite,Vector2 position,float height)
         {
@@ -199,17 +199,15 @@ namespace Darklight
         public void BossPhaseTwo(){AudioDirector?.EnemyWarning(true,lab.Player.transform.position);}
         public void Defended(){if(!Blood.RewardParry())return;style=Mathf.Min(450,style+40);idleStyle=0;AudioDirector?.Play("impact-impactMetal_light",DarklightAudioCategory.Combat,.45f);}
         public void Damaged(){CancelVampireCast();style=Mathf.Max(0,style-65);phonesTime=0;AudioDirector?.Play("impact-impactPunch_heavy",DarklightAudioCategory.Character,.3f);}
-        void TransformPlayer()
+        void TransformPlayer()=>TryTransformPlayer();
+        void EndForm(bool present=true)
         {
-            if(Form>0){EndForm();return;}int unlocked=Progress.FormUnlocked;
-            if(unlocked==0){Notice("RUPTURA DESPERTA APOS KAEL");return;}
-            if(Energy<60){Notice("TRANSFORMACAO: PRECISA 60 DE SANGUE");return;}
-            Form=Progress.preferredForm>0?Mathf.Min(unlocked,Progress.preferredForm):unlocked;Energy-=60;FormTime=12+Progress.mastery*2;Notice(new[]{"","RUPTURA","ECLIPSE","ABSOLUTO"}[Form]);Sound(3);
+            int previous=Form;Form=0;FormTime=0;slowTime=0;
+            if(present&&previous>0)BeginFormPresentation(previous,false);else ClearFormPresentation();
         }
-        void EndForm(){Form=0;FormTime=0;slowTime=0;}
         void FormAbility()
         {
-            if(Form==0)return;
+            if(Form==0||Transforming)return;
             if(Form==1)
             {
                 foreach(var enemy in enemies)if(enemy!=null&&!enemy.Health.IsDead)
@@ -242,6 +240,7 @@ namespace Darklight
         }
         public bool TryActivatePower()
         {
+            if(Transforming)return false;
             if(!Progress.mp3Unlocked){Notice("DESBLOQUEIE O MP3 COM ICARO NOX");return false;}
             if(!Resonance.Ready||phonesTime>0){Notice("MODO EM RECARGA OU SEM ENERGIA");return false;}
             if(lab.Player.Model.State==CombatState.Dead||lab.Player.Model.State==CombatState.Hurt)return false;
@@ -257,12 +256,12 @@ namespace Darklight
             if(!DarklightAutomation.Silent&&music.clip!=null){music.time=0;music.Play();}
             Sound(resonance==0?0:resonance==1?2:3);Notice(DarklightResonance.Names[resonance]);
         }
-        void StopPower(){StopVampire();Resonance.Stop();resonance=-1;phonesTime=0;EndForm();music.Stop();}
+        void StopPower(){firstAwakeningMusicPending=false;StopVampire();Resonance.Stop();resonance=-1;phonesTime=0;EndForm(false);music.Stop();}
         void UpdateAura()
         {
             if(aura==null)return;
             if(headphones==null){headphones=new GameObject("Fones").AddComponent<SpriteRenderer>();headphones.transform.SetParent(lab.Player.transform,false);headphones.sprite=extras[8];headphones.sharedMaterial=pixelMaterial;headphones.transform.localScale=Vector3.one*(.37f*DarklightCharacterView.WorldVisualScale)/headphones.sprite.bounds.size.y;}
-            headphones.enabled=phonesTime>0||resonance>=0;headphones.sortingOrder=lab.Player.GetComponentInChildren<SpriteRenderer>().sortingOrder+1;headphones.transform.localPosition=Vector3.up*DarklightCharacterView.WorldVisualScale*Mathf.Lerp(.75f,1.65f,1-Mathf.Clamp01(phonesTime/.28f));aura.enabled=Form>0||resonance>=0||phonesTime>0;
+            headphones.enabled=phonesTime>0||resonance>=0;headphones.sortingOrder=lab.Player.GetComponentInChildren<SpriteRenderer>().sortingOrder+1;headphones.transform.localPosition=Vector3.up*DarklightCharacterView.WorldVisualScale*Mathf.Lerp(.75f,1.65f,1-Mathf.Clamp01(phonesTime/.28f));aura.enabled=resonance>=0||phonesTime>0;
             float bpm=beatsPerMinute[selectedTrack];
             float beat=music.isPlaying?Mathf.Sin((music.time-beatOffsets[selectedTrack])*bpm/60*Mathf.PI*2):Mathf.Sin(lab.Player.Model.Clock*5);
             if(music.isPlaying && !DarklightAutomation.Silent)

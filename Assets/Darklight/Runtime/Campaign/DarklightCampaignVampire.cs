@@ -15,7 +15,7 @@ namespace Darklight
         public void SelectVampireSkill(int skill){if(!DarklightVampireSkills.Unlocked(Progress,skill))return;Progress.vampireSelected=skill;SaveCheckpoint();}
         public bool TryVampireSkill()
         {
-            if(!Active||MenuDismissedThisFrame||WearingHeadphones||VampireCasting||health.IsDead)return false;
+            if(!Active||MenuDismissedThisFrame||WearingHeadphones||VampireCasting||Transforming||health.IsDead)return false;
             var model=lab.Player.Model;if(model.State==CombatState.Hurt||model.State==CombatState.Dead||model.State==CombatState.Dodge||model.State==CombatState.Parry||model.State==CombatState.Charging)return false;
             if(model.State==CombatState.Attack&&model.StateTime<model.Attack.startup+model.Attack.active)return false;
             int skill=Progress.vampireSelected;
@@ -87,7 +87,7 @@ namespace Darklight
         {
             if(Progress.chapter!=0||Progress.awakeningState!=0||CurrentBoss==null||CurrentBoss.kind!=RequiemEnemyKind.Kael||health.CurrentHealth-damage>health.MaxHealth*.25f)return damage;
             Progress.awakeningState=1;Progress.CompleteMilestone(0,1);Progress.vampireSkills|=1;Progress.formsUnlocked=Mathf.Max(Progress.formsUnlocked,1);
-            Form=1;FormTime=8;Blood.Set(Mathf.Max(Blood.Amount,40));health.Heal(health.MaxHealth*.18f);Notice("SANGUE DESPERTO — H / RS CIMA: GARRAS");AudioDirector?.Awakening();SaveCheckpoint();
+            Form=1;FormTime=8;BeginFormPresentation(1,true);Blood.Set(Mathf.Max(Blood.Amount,40));health.Heal(health.MaxHealth*.18f);Notice("SANGUE DESPERTO — H / RS CIMA: GARRAS");AudioDirector?.Awakening();ScheduleFirstAwakeningMusic();SaveCheckpoint();
             return Mathf.Min(damage,Mathf.Max(0,health.CurrentHealth-health.MaxHealth*.15f));
         }
         void VampireChapterReward()

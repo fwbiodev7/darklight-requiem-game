@@ -1,6 +1,6 @@
 Shader "Darklight/PixelSprite"
 {
-    Properties { [PerRendererData] _MainTex ("Sprite", 2D) = "white" {} _Color ("Tint", Color) = (1,1,1,1) _AlphaClip ("Edge threshold", Range(0,1)) = 0.65 _DarkForm ("Form", Float) = 0 _HeadThreshold ("Hair height", Float) = 1.5 _WingOnly ("Spectral overlay", Float) = 0 }
+    Properties { [PerRendererData] _MainTex ("Sprite", 2D) = "white" {} _Color ("Tint", Color) = (1,1,1,1) _AlphaClip ("Edge threshold", Range(0,1)) = 0.65 _VampireMask ("Original selectors", 2D) = "black" {} _VampireForm ("Vampire palette", Float) = 0 _WholeSprite ("Complete supplied character", Float) = 0 _EraseHead ("Age attachment", Float) = 0 _DarkForm ("Form", Float) = 0 _HeadThreshold ("Hair height", Float) = 1.5 _WingOnly ("Spectral overlay", Float) = 0 }
     SubShader
     {
         Tags { "Queue"="Transparent" "RenderType"="Transparent" "IgnoreProjector"="True" "CanUseSpriteAtlas"="True" "DisableBatching"="True" }
@@ -13,7 +13,7 @@ Shader "Darklight/PixelSprite"
             #include "UnityCG.cginc"
             struct appdata { float4 vertex:POSITION; float2 uv:TEXCOORD0; fixed4 color:COLOR; };
             struct v2f { float4 vertex:SV_POSITION; float2 uv:TEXCOORD0; fixed4 color:COLOR; float height:TEXCOORD1; float side:TEXCOORD2; float2 sourceUV:TEXCOORD3; };
-            sampler2D _MainTex; fixed4 _Color; float _AlphaClip,_DarkForm,_HeadThreshold,_WingOnly,_ResonanceTint;
+            sampler2D _VampireMask; float _VampireForm,_EraseHead,_WholeSprite; sampler2D _MainTex; fixed4 _Color; float _AlphaClip,_DarkForm,_HeadThreshold,_WingOnly,_ResonanceTint;
             sampler2D _OcclusionTex;float _LayerOcclusion,_OcclusionChin,_Physique;float4 _OcclusionScale,_OcclusionOffset,_OcclusionRect,_OcclusionStep;
             v2f vert(appdata v) { v2f o; o.vertex=UnityObjectToClipPos(v.vertex); o.uv=v.uv; o.color=v.color*_Color; o.height=v.vertex.y;o.side=v.vertex.x;o.sourceUV=v.vertex.xy*_OcclusionScale.xy+_OcclusionOffset.xy; return o; }
             fixed4 frag(v2f i):SV_Target
@@ -48,6 +48,15 @@ Shader "Darklight/PixelSprite"
                 if(_ResonanceTint>.5)c.rgb=max(c.r,max(c.g,c.b));
                 if(_Physique>.5&&i.height>.6&&i.height<_HeadThreshold-.2&&abs(i.side)>.16&&c.r>.65&&c.g>.25&&c.g<.72&&c.b<.6)
                     c.rgb*=1-(_Physique>1.5?.07:.035);
+                fixed4 selectors=tex2D(_VampireMask,i.uv);
+                if(_VampireForm>.5)
+                {
+                    fixed3 palette=_VampireForm>2.5?fixed3(.95,.96,1):_VampireForm>1.5?fixed3(.62,.16,.96):fixed3(.86,.035,.08);
+                    if(_WholeSprite>.5&&_VampireForm>2.5&&selectors.b>.1)
+                        c.rgb=lerp(float3(.12,.14,.18),float3(.97,.98,1),saturate((c.r-.08)*1.7));
+                    if(selectors.r>.5)c.rgb=palette;
+                    else if(selectors.g>.1)c.rgb=lerp(c.rgb,palette*max(.3,max(c.r,max(c.g,c.b))*1.3),selectors.g*.85);
+                }
                 return c*i.color;
             }
             ENDCG

@@ -103,7 +103,7 @@ namespace Darklight.Tests
             Assert.That(enemy.attackFrames.Length,Is.EqualTo(4));Assert.That(enemy.attackFrames[1],Is.Not.EqualTo(enemy.attackFrames[2]));
             foreach(var sprite in enemy.attackFrames)Assert.That(sprite.texture.filterMode,Is.EqualTo(FilterMode.Point));
             lab.Player.Model.Tick(.01f,new CombatInput{dodgePressed=true,move=Vector2.right});view.Present(lab.Player.Model,Vector2.right);
-            var first=lab.Player.GetComponentInChildren<SpriteRenderer>().sprite;lab.Player.Model.Tick(.10f,default);view.Present(lab.Player.Model,Vector2.right);
+            var first=lab.Player.GetComponentInChildren<SpriteRenderer>().sprite;lab.Player.Model.Tick(.12f,default);view.Present(lab.Player.Model,Vector2.right);
             Assert.That(lab.Player.GetComponentInChildren<SpriteRenderer>().sprite,Is.Not.EqualTo(first));AssertSilent();
         }
     }

@@ -18,7 +18,7 @@ namespace Darklight
             var background=playtestGuideRoot.gameObject.AddComponent<Image>();background.color=new Color(.025f,.015f,.03f,.8f);background.raycastTarget=false;
             DarklightHUDTheme.Frame(playtestGuideRoot);
             playtestGuide=TextAt(playtestGuideRoot,"Comandos",7,5,250,39,5);playtestGuide.horizontalOverflow=HorizontalWrapMode.Wrap;playtestGuide.lineSpacing=1.35f;
-            Debug.Log("DARKLIGHT PLAYTEST READY: Jardim dos Ecos; vampireSkills=63; weapons=7; forms=3; initial appearance; campaign and atlas saves disabled. New katana stances are not implemented.");
+            Debug.Log("DARKLIGHT PLAYTEST READY: Jardim dos Ecos; vampireSkills=63; weapons=7; forms=3; initial appearance; campaign and atlas saves disabled.");
         }
         void ConfigurePlaytestResources()
         {
@@ -49,7 +49,7 @@ namespace Darklight
         }
         void BuildPlaytestTools()
         {
-            heading.text="SESSÃO DE TESTE";bodyText.text="Sua campanha salva permanece preservada.\n\nPoderes vampíricos, formas e três armas liberados.\n\nAparência inicial: catálogo de combate completo.\nAs animações envelhecidas seguem em produção.\n\nAs novas posturas da katana ainda não estão implementadas.";
+            heading.text="SESSÃO DE TESTE";bodyText.text="Sua campanha salva permanece preservada.\n\nPoderes vampíricos, formas e três armas liberados.\n\nAparência inicial: catálogo de combate completo.\nAs animações envelhecidas seguem em produção.";
             Button("REABASTECER VIDA E PODERES",RefillPlaytestPowers);
             Button("REINICIAR JARDIM E INIMIGOS",ResetPlaytestGarden);
             Button("VOLTAR",()=>Open("Pause"));

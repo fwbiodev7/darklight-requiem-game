@@ -48,7 +48,7 @@ namespace Darklight
             // Current destination is displayed in the atlas card, with its real tracking data.
             objectiveText.gameObject.SetActive(false);chapterText.gameObject.SetActive(false);
             HUDPlace(messageText.transform,203,282,232,21,5);messageText.horizontalOverflow=HorizontalWrapMode.Wrap;
-            HUDPlace(powerFrame.transform,456,236,176,44);HUDPlace(powerText.transform,35,6,135,30,5);
+            HUDPlace(powerFrame.transform,456,236,176,44);HUDPlace(powerText.transform,35,6,135,30,5);powerText.lineSpacing=1.7f;
             HUDPlace(powerFill.transform,35,37,134,2);DarklightHUDTheme.Frame(powerFrame.rectTransform);
             lab.PixelHUD.help.gameObject.SetActive(false);
         }

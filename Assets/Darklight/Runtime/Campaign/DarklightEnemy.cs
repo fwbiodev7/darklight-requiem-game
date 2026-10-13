@@ -75,12 +75,14 @@ namespace Darklight
         }
         void ShowAttack(int index)
         {
+            var transformed=FinalFormFrames;
+            if(transformed!=null){ShowFinalForm(index+4);return;}
             if(attackFrames?.Length!=4){Show(3);return;}
             art.sprite=attackFrames[index];
             float target=DarklightWorldScale.EnemyHeight(kind);
             art.transform.localScale=Vector3.one*target/(ExpandedBoss?poses[0]:attackFrames[0]).bounds.size.y;
         }
-        void Show(int index){art.transform.localScale=Vector3.one*(DarklightWorldScale.EnemyHeight(kind))/poses[0].bounds.size.y;if(poses!=null&&poses.Length>index)art.sprite=poses[index];}
+        void Show(int index){if(FinalFormFrames!=null){ShowFinalForm(index);return;}art.transform.localScale=Vector3.one*(DarklightWorldScale.EnemyHeight(kind))/poses[0].bounds.size.y;if(poses!=null&&poses.Length>index)art.sprite=poses[index];}
         void Perform(DarklightCampaign game,DarklightCombatLab lab,float range,bool ranged)
         {
             float damage=(Boss?14:kind==RequiemEnemyKind.Armored?15:8)+game.Progress.chapter*1.3f;

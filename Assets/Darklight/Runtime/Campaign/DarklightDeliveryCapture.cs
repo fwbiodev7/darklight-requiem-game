@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Darklight
 {
     // Explicit delivery preview; absent this switch the player's campaign is untouched.
-    public sealed class DarklightDeliveryCapture : MonoBehaviour
+    public sealed partial class DarklightDeliveryCapture : MonoBehaviour
     {
         // Capture the actual world and Canvas without depending on a visible Windows swap chain.
         void Capture(string path)
@@ -27,7 +27,12 @@ namespace Darklight
         }
         IEnumerator Start()
         {
-            string[] args=System.Environment.GetCommandLineArgs();bool upgrade=System.Array.IndexOf(args,"--requiem-upgrade-capture")>=0;
+            string[] args=System.Environment.GetCommandLineArgs();
+            int headFix=System.Array.IndexOf(args,"--requiem-head-fix-capture");
+            if(headFix>=0&&headFix+1<args.Length){yield return CaptureHeadFix(args[headFix+1]);yield break;}
+            int userSheets=System.Array.IndexOf(args,"--requiem-user-sheets-capture");
+            if(userSheets>=0&&userSheets+1<args.Length){yield return CaptureUserSheets(args[userSheets+1]);yield break;}
+            bool upgrade=System.Array.IndexOf(args,"--requiem-upgrade-capture")>=0;
             bool maps=upgrade||System.Array.IndexOf(args,"--requiem-map-capture")>=0;
             int index=System.Array.IndexOf(args,upgrade?"--requiem-upgrade-capture":maps?"--requiem-map-capture":"--requiem-capture");
             if(index<0||index+1>=args.Length)yield break;string path=args[index+1];Directory.CreateDirectory(path);

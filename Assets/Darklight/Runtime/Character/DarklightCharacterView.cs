@@ -9,16 +9,18 @@ namespace Darklight
         public Sprite[] idle, walk, slash, actions, motion;
         Sprite[] baseIdle,baseWalk,baseSlash,baseActions,baseMotion;bool rock;
         readonly Sprite[][] rockWalking=new Sprite[3][];
-        int walkingStage=-1;
-        Sprite[] RockWalking(int weapon)
+        int walkingStage=-1,walkingSkin=-1;
+        Sprite[] AuthoredWalking(int weapon)
         {
             weapon=Mathf.Clamp(weapon,0,2);
-            int stage=appearance?.RenderingStage??0;
-            if(walkingStage!=stage){System.Array.Clear(rockWalking,0,rockWalking.Length);walkingStage=stage;}
+            int stage=previewing?previewAge:appearance?.Stage??0;
+            int skin=rock?1:0;
+            if(walkingStage!=stage||walkingSkin!=skin){System.Array.Clear(rockWalking,0,rockWalking.Length);walkingStage=stage;walkingSkin=skin;}
             if(rockWalking[weapon]==null)
             {
-                var frames=Resources.LoadAll<Sprite>("Darklight/Walking/RockWalk"+new[]{"Katana","Daggers","Chain"}[weapon]+(stage==0?"":"Stage"+stage));
+                var frames=Resources.LoadAll<Sprite>("Darklight/Walking/"+(rock?"Rock":"Requiem")+"Walk"+new[]{"Katana","Daggers","Chain"}[weapon]+(stage==0?"":"Stage"+stage));
                 System.Array.Sort(frames,(a,b)=>int.Parse(a.name.Substring(a.name.LastIndexOf('_')+1)).CompareTo(int.Parse(b.name.Substring(b.name.LastIndexOf('_')+1))));
+                if(frames.Length!=32&&stage>0) { frames=Resources.LoadAll<Sprite>("Darklight/Walking/"+(rock?"Rock":"Requiem")+"Walk"+new[]{"Katana","Daggers","Chain"}[weapon]); System.Array.Sort(frames,(a,b)=>int.Parse(a.name.Substring(a.name.LastIndexOf('_')+1)).CompareTo(int.Parse(b.name.Substring(b.name.LastIndexOf('_')+1)))); }
                 rockWalking[weapon]=frames;
             }
             return rockWalking[weapon];
@@ -33,7 +35,18 @@ namespace Darklight
         int trailSerial=-1;float nextTrail,airHeight;
         SpriteRenderer display;
         CharacterAppearanceSystem appearance;
-        SpriteRenderer wings; MaterialPropertyBlock formBlock;
+        DarklightOriginalVampireView originalForms;
+        public bool UsesUserWholeSprite {get;private set;}
+        public bool UsesCompleteAgeSprite {get;private set;}
+        bool previewing;int previewAge,previewForm;WeaponDefinition previewWeapon;
+        public void PresentPreview(CombatModel model,Vector2 movement,int skin,int age,int form,WeaponDefinition weapon)
+        {
+            var source=DarklightCombatLab.Instance.Player.GetComponent<DarklightCharacterView>();
+            if(baseIdle==null){idle=source.baseIdle??source.idle;walk=source.baseWalk??source.walk;slash=source.baseSlash??source.slash;actions=source.baseActions??source.actions;motion=source.baseMotion??source.motion;}
+            var game=DarklightCampaign.Instance;SetSkin(skin,game.rockIdle,game.rockMotion,game.rockActions,game.rockSlash);
+            appearance??=gameObject.AddComponent<CharacterAppearanceSystem>();appearance.profile=game.Appearance.profile;appearance.PreviewStage(age);
+            previewing=true;previewAge=age;previewForm=form;previewWeapon=weapon;Present(model,movement);previewing=false;
+        }
         public static int DirectionIndex(Vector2 direction) => Mathf.RoundToInt(Mathf.Atan2(-direction.x, -direction.y) * Mathf.Rad2Deg / 45f + 8f) % 8;
         void Awake() { display = GetComponentInChildren<SpriteRenderer>();appearance=GetComponent<CharacterAppearanceSystem>(); }
         void LateUpdate()
@@ -43,7 +56,6 @@ namespace Darklight
             var camera = DarklightCombatLab.Instance?.WorldCamera;
             float grid = camera == null ? 48f : (camera.targetTexture!=null?camera.targetTexture.height:720f) / (camera.orthographicSize * 2f);
             display.transform.position = new Vector3(Mathf.Round(p.x * grid) / grid, Mathf.Round((p.y+airHeight) * grid) / grid, p.z);
-            if(wings!=null&&wings.enabled)wings.transform.position=display.transform.position;
         }
         public void Present(CombatModel model, Vector2 movement)
         {
@@ -75,7 +87,7 @@ namespace Darklight
                 // Keep that scale when crouching, swinging or changing facing.
                 display.transform.localScale=RenderScale;
             }
-            var equipped=DarklightCampaign.Instance?.Weapons?.Equipped;
+            var equipped=previewing?previewWeapon:DarklightCampaign.Instance?.Weapons?.Equipped;
             if(equipped!=null&&equipped.id!=DarklightWeaponId.Katana)
             {
                 var poses=equipped.Poses(rock?1:0);
@@ -91,38 +103,46 @@ namespace Darklight
             }
             display.transform.localRotation=model.State==CombatState.Dead&&equipped!=null&&equipped.id!=DarklightWeaponId.Katana?Quaternion.Euler(0,0,-75):Quaternion.identity;
             // True walking is selected after weapon poses so equipment cannot restore attack stances.
-            if(rock&&model.State==CombatState.Neutral&&!model.ActiveThisTick&&movement.sqrMagnitude>.01f&&!(DarklightCampaign.Instance?.Weapons?.Swapping??false))
+            if((rock||(appearance?.Stage??0)>0)&&model.State==CombatState.Neutral&&!model.ActiveThisTick&&movement.sqrMagnitude>.01f&&!(DarklightCampaign.Instance?.Weapons?.Swapping??false))
             {
-                var steps=RockWalking(equipped==null?0:(int)equipped.id);
+                var steps=AuthoredWalking(equipped==null?0:(int)equipped.id);
                 if(steps.Length==32){display.sprite=steps[direction*4+(int)(model.Clock*10f)%4];display.transform.localScale=RenderScale;}
             }
             // Whole aged bodies replace only their matching authored pose; never paint extra hair or shoulders.
             if(appearance!=null&&model.State==CombatState.Neutral&&!model.ActiveThisTick&&movement.sqrMagnitude<.01f&&!(DarklightCampaign.Instance?.Weapons?.Swapping??false)&&(equipped==null||equipped.id==DarklightWeaponId.Katana))
             {
-                var body=appearance.IdleBody(rock?1:0,direction,model.Clock,true);
+                var body=appearance.IdleBody(rock?1:0,direction,model.Clock,false);
                 if(body!=null)display.sprite=body;
             }
-            var exact=catalog.Light(rock?1:0,appearance?.RenderingStage??0,equipped==null?0:(int)equipped.id,direction,model);
+            var exact=catalog.Parry(rock?1:0,previewing?previewAge:appearance?.Stage??0,equipped==null?0:(int)equipped.id,direction,model)??catalog.Dodge(rock?1:0,previewing?previewAge:appearance?.Stage??0,equipped==null?0:(int)equipped.id,direction,model)??catalog.Light(rock?1:0,previewing?previewAge:appearance?.Stage??0,equipped==null?0:(int)equipped.id,direction,model);
             if(exact!=null){display.sprite=exact;display.transform.localScale=RenderScale;}
-            if(model.State==CombatState.Attack && model.ActiveThisTick && trailSerial!=model.AttackSerial)
-            {trailSerial=model.AttackSerial;DarklightCombatFX.Echo(display,.10f);}
-            if(model.State==CombatState.Dodge && model.Clock>=nextTrail)
-            {nextTrail=model.Clock+.05f;DarklightCombatFX.Echo(display,.12f);}
             var campaign=DarklightCampaign.Instance;
             if(appearance!=null)display.sprite=appearance.ResolveBody(display.sprite);
-            if(campaign!=null)
+            var userSprite=DarklightUserSpriteBank.Resolve(rock?1:0,previewing?previewAge:appearance?.Stage??0,equipped==null?0:(int)equipped.id,model,movement);
+            UsesUserWholeSprite=userSprite!=null;
+            display.flipX=false;
+            if(UsesUserWholeSprite)
             {
-                int form=campaign.Form;var forms=campaign.CurrentFormFrames;
-                if(form>0 && (appearance?.RenderingStage??0)==0 && (equipped==null||equipped.id==DarklightWeaponId.Katana) && model.State==CombatState.Neutral && movement.sqrMagnitude<.01f && forms?.Length==24)
-                    {display.sprite=forms[direction*3+form-1];display.transform.localScale=RenderScale;}
-                formBlock ??= new MaterialPropertyBlock();formBlock.SetFloat("_DarkForm",form);formBlock.SetFloat("_HeadThreshold",display.sprite.bounds.max.y-.5f);formBlock.SetFloat("_Physique",0);display.SetPropertyBlock(formBlock);
-                if(wings==null){wings=new GameObject("AsasEspectrais").AddComponent<SpriteRenderer>();wings.transform.SetParent(display.transform.parent,false);wings.sharedMaterial=display.sharedMaterial;var block=new MaterialPropertyBlock();block.SetFloat("_WingOnly",1);wings.SetPropertyBlock(block);}
-                wings.enabled=form==2&&forms?.Length==24;
-                if(wings.enabled){int wingDirection=rock&&direction==6?5:direction;wings.sprite=forms[wingDirection*3+1];wings.transform.localScale=RenderScale;wings.transform.position=display.transform.position;wings.sortingOrder=99-Mathf.RoundToInt(transform.position.y*10f);}
+                display.sprite=userSprite;display.transform.localScale=RenderScale;
+                display.flipX=model.Facing.x<-.1f;
+                display.transform.localRotation=model.State==CombatState.Dead?Quaternion.Euler(0,0,-75):Quaternion.identity;
+            }
+            UsesCompleteAgeSprite=false;
+            if(!UsesUserWholeSprite)
+            {
+                var complete=DarklightWholeCharacterBank.Resolve(rock?1:0,previewing?previewAge:appearance?.Stage??0,equipped==null?0:(int)equipped.id,direction,model,movement);
+                if(complete!=null){display.sprite=complete;UsesCompleteAgeSprite=true;}
             }
             display.color = model.State == CombatState.Hurt ? new Color(1, .4f, .4f) : model.State == CombatState.Parry ? new Color(.7f, .8f, 1) : Color.white;
             display.sortingOrder = 100 - Mathf.RoundToInt(transform.position.y * 10f);
             appearance?.Present(display,direction,rock?1:0,campaign?.Form??0,model);
+            originalForms??=GetComponent<DarklightOriginalVampireView>()??gameObject.AddComponent<DarklightOriginalVampireView>();
+            originalForms.Present(display,rock?1:0,appearance?.Stage??0,direction,previewing?previewForm:campaign?.PresentedForm??0,model.Clock,model.State==CombatState.Dead,UsesUserWholeSprite||UsesCompleteAgeSprite,model.State==CombatState.Dodge);
+            if(model.State==CombatState.Attack && model.ActiveThisTick && trailSerial!=model.AttackSerial)
+            {trailSerial=model.AttackSerial;DarklightCombatFX.Echo(display,.10f);}
+            if(model.State==CombatState.Dodge && model.Clock>=nextTrail)
+            {nextTrail=model.Clock+.05f;DarklightCombatFX.Echo(display,.12f);}
+
         }
     }
 }

@@ -22,7 +22,8 @@ namespace Darklight
             if(game?.InteractionClickConsumed==true)input.lightPressed=false;
             if(game != null && game.WearingHeadphones) { input.lightPressed=input.heavyPressed=input.skillPressed=input.aerialPressed=input.weaponSpecialPressed=false; }
             if(game?.VampireCasting==true){input.lightPressed=input.heavyPressed=input.heavyHeld=input.skillPressed=input.aerialPressed=input.weaponSpecialPressed=input.parryPressed=input.dodgePressed=false;input.move*=.25f;}
-            weapons?.BeforeTick(delta,!lab.Paused&&game?.WearingHeadphones!=true&&game?.VampireCasting!=true);
+            if(game?.Transforming==true)input=default;
+            weapons?.BeforeTick(delta,!lab.Paused&&game?.WearingHeadphones!=true&&game?.VampireCasting!=true&&game?.Transforming!=true);
             Model.Tick(delta, input, game?.AttackSpeed ?? 1);
             if(delta>0)weapons?.AfterTick();
             if (delta > 0 && Model.ActiveThisTick){game?.WeaponSwing(Model.Attack,Model.AttackSerial);ResolveStrike();}
@@ -32,7 +33,7 @@ namespace Darklight
         public void ResetModel() { Model = new CombatModel(loadout); body.linearVelocity = Vector2.zero; }
         void FixedUpdate()
         {
-            body.linearVelocity = DarklightCombatLab.Instance?.CombatDelta > 0 ? Model.Motion * 4.5f * (DarklightCampaign.Instance?.MovementSpeed ?? 1) : Vector2.zero;
+            body.linearVelocity = DarklightCombatLab.Instance?.CombatDelta > 0 && DarklightCampaign.Instance?.Transforming!=true ? Model.Motion * 4.5f * (DarklightCampaign.Instance?.MovementSpeed ?? 1) : Vector2.zero;
         }
         void ResolveStrike()
         {

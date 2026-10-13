@@ -9,6 +9,7 @@ namespace Darklight
     {
         readonly Dictionary<UnityEngine.UI.Image,(UnityEngine.UI.Image[] edges,UnityEngine.UI.Text cursor)> menuBorders=new();
         RectTransform cinematicRoot;
+        UnityEngine.UI.Image gameLogo;
         UnityEngine.UI.Text menuSubtitle,menuTagline,menuSave,menuVersion;
         CanvasGroup menuFade;
         DarklightMenuBackdrop cinematicBackdrop;
@@ -25,6 +26,7 @@ namespace Darklight
             cinematicBackdrop.Initialize();
             menuSubtitle=TextAt(menuRoot,"SubtituloRequiem",28,90,240,16,12);
             menuSubtitle.text="R E Q U I E M";
+            gameLogo=ImageAt(menuRoot,"LogoDarklight",28,32,260,87,Resources.Load<Sprite>("Darklight/Branding/GameLogo"));gameLogo.preserveAspect=true;gameLogo.raycastTarget=false;
             menuTagline=TextAt(menuRoot,"FraseTematica",28,110,270,12,7);
             menuTagline.text="Entre o sangue e o eclipse.";
             menuVersion=TextAt(menuRoot,"Versao",553,339,75,10,5);menuVersion.text="0.1 ALPHA";menuVersion.alignment=TextAnchor.MiddleRight;
@@ -94,9 +96,11 @@ namespace Darklight
             cinematicRoot.gameObject.SetActive(front);menuBackdrop.enabled=!front;
             if(paused){menuBackdrop.sprite=null;menuBackdrop.color=new Color(.015f,.012f,.025f,.55f);}
             menuRoot.Find("Moldura").gameObject.SetActive(!themed);
-            menuSubtitle.gameObject.SetActive(front&&panel=="Main");
+            bool brandedMain=front&&panel=="Main"&&gameLogo.sprite!=null;
+            gameLogo.gameObject.SetActive(brandedMain);heading.gameObject.SetActive(!brandedMain);
+            menuSubtitle.gameObject.SetActive(front&&panel=="Main"&&!brandedMain);
             menuSubtitle.text=paused?"DARKLIGHT: REQUIEM":"R E Q U I E M";
-            menuSubtitle.fontSize=paused?9:12;menuSubtitle.rectTransform.anchoredPosition=new Vector2(28,paused?-58:-90);menuSubtitle.rectTransform.sizeDelta=new Vector2(290,16);menuTagline.gameObject.SetActive(front&&panel=="Main");menuVersion.gameObject.SetActive(front);
+            menuSubtitle.fontSize=paused?9:12;menuSubtitle.rectTransform.anchoredPosition=new Vector2(28,paused?-58:-90);menuSubtitle.rectTransform.sizeDelta=new Vector2(290,16);menuTagline.gameObject.SetActive(front&&panel=="Main");menuTagline.rectTransform.anchoredPosition=new Vector2(28,brandedMain?-122:-110);menuVersion.gameObject.SetActive(front);
             SetHUDVisible(!themed);menuFade.alpha=themed?.7f:1;
             menuRoot.anchoredPosition=themed?Vector2.zero:new Vector2(24,-16);menuRoot.sizeDelta=themed?new Vector2(640,360):new Vector2(592,328);
             heading.rectTransform.anchoredPosition=themed?new Vector2(28,paused?-34:-58):new Vector2(22,-18);

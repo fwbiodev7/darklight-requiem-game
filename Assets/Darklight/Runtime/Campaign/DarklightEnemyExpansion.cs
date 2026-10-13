@@ -41,7 +41,7 @@ namespace Darklight
                 Phase++;phaseTwo=true;phaseTransition=.85f;state=0;dash=Vector2.zero;body.linearVelocity=Vector2.zero;timer=1.05f;warning?.Hide();
                 game.Progress.bossPhase=Phase;game.SaveBossPhase();
                 game.Notice("FASE "+Phase+": "+PhaseName);game.BossPhaseTwo();
-                if(kind==RequiemEnemyKind.Nocthar&&Phase==3)game.FinalAwakening();
+                if(kind==RequiemEnemyKind.Nocthar&&Phase==3){DarklightCombatFX.Transformation(transform.position,2,true);Show(0);game.FinalAwakening();}
                 return true;
             }
             if(phaseTransition>0){body.linearVelocity=Vector2.zero;Show(0);return true;}

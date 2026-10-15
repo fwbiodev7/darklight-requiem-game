@@ -9,6 +9,7 @@ namespace Darklight
         public int skin, age, weapon;
         public int[] directions;
         public int phases;
+        public bool ownerMask;
         public string[] spriteNames;
         [NonSerialized] public Sprite[] frames;
         [NonSerialized] public Texture2D palette;
@@ -31,10 +32,10 @@ namespace Darklight
         }
         public static bool ValidDescriptor(TodayCharacterPage page)
         {
-            if (page == null || string.IsNullOrEmpty(page.name) || page.skin < 0 || page.skin > 1 || page.age < 0 || page.age > 4 || page.weapon < 0 || page.weapon > 2 ||
+            if (page == null || string.IsNullOrEmpty(page.name) || page.skin < 0 || page.skin > 1 || page.age != 0 || page.weapon < 0 || page.weapon > 2 ||
                 page.directions == null || page.directions.Length == 0 || page.spriteNames == null || page.spriteNames.Length != page.directions.Length * page.phases ||
                 page.resourcePath != Root + page.name || page.paletteResourcePath != Root + page.name + "_Palette") return false;
-            int expected = page.kind == "Walk" ? 4 : page.kind == "Combat" || page.kind == "GuardDodge" ? 8 : 0;
+            int expected = page.kind == "Idle" ? 2 : page.kind == "Walk" || page.kind == "Attack" ? 4 : page.kind == "Combat" || page.kind == "GuardDodge" ? 8 : 0;
             if (page.phases != expected || expected == 0) return false;
             int seen = 0;
             foreach (int direction in page.directions)
@@ -51,7 +52,7 @@ namespace Darklight
             var data = Catalog();
             if (data?.pages == null) return null;
             foreach (var page in data.pages)
-                if (page != null && page.skin == skin && page.age == age && page.weapon == weapon && page.kind == kind &&
+                if (page != null && page.skin == skin && page.age == 0 && page.weapon == weapon && page.kind == kind &&
                     page.directions != null && Array.IndexOf(page.directions, direction) >= 0 && ValidDescriptor(page)) return page;
             return null;
         }
@@ -76,17 +77,26 @@ namespace Darklight
         public static Sprite Resolve(int skin, int age, int weapon, int direction, CombatModel model, Vector2 movement)
         {
             string kind = model.State == CombatState.Parry || model.State == CombatState.Dodge ? "GuardDodge" :
-                model.State == CombatState.Neutral && !model.ActiveThisTick && movement.sqrMagnitude > .01f ? "Walk" : "Combat";
+                model.State == CombatState.Neutral && !model.ActiveThisTick && movement.sqrMagnitude > .01f ? "Walk" : model.State == CombatState.Neutral ? "Idle" : "Combat";
+            if (model.State == CombatState.Attack || model.ActiveThisTick) kind = "Attack";
             var page = Page(skin, age, weapon, direction, kind);
+            if (page == null && kind == "Idle") { kind = "Combat"; page = Page(skin, 0, weapon, direction, kind); }
+            if (page == null && kind == "Attack") { kind = "Combat"; page = Page(skin, age, weapon, direction, kind); }
             if (page == null || !LoadFrames(page)) return null;
             int phase = 0;
-            if (kind == "Walk") phase = (int)(model.Clock * 10f) % 4;
+            if (kind == "Idle") phase = (int)(model.Clock * 2f) % page.phases;
+            else if (kind == "Walk") phase = (int)(model.Clock * 10f) % 4;
+            else if (kind == "Attack")
+                phase = model.ActiveThisTick ? 1 : model.StateTime < model.Attack.startup ? 0 :
+                    model.StateTime < model.Attack.startup + model.Attack.active ? 1 :
+                    model.StateTime < model.Attack.startup + model.Attack.active + model.Attack.recovery * .5f ? 2 : 3;
             else if (kind == "GuardDodge")
             {
                 if (model.State == CombatState.Parry)
                     phase = model.StateTime < .04f ? 0 : model.StateTime < .14f ? 1 : model.StateTime < .21f ? 2 : 3;
                 else phase = 4 + (model.StateTime < .045f ? 0 : model.StateTime < .12f ? 1 : model.StateTime < .19f ? 2 : 3);
             }
+            else if (model.State == CombatState.Neutral && !model.ActiveThisTick) phase = (int)(model.Clock * 2f) % 2 == 0 ? 0 : 5;
             else if (model.State == CombatState.Hurt) phase = 6;
             else if (model.State == CombatState.Dead) phase = 7;
             else if (model.State == CombatState.Charging) phase = 1;
@@ -97,11 +107,18 @@ namespace Darklight
             int row = Array.IndexOf(page.directions, direction);
             return page.frames[row * page.phases + phase];
         }
+        public static Sprite YoungIdle(int skin, int weapon, int direction, float clock)
+        {
+            var page = Page(skin, 0, weapon, direction, "Idle");
+            if (page == null || !LoadFrames(page)) return null;
+            return page.frames[Array.IndexOf(page.directions, direction) * page.phases + (int)(clock * 2f) % page.phases];
+        }
         public static Sprite StablePose(int skin, int age, int weapon, int direction)
         {
-            var page = Page(skin, age, weapon, direction, "Combat") ?? Page(skin, age, weapon, direction, "Walk");
+            var page = Page(skin, 0, weapon, direction, "Idle") ?? Page(skin, 0, weapon, direction, "Combat") ?? Page(skin, age, weapon, direction, "Attack") ?? Page(skin, age, weapon, direction, "Walk");
             if (page == null || !LoadFrames(page)) return null;
-            return page.frames[Array.IndexOf(page.directions, direction) * page.phases];
+            int phase = page.kind == "Attack" ? 3 : 0;
+            return page.frames[Array.IndexOf(page.directions, direction) * page.phases + phase];
         }
         public static Texture2D Mask(Sprite sprite)
         {
@@ -122,6 +139,17 @@ namespace Darklight
         public static int LoadedPageCount
         {
             get { int count = 0; if (catalog?.pages != null) foreach (var page in catalog.pages) if (page?.frames != null) count++; return count; }
+        }
+        public static int WholeFrameId(Sprite sprite)
+        {
+            if (sprite == null || Catalog()?.pages == null) return 0;
+            foreach (var page in Catalog().pages)
+            {
+                if (page == null || !page.ownerMask || !ValidDescriptor(page)) continue;
+                int index = Array.IndexOf(page.spriteNames, sprite.name);
+                if (index >= 0) return index + 1;
+            }
+            return 0;
         }
         public static void ClearCache()
         {

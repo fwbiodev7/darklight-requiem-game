@@ -9,7 +9,7 @@ namespace Darklight.Tests
     public sealed class DarklightCompleteAppearanceTests
     {
         [UnitySetUp] public IEnumerator Setup(){DarklightAutomation.Silent=true;yield return SceneManager.LoadSceneAsync("Assets/Darklight/Scenes/DarklightCampaign.unity");yield return null;yield return null;}
-        [UnityTest] public IEnumerator AuthoredAgedIdleAndIncompleteBundleGatePreserveIdentityForBothSkins()
+        [UnityTest] public IEnumerator YoungBreathingFramesIgnoreLegacyAgeInputsForBothSkins()
         {
             var game=DarklightCampaign.Instance;var lab=DarklightCombatLab.Instance;game.Progress.equippedWeapon=0;game.Weapons.Restore();
             var view=lab.Player.GetComponent<DarklightCharacterView>();var age=lab.Player.GetComponent<CharacterAppearanceSystem>();
@@ -19,10 +19,10 @@ namespace Darklight.Tests
                 game.SelectSkin(skin,false);age.PreviewStage(stage);
                 var facing=(Vector2)(Quaternion.Euler(0,0,-d*45)*Vector2.down);var model=new CombatModel(lab.Player.loadout);model.Tick(.01f,new CombatInput{aim=facing});view.Present(model,Vector2.zero);
                 var authored=age.IdleBody(skin,d,model.Clock);
-                Assert.That(authored.name,Does.StartWith(skin==0?"RequiemIdleStage":"RockIdleStage"));
+                Assert.That(authored.name,Does.StartWith(skin==0?"Today_RequiemIdleKatanaYoung":"Today_RockIdleKatanaYoung"));
                 Assert.That(authored.texture.filterMode,Is.EqualTo(FilterMode.Point));
                 Assert.That(authored.bounds.size.y,Is.InRange(1.75f,2.25f));
-                Assert.That(age.Stage,Is.EqualTo(stage));
+                Assert.That(age.Stage,Is.Zero);
                 var today=DarklightSpriteExpectations.Today(skin,stage,0,d,model,Vector2.zero);
                 Assert.That(art.sprite,Is.EqualTo(today??authored));
                 if(today!=null){Assert.That(art.flipX,Is.False);Assert.That(view.UsesCompleteAgeSprite,Is.True);}
@@ -31,7 +31,7 @@ namespace Darklight.Tests
             }
             yield return null;
         }
-        [UnityTest] public IEnumerator RemovesPreviouslySerializedWorldAndPortraitLayersWithoutChangingNarrativeAge()
+        [UnityTest] public IEnumerator RemovesSerializedHeadLayersAndKeepsFixedYoungAppearance()
         {
             var holder=new GameObject("LegacyAppearanceFixture");var age=holder.AddComponent<CharacterAppearanceSystem>();age.profile=DarklightCampaign.Instance.Appearance.profile;age.PreviewStage(4);
             var body=new GameObject("Body").AddComponent<SpriteRenderer>();body.transform.SetParent(holder.transform,false);
@@ -39,7 +39,7 @@ namespace Darklight.Tests
             var image=new GameObject("Portrait",typeof(RectTransform),typeof(Image)).GetComponent<Image>();image.transform.SetParent(holder.transform,false);
             foreach(var name in new[]{"AparenciaRetratoCabelo","AparenciaRetratoRosto"}){var layer=new GameObject(name,typeof(RectTransform),typeof(Image));layer.transform.SetParent(image.transform,false);}
             age.Present(body,0,0,0,null);age.UpdatePortrait(image);yield return null;
-            Assert.That(body.transform.childCount,Is.Zero);Assert.That(image.transform.childCount,Is.Zero);Assert.That(age.Stage,Is.EqualTo(4));Assert.That(age.Physique,Is.Zero);
+            Assert.That(body.transform.childCount,Is.Zero);Assert.That(image.transform.childCount,Is.Zero);Assert.That(age.Stage,Is.Zero);Assert.That(age.Physique,Is.Zero);
             Object.Destroy(holder);
         }
     }

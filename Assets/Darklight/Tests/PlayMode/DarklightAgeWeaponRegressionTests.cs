@@ -8,19 +8,21 @@ namespace Darklight.Tests
     public sealed class DarklightAgeWeaponRegressionTests
     {
         [UnitySetUp] public IEnumerator Setup(){DarklightAutomation.Silent=true;yield return SceneManager.LoadSceneAsync("Assets/Darklight/Scenes/DarklightCampaign.unity");yield return null;yield return null;DarklightCampaign.Instance.PreviewCampaign();DarklightCampaign.Instance.Progress.weaponUnlocks=7;}
+        internal static Sprite ExpectedWhole(Sprite normal,int form)
+        {
+            if(form==0)return normal;
+            Assert.That(DarklightTransformedBank.TryResolve(normal,form,out var complete,out var mask,out var owner),Is.True,"Missing authored transformation for "+normal.name+":"+form);
+            Assert.That(mask,Is.Not.Null);Assert.That(owner,Is.InRange(1,32));return complete;
+        }
         internal static void AssertIdentity(Sprite sprite,int skin,int age,int weapon)
         {
             Assert.That(sprite,Is.Not.Null);string n=sprite.name,who=skin==1?"Rock":"Requiem",arm=new[]{"Katana","Daggers","Chain"}[weapon];
-            if(age>0)
-            {
-                Assert.That(n,Does.Contain(who));Assert.That(n,Does.Contain("Stage"+age));
-                if(weapon!=0)Assert.That(n,Does.Contain(arm),"Wrong equipped weapon in complete age sprite: "+n);
-                else Assert.That(n,Does.Not.Contain("Daggers").And.Not.Contain("Chain"));
-            }
-            else if(n.StartsWith("Today_")){Assert.That(n,Does.Contain(who+"Walk"+arm+"Stage0"));}
-            else if(n.StartsWith("User_")){Assert.That(System.Array.IndexOf(DarklightUserSpriteBank.Page(skin,weapon),sprite),Is.GreaterThanOrEqualTo(0));}
+            Assert.That(n.StartsWith("Today_")||n.StartsWith("Transformed_"),Is.True);Assert.That(n,Does.Contain(who));
+            Assert.That(n,Does.Contain("Young"));Assert.That(n,Does.Not.Contain("Stage"));
+            Assert.That(n,Does.Contain(arm),"Wrong equipped weapon in young sprite: "+n);
+
         }
-        [UnityTest] public IEnumerator EveryAgeSkinWeaponDirectionKeepsIdentityDuringMovementAttackDefenseAndDodge()
+        [UnityTest] public IEnumerator LegacyAgeInputsCannotChangeYoungIdentityAcrossAllEquipmentAndForms()
         {
             var game=DarklightCampaign.Instance;var lab=DarklightCombatLab.Instance;var view=lab.Player.GetComponent<DarklightCharacterView>();var body=lab.Player.transform.Find("FabioVisual").GetComponent<SpriteRenderer>();
             var block=new MaterialPropertyBlock();int checks=0;
@@ -32,15 +34,15 @@ namespace Darklight.Tests
                     model.Tick(.01f,new CombatInput{aim=facing,move=move,lightPressed=pose==2,parryPressed=pose==3,dodgePressed=pose==4});
                     if(pose==2)model.Tick(model.Attack.startup+.01f,new CombatInput{aim=facing});
                     view.PresentPreview(model,move,skin,age,form,definition);AssertIdentity(body.sprite,skin,age,weapon);
-                    body.GetPropertyBlock(block);Assert.That(block.GetFloat("_VampireForm"),Is.EqualTo(form));Assert.That(block.GetFloat("_EraseHead"),Is.Zero);
+                    body.GetPropertyBlock(block);Assert.That(block.GetFloat("_VampireForm"),Is.Zero);Assert.That(block.GetFloat("_EraseHead"),Is.Zero);
                     Assert.That(body.transform.localScale,Is.EqualTo(Vector3.one*DarklightCharacterView.WorldVisualScale));Assert.That(view.GetComponent<DarklightOriginalVampireView>().HasAgeHead,Is.False);
-                    Assert.That(game.Appearance.Stage,Is.EqualTo(age));checks++;
+                    Assert.That(game.Appearance.Stage,Is.Zero);checks++;
                 }
                 TodayCharacterBank.ClearCache();yield return Resources.UnloadUnusedAssets();
             }
             Assert.That(checks,Is.EqualTo(4800));
         }
-        [UnityTest] public IEnumerator ActualSequentialWeaponSwapsCannotRestoreJuvenileOrKatanaFrames()
+        [UnityTest] public IEnumerator ActualSequentialWeaponSwapsKeepYoungIdentityAndEquippedWeapon()
         {
             var game=DarklightCampaign.Instance;var lab=DarklightCombatLab.Instance;var view=lab.Player.GetComponent<DarklightCharacterView>();var art=lab.Player.transform.Find("FabioVisual").GetComponent<SpriteRenderer>();
             for(int skin=0;skin<2;skin++)for(int age=1;age<5;age++)
@@ -49,7 +51,7 @@ namespace Darklight.Tests
                 foreach(int weapon in new[]{1,2,0,2,1,0})
                 {
                     game.Weapons.Request(weapon);game.Weapons.BeforeTick(.01f,true);Assert.That((int)game.Weapons.Equipped.id,Is.EqualTo(weapon));Assert.That(game.Weapons.Swapping,Is.True);
-                    view.Present(lab.Player.Model,Vector2.zero);AssertIdentity(art.sprite,skin,age,weapon);Assert.That(game.Appearance.Stage,Is.EqualTo(age));
+                    view.Present(lab.Player.Model,Vector2.zero);AssertIdentity(art.sprite,skin,age,weapon);Assert.That(game.Appearance.Stage,Is.Zero);
                     game.Weapons.BeforeTick(.2f,true);view.Present(lab.Player.Model,Vector2.zero);AssertIdentity(art.sprite,skin,age,weapon);
                 }
                 TodayCharacterBank.ClearCache();yield return Resources.UnloadUnusedAssets();

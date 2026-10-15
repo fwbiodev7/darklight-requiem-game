@@ -25,7 +25,7 @@ namespace Darklight.Tests
                 foreach(var key in keys)backup.prefs.Add(new Pref{key=key,type=type,exists=PlayerPrefs.HasKey(key),scalar=type=="float"?PlayerPrefs.GetFloat(key):0,number=type=="int"?PlayerPrefs.GetInt(key):0,text=type=="string"?PlayerPrefs.GetString(key):null});
             }
             Prefs("float","Darklight.Master","Darklight.Music","Darklight.Effects","Darklight.Ambient","Darklight.UI","Darklight.Enemies","Darklight.Player");
-            Prefs("int","Darklight.Flashes","Darklight.FrameRate","Darklight.Fullscreen","Darklight.Height","Darklight.Lessons","Darklight.Shake","Darklight.Skin","Darklight.Tips","Darklight.VSync","Darklight.Width");
+            Prefs("int","Darklight.VisualQuality","Darklight.Flashes","Darklight.FrameRate","Darklight.Fullscreen","Darklight.Height","Darklight.Lessons","Darklight.Shake","Darklight.Skin","Darklight.Tips","Darklight.VSync","Darklight.Width");
             Prefs("string","Darklight.Bindings","Darklight.Tests.CaptureOutput");
             if(Directory.Exists(Application.persistentDataPath))foreach(var path in Directory.GetFiles(Application.persistentDataPath,"*.json*",SearchOption.AllDirectories))backup.saves.Add(new Save{path=path,data=Convert.ToBase64String(File.ReadAllBytes(path))});
             string protection=output+".protection.json";File.WriteAllText(protection,JsonUtility.ToJson(backup,true));
@@ -35,7 +35,7 @@ namespace Darklight.Tests
         }
         public static void Audio(string output)=>Begin(output,new Filter{testMode=TestMode.PlayMode,groupNames=new[]{"^Darklight.Tests.DarklightAudioSettingsTests\\."}});
         public static void FinalEdit(string output)=>Begin(output,new Filter{testMode=TestMode.EditMode,groupNames=new[]{"^Darklight.Tests\\."}});
-        public static void FinalPlay(string output)=>Begin(output,new Filter{testMode=TestMode.PlayMode,groupNames=new[]{"^Darklight.Tests\\.","!^Darklight.Tests.DarklightFinalCaptureTests", "!^Darklight.Tests.DarklightNarrativePlayTests.AudioPlaybackIsBoundedMutedAndStopsWhenAutomationReturnsToSilence$","!^Darklight.Tests.DarklightAwakeningMusicTests.AwakeningMusicPausesAndResumesPositionAndDoesNotOverlapMainMenu$"}});
+        public static void FinalPlay(string output)=>Begin(output,new Filter{testMode=TestMode.PlayMode,groupNames=new[]{"^Darklight.Tests\\.","!^Darklight.Tests.DarklightFinalCaptureTests", "!^Darklight.Tests.DarklightRemasterPrototypeTests","!^Darklight.Tests.DarklightSoloTransformationTests", "!^Darklight.Tests.DarklightNarrativePlayTests.AudioPlaybackIsBoundedMutedAndStopsWhenAutomationReturnsToSilence$","!^Darklight.Tests.DarklightAwakeningMusicTests.AwakeningMusicPausesAndResumesPositionAndDoesNotOverlapMainMenu$"}});
         public static void Focused(string output,string pattern)=>Begin(output,new Filter{testMode=TestMode.PlayMode,groupNames=new[]{pattern}});
         public static void FocusedEdit(string output,string pattern)=>Begin(output,new Filter{testMode=TestMode.EditMode,groupNames=new[]{pattern}});
         public static void Capture(string output)=>Begin(output,new Filter{testMode=TestMode.PlayMode,groupNames=new[]{"^Darklight.Tests.DarklightFinalCaptureTests\\."}},Path.Combine(Path.GetDirectoryName(output),"captures-final"));

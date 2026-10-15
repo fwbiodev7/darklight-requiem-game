@@ -14,9 +14,9 @@ namespace Darklight
         CanvasGroup menuFade;
         DarklightMenuBackdrop cinematicBackdrop;
         float menuSoundAt;
-        bool CinematicFront=>panel=="Main"||panel=="Skins"&&returnPanel=="Main"||panel=="ConfirmNew"||panel=="LoadGames"||panel=="Extras"||panel=="Regions"||panel=="RegionDetails"||((panel=="Options"||panel=="Controls"||panel=="Credits"||panel=="BindingDevice")&&returnPanel=="Main");
+        bool CinematicFront=>panel=="Main"||panel=="Skins"&&returnPanel=="Main"||panel=="ConfirmNew"||panel=="LoadGames"||panel=="Extras"||panel=="Regions"||panel=="RegionDetails"||((panel=="Options"||panel=="Controls"||panel=="Credits"||panel=="BindingDevice"||panel=="BindingSlot"||panel=="BindingConflict")&&returnPanel=="Main");
 
-        bool CinematicPause=>panel=="Skins"&&returnPanel=="Pause"||panel=="Pause"||panel=="Skills"||panel=="VampireSkills"||panel=="Inventory"||panel=="Journal"||panel=="MP3"||panel=="Playtest"||((panel=="Options"||panel=="Controls"||panel=="BindingDevice")&&returnPanel=="Pause");
+        bool CinematicPause=>panel=="Skins"&&returnPanel=="Pause"||panel=="Pause"||panel=="Transformations"||panel=="Skills"||panel=="VampireSkills"||panel=="Inventory"||panel=="Journal"||panel=="MP3"||panel=="Playtest"||((panel=="Options"||panel=="Controls"||panel=="BindingDevice"||panel=="BindingSlot"||panel=="BindingConflict")&&returnPanel=="Pause");
 
         void CreateCinematicMenu()
         {
@@ -29,7 +29,7 @@ namespace Darklight
             gameLogo=ImageAt(menuRoot,"LogoDarklight",28,32,260,87,Resources.Load<Sprite>("Darklight/Branding/GameLogo"));gameLogo.preserveAspect=true;gameLogo.raycastTarget=false;
             menuTagline=TextAt(menuRoot,"FraseTematica",28,110,270,12,7);
             menuTagline.text="Entre o sangue e o eclipse.";
-            menuVersion=TextAt(menuRoot,"Versao",553,339,75,10,5);menuVersion.text="0.1 ALPHA";menuVersion.alignment=TextAnchor.MiddleRight;
+            menuVersion=TextAt(menuRoot,"Versao",553,339,75,10,5);menuVersion.text="0.2 PREVIA";menuVersion.alignment=TextAnchor.MiddleRight;
             menuFade=menuRoot.gameObject.AddComponent<CanvasGroup>();
         }
         public static int MenuProgressPercent(DarklightProgress saved)
@@ -138,6 +138,7 @@ namespace Darklight
             if(panel=="Skins"){width=208;y=108+(i-first)*32;h=26;}
             b.rect.anchoredPosition=new Vector2(panel=="Options"&&i>=6?236:28,-y);b.rect.sizeDelta=new Vector2(width,h);
             b.text.rectTransform.sizeDelta=new Vector2(width-28,tall?20:h);LayoutAudioSlider(i,width);
+            if(panel=="Controls"||panel=="BindingSlot"||panel=="BindingConflict"){b.text.fontSize=5;bodyText.rectTransform.anchoredPosition=new Vector2(328,-137);bodyText.rectTransform.sizeDelta=new Vector2(250,175);menuFooter.text="SETAS / LS / RODA: ESCOLHER    ENTER / A: OK    ESC / B: VOLTAR";}
             bool focused=b.enabled&&(i==selection||panel=="Options"&&i==optionsCategory);
             b.image.color=Color.Lerp(b.image.color,focused?new Color(.19f,.035f,.06f,.76f):new Color(.025f,.03f,.045f,.8f),Mathf.Min(1,Time.unscaledDeltaTime*14));
             b.text.color=b.enabled?new Color(.91f,.89f,.83f):new Color(.38f,.4f,.42f);

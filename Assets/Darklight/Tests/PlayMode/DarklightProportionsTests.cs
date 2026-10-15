@@ -11,7 +11,7 @@ namespace Darklight.Tests
     {
         DarklightCampaign game;DarklightCombatLab lab;
         [UnitySetUp] public IEnumerator Prepare(){DarklightAutomation.Silent=true;yield return SceneManager.LoadSceneAsync("Assets/Darklight/Scenes/DarklightCampaign.unity");yield return null;yield return null;game=DarklightCampaign.Instance;lab=DarklightCombatLab.Instance;}
-        [UnityTest] public IEnumerator RockUsesSuppliedYoungStepsAndPreservesAgedDirectionalWalking()
+        [UnityTest] public IEnumerator YoungRockKeepsFourDistinctStepsAndScaleAcrossLegacyAgeInputs()
         {
             game.PreviewCampaign();game.SelectSkin(1,false);game.Progress.weaponUnlocks=7;
             var view=lab.Player.GetComponent<DarklightCharacterView>();var art=lab.Player.transform.Find("FabioVisual").GetComponent<SpriteRenderer>();
@@ -33,23 +33,12 @@ namespace Darklight.Tests
                         {
                             Assert.That(art.sprite,Is.SameAs(today));Assert.That(view.UsesCompleteAgeSprite,Is.True);Assert.That(art.flipX,Is.False);
                         }
-                        else if(stage==0&&view.UsesUserWholeSprite)
-                        {
-                            var supplied=DarklightUserSpriteBank.Page(1,weapon);Assert.That(supplied.Length,Is.EqualTo(8));
-                            Assert.That(art.sprite==supplied[0]||art.sprite==supplied[1],Is.True);Assert.That(view.UsesUserWholeSprite,Is.True);
-                            Assert.That(art.flipX,Is.EqualTo(model.Facing.x<-.1f));
-                        }
-                        else
-                        {
-                            Assert.That(art.sprite.name,Does.StartWith("RockWalk"+new[]{"Katana","Daggers","Chain"}[weapon]+(stage==0?"":"Stage"+stage)+"_"));
-                            int index=int.Parse(art.sprite.name.Substring(art.sprite.name.LastIndexOf('_')+1));Assert.That(index/4,Is.EqualTo(d));
-                        }
                         frames.Add(art.sprite);
                         var block=new MaterialPropertyBlock();art.GetPropertyBlock(block);Assert.That(block.GetFloat("_Physique"),Is.Zero,"Whole body walking was deformed a second time");
                         Assert.That(art.transform.localScale,Is.EqualTo(Vector3.one*1.325f));Assert.That(art.sprite.texture.filterMode,Is.EqualTo(FilterMode.Point));
                     }
                     bool todayWalk=TodayCharacterBank.Page(1,stage,weapon,d,"Walk")!=null;
-                    Assert.That(frames.Count,Is.EqualTo(stage==0&&!todayWalk&&view.UsesUserWholeSprite?2:4),"Walking must use the available distinct authored steps");
+                    Assert.That(frames.Count,Is.EqualTo(4),"Walking must use the available distinct authored steps");
                     model.Tick(.01f,new CombatInput{aim=move,lightPressed=true});view.Present(model,move);
                     if(view.UsesAgePoseFallback)DarklightAgeWeaponRegressionTests.AssertIdentity(art.sprite,1,stage,weapon);else Assert.That(art.sprite.name,Does.Not.StartWith("RockWalk"),"Walking replaced accepted combat art");
                     Assert.That(model.State,Is.EqualTo(CombatState.Attack));
@@ -84,15 +73,11 @@ namespace Darklight.Tests
             foreach(var enemy in Object.FindObjectsByType<DarklightEnemy>(FindObjectsSortMode.None))
             {
                 var r=enemy.GetComponentInChildren<SpriteRenderer>();Assert.That(r.bounds.size.y,Is.EqualTo(DarklightWorldScale.EnemyHeight(enemy.kind)).Within(.01f));
-                typeof(DarklightEnemy).GetMethod("ShowAttack",BindingFlags.Instance|BindingFlags.NonPublic).Invoke(enemy,new object[]{0});
-                Assert.That(r.bounds.size.y,Is.EqualTo(DarklightWorldScale.EnemyHeight(enemy.kind)).Within(.01f));
+                var standingScale=r.transform.localScale;
+                for(int phase=0;phase<4;phase++){typeof(DarklightEnemy).GetMethod("ShowAttack",BindingFlags.Instance|BindingFlags.NonPublic).Invoke(enemy,new object[]{phase});Assert.That(r.transform.localScale,Is.EqualTo(standingScale),"Attack rescaled the complete body instead of preserving its authored posture");Assert.That(r.bounds.size.y,Is.InRange(DarklightWorldScale.EnemyHeight(enemy.kind)*.55f,DarklightWorldScale.EnemyHeight(enemy.kind)*1.8f));}
             }
             Assert.That(System.IO.File.Exists(DarklightProgress.Path)?System.IO.File.ReadAllText(DarklightProgress.Path):null,Is.EqualTo(save));
             foreach(var source in Object.FindObjectsByType<AudioSource>(FindObjectsSortMode.None))Assert.That(source.isPlaying,Is.False);
         }
     }
 }
-
-
-
-

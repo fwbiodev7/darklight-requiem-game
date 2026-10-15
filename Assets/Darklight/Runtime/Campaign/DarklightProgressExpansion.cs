@@ -39,7 +39,7 @@ namespace Darklight
             s.expansionFlags&=15;s.missionWeaponHits&=7;s.missionWave=Mathf.Clamp(s.missionWave,0,2);s.bossPhase=Mathf.Clamp(s.bossPhase,1,3);
             s.weaponUnlocks=(s.weaponUnlocks&7)|1;s.equippedWeapon=Mathf.Clamp(s.equippedWeapon,0,2);
             if((s.weaponUnlocks&(1<<s.equippedWeapon))==0)s.equippedWeapon=0;
-            s.appearanceStage=Mathf.Clamp(s.appearanceStage,0,4);s.narrativeDays=Mathf.Clamp(s.narrativeDays,0,36500);s.appearanceChapter=Mathf.Clamp(s.appearanceChapter,0,ChapterCapacity-1);
+            s.appearanceStage=0;s.narrativeDays=Mathf.Clamp(s.narrativeDays,0,36500);s.appearanceChapter=Mathf.Clamp(s.appearanceChapter,0,ChapterCapacity-1);
             s.checkpoint=Mathf.Clamp(s.checkpoint,0,4);s.potions=Mathf.Clamp(s.potions,0,99);
             s.attack=Mathf.Clamp(s.attack,0,5);s.vitality=Mathf.Clamp(s.vitality,0,5);s.mastery=Mathf.Clamp(s.mastery,0,5);s.points=Mathf.Max(0,s.points);s.xp=Mathf.Max(0,s.xp);
             s.formsUnlocked=Mathf.Clamp(s.formsUnlocked,0,3);s.preferredForm=Mathf.Clamp(s.preferredForm,0,s.FormUnlocked);

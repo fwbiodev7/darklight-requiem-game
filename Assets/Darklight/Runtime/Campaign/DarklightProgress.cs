@@ -7,7 +7,7 @@ namespace Darklight
     [Serializable] public sealed partial class DarklightProgress
     {
         public int version=2, chapter, checkpoint, level=1, xp, points, attack, vitality, mastery, potions=3, shards;
-        public int mp3Quest, ending, formsUnlocked, preferredForm; public bool mp3Unlocked, completed;
+        public int mp3Quest, ending, formsUnlocked; public int preferredForm=1; public bool mp3Unlocked, completed;
         public float resonanceCooldown;
         public float resonanceEnergy=100; public int resonanceSelected; public float[] resonanceRecoveries;
         public bool[] relics=new bool[ChapterCapacity];
@@ -16,7 +16,8 @@ namespace Darklight
         public static string Path => System.IO.Path.Combine(Application.persistentDataPath,"requiem-campaign.json");
         public int NeededXP => 60+level*35;
         public int MaxHealth => 100+(level-1)*8+vitality*15;
-        public int FormUnlocked => Mathf.Clamp(formsUnlocked,0,3);
+        // This edition starts with every form available; story milestones remain independent.
+        public int FormUnlocked => 3;
         public float Damage => 1+(level-1)*.055f+attack*.1f;
         public void Award(int amount)
         {

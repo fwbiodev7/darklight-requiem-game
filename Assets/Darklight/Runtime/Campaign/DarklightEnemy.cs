@@ -80,7 +80,7 @@ namespace Darklight
             if(attackFrames?.Length!=4){Show(3);return;}
             art.sprite=attackFrames[index];
             float target=DarklightWorldScale.EnemyHeight(kind);
-            art.transform.localScale=Vector3.one*target/(ExpandedBoss?poses[0]:attackFrames[0]).bounds.size.y;
+            art.transform.localScale=Vector3.one*target/poses[0].bounds.size.y;
         }
         void Show(int index){if(FinalFormFrames!=null){ShowFinalForm(index);return;}art.transform.localScale=Vector3.one*(DarklightWorldScale.EnemyHeight(kind))/poses[0].bounds.size.y;if(poses!=null&&poses.Length>index)art.sprite=poses[index];}
         void Perform(DarklightCampaign game,DarklightCombatLab lab,float range,bool ranged)
@@ -149,4 +149,3 @@ namespace Darklight
         }
     }
 }
-

@@ -1,1 +1,14 @@
-{"name":"Darklight.Editor","references":["Darklight.Runtime","Unity.2D.Sprite.Editor","UnityEngine.UI"],"includePlatforms":["Editor"]}
+{
+  "name": "Darklight.Editor",
+  "references": [
+    "Darklight.Runtime",
+    "Unity.2D.Sprite.Editor",
+    "UnityEngine.UI",
+    "Unity.RenderPipelines.Universal.Runtime",
+    "Unity.RenderPipelines.Core.Runtime",
+    "Unity.RenderPipelines.Universal.2D.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ]
+}

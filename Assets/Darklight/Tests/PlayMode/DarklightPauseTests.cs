@@ -27,7 +27,7 @@ namespace Darklight.Tests
         {
             yield return SceneManager.LoadSceneAsync("Assets/Darklight/Scenes/DarklightCampaign.unity");yield return null;yield return null;
             var g=DarklightCampaign.Instance;var lab=DarklightCombatLab.Instance;g.PreviewChapter(0);
-            var health=lab.Player.GetComponent<HealthSystem>();health.SetInvincibilityDuration(.4f);health.TakeDamage(1);g.PreviewPanel("Pause",7);yield return null;
+            var health=lab.Player.GetComponent<HealthSystem>();health.SetInvincibilityDuration(.4f);health.TakeDamage(1);g.PreviewPanel("Pause",8);yield return null;
             var menus=lab.PixelHUD.transform.Find("HUD640x360/Menus");
             Assert.That(menus.Find("VesperaCinematografica").gameObject.activeSelf,Is.False);
             Assert.That(menus.Find("Painel/Moldura").gameObject.activeSelf,Is.False);
@@ -39,8 +39,8 @@ namespace Darklight.Tests
             float clock=lab.Player.Model.Clock;yield return new WaitForSecondsRealtime(.55f);Assert.That(health.IsInvincible,Is.True,"Pause consumed combat invulnerability");
             Assert.That(lab.Player.transform.position,Is.EqualTo(player));Assert.That(lab.WorldCamera.transform.position,Is.EqualTo(camera));
             Assert.That(lab.Player.Model.Clock,Is.EqualTo(clock));Assert.That(lab.CombatDelta,Is.Zero);
-            Invoke(g,"Activate",7);yield return null;Assert.That(Field<string>(g,"panel"),Is.EqualTo("Options"));
-            Invoke(g,"Open","Pause");yield return null;Assert.That(Field<int>(g,"selection"),Is.EqualTo(7));
+            Invoke(g,"Activate",8);yield return null;Assert.That(Field<string>(g,"panel"),Is.EqualTo("Options"));
+            Invoke(g,"Open","Pause");yield return null;Assert.That(Field<int>(g,"selection"),Is.EqualTo(8));
             Invoke(g,"Activate",0);yield return null;Assert.That(lab.Paused,Is.False);
             g.ExploreRegion(6);g.PreviewPanel("Pause");yield return null;
             Assert.That(menus.Find("Painel/Botao1/Rotulo").GetComponent<UnityEngine.UI.Text>().text,Is.EqualTo("ESCOLHER REGIÃO"));

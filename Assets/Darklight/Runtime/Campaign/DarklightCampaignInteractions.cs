@@ -74,7 +74,7 @@ namespace Darklight
             if(target.Id=="portal")
             {
                 if(Progress.chapter==DarklightStory.Chapters.Length-1){Open("Ending");return;}
-                StopPower();SaveCheckpoint();Progress.chapter++;Progress.checkpoint=0;Progress.bossPhase=1;Progress.missionWave=0;LoadMap(Progress.chapter);SaveCheckpoint();Speak(DarklightStory.Introductions[Progress.chapter]);return;
+                TravelToChapter(Progress.chapter+1);return;
             }
             if(target.Id=="relic")
             {
@@ -95,4 +95,3 @@ namespace Darklight
         }
     }
 }
-

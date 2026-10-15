@@ -1,31 +1,33 @@
 # DARKLIGHT: REQUIEM
 
-RPG 2D em pixel art de Fábio Ronaldo. **Alpha em desenvolvimento.**
+RPG 2D em pixel art de Fábio Ronaldo. **Prévia do remaster em desenvolvimento.**
 
 Um eclipse abre fendas em Vespera. Fábio, Lyra e Kael atravessam a cidade e o Véu, enfrentando as consequências do Projeto Eclipse.
 
-## Versão pública e desenvolvimento atual
+## Atualização de 14/10/2026
 
-A [Alpha 0.1 para Windows](https://github.com/fwbiodev7/darklight-requiem-game/releases/tag/v0.1.0-alpha) continua sendo o download público anterior. Em 13/10/2026 foi gerado e verificado um executável local atualizado; este commit contém seu código e recursos, sem substituir o pacote público da Alpha.
+Protagonistas exclusivamente jovens, secundários no mesmo traço, três formas com figuras próprias, auras contínuas e entrada de transformação mais forte. Transformações liberadas desde o primeiro capítulo, com pelo menos três minutos de ação. Iluminação e sombras na campanha, novos efeitos de combate, correção de saltos laterais das animações, remapeamento de teclado/controle e telas de passagem com pequenas ilustrações do próximo destino.
 
-Correções verificadas: idade 0–4 preservada durante caminhada, combate e troca de armas; fallback da mesma skin/idade/arma; deslizamento em paredes com colliders originais; três transformações; sete volumes de áudio, temas por skin, nove superfícies e 82 efeitos originais. Animações inteiras aprovadas foram preservadas. Importadas 29 folhas/432 quadros completos de caminhada. Posturas da Katana foram canceladas.
-
-Validação: 85 verificações EditMode, 87 PlayMode, reconferências físicas finais e 672 capturas reais do executável. Saves preservados, testes silenciosos. A cobertura inclui 4.800 combinações de identidade e rotas dos dez mapas; isso não é uma partida manual completa nem teste com controle físico.
-
-Algumas ações envelhecidas ainda mantêm uma pose completa da idade e arma atuais quando falta uma folha específica. Essas animações, artes próprias de poderes e polimento continuam pendentes. Leia [o relatório de 13/10](Docs/CORRECOES-20261013.md) e [a expansão de áudio](Docs/AUDIO-EXPANSION-20261013.md).
+Leia [as mudanças, evidências e pendências](Docs/REMASTER-20261014.md). O criador pediu para encerrar os testes e concluir o commit; não houve nova rodada após a integração final. Esta prévia não é uma edição definitiva certificada.
 
 ## Jogar
 
-Baixe a Alpha 0.1, extraia o pacote completo e abra `Windows/DarklightRequiem.exe`. Consulte [o guia específico dessa versão](ALPHA-0.1.md). [Site do jogo](https://darklight-requiem.zfabiobrronaldo.chatgpt.site).
+O download anterior é a [Alpha 0.1 para Windows](https://github.com/fwbiodev7/darklight-requiem-game/releases/tag/v0.1.0-alpha), com [guia próprio](ALPHA-0.1.md). Novos pacotes, quando disponíveis, aparecem em [Releases](https://github.com/fwbiodev7/darklight-requiem-game/releases). Extraia o pacote completo e abra `Windows/DarklightRequiem.exe`.
 
-Os comandos do código atual podem ser remapeados: WASD/analógico esquerdo para mover; mouse esquerdo/X para ataque leve; mouse direito/Y para pesado; Espaço/B para esquiva; Q/LB para parry; E/A para interação; V/LS para trocar arma; H/analógico direito cima para poder vampírico; K/analógico direito baixo para escolher poder; T/LT para transformar; Tab/Select para mapa; Esc/Start para pausa. As teclas desta versão em desenvolvimento podem diferir da Alpha publicada. O personagem não segue o cursor do mouse.
+[Site do jogo](https://darklight-requiem.zfabiobrronaldo.chatgpt.site).
+
+## Comandos da nova prévia
+
+WASD / analógico esquerdo: mover; mouse esquerdo / X: leve; mouse direito / Y: pesado; Espaço / B: esquiva; Q / LB: parry; E / A: interagir; V / LS: trocar arma; T / LT / L2: transformar; R / RT / R2: elixir; Tab / Select: mapa; Esc / Start: pausa. O personagem acompanha a direção de movimento.
+
+Em Pausa → Transformações, escolha a forma. Em Pausa → Controles, ajuste atalhos por dispositivo, resolva conflitos ou restaure os padrões. Os comandos podem diferir da Alpha 0.1 publicada.
 
 ## Abrir na Unity
 
-Unity **6000.6.0f1**, dependências em `Packages`. Abra `Assets/Darklight/Scenes/DarklightCampaign.unity`. Importar e compilar não comprova gameplay, campanha completa ou controle físico.
+Unity **6000.6.0f1**. Dependências em `Packages`. Cena: `Assets/Darklight/Scenes/DarklightCampaign.unity`. O projeto usa URP 2D. Importar e compilar não comprova gameplay ou desempenho.
 
-`Darklight.Editor.DarklightPlaytestBuilder.Build` produz uma montagem local em `../outputs/teste-vampiro/Windows`. O argumento `--requiem-playtest` abre uma sessão temporária no Jardim dos Ecos com seis poderes e três armas, sem gravar campanha/exploração. Pausa → Ferramentas de teste permite reabastecer recursos e reiniciar o jardim. Não iniciar testes, gameplay ou áudio automaticamente enquanto a restrição do criador estiver vigente.
+O modo temporário `--requiem-playtest` preserva a campanha. Ferramentas de captura e diagnóstico só são iniciadas explicitamente; não reproduzir áudio ou executar testes sem autorização do criador.
 
 ## Recursos e licenças
 
-Arte, fontes e metadados de importação preservados. Press Start 2P acompanha sua licença OFL; novos efeitos e ambientes CC0 têm manifesto em `Assets/Darklight/Resources/Darklight/Audio/AUDIO-LICENSES.json`. As músicas fornecidas pelo criador não recebem licença de redistribuição por estarem neste protótipo. Não incluir caches da Unity, builds, credenciais ou saves pessoais nos commits.
+Figuras completas e metadados de importação preservados. Press Start 2P acompanha sua licença OFL; efeitos e ambientes CC0 têm manifesto em `Assets/Darklight/Resources/Darklight/Audio/AUDIO-LICENSES.json`. Músicas fornecidas pelo criador não recebem licença de redistribuição por estarem no protótipo. Não incluir caches, credenciais, builds ou saves pessoais nos commits.

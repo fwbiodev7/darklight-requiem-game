@@ -11,7 +11,7 @@ namespace Darklight
                 if(kind!=RequiemEnemyKind.Nocthar||Phase!=3)return null;
                 if(!finalFormLoaded)
                 {
-                    finalFormLoaded=true;finalFormFrames=Resources.LoadAll<Sprite>("Darklight/AnimationCatalog/NoctharFinal");
+                    finalFormLoaded=true;finalFormFrames=DarklightSecondaryStyleBank.Load("NoctharFinal");
                     System.Array.Sort(finalFormFrames,(a,b)=>int.Parse(a.name.Substring(a.name.LastIndexOf('_')+1)).CompareTo(int.Parse(b.name.Substring(b.name.LastIndexOf('_')+1))));
                 }
                 return finalFormFrames?.Length==8?finalFormFrames:null;

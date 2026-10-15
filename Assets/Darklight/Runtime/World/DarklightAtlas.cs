@@ -342,7 +342,7 @@ namespace Darklight
         }
         public void Flush()
         {
-            if(state==null||!pendingSave)return;Snapshot();if(!DarklightAutomation.Silent&&!game.PlaytestSession)
+            if(state==null||!pendingSave)return;Snapshot();if(!DarklightAutomation.Silent&&!DarklightAutomation.ProtectSaves&&!game.PlaytestSession)
             {try{state.Save(storage);}catch(IOException e){Debug.LogWarning("Mapa: "+e.Message);return;}}pendingSave=false;
         }
         void MakeSymbols()

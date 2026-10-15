@@ -7,7 +7,7 @@ namespace Darklight
     public sealed partial class DarklightCampaign
     {
         public float AmbientVolume=.45f,InterfaceVolume=.35f;
-        int optionsCategory,skinPreviewStage;DarklightPauseBlur pauseBlur;
+        int optionsCategory;DarklightPauseBlur pauseBlur;
         RectTransform pauseSceneRoot;UnityEngine.UI.Text pauseLocation,skinDescription,skinEquipped;
         UnityEngine.UI.Image skinPreview;
         Sprite[] requiemPreviewIdle;
@@ -40,16 +40,9 @@ namespace Darklight
             if(panel=="Pause"){bodyText.gameObject.SetActive(false);pauseLocation.text=(ExploringNewRegion?Map.Art.title:DarklightStory.Chapters[Progress.chapter])+"\n"+(ExploringNewRegion?Map.Art.title:DarklightStory.Places[Progress.chapter])+"\n\n"+Objective;}
             if(skin)
             {
-                int preview=selection<2?selection:SelectedSkin;int stage=skinPreviewStage;
-                string key=(preview==1?"Rock":"Requiem")+"IdleStage"+stage;
-                if(!skinPreviewCache.TryGetValue(key,out var poses))
-                {
-                    poses=stage>0?Resources.LoadAll<Sprite>("Darklight/AppearanceBodies/"+key):preview==1?rockIdle:requiemPreviewIdle;
-                    if(stage>0)Array.Sort(poses,(a,b)=>int.Parse(a.name[(a.name.LastIndexOf('_')+1)..]).CompareTo(int.Parse(b.name[(b.name.LastIndexOf('_')+1)..])));
-                    skinPreviewCache[key]=poses;
-                }
-                skinPreview.sprite=poses!=null&&poses.Length>0?poses[poses.Length==16?(int)(Time.unscaledTime*2)%2:0]:null;
-                skinDescription.text=(preview==1?"ROCK\n\nColete de couro, rebites e correntes. Presenca direta e rebelde.":"REQUIEM\n\nSobretudo escuro e katana ancestral. Atravessa Vespera entre o sangue e o eclipse.")+"\n\nAPARENCIA "+(stage+1)+" / 5";
+                int preview=selection<2?selection:SelectedSkin;
+                skinPreview.sprite=TodayCharacterBank.YoungIdle(preview,0,0,Time.unscaledTime)??TodayCharacterBank.StablePose(preview,0,0,0);
+                skinDescription.text=(preview==1?"ROCK\n\nColete de couro, rebites e correntes. Presenca direta e rebelde.":"REQUIEM\n\nSobretudo escuro e katana ancestral. Atravessa Vespera entre o sangue e o eclipse.");
                 skinEquipped.text=SelectedSkin==preview?"EQUIPADO":"ENTER / A: EQUIPAR";skinEquipped.color=SelectedSkin==preview?new Color(.72f,.08f,.15f):new Color(.84f,.82f,.78f);
             }
             foreach(var row in settingsSliders.Values)if(row.slider!=null){int percent=VolumePercent(row.read());row.slider.SetValueWithoutNotify(percent);row.percent.text=percent+"%";}
@@ -57,7 +50,6 @@ namespace Darklight
         }
         void BuildVisualPicker()
         {
-            skinPreviewStage=returnPanel=="Main"?(DarklightProgress.Load()?.appearanceStage??0):Appearance.Stage;
             heading.text="VISUAL";bodyText.text="";
             Button("REQUIEM",()=>{SelectSkin(0);RefreshPanel();});Button("ROCK",()=>{SelectSkin(1);RefreshPanel();});Button("VOLTAR",()=>Open(returnPanel));
         }
@@ -130,13 +122,14 @@ namespace Darklight
                     SliderRow("INIMIGOS",()=>EnemyVolume,v=>SetVolume("Darklight.Enemies",v,x=>EnemyVolume=x));
                     SliderRow("PERSONAGEM",()=>PlayerVolume,v=>SetVolume("Darklight.Player",v,x=>PlayerVolume=x));break;
                 case 2:
+                    Button("QUALIDADE: "+DarklightRemaster.QualityNames[DarklightRemaster.QualityLevel],()=>{GetComponent<DarklightRemaster>()?.SetQuality((DarklightRemaster.QualityLevel+settingsDirection+4)%4);RefreshPanel();});
                     Button("TELA: "+(Screen.fullScreen?"CHEIA":"JANELA"),()=>{Screen.fullScreen=!Screen.fullScreen;PlayerPrefs.SetInt("Darklight.Fullscreen",Screen.fullScreen?1:0);RefreshPanel();});
                     Button("RESOLUCAO: "+Screen.width+" x "+Screen.height,()=>CycleResolution());
                     Button("SINCRONIZACAO: "+(QualitySettings.vSyncCount>0?"SIM":"NAO"),()=>{QualitySettings.vSyncCount=QualitySettings.vSyncCount>0?0:1;PlayerPrefs.SetInt("Darklight.VSync",QualitySettings.vSyncCount);RefreshPanel();});
                     Button("LIMITE: "+(Application.targetFrameRate<=0?"LIVRE":Application.targetFrameRate+" FPS"),()=>{Application.targetFrameRate=Application.targetFrameRate==60?120:60;PlayerPrefs.SetInt("Darklight.FrameRate",Application.targetFrameRate);RefreshPanel();});break;
                 case 3:
                     Button("REMAPEAR COMANDOS",()=>Open("Controls"));
-                    Button("RESTAURAR COMANDOS",()=>{lab.Input.Asset.RemoveAllBindingOverrides();PlayerPrefs.DeleteKey("Darklight.Bindings");RefreshPanel();});break;
+                    Button("RESTAURAR COMANDOS",()=>{lab.Input.RestoreBindings();RefreshPanel();});break;
                 case 4:
                     Button("FLASHES REDUZIDOS: "+(ReducedFlashes?"SIM":"NAO"),()=>{ReducedFlashes=!ReducedFlashes;PlayerPrefs.SetInt("Darklight.Flashes",ReducedFlashes?1:0);RefreshPanel();});
                     Button("TREMER CAMERA: "+(PlayerPrefs.GetInt("Darklight.Shake",1)==1?"SIM":"NAO"),()=>{PlayerPrefs.SetInt("Darklight.Shake",1-PlayerPrefs.GetInt("Darklight.Shake",1));RefreshPanel();});break;

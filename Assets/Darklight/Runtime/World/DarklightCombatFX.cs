@@ -3,16 +3,12 @@ namespace Darklight
 {
     public sealed class DarklightCombatFX : MonoBehaviour
     {
-        SpriteRenderer art;Vector2 drift;float age,life;Color tint;
+        static readonly System.Collections.Generic.List<DarklightCombatFX> pool=new();
+        SpriteRenderer art;Vector2 drift;float age,life;Color tint;MaterialPropertyBlock block;
         public static void Impact(Vector3 position,bool heavy)
         {
-            var game=DarklightCampaign.Instance;if(game==null||game.ReducedFlashes)return;
-            Color color=game.Resonance.Active>=0?DarklightResonance.Colors[game.Resonance.Active]:new Color(1,.65f,.7f);
-            for(int i=0;i<(heavy?7:4);i++)
-            {
-                var fx=Create(game.extras[5],game.pixelMaterial,position+Vector3.up*.65f,.18f,heavy?.20f:.14f,color);
-                fx.drift=(Vector2)(Quaternion.Euler(0,0,i*137.5f)*Vector2.up)*(heavy?4:2.5f);
-            }
+            var game=DarklightCampaign.Instance;if(game==null)return;
+            DarklightCombatImpacts.Emit(position,heavy);
             DarklightCombatLab.Instance.WorldCamera.GetComponent<DarklightLabCamera>().Impulse(heavy?2:1);
         }
         public static void Transformation(Vector3 position,int form,bool release)
@@ -33,21 +29,24 @@ namespace Darklight
             var fx=Create(source.sprite,source.sharedMaterial,source.transform.position,0,duration,tint);
             fx.transform.localScale=source.transform.lossyScale;fx.art.flipX=source.flipX;fx.art.sortingOrder=source.sortingOrder-1;
             var selectors=new MaterialPropertyBlock();source.GetPropertyBlock(selectors);selectors.SetFloat("_ResonanceTint",1);fx.art.SetPropertyBlock(selectors);
-            var ageHead=source.transform.Find("IdadeOriginal")?.GetComponent<SpriteRenderer>();if(ageHead!=null&&ageHead.enabled)Echo(ageHead,duration);
         }
         static DarklightCombatFX Create(Sprite sprite,Material material,Vector3 position,float height,float duration,Color color)
         {
-            var obj=new GameObject("RequiemImpacto");obj.transform.position=position;
-            var fx=obj.AddComponent<DarklightCombatFX>();fx.art=obj.AddComponent<SpriteRenderer>();fx.art.sprite=sprite;fx.art.sharedMaterial=material;fx.art.sortingOrder=160;
+            DarklightCombatFX fx=null;int active=0;
+            for(int i=pool.Count-1;i>=0;i--){if(pool[i]==null){pool.RemoveAt(i);continue;}if(!pool[i].gameObject.activeSelf)fx=pool[i];else active++;}
+            int limit=new[]{12,20,32,48}[DarklightRemaster.QualityLevel];
+            if(active>=limit){fx=null;foreach(var item in pool)if(item.gameObject.activeSelf&&(fx==null||item.age/item.life>fx.age/fx.life))fx=item;}
+            if(fx==null){var created=new GameObject("EcoDeCombate");if(DarklightCombatLab.Instance!=null)created.transform.SetParent(DarklightCombatLab.Instance.transform,false);fx=created.AddComponent<DarklightCombatFX>();fx.art=created.AddComponent<SpriteRenderer>();fx.block=new MaterialPropertyBlock();pool.Add(fx);}
+            var obj=fx.gameObject;obj.transform.position=position;obj.transform.rotation=Quaternion.identity;obj.transform.localScale=Vector3.one;fx.age=0;fx.drift=Vector2.zero;fx.art.flipX=false;fx.art.sprite=sprite;fx.art.sharedMaterial=material;fx.art.sortingOrder=160;
             fx.tint=color;fx.art.color=color;fx.life=duration;
-            var block=new MaterialPropertyBlock();block.SetFloat("_ResonanceTint",1);fx.art.SetPropertyBlock(block);
-            if(height>0)obj.transform.localScale=Vector3.one*height/sprite.bounds.size.y;return fx;
+            fx.block.Clear();fx.block.SetFloat("_ResonanceTint",1);fx.art.SetPropertyBlock(fx.block);
+            if(height>0)obj.transform.localScale=Vector3.one*height/sprite.bounds.size.y;obj.SetActive(true);return fx;
         }
         void Update()
         {
             float dt=DarklightCombatLab.Instance?.CombatDelta??Time.deltaTime;if(dt<=0)return;
             age+=dt;transform.position+=(Vector3)(drift*dt);art.color=new Color(tint.r,tint.g,tint.b,tint.a*(1-age/life));
-            if(age>=life)Destroy(gameObject);
+            if(age>=life)gameObject.SetActive(false);
         }
     }
 }

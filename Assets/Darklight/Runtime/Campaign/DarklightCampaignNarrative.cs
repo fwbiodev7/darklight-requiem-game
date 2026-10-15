@@ -14,7 +14,7 @@ namespace Darklight
             {
                 if(expandedBossFrames==null)
                 {
-                    expandedBossFrames=Resources.LoadAll<Sprite>("Darklight/AnimationCatalog/ExpansionBosses");
+                    expandedBossFrames=new Sprite[32];int offset=0;foreach(var name in new[]{"Valtherion","Seraphine","KaelFractured","Nocthar"}){var frames=DarklightSecondaryStyleBank.Load(name);if(frames.Length!=8)throw new InvalidOperationException("Secondary boss sheet incomplete: "+name);Array.Copy(frames,0,expandedBossFrames,offset,8);offset+=8;}
                     Array.Sort(expandedBossFrames,(a,b)=>int.Parse(a.name[(a.name.LastIndexOf('_')+1)..]).CompareTo(int.Parse(b.name[(b.name.LastIndexOf('_')+1)..])));
                 }
                 if(expandedBossFrames.Length!=32)throw new InvalidOperationException("Expansion boss catalog requires 32 validated frames");
@@ -122,8 +122,7 @@ namespace Darklight
         public void ResumeLegacyExpansion()
         {
             if(!Progress.completed||!Progress.legacyFinaleCompleted||Progress.chapter>5)return;
-            Progress.completed=false;Progress.chapter=6;Progress.checkpoint=0;Progress.bossPhase=1;Progress.missionWave=0;
-            StopMenuMusic();LoadMap(6);SaveCheckpoint();Speak(DarklightStory.Introductions[6]);
+            StopMenuMusic();TravelToChapter(6);
         }
         void BuildEndings()
         {

@@ -26,11 +26,29 @@ namespace Darklight.Tests
             game.PreviewPanel("Pause");float progress=game.TransformationProgress,time=game.FormTime;
             yield return new WaitForSecondsRealtime(.12f);
             Assert.That(game.TransformationProgress,Is.EqualTo(progress));Assert.That(game.FormTime,Is.EqualTo(time));
-            Invoke(game,"Close");yield return new WaitForSeconds(.8f);
+            Invoke(game,"Close");yield return new WaitForSeconds(DarklightCampaign.TransformationEnterDuration+.15f);
             Assert.That(game.Transforming,Is.False);Assert.That(game.PresentedForm,Is.EqualTo(2));
             Assert.That(game.TryTransformPlayer(),Is.True);Assert.That(game.Form,Is.Zero);Assert.That(game.PresentedForm,Is.EqualTo(2));
-            yield return new WaitForSeconds(.45f);Assert.That(game.Transforming,Is.False);Assert.That(game.PresentedForm,Is.Zero);
+            yield return new WaitForSeconds(DarklightCampaign.TransformationExitDuration+.15f);Assert.That(game.Transforming,Is.False);Assert.That(game.PresentedForm,Is.Zero);
             Assert.That(game.Energy,Is.EqualTo(40));
+        }
+        [UnityTest]public IEnumerator EveryFormHasThreeActiveMinutesAndMasteryStillAddsTime()
+        {
+            game.Progress.mastery=0;
+            for(int form=1;form<=3;form++)
+            {
+                lab.Player.ResetModel();game.Progress.preferredForm=form;game.Blood.Set(100);
+                Assert.That(game.TryTransformPlayer(),Is.True);Assert.That(game.FormTime,Is.EqualTo(180f));
+                Invoke(game,"TickFormState",DarklightCampaign.TransformationEnterDuration);
+                Assert.That(game.FormTime,Is.EqualTo(180f).Within(.001f));Assert.That(game.PresentedForm,Is.EqualTo(form));
+                Invoke(game,"TickFormState",179.9f);Assert.That(game.Form,Is.EqualTo(form));
+                Assert.That(game.FormTime,Is.GreaterThan(0));Invoke(game,"TickFormState",.11f);
+                Assert.That(game.Form,Is.Zero);Assert.That(game.FormTime,Is.Zero);
+                Invoke(game,"TickFormState",DarklightCampaign.TransformationExitDuration);
+            }
+            Assert.That(DarklightCampaign.TransformationDuration(4),Is.EqualTo(188f));
+            Assert.That(DarklightCampaign.TransformationDuration(-2),Is.EqualTo(180f));
+            yield return null;
         }
         [UnityTest]public IEnumerator BothSkinsThreeWeaponsAndEightDirectionsKeepScaleAndOneWingLayer()
         {
@@ -38,7 +56,7 @@ namespace Darklight.Tests
             for(int skin=0;skin<2;skin++)for(int weapon=0;weapon<3;weapon++)for(int form=1;form<=3;form++)
             {
                 lab.Player.ResetModel();game.SelectSkin(skin,false);game.Progress.equippedWeapon=weapon;game.Weapons.Restore();game.Progress.preferredForm=form;game.Blood.Set(100);
-                Assert.That(game.TryTransformPlayer(),Is.True);Invoke(game,"TickFormPresentation",.7f);
+                Assert.That(game.TryTransformPlayer(),Is.True);Invoke(game,"TickFormPresentation",DarklightCampaign.TransformationEnterDuration+.01f);
                 for(int d=0;d<8;d++)
                 {
                     var model=new CombatModel(game.Weapons.Equipped.loadout);model.Tick(.01f,new CombatInput{aim=Quaternion.Euler(0,0,-d*45)*Vector2.down});
@@ -46,7 +64,7 @@ namespace Darklight.Tests
                     var wings=art.transform.parent.Find("AsasEspectrais");
                     Assert.That(wings,Is.Null);
                 }
-                Assert.That(game.TryTransformPlayer(),Is.True);Invoke(game,"TickFormPresentation",.4f);
+                Assert.That(game.TryTransformPlayer(),Is.True);Invoke(game,"TickFormPresentation",DarklightCampaign.TransformationExitDuration+.01f);
             }
             yield return null;
         }

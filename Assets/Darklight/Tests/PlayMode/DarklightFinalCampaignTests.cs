@@ -46,7 +46,7 @@ namespace Darklight.Tests
                 Assert.That(Field<string>(game, "panel"), Is.EqualTo("Victory"));
                 var saved = DarklightProgress.Decode(JsonUtility.ToJson(p));
                 Assert.That(saved.ending, Is.EqualTo(ending)); Assert.That(saved.completed, Is.True);
-                Assert.That(saved.appearanceStage, Is.EqualTo(4)); Assert.That(saved.weaponUnlocks, Is.EqualTo(7));
+                Assert.That(saved.appearanceStage, Is.Zero); Assert.That(saved.weaponUnlocks, Is.EqualTo(7));
                 Assert.That(saved.FormUnlocked, Is.EqualTo(3)); Assert.That(saved.SecretEndingAvailable, Is.True);
                 Assert.That(game.Form, Is.Zero); Assert.That(game.Transforming, Is.False);
                 yield return null;
@@ -78,7 +78,7 @@ namespace Darklight.Tests
                 Assert.That(p.chapter, Is.EqualTo(chapter)); Assert.That(p.checkpoint, Is.EqualTo(3));
                 Assert.That(p.bossPhase, Is.EqualTo(3)); Assert.That(p.points, Is.EqualTo(points));
                 Assert.That(p.level, Is.EqualTo(level)); Assert.That(p.expansionFlags, Is.EqualTo(flags));
-                Assert.That(p.equippedWeapon, Is.EqualTo(2)); Assert.That(game.Appearance.Stage, Is.EqualTo(4));
+                Assert.That(p.equippedWeapon, Is.EqualTo(2)); Assert.That(game.Appearance.Stage, Is.Zero);
                 Assert.That(game.Form, Is.Zero); Assert.That(game.Transforming, Is.False);
                 Assert.That(Vector2.Distance(lab.Player.transform.position, game.Map.SafeSpawn(game.Map.Checkpoints[3])), Is.LessThan(.15f));
                 Invoke(game, "Spawn", (RequiemEnemyKind)(chapter + 5), game.Map.SafeSpawn(game.Map.Arenas[3]), false);
@@ -92,10 +92,13 @@ namespace Darklight.Tests
             p.appearanceStage = 4; p.level = 12; p.points = 7; p.weaponUnlocks = 7; p.formsUnlocked = 3;
             p.relics[0] = true; p.relics[5] = true;
             game.ResumeLegacyExpansion();
+            Assert.That(game.PhaseLoading,Is.True);float deadline=Time.realtimeSinceStartup+10;
+            while(game.PhaseLoading&&Time.realtimeSinceStartup<deadline)yield return null;
+            Assert.That(game.PhaseLoading,Is.False);
             Assert.That(p.chapter, Is.EqualTo(6)); Assert.That(p.checkpoint, Is.Zero); Assert.That(p.completed, Is.False);
             Assert.That(p.bossPhase, Is.EqualTo(1)); Assert.That(p.level, Is.EqualTo(12)); Assert.That(p.points, Is.EqualTo(7));
             Assert.That(p.ending, Is.EqualTo(2)); Assert.That(p.weaponUnlocks, Is.EqualTo(7)); Assert.That(p.FormUnlocked, Is.EqualTo(3));
-            Assert.That(p.appearanceStage, Is.EqualTo(4)); Assert.That(p.relics[0] && p.relics[5], Is.True);
+            Assert.That(p.appearanceStage, Is.Zero); Assert.That(p.relics[0] && p.relics[5], Is.True);
             string before = JsonUtility.ToJson(p); game.ResumeLegacyExpansion();
             Assert.That(JsonUtility.ToJson(p), Is.EqualTo(before));
             yield return null;

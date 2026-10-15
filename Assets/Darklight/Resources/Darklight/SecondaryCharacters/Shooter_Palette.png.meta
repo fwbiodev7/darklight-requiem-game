@@ -1,0 +1,795 @@
+fileFormatVersion: 2
+guid: af6317b960d20774d92c486db242a258
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4558702653445339959
+    second: Shooter_Palette_0
+  - first:
+      213: 6881173604388958410
+    second: Shooter_Palette_1
+  - first:
+      213: 1985235374859629507
+    second: Shooter_Palette_2
+  - first:
+      213: 2560204020870936012
+    second: Shooter_Palette_3
+  - first:
+      213: 3625658843964181834
+    second: Shooter_Palette_4
+  - first:
+      213: -3968897717193525908
+    second: Shooter_Palette_5
+  - first:
+      213: -5308765501894520273
+    second: Shooter_Palette_6
+  - first:
+      213: 3474330229097708037
+    second: Shooter_Palette_7
+  - first:
+      213: 5297107493666145919
+    second: Shooter_Palette_8
+  - first:
+      213: -9036049675841489713
+    second: Shooter_Palette_9
+  - first:
+      213: -9176601292690135801
+    second: Shooter_Palette_10
+  - first:
+      213: 1548096989515989438
+    second: Shooter_Palette_11
+  - first:
+      213: -2833032702465872057
+    second: Shooter_Palette_12
+  - first:
+      213: 2900096329853057280
+    second: Shooter_Palette_13
+  - first:
+      213: 56183288456234431
+    second: Shooter_Palette_14
+  - first:
+      213: 754856946699173863
+    second: Shooter_Palette_15
+  - first:
+      213: 5855580703070560726
+    second: Shooter_Palette_16
+  - first:
+      213: 836814924764971249
+    second: Shooter_Palette_17
+  - first:
+      213: -7863264042720196257
+    second: Shooter_Palette_18
+  - first:
+      213: 3705136551466269255
+    second: Shooter_Palette_19
+  - first:
+      213: 8817509753429559987
+    second: Shooter_Palette_20
+  - first:
+      213: -6390913216415042402
+    second: Shooter_Palette_21
+  - first:
+      213: -5884693238596187944
+    second: Shooter_Palette_22
+  - first:
+      213: -5021571332856072096
+    second: Shooter_Palette_23
+  - first:
+      213: -4889213587459072915
+    second: Shooter_Palette_24
+  - first:
+      213: 3959600288916278676
+    second: Shooter_Palette_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shooter_Palette_0
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 461
+        width: 279
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73b7d3709e3c34f30800000000000000
+      internalID: 4558702653445339959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_1
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 461
+        width: 305
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac0f5676fe6de7f50800000000000000
+      internalID: 6881173604388958410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_2
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 461
+        width: 338
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c33c022e09fc8b10800000000000000
+      internalID: 1985235374859629507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_3
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 461
+        width: 380
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc5f9801efba78320800000000000000
+      internalID: 2560204020870936012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_4
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 826
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4d0d3f428de05230800000000000000
+      internalID: 3625658843964181834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_5
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 830
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6532d8ed84abe8c0800000000000000
+      internalID: -3968897717193525908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_6
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 793
+        width: 72
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f229abf27e97356b0800000000000000
+      internalID: -5308765501894520273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_7
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 687
+        width: 54
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a35c18fec473030800000000000000
+      internalID: 3474330229097708037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_8
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 749
+        width: 17
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76c701433b138940800000000000000
+      internalID: 5297107493666145919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_9
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 591
+        width: 17
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc43fa2e1b0899280800000000000000
+      internalID: -9036049675841489713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_10
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 45
+        width: 412
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70560d77eb926a080800000000000000
+      internalID: -9176601292690135801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_11
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 388
+        width: 71
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb1c3f18202fb7510800000000000000
+      internalID: 1548096989515989438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_12
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 379
+        width: 71
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74fe47464cb0fa8d0800000000000000
+      internalID: -2833032702465872057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_13
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 49
+        width: 379
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0093e432f363f3820800000000000000
+      internalID: 2900096329853057280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_14
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 410
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb54fb6376a97c000800000000000000
+      internalID: 56183288456234431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_15
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 49
+        width: 443
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef7d34c46ac97a00800000000000000
+      internalID: 754856946699173863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_16
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 49
+        width: 362
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1272010a3334150800000000000000
+      internalID: 5855580703070560726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_17
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 344
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f08c5d8db6fc9b00800000000000000
+      internalID: 836814924764971249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_18
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 347
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f598f86b30310e290800000000000000
+      internalID: -7863264042720196257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_19
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 293
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74a767a101a4b6330800000000000000
+      internalID: 3705136551466269255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_20
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 322
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ba06b057661e5a70800000000000000
+      internalID: 8817509753429559987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_21
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 296
+        width: 62
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e947b394a4aee47a0800000000000000
+      internalID: -6390913216415042402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_22
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 253
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8c45d8dae555ea0800000000000000
+      internalID: -5884693238596187944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_23
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 264
+        width: 39
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06834da6a7bcf4ab0800000000000000
+      internalID: -5021571332856072096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_24
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 225
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6c1d787526062cb0800000000000000
+      internalID: -4889213587459072915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Palette_25
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 201
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49d8361eb7353f630800000000000000
+      internalID: 3959600288916278676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Shooter_Palette_0: 4558702653445339959
+      Shooter_Palette_1: 6881173604388958410
+      Shooter_Palette_10: -9176601292690135801
+      Shooter_Palette_11: 1548096989515989438
+      Shooter_Palette_12: -2833032702465872057
+      Shooter_Palette_13: 2900096329853057280
+      Shooter_Palette_14: 56183288456234431
+      Shooter_Palette_15: 754856946699173863
+      Shooter_Palette_16: 5855580703070560726
+      Shooter_Palette_17: 836814924764971249
+      Shooter_Palette_18: -7863264042720196257
+      Shooter_Palette_19: 3705136551466269255
+      Shooter_Palette_2: 1985235374859629507
+      Shooter_Palette_20: 8817509753429559987
+      Shooter_Palette_21: -6390913216415042402
+      Shooter_Palette_22: -5884693238596187944
+      Shooter_Palette_23: -5021571332856072096
+      Shooter_Palette_24: -4889213587459072915
+      Shooter_Palette_25: 3959600288916278676
+      Shooter_Palette_3: 2560204020870936012
+      Shooter_Palette_4: 3625658843964181834
+      Shooter_Palette_5: -3968897717193525908
+      Shooter_Palette_6: -5308765501894520273
+      Shooter_Palette_7: 3474330229097708037
+      Shooter_Palette_8: 5297107493666145919
+      Shooter_Palette_9: -9036049675841489713
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

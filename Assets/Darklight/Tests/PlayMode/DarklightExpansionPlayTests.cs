@@ -30,12 +30,12 @@ namespace Darklight.Tests
             var blur=Object.FindFirstObjectByType<DarklightPauseBlur>();Assert.That(blur,Is.Not.Null);Assert.That(blur.Visible,Is.True);Assert.That(blur.SceneTexture,Is.Not.Null);Assert.That(blur.SceneTexture,Is.Not.EqualTo(lab.WorldCamera.targetTexture));
             yield return new WaitForSeconds(.15f);Assert.That(lab.Player.Model.Clock,Is.EqualTo(clock));Assert.That(game.Energy,Is.EqualTo(blood));Assert.That(game.Blood.FrenzyRemaining,Is.EqualTo(remaining));Assert.That(lab.WorldCamera.transform.position,Is.EqualTo(camera));
         }
-        [UnityTest] public IEnumerator VisualPickerUsesAgeAndReturnsToPauseWithGamepad()
+        [UnityTest] public IEnumerator VisualPickerUsesYoungPortraitAndReturnsToPauseWithGamepad()
         {
             game.Appearance.PreviewStage(4);game.PreviewPanel("Pause");game.PreviewPanel("Skins");yield return null;
-            var preview=Field<UnityEngine.UI.Image>(game,"skinPreview");Assert.That(preview.sprite.name,Does.StartWith("RequiemIdleStage4"));
+            var preview=Field<UnityEngine.UI.Image>(game,"skinPreview");Assert.That(preview.sprite.name,Does.StartWith("Today_RequiemIdleKatanaYoung"));
             pad=InputSystem.AddDevice<Gamepad>();InputSystem.QueueStateEvent(pad,new GamepadState().WithButton(GamepadButton.East));yield return null;yield return null;
-            Assert.That(Field<string>(game,"panel"),Is.EqualTo("Pause"));Assert.That(lab.Paused,Is.True);Assert.That(game.Appearance.Stage,Is.EqualTo(4));
+            Assert.That(Field<string>(game,"panel"),Is.EqualTo("Pause"));Assert.That(lab.Paused,Is.True);Assert.That(game.Appearance.Stage,Is.Zero);
         }
         [UnityTest] public IEnumerator BloodAbilityHasCostPauseRecoveryAndDamageInterruption()
         {
@@ -55,7 +55,7 @@ namespace Darklight.Tests
         {
             game.PreviewChapter(0);game.Appearance.PreviewStage(2);Invoke(game,"Spawn",RequiemEnemyKind.Kael,game.Map.SafeSpawn(game.Map.Arenas[3]),false);yield return null;
             var health=lab.Player.GetComponent<HealthSystem>();float damage=game.ProtectAwakening(90);
-            Assert.That(game.Progress.awakeningState,Is.EqualTo(1));Assert.That(game.Progress.vampireMastery,Is.EqualTo(1));Assert.That(game.Form,Is.EqualTo(1));Assert.That(game.Active,Is.True);Assert.That(game.Appearance.Stage,Is.EqualTo(2));Assert.That(damage,Is.LessThan(90));
+            Assert.That(game.Progress.awakeningState,Is.EqualTo(1));Assert.That(game.Progress.vampireMastery,Is.EqualTo(1));Assert.That(game.Form,Is.EqualTo(1));Assert.That(game.Active,Is.True);Assert.That(game.Appearance.Stage,Is.Zero);Assert.That(damage,Is.LessThan(90));
             game.Blood.Set(10);game.ProtectAwakening(99);Assert.That(game.Energy,Is.EqualTo(10));Assert.That(health.HealthPercent,Is.GreaterThan(.2f));
         }
         [UnityTest] public IEnumerator SelectStillOpensAtlasWhileBloodControlsDoNotRotateTowardMouse()

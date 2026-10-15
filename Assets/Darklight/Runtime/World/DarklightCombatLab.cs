@@ -113,7 +113,7 @@ namespace Darklight
         void StopRumble() { rumbling?.SetMotorSpeeds(0, 0); rumbling = null; }
         void OnDeviceChange(InputDevice device, InputDeviceChange change)
         { if (device == rumbling && (change == InputDeviceChange.Removed || change == InputDeviceChange.Disconnected)) StopRumble(); }
-        void OnApplicationFocus(bool focus) { if (!focus) { if(DarklightCampaign.Instance!=null) DarklightCampaign.Instance.PauseForFocus(); else SetPaused(true); } }
+        void OnApplicationFocus(bool focus) { if (!focus && !DarklightRemasterSmoke.Active) { if(DarklightCampaign.Instance!=null) DarklightCampaign.Instance.PauseForFocus(); else SetPaused(true); } }
         void OnApplicationPause(bool paused) { if (paused) { if(DarklightCampaign.Instance!=null) DarklightCampaign.Instance.PauseForFocus(); else SetPaused(true); } }
         void OnDestroy()
         {

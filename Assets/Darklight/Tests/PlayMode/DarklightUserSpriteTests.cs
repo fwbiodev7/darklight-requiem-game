@@ -20,7 +20,7 @@ namespace Darklight.Tests
                 Assert.That(today!=null?view.UsesCompleteAgeSprite:view.UsesUserWholeSprite,Is.True);
                 Assert.That(view.GetComponent<DarklightOriginalVampireView>().HasAgeHead,Is.False);body.GetPropertyBlock(block);Assert.That(block.GetFloat("_EraseHead"),Is.Zero);
                 foreach(var sprite in page){Assert.That(sprite.pivot.x,Is.EqualTo(384).Within(.01));Assert.That(sprite.pivot.y,Is.EqualTo(32).Within(.01));Assert.That(sprite.texture.filterMode,Is.EqualTo(FilterMode.Point));Assert.That(sprite.texture.mipmapCount,Is.EqualTo(1));}
-                view.PresentPreview(m,Vector2.zero,skin,3,0,definition);Assert.That(view.UsesUserWholeSprite,Is.False);Assert.That(game.Appearance.Stage,Is.EqualTo(3));
+                view.PresentPreview(m,Vector2.zero,skin,3,0,definition);Assert.That(view.UsesUserWholeSprite,Is.False);Assert.That(game.Appearance.Stage,Is.Zero);
             }
             yield return null;
         }
@@ -35,7 +35,8 @@ namespace Darklight.Tests
                 Assert.That(today!=null?view.UsesCompleteAgeSprite:view.UsesUserWholeSprite,Is.True);if(today!=null)Assert.That(body.sprite,Is.SameAs(today));
                 Assert.That(layers.HasAgeHead,Is.False);Assert.That(block.GetFloat("_EraseHead"),Is.Zero);Assert.That(block.GetFloat("_WholeSprite"),Is.EqualTo(1));Assert.That(block.GetFloat("_VampireForm"),Is.EqualTo(form));
                 var mask=DarklightSpriteExpectations.Mask(body.sprite);Assert.That(mask,Is.Not.Null);Assert.That(mask,Is.Not.SameAs(Texture2D.blackTexture));Assert.That(mask.width,Is.EqualTo(body.sprite.texture.width));Assert.That(mask.height,Is.EqualTo(body.sprite.texture.height));Assert.That(mask.filterMode,Is.EqualTo(FilterMode.Point));Assert.That(block.GetTexture("_VampireMask"),Is.SameAs(mask));
-                var aura=body.transform.Find("AuraVampiraOriginal");Assert.That(aura.GetComponent<SpriteRenderer>().sprite,Is.SameAs(layers.PresentedAura));Assert.That(aura.localPosition.y,Is.EqualTo(.76f).Within(.001));
+                var aura=body.transform.Find("AuraPequenaContinua");Assert.That(aura.GetComponent<DarklightSmallTransformationAura>().PresentedFrame,Is.SameAs(body.sprite));Assert.That(aura.localPosition,Is.EqualTo(Vector3.zero));Assert.That(aura.GetComponent<MeshRenderer>().enabled,Is.True);
+                var mesh=aura.GetComponent<MeshFilter>().sharedMesh;var first=mesh.vertices[0];aura.GetComponent<DarklightSmallTransformationAura>().Present(body,form,.8f,false);Assert.That(Vector3.Distance(first,mesh.vertices[0]),Is.GreaterThan(.01f),"Aura must animate while remaining attached");
                 var before=aura.position;var shift=new Vector3(.3f,.2f,0);body.transform.position+=shift;Assert.That(Vector3.Distance(aura.position-before,shift),Is.LessThan(.0001f));body.transform.position-=shift;
                 view.PresentPreview(m,Vector2.zero,skin,0,0,definition);Assert.That(layers.PresentedAura,Is.Null);
             }

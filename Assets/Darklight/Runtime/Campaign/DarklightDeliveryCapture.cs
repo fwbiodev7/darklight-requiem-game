@@ -7,24 +7,7 @@ namespace Darklight
     public sealed partial class DarklightDeliveryCapture : MonoBehaviour
     {
         // Capture the actual world and Canvas without depending on a visible Windows swap chain.
-        void Capture(string path)
-        {
-            var lab=DarklightCombatLab.Instance;var canvas=lab.PixelHUD.canvas;var oldMode=canvas.renderMode;var oldCamera=canvas.worldCamera;
-            var rects=canvas.GetComponentsInChildren<RectTransform>(true);var layers=new int[rects.Length];
-            int oldMask=lab.WorldCamera.cullingMask;
-            var obj=new GameObject("CameraDeCaptura");var camera=obj.AddComponent<Camera>();camera.orthographic=true;camera.orthographicSize=3.75f;camera.cullingMask=1<<5;
-            camera.clearFlags=CameraClearFlags.SolidColor;camera.backgroundColor=Color.black;camera.nearClipPlane=.01f;camera.farClipPlane=100;
-            var target=new RenderTexture(1280,720,24){filterMode=FilterMode.Point,antiAliasing=1};target.Create();camera.targetTexture=target;
-            for(int i=0;i<rects.Length;i++){layers[i]=rects[i].gameObject.layer;rects[i].gameObject.layer=5;}
-            lab.WorldCamera.cullingMask=oldMask&~(1<<5);lab.WorldCamera.Render();
-            canvas.renderMode=RenderMode.ScreenSpaceCamera;canvas.worldCamera=camera;canvas.planeDistance=1;
-            lab.PixelHUD.scaler.scaleFactor=2;canvas.scaleFactor=2;Canvas.ForceUpdateCanvases();camera.Render();
-            var oldTarget=RenderTexture.active;RenderTexture.active=target;var image=new Texture2D(1280,720,TextureFormat.RGB24,false);
-            image.ReadPixels(new Rect(0,0,1280,720),0,0);image.Apply();File.WriteAllBytes(path,image.EncodeToPNG());RenderTexture.active=oldTarget;
-            canvas.renderMode=oldMode;canvas.worldCamera=oldCamera;lab.WorldCamera.cullingMask=oldMask;
-            for(int i=0;i<rects.Length;i++)rects[i].gameObject.layer=layers[i];
-            camera.targetTexture=null;target.Release();Destroy(target);Destroy(image);Destroy(obj);Canvas.ForceUpdateCanvases();
-        }
+        void Capture(string path)=>DarklightNativeCapture.Screen(path);
         IEnumerator Start()
         {
             string[] args=System.Environment.GetCommandLineArgs();

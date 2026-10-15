@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 namespace Darklight
 {
     /// <summary>Reuses the base's Gameplay/UI separation and device-aware action pattern with independent bindings.</summary>
-    public sealed class DarklightInput : System.IDisposable
+    public sealed partial class DarklightInput : System.IDisposable
     {
         public readonly InputActionAsset Asset;
         public readonly InputActionMap Gameplay, UI;
@@ -63,8 +63,8 @@ namespace Darklight
             UI.AddAction("PointerActivity", InputActionType.Value, "<Mouse>/delta", expectedControlLayout: "Vector2");
             foreach (var action in Asset) action.performed += Track;
             InputSystem.onDeviceChange += DeviceChanged;
-            string bindings=PlayerPrefs.GetString("Darklight.Bindings", "");
-            if(!string.IsNullOrEmpty(bindings))try { Asset.LoadBindingOverridesFromJson(bindings); } catch(System.Exception e) { Debug.LogWarning(e.Message); }
+            AddOptionalDeviceBindings();
+            LoadBindings();
             Asset.Enable();
         }
         static void Add(InputActionMap map, string name, params string[] paths)
@@ -88,7 +88,7 @@ namespace Darklight
         }
         public string BindingLabel(string name)
         {
-            var action=name=="Map"||name=="Pause"?Menu(name):Action(name);
+            var action=ConfigurableAction(name);
             for(int i=0;i<action.bindings.Count;i++)
             {
                 var b=action.bindings[i];if(b.isComposite||b.isPartOfComposite)continue;

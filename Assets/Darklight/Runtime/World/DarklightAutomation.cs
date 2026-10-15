@@ -6,6 +6,18 @@ namespace Darklight
     public static class DarklightAutomation
     {
         public static bool Silent { get; set; }
+        public static bool ProtectSaves
+        {
+            get
+            {
+#if UNITY_EDITOR
+                return !string.IsNullOrEmpty(UnityEditor.SessionState.GetString("Darklight.Tests.Output", ""));
+#else
+                return false;
+#endif
+            }
+        }
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void Initialize()
         {

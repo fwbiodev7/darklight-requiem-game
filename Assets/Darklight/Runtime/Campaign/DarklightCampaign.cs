@@ -35,7 +35,7 @@ namespace Darklight
         AudioSource music,sfx,ambient; SpriteRenderer headphones; AudioClip[] tones;
         int encounter, lastAttack=-1, kills, selectedTrack, resonance=-1;
         bool encounterStarted, chapterCleared; float slowTime; int lastSkillSerial=-1;
-        
+
         public bool ResistsStagger => resonance==1;
         public DarklightResonance Resonance {get;}=new DarklightResonance();
         public DarklightMapDefinition Map {get;private set;}
@@ -44,7 +44,7 @@ namespace Darklight
         public float StrikeRangeBonus => Form>=2?1.1f:0;
         float style,idleStyle,attackPermit,noticeTime,resonanceTime,resonanceCooldown,phonesTime;
         readonly float[] rhythmSamples=new float[256];float rhythmEnvelope;MaterialPropertyBlock resonanceBlock;
-        
+
         string notice=""; Action dialogueDone; string[] dialogue;int dialogueIndex;
         public float MusicVolume=.5f, EffectsVolume=.7f; public bool ReducedFlashes;
         void Awake()
@@ -67,11 +67,11 @@ namespace Darklight
             if(MenuMusicSource!=null)MenuMusicSource.volume=MusicVolume;
             TickUI(); if(!Active||MenuDismissedThisFrame)return;TryStartFirstAwakeningMusic();
             float dt=lab.CombatDelta;if(dt<=0)return;
-            TickFormPresentation(dt);TickVampire(dt);noticeTime=Mathf.Max(0,noticeTime-dt); idleStyle+=dt;
+            TickFormState(dt);TickVampire(dt);noticeTime=Mathf.Max(0,noticeTime-dt); idleStyle+=dt;
             if(idleStyle>2)style=Mathf.Max(0,style-dt*9);
             if(health.IsDead){StopPower();SaveCheckpoint();Open("Death");return;}
             slowTime=Mathf.Max(0,slowTime-dt);
-            if(Form>0){FormTime-=dt;if(FormTime<=0)EndForm();}
+
             int previousPower=Resonance.Active;Resonance.Tick(dt);resonance=Resonance.Active;resonanceTime=Resonance.Remaining;resonanceCooldown=Resonance.Recovery[Resonance.Selected];
             if(previousPower>=0 && resonance<0){FinishMusicEvent();Notice("DARK RESONANCE: recarga do modo");}
             if(lab.Input.Action("PowerNext").WasPressedThisFrame())Resonance.Cycle(1);
@@ -123,15 +123,16 @@ namespace Darklight
             if(chapter==0||chapter==2||chapter==5||chapter==6||chapter==8)AddProp("LyraMoreau",extras[1],Map.Ally,1.8f);
             if(chapter==3||chapter==4||chapter==7||chapter==9)AddProp("KaelAliado",bossFrames[0],Map.Ally,1.8f);
             if(chapterCleared)AddProp("Portal",extras[3],Map.Portal,2.5f);
-            PrepareNarrativeMap();Objective=Goal();firstAwakeningMusicPending=false;music.Stop();ambient.clip=null;ambient.volume=0;AudioDirector?.Region(chapter);
+            PrepareNarrativeMap();Objective=Goal();firstAwakeningMusicPending=false;music.Stop();ambient.clip=null;ambient.volume=0;AudioDirector?.Region(chapter);InitializeRemaster(chapter);
         }
+        void InitializeRemaster(int chapter){var view=GetComponent<DarklightRemaster>()??gameObject.AddComponent<DarklightRemaster>();view.Initialize(lab.WorldCamera,lab.Player.transform,levelRoot,chapter);}
         void AddProp(string name,Sprite sprite,Vector2 position,float height)
         {
             if(name=="IcaroNox"&&icaroFrames?.Length==8)sprite=icaroFrames[0];
             else if(name=="LyraMoreau"&&lyraFrames?.Length==8)sprite=lyraFrames[0];
             position=InteractionAnchor(position);
             height=name=="LyraMoreau"?2.5f:name=="IcaroNox"?2.7f:name=="KaelAliado"?2.85f:height*DarklightWorldScale.Environment;
-            var obj=new GameObject(name);obj.transform.SetParent(levelRoot,false);obj.transform.position=position;var r=obj.AddComponent<SpriteRenderer>();r.sprite=sprite;r.sharedMaterial=pixelMaterial;obj.transform.localScale=Vector3.one*height/sprite.bounds.size.y;r.sortingOrder=100-Mathf.RoundToInt(position.y*10);if(name=="IcaroNox"||name=="LyraMoreau"){var view=obj.AddComponent<DarklightNPCView>();view.frames=name=="IcaroNox"?icaroFrames:lyraFrames;}else if(name=="KaelAliado")obj.AddComponent<DarklightActorIdle>();}
+            var obj=new GameObject(name);obj.transform.SetParent(levelRoot,false);obj.transform.position=position;var r=obj.AddComponent<SpriteRenderer>();r.sprite=sprite;r.sharedMaterial=pixelMaterial;DarklightSecondaryStyleBank.Attach(r);obj.transform.localScale=Vector3.one*height/sprite.bounds.size.y;r.sortingOrder=100-Mathf.RoundToInt(position.y*10);if(name=="IcaroNox"||name=="LyraMoreau"){var view=obj.AddComponent<DarklightNPCView>();view.frames=name=="IcaroNox"?icaroFrames:lyraFrames;}else if(name=="KaelAliado")obj.AddComponent<DarklightActorIdle>();}
         string Goal()=>chapterCleared?"PORTAL LIBERTO - INTERAGIR PARA AVANCAR":ExpandedChapter?MissionTitle:(encounter==3?"ENFRENTE "+DarklightStory.Bosses[Progress.chapter]:"ENCONTRE O SELO "+(encounter+1)+" / 3");
         public void PreviewCampaign() { Progress=new DarklightProgress();LoadMap(0);Close(); }
         public void PreviewChapter(int chapter) { Progress=new DarklightProgress{chapter=Mathf.Clamp(chapter,0,DarklightStory.Chapters.Length-1)};LoadMap(Progress.chapter);Close(); }
@@ -165,7 +166,7 @@ namespace Darklight
             Sprite[] frames=new Sprite[4];
             if((int)kind>=11)Array.Copy(ExpandedBossFrames,((int)kind-11)*8,frames,0,4);
             else Array.Copy((int)kind<5?enemyFrames:bossFrames,((int)kind<5?(int)kind:(int)kind-5)*4,frames,0,4);
-            var art=new GameObject("Sprite").AddComponent<SpriteRenderer>();art.transform.SetParent(obj.transform,false);art.sprite=frames[0];art.sharedMaterial=pixelMaterial;
+            var art=new GameObject("Sprite").AddComponent<SpriteRenderer>();art.transform.SetParent(obj.transform,false);art.sprite=frames[0];art.sharedMaterial=pixelMaterial;DarklightSecondaryStyleBank.Attach(art);
             float height=DarklightWorldScale.EnemyHeight(kind);
             art.transform.localScale=Vector3.one*height/frames[0].bounds.size.y;
             var rigid=obj.AddComponent<Rigidbody2D>();rigid.gravityScale=0;rigid.freezeRotation=true;rigid.collisionDetectionMode=CollisionDetectionMode2D.Continuous;
@@ -288,4 +289,3 @@ namespace Darklight
         void OnDestroy(){if(Instance==this)Instance=null;rebinding?.Dispose();foreach(var tone in tones)if(tone!=null)Destroy(tone);}
     }
 }
-

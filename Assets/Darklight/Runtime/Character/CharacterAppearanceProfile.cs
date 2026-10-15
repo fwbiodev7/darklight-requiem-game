@@ -31,8 +31,8 @@ namespace Darklight
         public AppearanceStage[] stages;
         // Enable an age only after both skins have complete movement, weapon actions and forms.
         // An incomplete bundle must never switch the character's age between animation states.
-        public bool[] completeAnimationStages={true,false,false,false,false};
-        public bool HasCompleteAnimations(int stage)=>stage==0||completeAnimationStages!=null&&stage>=0&&stage<completeAnimationStages.Length&&completeAnimationStages[stage];
+        public bool[] completeAnimationStages={true};
+        public bool HasCompleteAnimations(int stage)=>stage==0;
         public Sprite[] hair, windHair, facialHair, shoulders;
         public AppearanceAttachment[] attachments;
         public AppearanceBodyVariant[] bodyVariants;
@@ -42,11 +42,6 @@ namespace Darklight
             if(attachments!=null)foreach(var item in attachments)if(item.source==source)return item;
             return null;
         }
-        public int StageForDays(int days)
-        {
-            int stage=0;
-            if(stages!=null)for(int i=0;i<stages.Length;i++)if(days>=stages[i].minimumNarrativeDays)stage=i;
-            return stage;
-        }
+        public int StageForDays(int days)=>0;
     }
 }

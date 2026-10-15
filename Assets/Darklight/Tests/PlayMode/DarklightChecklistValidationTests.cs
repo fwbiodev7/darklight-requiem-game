@@ -29,7 +29,7 @@ namespace Darklight.Tests
         }
 
         [UnityTest]
-        public IEnumerator Test01_TrocarKatanaAdagasCorrenteNoEstagioAdulto()
+        public IEnumerator Test01_TrocarKatanaAdagasCorrenteComVisualJovem()
         {
             game.PreviewCampaign();
             game.Progress.weaponUnlocks = 7;
@@ -37,7 +37,7 @@ namespace Darklight.Tests
             var art = lab.Player.transform.Find("FabioVisual").GetComponent<SpriteRenderer>();
             var appearance = lab.Player.GetComponent<CharacterAppearanceSystem>();
             appearance.PreviewStage(1);
-            Assert.That(appearance.Stage, Is.EqualTo(1));
+            Assert.That(appearance.Stage, Is.Zero);
 
             for (int weapon = 0; weapon < 3; weapon++)
             {
@@ -45,13 +45,13 @@ namespace Darklight.Tests
                 game.Weapons.Restore();
                 yield return null;
 
-                Assert.That(appearance.Stage, Is.EqualTo(1), "Estágio adulto foi perdido na troca de arma " + weapon);
+                Assert.That(appearance.Stage, Is.Zero, "Visual jovem foi perdido na troca de arma " + weapon);
                 Assert.That((int)game.Weapons.Equipped.id, Is.EqualTo(weapon), "Arma equipada incorreta no step " + weapon);
                 var model = new CombatModel(game.Weapons.Equipped.loadout);
                 
                 // Em repouso (idle)
                 view.Present(model, Vector2.zero);
-                Assert.That(appearance.Stage, Is.EqualTo(1));
+                Assert.That(appearance.Stage, Is.Zero);
                 if (weapon == 1) // Adagas
                 {
                     Assert.That(art.sprite.name, Does.Not.Contain("IdleStage"), "Ao equipar adagas em repouso não pode mostrar a animação de idle da katana!");
@@ -116,7 +116,7 @@ namespace Darklight.Tests
             game.Blood.Set(100);
             lab.Player.ResetModel();
             Assert.That(game.TryTransformPlayer(), Is.True, "Falha ao ativar transformação vampiresca");
-            typeof(DarklightCampaign).GetMethod("TickFormPresentation", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(game, new object[] { 0.7f });
+            typeof(DarklightCampaign).GetMethod("TickFormPresentation", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(game, new object[] { DarklightCampaign.TransformationEnterDuration+0.01f });
             Assert.That(game.PresentedForm, Is.EqualTo(2));
 
             for (int weapon = 0; weapon < 3; weapon++)
@@ -127,7 +127,7 @@ namespace Darklight.Tests
 
                 Assert.That(game.PresentedForm, Is.EqualTo(2), "Forma vampiresca perdida na troca de arma");
                 Assert.That((int)game.Weapons.Equipped.id, Is.EqualTo(weapon));
-                Assert.That(appearance.Stage, Is.EqualTo(1));
+                Assert.That(appearance.Stage, Is.Zero);
             }
         }
 

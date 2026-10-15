@@ -8,7 +8,7 @@ namespace Darklight.Tests
     public sealed class DarklightOriginalVampireTests
     {
         [UnitySetUp] public IEnumerator Setup(){DarklightAutomation.Silent=true;yield return SceneManager.LoadSceneAsync("Assets/Darklight/Scenes/DarklightCampaign.unity");yield return null;yield return null;}
-        [UnityTest] public IEnumerator EveryAgeFormWeaponAndActionKeepsOriginalPosesAndScale()
+        [UnityTest] public IEnumerator EveryLegacyAgeFormWeaponAndActionKeepsYoungPosesAndScale()
         {
             var game=DarklightCampaign.Instance;var view=DarklightCombatLab.Instance.Player.GetComponent<DarklightCharacterView>();var body=DarklightCombatLab.Instance.Player.transform.Find("FabioVisual").GetComponent<SpriteRenderer>();
             var catalog=Resources.Load<DarklightOriginalVampireCatalog>("Darklight/OriginalVampireCatalog");Assert.That(catalog,Is.Not.Null);Assert.That(catalog.aura.Length,Is.EqualTo(12));
@@ -21,15 +21,13 @@ namespace Darklight.Tests
                 var today=DarklightSpriteExpectations.Today(skin,age,weapon,d,m,move);
                 Assert.That(TodayCharacterBank.Mask(original)!=null||DarklightWholeCharacterBank.Mask(original)!=null||catalog.Find(original)!=null,Is.True,"Unrecognized complete frame: "+original.name);
                 if(today!=null)Assert.That(original,Is.SameAs(today));
-                if(today==null&&weapon==0&&skin==0&&age<=3&&action==0)Assert.That(original.name.StartsWith("Whole_RequiemWalkStage"+age+"_"),Is.True);
-                if(weapon==0&&skin==1&&action==1)Assert.That(original.name.StartsWith("Whole_RockAttackStage"+age+"_"),Is.True,"Approved Rock katana attack was replaced");
                 for(int form=1;form<=3;form++)
                 {
                     view.PresentPreview(m,move,skin,age,form,definition);
-                    Assert.That(body.sprite,Is.SameAs(original),"A transformation replaced an original body/weapon pose");
+                    Assert.That(body.sprite,Is.SameAs(DarklightAgeWeaponRegressionTests.ExpectedWhole(original,form)),"Transformation must resolve the matching complete authored pose");
                     Assert.That(body.transform.localScale,Is.EqualTo(Vector3.one*DarklightCharacterView.WorldVisualScale));
                     Assert.That(m.State,Is.EqualTo(state));Assert.That(m.Clock,Is.EqualTo(clock));
-                    body.GetPropertyBlock(block);Assert.That(block.GetFloat("_DarkForm"),Is.Zero);Assert.That(block.GetFloat("_VampireForm"),Is.EqualTo(form));
+                    body.GetPropertyBlock(block);Assert.That(block.GetFloat("_DarkForm"),Is.Zero);Assert.That(block.GetFloat("_VampireForm"),Is.Zero);
                     var layers=view.GetComponent<DarklightOriginalVampireView>();Assert.That(layers.PresentedAura,Is.Not.Null);
                     Assert.That(layers.PresentedHead,Is.Null);Assert.That(block.GetFloat("_EraseHead"),Is.Zero);
                     Assert.That(body.transform.Find("IdadeOriginal"),Is.Null);
@@ -37,11 +35,11 @@ namespace Darklight.Tests
             }
             Assert.That(body.transform.parent.Find("AsasEspectrais"),Is.Null);yield return null;
         }
-        [UnityTest] public IEnumerator FormExitAndDeathHideAuraWithoutResettingAge()
+        [UnityTest] public IEnumerator FormExitHidesAuraAndKeepsYoungAppearance()
         {
             var view=DarklightCombatLab.Instance.Player.GetComponent<DarklightCharacterView>();var weapon=DarklightCampaign.Instance.weaponDefinitions[0];var m=new CombatModel(weapon.loadout);m.Tick(.01f,new CombatInput{aim=Vector2.down});
             view.PresentPreview(m,Vector2.zero,1,4,3,weapon);var layers=view.GetComponent<DarklightOriginalVampireView>();Assert.That(layers.PresentedAura,Is.Not.Null);
-            view.PresentPreview(m,Vector2.zero,1,4,0,weapon);Assert.That(layers.PresentedAura,Is.Null);Assert.That(view.GetComponent<CharacterAppearanceSystem>().Stage,Is.EqualTo(4));
+            view.PresentPreview(m,Vector2.zero,1,4,0,weapon);Assert.That(layers.PresentedAura,Is.Null);Assert.That(view.GetComponent<CharacterAppearanceSystem>().Stage,Is.Zero);
             yield return null;
         }
         [UnityTest] public IEnumerator RaisedKatanaUsesTheOriginalFaceBelowTheWeapon()

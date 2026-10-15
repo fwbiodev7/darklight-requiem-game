@@ -13,8 +13,9 @@ namespace Darklight.Editor
         {
             public string name, kind; public int skin, age, weapon, phases;
             public int[] directions; public float ppu; public Frame[] sprites;
+            public bool ownerMask;
         }
-        [Serializable] public class Frame { public string name; public int x, y, w, h; public float pivotX, pivotY; }
+        [Serializable] public class Frame { public string name, previousName; public int x, y, w, h; public float pivotX, pivotY; }
         public static string Import()
         {
             const string folder = "Assets/Darklight/Resources/Darklight/TodayCharacterAnimations/";
@@ -28,7 +29,7 @@ namespace Darklight.Editor
                     weapon = page.weapon, phases = page.phases, directions = page.directions,
                     resourcePath = "Darklight/TodayCharacterAnimations/" + page.name,
                     paletteResourcePath = "Darklight/TodayCharacterAnimations/" + page.name + "_Palette",
-                    spriteNames = page.sprites?.Select(f => f.name).ToArray() };
+                    spriteNames = page.sprites?.Select(f => f.name).ToArray(), ownerMask = page.ownerMask };
                 if (!TodayCharacterBank.ValidDescriptor(descriptor)) throw new InvalidOperationException("Invalid ordered whole-character descriptor: " + page.name);
                 foreach (int direction in page.directions)
                     if (!coverage.Add($"{page.skin}:{page.age}:{page.weapon}:{direction}:{page.kind}"))
@@ -55,7 +56,7 @@ namespace Darklight.Editor
                 var rects = page.sprites.Select(f => new SpriteRect
                 {
                     name = f.name, rect = new Rect(f.x, f.y, f.w, f.h), pivot = new Vector2(f.pivotX, f.pivotY),
-                    alignment = SpriteAlignment.Custom, spriteID = previous.TryGetValue(f.name, out var id) ? id : GUID.Generate()
+                    alignment = SpriteAlignment.Custom, spriteID = previous.TryGetValue(f.name, out var id) ? id : f.previousName != null && previous.TryGetValue(f.previousName, out var oldId) ? oldId : GUID.Generate()
                 }).ToArray();
                 provider.SetSpriteRects(rects);
                 provider.GetDataProvider<ISpriteNameFileIdDataProvider>().SetNameFileIdPairs(rects.Select(f => new SpriteNameFileIdPair(f.name, f.spriteID)));
@@ -64,7 +65,7 @@ namespace Darklight.Editor
                 var mi = (TextureImporter)AssetImporter.GetAtPath(maskPath);
                 mi.textureType = TextureImporterType.Default; mi.filterMode = FilterMode.Point; mi.mipmapEnabled = false;
                 mi.textureCompression = TextureImporterCompression.Uncompressed; mi.sRGBTexture = false;
-                mi.alphaSource = TextureImporterAlphaSource.None; mi.npotScale = TextureImporterNPOTScale.None;
+                mi.alphaSource = page.ownerMask ? TextureImporterAlphaSource.FromInput : TextureImporterAlphaSource.None; mi.alphaIsTransparency = false; mi.npotScale = TextureImporterNPOTScale.None;
                 mi.maxTextureSize = 4096; mi.wrapMode = TextureWrapMode.Clamp; mi.SaveAndReimport();
                 var frames = AssetDatabase.LoadAllAssetsAtPath(path).OfType<Sprite>().OrderBy(s => int.Parse(s.name[(s.name.LastIndexOf('_') + 1)..])).ToArray();
                 if (frames.Length != descriptor.spriteNames.Length || !frames.Select(f => f.name).SequenceEqual(descriptor.spriteNames))

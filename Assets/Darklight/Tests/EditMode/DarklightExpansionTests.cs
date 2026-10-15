@@ -4,12 +4,12 @@ namespace Darklight.Tests
 {
     public sealed class DarklightExpansionTests
     {
-        [Test] public void LegacyMigrationPreservesRewardsAgeFinaleAndRelics()
+        [Test] public void LegacyMigrationRemovesVisualAgeAndPreservesRewardsFinaleAndRelics()
         {
             var old=new DarklightProgress{version=1,chapter=5,checkpoint=4,completed=true,ending=2,formsUnlocked=3,preferredForm=3,appearanceStage=4,narrativeDays=410,level=8,attack=3,points=4,weaponUnlocks=7,equippedWeapon=2,relics=new[]{true,false,true,false,true,true}};
             var s=DarklightProgress.Decode(JsonUtility.ToJson(old));
             Assert.That(s.version,Is.EqualTo(2));Assert.That(s.completed&&s.legacyFinaleCompleted,Is.True);Assert.That(s.ending,Is.EqualTo(2));Assert.That(s.formsUnlocked,Is.EqualTo(3));Assert.That(s.preferredForm,Is.EqualTo(3));
-            Assert.That(s.appearanceStage,Is.EqualTo(4));Assert.That(s.narrativeDays,Is.EqualTo(410));Assert.That(s.level,Is.EqualTo(8));Assert.That(s.weaponUnlocks,Is.EqualTo(7));Assert.That(s.equippedWeapon,Is.EqualTo(2));Assert.That(s.points,Is.EqualTo(4));
+            Assert.That(s.appearanceStage,Is.Zero);Assert.That(s.narrativeDays,Is.EqualTo(410));Assert.That(s.level,Is.EqualTo(8));Assert.That(s.weaponUnlocks,Is.EqualTo(7));Assert.That(s.equippedWeapon,Is.EqualTo(2));Assert.That(s.points,Is.EqualTo(4));
             Assert.That(s.relics.Length,Is.EqualTo(10));Assert.That(s.relics[0]&&s.relics[2]&&s.relics[4]&&s.relics[5],Is.True);Assert.That(s.relics[6],Is.False);
         }
         [TestCase("bad-json")][TestCase("{\"version\":3,\"chapter\":0,\"level\":1}")][TestCase("{\"version\":1,\"chapter\":-1,\"level\":1}")]

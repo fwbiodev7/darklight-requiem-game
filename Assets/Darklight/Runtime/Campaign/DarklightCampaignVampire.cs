@@ -87,7 +87,7 @@ namespace Darklight
         {
             if(Progress.chapter!=0||Progress.awakeningState!=0||CurrentBoss==null||CurrentBoss.kind!=RequiemEnemyKind.Kael||health.CurrentHealth-damage>health.MaxHealth*.25f)return damage;
             Progress.awakeningState=1;Progress.CompleteMilestone(0,1);Progress.vampireSkills|=1;Progress.formsUnlocked=Mathf.Max(Progress.formsUnlocked,1);
-            Form=1;FormTime=8;BeginFormPresentation(1,true);Blood.Set(Mathf.Max(Blood.Amount,40));health.Heal(health.MaxHealth*.18f);Notice("SANGUE DESPERTO — H / RS CIMA: GARRAS");AudioDirector?.Awakening();ScheduleFirstAwakeningMusic();SaveCheckpoint();
+            Form=1;FormTime=TransformationDuration(Progress.mastery);BeginFormPresentation(1,true);Blood.Set(Mathf.Max(Blood.Amount,40));health.Heal(health.MaxHealth*.18f);Notice("SANGUE DESPERTO — H / RS CIMA: GARRAS");AudioDirector?.Awakening();ScheduleFirstAwakeningMusic();SaveCheckpoint();
             return Mathf.Min(damage,Mathf.Max(0,health.CurrentHealth-health.MaxHealth*.15f));
         }
         void VampireChapterReward()
@@ -108,7 +108,7 @@ namespace Darklight
         }
         void BuildSkillPaths()
         {
-            heading.text="HABILIDADES";bodyText.text="PONTOS: "+Progress.points+"\n\nLAMINA: contra-ataques e finalizadores.\nSANGUE: habilidades conquistadas na historia.\nVEU: controle e duracao das formas.\n\n"+DarklightProgress.MasteryNames[Progress.vampireMastery]+"\nA idade visual nao concede poderes.";
+            heading.text="HABILIDADES";bodyText.text="PONTOS: "+Progress.points+"\n\nLAMINA: contra-ataques e finalizadores.\nSANGUE: habilidades conquistadas na historia.\nVEU: controle e duracao das formas.\n\n"+DarklightProgress.MasteryNames[Progress.vampireMastery]+"\nAs tres transformacoes ja estao liberadas.";
             Button("LAMINA: PRECISAO [1 PT]",()=>LearnNode(0),(Progress.progressionNodes&1)==0&&Progress.points>0);
             Button("LAMINA: FINALIZAR [1 PT]",()=>LearnNode(1),(Progress.progressionNodes&2)==0&&Progress.points>0&&(Progress.progressionNodes&1)!=0);
             Button("SANGUE: HABILIDADES",()=>Open("VampireSkills"));

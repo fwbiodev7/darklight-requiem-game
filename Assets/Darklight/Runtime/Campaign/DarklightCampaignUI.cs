@@ -72,7 +72,7 @@ namespace Darklight
             messageText.text=noticeTime>0?notice:"";
             var boss=CurrentBoss;bossText.text=boss==null?"":DarklightStory.Bosses[Progress.chapter];bossFill.gameObject.SetActive(boss!=null);
             if(boss!=null)bossFill.rectTransform.sizeDelta=new Vector2(220*boss.Health.HealthPercent,3);
-            music.volume=MusicVolume;ambient.volume=AmbientVolume*(CurrentBoss!=null?.7f:1);TickMinimalHUD();TickPlaytestGuide();
+            music.volume=MusicVolume;ambient.volume=AmbientVolume*(CurrentBoss!=null?.7f:1);TickMinimalHUD();TickPlaytestGuide();TickTechnicalHUD();
         }
         void TickUI()
         {
@@ -80,7 +80,7 @@ namespace Darklight
             if(phaseLoading){TickLoadingScreen();return;}
             if(bindingWaiting||rebinding!=null){TickBindingCapture();return;}
             if(Time.unscaledTime<captureAfter)return;
-            TickInteractionInput();if(atlas!=null&&atlas.TickInput())return;var input=lab.Input;
+            TickInteractionInput();if(atlas!=null&&!Training&&atlas.TickInput())return;var input=lab.Input;
             bool emergencyPause=Keyboard.current?.escapeKey.wasPressedThisFrame==true;
             foreach(var pad in Gamepad.all)emergencyPause|=pad.startButton.wasPressedThisFrame;
             if(input.Menu("Pause").WasPressedThisFrame()||emergencyPause)
@@ -99,6 +99,7 @@ namespace Darklight
             }
             if(input.Menu("Cancel").WasPressedThisFrame())
             {
+                if(panel=="Training"){Close();return;}if(panel=="TrainingEnemies"||panel=="TrainingForms"){Open("Training");return;}if(panel=="CombatOptions"){Open("Pause");return;}if(panel=="Difficulty"){Open(difficultyForNewGame?"Main":Training?"Training":"CombatOptions");return;}
                 if(panel=="Pause")Close();else if(panel=="Dialogue"){dialogueIndex=dialogue.Length-1;NextDialogue();}
                 else if(panel!="Main"&&panel!="Death"&&panel!="Ending")Open(panel=="Victory"||panel=="LoadGames"?"Main":panel=="Skins"?returnPanel:panel=="BindingSlot"||panel=="BindingDevice"?"Controls":panel=="BindingConflict"?"BindingSlot":panel=="Transformations"?"Pause":panel=="Controls"||panel=="Extras"?"Options":panel=="RegionDetails"?"Regions":panel=="Regions"?regionMenuReturn:returnPanel);return;
             }
@@ -163,6 +164,11 @@ namespace Darklight
             switch(panel)
             {
                 case "Main":BuildCinematicMain();break;
+                case "Difficulty":BuildDifficulty();break;
+                case "CombatOptions":BuildCombatOptions();break;
+                case "Training":BuildTraining();break;
+                case "TrainingEnemies":BuildTrainingEnemies();break;
+                case "TrainingForms":BuildTrainingForms();break;
                 case "Regions":ShowRegions();break;
                 case "RegionDetails":ShowRegionDetails();break;
                 case "LoadGames":BuildSavePicker();break;
@@ -173,7 +179,7 @@ namespace Darklight
                 case "Pause":
                     if(ExploringNewRegion){heading.text="EXPLORAÇÃO";bodyText.text=Map.Art.title;Button("RETOMAR",Close);Button("ESCOLHER REGIÃO",()=>Open("Regions"));Button("MAPA DA FASE",()=>atlas.TryOpen());Button("OPÇÕES",()=>Open("Options"));Button("MENU PRINCIPAL",()=>Open("Main"));break;}
                     heading.text="PAUSA";bodyText.text=DarklightStory.Chapters[Progress.chapter]+"\n"+DarklightStory.Places[Progress.chapter];
-                    Button("RETOMAR",Close);Button("TRANSFORMACOES",()=>Open("Transformations"));Button("HABILIDADES",()=>Open("Skills"));Button("INVENTARIO",()=>Open("Inventory"));Button("DIARIO",()=>Open("Journal"));Button("DARK RESONANCE",()=>Open("MP3"));Button("TROCAR SKIN",()=>Open("Skins"));Button("MAPA DA FASE",()=>atlas.TryOpen());Button("OPCOES",()=>Open("Options"));Button("MENU PRINCIPAL",()=>{StopPower();SaveCheckpoint();Open("Main");});if(PlaytestSession)Button("FERRAMENTAS DE TESTE",()=>Open("Playtest"));break;
+                    Button("RETOMAR",Close);Button("COMBATE E TREINO",()=>Open(Training?"Training":"CombatOptions"));Button("TRANSFORMACOES",()=>Open("Transformations"));Button("HABILIDADES",()=>Open("Skills"));Button("INVENTARIO",()=>Open("Inventory"));Button("DIARIO",()=>Open("Journal"));Button("DARK RESONANCE",()=>Open("MP3"));Button("TROCAR SKIN",()=>Open("Skins"));Button("MAPA DA FASE",()=>atlas.TryOpen());Button("OPCOES",()=>Open("Options"));Button("MENU PRINCIPAL",()=>{if(Training){trainingFromMain=true;ExitTraining();}else{StopPower();SaveCheckpoint();Open("Main");}});if(PlaytestSession)Button("FERRAMENTAS DE TESTE",()=>Open("Playtest"));break;
                 case "Playtest":BuildPlaytestTools();break;
                 case "Skills":BuildSkillPaths();break;
                 case "VampireSkills":BuildVampireSkills();break;
@@ -194,7 +200,7 @@ namespace Darklight
                 case "BindingSlot":BuildBindingSlot();break;
                 case "BindingConflict":BuildBindingConflict();break;
                 case "Transformations":BuildTransformations();break;
-                case "Death":heading.text="O VEU TE ALCANCOU";bodyText.text="Retome do ultimo selo libertado.\nAs habilidades e a campanha continuam suas.";Button("RETOMAR CHECKPOINT",()=>{StopPower();LoadMap(Progress.chapter);Close();});Button("MENU PRINCIPAL",()=>Open("Main"));break;
+                case "Death":if(Training){health.SetMaxHealth(health.MaxHealth,false);lab.Player.ResetModel();Open("Training");return;}heading.text="O VEU TE ALCANCOU";bodyText.text="Retome do ultimo selo libertado.\nAs habilidades e a campanha continuam suas.";Button("RETOMAR CHECKPOINT",()=>{StopPower();LoadMap(Progress.chapter);Close();});Button("MENU PRINCIPAL",()=>Open("Main"));break;
                 case "Ending":BuildEndings();break;
                 case "Victory":
                     heading.text="REQUIEM CONCLUIDO";bodyText.text=EndingDescription;

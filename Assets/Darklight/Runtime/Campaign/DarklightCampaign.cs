@@ -21,11 +21,11 @@ namespace Darklight
         public float Energy {get=>Blood.Amount;private set=>Blood.Set(value);}
         public int Form {get;private set;}
         public float FormTime {get;private set;}
-        public string Rank => new[]{"D","C","B","A","S","SS","SSS"}[Mathf.Clamp((int)(style/65),0,6)];
-        public float DamageMultiplier => Progress.Damage*(Form==0?1:Form==1?1.35f:Form==2?1.65f:2)*Resonance.Damage*(Blood.FrenzyRemaining>0?1.1f:1);
-        public float AttackSpeed => Mathf.Min(1.65f,(Form>0?1.12f:1)*Resonance.Speed*(Blood.FrenzyRemaining>0?1.2f:1));
-        public float MovementSpeed => (Form>0?1.12f:1)*Resonance.Agility;
-        public float IncomingMultiplier => (Form==3?.75f:1)*(Resonance.Active==1?.9f:1);
+        public string Rank => Style.Rank;
+        public float DamageMultiplier => Progress.Damage*(Form==0?1:Form==1?1.5f:Form==2?1.65f:2)*Resonance.Damage*(Blood.FrenzyRemaining>0?1.1f:1);
+        public float AttackSpeed => Mathf.Min(1.85f,(Form==1?1.04f:Form==2?1.22f:Form==3?1.32f:1)*Resonance.Speed*(Blood.FrenzyRemaining>0?1.2f:1));
+        public float MovementSpeed => (Form==2?1.22f:Form==3?1.18f:Form==1?1.08f:1)*Resonance.Agility;
+        public float IncomingMultiplier => (Form==3?.75f:Form==1?1.12f:1)*(Resonance.Active==1?.9f:1);
         public bool WearingHeadphones => phonesTime>0;
         public bool Active => panel=="";
         public string Objective {get;private set;}="";
@@ -41,7 +41,7 @@ namespace Darklight
         public DarklightMapDefinition Map {get;private set;}
         public float EnemyTimeScale => slowTime>0?.55f:1;
         public Sprite[] formFrames;
-        public float StrikeRangeBonus => Form>=2?1.1f:0;
+        public float StrikeRangeBonus => Form==3?.15f:0;
         float style,idleStyle,attackPermit,noticeTime,resonanceTime,resonanceCooldown,phonesTime;
         readonly float[] rhythmSamples=new float[256];float rhythmEnvelope;MaterialPropertyBlock resonanceBlock;
 
@@ -68,8 +68,8 @@ namespace Darklight
             TickUI(); if(!Active||MenuDismissedThisFrame)return;TryStartFirstAwakeningMusic();
             float dt=lab.CombatDelta;if(dt<=0)return;
             TickFormState(dt);TickVampire(dt);noticeTime=Mathf.Max(0,noticeTime-dt); idleStyle+=dt;
-            if(idleStyle>2)style=Mathf.Max(0,style-dt*9);
-            if(health.IsDead){StopPower();SaveCheckpoint();Open("Death");return;}
+            Style.Tick(dt);style=Style.Points;
+            if(health.IsDead&&!Training){StopPower();SaveCheckpoint();Open("Death");return;}
             slowTime=Mathf.Max(0,slowTime-dt);
 
             int previousPower=Resonance.Active;Resonance.Tick(dt);resonance=Resonance.Active;resonanceTime=Resonance.Remaining;resonanceCooldown=Resonance.Recovery[Resonance.Selected];
@@ -92,6 +92,7 @@ namespace Darklight
             if(lab.Input.Action("Potion").WasPressedThisFrame())UsePotion();
             if(lab.Input.Action("Journal").WasPressedThisFrame()){Open("Journal");return;}
             if(lab.Input.Action("Interact").WasPressedThisFrame())Interact();
+            if(Training){TickTraining(dt);UpdateAura();return;}
             if(ExploringNewRegion){UpdateRegionExploration();UpdateAura();return;}
             if(!encounterStarted&&!chapterCleared&&Map.InArena(encounter,lab.Player.transform.position)){StartEncounter();return;}
             if(encounterStarted&&enemies.TrueForAll(e=>e==null||e.Health.IsDead||e.Resolved))ClearEncounter();
@@ -100,7 +101,7 @@ namespace Darklight
         }
         void LoadMap(int chapter)
         {
-            exploredRegion=-1;notice="";noticeTime=0;
+            exploredRegion=-1;notice="";noticeTime=0;Style.Reset();threats.Clear();
             if(levelRoot!=null){levelRoot.gameObject.SetActive(false);Destroy(levelRoot.gameObject);}
             foreach(var shot in FindObjectsByType<DarklightProjectile>(FindObjectsSortMode.None))Destroy(shot.gameObject);
             enemies.Clear();levelRoot=new GameObject(DarklightStory.Places[chapter]).transform;
@@ -137,7 +138,7 @@ namespace Darklight
         public void PreviewCampaign() { Progress=new DarklightProgress();LoadMap(0);Close(); }
         public void PreviewChapter(int chapter) { Progress=new DarklightProgress{chapter=Mathf.Clamp(chapter,0,DarklightStory.Chapters.Length-1)};LoadMap(Progress.chapter);Close(); }
         public void NewGame()
-        {StopMenuMusic();atlas?.ResetCampaign();Progress=new DarklightProgress();LoadMap(0);SaveCheckpoint();Speak(DarklightStory.Introductions[0]);}
+        {var old=DarklightProgress.Load();StopMenuMusic();atlas?.ResetCampaign();Progress=new DarklightProgress{difficulty=newGameDifficulty,extremeUnlocked=DarklightDifficultyProfile.ExtremeUnlocked(old)};LoadMap(0);SaveCheckpoint();Speak(DarklightStory.Introductions[0]);}
         public void ContinueGame()
         {var data=DarklightProgress.Load();if(data==null){Notice("Nenhum save valido");return;}StopMenuMusic();Progress=data;if(data.completed){Open("Victory");return;}LoadMap(Progress.chapter);Close();}
         void StartMenuMusic()
@@ -173,7 +174,7 @@ namespace Darklight
             var collider=obj.AddComponent<CircleCollider2D>();collider.radius=kind==RequiemEnemyKind.Armored?.42f:.28f;collider.offset=Vector2.up*.18f;
             var hp=obj.AddComponent<HealthSystem>();obj.AddComponent<DarklightCombatant>();
             var foe=obj.AddComponent<DarklightEnemy>();foe.kind=kind;foe.elite=elite;foe.poses=frames;foe.attackFrames=new Sprite[4];if((int)kind>=11)Array.Copy(ExpandedBossFrames,((int)kind-11)*8+4,foe.attackFrames,0,4);else Array.Copy(foe.Boss?bossAttacks:enemyAttacks,(foe.Boss?(int)kind-5:(int)kind)*4,foe.attackFrames,0,4);
-            hp.SetMaxHealth((foe.Boss?260+Progress.chapter*65:kind==RequiemEnemyKind.Armored?90:50+Progress.chapter*7)*(elite?1.45f:1),false);if(foe.ExpandedBoss)foe.RestorePhase(Progress.bossPhase);enemies.Add(foe);AddEnemyBar(foe);obj.AddComponent<TodayEnemyAudio>();
+            hp.SetMaxHealth((foe.Boss?260+Progress.chapter*65:kind==RequiemEnemyKind.Armored?90:50+Progress.chapter*7)*(elite?1.45f:1),false);if(foe.ExpandedBoss)foe.RestorePhase(Progress.bossPhase);enemies.Add(foe);AddEnemyBar(foe);obj.AddComponent<TodayEnemyAudio>();if(Training)obj.AddComponent<DarklightCombatDebug>();
         }
         void ClearEncounter()
         {
@@ -188,18 +189,18 @@ namespace Darklight
         }
         void Interact(){if(!TryInteract())Notice("APROXIME-SE DE UM NPC, MEMÓRIA OU CHECKPOINT");}
         public bool RequestAttack(DarklightEnemy enemy)
-        {float now=lab.Player.Model.Clock;if(now<attackPermit)return false;attackPermit=now+(enemy.Boss?.35f:.45f);return true;}
+        {return TechnicalAttackPermit(enemy);}
         public void EnemyDefeated(DarklightEnemy enemy)
         {
-            int previous=Progress.level;Progress.Award(enemy.Boss?150:18+Progress.chapter*4);kills++;
+            if(Training)return;int previous=Progress.level;Progress.Award(enemy.Boss?150:18+Progress.chapter*4);kills++;
             Energy=Mathf.Min(100,Energy+(enemy.Boss?30:8));Resonance.Gain(enemy.Boss?20:5);if(Progress.chapter==1&&Progress.mp3Quest>0&&Progress.mp3Quest<4)Progress.mp3Quest++;
             if(previous!=Progress.level){health.SetMaxHealth(Progress.MaxHealth);health.FullHeal();Notice("NIVEL "+Progress.level+" - +1 PONTO");Sound(3);}
         }
         public void Strike(StrikeKind kind)
-        {if(!Blood.RewardStrike(kind,lab.Player.Model.AttackSerial))return;bool varied=(int)kind!=lastAttack;style=Mathf.Min(450,style+(varied?24:7));lastAttack=(int)kind;idleStyle=0;Resonance.Gain(varied?2:1);RecordWeaponTrial();}
+        {if(!Blood.RewardStrike(kind,lab.Player.Model.AttackSerial))return;bool varied=(int)kind!=lastAttack;TechnicalStrike(kind);lastAttack=(int)kind;idleStyle=0;Resonance.Gain(varied?2:1);RecordWeaponTrial();}
         public void BossPhaseTwo(){AudioDirector?.EnemyWarning(true,lab.Player.transform.position);}
-        public void Defended(){if(!Blood.RewardParry())return;style=Mathf.Min(450,style+40);idleStyle=0;AudioDirector?.Play("dl-power-parry",DarklightAudioCategory.Combat,.38f);}
-        public void Damaged(){CancelVampireCast();style=Mathf.Max(0,style-65);phonesTime=0;AudioDirector?.Play("impact-impactPunch_heavy",DarklightAudioCategory.Character,.3f);}
+        public void Defended(){if(!Blood.RewardParry())return;Style.Defense(true);style=Style.Points;idleStyle=0;AudioDirector?.Play("dl-power-parry",DarklightAudioCategory.Combat,.38f);}
+        public void Damaged(){CancelVampireCast();Style.Damage();style=Style.Points;phonesTime=0;AudioDirector?.Play("impact-impactPunch_heavy",DarklightAudioCategory.Character,.3f);}
         void TransformPlayer()=>TryTransformPlayer();
         void EndForm(bool present=true)
         {
@@ -280,12 +281,12 @@ namespace Darklight
         {var obj=new GameObject("Aviso");obj.transform.SetParent(levelRoot,false);obj.transform.position=position+(Vector3)(area?Vector2.zero:direction*.65f);var sprite=obj.AddComponent<SpriteRenderer>();sprite.sprite=extras[4];sprite.sharedMaterial=pixelMaterial;sprite.sortingOrder=80;sprite.color=new Color(1,.13f,.2f,.48f);obj.transform.localScale=Vector3.one*(radius/sprite.sprite.bounds.size.y);Destroy(obj,.04f);}
         public void Notice(string message){notice=message;noticeTime=3.5f;}
         void SaveCheckpoint()
-        {SaveMapExploration();if(DarklightAutomation.Silent||ExploringNewRegion||PlaytestSession)return;Resonance.Store(Progress);Blood.Store(Progress);try{Progress.Save();}catch(Exception e){Notice("NAO FOI POSSIVEL SALVAR");Debug.LogError(e);}}
+        {if(Training)return;if(Progress.completed)Progress.extremeUnlocked=true;SaveMapExploration();if(DarklightAutomation.Silent||ExploringNewRegion||PlaytestSession)return;Resonance.Store(Progress);Blood.Store(Progress);try{Progress.Save();}catch(Exception e){Notice("NAO FOI POSSIVEL SALVAR");Debug.LogError(e);}}
         void Speak(string[] lines,Action done=null){dialogue=PrepareDialogueLines(lines);dialogueIndex=0;dialogueDone=done;Open("Dialogue");}
         void NextDialogue(){if(++dialogueIndex<dialogue.Length){RefreshPanel();return;}Close();var done=dialogueDone;dialogueDone=null;done?.Invoke();}
         public void Sound(int index){AudioDirector?.Play(index==1?"rpg-knifeSlice":index==2?"impact-impactPunch_heavy":"interface-confirmation_",index==1?DarklightAudioCategory.Combat:index==2?DarklightAudioCategory.Character:DarklightAudioCategory.Interface,index==3?.23f:.18f);}
         static AudioClip Tone(float frequency,float duration)
         {int count=(int)(22050*duration);var data=new float[count];for(int i=0;i<count;i++){float t=i/22050f;data[i]=Mathf.Sin(t*frequency*Mathf.PI*2)*Mathf.Pow(1-(float)i/count,2)*.3f;}var clip=AudioClip.Create("RequiemSFX",count,1,22050,false);clip.SetData(data,0);return clip;}
-        void OnDestroy(){if(Instance==this)Instance=null;rebinding?.Dispose();foreach(var tone in tones)if(tone!=null)Destroy(tone);}
+        void OnDestroy(){combatProfiles?.Dispose();if(Instance==this)Instance=null;rebinding?.Dispose();foreach(var tone in tones)if(tone!=null)Destroy(tone);}
     }
 }

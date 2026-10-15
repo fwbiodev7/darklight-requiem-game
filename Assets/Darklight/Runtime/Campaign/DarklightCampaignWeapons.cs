@@ -6,7 +6,7 @@ namespace Darklight
         public WeaponDefinition[] weaponDefinitions;
         public DarklightWeaponController Weapons {get;private set;}
         public void RecordWeaponSelection()=>SaveCheckpoint();
-        void InitializeWeapons(){Weapons=lab.Player.GetComponent<DarklightWeaponController>();Weapons.Initialize(this);}
+        void InitializeWeapons(){InitializeTechnicalCombat();Weapons=lab.Player.GetComponent<DarklightWeaponController>();Weapons.Initialize(this);}
         void UnlockWeaponReward()
         {
             int index=Progress.chapter==0?1:Progress.chapter==2?2:-1;

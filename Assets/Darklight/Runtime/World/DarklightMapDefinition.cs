@@ -71,6 +71,7 @@ namespace Darklight
             return best;
         }
         public bool InArena(int index,Vector2 p)=>Vector2.Distance(p,Arenas[index])<3.8f*DarklightWorldScale.Environment;
+        public static DarklightMapDefinition TrainingArena()=>new DarklightMapDefinition(new[]{V(0,-3),V(-3,0),V(3,0),V(0,3),V(0,0),V(-3,3)},new[]{V(20,14),V(20,14),V(20,14),V(20,14),V(20,14),V(20,14)},new[,]{{0,1},{1,2},{2,3},{3,4},{4,5}},5);
         static Vector2Int V(int x,int y)=>new Vector2Int(x,y);
         public static DarklightMapDefinition ForChapter(int chapter)
         {

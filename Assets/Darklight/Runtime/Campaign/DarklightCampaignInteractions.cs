@@ -19,7 +19,7 @@ namespace Darklight
         public bool InteractionClickConsumed=>interactionClickFrame==Time.frameCount;
         public bool TryGetInteraction(out DarklightInteractionTarget target)
         {
-            target=default;if(!Active||Map==null||lab.Player.Model.State!=CombatState.Neutral||WearingHeadphones)return false;
+            target=default;if(Training||!Active||Map==null||lab.Player.Model.State!=CombatState.Neutral||WearingHeadphones)return false;
             Vector2 player=lab.Player.transform.position;float best=float.MaxValue;DarklightInteractionTarget nearest=default;
             void Consider(string id,string label,Vector2 authored,float range)
             {

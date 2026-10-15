@@ -46,8 +46,9 @@ namespace Darklight
             Button("CONTINUAR",ContinueGame,saved!=null);
             menuSave=TextAt(buttons[0].rect,"ResumoDoSave",22,21,234,10,4);
             menuSave.text=MenuSaveSummary(saved);menuSave.color=saved!=null?new Color(.66f,.68f,.69f):new Color(.38f,.4f,.42f);
-            Button("NOVO JOGO",()=>{if(DarklightProgress.Load()!=null)Open("ConfirmNew");else NewGame();});
+            Button("NOVO JOGO",()=>{difficultyForNewGame=true;returnPanel="Main";Open("Difficulty");});
             Button("CARREGAR JOGO",()=>Open("LoadGames"));
+            Button("ARENA DE TREINAMENTO",EnterTraining);
             Button("CONFIGURAÇÕES",()=>Open("Options"));
             Button("TROCAR SKIN",()=>Open("Skins"));
             Button("CRÉDITOS",()=>Open("Credits"));
@@ -132,7 +133,7 @@ namespace Darklight
                 b.rect.anchoredPosition=new Vector2(22,-(62+(i-first)*28));b.image.sprite=UIArt(!b.enabled?3:i==selection?2:1,extras[7]);b.image.color=Color.white;b.text.color=b.enabled?new Color(.96f,.9f,.86f):Color.gray;return;
             }
             bool tall=panel=="Main"&&i==0||panel=="LoadGames"&&i<2;
-            float y=CinematicPause?96+(i-first)*23:panel=="Main"?(i==0?137:176+(i-1)*26):panel=="LoadGames"?116+(i-first)*41:116+(i-first)*27;
+            float y=CinematicPause?96+(i-first)*20:panel=="Main"?(i==0?137:176+(i-1)*22):panel=="LoadGames"?116+(i-first)*41:116+(i-first)*27;
             float width=panel=="Pause"?214:260;float h=panel=="Pause"?20:tall?34:22;
             if(panel=="Options"){width=i<6?178:372;y=i<6?101+i*27:101+(i-6)*(optionsCategory==1?29:30);if(settingsSliders.ContainsKey(i))h=26;}
             if(panel=="Skins"){width=208;y=108+(i-first)*32;h=26;}
@@ -161,4 +162,3 @@ namespace Darklight
         }
     }
 }
-

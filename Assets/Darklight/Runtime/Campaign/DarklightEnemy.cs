@@ -31,7 +31,7 @@ namespace Darklight
                 corpse+=dt;art.color=new Color(.35f,.2f,.3f,Mathf.Clamp01(1-corpse/1.3f));if(corpse>1.4f)Destroy(gameObject);return;
             }
             if(TickExpandedBoss(game,dt))return;
-            clock+=dt;timer-=dt;stagger-=dt;
+            clock+=dt;timer-=dt;stagger-=dt;TickAerial(dt);
             Vector2 delta=(Vector2)lab.Player.transform.position-body.position;float distance=delta.magnitude;
             if(Boss&&!ExpandedBoss&&!phaseTwo&&Health.HealthPercent<.5f){phaseTwo=true;game.BossPhaseTwo();game.Notice("FASE 2: "+DarklightStory.Bosses[(int)kind-5]);timer=.85f;state=0;}
             if(stagger>0){warning?.Hide();body.linearVelocity=Vector2.zero;art.color=new Color(1,.7f,.7f);Show(0);return;}
@@ -39,6 +39,8 @@ namespace Darklight
             float range=ranged?6:ExpandedBoss&&ExpandedArea?3.8f:Boss?2.5f:1.45f;
             float speed=kind==RequiemEnemyKind.Hunter?3.3f:kind==RequiemEnemyKind.Armored?1.25f:2.15f;
             if(Boss)speed=ExpandedBoss?ExpandedSpeed:phaseTwo?3.15f:2.4f;
+            speed*=game.DifficultyProfile.speed;
+            if(TickTactics(game,dt,delta,distance,range,speed,ranged))return;
             art.sortingOrder=100-Mathf.RoundToInt(transform.position.y*10);
             if(state==0)
             {
@@ -58,7 +60,7 @@ namespace Darklight
                 body.linearVelocity=ranged&&distance<2.1f&&sight?-delta.normalized*speed*.7f:walk?direction*speed*game.EnemyTimeScale:Vector2.zero;
                 Show(walk?1+(int)(clock*12)%2:0);art.transform.localPosition=Vector3.up*((int)(clock*1.5f)%2)/48f;
                 if(distance<range&&DarklightNavigation.Clear(body.position,lab.Player.transform.position)&&timer<=0&&game.RequestAttack(this))
-                {PrepareExpandedAttack();state=1;game.EnemyAudioWarning(this);timer=windup=ExpandedBoss?ExpandedWindup:Boss?.6f:kind==RequiemEnemyKind.Hunter?.4f:.52f;locked=delta.normalized;body.linearVelocity=Vector2.zero;}
+                {BeginTacticalSequence(game);PrepareExpandedAttack();state=1;game.EnemyAudioWarning(this);timer=windup=Mathf.Max(.32f,(ExpandedBoss?ExpandedWindup:Boss?.6f:kind==RequiemEnemyKind.Hunter?.4f:.52f)*game.DifficultyProfile.windup);locked=delta.normalized;body.linearVelocity=Vector2.zero;}
             }
             else if(state==1)
             {
@@ -70,7 +72,7 @@ namespace Darklight
             else
             {
                 body.linearVelocity=dash;ShowAttack(timer>.13f?2:3);art.color=Color.white;
-                if(timer<=0){state=0;dash=Vector2.zero;timer=phaseTwo?.5f:Boss?.7f:.8f;}
+                if(timer<=0){if(ContinueTacticalSequence(game))return;state=0;dash=Vector2.zero;timer=(phaseTwo?.5f:Boss?.7f:.8f)*game.DifficultyProfile.cooldown;}
             }
         }
         void ShowAttack(int index)
@@ -91,6 +93,7 @@ namespace Darklight
             if(ranged)
             {
                 int shots=Boss?(phaseTwo?7:3):kind==RequiemEnemyKind.Spectral?3:1;
+                if(!Boss)shots=Mathf.Min(5,shots+game.Difficulty+(elite?1:0));
                 for(int i=0;i<shots;i++){float angle=(i-(shots-1)*.5f)*18;Vector2 direction=Quaternion.Euler(0,0,angle)*locked;
                     game.Fire(transform.position+Vector3.up*.35f,direction,damage,phaseTwo?5:3.8f);}
             }
@@ -113,14 +116,16 @@ namespace Darklight
         void Reward(){if(rewarded)return;rewarded=true;DarklightCampaign.Instance?.EnemyDefeated(this);GetComponent<Collider2D>().enabled=false;}
         public bool EvadeStrike()
         {
+            var game=DarklightCampaign.Instance;
+            if(game==null||(game.Training&&game.TrainingPassive)||dodgeReadAt<0||clock<dodgeReadAt||clock<guardReady)return false;
             if((kind!=RequiemEnemyKind.Kael&&kind!=RequiemEnemyKind.Hunter)||state!=0||serial%3!=1||timer>.3f)return false;
             Vector2 side=(Vector2)(Quaternion.Euler(0,0,90)*((Vector2)DarklightCombatLab.Instance.Player.transform.position-body.position).normalized);
-            DarklightNavigation.SafeStep(body,side*.6f);timer=.6f;serial++;return true;
+            DarklightNavigation.SafeStep(body,side*.6f);timer=.6f;serial++;guardReady=clock+1.8f;return true;
         }
         public void Struck(float force,bool heavy)
         {
             bool armor=kind==RequiemEnemyKind.Armored||kind==RequiemEnemyKind.Sentinel;
-            if((!armor||heavy)&&clock>=staggerReady&&(!Boss||heavy)) {stagger=Boss?.10f:.24f;staggerReady=clock+(Boss?2f:.55f);state=0;timer=Mathf.Max(timer,.45f);}
+            if((!armor||heavy)&&clock>=staggerReady&&(!Boss||heavy)) {stagger=Mathf.Max(stagger,Boss?.10f:.24f);staggerReady=clock+(Boss?2f:.55f);state=0;timer=Mathf.Max(timer,.45f);}
             if(!Boss)DarklightNavigation.SafeStep(body,DarklightCombatLab.Instance.Player.Model.Facing*Mathf.Min(.8f,force));
         }
         public void PullToward(Vector2 point,float distance)
@@ -133,14 +138,17 @@ namespace Darklight
     }
     public sealed class DarklightProjectile : MonoBehaviour
     {
+        static readonly RaycastHit2D[] rayHits=new RaycastHit2D[64];
         public Vector2 direction;public float damage,speed;float age;
         void Update()
         {
             var lab=DarklightCombatLab.Instance;if(lab==null)return;float dt=lab.CombatDelta*(DarklightCampaign.Instance?.EnemyTimeScale??1);if(dt<=0)return;
             Vector2 origin=transform.position;Vector2 step=direction*speed*dt;
-            var hits=Physics2D.RaycastAll(origin,direction,step.magnitude+.12f);
-            foreach(var hit in hits)
+            int count=Physics2D.Raycast(origin,direction,new ContactFilter2D{useTriggers=true,useLayerMask=false},rayHits,step.magnitude+.12f);
+            if(count>=rayHits.Length){Destroy(gameObject);return;}
+            for(int i=0;i<count;i++)
             {
+                var hit=rayHits[i];
                 var actor=hit.collider.GetComponentInParent<DarklightCombatant>();
                 if(actor!=null){if(actor.player){actor.Receive(damage,direction);Destroy(gameObject);return;}continue;}
                 if(!hit.collider.isTrigger){Destroy(gameObject);return;}

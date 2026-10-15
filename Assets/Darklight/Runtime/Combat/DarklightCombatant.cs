@@ -13,12 +13,13 @@ namespace Darklight
         {
             if (Health.IsDead) return false;
             var enemy=player?null:GetComponent<DarklightEnemy>();
-            if(enemy!=null&&(!enemy.AcceptDamage||enemy.EvadeStrike()))return false;
+            if(enemy!=null&&(!enemy.AcceptDamage||enemy.TryGuardHit(force)||enemy.EvadeStrike()))return false;
             if(enemy!=null)damage=enemy.ProtectPurification(damage);
             if (fighter != null && (fighter.Model.Invulnerable||(!unblockable&&fighter.Model.Defend(-force))))
             { DarklightCombatLab.Instance?.Feedback(transform.position + Vector3.up, true);DarklightCombatLab.Instance?.Coach?.Record(fighter.Model.Invulnerable?DarklightLesson.Dodge:DarklightLesson.Parry); if(fighter.Model.PerfectParry&&!unblockable)DarklightCampaign.Instance?.Defended(); return false; }
             if(player)damage *= DarklightCampaign.Instance?.IncomingMultiplier ?? 1;
             if(player && (Health.IsInvincible||DarklightCampaign.Instance?.ShadowInvulnerable==true))return false;
+            if(player&&DarklightCampaign.Instance?.Training==true&&!DarklightCampaign.Instance.TrainingDamage)return false;
             if(player&&DarklightCampaign.Instance!=null)damage=DarklightCampaign.Instance.ProtectAwakening(damage);
             Health.TakeDamage(damage);
             if(player) { if(DarklightCampaign.Instance != null)Health.SetInvincibilityDuration(.28f); DarklightCampaign.Instance?.Damaged(); }

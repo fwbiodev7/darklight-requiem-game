@@ -14,15 +14,25 @@ namespace Darklight
         [Min(1)] public int hitPulses=1;
         public float lungeSpeed, cooldown;
         public bool pullTarget,blink;
+        // Optional authored phases; old profiles retain their original sector behaviour.
+        public HitShape hitShape;
+        public float innerRange, width=.55f, sweepDegrees, windupMove=.42f,recoveryMove=.42f;
+        public float postureDamage=1,chargeSeconds=.45f,hitstop=.035f;
+        public bool launch,finisher;
+        public float hitCancelFraction=1,whiffCancelFraction=1;
         [Range(0,1)] public float recoveryChainFraction=.35f;
         public float Duration => startup + active + recovery;
     }
+    public enum HitShape { Sector, Thrust, Sweep }
 
     [System.Serializable]
     public sealed class CombatLoadout
     {
         public AttackDefinition[] lights;
         public AttackDefinition heavy, charged, counter, skill, aerial, weaponSpecial;
+        public AttackDefinition pauseBranch,heavyBranch,swapEntry;
+        public float attackBuffer,defenseBuffer;
+        public int weapon;
     }
 
     public struct CombatInput

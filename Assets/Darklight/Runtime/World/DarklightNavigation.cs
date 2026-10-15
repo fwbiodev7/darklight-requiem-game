@@ -9,14 +9,17 @@ namespace Darklight
         readonly Dictionary<Vector2Int,Vector2Int> parents=new();readonly Queue<Vector2Int> queue=new();
         readonly Dictionary<Vector2Int,List<Vector2Int>> links=new();bool cached;
         static readonly Vector2Int[] Steps={Vector2Int.up,Vector2Int.right,Vector2Int.down,Vector2Int.left};
+        static readonly RaycastHit2D[] clearanceHits=new RaycastHit2D[128],travelHits=new RaycastHit2D[128];
+        static readonly Collider2D[] overlaps=new Collider2D[128];
         public void Initialize(DarklightMapDefinition definition){map=definition;Instance=this;}
         Vector2Int Cell(Vector2 p)=>new Vector2Int(Mathf.FloorToInt(p.x/map.CellSize),Mathf.FloorToInt(p.y/map.CellSize));
         Vector2 Center(Vector2Int c)=>(new Vector2(c.x,c.y)+Vector2.one*.5f)*map.CellSize;
         public static bool Clear(Vector2 a,Vector2 b,float radius=.3f)
         {
             Vector2 delta=b-a;
-            foreach(var hit in Physics2D.CircleCastAll(a,radius,delta.normalized,delta.magnitude))
-                if(!hit.collider.isTrigger&&hit.collider.GetComponentInParent<DarklightCombatant>()==null)return false;
+            int count=Physics2D.CircleCast(a,radius,delta.normalized,new ContactFilter2D{useTriggers=false,useLayerMask=false},clearanceHits,delta.magnitude);
+            if(count>=clearanceHits.Length)return false;
+            for(int i=0;i<count;i++)if(clearanceHits[i].collider.GetComponentInParent<DarklightCombatant>()==null)return false;
             return true;
         }
         public bool FindPath(Vector2 from,Vector2 to,List<Vector2> route)
@@ -82,12 +85,15 @@ namespace Darklight
             normal=Vector2.zero;float length=delta.magnitude,allowed=length;
             if(length<.00001f)return 0;var direction=delta/length;
             // A dash/pull must not escape through a solid region from an invalid overlapping origin.
-            foreach(var overlap in Physics2D.OverlapCircleAll(origin,radius))
-                if(!overlap.isTrigger&&overlap.attachedRigidbody!=owner&&overlap.GetComponentInParent<DarklightCombatant>()==null&&Vector2.Distance(overlap.ClosestPoint(origin),origin)<radius-.015f)
+            int overlapping=Physics2D.OverlapCircle(origin,radius,new ContactFilter2D{useTriggers=false,useLayerMask=false},overlaps);
+            if(overlapping>=overlaps.Length){normal=-direction;return 0;}
+            for(int i=0;i<overlapping;i++)
+                if(overlaps[i].attachedRigidbody!=owner&&overlaps[i].GetComponentInParent<DarklightCombatant>()==null&&Vector2.Distance(overlaps[i].ClosestPoint(origin),origin)<radius-.015f)
                 {normal=-direction;return 0;}
-            foreach(var hit in Physics2D.CircleCastAll(origin,radius,direction,length+CastSkin))
-                if(Blocks(hit,direction,owner)&&hit.distance-CastSkin<allowed)
-                {allowed=Mathf.Max(0,hit.distance-CastSkin);normal=hit.normal;}
+            int hits=Physics2D.CircleCast(origin,radius,direction,new ContactFilter2D{useTriggers=false,useLayerMask=false},travelHits,length+CastSkin);
+            if(hits>=travelHits.Length){normal=-direction;return 0;}
+            for(int i=0;i<hits;i++)if(Blocks(travelHits[i],direction,owner)&&travelHits[i].distance-CastSkin<allowed)
+                {allowed=Mathf.Max(0,travelHits[i].distance-CastSkin);normal=travelHits[i].normal;}
             return allowed;
         }
         public static void SafeStep(Rigidbody2D body,Vector2 delta,float radius=.3f)
@@ -131,4 +137,3 @@ namespace Darklight
         void OnDestroy(){if(Instance==this)Instance=null;}
     }
 }
-

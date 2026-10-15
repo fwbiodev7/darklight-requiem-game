@@ -24,13 +24,12 @@ namespace Darklight
         void CreateDialogueUI()
         {
             dialogueRoot=RectAt(overlay,"Dialogo",0,0,640,360);
-            dialogueBox=RectAt(dialogueRoot,"Caixa",10,246,620,108);
-            ImageAt(dialogueBox,"Carvao",0,0,620,108,null).color=new Color(.025f,.021f,.035f,.97f);
-            Color silver=new Color(.38f,.35f,.4f),wine=new Color(.45f,.05f,.14f);
-            ImageAt(dialogueBox,"Superior",0,0,620,1,null).color=silver;ImageAt(dialogueBox,"Inferior",0,107,620,1,null).color=silver;
-            ImageAt(dialogueBox,"Esquerda",0,0,1,108,null).color=silver;ImageAt(dialogueBox,"Direita",619,0,1,108,null).color=silver;
-            ImageAt(dialogueBox,"Sangue",3,3,614,1,null).color=wine;ImageAt(dialogueBox,"Divisor",119,12,1,81,null).color=wine;
-            var backdrop=ImageAt(dialogueRoot,"RetratoFundo",18,240,102,92,null);backdrop.color=new Color(.065f,.045f,.09f);
+            dialogueBox=RectAt(dialogueRoot,"Caixa",10,238,620,116);
+            var frame=ImageAt(dialogueBox,"MolduraDialogo",0,0,620,116,UIArt(5,UIArt(0,extras[6])));
+            frame.type=Image.Type.Sliced;frame.pixelsPerUnitMultiplier=8.333333f;frame.color=Color.white;frame.raycastTarget=false;
+            // Reuse the authored menu texture and the HUD portrait rim at native pixel scale.
+            var portraitFrame=RectAt(dialogueRoot,"MolduraRetrato",16,240,110,110);DarklightHUDTheme.Frame(portraitFrame);
+            var divider=ImageAt(dialogueBox,"Divisor",121,15,1,86,null);divider.color=new Color(.38f,.08f,.14f);
             dialoguePortrait=RectAt(dialogueRoot,"RetratoNPC",19,241,100,90).gameObject.AddComponent<RawImage>();dialoguePortrait.raycastTarget=false;
             dialogueName=TextAt(dialogueRoot,"NomeNPC",16,334,110,13,6);dialogueName.alignment=TextAnchor.MiddleCenter;dialogueName.horizontalOverflow=HorizontalWrapMode.Wrap;
             dialogueText=TextAt(dialogueRoot,"Fala",141,262,470,65,8);dialogueText.supportRichText=false;dialogueText.horizontalOverflow=HorizontalWrapMode.Wrap;dialogueText.verticalOverflow=VerticalWrapMode.Truncate;dialogueText.lineSpacing=1.55f;

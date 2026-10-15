@@ -1,8 +1,14 @@
 # DARKLIGHT: REQUIEM
 
-RPG 2D em pixel art de Fábio Ronaldo. **Prévia do remaster em desenvolvimento.**
+RPG 2D em pixel art de Fábio Ronaldo. **Beta 1.0 em desenvolvimento.**
 
 Um eclipse abre fendas em Vespera. Fábio, Lyra e Kael atravessam a cidade e o Véu, enfrentando as consequências do Projeto Eclipse.
+
+## Beta 1.0 — 15/10/2026
+
+Três trilhas de transformação e correção das conexões de colisão do Mapa 4. Consulte [mudanças e verificações](Docs/BETA-1.0.md).
+
+[Baixar Beta 1.0 para Windows](https://github.com/fwbiodev7/darklight-requiem-game/releases/tag/v1.0.0-beta.1).
 
 ## Atualização de 14/10/2026
 

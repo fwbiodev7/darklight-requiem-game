@@ -29,7 +29,7 @@ namespace Darklight
             gameLogo=ImageAt(menuRoot,"LogoDarklight",28,32,260,87,Resources.Load<Sprite>("Darklight/Branding/GameLogo"));gameLogo.preserveAspect=true;gameLogo.raycastTarget=false;
             menuTagline=TextAt(menuRoot,"FraseTematica",28,110,270,12,7);
             menuTagline.text="Entre o sangue e o eclipse.";
-            menuVersion=TextAt(menuRoot,"Versao",553,339,75,10,5);menuVersion.text="0.2 PREVIA";menuVersion.alignment=TextAnchor.MiddleRight;
+            menuVersion=TextAt(menuRoot,"Versao",553,339,75,10,5);menuVersion.text="BETA 1.0";menuVersion.alignment=TextAnchor.MiddleRight;
             menuFade=menuRoot.gameObject.AddComponent<CanvasGroup>();
         }
         public static int MenuProgressPercent(DarklightProgress saved)

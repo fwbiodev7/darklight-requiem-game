@@ -6,6 +6,7 @@ namespace Darklight
         public AudioSource EventMusicSource => music;
         public bool EventMusicHasPriority => firstAwakeningMusicPending || HasFirstAwakeningMusic && music.isPlaying;
         public TodaySkinMusic SkinMusic { get; private set; }
+        public TodayTransformationMusic TransformationMusic { get; private set; }
         void FinishMusicEvent() { if (SkinMusic != null) SkinMusic.FinishEvent(); else music.Stop(); }
     }
     // Skin themes persist across map loads; the campaign keeps its original resonance source.
@@ -87,7 +88,7 @@ namespace Darklight
             eventWeight = Fade(eventWeight, priority && (source.isPlaying || DarklightAutomation.Silent) ? 1 : 0, dt);
             source.volume = DarklightAutomation.Silent ? 0 : game.MusicVolume * eventWeight;
             if (eventEnding && eventWeight <= 0) { source.Stop(); eventEnding = false; }
-            bool suspend = priority || game.WearingHeadphones;
+            bool suspend = priority || game.WearingHeadphones || game.TransformationMusic != null && game.TransformationMusic.HasTheme;
             AdvanceSkinFade(game.SelectedSkin, suspend, dt);
             if (DarklightAutomation.Silent) { rock.Pause(); requiem.Pause(); source.Pause(); rock.main.volume = rock.tail.volume = requiem.main.volume = requiem.tail.volume = 0; return; }
             float gain = game.MusicVolume * .7f * (game.AudioDirector?.MusicDucking ?? 1);

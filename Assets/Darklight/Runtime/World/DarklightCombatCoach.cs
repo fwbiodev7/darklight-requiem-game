@@ -5,7 +5,7 @@ namespace Darklight
     public enum DarklightLesson { Strike, Dodge, Parry }
     public sealed class DarklightCombatCoach : MonoBehaviour
     {
-        DarklightCombatLab lab;Text text;RectTransform card;int mask,hits;float completedTime;
+        DarklightCombatLab lab;Text text;RectTransform card;int mask,hits;float completedTime,nextAbyssTip;
         public int Learned=>mask;
         public bool TipsEnabled {get;private set;}=true;
         public void Initialize(DarklightCombatLab value){lab=value;mask=DarklightAutomation.Silent?0:PlayerPrefs.GetInt("Darklight.Lessons",0);TipsEnabled=PlayerPrefs.GetInt("Darklight.Tips",1)!=0;}
@@ -29,6 +29,11 @@ namespace Darklight
                 var r=new GameObject("Texto",typeof(RectTransform),typeof(Text)).GetComponent<RectTransform>();r.SetParent(card,false);r.anchorMin=Vector2.zero;r.anchorMax=Vector2.one;r.offsetMin=new Vector2(6,3);r.offsetMax=new Vector2(-5,-3);text=r.GetComponent<Text>();text.font=lab.PixelHUD.pixelFont;text.fontSize=4;text.lineSpacing=1.6f;text.color=new Color(.95f,.9f,.82f);text.raycastTarget=false;
             }
             bool active=lab.Ready&&!lab.Paused&&TipsEnabled&&(DarklightCampaign.Instance==null||DarklightCampaign.Instance.Active);
+            var rider=DarklightCampaign.Instance?.AbyssRider;
+            if(rider?.Active==true)
+            {
+                card.gameObject.SetActive(active);if(active&&Time.unscaledTime>=nextAbyssTip){text.text=rider.LessonText(lab.Input);nextAbyssTip=Time.unscaledTime+.15f;}return;
+            }
             if(mask==7&&completedTime<5&&active)completedTime+=lab.CombatDelta;
             card.gameObject.SetActive(active&&(mask!=7||completedTime<5));if(!active)return;
             var input=lab.Input;

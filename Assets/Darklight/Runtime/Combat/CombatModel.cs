@@ -26,7 +26,7 @@ namespace Darklight
         public float SkillRemaining => Mathf.Max(0, skillReady - Clock);
         public float AttackDamage => Attack == null ? 0 : Attack.damage * (Attack.kind == StrikeKind.Heavy ? 1 + ComboCount * .15f : 1);
         CombatLoadout loadout;
-        int hitPulse=-1;float aerialReady,weaponSpecialReady;
+        int hitPulse=-1;float aerialReady,weaponSpecialReady;bool contactFinished;
         bool pendingAerial,pendingWeaponSpecial;
         public bool CanEquip=>State==CombatState.Neutral||(State==CombatState.Attack&&!ActiveThisTick&&StateTime>=Attack.startup+Attack.active+Attack.recovery*(AttackConnected?(FormStyle==3?0:.08f):Attack.recoveryChainFraction));
         public float WeaponSpecialRemaining=>Mathf.Max(0,weaponSpecialReady-Clock);
@@ -66,7 +66,7 @@ namespace Darklight
             {
                 float previous = StateTime;
                 StateTime += delta * attackSpeed;
-                ActiveThisTick = previous < Attack.startup + Attack.active && StateTime >= Attack.startup;
+                ActiveThisTick = !contactFinished && previous < Attack.startup + Attack.active && StateTime >= Attack.startup;
                 if(ActiveThisTick)
                 {
                     int total=Mathf.Clamp(Attack.hitPulses,1,6);
@@ -88,7 +88,7 @@ namespace Darklight
                 if(!ActiveThisTick && StateTime>=Attack.startup+Attack.active && pendingParry){Face(input);BeginParry();return;}
                 if(AttackConnected&&!ActiveThisTick&&StateTime>=Attack.startup+Attack.active+Attack.recovery*.12f)
                 {
-                    if(FormStyle==3&&pendingSkill&&Clock>=skillReady){BeginAttack(loadout.skill);skillReady=Clock+3;return;}
+                    if(FormStyle==3&&pendingSkill&&Clock>=skillReady){BeginAttack(loadout.skill);skillReady=Clock+(loadout.weapon==3?Mathf.Max(3,loadout.skill.cooldown):3);return;}
                     if(pendingAerial&&loadout.aerial!=null&&Clock>=aerialReady){BeginAttack(loadout.aerial);aerialReady=Clock+Mathf.Max(.5f,loadout.aerial.cooldown);return;}
                     if(pendingWeaponSpecial&&loadout.weaponSpecial!=null&&Clock>=weaponSpecialReady){BeginAttack(loadout.weaponSpecial);weaponSpecialReady=Clock+Mathf.Max(1,loadout.weaponSpecial.cooldown);return;}
                 }
@@ -113,7 +113,7 @@ namespace Darklight
             Face(input);
             if (pendingDodge && Clock >= dodgeReady) { BeginDodge(input); return; }
             if (pendingParry) { BeginParry(); return; }
-            if (pendingSkill && Clock >= skillReady) { BeginAttack(loadout.skill); skillReady = Clock + 3f; ClearPending();ClearQueue(); return; }
+            if (pendingSkill && Clock >= skillReady) { BeginAttack(loadout.skill); skillReady = Clock + (loadout.weapon==3?Mathf.Max(3,loadout.skill.cooldown):3); ClearPending();ClearQueue(); return; }
             if(pendingWeaponSpecial&&loadout.weaponSpecial!=null&&Clock>=weaponSpecialReady){BeginAttack(loadout.weaponSpecial);weaponSpecialReady=Clock+Mathf.Max(1,loadout.weaponSpecial.cooldown);ClearPending();ClearQueue();return;}
             if(pendingAerial&&loadout.aerial!=null&&Clock>=aerialReady){BeginAttack(loadout.aerial);aerialReady=Clock+Mathf.Max(.5f,loadout.aerial.cooldown);ClearPending();ClearQueue();return;}
             if (input.heavyPressed) { State = CombatState.Charging; StateTime = 0; ClearQueue(); return; }
@@ -149,12 +149,21 @@ namespace Darklight
         void BeginAttack(AttackDefinition attack)
         {
             if (attack == null) return;
-            Attack = attack; State = CombatState.Attack; StateTime = 0;
+            Attack = attack; State = CombatState.Attack; StateTime = 0;contactFinished=false;
             ClearPending();AttackSerial++; struck.Clear();foreach(var targets in pulseTargets)targets.Clear();hitPulse=-1; ActiveThisTick = false;AttackConnected=false;
+        }
+        // Restricted to the fourth weapon's committed follow-up transitions.
+        public bool TryMountedFollowup(AttackDefinition expected,AttackDefinition next)=>TryWeaponFollowup(expected,next);
+        public bool TryWeaponFollowup(AttackDefinition expected,AttackDefinition next)
+        {
+            if(loadout.weapon!=3||State!=CombatState.Attack||Attack!=expected||expected==null||next==null||ActiveThisTick||StateTime<expected.startup+expected.active)return false;
+            if(next.kind==StrikeKind.Skill){if(Clock<skillReady)return false;skillReady=Clock+Mathf.Max(3,next.cooldown);}
+            ClearQueue();BeginAttack(next);Motion=Vector2.zero;return true;
         }
         public bool RegisterHit(object target){bool hit=target != null && ActiveThisTick && struck.Add(target);if(hit)AttackConnected=true;return hit;}
         public bool RegisterPulseHit(object target,int pulse)=>target!=null&&ActiveThisTick&&(ContactPulses&(1u<<pulse))!=0&&pulseTargets[pulse].Add(target);
         public void ConfirmHit()=>AttackConnected=true;
+        public void FinishAttackContact(){if(State!=CombatState.Attack||Attack==null)return;contactFinished=true;StateTime=Mathf.Max(StateTime,Attack.startup+Attack.active);ActiveThisTick=false;ContactPulses=0;Motion=Vector2.zero;}
         public bool Defend()
         {
             if (Invulnerable) return true;
@@ -171,3 +180,4 @@ namespace Darklight
         public void SuspendInput() { ClearQueue(); ClearPending(); if (State == CombatState.Charging) EnterNeutral(); }
     }
 }
+

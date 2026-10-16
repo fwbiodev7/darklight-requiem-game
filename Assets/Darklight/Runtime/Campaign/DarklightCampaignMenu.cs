@@ -16,7 +16,7 @@ namespace Darklight
         float menuSoundAt;
         bool CinematicFront=>panel=="Main"||panel=="Skins"&&returnPanel=="Main"||panel=="ConfirmNew"||panel=="LoadGames"||panel=="Extras"||panel=="Regions"||panel=="RegionDetails"||((panel=="Options"||panel=="Controls"||panel=="Credits"||panel=="BindingDevice"||panel=="BindingSlot"||panel=="BindingConflict")&&returnPanel=="Main");
 
-        bool CinematicPause=>panel=="Skins"&&returnPanel=="Pause"||panel=="Pause"||panel=="Transformations"||panel=="Skills"||panel=="VampireSkills"||panel=="Inventory"||panel=="Journal"||panel=="MP3"||panel=="Playtest"||((panel=="Options"||panel=="Controls"||panel=="BindingDevice"||panel=="BindingSlot"||panel=="BindingConflict")&&returnPanel=="Pause");
+        bool CinematicPause=>panel=="Skins"&&returnPanel=="Pause"||panel=="Pause"||panel=="Transformations"||panel=="Skills"||panel=="VampireSkills"||panel=="Inventory"||panel=="Weapons"||panel=="AbyssHelp"||panel=="Journal"||panel=="MP3"||panel=="Playtest"||((panel=="Options"||panel=="Controls"||panel=="BindingDevice"||panel=="BindingSlot"||panel=="BindingConflict")&&returnPanel=="Pause");
 
         void CreateCinematicMenu()
         {
@@ -162,3 +162,5 @@ namespace Darklight
         }
     }
 }
+
+

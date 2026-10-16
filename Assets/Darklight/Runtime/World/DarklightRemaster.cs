@@ -28,7 +28,7 @@ namespace Darklight
                 CreateEmbers();
             }
             foreach(var light in lamps)if(light!=null){light.enabled=false;Destroy(light.gameObject);}lamps.Clear();
-            Point("LuaAmbiente",player.position,new Color(.42f,.57f,.86f),.7f,0,true);
+            Point("LuaAmbiente",player.position,chapter>=6&&DarklightCampaign.Instance?.Map?.Art?.revision>=2?DarklightRegionAtmosphere.Moon(chapter):new Color(.42f,.57f,.86f),.7f,0,true);
             Point("LuzFria",player.position+new Vector3(4.5f,1.5f),new Color(.2f,.46f,1),1.1f,7);
             Point("LuzQuente",player.position+new Vector3(-3.8f,2.3f),new Color(1,.52f,.2f),.85f,6.5f);
             if(DarklightCampaign.Instance?.Map!=null)

@@ -11,7 +11,7 @@ namespace Darklight
         float captureAfter,captureDeadline;
         DarklightInput.BindingSlot bindingSlot;
         string candidatePath;
-        readonly string[] gameplayCommands={"Move","Interact","Light","Heavy","Dodge","Parry","Skill","Transform","Potion","MP3","Journal","Map","Pause","Power","PowerNext","PowerPrevious","WeaponNext","Aerial","WeaponSpecial","Vampire","VampireNext"};
+        readonly string[] gameplayCommands={"Move","Interact","Light","Heavy","Dodge","Parry","Skill","Transform","Potion","MP3","Journal","Map","Pause","Power","PowerNext","PowerPrevious","WeaponNext","Aerial","WeaponSpecial","Vampire","VampireNext","AbyssSaw","AbyssBike","AbyssDrift"};
         readonly string[] mapCommands={"MapPan","MapCursor","MapZoomIn","MapZoomOut","MapCenter","MapMark","MapClear","MapObjective"};
         string SlotTitle(DarklightInput.BindingSlot slot)
         {

@@ -137,3 +137,4 @@ namespace Darklight
         void OnDestroy(){if(Instance==this)Instance=null;}
     }
 }
+

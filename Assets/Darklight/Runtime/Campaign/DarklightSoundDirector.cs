@@ -111,9 +111,10 @@ namespace Darklight
         public void Region(int chapter)
         {
             region = chapter; ambientTarget = chapter == 3 || chapter == 5 || chapter >= 6 && chapter != 7 ? 1 : 0; swingSerial = -1; StopCombat();
-            var clip = Resources.Load<AudioClip>("Darklight/Audio/Expansion/dl-ambient-" + RegionLayer(chapter));
+            var clip = Resources.Load<AudioClip>("Darklight/Audio/Expansion/dl-ambient-" + (game.Map?.Art?.revision>=2&&chapter>=6?DarklightRegionAtmosphere.Bed(chapter):RegionLayer(chapter)));
             if (regional != null && regional.clip != clip)
             { outgoing.Stop(); var old = outgoing; outgoing = regional; regional = old; regional.clip = clip; layerBlend = 0; }
+            if(regional!=null)regional.pitch=chapter>=6&&game.Map?.Art?.revision>=2?new[]{.92f,1.12f,.78f,.88f}[Mathf.Clamp(chapter-6,0,3)]:1;
             nextOccasion = Time.unscaledTime + 4;
         }
         public void StopCombat() { foreach (var voice in voices) if (voice?.source != null && voice.category != DarklightAudioCategory.Interface) voice.source.Stop(); }
@@ -140,6 +141,7 @@ namespace Darklight
             {
                 nextOccasion = Time.unscaledTime + Random.Range(8f, 17f);
                 string cue = region == 2 || region == 7 ? "thunder" : region == 3 || region == 6 ? "drip" : region == 4 ? "creature" : region == 8 || region == 9 ? "whisper" : "portal";
+                if(region>=6&&game.Map?.Art?.revision>=2)cue=DarklightRegionAtmosphere.Cue(region);
                 Vector2 p = DarklightCombatLab.Instance.Player.transform.position;
                 if (game.Map != null && Vector2.Distance(p, game.Map.Portal) < 4) cue = "portal";
                 Play("dl-ambient-" + cue, DarklightAudioCategory.Ambient, .17f, p + Random.insideUnitCircle * 7, 1, 3);

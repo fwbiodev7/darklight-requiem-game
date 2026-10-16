@@ -1,0 +1,1078 @@
+{
+  "cellWidth": 768,
+  "cellHeight": 512,
+  "pivot": [
+    0.5,
+    0.0625
+  ],
+  "sheets": [
+    {
+      "name": "requiemadaga1",
+      "source": "C:\\Users\\Usuario\\Pictures\\requiemadaga1.png",
+      "sha256": "fa6516685ceefcb4099e02f593ce09006eafb3a7813c386b859f73cb4afc3f65",
+      "skin": 0,
+      "weapon": 1,
+      "frames": [
+        {
+          "index": 0,
+          "action": "walk-left",
+          "sourceBounds": [
+            35,
+            65,
+            432,
+            389
+          ],
+          "support": [
+            274,
+            445
+          ],
+          "spriteName": "requiemadaga1_0",
+          "atlasRect": [
+            0,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 1,
+          "action": "walk-right",
+          "sourceBounds": [
+            515,
+            65,
+            373,
+            379
+          ],
+          "support": [
+            735,
+            440
+          ],
+          "spriteName": "requiemadaga1_1",
+          "atlasRect": [
+            768,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 2,
+          "action": "attack-startup",
+          "sourceBounds": [
+            902,
+            102,
+            568,
+            340
+          ],
+          "support": [
+            1092,
+            437
+          ],
+          "spriteName": "requiemadaga1_2",
+          "atlasRect": [
+            1536,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 3,
+          "action": "attack-contact",
+          "sourceBounds": [
+            1436,
+            80,
+            305,
+            363
+          ],
+          "support": [
+            1589,
+            439
+          ],
+          "spriteName": "requiemadaga1_3",
+          "atlasRect": [
+            2304,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 4,
+          "action": "defense",
+          "sourceBounds": [
+            111,
+            516,
+            262,
+            337
+          ],
+          "support": [
+            247,
+            848
+          ],
+          "spriteName": "requiemadaga1_4",
+          "atlasRect": [
+            0,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 5,
+          "action": "dodge-crouch",
+          "sourceBounds": [
+            436,
+            565,
+            530,
+            290
+          ],
+          "support": [
+            700,
+            848
+          ],
+          "spriteName": "requiemadaga1_5",
+          "atlasRect": [
+            768,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 6,
+          "action": "dodge-recovery",
+          "sourceBounds": [
+            912,
+            533,
+            440,
+            322
+          ],
+          "support": [
+            1125,
+            851
+          ],
+          "spriteName": "requiemadaga1_6",
+          "atlasRect": [
+            1536,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 7,
+          "action": "idle",
+          "sourceBounds": [
+            1350,
+            459,
+            402,
+            384
+          ],
+          "support": [
+            1560,
+            837
+          ],
+          "spriteName": "requiemadaga1_7",
+          "atlasRect": [
+            2304,
+            0,
+            768,
+            512
+          ]
+        }
+      ],
+      "ppu": 188.72017026082133
+    },
+    {
+      "name": "requiemfoice1",
+      "source": "C:\\Users\\Usuario\\Pictures\\requiemfoice1.png",
+      "sha256": "a9474027b5a1cb616b6c18ee9d1fae36e7bd25ca7679b1f60fbba78618a0aace",
+      "skin": 0,
+      "weapon": 2,
+      "frames": [
+        {
+          "index": 0,
+          "action": "walk-left",
+          "sourceBounds": [
+            58,
+            1,
+            384,
+            386
+          ],
+          "support": [
+            313,
+            378
+          ],
+          "spriteName": "requiemfoice1_0",
+          "atlasRect": [
+            0,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 1,
+          "action": "walk-right",
+          "sourceBounds": [
+            537,
+            1,
+            351,
+            385
+          ],
+          "support": [
+            787,
+            378
+          ],
+          "spriteName": "requiemfoice1_1",
+          "atlasRect": [
+            768,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 2,
+          "action": "attack-startup",
+          "sourceBounds": [
+            1043,
+            1,
+            473,
+            384
+          ],
+          "support": [
+            1260,
+            378
+          ],
+          "spriteName": "requiemfoice1_2",
+          "atlasRect": [
+            1536,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 3,
+          "action": "attack-contact",
+          "sourceBounds": [
+            1583,
+            3,
+            451,
+            379
+          ],
+          "support": [
+            1740,
+            372
+          ],
+          "spriteName": "requiemfoice1_3",
+          "atlasRect": [
+            2304,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 4,
+          "action": "defense",
+          "sourceBounds": [
+            90,
+            387,
+            342,
+            365
+          ],
+          "support": [
+            278,
+            741
+          ],
+          "spriteName": "requiemfoice1_4",
+          "atlasRect": [
+            0,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 5,
+          "action": "dodge-crouch",
+          "sourceBounds": [
+            509,
+            449,
+            485,
+            289
+          ],
+          "support": [
+            789,
+            736
+          ],
+          "spriteName": "requiemfoice1_5",
+          "atlasRect": [
+            768,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 6,
+          "action": "dodge-recovery",
+          "sourceBounds": [
+            1034,
+            400,
+            438,
+            352
+          ],
+          "support": [
+            1327,
+            745
+          ],
+          "spriteName": "requiemfoice1_6",
+          "atlasRect": [
+            1536,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 7,
+          "action": "idle",
+          "sourceBounds": [
+            1584,
+            370,
+            334,
+            383
+          ],
+          "support": [
+            1776,
+            726
+          ],
+          "spriteName": "requiemfoice1_7",
+          "atlasRect": [
+            2304,
+            0,
+            768,
+            512
+          ]
+        }
+      ],
+      "ppu": 175.1323180020422
+    },
+    {
+      "name": "requiemkatana1",
+      "source": "C:\\Users\\Usuario\\Pictures\\requiemkatana1.png",
+      "sha256": "cde9592b7421e9059970c0b708eb33c37f5835e442dc09dc0af3f83d8ead0a9d",
+      "skin": 0,
+      "weapon": 0,
+      "frames": [
+        {
+          "index": 0,
+          "action": "walk-left",
+          "sourceBounds": [
+            44,
+            20,
+            394,
+            387
+          ],
+          "support": [
+            296,
+            398
+          ],
+          "spriteName": "requiemkatana1_0",
+          "atlasRect": [
+            0,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 1,
+          "action": "walk-right",
+          "sourceBounds": [
+            528,
+            26,
+            362,
+            382
+          ],
+          "support": [
+            746,
+            399
+          ],
+          "spriteName": "requiemkatana1_1",
+          "atlasRect": [
+            768,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 2,
+          "action": "attack-startup",
+          "sourceBounds": [
+            981,
+            24,
+            418,
+            369
+          ],
+          "support": [
+            1224,
+            390
+          ],
+          "spriteName": "requiemkatana1_2",
+          "atlasRect": [
+            1536,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 3,
+          "action": "attack-contact",
+          "sourceBounds": [
+            1372,
+            46,
+            517,
+            346
+          ],
+          "support": [
+            1721,
+            389
+          ],
+          "spriteName": "requiemkatana1_3",
+          "atlasRect": [
+            2304,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 4,
+          "action": "defense",
+          "sourceBounds": [
+            80,
+            401,
+            345,
+            384
+          ],
+          "support": [
+            252,
+            778
+          ],
+          "spriteName": "requiemkatana1_4",
+          "atlasRect": [
+            0,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 5,
+          "action": "dodge-crouch",
+          "sourceBounds": [
+            444,
+            518,
+            459,
+            263
+          ],
+          "support": [
+            704,
+            773
+          ],
+          "spriteName": "requiemkatana1_5",
+          "atlasRect": [
+            768,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 6,
+          "action": "dodge-recovery",
+          "sourceBounds": [
+            932,
+            427,
+            487,
+            358
+          ],
+          "support": [
+            1244,
+            780
+          ],
+          "spriteName": "requiemkatana1_6",
+          "atlasRect": [
+            1536,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 7,
+          "action": "idle",
+          "sourceBounds": [
+            1480,
+            401,
+            380,
+            384
+          ],
+          "support": [
+            1720,
+            778
+          ],
+          "spriteName": "requiemkatana1_7",
+          "atlasRect": [
+            2304,
+            0,
+            768,
+            512
+          ]
+        }
+      ],
+      "ppu": 188.72017026082133
+    },
+    {
+      "name": "rockadaga1",
+      "source": "C:\\Users\\Usuario\\Pictures\\rockadaga1.png",
+      "sha256": "de827a111ec2ca3701a0ed873c20e7b57e7cac12e330f02fdcdacce51fba7784",
+      "skin": 1,
+      "weapon": 1,
+      "frames": [
+        {
+          "index": 0,
+          "action": "walk-left",
+          "sourceBounds": [
+            39,
+            50,
+            391,
+            388
+          ],
+          "support": [
+            235,
+            433
+          ],
+          "spriteName": "rockadaga1_0",
+          "atlasRect": [
+            0,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 1,
+          "action": "walk-right",
+          "sourceBounds": [
+            463,
+            50,
+            347,
+            398
+          ],
+          "support": [
+            654,
+            436
+          ],
+          "spriteName": "rockadaga1_1",
+          "atlasRect": [
+            768,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 2,
+          "action": "attack-startup",
+          "sourceBounds": [
+            874,
+            15,
+            448,
+            420
+          ],
+          "support": [
+            1085,
+            427
+          ],
+          "spriteName": "rockadaga1_2",
+          "atlasRect": [
+            1536,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 3,
+          "action": "attack-contact",
+          "sourceBounds": [
+            1349,
+            82,
+            408,
+            353
+          ],
+          "support": [
+            1527,
+            426
+          ],
+          "spriteName": "rockadaga1_3",
+          "atlasRect": [
+            2304,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 4,
+          "action": "defense",
+          "sourceBounds": [
+            71,
+            475,
+            326,
+            366
+          ],
+          "support": [
+            238,
+            830
+          ],
+          "spriteName": "rockadaga1_4",
+          "atlasRect": [
+            0,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 5,
+          "action": "dodge-crouch",
+          "sourceBounds": [
+            424,
+            562,
+            472,
+            279
+          ],
+          "support": [
+            647,
+            836
+          ],
+          "spriteName": "rockadaga1_5",
+          "atlasRect": [
+            768,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 6,
+          "action": "dodge-recovery",
+          "sourceBounds": [
+            902,
+            485,
+            437,
+            354
+          ],
+          "support": [
+            1150,
+            831
+          ],
+          "spriteName": "rockadaga1_6",
+          "atlasRect": [
+            1536,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 7,
+          "action": "idle",
+          "sourceBounds": [
+            1370,
+            435,
+            360,
+            395
+          ],
+          "support": [
+            1544,
+            824
+          ],
+          "spriteName": "rockadaga1_7",
+          "atlasRect": [
+            2304,
+            0,
+            768,
+            512
+          ]
+        }
+      ],
+      "ppu": 194.25596192180544
+    },
+    {
+      "name": "rockfoice1",
+      "source": "C:\\Users\\Usuario\\Pictures\\rockfoice1.png",
+      "sha256": "33be0911a855371c2e0af2cfbb651e468aa5867524de70662ecdd017609350e7",
+      "skin": 1,
+      "weapon": 2,
+      "frames": [
+        {
+          "index": 0,
+          "action": "walk-left",
+          "sourceBounds": [
+            47,
+            16,
+            368,
+            364
+          ],
+          "support": [
+            335,
+            369
+          ],
+          "spriteName": "rockfoice1_0",
+          "atlasRect": [
+            0,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 1,
+          "action": "walk-right",
+          "sourceBounds": [
+            515,
+            15,
+            393,
+            357
+          ],
+          "support": [
+            797,
+            367
+          ],
+          "spriteName": "rockfoice1_1",
+          "atlasRect": [
+            768,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 2,
+          "action": "attack-startup",
+          "sourceBounds": [
+            1010,
+            16,
+            494,
+            354
+          ],
+          "support": [
+            1198,
+            367
+          ],
+          "spriteName": "rockfoice1_2",
+          "atlasRect": [
+            1536,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 3,
+          "action": "attack-contact",
+          "sourceBounds": [
+            1557,
+            24,
+            477,
+            352
+          ],
+          "support": [
+            1740,
+            367
+          ],
+          "spriteName": "rockfoice1_3",
+          "atlasRect": [
+            2304,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 4,
+          "action": "defense",
+          "sourceBounds": [
+            117,
+            384,
+            283,
+            358
+          ],
+          "support": [
+            258,
+            737
+          ],
+          "spriteName": "rockfoice1_4",
+          "atlasRect": [
+            0,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 5,
+          "action": "dodge-crouch",
+          "sourceBounds": [
+            554,
+            449,
+            367,
+            305
+          ],
+          "support": [
+            773,
+            731
+          ],
+          "spriteName": "rockfoice1_5",
+          "atlasRect": [
+            768,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 6,
+          "action": "dodge-recovery",
+          "sourceBounds": [
+            996,
+            391,
+            461,
+            355
+          ],
+          "support": [
+            1266,
+            736
+          ],
+          "spriteName": "rockfoice1_6",
+          "atlasRect": [
+            1536,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 7,
+          "action": "idle",
+          "sourceBounds": [
+            1584,
+            373,
+            350,
+            380
+          ],
+          "support": [
+            1785,
+            722
+          ],
+          "spriteName": "rockfoice1_7",
+          "atlasRect": [
+            2304,
+            0,
+            768,
+            512
+          ]
+        }
+      ],
+      "ppu": 172.61604906523127
+    },
+    {
+      "name": "rockkatana1",
+      "source": "C:\\Users\\Usuario\\Pictures\\rockkatana1.png",
+      "sha256": "822baff4ea65a91b5bce80b5cda3cbfde81b62e38ed63fcd869ece6e00b9ed67",
+      "skin": 1,
+      "weapon": 0,
+      "frames": [
+        {
+          "index": 0,
+          "action": "walk-left",
+          "sourceBounds": [
+            35,
+            21,
+            416,
+            358
+          ],
+          "support": [
+            330,
+            373
+          ],
+          "spriteName": "rockkatana1_0",
+          "atlasRect": [
+            0,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 1,
+          "action": "walk-right",
+          "sourceBounds": [
+            543,
+            17,
+            385,
+            366
+          ],
+          "support": [
+            817,
+            377
+          ],
+          "spriteName": "rockkatana1_1",
+          "atlasRect": [
+            768,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 2,
+          "action": "attack-startup",
+          "sourceBounds": [
+            1098,
+            14,
+            390,
+            368
+          ],
+          "support": [
+            1281,
+            377
+          ],
+          "spriteName": "rockkatana1_2",
+          "atlasRect": [
+            1536,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 3,
+          "action": "attack-contact",
+          "sourceBounds": [
+            1620,
+            35,
+            417,
+            346
+          ],
+          "support": [
+            1805,
+            376
+          ],
+          "spriteName": "rockkatana1_3",
+          "atlasRect": [
+            2304,
+            512,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 4,
+          "action": "defense",
+          "sourceBounds": [
+            115,
+            377,
+            325,
+            372
+          ],
+          "support": [
+            280,
+            737
+          ],
+          "spriteName": "rockkatana1_4",
+          "atlasRect": [
+            0,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 5,
+          "action": "dodge-crouch",
+          "sourceBounds": [
+            490,
+            463,
+            452,
+            263
+          ],
+          "support": [
+            775,
+            721
+          ],
+          "spriteName": "rockkatana1_5",
+          "atlasRect": [
+            768,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 6,
+          "action": "dodge-recovery",
+          "sourceBounds": [
+            1088,
+            416,
+            350,
+            326
+          ],
+          "support": [
+            1292,
+            735
+          ],
+          "spriteName": "rockkatana1_6",
+          "atlasRect": [
+            1536,
+            0,
+            768,
+            512
+          ]
+        },
+        {
+          "index": 7,
+          "action": "idle",
+          "sourceBounds": [
+            1552,
+            383,
+            352,
+            368
+          ],
+          "support": [
+            1741,
+            742
+          ],
+          "spriteName": "rockkatana1_7",
+          "atlasRect": [
+            2304,
+            0,
+            768,
+            512
+          ]
+        }
+      ],
+      "ppu": 179.66160208830192
+    }
+  ]
+}

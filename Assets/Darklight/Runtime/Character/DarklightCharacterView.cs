@@ -10,7 +10,7 @@ namespace Darklight
         bool rock,previewing;int previewForm;WeaponDefinition previewWeapon;
         SpriteRenderer display;CharacterAppearanceSystem appearance;DarklightOriginalVampireView originalForms;
         int trailSerial=-1;float nextTrail,airHeight;
-        DarklightCombatTrail combatTrail;
+        DarklightCombatTrail combatTrail;DarklightAbyssLocomotion abyssLocomotion;
         public bool UsesUserWholeSprite{get;private set;}
         public bool UsesWholeCharacterSprite{get;private set;}
         public bool UsesPoseFallback{get;private set;}
@@ -46,13 +46,21 @@ namespace Darklight
             int direction=DirectionIndex(model.Facing),skin=rock?1:0;
             var game=DarklightCampaign.Instance;var equipped=previewing?previewWeapon:game?.Weapons?.Equipped;int weapon=equipped==null?0:(int)equipped.id;
             airHeight=model.State==CombatState.Attack&&model.Attack.kind==StrikeKind.Aerial?Mathf.Sin(Mathf.Clamp01(model.StateTime/model.Attack.Duration)*Mathf.PI)*.35f:0;
-            var selected=TodayCharacterBank.Resolve(skin,0,weapon,direction,model,movement);
+            if(!previewing&&game?.AbyssRider?.Active==true)airHeight+=game.AbyssRider.JumpHeight+game.AbyssRider.RunOverLift;
+            var selected=!previewing&&skin==1&&game?.AbyssRider?.Active==true?DarklightAbyssSpriteBank.Resolve(game.AbyssRider,model):TodayCharacterBank.Resolve(skin,0,weapon,direction,model,movement);
+            bool locomotionSelected=false;
+            if(!previewing&&skin==1&&game?.AbyssRider?.Active==true)
+            {
+                abyssLocomotion??=GetComponent<DarklightAbyssLocomotion>()??gameObject.AddComponent<DarklightAbyssLocomotion>();
+                var gait=abyssLocomotion.Present(model,movement,game.PresentedForm);
+                if(gait!=null){selected=gait;locomotionSelected=true;}
+            }
             UsesPoseFallback=false;UsesUserWholeSprite=false;
             if(selected==null){selected=TodayCharacterBank.StablePose(skin,0,weapon,direction);UsesPoseFallback=selected!=null;}
             if(selected==null){selected=DarklightUserSpriteBank.Resolve(skin,0,weapon,model,movement);UsesUserWholeSprite=selected!=null;}
             if(selected!=null)display.sprite=selected;
-            display.transform.localScale=RenderScale;display.flipX=UsesUserWholeSprite&&model.Facing.x<-.1f;
-            display.transform.localRotation=model.State==CombatState.Dead&&(UsesPoseFallback||UsesUserWholeSprite)?Quaternion.Euler(0,0,-75):Quaternion.identity;
+            display.transform.localScale=RenderScale;display.flipX=locomotionSelected?abyssLocomotion.Mirror:!previewing&&game?.AbyssRider?.Active==true?DarklightAbyssSpriteBank.Mirror(model):UsesUserWholeSprite&&model.Facing.x<-.1f;
+            display.transform.localRotation=model.State==CombatState.Dead&&(UsesPoseFallback||UsesUserWholeSprite)?Quaternion.Euler(0,0,-75):Quaternion.Euler(0,0,!previewing&&game?.AbyssRider?.Active==true?game.AbyssRider.LeanAngle+game.AbyssRider.RunOverPitch:0);
             UsesWholeCharacterSprite=selected!=null&&!UsesUserWholeSprite;
             display.color=model.State==CombatState.Hurt?new Color(1,.4f,.4f):model.State==CombatState.Parry?new Color(.7f,.8f,1):Color.white;
             display.sortingOrder=100-Mathf.RoundToInt(transform.position.y*10f);appearance?.Present(display,direction,skin,game?.Form??0,model);

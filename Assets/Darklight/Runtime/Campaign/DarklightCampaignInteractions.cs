@@ -27,6 +27,7 @@ namespace Darklight
                 if(distance>range*range||distance>=best||!DarklightNavigation.Clear(player,point))return;
                 best=distance;nearest=new DarklightInteractionTarget(id,label,point);
             }
+            if(AbyssSecretAvailable)Consider("abyss_motor","DESPERTAR MOTOR SELADO",AbyssSecretPoint,2.1f);
             if(ExploringNewRegion)
             {
                 Consider("region_exit","SAIR DA REGIÃO",Map.Portal,2.5f);
@@ -37,6 +38,7 @@ namespace Darklight
                 if(chapterCleared)Consider("portal","ATRAVESSAR PORTAL",Map.Portal,2.5f);
                 if(!Progress.relics[Progress.chapter])Consider("relic","RECOLHER MEMÓRIA",Map.Relic,2.3f);
                 if(NarrativeTarget(out var narrative))Consider(narrative.Id,narrative.Label,narrative.Point,2.7f);
+                if(RegionAtmosphereTarget(out var environmental))Consider(environmental.Id,environmental.Label,environmental.Point,2.2f);
                 Consider("ally","FALAR: "+AllyName,Map.Ally,2.7f);
                 if(!encounterStarted)Consider("checkpoint","SALVAR E RECUPERAR VIDA",CheckpointPoint,2.3f);
             }
@@ -65,11 +67,13 @@ namespace Darklight
         }
         void PerformInteraction(DarklightInteractionTarget target)
         {
+            if(InteractAbyssSecret(target.Id))return;
             if(ExploringNewRegion)
             {
                 if(target.Id=="region_exit"){Open("Regions");return;}
                 int area=int.Parse(target.Id.Substring(7));Speak(new[]{"MEMÓRIA DO VÉU|"+Map.Art.areas[area].description});return;
             }
+            if(InteractRegionAtmosphere(target.Id))return;
             if(InteractNarrative(target.Id))return;
             if(target.Id=="portal")
             {
@@ -95,3 +99,5 @@ namespace Darklight
         }
     }
 }
+
+

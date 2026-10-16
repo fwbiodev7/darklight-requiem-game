@@ -11,7 +11,7 @@ namespace Darklight
         Vector2 suspendedPosition;float suspendedHealth;
         bool trainingFromMain;
         UnityEngine.UI.Text trainingReadout;
-        void TickTechnicalHUD(){if(trainingReadout!=null)trainingReadout.gameObject.SetActive(Training&&Active);}
+        void TickTechnicalHUD(){UpdateAbyssHUD();if(trainingReadout!=null)trainingReadout.gameObject.SetActive(Training&&Active);}
         public void EnterTraining()
         {
             if(Training){Open("Training");return;}
@@ -70,7 +70,8 @@ namespace Darklight
             heading.text="ARENA DE TREINAMENTO";
             bodyText.text="O progresso real fica preservado.\nSangue e tempo de forma ilimitados.\n\nLeve repetido: sequencia\nLeve, pausa, leve: variacao\nDois leves + pesado: final\nTroca de arma apos acerto\nAereo: suspender alvo leve\n\nAlvo atual: "+(TrainingPassive?"PASSIVO":"ATIVO");
             Button("RETOMAR TREINO",Close);Button("ESCOLHER INIMIGOS",()=>Open("TrainingEnemies"));
-            Button("ARMA: "+Weapons.Equipped.displayName,()=>{Weapons.Request(((int)Weapons.Equipped.id+1)%3);Close();});
+            Button("ARMA: "+Weapons.Equipped.displayName,()=>{Weapons.Request(((int)Weapons.Equipped.id+1)%weaponDefinitions.Length);Close();});
+            Button("TESTAR CAVALEIRO · ROCK",StartAbyssPrototype);Button("GUIA DO CAVALEIRO",ShowAbyssHelp);Button("DESAFIOS DO CAVALEIRO",StartAbyssLessons);
             Button("ESCOLHER TRANSFORMACAO",()=>Open("TrainingForms"));
             Button("RECEBER DANO: "+(TrainingDamage?"SIM":"NAO"),()=>{TrainingDamage=!TrainingDamage;RefreshPanel();});
             Button("VER HITBOXES: "+(TrainingHitboxes?"SIM":"NAO"),()=>{TrainingHitboxes=!TrainingHitboxes;RefreshPanel();});

@@ -52,15 +52,15 @@ namespace Darklight
             if(model?.Attack==null||game==null)return false;
             Vector2 toward=DarklightCombatLab.Instance.Player.transform.position-transform.position;
             if(Vector2.Angle(facing,toward)>75)return false;
-            bool breaker=model.Attack.kind==StrikeKind.Charged||model.Attack.postureDamage>=3;
+            bool breaker=model.Attack.kind==StrikeKind.Charged||model.Attack.postureDamage*(game.AbyssRider?.Posture??1)>=3;
             if(breaker){guardUntil=0;posture=0;stagger=Mathf.Max(stagger,.65f);state=0;timer=.8f;return false;}
-            posture+=model.Attack.postureDamage;
+            posture+=model.Attack.postureDamage*(game.AbyssRider?.Posture??1);
             if(posture>=3){guardUntil=0;stagger=.5f;state=0;posture=0;timer=.65f;}
             DarklightCombatFX.Impact(transform.position,false);return true;
         }
         public void TechnicalImpact(AttackDefinition attack,int form)
         {
-            postureIdle=0;posture+=attack.postureDamage*(form==1?1.55f:form==3?1.25f:1);
+            postureIdle=0;posture+=attack.postureDamage*(form==1?1.55f:form==3?1.25f:1)*(DarklightCampaign.Instance?.AbyssRider?.Posture??1);
             float threshold=Boss?8:kind==RequiemEnemyKind.Armored?4.5f:3;
             if(posture>=threshold&&clock>=tacticalRecovery)
             {posture=0;stagger=Boss?.28f:.65f;tacticalRecovery=clock+(Boss?2.2f:1);state=0;timer=.65f;guardUntil=0;}

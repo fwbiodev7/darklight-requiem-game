@@ -13,7 +13,7 @@ namespace Darklight
             for(int i=0;i<count;i++)
             {
                 var target=contacts[i].GetComponentInParent<DarklightCombatant>();
-                if(target==null||target.player||target.Health.IsDead)continue;
+                if(target==null||target.player||target.Health.IsDead||game?.AbyssRider?.AcceptStrikeTarget(target)==false)continue;
                 Vector2 point=contacts[i].ClosestPoint(body.position);
                 if(!DarklightHitGeometry.Contains(attack,body.position,model.Facing,point,extra,model.ContactProgress,model.ContactStartProgress))continue;
                 Vector2 delta=point-body.position;
@@ -24,7 +24,7 @@ namespace Darklight
                 for(int pulse=0;pulse<Mathf.Clamp(attack.hitPulses,1,6);pulse++)
                 {
                     if(!model.RegisterPulseHit(target,pulse))continue;
-                    float damage=model.AttackDamage*(game?.DamageMultiplier??1)*(game?.VampireDamage(attack.kind)??1);
+                    float damage=model.AttackDamage*(game?.AbyssRider?.Damage??1)*(game?.DamageMultiplier??1)*(game?.VampireDamage(attack.kind)??1);
                     if(!target.Receive(damage,delta.normalized*attack.knockback))continue;
                     model.ConfirmHit();
                     DarklightCombatLab.Instance.Coach?.Record(DarklightLesson.Strike);
@@ -33,6 +33,7 @@ namespace Darklight
                     var enemy=target.GetComponent<DarklightEnemy>();
                     enemy?.Struck(attack.knockback*(game?.Resonance.Impact??1),attack.kind!=StrikeKind.Light);
                     enemy?.TechnicalImpact(attack,game?.Form??0);
+                    game?.AbyssRider?.ConfirmRunOverHit(enemy,attack);
                     if(attack.pullTarget)enemy?.PullToward(body.position,game?.Form==2?2.1f:1.6f);
                     DarklightCombatFX.Impact(target.transform.position,attack.kind!=StrikeKind.Light);
                 }

@@ -27,7 +27,7 @@ namespace Darklight
     }
     [Serializable] public sealed class DarklightMapArt
     {
-        public int width,height;public float pixelsPerUnit=24;
+        public int width,height;public int revision;public float pixelsPerUnit=24;
         public string title,chapterTitle,description;public DarklightMapArea[] areas;
         public Vector2 spawn,ally,relic,portal;public Vector2[] arenas,checkpoints;
         public DarklightMapShape[] walk,blocked;public DarklightMapForeground[] foreground;

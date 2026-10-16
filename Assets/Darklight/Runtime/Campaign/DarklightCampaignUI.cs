@@ -99,7 +99,7 @@ namespace Darklight
             }
             if(input.Menu("Cancel").WasPressedThisFrame())
             {
-                if(panel=="Training"){Close();return;}if(panel=="TrainingEnemies"||panel=="TrainingForms"){Open("Training");return;}if(panel=="CombatOptions"){Open("Pause");return;}if(panel=="Difficulty"){Open(difficultyForNewGame?"Main":Training?"Training":"CombatOptions");return;}
+                if(panel=="AbyssHelp"){Open("Weapons");return;}if(panel=="Weapons"){Open("Pause");return;}if(panel=="Training"){Close();return;}if(panel=="TrainingEnemies"||panel=="TrainingForms"){Open("Training");return;}if(panel=="CombatOptions"){Open("Pause");return;}if(panel=="Difficulty"){Open(difficultyForNewGame?"Main":Training?"Training":"CombatOptions");return;}
                 if(panel=="Pause")Close();else if(panel=="Dialogue"){dialogueIndex=dialogue.Length-1;NextDialogue();}
                 else if(panel!="Main"&&panel!="Death"&&panel!="Ending")Open(panel=="Victory"||panel=="LoadGames"?"Main":panel=="Skins"?returnPanel:panel=="BindingSlot"||panel=="BindingDevice"?"Controls":panel=="BindingConflict"?"BindingSlot":panel=="Transformations"?"Pause":panel=="Controls"||panel=="Extras"?"Options":panel=="RegionDetails"?"Regions":panel=="Regions"?regionMenuReturn:returnPanel);return;
             }
@@ -138,7 +138,7 @@ namespace Darklight
             if(value=="Skins"&&panel!="Skins")returnPanel=panel=="Main"?"Main":"Pause";
             if(value=="LoadGames")returnPanel="Main";
             if(value=="Options"||value=="Credits")returnPanel=panel=="Main"||panel=="Victory"?"Main":"Pause";
-            else if(value=="VampireSkills"||value=="Skills"||value=="Inventory"||value=="Journal"||value=="MP3")returnPanel="Pause";
+            else if(value=="VampireSkills"||value=="Skills"||value=="Inventory"||value=="Weapons"||value=="AbyssHelp"||value=="Journal"||value=="MP3")returnPanel="Pause";
             focusMemory[panel]=selection;panel=value;selection=focusMemory.TryGetValue(value,out var savedFocus)?savedFocus:0;nextNav=Time.unscaledTime+.15f;lab.SetPaused(true);AudioDirector?.StopCombat();music.Pause();ambient.Pause();RefreshPanel();
         }
         void Close(){menuDismissFrame=Time.frameCount;StopMenuMusic();panel="";SetHUDVisible(true);overlay.gameObject.SetActive(false);lab.SetPaused(false);if(!DarklightAutomation.Silent&&(resonance>=0||HasFirstAwakeningMusic))music.UnPause();}
@@ -161,6 +161,7 @@ namespace Darklight
             menuRoot.Find("Moldura").GetComponent<Image>().color=front?new Color(1,1,1,.72f):Color.white;heading.fontSize=10;heading.rectTransform.sizeDelta=new Vector2(548,24);heading.alignment=TextAnchor.UpperLeft;
             menuBackdrop.sprite=front?menuBackground:null;menuBackdrop.color=front&&menuBackground!=null?Color.white:new Color(.02f,.02f,.04f,.88f);
             bodyText.fontSize=7;bodyText.rectTransform.anchoredPosition=new Vector2(334,-155);bodyText.rectTransform.sizeDelta=new Vector2(232,132);bodyText.alignment=TextAnchor.UpperLeft;portrait.rectTransform.anchoredPosition=new Vector2(367,-62);portrait.rectTransform.sizeDelta=new Vector2(160,82);
+            if(abyssHelpImage!=null)abyssHelpImage.gameObject.SetActive(false);
             switch(panel)
             {
                 case "Main":BuildCinematicMain();break;
@@ -179,10 +180,12 @@ namespace Darklight
                 case "Pause":
                     if(ExploringNewRegion){heading.text="EXPLORAÇÃO";bodyText.text=Map.Art.title;Button("RETOMAR",Close);Button("ESCOLHER REGIÃO",()=>Open("Regions"));Button("MAPA DA FASE",()=>atlas.TryOpen());Button("OPÇÕES",()=>Open("Options"));Button("MENU PRINCIPAL",()=>Open("Main"));break;}
                     heading.text="PAUSA";bodyText.text=DarklightStory.Chapters[Progress.chapter]+"\n"+DarklightStory.Places[Progress.chapter];
-                    Button("RETOMAR",Close);Button("COMBATE E TREINO",()=>Open(Training?"Training":"CombatOptions"));Button("TRANSFORMACOES",()=>Open("Transformations"));Button("HABILIDADES",()=>Open("Skills"));Button("INVENTARIO",()=>Open("Inventory"));Button("DIARIO",()=>Open("Journal"));Button("DARK RESONANCE",()=>Open("MP3"));Button("TROCAR SKIN",()=>Open("Skins"));Button("MAPA DA FASE",()=>atlas.TryOpen());Button("OPCOES",()=>Open("Options"));Button("MENU PRINCIPAL",()=>{if(Training){trainingFromMain=true;ExitTraining();}else{StopPower();SaveCheckpoint();Open("Main");}});if(PlaytestSession)Button("FERRAMENTAS DE TESTE",()=>Open("Playtest"));break;
+                    Button("RETOMAR",Close);Button("COMBATE E TREINO",()=>Open(Training?"Training":"CombatOptions"));Button("TRANSFORMACOES",()=>Open("Transformations"));Button("HABILIDADES",()=>Open("Skills"));Button("ARMAS",()=>Open("Weapons"));Button("INVENTARIO",()=>Open("Inventory"));Button("DIARIO",()=>Open("Journal"));Button("DARK RESONANCE",()=>Open("MP3"));Button("TROCAR SKIN",()=>Open("Skins"));Button("MAPA DA FASE",()=>atlas.TryOpen());Button("OPCOES",()=>Open("Options"));Button("MENU PRINCIPAL",()=>{if(Training){trainingFromMain=true;ExitTraining();}else{StopPower();SaveCheckpoint();Open("Main");}});if(PlaytestSession)Button("FERRAMENTAS DE TESTE",()=>Open("Playtest"));break;
                 case "Playtest":BuildPlaytestTools();break;
                 case "Skills":BuildSkillPaths();break;
                 case "VampireSkills":BuildVampireSkills();break;
+                case "Weapons":BuildWeaponGuides();break;
+                case "AbyssHelp":BuildAbyssHelp();break;
                 case "Inventory":
                     heading.text="INVENTARIO";bodyText.text="V / LS: trocar armas\nPresas: apos Kael | Corrente: apos Matriarca\nELIXIRES: "+Progress.potions+" | MEMORIAS: "+Progress.shards+"/10\nMP3: "+(Progress.mp3Unlocked?"DESBLOQUEADO":"MISSAO FREQUENCIA DO VEU");
                     Button("USAR ELIXIR (+45% VIDA)",()=>{UsePotion();RefreshPanel();},Progress.potions>0&&health.HealthPercent<1&&!health.IsDead);for(int i=0;i<weaponDefinitions.Length;i++){int index=i;Button(weaponDefinitions[i].displayName+(Weapons.Equipped==weaponDefinitions[i]?" - EQUIPADA":""),()=>{Weapons.Request(index);Close();},Weapons.Unlocked(i));}Button("VOLTAR",()=>Open("Pause"));break;
@@ -210,7 +213,7 @@ namespace Darklight
             }
             RefreshAppearancePortrait();LayoutCinematicPanel(front);selection=Mathf.Clamp(selection,0,Mathf.Max(0,buttons.Count-1));if(buttons.Count>0&&!buttons[selection].enabled)MoveSelection(1);
         }
-
+        
         void AddEnemyBar(DarklightEnemy enemy)
         {
             if(enemy.Boss)return;var frame=ImageAt(uiRoot,"EcoVida",0,0,52,10,enemyBarFrame);
@@ -234,7 +237,7 @@ namespace Darklight
         void Upgrade(int stat)
         {if(Progress.points<=0)return;Progress.points--;if(stat==0)Progress.attack++;else if(stat==1){Progress.vitality++;health.SetMaxHealth(Progress.MaxHealth);}else Progress.mastery++;SaveCheckpoint();RefreshPanel();}
         void Finish(int ending){StopPower();Progress.ending=ending;Progress.completed=true;SaveCheckpoint();Open("Victory");Sound(3);}
-        string ActionLabel(string name)=>name switch{"Move"=>"MOVER","Potion"=>"ELIXIR","Journal"=>"DIARIO","Pause"=>"PAUSAR","MapPan"=>"MOVER MAPA","MapCursor"=>"CURSOR DO MAPA","MapZoomIn"=>"APROXIMAR MAPA","MapZoomOut"=>"AFASTAR MAPA","MapCenter"=>"CENTRALIZAR MAPA","MapMark"=>"MARCAR MAPA","MapClear"=>"APAGAR MARCA","MapObjective"=>"OBJETIVO","Interact"=>"INTERAGIR","Light"=>"LEVE","Heavy"=>"PESADO","Dodge"=>"ESQUIVA","Parry"=>"PARRY","Skill"=>"ONDA","Transform"=>"TRANSFORMAR","MP3"=>"MP3","Map"=>"MAPA DA FASE","Power"=>"ATIVAR PODER","PowerNext"=>"PROXIMO PODER","PowerPrevious"=>"PODER ANTERIOR","WeaponNext"=>"TROCAR ARMA","Aerial"=>"ATAQUE AEREO","WeaponSpecial"=>"ESPECIAL DA ARMA","Vampire"=>"PODER DE SANGUE","VampireNext"=>"PROXIMO PODER DE SANGUE",_=>name};
+        string ActionLabel(string name)=>name switch{"AbyssSaw"=>"CAVALEIRO: SERRAS","AbyssBike"=>"CAVALEIRO: MOTO / FINAL","AbyssDrift"=>"CAVALEIRO: DERRAPAGEM","Move"=>"MOVER","Potion"=>"ELIXIR","Journal"=>"DIARIO","Pause"=>"PAUSAR","MapPan"=>"MOVER MAPA","MapCursor"=>"CURSOR DO MAPA","MapZoomIn"=>"APROXIMAR MAPA","MapZoomOut"=>"AFASTAR MAPA","MapCenter"=>"CENTRALIZAR MAPA","MapMark"=>"MARCAR MAPA","MapClear"=>"APAGAR MARCA","MapObjective"=>"OBJETIVO","Interact"=>"INTERAGIR","Light"=>"LEVE","Heavy"=>"PESADO","Dodge"=>"ESQUIVA","Parry"=>"PARRY","Skill"=>"ONDA","Transform"=>"TRANSFORMAR","MP3"=>"MP3","Map"=>"MAPA DA FASE","Power"=>"ATIVAR PODER","PowerNext"=>"PROXIMO PODER","PowerPrevious"=>"PODER ANTERIOR","WeaponNext"=>"TROCAR ARMA","Aerial"=>"ATAQUE AEREO","WeaponSpecial"=>"ESPECIAL DA ARMA","Vampire"=>"PODER DE SANGUE","VampireNext"=>"PROXIMO PODER DE SANGUE",_=>name};
         RectTransform RectAt(Transform parent,string name,float x,float y,float w,float h)
         {var rect=new GameObject(name,typeof(RectTransform)).GetComponent<RectTransform>();rect.SetParent(parent,false);rect.anchorMin=rect.anchorMax=rect.pivot=new Vector2(0,1);rect.anchoredPosition=new Vector2(x,-y);rect.sizeDelta=new Vector2(w,h);return rect;}
         Image ImageAt(Transform parent,string name,float x,float y,float w,float h,Sprite sprite)
@@ -243,3 +246,8 @@ namespace Darklight
         {var text=RectAt(parent,name,x,y,w,h).gameObject.AddComponent<Text>();text.font=font;text.fontSize=size;text.color=new Color(.94f,.9f,.87f);text.raycastTarget=false;text.horizontalOverflow=HorizontalWrapMode.Overflow;text.verticalOverflow=VerticalWrapMode.Overflow;var outline=text.gameObject.AddComponent<Outline>();outline.effectColor=Color.black;outline.effectDistance=new Vector2(1,-1);return text;}
     }
 }
+
+
+
+
+

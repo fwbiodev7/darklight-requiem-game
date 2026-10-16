@@ -121,3 +121,4 @@ namespace Darklight
         void LearnNode(int node){if(node<0||node>1||Progress.points<1||(Progress.progressionNodes&(1<<node))!=0)return;Progress.points--;Progress.progressionNodes|=1<<node;SaveCheckpoint();RefreshPanel();}
     }
 }
+

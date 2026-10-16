@@ -1,7 +1,7 @@
 using UnityEngine;
 namespace Darklight
 {
-    public enum DarklightWeaponId { Katana,Daggers,Chain }
+    public enum DarklightWeaponId { Katana,Daggers,Chain,AbyssRider }
     [CreateAssetMenu(menuName="Darklight/Weapon")]
     public sealed class WeaponDefinition : ScriptableObject
     {

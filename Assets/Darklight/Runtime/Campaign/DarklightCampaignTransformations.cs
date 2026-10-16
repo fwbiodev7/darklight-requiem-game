@@ -53,3 +53,4 @@ namespace Darklight
         void ClearFormPresentation(){formPresentationTime=0;presentationForm=0;formReleased=false;}
     }
 }
+

@@ -61,9 +61,9 @@ namespace Darklight
             nav.AddCompositeBinding("2DVector").With("Up", "<Keyboard>/upArrow").With("Down", "<Keyboard>/downArrow").With("Left", "<Keyboard>/leftArrow").With("Right", "<Keyboard>/rightArrow");
             UI.AddAction("KeyboardActivity", InputActionType.Button, "<Keyboard>/anyKey");
             UI.AddAction("PointerActivity", InputActionType.Value, "<Mouse>/delta", expectedControlLayout: "Vector2");
-            foreach (var action in Asset) action.performed += Track;
             InputSystem.onDeviceChange += DeviceChanged;
-            AddOptionalDeviceBindings();
+            AddOptionalDeviceBindings();InitializeAbyssBindings();
+            foreach (var action in Asset) action.performed += Track;
             LoadBindings();
             Asset.Enable();
         }
@@ -81,7 +81,7 @@ namespace Darklight
         {
             Vector2 movement = Action("Move").ReadValue<Vector2>();
             return new CombatInput { move = movement, aim = movement,
-                lightPressed = Action("Light").WasPressedThisFrame(), heavyPressed = Action("Heavy").WasPressedThisFrame(),
+                lightPressed = Action("Light").WasPressedThisFrame(),lightHeld=Action("Light").IsPressed(),lightReleased=Action("Light").WasReleasedThisFrame(), heavyPressed = Action("Heavy").WasPressedThisFrame(),
                 heavyHeld = Action("Heavy").IsPressed(), heavyReleased = Action("Heavy").WasReleasedThisFrame(),
                 dodgePressed = Action("Dodge").WasPressedThisFrame(), parryPressed = Action("Parry").WasPressedThisFrame(),
                 skillPressed = Action("Skill").WasPressedThisFrame(),aerialPressed=Action("Aerial").WasPressedThisFrame(),weaponSpecialPressed=Action("WeaponSpecial").WasPressedThisFrame() };

@@ -35,7 +35,7 @@ namespace Darklight
         AudioSource music,sfx,ambient; SpriteRenderer headphones; AudioClip[] tones;
         int encounter, lastAttack=-1, kills, selectedTrack, resonance=-1;
         bool encounterStarted, chapterCleared; float slowTime; int lastSkillSerial=-1;
-
+        
         public bool ResistsStagger => resonance==1;
         public DarklightResonance Resonance {get;}=new DarklightResonance();
         public DarklightMapDefinition Map {get;private set;}
@@ -44,7 +44,7 @@ namespace Darklight
         public float StrikeRangeBonus => Form==3?.15f:0;
         float style,idleStyle,attackPermit,noticeTime,resonanceTime,resonanceCooldown,phonesTime;
         readonly float[] rhythmSamples=new float[256];float rhythmEnvelope;MaterialPropertyBlock resonanceBlock;
-
+        
         string notice=""; Action dialogueDone; string[] dialogue;int dialogueIndex;
         public float MusicVolume=.5f, EffectsVolume=.7f; public bool ReducedFlashes;
         void Awake()
@@ -89,7 +89,7 @@ namespace Darklight
             if(lab.Player.Model.State==CombatState.Attack&&lab.Player.Model.Attack.kind==StrikeKind.Skill&&lab.Player.Model.AttackSerial!=lastSkillSerial&&lab.Player.Model.ActiveThisTick){lastSkillSerial=lab.Player.Model.AttackSerial;FormAbility();}
             if(lab.Input.Action("Transform").WasPressedThisFrame())TransformPlayer();
             if(lab.Input.Action("MP3").WasPressedThisFrame()){Open("MP3");return;}
-            if(lab.Input.Action("Potion").WasPressedThisFrame())UsePotion();
+            if(lab.Input.Action("Potion").WasPressedThisFrame()&&!(AbyssRider?.Active==true&&AbyssRider.Dashing&&lab.Input.Action("AbyssDrift").WasPressedThisFrame()))UsePotion();
             if(lab.Input.Action("Journal").WasPressedThisFrame()){Open("Journal");return;}
             if(lab.Input.Action("Interact").WasPressedThisFrame())Interact();
             if(Training){TickTraining(dt);UpdateAura();return;}
@@ -124,7 +124,7 @@ namespace Darklight
             if(chapter==0||chapter==2||chapter==5||chapter==6||chapter==8)AddProp("LyraMoreau",extras[1],Map.Ally,1.8f);
             if(chapter==3||chapter==4||chapter==7||chapter==9)AddProp("KaelAliado",bossFrames[0],Map.Ally,1.8f);
             if(chapterCleared)AddProp("Portal",extras[3],Map.Portal,2.5f);
-            PrepareNarrativeMap();Objective=Goal();firstAwakeningMusicPending=false;music.Stop();ambient.clip=null;ambient.volume=0;AudioDirector?.Region(chapter);InitializeRemaster(chapter);
+            PrepareNarrativeMap();Objective=Goal();firstAwakeningMusicPending=false;music.Stop();ambient.clip=null;ambient.volume=0;AudioDirector?.Region(chapter);InitializeRemaster(chapter);InitializeRegionAtmosphere(chapter);
         }
         void InitializeRemaster(int chapter){var view=GetComponent<DarklightRemaster>()??gameObject.AddComponent<DarklightRemaster>();view.Initialize(lab.WorldCamera,lab.Player.transform,levelRoot,chapter);}
         void AddProp(string name,Sprite sprite,Vector2 position,float height)
@@ -290,3 +290,6 @@ namespace Darklight
         void OnDestroy(){combatProfiles?.Dispose();if(Instance==this)Instance=null;rebinding?.Dispose();foreach(var tone in tones)if(tone!=null)Destroy(tone);}
     }
 }
+
+
+

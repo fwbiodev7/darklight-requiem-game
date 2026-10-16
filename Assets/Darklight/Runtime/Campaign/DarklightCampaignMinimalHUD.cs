@@ -5,7 +5,7 @@ namespace Darklight
     public sealed partial class DarklightCampaign
     {
         UnityEngine.UI.Image hudPortrait;
-        UnityEngine.UI.Text hudSkillKey,hudPauseKey,hudAttackKey,hudDodgeKey,hudParryKey,hudCycleKey,hudPotionKey,hudPotionCount,hudWeaponHint;
+        UnityEngine.UI.Text hudSkillName,hudAttackName,hudSkillKey,hudPauseKey,hudAttackKey,hudDodgeKey,hudParryKey,hudCycleKey,hudPotionKey,hudPotionCount,hudWeaponHint;
         readonly Sprite[] hudPortraits=new Sprite[2];
         int hudPortraitSkin=-1;
         void HUDPlace(Transform item,float x,float y,float w,float h,int size=0)
@@ -30,7 +30,7 @@ namespace Darklight
             for(int i=0;i<2;i++)hudPortraits[i]=Resources.Load<Sprite>("Darklight/HUD/Portrait"+i);
             HUDPlace(uiRoot.Find("HabilidadeMoldura"),508,97,124,34);DarklightHUDTheme.Frame(uiRoot.Find("HabilidadeMoldura") as RectTransform);
             ImageAt(uiRoot,"EmblemaOnda",505,95,37,38,Resources.Load<Sprite>("Darklight/HUD/Wave")).preserveAspect=true;
-            HUDPlace(uiRoot.Find("HabilidadeNome"),544,100,83,9,5);uiRoot.Find("HabilidadeNome").GetComponent<UnityEngine.UI.Text>().text="ONDA DO VÉU";
+            HUDPlace(uiRoot.Find("HabilidadeNome"),544,100,83,9,5);hudSkillName=uiRoot.Find("HabilidadeNome").GetComponent<UnityEngine.UI.Text>();hudSkillName.text="ONDA DO VÉU";
             var waveBack=ImageAt(uiRoot,"FundoOnda",544,112,62,10,null);waveBack.color=new Color(.14f,.02f,.035f);waveBack.transform.SetSiblingIndex(uiRoot.Find("HabilidadeMoldura").GetSiblingIndex()+1);
             HUDPlace(lab.PixelHUD.skillFill.transform,545,113,60,8);HUDPlace(lab.PixelHUD.skillText.transform,545,113,60,9,5);lab.PixelHUD.skillText.alignment=TextAnchor.MiddleCenter;
             hudSkillKey=DarklightHUDTheme.Key(uiRoot,font,"TeclaOnda",611,110,18,18);
@@ -39,7 +39,7 @@ namespace Darklight
             weaponIcon.transform.SetAsLastSibling();weaponText.transform.SetAsLastSibling();
             hudWeaponHint=TextAt(uiRoot,"ArmaDescricao",40,327,76,9,5);hudWeaponHint.horizontalOverflow=UnityEngine.HorizontalWrapMode.Wrap;hudWeaponHint.verticalOverflow=UnityEngine.VerticalWrapMode.Truncate;
             hudCycleKey=TextAt(uiRoot,"TrocaArma",13,342,104,7,3);
-            hudAttackKey=DarklightHUDTheme.Key(uiRoot,font,"TeclaAtaque",129,309,26,13);TextAt(uiRoot,"RotuloAtaque",160,311,57,10,5).text="Corte";
+            hudAttackKey=DarklightHUDTheme.Key(uiRoot,font,"TeclaAtaque",129,309,26,13);hudAttackName=TextAt(uiRoot,"RotuloAtaque",160,311,57,10,5);hudAttackName.text="Corte";
             hudParryKey=DarklightHUDTheme.Key(uiRoot,font,"TeclaParry",129,324,26,13);TextAt(uiRoot,"RotuloParry",160,326,57,10,5).text="Parry";
             hudDodgeKey=DarklightHUDTheme.Key(uiRoot,font,"TeclaEsquiva",129,339,26,13);TextAt(uiRoot,"RotuloEsquiva",160,341,57,10,5).text="Esquiva";
             hudPotionKey=DarklightHUDTheme.Key(uiRoot,font,"TeclaElixir",226,323,21,16);
@@ -59,11 +59,12 @@ namespace Darklight
             energyFill.rectTransform.sizeDelta=new Vector2(106*Mathf.Clamp01(Energy/100),1);
             statusText.resizeTextForBestFit=true;statusText.resizeTextMinSize=4;statusText.resizeTextMaxSize=5;
             statusText.text="NV "+Progress.level+" | XP "+Progress.xp+"/"+Progress.NeededXP+" | R "+Progress.potions;
-            hudSkillKey.text=lab.Input.BindingLabel("Skill");hudAttackKey.text=lab.Input.BindingLabel("Light");hudParryKey.text=lab.Input.BindingLabel("Parry");
+            bool abyss=AbyssRider?.Active==true;hudSkillName.text=abyss?"ESMAGAMENTO":"ONDA DO VÉU";hudAttackName.text=abyss?"Serras":"Corte";
+            hudSkillKey.text=lab.Input.BindingLabel("Skill");hudAttackKey.text=lab.Input.BindingLabel(AbyssRider?.Active==true?"AbyssSaw":"Light");hudParryKey.text=lab.Input.BindingLabel("Parry");
             var dodge=lab.Input.BindingLabel("Dodge");hudDodgeKey.text=dodge=="SPACE"||dodge=="ESPAÇO"?"ESP":dodge;
             hudPauseKey.text=lab.Input.BindingLabel("Pause");hudPotionKey.text=lab.Input.BindingLabel("Potion");hudPotionCount.text="ELIXIR "+Progress.potions;
             hudCycleKey.text=lab.Input.BindingLabel("WeaponNext")+": TROCAR ARMA";
-            if(Weapons?.Equipped!=null){weaponText.text=Weapons.Equipped.displayName.ToUpperInvariant();hudWeaponHint.text=Weapons.Equipped.id switch{DarklightWeaponId.Daggers=>"Golpes rápidos",DarklightWeaponId.Chain=>"Longo alcance",_=>"Corte preciso"};}
+            if(Weapons?.Equipped!=null){weaponText.text=Weapons.Equipped.id==DarklightWeaponId.AbyssRider?"CAVALEIRO":Weapons.Equipped.displayName.ToUpperInvariant();hudWeaponHint.text=Weapons.Equipped.id switch{DarklightWeaponId.Daggers=>"Golpes rápidos",DarklightWeaponId.Chain=>"Longo alcance",DarklightWeaponId.AbyssRider=>"Serra e moto",_=>"Corte preciso"};}
             powerFill.rectTransform.sizeDelta=new Vector2(134*Resonance.Energy/100,2);
         }
         void RestoreMinimalHUDVisibility()

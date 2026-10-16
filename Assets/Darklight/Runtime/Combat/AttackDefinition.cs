@@ -38,6 +38,7 @@ namespace Darklight
     public struct CombatInput
     {
         public Vector2 move, aim;
+        public bool lightHeld,lightReleased;
         public bool lightPressed, heavyPressed, heavyHeld, heavyReleased, dodgePressed, parryPressed, skillPressed,aerialPressed,weaponSpecialPressed;
     }
 }

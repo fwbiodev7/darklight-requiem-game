@@ -56,6 +56,14 @@ namespace Darklight
         {
             bool globalA=a.name=="Map"||a.name=="Pause",globalB=b.name=="Map"||b.name=="Pause";
             if(globalA||globalB)return true;
+            bool abyssA=a.name.StartsWith("Abyss",StringComparison.Ordinal),abyssB=b.name.StartsWith("Abyss",StringComparison.Ordinal);
+            if(abyssA!=abyssB)
+            {
+                string original=abyssA?b.name:a.name,context=abyssA?a.name:b.name;
+                if(original=="Light"||original=="Heavy"||original=="WeaponSpecial")return false;
+                // These commands are consumed exclusively during mounted play.
+                if(context=="AbyssDrift"&&(original=="Potion"||original=="Aerial"))return false;
+            }
             return a.actionMap.name==b.actionMap.name;
         }
         static bool Overlap(string a,string b)
@@ -124,7 +132,9 @@ namespace Darklight
                     foreach(var record in file.bindings)
                     {
                         var action=Asset.FindActionMap(record.map)?.FindAction(record.action);if(action==null)continue;
-                        int index=record.index;if(index<0||index>=action.bindings.Count||action.bindings[index].path!=record.defaultPath)continue;
+                        int index=record.index;
+                        bool previousDriftDefault=action.name=="AbyssDrift"&&record.defaultPath=="<Gamepad>/rightShoulder"&&index==1&&action.bindings.Count>1&&action.bindings[1].path=="<Gamepad>/dpad/up";
+                        if(index<0||index>=action.bindings.Count||action.bindings[index].path!=record.defaultPath&&!previousDriftDefault)continue;
                         action.ApplyBindingOverride(index,new InputBinding{overridePath=record.path=="null"?null:record.path,overrideInteractions=Optional(record.interactions),overrideProcessors=Optional(record.processors)});
                     }
                 }

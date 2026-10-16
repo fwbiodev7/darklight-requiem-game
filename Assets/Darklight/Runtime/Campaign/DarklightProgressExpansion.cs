@@ -6,7 +6,7 @@ namespace Darklight
     {
         public const int CurrentVersion=2,ChapterCapacity=10;
         public int vampireMastery,vampireSkills,vampireSelected,awakeningState,progressionNodes;
-        public bool legacyFinaleCompleted;
+        public bool legacyFinaleCompleted,abyssTutorialSeen;
         public int expansionFlags,bossPhase=1,missionWave,missionWeaponHits;
         public bool SecretEndingAvailable {get {if((expansionFlags&15)!=15||relics==null||relics.Length<ChapterCapacity)return false;for(int i=0;i<ChapterCapacity;i++)if(!relics[i])return false;return true;}}
         public float blood;public float[] vampireRecoveries=new float[6];
@@ -37,7 +37,7 @@ namespace Darklight
             }
             s.version=CurrentVersion;
             s.expansionFlags&=15;s.missionWeaponHits&=7;s.missionWave=Mathf.Clamp(s.missionWave,0,2);s.bossPhase=Mathf.Clamp(s.bossPhase,1,3);
-            s.weaponUnlocks=(s.weaponUnlocks&7)|1;s.equippedWeapon=Mathf.Clamp(s.equippedWeapon,0,2);
+            s.weaponUnlocks=(s.weaponUnlocks&15)|1;s.equippedWeapon=Mathf.Clamp(s.equippedWeapon,0,3);
             if((s.weaponUnlocks&(1<<s.equippedWeapon))==0)s.equippedWeapon=0;
             s.appearanceStage=0;s.narrativeDays=Mathf.Clamp(s.narrativeDays,0,36500);s.appearanceChapter=Mathf.Clamp(s.appearanceChapter,0,ChapterCapacity-1);
             s.checkpoint=Mathf.Clamp(s.checkpoint,0,4);s.potions=Mathf.Clamp(s.potions,0,99);

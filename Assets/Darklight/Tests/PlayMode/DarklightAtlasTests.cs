@@ -69,7 +69,7 @@ namespace Darklight.Tests
                 Assert.That(a.Available,Is.True);Assert.That(a.Known(lab.Player.transform.position),Is.True);
                 Assert.That(a.DiscoveredCount,Is.GreaterThan(0));Assert.That(a.DiscoveredCount,Is.LessThan(game.Map.GridBounds.width*game.Map.GridBounds.height/3));
                 var grid=game.Map.GridBounds;var center=new Vector2(grid.x+grid.width*.5f,grid.y+grid.height*.5f)*game.Map.CellSize;
-                Assert.That(Vector2.Distance(a.WorldToMini(center),(lab.PixelHUD.transform.Find("HUD640x360/Minimapa/Territorio") as RectTransform).rect.size*.5f),Is.LessThan(.01f));
+                Assert.That(Vector2.Distance(a.WorldToMini(lab.Player.transform.position),(lab.PixelHUD.transform.Find("HUD640x360/Minimapa/Territorio") as RectTransform).rect.size*.5f),Is.LessThan(.01f));
                 Assert.That(a.TryOpen(),Is.True);Assert.That(lab.Paused,Is.True);a.SetZoom(20);Assert.That(a.Zoom,Is.EqualTo(4));a.SetZoom(-1);Assert.That(a.Zoom,Is.EqualTo(.65f));a.CloseMap();
             }
             game.PreviewChapter(0);yield return null;Assert.That(game.Atlas.DiscoveredCount,Is.GreaterThan(0));
@@ -84,7 +84,7 @@ namespace Darklight.Tests
             Invoke(game,"Spawn",RequiemEnemyKind.Crawler,p,false);yield return null;a.RefreshNow();Assert.That(a.VisibleEnemyCount,Is.EqualTo(1));
             var enemy=Object.FindAnyObjectByType<DarklightEnemy>();enemy.GetComponent<HealthSystem>().TakeDamage(10000);yield return null;a.RefreshNow();Assert.That(a.VisibleEnemyCount,Is.Zero);
             Invoke(game,"Spawn",RequiemEnemyKind.Lucien,game.Map.Arenas[3],false);yield return null;a.RefreshNow();Assert.That(a.VisibleEnemyCount,Is.Zero,"Unseen boss was leaked");
-            Assert.That(a.SetWaypoint(game.Map.Arenas[3]),Is.False,"Unknown destination was accepted");
+            Assert.That(a.SetWaypoint(game.Map.Arenas[3]),Is.True,"Revealed terrain allows a waypoint without revealing the unseen boss");Assert.That(a.Observed(game.Map.Arenas[3]),Is.False);Assert.That(a.VisibleEnemyCount,Is.Zero);
         }
         [UnityTest] public IEnumerator FogWaypointTrackingAndAreaMemoriesRoundTripAndIdleUpdatesStayCached()
         {

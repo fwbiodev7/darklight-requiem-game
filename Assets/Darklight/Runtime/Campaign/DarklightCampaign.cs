@@ -35,16 +35,16 @@ namespace Darklight
         AudioSource music,sfx,ambient; SpriteRenderer headphones; AudioClip[] tones;
         int encounter, lastAttack=-1, kills, selectedTrack, resonance=-1;
         bool encounterStarted, chapterCleared; float slowTime; int lastSkillSerial=-1;
-
+        
         public bool ResistsStagger => resonance==1;
         public DarklightResonance Resonance {get;}=new DarklightResonance();
         public DarklightMapDefinition Map {get;private set;}
         public float EnemyTimeScale => slowTime>0?.55f:1;
         public Sprite[] formFrames;
         public float StrikeRangeBonus => Form==3?.15f:0;
-        float style,idleStyle,attackPermit,noticeTime,resonanceTime,resonanceCooldown,phonesTime;
+        float style,idleStyle,noticeTime,resonanceTime,resonanceCooldown,phonesTime;
         readonly float[] rhythmSamples=new float[256];float rhythmEnvelope;MaterialPropertyBlock resonanceBlock;
-
+        
         string notice=""; Action dialogueDone; string[] dialogue;int dialogueIndex;
         public float MusicVolume=.5f, EffectsVolume=.7f; public bool ReducedFlashes;
         void Awake()
@@ -103,12 +103,12 @@ namespace Darklight
         {
             exploredRegion=-1;notice="";noticeTime=0;Style.Reset();threats.Clear();
             if(levelRoot!=null){levelRoot.gameObject.SetActive(false);Destroy(levelRoot.gameObject);}
-            foreach(var shot in FindObjectsByType<DarklightProjectile>(FindObjectsSortMode.None))Destroy(shot.gameObject);
+            foreach(var shot in FindObjectsByType<DarklightProjectile>())Destroy(shot.gameObject);
             enemies.Clear();levelRoot=new GameObject(DarklightStory.Places[chapter]).transform;
             Map=DarklightMapDefinition.ForChapter(chapter);
             DarklightMapLayout.Build(levelRoot,chapter,floorTiles,architecture,pixelMaterial);
             Physics2D.SyncTransforms();
-            encounter=Mathf.Clamp(Progress.checkpoint,0,3);encounterStarted=false;chapterCleared=Progress.checkpoint==4;attackPermit=0;
+            encounter=Mathf.Clamp(Progress.checkpoint,0,3);encounterStarted=false;chapterCleared=Progress.checkpoint==4;
             Vector3 start=Map.SafeSpawn(Progress.checkpoint==4?Map.Arenas[3]:Map.Checkpoints[encounter]);
             lab.Player.transform.position=start;lab.Player.GetComponent<Rigidbody2D>().position=start;
             Weapons.Restore();RestoreAppearance();health.SetMaxHealth(Progress.MaxHealth,false);
@@ -129,6 +129,7 @@ namespace Darklight
         void InitializeRemaster(int chapter){var view=GetComponent<DarklightRemaster>()??gameObject.AddComponent<DarklightRemaster>();view.Initialize(lab.WorldCamera,lab.Player.transform,levelRoot,chapter);}
         void AddProp(string name,Sprite sprite,Vector2 position,float height)
         {
+            if(name=="Checkpoint")height=2.3f;else if(name=="Portal"||name=="SaidaDaRegiao")height=4.2f;
             if(name=="IcaroNox"&&icaroFrames?.Length==8)sprite=icaroFrames[0];
             else if(name=="LyraMoreau"&&lyraFrames?.Length==8)sprite=lyraFrames[0];
             position=InteractionAnchor(position);

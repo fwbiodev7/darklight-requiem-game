@@ -11,6 +11,12 @@ namespace Darklight
             DarklightCombatImpacts.Emit(position,heavy);
             DarklightCombatLab.Instance.WorldCamera.GetComponent<DarklightLabCamera>().Impulse(heavy?2:1);
         }
+        public static void MotorcycleImpact(Vector3 position,Vector2 direction,DarklightMotorcycleImpact kind)
+        {
+            var game=DarklightCampaign.Instance;var lab=DarklightCombatLab.Instance;if(game==null||lab==null)return;
+            DarklightCombatImpacts.EmitMotorcycle(position,direction,kind);
+            lab.WorldCamera.GetComponent<DarklightLabCamera>()?.Impulse(game.ReducedFlashes?1:2);
+        }
         public static void Transformation(Vector3 position,int form,bool release)
         {
             var game=DarklightCampaign.Instance;if(game==null||game.ReducedFlashes||game.extras?.Length<=5)return;

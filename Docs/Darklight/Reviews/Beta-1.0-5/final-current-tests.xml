@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="43" result="Passed" total="43" passed="43" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-16 22:13:16Z" end-time="2026-10-16 22:14:35Z" duration="78,8522224">
+  <test-suite type="TestSuite" id="1241" name="DARKLIGHT REQUIEM QA Icons" fullname="DARKLIGHT REQUIEM QA Icons" runstate="Runnable" testcasecount="186" result="Passed" start-time="2026-10-16 22:13:16Z" end-time="2026-10-16 22:14:35Z" duration="78.852222" total="43" passed="43" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1235" name="Darklight.PlayModeTests.dll" fullname="C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/Library/ScriptAssemblies/Darklight.PlayModeTests.dll" runstate="Runnable" testcasecount="186" result="Passed" start-time="2026-10-16 22:13:16Z" end-time="2026-10-16 22:14:35Z" duration="78.756226" total="43" passed="43" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="12344" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1236" name="Darklight" fullname="Darklight" runstate="Runnable" testcasecount="186" result="Passed" start-time="2026-10-16 22:13:16Z" end-time="2026-10-16 22:14:35Z" duration="78.749932" total="43" passed="43" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1237" name="Tests" fullname="Darklight.Tests" runstate="Runnable" testcasecount="186" result="Passed" start-time="2026-10-16 22:13:16Z" end-time="2026-10-16 22:14:35Z" duration="78.744465" total="43" passed="43" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="DarklightAbyssPrototypeTests" fullname="Darklight.Tests.DarklightAbyssPrototypeTests" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" testcasecount="37" result="Passed" start-time="2026-10-16 22:13:16Z" end-time="2026-10-16 22:14:12Z" duration="55.712346" total="31" passed="31" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1019" name="ActualMountedClockRemainsStableAcrossFormsAndGears" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.ActualMountedClockRemainsStableAcrossFormsAndGears" methodname="ActualMountedClockRemainsStableAcrossFormsAndGears" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="151537334" result="Passed" start-time="2026-10-16 22:13:16Z" end-time="2026-10-16 22:13:21Z" duration="5.087189" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1018" name="AuthoredFormsRenderTheirOwnCompleteSheetsInRealUnityFrames" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.AuthoredFormsRenderTheirOwnCompleteSheetsInRealUnityFrames" methodname="AuthoredFormsRenderTheirOwnCompleteSheetsInRealUnityFrames" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="934554201" result="Passed" start-time="2026-10-16 22:13:21Z" end-time="2026-10-16 22:13:24Z" duration="2.478418" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1005" name="BikeSlamCostsOnceHitsOnlyAfterWindupAndCannotHitThroughWalls" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.BikeSlamCostsOnceHitsOnlyAfterWindupAndCannotHitThroughWalls" methodname="BikeSlamCostsOnceHitsOnlyAfterWindupAndCannotHitThroughWalls" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="868114612" result="Passed" start-time="2026-10-16 22:13:24Z" end-time="2026-10-16 22:13:24Z" duration="0.336533" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1011" name="BufferedBikeExpiresAndInterruptionDoesNotReplayIt" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.BufferedBikeExpiresAndInterruptionDoesNotReplayIt" methodname="BufferedBikeExpiresAndInterruptionDoesNotReplayIt" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="139566411" result="Passed" start-time="2026-10-16 22:13:24Z" end-time="2026-10-16 22:13:24Z" duration="0.309975" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1010" name="BufferedBikeWinsOverHeldSawAndPaysOnceAfterContact" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.BufferedBikeWinsOverHeldSawAndPaysOnceAfterContact" methodname="BufferedBikeWinsOverHeldSawAndPaysOnceAfterContact" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="359562988" result="Passed" start-time="2026-10-16 22:13:24Z" end-time="2026-10-16 22:13:25Z" duration="0.335665" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1031" name="CaptureAcceptedLiftAtTheStandingCharacterScaleInGameplay" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.CaptureAcceptedLiftAtTheStandingCharacterScaleInGameplay" methodname="CaptureAcceptedLiftAtTheStandingCharacterScaleInGameplay" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="552569321" result="Passed" start-time="2026-10-16 22:13:25Z" end-time="2026-10-16 22:13:25Z" duration="0.512249" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1035" name="CaptureMotorcycleImpactInRealGameplayAcrossFourForms" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.CaptureMotorcycleImpactInRealGameplayAcrossFourForms" methodname="CaptureMotorcycleImpactInRealGameplayAcrossFourForms" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="301833610" result="Passed" start-time="2026-10-16 22:13:25Z" end-time="2026-10-16 22:13:34Z" duration="8.483385" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1029" name="ConfirmedRunOverCrossesOneLightTargetWithBoundedDamageAndLandsIntoSaws" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.ConfirmedRunOverCrossesOneLightTargetWithBoundedDamageAndLandsIntoSaws" methodname="ConfirmedRunOverCrossesOneLightTargetWithBoundedDamageAndLandsIntoSaws" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="875901822" result="Passed" start-time="2026-10-16 22:13:34Z" end-time="2026-10-16 22:13:34Z" duration="0.353842" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1006" name="ContextFinisherConsumesGearThreeIsTargetedBoundedAndReturnsToSaws" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.ContextFinisherConsumesGearThreeIsTargetedBoundedAndReturnsToSaws" methodname="ContextFinisherConsumesGearThreeIsTargetedBoundedAndReturnsToSaws" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="441459113" result="Passed" start-time="2026-10-16 22:13:34Z" end-time="2026-10-16 22:13:34Z" duration="0.284489" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1025" name="DashTimingAndDistanceStayBoundedAcrossGearsAndLargePhysicsSteps" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.DashTimingAndDistanceStayBoundedAcrossGearsAndLargePhysicsSteps" methodname="DashTimingAndDistanceStayBoundedAcrossGearsAndLargePhysicsSteps" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="766439253" result="Passed" start-time="2026-10-16 22:13:34Z" end-time="2026-10-16 22:13:35Z" duration="0.335015" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1002" name="DefaultControllerSeparatesDriftFromMountedSlamInEveryForm" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.DefaultControllerSeparatesDriftFromMountedSlamInEveryForm" methodname="DefaultControllerSeparatesDriftFromMountedSlamInEveryForm" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="1746940420" result="Passed" start-time="2026-10-16 22:13:35Z" end-time="2026-10-16 22:13:38Z" duration="3.023785" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1013" name="DriftCannotRemountOnceVaultHasStarted" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.DriftCannotRemountOnceVaultHasStarted" methodname="DriftCannotRemountOnceVaultHasStarted" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="1833345321" result="Passed" start-time="2026-10-16 22:13:38Z" end-time="2026-10-16 22:13:38Z" duration="0.316903" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1020" name="DriftCostsOnceCurvesStopsAtSceneryAndLandsIntoCombo" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.DriftCostsOnceCurvesStopsAtSceneryAndLandsIntoCombo" methodname="DriftCostsOnceCurvesStopsAtSceneryAndLandsIntoCombo" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="1016054269" result="Passed" start-time="2026-10-16 22:13:38Z" end-time="2026-10-16 22:13:38Z" duration="0.409230" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1016" name="FormsKeepRiderAndRequiemSkinRestoresThePreviousWeapon" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.FormsKeepRiderAndRequiemSkinRestoresThePreviousWeapon" methodname="FormsKeepRiderAndRequiemSkinRestoresThePreviousWeapon" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="1424714506" result="Passed" start-time="2026-10-16 22:13:38Z" end-time="2026-10-16 22:13:39Z" duration="0.476484" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1009" name="ImpactPauseRetainsBikeAndMountedDriftWithoutDoublePayment" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.ImpactPauseRetainsBikeAndMountedDriftWithoutDoublePayment" methodname="ImpactPauseRetainsBikeAndMountedDriftWithoutDoublePayment" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="1254195690" result="Passed" start-time="2026-10-16 22:13:39Z" end-time="2026-10-16 22:13:39Z" duration="0.334605" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1003" name="LegacyCustomDriftAndOriginalWeaponControlsRemainIntact" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.LegacyCustomDriftAndOriginalWeaponControlsRemainIntact" methodname="LegacyCustomDriftAndOriginalWeaponControlsRemainIntact" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="1280718788" result="Passed" start-time="2026-10-16 22:13:39Z" end-time="2026-10-16 22:13:39Z" duration="0.341069" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1034" name="MotorcycleEffectsKeepFixedCapacityPauseAndHonorReducedFlashesAndShake" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.MotorcycleEffectsKeepFixedCapacityPauseAndHonorReducedFlashesAndShake" methodname="MotorcycleEffectsKeepFixedCapacityPauseAndHonorReducedFlashesAndShake" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="1379760946" result="Passed" start-time="2026-10-16 22:13:39Z" end-time="2026-10-16 22:13:40Z" duration="0.313998" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1032" name="MotorcycleGroundImpactStartsAtContactAndDoesNotRepeatOrAddDamage" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.MotorcycleGroundImpactStartsAtContactAndDoesNotRepeatOrAddDamage" methodname="MotorcycleGroundImpactStartsAtContactAndDoesNotRepeatOrAddDamage" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="642522584" result="Passed" start-time="2026-10-16 22:13:40Z" end-time="2026-10-16 22:13:40Z" duration="0.308130" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1014" name="MountedSlamLiftsBikeWithoutFirstSplittingAndPaysOnce" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.MountedSlamLiftsBikeWithoutFirstSplittingAndPaysOnce" methodname="MountedSlamLiftsBikeWithoutFirstSplittingAndPaysOnce" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="1493171242" result="Passed" start-time="2026-10-16 22:13:40Z" end-time="2026-10-16 22:13:40Z" duration="0.325208" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1008" name="RealInputsChainSawBikeDriftSlamAndReturnAcrossFourForms" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.RealInputsChainSawBikeDriftSlamAndReturnAcrossFourForms" methodname="RealInputsChainSawBikeDriftSlamAndReturnAcrossFourForms" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="1033092432" result="Passed" start-time="2026-10-16 22:13:40Z" end-time="2026-10-16 22:14:07Z" duration="26.340738" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1022" name="RealUpdateAndPhysicsAcceptRemappedInputForDashDriftAndCombo" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.RealUpdateAndPhysicsAcceptRemappedInputForDashDriftAndCombo" methodname="RealUpdateAndPhysicsAcceptRemappedInputForDashDriftAndCombo" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="1236974926" result="Passed" start-time="2026-10-16 22:14:07Z" end-time="2026-10-16 22:14:08Z" duration="1.749898" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1012" name="ReleasedSustainQueuesBikeWithoutCuttingPaidContactOrRecovery" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.ReleasedSustainQueuesBikeWithoutCuttingPaidContactOrRecovery" methodname="ReleasedSustainQueuesBikeWithoutCuttingPaidContactOrRecovery" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="694459251" result="Passed" start-time="2026-10-16 22:14:08Z" end-time="2026-10-16 22:14:09Z" duration="0.344604" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1027" name="RepeatedStrikeResolutionCannotMultiplySawContactsOrBypassDashCooldown" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.RepeatedStrikeResolutionCannotMultiplySawContactsOrBypassDashCooldown" methodname="RepeatedStrikeResolutionCannotMultiplySawContactsOrBypassDashCooldown" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="2103979339" result="Passed" start-time="2026-10-16 22:14:09Z" end-time="2026-10-16 22:14:09Z" duration="0.302919" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1024" name="ResetClearsReservationAndSerialSoNewDashChargesExactlyOnce" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.ResetClearsReservationAndSerialSoNewDashChargesExactlyOnce" methodname="ResetClearsReservationAndSerialSoNewDashChargesExactlyOnce" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="103496018" result="Passed" start-time="2026-10-16 22:14:09Z" end-time="2026-10-16 22:14:09Z" duration="0.285281" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1030" name="RunOverStillStopsAtWallsOtherEnemiesAndHeavyTargets" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.RunOverStillStopsAtWallsOtherEnemiesAndHeavyTargets" methodname="RunOverStillStopsAtWallsOtherEnemiesAndHeavyTargets" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="1185899650" result="Passed" start-time="2026-10-16 22:14:09Z" end-time="2026-10-16 22:14:10Z" duration="0.294267" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1021" name="SawContactsWorkInAllEightDirectionsWithoutRepeatedDamage" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.SawContactsWorkInAllEightDirectionsWithoutRepeatedDamage" methodname="SawContactsWorkInAllEightDirectionsWithoutRepeatedDamage" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="839160877" result="Passed" start-time="2026-10-16 22:14:10Z" end-time="2026-10-16 22:14:10Z" duration="0.281936" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1007" name="SecretDiscoveryKeepsCampaignStateAndRoundTripsOldAndNewSaves" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.SecretDiscoveryKeepsCampaignStateAndRoundTripsOldAndNewSaves" methodname="SecretDiscoveryKeepsCampaignStateAndRoundTripsOldAndNewSaves" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="1719053583" result="Passed" start-time="2026-10-16 22:14:10Z" end-time="2026-10-16 22:14:10Z" duration="0.531441" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1017" name="SixWholeAttackFramesFollowStartupContactAndRecoveryInBothViews" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.SixWholeAttackFramesFollowStartupContactAndRecoveryInBothViews" methodname="SixWholeAttackFramesFollowStartupContactAndRecoveryInBothViews" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="1081667034" result="Passed" start-time="2026-10-16 22:14:10Z" end-time="2026-10-16 22:14:11Z" duration="0.278874" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1004" name="SustainedSawsPayEachPulseOnceStopOnReleaseAndExhaustion" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.SustainedSawsPayEachPulseOnceStopOnReleaseAndExhaustion" methodname="SustainedSawsPayEachPulseOnceStopOnReleaseAndExhaustion" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="74806902" result="Passed" start-time="2026-10-16 22:14:11Z" end-time="2026-10-16 22:14:11Z" duration="0.294997" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1026" name="SweptDashStopsAtWallAndLiveEnemyButIgnoresObjectiveTriggers" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.SweptDashStopsAtWallAndLiveEnemyButIgnoresObjectiveTriggers" methodname="SweptDashStopsAtWallAndLiveEnemyButIgnoresObjectiveTriggers" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="1118436121" result="Passed" start-time="2026-10-16 22:14:11Z" end-time="2026-10-16 22:14:11Z" duration="0.277155" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1033" name="SweptMotorcycleCollisionEmitsOnlyOneImpactAtTheObstacle" fullname="Darklight.Tests.DarklightAbyssPrototypeTests.SweptMotorcycleCollisionEmitsOnlyOneImpactAtTheObstacle" methodname="SweptMotorcycleCollisionEmitsOnlyOneImpactAtTheObstacle" classname="Darklight.Tests.DarklightAbyssPrototypeTests" runstate="Runnable" seed="595474224" result="Passed" start-time="2026-10-16 22:14:11Z" end-time="2026-10-16 22:14:12Z" duration="0.276591" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1049" name="DarklightArtisticAtlasTests" fullname="Darklight.Tests.DarklightArtisticAtlasTests" classname="Darklight.Tests.DarklightArtisticAtlasTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-16 22:14:12Z" end-time="2026-10-16 22:14:18Z" duration="6.021975" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1052" name="MiniZoomButtonsAndWheelDoNotOpenMapOrLeakAnAttack" fullname="Darklight.Tests.DarklightArtisticAtlasTests.MiniZoomButtonsAndWheelDoNotOpenMapOrLeakAnAttack" methodname="MiniZoomButtonsAndWheelDoNotOpenMapOrLeakAnAttack" classname="Darklight.Tests.DarklightArtisticAtlasTests" runstate="Runnable" seed="1045866050" result="Passed" start-time="2026-10-16 22:14:12Z" end-time="2026-10-16 22:14:12Z" duration="0.359630" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1050" name="RevealedArtDoesNotRevealUnobservedMemoriesOrFutureBosses" fullname="Darklight.Tests.DarklightArtisticAtlasTests.RevealedArtDoesNotRevealUnobservedMemoriesOrFutureBosses" methodname="RevealedArtDoesNotRevealUnobservedMemoriesOrFutureBosses" classname="Darklight.Tests.DarklightArtisticAtlasTests" runstate="Runnable" seed="1777551653" result="Passed" start-time="2026-10-16 22:14:12Z" end-time="2026-10-16 22:14:12Z" duration="0.305303" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1051" name="TenActualMapsKeepAspectCoordinatesAndBoundedTextureMemory" fullname="Darklight.Tests.DarklightArtisticAtlasTests.TenActualMapsKeepAspectCoordinatesAndBoundedTextureMemory" methodname="TenActualMapsKeepAspectCoordinatesAndBoundedTextureMemory" classname="Darklight.Tests.DarklightArtisticAtlasTests" runstate="Runnable" seed="616201016" result="Passed" start-time="2026-10-16 22:14:12Z" end-time="2026-10-16 22:14:17Z" duration="5.063962" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1053" name="UnobservedWalkableDestinationsCanBeMarkedWithoutErasingDiscovery" fullname="Darklight.Tests.DarklightArtisticAtlasTests.UnobservedWalkableDestinationsCanBeMarkedWithoutErasingDiscovery" methodname="UnobservedWalkableDestinationsCanBeMarkedWithoutErasingDiscovery" classname="Darklight.Tests.DarklightArtisticAtlasTests" runstate="Runnable" seed="716134725" result="Passed" start-time="2026-10-16 22:14:17Z" end-time="2026-10-16 22:14:18Z" duration="0.286098" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1054" name="DarklightAtlasTests" fullname="Darklight.Tests.DarklightAtlasTests" classname="Darklight.Tests.DarklightAtlasTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-16 22:14:18Z" end-time="2026-10-16 22:14:21Z" duration="3.411976" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1056" name="AllTenPhasesKeepDiscoveryAndMapCoordinatesWithoutChangingCampaignSave" fullname="Darklight.Tests.DarklightAtlasTests.AllTenPhasesKeepDiscoveryAndMapCoordinatesWithoutChangingCampaignSave" methodname="AllTenPhasesKeepDiscoveryAndMapCoordinatesWithoutChangingCampaignSave" classname="Darklight.Tests.DarklightAtlasTests" runstate="Runnable" seed="1218819541" result="Passed" start-time="2026-10-16 22:14:18Z" end-time="2026-10-16 22:14:19Z" duration="1.361137" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1057" name="EnemiesNeedDetectionAndDefeatedEnemiesDisappearWithoutSpoilerBossOrExit" fullname="Darklight.Tests.DarklightAtlasTests.EnemiesNeedDetectionAndDefeatedEnemiesDisappearWithoutSpoilerBossOrExit" methodname="EnemiesNeedDetectionAndDefeatedEnemiesDisappearWithoutSpoilerBossOrExit" classname="Darklight.Tests.DarklightAtlasTests" runstate="Runnable" seed="669523390" result="Passed" start-time="2026-10-16 22:14:19Z" end-time="2026-10-16 22:14:20Z" duration="0.528010" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1058" name="FogWaypointTrackingAndAreaMemoriesRoundTripAndIdleUpdatesStayCached" fullname="Darklight.Tests.DarklightAtlasTests.FogWaypointTrackingAndAreaMemoriesRoundTripAndIdleUpdatesStayCached" methodname="FogWaypointTrackingAndAreaMemoriesRoundTripAndIdleUpdatesStayCached" classname="Darklight.Tests.DarklightAtlasTests" runstate="Runnable" seed="514399985" result="Passed" start-time="2026-10-16 22:14:20Z" end-time="2026-10-16 22:14:20Z" duration="0.729564" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1055" name="MouseKeyboardAndPadOperateMapAndNeverLeakGameplayInput" fullname="Darklight.Tests.DarklightAtlasTests.MouseKeyboardAndPadOperateMapAndNeverLeakGameplayInput" methodname="MouseKeyboardAndPadOperateMapAndNeverLeakGameplayInput" classname="Darklight.Tests.DarklightAtlasTests" runstate="Runnable" seed="773536449" result="Passed" start-time="2026-10-16 22:14:20Z" end-time="2026-10-16 22:14:21Z" duration="0.784542" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1111" name="DarklightFocusedHUDTests" fullname="Darklight.Tests.DarklightFocusedHUDTests" classname="Darklight.Tests.DarklightFocusedHUDTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-16 22:14:21Z" end-time="2026-10-16 22:14:33Z" duration="12.287798" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1112" name="ExplorationKeepsHealthAndRightCornerMapWithoutPermanentControlCards" fullname="Darklight.Tests.DarklightFocusedHUDTests.ExplorationKeepsHealthAndRightCornerMapWithoutPermanentControlCards" methodname="ExplorationKeepsHealthAndRightCornerMapWithoutPermanentControlCards" classname="Darklight.Tests.DarklightFocusedHUDTests" runstate="Runnable" seed="1704888450" result="Passed" start-time="2026-10-16 22:14:21Z" end-time="2026-10-16 22:14:28Z" duration="7.290426" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1113" name="LowHealthAndWeaponChangesShowUsefulContextWhileTrainingRetainsControls" fullname="Darklight.Tests.DarklightFocusedHUDTests.LowHealthAndWeaponChangesShowUsefulContextWhileTrainingRetainsControls" methodname="LowHealthAndWeaponChangesShowUsefulContextWhileTrainingRetainsControls" classname="Darklight.Tests.DarklightFocusedHUDTests" runstate="Runnable" seed="1202470045" result="Passed" start-time="2026-10-16 22:14:28Z" end-time="2026-10-16 22:14:33Z" duration="4.990016" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1152" name="DarklightMapIconTests" fullname="Darklight.Tests.DarklightMapIconTests" classname="Darklight.Tests.DarklightMapIconTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-16 22:14:33Z" end-time="2026-10-16 22:14:34Z" duration="0.607317" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1153" name="OpenMapHasDistinctOutlinedIconsAndReadableLegend" fullname="Darklight.Tests.DarklightMapIconTests.OpenMapHasDistinctOutlinedIconsAndReadableLegend" methodname="OpenMapHasDistinctOutlinedIconsAndReadableLegend" classname="Darklight.Tests.DarklightMapIconTests" runstate="Runnable" seed="456385401" result="Passed" start-time="2026-10-16 22:14:33Z" end-time="2026-10-16 22:14:34Z" duration="0.600139" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1233" name="DarklightWorldLandmarkTests" fullname="Darklight.Tests.DarklightWorldLandmarkTests" classname="Darklight.Tests.DarklightWorldLandmarkTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-16 22:14:34Z" end-time="2026-10-16 22:14:35Z" duration="0.546315" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1234" name="LargerShrineAndPortalsRemainReachableAndDoNotAddBlockers" fullname="Darklight.Tests.DarklightWorldLandmarkTests.LargerShrineAndPortalsRemainReachableAndDoNotAddBlockers" methodname="LargerShrineAndPortalsRemainReachableAndDoNotAddBlockers" classname="Darklight.Tests.DarklightWorldLandmarkTests" runstate="Runnable" seed="217243832" result="Passed" start-time="2026-10-16 22:14:34Z" end-time="2026-10-16 22:14:35Z" duration="0.537013" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/minimapa-reforma-20261015/authorial/final-current-tests.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

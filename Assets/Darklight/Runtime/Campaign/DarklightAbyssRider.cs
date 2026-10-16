@@ -152,8 +152,9 @@ namespace Darklight
             }
             if((Slamming&&m.ActiveThisTick||Finishing&&m.AttackConnected)&&impactSerial!=m.AttackSerial)
             {
-                impactSerial=m.AttackSerial;game.GetComponent<DarklightCombatLab>().WorldCamera.GetComponent<DarklightLabCamera>().Impulse(game.ReducedFlashes?1:2);
-                DarklightCombatFX.Impact(transform.position+(Vector3)m.Facing*.8f,true);
+                impactSerial=m.AttackSerial;
+                Vector3 contact=Finishing&&finisherTarget!=null?finisherTarget.transform.position:transform.position+(Vector3)m.Facing*.8f;
+                DarklightCombatFX.MotorcycleImpact(contact,m.Facing,Finishing?DarklightMotorcycleImpact.Finisher:DarklightMotorcycleImpact.Ground);
                 if(Finishing)game.TechnicalFinisher(finisherTarget!=null?finisherTarget.transform.position:transform.position);
             }
         }
@@ -175,7 +176,7 @@ namespace Darklight
             delta=Vector2.ClampMagnitude(delta,remaining);float allowed=delta.magnitude;
             if(allowed<=.00001f)return Vector2.zero;
             int count=capsule.Cast(delta.normalized,new ContactFilter2D{useTriggers=true,useLayerMask=false},hits,allowed+.035f);
-            bool blocked=count>=hits.Length;if(blocked)allowed=0;
+            bool blocked=count>=hits.Length,contactFound=false;Vector2 contactPoint=body.position;if(blocked)allowed=0;
             for(int i=0;i<count;i++)
             {
                 var hit=hits[i];if(hit.collider==null||hit.rigidbody==body)continue;
@@ -184,10 +185,11 @@ namespace Darklight
                 // Only the single confirmed, staggered light target can be rolled over. Other
                 // trigger volumes (objectives, effects) never block movement.
                 if(actor==null&&hit.collider.isTrigger)continue;
-                allowed=Mathf.Min(allowed,Mathf.Max(0,hit.distance-.035f));blocked=true;
+                float distance=Mathf.Max(0,hit.distance-.035f);
+                if(distance<=allowed){contactFound=true;contactPoint=hit.point;allowed=distance;}blocked=true;
             }
             if(Drifting)DriftDistance+=allowed;else DashDistance+=allowed;
-            if(blocked){DashBlocked=true;driftQueued=slamQueued=false;fighter.Model.FinishAttackContact();Gear.Crash();}
+            if(blocked){if(contactFound)DarklightCombatFX.MotorcycleImpact(contactPoint,-delta.normalized,DarklightMotorcycleImpact.Collision);DashBlocked=true;driftQueued=slamQueued=false;fighter.Model.FinishAttackContact();Gear.Crash();}
             return delta.normalized*(allowed/step);
         }
         public void ResetMotion(){ClearCommands();ResetRunOver();serial=impactSerial=-1;pendingAttack=null;reservation=0;DashBlocked=false;DashDistance=DriftDistance=0;driftQueued=driftUsed=slamQueued=false;SlamFromMounted=false;paidPulses=0;finisherTarget=null;dashFacing=Vector2.down;Gear.Reset();if(riderLoadout!=null)riderLoadout.weaponSpecial=dash;}
@@ -197,7 +199,7 @@ namespace Darklight
     public sealed partial class DarklightCampaign
     {
         public DarklightAbyssRider AbyssRider{get;private set;}
-        UnityEngine.UI.Text abyssGauge;int abyssHUDState=-1;
+        UnityEngine.UI.Text abyssGauge;
         void InitializeAbyssRider()
         {
             AbyssRider=lab.Player.GetComponent<DarklightAbyssRider>()??lab.Player.gameObject.AddComponent<DarklightAbyssRider>();

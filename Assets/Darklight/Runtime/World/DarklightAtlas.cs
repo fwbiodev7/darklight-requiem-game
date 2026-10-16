@@ -26,12 +26,21 @@ namespace Darklight
         readonly UnityEngine.UI.RawImage[] miniIcons=new UnityEngine.UI.RawImage[64],fullIcons=new UnityEngine.UI.RawImage[64];
         readonly UnityEngine.UI.Text[] objectiveLabels=new UnityEngine.UI.Text[3];
         readonly RectTransform[] objectiveRows=new RectTransform[3];
-        readonly Texture2D[] symbols=new Texture2D[9];
+        readonly Texture2D[] symbols=new Texture2D[9],artSymbols=new Texture2D[9];
         readonly Color[] symbolColors={new Color(.96f,.95f,.9f),new Color(.94f,.72f,.24f),new Color(.32f,.65f,.95f),new Color(.85f,.1f,.18f),new Color(.72f,.035f,.12f),new Color(.27f,.8f,.43f),new Color(.68f,.31f,.92f),new Color(.72f,.67f,.6f),new Color(.5f,.85f,.92f)};
         DarklightCampaign game;DarklightCombatLab lab;Font font;
         Geometry geometry;DarklightAtlasState state;
+        UnityEngine.CanvasGroup trackedContext;float trackedUntil,trackedFade;string trackedPresentationKey;
         RectTransform miniRoot,miniViewport,fullRoot,fullViewport,zoomIn,zoomOut,closeButton,centerButton,trackedRoot;
-        UnityEngine.UI.RawImage miniTerrain,fullTerrain,cursor;
+        UnityEngine.UI.RawImage miniTerrain,fullTerrain,miniArt,fullArt,cursor;
+        Texture2D activeMicroart;RectTransform miniZoomIn,miniZoomOut;UnityEngine.CanvasGroup fullFadeGroup;float fullFade,miniZoom=1,shownMiniZoom=1;
+        public Texture2D MicroartTexture=>activeMicroart;
+        public float MiniZoom=>miniZoom;
+        public bool CapturesPointer
+        {
+            get{var mouse=Mouse.current;return game!=null&&game.Active&&!IsOpen&&miniRoot!=null&&miniRoot.gameObject.activeInHierarchy&&mouse!=null&&Hit(miniRoot,mouse.position.ReadValue())&&(mouse.leftButton.isPressed||mouse.leftButton.wasPressedThisFrame||mouse.rightButton.isPressed||mouse.rightButton.wasPressedThisFrame||mouse.scroll.ReadValue().y!=0);}
+        }
+        public bool StructureRevealed=>geometry!=null&&activeMicroart!=null;
         UnityEngine.UI.Text miniTitle,fullTitle,description,status,trackedHUD,trackedTitle,trackedDistance,miniBinding;
         UnityEngine.UI.RawImage trackedIcon,routeArrow;
         UnityEngine.UI.Text routeHint;
@@ -56,33 +65,49 @@ namespace Darklight
             MakeSymbols();
             miniRoot=Rect(hud,"Minimapa",512,8,120,82);DarklightHUDTheme.Frame(miniRoot);
             miniTitle=Text(miniRoot,"Local","MAPA",6,5,61,10,5);
-            miniBinding=Text(miniRoot,"Atalho","",69,5,45,10,4);miniBinding.alignment=TextAnchor.MiddleRight;
-            miniViewport=Rect(miniRoot,"Territorio",4,18,112,60);miniTerrain=Raw(miniViewport,"Geometria",0,0,112,60,null);MakeIcons(miniViewport,miniIcons,4);
-            trackedRoot=Rect(hud,"DestinoAcompanhado",508,139,124,50);DarklightHUDTheme.Frame(trackedRoot);
+            miniBinding=Text(miniRoot,"Atalho","",61,5,27,10,4);miniBinding.alignment=TextAnchor.MiddleRight;
+            miniZoomOut=Rect(miniRoot,"DiminuirZoom",90,4,11,12);Panel(miniZoomOut,new Color(.09f,.035f,.05f));Text(miniZoomOut,"Rotulo","-",0,0,11,12,5);
+            miniZoomIn=Rect(miniRoot,"AumentarZoom",103,4,11,12);Panel(miniZoomIn,new Color(.09f,.035f,.05f));Text(miniZoomIn,"Rotulo","+",0,0,11,12,5);
+            miniViewport=Rect(miniRoot,"Territorio",4,18,112,60);Panel(miniViewport,Color.black);miniViewport.gameObject.AddComponent<UnityEngine.UI.RectMask2D>();miniArt=Raw(miniViewport,"Microarte",0,0,112,60,null);miniTerrain=Raw(miniViewport,"Geometria",0,0,112,60,null);MakeIcons(miniViewport,miniIcons,4);
+            trackedRoot=Rect(hud,"DestinoAcompanhado",508,94,124,22);trackedContext=trackedRoot.gameObject.AddComponent<UnityEngine.CanvasGroup>();trackedContext.alpha=0;trackedContext.blocksRaycasts=false;DarklightHUDTheme.Frame(trackedRoot);
             trackedIcon=Raw(trackedRoot,"Simbolo",7,8,8,8,symbols[1]);trackedIcon.color=symbolColors[1];
             trackedTitle=Text(trackedRoot,"Titulo","",21,5,72,11,5);trackedDistance=Text(trackedRoot,"Distancia","",94,5,24,11,5);trackedDistance.alignment=TextAnchor.MiddleRight;
             trackedHUD=Text(trackedRoot,"Rotulo","",21,19,98,13,5);
             routeArrow=Raw(trackedRoot,"DirecaoDoDestino",7,35,8,8,symbols[0]);routeArrow.color=symbolColors[1];
             routeHint=Text(trackedRoot,"Orientacao","",21,35,98,11,4);
+            trackedHUD.gameObject.SetActive(false);routeHint.gameObject.SetActive(false);trackedIcon.gameObject.SetActive(false);routeArrow.rectTransform.anchoredPosition=new Vector2(7,-7);
             overlay.SetAsLastSibling();
-            fullRoot=Rect(overlay,"MapaDaFase",0,0,640,360);Panel(fullRoot,new Color(.003f,.003f,.006f,.97f));
-            Text(fullRoot,"Identidade","DARKLIGHT: REQUIEM",28,24,420,16,9);
-            fullTitle=Text(fullRoot,"Local","MAPA DA FASE",28,51,430,33,10);
-            fullViewport=Rect(fullRoot,"Territorio",28,92,396,224);Panel(fullViewport,Color.black);Border(fullViewport,396,224);
-            fullViewport.gameObject.AddComponent<UnityEngine.UI.RectMask2D>();fullTerrain=Raw(fullViewport,"Geometria",0,0,396,224,null);MakeIcons(fullViewport,fullIcons,8);
+            fullRoot=Rect(overlay,"MapaDaFase",0,0,640,360);fullFadeGroup=fullRoot.gameObject.AddComponent<UnityEngine.CanvasGroup>();fullFadeGroup.alpha=0;Panel(fullRoot,new Color(.012f,.012f,.019f,1));
+            MapPanel(Rect(fullRoot,"MolduraDoAtlas",8,6,624,348),0);
+            Text(fullRoot,"Identidade","DARKLIGHT: REQUIEM  /  ATLAS DE VESPERA",24,14,490,12,4);
+            fullTitle=Text(fullRoot,"Local","MAPA DA FASE",24,29,490,22,8);
+            MapPanel(Rect(fullRoot,"MolduraDoTerritorio",16,64,412,242),0);
+            Text(fullRoot,"TerritorioTitulo","TERRITORIO",25,54,200,10,4);
+            fullViewport=Rect(fullRoot,"Territorio",24,74,396,224);Panel(fullViewport,Color.black);
+            fullViewport.gameObject.AddComponent<UnityEngine.UI.RectMask2D>();fullArt=Raw(fullViewport,"Microarte",0,0,396,224,null);fullTerrain=Raw(fullViewport,"Geometria",0,0,396,224,null);MakeIcons(fullViewport,fullIcons,8);
             cursor=Raw(fullViewport,"CursorDoControle",194,108,8,8,symbols[(int)DarklightMapSymbol.Waypoint]);cursor.color=Color.white;
-            zoomOut=SmallButton("Menos","-",342,76,22);zoomIn=SmallButton("Mais","+",369,76,22);centerButton=SmallButton("Centrar","CENTRAR",450,76,75);closeButton=SmallButton("Fechar","FECHAR",540,24,72);
-            Text(fullRoot,"ObjetivosTitulo","OBJETIVOS",450,94,162,12,6);
-            for(int i=0;i<3;i++){objectiveRows[i]=Rect(fullRoot,"Objetivo"+i,450,110+i*21,162,19);Panel(objectiveRows[i],new Color(.03f,.03f,.045f,.8f));objectiveLabels[i]=Text(objectiveRows[i],"Rotulo","",5,0,152,19,5);}
-            description=Text(fullRoot,"Descricao","",450,178,162,66,5);
+            zoomOut=SmallButton("Menos","-",300,47,22);zoomIn=SmallButton("Mais","+",325,47,22);centerButton=SmallButton("Centrar","CENTRAR",350,47,70);closeButton=SmallButton("Fechar","FECHAR",552,19,65);
+            MapPanel(Rect(fullRoot,"PainelDaJornada",438,51,186,274),0);
+            Text(fullRoot,"ObjetivosTitulo","OBJETIVOS",450,61,162,12,5);
+            for(int i=0;i<3;i++){objectiveRows[i]=Rect(fullRoot,"Objetivo"+i,448,77+i*19,168,17);MapPanel(objectiveRows[i],1);objectiveLabels[i]=Text(objectiveRows[i],"Rotulo","",7,0,154,17,5);}
+            MapPanel(Rect(fullRoot,"MolduraDaDescricao",448,138,168,60),0);
+            description=Text(fullRoot,"Descricao","",455,145,154,46,5);description.lineSpacing=1.5f;description.resizeTextForBestFit=true;description.resizeTextMinSize=4;description.resizeTextMaxSize=5;
+            Text(fullRoot,"LegendaTitulo","LEGENDA",450,204,162,10,4);
             string[] legend={"Jogador","Objetivo principal","Objetivo secundário","Inimigo detectado","Chefe conhecido","Checkpoint","Saída liberada"};
-            for(int i=0;i<legend.Length;i++){var icon=Raw(fullRoot,"LegendaIcone"+i,450,250+i*9,8,8,symbols[i]);icon.color=symbolColors[i];Text(fullRoot,"Legenda"+i,legend[i],463,248+i*9,149,11,4);}
-            status=Text(fullRoot,"Estado","",28,318,396,12,4);
-            Text(fullRoot,"Navegacao","TAB / SELECT: FECHAR   WASD / LS: MOVER   +/- / LT-RT: ZOOM\nMOUSE DIR.: ARRASTAR   SETAS / D-PAD: OBJETIVO   ENTER / A: SEGUIR   X: DESTINO   Y: LIMPAR",28,334,585,22,4);
+            for(int i=0;i<legend.Length;i++){var icon=Raw(fullRoot,"LegendaIcone"+i,449,218+i*15,14,14,artSymbols[i]);icon.color=Color.white;Text(fullRoot,"Legenda"+i,legend[i],469,219+i*15,145,12,5);}
+            status=Text(fullRoot,"Estado","",24,309,396,12,4);
+            MapPanel(Rect(fullRoot,"RodapeDoAtlas",16,328,608,24),1);
+            Text(fullRoot,"Navegacao","TAB / SELECT: FECHAR   WASD / LS: MOVER   +/- / LT-RT: ZOOM\nMOUSE DIR.: ARRASTAR   SETAS / D-PAD: OBJETIVO   ENTER / A: SEGUIR   X: DESTINO   Y: LIMPAR",25,333,590,18,4);
             padCursor=new Vector2(198,112);fullRoot.gameObject.SetActive(false);miniRoot.gameObject.SetActive(false);
         }
         RectTransform SmallButton(string name,string label,float x,float y,float w)
-        {var r=Rect(fullRoot,name,x,y,w,15);Panel(r,new Color(.08f,.025f,.045f,.9f));Border(r,w,15);Text(r,"Rotulo",label,2,0,w-4,15,5);return r;}
+        {var r=Rect(fullRoot,name,x,y,w,15);MapPanel(r,1);var t=Text(r,"Rotulo",label,3,0,w-6,15,5);t.alignment=TextAnchor.MiddleCenter;return r;}
+        void MapPanel(RectTransform rect,int index)
+        {
+            var image=rect.GetComponent<UnityEngine.UI.Image>();if(image==null)image=rect.gameObject.AddComponent<UnityEngine.UI.Image>();
+            image.sprite=game.uiArt!=null&&game.uiArt.Length>index?game.uiArt[index]:null;image.material=null;
+            image.type=UnityEngine.UI.Image.Type.Sliced;image.pixelsPerUnitMultiplier=8.333333f;image.color=Color.white;image.raycastTarget=false;
+        }
         public void UseStorage(string path){Flush();storage=path;state=DarklightAtlasState.Load(path);cache.Clear();geometry=null;region=-1;}
         public void ResetCampaign()
         {
@@ -107,8 +132,11 @@ namespace Darklight
                 for(int y=0;y<grid.height;y++)for(int x=0;x<grid.width;x++)geometry.floor[y*grid.width+x]=game.Map.Walkable(new Vector2Int(grid.x+x,grid.y+y));
                 geometry.texture=new Texture2D(grid.width,grid.height,TextureFormat.RGBA32,false){filterMode=FilterMode.Point,wrapMode=TextureWrapMode.Clamp,name="MapaConhecido_"+id};cache[id]=geometry;
             }
+            var previousMicroart=activeMicroart;activeMicroart=Resources.Load<Texture2D>("Darklight/Minimap/Map"+(id+1));
+            miniArt.texture=fullArt.texture=activeMicroart;miniArt.enabled=fullArt.enabled=activeMicroart!=null;
+            if(previousMicroart!=null&&previousMicroart!=activeMicroart)Resources.UnloadAsset(previousMicroart);
             miniTerrain.texture=fullTerrain.texture=geometry.texture;center=geometry.bounds.center;zoom=1;
-            fullTitle.text=!string.IsNullOrWhiteSpace(game.Map.Art?.title)?game.Map.Art.title.ToUpperInvariant():id<DarklightStory.Places.Length?DarklightStory.Places[id].ToUpperInvariant():"MAPA DA FASE";miniTitle.text="MAPA "+(id+1);
+            fullTitle.text=id>=0&&id<DarklightStory.Places.Length?DarklightStory.Places[id].ToUpperInvariant():!string.IsNullOrWhiteSpace(game.Map.Art?.title)?game.Map.Art.title.ToUpperInvariant():"MAPA DA FASE";miniTitle.text="MAPA "+(id+1);
             nextReveal=nextMarkers=nextRoute=0;geometry.dirty=true;focus=0;
         }
         int Index(Vector2 world)
@@ -117,12 +145,15 @@ namespace Darklight
             int x=Mathf.FloorToInt((world.x-geometry.bounds.xMin)/geometry.map.CellSize),y=Mathf.FloorToInt((world.y-geometry.bounds.yMin)/geometry.map.CellSize);
             return x>=0&&x<geometry.width&&y>=0&&y<geometry.height?y*geometry.width+x:-1;
         }
-        public bool Known(Vector2 world){int i=Index(world);return i>=0&&geometry.seen[i];}
+        public bool Known(Vector2 world)=>Index(world)>=0;
+        public bool Observed(Vector2 world){int i=Index(world);return i>=0&&geometry.seen[i];}
+        bool MarkerKnown(DarklightMapPoint point)=>point.symbol==DarklightMapSymbol.Primary||point.symbol==DarklightMapSymbol.Checkpoint||point.symbol==DarklightMapSymbol.Exit||Observed(point.position);
         Vector2 CellCenter(int x,int y)=>geometry.bounds.min+new Vector2(x+.5f,y+.5f)*geometry.map.CellSize;
         bool Sight(Vector2 from,Vector2 to,float margin=0)
         {
             Vector2 delta=to-from;if(delta.sqrMagnitude<.001f)return true;
-            int count=Physics2D.RaycastNonAlloc(from,delta.normalized,sightHits,delta.magnitude);
+            var filter=new ContactFilter2D{useLayerMask=true,layerMask=Physics2D.DefaultRaycastLayers,useTriggers=Physics2D.queriesHitTriggers};
+            int count=Physics2D.Raycast(from,delta.normalized,filter,sightHits,delta.magnitude);
             if(count==sightHits.Length)return false;
             for(int i=0;i<count;i++)if(!sightHits[i].collider.isTrigger&&sightHits[i].collider.GetComponentInParent<DarklightCombatant>()==null&&sightHits[i].distance<delta.magnitude-margin)return false;
             return true;
@@ -143,7 +174,7 @@ namespace Darklight
             points.Clear();visiblePoints.Clear();objectives.Clear();if(geometry==null)return;game.FillMapObjectives(points);
             foreach(var p in points)
             {
-                bool known=Known(p.position);if(known)visiblePoints.Add(p);
+                bool known=MarkerKnown(p);if(known)visiblePoints.Add(p);
                 if(p.symbol==DarklightMapSymbol.Primary||known&&p.trackable)objectives.Add(p);
             }
             var valid=points.Find(p=>p.id==geometry.record.tracked&&!p.completed);
@@ -167,6 +198,7 @@ namespace Darklight
             var tracked=points.Find(x=>x.id==geometry.record.tracked&&!x.completed)??points.Find(x=>x.symbol==DarklightMapSymbol.Primary&&!x.completed);
             if(tracked==null)tracked=points.Find(x=>x.symbol==DarklightMapSymbol.Exit&&!x.completed&&Known(x.position));
             trackedRoot.gameObject.SetActive(game.Active&&tracked!=null);
+            string presentation=tracked==null?null:region+":"+tracked.id;if(presentation!=trackedPresentationKey){trackedPresentationKey=presentation;trackedUntil=Time.unscaledTime+6;}
             trackedTitle.text=tracked==null?"":tracked.id.StartsWith("seal_")&&int.TryParse(tracked.id.Substring(5),out int seal)?seal<3?"SELO "+(seal+1)+" / 3":"OBJETIVO":tracked.title.ToUpperInvariant();
             if(trackedTitle.text.Length>14)trackedTitle.text=trackedTitle.text.Substring(0,12)+"..";
             trackedDistance.text=tracked==null?"":Vector2.Distance(player,tracked.position).ToString("0")+"m";
@@ -182,7 +214,7 @@ namespace Darklight
                 int i=firstObjective+row;bool visible=i<objectives.Count;objectiveRows[row].gameObject.SetActive(visible);if(!visible)continue;
                 var p=objectives[i];objectiveLabels[row].text=(p.completed?"CONCLUÍDO: ":geometry.record.tracked==p.id?"SEGUINDO: ":"")+p.title;
                 objectiveLabels[row].color=p.completed?new Color(.43f,.45f,.48f):i==focus?symbolColors[(int)p.symbol]:new Color(.8f,.78f,.73f);
-                objectiveRows[row].GetComponent<UnityEngine.UI.Image>().color=i==focus?new Color(.2f,.045f,.07f,.9f):new Color(.03f,.03f,.045f,.8f);
+                MapPanel(objectiveRows[row],i==focus?2:1);
             }
             var item=focus<objectives.Count?objectives[focus]:null;
             description.text=item==null?"Explore para descobrir objetivos e pontos de interesse.":item.description+(!Known(item.position)?"\n\nO local ainda não foi explorado.":"");
@@ -214,7 +246,7 @@ namespace Darklight
         void UploadTerrain()
         {
             if(!geometry.dirty)return;
-            for(int i=0;i<geometry.seen.Length;i++)geometry.pixels[i]=!geometry.seen[i]?new Color32(5,5,10,255):routeCells.Contains(i)?new Color32(177,126,44,255):geometry.floor[i]?new Color32(81,84,94,255):new Color32(27,29,39,255);
+            for(int i=0;i<geometry.seen.Length;i++)geometry.pixels[i]=routeCells.Contains(i)?new Color32(210,160,57,190):activeMicroart!=null?geometry.floor[i]?new Color32(0,0,0,0):new Color32(0,0,0,62):geometry.floor[i]?new Color32(81,84,94,255):new Color32(27,29,39,255);
             geometry.texture.SetPixels32(geometry.pixels);geometry.texture.Apply(false,false);geometry.dirty=false;TerrainUploads++;
         }
         public void RefreshNow()
@@ -223,22 +255,21 @@ namespace Darklight
         }
         void LateUpdate()
         {
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
-            long started=System.Diagnostics.Stopwatch.GetTimestamp();UpdateAtlas();
-            LastUpdateMilliseconds=(System.Diagnostics.Stopwatch.GetTimestamp()-started)*1000d/System.Diagnostics.Stopwatch.Frequency;
-#else
+            bool measure=Application.isEditor||Debug.isDebugBuild;
+            long started=measure?System.Diagnostics.Stopwatch.GetTimestamp():0;
             UpdateAtlas();
-#endif
+            if(measure)LastUpdateMilliseconds=(System.Diagnostics.Stopwatch.GetTimestamp()-started)*1000d/System.Diagnostics.Stopwatch.Frequency;
         }
         void UpdateAtlas()
         {
             if(miniRoot==null)return;
-            miniRoot.gameObject.SetActive(Available&&game.Active);trackedRoot.gameObject.SetActive(Available&&game.Active&&!string.IsNullOrEmpty(trackedTitle.text));fullRoot.gameObject.SetActive(IsOpen);
-            if(!Available)return;EnsureGeometry();miniBinding.text="["+lab.Input.BindingLabel("Map")+"]";float now=Time.unscaledTime;
+            miniRoot.gameObject.SetActive(Available&&game.Active);fullFade=Mathf.MoveTowards(fullFade,IsOpen?1:0,Time.unscaledDeltaTime*10);fullFadeGroup.alpha=fullFade;fullRoot.gameObject.SetActive(IsOpen||fullFade>0);shownMiniZoom=Mathf.Lerp(shownMiniZoom,miniZoom,1-Mathf.Exp(-Time.unscaledDeltaTime*14));
+            if(!Available){trackedFade=0;trackedContext.alpha=0;trackedRoot.gameObject.SetActive(false);return;}EnsureGeometry();miniBinding.text="["+lab.Input.BindingLabel("Map")+"]";float now=Time.unscaledTime;
             if(now>=nextReveal){nextReveal=now+.2f;Reveal();}
             if(now>=nextMarkers){nextMarkers=now+.2f;RefreshPoints();}
             if(now>=nextRoute&&(game.Active||IsOpen)){nextRoute=now+.8f;RefreshRoute();}
             UploadTerrain();Draw();UpdateRouteGuide();
+            trackedFade=Mathf.MoveTowards(trackedFade,game.Active&&!string.IsNullOrEmpty(trackedTitle.text)&&now<trackedUntil?1:0,Time.unscaledDeltaTime*6);trackedContext.alpha=trackedFade;trackedRoot.gameObject.SetActive(trackedFade>.001f);
             if(pendingSave&&now>=nextSave){nextSave=now+15;Flush();}
         }
         public bool TryOpen()
@@ -255,7 +286,7 @@ namespace Darklight
         }
         public bool SetWaypoint(Vector2 world)
         {
-            int i=Index(world);if(i<0||!geometry.seen[i]||!geometry.floor[i])return false;
+            int i=Index(world);if(i<0||!geometry.floor[i])return false;
             if(!DarklightNavigation.Clear(world,world+Vector2.right*.001f,.3f))return false;
             geometry.record.waypoint=world;geometry.record.hasWaypoint=true;pendingSave=true;nextRoute=0;RefreshPoints();return true;
         }
@@ -268,7 +299,12 @@ namespace Darklight
             {if(IsOpen)CloseMap();else TryOpen();return true;}
             if(!IsOpen)
             {
-                if(game.Active&&mouse!=null&&mouse.leftButton.wasPressedThisFrame&&Hit(miniRoot,mouse.position.ReadValue())){TryOpen();return true;}
+                if(game.Active&&mouse!=null&&Hit(miniRoot,mouse.position.ReadValue()))
+                {
+                    float wheel=mouse.scroll.ReadValue().y;if(wheel!=0){SetMiniZoom(miniZoom+Mathf.Sign(wheel)*.25f);return true;}
+                    if(mouse.leftButton.wasPressedThisFrame)
+                    {if(Hit(miniZoomIn,mouse.position.ReadValue()))SetMiniZoom(miniZoom+.25f);else if(Hit(miniZoomOut,mouse.position.ReadValue()))SetMiniZoom(miniZoom-.25f);else TryOpen();return true;}
+                }
                 return false;
             }
             if(input.Menu("Cancel").WasPressedThisFrame()||input.Menu("Pause").WasPressedThisFrame()){CloseMap();return true;}
@@ -309,27 +345,35 @@ namespace Darklight
         float MapScale=>Mathf.Min(396/geometry.bounds.width,224/geometry.bounds.height)*zoom;
         Vector2 ViewToWorld(Vector2 p)=>center+new Vector2(p.x-198,112-p.y)/MapScale;
         public Vector2 WorldToFull(Vector2 p)=>new Vector2(198+(p.x-center.x)*MapScale,112-(p.y-center.y)*MapScale);
-        public Vector2 WorldToMini(Vector2 p)=>new Vector2((p.x-geometry.bounds.xMin)/geometry.bounds.width*miniViewport.rect.width,(geometry.bounds.yMax-p.y)/geometry.bounds.height*miniViewport.rect.height);
-        public void SetZoom(float value){zoom=Mathf.Clamp(value,.65f,4);}
+        float MiniScale=>Mathf.Min(miniViewport.rect.width/28f,miniViewport.rect.height/18f)*shownMiniZoom;
+        public Vector2 WorldToMini(Vector2 p){Vector2 player=lab.Player.transform.position;return new Vector2(miniViewport.rect.width*.5f+(p.x-player.x)*MiniScale,miniViewport.rect.height*.5f-(p.y-player.y)*MiniScale);}
+        public Vector2 MiniToWorld(Vector2 p){Vector2 player=lab.Player.transform.position;return player+new Vector2(p.x-miniViewport.rect.width*.5f,miniViewport.rect.height*.5f-p.y)/MiniScale;}
+        public void SetMiniZoom(float value){miniZoom=Mathf.Clamp(value,.65f,3);}
+        public void SetZoom(float value){zoom=Mathf.Clamp(value,.65f,4);SetMiniZoom(value);}
         void Draw()
         {
             if(geometry==null)return;
             float scale=MapScale,w=geometry.bounds.width*scale,h=geometry.bounds.height*scale;
-            fullTerrain.rectTransform.anchoredPosition=new Vector2(198+(geometry.bounds.xMin-center.x)*scale,-(112-(geometry.bounds.yMax-center.y)*scale));fullTerrain.rectTransform.sizeDelta=new Vector2(w,h);
+            var fullPosition=new Vector2(198+(geometry.bounds.xMin-center.x)*scale,-(112-(geometry.bounds.yMax-center.y)*scale));
+            fullTerrain.rectTransform.anchoredPosition=fullArt.rectTransform.anchoredPosition=fullPosition;fullTerrain.rectTransform.sizeDelta=fullArt.rectTransform.sizeDelta=new Vector2(w,h);
+            Vector2 player=lab.Player.transform.position;float miniScale=MiniScale;
+            var miniPosition=new Vector2(miniViewport.rect.width*.5f+(geometry.bounds.xMin-player.x)*miniScale,-(miniViewport.rect.height*.5f-(geometry.bounds.yMax-player.y)*miniScale));
+            miniTerrain.rectTransform.anchoredPosition=miniArt.rectTransform.anchoredPosition=miniPosition;miniTerrain.rectTransform.sizeDelta=miniArt.rectTransform.sizeDelta=geometry.bounds.size*miniScale;
             int count=0;
             foreach(var p in visiblePoints){if(count>=miniIcons.Length-1)break;PlaceIcon(count++,p.position,p.symbol,p.completed);}
             PlaceIcon(count++,lab.Player.transform.position,DarklightMapSymbol.Player,false);
             miniIcons[count-1].transform.SetAsLastSibling();fullIcons[count-1].transform.SetAsLastSibling();
             for(int i=count;i<miniIcons.Length;i++){miniIcons[i].gameObject.SetActive(false);fullIcons[i].gameObject.SetActive(false);}
             cursor.rectTransform.anchoredPosition=new Vector2(padCursor.x-4,-(padCursor.y-4));cursor.gameObject.SetActive(IsOpen&&lab.Input.UsingGamepad);
-            status.text="EXPLORADO "+Mathf.RoundToInt(DiscoveredCount*100f/geometry.seen.Length)+"%   ZOOM "+zoom.ToString("0.0")+"x"+(routeCells.Count>0?"   ROTA CONHECIDA":"   EXPLORE PARA REVELAR CAMINHOS");
+            status.text="FASE REVELADA   ZOOM "+zoom.ToString("0.0")+"x"+(routeCells.Count>0?"   ROTA DO OBJETIVO":"   MARQUE UM DESTINO");
         }
         void PlaceIcon(int i,Vector2 p,DarklightMapSymbol symbol,bool complete)
         {
             void Place(UnityEngine.UI.RawImage icon,Vector2 point,int size,bool full)
             {
                 bool inside=full?point.x>=0&&point.x<=396&&point.y>=0&&point.y<=224:point.x>=0&&point.x<=miniViewport.rect.width&&point.y>=0&&point.y<=miniViewport.rect.height;
-                icon.gameObject.SetActive(inside);icon.texture=symbols[(int)symbol];icon.color=complete?new Color(.38f,.4f,.44f):symbolColors[(int)symbol];
+                icon.gameObject.SetActive(inside);icon.texture=full?artSymbols[(int)symbol]:symbols[(int)symbol];icon.color=complete?new Color(.38f,.4f,.44f):full?Color.white:symbolColors[(int)symbol];
+                icon.rectTransform.sizeDelta=Vector2.one*(full?(symbol==DarklightMapSymbol.Player?14:12):symbol==DarklightMapSymbol.Player?7:size);
                 icon.rectTransform.anchoredPosition=new Vector2(Mathf.Round(point.x),-Mathf.Round(point.y));
                 icon.rectTransform.localRotation=symbol==DarklightMapSymbol.Player?Quaternion.Euler(0,0,Mathf.Atan2(lab.Player.Model.Facing.y,lab.Player.Model.Facing.x)*Mathf.Rad2Deg-90):Quaternion.identity;
             }
@@ -348,20 +392,29 @@ namespace Darklight
         void MakeSymbols()
         {
             string[][] masks={
-                new[]{"...##...","..####..",".######.","########","...##...","...##...","...##...","........"},
-                new[]{"...##...","..####..",".######.","########","########",".######.","..####..","...##..."},
-                new[]{"...##...","..#..#..",".#....#.","#......#","#......#",".#....#.","..#..#..","...##..."},
-                new[]{"........","..####..",".######.",".######.",".######.",".######.","..####..","........"},
-                new[]{".######.","########","##.##.##","##.##.##","########",".######.","..#..#..","..####.."},
-                new[]{"...##...","...##...",".#.##.#.","########","########",".#.##.#.","...##...","...##..."},
-                new[]{"...##...","..####..",".######.","########","##.##.##","##.##.##",".######.","..####.."},
-                new[]{"...##...","...##...","........","...##...","...##...","...##...","...##...","........"},
-                new[]{"##....##","#......#","...##...","..#..#..","..#..#..","...##...","#......#","##....##"}};
+                new[]{"............",".....##.....","....####....","....####....","...######...","...######...","..########..","..###..###..",".....##.....",".....##.....","............","............"},
+                new[]{"............",".....##.....","....####....","...######...","..###..###..",".####..####.",".####..####.","..########..","...##..##...","....####....",".....##.....","............"},
+                new[]{"............",".....##.....","....####....","...##..##...","..##....##..",".##......##.",".##......##.","..##....##..","...##..##...","....####....",".....##.....","............"},
+                new[]{"............",".....##.....","....####....","...######...","..###..###..","..###..###..",".####..####.",".##########.",".####..####.",".##########.","............","............"},
+                new[]{"............","..#..##..#..","..########..",".##########.",".##..##..##.",".##..##..##.",".##########.","..###..###..","...######...","...#.#..#...","...######...","............"},
+                new[]{"............",".....##.....","....####....","....####....","...######...","...##..##...","...######...",".....##.....",".....##.....","..########..","..########..","............"},
+                new[]{"............","...######...","..########..","..##....##..","..##....##..","..##....##..","..##.##.##..","..##.##.##..","..##.##.##..","..########..","..########..","............"},
+                new[]{"............","..########..",".##########.",".##......##.",".##......##.",".##......##.",".##########.","..########..","...###......","...##.......","...#........","............"},
+                new[]{"............","....####....","...######...","..##....##..","..##....##..","..##....##..","...######...","....####....",".....##.....",".....##.....","............","............"}};
+            const int size=12;
             for(int n=0;n<9;n++)
             {
-                var t=new Texture2D(8,8,TextureFormat.RGBA32,false){filterMode=FilterMode.Point,wrapMode=TextureWrapMode.Clamp,name="IconeMapa_"+(DarklightMapSymbol)n};
-                var data=new Color32[64];for(int y=0;y<8;y++)for(int x=0;x<8;x++)data[(7-y)*8+x]=masks[n][y][x]=='#'?new Color32(255,255,255,255):new Color32(0,0,0,0);
+                var t=new Texture2D(size,size,TextureFormat.RGBA32,false){filterMode=FilterMode.Point,wrapMode=TextureWrapMode.Clamp,name="IconeMapa_"+(DarklightMapSymbol)n};
+                var data=new Color32[size*size];
+                for(int y=0;y<size;y++)for(int x=0;x<size;x++)
+                {
+                    bool filled=masks[n][y][x]=='#',edge=false;
+                    if(!filled)for(int oy=-1;oy<=1;oy++)for(int ox=-1;ox<=1;ox++)
+                    {int px=x+ox,py=y+oy;if(px>=0&&px<size&&py>=0&&py<size&&masks[n][py][px]=='#')edge=true;}
+                    data[(size-1-y)*size+x]=filled?new Color32(255,255,255,255):edge?new Color32(9,7,13,255):new Color32(0,0,0,0);
+                }
                 t.SetPixels32(data);t.Apply();symbols[n]=t;
+                artSymbols[n]=Resources.Load<Texture2D>("Darklight/Minimap/Icons/"+(DarklightMapSymbol)n);if(artSymbols[n]==null)artSymbols[n]=t;
             }
         }
         void MakeIcons(Transform parent,UnityEngine.UI.RawImage[] icons,int size){for(int i=0;i<icons.Length;i++){icons[i]=Raw(parent,"Marcador"+i,0,0,size,size,null);icons[i].rectTransform.pivot=Vector2.one*.5f;icons[i].gameObject.SetActive(false);}}

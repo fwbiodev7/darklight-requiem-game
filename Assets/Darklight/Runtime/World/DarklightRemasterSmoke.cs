@@ -20,7 +20,7 @@ namespace Darklight
             var args=Environment.GetCommandLineArgs();int i=Array.IndexOf(args,"--requiem-remaster-check");if(i<0||i+1>=args.Length)return;
             output=args[i+1];Directory.CreateDirectory(output);DarklightAutomation.Silent=true;AudioListener.volume=0;Application.runInBackground=true;
             InputSystem.settings.backgroundBehavior=InputSettings.BackgroundBehavior.IgnoreFocus;
-            UnityEngine.SceneManagement.SceneManager.sceneLoaded+=(scene,mode)=>{if(FindFirstObjectByType<DarklightRemasterSmoke>()==null)new GameObject("VerificacaoSilenciosaDoExecutavel").AddComponent<DarklightRemasterSmoke>();};
+            UnityEngine.SceneManagement.SceneManager.sceneLoaded+=(scene,mode)=>{if(FindAnyObjectByType<DarklightRemasterSmoke>()==null)new GameObject("VerificacaoSilenciosaDoExecutavel").AddComponent<DarklightRemasterSmoke>();};
         }
         static string SaveBytes(string path)=>File.Exists(path)?Convert.ToBase64String(File.ReadAllBytes(path)):"";
         static void WorldCapture(Camera camera,string name)

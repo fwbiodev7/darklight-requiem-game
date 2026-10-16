@@ -28,12 +28,12 @@ namespace Darklight
             var mask=RectAt(trim.transform,"Recorte",1,1,50,50).gameObject.AddComponent<DarklightHUDDiamond>();mask.color=new Color(.018f,.022f,.03f);mask.raycastTarget=false;mask.gameObject.AddComponent<UnityEngine.UI.Mask>().showMaskGraphic=true;
             hudPortrait=ImageAt(mask.transform,"Fábio",1,3,48,47,null);hudPortrait.preserveAspect=true;hudPortrait.material=null;
             for(int i=0;i<2;i++)hudPortraits[i]=Resources.Load<Sprite>("Darklight/HUD/Portrait"+i);
-            HUDPlace(uiRoot.Find("HabilidadeMoldura"),508,97,124,34);DarklightHUDTheme.Frame(uiRoot.Find("HabilidadeMoldura") as RectTransform);
-            ImageAt(uiRoot,"EmblemaOnda",505,95,37,38,Resources.Load<Sprite>("Darklight/HUD/Wave")).preserveAspect=true;
-            HUDPlace(uiRoot.Find("HabilidadeNome"),544,100,83,9,5);hudSkillName=uiRoot.Find("HabilidadeNome").GetComponent<UnityEngine.UI.Text>();hudSkillName.text="ONDA DO VÉU";
-            var waveBack=ImageAt(uiRoot,"FundoOnda",544,112,62,10,null);waveBack.color=new Color(.14f,.02f,.035f);waveBack.transform.SetSiblingIndex(uiRoot.Find("HabilidadeMoldura").GetSiblingIndex()+1);
-            HUDPlace(lab.PixelHUD.skillFill.transform,545,113,60,8);HUDPlace(lab.PixelHUD.skillText.transform,545,113,60,9,5);lab.PixelHUD.skillText.alignment=TextAnchor.MiddleCenter;
-            hudSkillKey=DarklightHUDTheme.Key(uiRoot,font,"TeclaOnda",611,110,18,18);
+            HUDPlace(uiRoot.Find("HabilidadeMoldura"),8,94,124,34);DarklightHUDTheme.Frame(uiRoot.Find("HabilidadeMoldura") as RectTransform);
+            ImageAt(uiRoot,"EmblemaOnda",5,92,37,38,Resources.Load<Sprite>("Darklight/HUD/Wave")).preserveAspect=true;
+            HUDPlace(uiRoot.Find("HabilidadeNome"),44,97,83,9,5);hudSkillName=uiRoot.Find("HabilidadeNome").GetComponent<UnityEngine.UI.Text>();hudSkillName.text="ONDA DO VÉU";
+            var waveBack=ImageAt(uiRoot,"FundoOnda",44,109,62,10,null);waveBack.color=new Color(.14f,.02f,.035f);waveBack.transform.SetSiblingIndex(uiRoot.Find("HabilidadeMoldura").GetSiblingIndex()+1);
+            HUDPlace(lab.PixelHUD.skillFill.transform,45,110,60,8);HUDPlace(lab.PixelHUD.skillText.transform,45,110,60,9,5);lab.PixelHUD.skillText.alignment=TextAnchor.MiddleCenter;
+            hudSkillKey=DarklightHUDTheme.Key(uiRoot,font,"TeclaOnda",111,107,18,18);
             var weaponCard=RectAt(uiRoot,"ArmaHUD",8,310,114,42);DarklightHUDTheme.Frame(weaponCard);
             HUDPlace(weaponIcon.transform,13,315,22,23);HUDPlace(weaponText.transform,40,316,78,10,5);
             weaponIcon.transform.SetAsLastSibling();weaponText.transform.SetAsLastSibling();

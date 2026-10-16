@@ -23,7 +23,7 @@ namespace Darklight
             for(int age=1;age<=4;age++)for(int skin=0;skin<2;skin++)for(int weapon=0;weapon<3;weapon++)for(int d=0;d<8;d++)for(int action=0;action<2;action++)for(int form=0;form<=(age==3?3:0);form++)
             {
                 game.PrepareUserSheetsPose(skin,age,form,weapon);
-                foreach(var echo in UnityEngine.Object.FindObjectsByType<DarklightCombatFX>(FindObjectsSortMode.None))UnityEngine.Object.Destroy(echo.gameObject);
+                foreach(var echo in UnityEngine.Object.FindObjectsByType<DarklightCombatFX>())UnityEngine.Object.Destroy(echo.gameObject);
                 Vector2 aim=Quaternion.Euler(0,0,-d*45)*Vector2.down;var m=fighter.Model;var move=action==0?aim:Vector2.zero;
                 m.Tick(.001f,new CombatInput{aim=aim,move=move,lightPressed=action==1});m.Tick(action==1?m.Attack.startup+.02f:.15f,new CombatInput{aim=aim,move=move});view.Present(m,move);yield return new WaitForEndOfFrame();
                 var layers=view.GetComponent<DarklightOriginalVampireView>();display.GetPropertyBlock(block);

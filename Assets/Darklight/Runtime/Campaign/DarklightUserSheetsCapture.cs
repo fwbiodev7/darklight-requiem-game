@@ -37,7 +37,7 @@ namespace Darklight
             for(int skin=0;skin<2;skin++)for(int weapon=0;weapon<3;weapon++)for(int pose=0;pose<8;pose++)
             {
                 game.PrepareUserSheetsPose(skin,0,0,weapon);
-                foreach(var echo in UnityEngine.Object.FindObjectsByType<DarklightCombatFX>(FindObjectsSortMode.None))UnityEngine.Object.Destroy(echo.gameObject);
+                foreach(var echo in UnityEngine.Object.FindObjectsByType<DarklightCombatFX>())UnityEngine.Object.Destroy(echo.gameObject);
                 var m=fighter.Model;var move=pose<2?Vector2.down:Vector2.zero;
                 m.Tick(.001f,new CombatInput{aim=Vector2.right,move=move,lightPressed=pose==2||pose==3,parryPressed=pose==4,dodgePressed=pose==5||pose==6});
                 float delta=pose==0?.02f:pose==1?.15f:pose==2?.01f:pose==3?m.Attack.startup+.02f:pose==5?.05f:pose==6?.17f:.04f;
@@ -57,7 +57,7 @@ namespace Darklight
             for(int skin=0;skin<2;skin++)for(int weapon=0;weapon<3;weapon++)for(int form=1;form<=3;form++)for(int action=0;action<4;action++)
             {
                 game.PrepareUserSheetsPose(skin,0,form,weapon);
-                foreach(var echo in UnityEngine.Object.FindObjectsByType<DarklightCombatFX>(FindObjectsSortMode.None))UnityEngine.Object.Destroy(echo.gameObject);
+                foreach(var echo in UnityEngine.Object.FindObjectsByType<DarklightCombatFX>())UnityEngine.Object.Destroy(echo.gameObject);
                 var m=fighter.Model;var move=action==0?Vector2.down:Vector2.zero;
                 m.Tick(.001f,new CombatInput{aim=Vector2.right,move=move,lightPressed=action==1,parryPressed=action==2,dodgePressed=action==3});
                 m.Tick(action==1?m.Attack.startup+.02f:action==3?.06f:.04f,new CombatInput{aim=Vector2.right,move=move});view.Present(m,move);yield return new WaitForEndOfFrame();

@@ -28,7 +28,7 @@ namespace Darklight
                 var edge=new GameObject("Borda",typeof(RectTransform),typeof(Image)).GetComponent<RectTransform>();edge.SetParent(card,false);edge.anchorMin=new Vector2(0,0);edge.anchorMax=new Vector2(0,1);edge.pivot=Vector2.zero;edge.sizeDelta=new Vector2(1,0);edge.GetComponent<Image>().color=new Color(.55f,.12f,.2f);edge.GetComponent<Image>().raycastTarget=false;
                 var r=new GameObject("Texto",typeof(RectTransform),typeof(Text)).GetComponent<RectTransform>();r.SetParent(card,false);r.anchorMin=Vector2.zero;r.anchorMax=Vector2.one;r.offsetMin=new Vector2(6,3);r.offsetMax=new Vector2(-5,-3);text=r.GetComponent<Text>();text.font=lab.PixelHUD.pixelFont;text.fontSize=4;text.lineSpacing=1.6f;text.color=new Color(.95f,.9f,.82f);text.raycastTarget=false;
             }
-            bool active=lab.Ready&&!lab.Paused&&TipsEnabled&&(DarklightCampaign.Instance==null||DarklightCampaign.Instance.Active);
+            bool active=lab.Ready&&!lab.Paused&&TipsEnabled&&(DarklightCampaign.Instance==null||DarklightCampaign.Instance.Active&&DarklightCampaign.Instance.Training);
             var rider=DarklightCampaign.Instance?.AbyssRider;
             if(rider?.Active==true)
             {

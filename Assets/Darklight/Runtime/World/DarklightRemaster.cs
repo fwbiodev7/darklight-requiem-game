@@ -70,7 +70,7 @@ namespace Darklight
         }
         public void SyncScene()
         {
-            foreach(var r in FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None))
+            foreach(var r in FindObjectsByType<SpriteRenderer>())
             {
                 if(r.sharedMaterial==null||r.sharedMaterial.shader.name!="Darklight/PixelSprite")continue;
                 var source=r.sharedMaterial;

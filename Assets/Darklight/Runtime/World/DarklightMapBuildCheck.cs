@@ -20,7 +20,7 @@ namespace Darklight
         {
             var args=Environment.GetCommandLineArgs();int i=Array.IndexOf(args,"--requiem-map-check");if(i<0||i+1>=args.Length)return;
             output=args[i+1];Directory.CreateDirectory(output);DarklightAutomation.Silent=true;AudioListener.volume=0;Application.runInBackground=true;
-            UnityEngine.SceneManagement.SceneManager.sceneLoaded+=(s,m)=>{if(FindFirstObjectByType<DarklightMapBuildCheck>()==null)new GameObject("VerificacaoMapasWindows").AddComponent<DarklightMapBuildCheck>();};
+            UnityEngine.SceneManagement.SceneManager.sceneLoaded+=(s,m)=>{if(FindAnyObjectByType<DarklightMapBuildCheck>()==null)new GameObject("VerificacaoMapasWindows").AddComponent<DarklightMapBuildCheck>();};
         }
         static string Saves()=>Directory.Exists(Application.persistentDataPath)?string.Join("|",Directory.GetFiles(Application.persistentDataPath,"*.json*",SearchOption.AllDirectories).OrderBy(p=>p).Select(p=>p+":"+Convert.ToBase64String(File.ReadAllBytes(p)))):"";
         IEnumerator Start()

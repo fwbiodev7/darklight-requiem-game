@@ -20,11 +20,13 @@ namespace Darklight
             var game = DarklightCampaign.Instance;
             var input = !lab.Paused && game?.MenuDismissedThisFrame!=true ? lab.Input.Read(body.position, lab.WorldCamera, lab.Viewport) : default;
             if(game?.AbyssRider?.Active==true&&!lab.Paused&&game.MenuDismissedThisFrame!=true)input=lab.Input.ReadAbyss(input,game.AbyssRider);
+            bool mapPointer=game?.Atlas?.CapturesPointer==true;
+            if(mapPointer){input.lightPressed=input.lightHeld=input.lightReleased=input.heavyPressed=input.heavyHeld=input.weaponSpecialPressed=false;}
             if(game?.InteractionClickConsumed==true){input.lightPressed=false;if(game.AbyssRider?.Active==true)input.weaponSpecialPressed=false;}
             if(game != null && game.WearingHeadphones) { input.lightHeld=false;input.lightPressed=input.heavyPressed=input.skillPressed=input.aerialPressed=input.weaponSpecialPressed=false; }
             if(game?.VampireCasting==true){input.lightHeld=false;input.lightPressed=input.heavyPressed=input.heavyHeld=input.skillPressed=input.aerialPressed=input.weaponSpecialPressed=input.parryPressed=input.dodgePressed=false;input.move*=.25f;}
             if(game?.Transforming==true)input=default;
-            weapons?.BeforeTick(delta,!lab.Paused&&game?.WearingHeadphones!=true&&game?.VampireCasting!=true&&game?.Transforming!=true);
+            weapons?.BeforeTick(delta,!mapPointer&&!lab.Paused&&game?.WearingHeadphones!=true&&game?.VampireCasting!=true&&game?.Transforming!=true);
             if(lab.Paused){delta=0;input=default;}
             game?.AbyssRider?.BeforeCombat(delta,ref input);
             Model.FormStyle=game?.Form??0;Model.Tick(delta,input,game?.AbyssRider?.AttackClockSpeed(game.AttackSpeed)??game?.AttackSpeed??1);

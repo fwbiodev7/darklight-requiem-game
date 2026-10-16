@@ -44,7 +44,7 @@ namespace Darklight
             enemy.Control(.65f);
             // Only this confirmed victim, only until the rear wheel clears it.
             Physics2D.IgnoreCollision(capsule,target,true);runOverPairIgnored=true;
-            DarklightCombatFX.Impact(enemy.transform.position,true);
+            DarklightCombatFX.MotorcycleImpact(enemy.transform.position,dashFacing,DarklightMotorcycleImpact.RunOver);
         }
         bool CanPassRunOverTarget(DarklightCombatant actor)=>RunOverConfirmed&&actor.gameObject==runOverTarget.gameObject&&runOverTarget.Vulnerable;
         void RestoreRunOverCollision(){if(runOverPairIgnored&&capsule!=null&&runOverCollider!=null)Physics2D.IgnoreCollision(capsule,runOverCollider,false);runOverPairIgnored=false;}

@@ -22,9 +22,15 @@ namespace Darklight
             }
             cache[slot]=result;return result;
         }
-        static Sprite Frame(int form,int page,int row,int phase)=>Page(form,page)[row*4+phase];
-        public static void Preload(int form){for(int page=0;page<6;page++)Page(form,page);}
-        public static void ClearCache(){for(int i=0;i<cache.Length;i++)cache[i]=null;}
+        static Sprite acceptedNormalLift;
+        static Sprite AcceptedNormalLift=>acceptedNormalLift??=Resources.Load<Sprite>("Darklight/AbyssPrototype/CorrectedNormalSlamRaiseS");
+        static Sprite Frame(int form,int page,int row,int phase)
+        {
+            if(form==0&&page==4&&row==0&&phase==0&&AcceptedNormalLift!=null)return AcceptedNormalLift;
+            return Page(form,page)[row*4+phase];
+        }
+        public static void Preload(int form){for(int page=0;page<6;page++)Page(form,page);if(form==0)_=AcceptedNormalLift;}
+        public static void ClearCache(){for(int i=0;i<cache.Length;i++)cache[i]=null;acceptedNormalLift=null;}
         public static bool HasCompleteForm(int form)
         {
             for(int row=0;row<2;row++)

@@ -6,13 +6,13 @@ Um eclipse abre fendas em Vespera. Fábio, Lyra e Kael atravessam a cidade e o V
 
 ## Beta 1.0 — 16/10/2026
 
-Cavaleiro do Abismo exclusivo da skin Rock, com serras, engrenagens, moto, derrapagem, esmagamento e finalização contextual. Fases 8–10 reformadas em peças sobrepostas, mantendo a fase 7, a campanha e os saves. Caminhadas calmas das quatro formas em oito direções.
+Cavaleiro do Abismo exclusivo da skin Rock, fases8–10 reformadas, dez miniartes detalhadas e HUD contextual. Atlas com texturas do jogo e novos ícones; pontos de retorno e portais maiores.
 
-[Baixar Beta 1.0 para Windows — build 1.0.6](https://github.com/fwbiodev7/darklight-requiem-game/releases/tag/v1.0.0-beta.4). Extraia o ZIP inteiro e abra `DarklightRequiem.exe`.
+[Baixar Beta 1.0 para Windows — build1.0.8](https://github.com/fwbiodev7/darklight-requiem-game/releases/tag/v1.0.0-beta.5). Extraia o ZIP inteiro e abra `DarklightRequiem.exe`.
 
-165 verificações aprovadas nesta entrega; executável conferido nas quatro formas e nos mapas 7–10. [Resultados e limitações](Docs/Darklight/Delivery/2026-10-16/RELEASE-NOTES.md), [guia de comandos](Docs/Darklight/Delivery/2026-10-16/LEIA-ME-BETA.txt) e [capturas reais](Docs/Darklight/Delivery/2026-10-16/quatro-fases-gameplay.png). Algumas ações direcionais das transformações ainda têm aproximações; avaliação humana de fluidez e balanceamento continua necessária. O minimapa permanece adiado.
+43 testes atuais de gameplay e118 de Editor aprovados. Build:0 erros/1 aviso conhecido. Verificação automatizada do executável em quatro resoluções e12 cenários. [Resultados, capturas e limitações](Docs/Darklight/Reviews/Beta-1.0-5/RELATORIO.md). Controle físico e avaliação humana de áudio, fluidez e balanceamento continuam pendentes; correção anatômica das transformações e catálogo completo de ataques/pilotagem em oito direções ainda não estão concluídos.
 
-O [vídeo de divulgação de 25 s](Docs/Darklight/Media/Darklight-Requiem-Gameplay-Roteiro-25s.mp4) está preservado sem alterações. [Registro da primeira Beta](Docs/BETA-1.0.md).
+O [vídeo de divulgação de25s](Docs/Darklight/Media/Darklight-Requiem-Gameplay-Roteiro-25s.mp4) permanece preservado. [Guia de comandos](Docs/Darklight/Delivery/2026-10-16/LEIA-ME-BETA.txt).
 
 ## Atualização de 14/10/2026
 

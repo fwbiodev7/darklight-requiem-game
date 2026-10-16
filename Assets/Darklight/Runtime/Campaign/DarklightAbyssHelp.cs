@@ -38,14 +38,14 @@ namespace Darklight
         void PresentAbyssHUD()
         {
             bool visible=AbyssRider?.Active==true&&Active;
-            if(abyssGauge==null&&visible){abyssGauge=TextAt(uiRoot,"Engrenagens",8,61,158,39,5);abyssGauge.alignment=TextAnchor.UpperLeft;for(int i=0;i<3;i++)abyssGears[i]=ImageAt(uiRoot,"NivelEngrenagem"+i,8+i*42,85,38,3,null);}
+            if(abyssGauge==null&&visible){abyssGauge=TextAt(uiRoot,"Engrenagens",8,65,165,11,5);abyssGauge.alignment=TextAnchor.UpperLeft;for(int i=0;i<3;i++)abyssGears[i]=ImageAt(uiRoot,"NivelEngrenagem"+i,8+i*28,79,24,2,null);}
             if(abyssGauge==null)return;abyssGauge.gameObject.SetActive(visible);foreach(var bar in abyssGears)if(bar!=null)bar.gameObject.SetActive(visible);if(!visible)return;
             if(Time.unscaledTime<nextAbyssHUD)return;nextAbyssHUD=Time.unscaledTime+.08f;
             var gear=AbyssRider.Gear;if(gear.Mistakes>lastAbyssMistakes)abyssMistakeUntil=Time.unscaledTime+1;lastAbyssMistakes=gear.Mistakes;
             string level=gear.Level==3?"III":gear.Level==2?"II":"I";
-            string cue=AbyssRider.CanFinish?AbyssKey("AbyssBike")+" FINALIZAR ALVO EXPOSTO":gear.WindowOpen?"ENGATE! TOQUE "+AbyssKey("AbyssSaw"):Time.unscaledTime<abyssMistakeUntil?"FORA DO RITMO · ESPERE O BRILHO":gear.Level<3?"PRÓXIMO: "+(gear.Level==1?"II":"III")+" · "+Mathf.Max(1,Mathf.CeilToInt((gear.Level==1?2:4)-gear.Rotation))+" ENGATE(S)":"SOBRECARGA · PROCURE ALVO EXPOSTO";
+
             abyssGauge.color=gear.WindowOpen?new Color(1,.83f,.3f):gear.Level==3?new Color(1,.78f,.25f):Time.unscaledTime<abyssMistakeUntil?new Color(1,.35f,.32f):new Color(.9f,.84f,.78f);
-            abyssGauge.text="ENGRENAGEM "+level+" / III\n"+AbyssKey("AbyssSaw")+" SERRAS · "+AbyssKey("AbyssBike")+" MOTO\n"+AbyssKey("AbyssDrift")+" NA MOTO: DERRAPAR\n"+cue;
+            abyssGauge.text="ENGR. "+level+" / III"+(gear.WindowOpen?"  ENGATE!":AbyssRider.CanFinish?"  "+AbyssKey("AbyssBike")+" FINAL":Time.unscaledTime<abyssMistakeUntil?"  FORA DO RITMO":"");
             for(int i=0;i<3;i++)abyssGears[i].color=i<gear.Level?(gear.Level==3?new Color(1,.7f,.14f):new Color(.8f,.15f,.23f)):new Color(.17f,.14f,.16f);
         }
     }

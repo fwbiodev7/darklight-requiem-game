@@ -19,12 +19,10 @@ namespace Darklight
         Sprite HUDArt(int index,Sprite fallback)=>hudArt!=null&&hudArt.Length>index?hudArt[index]:fallback;
         readonly List<(RectTransform rect,Text text,Image image,Action action,bool enabled)> buttons=new();
         InputActionRebindingExtensions.RebindingOperation rebinding;
-        string rebindAction;
         readonly Dictionary<DarklightEnemy,(RectTransform rect,Image fill)> enemyBars=new();
         public void PauseForFocus(){if(Active)Open("Pause");}
         public void PreviewPanel(string name,int previewSelection=0)
         {
-            if(name=="BindingDevice")rebindAction="Light";
             Open(name);selection=Mathf.Clamp(previewSelection,0,Mathf.Max(0,buttons.Count-1));
         }
         void CreateUI()
@@ -72,7 +70,7 @@ namespace Darklight
             messageText.text=noticeTime>0?notice:"";
             var boss=CurrentBoss;bossText.text=boss==null?"":DarklightStory.Bosses[Progress.chapter];bossFill.gameObject.SetActive(boss!=null);
             if(boss!=null)bossFill.rectTransform.sizeDelta=new Vector2(220*boss.Health.HealthPercent,3);
-            music.volume=MusicVolume;ambient.volume=AmbientVolume*(CurrentBoss!=null?.7f:1);TickMinimalHUD();TickPlaytestGuide();TickTechnicalHUD();
+            music.volume=MusicVolume;ambient.volume=AmbientVolume*(CurrentBoss!=null?.7f:1);TickMinimalHUD();TickPlaytestGuide();TickTechnicalHUD();TickFocusedHUD();
         }
         void TickUI()
         {
@@ -213,7 +211,7 @@ namespace Darklight
             }
             RefreshAppearancePortrait();LayoutCinematicPanel(front);selection=Mathf.Clamp(selection,0,Mathf.Max(0,buttons.Count-1));if(buttons.Count>0&&!buttons[selection].enabled)MoveSelection(1);
         }
-
+        
         void AddEnemyBar(DarklightEnemy enemy)
         {
             if(enemy.Boss)return;var frame=ImageAt(uiRoot,"EcoVida",0,0,52,10,enemyBarFrame);

@@ -30,4 +30,4 @@ Janela de QA em segundo plano; parte da execução coincidiu com testes no Edito
 - A correção anatômica aprovada do levantamento frontal normal está integrada, razão de altura corporal0,9947586 contra o personagem parado. A correção das pernas nas formas transformadas está em revisão e NÃO está concluída nesta build. Fontes novas com poses mecanicamente inadequadas não foram importadas.
 - O catálogo autoral completo de ataques/pilotagem em oito direções e quatro formas continua pendente. Há reuso e espelhamento em parte das ações; sprites importados não comprovam a qualidade final das animações.
 - Campanha, mapas7–10, Interface R2 e saves preservados. As miniartes interpretam visualmente os mapas; colisão vem da geometria real, sem afirmar correspondência artística de cada pixel pelos testes matemáticos.
-- ZIP completo verificado por CRC/SHA256; não inclui saves, arquivos de proteção ou artes rejeitadas. Novos GIFs serão registrados após a publicação.
+- ZIP completo verificado por CRC/SHA256; não inclui saves, arquivos de proteção ou artes rejeitadas. Três clipes reais foram registrados após a publicação; [vídeos, GIFs e evidências](Media/README.md).

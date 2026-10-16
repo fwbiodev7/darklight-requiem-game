@@ -1,0 +1,129 @@
+{
+  "source": "Actual Unity URP2D gameplay, current runtime, simulated keyboard input, normal Rock skin, silent",
+  "simulationFps": 30,
+  "videoFps": 30,
+  "gifFps": 20,
+  "test": {
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "savesPreserved": true,
+    "prefsRestored": true
+  },
+  "clips": [
+    {
+      "name": "serras-combo",
+      "frames": 120,
+      "uniquePoses": 5,
+      "damage": 74.765625,
+      "mounted": false,
+      "drift": false,
+      "jump": false,
+      "combo": false,
+      "slam": false,
+      "video": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1",
+            "nb_frames": "120"
+          }
+        ],
+        "format": {
+          "duration": "4.000000"
+        }
+      },
+      "files": [
+        {
+          "name": "serras-combo.mp4",
+          "bytes": 854704,
+          "sha256": "523174272417d9df07d6b2f603e7d22e93abf9a61902e95b92d611bcc4411c9a"
+        },
+        {
+          "name": "serras-combo.gif",
+          "bytes": 4941416,
+          "sha256": "c30ba64d83cd7e2e9a5dc1daee909f7d3e45d6dad7e8872106b1d0b852d9e394"
+        }
+      ]
+    },
+    {
+      "name": "moto-derrapagem-retorno",
+      "frames": 120,
+      "uniquePoses": 14,
+      "damage": 43.0,
+      "mounted": true,
+      "drift": true,
+      "jump": true,
+      "combo": true,
+      "slam": false,
+      "video": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1",
+            "nb_frames": "120"
+          }
+        ],
+        "format": {
+          "duration": "4.000000"
+        }
+      },
+      "files": [
+        {
+          "name": "moto-derrapagem-retorno.mp4",
+          "bytes": 1405697,
+          "sha256": "a286a326f3c16ba634ae7826dc47e159c8611957abbe7a77e8bb91fd0c4d84ec"
+        },
+        {
+          "name": "moto-derrapagem-retorno.gif",
+          "bytes": 9159031,
+          "sha256": "7097db0d1fc2002ff1a8b80ad893f8b5436afd1d1c5e2643ec58531f2a76e134"
+        }
+      ]
+    },
+    {
+      "name": "moto-esmagamento",
+      "frames": 72,
+      "uniquePoses": 5,
+      "damage": 38.0,
+      "mounted": false,
+      "drift": false,
+      "jump": false,
+      "combo": false,
+      "slam": true,
+      "video": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1",
+            "nb_frames": "72"
+          }
+        ],
+        "format": {
+          "duration": "2.400000"
+        }
+      },
+      "files": [
+        {
+          "name": "moto-esmagamento.mp4",
+          "bytes": 784924,
+          "sha256": "279d5d3ef92bc5f30043b3343934b52354d7a7e720a805c6e0627ce77ca2cfb0"
+        },
+        {
+          "name": "moto-esmagamento.gif",
+          "bytes": 5252392,
+          "sha256": "10e841eea28f7b3c0209260275c898f8a932462d793f0473972e2e889661b70c"
+        }
+      ]
+    }
+  ]
+}

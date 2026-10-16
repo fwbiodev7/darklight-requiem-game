@@ -35,7 +35,7 @@ namespace Darklight
         AudioSource music,sfx,ambient; SpriteRenderer headphones; AudioClip[] tones;
         int encounter, lastAttack=-1, kills, selectedTrack, resonance=-1;
         bool encounterStarted, chapterCleared; float slowTime; int lastSkillSerial=-1;
-        
+
         public bool ResistsStagger => resonance==1;
         public DarklightResonance Resonance {get;}=new DarklightResonance();
         public DarklightMapDefinition Map {get;private set;}
@@ -44,7 +44,7 @@ namespace Darklight
         public float StrikeRangeBonus => Form==3?.15f:0;
         float style,idleStyle,attackPermit,noticeTime,resonanceTime,resonanceCooldown,phonesTime;
         readonly float[] rhythmSamples=new float[256];float rhythmEnvelope;MaterialPropertyBlock resonanceBlock;
-        
+
         string notice=""; Action dialogueDone; string[] dialogue;int dialogueIndex;
         public float MusicVolume=.5f, EffectsVolume=.7f; public bool ReducedFlashes;
         void Awake()

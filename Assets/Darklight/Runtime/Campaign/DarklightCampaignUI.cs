@@ -213,7 +213,7 @@ namespace Darklight
             }
             RefreshAppearancePortrait();LayoutCinematicPanel(front);selection=Mathf.Clamp(selection,0,Mathf.Max(0,buttons.Count-1));if(buttons.Count>0&&!buttons[selection].enabled)MoveSelection(1);
         }
-        
+
         void AddEnemyBar(DarklightEnemy enemy)
         {
             if(enemy.Boss)return;var frame=ImageAt(uiRoot,"EcoVida",0,0,52,10,enemyBarFrame);

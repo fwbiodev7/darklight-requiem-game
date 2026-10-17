@@ -9,7 +9,7 @@ namespace Darklight.EditorTools
     {
         void OnPreprocessAudio()
         {
-            if (assetPath.Contains("/Audio/Expansion/") || assetPath.EndsWith("/RockTheme.mp3") || assetPath.EndsWith("/RequiemTheme.mp3"))
+            if (assetPath.Contains("/Audio/Expansion/") || assetPath.Contains("/Audio/Review20261017/") || assetPath.EndsWith("/RockTheme.mp3") || assetPath.EndsWith("/RequiemTheme.mp3"))
                 Configure((AudioImporter)assetImporter, assetPath);
         }
         static void Configure(AudioImporter importer, string path)

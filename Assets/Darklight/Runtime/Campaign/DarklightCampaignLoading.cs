@@ -54,7 +54,7 @@ namespace Darklight
         }
         void TickLoadingScreen()
         {
-            if(!phaseLoading)return;loadingRoot.SetAsLastSibling();
+            if(!phaseLoading||loadingRoot==null||!loadingRoot.gameObject.activeSelf)return;loadingRoot.SetAsLastSibling();
             float elapsed=Time.unscaledTime-loadingStarted;
             loadingState.text=loadingReady?"CAMINHO ABERTO":"PREPARANDO A PRÓXIMA FASE"+new string('.',(int)(elapsed*3)%4);
             loadingPulse.rectTransform.anchoredPosition=new Vector2(48+Mathf.PingPong(elapsed*.45f,1)*500,-320);
@@ -64,7 +64,7 @@ namespace Darklight
         void BeginPhaseTransition(int chapter,Action load,Action ready)
         {
             if(phaseLoading)return;if(chapter<0||chapter>=DarklightStory.Chapters.Length)throw new ArgumentOutOfRangeException(nameof(chapter));
-            phaseLoading=true;ShowLoadingScreen(chapter);StartCoroutine(LoadPhase(chapter,load,ready));
+            phaseLoading=true;StartCoroutine(PortalPhase(chapter,load,ready));
         }
         IEnumerator LoadPhase(int chapter,Action load,Action ready)
         {

@@ -22,6 +22,9 @@ MonoBehaviour:
     weapon: 2
     directions: 00000000020000000400000006000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemWalkChainYoungCardinal_0
@@ -49,6 +52,9 @@ MonoBehaviour:
     weapon: 2
     directions: 01000000030000000500000007000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemWalkChainYoungDiagonal_0
@@ -76,6 +82,9 @@ MonoBehaviour:
     weapon: 1
     directions: 00000000020000000400000006000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemWalkDaggersYoungCardinal_0
@@ -103,6 +112,9 @@ MonoBehaviour:
     weapon: 1
     directions: 010000000500000007000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RequiemWalkDaggersYoungDiagonal_0
@@ -126,6 +138,9 @@ MonoBehaviour:
     weapon: 1
     directions: 03000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RequiemWalkDaggersYoungNorthWest_0
@@ -141,6 +156,9 @@ MonoBehaviour:
     weapon: 1
     directions: 00000000020000000400000006000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RequiemAttackDaggersYoungCardinal_0
@@ -168,6 +186,9 @@ MonoBehaviour:
     weapon: 1
     directions: 01000000030000000500000007000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RequiemAttackDaggersYoungDiagonal_0
@@ -195,6 +216,9 @@ MonoBehaviour:
     weapon: 0
     directions: 00000000020000000400000006000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RequiemAttackKatanaYoungCardinal_0
@@ -222,6 +246,9 @@ MonoBehaviour:
     weapon: 0
     directions: 01000000030000000500000007000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RequiemAttackKatanaYoungDiagonal_0
@@ -249,6 +276,9 @@ MonoBehaviour:
     weapon: 1
     directions: 00000000020000000400000006000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RockAttackDaggersYoungCardinal_0
@@ -276,6 +306,9 @@ MonoBehaviour:
     weapon: 1
     directions: 01000000030000000500000007000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RockAttackDaggersYoungDiagonal_0
@@ -303,6 +336,9 @@ MonoBehaviour:
     weapon: 1
     directions: 00000000020000000400000006000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RockWalkDaggersYoungCardinal_0
@@ -330,6 +366,9 @@ MonoBehaviour:
     weapon: 1
     directions: 01000000030000000500000007000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RockWalkDaggersYoungDiagonal_0
@@ -357,6 +396,9 @@ MonoBehaviour:
     weapon: 2
     directions: 00000000020000000400000006000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RequiemAttackChainYoungCardinal_0
@@ -384,6 +426,9 @@ MonoBehaviour:
     weapon: 2
     directions: 01000000030000000500000007000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RequiemAttackChainYoungDiagonal_0
@@ -411,6 +456,9 @@ MonoBehaviour:
     weapon: 2
     directions: 00000000020000000400000006000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockAttackChainYoungCardinal_0
@@ -438,6 +486,9 @@ MonoBehaviour:
     weapon: 2
     directions: 01000000030000000500000007000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RockAttackChainYoungDiagonal_0
@@ -456,60 +507,6 @@ MonoBehaviour:
     - Today_RockAttackChainYoungDiagonal_13
     - Today_RockAttackChainYoungDiagonal_14
     - Today_RockAttackChainYoungDiagonal_15
-  - name: RequiemIdleKatanaYoung
-    kind: Idle
-    resourcePath: Darklight/TodayCharacterAnimations/RequiemIdleKatanaYoung
-    paletteResourcePath: Darklight/TodayCharacterAnimations/RequiemIdleKatanaYoung_Palette
-    skin: 0
-    age: 0
-    weapon: 0
-    directions: 0000000001000000020000000300000004000000050000000600000007000000i
-    phases: 2
-    ownerMask: 0
-    spriteNames:
-    - Today_RequiemIdleKatanaYoung_0
-    - Today_RequiemIdleKatanaYoung_1
-    - Today_RequiemIdleKatanaYoung_2
-    - Today_RequiemIdleKatanaYoung_3
-    - Today_RequiemIdleKatanaYoung_4
-    - Today_RequiemIdleKatanaYoung_5
-    - Today_RequiemIdleKatanaYoung_6
-    - Today_RequiemIdleKatanaYoung_7
-    - Today_RequiemIdleKatanaYoung_8
-    - Today_RequiemIdleKatanaYoung_9
-    - Today_RequiemIdleKatanaYoung_10
-    - Today_RequiemIdleKatanaYoung_11
-    - Today_RequiemIdleKatanaYoung_12
-    - Today_RequiemIdleKatanaYoung_13
-    - Today_RequiemIdleKatanaYoung_14
-    - Today_RequiemIdleKatanaYoung_15
-  - name: RockIdleKatanaYoung
-    kind: Idle
-    resourcePath: Darklight/TodayCharacterAnimations/RockIdleKatanaYoung
-    paletteResourcePath: Darklight/TodayCharacterAnimations/RockIdleKatanaYoung_Palette
-    skin: 1
-    age: 0
-    weapon: 0
-    directions: 0000000001000000020000000300000004000000050000000600000007000000i
-    phases: 2
-    ownerMask: 0
-    spriteNames:
-    - Today_RockIdleKatanaYoung_0
-    - Today_RockIdleKatanaYoung_1
-    - Today_RockIdleKatanaYoung_2
-    - Today_RockIdleKatanaYoung_3
-    - Today_RockIdleKatanaYoung_4
-    - Today_RockIdleKatanaYoung_5
-    - Today_RockIdleKatanaYoung_6
-    - Today_RockIdleKatanaYoung_7
-    - Today_RockIdleKatanaYoung_8
-    - Today_RockIdleKatanaYoung_9
-    - Today_RockIdleKatanaYoung_10
-    - Today_RockIdleKatanaYoung_11
-    - Today_RockIdleKatanaYoung_12
-    - Today_RockIdleKatanaYoung_13
-    - Today_RockIdleKatanaYoung_14
-    - Today_RockIdleKatanaYoung_15
   - name: RockWalkKatanaYoung
     kind: Walk
     resourcePath: Darklight/TodayCharacterAnimations/RockWalkKatanaYoung
@@ -519,6 +516,9 @@ MonoBehaviour:
     weapon: 0
     directions: 0000000001000000020000000300000004000000050000000600000007000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RockWalkKatanaYoung_0
@@ -562,6 +562,9 @@ MonoBehaviour:
     weapon: 2
     directions: 0000000001000000020000000300000004000000050000000600000007000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RockWalkChainYoung_0
@@ -605,6 +608,9 @@ MonoBehaviour:
     weapon: 0
     directions: 0000000001000000020000000300000004000000050000000600000007000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RequiemWalkKatanaYoung_0
@@ -648,6 +654,9 @@ MonoBehaviour:
     weapon: 0
     directions: 0000000001000000020000000300000004000000050000000600000007000000i
     phases: 4
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 0
     spriteNames:
     - Today_RockAttackKatanaYoung_0
@@ -691,6 +700,9 @@ MonoBehaviour:
     weapon: 2
     directions: 00000000020000000400000006000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemCombatChainYoungCardinal_0
@@ -734,6 +746,9 @@ MonoBehaviour:
     weapon: 2
     directions: 01000000030000000500000007000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemCombatChainYoungDiagonal_0
@@ -777,6 +792,9 @@ MonoBehaviour:
     weapon: 1
     directions: 00000000020000000400000006000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemCombatDaggersYoungCardinal_0
@@ -820,6 +838,9 @@ MonoBehaviour:
     weapon: 1
     directions: 01000000030000000500000007000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemCombatDaggersYoungDiagonal_0
@@ -863,6 +884,9 @@ MonoBehaviour:
     weapon: 0
     directions: 00000000020000000400000006000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemCombatKatanaYoungCardinal_0
@@ -906,6 +930,9 @@ MonoBehaviour:
     weapon: 0
     directions: 01000000030000000500000007000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemCombatKatanaYoungDiagonal_0
@@ -949,6 +976,9 @@ MonoBehaviour:
     weapon: 2
     directions: 0000000002000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemGuardDodgeChainYoungCardinalA_0
@@ -976,6 +1006,9 @@ MonoBehaviour:
     weapon: 2
     directions: 0400000006000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemGuardDodgeChainYoungCardinalB_0
@@ -1003,6 +1036,9 @@ MonoBehaviour:
     weapon: 2
     directions: 0100000003000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemGuardDodgeChainYoungDiagonalA_0
@@ -1030,6 +1066,9 @@ MonoBehaviour:
     weapon: 2
     directions: 0500000007000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemGuardDodgeChainYoungDiagonalB_0
@@ -1057,6 +1096,9 @@ MonoBehaviour:
     weapon: 1
     directions: 0000000002000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemGuardDodgeDaggersYoungCardinalA_0
@@ -1084,6 +1126,9 @@ MonoBehaviour:
     weapon: 1
     directions: 0400000006000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemGuardDodgeDaggersYoungCardinalB_0
@@ -1111,6 +1156,9 @@ MonoBehaviour:
     weapon: 1
     directions: 01000000030000000500000007000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemGuardDodgeDaggersYoungDiagonal_0
@@ -1154,6 +1202,9 @@ MonoBehaviour:
     weapon: 0
     directions: 00000000020000000400000006000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemGuardDodgeKatanaYoungCardinal_0
@@ -1197,6 +1248,9 @@ MonoBehaviour:
     weapon: 0
     directions: 0100000003000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemGuardDodgeKatanaYoungDiagonalA_0
@@ -1224,6 +1278,9 @@ MonoBehaviour:
     weapon: 0
     directions: 0500000007000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RequiemGuardDodgeKatanaYoungDiagonalB_0
@@ -1251,6 +1308,9 @@ MonoBehaviour:
     weapon: 2
     directions: 00000000020000000400000006000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockCombatChainYoungCardinal_0
@@ -1294,6 +1354,9 @@ MonoBehaviour:
     weapon: 2
     directions: 01000000030000000500000007000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockCombatChainYoungDiagonal_0
@@ -1337,6 +1400,9 @@ MonoBehaviour:
     weapon: 1
     directions: 00000000020000000400000006000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockCombatDaggersYoungCardinal_0
@@ -1380,6 +1446,9 @@ MonoBehaviour:
     weapon: 1
     directions: 01000000030000000500000007000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockCombatDaggersYoungDiagonal_0
@@ -1423,6 +1492,9 @@ MonoBehaviour:
     weapon: 0
     directions: 00000000020000000400000006000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockCombatKatanaYoungCardinal_0
@@ -1466,6 +1538,9 @@ MonoBehaviour:
     weapon: 0
     directions: 01000000030000000500000007000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockCombatKatanaYoungDiagonal_0
@@ -1509,6 +1584,9 @@ MonoBehaviour:
     weapon: 2
     directions: 0000000002000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockGuardDodgeChainYoungCardinalA_0
@@ -1536,6 +1614,9 @@ MonoBehaviour:
     weapon: 2
     directions: 0400000006000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockGuardDodgeChainYoungCardinalB_0
@@ -1563,6 +1644,9 @@ MonoBehaviour:
     weapon: 2
     directions: 0100000003000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockGuardDodgeChainYoungDiagonalA_0
@@ -1590,6 +1674,9 @@ MonoBehaviour:
     weapon: 2
     directions: 0500000007000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockGuardDodgeChainYoungDiagonalB_0
@@ -1617,6 +1704,9 @@ MonoBehaviour:
     weapon: 1
     directions: 00000000020000000400000006000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockGuardDodgeDaggersYoungCardinal_0
@@ -1660,6 +1750,9 @@ MonoBehaviour:
     weapon: 1
     directions: 01000000030000000500000007000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockGuardDodgeDaggersYoungDiagonal_0
@@ -1703,6 +1796,9 @@ MonoBehaviour:
     weapon: 0
     directions: 0000000002000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockGuardDodgeKatanaYoungCardinalA_0
@@ -1730,6 +1826,9 @@ MonoBehaviour:
     weapon: 0
     directions: 0400000006000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockGuardDodgeKatanaYoungCardinalB_0
@@ -1757,6 +1856,9 @@ MonoBehaviour:
     weapon: 0
     directions: 010000000300000007000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockGuardDodgeKatanaYoungDiagonal_0
@@ -1792,6 +1894,9 @@ MonoBehaviour:
     weapon: 0
     directions: 05000000i
     phases: 8
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
     ownerMask: 1
     spriteNames:
     - Today_RockGuardDodgeKatanaYoungNorthEast_0
@@ -1802,3 +1907,291 @@ MonoBehaviour:
     - Today_RockGuardDodgeKatanaYoungNorthEast_5
     - Today_RockGuardDodgeKatanaYoungNorthEast_6
     - Today_RockGuardDodgeKatanaYoungNorthEast_7
+  - name: RequiemIdleLivingCardinal20261017
+    kind: Idle
+    resourcePath: Darklight/TodayCharacterAnimations/RequiemIdleLivingCardinal20261017
+    paletteResourcePath: Darklight/TodayCharacterAnimations/RequiemIdleLivingCardinal20261017_Palette
+    skin: 0
+    age: 0
+    weapon: 0
+    directions: 00000000020000000400000006000000i
+    phases: 6
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: 5
+    ownerMask: 1
+    spriteNames:
+    - Today_RequiemIdleLivingCardinal20261017_0
+    - Today_RequiemIdleLivingCardinal20261017_1
+    - Today_RequiemIdleLivingCardinal20261017_2
+    - Today_RequiemIdleLivingCardinal20261017_3
+    - Today_RequiemIdleLivingCardinal20261017_4
+    - Today_RequiemIdleLivingCardinal20261017_5
+    - Today_RequiemIdleLivingCardinal20261017_6
+    - Today_RequiemIdleLivingCardinal20261017_7
+    - Today_RequiemIdleLivingCardinal20261017_8
+    - Today_RequiemIdleLivingCardinal20261017_9
+    - Today_RequiemIdleLivingCardinal20261017_10
+    - Today_RequiemIdleLivingCardinal20261017_11
+    - Today_RequiemIdleLivingCardinal20261017_12
+    - Today_RequiemIdleLivingCardinal20261017_13
+    - Today_RequiemIdleLivingCardinal20261017_14
+    - Today_RequiemIdleLivingCardinal20261017_15
+    - Today_RequiemIdleLivingCardinal20261017_16
+    - Today_RequiemIdleLivingCardinal20261017_17
+    - Today_RequiemIdleLivingCardinal20261017_18
+    - Today_RequiemIdleLivingCardinal20261017_19
+    - Today_RequiemIdleLivingCardinal20261017_20
+    - Today_RequiemIdleLivingCardinal20261017_21
+    - Today_RequiemIdleLivingCardinal20261017_22
+    - Today_RequiemIdleLivingCardinal20261017_23
+  - name: RequiemIdleLivingDiagonal20261017
+    kind: Idle
+    resourcePath: Darklight/TodayCharacterAnimations/RequiemIdleLivingDiagonal20261017
+    paletteResourcePath: Darklight/TodayCharacterAnimations/RequiemIdleLivingDiagonal20261017_Palette
+    skin: 0
+    age: 0
+    weapon: 0
+    directions: 01000000030000000500000007000000i
+    phases: 6
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: 5
+    ownerMask: 1
+    spriteNames:
+    - Today_RequiemIdleLivingDiagonal20261017_0
+    - Today_RequiemIdleLivingDiagonal20261017_1
+    - Today_RequiemIdleLivingDiagonal20261017_2
+    - Today_RequiemIdleLivingDiagonal20261017_3
+    - Today_RequiemIdleLivingDiagonal20261017_4
+    - Today_RequiemIdleLivingDiagonal20261017_5
+    - Today_RequiemIdleLivingDiagonal20261017_6
+    - Today_RequiemIdleLivingDiagonal20261017_7
+    - Today_RequiemIdleLivingDiagonal20261017_8
+    - Today_RequiemIdleLivingDiagonal20261017_9
+    - Today_RequiemIdleLivingDiagonal20261017_10
+    - Today_RequiemIdleLivingDiagonal20261017_11
+    - Today_RequiemIdleLivingDiagonal20261017_12
+    - Today_RequiemIdleLivingDiagonal20261017_13
+    - Today_RequiemIdleLivingDiagonal20261017_14
+    - Today_RequiemIdleLivingDiagonal20261017_15
+    - Today_RequiemIdleLivingDiagonal20261017_16
+    - Today_RequiemIdleLivingDiagonal20261017_17
+    - Today_RequiemIdleLivingDiagonal20261017_18
+    - Today_RequiemIdleLivingDiagonal20261017_19
+    - Today_RequiemIdleLivingDiagonal20261017_20
+    - Today_RequiemIdleLivingDiagonal20261017_21
+    - Today_RequiemIdleLivingDiagonal20261017_22
+    - Today_RequiemIdleLivingDiagonal20261017_23
+  - name: RockIdleLivingCardinal20261017
+    kind: Idle
+    resourcePath: Darklight/TodayCharacterAnimations/RockIdleLivingCardinal20261017
+    paletteResourcePath: Darklight/TodayCharacterAnimations/RockIdleLivingCardinal20261017_Palette
+    skin: 1
+    age: 0
+    weapon: 0
+    directions: 00000000020000000400000006000000i
+    phases: 6
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: 5
+    ownerMask: 1
+    spriteNames:
+    - Today_RockIdleLivingCardinal20261017_0
+    - Today_RockIdleLivingCardinal20261017_1
+    - Today_RockIdleLivingCardinal20261017_2
+    - Today_RockIdleLivingCardinal20261017_3
+    - Today_RockIdleLivingCardinal20261017_4
+    - Today_RockIdleLivingCardinal20261017_5
+    - Today_RockIdleLivingCardinal20261017_6
+    - Today_RockIdleLivingCardinal20261017_7
+    - Today_RockIdleLivingCardinal20261017_8
+    - Today_RockIdleLivingCardinal20261017_9
+    - Today_RockIdleLivingCardinal20261017_10
+    - Today_RockIdleLivingCardinal20261017_11
+    - Today_RockIdleLivingCardinal20261017_12
+    - Today_RockIdleLivingCardinal20261017_13
+    - Today_RockIdleLivingCardinal20261017_14
+    - Today_RockIdleLivingCardinal20261017_15
+    - Today_RockIdleLivingCardinal20261017_16
+    - Today_RockIdleLivingCardinal20261017_17
+    - Today_RockIdleLivingCardinal20261017_18
+    - Today_RockIdleLivingCardinal20261017_19
+    - Today_RockIdleLivingCardinal20261017_20
+    - Today_RockIdleLivingCardinal20261017_21
+    - Today_RockIdleLivingCardinal20261017_22
+    - Today_RockIdleLivingCardinal20261017_23
+  - name: RockIdleLivingDiagonal20261017
+    kind: Idle
+    resourcePath: Darklight/TodayCharacterAnimations/RockIdleLivingDiagonal20261017
+    paletteResourcePath: Darklight/TodayCharacterAnimations/RockIdleLivingDiagonal20261017_Palette
+    skin: 1
+    age: 0
+    weapon: 0
+    directions: 01000000030000000500000007000000i
+    phases: 6
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: 5
+    ownerMask: 1
+    spriteNames:
+    - Today_RockIdleLivingDiagonal20261017_0
+    - Today_RockIdleLivingDiagonal20261017_1
+    - Today_RockIdleLivingDiagonal20261017_2
+    - Today_RockIdleLivingDiagonal20261017_3
+    - Today_RockIdleLivingDiagonal20261017_4
+    - Today_RockIdleLivingDiagonal20261017_5
+    - Today_RockIdleLivingDiagonal20261017_6
+    - Today_RockIdleLivingDiagonal20261017_7
+    - Today_RockIdleLivingDiagonal20261017_8
+    - Today_RockIdleLivingDiagonal20261017_9
+    - Today_RockIdleLivingDiagonal20261017_10
+    - Today_RockIdleLivingDiagonal20261017_11
+    - Today_RockIdleLivingDiagonal20261017_12
+    - Today_RockIdleLivingDiagonal20261017_13
+    - Today_RockIdleLivingDiagonal20261017_14
+    - Today_RockIdleLivingDiagonal20261017_15
+    - Today_RockIdleLivingDiagonal20261017_16
+    - Today_RockIdleLivingDiagonal20261017_17
+    - Today_RockIdleLivingDiagonal20261017_18
+    - Today_RockIdleLivingDiagonal20261017_19
+    - Today_RockIdleLivingDiagonal20261017_20
+    - Today_RockIdleLivingDiagonal20261017_21
+    - Today_RockIdleLivingDiagonal20261017_22
+    - Today_RockIdleLivingDiagonal20261017_23
+  - name: RequiemLivingMotionCardinal20261017
+    kind: Motion
+    resourcePath: Darklight/TodayCharacterAnimations/RequiemLivingMotionCardinal20261017
+    paletteResourcePath: Darklight/TodayCharacterAnimations/RequiemLivingMotionCardinal20261017_Palette
+    skin: 0
+    age: 0
+    weapon: 0
+    directions: 00000000020000000400000006000000i
+    phases: 5
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
+    ownerMask: 1
+    spriteNames:
+    - Today_RequiemLivingMotionCardinal20261017_0
+    - Today_RequiemLivingMotionCardinal20261017_1
+    - Today_RequiemLivingMotionCardinal20261017_2
+    - Today_RequiemLivingMotionCardinal20261017_3
+    - Today_RequiemLivingMotionCardinal20261017_4
+    - Today_RequiemLivingMotionCardinal20261017_5
+    - Today_RequiemLivingMotionCardinal20261017_6
+    - Today_RequiemLivingMotionCardinal20261017_7
+    - Today_RequiemLivingMotionCardinal20261017_8
+    - Today_RequiemLivingMotionCardinal20261017_9
+    - Today_RequiemLivingMotionCardinal20261017_10
+    - Today_RequiemLivingMotionCardinal20261017_11
+    - Today_RequiemLivingMotionCardinal20261017_12
+    - Today_RequiemLivingMotionCardinal20261017_13
+    - Today_RequiemLivingMotionCardinal20261017_14
+    - Today_RequiemLivingMotionCardinal20261017_15
+    - Today_RequiemLivingMotionCardinal20261017_16
+    - Today_RequiemLivingMotionCardinal20261017_17
+    - Today_RequiemLivingMotionCardinal20261017_18
+    - Today_RequiemLivingMotionCardinal20261017_19
+  - name: RequiemLivingMotionDiagonal20261017
+    kind: Motion
+    resourcePath: Darklight/TodayCharacterAnimations/RequiemLivingMotionDiagonal20261017
+    paletteResourcePath: Darklight/TodayCharacterAnimations/RequiemLivingMotionDiagonal20261017_Palette
+    skin: 0
+    age: 0
+    weapon: 0
+    directions: 01000000030000000500000007000000i
+    phases: 5
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
+    ownerMask: 1
+    spriteNames:
+    - Today_RequiemLivingMotionDiagonal20261017_0
+    - Today_RequiemLivingMotionDiagonal20261017_1
+    - Today_RequiemLivingMotionDiagonal20261017_2
+    - Today_RequiemLivingMotionDiagonal20261017_3
+    - Today_RequiemLivingMotionDiagonal20261017_4
+    - Today_RequiemLivingMotionDiagonal20261017_5
+    - Today_RequiemLivingMotionDiagonal20261017_6
+    - Today_RequiemLivingMotionDiagonal20261017_7
+    - Today_RequiemLivingMotionDiagonal20261017_8
+    - Today_RequiemLivingMotionDiagonal20261017_9
+    - Today_RequiemLivingMotionDiagonal20261017_10
+    - Today_RequiemLivingMotionDiagonal20261017_11
+    - Today_RequiemLivingMotionDiagonal20261017_12
+    - Today_RequiemLivingMotionDiagonal20261017_13
+    - Today_RequiemLivingMotionDiagonal20261017_14
+    - Today_RequiemLivingMotionDiagonal20261017_15
+    - Today_RequiemLivingMotionDiagonal20261017_16
+    - Today_RequiemLivingMotionDiagonal20261017_17
+    - Today_RequiemLivingMotionDiagonal20261017_18
+    - Today_RequiemLivingMotionDiagonal20261017_19
+  - name: RockLivingMotionCardinal20261017
+    kind: Motion
+    resourcePath: Darklight/TodayCharacterAnimations/RockLivingMotionCardinal20261017
+    paletteResourcePath: Darklight/TodayCharacterAnimations/RockLivingMotionCardinal20261017_Palette
+    skin: 1
+    age: 0
+    weapon: 0
+    directions: 00000000020000000400000006000000i
+    phases: 5
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
+    ownerMask: 1
+    spriteNames:
+    - Today_RockLivingMotionCardinal20261017_0
+    - Today_RockLivingMotionCardinal20261017_1
+    - Today_RockLivingMotionCardinal20261017_2
+    - Today_RockLivingMotionCardinal20261017_3
+    - Today_RockLivingMotionCardinal20261017_4
+    - Today_RockLivingMotionCardinal20261017_5
+    - Today_RockLivingMotionCardinal20261017_6
+    - Today_RockLivingMotionCardinal20261017_7
+    - Today_RockLivingMotionCardinal20261017_8
+    - Today_RockLivingMotionCardinal20261017_9
+    - Today_RockLivingMotionCardinal20261017_10
+    - Today_RockLivingMotionCardinal20261017_11
+    - Today_RockLivingMotionCardinal20261017_12
+    - Today_RockLivingMotionCardinal20261017_13
+    - Today_RockLivingMotionCardinal20261017_14
+    - Today_RockLivingMotionCardinal20261017_15
+    - Today_RockLivingMotionCardinal20261017_16
+    - Today_RockLivingMotionCardinal20261017_17
+    - Today_RockLivingMotionCardinal20261017_18
+    - Today_RockLivingMotionCardinal20261017_19
+  - name: RockLivingMotionDiagonal20261017
+    kind: Motion
+    resourcePath: Darklight/TodayCharacterAnimations/RockLivingMotionDiagonal20261017
+    paletteResourcePath: Darklight/TodayCharacterAnimations/RockLivingMotionDiagonal20261017_Palette
+    skin: 1
+    age: 0
+    weapon: 0
+    directions: 01000000030000000500000007000000i
+    phases: 5
+    startupFrameEnd: 0
+    activeFrameEnd: 0
+    idleBlinkFrame: -1
+    ownerMask: 1
+    spriteNames:
+    - Today_RockLivingMotionDiagonal20261017_0
+    - Today_RockLivingMotionDiagonal20261017_1
+    - Today_RockLivingMotionDiagonal20261017_2
+    - Today_RockLivingMotionDiagonal20261017_3
+    - Today_RockLivingMotionDiagonal20261017_4
+    - Today_RockLivingMotionDiagonal20261017_5
+    - Today_RockLivingMotionDiagonal20261017_6
+    - Today_RockLivingMotionDiagonal20261017_7
+    - Today_RockLivingMotionDiagonal20261017_8
+    - Today_RockLivingMotionDiagonal20261017_9
+    - Today_RockLivingMotionDiagonal20261017_10
+    - Today_RockLivingMotionDiagonal20261017_11
+    - Today_RockLivingMotionDiagonal20261017_12
+    - Today_RockLivingMotionDiagonal20261017_13
+    - Today_RockLivingMotionDiagonal20261017_14
+    - Today_RockLivingMotionDiagonal20261017_15
+    - Today_RockLivingMotionDiagonal20261017_16
+    - Today_RockLivingMotionDiagonal20261017_17
+    - Today_RockLivingMotionDiagonal20261017_18
+    - Today_RockLivingMotionDiagonal20261017_19

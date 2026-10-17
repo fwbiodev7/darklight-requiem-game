@@ -31,8 +31,13 @@ namespace Darklight
             if(File.Exists(Path))File.Replace(temp,Path,Path+".bak");else File.Move(temp,Path);
         }
         public static DarklightProgress Load()
+            => LoadFromPath(Path);
+        // The same reader can validate imported/local backup files without
+        // touching the player's active save location.
+        public static DarklightProgress LoadFromPath(string savePath)
         {
-            foreach(string path in new[]{Path,Path+".bak"})
+            if(string.IsNullOrWhiteSpace(savePath))return null;
+            foreach(string path in new[]{savePath,savePath+".bak"})
                 try {if(!File.Exists(path))continue;var state=Decode(File.ReadAllText(path));if(state!=null)return state;}catch(Exception e){Debug.LogWarning("Save: "+e.Message);}
             return null;
         }

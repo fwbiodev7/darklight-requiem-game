@@ -21,8 +21,8 @@ namespace Darklight.Tests
             {
                 Assert.That(metadata.skin,Is.InRange(0,1));Assert.That(metadata.age,Is.Zero);Assert.That(metadata.weapon,Is.InRange(0,2));
                 Assert.That(metadata.directions.Distinct().Count(),Is.EqualTo(metadata.directions.Length));
-                CollectionAssert.Contains(new[]{"Combat","GuardDodge","Walk","Attack","Idle"},metadata.kind);
-                Assert.That(metadata.phases,Is.EqualTo(metadata.kind=="Idle"?2:metadata.kind=="Walk"||metadata.kind=="Attack"?4:8));
+                CollectionAssert.Contains(new[]{"Combat","GuardDodge","Walk","Attack","Idle","Motion"},metadata.kind);
+                Assert.That(metadata.phases,Is.EqualTo(metadata.kind=="Motion"?5:metadata.kind=="Idle"?(metadata.idleBlinkFrame==5?6:2):metadata.kind=="Walk"||metadata.kind=="Attack"?4:8));
                 foreach(int direction in metadata.directions)
                 {
                     Assert.That(direction,Is.InRange(0,7));

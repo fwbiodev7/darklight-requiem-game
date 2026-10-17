@@ -66,7 +66,7 @@ namespace Darklight
             var current=ReadMenuSave(DarklightProgress.Path);var backup=ReadMenuSave(DarklightProgress.Path+".bak");
             Button("SAVE ATUAL",()=>LoadMenuSave(DarklightProgress.Path),current!=null);
             Button("COPIA ANTERIOR",()=>LoadMenuSave(DarklightProgress.Path+".bak"),backup!=null);
-            Button("VOLTAR",()=>Open("Main"));
+            Button("VOLTAR",()=>Open(returnPanel));
             for(int i=0;i<2;i++)
             {
                 var label=TextAt(buttons[i].rect,"ResumoDoArquivo",22,19,232,10,4);
@@ -127,6 +127,7 @@ namespace Darklight
         }
         void StyleCinematicButton(int i,int first)
         {
+            if(panel=="Death"&&!Training){StyleGameOverButton(i);return;}
             if(panel=="Pause"||panel=="Options")first=0;var b=buttons[i];b.rect.gameObject.SetActive(panel=="Options"||panel=="Pause"?true:i>=first&&i<first+8);
             if(!CinematicFront&&!CinematicPause&&panel!="Options")
             {

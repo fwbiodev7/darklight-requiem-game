@@ -13,12 +13,29 @@ Shader "Darklight/PixelSprite"
             #include "UnityCG.cginc"
             struct appdata { float4 vertex:POSITION; float2 uv:TEXCOORD0; fixed4 color:COLOR; };
             struct v2f { float4 vertex:SV_POSITION; float2 uv:TEXCOORD0; fixed4 color:COLOR; float height:TEXCOORD1; float side:TEXCOORD2; float2 sourceUV:TEXCOORD3; };
-            sampler2D _VampireMask; float _VampireForm,_EraseHead,_WholeSprite,_WholeFrameId; sampler2D _MainTex; fixed4 _Color; float _AlphaClip,_DarkForm,_HeadThreshold,_WingOnly,_ResonanceTint;
+            sampler2D _VampireMask; float _VampireForm,_EraseHead,_WholeSprite,_WholeFrameId; sampler2D _MainTex; fixed4 _Color; float _AlphaClip,_DarkForm,_HeadThreshold,_WingOnly,_ResonanceTint;float4 _CanonicalSkinShift;
             sampler2D _OcclusionTex;float _LayerOcclusion,_OcclusionChin,_Physique;float4 _OcclusionScale,_OcclusionOffset,_OcclusionRect,_OcclusionStep;
             v2f vert(appdata v) { v2f o; o.vertex=UnityObjectToClipPos(v.vertex); o.uv=v.uv; o.color=v.color*_Color; o.height=v.vertex.y;o.side=v.vertex.x;o.sourceUV=v.vertex.xy*_OcclusionScale.xy+_OcclusionOffset.xy; return o; }
             fixed4 frag(v2f i):SV_Target
             {
                 fixed4 c=tex2D(_MainTex,i.uv); clip(c.a-_AlphaClip);
+                if(_CanonicalSkinShift.w>.5)
+                {
+                    float3 pigment=c.rgb;
+                    #ifndef UNITY_COLORSPACE_GAMMA
+                    pigment=LinearToGammaSpace(pigment);
+                    #endif
+                    // Warm flesh only. Dark hair/clothes, silver and red/purple
+                    // blade/energy do not enter this reference-color interval.
+                    if(pigment.r>200.0/255 && pigment.g>75.0/255 && pigment.g<205.0/255 && pigment.b>35.0/255 && pigment.b<165.0/255 && pigment.r>pigment.g*1.25 && pigment.g>pigment.b*1.2)
+                    {
+                        pigment=saturate(pigment+_CanonicalSkinShift.rgb);
+                        #ifndef UNITY_COLORSPACE_GAMMA
+                        pigment=GammaToLinearSpace(pigment);
+                        #endif
+                        c.rgb=pigment;
+                    }
+                }
                 if(_LayerOcclusion>.5)
                 {
                     bool inside=i.sourceUV.x>=_OcclusionRect.x&&i.sourceUV.y>=_OcclusionRect.y&&i.sourceUV.x<=_OcclusionRect.z&&i.sourceUV.y<=_OcclusionRect.w;

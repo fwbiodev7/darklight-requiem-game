@@ -24,7 +24,10 @@ namespace Darklight
             Application.logMessageReceived+=log;
             try
             {
-                while(!UnityEngine.Rendering.SplashScreen.isFinished)yield return null;
+                // An offscreen batch player may never present the splash frame.
+                // Manual capture must not wait indefinitely for a visible swap.
+                float splashDeadline=Time.realtimeSinceStartup+3;
+                while(!UnityEngine.Rendering.SplashScreen.isFinished&&Time.realtimeSinceStartup<splashDeadline)yield return null;
                 yield return null;yield return null;Capture(Path.Combine(folder,"menu.png"));
                 var game=DarklightCampaign.Instance;var lab=DarklightCombatLab.Instance;
                 for(int chapter=0;chapter<6;chapter++)

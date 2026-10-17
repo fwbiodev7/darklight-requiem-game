@@ -11,7 +11,7 @@ namespace Darklight.Editor
         [Serializable] public class Manifest { public Page[] pages; }
         [Serializable] public class Page
         {
-            public string name, kind; public int skin, age, weapon, phases;
+            public string name, kind,attackKey; public int skin, age, weapon, phases;
             public int[] directions; public float ppu; public Frame[] sprites;
             public bool ownerMask;
             public int startupFrameEnd, activeFrameEnd;
@@ -28,7 +28,7 @@ namespace Darklight.Editor
             var pages = data.pages.Select(page =>
             {
                 var descriptor = new TodayCharacterPage { name = page.name, kind = page.kind, skin = page.skin, age = page.age,
-                    weapon = page.weapon, phases = page.phases, directions = page.directions,
+                    weapon = page.weapon, phases = page.phases, directions = page.directions,attackKey=page.attackKey,
                     resourcePath = "Darklight/TodayCharacterAnimations/" + page.name,
                     paletteResourcePath = "Darklight/TodayCharacterAnimations/" + page.name + "_Palette",
                     spriteNames = page.sprites?.Select(f => f.name).ToArray(), ownerMask = page.ownerMask,
@@ -47,6 +47,7 @@ namespace Darklight.Editor
             if (catalog == null) { catalog = ScriptableObject.CreateInstance<TodayCharacterCatalog>(); AssetDatabase.CreateAsset(catalog, catalogPath); }
             catalog.pages = pages; EditorUtility.SetDirty(catalog); AssetDatabase.SaveAssets(); TodayCharacterBank.ClearCache();
             DarklightLivingIdleImporter.ImportIfPresent();
+            DarklightDetailedCombatImporter.ImportIfPresent();
             return "Imported " + pages.Length + " base sheets / " + pages.Sum(p => p.spriteNames.Length) + " base frames";
         }
         public static Sprite[] ImportTextureFrames(string path,float ppu,Frame[] sprites,string maskPath,bool ownerMask)

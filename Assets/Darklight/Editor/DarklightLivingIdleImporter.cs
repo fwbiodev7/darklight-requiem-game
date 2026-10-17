@@ -56,6 +56,11 @@ namespace Darklight.Editor
             // Only replace the neutral katana idle descriptors. Combat/death pages remain intact.
             var names=manifest.pages.Select(p=>p.name).ToHashSet();
             var removed=normal.pages.Where(p=>incoming.Any(n=>n.skin==p.skin&&n.weapon==p.weapon&&n.kind==p.kind)).Select(p=>p.name).ToHashSet();
+            // Re-composing the legacy form catalog must not leave orphaned old
+            // idle forms after the production normal pages were already replaced.
+            var legacy=JsonUtility.FromJson<TodayCharacterImporter.Manifest>(File.ReadAllText("Assets/Darklight/ArtSources/WholeCharacters20261013/manifest.json"));
+            foreach(var p in legacy.pages)
+                if(incoming.Any(n=>n.skin==p.skin&&n.weapon==p.weapon&&n.kind==p.kind))removed.Add(p.name);
             normal.pages=normal.pages.Where(p=>!removed.Contains(p.name)&&!names.Contains(p.name)).Concat(incoming).ToArray();
             transformed.pages=transformed.pages.Where(p=>!removed.Contains(p.baseName)&&!names.Contains(p.baseName)).Concat(formDescriptors).ToArray();
             EditorUtility.SetDirty(normal);EditorUtility.SetDirty(transformed);AssetDatabase.SaveAssets();

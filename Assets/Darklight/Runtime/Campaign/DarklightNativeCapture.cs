@@ -8,7 +8,7 @@ namespace Darklight
     // Opt-in evidence capture and explicit world+HUD rendering without a visible swap chain.
     public static class DarklightNativeCapture
     {
-        static void Render(Camera camera,RenderTexture target)
+        public static void Render(Camera camera,RenderTexture target)
         {
             if(GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset)
                 RenderPipeline.SubmitRenderRequest(camera,new UniversalRenderPipeline.SingleCameraRequest{destination=target});

@@ -49,7 +49,7 @@ namespace Darklight
             try
             {
                 StopPower();
-                var saved=DarklightAutomation.Silent||PlaytestSession?null:DarklightProgress.Load();
+                var saved=PlaytestSession||DarklightAutomation.Silent&&!DarklightProgress.HasIsolatedTestStorage?null:DarklightProgress.Load();
                 if(saved!=null)Progress=saved;
                 deathMenuPending=false;LoadMap(Progress.chapter);Close();
             }

@@ -23,26 +23,46 @@ Shader "Darklight/Remaster/SpriteLit"
             Tags {"LightMode"="Universal2D"}
             HLSLPROGRAM
             #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/Core2D.hlsl"
+            #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
             #pragma vertex LitVertex
             #pragma fragment LitFragment
             #include_with_pragmas "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/ShapeLightShared.hlsl"
             #pragma multi_compile_instancing
             #pragma multi_compile _ DEBUG_DISPLAY
             struct Attributes {COMMON_2D_INPUTS half4 color:COLOR; UNITY_SKINNED_VERTEX_INPUTS};
-            struct Varyings {COMMON_2D_LIT_OUTPUTS half4 color:COLOR;};
+            struct Varyings {COMMON_2D_LIT_OUTPUTS half4 color:COLOR;float2 bridgeWorld:TEXCOORD7;};
             #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/Lit2DCommon.hlsl"
             TEXTURE2D(_VampireMask);SAMPLER(sampler_VampireMask);
             CBUFFER_START(UnityPerMaterial)
-            half4 _Color;float _VampireForm,_WholeSprite,_AlphaClip,_WholeFrameId,_ResonanceTint;
+            half4 _Color;float _VampireForm,_WholeSprite,_AlphaClip,_WholeFrameId,_ResonanceTint,_BridgeForeground;
+            float4 _CanonicalSkinShift;
             CBUFFER_END
+            float _BridgeActorVisible;float4 _BridgeActorBounds;
             Varyings LitVertex(Attributes input)
             {
                 SetUpSpriteInstanceProperties();input.positionOS=UnityFlipSprite(input.positionOS,unity_SpriteProps.xy);
-                Varyings o=CommonLitVertex(input);o.color=input.color*_Color*unity_SpriteColor;return o;
+                Varyings o=CommonLitVertex(input);o.color=input.color*_Color*unity_SpriteColor;
+                o.bridgeWorld=TransformObjectToWorld(input.positionOS).xy;return o;
             }
             half4 LitFragment(Varyings input):SV_Target
             {
                 half4 main=SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,input.uv);clip(main.a-_AlphaClip);
+                if(_BridgeForeground>.5&&_BridgeActorVisible>.5&&input.bridgeWorld.x>=_BridgeActorBounds.x&&input.bridgeWorld.x<=_BridgeActorBounds.z&&input.bridgeWorld.y>=_BridgeActorBounds.y&&input.bridgeWorld.y<=_BridgeActorBounds.w)discard;
+                if(_CanonicalSkinShift.w>.5)
+                {
+                    float3 pigment=main.rgb;
+                    #ifndef UNITY_COLORSPACE_GAMMA
+                    pigment=LinearToSRGB(pigment);
+                    #endif
+                    if(pigment.r>200.0/255&&pigment.g>75.0/255&&pigment.g<205.0/255&&pigment.b>35.0/255&&pigment.b<165.0/255&&pigment.r>pigment.g*1.25&&pigment.g>pigment.b*1.2)
+                    {
+                        pigment=saturate(pigment+_CanonicalSkinShift.rgb);
+                        #ifndef UNITY_COLORSPACE_GAMMA
+                        pigment=SRGBToLinear(pigment);
+                        #endif
+                        main.rgb=pigment;
+                    }
+                }
                 half4 selectors=SAMPLE_TEXTURE2D(_VampireMask,sampler_VampireMask,input.uv);
                 if(_WholeFrameId>.5)clip(.49-abs(round(selectors.a*255)-_WholeFrameId));
                 if(_VampireForm>.5)

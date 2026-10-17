@@ -11,6 +11,9 @@ namespace Darklight
         void BeginGameOver()
         {
             if (deathMenuPending) return;
+            // Health can reach zero through hazards or direct health events as
+            // well as strikes. Set the presentation state before pausing combat.
+            if(lab.Player.Model.State!=CombatState.Dead)lab.Player.Model.Hurt(true);
             StopPower();
             // Never replace the last valid save with the defeat state.
             deathMenuPending = true;

@@ -5,7 +5,7 @@ namespace Darklight
 {
     [Serializable] public sealed class TodayCharacterPage
     {
-        public string name, kind, resourcePath, paletteResourcePath;
+        public string name, kind, resourcePath, paletteResourcePath,attackKey;
         public int skin, age, weapon;
         public int[] directions;
         public int phases;
@@ -49,6 +49,7 @@ namespace Darklight
             bool living = LivingKind(page.kind) && page.phases >= 2 && page.phases <= 32;
             bool detailedAttack = page.kind == "Attack" && page.phases > 4 && DarklightAttackFrameTiming.Valid(page.phases,page.startupFrameEnd,page.activeFrameEnd);
             bool detailedIdle = page.kind == "Idle" && page.phases == 6 && page.idleBlinkFrame == 5;
+            if(!string.IsNullOrEmpty(page.attackKey)&&!detailedAttack)return false;
             if (!living && !detailedAttack && !detailedIdle && (page.phases != expected || expected == 0)) return false;
             int seen = 0;
             foreach (int direction in page.directions)
@@ -60,12 +61,13 @@ namespace Darklight
                 if (page.spriteNames[i] != "Today_" + page.name + "_" + i) return false;
             return true;
         }
-        public static TodayCharacterPage Page(int skin, int age, int weapon, int direction, string kind)
+        public static TodayCharacterPage Page(int skin, int age, int weapon, int direction, string kind,string attackKey=null)
         {
             var data = Catalog();
             if (data?.pages == null) return null;
             foreach (var page in data.pages)
                 if (page != null && page.skin == skin && page.age == 0 && page.weapon == weapon && page.kind == kind &&
+                    string.Equals(page.attackKey??"",attackKey??"",StringComparison.Ordinal) &&
                     page.directions != null && Array.IndexOf(page.directions, direction) >= 0 && CachedValid(page)) return page;
             return null;
         }
@@ -93,7 +95,8 @@ namespace Darklight
             string kind = model.State == CombatState.Parry || model.State == CombatState.Dodge ? "GuardDodge" :
                 model.State == CombatState.Neutral && !model.ActiveThisTick && movement.sqrMagnitude > .01f ? "Walk" : model.State == CombatState.Neutral ? "Idle" : "Combat";
             if (model.State == CombatState.Attack || model.ActiveThisTick) kind = "Attack";
-            var page = Page(skin, age, weapon, direction, kind);
+            var page = kind=="Attack"&&model.Attack!=null?Page(skin,age,weapon,direction,kind,model.Attack.displayName):null;
+            page??=Page(skin, age, weapon, direction, kind);
             if (page == null && kind == "Idle") { kind = "Combat"; page = Page(skin, 0, weapon, direction, kind); }
             if (page == null && kind == "Attack") { kind = "Combat"; page = Page(skin, age, weapon, direction, kind); }
             if (page == null || !LoadFrames(page)) return null;

@@ -12,13 +12,15 @@ Shader "Darklight/PixelSprite"
             #pragma fragment frag
             #include "UnityCG.cginc"
             struct appdata { float4 vertex:POSITION; float2 uv:TEXCOORD0; fixed4 color:COLOR; };
-            struct v2f { float4 vertex:SV_POSITION; float2 uv:TEXCOORD0; fixed4 color:COLOR; float height:TEXCOORD1; float side:TEXCOORD2; float2 sourceUV:TEXCOORD3; };
+            struct v2f { float4 vertex:SV_POSITION; float2 uv:TEXCOORD0; fixed4 color:COLOR; float height:TEXCOORD1; float side:TEXCOORD2; float2 sourceUV:TEXCOORD3; float2 world:TEXCOORD4; };
             sampler2D _VampireMask; float _VampireForm,_EraseHead,_WholeSprite,_WholeFrameId; sampler2D _MainTex; fixed4 _Color; float _AlphaClip,_DarkForm,_HeadThreshold,_WingOnly,_ResonanceTint;float4 _CanonicalSkinShift;
             sampler2D _OcclusionTex;float _LayerOcclusion,_OcclusionChin,_Physique;float4 _OcclusionScale,_OcclusionOffset,_OcclusionRect,_OcclusionStep;
-            v2f vert(appdata v) { v2f o; o.vertex=UnityObjectToClipPos(v.vertex); o.uv=v.uv; o.color=v.color*_Color; o.height=v.vertex.y;o.side=v.vertex.x;o.sourceUV=v.vertex.xy*_OcclusionScale.xy+_OcclusionOffset.xy; return o; }
+            float _BridgeForeground,_BridgeActorVisible;float4 _BridgeActorBounds;
+            v2f vert(appdata v) { v2f o; o.vertex=UnityObjectToClipPos(v.vertex); o.uv=v.uv; o.color=v.color*_Color; o.height=v.vertex.y;o.side=v.vertex.x;o.sourceUV=v.vertex.xy*_OcclusionScale.xy+_OcclusionOffset.xy;o.world=mul(unity_ObjectToWorld,v.vertex).xy; return o; }
             fixed4 frag(v2f i):SV_Target
             {
                 fixed4 c=tex2D(_MainTex,i.uv); clip(c.a-_AlphaClip);
+                if(_BridgeForeground>.5&&_BridgeActorVisible>.5&&i.world.x>=_BridgeActorBounds.x&&i.world.x<=_BridgeActorBounds.z&&i.world.y>=_BridgeActorBounds.y&&i.world.y<=_BridgeActorBounds.w)discard;
                 if(_CanonicalSkinShift.w>.5)
                 {
                     float3 pigment=c.rgb;

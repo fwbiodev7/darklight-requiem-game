@@ -23,7 +23,11 @@ namespace Darklight.Editor
         [MenuItem("DARKLIGHT/Arte/Importar idles vivos aprovados")]
         public static void Import()
         {
-            var manifest=JsonUtility.FromJson<Manifest>(File.ReadAllText(ManifestPath));
+            ImportManifest(ManifestPath);
+        }
+        public static void ImportManifest(string path)
+        {
+            var manifest=JsonUtility.FromJson<Manifest>(File.ReadAllText(path));
             if(manifest?.pages==null || manifest.forms==null)throw new InvalidOperationException("Living idle manifest missing");
             foreach(var page in manifest.pages)
                 if(manifest.forms.Count(f=>f.baseName==page.name)!=3 ||

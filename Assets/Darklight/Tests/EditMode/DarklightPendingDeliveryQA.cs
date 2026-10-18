@@ -8,10 +8,12 @@ namespace Darklight.Tests
     {
         const string Key="Darklight.PendingDelivery.Result";
         static DarklightPendingDeliveryQA(){EditorApplication.update+=Finish;}
+        public static void TechnicalFinal()=>Run("technical-final-20261018","^Darklight.Tests.(DarklightBridgeDepthTests|DarklightGameOverFlowTests|DarklightSustainedCombatTests|DarklightAudioSettingsTests|DarklightConsistencyGameplayTests|DarklightLitPaletteTests|DarklightTechnicalDeliveryGameplayTests)\\.|^Darklight.Tests.DarklightAbyssPrototypeTests.(ImpactPauseRetainsBikeAndMountedDriftWithoutDoublePayment|BufferedBikeWinsOverHeldSawAndPaysOnceAfterContact|ReleasedSustainQueuesBikeWithoutCuttingPaidContactOrRecovery|DriftCannotRemountOnceVaultHasStarted|MountedSlamLiftsBikeWithoutFirstSplittingAndPaysOnce)$|^Darklight.Tests.(DarklightCampaignTests.(MovementPauseAndDodgeUseActualPhysics|AllPowersApplyGameplayAndKeepFormsIndependent)|DarklightGameplayTests.(CrowdedStrikesHitEveryTargetAndEnemyAreasCannotCrossWalls|AreaThreatRequiresEvadingAndWeaponsKeepTheirDifferentCounters)|DarklightAgeWeaponRegressionTests.*)$");
         public static void GameOver()=>Run("gameover-flow","^Darklight.Tests.DarklightGameOverFlowTests\\.");
         public static void Bridges()=>Run("bridge-depth","^Darklight.Tests.DarklightBridgeDepthTests\\.");
         public static void Delivery()=>Run("delivery-playmode","^Darklight.Tests.(DarklightBridgeDepthTests|DarklightGameOverFlowTests|DarklightSustainedCombatTests)\\.");
         public static void Palette()=>Run("lit-palette","^Darklight.Tests.DarklightLitPaletteTests\\.");
+        public static void Consistency()=>Run("consistency-playmode","^Darklight.Tests.(DarklightConsistencyGameplayTests|DarklightLitPaletteTests|DarklightGameOverFlowTests)\\.");
         public static void Gameplay()=>Run("gameplay-regression","^Darklight.Tests.(DarklightCampaignTests.(MovementPauseAndDodgeUseActualPhysics|AllPowersApplyGameplayAndKeepFormsIndependent)|DarklightGameplayTests.(CrowdedStrikesHitEveryTargetAndEnemyAreasCannotCrossWalls|AreaThreatRequiresEvadingAndWeaponsKeepTheirDifferentCounters)|DarklightAgeWeaponRegressionTests.*)$");
         static void Run(string name,string filter)
         {

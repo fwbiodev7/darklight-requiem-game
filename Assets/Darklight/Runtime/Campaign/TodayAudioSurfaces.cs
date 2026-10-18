@@ -44,7 +44,7 @@ namespace Darklight
             return Regions[Mathf.Clamp(region, 0, Regions.Length - 1)];
         }
     }
-    // Contacts match walking frames 0 and 2 in the current four-frame, 10fps catalog.
+    // Two contacts per .4s stride: phases 0/2 for four poses, 0/3 for six.
     // Actual displacement is required: input against walls and attack lunges are silent.
     public sealed class TodayStepContacts
     {

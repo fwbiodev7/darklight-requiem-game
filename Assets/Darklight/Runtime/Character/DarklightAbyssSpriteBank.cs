@@ -30,9 +30,10 @@ namespace Darklight
             return Page(form,page)[row*4+phase];
         }
         public static void Preload(int form){for(int page=0;page<6;page++)Page(form,page);if(form==0)_=AcceptedNormalLift;}
-        public static void ClearCache(){for(int i=0;i<cache.Length;i++)cache[i]=null;acceptedNormalLift=null;}
+        public static void ClearCache(){for(int i=0;i<cache.Length;i++)cache[i]=null;for(int i=0;i<directionCache.Length;i++)directionCache[i]=null;acceptedNormalLift=null;ClearWholeOwnership();}
         public static bool HasCompleteForm(int form)
         {
+            if(!HasCompleteDirections(form))return false;
             for(int row=0;row<2;row++)
             {
                 for(int phase=0;phase<4;phase++)if(Frame(form,0,row,phase)==null)return false;

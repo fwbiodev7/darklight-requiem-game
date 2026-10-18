@@ -49,8 +49,9 @@ namespace Darklight
             bool living = LivingKind(page.kind) && page.phases >= 2 && page.phases <= 32;
             bool detailedAttack = page.kind == "Attack" && page.phases > 4 && DarklightAttackFrameTiming.Valid(page.phases,page.startupFrameEnd,page.activeFrameEnd);
             bool detailedIdle = page.kind == "Idle" && page.phases == 6 && page.idleBlinkFrame == 5;
+            bool detailedWalk = page.kind == "Walk" && page.phases == 6 && page.ownerMask;
             if(!string.IsNullOrEmpty(page.attackKey)&&!detailedAttack)return false;
-            if (!living && !detailedAttack && !detailedIdle && (page.phases != expected || expected == 0)) return false;
+            if (!living && !detailedAttack && !detailedIdle && !detailedWalk && (page.phases != expected || expected == 0)) return false;
             int seen = 0;
             foreach (int direction in page.directions)
             {
@@ -102,7 +103,7 @@ namespace Darklight
             if (page == null || !LoadFrames(page)) return null;
             int phase = 0;
             if (kind == "Idle") phase = DarklightIdleFrameTiming.Frame(page.phases,model.Clock,page.idleBlinkFrame);
-            else if (kind == "Walk") phase = (int)(model.Clock * 10f) % 4;
+            else if (kind == "Walk") phase = WalkFrame(page.phases,model.Clock);
             else if (kind == "Attack")
                 phase = page.phases > 4 ? DarklightAttackFrameTiming.Frame(page.phases,page.startupFrameEnd,page.activeFrameEnd,
                     model.StateTime,model.Attack.startup,model.Attack.active,model.Attack.recovery) : model.ActiveThisTick ? 1 : model.StateTime < model.Attack.startup ? 0 :
@@ -131,6 +132,9 @@ namespace Darklight
             if (page == null || !LoadFrames(page)) return null;
             return page.frames[Array.IndexOf(page.directions, direction) * page.phases + DarklightIdleFrameTiming.Frame(page.phases,clock,page.idleBlinkFrame)];
         }
+        // Retain the existing 0.4-second stride, including when an atlas adds
+        // authored in-between poses. Never index a six-frame page modulo four.
+        public static int WalkFrame(int phases,float clock)=>Mathf.FloorToInt(Mathf.Repeat(clock, .4f)/.4f*phases)%phases;
         static bool LivingKind(string kind) => kind=="IdleAlert" || kind=="IdleImpatient" || kind=="IdleInspect" ||
             kind=="IdleFatigued" || kind=="IdleWounded" || kind=="StartMove" || kind=="Brake" || kind=="Turn";
         public static Sprite LivingPose(int skin,int weapon,int direction,DarklightLivingPresentation living)

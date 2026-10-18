@@ -12,7 +12,8 @@ namespace Darklight
         {
             public bool success,savesPreserved,silent,returnedToNormal;
             public string version,exception,gpu;public int maps,forms,combatFrames,attacks;
-            public float combatMedianMs,combatP95Ms;public string environment="Standalone Windows, offscreen batch graphics, not interactive display FPS";
+            public float combatMedianMs,combatP95Ms;public long managedBytes,totalAllocatedBytes,peakWorkingSetBytes;public float[] mapLoadMilliseconds;
+            public string environment="Standalone Windows, offscreen batch graphics, not interactive display FPS";
         }
         IEnumerator CaptureCrystalsNative(string folder)
         {
@@ -30,16 +31,23 @@ namespace Darklight
                 while(!UnityEngine.Rendering.SplashScreen.isFinished&&Time.realtimeSinceStartup<splashDeadline)yield return null;
                 yield return null;yield return null;Capture(Path.Combine(folder,"menu.png"));
                 var game=DarklightCampaign.Instance;var lab=DarklightCombatLab.Instance;
+                var loadTimes=new List<float>();
                 for(int chapter=0;chapter<6;chapter++)
                 {
-                    game.PreviewChapter(chapter);yield return new WaitForSecondsRealtime(.35f);
+                    float loadStart=Time.realtimeSinceStartup;game.PreviewChapter(chapter);yield return null;
+                    loadTimes.Add((Time.realtimeSinceStartup-loadStart)*1000);yield return new WaitForSecondsRealtime(.35f);
                     Capture(Path.Combine(folder,"capitulo-"+(chapter+1)+".png"));result.maps++;
                 }
                 game.PreviewChapter(0);yield return new WaitForSecondsRealtime(.25f);
                 for(int skin=0;skin<2;skin++)for(int form=0;form<4;form++)
                 {
                     game.SelectSkin(skin,false);
-                    if(game.Form>0){game.TryTransformPlayer();while(game.Transforming)yield return null;}
+                    if(game.Form>0)
+                    {
+                        game.TryTransformPlayer();float exitDeadline=Time.realtimeSinceStartup+5;
+                        while(game.Transforming&&Time.realtimeSinceStartup<exitDeadline)yield return null;
+                        if(game.Transforming)throw new InvalidOperationException("Native transformation exit timed out");
+                    }
                     if(form>0)
                     {
                         game.Progress.preferredForm=form;game.Blood.Set(100);yield return null;
@@ -70,6 +78,9 @@ namespace Darklight
                 result.silent=!FindObjectsByType<AudioSource>(FindObjectsSortMode.None).Any(source=>source.isPlaying);
                 result.savesPreserved=saves.All(pair=>File.Exists(pair.Key)&&File.ReadAllBytes(pair.Key).SequenceEqual(pair.Value))&&(!Directory.Exists(Application.persistentDataPath)||Directory.GetFiles(Application.persistentDataPath,"*.json*",SearchOption.AllDirectories).Length==saves.Count);
                 result.success=result.maps==6&&result.forms==8&&result.returnedToNormal&&result.silent&&result.savesPreserved&&result.combatFrames>10&&result.attacks>0&&string.IsNullOrEmpty(result.exception);
+                result.mapLoadMilliseconds=loadTimes.ToArray();result.managedBytes=System.GC.GetTotalMemory(false);
+                result.totalAllocatedBytes=UnityEngine.Profiling.Profiler.GetTotalAllocatedMemoryLong();
+                using(var process=System.Diagnostics.Process.GetCurrentProcess())result.peakWorkingSetBytes=process.PeakWorkingSet64;
             }
             finally
             {

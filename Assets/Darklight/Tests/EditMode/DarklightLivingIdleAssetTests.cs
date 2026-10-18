@@ -30,7 +30,7 @@ namespace Darklight.Tests
                     Assert.That(DarklightTransformedBank.TryResolve(blink,form,out var transformed,out var mask,out var owner),Is.True);
                     Assert.That(transformed,Is.Not.Null);Assert.That(mask,Is.Not.Null);
                     Assert.That(owner,Is.EqualTo(row*6+6));
-                    Assert.That(transformed.pixelsPerUnit,Is.EqualTo(normal.pixelsPerUnit).Within(.0001f));
+                    Assert.That(transformed.bounds.size.y/normal.bounds.size.y,Is.InRange(.88f,1.12f),"Whole atlas import must keep physical body scale across forms");
                     Assert.That(transformed.pivot.y,Is.InRange(0,transformed.rect.height*.35f));
                     Assert.That(transformed.texture.filterMode,Is.EqualTo(FilterMode.Point));
                 }

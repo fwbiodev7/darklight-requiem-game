@@ -77,6 +77,7 @@ namespace Darklight
             originalForms??=GetComponent<DarklightOriginalVampireView>()??gameObject.AddComponent<DarklightOriginalVampireView>();
             originalForms.Present(display,skin,0,direction,previewing?previewForm:game?.PresentedForm??0,model.Clock,model.State==CombatState.Dead,UsesUserWholeSprite||UsesWholeCharacterSprite,model.State==CombatState.Dodge,!previewing);
             DarklightCanonicalComplexion.Apply(display,model.State!=CombatState.Dead);
+            if(model.State!=CombatState.Dead)DarklightAbyssSpriteBank.ApplyWholeOwnership(display);
             if(combatTrail==null){var obj=new GameObject("RastrosDeCombate");obj.transform.SetParent(transform,false);combatTrail=obj.AddComponent<DarklightCombatTrail>();}
             combatTrail.Present(display,weapon,model,previewing?previewForm:game?.PresentedForm??0);
             if(model.State==CombatState.Attack&&model.ActiveThisTick&&trailSerial!=model.AttackSerial){trailSerial=model.AttackSerial;DarklightCombatFX.Echo(display,.10f);}

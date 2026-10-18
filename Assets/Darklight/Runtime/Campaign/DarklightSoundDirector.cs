@@ -79,7 +79,7 @@ namespace Darklight
         public void Swing(AttackDefinition attack, int serial, int weapon)
         {
             if (swingSerial == serial) return; swingSerial = serial;
-            Play(weapon == 2 ? "rpg-metalLatch" : weapon == 1 ? "rpg-drawKnife" : "rpg-knifeSlice", DarklightAudioCategory.Combat, attack.kind == StrikeKind.Light ? .28f : .4f, null, weapon == 1 ? 1.16f : .96f);
+            Play(weapon >= 2 ? "rpg-metalLatch" : weapon == 1 ? "rpg-drawKnife" : "rpg-knifeSlice", DarklightAudioCategory.Combat, attack.kind == StrikeKind.Light ? .28f : .4f, null, weapon == 1 ? 1.16f : .96f);
             if (attack.kind == StrikeKind.Counter) Play("dl-power-counter", DarklightAudioCategory.Combat, .3f);
         }
         public void Contact(DarklightCombatant target, AttackDefinition attack)
@@ -91,6 +91,7 @@ namespace Darklight
             else if (metal) EnemyIdentity(enemy.kind, "block", target.transform.position);
         }
         public void Footstep(TodayFootstepSurface surface, Vector2 p) => Play(TodaySurfaces.Prefix(surface), DarklightAudioCategory.Character, surface == TodayFootstepSurface.Metal ? .13f : .16f, p, 1, .13f);
+        public void Land(TodayFootstepSurface surface,Vector2 p)=>Play(TodaySurfaces.Prefix(surface),DarklightAudioCategory.Character,.24f,p,.82f,.18f);
         public void Footstep(bool wood, bool grass, Vector2 p) => Footstep(wood ? TodayFootstepSurface.Wood : grass ? TodayFootstepSurface.Grass : TodayFootstepSurface.Stone, p);
         public static string EnemyPrefix(RequiemEnemyKind kind) => "dl-enemy-" + kind.ToString().ToLowerInvariant();
         public void EnemyIdentity(RequiemEnemyKind kind, string cue, Vector2 p)

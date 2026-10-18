@@ -48,6 +48,7 @@ namespace Darklight.Editor
             catalog.pages = pages; EditorUtility.SetDirty(catalog); AssetDatabase.SaveAssets(); TodayCharacterBank.ClearCache();
             DarklightLivingIdleImporter.ImportIfPresent();
             DarklightDetailedCombatImporter.ImportIfPresent();
+            DarklightConsistencyImporter.ImportWalkIfPresent();
             return "Imported " + pages.Length + " base sheets / " + pages.Sum(p => p.spriteNames.Length) + " base frames";
         }
         public static Sprite[] ImportTextureFrames(string path,float ppu,Frame[] sprites,string maskPath,bool ownerMask)
@@ -84,9 +85,14 @@ namespace Darklight.Editor
                 mi.textureCompression = TextureImporterCompression.Uncompressed; mi.sRGBTexture = false;
                 mi.alphaSource = ownerMask ? TextureImporterAlphaSource.FromInput : TextureImporterAlphaSource.None; mi.alphaIsTransparency = false; mi.npotScale = TextureImporterNPOTScale.None;
                 mi.maxTextureSize = 4096; mi.wrapMode = TextureWrapMode.Clamp; mi.SaveAndReimport();
-                var frames = AssetDatabase.LoadAllAssetsAtPath(path).OfType<Sprite>().OrderBy(s => int.Parse(s.name[(s.name.LastIndexOf('_') + 1)..])).ToArray();
-                if (frames.Length != sprites.Length || !frames.Select(f => f.name).SequenceEqual(sprites.Select(f=>f.name)))
-                    throw new InvalidOperationException("Incomplete or misordered whole-character sheet: " + path);
+                // The manifest defines playback order, including row/phase names.
+                // Sorting only the final suffix interleaves rows in action atlases.
+                var imported = AssetDatabase.LoadAllAssetsAtPath(path).OfType<Sprite>().ToArray();
+                var byName = imported.ToDictionary(s => s.name);
+                if (imported.Length != sprites.Length || sprites.Select(f=>f.name).Distinct().Count()!=sprites.Length ||
+                    sprites.Any(f=>!byName.ContainsKey(f.name)))
+                    throw new InvalidOperationException("Incomplete or duplicate whole-character sheet: " + path);
+                var frames = sprites.Select(f=>byName[f.name]).ToArray();
                 if (AssetDatabase.LoadAssetAtPath<Texture2D>(maskPath) == null) throw new InvalidOperationException("Missing palette: " + path);
                 return frames;
         }

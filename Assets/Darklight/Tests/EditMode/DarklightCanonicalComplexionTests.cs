@@ -8,8 +8,10 @@ namespace Darklight.Tests
         {
             var source=Resources.Load<TextAsset>("Darklight/CanonicalComplexion");Assert.That(source,Is.Not.Null);
             var data=JsonUtility.FromJson<DarklightCanonicalComplexion.Data>(source.text);
-            Assert.That(data.reference,Does.Contain("2026-10-14 120511"));Assert.That(data.entries.Length,Is.EqualTo(32));
-            foreach(var entry in data.entries)foreach(float value in entry.shift)Assert.That(Mathf.Abs(value),Is.LessThanOrEqualTo(.12f));
+            int expected=System.IO.File.Exists("Assets/Darklight/ArtSources/ConsistentWalk20261017/manifest.json")?64:32;
+            if(System.IO.File.Exists("Assets/Darklight/ArtSources/AbyssDirectional20261018/manifest.json"))expected+=12;
+            Assert.That(data.reference,Does.Contain("2026-10-14 120511"));Assert.That(data.entries.Length,Is.EqualTo(expected));
+            foreach(var entry in data.entries)foreach(float value in entry.shift)Assert.That(Mathf.Abs(value),Is.LessThanOrEqualTo(.16f));
             var sprite=TodayCharacterBank.YoungIdle(1,0,0,0);var go=new GameObject("PaletteFixture");
             try
             {

@@ -50,6 +50,7 @@ namespace Darklight.Editor
             if(pages.Count!=165||pages.Sum(p=>p.spriteNames.Length)!=3552)throw new InvalidOperationException("Unexpected whole animation coverage");
             catalog.pages=pages.ToArray();EditorUtility.SetDirty(catalog);AssetDatabase.SaveAssets();DarklightTransformedBank.ClearCache();
             DarklightLivingIdleImporter.ImportIfPresent();DarklightDetailedCombatImporter.ImportIfPresent();
+            DarklightConsistencyImporter.ImportWalkIfPresent();
             string result="{\"success\":true,\"pages\":165,\"wholeFrameReferences\":3552,\"bodyPartAssembly\":false}";File.WriteAllText(Work+"complete-catalog.json",result);return result;
         }
     }

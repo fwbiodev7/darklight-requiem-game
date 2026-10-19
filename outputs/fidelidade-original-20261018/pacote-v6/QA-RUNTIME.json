@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-19",
+  "runtimeSourceSha256": {
+    "Assets/Darklight/Runtime/Combat/DarklightCombatProfiles.cs": "cbd68391968ba275ded3025f6a6c2fd98ff8bcad94a1d70261d267cf73463e0b",
+    "Assets/Darklight/Runtime/Character/DarklightCharacterView.cs": "f54b4d88da9cedb305dae8cdb9dd53e7503eb47aeb897bc79ec4f48f571ed673",
+    "Assets/Darklight/Runtime/Character/DarklightChainView.cs": "0c18bc96c67f0452b86adf4eda77a5c880990d083275657aa09138c0924bb96c",
+    "Assets/Darklight/Runtime/Character/DarklightSmallTransformationAura.cs": "bce9a41ba757a644fc67153840ff2d221947f93d65ef5021adb97d9598e5da7f",
+    "Assets/Darklight/Runtime/Character/DarklightTransformationBurst.cs": "f3c71b940d883b53cd953398502ce6dcfbd3d007775ebf8df909b259f465c795",
+    "Assets/Darklight/Runtime/World/DarklightCombatTrail.cs": "df88a30d35f3aa60de29793783aa24bb7fbe0df49e327bc46aa6a45b89e97a8d",
+    "Assets/Darklight/Runtime/Character/DarklightAttackFrameTiming.cs": "911961669912164c042dd4f9aed696665416ce8aa53aa3b592d94f9680b7ef41",
+    "Assets/Darklight/Runtime/Character/TodayCharacterCatalog.cs": "f5f790c15021fed08283db3bb3f28c2dbe26d96b0a375c08a0f8dc1405a1f974"
+  },
+  "preservedPreexistingRuntimeSha256": {
+    "Assets/Darklight/Runtime/World/DarklightAtlas.cs": "caff7ba3ef0d13ee01d634861410743bf1f65efcb50d6653d06b7687fdc19c35"
+  },
+  "editMode": {
+    "uniquePassed": 10,
+    "failed": 0,
+    "initialRunPassed": 9,
+    "initialRunFailed": 1,
+    "correctedFixtureRetryPassed": 1,
+    "fixtureCorrection": "Palette test now creates a child trail object, matching runtime; initial fixture incorrectly combined MeshRenderer/SpriteRenderer on one GameObject."
+  },
+  "playMode": {
+    "passed": 7,
+    "failed": 0,
+    "skipped": 0,
+    "cases": [
+      "Darklight.Tests.DarklightBridgeDepthTests.OpaqueTreeFloorCannotConcealTheHeroOnTheBridge",
+      "Darklight.Tests.DarklightGameOverFlowTests.CorruptPrimaryUsesBackupWithoutOverwritingIt",
+      "Darklight.Tests.DarklightGameOverFlowTests.NoFilesUseCurrentCheckpointFallback",
+      "Darklight.Tests.DarklightGameOverFlowTests.OldSaveWithoutCoordinatesUsesCheckpoint",
+      "Darklight.Tests.DarklightGameOverFlowTests.SavedCoordinatesSurviveDeathAndReturnWithEquipment",
+      "Darklight.Tests.DarklightSustainedCombatTests.SevenEquipmentModesSurviveSustainedActualCombat",
+      "Darklight.Tests.DarklightMapIconTests.OpenMapHasDistinctOutlinedIconsAndReadableLegend"
+    ],
+    "isolatedStorage": true
+  },
+  "nativeExecutable": {
+    "success": true,
+    "pauseFrozen": true,
+    "savesPreserved": true,
+    "preferencesPreserved": true,
+    "forms": 4,
+    "drifts": 4,
+    "slams": 4,
+    "sawReturns": 4,
+    "moved": 4,
+    "captures": 4,
+    "exception": ""
+  },
+  "build": {
+    "success": true,
+    "focusedEditModeValidated": true,
+    "focusedGameplayValidated": true,
+    "previewArtImported": false,
+    "audioAuditioned": false,
+    "errors": 0,
+    "warnings": 3,
+    "seconds": 658.1768943,
+    "version": "1.0.13",
+    "executable": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\revisao-runtime-20261019\\Windows\\DarklightRequiem.exe",
+    "scope": "Runtime contact timing, dagger fourth strike, form-colored ribbons, stable aura/burst and duplicate-chain fix. Existing integrated art retained. Candidate preview art remains external."
+  },
+  "combatEditor": {
+    "environment": "Unity Editor PlayMode, actual campaign, silent simulated input; not standalone FPS",
+    "samples": [
+      {
+        "skin": 0,
+        "weapon": 0,
+        "frames": 868,
+        "attacks": 16,
+        "enemies": 8,
+        "medianMs": 5.731703758239746,
+        "p95Ms": 7.321804523468018,
+        "maxMs": 112.25629425048828
+      },
+      {
+        "skin": 0,
+        "weapon": 1,
+        "frames": 892,
+        "attacks": 16,
+        "enemies": 8,
+        "medianMs": 5.644501209259033,
+        "p95Ms": 7.428798198699951,
+        "maxMs": 78.16079711914062
+      },
+      {
+        "skin": 0,
+        "weapon": 2,
+        "frames": 831,
+        "attacks": 16,
+        "enemies": 8,
+        "medianMs": 5.860799312591553,
+        "p95Ms": 7.729294300079346,
+        "maxMs": 105.58270263671875
+      },
+      {
+        "skin": 1,
+        "weapon": 0,
+        "frames": 889,
+        "attacks": 16,
+        "enemies": 8,
+        "medianMs": 5.629301071166992,
+        "p95Ms": 7.993494987487793,
+        "maxMs": 65.98939514160156
+      },
+      {
+        "skin": 1,
+        "weapon": 1,
+        "frames": 908,
+        "attacks": 16,
+        "enemies": 8,
+        "medianMs": 5.696102619171143,
+        "p95Ms": 6.8961944580078125,
+        "maxMs": 78.91920471191406
+      },
+      {
+        "skin": 1,
+        "weapon": 2,
+        "frames": 830,
+        "attacks": 16,
+        "enemies": 8,
+        "medianMs": 6.102501392364502,
+        "p95Ms": 7.866503715515137,
+        "maxMs": 55.66840362548828
+      },
+      {
+        "skin": 1,
+        "weapon": 3,
+        "frames": 904,
+        "attacks": 9,
+        "enemies": 8,
+        "medianMs": 5.551799774169922,
+        "p95Ms": 7.34970235824585,
+        "maxMs": 68.16180419921875
+      }
+    ]
+  },
+  "previewArtImported": false,
+  "audioStarted": false,
+  "audioAuditioned": false,
+  "physicalControllerTested": false,
+  "protectedFileCount": 8,
+  "protectedMismatches": [],
+  "limits": [
+    "Editor performance is not standalone FPS certification.",
+    "Native check exercises Cavaleiro in four forms, not every game chapter.",
+    "Candidate preview art remains external.",
+    "Initial native -batchmode run stalled before checks; normal hidden noaudio run completed successfully."
+  ]
+}

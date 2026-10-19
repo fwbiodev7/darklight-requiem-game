@@ -5,6 +5,7 @@ namespace Darklight
     public sealed class DarklightSmallTransformationAura:MonoBehaviour
     {
         Mesh mesh;MeshRenderer renderer;Material material;public Sprite PresentedFrame{get;private set;}
+        DarklightCharacterView characterView;
         readonly Vector3[] vertices=new Vector3[576];readonly Color[] colors=new Color[576];readonly int[] indices=new int[864];
         public void Present(SpriteRenderer body,int form,float clock,bool dead)
         {
@@ -17,7 +18,9 @@ namespace Darklight
             bool show=form>0&&!dead&&body.sprite!=null;renderer.enabled=show;PresentedFrame=show?body.sprite:null;if(!show)return;
             transform.localPosition=Vector3.zero;transform.localRotation=Quaternion.identity;transform.localScale=Vector3.one;
             renderer.sortingLayerID=body.sortingLayerID;renderer.sortingOrder=body.sortingOrder-1;
-            var bounds=body.sprite.bounds;float h=bounds.size.y;float radius=Mathf.Clamp(h*.24f,.16f,.66f);
+            characterView??=body.GetComponentInParent<DarklightCharacterView>();
+            var bounds=characterView!=null?characterView.ReferenceBodyBounds:DarklightCharacterView.FallbackBodyBounds;
+            float h=bounds.size.y;float radius=Mathf.Clamp(h*.24f,.16f,.66f);
             Color tint=form==3?new Color(.76f,.9f,1):form==2?new Color(.66f,.12f,1):new Color(1,.06f,.12f);
             bool reduced=DarklightCampaign.Instance?.ReducedFlashes==true;
             int quads=18;

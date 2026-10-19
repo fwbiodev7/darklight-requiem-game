@@ -16,6 +16,17 @@ namespace Darklight
         public bool UsesUserWholeSprite{get;private set;}
         public bool UsesWholeCharacterSprite{get;private set;}
         public bool UsesPoseFallback{get;private set;}
+        public static Bounds FallbackBodyBounds=>new Bounds(Vector3.up*1.315f,new Vector3(1.5f,2.63f,0));
+        // Effects use normal frontal katana idle for this skin, independently
+        // of the displayed attack, direction, weapon or transformation.
+        public Bounds ReferenceBodyBounds
+        {
+            get
+            {
+                var neutral=TodayCharacterBank.StablePose(rock?1:0,0,0,0);
+                return neutral!=null&&neutral.bounds.size.y>0?neutral.bounds:FallbackBodyBounds;
+            }
+        }
         // Kept for existing diagnostics, with no age selection behind these aliases.
         public bool UsesCompleteAgeSprite=>UsesWholeCharacterSprite;
         public bool UsesAgePoseFallback=>UsesPoseFallback;

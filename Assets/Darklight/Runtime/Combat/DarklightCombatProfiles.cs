@@ -29,7 +29,19 @@ namespace Darklight
             for(int w=0;w<result.Length;w++)
             {
                 var weapon=result[w]=Copy(originals[w]);var old=originals[w].loadout;var l=new CombatLoadout{weapon=w,attackBuffer=.18f,defenseBuffer=.18f};
-                l.lights=new AttackDefinition[old.lights.Length];for(int i=0;i<l.lights.Length;i++)l.lights[i]=Attack(old.lights[i],w,i);
+                bool addDaggerFinisher=w==1&&old.lights.Length==3;
+                l.lights=new AttackDefinition[old.lights.Length+(addDaggerFinisher?1:0)];
+                for(int i=0;i<old.lights.Length;i++)l.lights[i]=Attack(old.lights[i],w,i);
+                if(addDaggerFinisher)
+                {
+                    // The extra input commits two contacts; each pays half of the
+                    // preceding light's damage/posture instead of doubling its total.
+                    var previous=l.lights[old.lights.Length-1];
+                    var finisher=l.lights[old.lights.Length]=Attack(old.lights[old.lights.Length-1],w,old.lights.Length);
+                    finisher.displayName="Execucao Dupla";finisher.startup=.05f;finisher.active=.08f;finisher.recovery=.12f;
+                    finisher.hitPulses=2;finisher.damage=previous.damage*.5f;finisher.postureDamage=previous.postureDamage*.5f;
+                    finisher.finisher=true;finisher.hitstop=.028f;finisher.hitShape=HitShape.Sector;finisher.angle=110;
+                }
                 l.heavy=Attack(old.heavy,w,10);l.charged=Attack(old.charged,w,11);l.counter=Attack(old.counter,w,12);l.skill=Attack(old.skill,w,13);l.aerial=Attack(old.aerial,w,14);l.weaponSpecial=Attack(old.weaponSpecial,w,15);
                 l.pauseBranch=Attack(old.lights[old.lights.Length-1],w,20);l.pauseBranch.displayName=w==0?"Corte do Silencio":w==1?"Passo das Presas":"Orbita do Abismo";
                 l.pauseBranch.hitPulses=w==1?3:1;l.pauseBranch.lungeSpeed=w==0?1.2f:0;l.pauseBranch.angle=w==2?280:125;l.pauseBranch.hitShape=w==2?HitShape.Sweep:HitShape.Sector;l.pauseBranch.damage*=1.12f;

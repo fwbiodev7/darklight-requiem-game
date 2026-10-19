@@ -5,11 +5,13 @@ namespace Darklight
     public sealed class DarklightChainView:MonoBehaviour
     {
         public Sprite link,blade;public Material material;
-        readonly SpriteRenderer[] parts=new SpriteRenderer[17];DarklightFighter fighter;DarklightWeaponController weapons;
-        void Awake(){fighter=GetComponent<DarklightFighter>();weapons=GetComponent<DarklightWeaponController>();for(int i=0;i<parts.Length;i++){parts[i]=new GameObject("Elo"+i).AddComponent<SpriteRenderer>();parts[i].transform.SetParent(transform,false);parts[i].sprite=i==16?blade:link;parts[i].sharedMaterial=material;parts[i].enabled=false;parts[i].transform.localScale=Vector3.one*(i==16?.42f:.22f)*DarklightCharacterView.WorldVisualScale/parts[i].sprite.bounds.size.x;}}
+        readonly SpriteRenderer[] parts=new SpriteRenderer[17];DarklightFighter fighter;DarklightWeaponController weapons;DarklightCharacterView characterView;
+        void Awake(){fighter=GetComponent<DarklightFighter>();weapons=GetComponent<DarklightWeaponController>();characterView=GetComponent<DarklightCharacterView>();for(int i=0;i<parts.Length;i++){parts[i]=new GameObject("Elo"+i).AddComponent<SpriteRenderer>();parts[i].transform.SetParent(transform,false);parts[i].sprite=i==16?blade:link;parts[i].sharedMaterial=material;parts[i].enabled=false;parts[i].transform.localScale=Vector3.one*(i==16?.42f:.22f)*DarklightCharacterView.WorldVisualScale/parts[i].sprite.bounds.size.x;}}
         void LateUpdate()
         {
-            var m=fighter.Model;bool visible=weapons?.Equipped?.id==DarklightWeaponId.Chain&&m!=null&&m.State==CombatState.Attack&&m.Attack.kind!=StrikeKind.Skill&&m.Attack.kind!=StrikeKind.Counter;
+            var m=fighter?.Model;
+            bool whole=characterView!=null&&(characterView.UsesWholeCharacterSprite||characterView.UsesUserWholeSprite);
+            bool visible=!whole&&weapons?.Equipped?.id==DarklightWeaponId.Chain&&m!=null&&m.State==CombatState.Attack&&m.Attack!=null&&m.Attack.kind!=StrikeKind.Skill&&m.Attack.kind!=StrikeKind.Counter;
             foreach(var r in parts)r.enabled=visible;if(!visible)return;
             float t=Mathf.Clamp01(m.StateTime/m.Attack.Duration),reach=Mathf.Sin(t*Mathf.PI)*m.Attack.range;
             bool circle=m.Attack.angle>=300;float turn=circle?t*720:Mathf.Lerp(-m.Attack.angle*.5f,m.Attack.angle*.5f,t);

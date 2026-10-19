@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="10" result="Failed(Child)" total="10" passed="9" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0,4536471">
+  <test-suite type="TestSuite" id="1000" name="DARKLIGHT REQUIEM" fullname="DARKLIGHT REQUIEM" runstate="Runnable" testcasecount="200" result="Failed" site="Child" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.453647" total="10" passed="9" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1250" name="Darklight.EditModeTests.dll" fullname="C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/Library/ScriptAssemblies/Darklight.EditModeTests.dll" runstate="Runnable" testcasecount="200" result="Failed" site="Child" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.431575" total="10" passed="9" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="19700" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1251" name="Darklight" fullname="Darklight" runstate="Runnable" testcasecount="200" result="Failed" site="Child" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.423781" total="10" passed="9" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1252" name="Tests" fullname="Darklight.Tests" runstate="Runnable" testcasecount="200" result="Failed" site="Child" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.418363" total="10" passed="9" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1061" name="DarklightContactPresentationTests" fullname="Darklight.Tests.DarklightContactPresentationTests" classname="Darklight.Tests.DarklightContactPresentationTests" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.361723" total="6" passed="5" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="ParameterizedMethod" id="1068" name="AuraAndBurstDoNotGrowWhenAWeaponSpriteIsMuchLarger" fullname="Darklight.Tests.DarklightContactPresentationTests.AuraAndBurstDoNotGrowWhenAWeaponSpriteIsMuchLarger" classname="Darklight.Tests.DarklightContactPresentationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.319081" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1066" name="AuraAndBurstDoNotGrowWhenAWeaponSpriteIsMuchLarger(0)" fullname="Darklight.Tests.DarklightContactPresentationTests.AuraAndBurstDoNotGrowWhenAWeaponSpriteIsMuchLarger(0)" methodname="AuraAndBurstDoNotGrowWhenAWeaponSpriteIsMuchLarger" classname="Darklight.Tests.DarklightContactPresentationTests" runstate="Runnable" seed="55468998" result="Passed" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.255449" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1067" name="AuraAndBurstDoNotGrowWhenAWeaponSpriteIsMuchLarger(1)" fullname="Darklight.Tests.DarklightContactPresentationTests.AuraAndBurstDoNotGrowWhenAWeaponSpriteIsMuchLarger(1)" methodname="AuraAndBurstDoNotGrowWhenAWeaponSpriteIsMuchLarger" classname="Darklight.Tests.DarklightContactPresentationTests" runstate="Runnable" seed="304266006" result="Passed" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.051234" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1065" name="ChainAndOtherRibbonsFollowTheFormPalette" fullname="Darklight.Tests.DarklightContactPresentationTests.ChainAndOtherRibbonsFollowTheFormPalette" methodname="ChainAndOtherRibbonsFollowTheFormPalette" classname="Darklight.Tests.DarklightContactPresentationTests" runstate="Runnable" seed="976174131" result="Failed" label="Error" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.013509" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[System.NullReferenceException : Object reference not set to an instance of an object]]></message>
+                <stack-trace><![CDATA[  at Darklight.DarklightCombatTrail.Present (UnityEngine.SpriteRenderer body, System.Int32 weapon, Darklight.CombatModel model, System.Int32 form) [0x00032] in C:\Users\Usuario\Documents\Codex\2026-10-10\f\darklight-requiem-main\Assets\Darklight\Runtime\World\DarklightCombatTrail.cs:12 
+  at Darklight.Tests.DarklightContactPresentationTests.ChainAndOtherRibbonsFollowTheFormPalette () [0x00098] in C:\Users\Usuario\Documents\Codex\2026-10-10\f\darklight-requiem-main\Assets\Darklight\Tests\EditMode\DarklightContactPresentationTests.cs:69 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 ]]></stack-trace>
+              </failure>
+              <output><![CDATA[Can't add component 'MeshFilter' to RibbonPaletteTest because it conflicts with the existing 'SpriteRenderer' derived component!
+Can't add component 'MeshFilter' to RibbonPaletteTest because it conflicts with the existing 'SpriteRenderer' derived component!
+]]></output>
+            </test-case>
+            <test-case id="1062" name="ConfirmedContactSurvivesATickThatFinishesTheWholeAttack" fullname="Darklight.Tests.DarklightContactPresentationTests.ConfirmedContactSurvivesATickThatFinishesTheWholeAttack" methodname="ConfirmedContactSurvivesATickThatFinishesTheWholeAttack" classname="Darklight.Tests.DarklightContactPresentationTests" runstate="Runnable" seed="564995077" result="Passed" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.002983" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1063" name="ContactCrossingIntoRecoveryStillUsesTheFinalContactPose" fullname="Darklight.Tests.DarklightContactPresentationTests.ContactCrossingIntoRecoveryStillUsesTheFinalContactPose" methodname="ContactCrossingIntoRecoveryStillUsesTheFinalContactPose" classname="Darklight.Tests.DarklightContactPresentationTests" runstate="Runnable" seed="1407554279" result="Passed" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.000896" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1064" name="RibbonsUseOnlyConfirmedContactsIncludingTheLastLongTick" fullname="Darklight.Tests.DarklightContactPresentationTests.RibbonsUseOnlyConfirmedContactsIncludingTheLastLongTick" methodname="RibbonsUseOnlyConfirmedContactsIncludingTheLastLongTick" classname="Darklight.Tests.DarklightContactPresentationTests" runstate="Runnable" seed="803207980" result="Passed" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.008498" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1069" name="DarklightDaggerComboProfileTests" fullname="Darklight.Tests.DarklightDaggerComboProfileTests" classname="Darklight.Tests.DarklightDaggerComboProfileTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.024193" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1073" name="AnAuthoredFourthDaggerLightKeepsItsAuthoredContactAndTiming" fullname="Darklight.Tests.DarklightDaggerComboProfileTests.AnAuthoredFourthDaggerLightKeepsItsAuthoredContactAndTiming" methodname="AnAuthoredFourthDaggerLightKeepsItsAuthoredContactAndTiming" classname="Darklight.Tests.DarklightDaggerComboProfileTests" runstate="Runnable" seed="2127322534" result="Passed" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.009769" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1072" name="CreatingAndUsingProfilesDoesNotChangeAnyAuthoredAsset" fullname="Darklight.Tests.DarklightDaggerComboProfileTests.CreatingAndUsingProfilesDoesNotChangeAnyAuthoredAsset" methodname="CreatingAndUsingProfilesDoesNotChangeAnyAuthoredAsset" classname="Darklight.Tests.DarklightDaggerComboProfileTests" runstate="Runnable" seed="55525093" result="Passed" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.005832" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1070" name="FourBufferedDaggerInputsReachTheFinisherAndTheFifthRestarts" fullname="Darklight.Tests.DarklightDaggerComboProfileTests.FourBufferedDaggerInputsReachTheFinisherAndTheFifthRestarts" methodname="FourBufferedDaggerInputsReachTheFinisherAndTheFifthRestarts" classname="Darklight.Tests.DarklightDaggerComboProfileTests" runstate="Runnable" seed="2076948543" result="Passed" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.001714" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1071" name="FourthDaggerLightHasTwoUniqueContactsWithOnePrecedingLightTotalDamage" fullname="Darklight.Tests.DarklightDaggerComboProfileTests.FourthDaggerLightHasTwoUniqueContactsWithOnePrecedingLightTotalDamage" methodname="FourthDaggerLightHasTwoUniqueContactsWithOnePrecedingLightTotalDamage" classname="Darklight.Tests.DarklightDaggerComboProfileTests" runstate="Runnable" seed="1037023573" result="Passed" start-time="2026-10-19 22:16:15Z" end-time="2026-10-19 22:16:15Z" duration="0.004146" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Usuario/AppData/LocalLow/Fabio/DARKLIGHT REQUIEM\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/Fabio/DARKLIGHT REQUIEM\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

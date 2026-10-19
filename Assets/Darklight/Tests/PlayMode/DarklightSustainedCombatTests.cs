@@ -19,6 +19,9 @@ namespace Darklight.Tests
         [UnityTest] public IEnumerator SevenEquipmentModesSurviveSustainedActualCombat()
         {
             DarklightAutomation.Silent=true;AudioListener.pause=true;AudioListener.volume=0;
+            Directory.CreateDirectory(Path.GetFullPath("work/gameplay-20261019"));
+            using var storage=DarklightProgress.IsolateStorageForTests(Path.GetFullPath("work/gameplay-20261019/isolated-combat.json"));
+            Directory.CreateDirectory(Path.GetFullPath("outputs/validacao-pendencias-20261019"));
             var background=InputSystem.settings.backgroundBehavior;var editor=InputSystem.settings.editorInputBehaviorInPlayMode;
             InputSystem.settings.backgroundBehavior=InputSettings.BackgroundBehavior.IgnoreFocus;
             InputSystem.settings.editorInputBehaviorInPlayMode=InputSettings.EditorInputBehaviorInPlayMode.AllDeviceInputAlwaysGoesToGameView;
@@ -54,11 +57,11 @@ namespace Darklight.Tests
                     InputSystem.QueueStateEvent(pad,new GamepadState());yield return null;lab.SetPaused(true);
                     var camera=lab.WorldCamera;camera.transform.position=new Vector3(body.position.x,body.position.y,-10);camera.Render();
                     var previous=RenderTexture.active;RenderTexture.active=camera.targetTexture;var image=new Texture2D(camera.targetTexture.width,camera.targetTexture.height,TextureFormat.RGB24,false);
-                    try{image.ReadPixels(new Rect(0,0,image.width,image.height),0,0);image.Apply();File.WriteAllBytes(Path.GetFullPath("outputs/validacao-pendencias-20261017/combate-real-"+skin+"-"+weapon+".png"),image.EncodeToPNG());}
+                    try{image.ReadPixels(new Rect(0,0,image.width,image.height),0,0);image.Apply();File.WriteAllBytes(Path.GetFullPath("outputs/validacao-pendencias-20261019/combate-real-"+skin+"-"+weapon+".png"),image.EncodeToPNG());}
                     finally{RenderTexture.active=previous;Object.Destroy(image);}
                 }
                 foreach(var source in Object.FindObjectsByType<AudioSource>(FindObjectsSortMode.None))Assert.That(source.isPlaying,Is.False);
-                File.WriteAllText(Path.GetFullPath("outputs/validacao-pendencias-20261017/combate-real-editor.json"),JsonUtility.ToJson(new Report{samples=samples.ToArray()},true));
+                File.WriteAllText(Path.GetFullPath("outputs/validacao-pendencias-20261019/combate-real-editor.json"),JsonUtility.ToJson(new Report{samples=samples.ToArray()},true));
             }
             finally
             {

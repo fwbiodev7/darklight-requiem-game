@@ -105,8 +105,7 @@ namespace Darklight
             if (kind == "Idle") phase = DarklightIdleFrameTiming.Frame(page.phases,model.Clock,page.idleBlinkFrame);
             else if (kind == "Walk") phase = WalkFrame(page.phases,model.Clock);
             else if (kind == "Attack")
-                phase = page.phases > 4 ? DarklightAttackFrameTiming.Frame(page.phases,page.startupFrameEnd,page.activeFrameEnd,
-                    model.StateTime,model.Attack.startup,model.Attack.active,model.Attack.recovery) : model.ActiveThisTick ? 1 : model.StateTime < model.Attack.startup ? 0 :
+                phase = page.phases > 4 ? DarklightAttackFrameTiming.Frame(page.phases,page.startupFrameEnd,page.activeFrameEnd,model) : model.ActiveThisTick ? 1 : model.StateTime < model.Attack.startup ? 0 :
                     model.StateTime < model.Attack.startup + model.Attack.active ? 1 :
                     model.StateTime < model.Attack.startup + model.Attack.active + model.Attack.recovery * .5f ? 2 : 3;
             else if (kind == "GuardDodge")

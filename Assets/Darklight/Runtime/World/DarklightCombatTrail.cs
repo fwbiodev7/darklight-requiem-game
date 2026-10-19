@@ -13,14 +13,14 @@ namespace Darklight
                 for(int i=0;i<512;i++){int v=i*4,t=i*6;indices[t]=v;indices[t+1]=v+1;indices[t+2]=v+2;indices[t+3]=v;indices[t+4]=v+2;indices[t+5]=v+3;}
             }
             if(weapon==3){PresentRider(body,model,form);return;}
-            bool show=model.State==CombatState.Attack&&model.Attack!=null&&model.StateTime>=model.Attack.startup*.85f;display.enabled=show;if(!show)return;
+            bool show=model.Attack!=null&&model.ActiveThisTick;display.enabled=show;if(!show)return;
             quads=0;transform.position=body.transform.position+Vector3.up*.9f;transform.rotation=Quaternion.identity;transform.localScale=Vector3.one;
             display.sortingLayerID=body.sortingLayerID;display.sortingOrder=body.sortingOrder+1;
-            float phase=Mathf.Clamp01((model.StateTime-model.Attack.startup)/Mathf.Max(.01f,model.Attack.active+model.Attack.recovery));
+            float phase=model.ContactProgress;
             float angle=Mathf.Atan2(model.Facing.y,model.Facing.x),head=angle+Mathf.Lerp(-1.3f,1.3f,phase),radius=weapon==2?2.35f:weapon==1?1.1f:1.7f;
-            Color color=form==3?new Color(.35f,.7f,1):form==2||weapon==2?new Color(.74f,.21f,1):new Color(1,.065f,.12f);
-            Color hot=form==3?new Color(1.3f,1.5f,1.7f):weapon==2?new Color(1.3f,.8f,1.3f):new Color(1.5f,1.2f,.7f);
-            float fade=Mathf.Clamp01((1-phase)*2.5f);if(DarklightCampaign.Instance?.ReducedFlashes==true)fade*=.4f;color.a=hot.a=fade;
+            Color color=form==3?new Color(.83f,.88f,.94f):form==2?new Color(.74f,.21f,1):new Color(1,.065f,.12f);
+            Color hot=form==3?new Color(1.12f,1.16f,1.2f):form==2?new Color(1.3f,.8f,1.3f):new Color(1.5f,1.2f,.7f);
+            float fade=Mathf.Lerp(1,.45f,phase);if(DarklightCampaign.Instance?.ReducedFlashes==true)fade*=.4f;color.a=hot.a=fade;
             for(int a=0;a<(weapon==1?2:1);a++)
             {
                 Vector3 offset=weapon==1?Vector3.up*(a==0?.32f:-.25f):Vector3.zero;float side=a==1?-.35f:0;
@@ -37,12 +37,12 @@ namespace Darklight
         }
         void PresentRider(SpriteRenderer body,CombatModel model,int form)
         {
-            display.enabled=model.State==CombatState.Attack&&model.Attack!=null&&model.ActiveThisTick;
+            display.enabled=model.Attack!=null&&model.ActiveThisTick;
             if(!display.enabled)return;quads=0;
             transform.position=body.transform.position+Vector3.up*.25f;transform.rotation=Quaternion.identity;transform.localScale=Vector3.one;
             display.sortingLayerID=body.sortingLayerID;display.sortingOrder=body.sortingOrder+1;
             Vector2 facing=model.Facing,side=new Vector2(-facing.y,facing.x);
-            Color color=form==3?new Color(.72f,.9f,1):form==2?new Color(.72f,.12f,1):new Color(1,.025f,.065f);
+            Color color=form==3?new Color(.83f,.88f,.94f):form==2?new Color(.72f,.12f,1):new Color(1,.025f,.065f);
             color.a=DarklightCampaign.Instance?.ReducedFlashes==true?.28f:.65f;
             float gear=DarklightCampaign.Instance?.AbyssRider?.Gear.Level??1;
             if(model.Attack.kind==StrikeKind.WeaponSpecial)

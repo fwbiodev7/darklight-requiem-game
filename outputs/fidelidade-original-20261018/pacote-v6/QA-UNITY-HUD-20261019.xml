@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-19 22:48:44Z" end-time="2026-10-19 22:48:49Z" duration="4,6978504">
+  <test-suite type="TestSuite" id="1258" name="DARKLIGHT REQUIEM" fullname="DARKLIGHT REQUIEM" runstate="Runnable" testcasecount="197" result="Passed" start-time="2026-10-19 22:48:44Z" end-time="2026-10-19 22:48:49Z" duration="4.697850" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1252" name="Darklight.PlayModeTests.dll" fullname="C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/Library/ScriptAssemblies/Darklight.PlayModeTests.dll" runstate="Runnable" testcasecount="197" result="Passed" start-time="2026-10-19 22:48:44Z" end-time="2026-10-19 22:48:49Z" duration="4.683709" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="27732" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1253" name="Darklight" fullname="Darklight" runstate="Runnable" testcasecount="197" result="Passed" start-time="2026-10-19 22:48:44Z" end-time="2026-10-19 22:48:49Z" duration="4.679529" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1254" name="Tests" fullname="Darklight.Tests" runstate="Runnable" testcasecount="197" result="Passed" start-time="2026-10-19 22:48:44Z" end-time="2026-10-19 22:48:49Z" duration="4.675605" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1165" name="DarklightMapIconTests" fullname="Darklight.Tests.DarklightMapIconTests" classname="Darklight.Tests.DarklightMapIconTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-19 22:48:44Z" end-time="2026-10-19 22:48:49Z" duration="4.669191" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1166" name="OpenMapHasDistinctOutlinedIconsAndReadableLegend" fullname="Darklight.Tests.DarklightMapIconTests.OpenMapHasDistinctOutlinedIconsAndReadableLegend" methodname="OpenMapHasDistinctOutlinedIconsAndReadableLegend" classname="Darklight.Tests.DarklightMapIconTests" runstate="Runnable" seed="100739509" result="Passed" start-time="2026-10-19 22:48:44Z" end-time="2026-10-19 22:48:49Z" duration="4.652745" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Usuario/AppData/LocalLow/Fabio/DARKLIGHT REQUIEM\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

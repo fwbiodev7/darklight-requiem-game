@@ -1,0 +1,159 @@
+{
+  "generatedAtUtc": "2026-10-19T00:23:17.724340+00:00",
+  "method": "Offline, in-memory data and frontend logic audit. No browser, Unity Play mode, audio playback or physical controller test was performed by this audit.",
+  "manifest": {
+    "file": "manifesto.json",
+    "sha256": "9c50dd34fc24dde1144f23ac13da864d94317f8a2e70757df91e99fbb537eb91",
+    "revision": 7,
+    "pages": 44,
+    "sourcePngs": 36
+  },
+  "previousAuditBeforeTargetedAnchorFix": {
+    "sourceIntegrity": {
+      "sourcePngs": 36,
+      "wholeSourceComponents": 731,
+      "uniqueSelectedWholePoses": 711,
+      "checks": [
+        "SHA256",
+        "dimensions",
+        "alpha range",
+        "complete owner inside source rectangle",
+        "whole-pose pixelHash"
+      ],
+      "errors": 0
+    },
+    "coloredAnchorTransfers": {
+      "frames": 485,
+      "checks": [
+        "explicit normal anchorSource",
+        "source-frame mapping",
+        "manual body calibration ratio",
+        "foot/pelvis pivot registration",
+        "all transferred anchor coordinates"
+      ],
+      "errors": 0
+    },
+    "frontendControls": {
+      "realTimelines": 32,
+      "nextFrameSteps": 647,
+      "knightVariantTimelines": 8,
+      "eventsPerKnightVariant": 3,
+      "idleWeaponFormSelections": 28,
+      "checks": [
+        "event indices",
+        "active impact phases",
+        "launch-charge-brake order",
+        "loop and rest",
+        "pause and resume",
+        "half speed and return to normal speed",
+        "next frame and wrap",
+        "transformation next-step cap of 900 ms"
+      ],
+      "errors": 0
+    },
+    "defectFound": "The second dagger anchor in source pose 7 of both normal skins selected red eye pixels. The same anchor was inherited by the other three forms. This is corrected and revalidated below."
+  },
+  "targetedRevalidationAfterAnchorFix": {
+    "casesTested": 8,
+    "result": "passed",
+    "correction": "Explicit anchorExclusions[7]=[1] on each normal dagger source, applied before normal-template registration. Colored forms inherit the remaining real blade anchor. No source PNG was modified and no hidden second dagger was invented.",
+    "cases": [
+      {
+        "skin": "Requiem",
+        "weapon": "adagas",
+        "form": "normal",
+        "sourceFrame": 7,
+        "secondImpactPhase": 7,
+        "visibleWeaponAnchors": 1,
+        "sourcePngHashMatches": true,
+        "normalTemplateFrame": null,
+        "result": "passed"
+      },
+      {
+        "skin": "Requiem",
+        "weapon": "adagas",
+        "form": "vermelha",
+        "sourceFrame": 7,
+        "secondImpactPhase": 7,
+        "visibleWeaponAnchors": 1,
+        "sourcePngHashMatches": true,
+        "normalTemplateFrame": 7,
+        "result": "passed"
+      },
+      {
+        "skin": "Requiem",
+        "weapon": "adagas",
+        "form": "roxa",
+        "sourceFrame": 7,
+        "secondImpactPhase": 7,
+        "visibleWeaponAnchors": 1,
+        "sourcePngHashMatches": true,
+        "normalTemplateFrame": 7,
+        "result": "passed"
+      },
+      {
+        "skin": "Requiem",
+        "weapon": "adagas",
+        "form": "branca",
+        "sourceFrame": 7,
+        "secondImpactPhase": 7,
+        "visibleWeaponAnchors": 1,
+        "sourcePngHashMatches": true,
+        "normalTemplateFrame": 7,
+        "result": "passed"
+      },
+      {
+        "skin": "Rock",
+        "weapon": "adagas",
+        "form": "normal",
+        "sourceFrame": 7,
+        "secondImpactPhase": 7,
+        "visibleWeaponAnchors": 1,
+        "sourcePngHashMatches": true,
+        "normalTemplateFrame": null,
+        "result": "passed"
+      },
+      {
+        "skin": "Rock",
+        "weapon": "adagas",
+        "form": "vermelha",
+        "sourceFrame": 7,
+        "secondImpactPhase": 7,
+        "visibleWeaponAnchors": 1,
+        "sourcePngHashMatches": true,
+        "normalTemplateFrame": 7,
+        "result": "passed"
+      },
+      {
+        "skin": "Rock",
+        "weapon": "adagas",
+        "form": "roxa",
+        "sourceFrame": 7,
+        "secondImpactPhase": 7,
+        "visibleWeaponAnchors": 1,
+        "sourcePngHashMatches": true,
+        "normalTemplateFrame": 7,
+        "result": "passed"
+      },
+      {
+        "skin": "Rock",
+        "weapon": "adagas",
+        "form": "branca",
+        "sourceFrame": 7,
+        "secondImpactPhase": 7,
+        "visibleWeaponAnchors": 1,
+        "sourcePngHashMatches": true,
+        "normalTemplateFrame": 7,
+        "result": "passed"
+      }
+    ]
+  },
+  "limits": [
+    "Only the eight corrected dagger cases were rerun after the rebuild; the complete previous audit was not repeated.",
+    "Passing geometry, hashes and timing logic does not establish visual identity, anatomy, gait quality or user approval.",
+    "This report records no browser visual QA, Unity execution, audible playback or physical controller testing.",
+    "Directional availability depends on actual same-form sources; current frontal selections do not establish eight-direction coverage.",
+    "Colored effect anchors are transferred from manually calibrated normal poses; this establishes the transfer calculation, not pixel-perfect coincidence with each colored weapon."
+  ],
+  "openConcreteFailures": []
+}

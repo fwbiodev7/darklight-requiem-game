@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-19",
+  "page": "http://127.0.0.1:8551/previa.html",
+  "browserVerifiedToday": true,
+  "manifestSha256": "b1ee2cb914c45d7614a7fd9e1fe495fdf612c7750c38f23bc393c3bfbaf99e24",
+  "frontendSha256": "0f786af71b782a33213efaaef9bd8150e4e4dfc35ca0e83c00f07e84f86bfc76",
+  "promotion": "previa.html and previa-v6.html use identical current preview",
+  "observed": [
+    "Normal combo loaded both skins.",
+    "Red form selector and combo status observed.",
+    "Purple neutral attack guard and idle viewed against original references.",
+    "White katana combo pose13/24 viewed on both skins.",
+    "No captured console errors/warnings."
+  ],
+  "screenshot": "QA-ATAQUES-DUAS-SKINS.png",
+  "consoleErrors": 0,
+  "consoleWarnings": 0,
+  "allCombinationsVisuallyCertified": false,
+  "visualApproval": false,
+  "userReportedRemainingIssues": [
+    "Remover olheiras vermelhas inexistentes criadas por erros seus.",
+    "Melhorar qualidade das pixel art baseando-se na pose parada."
+  ],
+  "earlierAccessBlock": "Resolved by acquiring the current authorized in-app tab; initial unavailable stale tab not used.",
+  "limitations": [
+    "Full timeline matrix checked offline in QA-CONTROLES-20261019.json, not equivalent to visually approving every browser frame.",
+    "New attack under-eye shading/quality deferred at user request."
+  ]
+}

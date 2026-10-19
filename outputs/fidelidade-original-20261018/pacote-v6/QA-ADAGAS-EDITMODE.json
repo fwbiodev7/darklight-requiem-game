@@ -1,0 +1,62 @@
+{
+  "kind": "Native Unity EditMode in an isolated minimal project",
+  "unity": "6000.6.0f1",
+  "timestampBrasilia": "2026-10-18T21:44:26-03:00",
+  "passed": 4,
+  "failed": 0,
+  "skipped": 0,
+  "unityExitCode": 0,
+  "runtimeScripts": 4,
+  "testScripts": 1,
+  "unityPlayStarted": false,
+  "audioPlayback": false,
+  "gameSavesAccessed": false,
+  "xml": "QA-ADAGAS-EDITMODE.xml",
+  "xmlSha256": "d41a70317b01c85eb022f965c7484f63e777ceb861a1de701be71a872d62976e",
+  "testedSourceHashes": [
+    {
+      "file": "Assets/Darklight/Runtime/Combat/AttackDefinition.cs",
+      "sha256": "1a71b15a21579cfee273e84fbdcddb96be784d16846f793d5a1da0671d194da6"
+    },
+    {
+      "file": "Assets/Darklight/Runtime/Combat/WeaponDefinition.cs",
+      "sha256": "2294d924b53478acf1ff557116c2964b4a3200df7ab1dbc6fa09bafd9c7cedd2"
+    },
+    {
+      "file": "Assets/Darklight/Runtime/Combat/CombatModel.cs",
+      "sha256": "61e902c21c382801b5a37cbb25ddd5a63acab09e7fc052d5fcecbe23dbe29b8c"
+    },
+    {
+      "file": "Assets/Darklight/Runtime/Combat/DarklightCombatProfiles.cs",
+      "sha256": "cbd68391968ba275ded3025f6a6c2fd98ff8bcad94a1d70261d267cf73463e0b"
+    },
+    {
+      "file": "Assets/Darklight/Tests/EditMode/DarklightDaggerComboProfileTests.cs",
+      "sha256": "a1450e6e82ca8a3282e55ac739a7b431933f115bceec837106795a1767cc2a45"
+    }
+  ],
+  "cases": [
+    {
+      "name": "AnAuthoredFourthDaggerLightKeepsItsAuthoredContactAndTiming",
+      "result": "Passed"
+    },
+    {
+      "name": "CreatingAndUsingProfilesDoesNotChangeAnyAuthoredAsset",
+      "result": "Passed"
+    },
+    {
+      "name": "FourBufferedDaggerInputsReachTheFinisherAndTheFifthRestarts",
+      "result": "Passed"
+    },
+    {
+      "name": "FourthDaggerLightHasTwoUniqueContactsWithOnePrecedingLightTotalDamage",
+      "result": "Passed"
+    }
+  ],
+  "limits": [
+    "Model and ScriptableObject profile tests, not physical combat or a new build.",
+    "No fourth-strike animation was imported.",
+    "Authored fourth light keeps the existing general profile adjustments.",
+    "Multi-pulse resolver currently uses 0.012s hitstop; profile field is 0.028s."
+  ]
+}

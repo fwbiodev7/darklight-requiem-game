@@ -1,0 +1,55 @@
+{
+  "tool": "Integrated image_gen edit",
+  "selected": true,
+  "productionImported": false,
+  "visualApproval": false,
+  "strategy": "One built-in whole-sheet edit per skin; two independent calls in parallel. No correction iteration used.",
+  "inputs": {
+    "Requiem": [
+      {
+        "file": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/fidelidade-original-20261018/pacote-v6/Requiem-frontal-grande-branca.png",
+        "role": "complete edit target"
+      },
+      {
+        "file": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/fidelidade-original-20261018/pacote-v6/Requiem-frontal-grande-roxa.png",
+        "role": "physical faceted crystal shape only"
+      },
+      {
+        "file": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/revisao-consistencia-20261017/PREVIA-CABELO-BRANCO.png",
+        "role": "approved long white hair length only"
+      }
+    ],
+    "Rock": [
+      {
+        "file": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/fidelidade-original-20261018/pacote-v6/Rock-frontal-grande-branca.png",
+        "role": "complete edit target"
+      },
+      {
+        "file": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/fidelidade-original-20261018/pacote-v6/Rock-frontal-grande-vermelha.png",
+        "role": "physical faceted crystal shape only"
+      },
+      {
+        "file": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/revisao-consistencia-20261017/PREVIA-CABELO-BRANCO.png",
+        "role": "approved long white hair length only"
+      }
+    ]
+  },
+  "prompts": {
+    "Requiem": "Use case: precise-object-edit. Asset: complete transparent 1536x1024 game walk sprite sheet, EXACTLY eight complete large figures, four columns by two rows. Input1 is the EDIT TARGET Requiem white form; input2 is a reference ONLY for the physically protruding FACETED CRYSTAL SHAPE on shoulders and wrist cuffs (do not copy its violet color, brown hair, poses, body or weapon); input3 is reference ONLY for APPROVED SILVER-WHITE HAIR LENGTH, especially side and back views. Edit the ENTIRE input1 sheet as one intact image. Change ONLY the shoulder/cuff crystals: add small but clearly protruding white/silver FACETED CRYSTAL SHARDS, 2-3 angular crystalline spikes on each shoulder seam and 1-2 on each black wrist cuff, as substantial and readable as input2, with dark gray facet borders and restrained pearl highlights. These must break the shoulder/wrist outer silhouette visibly, not be flat white studs, seam trim or merely white painted dots. Keep them small enough to preserve the original silhouette proportions. Preserve ALL eight original complete bodies, faces, neutral peach skin, heads, large body/head/boot dimensions, precise poses and boot toe orientations, walking order and spacing. The neutral pose remains top-right, source pose3. Same katana in RIGHT hand (viewer LEFT), same hip chain viewer RIGHT, same black full sleeve LONG COAT and plain black shirt. No redesign of hair: preserve the approved white crown and flowing rear hair reaching the UPPER BACK / SHOULDER BLADES exactly as input3, longer than nape and well above belt. Do NOT shorten white hair to nape or turn it into a short bob; keep visible lower rear white tufts behind the shoulders in frontal view. All katana surfaces remain WHITE and SILVER, no red/pink/violet blade glow. Warm human peach skin remains neutral-lit, no neon on face or hands. Preserve input1 art style, black outlines, shading, all eight full figures and resolution. No cropping body parts, no assembly or pasting heads/arms/weapons, no rescaling, no extra limbs, no figure missing, no new pose, no ground/shadow/halo, no lettering/grid/watermark. Preserve genuine transparent background, alpha0 empty gutters and border padding. Return the complete 1536x1024 RGBA eight-figure sheet.",
+    "Rock": "Use case: precise-object-edit. Asset: complete transparent 1536x1024 game walk sprite sheet, EXACTLY eight complete large figures, four columns by two rows. Input1 is the EDIT TARGET Rock white form; input2 is a reference ONLY for the physically protruding FACETED CRYSTAL SHAPE on shoulders and wrist cuffs (do not copy its red color, brown hair, poses, body or weapon); input3 is reference ONLY for APPROVED SILVER-WHITE HAIR LENGTH, especially side and back views. Edit the ENTIRE input1 sheet as one intact image. Change ONLY the shoulder/cuff crystals: add small but clearly protruding pearl-white/silver FACETED CRYSTAL SHARDS, 2-3 angular crystalline spikes at each shoulder edge of the sleeveless black vest and 1-2 at the outer edges of each black wrist cuff, as substantial and readable as the red shards in input2. Use crisp gray facet borders and restrained white highlights. These must visibly break shoulder/cuff silhouettes, not be flat white studs or white paint. Keep skin and bare upper arms fully visible and unpainted. CRITICAL Rock wears a SHORT SLEEVELESS STUDDED BLACK VEST, skull/triangle graphic black shirt, BARE ARMS and studded wrist cuffs. Absolutely NO coat tails, extra fabric, cloak, skirt, sash, sleeves or panels below belt. Preserve ALL eight exact original whole bodies, faces, peach skin, head/body/leg/boot dimensions, precise poses and boot toe orientations, walking order and spacing. Neutral pose stays top-right source pose3. Same katana in RIGHT hand viewer LEFT and hip chain viewer RIGHT. Preserve approved white crown and long rear flowing white hair to UPPER BACK / SHOULDER BLADES exactly as the bottom Rock side/back figures in input3; longer than nape, well above waist. Do NOT shorten hair to a nape bob. Retain rear white tufts behind shoulders in front view. All katana surfaces remain PEARL-WHITE/SILVER, absolutely no red/pink/violet weapon or energy. Neutral-lit warm human peach skin without neon spill or white/orange skin paint. Match input1 original game raster/pixel-art contour and shading exactly. Preserve all eight complete figures and resolution. No cropping elements or assembly of body parts, no scaling, no extra limbs, no missing/reordered figures. True alpha0 background, clear gutters and border margin, no aura/gradient/ground shadow/grid/text/watermark. Return the entire 1536x1024 RGBA sheet."
+  },
+  "outputs": {
+    "Requiem": {
+      "file": "Requiem-frontal-grande-branca-cristais-v2.png",
+      "generatedSource": "C:/Users/Usuario/.codex/generated_images/01a15143-545a-7033-b673-cd3616b25fba/exec-19e99db4-c8d4-49c7-880a-eb40fd60b7a9.png",
+      "sha256": "594a3a1652d08e9672df0ece841420831adc9709f5ca0b5f4a2f703d04883236"
+    },
+    "Rock": {
+      "file": "Rock-frontal-grande-branca-cristais-v2.png",
+      "generatedSource": "C:/Users/Usuario/.codex/generated_images/01a15143-545a-7033-b673-cd3616b25fba/exec-0cc63c78-f542-46be-aef5-aaa18a5391ec.png",
+      "sha256": "6ed16bfade5bae1f2eab6eb3419ce51bebcd7c6f651449e09ce77a63af2387fb"
+    }
+  },
+  "diagnostics": "QA-CRISTAIS-BRANCOS-V2.json",
+  "selectedForPreview": true
+}

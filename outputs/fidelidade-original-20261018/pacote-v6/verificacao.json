@@ -1,0 +1,4416 @@
+{
+  "revision": 7,
+  "success": true,
+  "productionImported": false,
+  "visualApproval": false,
+  "problems": [],
+  "anatomyChecks": [
+    {
+      "file": "Requiem-frontal-grande-normal.png",
+      "bodyHeightPx": 407.0,
+      "targetBodyHeightPx": 266.0,
+      "uniformRenderScale": 0.6535626535626535,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 3,
+      "notes": "Approximate manual crown/chin/belt/sole registration on neutral frame3; frame0 has an advanced boot. No weapon bbox normalization. Source unchanged; candidate preview, not approval. Original full boot outline: Requiem y290, Rock y612. Manual marks approximate, not approval.",
+      "referenceFile": "referencia-original.png",
+      "headHeightPx": 117.0,
+      "headBodyRatio": 0.28746928746928746,
+      "referenceHeadRatio": 0.2894736842105263,
+      "headRatioDelta": -0.0020043967412388675
+    },
+    {
+      "file": "Requiem-frontal-grande-vermelha.png",
+      "bodyHeightPx": 420.0,
+      "targetBodyHeightPx": 266.0,
+      "uniformRenderScale": 0.6333333333333333,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 3,
+      "notes": "Approximate manual crown/chin/belt/sole registration on neutral frame3; frame0 has an advanced boot. No weapon bbox normalization. Source unchanged; candidate preview, not approval. Original full boot outline: Requiem y290, Rock y612. Manual marks approximate, not approval.",
+      "referenceFile": "referencia-original.png",
+      "headHeightPx": 122.0,
+      "headBodyRatio": 0.2904761904761905,
+      "referenceHeadRatio": 0.2894736842105263,
+      "headRatioDelta": 0.0010025062656641714
+    },
+    {
+      "file": "Requiem-frontal-grande-roxa.png",
+      "bodyHeightPx": 411.0,
+      "targetBodyHeightPx": 266.0,
+      "uniformRenderScale": 0.6472019464720195,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 3,
+      "notes": "Approximate manual crown/chin/belt/sole registration on neutral frame3; frame0 has an advanced boot. No weapon bbox normalization. Source unchanged; candidate preview, not approval. Original full boot outline: Requiem y290, Rock y612. Manual marks approximate, not approval.",
+      "referenceFile": "referencia-original.png",
+      "headHeightPx": 118.0,
+      "headBodyRatio": 0.2871046228710462,
+      "referenceHeadRatio": 0.2894736842105263,
+      "headRatioDelta": -0.0023690613394801163
+    },
+    {
+      "file": "Requiem-frontal-grande-branca-cristais-v2.png",
+      "bodyHeightPx": 431.0,
+      "targetBodyHeightPx": 266.0,
+      "uniformRenderScale": 0.617169373549884,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 3,
+      "notes": "Approximate crown/full-boot-outline marks on intact neutral pose3. One fixed scale per source; weapon extent excluded. Selected for candidate preview, not artistically approved or imported. Original full boot outline: Requiem y290, Rock y612. Manual marks approximate, not approval.",
+      "referenceFile": "../referencia-original.png",
+      "referenceHeadRatio": 0.2894736842105263
+    },
+    {
+      "file": "Rock-frontal-grande-normal.png",
+      "bodyHeightPx": 414.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 0.6714975845410628,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 3,
+      "notes": "Approximate manual crown/chin/belt/sole registration on neutral frame3; frame0 has an advanced boot. No weapon bbox normalization. Source unchanged; candidate preview, not approval. Original full boot outline: Requiem y290, Rock y612. Manual marks approximate, not approval.",
+      "referenceFile": "referencia-original.png",
+      "headHeightPx": 120.0,
+      "headBodyRatio": 0.2898550724637681,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": -0.005108956313210289
+    },
+    {
+      "file": "Rock-frontal-grande-vermelha.png",
+      "bodyHeightPx": 444.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 0.6261261261261262,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 3,
+      "notes": "Approximate manual crown/chin/belt/sole registration on neutral frame3; frame0 has an advanced boot. No weapon bbox normalization. Source unchanged; candidate preview, not approval. Original full boot outline: Requiem y290, Rock y612. Manual marks approximate, not approval.",
+      "referenceFile": "referencia-original.png",
+      "headHeightPx": 129.0,
+      "headBodyRatio": 0.2905405405405405,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": -0.0044234882364379
+    },
+    {
+      "file": "Rock-frontal-grande-roxa.png",
+      "bodyHeightPx": 461.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 0.6030368763557483,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 3,
+      "notes": "Approximate manual crown/chin/belt/sole registration on neutral frame3; frame0 has an advanced boot. No weapon bbox normalization. Source unchanged; candidate preview, not approval. Original full boot outline: Requiem y290, Rock y612. Manual marks approximate, not approval.",
+      "referenceFile": "referencia-original.png",
+      "headHeightPx": 133.0,
+      "headBodyRatio": 0.2885032537960954,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": -0.006460774980882988
+    },
+    {
+      "file": "Rock-frontal-grande-branca-cristais-v2.png",
+      "bodyHeightPx": 440.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 0.6318181818181818,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 3,
+      "notes": "Approximate crown/full-boot-outline marks on intact neutral pose3. One fixed scale per source; weapon extent excluded. Selected for candidate preview, not artistically approved or imported. Original full boot outline: Requiem y290, Rock y612. Manual marks approximate, not approval.",
+      "referenceFile": "../referencia-original.png",
+      "referenceHeadRatio": 0.2949640287769784
+    },
+    {
+      "file": "Requiem-katana-combo-normal-coerencia-v3.png",
+      "bodyHeightPx": 217.0,
+      "targetBodyHeightPx": 266.0,
+      "uniformRenderScale": 1.2258064516129032,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 67.0,
+      "headBodyRatio": 0.3087557603686636,
+      "referenceHeadRatio": 0.2894736842105263,
+      "headRatioDelta": 0.019282076158137262
+    },
+    {
+      "file": "Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+      "bodyHeightPx": 222.0,
+      "targetBodyHeightPx": 266.0,
+      "uniformRenderScale": 1.1981981981981982,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 69.0,
+      "headBodyRatio": 0.3108108108108108,
+      "referenceHeadRatio": 0.2894736842105263,
+      "headRatioDelta": 0.021337126600284473
+    },
+    {
+      "file": "Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+      "bodyHeightPx": 216.0,
+      "targetBodyHeightPx": 266.0,
+      "uniformRenderScale": 1.2314814814814814,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 67.0,
+      "headBodyRatio": 0.3101851851851852,
+      "referenceHeadRatio": 0.2894736842105263,
+      "headRatioDelta": 0.020711500974658847
+    },
+    {
+      "file": "Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+      "bodyHeightPx": 224.0,
+      "targetBodyHeightPx": 266.0,
+      "uniformRenderScale": 1.1875,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 68.0,
+      "headBodyRatio": 0.30357142857142855,
+      "referenceHeadRatio": 0.2894736842105263,
+      "headRatioDelta": 0.01409774436090222
+    },
+    {
+      "file": "Requiem-adagas-combo-normal-coerencia-v3.png",
+      "bodyHeightPx": 235.0,
+      "targetBodyHeightPx": 266.0,
+      "uniformRenderScale": 1.1319148936170214,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 72.0,
+      "headBodyRatio": 0.30638297872340425,
+      "referenceHeadRatio": 0.2894736842105263,
+      "headRatioDelta": 0.016909294512877926
+    },
+    {
+      "file": "Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+      "bodyHeightPx": 237.0,
+      "targetBodyHeightPx": 266.0,
+      "uniformRenderScale": 1.1223628691983123,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 72.0,
+      "headBodyRatio": 0.3037974683544304,
+      "referenceHeadRatio": 0.2894736842105263,
+      "headRatioDelta": 0.014323784143904061
+    },
+    {
+      "file": "Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+      "bodyHeightPx": 236.0,
+      "targetBodyHeightPx": 266.0,
+      "uniformRenderScale": 1.1271186440677967,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 72.0,
+      "headBodyRatio": 0.3050847457627119,
+      "referenceHeadRatio": 0.2894736842105263,
+      "headRatioDelta": 0.015611061552185557
+    },
+    {
+      "file": "Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+      "bodyHeightPx": 237.0,
+      "targetBodyHeightPx": 266.0,
+      "uniformRenderScale": 1.1223628691983123,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 71.0,
+      "headBodyRatio": 0.29957805907172996,
+      "referenceHeadRatio": 0.2894736842105263,
+      "headRatioDelta": 0.010104374861203635
+    },
+    {
+      "file": "Requiem-corrente-combo-normal-coerencia-v3.png",
+      "bodyHeightPx": 235.0,
+      "targetBodyHeightPx": 266.0,
+      "uniformRenderScale": 1.1319148936170214,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 76.0,
+      "headBodyRatio": 0.32340425531914896,
+      "referenceHeadRatio": 0.2894736842105263,
+      "headRatioDelta": 0.03393057110862263
+    },
+    {
+      "file": "Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+      "bodyHeightPx": 232.0,
+      "targetBodyHeightPx": 266.0,
+      "uniformRenderScale": 1.146551724137931,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 73.0,
+      "headBodyRatio": 0.3146551724137931,
+      "referenceHeadRatio": 0.2894736842105263,
+      "headRatioDelta": 0.025181488203266766
+    },
+    {
+      "file": "Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+      "bodyHeightPx": 225.0,
+      "targetBodyHeightPx": 266.0,
+      "uniformRenderScale": 1.1822222222222223,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 1,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 68.0,
+      "headBodyRatio": 0.3022222222222222,
+      "referenceHeadRatio": 0.2894736842105263,
+      "headRatioDelta": 0.012748538011695898
+    },
+    {
+      "file": "Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+      "bodyHeightPx": 236.0,
+      "targetBodyHeightPx": 266.0,
+      "uniformRenderScale": 1.1271186440677967,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 75.0,
+      "headBodyRatio": 0.3177966101694915,
+      "referenceHeadRatio": 0.2894736842105263,
+      "headRatioDelta": 0.028322925958965184
+    },
+    {
+      "file": "Rock-katana-combo-normal-coerencia-v3.png",
+      "bodyHeightPx": 229.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 1.2139737991266375,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 69.0,
+      "headBodyRatio": 0.30131004366812225,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": 0.006346014891143836
+    },
+    {
+      "file": "Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+      "bodyHeightPx": 232.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 1.1982758620689655,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 70.0,
+      "headBodyRatio": 0.3017241379310345,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": 0.00676010915405606
+    },
+    {
+      "file": "Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+      "bodyHeightPx": 234.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 1.188034188034188,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 71.0,
+      "headBodyRatio": 0.3034188034188034,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": 0.00845477464182498
+    },
+    {
+      "file": "Rock-katana-combo-branca-coerencia-v4-olhos.png",
+      "bodyHeightPx": 231.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 1.2034632034632036,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 70.0,
+      "headBodyRatio": 0.30303030303030304,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": 0.008066274253324623
+    },
+    {
+      "file": "Rock-adagas-combo-normal-coerencia-v3.png",
+      "bodyHeightPx": 241.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 1.1535269709543567,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 73.0,
+      "headBodyRatio": 0.3029045643153527,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": 0.00794053553837426
+    },
+    {
+      "file": "Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+      "bodyHeightPx": 251.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 1.1075697211155378,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 77.0,
+      "headBodyRatio": 0.30677290836653387,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": 0.011808879589555454
+    },
+    {
+      "file": "Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+      "bodyHeightPx": 247.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 1.125506072874494,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 75.0,
+      "headBodyRatio": 0.30364372469635625,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": 0.008679695919377839
+    },
+    {
+      "file": "Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+      "bodyHeightPx": 249.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 1.1164658634538152,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 75.0,
+      "headBodyRatio": 0.30120481927710846,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": 0.0062407905001300445
+    },
+    {
+      "file": "Rock-corrente-combo-normal-coerencia-v3.png",
+      "bodyHeightPx": 240.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 1.1583333333333334,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 72.0,
+      "headBodyRatio": 0.3,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": 0.005035971223021574
+    },
+    {
+      "file": "Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+      "bodyHeightPx": 247.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 1.125506072874494,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 76.0,
+      "headBodyRatio": 0.3076923076923077,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": 0.012728278915329294
+    },
+    {
+      "file": "Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+      "bodyHeightPx": 247.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 1.125506072874494,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 76.0,
+      "headBodyRatio": 0.3076923076923077,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": 0.012728278915329294
+    },
+    {
+      "file": "Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+      "bodyHeightPx": 239.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 1.1631799163179917,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 69.0,
+      "headBodyRatio": 0.28870292887029286,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": -0.006261099906685552
+    },
+    {
+      "file": "Rock-cavaleiro-combo-normal.png",
+      "bodyHeightPx": 227.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 1.224669603524229,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual guard crown/chin/boot marks, excluding weapon and glow. Whole-sheet scale, no fit to weapon. These remain visual candidates.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 73.0,
+      "headBodyRatio": 0.32158590308370044,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": 0.026621874306722026
+    },
+    {
+      "file": "Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+      "bodyHeightPx": 237.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 1.1729957805907174,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 77.0,
+      "headBodyRatio": 0.32489451476793246,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": 0.029930485990954048
+    },
+    {
+      "file": "Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+      "bodyHeightPx": 233.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 1.1931330472103003,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 0,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 75.0,
+      "headBodyRatio": 0.3218884120171674,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": 0.026924383240188976
+    },
+    {
+      "file": "Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+      "bodyHeightPx": 234.0,
+      "targetBodyHeightPx": 278.0,
+      "uniformRenderScale": 1.188034188034188,
+      "measurementMethod": "Manually marked guard anatomy; excludes weapon and effects.",
+      "visualApproval": false,
+      "guardFrame": 2,
+      "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit.",
+      "referenceFile": "../referencia-original.png",
+      "headHeightPx": 73.0,
+      "headBodyRatio": 0.31196581196581197,
+      "referenceHeadRatio": 0.2949640287769784,
+      "headRatioDelta": 0.017001783188833552
+    }
+  ],
+  "scaleChecks": [
+    {
+      "file": "Requiem-frontal-grande-normal.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 0.6535626535626535,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 266.0
+    },
+    {
+      "file": "Requiem-frontal-grande-vermelha.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 0.6333333333333333,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 266.0
+    },
+    {
+      "file": "Requiem-frontal-grande-roxa.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 0.6472019464720195,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 266.0
+    },
+    {
+      "file": "Requiem-frontal-grande-branca-cristais-v2.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 0.617169373549884,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 266.0
+    },
+    {
+      "file": "Rock-frontal-grande-normal.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 0.6714975845410628,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-frontal-grande-vermelha.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 0.6261261261261262,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-frontal-grande-roxa.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 0.6030368763557483,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-frontal-grande-branca-cristais-v2.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 0.6318181818181818,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Requiem-katana-combo-normal-coerencia-v3.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.2258064516129032,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 266.0
+    },
+    {
+      "file": "Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1981981981981982,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 266.0
+    },
+    {
+      "file": "Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.2314814814814814,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 266.0
+    },
+    {
+      "file": "Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1875,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 266.0
+    },
+    {
+      "file": "Requiem-adagas-combo-normal-coerencia-v3.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1319148936170214,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 266.0
+    },
+    {
+      "file": "Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1223628691983123,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 266.0
+    },
+    {
+      "file": "Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1271186440677967,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 266.0
+    },
+    {
+      "file": "Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1223628691983123,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 266.0
+    },
+    {
+      "file": "Requiem-corrente-combo-normal-coerencia-v3.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1319148936170214,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 266.0
+    },
+    {
+      "file": "Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.146551724137931,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 266.0
+    },
+    {
+      "file": "Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1822222222222223,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 266.0
+    },
+    {
+      "file": "Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1271186440677967,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 266.0
+    },
+    {
+      "file": "Rock-katana-combo-normal-coerencia-v3.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.2139737991266375,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1982758620689655,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.188034188034188,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-katana-combo-branca-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.2034632034632036,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-adagas-combo-normal-coerencia-v3.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1535269709543567,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1075697211155378,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.125506072874494,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1164658634538152,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-corrente-combo-normal-coerencia-v3.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1583333333333334,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.125506072874494,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.125506072874494,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1631799163179917,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-cavaleiro-combo-normal.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.224669603524229,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1729957805907174,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.1931330472103003,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    },
+    {
+      "file": "Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+      "method": "targetBodyHeightPx / bodyHeightPx",
+      "uniformRenderScale": 1.188034188034188,
+      "wholeSheetUniform": true,
+      "anatomicalHeightAfterScalePx": 278.0
+    }
+  ],
+  "selectedPages": [
+    {
+      "skin": "Requiem",
+      "weapon": "katana",
+      "form": "normal",
+      "kind": "walk",
+      "selectedFigures": 8,
+      "storedFigures": 8,
+      "directions": {
+        "S": 8
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-normal.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-normal.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-normal.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-normal.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-normal.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-normal.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-normal.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-normal.png",
+          "index": 7
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "katana",
+      "form": "normal",
+      "kind": "idle",
+      "selectedFigures": 1,
+      "storedFigures": 8,
+      "directions": {
+        "S": 1
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-normal.png",
+          "index": 3
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "katana",
+      "form": "vermelha",
+      "kind": "walk",
+      "selectedFigures": 8,
+      "storedFigures": 8,
+      "directions": {
+        "S": 8
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-vermelha.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-vermelha.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-vermelha.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-vermelha.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-vermelha.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-vermelha.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-vermelha.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-vermelha.png",
+          "index": 7
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "katana",
+      "form": "vermelha",
+      "kind": "idle",
+      "selectedFigures": 1,
+      "storedFigures": 8,
+      "directions": {
+        "S": 1
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-vermelha.png",
+          "index": 3
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "katana",
+      "form": "roxa",
+      "kind": "walk",
+      "selectedFigures": 8,
+      "storedFigures": 8,
+      "directions": {
+        "S": 8
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-roxa.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-roxa.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-roxa.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-roxa.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-roxa.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-roxa.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-roxa.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-roxa.png",
+          "index": 7
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "katana",
+      "form": "roxa",
+      "kind": "idle",
+      "selectedFigures": 1,
+      "storedFigures": 8,
+      "directions": {
+        "S": 1
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-roxa.png",
+          "index": 3
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "katana",
+      "form": "branca",
+      "kind": "walk",
+      "selectedFigures": 8,
+      "storedFigures": 8,
+      "directions": {
+        "S": 8
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-branca-cristais-v2.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-branca-cristais-v2.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-branca-cristais-v2.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-branca-cristais-v2.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-branca-cristais-v2.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-branca-cristais-v2.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-branca-cristais-v2.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-branca-cristais-v2.png",
+          "index": 7
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "katana",
+      "form": "branca",
+      "kind": "idle",
+      "selectedFigures": 1,
+      "storedFigures": 8,
+      "directions": {
+        "S": 1
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-frontal-grande-branca-cristais-v2.png",
+          "index": 3
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "katana",
+      "form": "normal",
+      "kind": "walk",
+      "selectedFigures": 8,
+      "storedFigures": 8,
+      "directions": {
+        "S": 8
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-normal.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-normal.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-normal.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-normal.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-normal.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-normal.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-normal.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-normal.png",
+          "index": 7
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "katana",
+      "form": "normal",
+      "kind": "idle",
+      "selectedFigures": 1,
+      "storedFigures": 8,
+      "directions": {
+        "S": 1
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-normal.png",
+          "index": 3
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "katana",
+      "form": "vermelha",
+      "kind": "walk",
+      "selectedFigures": 8,
+      "storedFigures": 8,
+      "directions": {
+        "S": 8
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-vermelha.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-vermelha.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-vermelha.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-vermelha.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-vermelha.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-vermelha.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-vermelha.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-vermelha.png",
+          "index": 7
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "katana",
+      "form": "vermelha",
+      "kind": "idle",
+      "selectedFigures": 1,
+      "storedFigures": 8,
+      "directions": {
+        "S": 1
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-vermelha.png",
+          "index": 3
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "katana",
+      "form": "roxa",
+      "kind": "walk",
+      "selectedFigures": 8,
+      "storedFigures": 8,
+      "directions": {
+        "S": 8
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-roxa.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-roxa.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-roxa.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-roxa.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-roxa.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-roxa.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-roxa.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-roxa.png",
+          "index": 7
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "katana",
+      "form": "roxa",
+      "kind": "idle",
+      "selectedFigures": 1,
+      "storedFigures": 8,
+      "directions": {
+        "S": 1
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-roxa.png",
+          "index": 3
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "katana",
+      "form": "branca",
+      "kind": "walk",
+      "selectedFigures": 8,
+      "storedFigures": 8,
+      "directions": {
+        "S": 8
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-branca-cristais-v2.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-branca-cristais-v2.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-branca-cristais-v2.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-branca-cristais-v2.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-branca-cristais-v2.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-branca-cristais-v2.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-branca-cristais-v2.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-branca-cristais-v2.png",
+          "index": 7
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "katana",
+      "form": "branca",
+      "kind": "idle",
+      "selectedFigures": 1,
+      "storedFigures": 8,
+      "directions": {
+        "S": 1
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-frontal-grande-branca-cristais-v2.png",
+          "index": 3
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "katana",
+      "form": "normal",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "katana",
+      "form": "vermelha",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "katana",
+      "form": "roxa",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "katana",
+      "form": "branca",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "adagas",
+      "form": "normal",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "adagas",
+      "form": "vermelha",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "adagas",
+      "form": "roxa",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "adagas",
+      "form": "branca",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "corrente",
+      "form": "normal",
+      "kind": "attack",
+      "selectedFigures": 20,
+      "storedFigures": 20,
+      "directions": {
+        "S": 20
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+          "index": 18
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "corrente",
+      "form": "vermelha",
+      "kind": "attack",
+      "selectedFigures": 20,
+      "storedFigures": 20,
+      "directions": {
+        "S": 20
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 17
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "corrente",
+      "form": "roxa",
+      "kind": "attack",
+      "selectedFigures": 20,
+      "storedFigures": 20,
+      "directions": {
+        "S": 20
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 17
+        }
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "weapon": "corrente",
+      "form": "branca",
+      "kind": "attack",
+      "selectedFigures": 20,
+      "storedFigures": 20,
+      "directions": {
+        "S": 20
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 18
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "katana",
+      "form": "normal",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "katana",
+      "form": "vermelha",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "katana",
+      "form": "roxa",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "katana",
+      "form": "branca",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "adagas",
+      "form": "normal",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "adagas",
+      "form": "vermelha",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "adagas",
+      "form": "roxa",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "adagas",
+      "form": "branca",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "corrente",
+      "form": "normal",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "corrente",
+      "form": "vermelha",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "corrente",
+      "form": "roxa",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "corrente",
+      "form": "branca",
+      "kind": "attack",
+      "selectedFigures": 24,
+      "storedFigures": 24,
+      "directions": {
+        "S": 24
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "cavaleiro",
+      "form": "normal",
+      "kind": "attack",
+      "selectedFigures": 22,
+      "storedFigures": 22,
+      "directions": {
+        "S": 22
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "cavaleiro",
+      "form": "vermelha",
+      "kind": "attack",
+      "selectedFigures": 22,
+      "storedFigures": 22,
+      "directions": {
+        "S": 22
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "cavaleiro",
+      "form": "roxa",
+      "kind": "attack",
+      "selectedFigures": 22,
+      "storedFigures": 22,
+      "directions": {
+        "S": 22
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 0
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 3
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 21
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+          "index": 23
+        }
+      ]
+    },
+    {
+      "skin": "Rock",
+      "weapon": "cavaleiro",
+      "form": "branca",
+      "kind": "attack",
+      "selectedFigures": 21,
+      "storedFigures": 21,
+      "directions": {
+        "S": 21
+      },
+      "sourceFrames": [
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 2
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 8
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 14
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 17
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 5
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 10
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 12
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 18
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 13
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 20
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 1
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 6
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 11
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 19
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 4
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 9
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 16
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 22
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 7
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 15
+        },
+        {
+          "sheet": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+          "index": 21
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Source pixels and anatomical proportions are not repaired by rendering scale.",
+    "Connected-component bodyHeight is a whole-figure extent, not an anatomical measurement.",
+    "Scale, anatomy and framing are separate checks; none establishes visual fidelity or approval.",
+    "Preview coordinates are canvas pixels, independent of CSS size and Unity PPU/camera."
+  ],
+  "sourceFigures": 731,
+  "sources": [
+    {
+      "file": "pacote-v6/Requiem-frontal-grande-normal.png",
+      "figures": 8
+    },
+    {
+      "file": "pacote-v6/Requiem-frontal-grande-vermelha.png",
+      "figures": 8
+    },
+    {
+      "file": "pacote-v6/Requiem-frontal-grande-roxa.png",
+      "figures": 8
+    },
+    {
+      "file": "pacote-v6/Requiem-frontal-grande-branca-cristais-v2.png",
+      "figures": 8
+    },
+    {
+      "file": "pacote-v6/Rock-frontal-grande-normal.png",
+      "figures": 8
+    },
+    {
+      "file": "pacote-v6/Rock-frontal-grande-vermelha.png",
+      "figures": 8
+    },
+    {
+      "file": "pacote-v6/Rock-frontal-grande-roxa.png",
+      "figures": 8
+    },
+    {
+      "file": "pacote-v6/Rock-frontal-grande-branca-cristais-v2.png",
+      "figures": 8
+    },
+    {
+      "file": "pacote-v6/Requiem-katana-combo-normal-coerencia-v3.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Requiem-adagas-combo-normal-coerencia-v3.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Requiem-corrente-combo-normal-coerencia-v3.png",
+      "figures": 23
+    },
+    {
+      "file": "pacote-v6/Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+      "figures": 23
+    },
+    {
+      "file": "pacote-v6/Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+      "figures": 23
+    },
+    {
+      "file": "pacote-v6/Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+      "figures": 23
+    },
+    {
+      "file": "pacote-v6/Rock-katana-combo-normal-coerencia-v3.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Rock-katana-combo-branca-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Rock-adagas-combo-normal-coerencia-v3.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Rock-corrente-combo-normal-coerencia-v3.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Rock-cavaleiro-combo-normal.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+      "figures": 24
+    },
+    {
+      "file": "pacote-v6/Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+      "figures": 23
+    }
+  ],
+  "selectedFigures": 719,
+  "selectedUniqueSourceFigures": 711,
+  "pages": 44,
+  "walkPages": 8,
+  "attackPages": 28,
+  "framingCheck": {
+    "canvasSize": [
+      640,
+      480
+    ],
+    "footPivot": [
+      260,
+      450
+    ],
+    "automaticShrink": false
+  }
+}

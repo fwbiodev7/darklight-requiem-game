@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DARKLIGHT — Prévia de combate</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#101115;color:#eee;font:14px system-ui,sans-serif;padding:14px}main{max-width:1000px;margin:auto}h1{font-size:20px;margin:0 0 4px}p{color:#b8bdc8;line-height:1.35;margin:6px 0}button,select{font:13px system-ui,sans-serif;color:#eee;background:#23252e;border:1px solid #505565;border-radius:6px;padding:6px 9px}button{cursor:pointer}button[aria-pressed=true]{background:#59213b;border-color:#d980ad}button:focus-visible,select:focus-visible,.comparison-scroll:focus-visible,a:focus-visible{outline:2px solid #e3b7f2;outline-offset:3px}nav,.selectors{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.selectors label{display:flex;align-items:center;gap:6px}.comparison-scroll{overflow-x:auto;padding:2px 2px 10px;scrollbar-color:#687187 #1b1e26}.comparison{display:grid;grid-template-columns:320px 640px;gap:16px;width:976px}.comparison figure{margin:0;width:100%;min-width:0}.comparison figcaption{min-height:23px;font-size:13px;color:#bfc2cb}.study{margin-bottom:16px}.study canvas{box-sizing:content-box;flex:none;max-width:none;width:640px;height:480px;background:radial-gradient(ellipse at 50% 70%,#252b36,#191c24 65%);image-rendering:pixelated;outline:1px solid #3f4656;border:0;display:block}.study .reference canvas{width:320px;height:480px}.study h2{font-size:15px;margin:4px 0 8px}.study small{display:block;min-height:18px;font-size:12px;color:#aeb7c7;margin-top:6px}.status{font-size:13px;background:#20212b;border-left:3px solid var(--accent,#a778b5);padding:8px 10px}.status[data-error=true]{border-color:#ff8495;color:#ffbec7}.notes,.scale-note{font-size:12px}.scale-note{color:#d5d9e2}a{color:#d6a9eb}footer{margin-top:14px;font-size:12px;color:#aaa}[hidden]{display:none!important}@media(max-width:650px){.selectors label{flex:1 1 100%;justify-content:space-between}.selectors select{max-width:70%}}
+button:disabled,select:disabled{opacity:.45;cursor:not-allowed}
+</style>
+<main>
+<h1>Combos e transformações</h1>
+<p class="scale-note">Escala fixa. Em telas menores, deslize para ver toda a animação.</p>
+<div class="selectors">
+<label for="weapon">Arma <select id="weapon"><option value="katana">Katana</option><option value="adagas">Adagas</option><option value="corrente">Corrente e foice</option><option value="cavaleiro">Cavaleiro do Abismo</option></select></label>
+<label for="form">Forma <select id="form"><option value="normal">Normal</option><option value="vermelha">Vermelha</option><option value="roxa">Roxa</option><option value="branca">Branca</option></select></label>
+<button id="transform">Ver transformação</button>
+</div>
+<nav aria-label="Animação e conferência"><button data-mode="idle" aria-pressed="false">Parado</button><button data-mode="walk" aria-pressed="false">Caminhada</button><button data-mode="attack" aria-pressed="true">Combo</button><button id="pause" aria-pressed="false">Pausar</button><button id="effects" aria-pressed="true">Cortes: ligados</button><button id="slow" aria-pressed="false">Câmera lenta</button><button id="next">Próximo quadro</button></nav>
+<div class="selectors">
+<label for="direction">Direção da caminhada <select id="direction"><option value="S">Frente</option><option value="SW">Frente/esquerda</option><option value="W">Esquerda</option><option value="NW">Costas/esquerda</option><option value="N">Costas</option><option value="NE">Costas/direita</option><option value="E">Direita</option><option value="SE">Frente/direita</option></select></label>
+<label id="variant-control" for="variant" hidden>Sequência <select id="variant"><option value="melee">Combo de serras</option><option value="moto">Investida da moto</option></select></label>
+</div>
+<p id="direction-note" class="notes" aria-live="polite" hidden></p>
+<div class="comparison-scroll" tabindex="0" role="region" aria-label="Comparação entre referência original e animação; deslize horizontalmente para ver toda a animação">
+<section class="study"><h2>Requiem</h2><div class="comparison">
+<figure class="reference"><figcaption>Referência original</figcaption><canvas id="requiem-reference" width="320" height="480" aria-label="Referência original de Requiem"></canvas></figure>
+<figure><figcaption>Animação</figcaption><canvas id="requiem" width="640" height="480" aria-label="Animação de Requiem"></canvas></figure>
+</div><small id="requiem-frame">Carregando…</small></section>
+<section class="study"><h2>Rock</h2><div class="comparison">
+<figure class="reference"><figcaption>Referência original</figcaption><canvas id="rock-reference" width="320" height="480" aria-label="Referência original de Rock"></canvas></figure>
+<figure><figcaption>Animação</figcaption><canvas id="rock" width="640" height="480" aria-label="Animação de Rock"></canvas></figure>
+</div><small id="rock-frame">Carregando…</small></section>
+</div>
+<p class="status" role="status">Carregando o combo… Prévia fora do jogo; seleções ainda em revisão visual.</p>
+<p class="notes">Cavaleiro do Abismo: skin Rock. Caminhada frontal; demais direções em revisão. Reprodução silenciosa.</p>
+<footer><a href="referencia-original.png">Abrir a referência original completa</a> · <a href="pacote-v6/REGISTRO.md">Animações e alterações desta revisão</a></footer>
+</main><script src="combat-preview.js?v=20261019-olhos-candidatos"></script></html>

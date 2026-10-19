@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-19 00:44:26Z" end-time="2026-10-19 00:44:26Z" duration="0,1002451">
+  <test-suite type="TestSuite" id="1000" name="dagger-combo-isolated-20261018" fullname="dagger-combo-isolated-20261018" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-19 00:44:26Z" end-time="2026-10-19 00:44:26Z" duration="0.100245" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1006" name="DaggerIsolated.Tests.dll" fullname="C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/work/dagger-combo-isolated-20261018/Library/ScriptAssemblies/DaggerIsolated.Tests.dll" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-19 00:44:26Z" end-time="2026-10-19 00:44:26Z" duration="0.085609" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="26132" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1007" name="Darklight" fullname="Darklight" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-19 00:44:26Z" end-time="2026-10-19 00:44:26Z" duration="0.084745" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1008" name="Tests" fullname="Darklight.Tests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-19 00:44:26Z" end-time="2026-10-19 00:44:26Z" duration="0.084404" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="DarklightDaggerComboProfileTests" fullname="Darklight.Tests.DarklightDaggerComboProfileTests" classname="Darklight.Tests.DarklightDaggerComboProfileTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-19 00:44:26Z" end-time="2026-10-19 00:44:26Z" duration="0.082929" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1005" name="AnAuthoredFourthDaggerLightKeepsItsAuthoredContactAndTiming" fullname="Darklight.Tests.DarklightDaggerComboProfileTests.AnAuthoredFourthDaggerLightKeepsItsAuthoredContactAndTiming" methodname="AnAuthoredFourthDaggerLightKeepsItsAuthoredContactAndTiming" classname="Darklight.Tests.DarklightDaggerComboProfileTests" runstate="Runnable" seed="421979952" result="Passed" start-time="2026-10-19 00:44:26Z" end-time="2026-10-19 00:44:26Z" duration="0.040826" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1004" name="CreatingAndUsingProfilesDoesNotChangeAnyAuthoredAsset" fullname="Darklight.Tests.DarklightDaggerComboProfileTests.CreatingAndUsingProfilesDoesNotChangeAnyAuthoredAsset" methodname="CreatingAndUsingProfilesDoesNotChangeAnyAuthoredAsset" classname="Darklight.Tests.DarklightDaggerComboProfileTests" runstate="Runnable" seed="1754564631" result="Passed" start-time="2026-10-19 00:44:26Z" end-time="2026-10-19 00:44:26Z" duration="0.013542" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1002" name="FourBufferedDaggerInputsReachTheFinisherAndTheFifthRestarts" fullname="Darklight.Tests.DarklightDaggerComboProfileTests.FourBufferedDaggerInputsReachTheFinisherAndTheFifthRestarts" methodname="FourBufferedDaggerInputsReachTheFinisherAndTheFifthRestarts" classname="Darklight.Tests.DarklightDaggerComboProfileTests" runstate="Runnable" seed="1470371746" result="Passed" start-time="2026-10-19 00:44:26Z" end-time="2026-10-19 00:44:26Z" duration="0.004218" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1003" name="FourthDaggerLightHasTwoUniqueContactsWithOnePrecedingLightTotalDamage" fullname="Darklight.Tests.DarklightDaggerComboProfileTests.FourthDaggerLightHasTwoUniqueContactsWithOnePrecedingLightTotalDamage" methodname="FourthDaggerLightHasTwoUniqueContactsWithOnePrecedingLightTotalDamage" classname="Darklight.Tests.DarklightDaggerComboProfileTests" runstate="Runnable" seed="502041959" result="Passed" start-time="2026-10-19 00:44:26Z" end-time="2026-10-19 00:44:26Z" duration="0.004176" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:\Users\Usuario\Documents\Codex\2026-10-10\f\darklight-requiem-main\work\dagger-combo-isolated-20261018\results.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

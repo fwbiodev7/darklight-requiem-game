@@ -1,0 +1,476 @@
+{
+  "date": "2026-10-19",
+  "manifestSha256": "b1ee2cb914c45d7614a7fd9e1fe495fdf612c7750c38f23bc393c3bfbaf99e24",
+  "editedWholeSheets": 27,
+  "facialCoherenceRevisions": 24,
+  "transformedEyeEditAttempts": 21,
+  "transformations": [
+    "vermelha",
+    "roxa",
+    "branca"
+  ],
+  "skins": [
+    "Requiem",
+    "Rock"
+  ],
+  "reference": "Corresponding approved idle/walk; approved Cavaleiro action identity",
+  "method": "Built-in image_gen whole-sheet edits, original sources preserved. Technical ownership labels do not assemble body parts.",
+  "assembledBodyParts": false,
+  "sourcePngs": 36,
+  "selectedWholeFigures": 711,
+  "pages": 44,
+  "technicalSourceErrors": 0,
+  "technicalControlErrors": 0,
+  "bodyHeightPx": {
+    "Requiem": 266,
+    "Rock": 278
+  },
+  "perFrameRescale": false,
+  "previewImportedInUnity": false,
+  "visualApproval": false,
+  "visualComplete": false,
+  "userReportedRemainingIssues": [
+    "Remover olheiras vermelhas inexistentes criadas por erros seus.",
+    "Melhorar qualidade das pixel art baseando-se na pose parada."
+  ],
+  "issueReference": "codex-clipboard-c82068c6-0668-4c95-a22d-d8bbaf7c4115.png",
+  "limits": [
+    "Eye saturation edits did not remove the red under-eye shading; latest user explicitly deferred correction to tomorrow.",
+    "Technical source checks do not certify artistic consistency.",
+    "Seven other walk directions and directional attacks remain incomplete."
+  ],
+  "records": [
+    {
+      "id": "Requiem-adagas-combo-normal",
+      "file": "Requiem-adagas-combo-normal-coerencia-v3.png",
+      "sha256": "4074f3e658ea2ce7ad23a49f097ada96a6c4031aafd15092b7629010081a7607",
+      "calibration": {
+        "bodyHeightPx": 235,
+        "headHeightPx": 72,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 266,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 12,
+        "manualChinY": 84,
+        "manualSoleY": 247,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Requiem-corrente-combo-normal",
+      "file": "Requiem-corrente-combo-normal-coerencia-v3.png",
+      "sha256": "019ffc8c33aa5c69535053bfd6f4bb5e08f0123d564a0fbf1f56abab9e872220",
+      "calibration": {
+        "bodyHeightPx": 235,
+        "headHeightPx": 76,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 266,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 25,
+        "manualChinY": 101,
+        "manualSoleY": 260,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Requiem-katana-combo-normal",
+      "file": "Requiem-katana-combo-normal-coerencia-v3.png",
+      "sha256": "876328b76e51d0d30b595b05ca06e78d7fc1a1c9c48f5f7210643f14c1987a36",
+      "calibration": {
+        "bodyHeightPx": 217,
+        "headHeightPx": 67,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 266,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 13,
+        "manualChinY": 80,
+        "manualSoleY": 230,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Rock-adagas-combo-normal",
+      "file": "Rock-adagas-combo-normal-coerencia-v3.png",
+      "sha256": "de9a6e5b6064449d0e57e99cd72dfe2880f395509a72284e2c06947cea252b3b",
+      "calibration": {
+        "bodyHeightPx": 241,
+        "headHeightPx": 73,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 278,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 16,
+        "manualChinY": 89,
+        "manualSoleY": 257,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Rock-corrente-combo-normal",
+      "file": "Rock-corrente-combo-normal-coerencia-v3.png",
+      "sha256": "d990a3af1d4eb6315a79aaa3504f2548b811b426d52e1b337a1136b95825e239",
+      "calibration": {
+        "bodyHeightPx": 240,
+        "headHeightPx": 72,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 278,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 40,
+        "manualChinY": 112,
+        "manualSoleY": 280,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Rock-katana-combo-normal",
+      "file": "Rock-katana-combo-normal-coerencia-v3.png",
+      "sha256": "95a6fa1f4aa30b4d754cb41df04beedd874ac0026f16e069d4842dc4e14cdb3e",
+      "calibration": {
+        "bodyHeightPx": 229,
+        "headHeightPx": 69,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 278,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 12,
+        "manualChinY": 81,
+        "manualSoleY": 241,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Requiem-adagas-combo-branca",
+      "file": "Requiem-adagas-combo-branca-coerencia-v4-olhos.png",
+      "sha256": "02347cb667080c31ba2ca8d701a42184d145f29ac5795a0feb099b348cc06136",
+      "calibration": {
+        "bodyHeightPx": 237,
+        "headHeightPx": 71,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 266,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 13,
+        "manualChinY": 84,
+        "manualSoleY": 250,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Requiem-adagas-combo-roxa",
+      "file": "Requiem-adagas-combo-roxa-coerencia-v4-olhos.png",
+      "sha256": "1a117844d2dc98d743d4b56b88deaa17be2c155b421c284c662688d15fb65dfd",
+      "calibration": {
+        "bodyHeightPx": 236,
+        "headHeightPx": 72,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 266,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 12,
+        "manualChinY": 84,
+        "manualSoleY": 248,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Requiem-adagas-combo-vermelha",
+      "file": "Requiem-adagas-combo-vermelha-coerencia-v4-olhos.png",
+      "sha256": "9cf21a754df361fffb8a4e026be1b7000d4c66474fd14f7b89949e918b03a4b3",
+      "calibration": {
+        "bodyHeightPx": 237,
+        "headHeightPx": 72,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 266,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 12,
+        "manualChinY": 84,
+        "manualSoleY": 249,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Requiem-corrente-combo-branca",
+      "file": "Requiem-corrente-combo-branca-coerencia-v4-olhos.png",
+      "sha256": "16f826be54090ea972dbbad0642564030b469964d6bc13053180841b6b64ec8b",
+      "calibration": {
+        "bodyHeightPx": 236,
+        "headHeightPx": 75,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 266,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 27,
+        "manualChinY": 102,
+        "manualSoleY": 263,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Requiem-corrente-combo-roxa",
+      "file": "Requiem-corrente-combo-roxa-coerencia-v4-olhos.png",
+      "sha256": "67fcfb3a215bc7a3a8ba18ca992384f638988aadb496a1c25912dc9714afaa98",
+      "calibration": {
+        "bodyHeightPx": 225,
+        "headHeightPx": 68,
+        "guardFrame": 1,
+        "targetBodyHeightPx": 266,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 36,
+        "manualChinY": 104,
+        "manualSoleY": 261,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Requiem-corrente-combo-vermelha",
+      "file": "Requiem-corrente-combo-vermelha-coerencia-v4-olhos.png",
+      "sha256": "dd5735fec6544ef27a7403148f1dd7bf6c070ff7cafaa376ac1dfd5d5b4e588f",
+      "calibration": {
+        "bodyHeightPx": 232,
+        "headHeightPx": 73,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 266,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 28,
+        "manualChinY": 101,
+        "manualSoleY": 260,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Requiem-katana-combo-branca",
+      "file": "Requiem-katana-combo-branca-coerencia-v4-olhos.png",
+      "sha256": "a2055d74f605eb3078c21be74ec7cf17c1a3a00dc457297746018131a9c2a2f9",
+      "calibration": {
+        "bodyHeightPx": 224,
+        "headHeightPx": 68,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 266,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 12,
+        "manualChinY": 80,
+        "manualSoleY": 236,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Requiem-katana-combo-roxa",
+      "file": "Requiem-katana-combo-roxa-coerencia-v4-olhos.png",
+      "sha256": "be886c2116c991cc33f480d41527dba5d99b6441e44799a91c75252e6ddb6b64",
+      "calibration": {
+        "bodyHeightPx": 216,
+        "headHeightPx": 67,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 266,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 20,
+        "manualChinY": 87,
+        "manualSoleY": 236,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Requiem-katana-combo-vermelha",
+      "file": "Requiem-katana-combo-vermelha-coerencia-v4-olhos.png",
+      "sha256": "12f08bdc3e87d1855458379a6c899a18fbe8b6e9fe5df7e1ae2ca618050b76ce",
+      "calibration": {
+        "bodyHeightPx": 222,
+        "headHeightPx": 69,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 266,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 11,
+        "manualChinY": 80,
+        "manualSoleY": 233,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Rock-adagas-combo-branca",
+      "file": "Rock-adagas-combo-branca-coerencia-v4-olhos.png",
+      "sha256": "b1fe635af8e56fce2fb87c6b06c4c8ca071c22432a518e5b1082db8c678331e7",
+      "calibration": {
+        "bodyHeightPx": 249,
+        "headHeightPx": 75,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 278,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 14,
+        "manualChinY": 89,
+        "manualSoleY": 263,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Rock-adagas-combo-roxa",
+      "file": "Rock-adagas-combo-roxa-coerencia-v4-olhos.png",
+      "sha256": "1e859db45c8df00cff382d79a65ca4da5adb3b6f13bf4049d49d8d7cd758b653",
+      "calibration": {
+        "bodyHeightPx": 247,
+        "headHeightPx": 75,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 278,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 13,
+        "manualChinY": 88,
+        "manualSoleY": 260,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Rock-adagas-combo-vermelha",
+      "file": "Rock-adagas-combo-vermelha-coerencia-v4-olhos.png",
+      "sha256": "6244130ca16e210062ae2bf04481a7b64c4f863ec7408acc31f329c2366757e5",
+      "calibration": {
+        "bodyHeightPx": 251,
+        "headHeightPx": 77,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 278,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 10,
+        "manualChinY": 87,
+        "manualSoleY": 261,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Rock-cavaleiro-combo-branca",
+      "file": "Rock-cavaleiro-combo-branca-coerencia-v4-olhos.png",
+      "sha256": "a047c8159b879ce03874f3177559be699d0ab8eb8651de3db72c2d7e85716b82",
+      "calibration": {
+        "bodyHeightPx": 234,
+        "headHeightPx": 73,
+        "guardFrame": 2,
+        "targetBodyHeightPx": 278,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 42,
+        "manualChinY": 115,
+        "manualSoleY": 276,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Rock-cavaleiro-combo-roxa",
+      "file": "Rock-cavaleiro-combo-roxa-coerencia-v4-olhos.png",
+      "sha256": "0d252828bc1bc36fde236497463f49c116c7cab34fe61256b2dd3ec3a453816e",
+      "calibration": {
+        "bodyHeightPx": 233,
+        "headHeightPx": 75,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 278,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 40,
+        "manualChinY": 115,
+        "manualSoleY": 273,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Rock-cavaleiro-combo-vermelha",
+      "file": "Rock-cavaleiro-combo-vermelha-coerencia-v4-olhos.png",
+      "sha256": "a7520b61ff33da5368ed522dc6685ccd705fca38cc06976406949044da18ca06",
+      "calibration": {
+        "bodyHeightPx": 237,
+        "headHeightPx": 77,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 278,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 35,
+        "manualChinY": 112,
+        "manualSoleY": 272,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Rock-corrente-combo-branca",
+      "file": "Rock-corrente-combo-branca-coerencia-v4-olhos.png",
+      "sha256": "c6919c447812dcdcc9c76df9179c0f717d4bf066a5f37a338136050eda67c6e0",
+      "calibration": {
+        "bodyHeightPx": 239,
+        "headHeightPx": 69,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 278,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 43,
+        "manualChinY": 112,
+        "manualSoleY": 282,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Rock-corrente-combo-roxa",
+      "file": "Rock-corrente-combo-roxa-coerencia-v4-olhos.png",
+      "sha256": "ea09f328eec79c95bbd08b72f9b546eb12beacf8dfa1fd8298222fe1323c550b",
+      "calibration": {
+        "bodyHeightPx": 247,
+        "headHeightPx": 76,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 278,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 35,
+        "manualChinY": 111,
+        "manualSoleY": 282,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Rock-corrente-combo-vermelha",
+      "file": "Rock-corrente-combo-vermelha-coerencia-v4-olhos.png",
+      "sha256": "e2befa6f3c26a4a3a69d6817cd0efa50acd09ca7ac01f47faf4b02946925305d",
+      "calibration": {
+        "bodyHeightPx": 247,
+        "headHeightPx": 76,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 278,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 35,
+        "manualChinY": 111,
+        "manualSoleY": 282,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Rock-katana-combo-branca",
+      "file": "Rock-katana-combo-branca-coerencia-v4-olhos.png",
+      "sha256": "657a3fa1cd3257d302e434ed5021d52a724baccc2ce7d57212524f365ab0137e",
+      "calibration": {
+        "bodyHeightPx": 231,
+        "headHeightPx": 70,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 278,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 11,
+        "manualChinY": 81,
+        "manualSoleY": 242,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Rock-katana-combo-roxa",
+      "file": "Rock-katana-combo-roxa-coerencia-v4-olhos.png",
+      "sha256": "9388da8be7aa7940558e460f3ecffe56c37f2cc4e341875311710e58bb685545",
+      "calibration": {
+        "bodyHeightPx": 234,
+        "headHeightPx": 71,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 278,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 10,
+        "manualChinY": 81,
+        "manualSoleY": 244,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    },
+    {
+      "id": "Rock-katana-combo-vermelha",
+      "file": "Rock-katana-combo-vermelha-coerencia-v4-olhos.png",
+      "sha256": "2ddc0fc7e2b531e8e61f28d92b08cc426957ebc3d660d71b55b6dd988c2ed1c4",
+      "calibration": {
+        "bodyHeightPx": 232,
+        "headHeightPx": 70,
+        "guardFrame": 0,
+        "targetBodyHeightPx": 278,
+        "referenceFile": "../referencia-original.png",
+        "manualCrownY": 11,
+        "manualChinY": 81,
+        "manualSoleY": 243,
+        "notes": "Manual neutral crown/chin/full boot outline marks on intact figure. One constant whole-sheet scale; no per-frame rescale or weapon fit."
+      }
+    }
+  ]
+}

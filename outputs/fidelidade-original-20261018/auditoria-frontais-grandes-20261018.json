@@ -1,0 +1,1477 @@
+{
+  "scope": "Only eight large frontal sheets; full source images inspected, no source pixels modified.",
+  "method": "Manual approximate chin/belt landmarks, with alpha>=128 whole-figure identification. Crown and sole follow the intact connected body; no source extraction or anatomical assembly.",
+  "landmarkUncertaintyPx": 3,
+  "reference": "referencia-original.png",
+  "referenceSize": [
+    289,
+    624
+  ],
+  "references": {
+    "Requiem": {
+      "crownY": 24,
+      "chinY": 101,
+      "beltY": 165,
+      "soleY": 289,
+      "bodyHeightPx": 265,
+      "headHeightPx": 77,
+      "headWidthPx": 102
+    },
+    "Rock": {
+      "crownY": 334,
+      "chinY": 416,
+      "beltY": 492,
+      "soleY": 604,
+      "bodyHeightPx": 270,
+      "headHeightPx": 82,
+      "headWidthPx": 101
+    }
+  },
+  "sourcePNGsUnchanged": true,
+  "productionImported": false,
+  "visualApproval": false,
+  "assets": [
+    {
+      "skin": "Requiem",
+      "form": "normal",
+      "sourcePath": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-f5a5c874-204e-4beb-99ea-1ef7c61d59bb.png",
+      "sha256": "31decfbaeb31daf8794411a03083446bf406122a8558385c778dd799bbff83dc",
+      "size": [
+        1536,
+        1024
+      ],
+      "rows": 2,
+      "columns": 4,
+      "figures": 8,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentPercent": 61.745643615722656,
+      "sourceEdgeFrames": [],
+      "wholeFigures": [
+        {
+          "index": 0,
+          "rect": [
+            37,
+            66,
+            357,
+            496
+          ],
+          "extentHeightPx": 426,
+          "anchor": [
+            186.17424242424244,
+            494
+          ]
+        },
+        {
+          "index": 1,
+          "rect": [
+            393,
+            62,
+            706,
+            488
+          ],
+          "extentHeightPx": 422,
+          "anchor": [
+            607.5243902439024,
+            486
+          ]
+        },
+        {
+          "index": 2,
+          "rect": [
+            766,
+            64,
+            1081,
+            496
+          ],
+          "extentHeightPx": 428,
+          "anchor": [
+            924.2304347826087,
+            494
+          ]
+        },
+        {
+          "index": 3,
+          "rect": [
+            1149,
+            65,
+            1457,
+            476
+          ],
+          "extentHeightPx": 407,
+          "anchor": [
+            1300.46875,
+            474
+          ]
+        },
+        {
+          "index": 4,
+          "rect": [
+            36,
+            557,
+            357,
+            980
+          ],
+          "extentHeightPx": 419,
+          "anchor": [
+            182.2263157894737,
+            978
+          ]
+        },
+        {
+          "index": 5,
+          "rect": [
+            393,
+            545,
+            707,
+            967
+          ],
+          "extentHeightPx": 418,
+          "anchor": [
+            614.328947368421,
+            965
+          ]
+        },
+        {
+          "index": 6,
+          "rect": [
+            765,
+            552,
+            1085,
+            975
+          ],
+          "extentHeightPx": 419,
+          "anchor": [
+            923.2590361445783,
+            973
+          ]
+        },
+        {
+          "index": 7,
+          "rect": [
+            1149,
+            546,
+            1457,
+            970
+          ],
+          "extentHeightPx": 420,
+          "anchor": [
+            1308.3235294117646,
+            968
+          ]
+        }
+      ],
+      "landmarks": {
+        "0": {
+          "pose": "Walking contact with one boot advanced",
+          "crownY": 68,
+          "chinY": 184,
+          "beltY": 275,
+          "soleY": 494,
+          "headCenterX": 230,
+          "bodyHeightPx": 426,
+          "headHeightPx": 116,
+          "headWidthPx": 166,
+          "headBodyRatio": 0.27230046948356806,
+          "headWidthBodyRatio": 0.38967136150234744,
+          "beltFraction": 0.4859154929577465
+        },
+        "3": {
+          "pose": "Closest available neutral two-foot support; recommended scale guard",
+          "crownY": 67,
+          "chinY": 184,
+          "beltY": 275,
+          "soleY": 474,
+          "headCenterX": 1335,
+          "bodyHeightPx": 407,
+          "headHeightPx": 117,
+          "headWidthPx": 165,
+          "headBodyRatio": 0.28746928746928746,
+          "headWidthBodyRatio": 0.40540540540540543,
+          "beltFraction": 0.5110565110565111
+        }
+      },
+      "calibration": {
+        "bodyHeightPx": 407,
+        "targetBodyHeightPx": 265,
+        "headHeightPx": 117,
+        "referenceHeadRatio": 0.29056603773584905,
+        "guardFrame": 3,
+        "referenceFile": "referencia-original.png",
+        "notes": "Approximate manual crown/chin/belt/sole registration on neutral frame3; frame0 has an advanced boot. No weapon bbox normalization. Source unchanged; candidate preview, not approval."
+      },
+      "guardHeadRatioDelta": -0.0030967502665615876,
+      "guardHeadWidthRelativeDelta": 0.05325914149443567,
+      "technicalPass": true,
+      "visualCandidateStatus": "Candidate for silent preview; no new approval",
+      "observations": [
+        "Figure 0 is walking, not a neutral guard.",
+        "Frame count and valid alpha do not prove a natural walk cycle or visual fidelity."
+      ]
+    },
+    {
+      "skin": "Rock",
+      "form": "normal",
+      "sourcePath": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-d970723d-828d-4a47-b886-3021bc8b18a3.png",
+      "sha256": "602d0c84bc35ad7bae504561c31b09d20cb7429e72abe08d602bda0054cc1ebe",
+      "size": [
+        1536,
+        1024
+      ],
+      "rows": 2,
+      "columns": 4,
+      "figures": 8,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentPercent": 59.13410186767578,
+      "sourceEdgeFrames": [],
+      "wholeFigures": [
+        {
+          "index": 0,
+          "rect": [
+            32,
+            64,
+            353,
+            497
+          ],
+          "extentHeightPx": 429,
+          "anchor": [
+            185.2348484848485,
+            495
+          ]
+        },
+        {
+          "index": 1,
+          "rect": [
+            390,
+            61,
+            710,
+            492
+          ],
+          "extentHeightPx": 427,
+          "anchor": [
+            609.6785714285714,
+            490
+          ]
+        },
+        {
+          "index": 2,
+          "rect": [
+            762,
+            62,
+            1085,
+            497
+          ],
+          "extentHeightPx": 431,
+          "anchor": [
+            922.7619047619048,
+            495
+          ]
+        },
+        {
+          "index": 3,
+          "rect": [
+            1143,
+            62,
+            1457,
+            480
+          ],
+          "extentHeightPx": 414,
+          "anchor": [
+            1301.4156626506024,
+            478
+          ]
+        },
+        {
+          "index": 4,
+          "rect": [
+            33,
+            553,
+            354,
+            979
+          ],
+          "extentHeightPx": 422,
+          "anchor": [
+            183.82478632478632,
+            977
+          ]
+        },
+        {
+          "index": 5,
+          "rect": [
+            389,
+            542,
+            707,
+            972
+          ],
+          "extentHeightPx": 426,
+          "anchor": [
+            615.8064516129032,
+            970
+          ]
+        },
+        {
+          "index": 6,
+          "rect": [
+            760,
+            549,
+            1084,
+            978
+          ],
+          "extentHeightPx": 425,
+          "anchor": [
+            920.7260869565217,
+            976
+          ]
+        },
+        {
+          "index": 7,
+          "rect": [
+            1143,
+            544,
+            1457,
+            972
+          ],
+          "extentHeightPx": 424,
+          "anchor": [
+            1308.39,
+            970
+          ]
+        }
+      ],
+      "landmarks": {
+        "0": {
+          "pose": "Walking contact with one boot advanced",
+          "crownY": 66,
+          "chinY": 184,
+          "beltY": 276,
+          "soleY": 495,
+          "headCenterX": 230,
+          "bodyHeightPx": 429,
+          "headHeightPx": 118,
+          "headWidthPx": 173,
+          "headBodyRatio": 0.27505827505827507,
+          "headWidthBodyRatio": 0.40326340326340326,
+          "beltFraction": 0.48951048951048953
+        },
+        "3": {
+          "pose": "Closest available neutral two-foot support; recommended scale guard",
+          "crownY": 64,
+          "chinY": 184,
+          "beltY": 276,
+          "soleY": 478,
+          "headCenterX": 1336,
+          "bodyHeightPx": 414,
+          "headHeightPx": 120,
+          "headWidthPx": 172,
+          "headBodyRatio": 0.2898550724637681,
+          "headWidthBodyRatio": 0.41545893719806765,
+          "beltFraction": 0.5120772946859904
+        }
+      },
+      "calibration": {
+        "bodyHeightPx": 414,
+        "targetBodyHeightPx": 270,
+        "headHeightPx": 120,
+        "referenceHeadRatio": 0.3037037037037037,
+        "guardFrame": 3,
+        "referenceFile": "referencia-original.png",
+        "notes": "Approximate manual crown/chin/belt/sole registration on neutral frame3; frame0 has an advanced boot. No weapon bbox normalization. Source unchanged; candidate preview, not approval."
+      },
+      "guardHeadRatioDelta": -0.013848631239935572,
+      "guardHeadWidthRelativeDelta": 0.11063280241067597,
+      "technicalPass": true,
+      "visualCandidateStatus": "Candidate for silent preview; no new approval",
+      "observations": [
+        "Figure 0 is walking, not a neutral guard.",
+        "Frame count and valid alpha do not prove a natural walk cycle or visual fidelity."
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "form": "vermelha",
+      "sourcePath": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-e0a52849-9c18-4c0a-b93f-d99ee3c82aac.png",
+      "sha256": "567dc679a2f58bf837dd8d3b00d834f82c6a3952c233566b68fe6574fc444793",
+      "size": [
+        1536,
+        1024
+      ],
+      "rows": 2,
+      "columns": 4,
+      "figures": 8,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentPercent": 59.27880605061849,
+      "sourceEdgeFrames": [],
+      "wholeFigures": [
+        {
+          "index": 0,
+          "rect": [
+            32,
+            57,
+            360,
+            496
+          ],
+          "extentHeightPx": 435,
+          "anchor": [
+            183.3803418803419,
+            494
+          ]
+        },
+        {
+          "index": 1,
+          "rect": [
+            388,
+            56,
+            714,
+            489
+          ],
+          "extentHeightPx": 429,
+          "anchor": [
+            609.1969696969697,
+            487
+          ]
+        },
+        {
+          "index": 2,
+          "rect": [
+            761,
+            57,
+            1088,
+            496
+          ],
+          "extentHeightPx": 435,
+          "anchor": [
+            924.1728971962617,
+            494
+          ]
+        },
+        {
+          "index": 3,
+          "rect": [
+            1140,
+            57,
+            1463,
+            481
+          ],
+          "extentHeightPx": 420,
+          "anchor": [
+            1299.8846153846155,
+            479
+          ]
+        },
+        {
+          "index": 4,
+          "rect": [
+            31,
+            532,
+            364,
+            978
+          ],
+          "extentHeightPx": 442,
+          "anchor": [
+            183.95263157894738,
+            976
+          ]
+        },
+        {
+          "index": 5,
+          "rect": [
+            388,
+            532,
+            716,
+            969
+          ],
+          "extentHeightPx": 433,
+          "anchor": [
+            619.8018867924528,
+            967
+          ]
+        },
+        {
+          "index": 6,
+          "rect": [
+            755,
+            536,
+            1090,
+            976
+          ],
+          "extentHeightPx": 436,
+          "anchor": [
+            919.1732673267327,
+            974
+          ]
+        },
+        {
+          "index": 7,
+          "rect": [
+            1139,
+            534,
+            1463,
+            971
+          ],
+          "extentHeightPx": 433,
+          "anchor": [
+            1308.3255813953488,
+            969
+          ]
+        }
+      ],
+      "landmarks": {
+        "0": {
+          "pose": "Walking contact with one boot advanced",
+          "crownY": 59,
+          "chinY": 180,
+          "beltY": 270,
+          "soleY": 494,
+          "headCenterX": 231,
+          "bodyHeightPx": 435,
+          "headHeightPx": 121,
+          "headWidthPx": 173,
+          "headBodyRatio": 0.27816091954022987,
+          "headWidthBodyRatio": 0.39770114942528734,
+          "beltFraction": 0.4850574712643678
+        },
+        "3": {
+          "pose": "Closest available neutral two-foot support; recommended scale guard",
+          "crownY": 59,
+          "chinY": 181,
+          "beltY": 270,
+          "soleY": 479,
+          "headCenterX": 1336,
+          "bodyHeightPx": 420,
+          "headHeightPx": 122,
+          "headWidthPx": 175,
+          "headBodyRatio": 0.2904761904761905,
+          "headWidthBodyRatio": 0.4166666666666667,
+          "beltFraction": 0.5023809523809524
+        }
+      },
+      "calibration": {
+        "bodyHeightPx": 420,
+        "targetBodyHeightPx": 265,
+        "headHeightPx": 122,
+        "referenceHeadRatio": 0.29056603773584905,
+        "guardFrame": 3,
+        "referenceFile": "referencia-original.png",
+        "notes": "Approximate manual crown/chin/belt/sole registration on neutral frame3; frame0 has an advanced boot. No weapon bbox normalization. Source unchanged; candidate preview, not approval."
+      },
+      "guardHeadRatioDelta": -8.984725965854867e-05,
+      "guardHeadWidthRelativeDelta": 0.08251633986928097,
+      "technicalPass": true,
+      "visualCandidateStatus": "Candidate for silent preview; no new approval",
+      "observations": [
+        "Figure 0 is walking, not a neutral guard.",
+        "Frame count and valid alpha do not prove a natural walk cycle or visual fidelity."
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "form": "roxa",
+      "sourcePath": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-7be6b11c-e5f6-4ca8-8e0c-cdce1b6611bb.png",
+      "sha256": "47bc3dcd813a1421685f256a27d668de8c618127e1a459e6af6e3bd4ef1884a3",
+      "size": [
+        1536,
+        1024
+      ],
+      "rows": 2,
+      "columns": 4,
+      "figures": 8,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentPercent": 60.39358774820963,
+      "sourceEdgeFrames": [],
+      "wholeFigures": [
+        {
+          "index": 0,
+          "rect": [
+            33,
+            65,
+            360,
+            498
+          ],
+          "extentHeightPx": 429,
+          "anchor": [
+            184.1829268292683,
+            496
+          ]
+        },
+        {
+          "index": 1,
+          "rect": [
+            389,
+            62,
+            710,
+            490
+          ],
+          "extentHeightPx": 424,
+          "anchor": [
+            608.2391304347826,
+            488
+          ]
+        },
+        {
+          "index": 2,
+          "rect": [
+            763,
+            63,
+            1087,
+            498
+          ],
+          "extentHeightPx": 431,
+          "anchor": [
+            923.6596638655462,
+            496
+          ]
+        },
+        {
+          "index": 3,
+          "rect": [
+            1145,
+            64,
+            1462,
+            479
+          ],
+          "extentHeightPx": 411,
+          "anchor": [
+            1301.1024096385543,
+            477
+          ]
+        },
+        {
+          "index": 4,
+          "rect": [
+            32,
+            555,
+            361,
+            980
+          ],
+          "extentHeightPx": 421,
+          "anchor": [
+            182.48181818181817,
+            978
+          ]
+        },
+        {
+          "index": 5,
+          "rect": [
+            389,
+            544,
+            710,
+            970
+          ],
+          "extentHeightPx": 422,
+          "anchor": [
+            614.1379310344828,
+            968
+          ]
+        },
+        {
+          "index": 6,
+          "rect": [
+            762,
+            550,
+            1089,
+            976
+          ],
+          "extentHeightPx": 422,
+          "anchor": [
+            922.304347826087,
+            974
+          ]
+        },
+        {
+          "index": 7,
+          "rect": [
+            1145,
+            545,
+            1462,
+            971
+          ],
+          "extentHeightPx": 422,
+          "anchor": [
+            1308.8008849557523,
+            969
+          ]
+        }
+      ],
+      "landmarks": {
+        "0": {
+          "pose": "Walking contact with one boot advanced",
+          "crownY": 67,
+          "chinY": 184,
+          "beltY": 274,
+          "soleY": 496,
+          "headCenterX": 230,
+          "bodyHeightPx": 429,
+          "headHeightPx": 117,
+          "headWidthPx": 169,
+          "headBodyRatio": 0.2727272727272727,
+          "headWidthBodyRatio": 0.3939393939393939,
+          "beltFraction": 0.4825174825174825
+        },
+        "3": {
+          "pose": "Closest available neutral two-foot support; recommended scale guard",
+          "crownY": 66,
+          "chinY": 184,
+          "beltY": 274,
+          "soleY": 477,
+          "headCenterX": 1338,
+          "bodyHeightPx": 411,
+          "headHeightPx": 118,
+          "headWidthPx": 169,
+          "headBodyRatio": 0.2871046228710462,
+          "headWidthBodyRatio": 0.41119221411192214,
+          "beltFraction": 0.5060827250608273
+        }
+      },
+      "calibration": {
+        "bodyHeightPx": 411,
+        "targetBodyHeightPx": 265,
+        "headHeightPx": 118,
+        "referenceHeadRatio": 0.29056603773584905,
+        "guardFrame": 3,
+        "referenceFile": "referencia-original.png",
+        "notes": "Approximate manual crown/chin/belt/sole registration on neutral frame3; frame0 has an advanced boot. No weapon bbox normalization. Source unchanged; candidate preview, not approval."
+      },
+      "guardHeadRatioDelta": -0.0034614148648028364,
+      "guardHeadWidthRelativeDelta": 0.0682934974476408,
+      "technicalPass": true,
+      "visualCandidateStatus": "Candidate for silent preview; no new approval",
+      "observations": [
+        "Figure 0 is walking, not a neutral guard.",
+        "Frame count and valid alpha do not prove a natural walk cycle or visual fidelity."
+      ]
+    },
+    {
+      "skin": "Requiem",
+      "form": "branca",
+      "sourcePath": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-1a7b08f0-183d-452c-b849-4d9e84557c81.png",
+      "sha256": "3264da35665c2bf57c55469e076b160ef20f7d0b5181182a1635e9b19596d8cc",
+      "size": [
+        1536,
+        1024
+      ],
+      "rows": 2,
+      "columns": 4,
+      "figures": 8,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentPercent": 56.348609924316406,
+      "sourceEdgeFrames": [],
+      "wholeFigures": [
+        {
+          "index": 0,
+          "rect": [
+            22,
+            45,
+            356,
+            494
+          ],
+          "extentHeightPx": 445,
+          "anchor": [
+            178.30769230769232,
+            492
+          ]
+        },
+        {
+          "index": 1,
+          "rect": [
+            386,
+            45,
+            728,
+            488
+          ],
+          "extentHeightPx": 439,
+          "anchor": [
+            616.6063829787234,
+            486
+          ]
+        },
+        {
+          "index": 2,
+          "rect": [
+            772,
+            45,
+            1114,
+            493
+          ],
+          "extentHeightPx": 444,
+          "anchor": [
+            940.2863247863248,
+            491
+          ]
+        },
+        {
+          "index": 3,
+          "rect": [
+            1163,
+            46,
+            1498,
+            478
+          ],
+          "extentHeightPx": 428,
+          "anchor": [
+            1325.1857142857143,
+            476
+          ]
+        },
+        {
+          "index": 4,
+          "rect": [
+            23,
+            545,
+            357,
+            979
+          ],
+          "extentHeightPx": 430,
+          "anchor": [
+            177.25892857142858,
+            977
+          ]
+        },
+        {
+          "index": 5,
+          "rect": [
+            393,
+            543,
+            725,
+            975
+          ],
+          "extentHeightPx": 428,
+          "anchor": [
+            621.9561403508771,
+            973
+          ]
+        },
+        {
+          "index": 6,
+          "rect": [
+            770,
+            540,
+            1111,
+            975
+          ],
+          "extentHeightPx": 431,
+          "anchor": [
+            936.3527131782946,
+            973
+          ]
+        },
+        {
+          "index": 7,
+          "rect": [
+            1161,
+            544,
+            1496,
+            975
+          ],
+          "extentHeightPx": 427,
+          "anchor": [
+            1335.2303370786517,
+            973
+          ]
+        }
+      ],
+      "landmarks": {
+        "0": {
+          "pose": "Walking contact with one boot advanced",
+          "crownY": 47,
+          "chinY": 169,
+          "beltY": 261,
+          "soleY": 492,
+          "headCenterX": 222,
+          "bodyHeightPx": 445,
+          "headHeightPx": 122,
+          "headWidthPx": 176,
+          "headBodyRatio": 0.27415730337078653,
+          "headWidthBodyRatio": 0.3955056179775281,
+          "beltFraction": 0.48089887640449436
+        },
+        "3": {
+          "pose": "Closest available neutral two-foot support; recommended scale guard",
+          "crownY": 48,
+          "chinY": 169,
+          "beltY": 261,
+          "soleY": 476,
+          "headCenterX": 1366,
+          "bodyHeightPx": 428,
+          "headHeightPx": 121,
+          "headWidthPx": 174,
+          "headBodyRatio": 0.2827102803738318,
+          "headWidthBodyRatio": 0.40654205607476634,
+          "beltFraction": 0.4976635514018692
+        }
+      },
+      "calibration": {
+        "bodyHeightPx": 428,
+        "targetBodyHeightPx": 265,
+        "headHeightPx": 121,
+        "referenceHeadRatio": 0.29056603773584905,
+        "guardFrame": 3,
+        "referenceFile": "referencia-original.png",
+        "notes": "Approximate manual crown/chin/belt/sole registration on neutral frame3; frame0 has an advanced boot. No weapon bbox normalization. Source unchanged; candidate preview, not approval."
+      },
+      "guardHeadRatioDelta": -0.007855757362017268,
+      "guardHeadWidthRelativeDelta": 0.056212204507971375,
+      "technicalPass": true,
+      "visualCandidateStatus": "Conditional: white crystals not visible",
+      "observations": [
+        "Figure 0 is walking, not a neutral guard.",
+        "Frame count and valid alpha do not prove a natural walk cycle or visual fidelity.",
+        "No clear protruding shoulder/wrist crystals visible, unlike the red/violet sheets; requires correction if crystals are mandatory in Absolute form."
+      ]
+    },
+    {
+      "skin": "Rock",
+      "form": "vermelha",
+      "sourcePath": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-ed9ee675-3af2-451a-8ce2-f691e91c99f6.png",
+      "sha256": "37326c9e51b11be64a80c0d59d295932cf48a75053185a72135d0cda8d9edfaa",
+      "size": [
+        1536,
+        1024
+      ],
+      "rows": 2,
+      "columns": 4,
+      "figures": 8,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentPercent": 59.053357442220054,
+      "sourceEdgeFrames": [],
+      "wholeFigures": [
+        {
+          "index": 0,
+          "rect": [
+            16,
+            35,
+            355,
+            493
+          ],
+          "extentHeightPx": 454,
+          "anchor": [
+            179.1917808219178,
+            491
+          ]
+        },
+        {
+          "index": 1,
+          "rect": [
+            385,
+            33,
+            728,
+            488
+          ],
+          "extentHeightPx": 451,
+          "anchor": [
+            624.9134615384615,
+            486
+          ]
+        },
+        {
+          "index": 2,
+          "rect": [
+            750,
+            34,
+            1096,
+            493
+          ],
+          "extentHeightPx": 455,
+          "anchor": [
+            926.4421487603306,
+            491
+          ]
+        },
+        {
+          "index": 3,
+          "rect": [
+            1135,
+            35,
+            1473,
+            483
+          ],
+          "extentHeightPx": 444,
+          "anchor": [
+            1305.1082474226805,
+            481
+          ]
+        },
+        {
+          "index": 4,
+          "rect": [
+            15,
+            527,
+            358,
+            980
+          ],
+          "extentHeightPx": 449,
+          "anchor": [
+            179.44827586206895,
+            978
+          ]
+        },
+        {
+          "index": 5,
+          "rect": [
+            386,
+            528,
+            726,
+            979
+          ],
+          "extentHeightPx": 447,
+          "anchor": [
+            629.1842105263158,
+            977
+          ]
+        },
+        {
+          "index": 6,
+          "rect": [
+            752,
+            527,
+            1098,
+            982
+          ],
+          "extentHeightPx": 451,
+          "anchor": [
+            924.6521739130435,
+            980
+          ]
+        },
+        {
+          "index": 7,
+          "rect": [
+            1133,
+            526,
+            1475,
+            978
+          ],
+          "extentHeightPx": 448,
+          "anchor": [
+            1311.4285714285713,
+            976
+          ]
+        }
+      ],
+      "landmarks": {
+        "0": {
+          "pose": "Walking contact with one boot advanced",
+          "crownY": 37,
+          "chinY": 165,
+          "beltY": 259,
+          "soleY": 491,
+          "headCenterX": 226,
+          "bodyHeightPx": 454,
+          "headHeightPx": 128,
+          "headWidthPx": 189,
+          "headBodyRatio": 0.28193832599118945,
+          "headWidthBodyRatio": 0.41629955947136565,
+          "beltFraction": 0.4889867841409692
+        },
+        "3": {
+          "pose": "Closest available neutral two-foot support; recommended scale guard",
+          "crownY": 37,
+          "chinY": 166,
+          "beltY": 259,
+          "soleY": 481,
+          "headCenterX": 1344,
+          "bodyHeightPx": 444,
+          "headHeightPx": 129,
+          "headWidthPx": 188,
+          "headBodyRatio": 0.2905405405405405,
+          "headWidthBodyRatio": 0.42342342342342343,
+          "beltFraction": 0.5
+        }
+      },
+      "calibration": {
+        "bodyHeightPx": 444,
+        "targetBodyHeightPx": 270,
+        "headHeightPx": 129,
+        "referenceHeadRatio": 0.3037037037037037,
+        "guardFrame": 3,
+        "referenceFile": "referencia-original.png",
+        "notes": "Approximate manual crown/chin/belt/sole registration on neutral frame3; frame0 has an advanced boot. No weapon bbox normalization. Source unchanged; candidate preview, not approval."
+      },
+      "guardHeadRatioDelta": -0.013163163163163183,
+      "guardHeadWidthRelativeDelta": 0.13192400321113196,
+      "technicalPass": true,
+      "visualCandidateStatus": "Candidate for silent preview; no new approval",
+      "observations": [
+        "Figure 0 is walking, not a neutral guard.",
+        "Frame count and valid alpha do not prove a natural walk cycle or visual fidelity."
+      ]
+    },
+    {
+      "skin": "Rock",
+      "form": "roxa",
+      "sourcePath": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-000b5f5c-87d4-42b5-8a94-1b71b70cc0fa.png",
+      "sha256": "1c3055697832f5e1af096256f8b9c71841aa285305d3d02d30ae179d39a174cb",
+      "size": [
+        1536,
+        1024
+      ],
+      "rows": 2,
+      "columns": 4,
+      "figures": 8,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentPercent": 49.29243723551433,
+      "sourceEdgeFrames": [],
+      "wholeFigures": [
+        {
+          "index": 0,
+          "rect": [
+            17,
+            19,
+            379,
+            503
+          ],
+          "extentHeightPx": 480,
+          "anchor": [
+            188.82539682539684,
+            501
+          ]
+        },
+        {
+          "index": 1,
+          "rect": [
+            375,
+            20,
+            736,
+            495
+          ],
+          "extentHeightPx": 471,
+          "anchor": [
+            625.60101010101,
+            493
+          ]
+        },
+        {
+          "index": 2,
+          "rect": [
+            745,
+            20,
+            1108,
+            503
+          ],
+          "extentHeightPx": 479,
+          "anchor": [
+            924.8362068965517,
+            501
+          ]
+        },
+        {
+          "index": 3,
+          "rect": [
+            1127,
+            20,
+            1482,
+            485
+          ],
+          "extentHeightPx": 461,
+          "anchor": [
+            1306.3796296296296,
+            483
+          ]
+        },
+        {
+          "index": 4,
+          "rect": [
+            14,
+            521,
+            377,
+            991
+          ],
+          "extentHeightPx": 466,
+          "anchor": [
+            184.94210526315788,
+            989
+          ]
+        },
+        {
+          "index": 5,
+          "rect": [
+            383,
+            520,
+            741,
+            989
+          ],
+          "extentHeightPx": 465,
+          "anchor": [
+            636.8913043478261,
+            987
+          ]
+        },
+        {
+          "index": 6,
+          "rect": [
+            748,
+            521,
+            1109,
+            990
+          ],
+          "extentHeightPx": 465,
+          "anchor": [
+            922.9903846153846,
+            988
+          ]
+        },
+        {
+          "index": 7,
+          "rect": [
+            1128,
+            520,
+            1486,
+            989
+          ],
+          "extentHeightPx": 465,
+          "anchor": [
+            1313.9020618556701,
+            987
+          ]
+        }
+      ],
+      "landmarks": {
+        "0": {
+          "pose": "Walking contact with one boot advanced",
+          "crownY": 21,
+          "chinY": 154,
+          "beltY": 254,
+          "soleY": 501,
+          "headCenterX": 244,
+          "bodyHeightPx": 480,
+          "headHeightPx": 133,
+          "headWidthPx": 197,
+          "headBodyRatio": 0.27708333333333335,
+          "headWidthBodyRatio": 0.41041666666666665,
+          "beltFraction": 0.48541666666666666
+        },
+        "3": {
+          "pose": "Closest available neutral two-foot support; recommended scale guard",
+          "crownY": 22,
+          "chinY": 155,
+          "beltY": 254,
+          "soleY": 483,
+          "headCenterX": 1351,
+          "bodyHeightPx": 461,
+          "headHeightPx": 133,
+          "headWidthPx": 197,
+          "headBodyRatio": 0.2885032537960954,
+          "headWidthBodyRatio": 0.42733188720173537,
+          "beltFraction": 0.5032537960954447
+        }
+      },
+      "calibration": {
+        "bodyHeightPx": 461,
+        "targetBodyHeightPx": 270,
+        "headHeightPx": 133,
+        "referenceHeadRatio": 0.3037037037037037,
+        "guardFrame": 3,
+        "referenceFile": "referencia-original.png",
+        "notes": "Approximate manual crown/chin/belt/sole registration on neutral frame3; frame0 has an advanced boot. No weapon bbox normalization. Source unchanged; candidate preview, not approval."
+      },
+      "guardHeadRatioDelta": -0.015200449907608271,
+      "guardHeadWidthRelativeDelta": 0.14237237172741146,
+      "technicalPass": true,
+      "visualCandidateStatus": "Candidate for silent preview; no new approval",
+      "observations": [
+        "Figure 0 is walking, not a neutral guard.",
+        "Frame count and valid alpha do not prove a natural walk cycle or visual fidelity."
+      ]
+    },
+    {
+      "skin": "Rock",
+      "form": "branca",
+      "sourcePath": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-c62f716c-7040-4a18-bf32-ad086c712546.png",
+      "sha256": "749b79874180463e1f2b52662e4c01b3e3975eef437bc954ecd082f227e585d5",
+      "size": [
+        1536,
+        1024
+      ],
+      "rows": 2,
+      "columns": 4,
+      "figures": 8,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentPercent": 58.303324381510414,
+      "sourceEdgeFrames": [],
+      "wholeFigures": [
+        {
+          "index": 0,
+          "rect": [
+            26,
+            21,
+            370,
+            476
+          ],
+          "extentHeightPx": 451,
+          "anchor": [
+            193.45238095238096,
+            474
+          ]
+        },
+        {
+          "index": 1,
+          "rect": [
+            378,
+            21,
+            720,
+            475
+          ],
+          "extentHeightPx": 450,
+          "anchor": [
+            617.0913978494624,
+            473
+          ]
+        },
+        {
+          "index": 2,
+          "rect": [
+            742,
+            21,
+            1091,
+            479
+          ],
+          "extentHeightPx": 454,
+          "anchor": [
+            916.4067796610169,
+            477
+          ]
+        },
+        {
+          "index": 3,
+          "rect": [
+            1116,
+            21,
+            1457,
+            463
+          ],
+          "extentHeightPx": 438,
+          "anchor": [
+            1291.2924528301887,
+            461
+          ]
+        },
+        {
+          "index": 4,
+          "rect": [
+            23,
+            525,
+            370,
+            978
+          ],
+          "extentHeightPx": 449,
+          "anchor": [
+            188.0,
+            976
+          ]
+        },
+        {
+          "index": 5,
+          "rect": [
+            377,
+            525,
+            722,
+            975
+          ],
+          "extentHeightPx": 446,
+          "anchor": [
+            624.0454545454545,
+            973
+          ]
+        },
+        {
+          "index": 6,
+          "rect": [
+            741,
+            525,
+            1091,
+            978
+          ],
+          "extentHeightPx": 449,
+          "anchor": [
+            914.804347826087,
+            976
+          ]
+        },
+        {
+          "index": 7,
+          "rect": [
+            1116,
+            525,
+            1462,
+            981
+          ],
+          "extentHeightPx": 452,
+          "anchor": [
+            1297.8243243243244,
+            979
+          ]
+        }
+      ],
+      "landmarks": {
+        "0": {
+          "pose": "Walking contact with one boot advanced",
+          "crownY": 23,
+          "chinY": 151,
+          "beltY": 245,
+          "soleY": 474,
+          "headCenterX": 240,
+          "bodyHeightPx": 451,
+          "headHeightPx": 128,
+          "headWidthPx": 188,
+          "headBodyRatio": 0.2838137472283814,
+          "headWidthBodyRatio": 0.41685144124168516,
+          "beltFraction": 0.49223946784922396
+        },
+        "3": {
+          "pose": "Closest available neutral two-foot support; recommended scale guard",
+          "crownY": 23,
+          "chinY": 151,
+          "beltY": 245,
+          "soleY": 461,
+          "headCenterX": 1326,
+          "bodyHeightPx": 438,
+          "headHeightPx": 128,
+          "headWidthPx": 188,
+          "headBodyRatio": 0.2922374429223744,
+          "headWidthBodyRatio": 0.4292237442922374,
+          "beltFraction": 0.5068493150684932
+        }
+      },
+      "calibration": {
+        "bodyHeightPx": 438,
+        "targetBodyHeightPx": 270,
+        "headHeightPx": 128,
+        "referenceHeadRatio": 0.3037037037037037,
+        "guardFrame": 3,
+        "referenceFile": "referencia-original.png",
+        "notes": "Approximate manual crown/chin/belt/sole registration on neutral frame3; frame0 has an advanced boot. No weapon bbox normalization. Source unchanged; candidate preview, not approval."
+      },
+      "guardHeadRatioDelta": -0.011466260781329285,
+      "guardHeadWidthRelativeDelta": 0.147429811474298,
+      "technicalPass": true,
+      "visualCandidateStatus": "Conditional: white crystals not visible",
+      "observations": [
+        "Figure 0 is walking, not a neutral guard.",
+        "Frame count and valid alpha do not prove a natural walk cycle or visual fidelity.",
+        "No clear protruding shoulder/wrist crystals visible, unlike the red/violet sheets; requires correction if crystals are mandatory in Absolute form."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-19",
+  "method": "Actual combat-preview.js executed in Node vm with DOM and clock mocks. No browser, Unity gameplay, audio or controller.",
+  "manifestSha256": "b1ee2cb914c45d7614a7fd9e1fe495fdf612c7750c38f23bc393c3bfbaf99e24",
+  "frontendSha256": "0f786af71b782a33213efaaef9bd8150e4e4dfc35ca0e83c00f07e84f86bfc76",
+  "timelines": 32,
+  "nextFrameSteps": 647,
+  "idleSelections": 28,
+  "knightVariantTimelines": 8,
+  "availabilitySelections": 16,
+  "skinSources": 36,
+  "referenceMedian": [
+    246,
+    174,
+    130
+  ],
+  "checks": [
+    "event bounds and hit counts",
+    "frame stepping and loop",
+    "rest interval",
+    "same weapon/form idle",
+    "only available walk directions",
+    "unavailable walks disabled without weapon substitution",
+    "pause and half speed",
+    "transition clamps at900ms",
+    "both skins/all forms skin medians match original Requiem",
+    "dark/brown hair, red/violet/silver weapons, clothing and alpha unchanged in control samples"
+  ],
+  "errors": 0,
+  "visualApproval": false,
+  "productionImported": false
+}

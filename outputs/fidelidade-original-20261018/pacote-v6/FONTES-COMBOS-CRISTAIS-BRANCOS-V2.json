@@ -1,0 +1,283 @@
+{
+  "dateRecovered": "2026-10-19",
+  "generationDate": "2026-10-18",
+  "tool": "Integrated image_gen",
+  "inspection": "All seven entire sheets viewed before selection. Real alpha, dimensions, components and source edges verified. No PNG pixels edited.",
+  "promptConstructionScripts": [
+    "const files=load(\"combo_cristais_files\");\nconst base=\"C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/fidelidade-original-20261018/pacote-v6/\";\nconst jobs=files.map(file=>{\n  const [skin,weapon]=file.split(\"-\");\n  const merged=weapon===\"corrente\"&&skin===\"Requiem\"||weapon===\"cavaleiro\";\n  const outfit=skin===\"Rock\"?\"Rock keeps the SHORT SLEEVELESS black studded vest and skull/triangle shirt, BARE ARMS, cuffs, pants and boots; absolutely no coat tails, extra fabric, sleeves, skirt or sash.\":\"Requiem keeps the FULL SLEEVE LONG black coat, plain black shirt, cuff straps, pants and boots.\";\n  const equipment=weapon===\"cavaleiro\"?\"Preserve both complete saw weapons, every saw tooth and white core, and the exact original twelve melee poses plus twelve mounting/launching/riding/braking motorcycle poses. Do not redesign the motorcycle or merge/split bikes.\":weapon===\"corrente\"?\"Preserve every chain loop, the complete chain/sickle, chain-link connections, length, grip, curvature and every blade tip exactly. Do not move the weapon to fix crossings.\":weapon===\"adagas\"?\"Preserve both complete daggers, exact hand grips and occlusions in every pose; do not invent an occluded dagger or a missing hand.\":\"Preserve the complete katana blade, its exact length, edge, grip, hand placements, orientation and occlusions in all poses.\";\n  const prompt=`Use case: precise-object-edit. Edit ONLY the crystal details on the entire original ${skin} ${weapon} WHITE-FORM COMBAT SHEET. Input1 = complete EDIT TARGET; Input2 = reference ONLY for WHITE/SILVER FACETED CRYSTAL SHARDS at shoulders and wrist cuffs. Do not copy Input2 walking poses, scale, face, body or layout. Canvas and layout MUST remain exactly 1024x1536, FOUR COLUMNS by SIX ROWS, EXACTLY the same TWENTY-FOUR whole poses in identical order and positions. Change only existing shoulder/cuff stud areas into small but visibly protruding physical white/silver faceted crystals matching Input2. Gray facet borders and restrained pearl highlights make them readable, projecting slightly outside the shoulder/cuff silhouette. Use the same crystal material consistently across all 24 poses, with correct occlusion and perspective. Do not draw a crystal over a hand, face, blade or occluded arm. ${outfit} ${equipment} Freeze and preserve every original HEAD, FACE, CROWN SIZE, TORSO WIDTH, WAIST, SKIN, ARM/LEG LENGTH, MUSCLES, FINGERS, BOOT SIZE, BOOT TOE DIRECTION, pose and silhouette outside the tiny crystal additions. NO head or torso redesign, no normalization, no shrinking, no rescaling individual poses, no body-part assembly or cropped-element compositing. Preserve the existing approved long silver-white wavy hair exactly, including rear tufts to upper back in side/turned poses; never shorten it to nape and never extend to waist. Original warm peach human skin and red irises remain unchanged and neutrally lit; no white/neon/orange spill on skin. Weapons and all cores stay white/silver, never red/pink/violet. ${merged?\"The source has two existing figures connected by their overlapping pixels; preserve every whole figure at its exact source position and preserve the existing contact. Do NOT separate, relocate, delete, duplicate or invent poses to force a component count.\":\"\"} Preserve all hands, fingers, feet, facial identity, coat or vest shapes, every weapon and original gutters/border margins. No new VFX, aura, glow, afterimages, shadows, labels, grid, text or watermark. True transparent alpha0 background, keep opaque black clothing and crisp source game-raster contours. Return the entire unchanged-layout 24-pose sheet, with ONLY the physical white crystal spikes added.`;\n  return {file,skin,weapon,prompt,inputs:[base+file,base+skin+\"-frontal-grande-branca-cristais-v2.png\"],expectedSize:[1024,1536],selected:false};\n});\nstore(\"combo_cristais_jobs\",jobs);text({jobs:jobs.length,mode:\"integrated whole-sheet edits\",selected:false});\n",
+    "// @exec: {\"yield_time_ms\": 120000, \"max_output_tokens\": 1500}\nconst jobs=load(\"combo_cristais_ready\");\nconst corrections=jobs.filter(j=>[\"Requiem-katana-combo-branca.png\",\"Rock-adagas-combo-branca.png\",\"Rock-corrente-combo-branca.png\"].includes(j.file)).map(job=>{\n  const tip=job.file.startsWith(\"Requiem\")?\"One clear error to fix: pose19 (zero based, fifth row fourth column) has its katana tip touching the RIGHT canvas edge around x1023,y1234. Restore the exact original complete pose/weapon position and length from input2 so the entire blade tip has the original transparent margin, without shrinking any body or weapon. Keep head, torso, limbs, pose and all white crystals exactly as input1. Also keep the background genuinely transparent alpha0.\":\"One clear error to fix: the gray/brown empty background of input1 has nonzero alpha and connects multiple poses. Remove ONLY this background/veil and make all empty gutters and outer margins genuinely alpha0. Preserve every opaque original sprite pixel, white hair, warm peach skin, black clothing, silver weapons, white crystal spikes, all hands/boots and the precise24poses, body dimensions and placement. Keep opaque black clothing intact; do not remove dark sprite colors.\";\n  const prompt=`Use case: precise-object-edit. Input1 is the entire 1024x1536 24-pose complete crystal-edited sheet to correct. Input2 is the complete original sheet, reference ONLY for original margins, layout and preserved characters. ${tip} STRICT: preserve FOUR columns SIX rows, all TWENTY-FOUR complete source poses in identical order. Do not redesign, re-pose, normalize, scale, crop, disassemble, copy/paste parts, split merged source figures, duplicate or omit any character. This is one targeted correction of the ENTIRE sheet. Preserve all added white/silver faceted crystals at shoulders/cuffs, unchanged white upper-back hair length, skin and original ${job.skin} outfit. No new effects, neon, shadow, text/grid or painted checkerboard. Output true transparent RGBA with empty alpha0 background, complete uncut figures and original pixel dimensions.`;\n  return {...job,correctionPrompt:prompt};\n});\nstore(\"combo_cristais_corrections\",corrections);\nconst results=await Promise.allSettled(corrections.map(async job=>{\n  const result=await tools.image_gen__imagegen({prompt:job.correctionPrompt,referenced_image_paths:[job.generatedSource,job.inputs[0]],transparent_background:true});\n  const path=result.output_hint?.match(/ as (C:\\\\[^\\n]+\\.png) by default/)?.[1]??null;\n  store(\"combo_cristais_corrected_\"+job.file,{result,path,prompt:job.correctionPrompt});\n  generatedImage(result);notify({file:job.file,correctionComplete:true,path});return {file:job.file,path};\n}));\ntext(results.map((r,i)=>r.status===\"fulfilled\"?r.value:{file:corrections[i].file,error:String(r.reason)}));\n"
+  ],
+  "assets": [
+    {
+      "id": "Requiem-katana-combo-branca",
+      "file": "Requiem-katana-combo-branca-cristais-v2.png",
+      "previousFile": "Requiem-katana-combo-branca.png",
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a15143-545a-7033-b673-cd3616b25fba\\exec-c6e88f51-03cf-4beb-8473-3e5835242e9d.png",
+      "sha256": "4f5d8d449a6daaae7a80518ae2cf4545dad03d42f634df882b84c1c9077b9a12",
+      "inputFiles": [
+        "Requiem-katana-combo-branca.png",
+        "Requiem-frontal-grande-branca-cristais-v2.png"
+      ],
+      "targetedCorrection": true,
+      "rows": 6,
+      "columns": 4,
+      "figures": 24,
+      "guardFrame": 0,
+      "guardGrid": [
+        5,
+        11,
+        216,
+        232
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "zeroAlphaPixels": 815825,
+      "sourceEdgeFigurePixels": 0,
+      "selectedForPreview": true,
+      "visualApproval": false,
+      "productionImported": false,
+      "calibration": {
+        "bodyHeightPx": 221,
+        "targetBodyHeightPx": 266,
+        "guardFrame": 0,
+        "referenceFile": "../referencia-original.png",
+        "notes": "Approximate crown/full-boot outline of complete guard0, excluding weapon. One fixed scale for this entire sheet; no per-frame rescale or fit. Crystal edits preserve source poses; residual identity remains subject to visual review."
+      }
+    },
+    {
+      "id": "Requiem-adagas-combo-branca",
+      "file": "Requiem-adagas-combo-branca-cristais-v2.png",
+      "previousFile": "Requiem-adagas-combo-branca.png",
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a15143-545a-7033-b673-cd3616b25fba\\exec-f23be9ea-bf23-49dc-889d-bf3b1108e315.png",
+      "sha256": "c717db2f9e5c5a09eff06bfa4cc22208b18a881e3b6c596cdd957cfe5cf5980a",
+      "inputFiles": [
+        "Requiem-adagas-combo-branca.png",
+        "Requiem-frontal-grande-branca-cristais-v2.png"
+      ],
+      "targetedCorrection": false,
+      "rows": 6,
+      "columns": 4,
+      "figures": 24,
+      "guardFrame": 0,
+      "guardGrid": [
+        16,
+        14,
+        253,
+        247
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "zeroAlphaPixels": 797921,
+      "sourceEdgeFigurePixels": 0,
+      "selectedForPreview": true,
+      "visualApproval": false,
+      "productionImported": false,
+      "calibration": {
+        "bodyHeightPx": 233,
+        "targetBodyHeightPx": 266,
+        "guardFrame": 0,
+        "referenceFile": "../referencia-original.png",
+        "notes": "Approximate crown/full-boot outline of complete guard0, excluding weapon. One fixed scale for this entire sheet; no per-frame rescale or fit. Crystal edits preserve source poses; residual identity remains subject to visual review."
+      }
+    },
+    {
+      "id": "Requiem-corrente-combo-branca",
+      "file": "Requiem-corrente-combo-branca-cristais-v2.png",
+      "previousFile": "Requiem-corrente-combo-branca.png",
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a15143-545a-7033-b673-cd3616b25fba\\exec-f150b897-01df-41ff-87d7-e33a700c0269.png",
+      "sha256": "463988a0e17b01e0d22d3b3087cec502d53bdf6b3297352dd5886517407b81d5",
+      "inputFiles": [
+        "Requiem-corrente-combo-branca.png",
+        "Requiem-frontal-grande-branca-cristais-v2.png"
+      ],
+      "targetedCorrection": false,
+      "rows": 1,
+      "columns": 23,
+      "figures": 23,
+      "guardFrame": 0,
+      "guardGrid": [
+        18,
+        30,
+        243,
+        261
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "zeroAlphaPixels": 813429,
+      "sourceEdgeFigurePixels": 0,
+      "selectedForPreview": true,
+      "visualApproval": false,
+      "productionImported": false,
+      "calibration": {
+        "bodyHeightPx": 231,
+        "targetBodyHeightPx": 266,
+        "guardFrame": 0,
+        "referenceFile": "../referencia-original.png",
+        "notes": "Approximate crown/full-boot outline of complete guard0, excluding weapon. One fixed scale for this entire sheet; no per-frame rescale or fit. Crystal edits preserve source poses; residual identity remains subject to visual review."
+      }
+    },
+    {
+      "id": "Rock-katana-combo-branca",
+      "file": "Rock-katana-combo-branca-cristais-v2.png",
+      "previousFile": "Rock-katana-combo-branca.png",
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a15143-545a-7033-b673-cd3616b25fba\\exec-d33a2a13-fbda-431b-a63a-64d388dc06c2.png",
+      "sha256": "15ace23e47ed5456a751266f01c72d6954ed81a2c98c9f84d4327715f5bed887",
+      "inputFiles": [
+        "Rock-katana-combo-branca.png",
+        "Rock-frontal-grande-branca-cristais-v2.png"
+      ],
+      "targetedCorrection": false,
+      "rows": 6,
+      "columns": 4,
+      "figures": 24,
+      "guardFrame": 0,
+      "guardGrid": [
+        15,
+        13,
+        226,
+        241
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "zeroAlphaPixels": 913158,
+      "sourceEdgeFigurePixels": 0,
+      "selectedForPreview": true,
+      "visualApproval": false,
+      "productionImported": false,
+      "calibration": {
+        "bodyHeightPx": 228,
+        "targetBodyHeightPx": 278,
+        "guardFrame": 0,
+        "referenceFile": "../referencia-original.png",
+        "notes": "Approximate crown/full-boot outline of complete guard0, excluding weapon. One fixed scale for this entire sheet; no per-frame rescale or fit. Crystal edits preserve source poses; residual identity remains subject to visual review."
+      }
+    },
+    {
+      "id": "Rock-adagas-combo-branca",
+      "file": "Rock-adagas-combo-branca-cristais-v2.png",
+      "previousFile": "Rock-adagas-combo-branca.png",
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a15143-545a-7033-b673-cd3616b25fba\\exec-ab54f798-851b-487b-b91b-cb8bd8c7338e.png",
+      "sha256": "da49114b4feca133bceb44b2648111b56c07aadad3db0a7d120611354bd7577f",
+      "inputFiles": [
+        "Rock-adagas-combo-branca.png",
+        "Rock-frontal-grande-branca-cristais-v2.png"
+      ],
+      "targetedCorrection": true,
+      "rows": 6,
+      "columns": 4,
+      "figures": 24,
+      "guardFrame": 0,
+      "guardGrid": [
+        19,
+        18,
+        271,
+        259
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "zeroAlphaPixels": 846467,
+      "sourceEdgeFigurePixels": 0,
+      "selectedForPreview": true,
+      "visualApproval": false,
+      "productionImported": false,
+      "calibration": {
+        "bodyHeightPx": 241,
+        "targetBodyHeightPx": 278,
+        "guardFrame": 0,
+        "referenceFile": "../referencia-original.png",
+        "notes": "Approximate crown/full-boot outline of complete guard0, excluding weapon. One fixed scale for this entire sheet; no per-frame rescale or fit. Crystal edits preserve source poses; residual identity remains subject to visual review."
+      }
+    },
+    {
+      "id": "Rock-corrente-combo-branca",
+      "file": "Rock-corrente-combo-branca-cristais-v2.png",
+      "previousFile": "Rock-corrente-combo-branca.png",
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a15143-545a-7033-b673-cd3616b25fba\\exec-b7898171-0f48-41fc-9985-05deb8e1ce7c.png",
+      "sha256": "ab4124c5152f79b48bfd59269867915a5dc47d3684b33c78e23a6a0d10247134",
+      "inputFiles": [
+        "Rock-corrente-combo-branca.png",
+        "Rock-frontal-grande-branca-cristais-v2.png"
+      ],
+      "targetedCorrection": true,
+      "rows": 6,
+      "columns": 4,
+      "figures": 24,
+      "guardFrame": 0,
+      "guardGrid": [
+        17,
+        40,
+        253,
+        280
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "zeroAlphaPixels": 769916,
+      "sourceEdgeFigurePixels": 0,
+      "selectedForPreview": true,
+      "visualApproval": false,
+      "productionImported": false,
+      "calibration": {
+        "bodyHeightPx": 240,
+        "targetBodyHeightPx": 278,
+        "guardFrame": 0,
+        "referenceFile": "../referencia-original.png",
+        "notes": "Approximate crown/full-boot outline of complete guard0, excluding weapon. One fixed scale for this entire sheet; no per-frame rescale or fit. Crystal edits preserve source poses; residual identity remains subject to visual review."
+      }
+    },
+    {
+      "id": "Rock-cavaleiro-combo-branca",
+      "file": "Rock-cavaleiro-combo-branca-cristais-v2.png",
+      "previousFile": "Rock-cavaleiro-combo-branca.png",
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a15143-545a-7033-b673-cd3616b25fba\\exec-21f8d6f0-8934-44f2-b0cc-db81babbfa7d.png",
+      "sha256": "2f890c7eb6f62b0f49a1aaa1c4b29231b13f067b0f0de57bccfa005b5163b55b",
+      "inputFiles": [
+        "Rock-cavaleiro-combo-branca.png",
+        "Rock-frontal-grande-branca-cristais-v2.png"
+      ],
+      "targetedCorrection": false,
+      "rows": 1,
+      "columns": 23,
+      "figures": 23,
+      "guardFrame": 2,
+      "guardGrid": [
+        14,
+        42,
+        248,
+        276
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "zeroAlphaPixels": 700928,
+      "sourceEdgeFigurePixels": 0,
+      "selectedForPreview": true,
+      "visualApproval": false,
+      "productionImported": false,
+      "calibration": {
+        "bodyHeightPx": 231,
+        "targetBodyHeightPx": 278,
+        "guardFrame": 2,
+        "referenceFile": "../referencia-original.png",
+        "notes": "Approximate crown/full-boot outline of complete guard0, excluding weapon. One fixed scale for this entire sheet; no per-frame rescale or fit. Crystal edits preserve source poses; residual identity remains subject to visual review."
+      }
+    }
+  ],
+  "limitations": [
+    "Connected source pairs remain intact and excluded by selector, not separated.",
+    "Hair and skin visually reviewed, not proven pixel-identical to original.",
+    "Approximate guard calibration corrects screen height only; it does not prove anatomy or motion quality."
+  ]
+}

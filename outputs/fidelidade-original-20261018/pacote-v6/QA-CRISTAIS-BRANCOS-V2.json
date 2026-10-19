@@ -1,0 +1,356 @@
+{
+  "generatedAtUtc": "2026-10-19T00:39:16.549674+00:00",
+  "method": "Integrated ImageGen edit of each complete source sheet. PixelArt and imagegen skills read; complete-sheet visual inspection plus PNG/whole-component diagnostics. No body-part assembly, crop asset, resize, alpha rewrite, frontend edit, builder edit or automatic source selection.",
+  "status": "unselected visual candidates",
+  "assets": [
+    {
+      "skin": "Requiem",
+      "file": "Requiem-frontal-grande-branca-cristais-v2.png",
+      "sha256": "594a3a1652d08e9672df0ece841420831adc9709f5ca0b5f4a2f703d04883236",
+      "selected": false,
+      "visualApproval": false,
+      "productionImported": false,
+      "generationAttempts": 1,
+      "correctionAttempts": 0,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "rows": 2,
+      "columns": 4,
+      "direction": "S",
+      "action": "walk",
+      "wholeFigureCount": 8,
+      "wholeFiguresTouchingBoundary": 0,
+      "alpha": {
+        "range": [
+          0,
+          254
+        ],
+        "zeroAlphaPixels": 889437,
+        "borderMaximum": 1,
+        "borderNonzeroPixels": 1,
+        "borderPixelsAtLeast128": 0
+      },
+      "sourceOriginal": {
+        "file": "Requiem-frontal-grande-branca.png",
+        "sha256": "3264da35665c2bf57c55469e076b160ef20f7d0b5181182a1635e9b19596d8cc",
+        "unchanged": true
+      },
+      "neutralCalibration": {
+        "sourceFrame": 3,
+        "crownY": 47,
+        "soleY": 478,
+        "bodyHeightPx": 431,
+        "targetBodyHeightPx": 266,
+        "uniformRenderScale": 0.617169373549884,
+        "proposedPreviewPivot": [
+          1357,
+          478
+        ],
+        "previousBodyHeightPx": 428.0,
+        "bodyHeightDriftPercent": 0.7009345794392496,
+        "method": "Approximate manual crown-to-full-boot-outline marks on complete neutral pose3. Weapon extent excluded. Proposed metadata only; no preview or game selection changed."
+      },
+      "frames": [
+        {
+          "index": 0,
+          "direction": "S",
+          "action": "walk",
+          "rect": [
+            21,
+            44,
+            357,
+            496
+          ],
+          "componentArea": 79577,
+          "touchesExtractionEdge": false
+        },
+        {
+          "index": 1,
+          "direction": "S",
+          "action": "walk",
+          "rect": [
+            386,
+            44,
+            730,
+            490
+          ],
+          "componentArea": 77559,
+          "touchesExtractionEdge": false
+        },
+        {
+          "index": 2,
+          "direction": "S",
+          "action": "walk",
+          "rect": [
+            771,
+            44,
+            1115,
+            495
+          ],
+          "componentArea": 79595,
+          "touchesExtractionEdge": false
+        },
+        {
+          "index": 3,
+          "direction": "S",
+          "action": "walk",
+          "rect": [
+            1162,
+            45,
+            1499,
+            480
+          ],
+          "componentArea": 77669,
+          "touchesExtractionEdge": false
+        },
+        {
+          "index": 4,
+          "direction": "S",
+          "action": "walk",
+          "rect": [
+            22,
+            544,
+            358,
+            981
+          ],
+          "componentArea": 77062,
+          "touchesExtractionEdge": false
+        },
+        {
+          "index": 5,
+          "direction": "S",
+          "action": "walk",
+          "rect": [
+            392,
+            542,
+            728,
+            977
+          ],
+          "componentArea": 77682,
+          "touchesExtractionEdge": false
+        },
+        {
+          "index": 6,
+          "direction": "S",
+          "action": "walk",
+          "rect": [
+            769,
+            539,
+            1113,
+            977
+          ],
+          "componentArea": 78702,
+          "touchesExtractionEdge": false
+        },
+        {
+          "index": 7,
+          "direction": "S",
+          "action": "walk",
+          "rect": [
+            1161,
+            542,
+            1498,
+            976
+          ],
+          "componentArea": 76053,
+          "touchesExtractionEdge": false
+        }
+      ],
+      "visualInspection": {
+        "wholeSheet": true,
+        "allEightFigures": true,
+        "observations": [
+          "White/silver faceted crystals visibly project from shoulder and wrist-cuff silhouettes.",
+          "Large bodies, frontal pose order, katana side, hip chain, complete heads/hands/boots and neutral warm skin visually retained.",
+          "Requiem retains the black full-sleeve long coat and plain shirt.",
+          "Visible frontal white-hair contour and lower rear tufts retained; rear upper-back length cannot be directly certified from this frontal-only sheet."
+        ]
+      },
+      "warnings": [
+        "One or more border pixels retain alpha1; no opaque figure pixel reaches the boundary. The original sources also contained alpha1 residue. No alpha cleanup or raster post-processing was performed.",
+        "Generated edits preserve the design visually, but are not pixel-identical: neutral crown-to-sole height drift is recorded.",
+        "Rear white-hair upper-back length requires a side/back visual check; this eight-pose sheet is frontal only."
+      ]
+    },
+    {
+      "skin": "Rock",
+      "file": "Rock-frontal-grande-branca-cristais-v2.png",
+      "sha256": "6ed16bfade5bae1f2eab6eb3419ce51bebcd7c6f651449e09ce77a63af2387fb",
+      "selected": false,
+      "visualApproval": false,
+      "productionImported": false,
+      "generationAttempts": 1,
+      "correctionAttempts": 0,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "rows": 2,
+      "columns": 4,
+      "direction": "S",
+      "action": "walk",
+      "wholeFigureCount": 8,
+      "wholeFiguresTouchingBoundary": 0,
+      "alpha": {
+        "range": [
+          0,
+          254
+        ],
+        "zeroAlphaPixels": 915077,
+        "borderMaximum": 1,
+        "borderNonzeroPixels": 15,
+        "borderPixelsAtLeast128": 0
+      },
+      "sourceOriginal": {
+        "file": "Rock-frontal-grande-branca.png",
+        "sha256": "749b79874180463e1f2b52662e4c01b3e3975eef437bc954ecd082f227e585d5",
+        "unchanged": true
+      },
+      "neutralCalibration": {
+        "sourceFrame": 3,
+        "crownY": 22,
+        "soleY": 462,
+        "bodyHeightPx": 440,
+        "targetBodyHeightPx": 278,
+        "uniformRenderScale": 0.6318181818181818,
+        "proposedPreviewPivot": [
+          1319,
+          462
+        ],
+        "previousBodyHeightPx": 438.0,
+        "bodyHeightDriftPercent": 0.45662100456620447,
+        "method": "Approximate manual crown-to-full-boot-outline marks on complete neutral pose3. Weapon extent excluded. Proposed metadata only; no preview or game selection changed."
+      },
+      "frames": [
+        {
+          "index": 0,
+          "direction": "S",
+          "action": "walk",
+          "rect": [
+            24,
+            21,
+            372,
+            476
+          ],
+          "componentArea": 73048,
+          "touchesExtractionEdge": false
+        },
+        {
+          "index": 1,
+          "direction": "S",
+          "action": "walk",
+          "rect": [
+            376,
+            21,
+            721,
+            475
+          ],
+          "componentArea": 71750,
+          "touchesExtractionEdge": false
+        },
+        {
+          "index": 2,
+          "direction": "S",
+          "action": "walk",
+          "rect": [
+            742,
+            20,
+            1092,
+            479
+          ],
+          "componentArea": 74120,
+          "touchesExtractionEdge": false
+        },
+        {
+          "index": 3,
+          "direction": "S",
+          "action": "walk",
+          "rect": [
+            1115,
+            20,
+            1459,
+            464
+          ],
+          "componentArea": 72150,
+          "touchesExtractionEdge": false
+        },
+        {
+          "index": 4,
+          "direction": "S",
+          "action": "walk",
+          "rect": [
+            22,
+            524,
+            372,
+            979
+          ],
+          "componentArea": 74481,
+          "touchesExtractionEdge": false
+        },
+        {
+          "index": 5,
+          "direction": "S",
+          "action": "walk",
+          "rect": [
+            375,
+            524,
+            724,
+            975
+          ],
+          "componentArea": 75178,
+          "touchesExtractionEdge": false
+        },
+        {
+          "index": 6,
+          "direction": "S",
+          "action": "walk",
+          "rect": [
+            740,
+            524,
+            1092,
+            979
+          ],
+          "componentArea": 74949,
+          "touchesExtractionEdge": false
+        },
+        {
+          "index": 7,
+          "direction": "S",
+          "action": "walk",
+          "rect": [
+            1115,
+            524,
+            1464,
+            981
+          ],
+          "componentArea": 74633,
+          "touchesExtractionEdge": false
+        }
+      ],
+      "visualInspection": {
+        "wholeSheet": true,
+        "allEightFigures": true,
+        "observations": [
+          "White/silver faceted crystals visibly project from shoulder and wrist-cuff silhouettes.",
+          "Large bodies, frontal pose order, katana side, hip chain, complete heads/hands/boots and neutral warm skin visually retained.",
+          "Rock remains sleeveless with bare arms and no fabric added below the belt.",
+          "Visible frontal white-hair contour and lower rear tufts retained; rear upper-back length cannot be directly certified from this frontal-only sheet."
+        ]
+      },
+      "warnings": [
+        "One or more border pixels retain alpha1; no opaque figure pixel reaches the boundary. The original sources also contained alpha1 residue. No alpha cleanup or raster post-processing was performed.",
+        "Generated edits preserve the design visually, but are not pixel-identical: neutral crown-to-sole height drift is recorded.",
+        "Rear white-hair upper-back length requires a side/back visual check; this eight-pose sheet is frontal only."
+      ]
+    }
+  ],
+  "globalLimits": [
+    "Two new whole-sheet candidate PNG siblings only; all originals preserved.",
+    "Technical component/alpha checks do not prove anatomy, gait quality, identity or user approval.",
+    "No Unity Play, audio playback, browser visual QA or physical-controller testing was performed for these candidates."
+  ]
+}

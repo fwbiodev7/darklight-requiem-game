@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace Darklight
 {
-    // A bounded palette correction for the newly authored whole sprites only.
+    // Shared Requiem-rest pigment for the inventoried player source textures.
     // Original files/geometry, hair, costumes, blades and protected death stay intact.
     public static class DarklightCanonicalComplexion
     {
-        [Serializable] public sealed class Entry { public string texture;public float[] shift; }
-        [Serializable] public sealed class Data { public string reference;public Entry[] entries; }
+        [Serializable] public sealed class Entry { public string texture;public float[] shift,sourceMedian; }
+        [Serializable] public sealed class Data { public string reference;public float[] referenceMedian;public Entry[] entries; }
         static Dictionary<string,Vector4> palette;
         static readonly Dictionary<Texture,Vector4> cache=new();
         static readonly MaterialPropertyBlock block=new();

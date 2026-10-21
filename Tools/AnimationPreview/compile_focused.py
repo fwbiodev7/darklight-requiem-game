@@ -5,7 +5,7 @@ No editor launch, audio or save access. Outputs stay under project work/.
 from pathlib import Path
 import subprocess
 ROOT=Path(__file__).resolve().parents[2]
-OUT=ROOT/'work'/'game-over-validation'
+OUT=ROOT.parent/'work'/'focused-compilation'
 OUT.mkdir(parents=True,exist_ok=True)
 DOTNET=Path('C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/DotNetSdk/dotnet.exe')
 CSC=DOTNET.parent/'sdk/8.0.318/Roslyn/bincore/csc.dll'

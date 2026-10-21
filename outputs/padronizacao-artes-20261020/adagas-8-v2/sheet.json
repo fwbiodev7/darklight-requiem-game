@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "image": "sheet.png",
+  "imageSha256": "7417a6038779ab186c62cdea80fe645df862bf92d4eb658f5ca923f9df14973f",
+  "nativeSize": [
+    2048,
+    1024
+  ],
+  "pixelsPerUnit": 177.38693467336682,
+  "status": "visual-reviewed",
+  "frames": [
+    {
+      "id": "RequiemDaggersViolet8_0",
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "pivot": [
+        0.498046875,
+        0.10546875
+      ],
+      "durationMs": 120,
+      "action": "ready",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Violet"
+    },
+    {
+      "id": "RequiemDaggersViolet8_1",
+      "rect": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "pivot": [
+        0.5078125,
+        0.1015625
+      ],
+      "durationMs": 120,
+      "action": "ready",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Violet"
+    },
+    {
+      "id": "RequiemDaggersViolet8_2",
+      "rect": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "pivot": [
+        0.529296875,
+        0.10546875
+      ],
+      "durationMs": 120,
+      "action": "dodge",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Violet"
+    },
+    {
+      "id": "RequiemDaggersViolet8_3",
+      "rect": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.10546875
+      ],
+      "durationMs": 120,
+      "action": "dodge",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Violet"
+    },
+    {
+      "id": "RequiemDaggersViolet8_4",
+      "rect": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "pivot": [
+        0.478515625,
+        0.10546875
+      ],
+      "durationMs": 120,
+      "action": "ready",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Violet"
+    },
+    {
+      "id": "RequiemDaggersViolet8_5",
+      "rect": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "pivot": [
+        0.46875,
+        0.10546875
+      ],
+      "durationMs": 120,
+      "action": "ready",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Violet"
+    },
+    {
+      "id": "RequiemDaggersViolet8_6",
+      "rect": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "pivot": [
+        0.443359375,
+        0.1015625
+      ],
+      "durationMs": 120,
+      "action": "dodge",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Violet"
+    },
+    {
+      "id": "RequiemDaggersViolet8_7",
+      "rect": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "pivot": [
+        0.33984375,
+        0.10546875
+      ],
+      "durationMs": 120,
+      "action": "dodge",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Violet"
+    }
+  ],
+  "clips": [
+    {
+      "name": "ready_S",
+      "frames": [
+        "RequiemDaggersViolet8_0",
+        "RequiemDaggersViolet8_1"
+      ],
+      "loop": true
+    },
+    {
+      "name": "dodge_S",
+      "frames": [
+        "RequiemDaggersViolet8_0",
+        "RequiemDaggersViolet8_2",
+        "RequiemDaggersViolet8_3",
+        "RequiemDaggersViolet8_2",
+        "RequiemDaggersViolet8_0"
+      ],
+      "loop": false
+    },
+    {
+      "name": "ready_SW",
+      "frames": [
+        "RequiemDaggersViolet8_4",
+        "RequiemDaggersViolet8_5"
+      ],
+      "loop": true
+    },
+    {
+      "name": "dodge_SW",
+      "frames": [
+        "RequiemDaggersViolet8_4",
+        "RequiemDaggersViolet8_6",
+        "RequiemDaggersViolet8_7",
+        "RequiemDaggersViolet8_6",
+        "RequiemDaggersViolet8_4"
+      ],
+      "loop": false
+    }
+  ],
+  "notes": [
+    "Eight complete figures generated together in one sheet, as requested.",
+    "Exact source scale; whole-figure ownership only. Shared body height 1.99 world units.",
+    "Preview clips are inspection sequences; existing gameplay uses unchanged catalog phase timing."
+  ]
+}

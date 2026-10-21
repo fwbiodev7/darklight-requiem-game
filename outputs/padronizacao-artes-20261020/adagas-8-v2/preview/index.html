@@ -1,0 +1,7 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Requiem · folha de 8 sprites</title>
+<style>body{margin:0;padding:24px;background:#1b1e25;color:#eee;font:16px system-ui}h1{margin:0 0 8px;font-size:26px}p{color:#c3c7d2}a{color:#c1a1ff;margin-right:18px}button{padding:8px 14px;border:1px solid #7a648f;border-radius:6px;background:#30253d;color:#fff;cursor:pointer}img{display:block;max-width:100%;height:auto;image-rendering:pixelated;background:#30343a;margin-top:20px;border-radius:8px}</style>
+<h1>Requiem · 8 sprites de adagas</h1><p>Frente e diagonal · olhos vermelhos · mechas roxas · figuras completas.</p>
+<p><a href="preview.html">Ver animações</a><a href="folha-original-8.png" download>Baixar a folha</a><button id="native">Tamanho original</button></p>
+<img id="sheet" src="folha-original-8.png" alt="Folha com oito sprites completos da Requiem roxa, em posições de prontidão, agachamento e esquiva, de frente e em diagonal.">
+<script>const sheet=document.getElementById('sheet'),button=document.getElementById('native');let native=false;button.onclick=()=>{native=!native;sheet.style.maxWidth=native?'none':'100%';sheet.style.width=native?sheet.naturalWidth+'px':'';button.textContent=native?'Ajustar à tela':'Tamanho original'};</script></html>

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "image": "sheet.png",
+  "imageSha256": "259789cad2edb13d4ebcdbbabbd5c5583772b397b109171f4208fc8189153e9f",
+  "nativeSize": [
+    1792,
+    448
+  ],
+  "pixelsPerUnit": 110.55276381909547,
+  "status": "visual-reviewed",
+  "frames": [
+    {
+      "id": "RequiemKatanaVioletFront_0",
+      "rect": [
+        0,
+        0,
+        448,
+        448
+      ],
+      "pivot": [
+        0.5,
+        0.10714285714285714
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Violet"
+    },
+    {
+      "id": "RequiemKatanaVioletFront_1",
+      "rect": [
+        448,
+        0,
+        448,
+        448
+      ],
+      "pivot": [
+        0.5,
+        0.10714285714285714
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Violet"
+    },
+    {
+      "id": "RequiemKatanaVioletFront_2",
+      "rect": [
+        896,
+        0,
+        448,
+        448
+      ],
+      "pivot": [
+        0.5,
+        0.10714285714285714
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Violet"
+    },
+    {
+      "id": "RequiemKatanaVioletFront_3",
+      "rect": [
+        1344,
+        0,
+        448,
+        448
+      ],
+      "pivot": [
+        0.5,
+        0.10714285714285714
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Violet"
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_S",
+      "frames": [
+        "RequiemKatanaVioletFront_0",
+        "RequiemKatanaVioletFront_1",
+        "RequiemKatanaVioletFront_2",
+        "RequiemKatanaVioletFront_3"
+      ],
+      "loop": false
+    }
+  ],
+  "notes": [
+    "Four complete poses; whole-figure nearest-neighbor scale only. No anatomy assembly.",
+    "100ms preview timing; runtime uses existing combat phase selection/events."
+  ]
+}

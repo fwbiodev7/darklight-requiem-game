@@ -22,6 +22,8 @@ Shader "Darklight/Prototype/YoungSpriteLit"
             Tags {"LightMode"="Universal2D"}
             HLSLPROGRAM
             #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/Core2D.hlsl"
+            #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
+            #include "../../Art/Includes/PlayerIrisPalette.hlsl"
             #pragma vertex LitVertex
             #pragma fragment LitFragment
             #include_with_pragmas "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/ShapeLightShared.hlsl"
@@ -41,7 +43,7 @@ Shader "Darklight/Prototype/YoungSpriteLit"
             }
             half4 LitFragment(Varyings input):SV_Target
             {
-                half4 main=SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,input.uv);clip(main.a-_AlphaClip);
+                half4 main=SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,input.uv);half3 sourcePigment=main.rgb;clip(main.a-_AlphaClip);
                 half4 selectors=SAMPLE_TEXTURE2D(_VampireMask,sampler_VampireMask,input.uv);
                 if(_WholeFrameId>.5)clip(.49-abs(round(selectors.a*255)-_WholeFrameId));
                 if(_VampireForm>.5)
@@ -49,8 +51,17 @@ Shader "Darklight/Prototype/YoungSpriteLit"
                     half3 palette=_VampireForm>2.5?half3(.95,.96,1):_VampireForm>1.5?half3(.62,.16,.96):half3(.86,.035,.08);
                     if(_WholeSprite>.5&&_VampireForm>2.5&&selectors.b>.1)
                         main.rgb=lerp(half3(.12,.14,.18),half3(.97,.98,1),saturate((main.r-.08)*1.7));
-                    if(selectors.r>.5)main.rgb=palette;
-                    else if(selectors.g>.1)main.rgb=lerp(main.rgb,palette*max(.3,max(main.r,max(main.g,main.b))*1.3),selectors.g*.85);
+                    if(selectors.r<.5&&selectors.g>.1)main.rgb=lerp(main.rgb,palette*max(.3,max(main.r,max(main.g,main.b))*1.3),selectors.g*.85);
+                }
+                if(selectors.r>.5)
+                {
+                    #ifndef UNITY_COLORSPACE_GAMMA
+                    sourcePigment=LinearToSRGB(sourcePigment);
+                    #endif
+                    main.rgb=DarklightPlayerIris(sourcePigment);
+                    #ifndef UNITY_COLORSPACE_GAMMA
+                    main.rgb=SRGBToLinear(main.rgb);
+                    #endif
                 }
                 main*=input.color;SurfaceData2D surfaceData;InputData2D inputData;
                 InitializeSurfaceData(main.rgb,main.a,half4(1,1,1,1),half3(0,0,1),surfaceData);

@@ -1,0 +1,4112 @@
+{
+  "normalPages": 61,
+  "transformedPages": 183,
+  "textures": 260,
+  "frames": 5367,
+  "sources": [
+    {
+      "resource": "Darklight/AbyssPrototype/ActionF0N",
+      "texture": "ActionF0N",
+      "frames": 12,
+      "sha256": "61f73fc984f347111ba0e815a4f7bc6d7ef4162027c970e5a45f58db50d491ed",
+      "metadata": "Darklight__AbyssPrototype__ActionF0N.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/ActionF0NW",
+      "texture": "ActionF0NW",
+      "frames": 12,
+      "sha256": "cdfafbe3c4d3268c4c07fe8c40759ca845d7bc44d7be7a4d2291d433d92ae90f",
+      "metadata": "Darklight__AbyssPrototype__ActionF0NW.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/ActionF0W",
+      "texture": "ActionF0W",
+      "frames": 12,
+      "sha256": "c27876cc4183245f9f0dfaf21eb03eff28cf6a621f826d6f498beb2acf1f13f6",
+      "metadata": "Darklight__AbyssPrototype__ActionF0W.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/ActionF1N",
+      "texture": "ActionF1N",
+      "frames": 12,
+      "sha256": "9d2964b24660769afd6884aea9a1c08de747713fdb419b028a0aa57bf40bf674",
+      "metadata": "Darklight__AbyssPrototype__ActionF1N.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/ActionF1NW",
+      "texture": "ActionF1NW",
+      "frames": 12,
+      "sha256": "b664a50c67b0d6140561242e57e064a5fa9c514f1f09b6bcc22e5ffe29cacd66",
+      "metadata": "Darklight__AbyssPrototype__ActionF1NW.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/ActionF1W",
+      "texture": "ActionF1W",
+      "frames": 12,
+      "sha256": "4feeb72d15191f95aac0c128143847301e8da9e895fab0dd3761c2d6bdec61f8",
+      "metadata": "Darklight__AbyssPrototype__ActionF1W.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/ActionF2N",
+      "texture": "ActionF2N",
+      "frames": 12,
+      "sha256": "c711f93f45b90d00304a176d0853cde4752cfc01c23f6830924742eab914db7a",
+      "metadata": "Darklight__AbyssPrototype__ActionF2N.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/ActionF2NW",
+      "texture": "ActionF2NW",
+      "frames": 12,
+      "sha256": "b02256c534c89f0a93c7eeb5d0010b417caba619af61424aa036eb298a27cf39",
+      "metadata": "Darklight__AbyssPrototype__ActionF2NW.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/ActionF2W",
+      "texture": "ActionF2W",
+      "frames": 12,
+      "sha256": "521d170f597be5a12d1cec3a87d43104ff3ad414bb725d84adbc5ff939cebe61",
+      "metadata": "Darklight__AbyssPrototype__ActionF2W.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/ActionF3N",
+      "texture": "ActionF3N",
+      "frames": 12,
+      "sha256": "86cc68c22da03bc9b1c19f2fe21c7e8f1d70c9cb879e2623a19c6748fe6d5b44",
+      "metadata": "Darklight__AbyssPrototype__ActionF3N.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/ActionF3NW",
+      "texture": "ActionF3NW",
+      "frames": 12,
+      "sha256": "5a79d9825796449f89e8520a9dcc14ded1b8ae143892b0ef7e031cf21c056c37",
+      "metadata": "Darklight__AbyssPrototype__ActionF3NW.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/ActionF3W",
+      "texture": "ActionF3W",
+      "frames": 12,
+      "sha256": "31527806df485cb578946ed00190e0603dbfcae2fb6aa28a97fd4c0cd328a002",
+      "metadata": "Darklight__AbyssPrototype__ActionF3W.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Attack",
+      "texture": "Attack",
+      "frames": 4,
+      "sha256": "68e6bd64588f7b7e49eb1cff5c629329fac59cc77696134f102738d1e20afe28",
+      "metadata": "Darklight__AbyssPrototype__Attack.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/AttackSix0",
+      "texture": "AttackSix0",
+      "frames": 6,
+      "sha256": "adddf096074f157af35076cc82bc0d0217f2a5998660d77f46419040b740f431",
+      "metadata": "Darklight__AbyssPrototype__AttackSix0.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/AttackSix1",
+      "texture": "AttackSix1",
+      "frames": 6,
+      "sha256": "dabda325d6639a7a5d76f8c56efd8ab21de839e660d0d18afbea871377199031",
+      "metadata": "Darklight__AbyssPrototype__AttackSix1.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/CalmWalkF0G0",
+      "texture": "CalmWalkF0G0",
+      "frames": 8,
+      "sha256": "b0c808f58c8d60a53e098445c36e73fbf2003c3baf9ee8922cbaf4094ebeefe7",
+      "metadata": "Darklight__AbyssPrototype__CalmWalkF0G0.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/CalmWalkF0G1",
+      "texture": "CalmWalkF0G1",
+      "frames": 8,
+      "sha256": "36321f97da613c12e3fec02f908ad17c31b3301bc42b48a8be7d8dac28450007",
+      "metadata": "Darklight__AbyssPrototype__CalmWalkF0G1.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/CalmWalkF0G2",
+      "texture": "CalmWalkF0G2",
+      "frames": 4,
+      "sha256": "3f912487eac88afd3f35b5a77967c451f5cd4a5de58c459ed8ac64b569ee3402",
+      "metadata": "Darklight__AbyssPrototype__CalmWalkF0G2.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/CalmWalkF1G0",
+      "texture": "CalmWalkF1G0",
+      "frames": 8,
+      "sha256": "b02987257e226c0b0107a7031003e06591309a2011d5ce15a4cbe130048cc15e",
+      "metadata": "Darklight__AbyssPrototype__CalmWalkF1G0.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/CalmWalkF1G1",
+      "texture": "CalmWalkF1G1",
+      "frames": 8,
+      "sha256": "852acb6d6ee4eb1a42f9200980bb088cca2ff2665ef450416718067f5cdbcf7b",
+      "metadata": "Darklight__AbyssPrototype__CalmWalkF1G1.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/CalmWalkF1G2",
+      "texture": "CalmWalkF1G2",
+      "frames": 4,
+      "sha256": "e7b54c58a1656716f6652d9e13e2f85c3df934e76ebcb1b645ed6cd82714ca51",
+      "metadata": "Darklight__AbyssPrototype__CalmWalkF1G2.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/CalmWalkF2G0",
+      "texture": "CalmWalkF2G0",
+      "frames": 8,
+      "sha256": "fb7cd5e6224a8590358ff2704256ee895ad2a794bf3dbb14d9a1a10da483df8a",
+      "metadata": "Darklight__AbyssPrototype__CalmWalkF2G0.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/CalmWalkF2G1",
+      "texture": "CalmWalkF2G1",
+      "frames": 8,
+      "sha256": "2fde3fb2207e53564fe9e6ebbe50c8d987bb08fce93bb5c96b461b4e487c9115",
+      "metadata": "Darklight__AbyssPrototype__CalmWalkF2G1.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/CalmWalkF2G2",
+      "texture": "CalmWalkF2G2",
+      "frames": 4,
+      "sha256": "9382eea1447dad08c14d25462de63f7e8c995d953b019d72fbe18e8b820c6d52",
+      "metadata": "Darklight__AbyssPrototype__CalmWalkF2G2.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/CalmWalkF3G0",
+      "texture": "CalmWalkF3G0",
+      "frames": 8,
+      "sha256": "077c4f851abb7d4606b5f8f0893ee5ca5a04318e8565c937956811f3b6bc00e0",
+      "metadata": "Darklight__AbyssPrototype__CalmWalkF3G0.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/CalmWalkF3G1",
+      "texture": "CalmWalkF3G1",
+      "frames": 8,
+      "sha256": "3ca6d16aa52b3b30e4729497e48db546e624e9414c6f9d2713a18eef01419ae5",
+      "metadata": "Darklight__AbyssPrototype__CalmWalkF3G1.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/CalmWalkF3G2",
+      "texture": "CalmWalkF3G2",
+      "frames": 4,
+      "sha256": "5c36d14f3e890cb0d5ee7a93886afe2ac451f173652da93f33a9289ba7639e2b",
+      "metadata": "Darklight__AbyssPrototype__CalmWalkF3G2.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/CorrectedNormalSlamRaiseS",
+      "texture": "CorrectedNormalSlamRaiseS",
+      "frames": 1,
+      "sha256": "8f061b214940d6fa600e011584463d65c51acf149aaefb857c7b927840a65190",
+      "metadata": "Darklight__AbyssPrototype__CorrectedNormalSlamRaiseS.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Dismount",
+      "texture": "Dismount",
+      "frames": 6,
+      "sha256": "89c778a49e2456e9fd674c51dee889abc2f3059bf40e719ea7c4f628f5211464",
+      "metadata": "Darklight__AbyssPrototype__Dismount.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form0Finisher",
+      "texture": "Form0Finisher",
+      "frames": 4,
+      "sha256": "b903d70a7e140c337189ca9e9094675d8d628bf3efabcc72e6a9b5094b680df5",
+      "metadata": "Darklight__AbyssPrototype__Form0Finisher.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form0Slam",
+      "texture": "Form0Slam",
+      "frames": 4,
+      "sha256": "1223866501b4d246fcf6c73d24b35c35b2c8012c439f134c36eff9ff6d6581eb",
+      "metadata": "Darklight__AbyssPrototype__Form0Slam.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form1AttackSix0",
+      "texture": "Form1AttackSix0",
+      "frames": 6,
+      "sha256": "1b609ea516b5df99bd4071a28e1fad1708502564a879f256ec44b3d6b67bdf28",
+      "metadata": "Darklight__AbyssPrototype__Form1AttackSix0.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form1AttackSix1",
+      "texture": "Form1AttackSix1",
+      "frames": 6,
+      "sha256": "f201c81ef0aa4e8f550285bd34d07c9fdeea3e7ac183202a7b7bfa9bba129743",
+      "metadata": "Darklight__AbyssPrototype__Form1AttackSix1.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form1Dismount",
+      "texture": "Form1Dismount",
+      "frames": 4,
+      "sha256": "e8a1c0968431864adb03fe826a77d97e9d841c53a3b7959cc381cd9a62cbacae",
+      "metadata": "Darklight__AbyssPrototype__Form1Dismount.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form1Finisher",
+      "texture": "Form1Finisher",
+      "frames": 4,
+      "sha256": "5fe55379ab17ac362c6511861bd04bd51ce65b884d3cb9d4882460ec3a22b222",
+      "metadata": "Darklight__AbyssPrototype__Form1Finisher.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form1Join",
+      "texture": "Form1Join",
+      "frames": 8,
+      "sha256": "f21a5f67ab6364a71fab54c70cb746d15c5ed638c1c535997e95502c1fabd844",
+      "metadata": "Darklight__AbyssPrototype__Form1Join.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form1Slam",
+      "texture": "Form1Slam",
+      "frames": 4,
+      "sha256": "559b3a85b3eae90d1ac486d709461ca4d9cdc9bf27b60c6c53f346a10091c4a5",
+      "metadata": "Darklight__AbyssPrototype__Form1Slam.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form2AttackSix0",
+      "texture": "Form2AttackSix0",
+      "frames": 6,
+      "sha256": "9fc570c8557b888eda4492cb65d9163f998da08d0101ee6875a2a6a5fdd110a1",
+      "metadata": "Darklight__AbyssPrototype__Form2AttackSix0.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form2AttackSix1",
+      "texture": "Form2AttackSix1",
+      "frames": 6,
+      "sha256": "9ded47a9dbf32095bc55390cbabe398e623601ca25fcca46931d2cb274d6d2be",
+      "metadata": "Darklight__AbyssPrototype__Form2AttackSix1.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form2Dismount",
+      "texture": "Form2Dismount",
+      "frames": 4,
+      "sha256": "5ff7b224303ef0528b04481076708c98d54d86800a4657fadf896c2204fe3e6a",
+      "metadata": "Darklight__AbyssPrototype__Form2Dismount.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form2Finisher",
+      "texture": "Form2Finisher",
+      "frames": 4,
+      "sha256": "56dc72577546d556ae13291a1e5f2ae2c7b1b3b5bd37fbf767372f7427c1dad6",
+      "metadata": "Darklight__AbyssPrototype__Form2Finisher.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form2Join",
+      "texture": "Form2Join",
+      "frames": 8,
+      "sha256": "2e4ca8d0f5aeccc502a16562095b183ee9efd4984a3f5a07b7c613c568a92971",
+      "metadata": "Darklight__AbyssPrototype__Form2Join.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form2Slam",
+      "texture": "Form2Slam",
+      "frames": 4,
+      "sha256": "11b932b61be16bbd8992ecced99fcc4461c2403f57338cbf316f9c9f9a2bf315",
+      "metadata": "Darklight__AbyssPrototype__Form2Slam.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form3AttackSix0",
+      "texture": "Form3AttackSix0",
+      "frames": 6,
+      "sha256": "d51914e81e2937720b00ef0b8eff01b6f544ff82526dd7ecc6dbf1461e511142",
+      "metadata": "Darklight__AbyssPrototype__Form3AttackSix0.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form3AttackSix1",
+      "texture": "Form3AttackSix1",
+      "frames": 6,
+      "sha256": "cdccf931372e859de814e7ef11a2d7c0f268df0e658110d6be78a45fa159e3b3",
+      "metadata": "Darklight__AbyssPrototype__Form3AttackSix1.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form3Dismount",
+      "texture": "Form3Dismount",
+      "frames": 4,
+      "sha256": "a9182d50f07e45a1bfe106d60cc6afcc6bf620485caac17f9951219504ccebd0",
+      "metadata": "Darklight__AbyssPrototype__Form3Dismount.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form3Finisher",
+      "texture": "Form3Finisher",
+      "frames": 4,
+      "sha256": "e3af6b7b08771880c3aac7a477e184d3adf5895740df230203c6c631df2a9aa1",
+      "metadata": "Darklight__AbyssPrototype__Form3Finisher.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form3Join",
+      "texture": "Form3Join",
+      "frames": 8,
+      "sha256": "507f1caeb9b644d0ddcec90c2d7163e2880d9fc4ea7ef349398b6f513b830a7d",
+      "metadata": "Darklight__AbyssPrototype__Form3Join.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Form3Slam",
+      "texture": "Form3Slam",
+      "frames": 4,
+      "sha256": "07a7201434c1147a9079b055df1142de78365283b150baa656801b6ad2b8b999",
+      "metadata": "Darklight__AbyssPrototype__Form3Slam.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/AbyssPrototype/Join",
+      "texture": "Join",
+      "frames": 8,
+      "sha256": "a97bd4794e9e477e09e28b50eb2b798748ed290f94baf6ee0a09b3471e3969bd",
+      "metadata": "Darklight__AbyssPrototype__Join.json",
+      "roles": [
+        "abyss-bank"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemAttackChainYoungCardinal",
+      "texture": "RequiemAttackChainYoungCardinal",
+      "frames": 16,
+      "sha256": "377fc1e4c2aee13c4e90f08f0c2fe1b6d21b15fd2f7e795dba1b08fce5b0cd83",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemAttackChainYoungCardinal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemAttackChainYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemAttackChainYoungDiagonal",
+      "texture": "RequiemAttackChainYoungDiagonal",
+      "frames": 16,
+      "sha256": "fc8892415350760f789035c7bf590f91d556959fbadfc3bcb8bf5c4d02b44d1d",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemAttackChainYoungDiagonal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemAttackChainYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemAttackDaggersYoungCardinal",
+      "texture": "RequiemAttackDaggersYoungCardinal",
+      "frames": 16,
+      "sha256": "3541f1aa8896fb7f611d8b38caa87fbf02f531560f94e75c566edb16052f6b69",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemAttackDaggersYoungCardinal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemAttackDaggersYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemAttackDaggersYoungDiagonal",
+      "texture": "RequiemAttackDaggersYoungDiagonal",
+      "frames": 16,
+      "sha256": "100cc8fa88131decae2eb94526138c5d1c17a2467c6240b04289c2a94edca9bc",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemAttackDaggersYoungDiagonal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemAttackDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemAttackKatanaYoungCardinal",
+      "texture": "RequiemAttackKatanaYoungCardinal",
+      "frames": 16,
+      "sha256": "a16db318bb9fbba18dd66e23680a194ac99372d98fe23556ee8334c88e058f17",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemAttackKatanaYoungCardinal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemAttackKatanaYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemAttackKatanaYoungDiagonal",
+      "texture": "RequiemAttackKatanaYoungDiagonal",
+      "frames": 16,
+      "sha256": "eb48c69a31d5cc2b6a7230692306cc61896c73cddb892996a1e9e432e5917f18",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemAttackKatanaYoungDiagonal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemAttackKatanaYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemCombatChainYoungCardinal",
+      "texture": "RequiemCombatChainYoungCardinal",
+      "frames": 32,
+      "sha256": "5f2c071cd82bc43497371537303e940eaccaa71f9cda26a52c0ec9e8a8bca0c8",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemCombatChainYoungCardinal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemCombatChainYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemCombatChainYoungDiagonal",
+      "texture": "RequiemCombatChainYoungDiagonal",
+      "frames": 32,
+      "sha256": "c17e87439ac747c24c7a77c02f76e26d93942bbbc26f217e9ff6b54fb69a9fe6",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemCombatChainYoungDiagonal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemCombatChainYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemCombatDaggersYoungCardinal",
+      "texture": "RequiemCombatDaggersYoungCardinal",
+      "frames": 32,
+      "sha256": "c17888ae350ed4c293f0f9d13c06145a53ed87bac23d772da4a021e65dc8b5bf",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemCombatDaggersYoungCardinal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemCombatDaggersYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemCombatDaggersYoungDiagonal",
+      "texture": "RequiemCombatDaggersYoungDiagonal",
+      "frames": 32,
+      "sha256": "cbfdbb502ea261828b6978b1c2863db883cc7c1e7dc6d451631ee93023e8af40",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemCombatDaggersYoungDiagonal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemCombatDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemCombatKatanaYoungCardinal",
+      "texture": "RequiemCombatKatanaYoungCardinal",
+      "frames": 32,
+      "sha256": "8b0b07b42c8f33a4e049639707bc7deed052c7bdcaa17c883cf9ad18308dcb8e",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemCombatKatanaYoungCardinal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemCombatKatanaYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemCombatKatanaYoungDiagonal",
+      "texture": "RequiemCombatKatanaYoungDiagonal",
+      "frames": 32,
+      "sha256": "4c247f9967aae405a89ca864a0477ad82f0041fe2d233895d1cf63e03bc96ceb",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemCombatKatanaYoungDiagonal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemCombatKatanaYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemGuardDodgeChainYoungCardinalA",
+      "texture": "RequiemGuardDodgeChainYoungCardinalA",
+      "frames": 16,
+      "sha256": "89dca0ecc94abd569220c64fcf248a7c616006d8d1004683d4a4bf6604e2238e",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemGuardDodgeChainYoungCardinalA.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeChainYoungCardinalA"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemGuardDodgeChainYoungCardinalB",
+      "texture": "RequiemGuardDodgeChainYoungCardinalB",
+      "frames": 16,
+      "sha256": "89f02f547f489979442348313ba6381f1cf62440539493b9ca4c2cbc988a5891",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemGuardDodgeChainYoungCardinalB.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeChainYoungCardinalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemGuardDodgeChainYoungDiagonalA",
+      "texture": "RequiemGuardDodgeChainYoungDiagonalA",
+      "frames": 16,
+      "sha256": "d363bda6967f16fb55222643d779c94905e49dd5befb1d50c56dcbcb089b56c9",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemGuardDodgeChainYoungDiagonalA.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeChainYoungDiagonalA"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemGuardDodgeChainYoungDiagonalB",
+      "texture": "RequiemGuardDodgeChainYoungDiagonalB",
+      "frames": 16,
+      "sha256": "79ade15325e905e29e2e3dbe092f9588c29684727c7054e37c5c8c7cc0b3ec1d",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemGuardDodgeChainYoungDiagonalB.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeChainYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemGuardDodgeDaggersYoungCardinalA",
+      "texture": "RequiemGuardDodgeDaggersYoungCardinalA",
+      "frames": 16,
+      "sha256": "aa6635c3b16c79dfa0898163d299059a17a36192445b8018130bea732ec240e6",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemGuardDodgeDaggersYoungCardinalA.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeDaggersYoungCardinalA"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemGuardDodgeDaggersYoungCardinalB",
+      "texture": "RequiemGuardDodgeDaggersYoungCardinalB",
+      "frames": 16,
+      "sha256": "0b46a22d68f6d04ddd3102c38af0090a5095019bb4981a436f75ba1ba2f2e3a3",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemGuardDodgeDaggersYoungCardinalB.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeDaggersYoungCardinalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemGuardDodgeDaggersYoungDiagonal",
+      "texture": "RequiemGuardDodgeDaggersYoungDiagonal",
+      "frames": 32,
+      "sha256": "ba715f8debe43c27a362e9bc82d9eeba2754fa01d6b9577a21bb9152fb6c5a36",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemGuardDodgeDaggersYoungDiagonal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemGuardDodgeKatanaYoungCardinal",
+      "texture": "RequiemGuardDodgeKatanaYoungCardinal",
+      "frames": 32,
+      "sha256": "408e7df8a6446ff1fd81f205d67a703e533476e52d35428b8aa32f0a52ba6516",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemGuardDodgeKatanaYoungCardinal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeKatanaYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemGuardDodgeKatanaYoungDiagonalA",
+      "texture": "RequiemGuardDodgeKatanaYoungDiagonalA",
+      "frames": 16,
+      "sha256": "ac26072565b3d549c37fea4b3c8d87900b40208bdc8bd47de130b27bcdf65ceb",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemGuardDodgeKatanaYoungDiagonalA.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeKatanaYoungDiagonalA"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemGuardDodgeKatanaYoungDiagonalB",
+      "texture": "RequiemGuardDodgeKatanaYoungDiagonalB",
+      "frames": 16,
+      "sha256": "0b1a77502f3b5c1ef2e0951cd0dca1423d7daa23ecab2ef1e4c9866b460144d4",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemGuardDodgeKatanaYoungDiagonalB.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeKatanaYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemIdleKatanaYoung",
+      "texture": "RequiemIdleKatanaYoung",
+      "frames": 16,
+      "sha256": "7937766da68835ce8c5f4a4565e26f3b0645797c5ad3fca8c921ed66dfec0514",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemIdleKatanaYoung.json",
+      "roles": [
+        "legacy-catalog"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemIdleLivingCardinal20261017",
+      "texture": "RequiemIdleLivingCardinal20261017",
+      "frames": 24,
+      "sha256": "110e899580a3f5935779131bd40283f936dc29670a1cd020276ff6684b1f42c4",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemIdleLivingCardinal20261017.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemIdleLivingCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemIdleLivingDiagonal20261017",
+      "texture": "RequiemIdleLivingDiagonal20261017",
+      "frames": 24,
+      "sha256": "b4c9012128f05b4d0d5e03db511987b0cfaf7d73c4e5e30eec4534d7d2312a30",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemIdleLivingDiagonal20261017.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemIdleLivingDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemLivingMotionCardinal20261017",
+      "texture": "RequiemLivingMotionCardinal20261017",
+      "frames": 20,
+      "sha256": "6a2409b581e79a22dae0fbf3c26d4fbff3bd2c65f5928a202be5ba155b7b1f08",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemLivingMotionCardinal20261017.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemLivingMotionCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemLivingMotionDiagonal20261017",
+      "texture": "RequiemLivingMotionDiagonal20261017",
+      "frames": 20,
+      "sha256": "5ec7812b79e2de74a9c806dca8a1c43ed40555906bd0f422495907ab9991a90a",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemLivingMotionDiagonal20261017.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemLivingMotionDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemWalkConsistentChainCardinal20261017",
+      "texture": "RequiemWalkConsistentChainCardinal20261017",
+      "frames": 24,
+      "sha256": "77dbc7e908c7419bbdbea52b164281c942393f89039891e9253bef0210b4b44b",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemWalkConsistentChainCardinal20261017.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentChainCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemWalkConsistentChainDiagonal20261017",
+      "texture": "RequiemWalkConsistentChainDiagonal20261017",
+      "frames": 24,
+      "sha256": "9d35118276552b07c11d2ba1580c7bedd8ab99588df07ab4a583f60e46a7ed19",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemWalkConsistentChainDiagonal20261017.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentChainDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemWalkConsistentDaggersCardinal20261017",
+      "texture": "RequiemWalkConsistentDaggersCardinal20261017",
+      "frames": 24,
+      "sha256": "e5192469824de9f944d728cbbf57ab25e3e4964bd1fd16d0cd0e76bda42231b4",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemWalkConsistentDaggersCardinal20261017.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentDaggersCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemWalkConsistentDaggersDiagonal20261017",
+      "texture": "RequiemWalkConsistentDaggersDiagonal20261017",
+      "frames": 24,
+      "sha256": "41a0fb394928f1a0c14ddaa4ab727af1ea900de073d3779b0c9759d8f6aa40ff",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemWalkConsistentDaggersDiagonal20261017.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentDaggersDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemWalkConsistentKatanaCardinal20261017",
+      "texture": "RequiemWalkConsistentKatanaCardinal20261017",
+      "frames": 24,
+      "sha256": "2040c2b25f815759b517180ac60c69a045b50f2033283e635a1be7c4580db378",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemWalkConsistentKatanaCardinal20261017.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentKatanaCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RequiemWalkConsistentKatanaDiagonal20261017",
+      "texture": "RequiemWalkConsistentKatanaDiagonal20261017",
+      "frames": 24,
+      "sha256": "000f8c23b7a857a7e6052747a4f15ff0774761d6ced2d7fa3db26a5de47b878b",
+      "metadata": "Darklight__TodayCharacterAnimations__RequiemWalkConsistentKatanaDiagonal20261017.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentKatanaDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockAttackChainYoungCardinal",
+      "texture": "RockAttackChainYoungCardinal",
+      "frames": 16,
+      "sha256": "c697f1db51b405229175053c0e5d6910648297d0bea34dad25fd2cc67ac9f7f0",
+      "metadata": "Darklight__TodayCharacterAnimations__RockAttackChainYoungCardinal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockAttackChainYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockAttackChainYoungDiagonal",
+      "texture": "RockAttackChainYoungDiagonal",
+      "frames": 16,
+      "sha256": "025e8e8ea0ce835d7168b8ca02172c69444bab4423cdfcdc1805c53f84a78a73",
+      "metadata": "Darklight__TodayCharacterAnimations__RockAttackChainYoungDiagonal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockAttackChainYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockAttackDaggersYoungCardinal",
+      "texture": "RockAttackDaggersYoungCardinal",
+      "frames": 16,
+      "sha256": "f7dc06b42e7ccc53beb4876ff477f856149c0549192a828a795ba5ec5574dc1d",
+      "metadata": "Darklight__TodayCharacterAnimations__RockAttackDaggersYoungCardinal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockAttackDaggersYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockAttackDaggersYoungDiagonal",
+      "texture": "RockAttackDaggersYoungDiagonal",
+      "frames": 16,
+      "sha256": "da6c9d31e2f3abfcc9fd309345b46ccdbbb5ee3db3e84b43af8caa8a7600ffdc",
+      "metadata": "Darklight__TodayCharacterAnimations__RockAttackDaggersYoungDiagonal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockAttackDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockAttackKatanaYoung",
+      "texture": "RockAttackKatanaYoung",
+      "frames": 32,
+      "sha256": "89fa1d31406a8f879ddbd314c0edd73cdecd5a4ceec1e6943bb24f93b73912f6",
+      "metadata": "Darklight__TodayCharacterAnimations__RockAttackKatanaYoung.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockAttackKatanaYoung"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockCombatChainYoungCardinal",
+      "texture": "RockCombatChainYoungCardinal",
+      "frames": 32,
+      "sha256": "b30f01e0622571cf13e056bc9ac3a92ba63e3fcf7703966b7334e7ff1a248b07",
+      "metadata": "Darklight__TodayCharacterAnimations__RockCombatChainYoungCardinal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockCombatChainYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockCombatChainYoungDiagonal",
+      "texture": "RockCombatChainYoungDiagonal",
+      "frames": 32,
+      "sha256": "99048ed68e5033225e20fd64cc4cc8889348199ca01a235f29d0574c5c3a8d4c",
+      "metadata": "Darklight__TodayCharacterAnimations__RockCombatChainYoungDiagonal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockCombatChainYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockCombatDaggersYoungCardinal",
+      "texture": "RockCombatDaggersYoungCardinal",
+      "frames": 32,
+      "sha256": "aea20773de6d53637b599c5f558b8b9b99c9d65d1f9aae1f84c9a1cd78a0a1e8",
+      "metadata": "Darklight__TodayCharacterAnimations__RockCombatDaggersYoungCardinal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockCombatDaggersYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockCombatDaggersYoungDiagonal",
+      "texture": "RockCombatDaggersYoungDiagonal",
+      "frames": 32,
+      "sha256": "d49b4be09f3df7ce26e5e4ab3d3aeffe03d7e12995a84a0f86a5468e410d7583",
+      "metadata": "Darklight__TodayCharacterAnimations__RockCombatDaggersYoungDiagonal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockCombatDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockCombatKatanaYoungCardinal",
+      "texture": "RockCombatKatanaYoungCardinal",
+      "frames": 32,
+      "sha256": "a4d3567c6dd7fa631ca9229afd4e7944ff0c1b7553a96e95c51c858e876b2491",
+      "metadata": "Darklight__TodayCharacterAnimations__RockCombatKatanaYoungCardinal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockCombatKatanaYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockCombatKatanaYoungDiagonal",
+      "texture": "RockCombatKatanaYoungDiagonal",
+      "frames": 32,
+      "sha256": "00f3a6476481dcb2f53eb52ba39839b04b3cead4c15556447a8e0ebbe88a1838",
+      "metadata": "Darklight__TodayCharacterAnimations__RockCombatKatanaYoungDiagonal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockCombatKatanaYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockGuardDodgeChainYoungCardinalA",
+      "texture": "RockGuardDodgeChainYoungCardinalA",
+      "frames": 16,
+      "sha256": "8b95f9686c8dd5c1030502de6a11e188953dd00af54733410b3532dcb0d20c06",
+      "metadata": "Darklight__TodayCharacterAnimations__RockGuardDodgeChainYoungCardinalA.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockGuardDodgeChainYoungCardinalA"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockGuardDodgeChainYoungCardinalB",
+      "texture": "RockGuardDodgeChainYoungCardinalB",
+      "frames": 16,
+      "sha256": "177eedbc755c9122a2c4d63db8730dca8e5f2a3ca77875b2f65d9a3c3323f2a6",
+      "metadata": "Darklight__TodayCharacterAnimations__RockGuardDodgeChainYoungCardinalB.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockGuardDodgeChainYoungCardinalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockGuardDodgeChainYoungDiagonalA",
+      "texture": "RockGuardDodgeChainYoungDiagonalA",
+      "frames": 16,
+      "sha256": "c4d0d91809eb3dcc6aea676106d43260d26c54b02a66ccc38f978af26e412f28",
+      "metadata": "Darklight__TodayCharacterAnimations__RockGuardDodgeChainYoungDiagonalA.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockGuardDodgeChainYoungDiagonalA"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockGuardDodgeChainYoungDiagonalB",
+      "texture": "RockGuardDodgeChainYoungDiagonalB",
+      "frames": 16,
+      "sha256": "f1506e92980f00c82216f6de967ea4e0f6c1737e61cfedc72028d9f0049be20f",
+      "metadata": "Darklight__TodayCharacterAnimations__RockGuardDodgeChainYoungDiagonalB.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockGuardDodgeChainYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockGuardDodgeDaggersYoungCardinal",
+      "texture": "RockGuardDodgeDaggersYoungCardinal",
+      "frames": 32,
+      "sha256": "9b5e1447413c8d3b49d9a5cf9080eeada50e22fffd70504c7c21052a8a46e9f3",
+      "metadata": "Darklight__TodayCharacterAnimations__RockGuardDodgeDaggersYoungCardinal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockGuardDodgeDaggersYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockGuardDodgeDaggersYoungDiagonal",
+      "texture": "RockGuardDodgeDaggersYoungDiagonal",
+      "frames": 32,
+      "sha256": "91346372eeb22b140fc060b5d41d7f2a48dbb0a923d71ce75ae0833d05a89f60",
+      "metadata": "Darklight__TodayCharacterAnimations__RockGuardDodgeDaggersYoungDiagonal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockGuardDodgeDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockGuardDodgeKatanaYoungCardinalA",
+      "texture": "RockGuardDodgeKatanaYoungCardinalA",
+      "frames": 16,
+      "sha256": "4c8c2f92a7f28e10532b387e88e5139222ddf2020d6cc0dc44fa2d452789ed7e",
+      "metadata": "Darklight__TodayCharacterAnimations__RockGuardDodgeKatanaYoungCardinalA.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockGuardDodgeKatanaYoungCardinalA"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockGuardDodgeKatanaYoungCardinalB",
+      "texture": "RockGuardDodgeKatanaYoungCardinalB",
+      "frames": 16,
+      "sha256": "ab7c3dfd3d0678e93dbf80dceaf7536eb818604c2c3547a2604267aae6d1b32a",
+      "metadata": "Darklight__TodayCharacterAnimations__RockGuardDodgeKatanaYoungCardinalB.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockGuardDodgeKatanaYoungCardinalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockGuardDodgeKatanaYoungDiagonal",
+      "texture": "RockGuardDodgeKatanaYoungDiagonal",
+      "frames": 24,
+      "sha256": "f6b82804e19590efb23f7826bcf643f0b215727d275a614bbaa915aa0d7b9976",
+      "metadata": "Darklight__TodayCharacterAnimations__RockGuardDodgeKatanaYoungDiagonal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockGuardDodgeKatanaYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockGuardDodgeKatanaYoungNorthEast",
+      "texture": "RockGuardDodgeKatanaYoungNorthEast",
+      "frames": 8,
+      "sha256": "2ff6695be55cee76af2436ba47519f0bc903531b4e5f5e458adb528363613cf8",
+      "metadata": "Darklight__TodayCharacterAnimations__RockGuardDodgeKatanaYoungNorthEast.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockGuardDodgeKatanaYoungNorthEast"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockIdleKatanaYoung",
+      "texture": "RockIdleKatanaYoung",
+      "frames": 16,
+      "sha256": "d0cebc803880493eb87375d43e636163a154bbae21e83832be46fd10cbc5488b",
+      "metadata": "Darklight__TodayCharacterAnimations__RockIdleKatanaYoung.json",
+      "roles": [
+        "legacy-catalog"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockIdleLivingCardinal20261017",
+      "texture": "RockIdleLivingCardinal20261017",
+      "frames": 24,
+      "sha256": "8444123023eb4a334910950e879a25a9cb5169f3dd776f52370b8cebbd4140cd",
+      "metadata": "Darklight__TodayCharacterAnimations__RockIdleLivingCardinal20261017.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockIdleLivingCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockIdleLivingDiagonal20261017",
+      "texture": "RockIdleLivingDiagonal20261017",
+      "frames": 24,
+      "sha256": "a1ad40fe2e2c54e2e7db7403d4dc0f98053cee88136465987fc675670e15c6dc",
+      "metadata": "Darklight__TodayCharacterAnimations__RockIdleLivingDiagonal20261017.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockIdleLivingDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockLivingMotionCardinal20261017",
+      "texture": "RockLivingMotionCardinal20261017",
+      "frames": 20,
+      "sha256": "0fb095ffd2d05dd7fbbdfc2928143e56b34739697ca6875e05258c4d8a7c75ed",
+      "metadata": "Darklight__TodayCharacterAnimations__RockLivingMotionCardinal20261017.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockLivingMotionCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockLivingMotionDiagonal20261017",
+      "texture": "RockLivingMotionDiagonal20261017",
+      "frames": 20,
+      "sha256": "9b2d00c2103d34d52cb72716ca26bba232db0e7d1b45164189f8078ff3a62234",
+      "metadata": "Darklight__TodayCharacterAnimations__RockLivingMotionDiagonal20261017.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockLivingMotionDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockWalkChainYoung",
+      "texture": "RockWalkChainYoung",
+      "frames": 32,
+      "sha256": "3abd5ef7d1f9b436dfcfa1214b38548ae4f67b72697cb4142d48b619036e8ec2",
+      "metadata": "Darklight__TodayCharacterAnimations__RockWalkChainYoung.json",
+      "roles": [
+        "normal-catalog",
+        "legacy-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockWalkChainYoung"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockWalkDaggersYoungCardinal",
+      "texture": "RockWalkDaggersYoungCardinal",
+      "frames": 16,
+      "sha256": "d10777fd45e800480cdf034471758c236a8169679fe8e77bc49f41e50ac81642",
+      "metadata": "Darklight__TodayCharacterAnimations__RockWalkDaggersYoungCardinal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockWalkDaggersYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockWalkDaggersYoungDiagonal",
+      "texture": "RockWalkDaggersYoungDiagonal",
+      "frames": 16,
+      "sha256": "8f7c939f2c2e4cc5d6d455e9ee679eb2b284a1a4a075705cf56e506db7aad836",
+      "metadata": "Darklight__TodayCharacterAnimations__RockWalkDaggersYoungDiagonal.json",
+      "roles": [
+        "normal-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockWalkDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TodayCharacterAnimations/RockWalkKatanaYoung",
+      "texture": "RockWalkKatanaYoung",
+      "frames": 32,
+      "sha256": "0cad39bf68b5580e87fce6e0032dfe153bbccb5a914374ef23240d79196a728e",
+      "metadata": "Darklight__TodayCharacterAnimations__RockWalkKatanaYoung.json",
+      "roles": [
+        "normal-catalog",
+        "legacy-catalog"
+      ],
+      "forms": [
+        0
+      ],
+      "baseNames": [
+        "RockWalkKatanaYoung"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackChainYoungCardinal_Crimson",
+      "texture": "RequiemAttackChainYoungCardinal_Crimson",
+      "frames": 16,
+      "sha256": "4d9e1ac726716f4ab94a43a1c059912716bdf7199a8c747e838aaee580cd8bcd",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackChainYoungCardinal_Crimson.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemAttackChainYoungCardinal",
+        "RequiemCombatChainYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackChainYoungCardinal_Violet",
+      "texture": "RequiemAttackChainYoungCardinal_Violet",
+      "frames": 16,
+      "sha256": "aabbe1a6db1fd683b75bfc98fcdc728fef8de001e87b7efedbac28cc6094eedd",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackChainYoungCardinal_Violet.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemAttackChainYoungCardinal",
+        "RequiemCombatChainYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackChainYoungCardinal_White",
+      "texture": "RequiemAttackChainYoungCardinal_White",
+      "frames": 16,
+      "sha256": "24f7c35b26780f8714aa9a37e6fffe79d8b0b68b6ba0f5fda36b4743f9e56840",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackChainYoungCardinal_White.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemAttackChainYoungCardinal",
+        "RequiemCombatChainYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackChainYoungDiagonal_Crimson",
+      "texture": "RequiemAttackChainYoungDiagonal_Crimson",
+      "frames": 16,
+      "sha256": "8bcdfab4bd632431eba4df3b55c5f725defe9b72bced9587348ffefa738a7920",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackChainYoungDiagonal_Crimson.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemAttackChainYoungDiagonal",
+        "RequiemCombatChainYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackChainYoungDiagonal_Violet",
+      "texture": "RequiemAttackChainYoungDiagonal_Violet",
+      "frames": 16,
+      "sha256": "01011758ddef021fb2f2110b7def959c0929b1087d540caa32b12b396829489e",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackChainYoungDiagonal_Violet.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemAttackChainYoungDiagonal",
+        "RequiemCombatChainYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackChainYoungDiagonal_White",
+      "texture": "RequiemAttackChainYoungDiagonal_White",
+      "frames": 16,
+      "sha256": "4e4919ebc7234c2467ce72bc12d65ae9d2bf6b42cf54cc486115d7ad1edd47a4",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackChainYoungDiagonal_White.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemAttackChainYoungDiagonal",
+        "RequiemCombatChainYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackDaggersYoungCardinal_Crimson",
+      "texture": "RequiemAttackDaggersYoungCardinal_Crimson",
+      "frames": 16,
+      "sha256": "d9c25db327bc78724a9e560c2d7b05dd3346c0916468f3ae0462f07040e94d8c",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackDaggersYoungCardinal_Crimson.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemAttackDaggersYoungCardinal",
+        "RequiemCombatDaggersYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackDaggersYoungCardinal_Violet",
+      "texture": "RequiemAttackDaggersYoungCardinal_Violet",
+      "frames": 16,
+      "sha256": "43e810ea50901300ed53ec73a75cdde8f3511575f2e62b401227123fb62560e2",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackDaggersYoungCardinal_Violet.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemAttackDaggersYoungCardinal",
+        "RequiemCombatDaggersYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackDaggersYoungCardinal_White",
+      "texture": "RequiemAttackDaggersYoungCardinal_White",
+      "frames": 16,
+      "sha256": "87d484327eb528e6729c966c6ee9a7e161965b7efa74948e536f754e14f897b4",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackDaggersYoungCardinal_White.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemAttackDaggersYoungCardinal",
+        "RequiemCombatDaggersYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackDaggersYoungDiagonal_Crimson",
+      "texture": "RequiemAttackDaggersYoungDiagonal_Crimson",
+      "frames": 16,
+      "sha256": "8c4fb4afe67047b0ffaf81160aad831923b1987a665f853e5bda82a770fad442",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackDaggersYoungDiagonal_Crimson.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemAttackDaggersYoungDiagonal",
+        "RequiemCombatDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackDaggersYoungDiagonal_Violet",
+      "texture": "RequiemAttackDaggersYoungDiagonal_Violet",
+      "frames": 16,
+      "sha256": "3122f206bf9dac4d5596dbfefa25fddfd5f8b987986c1356e9c0e437623856d0",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackDaggersYoungDiagonal_Violet.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemAttackDaggersYoungDiagonal",
+        "RequiemCombatDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackDaggersYoungDiagonal_White",
+      "texture": "RequiemAttackDaggersYoungDiagonal_White",
+      "frames": 16,
+      "sha256": "76b7ce461556a24dca2de41384d2ed0b035b42e436ae6478076b93da66b26bd8",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackDaggersYoungDiagonal_White.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemAttackDaggersYoungDiagonal",
+        "RequiemCombatDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackKatanaYoungCardinal_Crimson",
+      "texture": "RequiemAttackKatanaYoungCardinal_Crimson",
+      "frames": 16,
+      "sha256": "f4003bd0b62c0d1670e923f5302f6314c9424fc1b85b12c14e0eee43e49a5bad",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackKatanaYoungCardinal_Crimson.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemAttackKatanaYoungCardinal",
+        "RequiemCombatKatanaYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackKatanaYoungCardinal_Violet",
+      "texture": "RequiemAttackKatanaYoungCardinal_Violet",
+      "frames": 16,
+      "sha256": "3b1f9484cf8da68a0d60c247c7a0ab1ed7c8b3df1a68505e6903e9530f23ca34",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackKatanaYoungCardinal_Violet.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemAttackKatanaYoungCardinal",
+        "RequiemCombatKatanaYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackKatanaYoungCardinal_White",
+      "texture": "RequiemAttackKatanaYoungCardinal_White",
+      "frames": 16,
+      "sha256": "3372a4e742efc79d995a774d546a579cffcc5360e491a78ce34e28a0414ba9b3",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackKatanaYoungCardinal_White.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemAttackKatanaYoungCardinal",
+        "RequiemCombatKatanaYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackKatanaYoungDiagonal_Crimson",
+      "texture": "RequiemAttackKatanaYoungDiagonal_Crimson",
+      "frames": 16,
+      "sha256": "750bd020301374afd74a8563fa87ab1579ba1fd9da182cd85d61c6135570ac88",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackKatanaYoungDiagonal_Crimson.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemAttackKatanaYoungDiagonal",
+        "RequiemCombatKatanaYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackKatanaYoungDiagonal_Violet",
+      "texture": "RequiemAttackKatanaYoungDiagonal_Violet",
+      "frames": 16,
+      "sha256": "4b57196568f06a09919d9e717748b50efbeeaaa36f8d73af2dc104f27ae48cff",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackKatanaYoungDiagonal_Violet.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemAttackKatanaYoungDiagonal",
+        "RequiemCombatKatanaYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemAttackKatanaYoungDiagonal_White",
+      "texture": "RequiemAttackKatanaYoungDiagonal_White",
+      "frames": 16,
+      "sha256": "0519963e4aafa7ce2c5b4c5cc219acf2bdaffdb6d09e0c53bff1e87e44f1d1e3",
+      "metadata": "Darklight__TransformedYoung__RequiemAttackKatanaYoungDiagonal_White.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemAttackKatanaYoungDiagonal",
+        "RequiemCombatKatanaYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemCombatSupportChainYoung_Crimson",
+      "texture": "RequiemCombatSupportChainYoung_Crimson",
+      "frames": 32,
+      "sha256": "a10272dffc18d0b036c5ba44d1082a09885ea45cbbf34ef83180d81a8babe2a7",
+      "metadata": "Darklight__TransformedYoung__RequiemCombatSupportChainYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemCombatChainYoungCardinal",
+        "RequiemCombatChainYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemCombatSupportChainYoung_Violet",
+      "texture": "RequiemCombatSupportChainYoung_Violet",
+      "frames": 32,
+      "sha256": "6eb4fa58aa0dd3e4dc389d86a351b1cbe4720833c0254bffeeb6d72a35e87385",
+      "metadata": "Darklight__TransformedYoung__RequiemCombatSupportChainYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemCombatChainYoungCardinal",
+        "RequiemCombatChainYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemCombatSupportChainYoung_White",
+      "texture": "RequiemCombatSupportChainYoung_White",
+      "frames": 32,
+      "sha256": "9c3badc5fc61c8f8c094acbb54e6f25e0fb97878d5f61625634e920cd61ab8fa",
+      "metadata": "Darklight__TransformedYoung__RequiemCombatSupportChainYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemCombatChainYoungCardinal",
+        "RequiemCombatChainYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemCombatSupportDaggersYoung_Crimson",
+      "texture": "RequiemCombatSupportDaggersYoung_Crimson",
+      "frames": 32,
+      "sha256": "3b2e639e210db9990bb8489e85750bf208e5ff65f366304bdc658f904de4ba53",
+      "metadata": "Darklight__TransformedYoung__RequiemCombatSupportDaggersYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemCombatDaggersYoungCardinal",
+        "RequiemCombatDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemCombatSupportDaggersYoung_Violet",
+      "texture": "RequiemCombatSupportDaggersYoung_Violet",
+      "frames": 32,
+      "sha256": "0ab3009cd0a35e21d8b3804f647d5c75cbfe11efb3dbc0b77bdae0f1dbf2fb02",
+      "metadata": "Darklight__TransformedYoung__RequiemCombatSupportDaggersYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemCombatDaggersYoungCardinal",
+        "RequiemCombatDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemCombatSupportDaggersYoung_White",
+      "texture": "RequiemCombatSupportDaggersYoung_White",
+      "frames": 32,
+      "sha256": "8b7c80e2ca110db850e8ff3f3ee996c9d7859a418169bca771861abf6e36a110",
+      "metadata": "Darklight__TransformedYoung__RequiemCombatSupportDaggersYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemCombatDaggersYoungCardinal",
+        "RequiemCombatDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemCombatSupportKatanaYoung_Crimson",
+      "texture": "RequiemCombatSupportKatanaYoung_Crimson",
+      "frames": 32,
+      "sha256": "0c911ce68319ae887d520a3e9e3a427ea9dfd29b7d071fda3b726524fe6b765e",
+      "metadata": "Darklight__TransformedYoung__RequiemCombatSupportKatanaYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemCombatKatanaYoungCardinal",
+        "RequiemCombatKatanaYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemCombatSupportKatanaYoung_Violet",
+      "texture": "RequiemCombatSupportKatanaYoung_Violet",
+      "frames": 32,
+      "sha256": "fea753fd147dcd2093fe7c6624898c72104ad318e3fb59592777187346e0361d",
+      "metadata": "Darklight__TransformedYoung__RequiemCombatSupportKatanaYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemCombatKatanaYoungCardinal",
+        "RequiemCombatKatanaYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemCombatSupportKatanaYoung_White",
+      "texture": "RequiemCombatSupportKatanaYoung_White",
+      "frames": 32,
+      "sha256": "0e969b9bed635768ce46c1391811928f95a49f6f5d91e8d3922179a4ef5ecfe4",
+      "metadata": "Darklight__TransformedYoung__RequiemCombatSupportKatanaYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemCombatKatanaYoungCardinal",
+        "RequiemCombatKatanaYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemDodgeSupportChainYoung_Crimson",
+      "texture": "RequiemDodgeSupportChainYoung_Crimson",
+      "frames": 32,
+      "sha256": "d7ea362b80dda9fa65283f6d3a81385bd435f4ccc1ea1778346c547ffe77ed1e",
+      "metadata": "Darklight__TransformedYoung__RequiemDodgeSupportChainYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeChainYoungCardinalA",
+        "RequiemGuardDodgeChainYoungCardinalB",
+        "RequiemGuardDodgeChainYoungDiagonalA",
+        "RequiemGuardDodgeChainYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemDodgeSupportChainYoung_Violet",
+      "texture": "RequiemDodgeSupportChainYoung_Violet",
+      "frames": 32,
+      "sha256": "890e155abdec1d12ffa4d1fb61d6dfa29087e8154b4ed346c059350e773f74ee",
+      "metadata": "Darklight__TransformedYoung__RequiemDodgeSupportChainYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeChainYoungCardinalA",
+        "RequiemGuardDodgeChainYoungCardinalB",
+        "RequiemGuardDodgeChainYoungDiagonalA",
+        "RequiemGuardDodgeChainYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemDodgeSupportChainYoung_White",
+      "texture": "RequiemDodgeSupportChainYoung_White",
+      "frames": 32,
+      "sha256": "54934e643a15e650795906945f205c4b89d488899b77d303f4e16d0114e2bc56",
+      "metadata": "Darklight__TransformedYoung__RequiemDodgeSupportChainYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeChainYoungCardinalA",
+        "RequiemGuardDodgeChainYoungCardinalB",
+        "RequiemGuardDodgeChainYoungDiagonalA",
+        "RequiemGuardDodgeChainYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemDodgeSupportDaggersYoung_Crimson",
+      "texture": "RequiemDodgeSupportDaggersYoung_Crimson",
+      "frames": 32,
+      "sha256": "a3961a7a3cf81ca7f7295e3cc7641fce42d4ba330626182d6fd5662d66f29b3e",
+      "metadata": "Darklight__TransformedYoung__RequiemDodgeSupportDaggersYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeDaggersYoungCardinalA",
+        "RequiemGuardDodgeDaggersYoungCardinalB",
+        "RequiemGuardDodgeDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemDodgeSupportDaggersYoung_Violet",
+      "texture": "RequiemDodgeSupportDaggersYoung_Violet",
+      "frames": 32,
+      "sha256": "31264b274aafc9177a37d386832a2c026af9045609275cf2ae916895b36768ac",
+      "metadata": "Darklight__TransformedYoung__RequiemDodgeSupportDaggersYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeDaggersYoungCardinalA",
+        "RequiemGuardDodgeDaggersYoungCardinalB",
+        "RequiemGuardDodgeDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemDodgeSupportDaggersYoung_White",
+      "texture": "RequiemDodgeSupportDaggersYoung_White",
+      "frames": 32,
+      "sha256": "182a30c486637a46916b95f9bfe4c11f71b12633fe00d1d9d8b79620b070cc45",
+      "metadata": "Darklight__TransformedYoung__RequiemDodgeSupportDaggersYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeDaggersYoungCardinalA",
+        "RequiemGuardDodgeDaggersYoungCardinalB",
+        "RequiemGuardDodgeDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemDodgeSupportKatanaYoung_Crimson",
+      "texture": "RequiemDodgeSupportKatanaYoung_Crimson",
+      "frames": 32,
+      "sha256": "cb8643d38ac0b50f3c78e0988703dc90ff481ebc93c79d80d41d216b6a04cde6",
+      "metadata": "Darklight__TransformedYoung__RequiemDodgeSupportKatanaYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeKatanaYoungCardinal",
+        "RequiemGuardDodgeKatanaYoungDiagonalA",
+        "RequiemGuardDodgeKatanaYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemDodgeSupportKatanaYoung_Violet",
+      "texture": "RequiemDodgeSupportKatanaYoung_Violet",
+      "frames": 32,
+      "sha256": "896ec369b505824aa112fd0990394756db1f964d1c782de5dfedb053a109d906",
+      "metadata": "Darklight__TransformedYoung__RequiemDodgeSupportKatanaYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeKatanaYoungCardinal",
+        "RequiemGuardDodgeKatanaYoungDiagonalA",
+        "RequiemGuardDodgeKatanaYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemDodgeSupportKatanaYoung_White",
+      "texture": "RequiemDodgeSupportKatanaYoung_White",
+      "frames": 32,
+      "sha256": "ee80dc5dc5676f99025842e0807de21368b266f086b32edfd737b354a5fe212c",
+      "metadata": "Darklight__TransformedYoung__RequiemDodgeSupportKatanaYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeKatanaYoungCardinal",
+        "RequiemGuardDodgeKatanaYoungDiagonalA",
+        "RequiemGuardDodgeKatanaYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemGuardSupportChainYoung_Crimson",
+      "texture": "RequiemGuardSupportChainYoung_Crimson",
+      "frames": 32,
+      "sha256": "3439a3933ffdf50d8f4962efc528e4a5e7fbecf56d977b010838ebd9b80b4c69",
+      "metadata": "Darklight__TransformedYoung__RequiemGuardSupportChainYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeChainYoungCardinalA",
+        "RequiemGuardDodgeChainYoungCardinalB",
+        "RequiemGuardDodgeChainYoungDiagonalA",
+        "RequiemGuardDodgeChainYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemGuardSupportChainYoung_Violet",
+      "texture": "RequiemGuardSupportChainYoung_Violet",
+      "frames": 32,
+      "sha256": "ef426a10f78e334aa9b163a467d4c6460aea1ea353816cd46adabed86ffac95e",
+      "metadata": "Darklight__TransformedYoung__RequiemGuardSupportChainYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeChainYoungCardinalA",
+        "RequiemGuardDodgeChainYoungCardinalB",
+        "RequiemGuardDodgeChainYoungDiagonalA",
+        "RequiemGuardDodgeChainYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemGuardSupportChainYoung_White",
+      "texture": "RequiemGuardSupportChainYoung_White",
+      "frames": 32,
+      "sha256": "959df64984f7def3a1e6d6502459f6d5c0ce2356f89dd421bce16bce26d912b7",
+      "metadata": "Darklight__TransformedYoung__RequiemGuardSupportChainYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeChainYoungCardinalA",
+        "RequiemGuardDodgeChainYoungCardinalB",
+        "RequiemGuardDodgeChainYoungDiagonalA",
+        "RequiemGuardDodgeChainYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemGuardSupportDaggersYoung_Crimson",
+      "texture": "RequiemGuardSupportDaggersYoung_Crimson",
+      "frames": 32,
+      "sha256": "79d53a76e115a4a2da772c14ac428dc43ad7765146d9413003bad1ceeb1925b3",
+      "metadata": "Darklight__TransformedYoung__RequiemGuardSupportDaggersYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeDaggersYoungCardinalA",
+        "RequiemGuardDodgeDaggersYoungCardinalB",
+        "RequiemGuardDodgeDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemGuardSupportDaggersYoung_Violet",
+      "texture": "RequiemGuardSupportDaggersYoung_Violet",
+      "frames": 32,
+      "sha256": "efad6a76bb6ed2ef692d75d4f10afc38ce79dacd9bd0e753b43f8171aa4a0c22",
+      "metadata": "Darklight__TransformedYoung__RequiemGuardSupportDaggersYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeDaggersYoungCardinalA",
+        "RequiemGuardDodgeDaggersYoungCardinalB",
+        "RequiemGuardDodgeDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemGuardSupportDaggersYoung_White",
+      "texture": "RequiemGuardSupportDaggersYoung_White",
+      "frames": 32,
+      "sha256": "77b10f3f5e1082c60b283c8ba76fb2dc28df7e409fae30ef67b42127e0092a09",
+      "metadata": "Darklight__TransformedYoung__RequiemGuardSupportDaggersYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeDaggersYoungCardinalA",
+        "RequiemGuardDodgeDaggersYoungCardinalB",
+        "RequiemGuardDodgeDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemGuardSupportKatanaYoung_Crimson",
+      "texture": "RequiemGuardSupportKatanaYoung_Crimson",
+      "frames": 32,
+      "sha256": "194c417a5d40ebb78d1cd957441ae4058f3e67abb2f1ab8fa0631ea1bb4b73ff",
+      "metadata": "Darklight__TransformedYoung__RequiemGuardSupportKatanaYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeKatanaYoungCardinal",
+        "RequiemGuardDodgeKatanaYoungDiagonalA",
+        "RequiemGuardDodgeKatanaYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemGuardSupportKatanaYoung_Violet",
+      "texture": "RequiemGuardSupportKatanaYoung_Violet",
+      "frames": 32,
+      "sha256": "0ee26a8c43f5481f56d7d90411d214bb1c3a68d7530831610bd7587d80054913",
+      "metadata": "Darklight__TransformedYoung__RequiemGuardSupportKatanaYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeKatanaYoungCardinal",
+        "RequiemGuardDodgeKatanaYoungDiagonalA",
+        "RequiemGuardDodgeKatanaYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemGuardSupportKatanaYoung_White",
+      "texture": "RequiemGuardSupportKatanaYoung_White",
+      "frames": 32,
+      "sha256": "a774d21b922f014a2eb2540164557106c6560d23c2efd6f4b1967f95d433b11d",
+      "metadata": "Darklight__TransformedYoung__RequiemGuardSupportKatanaYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemGuardDodgeKatanaYoungCardinal",
+        "RequiemGuardDodgeKatanaYoungDiagonalA",
+        "RequiemGuardDodgeKatanaYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemIdleLivingCardinal20261017_Absolute",
+      "texture": "RequiemIdleLivingCardinal20261017_Absolute",
+      "frames": 24,
+      "sha256": "a99d16a17953783d398a303c160a5a40a5ecc98627227e07ca4136b859968072",
+      "metadata": "Darklight__TransformedYoung__RequiemIdleLivingCardinal20261017_Absolute.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemIdleLivingCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemIdleLivingCardinal20261017_Crimson",
+      "texture": "RequiemIdleLivingCardinal20261017_Crimson",
+      "frames": 24,
+      "sha256": "a74250e5d314f8ee396c2f2695adc8434e27893a1b009a034737a44326699e03",
+      "metadata": "Darklight__TransformedYoung__RequiemIdleLivingCardinal20261017_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemIdleLivingCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemIdleLivingCardinal20261017_Violet",
+      "texture": "RequiemIdleLivingCardinal20261017_Violet",
+      "frames": 24,
+      "sha256": "df36bebe4d5ecf409060073e3ed286e2f16a253128a9aff437d586e138163a58",
+      "metadata": "Darklight__TransformedYoung__RequiemIdleLivingCardinal20261017_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemIdleLivingCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemIdleLivingDiagonal20261017_Absolute",
+      "texture": "RequiemIdleLivingDiagonal20261017_Absolute",
+      "frames": 24,
+      "sha256": "82e7fe01dcbd95b4440fe0783be239eb66575af829322ceb661e203a80fbe928",
+      "metadata": "Darklight__TransformedYoung__RequiemIdleLivingDiagonal20261017_Absolute.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemIdleLivingDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemIdleLivingDiagonal20261017_Crimson",
+      "texture": "RequiemIdleLivingDiagonal20261017_Crimson",
+      "frames": 24,
+      "sha256": "22675069c413ff44d7a9ec6226701dfd0e22ccca4a4a19a997dc893101426222",
+      "metadata": "Darklight__TransformedYoung__RequiemIdleLivingDiagonal20261017_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemIdleLivingDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemIdleLivingDiagonal20261017_Violet",
+      "texture": "RequiemIdleLivingDiagonal20261017_Violet",
+      "frames": 24,
+      "sha256": "601b22253921d1cbe9d12118dd5bbd08048c71dfd9e559a4b33b3628cd715de8",
+      "metadata": "Darklight__TransformedYoung__RequiemIdleLivingDiagonal20261017_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemIdleLivingDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemLivingMotionCardinal20261017_Absolute",
+      "texture": "RequiemLivingMotionCardinal20261017_Absolute",
+      "frames": 20,
+      "sha256": "d2c15782c9e33bcd22b7c744675a35658b202d9987bfad89cc252dcc0d9f1671",
+      "metadata": "Darklight__TransformedYoung__RequiemLivingMotionCardinal20261017_Absolute.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemLivingMotionCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemLivingMotionCardinal20261017_Crimson",
+      "texture": "RequiemLivingMotionCardinal20261017_Crimson",
+      "frames": 20,
+      "sha256": "71e30a6b3ca839f3aaea7a195d4907f7db1b382cc5784547423313436ee00fb0",
+      "metadata": "Darklight__TransformedYoung__RequiemLivingMotionCardinal20261017_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemLivingMotionCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemLivingMotionCardinal20261017_Violet",
+      "texture": "RequiemLivingMotionCardinal20261017_Violet",
+      "frames": 20,
+      "sha256": "c8920ff44af8c6b27a43abd8a9401bf2d2aee1afa68632491d55cac4f77661d4",
+      "metadata": "Darklight__TransformedYoung__RequiemLivingMotionCardinal20261017_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemLivingMotionCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemLivingMotionDiagonal20261017_Absolute",
+      "texture": "RequiemLivingMotionDiagonal20261017_Absolute",
+      "frames": 20,
+      "sha256": "9bf8491d77aa124d8e9c10569e59e3576080e09e9b4c7afc27337f767eaad807",
+      "metadata": "Darklight__TransformedYoung__RequiemLivingMotionDiagonal20261017_Absolute.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemLivingMotionDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemLivingMotionDiagonal20261017_Crimson",
+      "texture": "RequiemLivingMotionDiagonal20261017_Crimson",
+      "frames": 20,
+      "sha256": "e99525b824928f5638c47326481633bf649c3ea0dbfc3777c1b3bfa71ecf30ee",
+      "metadata": "Darklight__TransformedYoung__RequiemLivingMotionDiagonal20261017_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemLivingMotionDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemLivingMotionDiagonal20261017_Violet",
+      "texture": "RequiemLivingMotionDiagonal20261017_Violet",
+      "frames": 20,
+      "sha256": "06b82c9acac6f4ca65a9a0c6a250f3dd3d0f915e15fa52bbfce0b47c8861ff4d",
+      "metadata": "Darklight__TransformedYoung__RequiemLivingMotionDiagonal20261017_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemLivingMotionDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentChainCardinal20261017_Absolute",
+      "texture": "RequiemWalkConsistentChainCardinal20261017_Absolute",
+      "frames": 24,
+      "sha256": "9e3e7de33377d5c6a733b6cead880202792de2d36599abf7b1a940e9b0c52c16",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentChainCardinal20261017_Absolute.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentChainCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentChainCardinal20261017_Crimson",
+      "texture": "RequiemWalkConsistentChainCardinal20261017_Crimson",
+      "frames": 24,
+      "sha256": "3c3d1d11bad098152bcc77730ff5dbfeef1e30b35feabbb274e67666ba588136",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentChainCardinal20261017_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentChainCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentChainCardinal20261017_Violet",
+      "texture": "RequiemWalkConsistentChainCardinal20261017_Violet",
+      "frames": 24,
+      "sha256": "f56347a64f7b8ff8acf4605b94ec16f29824ce3a9dd9f57533cb0d733b60daa9",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentChainCardinal20261017_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentChainCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentChainDiagonal20261017_Absolute",
+      "texture": "RequiemWalkConsistentChainDiagonal20261017_Absolute",
+      "frames": 24,
+      "sha256": "1cede51bc4ab8435967b6283c99bffb67288db8bf3ec3c51f069d3c4837d508d",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentChainDiagonal20261017_Absolute.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentChainDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentChainDiagonal20261017_Crimson",
+      "texture": "RequiemWalkConsistentChainDiagonal20261017_Crimson",
+      "frames": 24,
+      "sha256": "480c10a82afc633a7647a220f4f8526c7c84f2f028851a6fe2c3dba61bb47198",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentChainDiagonal20261017_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentChainDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentChainDiagonal20261017_Violet",
+      "texture": "RequiemWalkConsistentChainDiagonal20261017_Violet",
+      "frames": 24,
+      "sha256": "21f24931d7bc13770745a1143c36c83dbb6c85f1cd87720c565f0175881ea669",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentChainDiagonal20261017_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentChainDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentDaggersCardinal20261017_Absolute",
+      "texture": "RequiemWalkConsistentDaggersCardinal20261017_Absolute",
+      "frames": 24,
+      "sha256": "d539cbede9a3a7ef210df35a53dbe693fc7fb09f8cbe5ca2b52b4fd3337fc469",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentDaggersCardinal20261017_Absolute.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentDaggersCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentDaggersCardinal20261017_Crimson",
+      "texture": "RequiemWalkConsistentDaggersCardinal20261017_Crimson",
+      "frames": 24,
+      "sha256": "fd9cbe0b48fa5d346197486900505b9e100cfd5f14408a08b2d66066878b4914",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentDaggersCardinal20261017_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentDaggersCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentDaggersCardinal20261017_Violet",
+      "texture": "RequiemWalkConsistentDaggersCardinal20261017_Violet",
+      "frames": 24,
+      "sha256": "b428d1d45944a048a102936c32701264edbe2761986e6f6d54a6fc5cda4acc9f",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentDaggersCardinal20261017_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentDaggersCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentDaggersDiagonal20261017_Absolute",
+      "texture": "RequiemWalkConsistentDaggersDiagonal20261017_Absolute",
+      "frames": 24,
+      "sha256": "4ac4305c67fe5bc704b272af3b8c172e7a1ef14c044138305427a3dc3670fefd",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentDaggersDiagonal20261017_Absolute.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentDaggersDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentDaggersDiagonal20261017_Crimson",
+      "texture": "RequiemWalkConsistentDaggersDiagonal20261017_Crimson",
+      "frames": 24,
+      "sha256": "29eb6df0f65633a2f0c2726e03e546bb927de4154cdb45f741b83fc455f505a6",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentDaggersDiagonal20261017_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentDaggersDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentDaggersDiagonal20261017_Violet",
+      "texture": "RequiemWalkConsistentDaggersDiagonal20261017_Violet",
+      "frames": 24,
+      "sha256": "d4ef12f78f2cf2f01341d72be5c806405c8ab688fb1e5b81b63754c0f8a10652",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentDaggersDiagonal20261017_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentDaggersDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentKatanaCardinal20261017_Absolute",
+      "texture": "RequiemWalkConsistentKatanaCardinal20261017_Absolute",
+      "frames": 24,
+      "sha256": "731949b7041eb16182897d6d3b54bd31eb2378e70dce88bed38e1878b8e9cdca",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentKatanaCardinal20261017_Absolute.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentKatanaCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentKatanaCardinal20261017_Crimson",
+      "texture": "RequiemWalkConsistentKatanaCardinal20261017_Crimson",
+      "frames": 24,
+      "sha256": "7b04f6a286e760d6d9bca7bc2979cb036bcd2e99e65df04bda3f8a040b8dc10f",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentKatanaCardinal20261017_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentKatanaCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentKatanaCardinal20261017_Violet",
+      "texture": "RequiemWalkConsistentKatanaCardinal20261017_Violet",
+      "frames": 24,
+      "sha256": "c8920ff44af8c6b27a43abd8a9401bf2d2aee1afa68632491d55cac4f77661d4",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentKatanaCardinal20261017_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentKatanaCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentKatanaDiagonal20261017_Absolute",
+      "texture": "RequiemWalkConsistentKatanaDiagonal20261017_Absolute",
+      "frames": 24,
+      "sha256": "5c76e5dd4a969ed89c84a9ba9440c4015ad8e73d0833013f544dac8c05b014ec",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentKatanaDiagonal20261017_Absolute.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentKatanaDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentKatanaDiagonal20261017_Crimson",
+      "texture": "RequiemWalkConsistentKatanaDiagonal20261017_Crimson",
+      "frames": 24,
+      "sha256": "79355f2c3ea57a6c23fbdf570b27c0c1c60b8839340cd98d7dbb679572badd58",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentKatanaDiagonal20261017_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentKatanaDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RequiemWalkConsistentKatanaDiagonal20261017_Violet",
+      "texture": "RequiemWalkConsistentKatanaDiagonal20261017_Violet",
+      "frames": 24,
+      "sha256": "06b82c9acac6f4ca65a9a0c6a250f3dd3d0f915e15fa52bbfce0b47c8861ff4d",
+      "metadata": "Darklight__TransformedYoung__RequiemWalkConsistentKatanaDiagonal20261017_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RequiemWalkConsistentKatanaDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockAttackChainYoungCardinal_Crimson",
+      "texture": "RockAttackChainYoungCardinal_Crimson",
+      "frames": 16,
+      "sha256": "a142fb3217549a9c70e8cd53b185841b269d88ece183ae536844e444d7bc0fef",
+      "metadata": "Darklight__TransformedYoung__RockAttackChainYoungCardinal_Crimson.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockAttackChainYoungCardinal",
+        "RockCombatChainYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockAttackChainYoungCardinal_Violet",
+      "texture": "RockAttackChainYoungCardinal_Violet",
+      "frames": 16,
+      "sha256": "e80fd32abfa3747b70e3c0d08f6dabaa9f9275ca1875392bccf622a239bda9b2",
+      "metadata": "Darklight__TransformedYoung__RockAttackChainYoungCardinal_Violet.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockAttackChainYoungCardinal",
+        "RockCombatChainYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockAttackChainYoungCardinal_White",
+      "texture": "RockAttackChainYoungCardinal_White",
+      "frames": 16,
+      "sha256": "91d19041f95ba2d11ff45afac67844f43ab5a793a54ef193cba3801db0ea9ad5",
+      "metadata": "Darklight__TransformedYoung__RockAttackChainYoungCardinal_White.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockAttackChainYoungCardinal",
+        "RockCombatChainYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockAttackChainYoungDiagonal_Crimson",
+      "texture": "RockAttackChainYoungDiagonal_Crimson",
+      "frames": 16,
+      "sha256": "2de35729680a72e89363efe66614603f44baae8dbee4c073366cd175cc835901",
+      "metadata": "Darklight__TransformedYoung__RockAttackChainYoungDiagonal_Crimson.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockAttackChainYoungDiagonal",
+        "RockCombatChainYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockAttackChainYoungDiagonal_Violet",
+      "texture": "RockAttackChainYoungDiagonal_Violet",
+      "frames": 16,
+      "sha256": "ab1db68e714e088f8d83ee5dbdc6d92e9214f83f42b399296ce2d004139d69af",
+      "metadata": "Darklight__TransformedYoung__RockAttackChainYoungDiagonal_Violet.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockAttackChainYoungDiagonal",
+        "RockCombatChainYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockAttackChainYoungDiagonal_White",
+      "texture": "RockAttackChainYoungDiagonal_White",
+      "frames": 16,
+      "sha256": "951907da2627d1deeb9eb0afac2539189824a6572b5c2644eea0ea14500ea9cc",
+      "metadata": "Darklight__TransformedYoung__RockAttackChainYoungDiagonal_White.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockAttackChainYoungDiagonal",
+        "RockCombatChainYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockAttackDaggersYoungCardinal_Crimson",
+      "texture": "RockAttackDaggersYoungCardinal_Crimson",
+      "frames": 16,
+      "sha256": "4d404f5a64d31d69d9280e0c6ff3a3912da5dc6030e324780dff0a1c73c7d6cf",
+      "metadata": "Darklight__TransformedYoung__RockAttackDaggersYoungCardinal_Crimson.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockAttackDaggersYoungCardinal",
+        "RockCombatDaggersYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockAttackDaggersYoungCardinal_Violet",
+      "texture": "RockAttackDaggersYoungCardinal_Violet",
+      "frames": 16,
+      "sha256": "8405c7162e47833de3bf7f9d2f135d6ac26a7dfd7ee2b741ce8ddc02ea650e6f",
+      "metadata": "Darklight__TransformedYoung__RockAttackDaggersYoungCardinal_Violet.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockAttackDaggersYoungCardinal",
+        "RockCombatDaggersYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockAttackDaggersYoungCardinal_White",
+      "texture": "RockAttackDaggersYoungCardinal_White",
+      "frames": 16,
+      "sha256": "89a45c15474f908472b98ca6e3f185713167c7251ce892880c901abf52a8b2d2",
+      "metadata": "Darklight__TransformedYoung__RockAttackDaggersYoungCardinal_White.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockAttackDaggersYoungCardinal",
+        "RockCombatDaggersYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockAttackDaggersYoungDiagonal_Crimson",
+      "texture": "RockAttackDaggersYoungDiagonal_Crimson",
+      "frames": 16,
+      "sha256": "435c078995d62ca5ee4d0ded90e5d1cc541b5a8a89c36cefdd775053ebd3b2aa",
+      "metadata": "Darklight__TransformedYoung__RockAttackDaggersYoungDiagonal_Crimson.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockAttackDaggersYoungDiagonal",
+        "RockCombatDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockAttackDaggersYoungDiagonal_Violet",
+      "texture": "RockAttackDaggersYoungDiagonal_Violet",
+      "frames": 16,
+      "sha256": "3d13f6240958ce6a879661cb6d586b42301dc4d4b0bfba3abb90d3099239fdbc",
+      "metadata": "Darklight__TransformedYoung__RockAttackDaggersYoungDiagonal_Violet.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockAttackDaggersYoungDiagonal",
+        "RockCombatDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockAttackDaggersYoungDiagonal_White",
+      "texture": "RockAttackDaggersYoungDiagonal_White",
+      "frames": 16,
+      "sha256": "79db35ec24efbd218928f7da2f09c04eab82505fdeb0a7b414d3be41b162faf0",
+      "metadata": "Darklight__TransformedYoung__RockAttackDaggersYoungDiagonal_White.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockAttackDaggersYoungDiagonal",
+        "RockCombatDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockAttackKatanaYoung_Crimson",
+      "texture": "RockAttackKatanaYoung_Crimson",
+      "frames": 32,
+      "sha256": "7a04d5cc70897d761b05ad0d084b3cbbeaa00bbcc7251362f03407d5e2bfa169",
+      "metadata": "Darklight__TransformedYoung__RockAttackKatanaYoung_Crimson.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockAttackKatanaYoung",
+        "RockCombatKatanaYoungCardinal",
+        "RockCombatKatanaYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockAttackKatanaYoung_Violet",
+      "texture": "RockAttackKatanaYoung_Violet",
+      "frames": 32,
+      "sha256": "a629ea5315f21e161577f38665b86c68cd52db19a57b4da85304c01e58467c9a",
+      "metadata": "Darklight__TransformedYoung__RockAttackKatanaYoung_Violet.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockAttackKatanaYoung",
+        "RockCombatKatanaYoungCardinal",
+        "RockCombatKatanaYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockAttackKatanaYoung_White",
+      "texture": "RockAttackKatanaYoung_White",
+      "frames": 32,
+      "sha256": "247777f142cdbfc1de1baa20a183ab80bf22e92e79b2d2d2f1261e39f48ee256",
+      "metadata": "Darklight__TransformedYoung__RockAttackKatanaYoung_White.json",
+      "roles": [
+        "transformed-catalog",
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockAttackKatanaYoung",
+        "RockCombatKatanaYoungCardinal",
+        "RockCombatKatanaYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockCombatSupportChainYoung_Crimson",
+      "texture": "RockCombatSupportChainYoung_Crimson",
+      "frames": 32,
+      "sha256": "290315b97362a61a6a06fae22b071a61ec1dda0419aa6dead9c0813dfaba55d2",
+      "metadata": "Darklight__TransformedYoung__RockCombatSupportChainYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockCombatChainYoungCardinal",
+        "RockCombatChainYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockCombatSupportChainYoung_Violet",
+      "texture": "RockCombatSupportChainYoung_Violet",
+      "frames": 32,
+      "sha256": "8494a8df20953ad353bec33878842cdeca5b048129fa801c410b48f6c3821a39",
+      "metadata": "Darklight__TransformedYoung__RockCombatSupportChainYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockCombatChainYoungCardinal",
+        "RockCombatChainYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockCombatSupportChainYoung_White",
+      "texture": "RockCombatSupportChainYoung_White",
+      "frames": 32,
+      "sha256": "233c46f6046609e02b3d87b7511f6b302a4288ce7a43ad255d8a49d24342b054",
+      "metadata": "Darklight__TransformedYoung__RockCombatSupportChainYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockCombatChainYoungCardinal",
+        "RockCombatChainYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockCombatSupportDaggersYoung_Crimson",
+      "texture": "RockCombatSupportDaggersYoung_Crimson",
+      "frames": 32,
+      "sha256": "49d133c03d187acfdad7be7f2e4abae0ff79c4a1aa9ae86659dad99447ddb0c8",
+      "metadata": "Darklight__TransformedYoung__RockCombatSupportDaggersYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockCombatDaggersYoungCardinal",
+        "RockCombatDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockCombatSupportDaggersYoung_Violet",
+      "texture": "RockCombatSupportDaggersYoung_Violet",
+      "frames": 32,
+      "sha256": "0de9d60c3ee92a52eb48bdf0da65dce247e66b0e90b46b2f5b89d545c0f6745c",
+      "metadata": "Darklight__TransformedYoung__RockCombatSupportDaggersYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockCombatDaggersYoungCardinal",
+        "RockCombatDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockCombatSupportDaggersYoung_White",
+      "texture": "RockCombatSupportDaggersYoung_White",
+      "frames": 32,
+      "sha256": "58420197de41b0457dcfd5e41b9779d16dfb7a0f65e8f4f550c646fe37990df0",
+      "metadata": "Darklight__TransformedYoung__RockCombatSupportDaggersYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockCombatDaggersYoungCardinal",
+        "RockCombatDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockCombatSupportKatanaYoung_Crimson",
+      "texture": "RockCombatSupportKatanaYoung_Crimson",
+      "frames": 32,
+      "sha256": "304bfb3fc621dec8ae43eaff24b6c13e8e7b189de8431a6ef63246819835e27e",
+      "metadata": "Darklight__TransformedYoung__RockCombatSupportKatanaYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockCombatKatanaYoungCardinal",
+        "RockCombatKatanaYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockCombatSupportKatanaYoung_Violet",
+      "texture": "RockCombatSupportKatanaYoung_Violet",
+      "frames": 32,
+      "sha256": "d3fc2e621d0f428ed18febe509ef69959906abd90ac9b6bc00aaf69f0cfcb149",
+      "metadata": "Darklight__TransformedYoung__RockCombatSupportKatanaYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockCombatKatanaYoungCardinal",
+        "RockCombatKatanaYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockCombatSupportKatanaYoung_White",
+      "texture": "RockCombatSupportKatanaYoung_White",
+      "frames": 32,
+      "sha256": "cfea661a2c543de2ed18a5b01c6deccda0f1074fec66621b87e0fa149436cfca",
+      "metadata": "Darklight__TransformedYoung__RockCombatSupportKatanaYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockCombatKatanaYoungCardinal",
+        "RockCombatKatanaYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockDodgeSupportChainYoung_Crimson",
+      "texture": "RockDodgeSupportChainYoung_Crimson",
+      "frames": 32,
+      "sha256": "43fba66a2d7379b1cb92c68b99f272bf66ab23d20c8ce371064c0a46609f336e",
+      "metadata": "Darklight__TransformedYoung__RockDodgeSupportChainYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockGuardDodgeChainYoungCardinalA",
+        "RockGuardDodgeChainYoungCardinalB",
+        "RockGuardDodgeChainYoungDiagonalA",
+        "RockGuardDodgeChainYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockDodgeSupportChainYoung_Violet",
+      "texture": "RockDodgeSupportChainYoung_Violet",
+      "frames": 32,
+      "sha256": "f43f68fdc6476bb0c6c977eab1c55ffac94ab8069a77f6744c14c966031112ef",
+      "metadata": "Darklight__TransformedYoung__RockDodgeSupportChainYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockGuardDodgeChainYoungCardinalA",
+        "RockGuardDodgeChainYoungCardinalB",
+        "RockGuardDodgeChainYoungDiagonalA",
+        "RockGuardDodgeChainYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockDodgeSupportChainYoung_White",
+      "texture": "RockDodgeSupportChainYoung_White",
+      "frames": 32,
+      "sha256": "76b8228947a9f50bdc42be1d2914ef0065a4e1b79c44b61bf24979a242fb8aad",
+      "metadata": "Darklight__TransformedYoung__RockDodgeSupportChainYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockGuardDodgeChainYoungCardinalA",
+        "RockGuardDodgeChainYoungCardinalB",
+        "RockGuardDodgeChainYoungDiagonalA",
+        "RockGuardDodgeChainYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockDodgeSupportDaggersYoung_Crimson",
+      "texture": "RockDodgeSupportDaggersYoung_Crimson",
+      "frames": 32,
+      "sha256": "67ac3545ae1cba96d524e1b72385a7d0fb72572aab34a94e6dee4defecf8a0a9",
+      "metadata": "Darklight__TransformedYoung__RockDodgeSupportDaggersYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockGuardDodgeDaggersYoungCardinal",
+        "RockGuardDodgeDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockDodgeSupportDaggersYoung_Violet",
+      "texture": "RockDodgeSupportDaggersYoung_Violet",
+      "frames": 32,
+      "sha256": "725e27fc546758ca7b5fb78e0983b0d3c85629f8a4534b76ede50b703d47b96a",
+      "metadata": "Darklight__TransformedYoung__RockDodgeSupportDaggersYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockGuardDodgeDaggersYoungCardinal",
+        "RockGuardDodgeDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockDodgeSupportDaggersYoung_White",
+      "texture": "RockDodgeSupportDaggersYoung_White",
+      "frames": 32,
+      "sha256": "16f181b023755a7f74d507c5480d09ea0c2e18dd9aa54d782df184abaa6058f1",
+      "metadata": "Darklight__TransformedYoung__RockDodgeSupportDaggersYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockGuardDodgeDaggersYoungCardinal",
+        "RockGuardDodgeDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockDodgeSupportKatanaYoung_Crimson",
+      "texture": "RockDodgeSupportKatanaYoung_Crimson",
+      "frames": 32,
+      "sha256": "aeb899c9661ed024966af750304f34530190f0071d6dc38af109f9042167f25f",
+      "metadata": "Darklight__TransformedYoung__RockDodgeSupportKatanaYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockGuardDodgeKatanaYoungCardinalA",
+        "RockGuardDodgeKatanaYoungCardinalB",
+        "RockGuardDodgeKatanaYoungDiagonal",
+        "RockGuardDodgeKatanaYoungNorthEast"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockDodgeSupportKatanaYoung_Violet",
+      "texture": "RockDodgeSupportKatanaYoung_Violet",
+      "frames": 32,
+      "sha256": "12ce31dcfb526e653de017532180cfa2f7749905f1b9e897e3c9991c0f47c5f9",
+      "metadata": "Darklight__TransformedYoung__RockDodgeSupportKatanaYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockGuardDodgeKatanaYoungCardinalA",
+        "RockGuardDodgeKatanaYoungCardinalB",
+        "RockGuardDodgeKatanaYoungDiagonal",
+        "RockGuardDodgeKatanaYoungNorthEast"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockDodgeSupportKatanaYoung_White",
+      "texture": "RockDodgeSupportKatanaYoung_White",
+      "frames": 32,
+      "sha256": "66d7dd4081ce05fe771a638adb3cd66a9bc9e814a9db6e7242c97fe900027786",
+      "metadata": "Darklight__TransformedYoung__RockDodgeSupportKatanaYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockGuardDodgeKatanaYoungCardinalA",
+        "RockGuardDodgeKatanaYoungCardinalB",
+        "RockGuardDodgeKatanaYoungDiagonal",
+        "RockGuardDodgeKatanaYoungNorthEast"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockGuardSupportChainYoung_Crimson",
+      "texture": "RockGuardSupportChainYoung_Crimson",
+      "frames": 32,
+      "sha256": "32b704f407f1e3e1d1044d8ec9ca748d198d82862eba5bfba41f0c06df23984a",
+      "metadata": "Darklight__TransformedYoung__RockGuardSupportChainYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockGuardDodgeChainYoungCardinalA",
+        "RockGuardDodgeChainYoungCardinalB",
+        "RockGuardDodgeChainYoungDiagonalA",
+        "RockGuardDodgeChainYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockGuardSupportChainYoung_Violet",
+      "texture": "RockGuardSupportChainYoung_Violet",
+      "frames": 32,
+      "sha256": "18c6f555ae3150302f242f3d21ae0ca0d2ca4d36a65e479edbf19fdf5d5b2b45",
+      "metadata": "Darklight__TransformedYoung__RockGuardSupportChainYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockGuardDodgeChainYoungCardinalA",
+        "RockGuardDodgeChainYoungCardinalB",
+        "RockGuardDodgeChainYoungDiagonalA",
+        "RockGuardDodgeChainYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockGuardSupportChainYoung_White",
+      "texture": "RockGuardSupportChainYoung_White",
+      "frames": 32,
+      "sha256": "a4dbb6a25b2b35b6bdc2467d76857482a4f6a3dc39c82b761145795542cce2f4",
+      "metadata": "Darklight__TransformedYoung__RockGuardSupportChainYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockGuardDodgeChainYoungCardinalA",
+        "RockGuardDodgeChainYoungCardinalB",
+        "RockGuardDodgeChainYoungDiagonalA",
+        "RockGuardDodgeChainYoungDiagonalB"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockGuardSupportDaggersYoung_Crimson",
+      "texture": "RockGuardSupportDaggersYoung_Crimson",
+      "frames": 32,
+      "sha256": "0003b211d47758385826fd4b4d34844351843caff60c9cf0dc7e1c44c75e3a84",
+      "metadata": "Darklight__TransformedYoung__RockGuardSupportDaggersYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockGuardDodgeDaggersYoungCardinal",
+        "RockGuardDodgeDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockGuardSupportDaggersYoung_Violet",
+      "texture": "RockGuardSupportDaggersYoung_Violet",
+      "frames": 32,
+      "sha256": "f5028d77ac996bd1b1917bba3c7772883be6c2fdc21cde3a4b8415b63ca2ea55",
+      "metadata": "Darklight__TransformedYoung__RockGuardSupportDaggersYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockGuardDodgeDaggersYoungCardinal",
+        "RockGuardDodgeDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockGuardSupportDaggersYoung_White",
+      "texture": "RockGuardSupportDaggersYoung_White",
+      "frames": 32,
+      "sha256": "42e63ac6807ee8ae4e8936fff1af1ac9f7594e4fe9deb1fdafa5c3f6644b7d50",
+      "metadata": "Darklight__TransformedYoung__RockGuardSupportDaggersYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockGuardDodgeDaggersYoungCardinal",
+        "RockGuardDodgeDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockGuardSupportKatanaYoung_Crimson",
+      "texture": "RockGuardSupportKatanaYoung_Crimson",
+      "frames": 32,
+      "sha256": "096f9a61e1e36daf3d77050100ca7bcaa4c571d2a90d2414f7f64814f9247acb",
+      "metadata": "Darklight__TransformedYoung__RockGuardSupportKatanaYoung_Crimson.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockGuardDodgeKatanaYoungCardinalA",
+        "RockGuardDodgeKatanaYoungCardinalB",
+        "RockGuardDodgeKatanaYoungDiagonal",
+        "RockGuardDodgeKatanaYoungNorthEast"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockGuardSupportKatanaYoung_Violet",
+      "texture": "RockGuardSupportKatanaYoung_Violet",
+      "frames": 32,
+      "sha256": "4ff718712cbe6bb0e42168d3995addbe6e0fc90053f821522bdff4c40bcd7d35",
+      "metadata": "Darklight__TransformedYoung__RockGuardSupportKatanaYoung_Violet.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockGuardDodgeKatanaYoungCardinalA",
+        "RockGuardDodgeKatanaYoungCardinalB",
+        "RockGuardDodgeKatanaYoungDiagonal",
+        "RockGuardDodgeKatanaYoungNorthEast"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockGuardSupportKatanaYoung_White",
+      "texture": "RockGuardSupportKatanaYoung_White",
+      "frames": 32,
+      "sha256": "16c2d85a5c449867cd631d5c934f217f90398e44fb1b9a54d211d704f8ec52da",
+      "metadata": "Darklight__TransformedYoung__RockGuardSupportKatanaYoung_White.json",
+      "roles": [
+        "transformed-reference"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockGuardDodgeKatanaYoungCardinalA",
+        "RockGuardDodgeKatanaYoungCardinalB",
+        "RockGuardDodgeKatanaYoungDiagonal",
+        "RockGuardDodgeKatanaYoungNorthEast"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockIdleLivingCardinal20261017_Absolute",
+      "texture": "RockIdleLivingCardinal20261017_Absolute",
+      "frames": 24,
+      "sha256": "e898c5f6c016aa70bb6986bcc3a253c757c60e7e150d2d56d53df59ea6d6f75f",
+      "metadata": "Darklight__TransformedYoung__RockIdleLivingCardinal20261017_Absolute.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockIdleLivingCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockIdleLivingCardinal20261017_Crimson",
+      "texture": "RockIdleLivingCardinal20261017_Crimson",
+      "frames": 24,
+      "sha256": "dad3474441e9d58d55ae154b2f082059d5e29cf7cf866fd3eda81e2ccb959837",
+      "metadata": "Darklight__TransformedYoung__RockIdleLivingCardinal20261017_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockIdleLivingCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockIdleLivingCardinal20261017_Violet",
+      "texture": "RockIdleLivingCardinal20261017_Violet",
+      "frames": 24,
+      "sha256": "06e96c227e2b3c07ae227e4eff7306318efc69fa942644839f0906fb1262b9f4",
+      "metadata": "Darklight__TransformedYoung__RockIdleLivingCardinal20261017_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockIdleLivingCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockIdleLivingDiagonal20261017_Absolute",
+      "texture": "RockIdleLivingDiagonal20261017_Absolute",
+      "frames": 24,
+      "sha256": "10f6789b4002f4c554c392ffb97734b1a54a76b3c97ab07974b10ea172c70619",
+      "metadata": "Darklight__TransformedYoung__RockIdleLivingDiagonal20261017_Absolute.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockIdleLivingDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockIdleLivingDiagonal20261017_Crimson",
+      "texture": "RockIdleLivingDiagonal20261017_Crimson",
+      "frames": 24,
+      "sha256": "9b64e4f91a806c3e6f2fe6e655f84bdb7f6c206fffd620cbfdef3662ffe8eb43",
+      "metadata": "Darklight__TransformedYoung__RockIdleLivingDiagonal20261017_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockIdleLivingDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockIdleLivingDiagonal20261017_Violet",
+      "texture": "RockIdleLivingDiagonal20261017_Violet",
+      "frames": 24,
+      "sha256": "0b649b1132c86372c2b92836667a46d07b8de34e3bd1ea3ca800614b271a82ac",
+      "metadata": "Darklight__TransformedYoung__RockIdleLivingDiagonal20261017_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockIdleLivingDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockLivingMotionCardinal20261017_Absolute",
+      "texture": "RockLivingMotionCardinal20261017_Absolute",
+      "frames": 20,
+      "sha256": "427e2c54a5e19a478a7dfe7d0774d50969abc1c7f25ac2c070adb1c0f65a87d5",
+      "metadata": "Darklight__TransformedYoung__RockLivingMotionCardinal20261017_Absolute.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockLivingMotionCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockLivingMotionCardinal20261017_Crimson",
+      "texture": "RockLivingMotionCardinal20261017_Crimson",
+      "frames": 20,
+      "sha256": "c65537108a909c49820eeb730ea2c68a068a6becfa3b6fc63e27d6a6514fe4e4",
+      "metadata": "Darklight__TransformedYoung__RockLivingMotionCardinal20261017_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockLivingMotionCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockLivingMotionCardinal20261017_Violet",
+      "texture": "RockLivingMotionCardinal20261017_Violet",
+      "frames": 20,
+      "sha256": "cf09d45f369185601822bc67f473d762a079f0ddb71ba4cc0688cf41ec8f1474",
+      "metadata": "Darklight__TransformedYoung__RockLivingMotionCardinal20261017_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockLivingMotionCardinal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockLivingMotionDiagonal20261017_Absolute",
+      "texture": "RockLivingMotionDiagonal20261017_Absolute",
+      "frames": 20,
+      "sha256": "ff56a899f7e80577a0417600a501e59b110dac8c9f9fa735ba018d94201eaba5",
+      "metadata": "Darklight__TransformedYoung__RockLivingMotionDiagonal20261017_Absolute.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockLivingMotionDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockLivingMotionDiagonal20261017_Crimson",
+      "texture": "RockLivingMotionDiagonal20261017_Crimson",
+      "frames": 20,
+      "sha256": "7d4f5dfa70b148a30685383962879ba62af141bdf6dbc464fadca8935360578d",
+      "metadata": "Darklight__TransformedYoung__RockLivingMotionDiagonal20261017_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockLivingMotionDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockLivingMotionDiagonal20261017_Violet",
+      "texture": "RockLivingMotionDiagonal20261017_Violet",
+      "frames": 20,
+      "sha256": "35e9e87e92400e8b2c205d071f1f76730b7f0c889b7cc694575148b542ec012e",
+      "metadata": "Darklight__TransformedYoung__RockLivingMotionDiagonal20261017_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockLivingMotionDiagonal20261017"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockWalkChainYoung_Crimson",
+      "texture": "RockWalkChainYoung_Crimson",
+      "frames": 32,
+      "sha256": "e5c07fbd882482cc45fa291d1e76f5f767e14e64861420b3fc6b5ae844632e63",
+      "metadata": "Darklight__TransformedYoung__RockWalkChainYoung_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockWalkChainYoung"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockWalkChainYoung_Violet",
+      "texture": "RockWalkChainYoung_Violet",
+      "frames": 32,
+      "sha256": "e9b18d9c2d250826d8fe659c3a25a9e4af01d381b267c35d660dad108eebe08f",
+      "metadata": "Darklight__TransformedYoung__RockWalkChainYoung_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockWalkChainYoung"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockWalkChainYoung_White",
+      "texture": "RockWalkChainYoung_White",
+      "frames": 32,
+      "sha256": "4001c72da3dd319d674f0bcb4950f66e512a24e37cb5eac2b476bf72befc431f",
+      "metadata": "Darklight__TransformedYoung__RockWalkChainYoung_White.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockWalkChainYoung"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockWalkDaggersYoungCardinal_Crimson",
+      "texture": "RockWalkDaggersYoungCardinal_Crimson",
+      "frames": 16,
+      "sha256": "40fd1344115a063e9974bf76bd5c670e3a1189072bf44e71edea06bc422ff168",
+      "metadata": "Darklight__TransformedYoung__RockWalkDaggersYoungCardinal_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockWalkDaggersYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockWalkDaggersYoungCardinal_Violet",
+      "texture": "RockWalkDaggersYoungCardinal_Violet",
+      "frames": 16,
+      "sha256": "ec2e4dfa8afa79fe730128829dba72c92e884b7088c2ae62947187957db8d44e",
+      "metadata": "Darklight__TransformedYoung__RockWalkDaggersYoungCardinal_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockWalkDaggersYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockWalkDaggersYoungCardinal_White",
+      "texture": "RockWalkDaggersYoungCardinal_White",
+      "frames": 16,
+      "sha256": "42212d3b8addceb5ea67190b8ca0852a76778efb786e46ba94b69183d9a830f2",
+      "metadata": "Darklight__TransformedYoung__RockWalkDaggersYoungCardinal_White.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockWalkDaggersYoungCardinal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockWalkDaggersYoungDiagonal_Crimson",
+      "texture": "RockWalkDaggersYoungDiagonal_Crimson",
+      "frames": 16,
+      "sha256": "c7590c5b56bcf71023d278d5894ec474a91c658abc143719501a01de78016507",
+      "metadata": "Darklight__TransformedYoung__RockWalkDaggersYoungDiagonal_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockWalkDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockWalkDaggersYoungDiagonal_Violet",
+      "texture": "RockWalkDaggersYoungDiagonal_Violet",
+      "frames": 16,
+      "sha256": "aa8e4aa0d89f8d266bda8551883ee1ddfb03a7d705778c2ff71540e229d38513",
+      "metadata": "Darklight__TransformedYoung__RockWalkDaggersYoungDiagonal_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockWalkDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockWalkDaggersYoungDiagonal_White",
+      "texture": "RockWalkDaggersYoungDiagonal_White",
+      "frames": 16,
+      "sha256": "efbaadb21313819cc57670272dce364c801fb56f861a85bc7558df4a2858222e",
+      "metadata": "Darklight__TransformedYoung__RockWalkDaggersYoungDiagonal_White.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockWalkDaggersYoungDiagonal"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockWalkKatanaYoung_Crimson",
+      "texture": "RockWalkKatanaYoung_Crimson",
+      "frames": 32,
+      "sha256": "70a4c5a50443ad3343328ae9f65fa07ac585a20322f690d39a5e4cbdc356de75",
+      "metadata": "Darklight__TransformedYoung__RockWalkKatanaYoung_Crimson.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        1
+      ],
+      "baseNames": [
+        "RockWalkKatanaYoung"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockWalkKatanaYoung_Violet",
+      "texture": "RockWalkKatanaYoung_Violet",
+      "frames": 32,
+      "sha256": "8bbc92a440ecffb531215463e9a25f2a3e0ca8fd9a6942b5cc0c1d0125c563b1",
+      "metadata": "Darklight__TransformedYoung__RockWalkKatanaYoung_Violet.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        2
+      ],
+      "baseNames": [
+        "RockWalkKatanaYoung"
+      ]
+    },
+    {
+      "resource": "Darklight/TransformedYoung/RockWalkKatanaYoung_White",
+      "texture": "RockWalkKatanaYoung_White",
+      "frames": 32,
+      "sha256": "bd50a87c9d3d06f06bb3dc2a88d32a251df17854e2e4a9b85ad8e2039be79f9d",
+      "metadata": "Darklight__TransformedYoung__RockWalkKatanaYoung_White.json",
+      "roles": [
+        "transformed-catalog"
+      ],
+      "forms": [
+        3
+      ],
+      "baseNames": [
+        "RockWalkKatanaYoung"
+      ]
+    },
+    {
+      "resource": "Darklight/UserWholeSprites/requiemadaga1",
+      "texture": "requiemadaga1",
+      "frames": 8,
+      "sha256": "a54fdfdd4d06adb264e6d17c56a56c6c26c46d5fe6339c45cb0dd9da69e16829",
+      "metadata": "Darklight__UserWholeSprites__requiemadaga1.json",
+      "roles": [
+        "user-fallback"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/UserWholeSprites/requiemfoice1",
+      "texture": "requiemfoice1",
+      "frames": 8,
+      "sha256": "7fde55be991759138b312a16c7599e53aa8ed4ac179fec2ebb53b1e6c871b9b6",
+      "metadata": "Darklight__UserWholeSprites__requiemfoice1.json",
+      "roles": [
+        "user-fallback"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/UserWholeSprites/requiemkatana1",
+      "texture": "requiemkatana1",
+      "frames": 8,
+      "sha256": "36461a1d57c2114a18e35c22042679fb21f4a456e82454fbae6ea5467e55028e",
+      "metadata": "Darklight__UserWholeSprites__requiemkatana1.json",
+      "roles": [
+        "user-fallback"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/UserWholeSprites/rockadaga1",
+      "texture": "rockadaga1",
+      "frames": 8,
+      "sha256": "1790a58d116a638849d9d4f1e098b7c4a784a6e23b431e9368bbbe9ecf83171f",
+      "metadata": "Darklight__UserWholeSprites__rockadaga1.json",
+      "roles": [
+        "user-fallback"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/UserWholeSprites/rockfoice1",
+      "texture": "rockfoice1",
+      "frames": 8,
+      "sha256": "44eb22c5ec4c9e7a29180506d2088d85f17d1b2f598f93a2cbc0caf883d68f82",
+      "metadata": "Darklight__UserWholeSprites__rockfoice1.json",
+      "roles": [
+        "user-fallback"
+      ],
+      "forms": [],
+      "baseNames": []
+    },
+    {
+      "resource": "Darklight/UserWholeSprites/rockkatana1",
+      "texture": "rockkatana1",
+      "frames": 8,
+      "sha256": "4928ba4b15744555f8205ee509eec8bcc7a6b2bddba43981fb1f95dcdd3ffa6e",
+      "metadata": "Darklight__UserWholeSprites__rockkatana1.json",
+      "roles": [
+        "user-fallback"
+      ],
+      "forms": [],
+      "baseNames": []
+    }
+  ],
+  "failures": [],
+  "sourcePixelsModified": false,
+  "productionApplied": false
+}

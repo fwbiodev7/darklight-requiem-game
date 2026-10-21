@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-21 00:24:32Z" end-time="2026-10-21 00:24:33Z" duration="0,3281635">
+  <test-suite type="TestSuite" id="1000" name="DARKLIGHT REQUIEM" fullname="DARKLIGHT REQUIEM" runstate="Runnable" testcasecount="208" result="Passed" start-time="2026-10-21 00:24:32Z" end-time="2026-10-21 00:24:33Z" duration="0.328164" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1262" name="Darklight.EditModeTests.dll" fullname="C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/Library/ScriptAssemblies/Darklight.EditModeTests.dll" runstate="Runnable" testcasecount="208" result="Passed" start-time="2026-10-21 00:24:32Z" end-time="2026-10-21 00:24:33Z" duration="0.317065" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="33612" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1263" name="Darklight" fullname="Darklight" runstate="Runnable" testcasecount="208" result="Passed" start-time="2026-10-21 00:24:32Z" end-time="2026-10-21 00:24:33Z" duration="0.312134" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1264" name="Tests" fullname="Darklight.Tests" runstate="Runnable" testcasecount="208" result="Passed" start-time="2026-10-21 00:24:32Z" end-time="2026-10-21 00:24:33Z" duration="0.308888" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1020" name="DarklightCanonicalComplexionTests" fullname="Darklight.Tests.DarklightCanonicalComplexionTests" classname="Darklight.Tests.DarklightCanonicalComplexionTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-21 00:24:32Z" end-time="2026-10-21 00:24:32Z" duration="0.099065" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1022" name="LegacyTexturesDoNotReceiveTheNewPalette" fullname="Darklight.Tests.DarklightCanonicalComplexionTests.LegacyTexturesDoNotReceiveTheNewPalette" methodname="LegacyTexturesDoNotReceiveTheNewPalette" classname="Darklight.Tests.DarklightCanonicalComplexionTests" runstate="Runnable" seed="1373112754" result="Passed" start-time="2026-10-21 00:24:32Z" end-time="2026-10-21 00:24:32Z" duration="0.043981" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1021" name="PlayerTexturesShareTheRequiemRestPaletteAndKeepOwnerProperties" fullname="Darklight.Tests.DarklightCanonicalComplexionTests.PlayerTexturesShareTheRequiemRestPaletteAndKeepOwnerProperties" methodname="PlayerTexturesShareTheRequiemRestPaletteAndKeepOwnerProperties" classname="Darklight.Tests.DarklightCanonicalComplexionTests" runstate="Runnable" seed="1735935236" result="Passed" start-time="2026-10-21 00:24:32Z" end-time="2026-10-21 00:24:32Z" duration="0.037863" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1074" name="DarklightDaggerSheetEightTests" fullname="Darklight.Tests.DarklightDaggerSheetEightTests" classname="Darklight.Tests.DarklightDaggerSheetEightTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-21 00:24:32Z" end-time="2026-10-21 00:24:33Z" duration="0.192119" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1076" name="EightPoseSheetKeepsNativeDimensionsAndLosslessPixelImport" fullname="Darklight.Tests.DarklightDaggerSheetEightTests.EightPoseSheetKeepsNativeDimensionsAndLosslessPixelImport" methodname="EightPoseSheetKeepsNativeDimensionsAndLosslessPixelImport" classname="Darklight.Tests.DarklightDaggerSheetEightTests" runstate="Runnable" seed="2001505629" result="Passed" start-time="2026-10-21 00:24:32Z" end-time="2026-10-21 00:24:32Z" duration="0.013091" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1075" name="EightRevisedPosesResolveThroughTheExistingTwoDirectionalPages" fullname="Darklight.Tests.DarklightDaggerSheetEightTests.EightRevisedPosesResolveThroughTheExistingTwoDirectionalPages" methodname="EightRevisedPosesResolveThroughTheExistingTwoDirectionalPages" classname="Darklight.Tests.DarklightDaggerSheetEightTests" runstate="Runnable" seed="965591386" result="Passed" start-time="2026-10-21 00:24:32Z" end-time="2026-10-21 00:24:33Z" duration="0.175891" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Usuario/AppData/LocalLow/Fabio/DARKLIGHT REQUIEM\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/Fabio/DARKLIGHT REQUIEM\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

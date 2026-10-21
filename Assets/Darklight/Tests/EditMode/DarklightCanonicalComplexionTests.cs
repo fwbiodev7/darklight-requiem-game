@@ -4,14 +4,24 @@ namespace Darklight.Tests
 {
     public sealed class DarklightCanonicalComplexionTests
     {
-        [Test] public void NewlyAuthoredTexturesHaveBoundedReferencePaletteAndKeepOwnerProperties()
+        [Test] public void PlayerTexturesShareTheRequiemRestPaletteAndKeepOwnerProperties()
         {
             var source=Resources.Load<TextAsset>("Darklight/CanonicalComplexion");Assert.That(source,Is.Not.Null);
             var data=JsonUtility.FromJson<DarklightCanonicalComplexion.Data>(source.text);
-            int expected=System.IO.File.Exists("Assets/Darklight/ArtSources/ConsistentWalk20261017/manifest.json")?64:32;
-            if(System.IO.File.Exists("Assets/Darklight/ArtSources/AbyssDirectional20261018/manifest.json"))expected+=12;
-            Assert.That(data.reference,Does.Contain("2026-10-14 120511"));Assert.That(data.entries.Length,Is.EqualTo(expected));
-            foreach(var entry in data.entries)foreach(float value in entry.shift)Assert.That(Mathf.Abs(value),Is.LessThanOrEqualTo(.16f));
+            Assert.That(data.reference,Does.Contain("2026-10-14 120511"));Assert.That(data.entries.Length,Is.GreaterThanOrEqualTo(261));
+            CollectionAssert.AreEqual(new float[]{246,174,130},data.referenceMedian);
+            var names=new System.Collections.Generic.HashSet<string>();
+            foreach(var entry in data.entries)
+            {
+                Assert.That(names.Add(entry.texture),Is.True,"Duplicate texture palette: "+entry.texture);
+                Assert.That(entry.shift.Length,Is.EqualTo(3));Assert.That(entry.sourceMedian.Length,Is.EqualTo(3));
+                for(int channel=0;channel<3;channel++)
+                {
+                    Assert.That(float.IsNaN(entry.shift[channel])||float.IsInfinity(entry.shift[channel]),Is.False);
+                    Assert.That(Mathf.Abs(entry.shift[channel]),Is.LessThanOrEqualTo(.30f));
+                    Assert.That(entry.sourceMedian[channel]+entry.shift[channel]*255,Is.EqualTo(data.referenceMedian[channel]).Within(.001f),entry.texture);
+                }
+            }
             var sprite=TodayCharacterBank.YoungIdle(1,0,0,0);var go=new GameObject("PaletteFixture");
             try
             {

@@ -1,0 +1,646 @@
+{
+  "baseCommit": "5d48ce20eecf6760c1d5879fd249d6fc7c273a2c",
+  "branch": "codex/padronizacao-visual-20261020",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "2848918aa8d78374e3f2e0a214ea05307f6ce2f464c91e25e1755ed610806fc1",
+      "bytes": 5777
+    },
+    {
+      "path": "ArtSources/PlayerEyeReference20261020/referencia-inteira-4x.png",
+      "sha256": "7986256de49c0400f7b01352a49917e3f74f270037184bb0d2c08911170a5159",
+      "bytes": 49390
+    },
+    {
+      "path": "ArtSources/PlayerEyeReference20261020/referencia-olhos-player.png",
+      "sha256": "82ce8cb4761757ba6f3f1809fd4bf603d67eac5b7a8a7cec056c1ce178fcd949",
+      "bytes": 33212
+    },
+    {
+      "path": "ArtSources/PlayerStyleReference20261020/referencia-pixel-art-aprovada.png",
+      "sha256": "b7507a32fa16eff4c889497eb858b2cb466a037dbe3df584bb7e8e2a2b5d4cf3",
+      "bytes": 1006066
+    },
+    {
+      "path": "Assets/Darklight/Art/Includes.meta",
+      "sha256": "ed0c0ac5149a0c325113a65625f4f84a6f6b02db8f4a43de9fbe852f727ea840",
+      "bytes": 172
+    },
+    {
+      "path": "Assets/Darklight/Art/Includes/PlayerIrisPalette.hlsl",
+      "sha256": "22b94dcda7daab6caa620f64bd6576cf3676e21fd28710c1f3ae3b7eba74538a",
+      "bytes": 645
+    },
+    {
+      "path": "Assets/Darklight/Art/Includes/PlayerIrisPalette.hlsl.meta",
+      "sha256": "4edc6b3f29880b3e9333164061611985349134208f25100a689fc43e92a5d893",
+      "bytes": 161
+    },
+    {
+      "path": "Assets/Darklight/Art/PixelSprite.shader",
+      "sha256": "0f418f9ff407c33955a60ccf7aecbef20c160075a494650d3500f471620c9613",
+      "bytes": 6859
+    },
+    {
+      "path": "Assets/Darklight/Art/PixelSprite.shader.meta",
+      "sha256": "ffcef0f27b0efaa4588f9149a25d353dc63dff2d4aa32b5c67b7ea19c7179ff8",
+      "bytes": 204
+    },
+    {
+      "path": "Assets/Darklight/Art/Remaster/RemasterSpriteLit.shader",
+      "sha256": "c8bbfff5595488d6282fd10866bf41e97a7f547a824e283b6d79c0425f524e38",
+      "bytes": 5185
+    },
+    {
+      "path": "Assets/Darklight/Art/Remaster/RemasterSpriteLit.shader.meta",
+      "sha256": "c2b29f2f879538da0c6a5c51d62c96af72b44f7421ecc354f2d9c45098fbe687",
+      "bytes": 204
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020.meta",
+      "sha256": "749cd58bfe6848ab7b3a7646eb07e182739098ffa792b4f70eeadaaca98fb923",
+      "bytes": 172
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020/RequiemDaggersViolet8-v2-source.png",
+      "sha256": "a5b77f29784a6551369c562f22ef5c630340a874aff1a4f3c4f37392010068d6",
+      "bytes": 1287940
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020/RequiemDaggersViolet8-v2-source.png.meta",
+      "sha256": "59f4db02dd69548e941db854f1c78202513998502a5ef7618639f26fc127d104",
+      "bytes": 17636
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020/RequiemKatanaVioletFront-0-source.png",
+      "sha256": "b942282919aceeacd54d3362bfbd3a973203d3935a47451f742eadbb019d2727",
+      "bytes": 961954
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020/RequiemKatanaVioletFront-0-source.png.meta",
+      "sha256": "dbf3d1cf442adf956ed44fffef4de51f23adc5edaf782e73a0214c1230b97dff",
+      "bytes": 14986
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020/RequiemKatanaVioletFront-1-source.png",
+      "sha256": "41185f370e0b59e2dbe88b5e948fd1c3c12f4f91fd680eca1a584e7eea86e592",
+      "bytes": 895365
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020/RequiemKatanaVioletFront-1-source.png.meta",
+      "sha256": "d22ac305add0f9f9adf65b679f5d0d47541ba67ca38e81d70c6ee3cee197319d",
+      "bytes": 22500
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020/RequiemKatanaVioletFront-2-source.png",
+      "sha256": "51d0e7873c1f0a8d6c3c33fe44711356c491c1955a4587023817e277fb55fbc5",
+      "bytes": 894119
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020/RequiemKatanaVioletFront-2-source.png.meta",
+      "sha256": "a80a55cc2f0e7bcc78409e0bc729e47ae0dfe0accba7273fb7fc6e2f5ae89d46",
+      "bytes": 6107
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020/RequiemKatanaVioletFront-3-source.png",
+      "sha256": "16e074524d0f126956421e73214bf6998689abbf497fe9b28ae5a922c2d48524",
+      "bytes": 903587
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020/RequiemKatanaVioletFront-3-source.png.meta",
+      "sha256": "ada6f3acb5ef6308847b2537a7d7c67a345a35ce2066f9eea306e7790ff8913d",
+      "bytes": 13624
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020/daggers8-prompt-v2.json",
+      "sha256": "cf688d749a1fc47899e9c10b42de3c1d15cd7198a86145b2931eb8eb53f480b3",
+      "bytes": 2318
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020/daggers8-prompt-v2.json.meta",
+      "sha256": "debb3da34c8c294fbdaefd58750e10441dbfcc661cfa3bbf01bf0b650e4d7d06",
+      "bytes": 158
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020/daggers8-v2-manifest.json",
+      "sha256": "37441dbce08c715a3c1c81eecfe2431cbcd3b71081dc6f069dc3159fe5de7493",
+      "bytes": 3543
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020/daggers8-v2-manifest.json.meta",
+      "sha256": "e9789321501eb2c9c004a8fb4bae5f7ae8435f3b3606286dcd36bc77c1a400e0",
+      "bytes": 158
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020/manifest.json",
+      "sha256": "b7edbe95244f8816d1e1ef8a7e816943a0b7714fb2605384c0458900e04c9a8c",
+      "bytes": 2960
+    },
+    {
+      "path": "Assets/Darklight/ArtSources/PlayerVisualRevision20261020/manifest.json.meta",
+      "sha256": "0d15480b78aa3d67a2aea96ac26c252f4b96cf7cdffae95960b95583158c5466",
+      "bytes": 158
+    },
+    {
+      "path": "Assets/Darklight/Editor/RemasterPrototype/YoungSpriteLit.shader",
+      "sha256": "dffa92515ab208274e731436aac21f8ea2434325c3141e4753f9fb8eaeffe27b",
+      "bytes": 3851
+    },
+    {
+      "path": "Assets/Darklight/Editor/RemasterPrototype/YoungSpriteLit.shader.meta",
+      "sha256": "d6c499d9e751a9f3712c62d182345bc167ed76d08aa04b92dbf31e1e4ee1e6dc",
+      "bytes": 204
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/CanonicalComplexion.json",
+      "sha256": "48abf51771791c38e542e957e1e1f329946bcadaa283130f4026ba9ae0ee1f33",
+      "bytes": 70367
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/PlayerVisualRevision20261020.meta",
+      "sha256": "e248b5a62b09443b665a95cc46242e44d4d6fc5d3f07b050a0650ddbd14cc317",
+      "bytes": 172
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/PlayerVisualRevision20261020/RequiemDaggersViolet8.png",
+      "sha256": "7417a6038779ab186c62cdea80fe645df862bf92d4eb658f5ca923f9df14973f",
+      "bytes": 1272410
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/PlayerVisualRevision20261020/RequiemDaggersViolet8.png.meta",
+      "sha256": "9089ecc4dd54bc11e732ec0993402f0c34587a20b04a720e7e9bcaf6dd941e19",
+      "bytes": 8567
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/PlayerVisualRevision20261020/RequiemDaggersViolet8_Owner.png",
+      "sha256": "bb607c1e4154f646f8f9897a84d69b358f6dafc041b655395396002bcf8dfa77",
+      "bytes": 24536
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/PlayerVisualRevision20261020/RequiemDaggersViolet8_Owner.png.meta",
+      "sha256": "40d92ebcc367f1332284ac03bef656efc9261c0b0b3b1b23a920ad8448dba93e",
+      "bytes": 2953
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/PlayerVisualRevision20261020/RequiemKatanaVioletFront.png",
+      "sha256": "259789cad2edb13d4ebcdbbabbd5c5583772b397b109171f4208fc8189153e9f",
+      "bytes": 295305
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/PlayerVisualRevision20261020/RequiemKatanaVioletFront.png.meta",
+      "sha256": "3b3098688f0be0b9167d496601c0a8b7a57b0c59c0a9272db593afd1045a642d",
+      "bytes": 5799
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/PlayerVisualRevision20261020/RequiemKatanaVioletFront_Owner.png",
+      "sha256": "6a4679fd432c6721a1fbc3b1521c34446bb1902f04e1bfe40c28f6d620ef2731",
+      "bytes": 13267
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/PlayerVisualRevision20261020/RequiemKatanaVioletFront_Owner.png.meta",
+      "sha256": "dfb2df32a68700a38982892bd7f988c76443bf3d6a55343ef72328a3993a8100",
+      "bytes": 2953
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/TransformedCatalog.asset",
+      "sha256": "15601881540bbbf7b77626f1d04467453de55e03510899ad8d1e42d81fc3ed19",
+      "bytes": 934363
+    },
+    {
+      "path": "Assets/Darklight/Runtime/Character/DarklightCanonicalComplexion.cs",
+      "sha256": "65fe5b34a8c5159068d2c9f1ebec0c21cb235a1fb4a3407a010ecfaa32d6ddc2",
+      "bytes": 2030
+    },
+    {
+      "path": "Assets/Darklight/Runtime/Character/DarklightCanonicalComplexion.cs.meta",
+      "sha256": "14a5a5f3b934066e81d64ce67f6229f63ac93aa1bd0ee6adcb4cf7384bc06d96",
+      "bytes": 59
+    },
+    {
+      "path": "Assets/Darklight/Tests/EditMode/DarklightCanonicalComplexionTests.cs",
+      "sha256": "7aab4978454b55dd046760b58a8f6b82ebbf525a944d49233d039ceb5f4837a1",
+      "bytes": 2708
+    },
+    {
+      "path": "Assets/Darklight/Tests/EditMode/DarklightCanonicalComplexionTests.cs.meta",
+      "sha256": "63e9456a97d5d7bff8af41cae71c126031cc6a53aebe42f17e2b57672f5d4e59",
+      "bytes": 59
+    },
+    {
+      "path": "Assets/Darklight/Tests/EditMode/DarklightDaggerSheetEightTests.cs",
+      "sha256": "387c993a31ce696e6763cac2b4482df92c463ca7e84a77b20bb289d440f05e77",
+      "bytes": 3680
+    },
+    {
+      "path": "Assets/Darklight/Tests/EditMode/DarklightDaggerSheetEightTests.cs.meta",
+      "sha256": "e949da5d7f5dd5388f7f8c115f08569d73e478b3ecaf4819a4f2063663dcf902",
+      "bytes": 59
+    },
+    {
+      "path": "Assets/Darklight/Tests/EditMode/DarklightPlayerVisualRevisionTests.cs",
+      "sha256": "dd950cef80f1caccfaa6a668532ec959b2c7995813859c2fe5e48e4d132f4a32",
+      "bytes": 3427
+    },
+    {
+      "path": "Assets/Darklight/Tests/EditMode/DarklightPlayerVisualRevisionTests.cs.meta",
+      "sha256": "23189d9c662c5423ccb1be5f7e31242df13e37dfa5965ca2d9fbd1d9705aeffa",
+      "bytes": 59
+    },
+    {
+      "path": "Assets/Darklight/Tests/EditMode/DarklightSharedIrisRenderTests.cs",
+      "sha256": "c1f0dc6ae4cca134802fc26712fbb75c218ff8e4e8112659d6d16ee43c4baccc",
+      "bytes": 3835
+    },
+    {
+      "path": "Assets/Darklight/Tests/EditMode/DarklightSharedIrisRenderTests.cs.meta",
+      "sha256": "c4b8124acbb0a6aba7bfc102a7f351d0f8c7b875516179d18ea4ce780272bfe0",
+      "bytes": 59
+    },
+    {
+      "path": "Docs/Darklight/CONTINUIDADE-20261020.md",
+      "sha256": "5e67315f400ca9646557ae42f3629f923be8e72f1884cde01ad9ff18c364817a",
+      "bytes": 1877
+    },
+    {
+      "path": "Docs/Darklight/OLHOS-TODOS-ESTADOS-20261020.md",
+      "sha256": "17f055ce72d6758c654bb6246092a6827d2295efcaecfa624eec619b565509f9",
+      "bytes": 1856
+    },
+    {
+      "path": "Docs/Darklight/PENDENCIAS-20261020.md",
+      "sha256": "e294d83ca9240acd3a9dfc90caea892d5fa835b24b46f83a978f38c230a1b509",
+      "bytes": 3839
+    },
+    {
+      "path": "Docs/Darklight/RELATORIO-ARTE-20261020.md",
+      "sha256": "e699c21c2d6ba2d9b666dc76c271a08aa5bf5a2044092f71747dec0c790e216d",
+      "bytes": 4685
+    },
+    {
+      "path": "Tools/AnimationPreview/audit_sprite_skill.py",
+      "sha256": "b128492f46836b8b5d4676d86b0901315ae5863a53f785ea15e11f13d976fec2",
+      "bytes": 6279
+    },
+    {
+      "path": "Tools/AnimationPreview/compile_focused.py",
+      "sha256": "0d745671fa70ed97d2e02696409e01c2d2dea7e1c7314db37de936a51c12f5d6",
+      "bytes": 1892
+    },
+    {
+      "path": "Tools/AnimationPreview/extend_player_complexion.py",
+      "sha256": "72e984f4aed263819c4413d1e9d07c16562ba672e3e3722502c7151922ffb79e",
+      "bytes": 2417
+    },
+    {
+      "path": "Tools/AnimationPreview/inventory_player_eyes.py",
+      "sha256": "85061fb742123b776ddbc9aa96f1c30084eed89505693e3bbf1e7a3519656782",
+      "bytes": 6908
+    },
+    {
+      "path": "Tools/AnimationPreview/prepare_dagger_sheet8.py",
+      "sha256": "525fec84c05e44dfa47b390563a90a9c9a5b69cc7ce4e58a6d4fa52371edc10a",
+      "bytes": 8796
+    },
+    {
+      "path": "Tools/AnimationPreview/prepare_eight_pose_reference.py",
+      "sha256": "ce0e301383f300dafb5c494459a3c0a4e26bedf5233d777ac9e2ebef1c4723e5",
+      "bytes": 1262
+    },
+    {
+      "path": "Tools/AnimationPreview/prepare_sharp_katana.py",
+      "sha256": "180e6463e2f727c3fa0be5cc42c712a5268af145ba0c3e3afd6f7ad581dd7438",
+      "bytes": 9807
+    },
+    {
+      "path": "Tools/AnimationPreview/prepare_style_review.py",
+      "sha256": "de2e53e3ee578f66c2191bacd1e1af73193fccd5f37f5f7cfad79c25d4ee6d7f",
+      "bytes": 3437
+    },
+    {
+      "path": "Tools/AnimationPreview/requirements-visual.txt",
+      "sha256": "7fc57bd1975d9928eb911ff65ccb66613c9f0add1e64984951253c5b19d3a38f",
+      "bytes": 137
+    },
+    {
+      "path": "Tools/AnimationPreview/verify_visual_delivery.py",
+      "sha256": "9656fa12550ccaf73be41116bd47684f9377090d085a51ed40da23c77e8521ab",
+      "bytes": 4213
+    },
+    {
+      "path": "Tools/Skills/pixel-art-sprite-sheet-master/SKILL.md",
+      "sha256": "0fb063305661ced31151230fa5e5718823dc8f4b7fdda473e48a4267699f5d41",
+      "bytes": 5262
+    },
+    {
+      "path": "Tools/Skills/pixel-art-sprite-sheet-master/agents/openai.yaml",
+      "sha256": "43c82ef01ab24375315164973bda971678f90425df2385717f9501599b129d80",
+      "bytes": 311
+    },
+    {
+      "path": "Tools/Skills/pixel-art-sprite-sheet-master/references/metadata.md",
+      "sha256": "c4303d5f660a44621e21db1f08172ab7a7bafd63fe329f9a5d34d7c529de53ea",
+      "bytes": 3711
+    },
+    {
+      "path": "Tools/Skills/pixel-art-sprite-sheet-master/references/quality.md",
+      "sha256": "9ed8495fef99484b5b933748d0130f668e8228da91daf6691607852faf12dc9c",
+      "bytes": 2126
+    },
+    {
+      "path": "Tools/Skills/pixel-art-sprite-sheet-master/scripts/editor_export.py",
+      "sha256": "e59687066d83b18ebdfa60b7d6e504aa68c27ec95b3e76ee4963a0d970b7d8b4",
+      "bytes": 1760
+    },
+    {
+      "path": "Tools/Skills/pixel-art-sprite-sheet-master/scripts/replace_frames.py",
+      "sha256": "4a835c77c787e141d6a057d1fdb8dd79259c53615c1d5ef744fe1f6b15fb6f06",
+      "bytes": 4887
+    },
+    {
+      "path": "Tools/Skills/pixel-art-sprite-sheet-master/scripts/sprite_pipeline.py",
+      "sha256": "4c1bfba3bb327bd7b7224a4cc1ebf0cc53acba5492b5730963f7153549ef69a5",
+      "bytes": 24389
+    },
+    {
+      "path": "Tools/Skills/pixel-art-sprite-sheet-master/scripts/test_pipeline.py",
+      "sha256": "0091d01582780c5295288a63b626f821c8629b029d8b32d2518815702d44736e",
+      "bytes": 9538
+    },
+    {
+      "path": "Tools/Skills/pixel-art-sprite-sheet-master/workflows/animation.md",
+      "sha256": "2167fb6eadf3d123831aa11eee66bb069ed9b3b408ae8def735ec7830354ed98",
+      "bytes": 2507
+    },
+    {
+      "path": "Tools/Skills/pixel-art-sprite-sheet-master/workflows/identity.md",
+      "sha256": "a85f72718c4576dad611a7eb20c33e81841bf2efd962a63a4eb028d088526ad9",
+      "bytes": 3642
+    },
+    {
+      "path": "Tools/Skills/pixel-art-sprite-sheet-master/workflows/repair.md",
+      "sha256": "77a2d5080a8d04a6d396b5025c69a7b733292877fd8770a15a43016984d5c703",
+      "bytes": 2347
+    },
+    {
+      "path": "Tools/Skills/pixel-art-sprite-sheet-master/workflows/tools-unity.md",
+      "sha256": "562493f53addc5ad95304b4f93237056852d284470894868fdb125c1cff72e2c",
+      "bytes": 3127
+    },
+    {
+      "path": "Tools/TokenEconomy/USO.md",
+      "sha256": "5058d6fbc65ed0a31bf7838fe314361f7ee0b1ba105e8c4601af7e2ed1caf022",
+      "bytes": 2095
+    },
+    {
+      "path": "Tools/TokenEconomy/run_compact.py",
+      "sha256": "f7c61dfb7f9e1ad3d402d351edca1d138aa19bfaa4dad7a3c0cb465975a03364",
+      "bytes": 6025
+    },
+    {
+      "path": "Tools/TokenEconomy/test_compact.py",
+      "sha256": "56657f6d33a218d076c03254427c697399c9b1e38d9f48306619e0dfea864764",
+      "bytes": 3922
+    },
+    {
+      "path": "outputs/olhos-todas-formas-20261020/INVENTARIO.json",
+      "sha256": "7dcfaac739c866ee54de9b8aa5eb3e9bc09b6ff2e7eb07cd6550700f24042d2a",
+      "bytes": 138138
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/QA-ADAGAS8-NAVEGADOR.png",
+      "sha256": "0cc2f5a41fe4c738e4bc441c49f903c0dabb7079252ec5d04e2266e4b4f35dc2",
+      "bytes": 78484
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/QA-ENTREGA.json",
+      "sha256": "be922e53825ce960afdbb14ad9d79bf5d72a8c915dc654a1bf83a9c9ec712232",
+      "bytes": 1307
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/QA-KATANA-NAVEGADOR.png",
+      "sha256": "1bbe71c94e8c08771cd39cb832ff86758b8edca63fa65d924c0c31e9de9cdd07",
+      "bytes": 46755
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/PROVENIENCIA.json",
+      "sha256": "37441dbce08c715a3c1c81eecfe2431cbcd3b71081dc6f069dc3159fe5de7493",
+      "bytes": 3543
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/audit/REPORT.md",
+      "sha256": "7ae19fb18d437186f0c3d98ac9bd85c6bebbe5dc3c06944c31e5f0b15333745b",
+      "bytes": 882
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/audit/report.json",
+      "sha256": "1155d10fc0525289b871c5a3064f57c1a15a0a6ac563004c28298fc449b2f488",
+      "bytes": 4449
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/f00.png",
+      "sha256": "1602230a8229880bf98da5d2708f6d532acfac7c60b876401bff318d640bbbe2",
+      "bytes": 184998
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/f01.png",
+      "sha256": "f0dac5b10657d638dedf41061749e63295b55a2f68d140b23d987eb25e5e141d",
+      "bytes": 179731
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/f02.png",
+      "sha256": "1e64f2b3447d87e3f0d10f38b56a4e9cc106195cb9be559e6b19309c74d74392",
+      "bytes": 145664
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/f03.png",
+      "sha256": "a5c68b2c4d80c620299a6c535082f2772c4594abcc369cd4648ea54533b3b2df",
+      "bytes": 120246
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/f04.png",
+      "sha256": "6b05fe7f59b9f71a0758b6399808cd6eeef087713b7004cd1f11b0102faa2f3f",
+      "bytes": 183246
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/f05.png",
+      "sha256": "fae5a75f6521d24e8ef95d88a029fe1f8b8b562aecd7050d2d3ac09c2146a98e",
+      "bytes": 177465
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/f06.png",
+      "sha256": "c350db568f7abc4d43ce3e6c1dd7d69b6f8a1833d361b3e2cdcc6565fefbf155",
+      "bytes": 156949
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/f07.png",
+      "sha256": "e5c496b1f67add9123bd1d3a64d72bf24e8f3da3d104a46f5f5e400babca4a9c",
+      "bytes": 122766
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/owner.png",
+      "sha256": "bb607c1e4154f646f8f9897a84d69b358f6dafc041b655395396002bcf8dfa77",
+      "bytes": 24536
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/palette-full.json.gz",
+      "sha256": "4ed54e2c85fcdfc99300b01b38fdb0715a94b39e47e44ad7de5879815744e29b",
+      "bytes": 1321677
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/palette.json",
+      "sha256": "e68be914ed0a70accfdee5a1eb2340f95a1b2f519916a97bf733b7744d775dbe",
+      "bytes": 29583
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/preview/clip-00.gif",
+      "sha256": "8cfef565bbd3846c4b69f2020e8728a0457f53feb66f47b5caeb4f93727d8b9a",
+      "bytes": 126045
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/preview/clip-01.gif",
+      "sha256": "0c029b00737c0624ae961b40d7e3d9a35fa95448079749723a602c8433a21476",
+      "bytes": 273696
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/preview/clip-02.gif",
+      "sha256": "17b1221c53bd77b9a97bc4ce93ec4c5c9db0129de2c4610a76c7902223469947",
+      "bytes": 125246
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/preview/clip-03.gif",
+      "sha256": "8a6b274e762570e85b9528ddedb4fe9e32db0651cd6ad2ac053e115ad76bacac",
+      "bytes": 281536
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/preview/contact.png",
+      "sha256": "21a5f9e47c954203605ac656d34d70fa571674243dd4593f4d8370ad99d90b5b",
+      "bytes": 1034763
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/preview/folha-original-8.png",
+      "sha256": "a5b77f29784a6551369c562f22ef5c630340a874aff1a4f3c4f37392010068d6",
+      "bytes": 1287940
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/preview/index.html",
+      "sha256": "6364339f42f2ce0f563d290ff849867146df20d1f63320f9237c08045a975f7d",
+      "bytes": 1353
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/preview/preview.html",
+      "sha256": "2ada520bf485c6f4c7e1d7d1e57c8aff116fab9ca7bfdf648aa9ae5938c738d7",
+      "bytes": 1702914
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/preview/preview.json",
+      "sha256": "efdf9707b06a818136296a5dadab043c5b625513fc54a480f89949eb883cada2",
+      "bytes": 245
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/sheet.json",
+      "sha256": "03cf7e5aaa6edb6e853617ee44e5dea2fd3327d2687f1e3457497e62284cb8dc",
+      "bytes": 4105
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/adagas-8-v2/sheet.png",
+      "sha256": "7417a6038779ab186c62cdea80fe645df862bf92d4eb658f5ca923f9df14973f",
+      "bytes": 1272410
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/evidencias-unity-11.xml",
+      "sha256": "a53491aae8dc0bd2c77e3dc36b0fa8eaa2808314e3bc10367ff992623b6c98f4",
+      "bytes": 13318
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/evidencias-unity-refinada-4.xml",
+      "sha256": "a6e4f49268d20ea145f2675b47fc75349e96241c02b680d1ec6ead91782c721a",
+      "bytes": 6144
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/PROVENIENCIA.json",
+      "sha256": "b7edbe95244f8816d1e1ef8a7e816943a0b7714fb2605384c0458900e04c9a8c",
+      "bytes": 2960
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/audit/REPORT.md",
+      "sha256": "664f4fd673873758d966eef52278ebfeefb2d0b3e4075a3ac6a3c17d2a64b8f4",
+      "bytes": 580
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/audit/report.json",
+      "sha256": "fee6062d713c20986dfa759e46c9e7af9e2dc0a5fdb60f1c9ba85a8f878ec7be",
+      "bytes": 2294
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/f00.png",
+      "sha256": "4bb84a32bbb33518554842ed76016df60bc8a9ea79ee8e109cf427ba5e39bd4c",
+      "bytes": 80494
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/f01.png",
+      "sha256": "069bb410fd2250441913c7b17a5b556a2f0218c1adf0f999758a058987661a62",
+      "bytes": 75128
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/f02.png",
+      "sha256": "da34ffab8d5605f19d6440b3b70e9fe58fc1cc60e2d409130e8fd4f677e5ac31",
+      "bytes": 73697
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/f03.png",
+      "sha256": "ac92a6f85fe1a3b07d3d5022937d1aec6600a3b27aed929f6c6e816a313433c6",
+      "bytes": 68542
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/original-catalog-page.json",
+      "sha256": "573418ccdf62f128a098cf91de00f5720103245d562ed74ce39cd8f18d36290e",
+      "bytes": 1445
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/owner.png",
+      "sha256": "6a4679fd432c6721a1fbc3b1521c34446bb1902f04e1bfe40c28f6d620ef2731",
+      "bytes": 13267
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/palette-full.json.gz",
+      "sha256": "8e5d8753f5e35dc0bf48bc721138acf01aa6dc601b6f2a0ac4af9fca19fb6a85",
+      "bytes": 261706
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/palette.json",
+      "sha256": "131c58d9d35ef6fc7a8b9970f55fedde599c4380a37e079af48a10cfe87eecf5",
+      "bytes": 29203
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/preview/clip-00.gif",
+      "sha256": "09d40e5c264e40f7f8de8a11971a34f6f3e65bd03b1b293523ef65371e1a9112",
+      "bytes": 264345
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/preview/contact.png",
+      "sha256": "0c87ca38c88e138c655aff5a1444d54d4e80af179d2c5cb373e2a73538c017fe",
+      "bytes": 247422
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/preview/preview.html",
+      "sha256": "14f2e8014b764636e28bcbbacd15b3f8e34617fd13f8c2b7889e9196c987c40f",
+      "bytes": 398865
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/preview/preview.json",
+      "sha256": "55b007f0a1fbf839ed294ed038f6983571e48d73083d8b4ad731ff66ec278dbe",
+      "bytes": 185
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/sheet.json",
+      "sha256": "b5ab9319923bcf6c1a93e6e65913273f3047ca59975d159e1578fb123e7294d6",
+      "bytes": 2083
+    },
+    {
+      "path": "outputs/padronizacao-artes-20261020/katana-roxa-frente/sheet.png",
+      "sha256": "259789cad2edb13d4ebcdbbabbd5c5583772b397b109171f4208fc8189153e9f",
+      "bytes": 295305
+    }
+  ]
+}

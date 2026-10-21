@@ -11,6 +11,7 @@ Shader "Darklight/PixelSprite"
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
+            #include "Includes/PlayerIrisPalette.hlsl"
             struct appdata { float4 vertex:POSITION; float2 uv:TEXCOORD0; fixed4 color:COLOR; };
             struct v2f { float4 vertex:SV_POSITION; float2 uv:TEXCOORD0; fixed4 color:COLOR; float height:TEXCOORD1; float side:TEXCOORD2; float2 sourceUV:TEXCOORD3; float2 world:TEXCOORD4; };
             sampler2D _VampireMask; float _VampireForm,_EraseHead,_WholeSprite,_WholeFrameId; sampler2D _MainTex; fixed4 _Color; float _AlphaClip,_DarkForm,_HeadThreshold,_WingOnly,_ResonanceTint;float4 _CanonicalSkinShift;
@@ -19,7 +20,7 @@ Shader "Darklight/PixelSprite"
             v2f vert(appdata v) { v2f o; o.vertex=UnityObjectToClipPos(v.vertex); o.uv=v.uv; o.color=v.color*_Color; o.height=v.vertex.y;o.side=v.vertex.x;o.sourceUV=v.vertex.xy*_OcclusionScale.xy+_OcclusionOffset.xy;o.world=mul(unity_ObjectToWorld,v.vertex).xy; return o; }
             fixed4 frag(v2f i):SV_Target
             {
-                fixed4 c=tex2D(_MainTex,i.uv); clip(c.a-_AlphaClip);
+                fixed4 c=tex2D(_MainTex,i.uv);float3 sourcePigment=c.rgb; clip(c.a-_AlphaClip);
                 if(_BridgeForeground>.5&&_BridgeActorVisible>.5&&i.world.x>=_BridgeActorBounds.x&&i.world.x<=_BridgeActorBounds.z&&i.world.y>=_BridgeActorBounds.y&&i.world.y<=_BridgeActorBounds.w)discard;
                 if(_CanonicalSkinShift.w>.5)
                 {
@@ -73,9 +74,19 @@ Shader "Darklight/PixelSprite"
                     fixed3 palette=_VampireForm>2.5?fixed3(.95,.96,1):_VampireForm>1.5?fixed3(.62,.16,.96):fixed3(.86,.035,.08);
                     if(_WholeSprite>.5&&_VampireForm>2.5&&selectors.b>.1)
                         c.rgb=lerp(float3(.12,.14,.18),float3(.97,.98,1),saturate((c.r-.08)*1.7));
-                    if(selectors.r>.5)c.rgb=palette;
-                    else if(selectors.g>.1)c.rgb=lerp(c.rgb,palette*max(.3,max(c.r,max(c.g,c.b))*1.3),selectors.g*.85);
+                    if(selectors.r<.5&&selectors.g>.1)c.rgb=lerp(c.rgb,palette*max(.3,max(c.r,max(c.g,c.b))*1.3),selectors.g*.85);
                 }
+                if(selectors.r>.5)
+                {
+                    #ifndef UNITY_COLORSPACE_GAMMA
+                    sourcePigment=float3(LinearToGammaSpaceExact(sourcePigment.r),LinearToGammaSpaceExact(sourcePigment.g),LinearToGammaSpaceExact(sourcePigment.b));
+                    #endif
+                    c.rgb=DarklightPlayerIris(sourcePigment);
+                    #ifndef UNITY_COLORSPACE_GAMMA
+                    c.rgb=float3(GammaToLinearSpaceExact(c.r),GammaToLinearSpaceExact(c.g),GammaToLinearSpaceExact(c.b));
+                    #endif
+                }
+                if(_ResonanceTint>.5)c.rgb=max(c.r,max(c.g,c.b));
                 return c*i.color;
             }
             ENDCG

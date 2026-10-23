@@ -13,6 +13,9 @@ namespace Darklight
         public int Hits { get; private set; }
         public bool SlamPending { get; private set; }
         float age, hold, immunity;
+        // A chase adds no hit/damage and cannot extend the global airborne cap.
+        public void HoldForChase()
+        {if(Airborne&&!SlamPending&&age<4.5f)hold=Mathf.Max(hold,.35f);}
         public bool React(DarklightAirReaction reaction, float strength = 4, bool resistant = false)
         {
             if (resistant || reaction == DarklightAirReaction.None) return false;

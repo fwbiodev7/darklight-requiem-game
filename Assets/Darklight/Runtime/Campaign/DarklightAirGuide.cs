@@ -5,7 +5,8 @@ namespace Darklight
         void BuildAirGuide()
         {
             heading.text="COMBATE AÉREO";
-            string air=lab.Input.BindingLabel("Aerial"),light=lab.Input.BindingLabel("Light"),heavy=lab.Input.BindingLabel("Heavy");
+            bool bike=Weapons?.Equipped?.id==DarklightWeaponId.AbyssRider;
+            string air=lab.Input.BindingLabel("Aerial"),light=lab.Input.BindingLabel(bike?"AbyssSaw":"Light"),heavy=lab.Input.BindingLabel(bike?"AbyssHeavy":"Heavy");
             bodyText.text=air+": lançar; nos Punhos, use o pesado (uppercut).\n"+
                 air+" novamente após acertar: perseguir.\n"+light+": sequência com a arma atual.\n"+heavy+": golpe forte; após 3 contatos, arremessar.\n"+
                 air+" após arremesso: alcançar por cima.\n"+heavy+" por cima: golpe descendente.\n\n"+
@@ -18,12 +19,12 @@ namespace Darklight
         void BuildMotorcycleExpansionGuide()
         {
             heading.text="ARSENAL MOTORIZADO";
-            string light=lab.Input.BindingLabel("AbyssSaw"),heavy=lab.Input.BindingLabel("Heavy");
+            string light=lab.Input.BindingLabel("AbyssSaw"),heavy=lab.Input.BindingLabel("AbyssHeavy");
             bodyText.text="Os três golpes iniciais e as variações anteriores foram preservados.\n\n"+
-                light+" ×6: Serra Infernal, 4 contatos e lançamento.\n"+light+" ×7: Giro Devastador, varredura ao redor.\n"+
+                light+" + "+heavy+": Serra Infernal, 4 contatos e lançamento.\n"+light+" + "+lab.Input.BindingLabel("Parry")+": Giro Devastador, varredura ao redor.\n"+
                 "2 golpes + "+heavy+": Roda Destruidora, avanço e lançamento.\n"+lab.Input.BindingLabel("Skill")+": Esmagamento Vertical (22 sangue).\n"+
                 "Mover + "+lab.Input.BindingLabel("AbyssBike")+": Cavalgada Brutal (18 sangue).\n"+
-                "Montado: pesado derrapa; habilidade esmaga; recuperação desmonta.\n"+
+                "Pesado próprio: "+heavy+" (remapeável). Leves ×6/×7 também acessam serra/giro.\nMontado: "+lab.Input.BindingLabel("AbyssDrift")+" derrapa; habilidade esmaga.\n"+
                 "Aéreo: lance, persiga, acerte 3 contatos, pesado arremessa, persiga novamente e pesado executa a finalização motorizada.";
             GuideLayout();Button("GUIA AÉREO",()=>Open("AirCombat"));Button("VOLTAR",ShowAbyssHelp);
         }

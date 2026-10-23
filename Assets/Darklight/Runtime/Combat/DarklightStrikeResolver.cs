@@ -26,15 +26,16 @@ namespace Darklight
                 for(int pulse=0;pulse<Mathf.Clamp(attack.hitPulses,1,6);pulse++)
                 {
                     if(!model.RegisterPulseHit(target,pulse))continue;
+                    bool finalPulse=pulse==Mathf.Clamp(attack.hitPulses,1,6)-1;
+                    float force=finalPulse&&attack.finalKnockback>0?attack.finalKnockback:attack.knockback;
                     float damage=model.AttackDamage*(game?.AbyssRider?.Damage??1)*(game?.DamageMultiplier??1)*(game?.VampireDamage(attack.kind)??1);
-                    if(!target.Receive(damage,delta.normalized*attack.knockback))continue;
+                    if(!target.Receive(damage,delta.normalized*force))continue;
                     model.ConfirmHit();
                     DarklightCombatLab.Instance?.Coach?.Record(DarklightLesson.Strike);
                     hitstop=Mathf.Max(hitstop,attack.hitPulses>1?.012f:attack.hitstop+(game?.Form==1?.008f:0));
                     game?.WeaponHit(target,attack,model.AttackSerial);
-                    enemy?.Struck(attack.knockback*(game?.Resonance.Impact??1),attack.kind!=StrikeKind.Light);
+                    enemy?.Struck(force*(game?.Resonance.Impact??1),attack.kind!=StrikeKind.Light);
                     enemy?.TechnicalImpact(attack,game?.Form??0);
-                    bool finalPulse=pulse==Mathf.Clamp(attack.hitPulses,1,6)-1;
                     var reaction=attack.airReaction!=DarklightAirReaction.None?attack.airReaction:attack.launch?DarklightAirReaction.Launch:enemy?.Airborne==true?DarklightAirReaction.Suspend:DarklightAirReaction.None;
                     if(!finalPulse&&(reaction==DarklightAirReaction.Slam||reaction==DarklightAirReaction.Throw||reaction==DarklightAirReaction.Launch))reaction=DarklightAirReaction.Suspend;
                     if(reaction!=DarklightAirReaction.Throw&&reaction!=DarklightAirReaction.Slam||finalPulse)

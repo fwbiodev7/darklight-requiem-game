@@ -42,9 +42,10 @@ def main():
     for p in (ROOT/'ArtSources/RuinFists20261021/references').rglob('*'):
         if p.is_file():candidates.add(p)
     # Evidence is bounded; do not upload the large RGBA histograms or local logs.
-    for name in ['asset-qa.json','PROGRESS.json','bridge-edit-review.txt']:
+    for name in ['asset-qa.json','PROGRESS.json','bridge-edit-review.txt','bridge-play-review.txt','air-play-trace.txt',
+                 'play-tests.xml','edit-tests.xml','render-tests.xml','build-result.json','build-smoke.json']:
         if (OUT/name).exists():candidates.add(OUT/name)
-    for folder in ['unity-editmode']:
+    for folder in ['unity-editmode','unity-play']:
         candidates.update(p for p in (OUT/folder).rglob('*') if p.is_file())
     copies=[];scope=[];omitted=[]
     for source in sorted(candidates):

@@ -12,6 +12,7 @@ namespace Darklight
         public bool AboveTarget { get; private set; }
         public int Contacts { get; private set; }
         public DarklightEnemy Target { get; private set; }
+        Vector2 TargetPosition=>Target.GetComponent<Rigidbody2D>().position;
         public bool Active => Height > .01f || Chasing;
         readonly Dictionary<AttackDefinition, AttackDefinition[]> banks=new();
         readonly List<Object> owned=new();
@@ -68,16 +69,18 @@ namespace Darklight
             if(input.dodgePressed||input.parryPressed){CancelFlight(dt);return;}
             idle+=dt;
             if(Active&&idle>1.1f){CancelFlight(dt);return;}
-            float distance=Vector2.Distance(body.position,Target.transform.position);
+            float distance=Vector2.Distance(body.position,TargetPosition);
             if(input.aerialPressed&&distance<6&&!Chasing){chaseQueued=true;commandLife=.28f;input.aerialPressed=false;}
             if(chaseQueued&&!Chasing&&m.TryAirFollowup(chase,input))
-            {chaseQueued=false;Chasing=true;chaseAge=idle=0;AboveTarget=thrown;}
+            {chaseQueued=false;Chasing=true;chaseAge=idle=0;AboveTarget=thrown;Target.AirBody.HoldForChase();}
             if(Chasing)
             {
+                if(input.lightPressed||input.heavyPressed)
+                {queuedMove=input.heavyPressed?(AboveTarget?3:Contacts>=3?2:1):0;commandLife=.55f;}
                 chaseAge+=dt;
-                Vector2 offset=body.position-(Vector2)Target.transform.position;
+                Vector2 offset=body.position-TargetPosition;
                 Vector2 side=offset.sqrMagnitude>.01f?offset.normalized:-m.Facing;
-                Vector2 destination=(Vector2)Target.transform.position+side*.65f;
+                Vector2 destination=TargetPosition+side*.65f;
                 DarklightNavigation.SafeStep(body,Vector2.ClampMagnitude(destination-body.position,dt*15),.28f);
                 Height=Mathf.MoveTowards(Height,Target.AirHeight+(AboveTarget?.55f:0),dt*12);
                 if(chaseAge>.12f&&Vector2.Distance(body.position,destination)<.2f){Chasing=false;idle=0;}

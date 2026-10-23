@@ -48,6 +48,19 @@ namespace Darklight.Tests
             }
             finally{Object.DestroyImmediate(obj);}
         }
+        [Test]public void WheelSurgeAcceleratesAlongTheCommittedFacingAndStopsInRecovery()
+        {
+            var a=ScriptableObject.CreateInstance<AttackDefinition>();
+            try
+            {
+                a.startup=.1f;a.active=.6f;a.recovery=.3f;a.lungeSpeed=1.3f;a.endLungeMultiplier=1.75f;
+                var m=new CombatModel(new CombatLoadout{lights=new[]{a}});m.Tick(.01f,new CombatInput{lightPressed=true,aim=Vector2.right});
+                m.Tick(.13f,default);float early=m.Motion.magnitude;m.Tick(.4f,new CombatInput{aim=Vector2.left});
+                Assert.That(m.Motion.magnitude,Is.GreaterThan(early));Assert.That(m.Motion.x,Is.GreaterThan(0));
+                m.Tick(.2f,default);m.Tick(.01f,default);Assert.That(m.Motion,Is.EqualTo(Vector2.zero));
+            }
+            finally{Object.DestroyImmediate(a);}
+        }
     }
     public sealed class DarklightMultiverseTests
     {

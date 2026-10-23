@@ -13,6 +13,7 @@ namespace Darklight
         public float damage = 15f, range = 1.6f, angle = 110f, knockback = .2f;
         [Min(1)] public int hitPulses=1;
         public float lungeSpeed, cooldown;
+        public float endLungeMultiplier=1,finalKnockback;
         public bool pullTarget,blink;
         public DarklightRuinStrike ruinStrike;
         // Optional authored phases; old profiles retain their original sector behaviour.

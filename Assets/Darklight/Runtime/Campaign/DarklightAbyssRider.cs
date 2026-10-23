@@ -15,7 +15,7 @@ namespace Darklight
         public bool SlamFromMounted{get;private set;}
         public bool Drifting=>Dashing&&fighter.Model.Attack==drift;
         public bool BlocksSwap=>(Dashing||Slamming||Sustaining)&&fighter.Model.StateTime<fighter.Model.Attack.startup+fighter.Model.Attack.active+(Sustaining?.2f:.34f);
-        public float JumpHeight=>Dashing?Mathf.Sin(Mathf.Clamp01((fighter.Model.StateTime-fighter.Model.Attack.startup-fighter.Model.Attack.active)/.34f)*Mathf.PI)*.28f:0;
+        public float JumpHeight=>Slamming&&!AerialExecution?Mathf.Sin(Mathf.Clamp01(fighter.Model.StateTime/Mathf.Max(.01f,fighter.Model.Attack.startup))*Mathf.PI)*.55f:Dashing?Mathf.Sin(Mathf.Clamp01((fighter.Model.StateTime-fighter.Model.Attack.startup-fighter.Model.Attack.active)/.34f)*Mathf.PI)*.28f:0;
         public bool DashBlocked{get;private set;}
         public float DashDistance{get;private set;}
         public float Speed=>Active&&!Dashing?Gear.Speed:1;
@@ -76,6 +76,7 @@ namespace Darklight
         public void BeforeCombat(float dt,ref CombatInput input)
         {
             if(game==null)return;
+            PrepareExpandedTechnique(dt,ref input);
             if(dt<=0){if(Active&&game.Active&&DarklightCombatLab.Instance?.Paused==false)CaptureStoppedCommands(ref input);return;}
             var m=fighter.Model;
             bool precise=Gear.Tick(dt,Active,m.AttackSerial,m.Attack,m.StateTime,m.AttackConnected,m.State==CombatState.Attack,!Dashing&&(input.lightPressed||input.heavyPressed||input.weaponSpecialPressed),m.State==CombatState.Hurt||m.State==CombatState.Dead,game.Form);
@@ -198,7 +199,7 @@ namespace Darklight
             if(blocked){if(contactFound)DarklightCombatFX.MotorcycleImpact(contactPoint,-delta.normalized,DarklightMotorcycleImpact.Collision);DashBlocked=true;driftQueued=slamQueued=false;fighter.Model.FinishAttackContact();Gear.Crash();}
             return delta.normalized*(allowed/step);
         }
-        public void ResetMotion(){ClearCommands();ResetRunOver();serial=impactSerial=-1;pendingAttack=null;reservation=0;DashBlocked=false;DashDistance=DriftDistance=0;driftQueued=driftUsed=slamQueued=false;SlamFromMounted=false;paidPulses=0;finisherTarget=null;dashFacing=Vector2.down;Gear.Reset();if(riderLoadout!=null)riderLoadout.weaponSpecial=dash;}
+        public void ResetMotion(){ClearCommands();ResetRunOver();serial=impactSerial=-1;pendingAttack=queuedExpansion=null;reservation=expansionUntil=0;DashBlocked=false;DashDistance=DriftDistance=0;driftQueued=driftUsed=slamQueued=false;SlamFromMounted=false;paidPulses=0;finisherTarget=null;dashFacing=Vector2.down;Gear.Reset();if(riderLoadout!=null)riderLoadout.weaponSpecial=dash;}
 
         void OnDestroy(){foreach(var asset in owned)if(asset!=null){if(Application.isPlaying)Destroy(asset);else DestroyImmediate(asset);}owned.Clear();}
     }

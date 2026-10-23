@@ -79,7 +79,7 @@ namespace Darklight
                 }
                 Motion = Vector2.ClampMagnitude(input.move, 1) * (StateTime<Attack.startup?Attack.windupMove:StateTime>=Attack.startup+Attack.active?Attack.recoveryMove:.42f);
                 if(StateTime<Attack.startup*.5f)Face(input);
-                if(ActiveThisTick&&Attack.lungeSpeed>0)Motion=Facing*Attack.lungeSpeed+Vector2.ClampMagnitude(input.move,1)*.15f;
+                if(ActiveThisTick&&Attack.lungeSpeed>0)Motion=Facing*Attack.lungeSpeed*Mathf.Lerp(1,Mathf.Max(1,Attack.endLungeMultiplier),ContactProgress*ContactProgress*ContactProgress)+Vector2.ClampMagnitude(input.move,1)*.15f;
                 // Recovery cancellation only: wind-up and contact remain committed.
                 float cancelAt=Attack.startup+Attack.active+Attack.recovery*Mathf.Max(0,(AttackConnected?Attack.hitCancelFraction:Attack.whiffCancelFraction)-1);
                 if(FormStyle==1&&Attack.kind!=StrikeKind.Light)cancelAt+=Attack.recovery*.2f;

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="6" result="Passed" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-23 21:26:00Z" end-time="2026-10-23 21:26:06Z" duration="6,290932">
+  <test-suite type="TestSuite" id="1000" name="DARKLIGHT REQUIEM" fullname="DARKLIGHT REQUIEM" runstate="Runnable" testcasecount="258" result="Passed" start-time="2026-10-23 21:26:00Z" end-time="2026-10-23 21:26:06Z" duration="6.290932" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1322" name="Darklight.EditModeTests.dll" fullname="C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/Library/ScriptAssemblies/Darklight.EditModeTests.dll" runstate="Runnable" testcasecount="258" result="Passed" start-time="2026-10-23 21:26:00Z" end-time="2026-10-23 21:26:06Z" duration="6.266852" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="34672" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1323" name="Darklight" fullname="Darklight" runstate="Runnable" testcasecount="258" result="Passed" start-time="2026-10-23 21:26:00Z" end-time="2026-10-23 21:26:06Z" duration="6.262435" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1324" name="Tests" fullname="Darklight.Tests" runstate="Runnable" testcasecount="258" result="Passed" start-time="2026-10-23 21:26:00Z" end-time="2026-10-23 21:26:06Z" duration="6.258228" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1215" name="DarklightRuinFistsIntegrationTests" fullname="Darklight.Tests.DarklightRuinFistsIntegrationTests" classname="Darklight.Tests.DarklightRuinFistsIntegrationTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-23 21:26:00Z" end-time="2026-10-23 21:26:06Z" duration="5.847529" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1217" name="BothSkinsTransformAllDirectionsWithoutBorrowingAnotherDirectionOrLosingOwnership" fullname="Darklight.Tests.DarklightRuinFistsIntegrationTests.BothSkinsTransformAllDirectionsWithoutBorrowingAnotherDirectionOrLosingOwnership" methodname="BothSkinsTransformAllDirectionsWithoutBorrowingAnotherDirectionOrLosingOwnership" classname="Darklight.Tests.DarklightRuinFistsIntegrationTests" runstate="Runnable" seed="1934210140" result="Passed" start-time="2026-10-23 21:26:00Z" end-time="2026-10-23 21:26:03Z" duration="2.454647" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1219" name="DeathFinishesAndHoldsTheProneWholeFigureWhileCombatIsPaused" fullname="Darklight.Tests.DarklightRuinFistsIntegrationTests.DeathFinishesAndHoldsTheProneWholeFigureWhileCombatIsPaused" methodname="DeathFinishesAndHoldsTheProneWholeFigureWhileCombatIsPaused" classname="Darklight.Tests.DarklightRuinFistsIntegrationTests" runstate="Runnable" seed="357098427" result="Passed" start-time="2026-10-23 21:26:03Z" end-time="2026-10-23 21:26:03Z" duration="0.077113" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1216" name="EveryImportedConfigurationHasTwelveNativeSpritesAndAnUncompressedPointMask" fullname="Darklight.Tests.DarklightRuinFistsIntegrationTests.EveryImportedConfigurationHasTwelveNativeSpritesAndAnUncompressedPointMask" methodname="EveryImportedConfigurationHasTwelveNativeSpritesAndAnUncompressedPointMask" classname="Darklight.Tests.DarklightRuinFistsIntegrationTests" runstate="Runnable" seed="183374408" result="Passed" start-time="2026-10-23 21:26:03Z" end-time="2026-10-23 21:26:06Z" duration="3.274753" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1218" name="ImportedWalkDefenseDamageDeathAndComboContactsResolveWithTheirWholeFigureMasks" fullname="Darklight.Tests.DarklightRuinFistsIntegrationTests.ImportedWalkDefenseDamageDeathAndComboContactsResolveWithTheirWholeFigureMasks" methodname="ImportedWalkDefenseDamageDeathAndComboContactsResolveWithTheirWholeFigureMasks" classname="Darklight.Tests.DarklightRuinFistsIntegrationTests" runstate="Runnable" seed="725180259" result="Passed" start-time="2026-10-23 21:26:06Z" end-time="2026-10-23 21:26:06Z" duration="0.022007" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1220" name="DarklightRuinFistsMaterialTests" fullname="Darklight.Tests.DarklightRuinFistsMaterialTests" classname="Darklight.Tests.DarklightRuinFistsMaterialTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-23 21:26:06Z" end-time="2026-10-23 21:26:06Z" duration="0.367479" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1221" name="AuraChangesPreserveIrisSkinAndWarmArmor" fullname="Darklight.Tests.DarklightRuinFistsMaterialTests.AuraChangesPreserveIrisSkinAndWarmArmor" methodname="AuraChangesPreserveIrisSkinAndWarmArmor" classname="Darklight.Tests.DarklightRuinFistsMaterialTests" runstate="Runnable" seed="2029666252" result="Passed" start-time="2026-10-23 21:26:06Z" end-time="2026-10-23 21:26:06Z" duration="0.363480" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1229" name="DarklightSharedIrisRenderTests" fullname="Darklight.Tests.DarklightSharedIrisRenderTests" classname="Darklight.Tests.DarklightSharedIrisRenderTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-23 21:26:06Z" end-time="2026-10-23 21:26:06Z" duration="0.023548" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1230" name="EveryFormKeepsRedIrisesBlackPupilsWhiteGlintsAndOtherMaterials" fullname="Darklight.Tests.DarklightSharedIrisRenderTests.EveryFormKeepsRedIrisesBlackPupilsWhiteGlintsAndOtherMaterials" methodname="EveryFormKeepsRedIrisesBlackPupilsWhiteGlintsAndOtherMaterials" classname="Darklight.Tests.DarklightSharedIrisRenderTests" runstate="Runnable" seed="1746550522" result="Passed" start-time="2026-10-23 21:26:06Z" end-time="2026-10-23 21:26:06Z" duration="0.022290" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Usuario/AppData/LocalLow/Fabio/DARKLIGHT REQUIEM\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/Fabio/DARKLIGHT REQUIEM\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

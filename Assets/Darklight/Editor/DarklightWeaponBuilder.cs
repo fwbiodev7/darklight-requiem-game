@@ -39,6 +39,11 @@ namespace Darklight.Editor
             {
                 var w=Asset<WeaponDefinition>(new[]{"Requiem","PresasDoVeu","LacoDaRuptura"}[i]);w.id=(DarklightWeaponId)i;w.displayName=new[]{"REQUIEM","PRESAS DO VEU","LACO DA RUPTURA"}[i];w.unlockAfterChapter=i==0?-1:i==1?0:2;w.loadout=i==0?katana:i==1?daggers:chain;w.icon=icons[i];
                 if(i>0){string suffix=i==1?"daggers":"chain";w.requiemPoses=DarklightUserArtImporter.Slice("requiem_"+suffix,true);w.rockPoses=DarklightUserArtImporter.Slice("rock_"+suffix,true);}
+                if(i==2&&DarklightRuinFistsBank.Ready)
+                {
+                    w.displayName=DarklightRuinFistsProfile.DisplayName;w.icon=DarklightRuinFistsBank.Idle(0,0,0);
+                    w.requiemPoses=new[]{DarklightRuinFistsBank.Idle(0,0,0)};w.rockPoses=new[]{DarklightRuinFistsBank.Idle(1,0,0)};
+                }
                 EditorUtility.SetDirty(w);game.weaponDefinitions[i]=w;
             }
             if(player.GetComponent<DarklightWeaponController>()==null)player.gameObject.AddComponent<DarklightWeaponController>();

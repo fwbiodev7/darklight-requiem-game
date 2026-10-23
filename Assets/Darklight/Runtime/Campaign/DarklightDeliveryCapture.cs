@@ -11,6 +11,8 @@ namespace Darklight
         IEnumerator Start()
         {
             string[] args=System.Environment.GetCommandLineArgs();
+            int crystals=System.Array.IndexOf(args,"--requiem-crystal-capture");
+            if(crystals>=0&&crystals+1<args.Length){yield return CaptureCrystalsNative(args[crystals+1]);yield break;}
             int headFix=System.Array.IndexOf(args,"--requiem-head-fix-capture");
             if(headFix>=0&&headFix+1<args.Length){yield return CaptureHeadFix(args[headFix+1]);yield break;}
             int userSheets=System.Array.IndexOf(args,"--requiem-user-sheets-capture");

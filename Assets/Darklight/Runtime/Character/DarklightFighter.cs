@@ -7,6 +7,7 @@ namespace Darklight
     {
         public CombatLoadout loadout;
         public CombatModel Model { get; private set; }
+        public DarklightAirCombo AirCombo { get; private set; }
         Rigidbody2D body;
         DarklightCharacterView view;
         DarklightWeaponController weapons;
@@ -28,6 +29,8 @@ namespace Darklight
             if(game?.Transforming==true)input=default;
             weapons?.BeforeTick(delta,!mapPointer&&!lab.Paused&&game?.WearingHeadphones!=true&&game?.VampireCasting!=true&&game?.Transforming!=true);
             if(lab.Paused){delta=0;input=default;}
+            AirCombo??=GetComponent<DarklightAirCombo>()??gameObject.AddComponent<DarklightAirCombo>();
+            AirCombo.BeforeCombat(delta,ref input);
             game?.AbyssRider?.BeforeCombat(delta,ref input);
             Model.FormStyle=game?.Form??0;Model.Tick(delta,input,game?.AbyssRider?.AttackClockSpeed(game.AttackSpeed)??game?.AttackSpeed??1);
             if(delta>0)game?.AbyssRider?.AfterCombat();
@@ -36,7 +39,7 @@ namespace Darklight
             view.Present(Model, Model.Motion);
             if (game == null && input.move.sqrMagnitude < .01f && lab.Input.Action("Interact").WasPressedThisFrame()) lab.ResetEncounter();
         }
-        public void ResetModel() { Model = new CombatModel(loadout); body.linearVelocity = Vector2.zero; GetComponent<DarklightAbyssRider>()?.ResetMotion(); }
+        public void ResetModel() { Model = new CombatModel(loadout); body.linearVelocity = Vector2.zero; AirCombo?.ResetMotion();GetComponent<DarklightAbyssRider>()?.ResetMotion(); }
         void FixedUpdate()
         {
             var requested=DarklightCombatLab.Instance?.CombatDelta > 0 && DarklightCampaign.Instance?.Transforming!=true ? Model.Motion * 4.5f * (DarklightCampaign.Instance?.MovementSpeed ?? 1) : Vector2.zero;

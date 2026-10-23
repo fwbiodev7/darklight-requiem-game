@@ -31,6 +31,7 @@ namespace Darklight
         public static void ClearCache(){catalog=null;sheets.Clear();}
         public static bool TryResolve(Sprite normal,int form,out Sprite frame,out Texture2D mask,out int owner)
         {
+            if(DarklightRuinFistsBank.TryTransform(normal,form,out frame,out mask,out owner))return true;
             frame=null;mask=null;owner=0;if(normal==null||form<=0||!normal.name.StartsWith("Today_"))return false;
             int split=normal.name.LastIndexOf('_');if(!int.TryParse(normal.name.Substring(split+1),out int index))return false;string name=normal.name.Substring(6,split-6);
             catalog??=Resources.Load<DarklightTransformedCatalog>("Darklight/TransformedCatalog");if(catalog?.pages==null)return false;

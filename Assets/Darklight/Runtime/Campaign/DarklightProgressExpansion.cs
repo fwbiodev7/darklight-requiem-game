@@ -49,7 +49,7 @@ namespace Darklight
             var resonance=new float[3];for(int i=0;i<3;i++)resonance[i]=DarklightBlood.Finite(s.resonanceRecoveries!=null&&i<s.resonanceRecoveries.Length?s.resonanceRecoveries[i]:s.resonanceCooldown,0,120);s.resonanceRecoveries=resonance;
             s.blood=DarklightBlood.Finite(s.blood,0,100);s.vampireMastery=Mathf.Clamp(s.vampireMastery,0,3);s.vampireSkills&=63;s.vampireSelected=Mathf.Clamp(s.vampireSelected,0,5);s.awakeningState=Mathf.Clamp(s.awakeningState,0,2);
             var recoveries=new float[6];for(int i=0;i<6;i++)recoveries[i]=DarklightBlood.Finite(s.vampireRecoveries!=null&&i<s.vampireRecoveries.Length?s.vampireRecoveries[i]:0,0,120);s.vampireRecoveries=recoveries;
-            return s;
+            s.NormalizeStageResults();return s;
         }
     }
 }

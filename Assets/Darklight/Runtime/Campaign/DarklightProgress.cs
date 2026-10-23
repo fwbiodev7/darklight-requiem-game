@@ -14,7 +14,7 @@ namespace Darklight
         public bool[] relics=new bool[ChapterCapacity];
         public int weaponUnlocks=1,equippedWeapon;
         public int appearanceStage,narrativeDays,appearanceChapter;
-        public static string Path => System.IO.Path.Combine(Application.persistentDataPath,"requiem-campaign.json");
+        public static string Path => IsolatedTestPath ?? System.IO.Path.Combine(Application.persistentDataPath,"requiem-campaign.json");
         public int NeededXP => 60+level*35;
         public int MaxHealth => 100+(level-1)*8+vitality*15;
         // This edition starts with every form available; story milestones remain independent.
@@ -26,13 +26,18 @@ namespace Darklight
         }
         public void Save()
         {
-            Directory.CreateDirectory(Application.persistentDataPath);
+            Directory.CreateDirectory(System.IO.Path.GetDirectoryName(Path));
             string temp=Path+".tmp"; File.WriteAllText(temp,JsonUtility.ToJson(this,true));
             if(File.Exists(Path))File.Replace(temp,Path,Path+".bak");else File.Move(temp,Path);
         }
         public static DarklightProgress Load()
+            => LoadFromPath(Path);
+        // The same reader can validate imported/local backup files without
+        // touching the player's active save location.
+        public static DarklightProgress LoadFromPath(string savePath)
         {
-            foreach(string path in new[]{Path,Path+".bak"})
+            if(string.IsNullOrWhiteSpace(savePath))return null;
+            foreach(string path in new[]{savePath,savePath+".bak"})
                 try {if(!File.Exists(path))continue;var state=Decode(File.ReadAllText(path));if(state!=null)return state;}catch(Exception e){Debug.LogWarning("Save: "+e.Message);}
             return null;
         }

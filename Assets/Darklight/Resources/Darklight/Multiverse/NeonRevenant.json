@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "image": "NeonRevenant.png",
+  "imageSha256": "db51615b730d2dcb4fadb5a749fa6e61db2b5402bcecfdae16b3b4162d95371c",
+  "nativeSize": [
+    2472,
+    1248
+  ],
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "logicalResolution": "unverified generated pixel clusters; no quantization",
+  "pixelsPerUnit": 154.8,
+  "status": "visual-reviewed",
+  "frames": [
+    {
+      "id": "NeonRevenant_00",
+      "rect": [
+        0,
+        0,
+        618,
+        624
+      ],
+      "pivot": [
+        0.551779935275081,
+        0.2483974358974359
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        0,
+        19,
+        388,
+        492
+      ],
+      "sourceAnchor": [
+        164,
+        466
+      ],
+      "action": "idle",
+      "direction": "S",
+      "skin": "NeonRevenant",
+      "form": "normal"
+    },
+    {
+      "id": "NeonRevenant_01",
+      "rect": [
+        618,
+        0,
+        618,
+        624
+      ],
+      "pivot": [
+        0.551779935275081,
+        0.2483974358974359
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        389,
+        17,
+        380,
+        517
+      ],
+      "sourceAnchor": [
+        572,
+        478
+      ],
+      "action": "walk",
+      "direction": "S",
+      "skin": "NeonRevenant",
+      "form": "normal"
+    },
+    {
+      "id": "NeonRevenant_02",
+      "rect": [
+        1236,
+        0,
+        618,
+        624
+      ],
+      "pivot": [
+        0.551779935275081,
+        0.2483974358974359
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        769,
+        17,
+        353,
+        515
+      ],
+      "sourceAnchor": [
+        976,
+        478
+      ],
+      "action": "walk",
+      "direction": "S",
+      "skin": "NeonRevenant",
+      "form": "normal"
+    },
+    {
+      "id": "NeonRevenant_03",
+      "rect": [
+        1854,
+        0,
+        618,
+        624
+      ],
+      "pivot": [
+        0.551779935275081,
+        0.2483974358974359
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        1119,
+        9,
+        391,
+        604
+      ],
+      "sourceAnchor": [
+        1255,
+        466
+      ],
+      "action": "hurt",
+      "direction": "S",
+      "skin": "NeonRevenant",
+      "form": "normal"
+    },
+    {
+      "id": "NeonRevenant_04",
+      "rect": [
+        0,
+        624,
+        618,
+        624
+      ],
+      "pivot": [
+        0.551779935275081,
+        0.2483974358974359
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        25,
+        511,
+        347,
+        513
+      ],
+      "sourceAnchor": [
+        103,
+        962
+      ],
+      "action": "windup",
+      "direction": "S",
+      "skin": "NeonRevenant",
+      "form": "normal"
+    },
+    {
+      "id": "NeonRevenant_05",
+      "rect": [
+        618,
+        624,
+        618,
+        624
+      ],
+      "pivot": [
+        0.551779935275081,
+        0.2483974358974359
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        363,
+        535,
+        414,
+        489
+      ],
+      "sourceAnchor": [
+        539,
+        962
+      ],
+      "action": "contact",
+      "direction": "S",
+      "skin": "NeonRevenant",
+      "form": "normal"
+    },
+    {
+      "id": "NeonRevenant_06",
+      "rect": [
+        1236,
+        624,
+        618,
+        624
+      ],
+      "pivot": [
+        0.551779935275081,
+        0.2483974358974359
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        777,
+        519,
+        479,
+        505
+      ],
+      "sourceAnchor": [
+        1077,
+        963
+      ],
+      "action": "recovery",
+      "direction": "S",
+      "skin": "NeonRevenant",
+      "form": "normal"
+    },
+    {
+      "id": "NeonRevenant_07",
+      "rect": [
+        1854,
+        624,
+        618,
+        624
+      ],
+      "pivot": [
+        0.551779935275081,
+        0.2483974358974359
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        1147,
+        613,
+        377,
+        385
+      ],
+      "sourceAnchor": [
+        1480,
+        960
+      ],
+      "action": "defeat",
+      "direction": "S",
+      "skin": "NeonRevenant",
+      "form": "normal"
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_S",
+      "frames": [
+        "NeonRevenant_01",
+        "NeonRevenant_02"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_S",
+      "frames": [
+        "NeonRevenant_04",
+        "NeonRevenant_05",
+        "NeonRevenant_06"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "hurt_S",
+      "frames": [
+        "NeonRevenant_03"
+      ],
+      "loop": false,
+      "allowStatic": true
+    },
+    {
+      "name": "defeat_S",
+      "frames": [
+        "NeonRevenant_07"
+      ],
+      "loop": false,
+      "allowStatic": true
+    }
+  ],
+  "requiredClips": [
+    "walk_S",
+    "attack_S",
+    "hurt_S",
+    "defeat_S"
+  ],
+  "source": "ArtSources\\Multiverse20261023\\exec-1f97c17b-0527-4119-9aab-2f878e5a860c.png",
+  "sourceSha256": "1c33f2eb77a5609b6fc81288ac2ed6181f010fb17226895c864caef3da57eea9",
+  "sourcePixels": 547317,
+  "packedPixels": 547317,
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 3
+  },
+  "warnings": [
+    "Continuous RGBA palette and soft alpha; native indexed pixel art unverified.",
+    "South-facing authored animation only; no claim of eight-view coverage."
+  ],
+  "references": [
+    {
+      "path": "Assets/Darklight/Art/Campaign/Enemies.png",
+      "sha256": "e63eafaff06f24e0479981228bf6f97a8423d9cc6ad1f0861696ad097ad86cd4"
+    }
+  ],
+  "generator": "built-in image_gen"
+}

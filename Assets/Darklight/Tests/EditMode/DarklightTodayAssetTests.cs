@@ -21,14 +21,16 @@ namespace Darklight.Tests
             {
                 Assert.That(metadata.skin,Is.InRange(0,1));Assert.That(metadata.age,Is.Zero);Assert.That(metadata.weapon,Is.InRange(0,2));
                 Assert.That(metadata.directions.Distinct().Count(),Is.EqualTo(metadata.directions.Length));
-                CollectionAssert.Contains(new[]{"Combat","GuardDodge","Walk","Attack","Idle"},metadata.kind);
-                Assert.That(metadata.phases,Is.EqualTo(metadata.kind=="Idle"?2:metadata.kind=="Walk"||metadata.kind=="Attack"?4:8));
+                CollectionAssert.Contains(new[]{"Combat","GuardDodge","Walk","Attack","Idle","Motion"},metadata.kind);
+                if(metadata.kind=="Attack"&&!string.IsNullOrEmpty(metadata.attackKey))
+                    Assert.That(DarklightAttackFrameTiming.Valid(metadata.phases,metadata.startupFrameEnd,metadata.activeFrameEnd),Is.True);
+                else Assert.That(metadata.phases,Is.EqualTo(metadata.kind=="Motion"?5:metadata.kind=="Idle"?(metadata.idleBlinkFrame==5?6:2):metadata.kind=="Walk"||metadata.kind=="Attack"?4:8));
                 foreach(int direction in metadata.directions)
                 {
                     Assert.That(direction,Is.InRange(0,7));
-                    Assert.That(identities.Add($"{metadata.skin}/{metadata.age}/{metadata.weapon}/{direction}/{metadata.kind}"),Is.True,"Duplicate identity: "+metadata.name);
+                    Assert.That(identities.Add($"{metadata.skin}/{metadata.age}/{metadata.weapon}/{direction}/{metadata.kind}/{metadata.attackKey}"),Is.True,"Duplicate identity: "+metadata.name);
                 }
-                var page=TodayCharacterBank.Page(metadata.skin,metadata.age,metadata.weapon,metadata.directions[0],metadata.kind);
+                var page=TodayCharacterBank.Page(metadata.skin,metadata.age,metadata.weapon,metadata.directions[0],metadata.kind,metadata.attackKey);
                 Assert.That(page.name,Is.EqualTo(metadata.name));Assert.That(page.skin,Is.EqualTo(metadata.skin));Assert.That(page.age,Is.EqualTo(metadata.age));Assert.That(page.weapon,Is.EqualTo(metadata.weapon));Assert.That(page.spriteNames.Length,Is.EqualTo(page.phases*page.directions.Length));
                 Assert.That(TodayCharacterBank.LoadedPageCount,Is.Zero,"Descriptor lookup eagerly loaded art");
                 Assert.That(page.frames,Is.Null);Assert.That(page.palette,Is.Null);

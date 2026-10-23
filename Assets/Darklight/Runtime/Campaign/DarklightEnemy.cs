@@ -26,12 +26,15 @@ namespace Darklight
             if(dt<=0){body.linearVelocity=Vector2.zero;return;}
             if(Health.IsDead)
             {
+                TickAerial(dt);
+                if(visitorDefeat!=null)art.sprite=visitorDefeat;
                 body.linearVelocity=Vector2.zero;
                 if(!rewarded){rewarded=true;game.EnemyDefeated(this);GetComponent<Collider2D>().enabled=false;}
                 corpse+=dt;art.color=new Color(.35f,.2f,.3f,Mathf.Clamp01(1-corpse/1.3f));if(corpse>1.4f)Destroy(gameObject);return;
             }
             if(TickExpandedBoss(game,dt))return;
             clock+=dt;timer-=dt;stagger-=dt;TickAerial(dt);
+            if(TickVisitor(game,lab,dt))return;
             Vector2 delta=(Vector2)lab.Player.transform.position-body.position;float distance=delta.magnitude;
             if(Boss&&!ExpandedBoss&&!phaseTwo&&Health.HealthPercent<.5f){phaseTwo=true;game.BossPhaseTwo();game.Notice("FASE 2: "+DarklightStory.Bosses[(int)kind-5]);timer=.85f;state=0;}
             if(stagger>0){warning?.Hide();body.linearVelocity=Vector2.zero;art.color=new Color(1,.7f,.7f);Show(0);return;}
@@ -82,9 +85,14 @@ namespace Darklight
             if(attackFrames?.Length!=4){Show(3);return;}
             art.sprite=attackFrames[index];
             float target=DarklightWorldScale.EnemyHeight(kind);
-            art.transform.localScale=Vector3.one*target/poses[0].bounds.size.y;
+            art.transform.localScale=Visitor!=DarklightVisitor.None?Vector3.one:Vector3.one*target/poses[0].bounds.size.y;
         }
-        void Show(int index){if(FinalFormFrames!=null){ShowFinalForm(index);return;}art.transform.localScale=Vector3.one*(DarklightWorldScale.EnemyHeight(kind))/poses[0].bounds.size.y;if(poses!=null&&poses.Length>index)art.sprite=poses[index];}
+        void Show(int index)
+        {
+            if(FinalFormFrames!=null){ShowFinalForm(index);return;}
+            art.transform.localScale=Visitor!=DarklightVisitor.None?Vector3.one:Vector3.one*DarklightWorldScale.EnemyHeight(kind)/poses[0].bounds.size.y;
+            if(poses!=null&&poses.Length>index)art.sprite=poses[index];
+        }
         void Perform(DarklightCampaign game,DarklightCombatLab lab,float range,bool ranged)
         {
             float damage=(Boss?14:kind==RequiemEnemyKind.Armored?15:8)+game.Progress.chapter*1.3f;

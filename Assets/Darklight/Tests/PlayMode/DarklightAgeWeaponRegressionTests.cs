@@ -16,10 +16,22 @@ namespace Darklight.Tests
         }
         internal static void AssertIdentity(Sprite sprite,int skin,int age,int weapon)
         {
-            Assert.That(sprite,Is.Not.Null);string n=sprite.name,who=skin==1?"Rock":"Requiem",arm=new[]{"Katana","Daggers","Chain"}[weapon];
+            Assert.That(sprite,Is.Not.Null);string n=sprite.name,who=skin==1?"Rock":"Requiem";
             Assert.That(n.StartsWith("Today_")||n.StartsWith("Transformed_"),Is.True);Assert.That(n,Does.Contain(who));
-            Assert.That(n,Does.Contain("Young"));Assert.That(n,Does.Not.Contain("Stage"));
-            Assert.That(n,Does.Contain(arm),"Wrong equipped weapon in young sprite: "+n);
+            Assert.That(n,Does.Not.Contain("Stage"));
+            var catalog=Resources.Load<TodayCharacterCatalog>("Darklight/TodayCharacterCatalog");
+            TodayCharacterPage page;
+            if(n.StartsWith("Today_"))page=System.Array.Find(catalog.pages,p=>System.Array.IndexOf(p.spriteNames,n)>=0);
+            else
+            {
+                var forms=Resources.Load<DarklightTransformedCatalog>("Darklight/TransformedCatalog");
+                var formed=System.Array.Find(forms.pages,p=>System.Array.IndexOf(p.spriteNames,n)>=0);
+                Assert.That(formed,Is.Not.Null,"Unregistered whole transformed sprite: "+n);
+                page=System.Array.Find(catalog.pages,p=>p.name==formed.baseName);
+            }
+            Assert.That(page,Is.Not.Null,"Whole sprite must belong to its production descriptor");
+            Assert.That(page.age,Is.Zero,"Legacy age input must keep the approved young identity");
+            Assert.That(page.skin,Is.EqualTo(skin));Assert.That(page.weapon,Is.EqualTo(weapon),"Wrong equipped weapon: "+n);
 
         }
         [UnityTest] public IEnumerator LegacyAgeInputsCannotChangeYoungIdentityAcrossAllEquipmentAndForms()

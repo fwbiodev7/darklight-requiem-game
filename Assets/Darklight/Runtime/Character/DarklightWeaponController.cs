@@ -21,7 +21,7 @@ namespace Darklight
         }
         public void Request(int index)
         {
-            if(!Unlocked(index)){game.Notice(index==3?"CAVALEIRO: SKIN ROCK + MOTOR SELADO NA CRIPTA":index==1?"PRESAS: DERROTE KAEL":"CORRENTE: DERROTE A MATRIARCA");return;}
+            if(!Unlocked(index)){game.Notice(index==3?"CAVALEIRO: SKIN ROCK + MOTOR SELADO NA CRIPTA":index==1?"PRESAS: DERROTE KAEL":(DarklightRuinFistsBank.Ready?"PUNHOS DA RUÍNA: DERROTE A MATRIARCA":"CORRENTE: DERROTE A MATRIARCA"));return;}
             if(Equipped==game.weaponDefinitions[index])return;
             pending=index;pendingUntil=fighter.Model.Clock+.8f;
         }

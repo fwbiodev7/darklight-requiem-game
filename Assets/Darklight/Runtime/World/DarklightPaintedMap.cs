@@ -33,6 +33,7 @@ namespace Darklight
                     var sprite=Sprite.Create(image.texture,crop,pivot,map.Art.pixelsPerUnit,0,SpriteMeshType.FullRect);owner.temporary.Add(sprite);var renderer=obj.AddComponent<SpriteRenderer>();renderer.sprite=sprite;renderer.sharedMaterial=material;renderer.sortingOrder=100-Mathf.RoundToInt(foot.y*10);var fade=obj.AddComponent<DarklightMapOcclusion>();fade.width=renderer.bounds.size.x;fade.height=renderer.bounds.size.y;
                 }
             }
+            DarklightBridgeVisibility.Attach(root,map);
             BuildGeometry(root,map);
         }
         internal static void BuildGeometry(Transform root,DarklightMapDefinition map)

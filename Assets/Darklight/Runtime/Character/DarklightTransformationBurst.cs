@@ -5,8 +5,9 @@ namespace Darklight
     public sealed class DarklightTransformationBurst:MonoBehaviour
     {
         Mesh mesh;MeshRenderer display;Light2D lightSource;
+        DarklightCharacterView characterView;
         readonly Vector3[] vertices=new Vector3[4096];readonly Color[] colors=new Color[4096];readonly int[] indices=new int[6144];int quads;
-        float unit;Color tint;
+        float unit,baseY;Color tint;
         public void Present(SpriteRenderer body,int form,float progress,bool entering,bool visible)
         {
             if(mesh==null)
@@ -19,13 +20,15 @@ namespace Darklight
             bool show=visible&&body.sprite!=null&&progress>0&&progress<1;
             display.enabled=show;lightSource.enabled=show;if(!show)return;
             transform.localPosition=Vector3.zero;transform.localRotation=Quaternion.identity;transform.localScale=Vector3.one;
-            unit=body.sprite.bounds.size.y/2.63f;quads=0;
+            characterView??=body.GetComponentInParent<DarklightCharacterView>();
+            var bounds=characterView!=null?characterView.ReferenceBodyBounds:DarklightCharacterView.FallbackBodyBounds;
+            unit=bounds.size.y/2.63f;baseY=bounds.min.y;quads=0;
             float rise=Mathf.Clamp01(progress*2.8f),fade=1-Mathf.SmoothStep(0,1,Mathf.InverseLerp(.72f,1,progress));
             float energy=Mathf.Sin(progress*Mathf.PI)*fade*(entering?1:.6f);
             bool reduced=DarklightCampaign.Instance?.ReducedFlashes==true;if(reduced)energy*=.35f;
             tint=form==3?new Color(.78f,.91f,1,energy):form==2?new Color(.68f,.12f,1,energy):new Color(1,.04f,.09f,energy);
             display.sortingLayerID=body.sortingLayerID;display.sortingOrder=body.sortingOrder+1;
-            lightSource.color=tint;lightSource.intensity=energy*(reduced?.6f:2.3f);lightSource.transform.localPosition=Vector3.up*body.sprite.bounds.size.y*.48f;
+            lightSource.color=tint;lightSource.intensity=energy*(reduced?.6f:2.3f);lightSource.transform.localPosition=Vector3.up*(baseY+bounds.size.y*.48f);
             for(int ring=0;ring<2;ring++)for(int i=0;i<48;i++)
             {
                 float a=i/48f*Mathf.PI*2,b=(i+1)/48f*Mathf.PI*2,r=(.35f+rise*.7f)*(ring==0?1:.77f);
@@ -58,11 +61,13 @@ namespace Darklight
         void Segment(Vector3 start,Vector3 end,float width,Color color)
         {
             Vector3 d=(end-start).normalized,n=new Vector3(-d.y,d.x)*width;int k=quads++*4;
-            vertices[k]=(start+n)*unit;vertices[k+1]=(start-n)*unit;vertices[k+2]=(end-n)*unit;vertices[k+3]=(end+n)*unit;colors[k]=colors[k+1]=colors[k+2]=colors[k+3]=color;
+            Vector3 support=Vector3.up*baseY;
+            vertices[k]=(start+n)*unit+support;vertices[k+1]=(start-n)*unit+support;vertices[k+2]=(end-n)*unit+support;vertices[k+3]=(end+n)*unit+support;colors[k]=colors[k+1]=colors[k+2]=colors[k+3]=color;
         }
         void Shard(Vector3 p,float r,Color color)
         {
-            int k=quads++*4;vertices[k]=(p+Vector3.up*r*1.8f)*unit;vertices[k+1]=(p+Vector3.right*r)*unit;vertices[k+2]=(p-Vector3.up*r*1.8f)*unit;vertices[k+3]=(p-Vector3.right*r)*unit;colors[k]=colors[k+1]=colors[k+2]=colors[k+3]=color;
+            Vector3 support=Vector3.up*baseY;
+            int k=quads++*4;vertices[k]=(p+Vector3.up*r*1.8f)*unit+support;vertices[k+1]=(p+Vector3.right*r)*unit+support;vertices[k+2]=(p-Vector3.up*r*1.8f)*unit+support;vertices[k+3]=(p-Vector3.right*r)*unit+support;colors[k]=colors[k+1]=colors[k+2]=colors[k+3]=color;
         }
         void OnDestroy(){if(mesh!=null)Destroy(mesh);}
     }

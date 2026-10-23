@@ -14,7 +14,7 @@ namespace Darklight
         AudioClip[] allClips;
         DarklightCampaign game;
         AudioSource nature, dungeon, regional, outgoing;
-        float ambientBlend, ambientTarget, layerBlend = 1, duck, nextOccasion;
+        float windGain=.28f,veilGain=.025f, layerBlend = 1, duck, nextOccasion;
         int swingSerial = -1, region;
         public int AllocatedVoices => voices.Length;
         public int ActiveVoices { get { int n = 0; foreach (var v in voices) if (v?.source != null && v.source.isPlaying) n++; return n; } }
@@ -79,7 +79,7 @@ namespace Darklight
         public void Swing(AttackDefinition attack, int serial, int weapon)
         {
             if (swingSerial == serial) return; swingSerial = serial;
-            Play(weapon == 2 ? "rpg-metalLatch" : weapon == 1 ? "rpg-drawKnife" : "rpg-knifeSlice", DarklightAudioCategory.Combat, attack.kind == StrikeKind.Light ? .28f : .4f, null, weapon == 1 ? 1.16f : .96f);
+            Play(weapon >= 2 ? "rpg-metalLatch" : weapon == 1 ? "rpg-drawKnife" : "rpg-knifeSlice", DarklightAudioCategory.Combat, attack.kind == StrikeKind.Light ? .28f : .4f, null, weapon == 1 ? 1.16f : .96f);
             if (attack.kind == StrikeKind.Counter) Play("dl-power-counter", DarklightAudioCategory.Combat, .3f);
         }
         public void Contact(DarklightCombatant target, AttackDefinition attack)
@@ -91,11 +91,14 @@ namespace Darklight
             else if (metal) EnemyIdentity(enemy.kind, "block", target.transform.position);
         }
         public void Footstep(TodayFootstepSurface surface, Vector2 p) => Play(TodaySurfaces.Prefix(surface), DarklightAudioCategory.Character, surface == TodayFootstepSurface.Metal ? .13f : .16f, p, 1, .13f);
+        public void Land(TodayFootstepSurface surface,Vector2 p)=>Play(TodaySurfaces.Prefix(surface),DarklightAudioCategory.Character,.24f,p,.82f,.18f);
         public void Footstep(bool wood, bool grass, Vector2 p) => Footstep(wood ? TodayFootstepSurface.Wood : grass ? TodayFootstepSurface.Grass : TodayFootstepSurface.Stone, p);
         public static string EnemyPrefix(RequiemEnemyKind kind) => "dl-enemy-" + kind.ToString().ToLowerInvariant();
         public void EnemyIdentity(RequiemEnemyKind kind, string cue, Vector2 p)
         {
             bool boss = (int)kind >= 5;
+            if(kind==RequiemEnemyKind.Crawler && (cue=="alert" || cue=="windup"))
+            { Play("dl-web-creature-alert",DarklightAudioCategory.Enemy,.14f,p,1,3.7f);return; }
             if (cue == "step")
             { Play(kind == RequiemEnemyKind.Armored || kind == RequiemEnemyKind.Sentinel ? "dl-step-metal" : kind == RequiemEnemyKind.Crawler ? "impact-footstep_grass" : "impact-footstep_concrete", DarklightAudioCategory.Enemy, boss ? .13f : .08f, p, boss ? .8f : 1.08f, .18f); return; }
             if (cue == "special")
@@ -110,7 +113,7 @@ namespace Darklight
         public static string RegionLayer(int chapter) => chapter switch { 0 => "urban", 1 => "urban", 2 => "rain", 3 => "cave", 4 => "leaves", 5 => "veil", 6 => "cave", 7 => "rain", 8 => "veil", _ => "veil" };
         public void Region(int chapter)
         {
-            region = chapter; ambientTarget = chapter == 3 || chapter == 5 || chapter >= 6 && chapter != 7 ? 1 : 0; swingSerial = -1; StopCombat();
+            region = chapter; swingSerial = -1; StopCombat();
             var clip = Resources.Load<AudioClip>("Darklight/Audio/Expansion/dl-ambient-" + (game.Map?.Art?.revision>=2&&chapter>=6?DarklightRegionAtmosphere.Bed(chapter):RegionLayer(chapter)));
             if (regional != null && regional.clip != clip)
             { outgoing.Stop(); var old = outgoing; outgoing = regional; regional = old; regional.clip = clip; layerBlend = 0; }
@@ -132,10 +135,12 @@ namespace Darklight
             if (!game.Active) { nature.Pause(); dungeon.Pause(); regional.Pause(); outgoing.Pause(); return; }
             Resume(nature); Resume(dungeon); Resume(regional); if (layerBlend < 1) Resume(outgoing);
             float dt = Time.unscaledDeltaTime; duck = Mathf.Max(0, duck - dt);
-            ambientBlend = Mathf.MoveTowards(ambientBlend, ambientTarget, dt * .6f); layerBlend = Mathf.MoveTowards(layerBlend, 1, dt / 1.4f);
+            var profile=DarklightRegionSoundProfile.ForChapter(region);
+            windGain=Mathf.MoveTowards(windGain,profile.Wind,dt*.18f);veilGain=Mathf.MoveTowards(veilGain,profile.Veil,dt*.18f);
+            layerBlend = Mathf.MoveTowards(layerBlend, 1, dt / 1.4f);
             float volume = game.AmbientVolume * (duck > 0 ? .5f : game.Resonance.Active >= 0 ? .75f : 1);
-            nature.volume = volume * .30f * (1 - ambientBlend); dungeon.volume = volume * .30f * ambientBlend;
-            regional.volume = volume * .18f * layerBlend; outgoing.volume = volume * .18f * (1 - layerBlend);
+            nature.volume = volume * windGain; dungeon.volume = volume * veilGain;
+            regional.volume = volume * profile.Regional * layerBlend; outgoing.volume = volume * profile.Regional * (1 - layerBlend);
             if (layerBlend >= 1) outgoing.Pause();
             if (Time.unscaledTime >= nextOccasion)
             {

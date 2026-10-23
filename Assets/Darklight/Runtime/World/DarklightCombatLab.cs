@@ -17,15 +17,7 @@ namespace Darklight
         public int RepaintCount { get; private set; }
         public bool Ready => Input != null;
         public float CombatDelta => Paused || Time.unscaledTime < hitstopUntil || Time.frameCount <= suppressThrough ? 0 : Time.deltaTime;
-        public Rect Viewport
-        {
-            get
-            {
-                float scale = Mathf.Max(1, Mathf.Floor(Mathf.Min(Screen.width / 1280f, Screen.height / 720f)));
-                if (Screen.width < 1280 || Screen.height < 720) scale = Mathf.Min(Screen.width / 1280f, Screen.height / 720f);
-                return new Rect((Screen.width - 1280 * scale) * .5f, (Screen.height - 720 * scale) * .5f, 1280 * scale, 720 * scale);
-            }
-        }
+        public Rect Viewport=>DarklightViewport.Fit(Screen.width,Screen.height);
         RenderTexture world;
         float hitstopUntil, rumbleUntil, nextNavigate;
         int menuSelection, suppressThrough;

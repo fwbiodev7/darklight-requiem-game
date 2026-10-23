@@ -12,7 +12,7 @@ namespace Darklight.Editor
         {
             EditorGUILayout.LabelField("Previa visual sem Play Mode",EditorStyles.boldLabel);
             stage=EditorGUILayout.IntSlider("Estagio",stage,0,4);skin=EditorGUILayout.Popup("Skin",skin,new[]{"Requiem","Rock"});
-            weapon=EditorGUILayout.Popup("Arma",weapon,new[]{"Katana","Presas do Veu","Laco da Ruptura"});
+            weapon=EditorGUILayout.Popup("Arma",weapon,new[]{"Katana","Presas do Veu",DarklightRuinFistsBank.Ready?"Punhos da Ruína":"Laco da Ruptura"});
             direction=EditorGUILayout.Popup("Direcao",direction,new[]{"S","SW","W","NW","N","NE","E","SE"});frame=EditorGUILayout.IntSlider("Pose da arma",frame,0,7);
             if(GUILayout.Button("Atualizar previa na cena"))Refresh();
             if(GUILayout.Button("Remover previa"))Remove();

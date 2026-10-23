@@ -48,7 +48,7 @@ namespace Darklight
             Blood.Set(100);if(!TrainingDamage&&health.HealthPercent<1)health.FullHeal();
             if(Form>0)FormTime=Mathf.Max(FormTime,180);
             if(trainingReadout!=null)trainingReadout.text="TREINO · "+DifficultyName+"\nCOMBO "+lab.Player.Model.ComboCount+" · "+Style.Rank+"\nPAUSA: ALVOS / ARMAS / FORMAS";
-            if(TrainingDamage&&health.IsDead){health.SetMaxHealth(health.MaxHealth,false);lab.Player.ResetModel();lab.Player.GetComponent<Rigidbody2D>().position=Map.Spawn;Notice("TREINO: VIDA RESTAURADA");}
+            if(TrainingDamage&&health.IsDead){StopPower();health.SetMaxHealth(health.MaxHealth,false);lab.Player.ResetModel();lab.Player.GetComponent<Rigidbody2D>().position=Map.Spawn;Notice("TREINO: VIDA RESTAURADA");}
         }
         void SpawnTraining(int type)
         {

@@ -11,9 +11,22 @@ namespace Darklight
         SpriteRenderer display;CharacterAppearanceSystem appearance;DarklightOriginalVampireView originalForms;
         int trailSerial=-1;float nextTrail,airHeight;
         DarklightCombatTrail combatTrail;DarklightAbyssLocomotion abyssLocomotion;
+        readonly DarklightLivingPresentation living=new();
+        HealthSystem livingHealth;
         public bool UsesUserWholeSprite{get;private set;}
         public bool UsesWholeCharacterSprite{get;private set;}
         public bool UsesPoseFallback{get;private set;}
+        public static Bounds FallbackBodyBounds=>new Bounds(Vector3.up*1.315f,new Vector3(1.5f,2.63f,0));
+        // Effects use normal frontal katana idle for this skin, independently
+        // of the displayed attack, direction, weapon or transformation.
+        public Bounds ReferenceBodyBounds
+        {
+            get
+            {
+                var neutral=TodayCharacterBank.StablePose(rock?1:0,0,0,0);
+                return neutral!=null&&neutral.bounds.size.y>0?neutral.bounds:FallbackBodyBounds;
+            }
+        }
         // Kept for existing diagnostics, with no age selection behind these aliases.
         public bool UsesCompleteAgeSprite=>UsesWholeCharacterSprite;
         public bool UsesAgePoseFallback=>UsesPoseFallback;
@@ -45,9 +58,19 @@ namespace Darklight
             if(display==null)return;
             int direction=DirectionIndex(model.Facing),skin=rock?1:0;
             var game=DarklightCampaign.Instance;var equipped=previewing?previewWeapon:game?.Weapons?.Equipped;int weapon=equipped==null?0:(int)equipped.id;
-            airHeight=model.State==CombatState.Attack&&model.Attack.kind==StrikeKind.Aerial?Mathf.Sin(Mathf.Clamp01(model.StateTime/model.Attack.Duration)*Mathf.PI)*.35f:0;
+            bool ruinFists=weapon==2&&DarklightRuinFistsBank.Ready;
+            airHeight=!ruinFists&&model.State==CombatState.Attack&&model.Attack.kind==StrikeKind.Aerial?Mathf.Sin(Mathf.Clamp01(model.StateTime/model.Attack.Duration)*Mathf.PI)*.35f:0;
             if(!previewing&&game?.AbyssRider?.Active==true)airHeight+=game.AbyssRider.JumpHeight+game.AbyssRider.RunOverLift;
+            if(!previewing&&GetComponent<DarklightFighter>()?.AirCombo is {Active:true} air)airHeight=air.Height;
             var selected=!previewing&&skin==1&&game?.AbyssRider?.Active==true?DarklightAbyssSpriteBank.Resolve(game.AbyssRider,model):TodayCharacterBank.Resolve(skin,0,weapon,direction,model,movement);
+            if(!previewing)
+            {
+                livingHealth??=GetComponent<HealthSystem>();
+                living.Observe(model.Clock,model.State,movement,livingHealth!=null?livingHealth.HealthPercent:1,game?.Form??0,
+                    game?.PresentationThreat??false,game?.Transforming==true);
+                if(model.State==CombatState.Neutral && game?.Transforming!=true && game?.AbyssRider?.Active!=true)
+                    selected=TodayCharacterBank.LivingPose(skin,weapon,direction,living)??selected;
+            }
             bool locomotionSelected=false;
             if(!previewing&&skin==1&&game?.AbyssRider?.Active==true)
             {
@@ -65,7 +88,9 @@ namespace Darklight
             display.color=model.State==CombatState.Hurt?new Color(1,.4f,.4f):model.State==CombatState.Parry?new Color(.7f,.8f,1):Color.white;
             display.sortingOrder=100-Mathf.RoundToInt(transform.position.y*10f);appearance?.Present(display,direction,skin,game?.Form??0,model);
             originalForms??=GetComponent<DarklightOriginalVampireView>()??gameObject.AddComponent<DarklightOriginalVampireView>();
-            originalForms.Present(display,skin,0,direction,previewing?previewForm:game?.PresentedForm??0,model.Clock,model.State==CombatState.Dead,UsesUserWholeSprite||UsesWholeCharacterSprite,model.State==CombatState.Dodge);
+            originalForms.Present(display,skin,0,direction,previewing?previewForm:game?.PresentedForm??0,model.Clock,model.State==CombatState.Dead,UsesUserWholeSprite||UsesWholeCharacterSprite,model.State==CombatState.Dodge,!previewing);
+            DarklightCanonicalComplexion.Apply(display,model.State!=CombatState.Dead);
+            if(model.State!=CombatState.Dead)DarklightAbyssSpriteBank.ApplyWholeOwnership(display);
             if(combatTrail==null){var obj=new GameObject("RastrosDeCombate");obj.transform.SetParent(transform,false);combatTrail=obj.AddComponent<DarklightCombatTrail>();}
             combatTrail.Present(display,weapon,model,previewing?previewForm:game?.PresentedForm??0);
             if(model.State==CombatState.Attack&&model.ActiveThisTick&&trailSerial!=model.AttackSerial){trailSerial=model.AttackSerial;DarklightCombatFX.Echo(display,.10f);}

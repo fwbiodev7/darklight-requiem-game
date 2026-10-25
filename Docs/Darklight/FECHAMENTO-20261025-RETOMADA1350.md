@@ -10,7 +10,7 @@ Nova retomada única confirmada **hoje18h50 America/Sao_Paulo**, mesmochat/autom
 - PunhosRéquiemNormal47novas/7atlas/13páginas: DiretoNW/N/NE/E/SE completa8direções com9anteriores; idle32nas8direções. TrêsNWcoruja e quatroN comgarras invertidas reparados comofigurasinteiras, preservando6NNEataque/8NWNEidle.
 - PunhosRockNormal32idles/8páginas; ataquespendentes. Cabeça/nuca/costascoerentes, semfrentegiradasobrecostas.
 - Painéis deescala revisados comPPUs reais/WorldVisualScale1.325. Ousuário elogiouacomparação/fidelidade; isso não certifica aprovação global/gameplay.
-- Catálogo **50folhas/436figuras/119contextos**,1417dos1536contextos principais semclipnovo. Moto48separadaspreservadas.204figuras novas selecionadas nestarodada; acontagemlíquida varia por substituições.
+- Catálogo **50folhas/436figuras/119contextos**,1417dos1536contextos principais semclipnovo. Moto48separadaspreservadas.201 figuras novas selecionadas nestarodada; acontagemlíquida varia por substituições.
 
 ## Verificação e Git
 

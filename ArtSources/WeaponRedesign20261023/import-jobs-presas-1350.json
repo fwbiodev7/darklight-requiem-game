@@ -1,0 +1,763 @@
+{
+  "schemaVersion": 1,
+  "jobs": [
+    {
+      "name": "ReqDaggersNormalPresas1E_SE1350V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1350\\presas-normal\\ReqDaggersNormalPresas1E_SE1350V1-source.png",
+      "skin": 0,
+      "weapon": 1,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 6,
+          "action": "Attack",
+          "loop": false,
+          "attackKey": "Presas1",
+          "sourceSpriteNames": [
+            "Today_RequiemAttackDaggersYoungCardinal_12",
+            "Today_RequiemAttackDaggersYoungCardinal_13",
+            "Today_RequiemAttackDaggersYoungCardinal_14",
+            "Today_RequiemAttackDaggersYoungCardinal_15"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 7,
+          "action": "Attack",
+          "loop": false,
+          "attackKey": "Presas1",
+          "sourceSpriteNames": [
+            "Today_RequiemAttackDaggersYoungDiagonal_12",
+            "Today_RequiemAttackDaggersYoungDiagonal_13",
+            "Today_RequiemAttackDaggersYoungDiagonal_14",
+            "Today_RequiemAttackDaggersYoungDiagonal_15"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            227,
+            438
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "1": {
+          "anchor": [
+            659,
+            438
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "2": {
+          "anchor": [
+            1094,
+            438
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "3": {
+          "anchor": [
+            1556,
+            438
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "4": {
+          "anchor": [
+            233,
+            853
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "5": {
+          "anchor": [
+            677,
+            846
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "6": {
+          "anchor": [
+            1110,
+            848
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "7": {
+          "anchor": [
+            1570,
+            846
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        }
+      }
+    },
+    {
+      "name": "ReqDaggersNormalIdleS_SW_W1350V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1350\\presas-normal\\ReqDaggersNormalIdleS_SW_W1350V1-source.png",
+      "skin": 0,
+      "weapon": 1,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 0,
+          "action": "Idle",
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 1,
+          "action": "Idle",
+          "loop": true
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 2,
+          "action": "Idle",
+          "loop": true
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            184,
+            339
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "1": {
+          "anchor": [
+            584,
+            339
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "2": {
+          "anchor": [
+            960,
+            339
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "3": {
+          "anchor": [
+            1352,
+            339
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "4": {
+          "anchor": [
+            182,
+            675
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "5": {
+          "anchor": [
+            577,
+            675
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "6": {
+          "anchor": [
+            958,
+            675
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "7": {
+          "anchor": [
+            1350,
+            675
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "8": {
+          "anchor": [
+            180,
+            1012
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "9": {
+          "anchor": [
+            569,
+            1012
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "10": {
+          "anchor": [
+            952,
+            1012
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "11": {
+          "anchor": [
+            1347,
+            1012
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        }
+      }
+    },
+    {
+      "name": "ReqDaggersNormalIdleNW_N1350V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1350\\presas-normal\\ReqDaggersNormalIdleNW_N1350V1-source.png",
+      "skin": 0,
+      "weapon": 1,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 3,
+          "action": "Idle",
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 4,
+          "action": "Idle",
+          "loop": true
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            185,
+            331
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "1": {
+          "anchor": [
+            575,
+            332
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "2": {
+          "anchor": [
+            968,
+            332
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "3": {
+          "anchor": [
+            1363,
+            332
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "4": {
+          "anchor": [
+            187,
+            666
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "5": {
+          "anchor": [
+            571,
+            666
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "6": {
+          "anchor": [
+            962,
+            666
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "7": {
+          "anchor": [
+            1354,
+            666
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        }
+      }
+    },
+    {
+      "name": "ReqDaggersNormalIdleNE1350V3",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1350\\presas-normal\\ReqDaggersNormalIdleNE1350V3-source.png",
+      "skin": 0,
+      "weapon": 1,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 1,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 5,
+          "action": "Idle",
+          "loop": true
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            286,
+            655
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "1": {
+          "anchor": [
+            831,
+            655
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "2": {
+          "anchor": [
+            1392,
+            660
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "3": {
+          "anchor": [
+            1934,
+            654
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        }
+      }
+    },
+    {
+      "name": "ReqDaggersNormalIdleE_SE1350V2",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1350\\presas-normal\\ReqDaggersNormalIdleE_SE1350V2-source.png",
+      "skin": 0,
+      "weapon": 1,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 6,
+          "action": "Idle",
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 7,
+          "action": "Idle",
+          "loop": true
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            245,
+            496
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "1": {
+          "anchor": [
+            629,
+            496
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "2": {
+          "anchor": [
+            1013,
+            496
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "3": {
+          "anchor": [
+            1397,
+            496
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "4": {
+          "anchor": [
+            215,
+            969
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "5": {
+          "anchor": [
+            599,
+            969
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "6": {
+          "anchor": [
+            983,
+            969
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "7": {
+          "anchor": [
+            1363,
+            969
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        }
+      }
+    },
+    {
+      "name": "RockDaggersNormalIdleS_SW_W1350V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1350\\presas-normal\\rock-normal\\RockDaggersNormalIdleS_SW_W1350V1-source.png",
+      "skin": 1,
+      "weapon": 1,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2
+          ],
+          "direction": 0,
+          "action": "Idle",
+          "loop": true,
+          "phaseIndices": [
+            0,
+            1,
+            2,
+            0
+          ],
+          "durationMs": [
+            350,
+            250,
+            180
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6
+          ],
+          "direction": 1,
+          "action": "Idle",
+          "loop": true,
+          "phaseIndices": [
+            0,
+            1,
+            2,
+            0
+          ],
+          "durationMs": [
+            350,
+            250,
+            180
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 2,
+          "action": "Idle",
+          "loop": true
+        }
+      ],
+      "excludedReason": "Entire source figures3/7 rejected: clipped outer dagger tips. Only0/1/2,4/5/6,8/9/10/11 selected. Return-to-neutral hold does not count a new figure.",
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            230,
+            342
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "1": {
+          "anchor": [
+            610,
+            340
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "2": {
+          "anchor": [
+            1000,
+            342
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "3": {
+          "anchor": [
+            1400,
+            342
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "4": {
+          "anchor": [
+            235,
+            686
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "5": {
+          "anchor": [
+            620,
+            687
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "6": {
+          "anchor": [
+            1010,
+            687
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "7": {
+          "anchor": [
+            1400,
+            687
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "8": {
+          "anchor": [
+            230,
+            1011
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "9": {
+          "anchor": [
+            610,
+            1011
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "10": {
+          "anchor": [
+            1000,
+            1012
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "11": {
+          "anchor": [
+            1380,
+            1012
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        }
+      }
+    },
+    {
+      "name": "RockDaggersNormalIdleN1350V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1350\\presas-normal\\rock-normal\\RockDaggersNormalIdleN1350V1-source.png",
+      "skin": 1,
+      "weapon": 1,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 1,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 4,
+          "action": "Idle",
+          "loop": true
+        }
+      ],
+      "excludedReason": "",
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            219,
+            326
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "1": {
+          "anchor": [
+            599,
+            324
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "2": {
+          "anchor": [
+            966,
+            324
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "3": {
+          "anchor": [
+            1338,
+            327
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        }
+      }
+    },
+    {
+      "name": "RockDaggersNormalIdleNE1350V2",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1350\\presas-normal\\rock-normal\\RockDaggersNormalIdleNE1350V2-source.png",
+      "skin": 1,
+      "weapon": 1,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 1,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 5,
+          "action": "Idle",
+          "loop": true
+        }
+      ],
+      "excludedReason": "",
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            236,
+            421
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "1": {
+          "anchor": [
+            680,
+            421
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "2": {
+          "anchor": [
+            1123,
+            421
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        },
+        "3": {
+          "anchor": [
+            1565,
+            421
+          ],
+          "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+        }
+      }
+    }
+  ],
+  "preparationScript": "Tools/AnimationPreview/prepare_presas_normal_1350_20261025.py",
+  "argumentsBySkin": {
+    "0": [],
+    "1": [
+      "--skin",
+      "1"
+    ]
+  },
+  "scope": "40Requiem+18Rock complete unique figures, staging only; RockS/SW returnhold0 is not a new fourth figure."
+}

@@ -1,5 +1,9 @@
 # Pendências — 25/10/2026
 
+## Último checkpoint — retomada13h50 encerrada
+
+Lerprimeiro **FECHAMENTO-20261025-RETOMADA1350.md** e recibosem `outputs/redesign-armas-20261025-retomada1350`. Retomada hoje18h50 confirmada. Agora119contextos/436figuras/50folhas,moto48separadas. KatanaRockidle+Leve1 oito lados; PresasRéquiemNormalataque+idle8; PunhosRéquiemNormalDireto+idle8; PunhosRockidle8; PresasRockidleAPENASS/SW/W/N/NE. NWcorujarejeitada; E/SEeataquesRockPresas/Punhospendentes. PrioridadeNormaisduasskins/todasarmas,depoistransformações,depoisLucius. PréviaLuciusV1rejeitada: refazermesmaaltura/corpo/semblante/estiloFabius, mantendoidentidadecanônicaLucius; pendenteaté18h50. Semnovasgeraçõesnestefechamento.
+
 ## Checkpoint final de hoje — ler primeiro na retomada das13h50
 
 Concluídos/preparados e limites reais: **FECHAMENTO-20261025.md**. Contrato visual atualizado: **CONTRATO-VISUAL-20261025.md** e regra permanente no AGENTS.md. Não repetir a lista abaixo como se todos os estados de24/10 continuassem iguais.
@@ -16,6 +20,10 @@ Concluídos/preparados e limites reais: **FECHAMENTO-20261025.md**. Contrato vis
 Ordem preservada: redesign integral → CombatAI2.0 → Sangue doAbismo → site/promocional. Lucius:Normal/Ascensão/Fenrir/Nexo conforme referência25/10; conteúdo futuro. Minecraft pausado.
 
 ## Histórico da abertura da sessão
+
+### Adendo da retomada13h50 — O Encapuzado
+
+Pedido e duas referências confirmados pelo usuário em25/10. Seguir `O-ENCAPUZADO-PLANO-20261025.md`. **Etapa posterior ao redesign e à implementação das artes dos últimos dois dias**, conforme esclarecimento explícito. Introdução discreta na campanha: nome exclusivo O Encapuzado, manto quase preto/azul-marinho com detalhes cobalto, rosto/cabelo totalmente ocultos, porte adulto,8direções com caminhada/idle/tecido. Revelação de Lucius/parentesco somente na cutscene de Sangue do Abismo. Não antecipar implementação nem spoilers nesta rodada das armas.
 
 Prioridade: jogo Unity. Minecraft permanece pausado por pedido do usuário. Não retomar gerações ou alterar prioridades automaticamente.
 

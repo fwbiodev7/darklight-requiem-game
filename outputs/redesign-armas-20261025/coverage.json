@@ -4,20 +4,20 @@
   "catalogExists": true,
   "complete": false,
   "summary": {
-    "sheets": 30,
-    "wholeFigures": 275,
-    "exactContextClips": 76,
-    "uniqueRuntimeReferencedFigures": 268,
-    "unreferencedPhysicalFigures": 7,
+    "sheets": 50,
+    "wholeFigures": 436,
+    "exactContextClips": 119,
+    "uniqueRuntimeReferencedFigures": 433,
+    "unreferencedPhysicalFigures": 3,
     "explicitLegacyPhaseHolds": 0,
-    "coreContextsWithAnyNewClip": 76,
+    "coreContextsWithAnyNewClip": 119,
     "coreContextsRequired": 1536,
-    "coreContextsMissingNewArt": 1460,
+    "coreContextsMissingNewArt": 1417,
     "structuralErrors": 0,
     "clipsByWeapon": {
-      "1": 41,
-      "2": 12,
-      "0": 23
+      "1": 48,
+      "0": 39,
+      "2": 32
     }
   },
   "limits": [
@@ -120,51 +120,6 @@
       "staticClip": false
     },
     {
-      "id": "ReqDaggersNormalIdleA_Idle_S",
-      "skin": 0,
-      "weapon": 1,
-      "form": 0,
-      "direction": 0,
-      "directionName": "S",
-      "action": "Idle",
-      "attackKey": "",
-      "frames": 4,
-      "mode": "explicit-duration-clip",
-      "sourceSpriteNames": [],
-      "status": "visual-reviewed",
-      "staticClip": false
-    },
-    {
-      "id": "ReqDaggersNormalIdleA_Idle_SW",
-      "skin": 0,
-      "weapon": 1,
-      "form": 0,
-      "direction": 1,
-      "directionName": "SW",
-      "action": "Idle",
-      "attackKey": "",
-      "frames": 4,
-      "mode": "explicit-duration-clip",
-      "sourceSpriteNames": [],
-      "status": "visual-reviewed",
-      "staticClip": false
-    },
-    {
-      "id": "ReqDaggersNormalIdleA_Idle_W",
-      "skin": 0,
-      "weapon": 1,
-      "form": 0,
-      "direction": 2,
-      "directionName": "W",
-      "action": "Idle",
-      "attackKey": "",
-      "frames": 4,
-      "mode": "explicit-duration-clip",
-      "sourceSpriteNames": [],
-      "status": "visual-reviewed",
-      "staticClip": false
-    },
-    {
       "id": "ReqDaggersRupturaIdleA_Idle_S",
       "skin": 0,
       "weapon": 1,
@@ -201,21 +156,6 @@
       "form": 1,
       "direction": 2,
       "directionName": "W",
-      "action": "Idle",
-      "attackKey": "",
-      "frames": 4,
-      "mode": "explicit-duration-clip",
-      "sourceSpriteNames": [],
-      "status": "visual-reviewed",
-      "staticClip": false
-    },
-    {
-      "id": "ReqFistsNormalSouth_Idle_S",
-      "skin": 0,
-      "weapon": 2,
-      "form": 0,
-      "direction": 0,
-      "directionName": "S",
       "action": "Idle",
       "attackKey": "",
       "frames": 4,
@@ -632,81 +572,6 @@
       "action": "Idle",
       "attackKey": "",
       "frames": 2,
-      "mode": "explicit-duration-clip",
-      "sourceSpriteNames": [],
-      "status": "visual-reviewed",
-      "staticClip": false
-    },
-    {
-      "id": "ReqDaggersNormalIdleC_Idle_E",
-      "skin": 0,
-      "weapon": 1,
-      "form": 0,
-      "direction": 6,
-      "directionName": "E",
-      "action": "Idle",
-      "attackKey": "",
-      "frames": 4,
-      "mode": "explicit-duration-clip",
-      "sourceSpriteNames": [],
-      "status": "visual-reviewed",
-      "staticClip": false
-    },
-    {
-      "id": "ReqDaggersNormalIdleC_Idle_SE",
-      "skin": 0,
-      "weapon": 1,
-      "form": 0,
-      "direction": 7,
-      "directionName": "SE",
-      "action": "Idle",
-      "attackKey": "",
-      "frames": 4,
-      "mode": "explicit-duration-clip",
-      "sourceSpriteNames": [],
-      "status": "visual-reviewed",
-      "staticClip": false
-    },
-    {
-      "id": "ReqDaggersNormalIdleB2_Idle_NW",
-      "skin": 0,
-      "weapon": 1,
-      "form": 0,
-      "direction": 3,
-      "directionName": "NW",
-      "action": "Idle",
-      "attackKey": "",
-      "frames": 4,
-      "mode": "explicit-duration-clip",
-      "sourceSpriteNames": [],
-      "status": "visual-reviewed",
-      "staticClip": false
-    },
-    {
-      "id": "ReqDaggersNormalIdleB2_Idle_N",
-      "skin": 0,
-      "weapon": 1,
-      "form": 0,
-      "direction": 4,
-      "directionName": "N",
-      "action": "Idle",
-      "attackKey": "",
-      "frames": 4,
-      "mode": "explicit-duration-clip",
-      "sourceSpriteNames": [],
-      "status": "visual-reviewed",
-      "staticClip": false
-    },
-    {
-      "id": "ReqDaggersNormalIdleB2_Idle_NE",
-      "skin": 0,
-      "weapon": 1,
-      "form": 0,
-      "direction": 5,
-      "directionName": "NE",
-      "action": "Idle",
-      "attackKey": "",
-      "frames": 4,
       "mode": "explicit-duration-clip",
       "sourceSpriteNames": [],
       "status": "visual-reviewed",
@@ -1307,6 +1172,856 @@
       ],
       "status": "visual-reviewed",
       "staticClip": false
+    },
+    {
+      "id": "RockKatanaNormalIdleS_SW_W1350_Idle_S",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "direction": 0,
+      "directionName": "S",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockKatanaNormalIdleS_SW_W1350_Idle_SW",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "direction": 1,
+      "directionName": "SW",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockKatanaNormalIdleS_SW_W1350_Idle_W",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "direction": 2,
+      "directionName": "W",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockKatanaNormalIdleNW_N_NE1350_Idle_NW",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "direction": 3,
+      "directionName": "NW",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockKatanaNormalIdleNW_N_NE1350_Idle_N",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "direction": 4,
+      "directionName": "N",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockKatanaNormalIdleNW_N_NE1350_Idle_NE",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "direction": 5,
+      "directionName": "NE",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockKatanaNormalIdleE_SE1350_Idle_E",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "direction": 6,
+      "directionName": "E",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockKatanaNormalIdleE_SE1350_Idle_SE",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "direction": 7,
+      "directionName": "SE",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockKatanaNormalLeve1S_SW_W1350_Attack_S",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "direction": 0,
+      "directionName": "S",
+      "action": "Attack",
+      "attackKey": "Leve1",
+      "frames": 4,
+      "mode": "exact-existing-phase-mapping",
+      "sourceSpriteNames": [
+        "Today_RockAttackKatanaYoungCardinal_0",
+        "Today_RockAttackKatanaYoungCardinal_1",
+        "Today_RockAttackKatanaYoungCardinal_2",
+        "Today_RockAttackKatanaYoungCardinal_3"
+      ],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockKatanaNormalLeve1S_SW_W1350_Attack_SW",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "direction": 1,
+      "directionName": "SW",
+      "action": "Attack",
+      "attackKey": "Leve1",
+      "frames": 4,
+      "mode": "exact-existing-phase-mapping",
+      "sourceSpriteNames": [
+        "Today_RockAttackKatanaYoungDiagonal_0",
+        "Today_RockAttackKatanaYoungDiagonal_1",
+        "Today_RockAttackKatanaYoungDiagonal_2",
+        "Today_RockAttackKatanaYoungDiagonal_3"
+      ],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockKatanaNormalLeve1S_SW_W1350_Attack_W",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "direction": 2,
+      "directionName": "W",
+      "action": "Attack",
+      "attackKey": "Leve1",
+      "frames": 4,
+      "mode": "exact-existing-phase-mapping",
+      "sourceSpriteNames": [
+        "Today_RockAttackKatanaYoungCardinal_4",
+        "Today_RockAttackKatanaYoungCardinal_5",
+        "Today_RockAttackKatanaYoungCardinal_6",
+        "Today_RockAttackKatanaYoungCardinal_7"
+      ],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockKatanaNormalLeve1NW_N_NE1350_Attack_NW",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "direction": 3,
+      "directionName": "NW",
+      "action": "Attack",
+      "attackKey": "Leve1",
+      "frames": 4,
+      "mode": "exact-existing-phase-mapping",
+      "sourceSpriteNames": [
+        "Today_RockAttackKatanaYoungDiagonal_4",
+        "Today_RockAttackKatanaYoungDiagonal_5",
+        "Today_RockAttackKatanaYoungDiagonal_6",
+        "Today_RockAttackKatanaYoungDiagonal_7"
+      ],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockKatanaNormalLeve1NW_N_NE1350_Attack_N",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "direction": 4,
+      "directionName": "N",
+      "action": "Attack",
+      "attackKey": "Leve1",
+      "frames": 4,
+      "mode": "exact-existing-phase-mapping",
+      "sourceSpriteNames": [
+        "Today_RockAttackKatanaYoungCardinal_8",
+        "Today_RockAttackKatanaYoungCardinal_9",
+        "Today_RockAttackKatanaYoungCardinal_10",
+        "Today_RockAttackKatanaYoungCardinal_11"
+      ],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockKatanaNormalLeve1NW_N_NE1350_Attack_NE",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "direction": 5,
+      "directionName": "NE",
+      "action": "Attack",
+      "attackKey": "Leve1",
+      "frames": 4,
+      "mode": "exact-existing-phase-mapping",
+      "sourceSpriteNames": [
+        "Today_RockAttackKatanaYoungDiagonal_8",
+        "Today_RockAttackKatanaYoungDiagonal_9",
+        "Today_RockAttackKatanaYoungDiagonal_10",
+        "Today_RockAttackKatanaYoungDiagonal_11"
+      ],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockKatanaNormalLeve1E_SE1350_Attack_E",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "direction": 6,
+      "directionName": "E",
+      "action": "Attack",
+      "attackKey": "Leve1",
+      "frames": 4,
+      "mode": "exact-existing-phase-mapping",
+      "sourceSpriteNames": [
+        "Today_RockAttackKatanaYoungCardinal_12",
+        "Today_RockAttackKatanaYoungCardinal_13",
+        "Today_RockAttackKatanaYoungCardinal_14",
+        "Today_RockAttackKatanaYoungCardinal_15"
+      ],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockKatanaNormalLeve1E_SE1350_Attack_SE",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "direction": 7,
+      "directionName": "SE",
+      "action": "Attack",
+      "attackKey": "Leve1",
+      "frames": 4,
+      "mode": "exact-existing-phase-mapping",
+      "sourceSpriteNames": [
+        "Today_RockAttackKatanaYoungDiagonal_12",
+        "Today_RockAttackKatanaYoungDiagonal_13",
+        "Today_RockAttackKatanaYoungDiagonal_14",
+        "Today_RockAttackKatanaYoungDiagonal_15"
+      ],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqDaggersNormalPresas1E_SE1350V1_Attack_E",
+      "skin": 0,
+      "weapon": 1,
+      "form": 0,
+      "direction": 6,
+      "directionName": "E",
+      "action": "Attack",
+      "attackKey": "Presas1",
+      "frames": 4,
+      "mode": "exact-existing-phase-mapping",
+      "sourceSpriteNames": [
+        "Today_RequiemAttackDaggersYoungCardinal_12",
+        "Today_RequiemAttackDaggersYoungCardinal_13",
+        "Today_RequiemAttackDaggersYoungCardinal_14",
+        "Today_RequiemAttackDaggersYoungCardinal_15"
+      ],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqDaggersNormalPresas1E_SE1350V1_Attack_SE",
+      "skin": 0,
+      "weapon": 1,
+      "form": 0,
+      "direction": 7,
+      "directionName": "SE",
+      "action": "Attack",
+      "attackKey": "Presas1",
+      "frames": 4,
+      "mode": "exact-existing-phase-mapping",
+      "sourceSpriteNames": [
+        "Today_RequiemAttackDaggersYoungDiagonal_12",
+        "Today_RequiemAttackDaggersYoungDiagonal_13",
+        "Today_RequiemAttackDaggersYoungDiagonal_14",
+        "Today_RequiemAttackDaggersYoungDiagonal_15"
+      ],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqDaggersNormalIdleS_SW_W1350V1_Idle_S",
+      "skin": 0,
+      "weapon": 1,
+      "form": 0,
+      "direction": 0,
+      "directionName": "S",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqDaggersNormalIdleS_SW_W1350V1_Idle_SW",
+      "skin": 0,
+      "weapon": 1,
+      "form": 0,
+      "direction": 1,
+      "directionName": "SW",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqDaggersNormalIdleS_SW_W1350V1_Idle_W",
+      "skin": 0,
+      "weapon": 1,
+      "form": 0,
+      "direction": 2,
+      "directionName": "W",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqDaggersNormalIdleNW_N1350V1_Idle_NW",
+      "skin": 0,
+      "weapon": 1,
+      "form": 0,
+      "direction": 3,
+      "directionName": "NW",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqDaggersNormalIdleNW_N1350V1_Idle_N",
+      "skin": 0,
+      "weapon": 1,
+      "form": 0,
+      "direction": 4,
+      "directionName": "N",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqDaggersNormalIdleNE1350V3_Idle_NE",
+      "skin": 0,
+      "weapon": 1,
+      "form": 0,
+      "direction": 5,
+      "directionName": "NE",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqDaggersNormalIdleE_SE1350V2_Idle_E",
+      "skin": 0,
+      "weapon": 1,
+      "form": 0,
+      "direction": 6,
+      "directionName": "E",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqDaggersNormalIdleE_SE1350V2_Idle_SE",
+      "skin": 0,
+      "weapon": 1,
+      "form": 0,
+      "direction": 7,
+      "directionName": "SE",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockDaggersNormalIdleS_SW_W1350V1_Idle_S",
+      "skin": 1,
+      "weapon": 1,
+      "form": 0,
+      "direction": 0,
+      "directionName": "S",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockDaggersNormalIdleS_SW_W1350V1_Idle_SW",
+      "skin": 1,
+      "weapon": 1,
+      "form": 0,
+      "direction": 1,
+      "directionName": "SW",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockDaggersNormalIdleS_SW_W1350V1_Idle_W",
+      "skin": 1,
+      "weapon": 1,
+      "form": 0,
+      "direction": 2,
+      "directionName": "W",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockDaggersNormalIdleN1350V1_Idle_N",
+      "skin": 1,
+      "weapon": 1,
+      "form": 0,
+      "direction": 4,
+      "directionName": "N",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockDaggersNormalIdleNE1350V2_Idle_NE",
+      "skin": 1,
+      "weapon": 1,
+      "form": 0,
+      "direction": 5,
+      "directionName": "NE",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqFistsNormalDiretoNW20261025V4_Attack_NW",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "direction": 3,
+      "directionName": "NW",
+      "action": "Attack",
+      "attackKey": "Direto da Ruína",
+      "frames": 3,
+      "mode": "exact-existing-phase-mapping",
+      "sourceSpriteNames": [
+        "Ruin_Requiem_Normal_NW_Combat_02",
+        "Ruin_Requiem_Normal_NW_Combat_03",
+        "Ruin_Requiem_Normal_NW_Combat_11"
+      ],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqFistsNormalDiretoN_NE20261025V1_Attack_N",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "direction": 4,
+      "directionName": "N",
+      "action": "Attack",
+      "attackKey": "Direto da Ruína",
+      "frames": 3,
+      "mode": "exact-existing-phase-mapping",
+      "sourceSpriteNames": [
+        "Ruin_Requiem_Normal_N_Combat_02",
+        "Ruin_Requiem_Normal_N_Combat_03",
+        "Ruin_Requiem_Normal_N_Combat_11"
+      ],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqFistsNormalDiretoN_NE20261025V1_Attack_NE",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "direction": 5,
+      "directionName": "NE",
+      "action": "Attack",
+      "attackKey": "Direto da Ruína",
+      "frames": 3,
+      "mode": "exact-existing-phase-mapping",
+      "sourceSpriteNames": [
+        "Ruin_Requiem_Normal_NE_Combat_02",
+        "Ruin_Requiem_Normal_NE_Combat_03",
+        "Ruin_Requiem_Normal_NE_Combat_11"
+      ],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqFistsNormalDiretoE_SE20261025V1_Attack_E",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "direction": 6,
+      "directionName": "E",
+      "action": "Attack",
+      "attackKey": "Direto da Ruína",
+      "frames": 3,
+      "mode": "exact-existing-phase-mapping",
+      "sourceSpriteNames": [
+        "Ruin_Requiem_Normal_E_Combat_02",
+        "Ruin_Requiem_Normal_E_Combat_03",
+        "Ruin_Requiem_Normal_E_Combat_11"
+      ],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqFistsNormalDiretoE_SE20261025V1_Attack_SE",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "direction": 7,
+      "directionName": "SE",
+      "action": "Attack",
+      "attackKey": "Direto da Ruína",
+      "frames": 3,
+      "mode": "exact-existing-phase-mapping",
+      "sourceSpriteNames": [
+        "Ruin_Requiem_Normal_SE_Combat_02",
+        "Ruin_Requiem_Normal_SE_Combat_03",
+        "Ruin_Requiem_Normal_SE_Combat_11"
+      ],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqFistsNormalIdleS_SW_W20261025V1_Idle_S",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "direction": 0,
+      "directionName": "S",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqFistsNormalIdleS_SW_W20261025V1_Idle_SW",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "direction": 1,
+      "directionName": "SW",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqFistsNormalIdleS_SW_W20261025V1_Idle_W",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "direction": 2,
+      "directionName": "W",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqFistsNormalIdleNW_NE20261025V1_Idle_NW",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "direction": 3,
+      "directionName": "NW",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqFistsNormalIdleNW_NE20261025V1_Idle_NE",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "direction": 5,
+      "directionName": "NE",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqFistsNormalIdleN20261025V2_Idle_N",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "direction": 4,
+      "directionName": "N",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqFistsNormalIdleE_SE20261025V1_Idle_E",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "direction": 6,
+      "directionName": "E",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "ReqFistsNormalIdleE_SE20261025V1_Idle_SE",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "direction": 7,
+      "directionName": "SE",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockFistsNormalIdleS_SW_W20261025V1_Idle_S",
+      "skin": 1,
+      "weapon": 2,
+      "form": 0,
+      "direction": 0,
+      "directionName": "S",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockFistsNormalIdleS_SW_W20261025V1_Idle_SW",
+      "skin": 1,
+      "weapon": 2,
+      "form": 0,
+      "direction": 1,
+      "directionName": "SW",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockFistsNormalIdleS_SW_W20261025V1_Idle_W",
+      "skin": 1,
+      "weapon": 2,
+      "form": 0,
+      "direction": 2,
+      "directionName": "W",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockFistsNormalIdleNW_N_NE20261025V1_Idle_NW",
+      "skin": 1,
+      "weapon": 2,
+      "form": 0,
+      "direction": 3,
+      "directionName": "NW",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockFistsNormalIdleNW_N_NE20261025V1_Idle_N",
+      "skin": 1,
+      "weapon": 2,
+      "form": 0,
+      "direction": 4,
+      "directionName": "N",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockFistsNormalIdleNW_N_NE20261025V1_Idle_NE",
+      "skin": 1,
+      "weapon": 2,
+      "form": 0,
+      "direction": 5,
+      "directionName": "NE",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockFistsNormalIdleE_SE20261025V1_Idle_E",
+      "skin": 1,
+      "weapon": 2,
+      "form": 0,
+      "direction": 6,
+      "directionName": "E",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
+    },
+    {
+      "id": "RockFistsNormalIdleE_SE20261025V1_Idle_SE",
+      "skin": 1,
+      "weapon": 2,
+      "form": 0,
+      "direction": 7,
+      "directionName": "SE",
+      "action": "Idle",
+      "attackKey": "",
+      "frames": 4,
+      "mode": "explicit-duration-clip",
+      "sourceSpriteNames": [],
+      "status": "visual-reviewed",
+      "staticClip": false
     }
   ],
   "requiemDaggerIdle": [
@@ -1321,7 +2036,7 @@
           "present": true,
           "uniqueFigures": 4,
           "pageIds": [
-            "ReqDaggersNormalIdleA_Idle_S"
+            "ReqDaggersNormalIdleS_SW_W1350V1_Idle_S"
           ]
         },
         {
@@ -1330,7 +2045,7 @@
           "present": true,
           "uniqueFigures": 4,
           "pageIds": [
-            "ReqDaggersNormalIdleA_Idle_SW"
+            "ReqDaggersNormalIdleS_SW_W1350V1_Idle_SW"
           ]
         },
         {
@@ -1339,7 +2054,7 @@
           "present": true,
           "uniqueFigures": 4,
           "pageIds": [
-            "ReqDaggersNormalIdleA_Idle_W"
+            "ReqDaggersNormalIdleS_SW_W1350V1_Idle_W"
           ]
         },
         {
@@ -1348,7 +2063,7 @@
           "present": true,
           "uniqueFigures": 4,
           "pageIds": [
-            "ReqDaggersNormalIdleB2_Idle_NW"
+            "ReqDaggersNormalIdleNW_N1350V1_Idle_NW"
           ]
         },
         {
@@ -1357,7 +2072,7 @@
           "present": true,
           "uniqueFigures": 4,
           "pageIds": [
-            "ReqDaggersNormalIdleB2_Idle_N"
+            "ReqDaggersNormalIdleNW_N1350V1_Idle_N"
           ]
         },
         {
@@ -1366,7 +2081,7 @@
           "present": true,
           "uniqueFigures": 4,
           "pageIds": [
-            "ReqDaggersNormalIdleB2_Idle_NE"
+            "ReqDaggersNormalIdleNE1350V3_Idle_NE"
           ]
         },
         {
@@ -1375,7 +2090,7 @@
           "present": true,
           "uniqueFigures": 4,
           "pageIds": [
-            "ReqDaggersNormalIdleC_Idle_E"
+            "ReqDaggersNormalIdleE_SE1350V2_Idle_E"
           ]
         },
         {
@@ -1384,7 +2099,7 @@
           "present": true,
           "uniqueFigures": 4,
           "pageIds": [
-            "ReqDaggersNormalIdleC_Idle_SE"
+            "ReqDaggersNormalIdleE_SE1350V2_Idle_SE"
           ]
         }
       ],
@@ -3798,14 +4513,6 @@
       "form": 0,
       "direction": 6,
       "directionName": "E",
-      "action": "Attack"
-    },
-    {
-      "skin": 0,
-      "weapon": 1,
-      "form": 0,
-      "direction": 6,
-      "directionName": "E",
       "action": "Charging"
     },
     {
@@ -3847,14 +4554,6 @@
       "direction": 7,
       "directionName": "SE",
       "action": "Walk"
-    },
-    {
-      "skin": 0,
-      "weapon": 1,
-      "form": 0,
-      "direction": 7,
-      "directionName": "SE",
-      "action": "Attack"
     },
     {
       "skin": 0,
@@ -5263,14 +5962,6 @@
       "direction": 0,
       "directionName": "S",
       "action": "Dead"
-    },
-    {
-      "skin": 0,
-      "weapon": 2,
-      "form": 0,
-      "direction": 1,
-      "directionName": "SW",
-      "action": "Idle"
     },
     {
       "skin": 0,
@@ -5319,14 +6010,6 @@
       "direction": 1,
       "directionName": "SW",
       "action": "Dead"
-    },
-    {
-      "skin": 0,
-      "weapon": 2,
-      "form": 0,
-      "direction": 2,
-      "directionName": "W",
-      "action": "Idle"
     },
     {
       "skin": 0,
@@ -5382,23 +6065,7 @@
       "form": 0,
       "direction": 3,
       "directionName": "NW",
-      "action": "Idle"
-    },
-    {
-      "skin": 0,
-      "weapon": 2,
-      "form": 0,
-      "direction": 3,
-      "directionName": "NW",
       "action": "Walk"
-    },
-    {
-      "skin": 0,
-      "weapon": 2,
-      "form": 0,
-      "direction": 3,
-      "directionName": "NW",
-      "action": "Attack"
     },
     {
       "skin": 0,
@@ -5439,14 +6106,6 @@
       "direction": 3,
       "directionName": "NW",
       "action": "Dead"
-    },
-    {
-      "skin": 0,
-      "weapon": 2,
-      "form": 0,
-      "direction": 4,
-      "directionName": "N",
-      "action": "Idle"
     },
     {
       "skin": 0,
@@ -5455,14 +6114,6 @@
       "direction": 4,
       "directionName": "N",
       "action": "Walk"
-    },
-    {
-      "skin": 0,
-      "weapon": 2,
-      "form": 0,
-      "direction": 4,
-      "directionName": "N",
-      "action": "Attack"
     },
     {
       "skin": 0,
@@ -5510,23 +6161,7 @@
       "form": 0,
       "direction": 5,
       "directionName": "NE",
-      "action": "Idle"
-    },
-    {
-      "skin": 0,
-      "weapon": 2,
-      "form": 0,
-      "direction": 5,
-      "directionName": "NE",
       "action": "Walk"
-    },
-    {
-      "skin": 0,
-      "weapon": 2,
-      "form": 0,
-      "direction": 5,
-      "directionName": "NE",
-      "action": "Attack"
     },
     {
       "skin": 0,
@@ -5567,14 +6202,6 @@
       "direction": 5,
       "directionName": "NE",
       "action": "Dead"
-    },
-    {
-      "skin": 0,
-      "weapon": 2,
-      "form": 0,
-      "direction": 6,
-      "directionName": "E",
-      "action": "Idle"
     },
     {
       "skin": 0,
@@ -5583,14 +6210,6 @@
       "direction": 6,
       "directionName": "E",
       "action": "Walk"
-    },
-    {
-      "skin": 0,
-      "weapon": 2,
-      "form": 0,
-      "direction": 6,
-      "directionName": "E",
-      "action": "Attack"
     },
     {
       "skin": 0,
@@ -5638,23 +6257,7 @@
       "form": 0,
       "direction": 7,
       "directionName": "SE",
-      "action": "Idle"
-    },
-    {
-      "skin": 0,
-      "weapon": 2,
-      "form": 0,
-      "direction": 7,
-      "directionName": "SE",
       "action": "Walk"
-    },
-    {
-      "skin": 0,
-      "weapon": 2,
-      "form": 0,
-      "direction": 7,
-      "directionName": "SE",
-      "action": "Attack"
     },
     {
       "skin": 0,
@@ -7167,14 +7770,6 @@
       "direction": 7,
       "directionName": "SE",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 0,
-      "form": 0,
-      "direction": 0,
-      "directionName": "S",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -7183,14 +7778,6 @@
       "direction": 0,
       "directionName": "S",
       "action": "Walk"
-    },
-    {
-      "skin": 1,
-      "weapon": 0,
-      "form": 0,
-      "direction": 0,
-      "directionName": "S",
-      "action": "Attack"
     },
     {
       "skin": 1,
@@ -7231,14 +7818,6 @@
       "direction": 0,
       "directionName": "S",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 0,
-      "form": 0,
-      "direction": 1,
-      "directionName": "SW",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -7247,14 +7826,6 @@
       "direction": 1,
       "directionName": "SW",
       "action": "Walk"
-    },
-    {
-      "skin": 1,
-      "weapon": 0,
-      "form": 0,
-      "direction": 1,
-      "directionName": "SW",
-      "action": "Attack"
     },
     {
       "skin": 1,
@@ -7295,14 +7866,6 @@
       "direction": 1,
       "directionName": "SW",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 0,
-      "form": 0,
-      "direction": 2,
-      "directionName": "W",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -7311,14 +7874,6 @@
       "direction": 2,
       "directionName": "W",
       "action": "Walk"
-    },
-    {
-      "skin": 1,
-      "weapon": 0,
-      "form": 0,
-      "direction": 2,
-      "directionName": "W",
-      "action": "Attack"
     },
     {
       "skin": 1,
@@ -7359,14 +7914,6 @@
       "direction": 2,
       "directionName": "W",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 0,
-      "form": 0,
-      "direction": 3,
-      "directionName": "NW",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -7375,14 +7922,6 @@
       "direction": 3,
       "directionName": "NW",
       "action": "Walk"
-    },
-    {
-      "skin": 1,
-      "weapon": 0,
-      "form": 0,
-      "direction": 3,
-      "directionName": "NW",
-      "action": "Attack"
     },
     {
       "skin": 1,
@@ -7423,14 +7962,6 @@
       "direction": 3,
       "directionName": "NW",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 0,
-      "form": 0,
-      "direction": 4,
-      "directionName": "N",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -7439,14 +7970,6 @@
       "direction": 4,
       "directionName": "N",
       "action": "Walk"
-    },
-    {
-      "skin": 1,
-      "weapon": 0,
-      "form": 0,
-      "direction": 4,
-      "directionName": "N",
-      "action": "Attack"
     },
     {
       "skin": 1,
@@ -7487,14 +8010,6 @@
       "direction": 4,
       "directionName": "N",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 0,
-      "form": 0,
-      "direction": 5,
-      "directionName": "NE",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -7503,14 +8018,6 @@
       "direction": 5,
       "directionName": "NE",
       "action": "Walk"
-    },
-    {
-      "skin": 1,
-      "weapon": 0,
-      "form": 0,
-      "direction": 5,
-      "directionName": "NE",
-      "action": "Attack"
     },
     {
       "skin": 1,
@@ -7551,14 +8058,6 @@
       "direction": 5,
       "directionName": "NE",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 0,
-      "form": 0,
-      "direction": 6,
-      "directionName": "E",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -7567,14 +8066,6 @@
       "direction": 6,
       "directionName": "E",
       "action": "Walk"
-    },
-    {
-      "skin": 1,
-      "weapon": 0,
-      "form": 0,
-      "direction": 6,
-      "directionName": "E",
-      "action": "Attack"
     },
     {
       "skin": 1,
@@ -7615,14 +8106,6 @@
       "direction": 6,
       "directionName": "E",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 0,
-      "form": 0,
-      "direction": 7,
-      "directionName": "SE",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -7631,14 +8114,6 @@
       "direction": 7,
       "directionName": "SE",
       "action": "Walk"
-    },
-    {
-      "skin": 1,
-      "weapon": 0,
-      "form": 0,
-      "direction": 7,
-      "directionName": "SE",
-      "action": "Attack"
     },
     {
       "skin": 1,
@@ -9215,14 +9690,6 @@
       "direction": 7,
       "directionName": "SE",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 1,
-      "form": 0,
-      "direction": 0,
-      "directionName": "S",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -9279,14 +9746,6 @@
       "direction": 0,
       "directionName": "S",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 1,
-      "form": 0,
-      "direction": 1,
-      "directionName": "SW",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -9343,14 +9802,6 @@
       "direction": 1,
       "directionName": "SW",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 1,
-      "form": 0,
-      "direction": 2,
-      "directionName": "W",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -9471,14 +9922,6 @@
       "direction": 3,
       "directionName": "NW",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 1,
-      "form": 0,
-      "direction": 4,
-      "directionName": "N",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -9535,14 +9978,6 @@
       "direction": 4,
       "directionName": "N",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 1,
-      "form": 0,
-      "direction": 5,
-      "directionName": "NE",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -11263,14 +11698,6 @@
       "direction": 7,
       "directionName": "SE",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 2,
-      "form": 0,
-      "direction": 0,
-      "directionName": "S",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -11327,14 +11754,6 @@
       "direction": 0,
       "directionName": "S",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 2,
-      "form": 0,
-      "direction": 1,
-      "directionName": "SW",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -11391,14 +11810,6 @@
       "direction": 1,
       "directionName": "SW",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 2,
-      "form": 0,
-      "direction": 2,
-      "directionName": "W",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -11455,14 +11866,6 @@
       "direction": 2,
       "directionName": "W",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 2,
-      "form": 0,
-      "direction": 3,
-      "directionName": "NW",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -11519,14 +11922,6 @@
       "direction": 3,
       "directionName": "NW",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 2,
-      "form": 0,
-      "direction": 4,
-      "directionName": "N",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -11583,14 +11978,6 @@
       "direction": 4,
       "directionName": "N",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 2,
-      "form": 0,
-      "direction": 5,
-      "directionName": "NE",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -11647,14 +12034,6 @@
       "direction": 5,
       "directionName": "NE",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 2,
-      "form": 0,
-      "direction": 6,
-      "directionName": "E",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -11711,14 +12090,6 @@
       "direction": 6,
       "directionName": "E",
       "action": "Dead"
-    },
-    {
-      "skin": 1,
-      "weapon": 2,
-      "form": 0,
-      "direction": 7,
-      "directionName": "SE",
-      "action": "Idle"
     },
     {
       "skin": 1,
@@ -13338,18 +13709,6 @@
       ],
       "imageSha256": "3260f7c5c92bfe20b0c8f609cca6f6127b00a18ebe06604dcf24127a5b61439d"
     },
-    "Darklight/WeaponRedesign20261023/ReqDaggersNormalIdleA": {
-      "frames": 12,
-      "nativeSize": [
-        1820,
-        1176
-      ],
-      "sourceSize": [
-        1448,
-        1086
-      ],
-      "imageSha256": "7ceb528c7600e4c5e6de3bc3cc0fddc80d23b986b98fde62e2d0bce9524c621a"
-    },
     "Darklight/WeaponRedesign20261023/ReqDaggersRupturaIdleA": {
       "frames": 12,
       "nativeSize": [
@@ -13361,18 +13720,6 @@
         1024
       ],
       "imageSha256": "f0e226f4d4080c4c5c18ace0b76fa253486a24172ef53ccd0ca6e2f5930c7584"
-    },
-    "Darklight/WeaponRedesign20261023/ReqFistsNormalSouth": {
-      "frames": 8,
-      "nativeSize": [
-        2044,
-        772
-      ],
-      "sourceSize": [
-        1448,
-        1086
-      ],
-      "imageSha256": "3a35ace9ea5b2754072a8b8be061c7a6cd1d84a9d7cae85d18def1fd614a48eb"
     },
     "Darklight/WeaponRedesign20261023/ReqKatanaRupturaSouth": {
       "frames": 8,
@@ -13481,30 +13828,6 @@
         1536
       ],
       "imageSha256": "2032fed5330d3545b58d881b318a358078fb78f9ac44332afe5c68fa84a4d579"
-    },
-    "Darklight/WeaponRedesign20261023/ReqDaggersNormalIdleC": {
-      "frames": 8,
-      "nativeSize": [
-        2012,
-        886
-      ],
-      "sourceSize": [
-        1774,
-        887
-      ],
-      "imageSha256": "904eeaf9d8e86b3bed599110372dd758350c64559c8edcce62d683fb35aaafc7"
-    },
-    "Darklight/WeaponRedesign20261023/ReqDaggersNormalIdleB2": {
-      "frames": 12,
-      "nativeSize": [
-        1812,
-        1149
-      ],
-      "sourceSize": [
-        1448,
-        1086
-      ],
-      "imageSha256": "941f437c807af276bebd2de8a83a1c8e02bd3f64e95aecfbca88c29a7be35f1b"
     },
     "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralLight1S_Wv1": {
       "frames": 8,
@@ -13673,6 +13996,294 @@
         1024
       ],
       "imageSha256": "f67efab9600b8ab21a704d77226824785a6d606a3af6ec20c165645e7a299c1c"
+    },
+    "Darklight/WeaponRedesign20261023/RockKatanaNormalIdleS_SW_W1350": {
+      "frames": 12,
+      "nativeSize": [
+        2096,
+        1218
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "imageSha256": "8716e90e4c41419818b11175a0f2ff6b6d696015e66de605406475932412620d"
+    },
+    "Darklight/WeaponRedesign20261023/RockKatanaNormalIdleNW_N_NE1350": {
+      "frames": 12,
+      "nativeSize": [
+        2072,
+        1089
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "imageSha256": "15f65adf008e4aa68e905c363e5af113ec3b5d32407253d3db7ad0f816ddce32"
+    },
+    "Darklight/WeaponRedesign20261023/RockKatanaNormalIdleE_SE1350": {
+      "frames": 8,
+      "nativeSize": [
+        1928,
+        1114
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "imageSha256": "1d90ee0e97ebf2c57e8575f9a9337abcff31a89d376c471bd789208c7981fdf4"
+    },
+    "Darklight/WeaponRedesign20261023/RockKatanaNormalLeve1S_SW_W1350": {
+      "frames": 12,
+      "nativeSize": [
+        2792,
+        1146
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "imageSha256": "b08ae3c6c09c65caea56f7f737b246baed7069b9d9795d54d1bd6fb965ce0fed"
+    },
+    "Darklight/WeaponRedesign20261023/RockKatanaNormalLeve1NW_N_NE1350": {
+      "frames": 12,
+      "nativeSize": [
+        2676,
+        1236
+      ],
+      "sourceSize": [
+        2748,
+        1287
+      ],
+      "imageSha256": "ee2277ffcb3343c1fe86b3034e911bf423ae8c2ae2d68255224be545eae237d6"
+    },
+    "Darklight/WeaponRedesign20261023/RockKatanaNormalLeve1E_SE1350": {
+      "frames": 8,
+      "nativeSize": [
+        3096,
+        966
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "imageSha256": "f18707897515e7402b683841367f02857f8e57866ef44fdaa08324231e836ca5"
+    },
+    "Darklight/WeaponRedesign20261023/ReqDaggersNormalPresas1E_SE1350V1": {
+      "frames": 8,
+      "nativeSize": [
+        3004,
+        946
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "imageSha256": "6349b894eb5fd258c7d7a8d4cafde3fbd13ca0b9432e12323810599bf81ec84b"
+    },
+    "Darklight/WeaponRedesign20261023/ReqDaggersNormalIdleS_SW_W1350V1": {
+      "frames": 12,
+      "nativeSize": [
+        2064,
+        1173
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "imageSha256": "4b1136433fe4e92f36a37e3f2ff6fe281f320f7a4663025d67e2b25fbbc289ab"
+    },
+    "Darklight/WeaponRedesign20261023/ReqDaggersNormalIdleNW_N1350V1": {
+      "frames": 8,
+      "nativeSize": [
+        1848,
+        718
+      ],
+      "sourceSize": [
+        1536,
+        674
+      ],
+      "imageSha256": "9f18d446017a92d6bf729addd63dbbca765dd36671a1de4d0a107d13f37b2476"
+    },
+    "Darklight/WeaponRedesign20261023/ReqDaggersNormalIdleNE1350V3": {
+      "frames": 4,
+      "nativeSize": [
+        2728,
+        725
+      ],
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "imageSha256": "2bdd196836d3a73c6fb81d96f487260784823f0019c01047179aaa94134ba10e"
+    },
+    "Darklight/WeaponRedesign20261023/ReqDaggersNormalIdleE_SE1350V2": {
+      "frames": 8,
+      "nativeSize": [
+        1688,
+        1078
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "imageSha256": "4d80b7a7b5cf38c20ce6daa23232c078f6ad8b0566486dad8b7185c5b127a015"
+    },
+    "Darklight/WeaponRedesign20261023/RockDaggersNormalIdleS_SW_W1350V1": {
+      "frames": 10,
+      "nativeSize": [
+        1928,
+        1092
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "imageSha256": "a1997bbed9a4404fe4ab0fbce7b8bd400f1d873847ef54c2e9524a9ebe1bb843"
+    },
+    "Darklight/WeaponRedesign20261023/RockDaggersNormalIdleN1350V1": {
+      "frames": 4,
+      "nativeSize": [
+        1588,
+        349
+      ],
+      "sourceSize": [
+        1536,
+        330
+      ],
+      "imageSha256": "3e5ea121eb152247dd71c9844f72085ab51f41a51e11cbaad2f9fe22083ab5f3"
+    },
+    "Darklight/WeaponRedesign20261023/RockDaggersNormalIdleNE1350V2": {
+      "frames": 4,
+      "nativeSize": [
+        1840,
+        436
+      ],
+      "sourceSize": [
+        1774,
+        439
+      ],
+      "imageSha256": "31bec412d8949e3bfcf55fbe617649c6ffdd4ecfbf07540aec3f537d9b7b4b15"
+    },
+    "Darklight/WeaponRedesign20261023/ReqFistsNormalDiretoNW20261025V4": {
+      "frames": 3,
+      "nativeSize": [
+        2010,
+        717
+      ],
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "imageSha256": "df42d854457d1c61126ca485343f55c919c734acd81187e2fa15eb418bc5cce0"
+    },
+    "Darklight/WeaponRedesign20261023/ReqFistsNormalDiretoN_NE20261025V1": {
+      "frames": 6,
+      "nativeSize": [
+        2361,
+        754
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "imageSha256": "f791f80caf5feb51a3d863978c445dcd4524249ec952c7db267d87ae0cbfe7cd"
+    },
+    "Darklight/WeaponRedesign20261023/ReqFistsNormalDiretoE_SE20261025V1": {
+      "frames": 6,
+      "nativeSize": [
+        2592,
+        1094
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "imageSha256": "a4618cc99637b387a581ea4f3115edefa11d720e16a9fef0304f0e2830232acb"
+    },
+    "Darklight/WeaponRedesign20261023/ReqFistsNormalIdleS_SW_W20261025V1": {
+      "frames": 12,
+      "nativeSize": [
+        2340,
+        1245
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "imageSha256": "6a15d28a66cef8b5f6bf579afa1c02d0f5d57047b6fe4ca65c3e370e36c778af"
+    },
+    "Darklight/WeaponRedesign20261023/ReqFistsNormalIdleNW_NE20261025V1": {
+      "frames": 8,
+      "nativeSize": [
+        2276,
+        744
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "imageSha256": "f302effa11a44da2d63863c5645011976ca6d2f57a63221a6c7df2226b67f181"
+    },
+    "Darklight/WeaponRedesign20261023/ReqFistsNormalIdleN20261025V2": {
+      "frames": 4,
+      "nativeSize": [
+        2244,
+        698
+      ],
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "imageSha256": "e2bf44d64812455929ff333b63ac5e50f7dfffbc63f324f863a0e3164deeaf55"
+    },
+    "Darklight/WeaponRedesign20261023/ReqFistsNormalIdleE_SE20261025V1": {
+      "frames": 8,
+      "nativeSize": [
+        1700,
+        1038
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "imageSha256": "6d32b807a2848b10166c239a2dd61481a78df58be75cd5405a9f1ee9634f05a3"
+    },
+    "Darklight/WeaponRedesign20261023/RockFistsNormalIdleS_SW_W20261025V1": {
+      "frames": 12,
+      "nativeSize": [
+        2112,
+        1206
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "imageSha256": "db8295acfd31bc4ed96261aa276986071f62e2a59837dffbf9b51fedfc5d8044"
+    },
+    "Darklight/WeaponRedesign20261023/RockFistsNormalIdleNW_N_NE20261025V1": {
+      "frames": 12,
+      "nativeSize": [
+        2204,
+        1128
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "imageSha256": "135e55e9c13c69ecf52afb333af033cb5373a887ff6bb21468205ab3f07210f9"
+    },
+    "Darklight/WeaponRedesign20261023/RockFistsNormalIdleE_SE20261025V1": {
+      "frames": 8,
+      "nativeSize": [
+        1892,
+        1154
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "imageSha256": "235d5ad68256e80ef0c965ae8dffd49cdf3351dd56b004fb09905efdc9a96fbc"
     }
   },
   "equipmentIcons": {

@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "image": "RockDaggersNormalIdleNE1350V2.png",
+  "imageSha256": "31bec412d8949e3bfcf55fbe617649c6ffdd4ecfbf07540aec3f537d9b7b4b15",
+  "nativeSize": [
+    1840,
+    436
+  ],
+  "sourceSize": [
+    1774,
+    439
+  ],
+  "pixelsPerUnit": 207.07070707070707,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261025Retomada1350/presas-normal/rock-normal/RockDaggersNormalIdleNE1350V2-source.png",
+  "sourceSha256": "cd6b7880aae60e08ccb1f2235114282d1d49c4d28f096cd0bc8b8886da9e5561",
+  "frames": [
+    {
+      "id": "Redesign_RockDaggersNormalIdleNE1350V2_00",
+      "rect": [
+        0,
+        0,
+        460,
+        436
+      ],
+      "pivot": [
+        0.5152173913043478,
+        0.02522935779816514
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "NE",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "neutral",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        29,
+        4,
+        422,
+        420
+      ],
+      "sourceAnchor": [
+        236,
+        421
+      ],
+      "sourcePackingAnchor": [
+        291,
+        421
+      ],
+      "supportGuide": {
+        "anchor": [
+          236,
+          421
+        ],
+        "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+      },
+      "sourceOffsetInFrame": [
+        30,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_RockDaggersNormalIdleNE1350V2_01",
+      "rect": [
+        460,
+        0,
+        460,
+        436
+      ],
+      "pivot": [
+        0.5152173913043478,
+        0.02522935779816514
+      ],
+      "durationMs": 250,
+      "action": "idle",
+      "direction": "NE",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "inhale",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        451,
+        6,
+        443,
+        418
+      ],
+      "sourceAnchor": [
+        680,
+        421
+      ],
+      "sourcePackingAnchor": [
+        735,
+        421
+      ],
+      "supportGuide": {
+        "anchor": [
+          680,
+          421
+        ],
+        "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+      },
+      "sourceOffsetInFrame": [
+        8,
+        10
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_RockDaggersNormalIdleNE1350V2_02",
+      "rect": [
+        920,
+        0,
+        460,
+        436
+      ],
+      "pivot": [
+        0.5173913043478261,
+        0.02522935779816514
+      ],
+      "durationMs": 180,
+      "action": "idle",
+      "direction": "NE",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "blink",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        894,
+        4,
+        441,
+        420
+      ],
+      "sourceAnchor": [
+        1123,
+        421
+      ],
+      "sourcePackingAnchor": [
+        1177,
+        421
+      ],
+      "supportGuide": {
+        "anchor": [
+          1123,
+          421
+        ],
+        "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+      },
+      "sourceOffsetInFrame": [
+        9,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_RockDaggersNormalIdleNE1350V2_03",
+      "rect": [
+        1380,
+        0,
+        460,
+        436
+      ],
+      "pivot": [
+        0.5130434782608696,
+        0.02522935779816514
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "NE",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "return",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1337,
+        7,
+        421,
+        417
+      ],
+      "sourceAnchor": [
+        1565,
+        421
+      ],
+      "sourcePackingAnchor": [
+        1621,
+        421
+      ],
+      "supportGuide": {
+        "anchor": [
+          1565,
+          421
+        ],
+        "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+      },
+      "sourceOffsetInFrame": [
+        8,
+        11
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "idle_NE",
+      "frames": [
+        "Redesign_RockDaggersNormalIdleNE1350V2_00",
+        "Redesign_RockDaggersNormalIdleNE1350V2_01",
+        "Redesign_RockDaggersNormalIdleNE1350V2_02",
+        "Redesign_RockDaggersNormalIdleNE1350V2_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "idle_NE"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 299225,
+  "packedPixels": 299225,
+  "originalSourcePixels": 299225,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 479561,
+    "farBeyond16pxPixels": 47,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.1843137254901961,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Third authored idle pose is a blink, not a breathing in-between.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ],
+  "stagingOnly": true,
+  "imported": false,
+  "runtimeVerified": false,
+  "visualReviewed": true,
+  "visualApproval": false,
+  "ppuProvenance": {
+    "pipelineInferred": 207.07070707070707,
+    "candidateAnatomical": 207.07070707070707,
+    "measurements": [
+      {
+        "sourceFrameIndex": 0,
+        "headY": 11,
+        "soleY": 421,
+        "anatomyHeight": 410
+      },
+      {
+        "sourceFrameIndex": 1,
+        "headY": 10,
+        "soleY": 421,
+        "anatomyHeight": 411
+      },
+      {
+        "sourceFrameIndex": 2,
+        "headY": 11,
+        "soleY": 421,
+        "anatomyHeight": 410
+      },
+      {
+        "sourceFrameIndex": 3,
+        "headY": 11,
+        "soleY": 421,
+        "anatomyHeight": 410
+      }
+    ],
+    "targetHeightUnits": 1.98,
+    "method": "Manually identified compact canonical head-to-sole height; raised daggers do not count. One PPU per sheet; no raster scaling.",
+    "limitation": "Projected posture and hair crown imply uncertainty; world-scale/camera and transitions require coordinator review."
+  },
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261024/candidates/ReqDaggersNormalLight1S_SW_W20261024v2-source.png",
+      "sha256": "b918d0e89a14e1e6bf45597a075e7cddce2d8c96890c6ffe393033b72b4d83ff"
+    }
+  ],
+  "generation": {
+    "tool": "integrated image_gen",
+    "promptPath": "ArtSources/WeaponRedesign20261025Retomada1350/presas-normal/rock-normal/RockDaggersNormalIdleNW_NE1350V2-prompt.txt"
+  },
+  "review": {
+    "sourceSeen": true,
+    "packedContactSeen": true,
+    "motionPreviewSeen": false,
+    "findings": "Four new NE whole figures retained from repair bottom row. Coherent back-right head/nape/neck/shoulders/hips/boots; no eyes toward camera, plain studded vest back, two complete neutral daggers. Far-left hip chain naturally hidden. Entire top row rejected because it also faces NE despite intended NW label; never count as NW.",
+    "audioStarted": false
+  },
+  "stoppedPoseFrameIds": [
+    "Redesign_RockDaggersNormalIdleNE1350V2_00"
+  ],
+  "stoppedPosePolicy": "First neutral authored frame is stopped pose; it is not an additional figure. Four distinct phases are neutral/inhale/blink/exhale."
+}

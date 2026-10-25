@@ -1,0 +1,785 @@
+{
+  "schemaVersion": 1,
+  "jobs": [
+    {
+      "name": "RockKatanaNormalIdleS_SW_W1350",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1350\\katana-normal\\RockKatanaNormalIdleS_SW_W-v1-source.png",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 0,
+          "action": "Idle",
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 1,
+          "action": "Idle",
+          "loop": true
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 2,
+          "action": "Idle",
+          "loop": true
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            231,
+            338
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "1": {
+          "anchor": [
+            610,
+            338
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "2": {
+          "anchor": [
+            987,
+            340
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "3": {
+          "anchor": [
+            1367,
+            340
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "4": {
+          "anchor": [
+            226,
+            676
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "5": {
+          "anchor": [
+            605,
+            678
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "6": {
+          "anchor": [
+            989,
+            680
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "7": {
+          "anchor": [
+            1375,
+            680
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "8": {
+          "anchor": [
+            233,
+            1002
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "9": {
+          "anchor": [
+            620,
+            1002
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "10": {
+          "anchor": [
+            1006,
+            1002
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "11": {
+          "anchor": [
+            1381,
+            1003
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        }
+      }
+    },
+    {
+      "name": "RockKatanaNormalIdleNW_N_NE1350",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1350\\katana-normal\\RockKatanaNormalIdleNW_N_NE-v1-source.png",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 3,
+          "action": "Idle",
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 4,
+          "action": "Idle",
+          "loop": true
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 5,
+          "action": "Idle",
+          "loop": true
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            163,
+            332
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "1": {
+          "anchor": [
+            556,
+            332
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "2": {
+          "anchor": [
+            947,
+            332
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "3": {
+          "anchor": [
+            1331,
+            331
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "4": {
+          "anchor": [
+            178,
+            670
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "5": {
+          "anchor": [
+            570,
+            670
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "6": {
+          "anchor": [
+            961,
+            670
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "7": {
+          "anchor": [
+            1350,
+            670
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "8": {
+          "anchor": [
+            181,
+            997
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "9": {
+          "anchor": [
+            573,
+            997
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "10": {
+          "anchor": [
+            963,
+            998
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "11": {
+          "anchor": [
+            1358,
+            997
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        }
+      }
+    },
+    {
+      "name": "RockKatanaNormalIdleE_SE1350",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1350\\katana-normal\\RockKatanaNormalIdleE_SE-v1-source.png",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 6,
+          "action": "Idle",
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 7,
+          "action": "Idle",
+          "loop": true
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            193,
+            480
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "1": {
+          "anchor": [
+            577,
+            480
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "2": {
+          "anchor": [
+            959,
+            480
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "3": {
+          "anchor": [
+            1345,
+            481
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "4": {
+          "anchor": [
+            206,
+            958
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "5": {
+          "anchor": [
+            590,
+            958
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "6": {
+          "anchor": [
+            975,
+            958
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        },
+        "7": {
+          "anchor": [
+            1363,
+            958
+          ],
+          "method": "Manual projected boot-support midpoint in intact source; world-scale preview checked, Unity pending."
+        }
+      }
+    },
+    {
+      "name": "RockKatanaNormalLeve1S_SW_W1350",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1350\\katana-normal\\RockKatanaNormalLeve1S_SW_W-v1-source.png",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Leve1",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RockAttackKatanaYoungCardinal_0",
+            "Today_RockAttackKatanaYoungCardinal_1",
+            "Today_RockAttackKatanaYoungCardinal_2",
+            "Today_RockAttackKatanaYoungCardinal_3"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "Leve1",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RockAttackKatanaYoungDiagonal_0",
+            "Today_RockAttackKatanaYoungDiagonal_1",
+            "Today_RockAttackKatanaYoungDiagonal_2",
+            "Today_RockAttackKatanaYoungDiagonal_3"
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "Leve1",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RockAttackKatanaYoungCardinal_4",
+            "Today_RockAttackKatanaYoungCardinal_5",
+            "Today_RockAttackKatanaYoungCardinal_6",
+            "Today_RockAttackKatanaYoungCardinal_7"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            186,
+            336
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "1": {
+          "anchor": [
+            601,
+            336
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "2": {
+          "anchor": [
+            963,
+            337
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "3": {
+          "anchor": [
+            1349,
+            337
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "4": {
+          "anchor": [
+            190,
+            660
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "5": {
+          "anchor": [
+            603,
+            659
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "6": {
+          "anchor": [
+            981,
+            656
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "7": {
+          "anchor": [
+            1380,
+            659
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "8": {
+          "anchor": [
+            186,
+            991
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "9": {
+          "anchor": [
+            596,
+            974
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "10": {
+          "anchor": [
+            1005,
+            979
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "11": {
+          "anchor": [
+            1394,
+            979
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        }
+      }
+    },
+    {
+      "name": "RockKatanaNormalLeve1NW_N_NE1350",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1350\\katana-normal\\RockKatanaNormalLeve1NW_N_NE-selected-whole-figures-source.png",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "Leve1",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RockAttackKatanaYoungDiagonal_4",
+            "Today_RockAttackKatanaYoungDiagonal_5",
+            "Today_RockAttackKatanaYoungDiagonal_6",
+            "Today_RockAttackKatanaYoungDiagonal_7"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "Leve1",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RockAttackKatanaYoungCardinal_8",
+            "Today_RockAttackKatanaYoungCardinal_9",
+            "Today_RockAttackKatanaYoungCardinal_10",
+            "Today_RockAttackKatanaYoungCardinal_11"
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "Leve1",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RockAttackKatanaYoungDiagonal_8",
+            "Today_RockAttackKatanaYoungDiagonal_9",
+            "Today_RockAttackKatanaYoungDiagonal_10",
+            "Today_RockAttackKatanaYoungDiagonal_11"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            221,
+            356
+          ],
+          "method": "Exact coordinate transfer of intact original/repaired full-figure support; no anatomical changes."
+        },
+        "1": {
+          "anchor": [
+            902,
+            352
+          ],
+          "method": "Exact coordinate transfer of intact original/repaired full-figure support; no anatomical changes."
+        },
+        "2": {
+          "anchor": [
+            1595,
+            354
+          ],
+          "method": "Exact coordinate transfer of intact original/repaired full-figure support; no anatomical changes."
+        },
+        "3": {
+          "anchor": [
+            2304,
+            353
+          ],
+          "method": "Exact coordinate transfer of intact original/repaired full-figure support; no anatomical changes."
+        },
+        "4": {
+          "anchor": [
+            283,
+            773
+          ],
+          "method": "Exact coordinate transfer of intact original/repaired full-figure support; no anatomical changes."
+        },
+        "5": {
+          "anchor": [
+            960,
+            771
+          ],
+          "method": "Exact coordinate transfer of intact original/repaired full-figure support; no anatomical changes."
+        },
+        "6": {
+          "anchor": [
+            1652,
+            772
+          ],
+          "method": "Exact coordinate transfer of intact original/repaired full-figure support; no anatomical changes."
+        },
+        "7": {
+          "anchor": [
+            2381,
+            773
+          ],
+          "method": "Exact coordinate transfer of intact original/repaired full-figure support; no anatomical changes."
+        },
+        "8": {
+          "anchor": [
+            387,
+            1212
+          ],
+          "method": "Exact coordinate transfer of intact original/repaired full-figure support; no anatomical changes."
+        },
+        "9": {
+          "anchor": [
+            1049,
+            1190
+          ],
+          "method": "Exact coordinate transfer of intact original/repaired full-figure support; no anatomical changes."
+        },
+        "10": {
+          "anchor": [
+            1719,
+            1189
+          ],
+          "method": "Exact coordinate transfer of intact original/repaired full-figure support; no anatomical changes."
+        },
+        "11": {
+          "anchor": [
+            2419,
+            1190
+          ],
+          "method": "Exact coordinate transfer of intact original/repaired full-figure support; no anatomical changes."
+        }
+      }
+    },
+    {
+      "name": "RockKatanaNormalLeve1E_SE1350",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1350\\katana-normal\\RockKatanaNormalLeve1E_SE-v1-source.png",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "Leve1",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RockAttackKatanaYoungCardinal_12",
+            "Today_RockAttackKatanaYoungCardinal_13",
+            "Today_RockAttackKatanaYoungCardinal_14",
+            "Today_RockAttackKatanaYoungCardinal_15"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "Leve1",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RockAttackKatanaYoungDiagonal_12",
+            "Today_RockAttackKatanaYoungDiagonal_13",
+            "Today_RockAttackKatanaYoungDiagonal_14",
+            "Today_RockAttackKatanaYoungDiagonal_15"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            208,
+            420
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "1": {
+          "anchor": [
+            645,
+            420
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "2": {
+          "anchor": [
+            1111,
+            421
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "3": {
+          "anchor": [
+            1572,
+            420
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "4": {
+          "anchor": [
+            223,
+            847
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "5": {
+          "anchor": [
+            664,
+            844
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "6": {
+          "anchor": [
+            1109,
+            841
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        },
+        "7": {
+          "anchor": [
+            1575,
+            849
+          ],
+          "method": "Manual projected boot support in intact whole figure."
+        }
+      }
+    }
+  ]
+}

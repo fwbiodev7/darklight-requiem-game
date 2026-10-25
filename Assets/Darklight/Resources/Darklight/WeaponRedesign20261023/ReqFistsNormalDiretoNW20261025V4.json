@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqFistsNormalDiretoNW20261025V4.png",
+  "imageSha256": "df42d854457d1c61126ca485343f55c919c734acd81187e2fa15eb418bc5cce0",
+  "nativeSize": [
+    2010,
+    717
+  ],
+  "sourceSize": [
+    2172,
+    724
+  ],
+  "pixelsPerUnit": 279.11352329262775,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalDiretoNW-v4-source.png",
+  "sourceSha256": "11850d4c665aa7612c289a42657496d06e1c8ab2a6876cdd3e2b8c1625bcc938",
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsNormalDiretoNW20261025V4_00",
+      "rect": [
+        0,
+        0,
+        670,
+        717
+      ],
+      "pivot": [
+        0.5164179104477612,
+        0.10181311018131102
+      ],
+      "durationMs": 75,
+      "action": "attack",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        206,
+        23,
+        560,
+        659
+      ],
+      "sourceAnchor": [
+        450,
+        659
+      ],
+      "sourcePackingAnchor": [
+        636,
+        659
+      ],
+      "supportGuide": {
+        "anchor": [
+          450,
+          659
+        ],
+        "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+      },
+      "sourceOffsetInFrame": [
+        102,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDiretoNW20261025V4_01",
+      "rect": [
+        670,
+        0,
+        670,
+        717
+      ],
+      "pivot": [
+        0.48955223880597015,
+        0.10181311018131102
+      ],
+      "durationMs": 65,
+      "action": "attack",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        797,
+        95,
+        653,
+        605
+      ],
+      "sourceAnchor": [
+        1117,
+        659
+      ],
+      "sourcePackingAnchor": [
+        1321,
+        659
+      ],
+      "supportGuide": {
+        "anchor": [
+          1117,
+          659
+        ],
+        "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+      },
+      "sourceOffsetInFrame": [
+        8,
+        80
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDiretoNW20261025V4_02",
+      "rect": [
+        1340,
+        0,
+        670,
+        717
+      ],
+      "pivot": [
+        0.5388059701492537,
+        0.10181311018131102
+      ],
+      "durationMs": 130,
+      "action": "attack",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        1518,
+        104,
+        526,
+        620
+      ],
+      "sourceAnchor": [
+        1776,
+        659
+      ],
+      "sourcePackingAnchor": [
+        1947,
+        659
+      ],
+      "supportGuide": {
+        "anchor": [
+          1776,
+          659
+        ],
+        "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+      },
+      "sourceOffsetInFrame": [
+        103,
+        89
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_NW",
+      "frames": [
+        "Redesign_ReqFistsNormalDiretoNW20261025V4_00",
+        "Redesign_ReqFistsNormalDiretoNW20261025V4_01",
+        "Redesign_ReqFistsNormalDiretoNW20261025V4_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "attack_NW"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 416246,
+  "packedPixels": 416246,
+  "originalSourcePixels": 416246,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 1156282,
+    "farBeyond16pxPixels": 35,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.13725490196078433,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ],
+  "ppuProvenance": {
+    "method": "Comparable whole-body guarded stance crown-to-ground; no weapon/FX/coat bounds and no per-frame resizing.",
+    "referencePath": "ArtSources/WeaponRedesign20261024/candidates/ReqFistsNormalDireto_S_SW_W-v2-source.png",
+    "referenceSha256": "569470770dc7793b22cc4f3aeb7dded4ea102a8ce647d07338fb7ce1a599f7d6",
+    "referenceCrownY": 11,
+    "referenceSoleY": 346,
+    "referenceBodyPixels": 335,
+    "referencePixelsPerUnit": 169.6969696969697,
+    "referenceWorldBodyHeight": 1.974107142857143,
+    "measurements": [
+      {
+        "sourceFrameIndex": 0,
+        "crownY": 108,
+        "soleY": 659,
+        "anatomyHeight": 551,
+        "uncertaintyPx": 8
+      }
+    ],
+    "pixelsPerUnit": 279.11352329262775,
+    "worldVisualScale": 1.325,
+    "liveCameraCheckPending": true
+  },
+  "review": {
+    "sourceSeen": true,
+    "wholeFigures": true,
+    "anatomyEdits": false,
+    "sourceRgbaExact": true,
+    "visualApproval": false,
+    "reviewer": "weapon/form agent plus root for NW V4 neck correction",
+    "imported": false,
+    "runtimeVerified": false,
+    "findings": "NW V4: neck/head/back alignment reviewed after explicit owl-neck rejection; left gauntlet stays in guard, right extends away. N/NE: six selected original figures, unselected rejected NW excluded; original source untouched.",
+    "limitations": "Generated pixel-cluster art has many colors and soft alpha; audit warnings do not authorize erasure. Native logical pixel grid unverified. Gameplay/camera not tested."
+  }
+}

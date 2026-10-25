@@ -9,6 +9,7 @@ import os
 import shutil
 import subprocess
 import sys
+import time
 
 import numpy as np
 from PIL import Image
@@ -57,7 +58,14 @@ def atomic_bytes(path, value):
         return
     pending = path.with_name('.' + path.name + '.staged')
     pending.write_bytes(value)
-    os.replace(pending, path)
+    for attempt in range(6):
+        try:
+            os.replace(pending, path)
+            break
+        except PermissionError:
+            if attempt == 5:
+                raise
+            time.sleep(.05 * 2 ** attempt)
 
 
 def preserved_copy(source, destination):
@@ -232,6 +240,16 @@ def qa(name):
         marker = folder / (mode + '-input.sha256')
         if existing.exists() and marker.exists() and marker.read_text(encoding='utf-8').strip() == fingerprint:
             continue
+        if output.exists():
+            # The skill's audit/preview commands require a new or empty output.
+            # Preserve previous QA instead of reusing stale evidence or deleting it.
+            archive_root = folder / 'qa-history'
+            archive_root.mkdir(exist_ok=True)
+            old = marker.read_text(encoding='utf-8').strip()[:12] if marker.exists() else 'legacy'
+            archived = archive_root / (mode + '-' + old + '-' + str(time.time_ns()))
+            if not output.resolve().is_relative_to(ROOT.resolve()) or not archived.resolve().is_relative_to(ROOT.resolve()):
+                raise ValueError('QA archive escaped workspace')
+            output.rename(archived)
         result = subprocess.run([sys.executable, str(PIPE), mode,
                                  '--image' if mode == 'palette' else '--manifest', str(source),
                                  '--out', str(output)], capture_output=True, text=True,

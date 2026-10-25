@@ -13,6 +13,8 @@ Pedido ativo: continuar o jogo Unity e terminar o escopo de ontem pelas referên
 
 ## Oito posições reais por contexto
 
+Na retomada13h50 o usuário identificou3figuras dosPunhos NW com corpo de costas e rosto frontal (“pescoço ao contrário”). Rejeitar essa combinação: cabeça/capuz/nuca/pescoço/ombros/tronco/quadril devem ter orientação anatomicamente coerente. Reparar as3figuras inteiras afetadas, preservar as6corretas e reconferir vistas traseiras das outras armas. A correção NWv4 recebeu revisão técnica da coordenação; não é aprovação humana global.
+
 Ordem técnica: **S frente, SW frente/esquerda, W esquerda, NW costas/esquerda, N costas, NE costas/direita, E direita, SE frente/direita**. Conferir o desenho de cada direção: rosto/nuca, tronco, mãos, equipamento, corrente e demais assimetrias. Nomes e contagem não comprovam vistas corretas. Não espelhar assimetrias para preencher lacunas; giro de tronco legítimo durante golpe não substitui a orientação de base correta.
 
 Essa exigência vale por skin × arma × forma × ação. Uma folha de oito poses estáticas não completa os ataques, caminhada ou idle animado.
@@ -34,3 +36,5 @@ Registrar referências anatômicas, medida e incerteza, mantendo um PPU por folh
 Subagentes responsáveis por arma e forma, processados conforme os três slots paralelos disponíveis. A coordenação revisa fontes e consolida catálogo/importação. Cada entrega distingue produzido, revisado, importado e verificado em gameplay. Não rotular o redesign integral como concluído enquanto faltarem contextos.
 
 Prioridade permanece: redesign → Combat AI 2.0 → expansão Sangue do Abismo → site/material promocional. As novas referências não autorizam anunciar esses conteúdos futuros como disponíveis.
+
+Refinamento explícito do usuário na retomada: dentro do redesign, terminar primeiro **Réquiem e Rock na forma Normal com todas as armas/ações**, depois produzir/completar as transformações, e somente após isso começar Lucius/O Encapuzado. Referências e plano deste último em `O-ENCAPUZADO-PLANO-20261025.md`; não antecipar o personagem para interromper as armas.

@@ -35,6 +35,8 @@ def main():
     scope = set(report['scopePaths'])
     extras = set(permitted)
     extras.update(p.relative_to(ROOT).as_posix() for p in (ROOT / 'ArtSources/WeaponRedesign20261025/references').glob('*.png'))
+    extras.update('outputs/redesign-armas-20261025-retomada1350/' + name for name in (
+        'coverage.json', 'final-validation.json', 'focused-edit-tests.xml', 'integration-preparation.json'))
     extras.update('outputs/redesign-armas-20261025/' + name for name in (
         'coverage.json', 'reference-contract.json', 'consolidation.json', 'eight-direction-idle-matrix.json',
         'final-import.json', 'focused-edit-tests.xml'))
@@ -56,7 +58,6 @@ def main():
         copied=args.copy, scopeCount=len(ordered), extraPaths=len(scope - set(report['scopePaths'])),
         pathspec=pathspec.relative_to(ROOT).as_posix(), staged=False, committed=False, pushed=False,
         rejectedRasterPublished=False, scopePaths=ordered)
-    base.write = None
     (OUT / 'publication-preparation.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
     print(json.dumps({k:v for k,v in summary.items() if k!='scopePaths'}))
 

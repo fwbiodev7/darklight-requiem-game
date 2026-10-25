@@ -1,5 +1,7 @@
 # Concluídos e checkpoint — 25/10/2026
 
+**Atualizaçãoposterior:** lerprimeiro `FECHAMENTO-20261025-RETOMADA1350.md` e recibosdaretomada. Oestadoabaixoéodamanhã; retomada automáticaagora18h50.
+
 Encerramento por saldo baixo conforme pedido do usuário. Redesign **parcial**, sem aprovação visual global. Retomada automática única confirmada hoje às **13h50 America/Sao_Paulo**, neste chat. Regra permanente de checkpoint/commit e próxima retomada perto de10% registrada em AGENTS.md e na automação `retomar-redesign-completo-do-darklight`.
 
 ## Entregue/preparado hoje

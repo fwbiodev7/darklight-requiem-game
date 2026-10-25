@@ -1,0 +1,651 @@
+{
+  "schemaVersion": 1,
+  "stagingOnly": true,
+  "jobs": [
+    {
+      "name": "ReqKatanaNormalNeutralLeve1NW_N20261025",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\ReqKatanaNormalLight1NW_N_NE-v3-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 3,
+          "action": "Attack",
+          "loop": false,
+          "attackKey": "Leve1",
+          "sourceSpriteNames": [
+            "Today_RequiemAttackKatanaYoungDiagonal_4",
+            "Today_RequiemAttackKatanaYoungDiagonal_5",
+            "Today_RequiemAttackKatanaYoungDiagonal_6",
+            "Today_RequiemAttackKatanaYoungDiagonal_7"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 4,
+          "action": "Attack",
+          "loop": false,
+          "attackKey": "Leve1",
+          "sourceSpriteNames": [
+            "Today_RequiemAttackKatanaYoungCardinal_8",
+            "Today_RequiemAttackKatanaYoungCardinal_9",
+            "Today_RequiemAttackKatanaYoungCardinal_10",
+            "Today_RequiemAttackKatanaYoungCardinal_11"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            205,
+            309
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "1": {
+          "anchor": [
+            560,
+            325
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "2": {
+          "anchor": [
+            963,
+            324
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "3": {
+          "anchor": [
+            1358,
+            326
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "4": {
+          "anchor": [
+            169,
+            660
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "5": {
+          "anchor": [
+            573,
+            659
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "6": {
+          "anchor": [
+            966,
+            660
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "7": {
+          "anchor": [
+            1362,
+            660
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        }
+      },
+      "excludedReason": "Entire NE row excluded: anticipation swaps weapon hand. Corrected NE source is staged separately."
+    },
+    {
+      "name": "ReqKatanaNormalNeutralLeve1NE20261025",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\ReqKatanaNormalLight1NE-v4-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 1,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 5,
+          "action": "Attack",
+          "loop": false,
+          "attackKey": "Leve1",
+          "sourceSpriteNames": [
+            "Today_RequiemAttackKatanaYoungDiagonal_8",
+            "Today_RequiemAttackKatanaYoungDiagonal_9",
+            "Today_RequiemAttackKatanaYoungDiagonal_10",
+            "Today_RequiemAttackKatanaYoungDiagonal_11"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            255,
+            606
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "1": {
+          "anchor": [
+            758,
+            604
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "2": {
+          "anchor": [
+            1320,
+            605
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "3": {
+          "anchor": [
+            1852,
+            605
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        }
+      },
+      "excludedReason": ""
+    },
+    {
+      "name": "ReqKatanaNormalNeutralLeve1E_SE20261025",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\ReqKatanaNormalLight1E_SE-v1-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 6,
+          "action": "Attack",
+          "loop": false,
+          "attackKey": "Leve1",
+          "sourceSpriteNames": [
+            "Today_RequiemAttackKatanaYoungCardinal_12",
+            "Today_RequiemAttackKatanaYoungCardinal_13",
+            "Today_RequiemAttackKatanaYoungCardinal_14",
+            "Today_RequiemAttackKatanaYoungCardinal_15"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 7,
+          "action": "Attack",
+          "loop": false,
+          "attackKey": "Leve1",
+          "sourceSpriteNames": [
+            "Today_RequiemAttackKatanaYoungDiagonal_12",
+            "Today_RequiemAttackKatanaYoungDiagonal_13",
+            "Today_RequiemAttackKatanaYoungDiagonal_14",
+            "Today_RequiemAttackKatanaYoungDiagonal_15"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            234,
+            426
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "1": {
+          "anchor": [
+            662,
+            425
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "2": {
+          "anchor": [
+            1113,
+            429
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "3": {
+          "anchor": [
+            1586,
+            429
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "4": {
+          "anchor": [
+            243,
+            839
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "5": {
+          "anchor": [
+            678,
+            831
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "6": {
+          "anchor": [
+            1132,
+            832
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "7": {
+          "anchor": [
+            1584,
+            840
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        }
+      },
+      "excludedReason": ""
+    },
+    {
+      "name": "ReqKatanaNormalNeutralIdleS_SW_W20261025",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\ReqKatanaNormalIdleS_SW_W-v1-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 0,
+          "action": "Idle",
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 1,
+          "action": "Idle",
+          "loop": true
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 2,
+          "action": "Idle",
+          "loop": true
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            246,
+            336
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "1": {
+          "anchor": [
+            607,
+            337
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "2": {
+          "anchor": [
+            979,
+            337
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "3": {
+          "anchor": [
+            1350,
+            337
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "4": {
+          "anchor": [
+            229,
+            656
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "5": {
+          "anchor": [
+            601,
+            656
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "6": {
+          "anchor": [
+            975,
+            656
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "7": {
+          "anchor": [
+            1360,
+            656
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "8": {
+          "anchor": [
+            236,
+            984
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "9": {
+          "anchor": [
+            605,
+            982
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "10": {
+          "anchor": [
+            982,
+            984
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "11": {
+          "anchor": [
+            1368,
+            984
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        }
+      },
+      "excludedReason": ""
+    },
+    {
+      "name": "ReqKatanaNormalNeutralIdleNW_N_NE20261025",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\ReqKatanaNormalIdleNW_N_NE-v1-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 3,
+          "action": "Idle",
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 4,
+          "action": "Idle",
+          "loop": true
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 5,
+          "action": "Idle",
+          "loop": true
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            180,
+            330
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "1": {
+          "anchor": [
+            556,
+            330
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "2": {
+          "anchor": [
+            923,
+            330
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "3": {
+          "anchor": [
+            1306,
+            330
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "4": {
+          "anchor": [
+            189,
+            668
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "5": {
+          "anchor": [
+            560,
+            668
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "6": {
+          "anchor": [
+            935,
+            668
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "7": {
+          "anchor": [
+            1324,
+            668
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "8": {
+          "anchor": [
+            200,
+            988
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "9": {
+          "anchor": [
+            575,
+            988
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "10": {
+          "anchor": [
+            949,
+            988
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "11": {
+          "anchor": [
+            1328,
+            988
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        }
+      },
+      "excludedReason": ""
+    },
+    {
+      "name": "ReqKatanaNormalNeutralIdleE_SE20261025",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\ReqKatanaNormalIdleE_SE-v1-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 6,
+          "action": "Idle",
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 7,
+          "action": "Idle",
+          "loop": true
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            244,
+            434
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "1": {
+          "anchor": [
+            686,
+            435
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "2": {
+          "anchor": [
+            1126,
+            436
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "3": {
+          "anchor": [
+            1577,
+            436
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "4": {
+          "anchor": [
+            242,
+            849
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "5": {
+          "anchor": [
+            680,
+            849
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "6": {
+          "anchor": [
+            1133,
+            849
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        },
+        "7": {
+          "anchor": [
+            1570,
+            849
+          ],
+          "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+        }
+      },
+      "excludedReason": ""
+    }
+  ]
+}

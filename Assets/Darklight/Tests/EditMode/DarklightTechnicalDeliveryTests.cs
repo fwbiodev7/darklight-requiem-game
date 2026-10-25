@@ -20,7 +20,8 @@ namespace Darklight.Tests
         [Test] public void ExistingAudioCuesResolveWithoutStartingAnySource()
         {
             var clips=Resources.LoadAll<AudioClip>("Darklight/Audio");
-            Assert.That(clips.Length,Is.EqualTo(132));
+            Assert.That(clips.Count(c=>!c.name.StartsWith("dl-user-",System.StringComparison.Ordinal)),Is.EqualTo(132),"Preserve the original bank");
+            Assert.That(clips.Count(c=>c.name.StartsWith("dl-user-",System.StringComparison.Ordinal)),Is.EqualTo(DarklightSoundDirector.DeliveredIds.Length));
             foreach(var clip in clips)
             {Assert.That(clip.length,Is.GreaterThan(0),clip.name);Assert.That(clip.channels,Is.InRange(1,2),clip.name);Assert.That(clip.frequency,Is.GreaterThanOrEqualTo(22050),clip.name);}
             var prefixes=new[]{"rpg-metalLatch","rpg-metalClick","rpg-drawKnife","rpg-knifeSlice","impact-impactPunch_heavy","dl-power-parry","dl-power-dodge","dl-power-counter","dl-power-critical","dl-power-finisher","dl-power-rupture","dl-power-eclipse","dl-power-absolute","dl-heartbeat","dl-web-creature-alert","interface-confirmation_","interface-click_"};

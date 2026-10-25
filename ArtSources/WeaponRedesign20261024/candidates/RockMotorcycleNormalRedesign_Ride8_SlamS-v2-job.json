@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "owner": "/root/arma_moto",
+  "generator": "built-in image_gen",
+  "status": "source-design-user-approved-not-imported",
+  "userVisualApproval": true,
+  "approvalScope": "User explicitly approved new motorcycle design; not full-animation/runtime QA",
+  "source": "ArtSources/WeaponRedesign20261024/candidates/RockMotorcycleNormalRedesign_Ride8_SlamS-v2-source.png",
+  "sourceSha256": "a1473da99dd43904dc27b834b0242a5b8d93a5506a610ec622dd88a882c95b29",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "skin": "Rock",
+  "character": "Same canonical Fabius as Requiem; only clothes/accessories differ",
+  "form": "Normal",
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261024/candidates/ReqKatanaNormalLight1_S_SW_W-v1-source.png",
+      "sha256": "0c701bcea3da3682349d3d5567d99be05d7261df14b4f016d5f5a7c99af47795",
+      "role": "canonical identity/face/body/hair/age/proportions"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261023/references/equipment-four-forms.png",
+      "sha256": "6c8c6b05e27f16f19f2bfcad3151294b164f004c0960fa713662788f9e3f6930",
+      "role": "NORMAL-column equipment design language"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261024/candidates/RockMotorcycleNormalRide8_SlamS-v1-source.png",
+      "role": "pose/clothes/layout only; previous vehicle design superseded and excluded from publication"
+    }
+  ],
+  "prompt": "Use case: identity-preserve / whole sprite-sheet redesign. Create a production candidate PNG for DARKLIGHT REQUIEM: exactly 12 complete full character-plus-motorcycle figures on a genuinely transparent background, four columns by three rows, generous transparent gutters and outer padding. No backdrop, ground, cast shadow, text, labels, grid, checkerboard or detached parts.\nREFERENCE AUTHORITY:\nImage 1 (ReqKatanaNormalLight1_S_SW_W) is the absolute SAME FABIUS identity: same young narrow intense face, deep dark-red eyes, clean warm skin, same dark chestnut layered tousled hair/fringe, same head size, age, slender athletic body, natural limbs and proportions. Rock and Requiem are one man; ONLY clothes/accessories differ. Do not make Rock muscular, older, stockier, round-faced or a different person. Brown hair in NORMAL, no colored streaks, no body transformation veins/aura.\nImage 2 (equipment-four-forms) is the NEW MOTORCYCLE DESIGN LANGUAGE authority. Use the FIRST/NORMAL COLUMN ONLY: gunmetal graphite/black structural metal with physical silver sharpened edges, overlapping angular lance-shaped/scaled armor plates like the abyssal gauntlets and greaves, controlled clean faceted shading, curved fanged claw-shaped physical silhouettes echoing the katana and twin daggers. Build a distinctive gothic abyssal MOTORCYCLE, not a generic cruiser and not literal weapons stuck onto an engine. Black armored beastlike angular front cowl, cohesive stepped lanceolate silver-edged panels on front/tank/tail, robust coherent frame/engine/exhaust, working handlebars/pegs/seat. Exactly TWO conventional in-line mechanical wheels per motorcycle, with dark rubber tires, graphite spokes/hubs and restrained physical silver teeth integrated into wheel guards. Never three wheels, extra wheel, detached wheel, sidecar, trike, impossible steering, oversized machinery hiding the entire rider. Same motorcycle model in every image.\nImage 3 (prior RockMotorcycleNormalRide8_SlamS sheet) is reference ONLY for ROCK CLOTHES, seated/body poses and 12-sprite sheet layout. Completely REPLACE its old glowing red/purple bike with the newly designed Normal motorcycle. Rock clothes: sleeveless black studded leather vest, black skull-emblem tee, black trousers, silver belt and same physical hip chain, studded wrist cuffs and black strapped boots. The old bike and old face/muscles are superseded; canonical anatomy is image 1.\nNORMAL PALETTE: graphite, black, iron gray, restrained silver metal edges. NO RED OR PURPLE ENERGY anywhere on vehicle; no glowing wheels, red cracks, purple cores, luminous eyes, magical light, neon trim, transformation effects. Dark red irises on the CHARACTER are retained.\nSTYLE: match image 1 dense crisp deliberate pixel clusters with controlled dark pixel outlines, RPG oblique top-down camera, detailed small readable faces, consistent physical body and motorcycle scale. No photorealism, no 3D model, airbrush or smoothed cartoon redesign. Every visible square pixel intentional, restrained material highlights.\nEXACT 12 WHOLE FIGURES IN READING ORDER:\nRow 1: (1) riding South toward viewer, (2) riding Southwest toward lower left, (3) riding West left profile, (4) riding Northwest away toward upper left.\nRow 2: (5) riding North showing only back of head and vest, (6) riding Northeast away toward upper right, (7) riding East right profile, (8) riding Southeast toward lower right.\nThese must be eight genuinely different spatial views, not mirrored asymmetric chain/engine/exhaust. Hands grip handlebars, feet on pegs, rider seated on seat, no floating pelvis. Front/back views naturally occlude the farther in-line wheel; never fabricate a third wheel to show two tires beside a front tire.\nRow 3: four clearly distinct chronological whole-character Esmagamento Vertical stages with Fabius facing South; his single intact motorcycle is held SIDE-ON ACROSS HIS BODY so its TWO wheels are unambiguous, ONE at each end, connected by one frame and one engine. (9) anticipation: both boots planted wide, knees flexed, full bike held low across front. (10) windup: same full bike lifted horizontally above his head in both hands, extended arms, complete hair/head/body/boots and TWO wheels all inside cell. (11) contact: Fabius crouches into the downward slam, both arms push same complete SIDE-ON bike to ground across his front, front and rear wheel visible at opposite ends, NO additional central/front-facing wheel, no impact cloud hiding anatomy. (12) recovery: rises back into stable standing ready, complete bike held upright slightly diagonal in front, head/face visible, boots planted, two in-line wheels and full bike visible.\nAll twelve drawings include head+body+arms+legs+boots+whole motorcycle together. Reserve 10-15 percent blank transparent margin around every complete silhouette; especially overhead-bike frame must not touch row above. Never crop wheels, spikes, hair, boots or hands, never assemble body parts. Nothing outside a complete figure. Highest priorities: identical canonical Fabius from image 1, unified neutral physical-metal weapon design from NORMAL column image 2, exactly two wheels, all twelve whole figures separated.",
+  "wholeFigures": true,
+  "design": "Graphite/black metal, silver physical edges, lanceolate overlapping plates, exactly two in-line mechanical wheels; Normal has no red/purple energy.",
+  "frames": [
+    {
+      "proposedId": "AbyssRockNormal_Ride_S",
+      "sourceRect": [
+        78,
+        18,
+        208,
+        311
+      ],
+      "direction": "S",
+      "action": "mounted_riding",
+      "phase": "static_direction",
+      "durationMs": 160
+    },
+    {
+      "proposedId": "AbyssRockNormal_Ride_SW",
+      "sourceRect": [
+        390,
+        20,
+        341,
+        308
+      ],
+      "direction": "SW",
+      "action": "mounted_riding",
+      "phase": "static_direction",
+      "durationMs": 160
+    },
+    {
+      "proposedId": "AbyssRockNormal_Ride_W",
+      "sourceRect": [
+        767,
+        25,
+        451,
+        291
+      ],
+      "direction": "W",
+      "action": "mounted_riding",
+      "phase": "static_direction",
+      "durationMs": 160
+    },
+    {
+      "proposedId": "AbyssRockNormal_Ride_NW",
+      "sourceRect": [
+        1247,
+        24,
+        282,
+        312
+      ],
+      "direction": "NW",
+      "action": "mounted_riding",
+      "phase": "static_direction",
+      "durationMs": 160
+    },
+    {
+      "proposedId": "AbyssRockNormal_Ride_N",
+      "sourceRect": [
+        76,
+        351,
+        206,
+        300
+      ],
+      "direction": "N",
+      "action": "mounted_riding",
+      "phase": "static_direction",
+      "durationMs": 160
+    },
+    {
+      "proposedId": "AbyssRockNormal_Ride_NE",
+      "sourceRect": [
+        388,
+        355,
+        325,
+        292
+      ],
+      "direction": "NE",
+      "action": "mounted_riding",
+      "phase": "static_direction",
+      "durationMs": 160
+    },
+    {
+      "proposedId": "AbyssRockNormal_Ride_E",
+      "sourceRect": [
+        766,
+        357,
+        422,
+        282
+      ],
+      "direction": "E",
+      "action": "mounted_riding",
+      "phase": "static_direction",
+      "durationMs": 160
+    },
+    {
+      "proposedId": "AbyssRockNormal_Ride_SE",
+      "sourceRect": [
+        1232,
+        358,
+        288,
+        310
+      ],
+      "direction": "SE",
+      "action": "mounted_riding",
+      "phase": "static_direction",
+      "durationMs": 160
+    },
+    {
+      "proposedId": "AbyssRockNormal_VerticalSlam_S_anticipation",
+      "sourceRect": [
+        16,
+        706,
+        387,
+        285
+      ],
+      "direction": "S",
+      "action": "Esmagamento Vertical",
+      "phase": "anticipation",
+      "durationMs": 232
+    },
+    {
+      "proposedId": "AbyssRockNormal_VerticalSlam_S_windup",
+      "sourceRect": [
+        407,
+        644,
+        357,
+        345
+      ],
+      "direction": "S",
+      "action": "Esmagamento Vertical",
+      "phase": "windup",
+      "durationMs": 348
+    },
+    {
+      "proposedId": "AbyssRockNormal_VerticalSlam_S_contact",
+      "sourceRect": [
+        787,
+        755,
+        407,
+        237
+      ],
+      "direction": "S",
+      "action": "Esmagamento Vertical",
+      "phase": "contact",
+      "durationMs": 160
+    },
+    {
+      "proposedId": "AbyssRockNormal_VerticalSlam_S_recovery",
+      "sourceRect": [
+        1222,
+        707,
+        311,
+        284
+      ],
+      "direction": "S",
+      "action": "Esmagamento Vertical",
+      "phase": "recovery",
+      "durationMs": 580
+    }
+  ],
+  "geometryStatus": "Whole-figure component bounds measured at alpha>=64; not final Unity slicing/pivots. Soft alpha exists outside bounds, so preserve source and use whole-figure ownership during future packing.",
+  "nativePixelArtResolution": "Unverified generated pixel clusters; no quantization or resizing performed",
+  "pixelsPerUnit": null,
+  "pivot": null,
+  "imported": false,
+  "runtimeVerified": false,
+  "consumerContract": {
+    "resources": "New motorcycle-specific resource only; no existing approved sprite overwrite",
+    "spriteBank": "Assets/Darklight/Runtime/Character/DarklightAbyssSpriteBank.cs",
+    "directional": "Assets/Darklight/Runtime/Character/DarklightAbyssDirectionalActions.cs",
+    "expansion": "Assets/Darklight/Runtime/Character/DarklightAbyssExpansionArt.cs",
+    "timing": "Esmagamento Vertical startup 0.58s / active 0.16s / recovery 0.58s unchanged; 8 riding figures are static views, not animated locomotion",
+    "mirror": "Eight drawn views; do not mirror the new asymmetric directions"
+  },
+  "formMatrix": [
+    {
+      "form": "Normal",
+      "palette": "graphite/black/silver",
+      "producedWholeFigures": 12,
+      "imported": false
+    },
+    {
+      "form": "Ruptura",
+      "palette": "red transformation equipment palette",
+      "producedWholeFigures": 0,
+      "imported": false
+    },
+    {
+      "form": "Eclipse",
+      "palette": "violet transformation equipment palette",
+      "producedWholeFigures": 0,
+      "imported": false
+    },
+    {
+      "form": "Absoluto",
+      "palette": "white/silver equipment with red fissures",
+      "producedWholeFigures": 0,
+      "imported": false
+    }
+  ],
+  "nextSession": [
+    "Pack intact figures and define integer anchors/PPU against canonical Fabius; preserve exact source pixels.",
+    "Integrate only these eight riding directions and four slam stages through motorcycle bank; preserve gameplay timings/events.",
+    "Produce remaining forms with the main transformation color on motorcycle/equipment only; do not tint skin, irises or arbitrarily alter clothing/body.",
+    "Complete other motorcycle attacks/transitions as separate missing-art contexts. Requiem motorcycle remains N/A."
+  ],
+  "publication": {
+    "include": [
+      "ArtSources/WeaponRedesign20261024/candidates/RockMotorcycleNormalRedesign_Ride8_SlamS-v2-source.png",
+      "ArtSources/WeaponRedesign20261024/candidates/RockMotorcycleNormalRedesign_Ride8_SlamS-v2-job.json"
+    ],
+    "excludeSuperseded": "ArtSources/WeaponRedesign20261024/candidates/RockMotorcycleNormalRide8_SlamS-v1-source.png"
+  },
+  "checks": "12 intact figures visually inspected; Normal design approved by user; no new runtime code, Unity import, Play, audio, tests or build executed by this agent."
+}

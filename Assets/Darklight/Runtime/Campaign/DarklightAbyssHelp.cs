@@ -15,7 +15,7 @@ namespace Darklight
         void BuildWeaponGuides()
         {
             heading.text="ARMAS";bodyText.text="Escolha uma arma ou consulte o guia.\n\nCavaleiro do Abismo: exclusivo da skin Rock.\n\nNa campanha, desperte o motor selado junto à memória da Cripta dos Primeiros.\n\nA arena permite testar a arma e suas formas sem alterar a campanha.";
-            for(int i=0;i<3;i++){int index=i;Button(weaponDefinitions[i].displayName,()=>{Weapons.Request(index);Close();},Weapons.Unlocked(i));}
+            for(int i=0;i<3;i++){int index=i;Button(weaponDefinitions[i].displayName,()=>{Weapons.Request(index);Close();},Weapons.Unlocked(i),WeaponIcon(weaponDefinitions[i]));}
             Button("COMBOS E ESPECIAIS",()=>{guideWeapon=Mathf.Clamp((int)(Weapons?.Equipped?.id??DarklightWeaponId.Katana),0,2);Open("WeaponCombos");});Button("CAVALEIRO DO ABISMO · GUIA",ShowAbyssHelp);Button("VOLTAR",()=>Open("Pause"));
         }
         void BuildAbyssHelp()

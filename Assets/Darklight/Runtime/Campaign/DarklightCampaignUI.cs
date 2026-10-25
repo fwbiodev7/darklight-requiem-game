@@ -17,6 +17,7 @@ namespace Darklight
         Image energyFill,bossFill,portrait,menuBackdrop;Font font;
         Sprite UIArt(int index,Sprite fallback)=>uiArt!=null&&uiArt.Length>index?uiArt[index]:fallback;
         Sprite HUDArt(int index,Sprite fallback)=>hudArt!=null&&hudArt.Length>index?hudArt[index]:fallback;
+        Sprite WeaponIcon(WeaponDefinition weapon)=>weapon==null?null:DarklightWeaponRedesignBank.Icon((int)weapon.id,PresentedForm,weapon.icon);
         readonly List<(RectTransform rect,Text text,Image image,Action action,bool enabled)> buttons=new();
         InputActionRebindingExtensions.RebindingOperation rebinding;
         readonly Dictionary<DarklightEnemy,(RectTransform rect,Image fill)> enemyBars=new();
@@ -29,7 +30,7 @@ namespace Darklight
         {
             font=lab.PixelHUD.pixelFont;if(font.material.mainTexture!=null)font.material.mainTexture.filterMode=FilterMode.Point;uiRoot=lab.PixelHUD.transform.Find("HUD640x360") as RectTransform;
             PolishHUD();
-            weaponIcon=ImageAt(uiRoot,"ArmaEquipada",12,310,24,24,weaponDefinitions[0].icon);weaponIcon.preserveAspect=true;weaponText=TextAt(uiRoot,"Arma",42,310,196,26,5);
+            weaponIcon=ImageAt(uiRoot,"ArmaEquipada",12,310,24,24,WeaponIcon(weaponDefinitions[0]));weaponIcon.preserveAspect=true;weaponText=TextAt(uiRoot,"Arma",42,310,196,26,5);
             chapterText=TextAt(uiRoot,"Capitulo",264,31,112,10,5);chapterText.alignment=TextAnchor.MiddleCenter;
             energyText=TextAt(uiRoot,"Energia",12,78,168,10,5);energyText.alignment=TextAnchor.MiddleCenter;
             energyFill=ImageAt(uiRoot,"EnergiaBarra",12,90,132,2,null);energyFill.color=new Color(.45f,.15f,.75f);
@@ -57,7 +58,7 @@ namespace Darklight
         {
             if(uiRoot==null)return;
             TickMenuPolish();TickGameOverArtwork();UpdateEnemyBars();
-            if(Weapons?.Equipped!=null){weaponIcon.sprite=Weapons.Equipped.icon;weaponText.text=Weapons.Equipped.displayName+"  "+lab.Input.BindingLabel("WeaponNext")+"\n"+(Weapons.Equipped.id==DarklightWeaponId.Katana?lab.Input.BindingLabel("Skill")+": ONDA":lab.Player.Model.WeaponSpecialRemaining>0?"ESPECIAL: "+lab.Player.Model.WeaponSpecialRemaining.ToString("0.0")+"s":lab.Input.BindingLabel("WeaponSpecial")+": ESPECIAL");}
+            if(Weapons?.Equipped!=null){weaponIcon.sprite=WeaponIcon(Weapons.Equipped);weaponText.text=Weapons.Equipped.displayName+"  "+lab.Input.BindingLabel("WeaponNext")+"\n"+(Weapons.Equipped.id==DarklightWeaponId.Katana?lab.Input.BindingLabel("Skill")+": ONDA":lab.Player.Model.WeaponSpecialRemaining>0?"ESPECIAL: "+lab.Player.Model.WeaponSpecialRemaining.ToString("0.0")+"s":lab.Input.BindingLabel("WeaponSpecial")+": ESPECIAL");}
             chapterText.text=(ExploringNewRegion?"REGIÃO "+(RegionChapter+1):"CAP. "+(Progress.chapter+1))+"  "+Rank;
             energyText.text=(Form>0?new[]{"","RUPTURA","ECLIPSE","ABSOLUTO"}[Form]+" "+FormTime.ToString("0"):"SANGUE "+Energy.ToString("0"));
             energyFill.rectTransform.sizeDelta=new Vector2(132*Mathf.Clamp01(Energy/100),2);
@@ -144,11 +145,16 @@ namespace Darklight
         void Close(){menuDismissFrame=Time.frameCount;StopMenuMusic();panel="";SetHUDVisible(true);overlay.gameObject.SetActive(false);lab.SetPaused(screenTransitionBusy);if(!screenTransitionBusy&&!DarklightAutomation.Silent&&(resonance>=0||HasFirstAwakeningMusic))music.UnPause();}
         void SetHUDVisible(bool value){foreach(Transform child in uiRoot)if(child.name!="Mundo640x360"&&child.name!="Menus"&&child.name!="PassagemDeFase"&&child.name!="TransicaoAprovada"&&child.name!="ApresentacaoAprovada")child.gameObject.SetActive(value);if(loadingRoot!=null)loadingRoot.gameObject.SetActive(phaseLoading);if(value)PolishHUD();overlay.SetAsLastSibling();}
         void ClearButtons(){foreach(var b in buttons)Destroy(b.rect.gameObject);buttons.Clear();menuBorders.Clear();}
-        void Button(string label,Action action,bool enabled=true)
+        void Button(string label,Action action,bool enabled=true,Sprite icon=null)
         {
             int i=buttons.Count;float y=62+i*28;
             var image=ImageAt(menuRoot,"Botao"+i,22,y,286,24,UIArt(enabled?1:3,extras[7]));image.color=Color.white;image.type=Image.Type.Sliced;image.pixelsPerUnitMultiplier=8.333333f;
             var text=TextAt(image.transform,"Rotulo",8,0,270,24,6);text.text=label;text.alignment=TextAnchor.MiddleCenter;
+            if(icon!=null)
+            {
+                var equipment=ImageAt(image.transform,"IconeArma",5,2,20,20,icon);equipment.preserveAspect=true;equipment.raycastTarget=false;
+                text.rectTransform.anchoredPosition=new Vector2(30,0);text.rectTransform.sizeDelta=new Vector2(248,24);
+            }
             buttons.Add((image.rectTransform,text,image,action,enabled));
             if(CinematicFront||CinematicPause)AddCinematicBorder(image,text,i);
         }
@@ -193,7 +199,7 @@ namespace Darklight
                 case "AbyssHelp":BuildAbyssHelp();break;
                 case "Inventory":
                     heading.text="INVENTARIO";bodyText.text="V / LS: trocar armas\nPresas: após Kael | Punhos: após Matriarca\nELIXIRES: "+Progress.potions+" | MEMORIAS: "+Progress.shards+"/10\nMP3: "+(Progress.mp3Unlocked?"DESBLOQUEADO":"MISSAO FREQUENCIA DO VEU");
-                    Button("USAR ELIXIR (+45% VIDA)",()=>{UsePotion();RefreshPanel();},Progress.potions>0&&health.HealthPercent<1&&!health.IsDead);for(int i=0;i<weaponDefinitions.Length;i++){int index=i;Button(weaponDefinitions[i].displayName+(Weapons.Equipped==weaponDefinitions[i]?" - EQUIPADA":""),()=>{Weapons.Request(index);Close();},Weapons.Unlocked(i));}Button("VOLTAR",()=>Open("Pause"));break;
+                    Button("USAR ELIXIR (+45% VIDA)",()=>{UsePotion();RefreshPanel();},Progress.potions>0&&health.HealthPercent<1&&!health.IsDead);for(int i=0;i<weaponDefinitions.Length;i++){int index=i;Button(weaponDefinitions[i].displayName+(Weapons.Equipped==weaponDefinitions[i]?" - EQUIPADA":""),()=>{Weapons.Request(index);Close();},Weapons.Unlocked(i),WeaponIcon(weaponDefinitions[i]));}Button("VOLTAR",()=>Open("Pause"));break;
                 case "Journal":
                     heading.text="DIARIO";bodyText.text=Objective+"\n\n"+(Progress.mp3Unlocked?"Frequencia do Veu concluida.":Progress.mp3Quest>0?"Frequencia do Veu: "+Mathf.Min(3,Progress.mp3Quest-1)+"/3 componentes. Volte a Icaro.":"Icaro Nox espera no distrito do vinil (cap. 2).")+"\nMemorias opcionais: aproxime-se dos fragmentos e use E / A.";
                     Button("VOLTAR",()=>Open("Pause"));break;

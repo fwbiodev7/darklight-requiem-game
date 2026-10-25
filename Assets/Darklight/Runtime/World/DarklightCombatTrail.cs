@@ -13,6 +13,10 @@ namespace Darklight
                 for(int i=0;i<512;i++){int v=i*4,t=i*6;indices[t]=v;indices[t+1]=v+1;indices[t+2]=v+2;indices[t+3]=v;indices[t+4]=v+2;indices[t+5]=v+3;}
             }
             if(weapon==3){PresentRider(body,model,form);return;}
+            // These complete figures already contain their authored punch energy.
+            // The old centered fist streak would otherwise draw across the waist.
+            if(weapon==2&&DarklightWeaponRedesignBank.IsAuthored(body.sprite))
+            {display.enabled=false;if(quads>0){quads=0;mesh.Clear();}return;}
             if(weapon==2&&DarklightRuinFistsBank.Ready){PresentRuin(body,model,form);return;}
             bool show=model.Attack!=null&&model.ActiveThisTick;display.enabled=show;if(!show)return;
             quads=0;transform.position=body.transform.position+Vector3.up*.9f;transform.rotation=Quaternion.identity;transform.localScale=Vector3.one;

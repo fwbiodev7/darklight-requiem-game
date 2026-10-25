@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqKatanaNormalNeutralLeve1NE20261025.png",
+  "imageSha256": "8be812a786fe6a17e40cdec40795c98a027e2bf4537be15dbe9cd196993fd4c3",
+  "nativeSize": [
+    2588,
+    705
+  ],
+  "sourceSize": [
+    2172,
+    724
+  ],
+  "pixelsPerUnit": 202.02020202020202,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralLeve1NE20261025-source.png",
+  "sourceSha256": "5bb77f64fc4d55340982f1597fb8f9ebaad21d37f3225e33464a09e81b3d8622",
+  "frames": [
+    {
+      "id": "Redesign_ReqKatanaNormalNeutralLeve1NE20261025_00",
+      "rect": [
+        0,
+        0,
+        647,
+        705
+      ],
+      "pivot": [
+        0.3554868624420402,
+        0.17872340425531916
+      ],
+      "durationMs": 55,
+      "action": "attack",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "attack_0",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        33,
+        37,
+        548,
+        671
+      ],
+      "sourceAnchor": [
+        255,
+        606
+      ],
+      "sourcePackingAnchor": [
+        146,
+        626
+      ],
+      "supportGuide": {
+        "anchor": [
+          255,
+          606
+        ],
+        "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+      },
+      "sourceOffsetInFrame": [
+        8,
+        10
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalNeutralLeve1NE20261025_01",
+      "rect": [
+        647,
+        0,
+        647,
+        705
+      ],
+      "pivot": [
+        0.3446676970633694,
+        0.1773049645390071
+      ],
+      "durationMs": 75,
+      "action": "attack",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "attack_1",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        546,
+        95,
+        628,
+        613
+      ],
+      "sourceAnchor": [
+        758,
+        604
+      ],
+      "sourcePackingAnchor": [
+        656,
+        623
+      ],
+      "supportGuide": {
+        "anchor": [
+          758,
+          604
+        ],
+        "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+      },
+      "sourceOffsetInFrame": [
+        11,
+        71
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalNeutralLeve1NE20261025_02",
+      "rect": [
+        1294,
+        0,
+        647,
+        705
+      ],
+      "pivot": [
+        0.3369397217928903,
+        0.18014184397163122
+      ],
+      "durationMs": 70,
+      "action": "attack",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "attack_2",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        1117,
+        61,
+        558,
+        647
+      ],
+      "sourceAnchor": [
+        1320,
+        605
+      ],
+      "sourcePackingAnchor": [
+        1223,
+        626
+      ],
+      "supportGuide": {
+        "anchor": [
+          1320,
+          605
+        ],
+        "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+      },
+      "sourceOffsetInFrame": [
+        15,
+        34
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalNeutralLeve1NE20261025_03",
+      "rect": [
+        1941,
+        0,
+        647,
+        705
+      ],
+      "pivot": [
+        0.28593508500772796,
+        0.18014184397163122
+      ],
+      "durationMs": 70,
+      "action": "attack",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "attack_3",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1675,
+        35,
+        479,
+        689
+      ],
+      "sourceAnchor": [
+        1852,
+        605
+      ],
+      "sourcePackingAnchor": [
+        1788,
+        626
+      ],
+      "supportGuide": {
+        "anchor": [
+          1852,
+          605
+        ],
+        "method": "Manual projected foot-support midpoint in intact full source; Unity calibration pending."
+      },
+      "sourceOffsetInFrame": [
+        8,
+        8
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_NE",
+      "frames": [
+        "Redesign_ReqKatanaNormalNeutralLeve1NE20261025_00",
+        "Redesign_ReqKatanaNormalNeutralLeve1NE20261025_01",
+        "Redesign_ReqKatanaNormalNeutralLeve1NE20261025_02",
+        "Redesign_ReqKatanaNormalNeutralLeve1NE20261025_03"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "attack_NE"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 399866,
+  "packedPixels": 399866,
+  "originalSourcePixels": 399866,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 1172662,
+    "farBeyond16pxPixels": 1501,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 5.886274509803922,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending.",
+    "Staging only; no shared Unity catalog or gameplay timings modified.",
+    "Direction review includes silhouette, nuca, profile and right-hand grip; source sheet positions are not direction evidence alone."
+  ],
+  "visualReviewed": true,
+  "imported": false,
+  "runtimeVerified": false,
+  "originalSourcePath": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalLight1NE-v4-source.png",
+  "ppuProvenance": {
+    "pipelineInferred": 223.4848484848485,
+    "candidateAnatomical": 202.02020202020202,
+    "targetHeightUnits": 1.98,
+    "measurements": [
+      {
+        "sourceFrameIndex": 0,
+        "headY": 221,
+        "soleY": 626,
+        "anatomyHeight": 405
+      },
+      {
+        "sourceFrameIndex": 1,
+        "headY": 226,
+        "soleY": 623,
+        "anatomyHeight": 397
+      },
+      {
+        "sourceFrameIndex": 2,
+        "headY": 237,
+        "soleY": 626,
+        "anatomyHeight": 389
+      },
+      {
+        "sourceFrameIndex": 3,
+        "headY": 223,
+        "soleY": 626,
+        "anatomyHeight": 403
+      }
+    ],
+    "method": "Manual hair-to-sole, excludes raised blade and effects.",
+    "limitation": "Pose and source scale differ; Unity camera and transitions still require review."
+  },
+  "previewTimingsMs": [
+    55,
+    75,
+    70,
+    70
+  ]
+}

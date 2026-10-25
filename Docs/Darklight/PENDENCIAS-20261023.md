@@ -2,6 +2,10 @@
 
 Continuidade e evidências: `EXPANSAO-20261023.md`. O prompt mestre foi preservado em `PROMPT-EXPANSAO-20261023.md`.
 
+- **Lista de sons criada — aquisição e integração pendentes:** `LISTA-SONS-PARA-PESQUISA-20261023.md` reúne moto, aéreo, armas, personagem, poderes, inimigos/chefes, dez ambientes, interações e interface. Diferencia sons dedicados novos de bases existentes a revisar. O usuário pesquisará e enviará os arquivos; priorizar moto, aéreo e três visitantes. Nenhum áudio importado ou reproduzido ao criar a lista.
+
+- **Não iniciado — adiado pelo usuário: músicas das três bossfights principais.** Ordem obrigatória pela progressão real: Going Under → Afterlife → See U in Hell. Três caminhos MP3 fornecidos em Downloads; importação, associação aos chefes, fades, loop, fases, vitória, morte, reinício, abandono e validação ficam para retomada. Reutilizar áudio existente e preservar efeitos, músicas atuais, gameplay e saves. Não distribuir builds com essas faixas sem autorização de distribuição. Especificação completa: `PENDENCIA-MUSICAS-BOSSFIGHTS-20261023.md`. Não implementar agora.
+
 - **Gameplay focado aprovado — combate aéreo e seis técnicas de moto:** Play silencioso expressamente autorizado e executado. Passaram sequência completa, dano real, custos dos golpes com reserva, atalhos e entrada virtual pelo Update real. Corrigidos posição física, buffer durante perseguição e suspensão limitada do alvo. Ainda revisar sensação de combate em sessão humana e sincronização visual em todas as vistas/formas.
 - **Parcial — animações novas:** 12 figuras novas da moto cobrem Rock Normal/S. Ampliar intermediários, vistas e formas onde a arte autorada anterior não representar o golpe. Não substituir personagens por partes nem declarar cobertura global a partir dessa folha.
 - **Parcial — inimigos e encontros secretos:** três IAs, oito figuras por inimigo, telegráficos, dano, reação e recompensa persistente implementados. Aceitação, derrota, retorno e recompensa única passaram em Play. Continuar sessão prolongada contra as IAs e completar direções necessárias.

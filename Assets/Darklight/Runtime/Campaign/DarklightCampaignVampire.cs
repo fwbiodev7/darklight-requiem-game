@@ -19,7 +19,7 @@ namespace Darklight
             var model=lab.Player.Model;if(model.State==CombatState.Hurt||model.State==CombatState.Dead||model.State==CombatState.Dodge||model.State==CombatState.Parry||model.State==CombatState.Charging)return false;
             if(model.State==CombatState.Attack&&model.StateTime<model.Attack.startup+model.Attack.active)return false;
             int skill=Progress.vampireSelected;
-            if(!Blood.Activate(skill,Progress)){Notice("PODER BLOQUEADO, SEM SANGUE OU EM RECARGA");return false;}
+            if(!Blood.Activate(skill,Progress)){Notice("PODER BLOQUEADO, SEM SANGUE OU EM RECARGA");AudioDirector?.ActionDenied();return false;}
             model.SuspendInput();vampireCast=skill;vampireCastTime=0;vampirePulses=0;Notice(DarklightVampireSkills.Names[skill]);return true;
         }
         void TickVampire(float dt)

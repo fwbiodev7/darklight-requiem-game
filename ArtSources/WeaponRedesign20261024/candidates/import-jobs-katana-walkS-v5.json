@@ -1,0 +1,148 @@
+{
+  "jobs": [
+    {
+      "name": "ReqKatanaNormalNeutralWalkS20261024V5",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261024\\candidates\\ReqKatanaNormalWalkS-v5-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 3,
+      "sourceRows": 2,
+      "durationMs": [
+        66.66666666666667,
+        66.66666666666667,
+        66.66666666666667,
+        66.66666666666667,
+        66.66666666666667,
+        66.66666666666667
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            324,
+            482
+          ],
+          "supportPoints": [
+            [
+              298,
+              482
+            ],
+            [
+              350,
+              415
+            ]
+          ],
+          "method": "Projected midpoint of both boot supports; manually inspected complete source, lower sole baseline."
+        },
+        "1": {
+          "anchor": [
+            788,
+            481
+          ],
+          "supportPoints": [
+            [
+              810,
+              481
+            ],
+            [
+              766,
+              407
+            ]
+          ],
+          "method": "Projected midpoint of both boot supports; manually inspected complete source, lower sole baseline."
+        },
+        "2": {
+          "anchor": [
+            1230,
+            483
+          ],
+          "supportPoints": [
+            [
+              1255,
+              483
+            ],
+            [
+              1204,
+              414
+            ]
+          ],
+          "method": "Projected midpoint of both boot supports; manually inspected complete source, lower sole baseline."
+        },
+        "3": {
+          "anchor": [
+            330,
+            963
+          ],
+          "supportPoints": [
+            [
+              306,
+              963
+            ],
+            [
+              355,
+              897
+            ]
+          ],
+          "method": "Projected midpoint of both boot supports; manually inspected complete source, lower sole baseline."
+        },
+        "4": {
+          "anchor": [
+            794,
+            963
+          ],
+          "supportPoints": [
+            [
+              814,
+              963
+            ],
+            [
+              774,
+              890
+            ]
+          ],
+          "method": "Projected midpoint of both boot supports; manually inspected complete source, lower sole baseline."
+        },
+        "5": {
+          "anchor": [
+            1282,
+            964
+          ],
+          "supportPoints": [
+            [
+              1255,
+              964
+            ],
+            [
+              1310,
+              875
+            ]
+          ],
+          "method": "Projected midpoint of both boot supports; manually inspected complete source, lower sole baseline."
+        }
+      },
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            3,
+            5,
+            1,
+            4,
+            2
+          ],
+          "direction": 0,
+          "action": "Walk",
+          "sourceSpriteNames": [
+            "Today_RequiemWalkConsistentKatanaCardinal20261017_0",
+            "Today_RequiemWalkConsistentKatanaCardinal20261017_1",
+            "Today_RequiemWalkConsistentKatanaCardinal20261017_2",
+            "Today_RequiemWalkConsistentKatanaCardinal20261017_3",
+            "Today_RequiemWalkConsistentKatanaCardinal20261017_4",
+            "Today_RequiemWalkConsistentKatanaCardinal20261017_5"
+          ]
+        }
+      ]
+    }
+  ]
+}

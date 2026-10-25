@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqKatanaNormalNeutralLight1SWv2.png",
+  "imageSha256": "21d2ee184753cf086468d0f455bc69850c22846154f0cfcbb5d0b7a1473c5f07",
+  "nativeSize": [
+    2528,
+    381
+  ],
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 124.4949494949495,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261023/ReqKatanaNormalNeutralLight1SWv2-source.png",
+  "sourceSha256": "67dca8434d9abdcc847d595eb9b174e801e4b9d9c5376615644932e26360611a",
+  "frames": [
+    {
+      "id": "Redesign_ReqKatanaNormalNeutralLight1SWv2_00",
+      "rect": [
+        0,
+        0,
+        632,
+        381
+      ],
+      "pivot": [
+        0.4651898734177215,
+        0.13910761154855644
+      ],
+      "durationMs": 120,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "attack_0",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        25,
+        354,
+        345,
+        342
+      ],
+      "sourceAnchor": [
+        175,
+        674
+      ],
+      "sourcePackingAnchor": [
+        246,
+        675
+      ],
+      "supportGuide": {
+        "anchor": [
+          175,
+          674
+        ],
+        "method": "whole-figure proposed support center from source manifest; not Unity verified"
+      },
+      "sourceOffsetInFrame": [
+        144,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalNeutralLight1SWv2_01",
+      "rect": [
+        632,
+        0,
+        632,
+        381
+      ],
+      "pivot": [
+        0.6882911392405063,
+        0.13910761154855644
+      ],
+      "durationMs": 120,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "attack_1",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        371,
+        390,
+        445,
+        314
+      ],
+      "sourceAnchor": [
+        627,
+        662
+      ],
+      "sourcePackingAnchor": [
+        557,
+        663
+      ],
+      "supportGuide": {
+        "anchor": [
+          627,
+          662
+        ],
+        "method": "whole-figure proposed support center from source manifest; not Unity verified"
+      },
+      "sourceOffsetInFrame": [
+        179,
+        56
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalNeutralLight1SWv2_02",
+      "rect": [
+        1264,
+        0,
+        632,
+        381
+      ],
+      "pivot": [
+        0.3338607594936709,
+        0.14173228346456693
+      ],
+      "durationMs": 120,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "attack_2",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        815,
+        399,
+        403,
+        317
+      ],
+      "sourceAnchor": [
+        1018,
+        670
+      ],
+      "sourcePackingAnchor": [
+        1172,
+        672
+      ],
+      "supportGuide": {
+        "anchor": [
+          1018,
+          670
+        ],
+        "method": "whole-figure proposed support center from source manifest; not Unity verified"
+      },
+      "sourceOffsetInFrame": [
+        8,
+        56
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalNeutralLight1SWv2_03",
+      "rect": [
+        1896,
+        0,
+        632,
+        381
+      ],
+      "pivot": [
+        0.6708860759493671,
+        0.14173228346456693
+      ],
+      "durationMs": 120,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "attack_3",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        1223,
+        381,
+        299,
+        295
+      ],
+      "sourceAnchor": [
+        1380,
+        667
+      ],
+      "sourcePackingAnchor": [
+        1321,
+        669
+      ],
+      "supportGuide": {
+        "anchor": [
+          1380,
+          667
+        ],
+        "method": "whole-figure proposed support center from source manifest; not Unity verified"
+      },
+      "sourceOffsetInFrame": [
+        267,
+        41
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_SW",
+      "frames": [
+        "Redesign_ReqKatanaNormalNeutralLight1SWv2_00",
+        "Redesign_ReqKatanaNormalNeutralLight1SWv2_01",
+        "Redesign_ReqKatanaNormalNeutralLight1SWv2_02",
+        "Redesign_ReqKatanaNormalNeutralLight1SWv2_03"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "attack_SW"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 185395,
+  "packedPixels": 185395,
+  "originalSourcePixels": 555465,
+  "selectedSourceFrameIndices": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "excludedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    8,
+    9,
+    10,
+    11
+  ],
+  "excludedSourceReason": "S/W v1 retained; SW v1 rejected. Only SW v2 selected; its S/W are excluded.",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 1017399,
+    "farBeyond16pxPixels": 3151,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 12.35686274509804,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ]
+}

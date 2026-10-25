@@ -15,6 +15,7 @@ namespace Darklight
         HealthSystem livingHealth;
         public bool UsesUserWholeSprite{get;private set;}
         public bool UsesWholeCharacterSprite{get;private set;}
+        public bool UsesWeaponRedesignSprite{get;private set;}
         public bool UsesPoseFallback{get;private set;}
         public static Bounds FallbackBodyBounds=>new Bounds(Vector3.up*1.315f,new Vector3(1.5f,2.63f,0));
         // Effects use normal frontal katana idle for this skin, independently
@@ -81,8 +82,12 @@ namespace Darklight
             UsesPoseFallback=false;UsesUserWholeSprite=false;
             if(selected==null){selected=TodayCharacterBank.StablePose(skin,0,weapon,direction);UsesPoseFallback=selected!=null;}
             if(selected==null){selected=DarklightUserSpriteBank.Resolve(skin,0,weapon,model,movement);UsesUserWholeSprite=selected!=null;}
+            UsesWeaponRedesignSprite=DarklightWeaponRedesignBank.TryResolve(skin,weapon,previewing?previewForm:game?.PresentedForm??0,
+                direction,model,movement,selected,out var redesigned,previewing?null:living.Clip,
+                previewing?-1:living.Clip=="Idle"?living.BreathClock:living.ClipTime);
+            if(UsesWeaponRedesignSprite){selected=redesigned;UsesPoseFallback=UsesUserWholeSprite=false;}
             if(selected!=null)display.sprite=selected;
-            display.transform.localScale=RenderScale;display.flipX=locomotionSelected?abyssLocomotion.Mirror:!previewing&&game?.AbyssRider?.Active==true?DarklightAbyssSpriteBank.Mirror(model):UsesUserWholeSprite&&model.Facing.x<-.1f;
+            display.transform.localScale=RenderScale;display.flipX=!UsesWeaponRedesignSprite&&!DarklightMotorcycleRedesignBank.IsAuthored(selected)&&(locomotionSelected?abyssLocomotion.Mirror:!previewing&&game?.AbyssRider?.Active==true?DarklightAbyssSpriteBank.Mirror(model):UsesUserWholeSprite&&model.Facing.x<-.1f);
             display.transform.localRotation=model.State==CombatState.Dead&&(UsesPoseFallback||UsesUserWholeSprite)?Quaternion.Euler(0,0,-75):Quaternion.Euler(0,0,!previewing&&game?.AbyssRider?.Active==true?game.AbyssRider.LeanAngle+game.AbyssRider.RunOverPitch:0);
             UsesWholeCharacterSprite=selected!=null&&!UsesUserWholeSprite;
             display.color=model.State==CombatState.Hurt?new Color(1,.4f,.4f):model.State==CombatState.Parry?new Color(.7f,.8f,1):Color.white;
@@ -91,6 +96,8 @@ namespace Darklight
             originalForms.Present(display,skin,0,direction,previewing?previewForm:game?.PresentedForm??0,model.Clock,model.State==CombatState.Dead,UsesUserWholeSprite||UsesWholeCharacterSprite,model.State==CombatState.Dodge,!previewing);
             DarklightCanonicalComplexion.Apply(display,model.State!=CombatState.Dead);
             if(model.State!=CombatState.Dead)DarklightAbyssSpriteBank.ApplyWholeOwnership(display);
+            DarklightWeaponRedesignBank.ApplyAuthoredOwnership(display);
+            DarklightMotorcycleRedesignBank.ApplyOwnership(display);
             if(combatTrail==null){var obj=new GameObject("RastrosDeCombate");obj.transform.SetParent(transform,false);combatTrail=obj.AddComponent<DarklightCombatTrail>();}
             combatTrail.Present(display,weapon,model,previewing?previewForm:game?.PresentedForm??0);
             if(model.State==CombatState.Attack&&model.ActiveThisTick&&trailSerial!=model.AttackSerial){trailSerial=model.AttackSerial;DarklightCombatFX.Echo(display,.10f);}

@@ -28,7 +28,19 @@ namespace Darklight
         {
             Directory.CreateDirectory(System.IO.Path.GetDirectoryName(Path));
             string temp=Path+".tmp"; File.WriteAllText(temp,JsonUtility.ToJson(this,true));
-            if(File.Exists(Path))File.Replace(temp,Path,Path+".bak");else File.Move(temp,Path);
+            if(File.Exists(Path))ReplaceWithTransientRetry(temp,Path,Path+".bak");else File.Move(temp,Path);
+        }
+        static void ReplaceWithTransientRetry(string source,string destination,string backup)
+        {
+            for(int attempt=0;;attempt++)
+            {
+                try{File.Replace(source,destination,backup);return;}
+                // Windows can transiently refuse removal of the replaced file
+                // (1175). Retry only this observed error, keeping the atomic save
+                // and backup operation; all other/exhausted failures still escape.
+                catch(IOException error) when((error.HResult&0xffff)==1175&&attempt<3&&File.Exists(source)&&File.Exists(destination))
+                {System.Threading.Thread.Sleep(10<<attempt);}
+            }
         }
         public static DarklightProgress Load()
             => LoadFromPath(Path);

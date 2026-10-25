@@ -219,7 +219,7 @@ namespace Darklight
         {if(!Blood.RewardStrike(kind,lab.Player.Model.AttackSerial))return;bool varied=(int)kind!=lastAttack;TechnicalStrike(kind);lastAttack=(int)kind;idleStyle=0;Resonance.Gain(varied?2:1);RecordWeaponTrial();}
         public void BossPhaseTwo(){AudioDirector?.EnemyWarning(true,lab.Player.transform.position);}
         public void Defended(){if(!Blood.RewardParry())return;Style.Defense(true);if(!Training)StageStats.Parry();style=Style.Points;idleStyle=0;AudioDirector?.Play("dl-power-parry",DarklightAudioCategory.Combat,.38f);}
-        public void Damaged(float actualHealthLost=0){CancelVampireCast();if(!Training)StageStats.Damage(actualHealthLost);Style.Damage();style=Style.Points;phonesTime=0;AudioDirector?.Play("impact-impactPunch_heavy",DarklightAudioCategory.Character,.3f);}
+        public void Damaged(float actualHealthLost=0){CancelVampireCast();if(!Training)StageStats.Damage(actualHealthLost);Style.Damage();style=Style.Points;phonesTime=0;AudioDirector?.PlayerPain();}
         public void Evaded(float maneuverStart){if(!Training&&StageStats.Dodge(Mathf.RoundToInt(maneuverStart*10000))){Style.Defense(false);style=Style.Points;}}
         void TransformPlayer()=>TryTransformPlayer();
         void EndForm(bool present=true)
@@ -252,7 +252,7 @@ namespace Darklight
             }
             Sound(3);
         }
-        void UsePotion(){if(Progress.potions<=0){Notice("SEM ELIXIRES");return;}if(health.IsDead||health.HealthPercent>=1)return;Progress.potions--;health.Heal(health.MaxHealth*.45f);Sound(0);Notice("ELIXIR: +45% VIDA");SaveCheckpoint();}
+        void UsePotion(){if(Progress.potions<=0){Notice("SEM ELIXIRES");AudioDirector?.ActionDenied();return;}if(health.IsDead||health.HealthPercent>=1)return;Progress.potions--;health.Heal(health.MaxHealth*.45f);AudioDirector?.Delivered("PC05");Notice("ELIXIR: +45% VIDA");SaveCheckpoint();}
         void SelectSong(int index)
         {
             if(!Progress.mp3Unlocked){Notice("DESBLOQUEIE COM ICARO NOX NO CAPITULO 2");return;}
@@ -263,10 +263,10 @@ namespace Darklight
         public bool TryActivatePower()
         {
             if(Transforming)return false;
-            if(!Progress.mp3Unlocked){Notice("DESBLOQUEIE O MP3 COM ICARO NOX");return false;}
-            if(!Resonance.Ready||phonesTime>0){Notice("MODO EM RECARGA OU SEM ENERGIA");return false;}
+            if(!Progress.mp3Unlocked){Notice("DESBLOQUEIE O MP3 COM ICARO NOX");AudioDirector?.ActionDenied();return false;}
+            if(!Resonance.Ready||phonesTime>0){Notice("MODO EM RECARGA OU SEM ENERGIA");AudioDirector?.ActionDenied();return false;}
             if(lab.Player.Model.State==CombatState.Dead||lab.Player.Model.State==CombatState.Hurt)return false;
-            phonesTime=.28f;Notice("COLOCANDO FONES");return true;
+            phonesTime=.28f;AudioDirector?.Delivered("PW10");Notice("COLOCANDO FONES");return true;
         }
         void BeginResonance()
         {

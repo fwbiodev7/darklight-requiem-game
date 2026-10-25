@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqKatanaNormalLight1_S_SW_W-v2-source.png",
+  "imageSha256": "67dca8434d9abdcc847d595eb9b174e801e4b9d9c5376615644932e26360611a",
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "logicalNativeSize": null,
+  "pixelsPerUnit": 174.24242424242425,
+  "pixelsPerUnitStatus": "reference-consumer-value-not-imported",
+  "pivotStatus": "proposed-for-inspection-only",
+  "status": "candidate",
+  "wholeFigures": true,
+  "visualApproval": false,
+  "frames": [
+    {
+      "id": "v2_S_00",
+      "rect": [
+        0,
+        0,
+        359,
+        359
+      ],
+      "pivot": [
+        0.4958217270194986,
+        0.04178272980501396
+      ],
+      "durationMs": 55,
+      "action": "attackLight1",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation"
+    },
+    {
+      "id": "v2_S_01",
+      "rect": [
+        359,
+        0,
+        471,
+        359
+      ],
+      "pivot": [
+        0.554140127388535,
+        0.02228412256267409
+      ],
+      "durationMs": 75,
+      "action": "attackLight1",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact"
+    },
+    {
+      "id": "v2_S_02",
+      "rect": [
+        830,
+        0,
+        381,
+        359
+      ],
+      "pivot": [
+        0.4566929133858268,
+        0.01949860724233987
+      ],
+      "durationMs": 70,
+      "action": "attackLight1",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "follow-through"
+    },
+    {
+      "id": "v2_S_03",
+      "rect": [
+        1211,
+        0,
+        325,
+        359
+      ],
+      "pivot": [
+        0.5353846153846153,
+        0.02228412256267409
+      ],
+      "durationMs": 70,
+      "action": "attackLight1",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery"
+    },
+    {
+      "id": "v2_SW_00",
+      "rect": [
+        0,
+        359,
+        359,
+        324
+      ],
+      "pivot": [
+        0.48746518105849584,
+        0.02777777777777779
+      ],
+      "durationMs": 55,
+      "action": "attackLight1",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation"
+    },
+    {
+      "id": "v2_SW_01",
+      "rect": [
+        359,
+        359,
+        471,
+        324
+      ],
+      "pivot": [
+        0.5690021231422505,
+        0.06481481481481477
+      ],
+      "durationMs": 75,
+      "action": "attackLight1",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact"
+    },
+    {
+      "id": "v2_SW_02",
+      "rect": [
+        830,
+        359,
+        381,
+        324
+      ],
+      "pivot": [
+        0.49343832020997375,
+        0.04012345679012341
+      ],
+      "durationMs": 70,
+      "action": "attackLight1",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "follow-through"
+    },
+    {
+      "id": "v2_SW_03",
+      "rect": [
+        1211,
+        359,
+        325,
+        324
+      ],
+      "pivot": [
+        0.52,
+        0.04938271604938271
+      ],
+      "durationMs": 70,
+      "action": "attackLight1",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery"
+    },
+    {
+      "id": "v2_W_00",
+      "rect": [
+        0,
+        683,
+        359,
+        341
+      ],
+      "pivot": [
+        0.5153203342618384,
+        0.12023460410557185
+      ],
+      "durationMs": 55,
+      "action": "attackLight1",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation"
+    },
+    {
+      "id": "v2_W_01",
+      "rect": [
+        359,
+        683,
+        471,
+        341
+      ],
+      "pivot": [
+        0.6093418259023354,
+        0.14662756598240467
+      ],
+      "durationMs": 75,
+      "action": "attackLight1",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact"
+    },
+    {
+      "id": "v2_W_02",
+      "rect": [
+        830,
+        683,
+        381,
+        341
+      ],
+      "pivot": [
+        0.48293963254593175,
+        0.1407624633431085
+      ],
+      "durationMs": 70,
+      "action": "attackLight1",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "follow-through"
+    },
+    {
+      "id": "v2_W_03",
+      "rect": [
+        1211,
+        683,
+        325,
+        341
+      ],
+      "pivot": [
+        0.5692307692307692,
+        0.1378299120234604
+      ],
+      "durationMs": 70,
+      "action": "attackLight1",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery"
+    }
+  ],
+  "clips": [
+    {
+      "name": "attackLight1_S",
+      "frames": [
+        "v2_S_00",
+        "v2_S_01",
+        "v2_S_02",
+        "v2_S_03"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attackLight1_SW",
+      "frames": [
+        "v2_SW_00",
+        "v2_SW_01",
+        "v2_SW_02",
+        "v2_SW_03"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attackLight1_W",
+      "frames": [
+        "v2_W_00",
+        "v2_W_01",
+        "v2_W_02",
+        "v2_W_03"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "attackLight1_S",
+    "attackLight1_SW",
+    "attackLight1_W"
+  ],
+  "quality": {
+    "alphaThreshold": 200,
+    "maxHeightRatio": 1.5
+  }
+}

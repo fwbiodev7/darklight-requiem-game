@@ -1,0 +1,42 @@
+{
+  "result": "Succeeded",
+  "executable": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\redesign-armas-20261023\\Windows\\DarklightRequiem.exe",
+  "previousRedesignBuild": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\redesign-armas-20261023\\Windows-previous-20261025-233606-7c32f1",
+  "exception": "",
+  "editMode": {
+    "path": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\redesign-armas-20261025-retomada1850\\build-edit-tests.xml",
+    "sha256": "3c63c009788aa7c06b5b3d974ea1abd30c5a1cdfa1bfcfe0aa9263dbdafbd85e",
+    "endTimeUtc": "2026-10-25 23:32:25Z",
+    "passed": 60
+  },
+  "playMode": {
+    "path": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\redesign-armas-20261025-retomada1850\\build-play-tests.xml",
+    "sha256": "cc34ddcc898a40b3a11d24d25cfa9efc36d900d5da017699abeadd67e9f97990",
+    "endTimeUtc": "2026-10-25 23:35:20Z",
+    "passed": 15
+  },
+  "errors": 0,
+  "warnings": 3,
+  "redesignPages": 154,
+  "redesignSheets": 67,
+  "redesignFigures": 582,
+  "deliveredEffects": 19,
+  "totalAudioResources": 151,
+  "bytes": 1750386461,
+  "seconds": 522.4466119,
+  "redesignComplete": false,
+  "audioEnabledForInteractiveLaunch": true,
+  "automationSilent": true,
+  "audioAuditioned": false,
+  "autoRunPlayer": false,
+  "executableSha256": "44a9edd0c63b0b93957a2c2e09117072e377c53dcbd78f9134459320e8180abd",
+  "executableHeaderVerified": true,
+  "previousBuildPreserved": true,
+  "userRequestedBuild": true,
+  "playerLaunched": false,
+  "wholeCharacterFigures": 570,
+  "equipmentIconFigures": 12,
+  "motorcycleFiguresSeparate": 48,
+  "knownContextualAudioIssue": "PC04 failed earlier automated context test; PC06 contextual retest was not reached. Not a blocker for this requested test build.",
+  "buildGateScope": "60 EditMode and15 selected PlayMode cases all passed. The earlier contextual audio diagnostic is still open; it is not included in the delivery gate."
+}

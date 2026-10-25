@@ -33,3 +33,12 @@ O teste final `gameplay-final.xml` executou cinco casos: **quatro visuais aprova
 O reteste contextual de áudio falhou em **PC04: real context must start its voice**. Não houve voz/sinal de respiração; investigar tanto o estado real de vida preparado pelo teste quanto o disparador em runtime. PC06 não foi alcançado nesse reteste. Não alterar o WAV saudável por inferência. Arquivo: `audio/contextual-playback-retest.json`. Os17efeitos com DSP comprovado na rodada anterior permanecem válidos; não há certificação subjetiva de qualidade nem de música.
 
 Contagem sem duplicação:17casos distintos nesta rodada,16com aprovação e1falha contextual; os três casos Normais foram repetidos no fechamento. Não houve nova suíte EditMode nem nova build nesta etapa. As limitações anteriores permanecem.
+
+
+## Build de teste solicitada após o fechamento — 25/10,20h45
+
+Build Windows concluída com zero erros e três avisos,1.750.386.461bytes. Executável: `outputs/redesign-armas-20261023/Windows/DarklightRequiem.exe`. Build anterior preservada em `Windows-previous-20261025-233606-7c32f1`, na mesma pasta principal. Os nomes antigos das pastas não indicam a data desta compilação.
+
+Gate técnico renovado:60/60 EditMode e15/15 cenários PlayMode selecionados aprovados. Esta repetição foi exigida pelo construtor da build após mudança dos recursos. Catálogo154clips,570figuras de personagens+12ícones;48figuras da moto em banco separado.19novos SFX habilitados,151recursos de áudio totais. Executável não foi iniciado automaticamente; esta entrega não é teste da build jogada.
+
+A falha contextual PC04 anterior permanece aberta; PC06 não foi alcançado naquele diagnóstico. Os casos desse diagnóstico não fazem parte dos15cenários aprovados do gate de entrega. Não declarar áudio integralmente aprovado nem apagar a falha. O redesign global segue parcial. Recibos e XML em `outputs/redesign-armas-20261025-retomada1850`. A retomada automática já agendada às00h27 continua válida.

@@ -53,7 +53,7 @@
   "subjectiveAudioListeningCertified": false,
   "fullHumanCampaignCertified": false,
   "physicalControllerTested": false,
-  "newBuild": false,
+  "newBuild": true,
   "complete": false,
   "resumeUtc": "2026-10-26T03:27:32Z",
   "limits": [
@@ -61,5 +61,10 @@
     "DSP playback previously observed17/19 supplied effects, not a subjective sound-quality review.",
     "No fresh EditMode suite in this final round; prior valid tests retained without rerun.",
     "Normal remaining actions and motorcycle cycles, transformations, AI2.0, expansion and site remain pending."
-  ]
+  ],
+  "buildResult": "Succeeded",
+  "buildReport": "outputs/redesign-armas-20261025-retomada1850/build-result.json",
+  "buildEditPassed": 60,
+  "buildPlayPassed": 15,
+  "playerLaunched": false
 }

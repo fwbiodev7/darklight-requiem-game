@@ -1,3 +1,5 @@
+> Checkpoint mais recente: **FECHAMENTO-20261025-RETOMADA1850.md** e recibos em `outputs/redesign-armas-20261025-retomada1850`. Os estados anteriores abaixo são históricos; não repetir trabalho consolidado.
+
 # Concluídos e checkpoint — 25/10/2026
 
 **Atualizaçãoposterior:** lerprimeiro `FECHAMENTO-20261025-RETOMADA1350.md` e recibosdaretomada. Oestadoabaixoéodamanhã; retomada automáticaagora18h50.

@@ -16,7 +16,7 @@ namespace Darklight.Tests
 {
     // Real campaign render/consumer checks, deterministically stepping its combat
     // model while paused. These do not certify human input, physical controls or sound.
-    public sealed class DarklightWeaponRedesignGameplayTests
+    public sealed partial class DarklightWeaponRedesignGameplayTests
     {
         const string Folder="outputs/redesign-armas-20261023/unity-play";
         IDisposable storage;DarklightCampaign game;DarklightCombatLab lab;DarklightFighter fighter;

@@ -1,5 +1,11 @@
 # O Encapuzado — contrato narrativo e visual de25/10/2026
 
+## Novas referências recebidas na retomada18h50
+
+O usuário forneceu as duas folhas completas em `ArtSources/LuciusConcepts20261025/references/`: `hooded-navy-selected.png` é a referência escolhida do disfarce; `lucius-normal-gothic-prototype.png` é **protótipo sujeito à aprovação**, sem substituir as fontes canônicas anteriores. Contrato com hashes em `ArtSources/LuciusConcepts20261025/reference-contract.json`. Essas imagens permanecem somente locais, fora da publicação.
+
+Disfarce: manto quase preto/azul-marinho, capuz grande, rosto e cabelo ocultos, extremidades azuis. Protótipo Normal: cabelo prateado, olhos azuis, sobretudo preto/azul e espada grande nas costas; inspiração estética indicada pelo usuário, preservando identidade própria. Ambos precisam da mesma altura, anatomia, proporções, estilo e semelhança facial entre os irmãos gêmeos como Fabius canônico. Registrar após a etapa atual; não antecipar implementação nem a identidade secreta antes de Sangue do Abismo.
+
 Estado: **planejado, não implementado**. O usuário esclareceu expressamente que esta etapa começa após o redesign das armas e a implementação das artes dos últimos dois dias. Manter o trabalho atual das armas como prioridade. A introdução ocorre na campanha antes dos acontecimentos de Sangue do Abismo; a revelação pertence exclusivamente à expansão.
 
 ## Autoridades visuais fornecidas

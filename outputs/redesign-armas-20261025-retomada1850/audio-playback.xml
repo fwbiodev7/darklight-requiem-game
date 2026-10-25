@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-25 22:45:43Z" end-time="2026-10-25 22:46:33Z" duration="49,8557687">
+  <test-suite type="TestSuite" id="1282" name="DARKLIGHT REQUIEM" fullname="DARKLIGHT REQUIEM" runstate="Runnable" testcasecount="217" result="Passed" start-time="2026-10-25 22:45:43Z" end-time="2026-10-25 22:46:33Z" duration="49.855769" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1276" name="Darklight.PlayModeTests.dll" fullname="C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/Library/ScriptAssemblies/Darklight.PlayModeTests.dll" runstate="Runnable" testcasecount="217" result="Passed" start-time="2026-10-25 22:45:43Z" end-time="2026-10-25 22:46:33Z" duration="49.833426" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="26524" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1277" name="Darklight" fullname="Darklight" runstate="Runnable" testcasecount="217" result="Passed" start-time="2026-10-25 22:45:43Z" end-time="2026-10-25 22:46:33Z" duration="49.824355" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1278" name="Tests" fullname="Darklight.Tests" runstate="Runnable" testcasecount="217" result="Passed" start-time="2026-10-25 22:45:43Z" end-time="2026-10-25 22:46:33Z" duration="49.800566" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1060" name="DarklightWeaponRedesignGameplayTests" fullname="Darklight.Tests.DarklightWeaponRedesignGameplayTests" classname="Darklight.Tests.DarklightWeaponRedesignGameplayTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-25 22:45:43Z" end-time="2026-10-25 22:46:33Z" duration="49.793876" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1061" name="DeliveredEffectsUseTheActualPoolAndExposeDspOutput" fullname="Darklight.Tests.DarklightWeaponRedesignGameplayTests.DeliveredEffectsUseTheActualPoolAndExposeDspOutput" methodname="DeliveredEffectsUseTheActualPoolAndExposeDspOutput" classname="Darklight.Tests.DarklightWeaponRedesignGameplayTests" runstate="Runnable" seed="1237252345" result="Passed" start-time="2026-10-25 22:45:43Z" end-time="2026-10-25 22:46:33Z" duration="49.767415" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="Timeout" value="180000" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Usuario/AppData/LocalLow/Fabio/DARKLIGHT REQUIEM\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

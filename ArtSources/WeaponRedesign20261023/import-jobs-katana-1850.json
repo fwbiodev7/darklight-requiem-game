@@ -1,0 +1,847 @@
+{
+  "schemaVersion": 1,
+  "jobs": [
+    {
+      "name": "ReqKatanaNormalLeve2S_SW_W1850",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1850\\katana-normal\\ReqKatanaNormalLeve2S_SW_W-v1-source.png",
+      "preservedSourceName": "ReqKatanaNormalLeve2S_SW_W-v1-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Leve2",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RequiemAttackKatanaYoungCardinal_0",
+            "Today_RequiemAttackKatanaYoungCardinal_1",
+            "Today_RequiemAttackKatanaYoungCardinal_2",
+            "Today_RequiemAttackKatanaYoungCardinal_3"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "Leve2",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RequiemAttackKatanaYoungDiagonal_0",
+            "Today_RequiemAttackKatanaYoungDiagonal_1",
+            "Today_RequiemAttackKatanaYoungDiagonal_2",
+            "Today_RequiemAttackKatanaYoungDiagonal_3"
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "Leve2",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RequiemAttackKatanaYoungCardinal_4",
+            "Today_RequiemAttackKatanaYoungCardinal_5",
+            "Today_RequiemAttackKatanaYoungCardinal_6",
+            "Today_RequiemAttackKatanaYoungCardinal_7"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            226,
+            350
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "1": {
+          "anchor": [
+            600,
+            350
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "2": {
+          "anchor": [
+            983,
+            350
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "3": {
+          "anchor": [
+            1345,
+            350
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "4": {
+          "anchor": [
+            222,
+            668
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "5": {
+          "anchor": [
+            600,
+            668
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "6": {
+          "anchor": [
+            990,
+            675
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "7": {
+          "anchor": [
+            1342,
+            668
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "8": {
+          "anchor": [
+            226,
+            984
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "9": {
+          "anchor": [
+            614,
+            984
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "10": {
+          "anchor": [
+            988,
+            984
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "11": {
+          "anchor": [
+            1352,
+            984
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        }
+      }
+    },
+    {
+      "name": "ReqKatanaNormalLeve2NW_N_NE1850",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1850\\katana-normal\\ReqKatanaNormalLeve2NW_N_NE-selected-whole-figures-source.png",
+      "preservedSourceName": "ReqKatanaNormalLeve2NW_N_NE-selected-whole-figures-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "Leve2",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RequiemAttackKatanaYoungDiagonal_4",
+            "Today_RequiemAttackKatanaYoungDiagonal_5",
+            "Today_RequiemAttackKatanaYoungDiagonal_6",
+            "Today_RequiemAttackKatanaYoungDiagonal_7"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "Leve2",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RequiemAttackKatanaYoungCardinal_8",
+            "Today_RequiemAttackKatanaYoungCardinal_9",
+            "Today_RequiemAttackKatanaYoungCardinal_10",
+            "Today_RequiemAttackKatanaYoungCardinal_11"
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "Leve2",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RequiemAttackKatanaYoungDiagonal_8",
+            "Today_RequiemAttackKatanaYoungDiagonal_9",
+            "Today_RequiemAttackKatanaYoungDiagonal_10",
+            "Today_RequiemAttackKatanaYoungDiagonal_11"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            353,
+            354
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "1": {
+          "anchor": [
+            1034,
+            350
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "2": {
+          "anchor": [
+            1698,
+            347
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "3": {
+          "anchor": [
+            2314,
+            347
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "4": {
+          "anchor": [
+            323,
+            768
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "5": {
+          "anchor": [
+            1039,
+            762
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "6": {
+          "anchor": [
+            1690,
+            761
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "7": {
+          "anchor": [
+            2237,
+            763
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "8": {
+          "anchor": [
+            230,
+            1170
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "9": {
+          "anchor": [
+            890,
+            1167
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "10": {
+          "anchor": [
+            1530,
+            1170
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "11": {
+          "anchor": [
+            2179,
+            1168
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        }
+      }
+    },
+    {
+      "name": "ReqKatanaNormalLeve2E_SE1850",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1850\\katana-normal\\ReqKatanaNormalLeve2E_SE-selected-whole-figures-source.png",
+      "preservedSourceName": "ReqKatanaNormalLeve2E_SE-selected-whole-figures-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "Leve2",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RequiemAttackKatanaYoungCardinal_12",
+            "Today_RequiemAttackKatanaYoungCardinal_13",
+            "Today_RequiemAttackKatanaYoungCardinal_14",
+            "Today_RequiemAttackKatanaYoungCardinal_15"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "Leve2",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RequiemAttackKatanaYoungDiagonal_12",
+            "Today_RequiemAttackKatanaYoungDiagonal_13",
+            "Today_RequiemAttackKatanaYoungDiagonal_14",
+            "Today_RequiemAttackKatanaYoungDiagonal_15"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            367,
+            521
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "1": {
+          "anchor": [
+            985,
+            518
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "2": {
+          "anchor": [
+            1583,
+            523
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "3": {
+          "anchor": [
+            2177,
+            516
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "4": {
+          "anchor": [
+            227,
+            1123
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "5": {
+          "anchor": [
+            940,
+            1092
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "6": {
+          "anchor": [
+            1541,
+            1090
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "7": {
+          "anchor": [
+            2136,
+            1092
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        }
+      }
+    },
+    {
+      "name": "RockKatanaNormalLeve2S_SW_W1850",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1850\\katana-normal\\RockKatanaNormalLeve2S_SW_W-selected-whole-figures-source.png",
+      "preservedSourceName": "RockKatanaNormalLeve2S_SW_W-selected-whole-figures-source.png",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Leve2",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RockAttackKatanaYoung_0",
+            "Today_RockAttackKatanaYoung_1",
+            "Today_RockAttackKatanaYoung_2",
+            "Today_RockAttackKatanaYoung_3"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "Leve2",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RockAttackKatanaYoung_4",
+            "Today_RockAttackKatanaYoung_5",
+            "Today_RockAttackKatanaYoung_6",
+            "Today_RockAttackKatanaYoung_7"
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "Leve2",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RockAttackKatanaYoung_8",
+            "Today_RockAttackKatanaYoung_9",
+            "Today_RockAttackKatanaYoung_10",
+            "Today_RockAttackKatanaYoung_11"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            311,
+            353
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "1": {
+          "anchor": [
+            1017,
+            351
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "2": {
+          "anchor": [
+            1711,
+            347
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "3": {
+          "anchor": [
+            2228,
+            350
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "4": {
+          "anchor": [
+            220,
+            827
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "5": {
+          "anchor": [
+            960,
+            827
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "6": {
+          "anchor": [
+            1694,
+            823
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "7": {
+          "anchor": [
+            2219,
+            829
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "8": {
+          "anchor": [
+            293,
+            1337
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "9": {
+          "anchor": [
+            901,
+            1313
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "10": {
+          "anchor": [
+            1541,
+            1309
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "11": {
+          "anchor": [
+            2176,
+            1309
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        }
+      }
+    },
+    {
+      "name": "RockKatanaNormalLeve2NW_N_NE1850",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1850\\katana-normal\\RockKatanaNormalLeve2NW_N_NE-v1-source.png",
+      "preservedSourceName": "RockKatanaNormalLeve2NW_N_NE-v1-source.png",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "Leve2",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RockAttackKatanaYoung_12",
+            "Today_RockAttackKatanaYoung_13",
+            "Today_RockAttackKatanaYoung_14",
+            "Today_RockAttackKatanaYoung_15"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "Leve2",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RockAttackKatanaYoung_16",
+            "Today_RockAttackKatanaYoung_17",
+            "Today_RockAttackKatanaYoung_18",
+            "Today_RockAttackKatanaYoung_19"
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "Leve2",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RockAttackKatanaYoung_20",
+            "Today_RockAttackKatanaYoung_21",
+            "Today_RockAttackKatanaYoung_22",
+            "Today_RockAttackKatanaYoung_23"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            200,
+            326
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "1": {
+          "anchor": [
+            580,
+            326
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "2": {
+          "anchor": [
+            965,
+            326
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "3": {
+          "anchor": [
+            1335,
+            326
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "4": {
+          "anchor": [
+            200,
+            663
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "5": {
+          "anchor": [
+            580,
+            663
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "6": {
+          "anchor": [
+            965,
+            664
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "7": {
+          "anchor": [
+            1335,
+            663
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "8": {
+          "anchor": [
+            200,
+            993
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "9": {
+          "anchor": [
+            580,
+            993
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "10": {
+          "anchor": [
+            965,
+            993
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "11": {
+          "anchor": [
+            1335,
+            993
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        }
+      }
+    },
+    {
+      "name": "RockKatanaNormalLeve2E_SE1850",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1850\\katana-normal\\RockKatanaNormalLeve2E_SE-selected-whole-figures-source.png",
+      "preservedSourceName": "RockKatanaNormalLeve2E_SE-selected-whole-figures-source.png",
+      "skin": 1,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "Leve2",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RockAttackKatanaYoung_24",
+            "Today_RockAttackKatanaYoung_25",
+            "Today_RockAttackKatanaYoung_26",
+            "Today_RockAttackKatanaYoung_27"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "Leve2",
+          "loop": false,
+          "sourceSpriteNames": [
+            "Today_RockAttackKatanaYoung_28",
+            "Today_RockAttackKatanaYoung_29",
+            "Today_RockAttackKatanaYoung_30",
+            "Today_RockAttackKatanaYoung_31"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            435,
+            505
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "1": {
+          "anchor": [
+            1125,
+            504
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "2": {
+          "anchor": [
+            1758,
+            500
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "3": {
+          "anchor": [
+            2446,
+            500
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "4": {
+          "anchor": [
+            240,
+            1099
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "5": {
+          "anchor": [
+            881,
+            1097
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "6": {
+          "anchor": [
+            1570,
+            1089
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        },
+        "7": {
+          "anchor": [
+            2417,
+            1094
+          ],
+          "method": "Manual boot-support midpoint on complete source figure; +/-5-10px."
+        }
+      }
+    }
+  ]
+}

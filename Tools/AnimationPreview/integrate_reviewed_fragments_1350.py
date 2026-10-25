@@ -17,9 +17,15 @@ def digest(path):
 
 
 def main():
+    global OUT
     parser = argparse.ArgumentParser()
     parser.add_argument('--fragment', type=Path, action='append', required=True)
+    parser.add_argument('--out', type=Path)
     args = parser.parse_args()
+    if args.out:
+        OUT=args.out.resolve()
+        if not OUT.is_relative_to(ROOT.resolve()):
+            raise ValueError('Integration output must stay in this workspace')
     copied, fragments = [], []
     for fragment_path in args.fragment:
         fragment = json.loads(fragment_path.read_text(encoding='utf-8'))
@@ -27,7 +33,7 @@ def main():
             name = Path(page['resourcePath']).name
             if page['status'] != 'visual-reviewed' or not page['wholeFigures']:
                 raise ValueError('Unreviewed context: ' + page['id'])
-            candidates = [fragment_path.parent / (name + '.json'), fragment_path.parent / 'packed' / (name + '.json')]
+            candidates = [fragment_path.parent / (name + '.json'), fragment_path.parent / 'packed' / (name + '.json'), RES / (name + '.json')]
             descriptor = next((path for path in candidates if path.is_file()), None)
             if descriptor is None:
                 raise FileNotFoundError('Missing staged descriptor: ' + name)

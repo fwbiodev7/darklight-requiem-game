@@ -1,5 +1,9 @@
 # Checkpoint da retomada13h50 — 25/10/2026
 
+## Referência de Lucius atualizada após o fechamento
+
+O usuário enviou `Folha de Sprites do Guerreiro Prateado.png` e pediu usar esta versão. Nova autoridade visual de **Lucius Normal**: `ArtSources/LuciusPreview20261025/references/lucius-normal-user-selected.png`, com hash/dimensões em `reference-contract.json` na pasta superior. Esta seleção supera o pedido anterior de refazer a préviaV1 rejeitada: partir desta nova folha para preparação e comparação com Fabius. A aprovação é do design, sem certificar direções/ciclos/escala/importação. Conferir altura, corpo e semblante lado a lado com Fabius; preservar cabelo prateado curto, olhos azuis e traje preto/azul. Sem nova geração ou integração nesta rodada encerrada.
+
 Nova retomada única confirmada **hoje18h50 America/Sao_Paulo**, mesmochat/automação. Pedido de encerrar por7%após limiar15%. Prioridade: **Normal Réquiem eRock com todas armas/ações → transformações → Lucius**. MotoexclusivaRock. Semnovasgerações.
 
 ## Arte selecionada/consolidada nesta rodada

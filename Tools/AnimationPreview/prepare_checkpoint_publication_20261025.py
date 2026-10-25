@@ -37,6 +37,11 @@ def main():
     extras.update(p.relative_to(ROOT).as_posix() for p in (ROOT / 'ArtSources/WeaponRedesign20261025/references').glob('*.png'))
     extras.update('outputs/redesign-armas-20261025-retomada1350/' + name for name in (
         'coverage.json', 'final-validation.json', 'focused-edit-tests.xml', 'integration-preparation.json'))
+    current = ROOT / 'outputs/redesign-armas-20261025-retomada1850'
+    extras.update(p.relative_to(ROOT).as_posix() for p in current.glob('*.json'))
+    extras.update(p.relative_to(ROOT).as_posix() for p in current.glob('*.xml'))
+    extras.update(p.relative_to(ROOT).as_posix() for p in (current / 'audio').glob('*.json'))
+    extras.update(p.relative_to(ROOT).as_posix() for p in (current / 'gameplay').glob('*.json'))
     extras.update('outputs/redesign-armas-20261025/' + name for name in (
         'coverage.json', 'reference-contract.json', 'consolidation.json', 'eight-direction-idle-matrix.json',
         'final-import.json', 'focused-edit-tests.xml'))

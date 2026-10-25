@@ -1,4 +1,8 @@
+> Checkpoint mais recente: **FECHAMENTO-20261025-RETOMADA1850.md** e recibos em `outputs/redesign-armas-20261025-retomada1850`. Os estados anteriores abaixo são históricos; não repetir trabalho consolidado.
+
 # Pendências — 25/10/2026
+
+**Adendo de Lucius após o fechamento:** o usuário selecionou a nova folha `ArtSources/LuciusPreview20261025/references/lucius-normal-user-selected.png`. Usar esse design Normal na retomada das18h50; ele supera o pedido de refazer a préviaV1 antiga. Conferir escala/altura/semelhança com Fabius e direções/ciclos antes de integrar. Não confundir seleção do design com sprite sheet completa ou importada.
 
 ## Último checkpoint — retomada13h50 encerrada
 

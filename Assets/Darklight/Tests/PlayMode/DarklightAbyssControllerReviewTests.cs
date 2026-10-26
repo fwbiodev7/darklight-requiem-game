@@ -10,7 +10,7 @@ namespace Darklight.Tests
 {
     public sealed partial class DarklightAbyssPrototypeTests
     {
-        const string ControllerReview="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/avaliacao-video-20261016/";
+        static string ControllerReview => DarklightTestOutput.GetDirectory("avaliacao-video-20261016");
         [UnityTest]public IEnumerator DefaultControllerSeparatesDriftFromMountedSlamInEveryForm()
         {
             var pad=InputSystem.AddDevice<Gamepad>();var previous=lab.Input.Asset.SaveBindingOverridesAsJson();int rate=Time.captureFramerate;

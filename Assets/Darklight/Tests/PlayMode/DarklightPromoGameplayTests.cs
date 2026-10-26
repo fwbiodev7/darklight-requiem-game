@@ -11,7 +11,7 @@ namespace Darklight.Tests
 {
     public sealed partial class DarklightAbyssPrototypeTests
     {
-        const string Promo="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/promocional-20261016/final/";
+        static string Promo => DarklightTestOutput.GetDirectory("promocional-20261016/final");
         Keyboard promoKeys;Gamepad promoPad;int promoFrame;List<string> promoShots=new();
         void PromoInput(params Key[] keys)
         {

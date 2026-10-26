@@ -11,7 +11,7 @@ namespace Darklight.Tests
 {
     public sealed partial class DarklightAbyssPrototypeTests
     {
-        const string Film="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/trailer-20261016/";
+        static string Film => DarklightTestOutput.GetDirectory("trailer-20261016");
         Keyboard filmKeys;int filmFrame;List<string> filmShots=new();
         void FilmInput(params Key[] keys)=>InputSystem.QueueStateEvent(filmKeys,new KeyboardState(keys));
         void FilmFrame()

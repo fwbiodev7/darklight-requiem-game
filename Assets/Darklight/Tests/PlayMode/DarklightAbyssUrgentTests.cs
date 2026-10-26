@@ -15,7 +15,7 @@ namespace Darklight.Tests
 {
     public sealed class DarklightAbyssUrgentTests
     {
-        const string Root="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/cavaleiro-sprites-20261015/";
+        static string Root => DarklightTestOutput.GetDirectory("cavaleiro-sprites-20261015");
         DarklightCampaign game;DarklightCombatLab lab;DarklightFighter fighter;Rigidbody2D body;Gamepad pad;Mouse mouse;GameObject wall;
         string bindings;
         static void Call(object target,string name,params object[] args)=>target.GetType().GetMethod(name,BindingFlags.Instance|BindingFlags.NonPublic).Invoke(target,args);

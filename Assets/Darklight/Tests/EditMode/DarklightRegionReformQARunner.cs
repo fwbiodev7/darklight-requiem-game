@@ -5,7 +5,7 @@ namespace Darklight.Tests
 {
     [InitializeOnLoad]public static class DarklightRegionReformQARunner
     {
-        const string Work="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/mapas-reforma-20261015/";
+        static string Work => DarklightTestOutput.GetDirectory("mapas-reforma-20261015");
         static DarklightRegionReformQARunner(){EditorApplication.update+=Watch;}
         static void Watch()
         {

@@ -6,7 +6,7 @@ namespace Darklight.Tests
     [InitializeOnLoad]public static class DarklightOverhaulQARunner
     {
         static TestRunnerApi api;
-        const string Work="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/combat-overhaul-20261015/";
+        static string Work => DarklightTestOutput.GetDirectory("combat-overhaul-20261015");
         static DarklightOverhaulQARunner(){EditorApplication.update+=Watch;}
         static void Watch()
         {

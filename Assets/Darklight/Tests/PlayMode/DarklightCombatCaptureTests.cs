@@ -8,7 +8,7 @@ namespace Darklight.Tests
 {
     public sealed class DarklightCombatCaptureTests
     {
-        const string Folder="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/combat-overhaul-20261015/captures/";
+        static string Folder => DarklightTestOutput.GetDirectory("combat-overhaul-20261015/captures");
         static void Capture(string name)
         {
             Directory.CreateDirectory(Folder);var lab=DarklightCombatLab.Instance;var canvas=lab.PixelHUD.canvas;

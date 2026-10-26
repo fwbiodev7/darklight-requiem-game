@@ -12,16 +12,33 @@ namespace Darklight.Tests
 {
     public sealed class DarklightSoloTransformationTests
     {
-        const string Output="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/remaster-prototype-20261014/solo/";
+        static string Output => DarklightTestOutput.GetDirectory("remaster-prototype-20261014/solo");
         [Serializable] class HeightProof{public int skin,form;public float normal,transformed;}
         [Serializable] class Proof{public string status;public int frames;public bool pipelineRestored;public List<HeightProof> heights=new();}
-        static object Call(string method,params object[] args)=>Type.GetType("Darklight.Editor.RemasterPrototype, Darklight.Editor").GetMethod(method,BindingFlags.Public|BindingFlags.Static).Invoke(null,args);
+        static Type remasterType;
+        static Type RemasterType => remasterType ??= Type.GetType("Darklight.Editor.RemasterPrototype, Darklight.Editor");
+        static bool HasRemaster => RemasterType != null;
+        static object Call(string method, params object[] args)
+        {
+            var type = RemasterType;
+            if (type == null)
+                throw new InvalidOperationException("Darklight.Editor.RemasterPrototype is not available in standalone player builds.");
+            var m = type.GetMethod(method, BindingFlags.Public | BindingFlags.Static);
+            if (m == null)
+                throw new MissingMethodException("Darklight.Editor.RemasterPrototype", method);
+            return m.Invoke(null, args);
+        }
         static void Capture(RenderTexture target,Texture2D image,string name)
         {
             var previous=RenderTexture.active;try{RenderTexture.active=target;image.ReadPixels(new Rect(0,0,target.width,target.height),0,0);image.Apply();File.WriteAllBytes(Output+name,image.EncodeToPNG());}finally{RenderTexture.active=previous;}
         }
         [UnityTest]public IEnumerator SoloFormsHaveNormalHeightAndCompleteTransitionEndpoints()
         {
+            if (!HasRemaster)
+            {
+                Assert.Ignore("DarklightSoloTransformationTests requires Darklight.Editor.RemasterPrototype, which is only compiled inside the Unity Editor.");
+                yield break;
+            }
             Directory.CreateDirectory(Output);DarklightAutomation.Silent=true;AudioListener.volume=0;
             var result=new Proof{status="RUNNING"};
             yield return SceneManager.LoadSceneAsync("Assets/Darklight/Scenes/DarklightCampaign.unity");yield return null;yield return null;

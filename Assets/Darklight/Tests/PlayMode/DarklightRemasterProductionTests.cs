@@ -11,7 +11,7 @@ namespace Darklight.Tests
 {
     public sealed class DarklightRemasterProductionTests
     {
-        const string Output="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/remaster-production-20261014/captures/";
+        static string Output => DarklightTestOutput.GetDirectory("remaster-production-20261014/captures");
         static void Invoke(object target,string name,params object[] args)=>target.GetType().GetMethod(name,BindingFlags.NonPublic|BindingFlags.Instance).Invoke(target,args);
         static void Capture(Camera camera,string name)
         {

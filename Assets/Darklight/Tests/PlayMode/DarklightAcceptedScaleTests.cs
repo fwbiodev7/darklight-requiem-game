@@ -9,7 +9,7 @@ namespace Darklight.Tests
     {
         [UnityTest]public IEnumerator CaptureAcceptedLiftAtTheStandingCharacterScaleInGameplay()
         {
-            const string folder="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/cavaleiro-final-20261016/anatomy-correction/gameplay/";
+            static string folder => DarklightTestOutput.GetDirectory("cavaleiro-final-20261016/anatomy-correction/gameplay");
             Directory.CreateDirectory(folder);var view=fighter.GetComponent<DarklightCharacterView>();var art=fighter.transform.Find("FabioVisual").GetComponent<SpriteRenderer>();
             foreach(var enemy in game.MapEnemies){enemy.enabled=false;enemy.transform.position=(Vector3)game.Map.Spawn+Vector3.right*6;enemy.GetComponent<Rigidbody2D>().position=enemy.transform.position;}
             fighter.Model.Tick(.01f,new CombatInput{aim=Vector2.down});view.Present(fighter.Model,Vector2.zero);Call(view,"LateUpdate");

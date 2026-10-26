@@ -1,1 +1,22 @@
-{"name":"Darklight.EditModeTests","references":["Darklight.Runtime","Unity.InputSystem","Unity.InputSystem.TestFramework","UnityEngine.TestRunner","UnityEditor.TestRunner"],"includePlatforms":["Editor"],"overrideReferences":true,"precompiledReferences":["nunit.framework.dll"],"autoReferenced":false,"defineConstraints":["UNITY_INCLUDE_TESTS"]}
+{
+    "name": "Darklight.EditModeTests",
+    "references": [
+        "Darklight.Runtime",
+        "Unity.InputSystem",
+        "Unity.InputSystem.TestFramework",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "Darklight.Tests.Common"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ]
+}

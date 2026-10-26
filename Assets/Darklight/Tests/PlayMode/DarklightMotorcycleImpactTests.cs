@@ -66,7 +66,7 @@ namespace Darklight.Tests
         }
         [UnityTest]public IEnumerator CaptureMotorcycleImpactInRealGameplayAcrossFourForms()
         {
-            const string root="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/cavaleiro-final-20261016/impact-captures/";
+            static string root => DarklightTestOutput.GetDirectory("cavaleiro-final-20261016/impact-captures");
             var keys=InputSystem.AddDevice<Keyboard>();string bindings=lab.Input.Asset.SaveBindingOverridesAsJson();int oldRate=Time.captureFramerate;
             try
             {

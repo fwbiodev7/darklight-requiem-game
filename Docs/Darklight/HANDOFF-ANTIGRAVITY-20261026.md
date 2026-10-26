@@ -1,4 +1,4 @@
-﻿# HANDOFF ANTIGRAVITY — 26/10/2026
+# HANDOFF ANTIGRAVITY — 26/10/2026
 
 **Documento de transferência para o Codex**
 
@@ -23,7 +23,7 @@
 
 | Hash | Descrição | Arquivos |
 |---|---|---|
-| *(em andamento)* | Auditoria inicial, handoff e redução de escopo | Docs/ |
+| 594dbd6 | docs: auditoria inicial do clone, handoff e proposta de reducao de escopo | Docs/Darklight/ |
 
 ## 4. Estado do Clone vs Fechamento de 26/10
 

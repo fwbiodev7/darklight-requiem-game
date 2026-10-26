@@ -1,4 +1,4 @@
-﻿# REDUÇÃO DE ESCOPO — PROPOSTA ANTIGRAVITY 26/10/2026
+# REDUÇÃO DE ESCOPO — PROPOSTA ANTIGRAVITY 26/10/2026
 
 **Status: PROPOSTA — requer aprovação humana antes de implementação**
 

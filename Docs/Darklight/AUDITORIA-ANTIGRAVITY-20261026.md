@@ -1,4 +1,4 @@
-﻿# AUDITORIA DO CLONE — ANTIGRAVITY 26/10/2026
+# AUDITORIA DO CLONE — ANTIGRAVITY 26/10/2026
 
 ## 1. Repositório e Branch
 
@@ -93,10 +93,10 @@ Disponíveis no clone:
 ## 6. Outputs (Relatórios de Produção)
 
 - expansao-20261023/ — testes e QA da expansão aérea
-- edesign-armas-20261023/ — redesign original
-- edesign-armas-20261025/ — coverage.json com catálogo parcial
-- edesign-armas-20261025-retomada1350/ — checkpoint 13h50
-- edesign-armas-20261025-retomada1850/ — checkpoint 18h50
+- redesign-armas-20261023/ — redesign original
+- redesign-armas-20261025/ — coverage.json com catálogo parcial
+- redesign-armas-20261025-retomada1350/ — checkpoint 13h50
+- redesign-armas-20261025-retomada1850/ — checkpoint 18h50
 
 ## 7. Conflitos AGENTS.md vs Contrato Canônico Atual
 

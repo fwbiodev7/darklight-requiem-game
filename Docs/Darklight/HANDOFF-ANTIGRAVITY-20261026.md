@@ -24,6 +24,8 @@
 | Hash | Descrição | Arquivos |
 |---|---|---|
 | 594dbd6 | docs: auditoria inicial do clone, handoff e proposta de reducao de escopo | Docs/Darklight/ |
+| 16ea19 | docs: normalizar encoding UTF-8 sem BOM e registrar commit 594dbd6 no handoff | Docs/Darklight/ |
+| 17fe8c6 | docs: auditorias de fontes canonicas, dependencias da moto e lacunas de teste (Etapa B) | Docs/Darklight/ |
 
 ## 4. Estado do Clone vs Fechamento de 26/10
 

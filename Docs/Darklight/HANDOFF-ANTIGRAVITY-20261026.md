@@ -15,16 +15,22 @@
 
 ## 2. Documentos Criados
 
-- `Docs/Darklight/AUDITORIA-ANTIGRAVITY-20261026.md` — auditoria completa do clone
-- `Docs/Darklight/HANDOFF-ANTIGRAVITY-20261026.md` — este documento
-- `Docs/Darklight/REDUCAO-ESCOPO-ANTIGRAVITY-20261026.md` — proposta de simplificação
+- Docs/Darklight/AUDITORIA-ANTIGRAVITY-20261026.md — auditoria completa do clone
+- Docs/Darklight/HANDOFF-ANTIGRAVITY-20261026.md — este documento de transferencia e handoff
+- Docs/Darklight/REDUCAO-ESCOPO-ANTIGRAVITY-20261026.md — proposta analitica de reducao de escopo
+- Docs/Darklight/AUDITORIA-FONTES-ARTISTICAS-20261026.md — auditoria detalhada de fontes canonicas (Katana, Punhos, Moto)
+- Docs/Darklight/MAPEAMENTO-DEPENDENCIAS-OBSOLETOS-20261026.md — mapeamento de dependencias, acoplamentos a Rock e analise de scripts de captura
+- Docs/Darklight/AUDITORIA-TESTES-E-REGRESSOES-20261026.md — auditoria de testes (29 hardcoded paths, reflection coupling, lacunas Moto-Requiem)
+- Docs/Darklight/PREPARO-TECNICO-MOTO-REQUIEM-20261026.md — especificacao tecnica do desacoplamento de Requiem na moto
+- Docs/Darklight/STATUS-CAMINHADA-KATANA-20261026.md — registro formal de suspensao e especificacao de caminhada Katana SW/W
+- Docs/Darklight/PROPOSTA-PORTABILIDADE-TESTES-20261026.md — solucao portavel para os 29 caminhos absolutos em testes
 
 ## 3. Commits Gerados
 
 | Hash | Descrição | Arquivos |
 |---|---|---|
 | 594dbd6 | docs: auditoria inicial do clone, handoff e proposta de reducao de escopo | Docs/Darklight/ |
-| 16ea19 | docs: normalizar encoding UTF-8 sem BOM e registrar commit 594dbd6 no handoff | Docs/Darklight/ |
+| b16ea19 | docs: normalizar encoding UTF-8 sem BOM e registrar commit 594dbd6 no handoff | Docs/Darklight/ |
 | 17fe8c6 | docs: auditorias de fontes canonicas, dependencias da moto e lacunas de teste (Etapa B) | Docs/Darklight/ |
 
 ## 4. Estado do Clone vs Fechamento de 26/10

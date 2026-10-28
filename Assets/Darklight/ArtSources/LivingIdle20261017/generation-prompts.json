@@ -1,0 +1,1164 @@
+{
+  "normal": [
+    {
+      "id": "idle-vivo-requiem-cardinais",
+      "skin": "requiem",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "DARKLIGHT: REQUIEM production WHOLE CHARACTER IDLE animation atlas. Reference1 is the user's immutable ORIGINAL FÁBIO design (TOP figure Requiem, BOTTOM figure Rock). Reference2 is the currently used eight-view idle atlas of this exact skin, useful for camera/weapon handedness/orientation, NOT permission to change identity. Generate ONLY REQUIEM skin, the same original adult face, brown wavy hair, compact boots, exact head/torso/thigh/shin proportions and strong arms. REQUIEM = long-sleeved black leather long coat, lapels and shoulder studs, plain black shirt, black pants, silver hip chain. Absolutely never sleeveless.\nExactly SIX COLUMNS x FOUR ROWS, 24 WHOLE figure frames, generous transparent gutters, output landscape 1536x1024 if possible. Every row is one DIRECTION, every column one phase. ROW1 SOUTH/front, ROW2 WEST/left side, ROW3 NORTH/back, ROW4 EAST/right side. Interpret WEST/EAST as character facing the left/right edge of the image, not viewer's right/left. Back views MUST show the back of the head and clothing, never a face painted on the back. Proper RPG top-down camera consistent with reference2, no isometric.\nEvery phase: full character AND full identical crimson-edged katana held in original RIGHT hand. Do not mirror asymmetric chain, wrist details or handedness. Exactly two arms/two legs, both hands anatomically coherent, all hair, coat/vest and boots intact in each whole frame. Feet planted at the SAME baseline and x-position within that row, NO leg length, body scale, camera, head size or framing changes.\nSix chronological phases per row:\ncol1 neutral exhaled stance, original reference pose;\ncol2 subtle inhalation at chest and shoulders, slight hair/cloth lift;\ncol3 breath apex, small coherent hair-tip/coat-hem movement;\ncol4 gentle exhale and settling fabric;\ncol5 return toward original neutral stance, calm open eyes;\ncol6 a SINGLE NATURAL BLINK, eyes softly CLOSED in views where eyes are visible, otherwise same back-view body with slight hair settle. Cols1-5 EYES OPEN in visible faces, col6 CLOSED. Mouth remains natural and closed, not speaking.\nThis is tiny natural idle movement, NOT attacks, not dancing, no walking, no dramatic sword gesture, no fatigue, no death. Original katana geometry and arm length remain consistent; chest breathing must not enlarge/shrink the full body. Detailed clean approved pixel-sprite language, crisp square pixel clusters, not generic anime/3D/plastic. No new belts, accessories, capes or sheaths.\nReal transparent RGBA background with alpha, no printed checkerboard, solid backdrop, floor, shadow, aura, text, labels, grid or watermark. Each of the 24 FULL figures isolated inside its own cell, no figure/weapon touching adjacent cells. Do not assemble characters from detached body parts. Keep original approved design EXACTLY.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RequiemIdleKatanaYoung.png"
+      ],
+      "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-requiem-cardinais-margens-v4.png",
+      "previousOutput": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-cardinais.png",
+      "paddingCorrection": {
+        "prompt": "Correct the sprite atlas framing. Preserve the supplied 24 whole characters EXACTLY, their existing pixel body scale, original compact leg/head proportions, outfit and form colors. SIX columns, FOUR rows. THIRD ROW ONLY (the six back-facing NORTH figures): reposition ALL SIX COMPLETE FIGURES forty (40) pixels to the LEFT, leaving the full rightmost katana tip clearly inside the canvas with at least 20 pixels of transparent space at the right edge. The current last North katana tip is clipped. Regenerate the six COMPLETE north figures intact, including both arms, both boots, entire hair and full one right-hand sword, positioned 40px left. First north figure has space on its left for this shift. Do not change the other three rows. Same 1536x1024 canvas. No head, body, weapon or limbs assembled separately. ROCK if present has sleeveless vest, skull shirt, black pants and NO cloth below waist, NO sash or ribbons. Transparent background alpha, no labels, no extra weapons, no backdrop.",
+        "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-c02df8fc-01db-464c-8693-838c90c62a8e.png",
+        "tool": "integrated imagegen"
+      }
+    },
+    {
+      "id": "idle-vivo-requiem-diagonais",
+      "skin": "requiem",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "DARKLIGHT: REQUIEM production WHOLE CHARACTER IDLE animation atlas. Reference1 is the user's immutable ORIGINAL FÁBIO design (TOP figure Requiem, BOTTOM figure Rock). Reference2 is the currently used eight-view idle atlas of this exact skin, useful for camera/weapon handedness/orientation, NOT permission to change identity. Generate ONLY REQUIEM skin, the same original adult face, brown wavy hair, compact boots, exact head/torso/thigh/shin proportions and strong arms. REQUIEM = long-sleeved black leather long coat, lapels and shoulder studs, plain black shirt, black pants, silver hip chain. Absolutely never sleeveless.\nExactly SIX COLUMNS x FOUR ROWS, 24 WHOLE figure frames, generous transparent gutters, output landscape 1536x1024 if possible. Every row is one DIRECTION, every column one phase. ROW1 SOUTHWEST/front-left 45deg, ROW2 NORTHWEST/back-left 45deg, ROW3 NORTHEAST/back-right 45deg, ROW4 SOUTHEAST/front-right 45deg. Interpret WEST/EAST as character facing the left/right edge of the image, not viewer's right/left. Back views MUST show the back of the head and clothing, never a face painted on the back. Proper RPG top-down camera consistent with reference2, no isometric.\nEvery phase: full character AND full identical crimson-edged katana held in original RIGHT hand. Do not mirror asymmetric chain, wrist details or handedness. Exactly two arms/two legs, both hands anatomically coherent, all hair, coat/vest and boots intact in each whole frame. Feet planted at the SAME baseline and x-position within that row, NO leg length, body scale, camera, head size or framing changes.\nSix chronological phases per row:\ncol1 neutral exhaled stance, original reference pose;\ncol2 subtle inhalation at chest and shoulders, slight hair/cloth lift;\ncol3 breath apex, small coherent hair-tip/coat-hem movement;\ncol4 gentle exhale and settling fabric;\ncol5 return toward original neutral stance, calm open eyes;\ncol6 a SINGLE NATURAL BLINK, eyes softly CLOSED in views where eyes are visible, otherwise same back-view body with slight hair settle. Cols1-5 EYES OPEN in visible faces, col6 CLOSED. Mouth remains natural and closed, not speaking.\nThis is tiny natural idle movement, NOT attacks, not dancing, no walking, no dramatic sword gesture, no fatigue, no death. Original katana geometry and arm length remain consistent; chest breathing must not enlarge/shrink the full body. Detailed clean approved pixel-sprite language, crisp square pixel clusters, not generic anime/3D/plastic. No new belts, accessories, capes or sheaths.\nReal transparent RGBA background with alpha, no printed checkerboard, solid backdrop, floor, shadow, aura, text, labels, grid or watermark. Each of the 24 FULL figures isolated inside its own cell, no figure/weapon touching adjacent cells. Do not assemble characters from detached body parts. Keep original approved design EXACTLY.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RequiemIdleKatanaYoung.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais-v2.png"
+    },
+    {
+      "id": "idle-vivo-rock-cardinais",
+      "skin": "rock",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "DARKLIGHT: REQUIEM production WHOLE CHARACTER IDLE animation atlas. Reference1 is the user's immutable ORIGINAL FÁBIO design (TOP figure Requiem, BOTTOM figure Rock). Reference2 is the currently used eight-view idle atlas of this exact skin, useful for camera/weapon handedness/orientation, NOT permission to change identity. Generate ONLY ROCK skin, the same original adult face, brown wavy hair, compact boots, exact head/torso/thigh/shin proportions and strong arms. ROCK = sleeveless studded leather vest, original skull shirt, muscular bare arms, wrist cuffs, black pants, silver hip chain. No long sleeves, no coat.\nExactly SIX COLUMNS x FOUR ROWS, 24 WHOLE figure frames, generous transparent gutters, output landscape 1536x1024 if possible. Every row is one DIRECTION, every column one phase. ROW1 SOUTH/front, ROW2 WEST/left side, ROW3 NORTH/back, ROW4 EAST/right side. Interpret WEST/EAST as character facing the left/right edge of the image, not viewer's right/left. Back views MUST show the back of the head and clothing, never a face painted on the back. Proper RPG top-down camera consistent with reference2, no isometric.\nEvery phase: full character AND full identical crimson-edged katana held in original RIGHT hand. Do not mirror asymmetric chain, wrist details or handedness. Exactly two arms/two legs, both hands anatomically coherent, all hair, coat/vest and boots intact in each whole frame. Feet planted at the SAME baseline and x-position within that row, NO leg length, body scale, camera, head size or framing changes.\nSix chronological phases per row:\ncol1 neutral exhaled stance, original reference pose;\ncol2 subtle inhalation at chest and shoulders, slight hair/cloth lift;\ncol3 breath apex, small coherent hair-tip/coat-hem movement;\ncol4 gentle exhale and settling fabric;\ncol5 return toward original neutral stance, calm open eyes;\ncol6 a SINGLE NATURAL BLINK, eyes softly CLOSED in views where eyes are visible, otherwise same back-view body with slight hair settle. Cols1-5 EYES OPEN in visible faces, col6 CLOSED. Mouth remains natural and closed, not speaking.\nThis is tiny natural idle movement, NOT attacks, not dancing, no walking, no dramatic sword gesture, no fatigue, no death. Original katana geometry and arm length remain consistent; chest breathing must not enlarge/shrink the full body. Detailed clean approved pixel-sprite language, crisp square pixel clusters, not generic anime/3D/plastic. No new belts, accessories, capes or sheaths.\nReal transparent RGBA background with alpha, no printed checkerboard, solid backdrop, floor, shadow, aura, text, labels, grid or watermark. Each of the 24 FULL figures isolated inside its own cell, no figure/weapon touching adjacent cells. Do not assemble characters from detached body parts. Keep original approved design EXACTLY.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RockIdleKatanaYoung.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-cardinais.png"
+    },
+    {
+      "id": "idle-vivo-rock-diagonais",
+      "skin": "rock",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "DARKLIGHT: REQUIEM production WHOLE CHARACTER IDLE animation atlas. Reference1 is the user's immutable ORIGINAL FÁBIO design (TOP figure Requiem, BOTTOM figure Rock). Reference2 is the currently used eight-view idle atlas of this exact skin, useful for camera/weapon handedness/orientation, NOT permission to change identity. Generate ONLY ROCK skin, the same original adult face, brown wavy hair, compact boots, exact head/torso/thigh/shin proportions and strong arms. ROCK = sleeveless studded leather vest, original skull shirt, muscular bare arms, wrist cuffs, black pants, silver hip chain. No long sleeves, no coat.\nExactly SIX COLUMNS x FOUR ROWS, 24 WHOLE figure frames, generous transparent gutters, output landscape 1536x1024 if possible. Every row is one DIRECTION, every column one phase. ROW1 SOUTHWEST/front-left 45deg, ROW2 NORTHWEST/back-left 45deg, ROW3 NORTHEAST/back-right 45deg, ROW4 SOUTHEAST/front-right 45deg. Interpret WEST/EAST as character facing the left/right edge of the image, not viewer's right/left. Back views MUST show the back of the head and clothing, never a face painted on the back. Proper RPG top-down camera consistent with reference2, no isometric.\nEvery phase: full character AND full identical crimson-edged katana held in original RIGHT hand. Do not mirror asymmetric chain, wrist details or handedness. Exactly two arms/two legs, both hands anatomically coherent, all hair, coat/vest and boots intact in each whole frame. Feet planted at the SAME baseline and x-position within that row, NO leg length, body scale, camera, head size or framing changes.\nSix chronological phases per row:\ncol1 neutral exhaled stance, original reference pose;\ncol2 subtle inhalation at chest and shoulders, slight hair/cloth lift;\ncol3 breath apex, small coherent hair-tip/coat-hem movement;\ncol4 gentle exhale and settling fabric;\ncol5 return toward original neutral stance, calm open eyes;\ncol6 a SINGLE NATURAL BLINK, eyes softly CLOSED in views where eyes are visible, otherwise same back-view body with slight hair settle. Cols1-5 EYES OPEN in visible faces, col6 CLOSED. Mouth remains natural and closed, not speaking.\nThis is tiny natural idle movement, NOT attacks, not dancing, no walking, no dramatic sword gesture, no fatigue, no death. Original katana geometry and arm length remain consistent; chest breathing must not enlarge/shrink the full body. Detailed clean approved pixel-sprite language, crisp square pixel clusters, not generic anime/3D/plastic. No new belts, accessories, capes or sheaths.\nReal transparent RGBA background with alpha, no printed checkerboard, solid backdrop, floor, shadow, aura, text, labels, grid or watermark. Each of the 24 FULL figures isolated inside its own cell, no figure/weapon touching adjacent cells. Do not assemble characters from detached body parts. Keep original approved design EXACTLY.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RockIdleKatanaYoung.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-diagonais.png"
+    },
+    {
+      "id": "movimento-requiem-cardinais",
+      "skin": "requiem",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Create a full-character MOVEMENT TRANSITION sprite sheet by editing the supplied approved REQUIEM character atlas. Preserve the EXACT same adult face, brown hairstyle, head/body ratio, original short compact legs and large black boots, clothing, silver chain and belt, single right-hand crimson katana and empty left hand. REQUIEM wears the approved black long coat with sleeves and plain shirt. This is a game sprite asset, not a scene. Transparent RGBA canvas, no floor, no shadows, no labels, no grid.\nExactly SIX columns and FOUR rows, keeping the source layout, identical full-body pixel height and generous margins around every complete sword and boot. Rows: SOUTH/front, WEST/left, NORTH/back, EAST/right. Each row shows the SAME direction with SIX DIFFERENT FULL-CHARACTER poses, left to right:\n0 relaxed ready stance;\n1 anticipation of walking, subtle forward weight shift and bent knee;\n2 first natural walking contact, one boot forward, torso and arms move together;\n3 stopping/braking, weight shifts gently onto forward heel, katana safely down;\n4 small natural turning/pivot pose, hips, shoulders and both arms turn together about 20 degrees, feet remain grounded;\n5 settled ready stance after the turn, relaxed shoulders, both eyes open.\nKeep the character's approved stocky proportions in EVERY frame; moving legs changes pose but NEVER lengthens them. Two complete connected arms and two legs, no missing hands. Show connected whole figures including sword from handle to intact tip, never cut or assemble body parts. No duplicate sword, no red waist cloth on Rock. Keep each complete figure inside its own cell with at least 12px empty padding and the rightmost blades well INSIDE the canvas. Readable deliberate pixel-art edges matching reference.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RequiemIdleKatanaYoung.png"
+      ],
+      "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-requiem-cardinais.png",
+      "previousOutput": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-cardinais.png",
+      "paddingCorrection": {
+        "prompt": "Correct the sprite atlas framing. Preserve the supplied 24 whole characters EXACTLY, their existing pixel body scale, original compact leg/head proportions, outfit and form colors. SIX columns, FOUR rows. THIRD ROW ONLY (the six back-facing NORTH figures): reposition ALL SIX COMPLETE FIGURES forty (40) pixels to the LEFT, leaving the full rightmost katana tip clearly inside the canvas with at least 20 pixels of transparent space at the right edge. The current last North katana tip is clipped. Regenerate the six COMPLETE north figures intact, including both arms, both boots, entire hair and full one right-hand sword, positioned 40px left. First north figure has space on its left for this shift. Do not change the other three rows. Same 1536x1024 canvas. No head, body, weapon or limbs assembled separately. ROCK if present has sleeveless vest, skull shirt, black pants and NO cloth below waist, NO sash or ribbons. Transparent background alpha, no labels, no extra weapons, no backdrop.",
+        "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-c02df8fc-01db-464c-8693-838c90c62a8e.png",
+        "tool": "integrated imagegen"
+      },
+      "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-requiem-cardinais-margens-v4.png",
+      "kind": "Motion",
+      "idleBlinkFrame": -1,
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-d009a174-a4e9-4951-af0c-69ffd674ae93.png",
+      "productionPhases": 5,
+      "settleUsesApprovedIdle": true
+    },
+    {
+      "id": "movimento-requiem-diagonais",
+      "skin": "requiem",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Create a full-character MOVEMENT TRANSITION sprite sheet by editing the supplied approved REQUIEM character atlas. Preserve the EXACT same adult face, brown hairstyle, head/body ratio, original short compact legs and large black boots, clothing, silver chain and belt, single right-hand crimson katana and empty left hand. REQUIEM wears the approved black long coat with sleeves and plain shirt. This is a game sprite asset, not a scene. Transparent RGBA canvas, no floor, no shadows, no labels, no grid.\nExactly SIX columns and FOUR rows, keeping the source layout, identical full-body pixel height and generous margins around every complete sword and boot. Rows: SOUTHWEST/front-left, NORTHWEST/back-left, NORTHEAST/back-right, SOUTHEAST/front-right. Each row shows the SAME direction with SIX DIFFERENT FULL-CHARACTER poses, left to right:\n0 relaxed ready stance;\n1 anticipation of walking, subtle forward weight shift and bent knee;\n2 first natural walking contact, one boot forward, torso and arms move together;\n3 stopping/braking, weight shifts gently onto forward heel, katana safely down;\n4 small natural turning/pivot pose, hips, shoulders and both arms turn together about 20 degrees, feet remain grounded;\n5 settled ready stance after the turn, relaxed shoulders, both eyes open.\nKeep the character's approved stocky proportions in EVERY frame; moving legs changes pose but NEVER lengthens them. Two complete connected arms and two legs, no missing hands. Show connected whole figures including sword from handle to intact tip, never cut or assemble body parts. No duplicate sword, no red waist cloth on Rock. Keep each complete figure inside its own cell with at least 12px empty padding and the rightmost blades well INSIDE the canvas. Readable deliberate pixel-art edges matching reference.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RequiemIdleKatanaYoung.png"
+      ],
+      "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-requiem-diagonais.png",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais-v2.png",
+      "kind": "Motion",
+      "idleBlinkFrame": -1,
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-6307d5f7-e40c-4b23-9695-c3d0c3e4232c.png",
+      "productionPhases": 5,
+      "settleUsesApprovedIdle": true
+    },
+    {
+      "id": "movimento-rock-cardinais",
+      "skin": "rock",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Create a full-character MOVEMENT TRANSITION sprite sheet by editing the supplied approved ROCK character atlas. Preserve the EXACT same adult face, brown hairstyle, head/body ratio, original short compact legs and large black boots, clothing, silver chain and belt, single right-hand crimson katana and empty left hand. ROCK wears black sleeveless studded vest with skull shirt, muscular bare arms and wrist cuffs. NO red hip strips, NO ribbons, NO coat tails, NO sash, NO cloth below belt. This is a game sprite asset, not a scene. Transparent RGBA canvas, no floor, no shadows, no labels, no grid.\nExactly SIX columns and FOUR rows, keeping the source layout, identical full-body pixel height and generous margins around every complete sword and boot. Rows: SOUTH/front, WEST/left, NORTH/back, EAST/right. Each row shows the SAME direction with SIX DIFFERENT FULL-CHARACTER poses, left to right:\n0 relaxed ready stance;\n1 anticipation of walking, subtle forward weight shift and bent knee;\n2 first natural walking contact, one boot forward, torso and arms move together;\n3 stopping/braking, weight shifts gently onto forward heel, katana safely down;\n4 small natural turning/pivot pose, hips, shoulders and both arms turn together about 20 degrees, feet remain grounded;\n5 settled ready stance after the turn, relaxed shoulders, both eyes open.\nKeep the character's approved stocky proportions in EVERY frame; moving legs changes pose but NEVER lengthens them. Two complete connected arms and two legs, no missing hands. Show connected whole figures including sword from handle to intact tip, never cut or assemble body parts. No duplicate sword, no red waist cloth on Rock. Keep each complete figure inside its own cell with at least 12px empty padding and the rightmost blades well INSIDE the canvas. Readable deliberate pixel-art edges matching reference.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RockIdleKatanaYoung.png"
+      ],
+      "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-rock-cardinais-pele-original.png",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-cardinais.png",
+      "kind": "Motion",
+      "idleBlinkFrame": -1,
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-710f0959-1479-4183-a5fd-991a53c76a18.png",
+      "skinCorrection": {
+        "id": "movimento-rock-cardinais-pele-original",
+        "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-rock-cardinais.png",
+        "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-rock-cardinais-pele-original.png",
+        "ref": "C:/Users/Usuario/Pictures/Screenshots/Captura de tela 2026-10-14 120511.png",
+        "prompt": "Skin-tone correction ONLY for Image1, the 24-frame ROCK movement atlas. Image2 BOTTOM full character is the immutable approved ROCK design and SKIN COLOR reference. Match its original LIGHT WARM PEACH complexion faithfully in EVERY face, ear, bare arm and hand of all 24 complete figures. The current atlas is becoming too orange/tanned. Bring the same peach midtone and soft warm shadows as the original; approximate reference midtone RGB246,165,114, gentle peach highlights, no sunburn red, oversaturated orange, pale gray or purple skin. This is not a new design. KEEP EVERYTHING ELSE from Image1: pixel dimensions, compact head/body/leg proportions, brown hair, face features, original sleeveless studded skull vest, black pants, silver chain, boots, single right-hand red katana, all six distinct movement poses in each direction, their positions and complete intact bounds. SIX columns FOUR rows SOUTH,WEST,NORTH,EAST. ROCK HAS NO sash, ribbons, tails or cloth below vest. All figures remain whole and connected, both arms/hands and legs/boots present; no body-part collage. Preserve true transparent RGBA background and empty gutters, no cropped sword tip, no scene floor, no labels. Change only skin pigmentation/shading to match original Image2 BOTTOM, never costume or silhouette.",
+        "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-27e55a9a-1590-4de5-8750-49e6e281ff85.png"
+      },
+      "productionPhases": 5,
+      "settleUsesApprovedIdle": true
+    },
+    {
+      "id": "movimento-rock-diagonais",
+      "skin": "rock",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Create a full-character MOVEMENT TRANSITION sprite sheet by editing the supplied approved ROCK character atlas. Preserve the EXACT same adult face, brown hairstyle, head/body ratio, original short compact legs and large black boots, clothing, silver chain and belt, single right-hand crimson katana and empty left hand. ROCK wears black sleeveless studded vest with skull shirt, muscular bare arms and wrist cuffs. NO red hip strips, NO ribbons, NO coat tails, NO sash, NO cloth below belt. This is a game sprite asset, not a scene. Transparent RGBA canvas, no floor, no shadows, no labels, no grid.\nExactly SIX columns and FOUR rows, keeping the source layout, identical full-body pixel height and generous margins around every complete sword and boot. Rows: SOUTHWEST/front-left, NORTHWEST/back-left, NORTHEAST/back-right, SOUTHEAST/front-right. Each row shows the SAME direction with SIX DIFFERENT FULL-CHARACTER poses, left to right:\n0 relaxed ready stance;\n1 anticipation of walking, subtle forward weight shift and bent knee;\n2 first natural walking contact, one boot forward, torso and arms move together;\n3 stopping/braking, weight shifts gently onto forward heel, katana safely down;\n4 small natural turning/pivot pose, hips, shoulders and both arms turn together about 20 degrees, feet remain grounded;\n5 settled ready stance after the turn, relaxed shoulders, both eyes open.\nKeep the character's approved stocky proportions in EVERY frame; moving legs changes pose but NEVER lengthens them. Two complete connected arms and two legs, no missing hands. Show connected whole figures including sword from handle to intact tip, never cut or assemble body parts. No duplicate sword, no red waist cloth on Rock. Keep each complete figure inside its own cell with at least 12px empty padding and the rightmost blades well INSIDE the canvas. Readable deliberate pixel-art edges matching reference.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RockIdleKatanaYoung.png"
+      ],
+      "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-rock-diagonais.png",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-diagonais.png",
+      "kind": "Motion",
+      "idleBlinkFrame": -1,
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-7647f63f-6e7b-4f87-807a-3af19f9f9240.png",
+      "productionPhases": 5,
+      "settleUsesApprovedIdle": true
+    }
+  ],
+  "forms": [
+    {
+      "id": "idle-vivo-requiem-cardinais-vermelha",
+      "skin": "requiem",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit the WHOLE CHARACTER idle atlas in Image1 into the VERMELHA vampiric form of DARKLIGHT: REQUIEM, using Image2 as immutable canonical appearance. Image2 TOP is long-sleeved REQUIEM and BOTTOM is sleeveless ROCK; use ONLY REQUIEM skin.\nCRITICAL: preserve all 24 FULL figures, SIX columns x FOUR rows, EXACT SAME pose, camera direction, foot location, head size, torso and original compact leg/boot proportions in each corresponding cell. Do not invent a new figure or bigger body, and do not swap skins. Preserve the direction row order and original right-hand equipment. Exactly ONE KATANA per figure, held in the right hand, left hand EMPTY; exactly two arms and two legs. No duplicate swords, no detached limbs or blade fragments. Every figure remains whole, never assembled by parts.\nCrimson: original brown wavy hair with red streaks/tips, discreet red clothing accents, crimson energy blade, same adult face and black clothing.\nKeep the original long-sleeved long leather coat, lapels/studs and plain black shirt and the same pants, hip chain and original boot length. White hair may flow but the BODY and head geometry cannot grow.\nKeep frame1-5 eyes OPEN in faces where visible, and col6 eyes CLOSED for the single blink. No eyes painted onto backs. All six phases retain subtle chest breathing, hair and cloth movement. Do not replace the breathing poses with attacks or transformation poses. Same skin, body scale, same row/column spacing and cell bounds as Image1; preserve source canvas dimensions.\nUse clean approved detailed pixel-sprite language. Keep effects compact and close to the body, no huge aura, no floor shadow, no grid/text/watermarks/checkerboard. Output real RGBA alpha; fully transparent between whole figures. Katana, full hair, arms and boots must remain inside each corresponding cell. This is a precise form edit of complete sprites, not a redraw with different proportions.",
+      "refs": [
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-cardinais.png",
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 144135.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\restauracao-cristais-20261017\\idle-vivo-requiem-cardinais-vermelha-cristais.png",
+      "base": "idle-vivo-requiem-cardinais",
+      "form": "vermelha",
+      "previousOutput": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-requiem-cardinais-vermelha-margens-v3.png",
+      "paddingCorrection": {
+        "prompt": "Edit the provided complete DARKLIGHT REQUIEM 24-character idle sprite sheet, preserving the identical character identity, adult face, outfit, colors, single katana, compact body/leg proportions, and all 24 poses. Correct the CLIPPED BLADE at the right canvas edge. Re-layout the 24 COMPLETE coherent figures with more transparent space: SIX columns and FOUR rows, rows SOUTH/front, WEST, NORTH/back, EAST. Each row has six subtle idle breathing phases, sixth with closed eyes wherever face visible. Use the SAME 1536x1024 canvas, but uniformly render every WHOLE figure at about 82% of its current pixel dimensions, placed centrally in its own 256x256 cell. This is a uniform atlas-packing change only; NEVER change head-to-body ratio or stretch/shrink legs independently. Leave at least 16 transparent pixels between every complete figure including blade tip and each cell boundary. Especially keep the ENTIRE rightmost North and East katana blades with their intact tips inside the image. Preserve exact weapon length and one right-hand katana, two complete arms, two complete legs, both boots. Do not assemble body parts. REQU IEM wears the original long black coat with sleeves, plain black shirt, silver belt/chain and black boots. Preserve the input transformation hair and blade colors. No duplicate swords, extra limbs, labels or grid. Transparent RGBA alpha, no backdrop, floor or shadows.",
+        "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-6941b26e-cb7e-42cc-8392-373375e75cc1.png",
+        "tool": "integrated imagegen"
+      },
+      "crystalRestoration": {
+        "prompt": "EDIT image1 only: restore the approved solid crimson RED CRYSTAL SPIKES physically growing out of the coat shoulder seams/collar, upper sleeves and wrist cuffs, matching image2 TOP LEFT approved transformation. Crystals are small pointed angular clusters integrated into clothing, with dark colored facets and bright tips. Floating motes alone do not satisfy this. Keep EXACTLY all existing 24 WHOLE character poses, 4 rows and 6 columns, source body pixel scale, all feet positions, compact legs/head ratio, original adult face and warm peach skin, existing hair color, full right-hand katana and coherent two arms/two boots. REQUIEM keeps black long-sleeved coat and plain shirt. Same breathing/blink sequence and directions in every cell. All complete figures and weapons isolated with transparent margins, no sword tip touching canvas boundary, at least 20px outer padding. No anatomy/body part assembly, no redesign. Real RGBA transparent background, no floor/shadow/text/checkerboard/grid/watermark. Preserve exact source canvas 1536x1024.",
+        "tool": "integrated imagegen",
+        "reference": "approved transformation 2026-10-14 144135"
+      }
+    },
+    {
+      "id": "idle-vivo-requiem-cardinais-roxa",
+      "skin": "requiem",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit the WHOLE CHARACTER idle atlas in Image1 into the ROXA vampiric form of DARKLIGHT: REQUIEM, using Image2 as immutable canonical appearance. Image2 TOP is long-sleeved REQUIEM and BOTTOM is sleeveless ROCK; use ONLY REQUIEM skin.\nCRITICAL: preserve all 24 FULL figures, SIX columns x FOUR rows, EXACT SAME pose, camera direction, foot location, head size, torso and original compact leg/boot proportions in each corresponding cell. Do not invent a new figure or bigger body, and do not swap skins. Preserve the direction row order and original right-hand equipment. Exactly ONE KATANA per figure, held in the right hand, left hand EMPTY; exactly two arms and two legs. No duplicate swords, no detached limbs or blade fragments. Every figure remains whole, never assembled by parts.\nViolet: original brown hair with purple streaks, purple eyes and small original purple shoulder/wrist crystals, violet blade, black clothing.\nKeep the original long-sleeved long leather coat, lapels/studs and plain black shirt and the same pants, hip chain and original boot length. White hair may flow but the BODY and head geometry cannot grow.\nKeep frame1-5 eyes OPEN in faces where visible, and col6 eyes CLOSED for the single blink. No eyes painted onto backs. All six phases retain subtle chest breathing, hair and cloth movement. Do not replace the breathing poses with attacks or transformation poses. Same skin, body scale, same row/column spacing and cell bounds as Image1; preserve source canvas dimensions.\nUse clean approved detailed pixel-sprite language. Keep effects compact and close to the body, no huge aura, no floor shadow, no grid/text/watermarks/checkerboard. Output real RGBA alpha; fully transparent between whole figures. Katana, full hair, arms and boots must remain inside each corresponding cell. This is a precise form edit of complete sprites, not a redraw with different proportions.",
+      "refs": [
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-cardinais.png",
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 144135.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\restauracao-cristais-20261017\\idle-vivo-requiem-cardinais-roxa-cristais.png",
+      "base": "idle-vivo-requiem-cardinais",
+      "form": "roxa",
+      "previousOutput": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-requiem-cardinais-roxa-margens-v4.png",
+      "paddingCorrection": {
+        "prompt": "Correct the sprite atlas framing. Preserve the supplied 24 whole characters EXACTLY, their existing pixel body scale, original compact leg/head proportions, outfit and form colors. SIX columns, FOUR rows. THIRD ROW ONLY (the six back-facing NORTH figures): reposition ALL SIX COMPLETE FIGURES forty (40) pixels to the LEFT, leaving the full rightmost katana tip clearly inside the canvas with at least 20 pixels of transparent space at the right edge. The current last North katana tip is clipped. Regenerate the six COMPLETE north figures intact, including both arms, both boots, entire hair and full one right-hand sword, positioned 40px left. First north figure has space on its left for this shift. Do not change the other three rows. Same 1536x1024 canvas. No head, body, weapon or limbs assembled separately. ROCK if present has sleeveless vest, skull shirt, black pants and NO cloth below waist, NO sash or ribbons. Transparent background alpha, no labels, no extra weapons, no backdrop.",
+        "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-58ea5e4f-234e-4416-925d-e4cd80d72cf1.png",
+        "tool": "integrated imagegen"
+      },
+      "crystalRestoration": {
+        "prompt": "EDIT TARGET image1: this complete 24-figure Requiem violet idle animation sheet. REFERENCE image2 is the user's approved transformation design, especially the TOP MIDDLE character. Restore its solid purple CRYSTAL SPIKES physically protruding from the coat shoulder seams, lapels/collar, upper sleeves and wrist cuffs. Distinct angular pointed clusters, with deep violet sides and bright lilac facets, as in the approved reference. Existing floating motes alone do not count: the crystals must visibly grow out of the CLOTHING. Keep the exact existing 24 whole character poses, all 4 rows and 6 columns, their body sizes, original adult face, warm peach skin, brown violet-streaked hair, sleeves, hands and compact legs, black coat, silver hip chain and full right-hand katana unchanged. Same breathing/blink phases and facing in every cell. Strictly preserve source character scale and foot placement. Keep every figure including weapon entirely within the canvas and separate from neighbors with transparent margin. The last right-facing katana must fit fully with 20px right padding. Do not alter anatomy or assemble body parts. No new capes, belts, ribbons. Real transparent background, no floor, shadow, grid, text or labels; landscape 1536x1024. The requested change is tangible crystal spikes on the existing transformed clothing, not a general redesign.",
+        "tool": "integrated imagegen",
+        "reference": "approved transformation 2026-10-14 144135"
+      }
+    },
+    {
+      "id": "idle-vivo-requiem-cardinais-branca",
+      "skin": "requiem",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit the WHOLE CHARACTER idle atlas in Image1 into the BRANCA vampiric form of DARKLIGHT: REQUIEM, using Image2 as immutable canonical appearance. Image2 TOP is long-sleeved REQUIEM and BOTTOM is sleeveless ROCK; use ONLY REQUIEM skin.\nCRITICAL: preserve all 24 FULL figures, SIX columns x FOUR rows, EXACT SAME pose, camera direction, foot location, head size, torso and original compact leg/boot proportions in each corresponding cell. Do not invent a new figure or bigger body, and do not swap skins. Preserve the direction row order and original right-hand equipment. Exactly ONE KATANA per figure, held in the right hand, left hand EMPTY; exactly two arms and two legs. No duplicate swords, no detached limbs or blade fragments. Every figure remains whole, never assembled by parts.\nAbsolute: LONG flowing SILVER/WHITE hair from the canonical reference, same head/skull/body/legs and original black/silver outfit, silver-white blade with crimson edge where canonical. Long hair must not enlarge the skull.\nKeep the original long-sleeved long leather coat, lapels/studs and plain black shirt and the same pants, hip chain and original boot length. White hair may flow but the BODY and head geometry cannot grow.\nKeep frame1-5 eyes OPEN in faces where visible, and col6 eyes CLOSED for the single blink. No eyes painted onto backs. All six phases retain subtle chest breathing, hair and cloth movement. Do not replace the breathing poses with attacks or transformation poses. Same skin, body scale, same row/column spacing and cell bounds as Image1; preserve source canvas dimensions.\nUse clean approved detailed pixel-sprite language. Keep effects compact and close to the body, no huge aura, no floor shadow, no grid/text/watermarks/checkerboard. Output real RGBA alpha; fully transparent between whole figures. Katana, full hair, arms and boots must remain inside each corresponding cell. This is a precise form edit of complete sprites, not a redraw with different proportions.",
+      "refs": [
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-cardinais.png",
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 144135.png"
+      ],
+      "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-requiem-cardinais-branca-margens-v3.png",
+      "base": "idle-vivo-requiem-cardinais",
+      "form": "branca",
+      "previousOutput": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-cardinais-branca.png",
+      "paddingCorrection": {
+        "prompt": "Edit the provided complete DARKLIGHT REQUIEM 24-character idle sprite sheet, preserving the identical character identity, adult face, outfit, colors, single katana, compact body/leg proportions, and all 24 poses. Correct the CLIPPED BLADE at the right canvas edge. Re-layout the 24 COMPLETE coherent figures with more transparent space: SIX columns and FOUR rows, rows SOUTH/front, WEST, NORTH/back, EAST. Each row has six subtle idle breathing phases, sixth with closed eyes wherever face visible. Use the SAME 1536x1024 canvas, but uniformly render every WHOLE figure at about 82% of its current pixel dimensions, placed centrally in its own 256x256 cell. This is a uniform atlas-packing change only; NEVER change head-to-body ratio or stretch/shrink legs independently. Leave at least 16 transparent pixels between every complete figure including blade tip and each cell boundary. Especially keep the ENTIRE rightmost North and East katana blades with their intact tips inside the image. Preserve exact weapon length and one right-hand katana, two complete arms, two complete legs, both boots. Do not assemble body parts. REQU IEM wears the original long black coat with sleeves, plain black shirt, silver belt/chain and black boots. Preserve the input transformation hair and blade colors. No duplicate swords, extra limbs, labels or grid. Transparent RGBA alpha, no backdrop, floor or shadows.",
+        "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-e6b09f0a-0748-4ec3-8fb7-6ae67db324d1.png",
+        "tool": "integrated imagegen"
+      }
+    },
+    {
+      "id": "idle-vivo-requiem-diagonais-vermelha",
+      "skin": "requiem",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit the WHOLE CHARACTER idle atlas in Image1 into the VERMELHA vampiric form of DARKLIGHT: REQUIEM, using Image2 as immutable canonical appearance. Image2 TOP is long-sleeved REQUIEM and BOTTOM is sleeveless ROCK; use ONLY REQUIEM skin.\nCRITICAL: preserve all 24 FULL figures, SIX columns x FOUR rows, EXACT SAME pose, camera direction, foot location, head size, torso and original compact leg/boot proportions in each corresponding cell. Do not invent a new figure or bigger body, and do not swap skins. Preserve the direction row order and original right-hand equipment. Exactly ONE KATANA per figure, held in the right hand, left hand EMPTY; exactly two arms and two legs. No duplicate swords, no detached limbs or blade fragments. Every figure remains whole, never assembled by parts.\nCrimson: original brown wavy hair with red streaks/tips, discreet red clothing accents, crimson energy blade, same adult face and black clothing.\nKeep the original long-sleeved long leather coat, lapels/studs and plain black shirt and the same pants, hip chain and original boot length. White hair may flow but the BODY and head geometry cannot grow.\nKeep frame1-5 eyes OPEN in faces where visible, and col6 eyes CLOSED for the single blink. No eyes painted onto backs. All six phases retain subtle chest breathing, hair and cloth movement. Do not replace the breathing poses with attacks or transformation poses. Same skin, body scale, same row/column spacing and cell bounds as Image1; preserve source canvas dimensions.\nUse clean approved detailed pixel-sprite language. Keep effects compact and close to the body, no huge aura, no floor shadow, no grid/text/watermarks/checkerboard. Output real RGBA alpha; fully transparent between whole figures. Katana, full hair, arms and boots must remain inside each corresponding cell. This is a precise form edit of complete sprites, not a redraw with different proportions.",
+      "refs": [
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais-v2.png",
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 144135.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\restauracao-cristais-20261017\\idle-vivo-requiem-diagonais-vermelha-cristais.png",
+      "base": "idle-vivo-requiem-diagonais",
+      "form": "vermelha",
+      "previousOutput": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais-vermelha.png",
+      "crystalRestoration": {
+        "prompt": "Edit image1's full 24-character diagonal idle sheet. Restore small SOLID CRIMSON RED pointed faceted crystal clusters growing from the coat shoulders/collar and sleeve cuffs exactly in the spirit of image2's TOP LEFT approved design. Keep the existing 6-column 4-row structure and ALL full body poses, orientation, blink/breath sequence, skin, adult face, proportions, source pixel scale, feet position, hands, boots, full right-hand katana and silver chain. Clear visible connected angular clothing spikes with dark facets/bright tips; don't substitute floating particles or redesign the armor. Requiem stays long-sleeved black coat and plain shirt. Original warm peach skin is absolutely unchanged, no colored skin or longer legs. No new accessories. Every whole character AND sword completely inside canvas with padding, no overlaps, no clipped tips. Preserve 1536x1024 landscape. Real transparent RGBA background, no floor, shadow, labels/grid/watermarks. Never assemble limbs/heads/weapons separately.",
+        "tool": "integrated imagegen",
+        "reference": "approved transformation 2026-10-14 144135"
+      }
+    },
+    {
+      "id": "idle-vivo-requiem-diagonais-roxa",
+      "skin": "requiem",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit the WHOLE CHARACTER idle atlas in Image1 into the ROXA vampiric form of DARKLIGHT: REQUIEM, using Image2 as immutable canonical appearance. Image2 TOP is long-sleeved REQUIEM and BOTTOM is sleeveless ROCK; use ONLY REQUIEM skin.\nCRITICAL: preserve all 24 FULL figures, SIX columns x FOUR rows, EXACT SAME pose, camera direction, foot location, head size, torso and original compact leg/boot proportions in each corresponding cell. Do not invent a new figure or bigger body, and do not swap skins. Preserve the direction row order and original right-hand equipment. Exactly ONE KATANA per figure, held in the right hand, left hand EMPTY; exactly two arms and two legs. No duplicate swords, no detached limbs or blade fragments. Every figure remains whole, never assembled by parts.\nViolet: original brown hair with purple streaks, purple eyes and small original purple shoulder/wrist crystals, violet blade, black clothing.\nKeep the original long-sleeved long leather coat, lapels/studs and plain black shirt and the same pants, hip chain and original boot length. White hair may flow but the BODY and head geometry cannot grow.\nKeep frame1-5 eyes OPEN in faces where visible, and col6 eyes CLOSED for the single blink. No eyes painted onto backs. All six phases retain subtle chest breathing, hair and cloth movement. Do not replace the breathing poses with attacks or transformation poses. Same skin, body scale, same row/column spacing and cell bounds as Image1; preserve source canvas dimensions.\nUse clean approved detailed pixel-sprite language. Keep effects compact and close to the body, no huge aura, no floor shadow, no grid/text/watermarks/checkerboard. Output real RGBA alpha; fully transparent between whole figures. Katana, full hair, arms and boots must remain inside each corresponding cell. This is a precise form edit of complete sprites, not a redraw with different proportions.",
+      "refs": [
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais-v2.png",
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 144135.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\restauracao-cristais-20261017\\idle-vivo-requiem-diagonais-roxa-cristais.png",
+      "base": "idle-vivo-requiem-diagonais",
+      "form": "roxa",
+      "previousOutput": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais-roxa.png",
+      "crystalRestoration": {
+        "prompt": "Edit image1's full 24-character diagonal idle sheet. Restore small SOLID VIOLET PURPLE pointed faceted crystal clusters growing from the coat shoulders/collar and sleeve cuffs exactly in the spirit of image2's TOP MIDDLE approved design. Keep the existing 6-column 4-row structure and ALL full body poses, orientation, blink/breath sequence, skin, adult face, proportions, source pixel scale, feet position, hands, boots, full right-hand katana and silver chain. Clear visible connected angular clothing spikes with dark facets/bright tips; don't substitute floating particles or redesign the armor. Requiem stays long-sleeved black coat and plain shirt. Original warm peach skin is absolutely unchanged, no colored skin or longer legs. No new accessories. Every whole character AND sword completely inside canvas with padding, no overlaps, no clipped tips. Preserve 1536x1024 landscape. Real transparent RGBA background, no floor, shadow, labels/grid/watermarks. Never assemble limbs/heads/weapons separately.",
+        "tool": "integrated imagegen",
+        "reference": "approved transformation 2026-10-14 144135"
+      }
+    },
+    {
+      "id": "idle-vivo-requiem-diagonais-branca",
+      "skin": "requiem",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit the WHOLE CHARACTER idle atlas in Image1 into the BRANCA vampiric form of DARKLIGHT: REQUIEM, using Image2 as immutable canonical appearance. Image2 TOP is long-sleeved REQUIEM and BOTTOM is sleeveless ROCK; use ONLY REQUIEM skin.\nCRITICAL: preserve all 24 FULL figures, SIX columns x FOUR rows, EXACT SAME pose, camera direction, foot location, head size, torso and original compact leg/boot proportions in each corresponding cell. Do not invent a new figure or bigger body, and do not swap skins. Preserve the direction row order and original right-hand equipment. Exactly ONE KATANA per figure, held in the right hand, left hand EMPTY; exactly two arms and two legs. No duplicate swords, no detached limbs or blade fragments. Every figure remains whole, never assembled by parts.\nAbsolute: LONG flowing SILVER/WHITE hair from the canonical reference, same head/skull/body/legs and original black/silver outfit, silver-white blade with crimson edge where canonical. Long hair must not enlarge the skull.\nKeep the original long-sleeved long leather coat, lapels/studs and plain black shirt and the same pants, hip chain and original boot length. White hair may flow but the BODY and head geometry cannot grow.\nKeep frame1-5 eyes OPEN in faces where visible, and col6 eyes CLOSED for the single blink. No eyes painted onto backs. All six phases retain subtle chest breathing, hair and cloth movement. Do not replace the breathing poses with attacks or transformation poses. Same skin, body scale, same row/column spacing and cell bounds as Image1; preserve source canvas dimensions.\nUse clean approved detailed pixel-sprite language. Keep effects compact and close to the body, no huge aura, no floor shadow, no grid/text/watermarks/checkerboard. Output real RGBA alpha; fully transparent between whole figures. Katana, full hair, arms and boots must remain inside each corresponding cell. This is a precise form edit of complete sprites, not a redraw with different proportions.",
+      "refs": [
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais-v2.png",
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 144135.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais-branca.png",
+      "base": "idle-vivo-requiem-diagonais",
+      "form": "branca"
+    },
+    {
+      "id": "idle-vivo-rock-cardinais-vermelha",
+      "skin": "rock",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit the WHOLE CHARACTER idle atlas in Image1 into the VERMELHA vampiric form of DARKLIGHT: REQUIEM, using Image2 as immutable canonical appearance. Image2 TOP is long-sleeved REQUIEM and BOTTOM is sleeveless ROCK; use ONLY ROCK skin.\nCRITICAL: preserve all 24 FULL figures, SIX columns x FOUR rows, EXACT SAME pose, camera direction, foot location, head size, torso and original compact leg/boot proportions in each corresponding cell. Do not invent a new figure or bigger body, and do not swap skins. Preserve the direction row order and original right-hand equipment. Exactly ONE KATANA per figure, held in the right hand, left hand EMPTY; exactly two arms and two legs. No duplicate swords, no detached limbs or blade fragments. Every figure remains whole, never assembled by parts.\nCrimson: original brown wavy hair with red streaks/tips, discreet red clothing accents, crimson energy blade, same adult face and black clothing.\nKeep the sleeveless leather vest, skull shirt, muscular bare arms and studded wrist cuffs and the same pants, hip chain and original boot length. White hair may flow but the BODY and head geometry cannot grow.\nKeep frame1-5 eyes OPEN in faces where visible, and col6 eyes CLOSED for the single blink. No eyes painted onto backs. All six phases retain subtle chest breathing, hair and cloth movement. Do not replace the breathing poses with attacks or transformation poses. Same skin, body scale, same row/column spacing and cell bounds as Image1; preserve source canvas dimensions.\nUse clean approved detailed pixel-sprite language. Keep effects compact and close to the body, no huge aura, no floor shadow, no grid/text/watermarks/checkerboard. Output real RGBA alpha; fully transparent between whole figures. Katana, full hair, arms and boots must remain inside each corresponding cell. This is a precise form edit of complete sprites, not a redraw with different proportions.",
+      "refs": [
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-cardinais.png",
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 144135.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\restauracao-cristais-20261017\\idle-vivo-rock-cardinais-vermelha-cristais.png",
+      "base": "idle-vivo-rock-cardinais",
+      "form": "vermelha",
+      "correctionId": "idle-vivo-rock-cardinais-vermelha-v2",
+      "previousOutput": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-cardinais-vermelha-v2.png",
+      "crystalRestoration": {
+        "prompt": "EDIT image1 only: restore the approved solid crimson RED CRYSTAL SPIKES physically growing out of the sleeveless vest shoulder seams/collar and wrist cuffs, matching image2 BOTTOM LEFT approved transformation. Crystals are small pointed angular clusters integrated into clothing, with dark colored facets and bright tips. Floating motes alone do not satisfy this. Keep EXACTLY all existing 24 WHOLE character poses, 4 rows and 6 columns, source body pixel scale, all feet positions, compact legs/head ratio, original adult face and warm peach skin, existing hair color, full right-hand katana and coherent two arms/two boots. ROCK must remain bare muscular arms, sleeveless black vest and skull shirt, silver waist chain, black pants; NO fabric below waist, NO sash/ribbon/coat tail. Same breathing/blink sequence and directions in every cell. All complete figures and weapons isolated with transparent margins, no sword tip touching canvas boundary, at least 20px outer padding. No anatomy/body part assembly, no redesign. Real RGBA transparent background, no floor/shadow/text/checkerboard/grid/watermark. Preserve exact source canvas 1536x1024.",
+        "tool": "integrated imagegen",
+        "reference": "approved transformation 2026-10-14 144135"
+      }
+    },
+    {
+      "id": "idle-vivo-rock-cardinais-roxa",
+      "skin": "rock",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit the WHOLE CHARACTER idle atlas in Image1 into the ROXA vampiric form of DARKLIGHT: REQUIEM, using Image2 as immutable canonical appearance. Image2 TOP is long-sleeved REQUIEM and BOTTOM is sleeveless ROCK; use ONLY ROCK skin.\nCRITICAL: preserve all 24 FULL figures, SIX columns x FOUR rows, EXACT SAME pose, camera direction, foot location, head size, torso and original compact leg/boot proportions in each corresponding cell. Do not invent a new figure or bigger body, and do not swap skins. Preserve the direction row order and original right-hand equipment. Exactly ONE KATANA per figure, held in the right hand, left hand EMPTY; exactly two arms and two legs. No duplicate swords, no detached limbs or blade fragments. Every figure remains whole, never assembled by parts.\nViolet: original brown hair with purple streaks, purple eyes and small original purple shoulder/wrist crystals, violet blade, black clothing.\nKeep the sleeveless leather vest, skull shirt, muscular bare arms and studded wrist cuffs and the same pants, hip chain and original boot length. White hair may flow but the BODY and head geometry cannot grow.\nKeep frame1-5 eyes OPEN in faces where visible, and col6 eyes CLOSED for the single blink. No eyes painted onto backs. All six phases retain subtle chest breathing, hair and cloth movement. Do not replace the breathing poses with attacks or transformation poses. Same skin, body scale, same row/column spacing and cell bounds as Image1; preserve source canvas dimensions.\nUse clean approved detailed pixel-sprite language. Keep effects compact and close to the body, no huge aura, no floor shadow, no grid/text/watermarks/checkerboard. Output real RGBA alpha; fully transparent between whole figures. Katana, full hair, arms and boots must remain inside each corresponding cell. This is a precise form edit of complete sprites, not a redraw with different proportions.",
+      "refs": [
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-cardinais.png",
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 144135.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\restauracao-cristais-20261017\\idle-vivo-rock-cardinais-roxa-cristais.png",
+      "base": "idle-vivo-rock-cardinais",
+      "form": "roxa",
+      "previousOutput": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-cardinais-roxa.png",
+      "crystalRestoration": {
+        "prompt": "EDIT image1 only: restore the approved solid violet PURPLE CRYSTAL SPIKES physically growing out of the sleeveless vest shoulder seams/collar and wrist cuffs, matching image2 BOTTOM MIDDLE approved transformation. Crystals are small pointed angular clusters integrated into clothing, with dark colored facets and bright tips. Floating motes alone do not satisfy this. Keep EXACTLY all existing 24 WHOLE character poses, 4 rows and 6 columns, source body pixel scale, all feet positions, compact legs/head ratio, original adult face and warm peach skin, existing hair color, full right-hand katana and coherent two arms/two boots. ROCK must remain bare muscular arms, sleeveless black vest and skull shirt, silver waist chain, black pants; NO fabric below waist, NO sash/ribbon/coat tail. Same breathing/blink sequence and directions in every cell. All complete figures and weapons isolated with transparent margins, no sword tip touching canvas boundary, at least 20px outer padding. No anatomy/body part assembly, no redesign. Real RGBA transparent background, no floor/shadow/text/checkerboard/grid/watermark. Preserve exact source canvas 1536x1024.",
+        "tool": "integrated imagegen",
+        "reference": "approved transformation 2026-10-14 144135"
+      }
+    },
+    {
+      "id": "idle-vivo-rock-cardinais-branca",
+      "skin": "rock",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit the WHOLE CHARACTER idle atlas in Image1 into the BRANCA vampiric form of DARKLIGHT: REQUIEM, using Image2 as immutable canonical appearance. Image2 TOP is long-sleeved REQUIEM and BOTTOM is sleeveless ROCK; use ONLY ROCK skin.\nCRITICAL: preserve all 24 FULL figures, SIX columns x FOUR rows, EXACT SAME pose, camera direction, foot location, head size, torso and original compact leg/boot proportions in each corresponding cell. Do not invent a new figure or bigger body, and do not swap skins. Preserve the direction row order and original right-hand equipment. Exactly ONE KATANA per figure, held in the right hand, left hand EMPTY; exactly two arms and two legs. No duplicate swords, no detached limbs or blade fragments. Every figure remains whole, never assembled by parts.\nAbsolute: LONG flowing SILVER/WHITE hair from the canonical reference, same head/skull/body/legs and original black/silver outfit, silver-white blade with crimson edge where canonical. Long hair must not enlarge the skull.\nKeep the sleeveless leather vest, skull shirt, muscular bare arms and studded wrist cuffs and the same pants, hip chain and original boot length. White hair may flow but the BODY and head geometry cannot grow.\nKeep frame1-5 eyes OPEN in faces where visible, and col6 eyes CLOSED for the single blink. No eyes painted onto backs. All six phases retain subtle chest breathing, hair and cloth movement. Do not replace the breathing poses with attacks or transformation poses. Same skin, body scale, same row/column spacing and cell bounds as Image1; preserve source canvas dimensions.\nUse clean approved detailed pixel-sprite language. Keep effects compact and close to the body, no huge aura, no floor shadow, no grid/text/watermarks/checkerboard. Output real RGBA alpha; fully transparent between whole figures. Katana, full hair, arms and boots must remain inside each corresponding cell. This is a precise form edit of complete sprites, not a redraw with different proportions.",
+      "refs": [
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-cardinais.png",
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 144135.png"
+      ],
+      "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-rock-cardinais-branca-margens-v4.png",
+      "base": "idle-vivo-rock-cardinais",
+      "form": "branca",
+      "previousOutput": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-cardinais-branca.png",
+      "paddingCorrection": {
+        "prompt": "Correct the sprite atlas framing. Preserve the supplied 24 whole characters EXACTLY, their existing pixel body scale, original compact leg/head proportions, outfit and form colors. SIX columns, FOUR rows. THIRD ROW ONLY (the six back-facing NORTH figures): reposition ALL SIX COMPLETE FIGURES forty (40) pixels to the LEFT, leaving the full rightmost katana tip clearly inside the canvas with at least 20 pixels of transparent space at the right edge. The current last North katana tip is clipped. Regenerate the six COMPLETE north figures intact, including both arms, both boots, entire hair and full one right-hand sword, positioned 40px left. First north figure has space on its left for this shift. Do not change the other three rows. Same 1536x1024 canvas. No head, body, weapon or limbs assembled separately. ROCK if present has sleeveless vest, skull shirt, black pants and NO cloth below waist, NO sash or ribbons. Transparent background alpha, no labels, no extra weapons, no backdrop.",
+        "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-84501236-abc0-42fc-b285-ed79713f7e6b.png",
+        "tool": "integrated imagegen"
+      }
+    },
+    {
+      "id": "idle-vivo-rock-diagonais-vermelha",
+      "skin": "rock",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit the WHOLE CHARACTER idle atlas in Image1 into the VERMELHA vampiric form of DARKLIGHT: REQUIEM, using Image2 as immutable canonical appearance. Image2 TOP is long-sleeved REQUIEM and BOTTOM is sleeveless ROCK; use ONLY ROCK skin.\nCRITICAL: preserve all 24 FULL figures, SIX columns x FOUR rows, EXACT SAME pose, camera direction, foot location, head size, torso and original compact leg/boot proportions in each corresponding cell. Do not invent a new figure or bigger body, and do not swap skins. Preserve the direction row order and original right-hand equipment. Exactly ONE KATANA per figure, held in the right hand, left hand EMPTY; exactly two arms and two legs. No duplicate swords, no detached limbs or blade fragments. Every figure remains whole, never assembled by parts.\nCrimson: original brown wavy hair with red streaks/tips, discreet red clothing accents, crimson energy blade, same adult face and black clothing.\nKeep the sleeveless leather vest, skull shirt, muscular bare arms and studded wrist cuffs and the same pants, hip chain and original boot length. White hair may flow but the BODY and head geometry cannot grow.\nKeep frame1-5 eyes OPEN in faces where visible, and col6 eyes CLOSED for the single blink. No eyes painted onto backs. All six phases retain subtle chest breathing, hair and cloth movement. Do not replace the breathing poses with attacks or transformation poses. Same skin, body scale, same row/column spacing and cell bounds as Image1; preserve source canvas dimensions.\nUse clean approved detailed pixel-sprite language. Keep effects compact and close to the body, no huge aura, no floor shadow, no grid/text/watermarks/checkerboard. Output real RGBA alpha; fully transparent between whole figures. Katana, full hair, arms and boots must remain inside each corresponding cell. This is a precise form edit of complete sprites, not a redraw with different proportions.",
+      "refs": [
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-diagonais.png",
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 144135.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\restauracao-cristais-20261017\\idle-vivo-rock-diagonais-vermelha-cristais.png",
+      "base": "idle-vivo-rock-diagonais",
+      "form": "vermelha",
+      "previousOutput": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-diagonais-vermelha.png",
+      "crystalRestoration": {
+        "prompt": "Edit image1's full 24-character diagonal idle sheet. Restore small SOLID CRIMSON RED pointed faceted crystal clusters growing from the vest shoulder seams/collar and black wrist cuffs exactly in the spirit of image2's BOTTOM LEFT approved design. Keep the existing 6-column 4-row structure and ALL full body poses, orientation, blink/breath sequence, skin, adult face, proportions, source pixel scale, feet position, hands, boots, full right-hand katana and silver chain. Clear visible connected angular clothing spikes with dark facets/bright tips; don't substitute floating particles or redesign the armor. Rock stays muscular bare arms, sleeveless vest, skull shirt, pants, compact boots; NO cloth below waist, sash, coat tails or cape. Original warm peach skin is absolutely unchanged, no colored skin or longer legs. No new accessories. Every whole character AND sword completely inside canvas with padding, no overlaps, no clipped tips. Preserve 1536x1024 landscape. Real transparent RGBA background, no floor, shadow, labels/grid/watermarks. Never assemble limbs/heads/weapons separately.",
+        "tool": "integrated imagegen",
+        "reference": "approved transformation 2026-10-14 144135"
+      }
+    },
+    {
+      "id": "idle-vivo-rock-diagonais-roxa",
+      "skin": "rock",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit the WHOLE CHARACTER idle atlas in Image1 into the ROXA vampiric form of DARKLIGHT: REQUIEM, using Image2 as immutable canonical appearance. Image2 TOP is long-sleeved REQUIEM and BOTTOM is sleeveless ROCK; use ONLY ROCK skin.\nCRITICAL: preserve all 24 FULL figures, SIX columns x FOUR rows, EXACT SAME pose, camera direction, foot location, head size, torso and original compact leg/boot proportions in each corresponding cell. Do not invent a new figure or bigger body, and do not swap skins. Preserve the direction row order and original right-hand equipment. Exactly ONE KATANA per figure, held in the right hand, left hand EMPTY; exactly two arms and two legs. No duplicate swords, no detached limbs or blade fragments. Every figure remains whole, never assembled by parts.\nViolet: original brown hair with purple streaks, purple eyes and small original purple shoulder/wrist crystals, violet blade, black clothing.\nKeep the sleeveless leather vest, skull shirt, muscular bare arms and studded wrist cuffs and the same pants, hip chain and original boot length. White hair may flow but the BODY and head geometry cannot grow.\nKeep frame1-5 eyes OPEN in faces where visible, and col6 eyes CLOSED for the single blink. No eyes painted onto backs. All six phases retain subtle chest breathing, hair and cloth movement. Do not replace the breathing poses with attacks or transformation poses. Same skin, body scale, same row/column spacing and cell bounds as Image1; preserve source canvas dimensions.\nUse clean approved detailed pixel-sprite language. Keep effects compact and close to the body, no huge aura, no floor shadow, no grid/text/watermarks/checkerboard. Output real RGBA alpha; fully transparent between whole figures. Katana, full hair, arms and boots must remain inside each corresponding cell. This is a precise form edit of complete sprites, not a redraw with different proportions.",
+      "refs": [
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-diagonais.png",
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 144135.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\restauracao-cristais-20261017\\idle-vivo-rock-diagonais-roxa-cristais.png",
+      "base": "idle-vivo-rock-diagonais",
+      "form": "roxa",
+      "previousOutput": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-diagonais-roxa.png",
+      "crystalRestoration": {
+        "prompt": "Edit image1's full 24-character diagonal idle sheet. Restore small SOLID VIOLET PURPLE pointed faceted crystal clusters growing from the vest shoulder seams/collar and black wrist cuffs exactly in the spirit of image2's BOTTOM MIDDLE approved design. Keep the existing 6-column 4-row structure and ALL full body poses, orientation, blink/breath sequence, skin, adult face, proportions, source pixel scale, feet position, hands, boots, full right-hand katana and silver chain. Clear visible connected angular clothing spikes with dark facets/bright tips; don't substitute floating particles or redesign the armor. Rock stays muscular bare arms, sleeveless vest, skull shirt, pants, compact boots; NO cloth below waist, sash, coat tails or cape. Original warm peach skin is absolutely unchanged, no colored skin or longer legs. No new accessories. Every whole character AND sword completely inside canvas with padding, no overlaps, no clipped tips. Preserve 1536x1024 landscape. Real transparent RGBA background, no floor, shadow, labels/grid/watermarks. Never assemble limbs/heads/weapons separately.\nCorrect precisely ONE WHOLE FIGURE in image1: FIRST ROW FIFTH COLUMN (count from left). It is accidentally back-facing and lost its sword. Regenerate that COMPLETE character in the same SOUTHWEST FRONT-LEFT 45degree facing, OPEN eyes and near-neutral breathing pose as the adjacent first-row columns 1,2,3,4. Include the entire original right-hand purple edged katana, both arms/hands/boots, original adult warm peach face, compact legs, sleeveless black Rock vest/skull shirt and silver chain. Keep solid purple crystal spikes attached at vest shoulder seams and wrist cuffs; NO cloth below waist or long sleeves. Image2 shows the correct direction and pose for this row. Preserve ALL OTHER 23 complete figures, exact pixel scale, positions, full swords, source 1536x1024 layout and transparent background. This is a correction of an entire wrongly oriented figure, never assemble body parts. No labels/grids/shadows.",
+        "tool": "integrated imagegen",
+        "reference": "approved transformation 2026-10-14 144135"
+      }
+    },
+    {
+      "id": "idle-vivo-rock-diagonais-branca",
+      "skin": "rock",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit the WHOLE CHARACTER idle atlas in Image1 into the BRANCA vampiric form of DARKLIGHT: REQUIEM, using Image2 as immutable canonical appearance. Image2 TOP is long-sleeved REQUIEM and BOTTOM is sleeveless ROCK; use ONLY ROCK skin.\nCRITICAL: preserve all 24 FULL figures, SIX columns x FOUR rows, EXACT SAME pose, camera direction, foot location, head size, torso and original compact leg/boot proportions in each corresponding cell. Do not invent a new figure or bigger body, and do not swap skins. Preserve the direction row order and original right-hand equipment. Exactly ONE KATANA per figure, held in the right hand, left hand EMPTY; exactly two arms and two legs. No duplicate swords, no detached limbs or blade fragments. Every figure remains whole, never assembled by parts.\nAbsolute: LONG flowing SILVER/WHITE hair from the canonical reference, same head/skull/body/legs and original black/silver outfit, silver-white blade with crimson edge where canonical. Long hair must not enlarge the skull.\nKeep the sleeveless leather vest, skull shirt, muscular bare arms and studded wrist cuffs and the same pants, hip chain and original boot length. White hair may flow but the BODY and head geometry cannot grow.\nKeep frame1-5 eyes OPEN in faces where visible, and col6 eyes CLOSED for the single blink. No eyes painted onto backs. All six phases retain subtle chest breathing, hair and cloth movement. Do not replace the breathing poses with attacks or transformation poses. Same skin, body scale, same row/column spacing and cell bounds as Image1; preserve source canvas dimensions.\nUse clean approved detailed pixel-sprite language. Keep effects compact and close to the body, no huge aura, no floor shadow, no grid/text/watermarks/checkerboard. Output real RGBA alpha; fully transparent between whole figures. Katana, full hair, arms and boots must remain inside each corresponding cell. This is a precise form edit of complete sprites, not a redraw with different proportions.",
+      "refs": [
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-diagonais.png",
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 144135.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-diagonais-branca.png",
+      "base": "idle-vivo-rock-diagonais",
+      "form": "branca"
+    },
+    {
+      "id": "movimento-requiem-cardinais-vermelha",
+      "skin": "requiem",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit Image1, the REQUIEM 24-FRAME WHOLE-CHARACTER movement-transition atlas. Image2 is ONLY the approved vermelha transformation appearance reference. Apply Image2's exact hair, blade and subtle energy colors to ALL 24 COMPLETE figures of Image1. Crimson: brown hair with red accents, crimson katana.\nKeep Image1's six poses in EACH row EXACTLY in place, pixel body size, compact leg length, head-to-body ratio, boot positions and original adult face. The phases are ready, weight shift, first step, braking, pivot and settled. Four directions ordered as Image1. Exactly SIX columns x FOUR rows, SAME canvas dimensions. Never replace the poses with six identical idle figures. Keep two arms, two legs, one right-hand katana, left hand empty. Every complete figure and sword tip stays inside its cell with transparent padding and no cut tips. REQUIEM: black long coat with sleeves and plain black shirt. Keep the approved coat and silver hip chain. These are WHOLE coherent figures, no body parts assembled. Transparent RGBA background, no backdrop, floor, text or grid.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RequiemIdleKatanaYoung.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\restauracao-cristais-20261017\\movimento-requiem-cardinais-vermelha-cristais.png",
+      "previousOutput": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-requiem-cardinais-vermelha.png",
+      "paddingCorrection": {
+        "prompt": "Correct the sprite atlas framing. Preserve the supplied 24 whole characters EXACTLY, their existing pixel body scale, original compact leg/head proportions, outfit and form colors. SIX columns, FOUR rows. THIRD ROW ONLY (the six back-facing NORTH figures): reposition ALL SIX COMPLETE FIGURES forty (40) pixels to the LEFT, leaving the full rightmost katana tip clearly inside the canvas with at least 20 pixels of transparent space at the right edge. The current last North katana tip is clipped. Regenerate the six COMPLETE north figures intact, including both arms, both boots, entire hair and full one right-hand sword, positioned 40px left. First north figure has space on its left for this shift. Do not change the other three rows. Same 1536x1024 canvas. No head, body, weapon or limbs assembled separately. ROCK if present has sleeveless vest, skull shirt, black pants and NO cloth below waist, NO sash or ribbons. Transparent background alpha, no labels, no extra weapons, no backdrop.",
+        "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-c02df8fc-01db-464c-8693-838c90c62a8e.png",
+        "tool": "integrated imagegen"
+      },
+      "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-requiem-cardinais.png",
+      "kind": "Motion",
+      "idleBlinkFrame": -1,
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-4ddba803-f89d-4f45-aa3e-d8b049286085.png",
+      "base": "movimento-requiem-cardinais",
+      "form": "vermelha",
+      "formRef": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-requiem-cardinais-vermelha-margens-v3.png",
+      "productionPhases": 5,
+      "settleUsesApprovedIdle": true,
+      "crystalRestoration": {
+        "prompt": "Edit this WHOLE character motion animation atlas image1 ONLY to restore the approved solid pointed crimson RED crystal spikes at the black COAT collar/shoulders, upper sleeves and wrist cuffs. Image2 TOP LEFT character is the approved crystal design. The existing sheet must keep the exact same full characters, 6 columns x4 rows, motions/directions/foot placement, sprite pixel scale, skin, facial identity, compact leg lengths, hair and all right-hand katanas. NO changes to movements, weapons, proportions or clothes other than clothing crystal spikes. Need distinct small faceted shards ATTACHED to seams/cuffs, not only floating motes. Preserve every figure's full weapon and body within source bounds, clear transparent gutters. Requiem wears full sleeves and long black coat, plain shirt and silver chain. Warm peach skin unchanged. All heads, both hands/arms, boots and swords must remain complete. Real transparent RGBA 1536x1024 background, no shadow, floor, checkerboard, grid, text, labels. No anatomy assembly or separate body pieces.",
+        "tool": "integrated imagegen",
+        "reference": "approved transformation 2026-10-14 144135"
+      }
+    },
+    {
+      "id": "movimento-requiem-cardinais-roxa",
+      "skin": "requiem",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit Image1, the REQUIEM 24-FRAME WHOLE-CHARACTER movement-transition atlas. Image2 is ONLY the approved roxa transformation appearance reference. Apply Image2's exact hair, blade and subtle energy colors to ALL 24 COMPLETE figures of Image1. Violet: brown hair with purple accents, purple katana and tiny violet energy flecks.\nKeep Image1's six poses in EACH row EXACTLY in place, pixel body size, compact leg length, head-to-body ratio, boot positions and original adult face. The phases are ready, weight shift, first step, braking, pivot and settled. Four directions ordered as Image1. Exactly SIX columns x FOUR rows, SAME canvas dimensions. Never replace the poses with six identical idle figures. Keep two arms, two legs, one right-hand katana, left hand empty. Every complete figure and sword tip stays inside its cell with transparent padding and no cut tips. REQUIEM: black long coat with sleeves and plain black shirt. Keep the approved coat and silver hip chain. These are WHOLE coherent figures, no body parts assembled. Transparent RGBA background, no backdrop, floor, text or grid.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RequiemIdleKatanaYoung.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\restauracao-cristais-20261017\\movimento-requiem-cardinais-roxa-cristais.png",
+      "previousOutput": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-requiem-cardinais-roxa.png",
+      "paddingCorrection": {
+        "prompt": "Correct the sprite atlas framing. Preserve the supplied 24 whole characters EXACTLY, their existing pixel body scale, original compact leg/head proportions, outfit and form colors. SIX columns, FOUR rows. THIRD ROW ONLY (the six back-facing NORTH figures): reposition ALL SIX COMPLETE FIGURES forty (40) pixels to the LEFT, leaving the full rightmost katana tip clearly inside the canvas with at least 20 pixels of transparent space at the right edge. The current last North katana tip is clipped. Regenerate the six COMPLETE north figures intact, including both arms, both boots, entire hair and full one right-hand sword, positioned 40px left. First north figure has space on its left for this shift. Do not change the other three rows. Same 1536x1024 canvas. No head, body, weapon or limbs assembled separately. ROCK if present has sleeveless vest, skull shirt, black pants and NO cloth below waist, NO sash or ribbons. Transparent background alpha, no labels, no extra weapons, no backdrop.",
+        "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-c02df8fc-01db-464c-8693-838c90c62a8e.png",
+        "tool": "integrated imagegen"
+      },
+      "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-requiem-cardinais.png",
+      "kind": "Motion",
+      "idleBlinkFrame": -1,
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-bff37e84-c545-4b17-bdd0-82c2509834b6.png",
+      "base": "movimento-requiem-cardinais",
+      "form": "roxa",
+      "formRef": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-requiem-cardinais-roxa-margens-v4.png",
+      "productionPhases": 5,
+      "settleUsesApprovedIdle": true,
+      "crystalRestoration": {
+        "prompt": "Edit this WHOLE character motion animation atlas image1 ONLY to restore the approved solid pointed violet PURPLE crystal spikes at the black COAT collar/shoulders, upper sleeves and wrist cuffs. Image2 TOP MIDDLE character is the approved crystal design. The existing sheet must keep the exact same full characters, 6 columns x4 rows, motions/directions/foot placement, sprite pixel scale, skin, facial identity, compact leg lengths, hair and all right-hand katanas. NO changes to movements, weapons, proportions or clothes other than clothing crystal spikes. Need distinct small faceted shards ATTACHED to seams/cuffs, not only floating motes. Preserve every figure's full weapon and body within source bounds, clear transparent gutters. Requiem wears full sleeves and long black coat, plain shirt and silver chain. Warm peach skin unchanged. All heads, both hands/arms, boots and swords must remain complete. Real transparent RGBA 1536x1024 background, no shadow, floor, checkerboard, grid, text, labels. No anatomy assembly or separate body pieces.",
+        "tool": "integrated imagegen",
+        "reference": "approved transformation 2026-10-14 144135"
+      }
+    },
+    {
+      "id": "movimento-requiem-cardinais-branca",
+      "skin": "requiem",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit Image1, the REQUIEM 24-FRAME WHOLE-CHARACTER movement-transition atlas. Image2 is ONLY the approved branca transformation appearance reference. Apply Image2's exact hair, blade and subtle energy colors to ALL 24 COMPLETE figures of Image1. Absolute: long silver-white hair, original crimson/white katana, black clothes with silver-white accents.\nKeep Image1's six poses in EACH row EXACTLY in place, pixel body size, compact leg length, head-to-body ratio, boot positions and original adult face. The phases are ready, weight shift, first step, braking, pivot and settled. Four directions ordered as Image1. Exactly SIX columns x FOUR rows, SAME canvas dimensions. Never replace the poses with six identical idle figures. Keep two arms, two legs, one right-hand katana, left hand empty. Every complete figure and sword tip stays inside its cell with transparent padding and no cut tips. REQUIEM: black long coat with sleeves and plain black shirt. Keep the approved coat and silver hip chain. These are WHOLE coherent figures, no body parts assembled. Transparent RGBA background, no backdrop, floor, text or grid.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RequiemIdleKatanaYoung.png"
+      ],
+      "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-requiem-cardinais-branca.png",
+      "previousOutput": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-cardinais.png",
+      "paddingCorrection": {
+        "prompt": "Correct the sprite atlas framing. Preserve the supplied 24 whole characters EXACTLY, their existing pixel body scale, original compact leg/head proportions, outfit and form colors. SIX columns, FOUR rows. THIRD ROW ONLY (the six back-facing NORTH figures): reposition ALL SIX COMPLETE FIGURES forty (40) pixels to the LEFT, leaving the full rightmost katana tip clearly inside the canvas with at least 20 pixels of transparent space at the right edge. The current last North katana tip is clipped. Regenerate the six COMPLETE north figures intact, including both arms, both boots, entire hair and full one right-hand sword, positioned 40px left. First north figure has space on its left for this shift. Do not change the other three rows. Same 1536x1024 canvas. No head, body, weapon or limbs assembled separately. ROCK if present has sleeveless vest, skull shirt, black pants and NO cloth below waist, NO sash or ribbons. Transparent background alpha, no labels, no extra weapons, no backdrop.",
+        "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-c02df8fc-01db-464c-8693-838c90c62a8e.png",
+        "tool": "integrated imagegen"
+      },
+      "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-requiem-cardinais.png",
+      "kind": "Motion",
+      "idleBlinkFrame": -1,
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-f7e6622b-5482-4a8f-bb72-9390c4891508.png",
+      "base": "movimento-requiem-cardinais",
+      "form": "branca",
+      "formRef": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-requiem-cardinais-branca-margens-v3.png",
+      "productionPhases": 5,
+      "settleUsesApprovedIdle": true
+    },
+    {
+      "id": "movimento-requiem-diagonais-vermelha",
+      "skin": "requiem",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit Image1, the REQUIEM 24-FRAME WHOLE-CHARACTER movement-transition atlas. Image2 is ONLY the approved vermelha transformation appearance reference. Apply Image2's exact hair, blade and subtle energy colors to ALL 24 COMPLETE figures of Image1. Crimson: brown hair with red accents, crimson katana.\nKeep Image1's six poses in EACH row EXACTLY in place, pixel body size, compact leg length, head-to-body ratio, boot positions and original adult face. The phases are ready, weight shift, first step, braking, pivot and settled. Four directions ordered as Image1. Exactly SIX columns x FOUR rows, SAME canvas dimensions. Never replace the poses with six identical idle figures. Keep two arms, two legs, one right-hand katana, left hand empty. Every complete figure and sword tip stays inside its cell with transparent padding and no cut tips. REQUIEM: black long coat with sleeves and plain black shirt. Keep the approved coat and silver hip chain. These are WHOLE coherent figures, no body parts assembled. Transparent RGBA background, no backdrop, floor, text or grid.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RequiemIdleKatanaYoung.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\restauracao-cristais-20261017\\movimento-requiem-diagonais-vermelha-cristais.png",
+      "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-requiem-diagonais.png",
+      "kind": "Motion",
+      "idleBlinkFrame": -1,
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-a9da5e1b-8bf5-4290-817a-f2b9aa0bb939.png",
+      "base": "movimento-requiem-diagonais",
+      "form": "vermelha",
+      "formRef": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais-vermelha.png",
+      "productionPhases": 5,
+      "settleUsesApprovedIdle": true,
+      "previousOutput": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-requiem-diagonais-vermelha.png",
+      "crystalRestoration": {
+        "prompt": "Edit this WHOLE character motion animation atlas image1 ONLY to restore the approved solid pointed crimson RED crystal spikes at the black COAT collar/shoulders, upper sleeves and wrist cuffs. Image2 TOP LEFT character is the approved crystal design. The existing sheet must keep the exact same full characters, 6 columns x4 rows, motions/directions/foot placement, sprite pixel scale, skin, facial identity, compact leg lengths, hair and all right-hand katanas. NO changes to movements, weapons, proportions or clothes other than clothing crystal spikes. Need distinct small faceted shards ATTACHED to seams/cuffs, not only floating motes. Preserve every figure's full weapon and body within source bounds, clear transparent gutters. Requiem wears full sleeves and long black coat, plain shirt and silver chain. Warm peach skin unchanged. All heads, both hands/arms, boots and swords must remain complete. Real transparent RGBA 1536x1024 background, no shadow, floor, checkerboard, grid, text, labels. No anatomy assembly or separate body pieces.",
+        "tool": "integrated imagegen",
+        "reference": "approved transformation 2026-10-14 144135"
+      }
+    },
+    {
+      "id": "movimento-requiem-diagonais-roxa",
+      "skin": "requiem",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit Image1, the REQUIEM 24-FRAME WHOLE-CHARACTER movement-transition atlas. Image2 is ONLY the approved roxa transformation appearance reference. Apply Image2's exact hair, blade and subtle energy colors to ALL 24 COMPLETE figures of Image1. Violet: brown hair with purple accents, purple katana and tiny violet energy flecks.\nKeep Image1's six poses in EACH row EXACTLY in place, pixel body size, compact leg length, head-to-body ratio, boot positions and original adult face. The phases are ready, weight shift, first step, braking, pivot and settled. Four directions ordered as Image1. Exactly SIX columns x FOUR rows, SAME canvas dimensions. Never replace the poses with six identical idle figures. Keep two arms, two legs, one right-hand katana, left hand empty. Every complete figure and sword tip stays inside its cell with transparent padding and no cut tips. REQUIEM: black long coat with sleeves and plain black shirt. Keep the approved coat and silver hip chain. These are WHOLE coherent figures, no body parts assembled. Transparent RGBA background, no backdrop, floor, text or grid.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RequiemIdleKatanaYoung.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\restauracao-cristais-20261017\\movimento-requiem-diagonais-roxa-cristais.png",
+      "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-requiem-diagonais.png",
+      "kind": "Motion",
+      "idleBlinkFrame": -1,
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-1044550c-184a-41ba-ad87-5b044bd12d1e.png",
+      "base": "movimento-requiem-diagonais",
+      "form": "roxa",
+      "formRef": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais-roxa.png",
+      "productionPhases": 5,
+      "settleUsesApprovedIdle": true,
+      "previousOutput": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-requiem-diagonais-roxa.png",
+      "crystalRestoration": {
+        "prompt": "Edit this WHOLE character motion animation atlas image1 ONLY to restore the approved solid pointed violet PURPLE crystal spikes at the black COAT collar/shoulders, upper sleeves and wrist cuffs. Image2 TOP MIDDLE character is the approved crystal design. The existing sheet must keep the exact same full characters, 6 columns x4 rows, motions/directions/foot placement, sprite pixel scale, skin, facial identity, compact leg lengths, hair and all right-hand katanas. NO changes to movements, weapons, proportions or clothes other than clothing crystal spikes. Need distinct small faceted shards ATTACHED to seams/cuffs, not only floating motes. Preserve every figure's full weapon and body within source bounds, clear transparent gutters. Requiem wears full sleeves and long black coat, plain shirt and silver chain. Warm peach skin unchanged. All heads, both hands/arms, boots and swords must remain complete. Real transparent RGBA 1536x1024 background, no shadow, floor, checkerboard, grid, text, labels. No anatomy assembly or separate body pieces.",
+        "tool": "integrated imagegen",
+        "reference": "approved transformation 2026-10-14 144135"
+      }
+    },
+    {
+      "id": "movimento-requiem-diagonais-branca",
+      "skin": "requiem",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit Image1, the REQUIEM 24-FRAME WHOLE-CHARACTER movement-transition atlas. Image2 is ONLY the approved branca transformation appearance reference. Apply Image2's exact hair, blade and subtle energy colors to ALL 24 COMPLETE figures of Image1. Absolute: long silver-white hair, original crimson/white katana, black clothes with silver-white accents.\nKeep Image1's six poses in EACH row EXACTLY in place, pixel body size, compact leg length, head-to-body ratio, boot positions and original adult face. The phases are ready, weight shift, first step, braking, pivot and settled. Four directions ordered as Image1. Exactly SIX columns x FOUR rows, SAME canvas dimensions. Never replace the poses with six identical idle figures. Keep two arms, two legs, one right-hand katana, left hand empty. Every complete figure and sword tip stays inside its cell with transparent padding and no cut tips. REQUIEM: black long coat with sleeves and plain black shirt. Keep the approved coat and silver hip chain. These are WHOLE coherent figures, no body parts assembled. Transparent RGBA background, no backdrop, floor, text or grid.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RequiemIdleKatanaYoung.png"
+      ],
+      "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-requiem-diagonais-branca.png",
+      "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-requiem-diagonais.png",
+      "kind": "Motion",
+      "idleBlinkFrame": -1,
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-c95d2bbe-43c2-4c64-bb20-061050110668.png",
+      "base": "movimento-requiem-diagonais",
+      "form": "branca",
+      "formRef": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais-branca.png",
+      "productionPhases": 5,
+      "settleUsesApprovedIdle": true
+    },
+    {
+      "id": "movimento-rock-cardinais-vermelha",
+      "skin": "rock",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit Image1, the ROCK 24-FRAME WHOLE-CHARACTER movement-transition atlas. Image2 is ONLY the approved vermelha transformation appearance reference. Apply Image2's exact hair, blade and subtle energy colors to ALL 24 COMPLETE figures of Image1. Crimson: brown hair with red accents, crimson katana.\nKeep Image1's six poses in EACH row EXACTLY in place, pixel body size, compact leg length, head-to-body ratio, boot positions and original adult face. The phases are ready, weight shift, first step, braking, pivot and settled. Four directions ordered as Image1. Exactly SIX columns x FOUR rows, SAME canvas dimensions. Never replace the poses with six identical idle figures. Keep two arms, two legs, one right-hand katana, left hand empty. Every complete figure and sword tip stays inside its cell with transparent padding and no cut tips. ROCK: black sleeveless studded skull vest, bare muscular arms, black pants and wrist cuffs. NO red or purple hip ribbons, NO sash, NO tails, NO cape, NO garment or ribbon-shaped energy below belt. The original silver chain stays. These are WHOLE coherent figures, no body parts assembled. Transparent RGBA background, no backdrop, floor, text or grid.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RockIdleKatanaYoung.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\restauracao-cristais-20261017\\movimento-rock-cardinais-vermelha-cristais.png",
+      "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-rock-cardinais.png",
+      "kind": "Motion",
+      "idleBlinkFrame": -1,
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-ec72689d-a954-468b-841c-786138aa974a.png",
+      "base": "movimento-rock-cardinais",
+      "form": "vermelha",
+      "formRef": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-cardinais-vermelha-v2.png",
+      "productionPhases": 5,
+      "settleUsesApprovedIdle": true,
+      "previousOutput": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-rock-cardinais-vermelha.png",
+      "crystalRestoration": {
+        "prompt": "Edit image1's WHOLE ROCK character motion atlas ONLY by restoring small solid faceted CRIMSON RED crystal spikes growing out of the sleeveless vest shoulder seams/collar and black wrist cuffs. Reference2 BOTTOM LEFT character is the approved design. Preserve absolutely all existing 24 FULL character poses, 4 rows x6 columns, identical facing and chronological start/brake/turn motions. Do not replace a frontal figure by a back figure. Same source body pixel scale, feet position, compact original leg lengths/head ratio, original adult face and warm peach skin. Same muscular bare arms, skull shirt, sleeveless black leather vest, pants, compact boots, silver hip chain and entire right-hand katana. NO fabric below waist, NO sash, ribbons, coat tails, cape or sleeves. Only the attached pointed clothing crystal clusters change; no additional armor or floating motes. Each full body AND sword isolated in its own cell, transparent gutters and padding, no tips touching canvas edge. 1536x1024 real transparent RGBA, no floor, shadow, grid, checkerboard/text/watermark. No body part assembly.",
+        "tool": "integrated imagegen",
+        "reference": "approved transformation 2026-10-14 144135"
+      }
+    },
+    {
+      "id": "movimento-rock-cardinais-roxa",
+      "skin": "rock",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit Image1, the ROCK 24-FRAME WHOLE-CHARACTER movement-transition atlas. Image2 is ONLY the approved roxa transformation appearance reference. Apply Image2's exact hair, blade and subtle energy colors to ALL 24 COMPLETE figures of Image1. Violet: brown hair with purple accents, purple katana and tiny violet energy flecks.\nKeep Image1's six poses in EACH row EXACTLY in place, pixel body size, compact leg length, head-to-body ratio, boot positions and original adult face. The phases are ready, weight shift, first step, braking, pivot and settled. Four directions ordered as Image1. Exactly SIX columns x FOUR rows, SAME canvas dimensions. Never replace the poses with six identical idle figures. Keep two arms, two legs, one right-hand katana, left hand empty. Every complete figure and sword tip stays inside its cell with transparent padding and no cut tips. ROCK: black sleeveless studded skull vest, bare muscular arms, black pants and wrist cuffs. NO red or purple hip ribbons, NO sash, NO tails, NO cape, NO garment or ribbon-shaped energy below belt. The original silver chain stays. These are WHOLE coherent figures, no body parts assembled. Transparent RGBA background, no backdrop, floor, text or grid.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RockIdleKatanaYoung.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\restauracao-cristais-20261017\\movimento-rock-cardinais-roxa-cristais.png",
+      "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-rock-cardinais.png",
+      "kind": "Motion",
+      "idleBlinkFrame": -1,
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-88cfadb1-ebe5-4a8e-90a2-de0fd38a8207.png",
+      "base": "movimento-rock-cardinais",
+      "form": "roxa",
+      "formRef": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-cardinais-roxa.png",
+      "productionPhases": 5,
+      "settleUsesApprovedIdle": true,
+      "previousOutput": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-rock-cardinais-roxa.png",
+      "crystalRestoration": {
+        "prompt": "Edit image1's WHOLE ROCK character motion atlas ONLY by restoring small solid faceted VIOLET PURPLE crystal spikes growing out of the sleeveless vest shoulder seams/collar and black wrist cuffs. Reference2 BOTTOM MIDDLE character is the approved design. Preserve absolutely all existing 24 FULL character poses, 4 rows x6 columns, identical facing and chronological start/brake/turn motions. Do not replace a frontal figure by a back figure. Same source body pixel scale, feet position, compact original leg lengths/head ratio, original adult face and warm peach skin. Same muscular bare arms, skull shirt, sleeveless black leather vest, pants, compact boots, silver hip chain and entire right-hand katana. NO fabric below waist, NO sash, ribbons, coat tails, cape or sleeves. Only the attached pointed clothing crystal clusters change; no additional armor or floating motes. Each full body AND sword isolated in its own cell, transparent gutters and padding, no tips touching canvas edge. 1536x1024 real transparent RGBA, no floor, shadow, grid, checkerboard/text/watermark. No body part assembly.",
+        "tool": "integrated imagegen",
+        "reference": "approved transformation 2026-10-14 144135"
+      }
+    },
+    {
+      "id": "movimento-rock-cardinais-branca",
+      "skin": "rock",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit Image1, the ROCK 24-FRAME WHOLE-CHARACTER movement-transition atlas. Image2 is ONLY the approved branca transformation appearance reference. Apply Image2's exact hair, blade and subtle energy colors to ALL 24 COMPLETE figures of Image1. Absolute: long silver-white hair, original crimson/white katana, black clothes with silver-white accents.\nKeep Image1's six poses in EACH row EXACTLY in place, pixel body size, compact leg length, head-to-body ratio, boot positions and original adult face. The phases are ready, weight shift, first step, braking, pivot and settled. Four directions ordered as Image1. Exactly SIX columns x FOUR rows, SAME canvas dimensions. Never replace the poses with six identical idle figures. Keep two arms, two legs, one right-hand katana, left hand empty. Every complete figure and sword tip stays inside its cell with transparent padding and no cut tips. ROCK: black sleeveless studded skull vest, bare muscular arms, black pants and wrist cuffs. NO red or purple hip ribbons, NO sash, NO tails, NO cape, NO garment or ribbon-shaped energy below belt. The original silver chain stays. These are WHOLE coherent figures, no body parts assembled. Transparent RGBA background, no backdrop, floor, text or grid.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RockIdleKatanaYoung.png"
+      ],
+      "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-rock-cardinais-branca.png",
+      "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-rock-cardinais.png",
+      "kind": "Motion",
+      "idleBlinkFrame": -1,
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-a3fe0996-979e-43da-89b2-a6fd1b6dba6c.png",
+      "base": "movimento-rock-cardinais",
+      "form": "branca",
+      "formRef": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-rock-cardinais-branca-margens-v4.png",
+      "productionPhases": 5,
+      "settleUsesApprovedIdle": true
+    },
+    {
+      "id": "movimento-rock-diagonais-vermelha",
+      "skin": "rock",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit Image1, the ROCK 24-FRAME WHOLE-CHARACTER movement-transition atlas. Image2 is ONLY the approved vermelha transformation appearance reference. Apply Image2's exact hair, blade and subtle energy colors to ALL 24 COMPLETE figures of Image1. Crimson: brown hair with red accents, crimson katana.\nKeep Image1's six poses in EACH row EXACTLY in place, pixel body size, compact leg length, head-to-body ratio, boot positions and original adult face. The phases are ready, weight shift, first step, braking, pivot and settled. Four directions ordered as Image1. Exactly SIX columns x FOUR rows, SAME canvas dimensions. Never replace the poses with six identical idle figures. Keep two arms, two legs, one right-hand katana, left hand empty. Every complete figure and sword tip stays inside its cell with transparent padding and no cut tips. ROCK: black sleeveless studded skull vest, bare muscular arms, black pants and wrist cuffs. NO red or purple hip ribbons, NO sash, NO tails, NO cape, NO garment or ribbon-shaped energy below belt. The original silver chain stays. These are WHOLE coherent figures, no body parts assembled. Transparent RGBA background, no backdrop, floor, text or grid.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RockIdleKatanaYoung.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\restauracao-cristais-20261017\\movimento-rock-diagonais-vermelha-cristais.png",
+      "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-rock-diagonais.png",
+      "kind": "Motion",
+      "idleBlinkFrame": -1,
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-2413cc52-1f2d-44f2-9b91-b7cf058f3b17.png",
+      "base": "movimento-rock-diagonais",
+      "form": "vermelha",
+      "formRef": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-diagonais-vermelha.png",
+      "productionPhases": 5,
+      "settleUsesApprovedIdle": true,
+      "previousOutput": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-rock-diagonais-vermelha.png",
+      "crystalRestoration": {
+        "prompt": "Edit image1's WHOLE ROCK character motion atlas ONLY by restoring small solid faceted CRIMSON RED crystal spikes growing out of the sleeveless vest shoulder seams/collar and black wrist cuffs. Reference2 BOTTOM LEFT character is the approved design. Preserve absolutely all existing 24 FULL character poses, 4 rows x6 columns, identical facing and chronological start/brake/turn motions. Do not replace a frontal figure by a back figure. Same source body pixel scale, feet position, compact original leg lengths/head ratio, original adult face and warm peach skin. Same muscular bare arms, skull shirt, sleeveless black leather vest, pants, compact boots, silver hip chain and entire right-hand katana. NO fabric below waist, NO sash, ribbons, coat tails, cape or sleeves. Only the attached pointed clothing crystal clusters change; no additional armor or floating motes. Each full body AND sword isolated in its own cell, transparent gutters and padding, no tips touching canvas edge. 1536x1024 real transparent RGBA, no floor, shadow, grid, checkerboard/text/watermark. No body part assembly.",
+        "tool": "integrated imagegen",
+        "reference": "approved transformation 2026-10-14 144135"
+      }
+    },
+    {
+      "id": "movimento-rock-diagonais-roxa",
+      "skin": "rock",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit Image1, the ROCK 24-FRAME WHOLE-CHARACTER movement-transition atlas. Image2 is ONLY the approved roxa transformation appearance reference. Apply Image2's exact hair, blade and subtle energy colors to ALL 24 COMPLETE figures of Image1. Violet: brown hair with purple accents, purple katana and tiny violet energy flecks.\nKeep Image1's six poses in EACH row EXACTLY in place, pixel body size, compact leg length, head-to-body ratio, boot positions and original adult face. The phases are ready, weight shift, first step, braking, pivot and settled. Four directions ordered as Image1. Exactly SIX columns x FOUR rows, SAME canvas dimensions. Never replace the poses with six identical idle figures. Keep two arms, two legs, one right-hand katana, left hand empty. Every complete figure and sword tip stays inside its cell with transparent padding and no cut tips. ROCK: black sleeveless studded skull vest, bare muscular arms, black pants and wrist cuffs. NO red or purple hip ribbons, NO sash, NO tails, NO cape, NO garment or ribbon-shaped energy below belt. The original silver chain stays. These are WHOLE coherent figures, no body parts assembled. Transparent RGBA background, no backdrop, floor, text or grid.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RockIdleKatanaYoung.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\restauracao-cristais-20261017\\movimento-rock-diagonais-roxa-cristais.png",
+      "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-rock-diagonais.png",
+      "kind": "Motion",
+      "idleBlinkFrame": -1,
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-e506ca6a-b078-49d1-9d6c-f0599801ad34.png",
+      "base": "movimento-rock-diagonais",
+      "form": "roxa",
+      "formRef": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-diagonais-roxa.png",
+      "productionPhases": 5,
+      "settleUsesApprovedIdle": true,
+      "previousOutput": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-rock-diagonais-roxa.png",
+      "crystalRestoration": {
+        "prompt": "Edit image1's WHOLE ROCK character motion atlas ONLY by restoring small solid faceted VIOLET PURPLE crystal spikes growing out of the sleeveless vest shoulder seams/collar and black wrist cuffs. Reference2 BOTTOM MIDDLE character is the approved design. Preserve absolutely all existing 24 FULL character poses, 4 rows x6 columns, identical facing and chronological start/brake/turn motions. Do not replace a frontal figure by a back figure. Same source body pixel scale, feet position, compact original leg lengths/head ratio, original adult face and warm peach skin. Same muscular bare arms, skull shirt, sleeveless black leather vest, pants, compact boots, silver hip chain and entire right-hand katana. NO fabric below waist, NO sash, ribbons, coat tails, cape or sleeves. Only the attached pointed clothing crystal clusters change; no additional armor or floating motes. Each full body AND sword isolated in its own cell, transparent gutters and padding, no tips touching canvas edge. 1536x1024 real transparent RGBA, no floor, shadow, grid, checkerboard/text/watermark. No body part assembly.",
+        "tool": "integrated imagegen",
+        "reference": "approved transformation 2026-10-14 144135"
+      }
+    },
+    {
+      "id": "movimento-rock-diagonais-branca",
+      "skin": "rock",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Edit Image1, the ROCK 24-FRAME WHOLE-CHARACTER movement-transition atlas. Image2 is ONLY the approved branca transformation appearance reference. Apply Image2's exact hair, blade and subtle energy colors to ALL 24 COMPLETE figures of Image1. Absolute: long silver-white hair, original crimson/white katana, black clothes with silver-white accents.\nKeep Image1's six poses in EACH row EXACTLY in place, pixel body size, compact leg length, head-to-body ratio, boot positions and original adult face. The phases are ready, weight shift, first step, braking, pivot and settled. Four directions ordered as Image1. Exactly SIX columns x FOUR rows, SAME canvas dimensions. Never replace the poses with six identical idle figures. Keep two arms, two legs, one right-hand katana, left hand empty. Every complete figure and sword tip stays inside its cell with transparent padding and no cut tips. ROCK: black sleeveless studded skull vest, bare muscular arms, black pants and wrist cuffs. NO red or purple hip ribbons, NO sash, NO tails, NO cape, NO garment or ribbon-shaped energy below belt. The original silver chain stays. These are WHOLE coherent figures, no body parts assembled. Transparent RGBA background, no backdrop, floor, text or grid.",
+      "refs": [
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RockIdleKatanaYoung.png"
+      ],
+      "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-rock-diagonais-branca.png",
+      "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/movimento-rock-diagonais.png",
+      "kind": "Motion",
+      "idleBlinkFrame": -1,
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-84eedbce-b031-4fe0-9d24-db7371646b18.png",
+      "base": "movimento-rock-diagonais",
+      "form": "branca",
+      "formRef": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-diagonais-branca.png",
+      "productionPhases": 5,
+      "settleUsesApprovedIdle": true
+    }
+  ],
+  "provenance": [
+    {
+      "id": "idle-vivo-requiem-cardinais",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-4f357d5f-6842-4232-8465-8aa0ceed6250.png",
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-cardinais.png"
+    },
+    {
+      "id": "idle-vivo-requiem-diagonais",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-b463e754-b0fa-4ddd-8787-eb6948df6ce5.png",
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais-v2.png",
+      "correction": "idle-vivo-requiem-diagonais-v2"
+    },
+    {
+      "id": "idle-vivo-rock-cardinais",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-03fe3932-bcaf-4e43-a50c-93e92baf98df.png",
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-cardinais.png"
+    },
+    {
+      "id": "idle-vivo-rock-diagonais",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-5b58441a-0735-4e57-9e76-b521032a7976.png",
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-diagonais.png"
+    },
+    {
+      "id": "idle-vivo-requiem-cardinais-vermelha",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-4d154920-ded1-40dd-9721-9a5c0358e810.png",
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-cardinais-vermelha.png"
+    },
+    {
+      "id": "idle-vivo-requiem-cardinais-roxa",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-6442e903-28d2-4578-bae2-bb19cc1f7ef2.png",
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-cardinais-roxa.png"
+    },
+    {
+      "id": "idle-vivo-requiem-cardinais-branca",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-33e40aa7-3918-4dc6-ba0f-8d4073cf7365.png",
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-cardinais-branca.png"
+    },
+    {
+      "id": "idle-vivo-requiem-diagonais-vermelha",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-9118ab33-21c5-437f-9005-15fa92e851a1.png",
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais-vermelha.png"
+    },
+    {
+      "id": "idle-vivo-requiem-diagonais-roxa",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-9e8fa1b7-b5ba-4b86-a4cd-291064118a06.png",
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais-roxa.png"
+    },
+    {
+      "id": "idle-vivo-requiem-diagonais-branca",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-def1f59c-6be4-4292-b43e-101ac0a58af5.png",
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais-branca.png"
+    },
+    {
+      "id": "idle-vivo-rock-cardinais-vermelha",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-ca62cc0f-b66c-4b29-b903-389c34ed97f3.png",
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-cardinais-vermelha-v2.png",
+      "correction": "idle-vivo-rock-cardinais-vermelha-v2"
+    },
+    {
+      "id": "idle-vivo-rock-cardinais-roxa",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-d56709bf-561e-4ffa-89a8-9c571f95e51e.png",
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-cardinais-roxa.png"
+    },
+    {
+      "id": "idle-vivo-rock-cardinais-branca",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-09a5e6fb-f09b-4e73-861e-7c155db8876e.png",
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-cardinais-branca.png"
+    },
+    {
+      "id": "idle-vivo-rock-diagonais-vermelha",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-baef2f8f-3aa3-459b-b95b-affdbbef9845.png",
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-diagonais-vermelha.png"
+    },
+    {
+      "id": "idle-vivo-rock-diagonais-roxa",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-6084f14e-1bd7-47fa-8031-06551bbe01cc.png",
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-diagonais-roxa.png"
+    },
+    {
+      "id": "idle-vivo-rock-diagonais-branca",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-424eef8d-60fe-4948-8e71-768bda2b779a.png",
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-diagonais-branca.png"
+    }
+  ],
+  "rockNoLowerCloth": true,
+  "tool": "integrated imagegen",
+  "corrections": [
+    {
+      "id": "idle-vivo-requiem-diagonais-v2",
+      "skin": "requiem",
+      "set": "diagonais",
+      "directions": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Correct this WHOLE-CHARACTER animation atlas for DARKLIGHT: REQUIEM. Image1 is the current SIX columns by FOUR rows idle atlas; image2 is the user's immutable original design TOP REQUIEM skin; image3 the production eight-view camera reference.\nThere is a MAJOR error in ROW2 (the NORTHWEST / back-left diagonal): several figures hold TWO KATANAS. Regenerate the SIX COMPLETE FIGURES of row2 as coherent WHOLE characters: exactly ONE KATANA total per figure, held in the RIGHT hand, held low, extending towards the right edge as appropriate for the back view. The LEFT hand is EMPTY, relaxed, not holding any object. Absolutely no second sword or extra blade/sword segment anywhere to the left of these figures. Match the existing row2 col4 single-sword pose as the equipment arrangement, but maintain correct northwest orientation in ALL six frames and original coat, chain, arms and body proportions. No new sheath, no additional arms. Generate whole finished figures, no body-part assembly.\nKeep rows1,3,4 and all overall body heights, head sizes, leg lengths, clothes, pose scale, six-phase subtle breathing and col6 blinking from image1. Preserve SINGLE KATANA in ALL24 figures. Each row one direction: southwest, northwest, northeast, southeast. Proper back views have no face unless the back-left/back-right head turn realistically reveals a small side of the face. Keep full shoes/weapon inside cell. Same SIX columns FOUR rows, real transparent alpha, no solid backdrop, no text/shadows/grid. Especially ensure row2 never shows two blades or two sword grips. Only one crimson katana per person in the whole atlas.",
+      "refs": [
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais.png",
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\Assets\\Darklight\\Resources\\Darklight\\TodayCharacterAnimations\\RequiemIdleKatanaYoung.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-requiem-diagonais-v2.png"
+    },
+    {
+      "id": "idle-vivo-rock-cardinais-vermelha-v2",
+      "skin": "rock",
+      "set": "cardinais",
+      "directions": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rows": 4,
+      "columns": 6,
+      "phases": 6,
+      "frames": 24,
+      "prompt": "Correct the ROCK CRIMSON whole-character sprite atlas. Image1 is the 24-frame target to correct. Image2 is the exact normal Rock atlas showing the TRUE garment outline. Image3 BOTTOM character is the user's immutable original Rock design.\nTHE USER REJECTED THE RED FABRIC STRIPS HANGING BELOW THE VEST/WAIST. ROCK HAS NO SASH, NO RED WAISTBAND, NO COAT TAILS, NO SKIRT, NO HIP RIBBONS, NO TABARD AND NO LONG VEST FLAPS. Regenerate the 24 COMPLETE figures with the waist, hip and thigh silhouette EXACTLY like Image2. Vest ends at the belt/waist, then ordinary black pants only. Keep the original silver hip chain, belt, pants, legs and boots. There must be TRANSPARENT EMPTY SPACE outside the original pants silhouette below the vest, no red fabric at either hip in ANY row/frame, including SIDE and BACK.\nPreserve ALL other details of Image1: original compact body/head/leg proportions and adult face, red-accented brown hair, red wrist energy, skull shirt, black sleeveless studded vest, original one right-hand crimson katana, stance and the six chronological subtle breathing/blink poses. Exactly two arms and legs, left hand empty. SIX columns x FOUR rows; row1 SOUTH/front, row2 WEST/left, row3 NORTH/back, row4 EAST/right. Do not add any accessory. Red energy can remain in hair, wrist accents and blade, but it must NEVER generate strips of clothing or ribbon-shaped energy below the belt.\nGenerate complete coherent whole figures, not a collage or body-part patch. Every full katana and both boots intact. Same canvas dimensions and all corresponding pose positions as Image1. True transparent RGBA alpha, no backdrop, floor, shadows, text, labels or grid. The corrected result MUST show the original plain black pants immediately below the belt in all 24 frames, with no hanging red strips whatsoever.",
+      "refs": [
+        "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-866e28b4-56e1-441c-83b9-f602a0994dd5.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-cardinais.png",
+        "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-10-14 120511.png"
+      ],
+      "output": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\implementacao-fase2-20261017\\idle-vivo-rock-cardinais-vermelha-v2.png",
+      "base": "idle-vivo-rock-cardinais",
+      "form": "vermelha"
+    },
+    {
+      "id": "idle-vivo-requiem-cardinais-vermelha",
+      "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-requiem-cardinais-vermelha.png",
+      "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-requiem-cardinais-vermelha-margens-v3.png",
+      "prompt": "Edit the provided complete DARKLIGHT REQUIEM 24-character idle sprite sheet, preserving the identical character identity, adult face, outfit, colors, single katana, compact body/leg proportions, and all 24 poses. Correct the CLIPPED BLADE at the right canvas edge. Re-layout the 24 COMPLETE coherent figures with more transparent space: SIX columns and FOUR rows, rows SOUTH/front, WEST, NORTH/back, EAST. Each row has six subtle idle breathing phases, sixth with closed eyes wherever face visible. Use the SAME 1536x1024 canvas, but uniformly render every WHOLE figure at about 82% of its current pixel dimensions, placed centrally in its own 256x256 cell. This is a uniform atlas-packing change only; NEVER change head-to-body ratio or stretch/shrink legs independently. Leave at least 16 transparent pixels between every complete figure including blade tip and each cell boundary. Especially keep the ENTIRE rightmost North and East katana blades with their intact tips inside the image. Preserve exact weapon length and one right-hand katana, two complete arms, two complete legs, both boots. Do not assemble body parts. REQU IEM wears the original long black coat with sleeves, plain black shirt, silver belt/chain and black boots. Preserve the input transformation hair and blade colors. No duplicate swords, extra limbs, labels or grid. Transparent RGBA alpha, no backdrop, floor or shadows.",
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-6941b26e-cb7e-42cc-8392-373375e75cc1.png"
+    },
+    {
+      "id": "idle-vivo-requiem-cardinais-branca",
+      "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-requiem-cardinais-branca.png",
+      "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-requiem-cardinais-branca-margens-v3.png",
+      "prompt": "Edit the provided complete DARKLIGHT REQUIEM 24-character idle sprite sheet, preserving the identical character identity, adult face, outfit, colors, single katana, compact body/leg proportions, and all 24 poses. Correct the CLIPPED BLADE at the right canvas edge. Re-layout the 24 COMPLETE coherent figures with more transparent space: SIX columns and FOUR rows, rows SOUTH/front, WEST, NORTH/back, EAST. Each row has six subtle idle breathing phases, sixth with closed eyes wherever face visible. Use the SAME 1536x1024 canvas, but uniformly render every WHOLE figure at about 82% of its current pixel dimensions, placed centrally in its own 256x256 cell. This is a uniform atlas-packing change only; NEVER change head-to-body ratio or stretch/shrink legs independently. Leave at least 16 transparent pixels between every complete figure including blade tip and each cell boundary. Especially keep the ENTIRE rightmost North and East katana blades with their intact tips inside the image. Preserve exact weapon length and one right-hand katana, two complete arms, two complete legs, both boots. Do not assemble body parts. REQU IEM wears the original long black coat with sleeves, plain black shirt, silver belt/chain and black boots. Preserve the input transformation hair and blade colors. No duplicate swords, extra limbs, labels or grid. Transparent RGBA alpha, no backdrop, floor or shadows.",
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-e6b09f0a-0748-4ec3-8fb7-6ae67db324d1.png"
+    },
+    {
+      "id": "idle-vivo-requiem-cardinais-deslocamento",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-f656c771-151a-482d-a31b-7ef27d5b751c.png",
+      "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-requiem-cardinais-margens-v4.png",
+      "prompt": "Correct the sprite atlas framing. Preserve the supplied 24 whole characters EXACTLY, their existing pixel body scale, original compact leg/head proportions, outfit and form colors. SIX columns, FOUR rows. THIRD ROW ONLY (the six back-facing NORTH figures): reposition ALL SIX COMPLETE FIGURES forty (40) pixels to the LEFT, leaving the full rightmost katana tip clearly inside the canvas with at least 20 pixels of transparent space at the right edge. The current last North katana tip is clipped. Regenerate the six COMPLETE north figures intact, including both arms, both boots, entire hair and full one right-hand sword, positioned 40px left. First north figure has space on its left for this shift. Do not change the other three rows. Same 1536x1024 canvas. No head, body, weapon or limbs assembled separately. ROCK if present has sleeveless vest, skull shirt, black pants and NO cloth below waist, NO sash or ribbons. Transparent background alpha, no labels, no extra weapons, no backdrop.",
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-c02df8fc-01db-464c-8693-838c90c62a8e.png"
+    },
+    {
+      "id": "idle-vivo-requiem-cardinais-roxa-deslocamento",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-e2582fe9-3c21-4fcc-8506-424aa59197bf.png",
+      "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-requiem-cardinais-roxa-margens-v4.png",
+      "prompt": "Correct the sprite atlas framing. Preserve the supplied 24 whole characters EXACTLY, their existing pixel body scale, original compact leg/head proportions, outfit and form colors. SIX columns, FOUR rows. THIRD ROW ONLY (the six back-facing NORTH figures): reposition ALL SIX COMPLETE FIGURES forty (40) pixels to the LEFT, leaving the full rightmost katana tip clearly inside the canvas with at least 20 pixels of transparent space at the right edge. The current last North katana tip is clipped. Regenerate the six COMPLETE north figures intact, including both arms, both boots, entire hair and full one right-hand sword, positioned 40px left. First north figure has space on its left for this shift. Do not change the other three rows. Same 1536x1024 canvas. No head, body, weapon or limbs assembled separately. ROCK if present has sleeveless vest, skull shirt, black pants and NO cloth below waist, NO sash or ribbons. Transparent background alpha, no labels, no extra weapons, no backdrop.",
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-58ea5e4f-234e-4416-925d-e4cd80d72cf1.png"
+    },
+    {
+      "id": "idle-vivo-rock-cardinais-branca-deslocamento",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-3cbf730e-7e74-4057-aae3-0ab19ca5dcb2.png",
+      "output": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/outputs/implementacao-fase2-20261017/idle-vivo-rock-cardinais-branca-margens-v4.png",
+      "prompt": "Correct the sprite atlas framing. Preserve the supplied 24 whole characters EXACTLY, their existing pixel body scale, original compact leg/head proportions, outfit and form colors. SIX columns, FOUR rows. THIRD ROW ONLY (the six back-facing NORTH figures): reposition ALL SIX COMPLETE FIGURES forty (40) pixels to the LEFT, leaving the full rightmost katana tip clearly inside the canvas with at least 20 pixels of transparent space at the right edge. The current last North katana tip is clipped. Regenerate the six COMPLETE north figures intact, including both arms, both boots, entire hair and full one right-hand sword, positioned 40px left. First north figure has space on its left for this shift. Do not change the other three rows. Same 1536x1024 canvas. No head, body, weapon or limbs assembled separately. ROCK if present has sleeveless vest, skull shirt, black pants and NO cloth below waist, NO sash or ribbons. Transparent background alpha, no labels, no extra weapons, no backdrop.",
+      "generatedSource": "C:\\Users\\Usuario\\.codex\\generated_images\\01a149ec-0533-7b31-9701-5381b9e4d81e\\exec-84501236-abc0-42fc-b285-ed79713f7e6b.png"
+    }
+  ],
+  "rejected": [
+    "requiem-diagonal-double-katana",
+    "rock-cardinal-crimson-extra-cloth"
+  ],
+  "motionPolicy": "Five complete action poses per direction. Settle references approved idle. Sixth-column source candidates are not imported as sprites.",
+  "canonicalSkinReference": "C:/Users/Usuario/Pictures/Screenshots/Captura de tela 2026-10-14 120511.png"
+}

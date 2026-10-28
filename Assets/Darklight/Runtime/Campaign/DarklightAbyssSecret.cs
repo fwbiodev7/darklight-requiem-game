@@ -22,7 +22,7 @@ namespace Darklight
             }
             catch(System.IO.IOException e){Progress.weaponUnlocks=previous;Debug.LogWarning("Cavaleiro save: "+e.Message);Notice("NAO FOI POSSIVEL SALVAR A DESCOBERTA. TENTE NOVAMENTE.");return true;}
             Speak(new[]{"FÁBIO|Um motor selado entre memórias... As duas metades ainda respondem ao meu sangue.","FÁBIO|Cavaleiro do Abismo. Vou abrir meu próprio caminho."});
-            Notice("ARMA SECRETA LIBERADA · CAVALEIRO DO ABISMO · SKIN ROCK");return true;
+            Notice("ARMA SECRETA LIBERADA · CAVALEIRO DO ABISMO · REQUIEM");return true;
         }
     }
 }

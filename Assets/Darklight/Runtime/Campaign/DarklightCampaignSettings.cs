@@ -40,9 +40,9 @@ namespace Darklight
             if(panel=="Pause"){bodyText.gameObject.SetActive(false);pauseLocation.text=(ExploringNewRegion?Map.Art.title:DarklightStory.Chapters[Progress.chapter])+"\n"+(ExploringNewRegion?Map.Art.title:DarklightStory.Places[Progress.chapter])+"\n\n"+Objective;}
             if(skin)
             {
-                int preview=selection<2?selection:SelectedSkin;
+                int preview=0;
                 skinPreview.sprite=TodayCharacterBank.YoungIdle(preview,0,0,Time.unscaledTime)??TodayCharacterBank.StablePose(preview,0,0,0);
-                skinDescription.text=(preview==1?"ROCK\n\nColete de couro, rebites e correntes. Presenca direta e rebelde.":"REQUIEM\n\nSobretudo escuro e katana ancestral. Atravessa Vespera entre o sangue e o eclipse.");
+                skinDescription.text="REQUIEM\n\nSobretudo escuro e katana ancestral. Katana, Punhos da Ruína e motocicleta.";
                 skinEquipped.text=SelectedSkin==preview?"EQUIPADO":"ENTER / A: EQUIPAR";skinEquipped.color=SelectedSkin==preview?new Color(.72f,.08f,.15f):new Color(.84f,.82f,.78f);
             }
             foreach(var row in settingsSliders.Values)if(row.slider!=null){int percent=VolumePercent(row.read());row.slider.SetValueWithoutNotify(percent);row.percent.text=percent+"%";}
@@ -51,7 +51,7 @@ namespace Darklight
         void BuildVisualPicker()
         {
             heading.text="VISUAL";bodyText.text="";
-            Button("REQUIEM",()=>{SelectSkin(0);RefreshPanel();});Button("ROCK",()=>{SelectSkin(1);RefreshPanel();});Button("VOLTAR",()=>Open(returnPanel));
+            Button("REQUIEM",()=>{SelectSkin(0);RefreshPanel();});Button("VOLTAR",()=>Open(returnPanel));
         }
         void SliderRow(string name,Func<float> read,Action<float> write)
         {

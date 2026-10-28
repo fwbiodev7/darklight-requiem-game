@@ -1,0 +1,571 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-27",
+  "evidence": "Static source/catalog audit only; no Unity or visual playback was run by this auditor.",
+  "catalog": {
+    "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/catalog.json",
+    "attackPageCountActiveRequiemKatanaAndFists": 40,
+    "weaponFormAttackCoverage": [
+      {
+        "skin": "Requiem",
+        "weapon": "Katana",
+        "form": "Normal",
+        "attackKey": "Leve1",
+        "catalogPages": 8,
+        "directions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "missingDirections": [],
+        "allPageSourcesPresent": true,
+        "approvedNewSourceScope": true,
+        "sourcePages": [
+          {
+            "direction": 0,
+            "resource": "ReqKatanaNormalNeutralLight1S_Wv1",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 2,
+            "resource": "ReqKatanaNormalNeutralLight1S_Wv1",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 1,
+            "resource": "ReqKatanaNormalNeutralLight1SWv2",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 3,
+            "resource": "ReqKatanaNormalNeutralLeve1NW_N20261025",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 4,
+            "resource": "ReqKatanaNormalNeutralLeve1NW_N20261025",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 5,
+            "resource": "ReqKatanaNormalNeutralLeve1NE20261025",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 6,
+            "resource": "ReqKatanaNormalNeutralLeve1E_SE20261025",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 7,
+            "resource": "ReqKatanaNormalNeutralLeve1E_SE20261025",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          }
+        ]
+      },
+      {
+        "skin": "Requiem",
+        "weapon": "Katana",
+        "form": "Normal",
+        "attackKey": "Leve2",
+        "catalogPages": 8,
+        "directions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "missingDirections": [],
+        "allPageSourcesPresent": true,
+        "approvedNewSourceScope": true,
+        "sourcePages": [
+          {
+            "direction": 0,
+            "resource": "ReqKatanaNormalLeve2S_SW_W1850",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 1,
+            "resource": "ReqKatanaNormalLeve2S_SW_W1850",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 2,
+            "resource": "ReqKatanaNormalLeve2S_SW_W1850",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 3,
+            "resource": "ReqKatanaNormalLeve2NW_N_NE1850",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 4,
+            "resource": "ReqKatanaNormalLeve2NW_N_NE1850",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 5,
+            "resource": "ReqKatanaNormalLeve2NW_N_NE1850",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 6,
+            "resource": "ReqKatanaNormalLeve2E_SE1850",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 7,
+            "resource": "ReqKatanaNormalLeve2E_SE1850",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          }
+        ]
+      },
+      {
+        "skin": "Requiem",
+        "weapon": "Katana",
+        "form": "Ruptura",
+        "attackKey": "Leve1",
+        "catalogPages": 1,
+        "directions": [
+          0
+        ],
+        "missingDirections": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "allPageSourcesPresent": true,
+        "approvedNewSourceScope": false,
+        "sourcePages": [
+          {
+            "direction": 0,
+            "resource": "ReqKatanaRupturaSouth",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          }
+        ]
+      },
+      {
+        "skin": "Requiem",
+        "weapon": "Katana",
+        "form": "Eclipse",
+        "attackKey": "Leve1",
+        "catalogPages": 1,
+        "directions": [
+          0
+        ],
+        "missingDirections": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "allPageSourcesPresent": true,
+        "approvedNewSourceScope": false,
+        "sourcePages": [
+          {
+            "direction": 0,
+            "resource": "ReqKatanaEclipseSouth",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          }
+        ]
+      },
+      {
+        "skin": "Requiem",
+        "weapon": "Katana",
+        "form": "Absoluto",
+        "attackKey": "Leve1",
+        "catalogPages": 1,
+        "directions": [
+          0
+        ],
+        "missingDirections": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "allPageSourcesPresent": true,
+        "approvedNewSourceScope": false,
+        "sourcePages": [
+          {
+            "direction": 0,
+            "resource": "ReqKatanaAbsolutoSouth",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          }
+        ]
+      },
+      {
+        "skin": "Requiem",
+        "weapon": "Punhos da Ruína",
+        "form": "Normal",
+        "attackKey": "Chute Quebra-Osso",
+        "catalogPages": 8,
+        "directions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "missingDirections": [],
+        "allPageSourcesPresent": true,
+        "approvedNewSourceScope": true,
+        "sourcePages": [
+          {
+            "direction": 0,
+            "resource": "ReqFistsNormalChuteSSWWNW20261026Selected",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 1,
+            "resource": "ReqFistsNormalChuteSSWWNW20261026Selected",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 2,
+            "resource": "ReqFistsNormalChuteSSWWNW20261026Selected",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 3,
+            "resource": "ReqFistsNormalChuteSSWWNW20261026Selected",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 5,
+            "resource": "ReqFistsNormalChuteNE_E_SE20261027Selected",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 6,
+            "resource": "ReqFistsNormalChuteNE_E_SE20261027Selected",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 7,
+            "resource": "ReqFistsNormalChuteNE_E_SE20261027Selected",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 4,
+            "resource": "ReqFistsNormalChuteN20261027Selected",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          }
+        ]
+      },
+      {
+        "skin": "Requiem",
+        "weapon": "Punhos da Ruína",
+        "form": "Normal",
+        "attackKey": "Direto da Ruína",
+        "catalogPages": 8,
+        "directions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "missingDirections": [],
+        "allPageSourcesPresent": true,
+        "approvedNewSourceScope": true,
+        "sourcePages": [
+          {
+            "direction": 0,
+            "resource": "ReqFistsNormalDiretoSSWW20261025V2",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 1,
+            "resource": "ReqFistsNormalDiretoSSWW20261025V2",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 2,
+            "resource": "ReqFistsNormalDiretoSSWW20261025V2",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 3,
+            "resource": "ReqFistsNormalDiretoNW20261025V4",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 4,
+            "resource": "ReqFistsNormalDiretoN_NE20261025V1",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 5,
+            "resource": "ReqFistsNormalDiretoN_NE20261025V1",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 6,
+            "resource": "ReqFistsNormalDiretoE_SE20261025V1",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 7,
+            "resource": "ReqFistsNormalDiretoE_SE20261025V1",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          }
+        ]
+      },
+      {
+        "skin": "Requiem",
+        "weapon": "Punhos da Ruína",
+        "form": "Ruptura",
+        "attackKey": "Direto da Ruína",
+        "catalogPages": 3,
+        "directions": [
+          0,
+          1,
+          2
+        ],
+        "missingDirections": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "allPageSourcesPresent": true,
+        "approvedNewSourceScope": false,
+        "sourcePages": [
+          {
+            "direction": 0,
+            "resource": "ReqFistsRupturaDiretoS_SW_W20261025V1",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 1,
+            "resource": "ReqFistsRupturaDiretoS_SW_W20261025V1",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          },
+          {
+            "direction": 2,
+            "resource": "ReqFistsRupturaDiretoS_SW_W20261025V1",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          }
+        ]
+      },
+      {
+        "skin": "Requiem",
+        "weapon": "Punhos da Ruína",
+        "form": "Eclipse",
+        "attackKey": "Direto da Ruína",
+        "catalogPages": 1,
+        "directions": [
+          0
+        ],
+        "missingDirections": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "allPageSourcesPresent": true,
+        "approvedNewSourceScope": false,
+        "sourcePages": [
+          {
+            "direction": 0,
+            "resource": "ReqFistsEclipseSouth",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          }
+        ]
+      },
+      {
+        "skin": "Requiem",
+        "weapon": "Punhos da Ruína",
+        "form": "Absoluto",
+        "attackKey": "Direto da Ruína",
+        "catalogPages": 1,
+        "directions": [
+          0
+        ],
+        "missingDirections": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "allPageSourcesPresent": true,
+        "approvedNewSourceScope": false,
+        "sourcePages": [
+          {
+            "direction": 0,
+            "resource": "ReqFistsAbsolutoSouth",
+            "status": "visual-reviewed",
+            "sourceExists": true
+          }
+        ]
+      }
+    ]
+  },
+  "confirmedNewAttackSourceCoverage": [
+    {
+      "weapon": "Katana",
+      "form": "Normal",
+      "attackKey": "Leve1",
+      "directions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "pages": 8
+    },
+    {
+      "weapon": "Katana",
+      "form": "Normal",
+      "attackKey": "Leve2",
+      "directions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "pages": 8
+    },
+    {
+      "weapon": "Punhos da Ruína",
+      "form": "Normal",
+      "attackKey": "Direto da Ruína",
+      "directions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "pages": 8
+    },
+    {
+      "weapon": "Punhos da Ruína",
+      "form": "Normal",
+      "attackKey": "Chute Quebra-Osso",
+      "directions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "pages": 8
+    }
+  ],
+  "notCoveredByThoseSpecificSources": "Other attack keys (extra light strikes, heavy, charged, counter, skill, aerial, weapon special and branch attacks) have no source-specific replacement evidenced by the four confirmed sets; transformation forms only have partial existing catalog entries. Do not call these complete new animation coverage.",
+  "fallbackCause": [
+    {
+      "file": "Assets/Darklight/Runtime/Character/DarklightCharacterView.cs",
+      "lines": "81,101-103",
+      "finding": "The view initializes selected from TodayCharacterBank.Resolve; only a successful DarklightWeaponRedesignBank.TryResolve replaces it. A false return leaves the legacy sprite rendered."
+    },
+    {
+      "file": "Assets/Darklight/Runtime/Character/DarklightWeaponRedesignBank.cs",
+      "lines": "137-153",
+      "finding": "Attack lookup is scoped to exact skin/weapon/form/direction and first exact attackKey, then a generic empty attackKey. There is no fallback to another approved attack sequence for the same weapon/direction."
+    },
+    {
+      "file": "Assets/Darklight/Runtime/Character/DarklightWeaponRedesignBank.cs",
+      "lines": "155-177",
+      "finding": "MapsWholeSequence simulates the existing attack in 1 ms steps and rejects the whole mapping if any source sprite name is absent; rejection returns to the already selected legacy sprite."
+    }
+  ],
+  "recommendedPolicyForCoordinator": [
+    "During CombatState.Attack, never render a sprite from TodayCharacterBank, including after an exact key is missing or a whole-sequence map fails.",
+    "Resolve exact skin+weapon+form+direction+attackKey first. If no dedicated page exists, temporarily share an explicitly approved sequence for the same weapon, form and exact direction; do not mirror or borrow another direction.",
+    "For shared sequences, sample the replacement sequence by normalized attack time while preserving the original CombatModel timing, hitboxes, hit pulses, combo branch and damage. The visual alias must not mutate combat state.",
+    "If a form/direction has no approved new attack sequence, hold that same-form, same-direction approved idle pose through the attack. Avoid cross-form art; mark the visual coverage as temporary until authored attack frames exist.",
+    "Track source-specific frames separately from temporary shared-sequence coverage; do not label shared coverage as authored completion."
+  ],
+  "runtimeTestsExecuted": false,
+  "visualPlaytestExecuted": false,
+  "status": "AUDIT_COMPLETE_RECOMMENDATION_ONLY"
+}

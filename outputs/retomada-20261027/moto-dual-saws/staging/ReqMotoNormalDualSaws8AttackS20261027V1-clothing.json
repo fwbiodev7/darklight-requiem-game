@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqMotoNormalDualSaws8AttackS20261027V1-clothing.png",
+  "imageSha256": "5d5026c74f094a23cd2bd0d5edc3d957242d206dd00b6b4ca33038a2bd9b3106",
+  "nativeSize": [
+    1460,
+    343
+  ],
+  "sourceSize": [
+    1448,
+    1086
+  ],
+  "pixelsPerUnit": 160.1010101010101,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261027/moto-dual-saws/ReqMotoNormalDualSaws8AttackS20261027V1-repair3-source.png",
+  "sourceSha256": "32cf3b554c2d0208c96a93bc12d381c1564427a7b35446de0a2a1cc00bb000c6",
+  "frames": [
+    {
+      "id": "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1-clothing_00",
+      "rect": [
+        0,
+        0,
+        365,
+        343
+      ],
+      "pivot": [
+        0.4767123287671233,
+        0.061224489795918366
+      ],
+      "durationMs": 160,
+      "action": "idle",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "neutral",
+      "sourceFrameIndex": 10,
+      "sourceRect": [
+        764,
+        743,
+        349,
+        327
+      ],
+      "sourceAnchor": [
+        930,
+        1057
+      ],
+      "sourcePackingAnchor": [
+        998,
+        1064
+      ],
+      "supportGuide": {
+        "anchor": [
+          930,
+          1057
+        ],
+        "method": "Whole-source inspected boot support."
+      },
+      "sourceOffsetInFrame": [
+        8,
+        8
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "idle_S",
+      "frames": [
+        "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1-clothing_00"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "idle_S"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 67816,
+  "packedPixels": 67816,
+  "originalSourcePixels": 861312,
+  "selectedSourceFrameIndices": [
+    10
+  ],
+  "excludedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11
+  ],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 711216,
+    "farBeyond16pxPixels": 76,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.2980392156862745,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Third authored idle pose is a blink, not a breathing in-between.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ]
+}

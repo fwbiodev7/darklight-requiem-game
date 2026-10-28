@@ -28,7 +28,8 @@ namespace Darklight.Tests
             var watch=System.Diagnostics.Stopwatch.StartNew();long before=System.GC.GetAllocatedBytesForCurrentThread();
             for(int i=0;i<10000;i++){model.Tick(.02f,new CombatInput{lightPressed=i%8==0});score.Hit(i%8,i%3);}
             long bytes=System.GC.GetAllocatedBytesForCurrentThread()-before;watch.Stop();
-            System.IO.File.WriteAllText("C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/combat-overhaul-20261015/model-metrics.json","{\"ticks\":10000,\"allocatedBytes\":"+bytes+",\"milliseconds\":"+watch.ElapsedMilliseconds+"}");
+            System.IO.Directory.CreateDirectory("outputs/finalizacao-20261018");
+            System.IO.File.WriteAllText("outputs/finalizacao-20261018/model-metrics.json","{\"ticks\":10000,\"allocatedBytes\":"+bytes+",\"milliseconds\":"+watch.ElapsedMilliseconds+"}");
             Assert.That(bytes,Is.LessThan(1024),"Combat and style hot path allocated after warmup");
         }
         [Test]public void VioletDodgePreservesTheComboForAnExtension(){model.FormStyle=2;Light();model.Tick(.14f,default);model.Tick(.01f,new CombatInput{dodgePressed=true,move=Vector2.right});Assert.That(model.State,Is.EqualTo(CombatState.Dodge));Assert.That(model.ComboCount,Is.EqualTo(1));model.Tick(.24f,default);Light();Assert.That(model.ComboCount,Is.GreaterThan(1));}

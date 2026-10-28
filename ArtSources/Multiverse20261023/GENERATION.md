@@ -1,0 +1,14 @@
+# Fontes da expansão — 23/10/2026
+
+Geração pela ferramenta integrada image_gen. A tabela resume os prompts executados; os invariantes comuns foram pixel art nítida no estilo do DARKLIGHT, câmera RPG levemente superior, figuras completas e separadas, fundo transparente real, sem textos/grade/chão e sem montagem anatômica. A geração não garantiu paleta indexada ou grade lógica; os avisos estão na auditoria.
+
+| Fonte selecionada | Prompt de identidade e ações |
+|---|---|
+| `exec-1c9b67c6-67ef-4b1b-be4a-e07982b45c62.png` | Moss Detonator: criatura original de blocos, musgo verde, obsidiana e núcleo turquesa. Oito quadros 4×2: repouso, dois passos opostos, dano, antecipação, explosão, recuperação, derrota. Referência de estilo: folha Enemies inteira. |
+| `exec-1f97c17b-0527-4119-9aab-2f878e5a860c.png` | Neon Revenant: mercenário cibernético original, cabelo escuro assimétrico, casaco carvão, costuras ciano/magenta e braço com lâmina. Mesmos oito estados, com investida de lâmina. |
+| `exec-ccecf83a-d825-4252-a90b-7102ee5b7056.png` | Ash Ronin: samurai original de máscara de osso rachada, armadura índigo, faixa carmesim, lenço cinza e katana na mão direita. Oito estados com antecipação de iaijutsu, corte, recuperação e derrota. |
+| `exec-6d9f23a7-c11e-40e9-bbea-9683aaac4ef2.png` | Doze objetos 4×3: cartaz do mineiro, portal de obsidiana, efígie de olhos violetas, blocos/picareta, terminal de implantes, torii/raposa, estandarte/katana, fogueira/espada, cartaz do fora-da-lei, contrato/lobo/duas espadas, pedra de dragão, memorial/guitarra/casaco vermelho. Texto é renderizado na interação do jogo. |
+| `exec-cdffba86-3bbd-4346-9307-5087aa6dbde4.png` | Doze figuras completas de Rock e moto, duas poses para cada técnica nova. Cabelo castanho, olhos vermelho escuro #C40814/#5A0000, pele #F6AE82 com sombras, colete preto sem mangas, caveira, corrente e botas aprovados. Moto preta/vermelha com motor violeta. Regeneração integral com mais espaço após candidata inicial cortar rodas; referências Join, Form0Slam e captura integral dos olhos. |
+| `exec-0d1c1215-0756-4adb-bfc6-29fb7a14ab76.png` | Maelis, cartógrafa original: mulher adulta, pele castanha, cabelo carvão ondulado curto e mecha prateada, olhos âmbar, casaco vinho, broche de bússola, atlas azul na mão esquerda e bolsa. Oito vistas estáticas S/SW/W/NW/N/NE/E/SE, desenhadas individualmente. A seleção final conserva a bolsa à direita conforme a vista frontal da fonte; nenhuma vista foi espelhada por código. |
+
+Referências e SHA-256 reais, dimensões da fonte/atlas, PPU e vínculo de cada figura estão nos manifestos de mesmo nome em `Assets/Darklight/Resources/Darklight/Multiverse/`. A resolução lógica nativa permanece não certificada. Toda alteração foi técnica de identificação/empacotamento de figuras inteiras; RGB/alpha visíveis das fontes foram conservados.

@@ -7,7 +7,7 @@ namespace Darklight
         Collider2D runOverCollider;
         float runOverContactTime;
         bool runOverPairIgnored;
-        public bool RunOverConfirmed=>Dashing&&fighter.Model.Attack==dash&&runOverTarget!=null;
+        public bool RunOverConfirmed=>Dashing&&RidingAttack(fighter.Model.Attack)&&runOverTarget!=null;
         public Vector2 RunOverImpactPoint{get;private set;}
         public bool RunOverCleared=>RunOverConfirmed&&Vector2.Dot((Vector2)capsule.bounds.center-(Vector2)runOverCollider.bounds.center,dashFacing)>RunOverExtent()+.035f;
         float RunOverExtent()
@@ -18,11 +18,11 @@ namespace Darklight
         // A short crest over the struck target, then the existing authored split/vault.
         // The physical capsule still sweeps against scenery and every other enemy.
         public float RunOverLift=>RunOverConfirmed&&fighter.Model.ActiveThisTick?
-            Mathf.Sin(Mathf.Clamp01((fighter.Model.StateTime-runOverContactTime)/Mathf.Max(.03f,dash.startup+dash.active-runOverContactTime))*Mathf.PI)*.16f:0;
+            Mathf.Sin(Mathf.Clamp01((fighter.Model.StateTime-runOverContactTime)/Mathf.Max(.03f,fighter.Model.Attack.startup+fighter.Model.Attack.active-runOverContactTime))*Mathf.PI)*.16f:0;
         public float RunOverPitch=>RunOverLift*55*(dashFacing.x>.2f?1:dashFacing.x<-.2f?-1:0);
         public void ConfirmRunOverHit(DarklightEnemy enemy,AttackDefinition attack)
         {
-            if(!Active||attack!=dash||runOverTarget!=null||DashBlocked||enemy==null||enemy.Boss||enemy.Health.IsDead||!enemy.Vulnerable||enemy.kind==RequiemEnemyKind.Armored||enemy.kind==RequiemEnemyKind.Sentinel)return;
+            if(!Active||!RidingAttack(attack)||runOverTarget!=null||DashBlocked||enemy==null||enemy.Boss||enemy.Health.IsDead||!enemy.Vulnerable||enemy.kind==RequiemEnemyKind.Armored||enemy.kind==RequiemEnemyKind.Sentinel)return;
             var target=enemy.GetComponent<Collider2D>();
             if(target==null)return;
             runOverCollider=target;

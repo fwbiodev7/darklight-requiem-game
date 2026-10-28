@@ -1,0 +1,60 @@
+{
+  "status": "visual-reviewed-staging",
+  "figures": 12,
+  "clips": 2,
+  "directions": [
+    "NW",
+    "N"
+  ],
+  "generatedCalls": 2,
+  "figuresFromV1": 9,
+  "completeFiguresRepairedFromV2": 3,
+  "anatomicalAssembly": false,
+  "pixelEdits": false,
+  "sourceRasterExact": true,
+  "eyesVisibility": "N: no eyes/face; NW: ear/slim jaw edge only, coherent posterior head and nape",
+  "normalIdentity": "Short natural brown canonical haircut; no transformation colors; black coat burgundy lining; right-hand silver katana",
+  "gait": "Six distinct whole figures in each direction; N second half repaired to reverse trailing/support boot; cyclic order reviewed on full contact sheet",
+  "scale": "One anatomical PPU168.93939393939394;1.98bodyunits;WorldVisualScale1.325;no per-frame scaling",
+  "qaErrors": 0,
+  "qaWarnings": 13,
+  "warningDetails": [
+    "Generated raster exceeds declared256-color target; true indexed pixel grid is unverified",
+    "Partial alpha preserved exactly; halos/Point rendering require focused Unity review"
+  ],
+  "previewGifs": [
+    {
+      "path": "outputs/retomada-20261027/katana-normal/ReqKatanaNormalWalkNW_N20261027Selected/preview/walk-N-400ms.gif",
+      "frames": 6,
+      "durationMs": [
+        60,
+        70,
+        70,
+        60,
+        70,
+        70
+      ]
+    },
+    {
+      "path": "outputs/retomada-20261027/katana-normal/ReqKatanaNormalWalkNW_N20261027Selected/preview/walk-NW-400ms.gif",
+      "frames": 6,
+      "durationMs": [
+        60,
+        70,
+        70,
+        60,
+        70,
+        70
+      ]
+    }
+  ],
+  "previewTiming": "GIF uses nearest cumulative10ms timing, total400ms. Original helperGIFs380ms retained separately; authoritative clips remain65/65/70/65/65/70ms",
+  "humanApproved": false,
+  "unityImported": false,
+  "runtimeVerified": false,
+  "remaining": [
+    "Katana Walk NE/E/SE",
+    "Katana other requested actions/combos and transformations",
+    "Unity import, dynamic contact/scale/transitions review"
+  ]
+}

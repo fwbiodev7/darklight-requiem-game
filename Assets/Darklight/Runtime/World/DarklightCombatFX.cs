@@ -8,6 +8,7 @@ namespace Darklight
         public static void Impact(Vector3 position,bool heavy)
         {
             var game=DarklightCampaign.Instance;if(game==null)return;
+            DarklightPixelContactBurst.TryEmit(position,heavy);
             DarklightCombatImpacts.Emit(position,heavy);
             DarklightCombatLab.Instance.WorldCamera.GetComponent<DarklightLabCamera>().Impulse(heavy?2:1);
         }

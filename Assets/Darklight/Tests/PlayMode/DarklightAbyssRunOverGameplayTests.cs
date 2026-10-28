@@ -13,7 +13,7 @@ namespace Darklight.Tests
     {
         [UnityTest]public IEnumerator CaptureRunOverPrototypeFromRealInputs()
         {
-            const string root="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/cavaleiro-sprites-20261015/capturas/runover/";
+            string root = DarklightTestOutput.GetDirectory("cavaleiro-sprites-20261015/capturas/runover");
             var pad=InputSystem.AddDevice<Gamepad>();int oldRate=Time.captureFramerate;string bindings=lab.Input.Asset.SaveBindingOverridesAsJson();
             try
             {

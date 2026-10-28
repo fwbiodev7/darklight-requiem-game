@@ -37,7 +37,7 @@ namespace Darklight
             if(mask==7&&completedTime<5&&active)completedTime+=lab.CombatDelta;
             card.gameObject.SetActive(active&&(mask!=7||completedTime<5));if(!active)return;
             var input=lab.Input;
-            string weapon=lab.Player.GetComponent<DarklightWeaponController>()?.Equipped?.id switch{DarklightWeaponId.Daggers=>"PRESAS: curto alcance; golpes rápidos.",DarklightWeaponId.Chain=>"CORRENTE: alcance; pesado puxa o alvo.",_=>"KATANA: precisão; parry abre contra-ataque."};
+            string weapon=lab.Player.GetComponent<DarklightWeaponController>()?.Equipped?.id switch{DarklightWeaponId.Daggers=>"PRESAS: curto alcance; golpes rápidos.",DarklightWeaponId.Chain=>(DarklightRuinFistsBank.Ready?"PUNHOS DA RUÍNA: socos, chutes e finalizações.":"CORRENTE: alcance; pesado puxa o alvo."),_=>"KATANA: precisão; parry abre contra-ataque."};
             text.text=(mask&1)==0?input.BindingLabel("Light")+": ACERTE 3 GOLPES  "+Mathf.Min(hits,3)+"/3\n"+weapon:(mask&2)==0?input.BindingLabel("Dodge")+": ESQUIVE DE UM GOLPE\nAnel duplo vermelho: saia da área." :(mask&4)==0?input.BindingLabel("Parry")+": PARRY NO IMPACTO\nArco dourado: encare quem ataca.":"TREINO CONCLUÍDO\nParry + "+input.BindingLabel("Light")+": contra-ataque.";
         }
     }

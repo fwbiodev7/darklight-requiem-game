@@ -1,0 +1,523 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqDaggersNormalIdleA.png",
+  "imageSha256": "7ceb528c7600e4c5e6de3bc3cc0fddc80d23b986b98fde62e2d0bce9524c621a",
+  "nativeSize": [
+    1820,
+    1176
+  ],
+  "sourceSize": [
+    1448,
+    1086
+  ],
+  "pixelsPerUnit": 170.45454545454547,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261023/ReqDaggersNormalIdleA-source.png",
+  "sourceSha256": "b16defc3cfe24c7feec44eebb23b4a42a4b33e5f4311d2e64725b0176a695058",
+  "frames": [
+    {
+      "id": "Redesign_ReqDaggersNormalIdleA_00",
+      "rect": [
+        0,
+        0,
+        455,
+        392
+      ],
+      "pivot": [
+        0.5274725274725275,
+        0.07397959183673469
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "neutral",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        0,
+        349,
+        361
+      ],
+      "sourceAnchor": [
+        188,
+        355
+      ],
+      "sourceOffsetInFrame": [
+        52,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqDaggersNormalIdleA_01",
+      "rect": [
+        455,
+        0,
+        455,
+        392
+      ],
+      "pivot": [
+        0.5274725274725275,
+        0.07397959183673469
+      ],
+      "durationMs": 250,
+      "action": "idle",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "inhale",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        361,
+        14,
+        363,
+        349
+      ],
+      "sourceAnchor": [
+        539,
+        355
+      ],
+      "sourceOffsetInFrame": [
+        62,
+        22
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqDaggersNormalIdleA_02",
+      "rect": [
+        910,
+        0,
+        455,
+        392
+      ],
+      "pivot": [
+        0.5274725274725275,
+        0.07397959183673469
+      ],
+      "durationMs": 180,
+      "action": "idle",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "blink",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        725,
+        9,
+        361,
+        356
+      ],
+      "sourceAnchor": [
+        911,
+        355
+      ],
+      "sourceOffsetInFrame": [
+        54,
+        17
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqDaggersNormalIdleA_03",
+      "rect": [
+        1365,
+        0,
+        455,
+        392
+      ],
+      "pivot": [
+        0.5274725274725275,
+        0.07397959183673469
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "return",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1087,
+        0,
+        345,
+        373
+      ],
+      "sourceAnchor": [
+        1261,
+        355
+      ],
+      "sourceOffsetInFrame": [
+        66,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqDaggersNormalIdleA_04",
+      "rect": [
+        0,
+        392,
+        455,
+        392
+      ],
+      "pivot": [
+        0.5274725274725275,
+        0.07397959183673469
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "neutral",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        0,
+        373,
+        354,
+        342
+      ],
+      "sourceAnchor": [
+        232,
+        708
+      ],
+      "sourceOffsetInFrame": [
+        8,
+        28
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqDaggersNormalIdleA_05",
+      "rect": [
+        455,
+        392,
+        455,
+        392
+      ],
+      "pivot": [
+        0.5274725274725275,
+        0.07397959183673469
+      ],
+      "durationMs": 250,
+      "action": "idle",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "inhale",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        379,
+        366,
+        343,
+        348
+      ],
+      "sourceAnchor": [
+        583,
+        708
+      ],
+      "sourceOffsetInFrame": [
+        36,
+        21
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqDaggersNormalIdleA_06",
+      "rect": [
+        910,
+        392,
+        455,
+        392
+      ],
+      "pivot": [
+        0.5274725274725275,
+        0.07397959183673469
+      ],
+      "durationMs": 180,
+      "action": "idle",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "blink",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        739,
+        366,
+        349,
+        348
+      ],
+      "sourceAnchor": [
+        953,
+        708
+      ],
+      "sourceOffsetInFrame": [
+        26,
+        21
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqDaggersNormalIdleA_07",
+      "rect": [
+        1365,
+        392,
+        455,
+        392
+      ],
+      "pivot": [
+        0.5274725274725275,
+        0.07397959183673469
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "return",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        1101,
+        366,
+        329,
+        348
+      ],
+      "sourceAnchor": [
+        1307,
+        708
+      ],
+      "sourceOffsetInFrame": [
+        34,
+        21
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqDaggersNormalIdleA_08",
+      "rect": [
+        0,
+        784,
+        455,
+        392
+      ],
+      "pivot": [
+        0.5274725274725275,
+        0.07397959183673469
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "neutral",
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        35,
+        715,
+        329,
+        371
+      ],
+      "sourceAnchor": [
+        174,
+        1065
+      ],
+      "sourceOffsetInFrame": [
+        101,
+        13
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqDaggersNormalIdleA_09",
+      "rect": [
+        455,
+        784,
+        455,
+        392
+      ],
+      "pivot": [
+        0.5274725274725275,
+        0.07397959183673469
+      ],
+      "durationMs": 250,
+      "action": "idle",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "inhale",
+      "sourceFrameIndex": 9,
+      "sourceRect": [
+        379,
+        714,
+        355,
+        356
+      ],
+      "sourceAnchor": [
+        527,
+        1065
+      ],
+      "sourceOffsetInFrame": [
+        92,
+        12
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqDaggersNormalIdleA_10",
+      "rect": [
+        910,
+        784,
+        455,
+        392
+      ],
+      "pivot": [
+        0.5274725274725275,
+        0.07397959183673469
+      ],
+      "durationMs": 180,
+      "action": "idle",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "blink",
+      "sourceFrameIndex": 10,
+      "sourceRect": [
+        757,
+        714,
+        324,
+        358
+      ],
+      "sourceAnchor": [
+        893,
+        1065
+      ],
+      "sourceOffsetInFrame": [
+        104,
+        12
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqDaggersNormalIdleA_11",
+      "rect": [
+        1365,
+        784,
+        455,
+        392
+      ],
+      "pivot": [
+        0.5274725274725275,
+        0.07397959183673469
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "return",
+      "sourceFrameIndex": 11,
+      "sourceRect": [
+        1119,
+        714,
+        315,
+        356
+      ],
+      "sourceAnchor": [
+        1251,
+        1065
+      ],
+      "sourceOffsetInFrame": [
+        108,
+        12
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "idle_S",
+      "frames": [
+        "Redesign_ReqDaggersNormalIdleA_00",
+        "Redesign_ReqDaggersNormalIdleA_01",
+        "Redesign_ReqDaggersNormalIdleA_02",
+        "Redesign_ReqDaggersNormalIdleA_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "idle_SW",
+      "frames": [
+        "Redesign_ReqDaggersNormalIdleA_04",
+        "Redesign_ReqDaggersNormalIdleA_05",
+        "Redesign_ReqDaggersNormalIdleA_06",
+        "Redesign_ReqDaggersNormalIdleA_07"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "idle_W",
+      "frames": [
+        "Redesign_ReqDaggersNormalIdleA_08",
+        "Redesign_ReqDaggersNormalIdleA_09",
+        "Redesign_ReqDaggersNormalIdleA_10",
+        "Redesign_ReqDaggersNormalIdleA_11"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "idle_S",
+    "idle_SW",
+    "idle_W"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 727019,
+  "packedPixels": 727019,
+  "originalSourcePixels": 727019,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 845509,
+    "farBeyond16pxPixels": 153,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.6,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Third authored idle pose is a blink, not a breathing in-between.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ]
+}

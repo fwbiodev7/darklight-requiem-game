@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "job": "ReqFistsNormalDireto_S_SW_W-v2",
+  "status": "candidate-visual-reviewed-preparation-pending",
+  "tool": "built-in-imagegen-edit",
+  "source": "ReqFistsNormalDireto_S_SW_W-v2-source.png",
+  "imageSha256": "569470770dc7793b22cc4f3aeb7dded4ea102a8ce647d07338fb7ce1a599f7d6",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "logicalResolutionUnknown": true,
+  "rows": 3,
+  "columns": 3,
+  "wholeFigures": 9,
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261024/candidates/ReqFistsNormalDireto_S_SW_W-v1-source.png",
+      "sha256": "dc502817bd7f67d7d7c38a425016d4ce52505506cb508fd5e852251dd91b208e",
+      "inspectedWhole": true
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261023/references/equipment-four-forms.png",
+      "sha256": "6c8c6b05e27f16f19f2bfcad3151294b164f004c0960fa713662788f9e3f6930",
+      "inspectedWhole": true
+    }
+  ],
+  "identityAuthority": "ArtSources/WeaponRedesign20261024/candidates/ReqKatanaNormalLight1_S_SW_W-v1-source.png",
+  "promptFile": "ReqFistsNormalDireto_S_SW_W-v2-prompt.txt",
+  "weapon": 2,
+  "skin": 0,
+  "form": 0,
+  "attack": "Direto da Ruína",
+  "action": "Attack:light1",
+  "dominantHand": "right",
+  "frames": [
+    {
+      "index": 0,
+      "direction": "S",
+      "directionIndex": 0,
+      "phase": "anticipation",
+      "sourceName": "Ruin_Requiem_Normal_S_Combat_02",
+      "consumerSpriteName": "Ruin_Requiem_Normal_S_Combat_02",
+      "durationMs": 75,
+      "visibleWholeFigureBoundsAlphaGT32": [
+        179,
+        11,
+        316,
+        335
+      ],
+      "proposedGroundAnchorSource": [
+        330,
+        346
+      ],
+      "bothGauntletsAndGreavesInspected": true
+    },
+    {
+      "index": 1,
+      "direction": "S",
+      "directionIndex": 0,
+      "phase": "contact",
+      "sourceName": "Ruin_Requiem_Normal_S_Combat_03",
+      "consumerSpriteName": "Ruin_Requiem_Normal_S_Combat_03",
+      "durationMs": 65,
+      "visibleWholeFigureBoundsAlphaGT32": [
+        613,
+        11,
+        347,
+        338
+      ],
+      "proposedGroundAnchorSource": [
+        785,
+        349
+      ],
+      "bothGauntletsAndGreavesInspected": true
+    },
+    {
+      "index": 2,
+      "direction": "S",
+      "directionIndex": 0,
+      "phase": "recovery",
+      "sourceName": "Ruin_Requiem_Normal_S_Combat_11",
+      "consumerSpriteName": "Ruin_Requiem_Normal_S_Combat_11",
+      "durationMs": 130,
+      "visibleWholeFigureBoundsAlphaGT32": [
+        1053,
+        10,
+        320,
+        339
+      ],
+      "proposedGroundAnchorSource": [
+        1207,
+        349
+      ],
+      "bothGauntletsAndGreavesInspected": true
+    },
+    {
+      "index": 3,
+      "direction": "SW",
+      "directionIndex": 1,
+      "phase": "anticipation",
+      "sourceName": "Ruin_Requiem_Normal_SW_Combat_02",
+      "consumerSpriteName": "Ruin_Requiem_Normal_SW_Combat_02",
+      "durationMs": 75,
+      "visibleWholeFigureBoundsAlphaGT32": [
+        212,
+        338,
+        322,
+        325
+      ],
+      "proposedGroundAnchorSource": [
+        324,
+        663
+      ],
+      "bothGauntletsAndGreavesInspected": true
+    },
+    {
+      "index": 4,
+      "direction": "SW",
+      "directionIndex": 1,
+      "phase": "contact",
+      "sourceName": "Ruin_Requiem_Normal_SW_Combat_03",
+      "consumerSpriteName": "Ruin_Requiem_Normal_SW_Combat_03",
+      "durationMs": 65,
+      "visibleWholeFigureBoundsAlphaGT32": [
+        602,
+        341,
+        396,
+        325
+      ],
+      "proposedGroundAnchorSource": [
+        780,
+        666
+      ],
+      "bothGauntletsAndGreavesInspected": true
+    },
+    {
+      "index": 5,
+      "direction": "SW",
+      "directionIndex": 1,
+      "phase": "recovery",
+      "sourceName": "Ruin_Requiem_Normal_SW_Combat_11",
+      "consumerSpriteName": "Ruin_Requiem_Normal_SW_Combat_11",
+      "durationMs": 130,
+      "visibleWholeFigureBoundsAlphaGT32": [
+        1082,
+        341,
+        338,
+        328
+      ],
+      "proposedGroundAnchorSource": [
+        1205,
+        669
+      ],
+      "bothGauntletsAndGreavesInspected": true
+    },
+    {
+      "index": 6,
+      "direction": "W",
+      "directionIndex": 2,
+      "phase": "anticipation",
+      "sourceName": "Ruin_Requiem_Normal_W_Combat_02",
+      "consumerSpriteName": "Ruin_Requiem_Normal_W_Combat_02",
+      "durationMs": 75,
+      "visibleWholeFigureBoundsAlphaGT32": [
+        212,
+        673,
+        339,
+        336
+      ],
+      "proposedGroundAnchorSource": [
+        320,
+        1009
+      ],
+      "bothGauntletsAndGreavesInspected": true
+    },
+    {
+      "index": 7,
+      "direction": "W",
+      "directionIndex": 2,
+      "phase": "contact",
+      "sourceName": "Ruin_Requiem_Normal_W_Combat_03",
+      "consumerSpriteName": "Ruin_Requiem_Normal_W_Combat_03",
+      "durationMs": 65,
+      "visibleWholeFigureBoundsAlphaGT32": [
+        585,
+        677,
+        435,
+        331
+      ],
+      "proposedGroundAnchorSource": [
+        776,
+        1008
+      ],
+      "bothGauntletsAndGreavesInspected": true
+    },
+    {
+      "index": 8,
+      "direction": "W",
+      "directionIndex": 2,
+      "phase": "recovery",
+      "sourceName": "Ruin_Requiem_Normal_W_Combat_11",
+      "consumerSpriteName": "Ruin_Requiem_Normal_W_Combat_11",
+      "durationMs": 130,
+      "visibleWholeFigureBoundsAlphaGT32": [
+        1099,
+        674,
+        362,
+        335
+      ],
+      "proposedGroundAnchorSource": [
+        1210,
+        1009
+      ],
+      "bothGauntletsAndGreavesInspected": true
+    }
+  ],
+  "consumerIndices": [
+    2,
+    3,
+    11
+  ],
+  "consumerTimingsMs": [
+    75,
+    65,
+    130
+  ],
+  "physicsChanged": false,
+  "pixelsPerUnit": 175.25252,
+  "pixelsPerUnitStatus": "existing-frontal-consumer-reference-only-not-calibrated-for-new-source",
+  "pivotStatus": "proposed-ground-anchors-not-imported",
+  "sourceRectsNeedWholeFigureOwnership": true,
+  "doNotGridSlice": true,
+  "boundsWarning": "Bounds use alpha>32 to identify whole silhouettes, not final crop rects. S and SW bbox intervals overlap by 8-11 pixels in Y although silhouettes are separate in X; isolate each whole figure before atlas packing. Preserve source. Alpha includes faint remnants. Root handles prep/import.",
+  "visualApproval": false,
+  "unityImported": false,
+  "runtimeVerified": false,
+  "audioStarted": false,
+  "generationPasses": 1,
+  "sourceAlphaPreserved": true,
+  "generatedImageOrigin": "C:/Users/Usuario/.codex/generated_images/01a17020-9993-7ca0-a7fb-2b2703d71fc1/exec-bfe76b8f-24a9-4965-be9f-c25f40cf2c08.png"
+}

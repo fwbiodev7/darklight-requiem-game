@@ -14,9 +14,9 @@ namespace Darklight
         public void ShowAbyssHelp()=>Open("AbyssHelp");
         void BuildWeaponGuides()
         {
-            heading.text="ARMAS";bodyText.text="Escolha uma arma ou consulte o guia.\n\nCavaleiro do Abismo: exclusivo da skin Rock.\n\nNa campanha, desperte o motor selado junto à memória da Cripta dos Primeiros.\n\nA arena permite testar a arma e suas formas sem alterar a campanha.";
-            for(int i=0;i<3;i++){int index=i;Button(weaponDefinitions[i].displayName,()=>{Weapons.Request(index);Close();},Weapons.Unlocked(i));}
-            Button("CAVALEIRO DO ABISMO · GUIA",ShowAbyssHelp);Button("VOLTAR",()=>Open("Pause"));
+            heading.text="ARMAS";bodyText.text="Escolha uma arma ou consulte o guia.\n\nCavaleiro do Abismo: motocicleta de Réquiem.\n\nNa campanha, desperte o motor selado junto à memória da Cripta dos Primeiros.\n\nA arena permite testar a arma e suas formas sem alterar a campanha.";
+            for(int i=0;i<weaponDefinitions.Length;i++){if(!DarklightPlayableScope.WeaponActive(i))continue;int index=i;Button(weaponDefinitions[i].displayName,()=>{Weapons.Request(index);Close();},Weapons.Unlocked(i),WeaponIcon(weaponDefinitions[i]));}
+            Button("COMBOS E ESPECIAIS",()=>{guideWeapon=Mathf.Clamp((int)(Weapons?.Equipped?.id??DarklightWeaponId.Katana),0,2);Open("WeaponCombos");});Button("CAVALEIRO DO ABISMO · GUIA",ShowAbyssHelp);Button("VOLTAR",()=>Open("Pause"));
         }
         void BuildAbyssHelp()
         {
@@ -27,13 +27,14 @@ namespace Darklight
                 "I → II → III: acerte e toque no brilho ENGATE!\nErros reduzem a rotação; segurar não sobe nível.\nIII + alvo exposto: "+AbyssKey("AbyssBike")+" FINAL (35 sangue).\n"+
                 "Montado: "+AbyssKey("AbyssDrift")+" derrapa; "+AbyssKey("Skill")+" esmaga.\nApós o salto, "+AbyssKey("AbyssSaw")+" continua o combo.\n"+AbyssKey("Potion")+" a pé: elixir. Todos os botões são remapeáveis.";
             Button("EQUIPAR CAVALEIRO",()=>{Weapons.Request(3);Close();},Weapons.Unlocked(3));
+            Button("NOVOS GOLPES",()=>Open("MotorcycleExpansion"));Button("COMBATE AÉREO",()=>Open("AirCombat"));
             Button("TREINAR PASSO A PASSO",StartAbyssLessons);Button("REMAPEAR COMANDOS",()=>Open("Controls"));Button("VOLTAR",()=>Open("Weapons"));
             if(abyssHelpImage==null){abyssHelpImage=ImageAt(menuRoot,"GuiaVisualCavaleiro",65,195,150,130,DarklightAbyssSpriteBank.Icon);abyssHelpImage.preserveAspect=true;abyssHelpImage.raycastTarget=false;}
             abyssHelpImage.gameObject.SetActive(true);
         }
         void StartAbyssLessons()
         {
-            if(!Training)EnterTraining();SelectSkin(1,false);SetTrainingForm(0);Progress.abyssTutorialSeen=true;AbyssRider.ResetLessons();Weapons.Request(3);Close();Notice("TREINO CAVALEIRO: SIGA AS ETAPAS NO CANTO DA TELA");
+            if(!Training)EnterTraining();SelectSkin(0,false);SetTrainingForm(0);Progress.abyssTutorialSeen=true;AbyssRider.ResetLessons();Weapons.Request(3);Close();Notice("TREINO CAVALEIRO: SIGA AS ETAPAS NO CANTO DA TELA");
         }
         void PresentAbyssHUD()
         {

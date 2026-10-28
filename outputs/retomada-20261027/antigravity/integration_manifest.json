@@ -1,0 +1,275 @@
+{
+  "repository": "fwbiodev7/darklight-requiem-game",
+  "base_commit": "b719c527c736009e3ff560fd124ad07f67ae30d0",
+  "head_commit": "f26ecf490d1f35c48eb4f19656550fb4ab4c3144",
+  "branch": "integracao-completa-20261026",
+  "comparison_ref": "f26ecf4",
+  "commits_ahead_count": 10,
+  "commits": [
+    {
+      "hash": "f26ecf490d1f35c48eb4f19656550fb4ab4c3144",
+      "subject": "docs: atualizar handoff com ferramentas de engenharia, preflight e testes de save"
+    },
+    {
+      "hash": "58c1d919557fb85f22dfb64a712ec30a942ff972",
+      "subject": "tools: adicionar runner de testes unity, preflight de build e verificador de handoff"
+    },
+    {
+      "hash": "f232a9683aab86e5e572917c83acd315f32252f4",
+      "subject": "test: ampliar cobertura de saves e contratos persistentes"
+    },
+    {
+      "hash": "3f6baf391a585655b1c2475c560956ebd49cb9d0",
+      "subject": "tools: adicionar validacao de assets, catalogos e auditoria de metadados unity"
+    },
+    {
+      "hash": "9ea7001855c6ef79256a602b86163ee2cbf334b3",
+      "subject": "test: adicionar metadados unity para DarklightTestOutput"
+    },
+    {
+      "hash": "3c7b2802317ea87e08edc7e1f6c7787cb57b9028",
+      "subject": "test: tornar outputs dos testes portaveis e corrigir dependencias editor playmode"
+    },
+    {
+      "hash": "43f85d8de2351f7cd3257ab43dee73bdbacc1e78",
+      "subject": "docs: preparo de moto requiem, status de caminhada e portabilidade de testes (Etapa C/E)"
+    },
+    {
+      "hash": "cdc2fdef747b8e94db9319b23cc8f1d8532f741d",
+      "subject": "docs: auditorias de fontes canonicas, dependencias da moto e lacunas de teste (Etapa B)"
+    },
+    {
+      "hash": "b16ea1953034ac7ea08e0036b51cb8c66d996896",
+      "subject": "docs: normalizar encoding UTF-8 sem BOM e registrar commit 594dbd6 no handoff"
+    },
+    {
+      "hash": "594dbd6c21688675e0453a03a977201b0f770474",
+      "subject": "docs: auditoria inicial do clone, handoff e proposta de reducao de escopo"
+    }
+  ],
+  "file_summary": {
+    "docs_count": 9,
+    "tests_count": 34,
+    "tools_count": 5,
+    "runtime_count": 0,
+    "editor_count": 1,
+    "art_count": 0,
+    "other_count": 0
+  },
+  "categorized_files": {
+    "docs": [
+      {
+        "status": "A",
+        "path": "Docs/Darklight/AUDITORIA-ANTIGRAVITY-20261026.md"
+      },
+      {
+        "status": "A",
+        "path": "Docs/Darklight/AUDITORIA-FONTES-ARTISTICAS-20261026.md"
+      },
+      {
+        "status": "A",
+        "path": "Docs/Darklight/AUDITORIA-TESTES-E-REGRESSOES-20261026.md"
+      },
+      {
+        "status": "A",
+        "path": "Docs/Darklight/HANDOFF-ANTIGRAVITY-20261026.md"
+      },
+      {
+        "status": "A",
+        "path": "Docs/Darklight/MAPEAMENTO-DEPENDENCIAS-OBSOLETOS-20261026.md"
+      },
+      {
+        "status": "A",
+        "path": "Docs/Darklight/PREPARO-TECNICO-MOTO-REQUIEM-20261026.md"
+      },
+      {
+        "status": "A",
+        "path": "Docs/Darklight/PROPOSTA-PORTABILIDADE-TESTES-20261026.md"
+      },
+      {
+        "status": "A",
+        "path": "Docs/Darklight/REDUCAO-ESCOPO-ANTIGRAVITY-20261026.md"
+      },
+      {
+        "status": "A",
+        "path": "Docs/Darklight/STATUS-CAMINHADA-KATANA-20261026.md"
+      }
+    ],
+    "tests": [
+      {
+        "status": "A",
+        "path": "Assets/Darklight/Tests/Darklight.Tests.Common.asmdef"
+      },
+      {
+        "status": "A",
+        "path": "Assets/Darklight/Tests/Darklight.Tests.Common.asmdef.meta"
+      },
+      {
+        "status": "A",
+        "path": "Assets/Darklight/Tests/DarklightTestOutput.cs"
+      },
+      {
+        "status": "A",
+        "path": "Assets/Darklight/Tests/DarklightTestOutput.cs.meta"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/EditMode/Darklight.EditModeTests.asmdef"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/EditMode/DarklightDialogueQARunner.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/EditMode/DarklightOverhaulQARunner.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/EditMode/DarklightRegionReformQARunner.cs"
+      },
+      {
+        "status": "A",
+        "path": "Assets/Darklight/Tests/EditMode/DarklightSaveContractTests.cs"
+      },
+      {
+        "status": "A",
+        "path": "Assets/Darklight/Tests/EditMode/DarklightSaveContractTests.cs.meta"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/Darklight.PlayModeTests.asmdef"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightAbyssControllerReviewTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightAbyssDeliveryMediaTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightAbyssFlowGameplayTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightAbyssPrototypeTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightAbyssRunOverGameplayTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightAbyssUrgentTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightAcceptedScaleTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightArtisticAtlasTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightCombatCaptureTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightCombatImpactTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightFocusedHUDTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightLoadingTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightMap10ReviewTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightMap8ReviewTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightMap9ReviewTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightMotorcycleImpactTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightPromoGameplayTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightReformedRegionTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightRemasterProductionTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightRemasterPrototypeTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightSoloTransformationTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightTrailerGameplayTests.cs"
+      },
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Tests/PlayMode/DarklightWorldLandmarkTests.cs"
+      }
+    ],
+    "tools": [
+      {
+        "status": "A",
+        "path": "Tools/Handoff/verify_integration.py"
+      },
+      {
+        "status": "A",
+        "path": "Tools/Preflight/build_preflight.py"
+      },
+      {
+        "status": "A",
+        "path": "Tools/Testing/run_tests.py"
+      },
+      {
+        "status": "A",
+        "path": "Tools/Validation/audit_unity_metadata.py"
+      },
+      {
+        "status": "A",
+        "path": "Tools/Validation/validate_assets.py"
+      }
+    ],
+    "runtime": [],
+    "editor": [
+      {
+        "status": "M",
+        "path": "Assets/Darklight/Editor/RemasterPrototype/RemasterPrototype.cs"
+      }
+    ],
+    "art": [],
+    "other": []
+  },
+  "technical_boundary_passed": true,
+  "runtime_code_modified": false,
+  "art_modified_or_generated": false,
+  "limits": [
+    "Committed reference comparison only; working-tree changes are not included",
+    "No Unity compilation, save compatibility or gameplay claim follows from this inventory"
+  ]
+}

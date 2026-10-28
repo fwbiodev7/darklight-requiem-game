@@ -26,9 +26,10 @@ namespace Darklight
         public float SkillRemaining => Mathf.Max(0, skillReady - Clock);
         public float AttackDamage => Attack == null ? 0 : Attack.damage * (Attack.kind == StrikeKind.Heavy ? 1 + ComboCount * .15f : 1);
         CombatLoadout loadout;
+        internal CombatLoadout Loadout=>loadout;
         int hitPulse=-1;float aerialReady,weaponSpecialReady;bool contactFinished;
         bool pendingAerial,pendingWeaponSpecial;
-        public bool CanEquip=>State==CombatState.Neutral||(State==CombatState.Attack&&!ActiveThisTick&&StateTime>=Attack.startup+Attack.active+Attack.recovery*(AttackConnected?(FormStyle==3?0:.08f):Attack.recoveryChainFraction));
+        public bool CanEquip=>State==CombatState.Neutral||(State==CombatState.Attack&&!ActiveThisTick&&StateTime>=Attack.startup+Attack.active+Attack.recovery*(AttackConnected?(FormStyle>=2?0:.08f):Attack.recoveryChainFraction));
         public float WeaponSpecialRemaining=>Mathf.Max(0,weaponSpecialReady-Clock);
         public float AerialRemaining=>Mathf.Max(0,aerialReady-Clock);
         public bool Equip(CombatLoadout next){if(!CanEquip||next?.lights==null||next.lights.Length==0)return false;loadout=next;return true;}
@@ -79,7 +80,7 @@ namespace Darklight
                 }
                 Motion = Vector2.ClampMagnitude(input.move, 1) * (StateTime<Attack.startup?Attack.windupMove:StateTime>=Attack.startup+Attack.active?Attack.recoveryMove:.42f);
                 if(StateTime<Attack.startup*.5f)Face(input);
-                if(ActiveThisTick&&Attack.lungeSpeed>0)Motion=Facing*Attack.lungeSpeed+Vector2.ClampMagnitude(input.move,1)*.15f;
+                if(ActiveThisTick&&Attack.lungeSpeed>0)Motion=Facing*Attack.lungeSpeed*Mathf.Lerp(1,Mathf.Max(1,Attack.endLungeMultiplier),ContactProgress*ContactProgress*ContactProgress)+Vector2.ClampMagnitude(input.move,1)*.15f;
                 // Recovery cancellation only: wind-up and contact remain committed.
                 float cancelAt=Attack.startup+Attack.active+Attack.recovery*Mathf.Max(0,(AttackConnected?Attack.hitCancelFraction:Attack.whiffCancelFraction)-1);
                 if(FormStyle==1&&Attack.kind!=StrikeKind.Light)cancelAt+=Attack.recovery*.2f;
@@ -88,7 +89,7 @@ namespace Darklight
                 if(!ActiveThisTick && StateTime>=Attack.startup+Attack.active && pendingParry){Face(input);BeginParry();return;}
                 if(AttackConnected&&!ActiveThisTick&&StateTime>=Attack.startup+Attack.active+Attack.recovery*.12f)
                 {
-                    if(FormStyle==3&&pendingSkill&&Clock>=skillReady){BeginAttack(loadout.skill);skillReady=Clock+(loadout.weapon==3?Mathf.Max(3,loadout.skill.cooldown):3);return;}
+                    if(FormStyle>=2&&pendingSkill&&Clock>=skillReady){BeginAttack(loadout.skill);skillReady=Clock+(loadout.weapon==3?Mathf.Max(3,loadout.skill.cooldown):3);return;}
                     if(pendingAerial&&loadout.aerial!=null&&Clock>=aerialReady){BeginAttack(loadout.aerial);aerialReady=Clock+Mathf.Max(.5f,loadout.aerial.cooldown);return;}
                     if(pendingWeaponSpecial&&loadout.weaponSpecial!=null&&Clock>=weaponSpecialReady){BeginAttack(loadout.weaponSpecial);weaponSpecialReady=Clock+Mathf.Max(1,loadout.weaponSpecial.cooldown);return;}
                 }
@@ -163,6 +164,13 @@ namespace Darklight
         public bool RegisterHit(object target){bool hit=target != null && ActiveThisTick && struck.Add(target);if(hit)AttackConnected=true;return hit;}
         public bool RegisterPulseHit(object target,int pulse)=>target!=null&&ActiveThisTick&&(ContactPulses&(1u<<pulse))!=0&&pulseTargets[pulse].Add(target);
         public void ConfirmHit()=>AttackConnected=true;
+        // Contextual air moves obey the same committed contact and recovery windows.
+        public bool TryAirFollowup(AttackDefinition next, CombatInput input)
+        {
+            if(next==null||State!=CombatState.Neutral&&
+                !(State==CombatState.Attack&&AttackConnected&&!ActiveThisTick&&StateTime>=Attack.startup+Attack.active+Attack.recovery*.12f))return false;
+            Face(input);ClearQueue();BeginAttack(next);Motion=Vector2.zero;return true;
+        }
         public void FinishAttackContact(){if(State!=CombatState.Attack||Attack==null)return;contactFinished=true;StateTime=Mathf.Max(StateTime,Attack.startup+Attack.active);ActiveThisTick=false;ContactPulses=0;Motion=Vector2.zero;}
         public bool Defend()
         {

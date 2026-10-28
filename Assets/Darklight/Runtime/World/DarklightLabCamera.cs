@@ -13,6 +13,13 @@ namespace Darklight
         Camera view;
         Vector3 velocity;
         float impulseTime;int impulsePixels;
+        Vector3 contactFocus;float contactUntil;
+        public bool ContactFocusActive=>contactUntil>Time.unscaledTime;
+        public void ConfirmContact(Vector3 point)
+        {
+            if(DarklightCampaign.Instance?.ReducedFlashes==true||PlayerPrefs.GetInt("Darklight.Shake",1)==0){contactUntil=0;return;}
+            contactFocus=point;contactUntil=Time.unscaledTime+.16f;
+        }
         public void Impulse(int pixels){if(PlayerPrefs.GetInt("Darklight.Shake",1)==0)return;impulsePixels=Mathf.Clamp(pixels,0,2);impulseTime=.09f;}
         void Awake()
         {
@@ -29,7 +36,9 @@ namespace Darklight
         void LateUpdate()
         {
             if(target==null || DarklightCombatLab.Instance?.Paused == true)return;Fit();
-            Vector3 p=Vector3.SmoothDamp(transform.position,Constrain(target.position+new Vector3(followOffset.x,followOffset.y,-10)),ref velocity,.25f);
+            Vector3 focus=target.position+new Vector3(followOffset.x,followOffset.y,-10);
+            if(ContactFocusActive){float t=(contactUntil-Time.unscaledTime)/.16f;focus+=Vector3.ClampMagnitude(new Vector3(contactFocus.x-target.position.x,contactFocus.y-target.position.y,0),1.5f)*(.18f*t);}
+            Vector3 p=Vector3.SmoothDamp(transform.position,Constrain(focus),ref velocity,ContactFocusActive?.06f:.25f);
             float grid=(view.targetTexture!=null?view.targetTexture.height:720f)/(view.orthographicSize*2);
             impulseTime=Mathf.Max(0,impulseTime-(DarklightCombatLab.Instance?.CombatDelta??Time.deltaTime));
             int offset=impulseTime>0?((Time.frameCount&1)==0?impulsePixels:-impulsePixels):0;

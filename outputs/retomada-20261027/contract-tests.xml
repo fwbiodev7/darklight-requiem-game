@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="11" result="Passed" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0,1811038">
+  <test-suite type="TestSuite" id="1000" name="DARKLIGHT REQUIEM" fullname="DARKLIGHT REQUIEM" runstate="Runnable" testcasecount="306" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.181104" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1382" name="Darklight.EditModeTests.dll" fullname="C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/Library/ScriptAssemblies/Darklight.EditModeTests.dll" runstate="Runnable" testcasecount="306" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.159290" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="22124" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1383" name="Darklight" fullname="Darklight" runstate="Runnable" testcasecount="306" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.135176" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1384" name="Tests" fullname="Darklight.Tests" runstate="Runnable" testcasecount="306" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.126079" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1254" name="DarklightSaveContractTests" fullname="Darklight.Tests.DarklightSaveContractTests" classname="Darklight.Tests.DarklightSaveContractTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.080755" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1260" name="AudioPreferencesClampVolumeSafely" fullname="Darklight.Tests.DarklightSaveContractTests.AudioPreferencesClampVolumeSafely" methodname="AudioPreferencesClampVolumeSafely" classname="Darklight.Tests.DarklightSaveContractTests" runstate="Runnable" seed="295723390" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.022524" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1257" name="CorruptPrimarySaveFallsBackGracefullyToBackup" fullname="Darklight.Tests.DarklightSaveContractTests.CorruptPrimarySaveFallsBackGracefullyToBackup" methodname="CorruptPrimarySaveFallsBackGracefullyToBackup" classname="Darklight.Tests.DarklightSaveContractTests" runstate="Runnable" seed="1367330293" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.019871" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1258" name="MissingSaveFilesReturnNullWithoutThrowing" fullname="Darklight.Tests.DarklightSaveContractTests.MissingSaveFilesReturnNullWithoutThrowing" methodname="MissingSaveFilesReturnNullWithoutThrowing" classname="Darklight.Tests.DarklightSaveContractTests" runstate="Runnable" seed="855568771" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.003155" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1255" name="NewProgressHasConsistentInitialContract" fullname="Darklight.Tests.DarklightSaveContractTests.NewProgressHasConsistentInitialContract" methodname="NewProgressHasConsistentInitialContract" classname="Darklight.Tests.DarklightSaveContractTests" runstate="Runnable" seed="863002700" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.001339" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1256" name="SaveAndLoadRoundtripPreservesAllCoreProgressFields" fullname="Darklight.Tests.DarklightSaveContractTests.SaveAndLoadRoundtripPreservesAllCoreProgressFields" methodname="SaveAndLoadRoundtripPreservesAllCoreProgressFields" classname="Darklight.Tests.DarklightSaveContractTests" runstate="Runnable" seed="1023839692" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.010630" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1259" name="WeaponEnumIdsMaintainStrictNumericalContinuity" fullname="Darklight.Tests.DarklightSaveContractTests.WeaponEnumIdsMaintainStrictNumericalContinuity" methodname="WeaponEnumIdsMaintainStrictNumericalContinuity" classname="Darklight.Tests.DarklightSaveContractTests" runstate="Runnable" seed="715824373" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.000972" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1320" name="DarklightTestOutputTests" fullname="Darklight.Tests.DarklightTestOutputTests" classname="Darklight.Tests.DarklightTestOutputTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.014273" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1326" name="AbsoluteAndEmptyFileTargetsAreRejected" fullname="Darklight.Tests.DarklightTestOutputTests.AbsoluteAndEmptyFileTargetsAreRejected" methodname="AbsoluteAndEmptyFileTargetsAreRejected" classname="Darklight.Tests.DarklightTestOutputTests" runstate="Runnable" seed="719854079" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.005833" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1321" name="NestedArtifactsRemainUnderThePortableRoot" fullname="Darklight.Tests.DarklightTestOutputTests.NestedArtifactsRemainUnderThePortableRoot" methodname="NestedArtifactsRemainUnderThePortableRoot" classname="Darklight.Tests.DarklightTestOutputTests" runstate="Runnable" seed="289176495" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.002715" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1325" name="TraversalCannotCreateExternalArtifactDirectories" fullname="Darklight.Tests.DarklightTestOutputTests.TraversalCannotCreateExternalArtifactDirectories" classname="Darklight.Tests.DarklightTestOutputTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.002893" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1322" name="TraversalCannotCreateExternalArtifactDirectories(&quot;../outside&quot;)" fullname="Darklight.Tests.DarklightTestOutputTests.TraversalCannotCreateExternalArtifactDirectories(&quot;../outside&quot;)" methodname="TraversalCannotCreateExternalArtifactDirectories" classname="Darklight.Tests.DarklightTestOutputTests" runstate="Runnable" seed="346665044" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.000626" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1323" name="TraversalCannotCreateExternalArtifactDirectories(&quot;nested/../../outside&quot;)" fullname="Darklight.Tests.DarklightTestOutputTests.TraversalCannotCreateExternalArtifactDirectories(&quot;nested/../../outside&quot;)" methodname="TraversalCannotCreateExternalArtifactDirectories" classname="Darklight.Tests.DarklightTestOutputTests" runstate="Runnable" seed="1812362" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.000217" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1324" name="TraversalCannotCreateExternalArtifactDirectories(&quot;..\\outside&quot;)" fullname="Darklight.Tests.DarklightTestOutputTests.TraversalCannotCreateExternalArtifactDirectories(&quot;..\\outside&quot;)" methodname="TraversalCannotCreateExternalArtifactDirectories" classname="Darklight.Tests.DarklightTestOutputTests" runstate="Runnable" seed="784574291" result="Passed" start-time="2026-10-28 00:15:28Z" end-time="2026-10-28 00:15:28Z" duration="0.000149" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: C:/Users/Usuario/AppData/LocalLow/Fabio/DARKLIGHT REQUIEM\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/Fabio/DARKLIGHT REQUIEM\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

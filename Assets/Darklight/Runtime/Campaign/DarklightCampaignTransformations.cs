@@ -21,9 +21,9 @@ namespace Darklight
             int unlocked=Progress.FormUnlocked;
             if(unlocked==0){Notice("RUPTURA DESPERTA APOS KAEL");return false;}
             if(Energy<60){Notice("TRANSFORMACAO: PRECISA 60 DE SANGUE");return false;}
-            Form=Progress.preferredForm>0?Mathf.Min(unlocked,Progress.preferredForm):unlocked;
+            Form=Progress.preferredForm>0?Mathf.Min(unlocked,DarklightPlayableScope.Form(Progress.preferredForm)):unlocked;
             Energy-=60;FormTime=TransformationDuration(Progress.mastery);BeginFormPresentation(Form,true);
-            Notice(new[]{"","RUPTURA","ECLIPSE","ABSOLUTO"}[Form]);Sound(3);return true;
+            Notice(DarklightPlayableScope.FormName(Form));Sound(3);return true;
         }
         void BeginFormPresentation(int form,bool entering)
         {

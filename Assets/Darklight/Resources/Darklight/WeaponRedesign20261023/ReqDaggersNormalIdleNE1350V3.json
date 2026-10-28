@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqDaggersNormalIdleNE1350V3.png",
+  "imageSha256": "2bdd196836d3a73c6fb81d96f487260784823f0019c01047179aaa94134ba10e",
+  "nativeSize": [
+    2728,
+    725
+  ],
+  "sourceSize": [
+    2172,
+    724
+  ],
+  "pixelsPerUnit": 312.62626262626264,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261025Retomada1350/presas-normal/ReqDaggersNormalIdleNE1350V3-source.png",
+  "sourceSha256": "ebd07226a258b73eceb8a99fd73a777a59e3b4af74305fbb4069a59bf404a73a",
+  "frames": [
+    {
+      "id": "Redesign_ReqDaggersNormalIdleNE1350V3_00",
+      "rect": [
+        0,
+        0,
+        682,
+        725
+      ],
+      "pivot": [
+        0.5483870967741935,
+        0.10758620689655173
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "neutral",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        19,
+        563,
+        705
+      ],
+      "sourceAnchor": [
+        286,
+        655
+      ],
+      "sourcePackingAnchor": [
+        309,
+        655
+      ],
+      "supportGuide": {
+        "anchor": [
+          286,
+          655
+        ],
+        "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+      },
+      "sourceOffsetInFrame": [
+        88,
+        11
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqDaggersNormalIdleNE1350V3_01",
+      "rect": [
+        682,
+        0,
+        682,
+        725
+      ],
+      "pivot": [
+        0.5806451612903226,
+        0.10758620689655173
+      ],
+      "durationMs": 250,
+      "action": "idle",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "inhale",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        563,
+        17,
+        546,
+        689
+      ],
+      "sourceAnchor": [
+        831,
+        655
+      ],
+      "sourcePackingAnchor": [
+        832,
+        655
+      ],
+      "supportGuide": {
+        "anchor": [
+          831,
+          655
+        ],
+        "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+      },
+      "sourceOffsetInFrame": [
+        128,
+        9
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqDaggersNormalIdleNE1350V3_02",
+      "rect": [
+        1364,
+        0,
+        682,
+        725
+      ],
+      "pivot": [
+        0.42668621700879766,
+        0.10758620689655173
+      ],
+      "durationMs": 180,
+      "action": "idle",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "blink",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        1109,
+        21,
+        555,
+        703
+      ],
+      "sourceAnchor": [
+        1392,
+        660
+      ],
+      "sourcePackingAnchor": [
+        1498,
+        660
+      ],
+      "supportGuide": {
+        "anchor": [
+          1392,
+          660
+        ],
+        "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+      },
+      "sourceOffsetInFrame": [
+        8,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqDaggersNormalIdleNE1350V3_03",
+      "rect": [
+        2046,
+        0,
+        682,
+        725
+      ],
+      "pivot": [
+        0.5835777126099707,
+        0.10758620689655173
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "return",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1664,
+        17,
+        508,
+        707
+      ],
+      "sourceAnchor": [
+        1934,
+        654
+      ],
+      "sourcePackingAnchor": [
+        1933,
+        654
+      ],
+      "supportGuide": {
+        "anchor": [
+          1934,
+          654
+        ],
+        "method": "Visual inspection of whole source: projected midpoint between boot supports at lower sole baseline."
+      },
+      "sourceOffsetInFrame": [
+        128,
+        10
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "idle_NE",
+      "frames": [
+        "Redesign_ReqDaggersNormalIdleNE1350V3_00",
+        "Redesign_ReqDaggersNormalIdleNE1350V3_01",
+        "Redesign_ReqDaggersNormalIdleNE1350V3_02",
+        "Redesign_ReqDaggersNormalIdleNE1350V3_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "idle_NE"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 710338,
+  "packedPixels": 710338,
+  "originalSourcePixels": 710338,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 862190,
+    "farBeyond16pxPixels": 153,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.6,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Third authored idle pose is a blink, not a breathing in-between.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ],
+  "stagingOnly": true,
+  "imported": false,
+  "runtimeVerified": false,
+  "visualReviewed": true,
+  "visualApproval": false,
+  "ppuProvenance": {
+    "pipelineInferred": 312.37373737373736,
+    "candidateAnatomical": 312.62626262626264,
+    "measurements": [
+      {
+        "sourceFrameIndex": 0,
+        "headY": 36,
+        "soleY": 655,
+        "anatomyHeight": 619
+      },
+      {
+        "sourceFrameIndex": 1,
+        "headY": 36,
+        "soleY": 655,
+        "anatomyHeight": 619
+      },
+      {
+        "sourceFrameIndex": 2,
+        "headY": 36,
+        "soleY": 660,
+        "anatomyHeight": 624
+      },
+      {
+        "sourceFrameIndex": 3,
+        "headY": 36,
+        "soleY": 654,
+        "anatomyHeight": 618
+      }
+    ],
+    "targetHeightUnits": 1.98,
+    "method": "Manually identified compact canonical head-to-sole height; raised daggers do not count. One PPU per sheet; no raster scaling.",
+    "limitation": "Projected posture and hair crown imply uncertainty; world-scale/camera and transitions require coordinator review."
+  },
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261024/candidates/ReqDaggersNormalLight1S_SW_W20261024v2-source.png",
+      "sha256": "b918d0e89a14e1e6bf45597a075e7cddce2d8c96890c6ffe393033b72b4d83ff"
+    }
+  ],
+  "generation": {
+    "tool": "integrated image_gen",
+    "promptPath": "ArtSources/WeaponRedesign20261025Retomada1350/presas-normal/ReqDaggersNormalIdleNE1350V3-prompt.txt"
+  },
+  "review": {
+    "sourceSeen": true,
+    "packedContactSeen": true,
+    "motionPreviewSeen": false,
+    "findings": "Four new whole-figure repairs for NE. Head/nape/neck/shoulders/back and boot orientation coherent upper-right, no frontal eyes. Wrong-side chain corrected by natural occlusion under far coat panel: no visible chain relocated to near hip. Two daggers intact. Short compact hair silhouette. Earlier NEV1/V2 rejected.",
+    "audioStarted": false
+  },
+  "stoppedPoseFrameIds": [
+    "Redesign_ReqDaggersNormalIdleNE1350V3_00"
+  ],
+  "stoppedPosePolicy": "First neutral authored frame is stopped pose; it is not an additional figure. Four distinct phases are neutral/inhale/blink/exhale."
+}

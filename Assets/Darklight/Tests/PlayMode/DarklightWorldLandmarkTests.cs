@@ -13,7 +13,7 @@ namespace Darklight.Tests
         {
             DarklightAutomation.Silent=true;AudioListener.volume=0;yield return SceneManager.LoadSceneAsync("Assets/Darklight/Scenes/DarklightCampaign.unity");yield return null;yield return null;
             var game=DarklightCampaign.Instance;var lab=DarklightCombatLab.Instance;game.PreviewChapter(0);yield return null;lab.SetPaused(true);
-            string folder="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/minimapa-reforma-20261015/authorial/map-screen-r2/captures/";Directory.CreateDirectory(folder);
+            string folder=DarklightTestOutput.GetDirectory("minimapa-reforma-20261015/authorial/map-screen-r2/captures");
             Transform Level()=>(Transform)typeof(DarklightCampaign).GetField("levelRoot",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(game);
             void At(Vector2 p){lab.Player.ResetModel();lab.Player.GetComponent<Rigidbody2D>().position=p;lab.Player.transform.position=p;Physics2D.SyncTransforms();}
             var shrine=Level().Find("Checkpoint");Assert.That(shrine.GetComponent<SpriteRenderer>().bounds.size.y,Is.EqualTo(2.3f*DarklightWorldScale.Environment).Within(.01f));Assert.That(shrine.GetComponent<Collider2D>(),Is.Null);

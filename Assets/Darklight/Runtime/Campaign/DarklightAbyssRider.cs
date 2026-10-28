@@ -6,16 +6,19 @@ namespace Darklight
     {
         public readonly DarklightGearModel Gear=new();
         public const float DashCost=18,MaximumDashDistance=2.4f;
-        public bool Active=>game!=null&&game.SelectedSkin==1&&game.Weapons?.Equipped?.id==DarklightWeaponId.AbyssRider;
-        public bool Dashing=>Active&&fighter.Model.State==CombatState.Attack&&(fighter.Model.Attack==dash||fighter.Model.Attack==drift||fighter.Model.Attack==finisher);
+        public bool Active=>game!=null&&game.SelectedSkin==0&&game.Weapons?.Equipped?.id==DarklightWeaponId.AbyssRider;
+        // Equipping this weapon means holding the separated wheel-saws. Vehicle
+        // presentation belongs to riding techniques and their committed phases.
+        public bool MountedPresentation=>Active&&(Dashing||Slamming&&SlamFromMounted);
+        public bool Dashing=>Active&&fighter.Model.State==CombatState.Attack&&(RidingAttack(fighter.Model.Attack)||fighter.Model.Attack==drift||fighter.Model.Attack==finisher);
         public bool Sustaining=>Active&&fighter.Model.State==CombatState.Attack&&fighter.Model.Attack==sustain;
         public bool CanFinish=>Active&&Gear.Level==3&&fighter.Model.WeaponSpecialRemaining<=0&&game.Blood.Amount>=FinisherCost&&FindFinisherTarget()!=null;
-        public bool Slamming=>Active&&fighter.Model.State==CombatState.Attack&&fighter.Model.Attack==slam;
+        public bool Slamming=>Active&&fighter.Model.State==CombatState.Attack&&(GroundSlam(fighter.Model.Attack)||AerialExecution);
         public bool Finishing=>Dashing&&fighter.Model.Attack==finisher;
         public bool SlamFromMounted{get;private set;}
         public bool Drifting=>Dashing&&fighter.Model.Attack==drift;
         public bool BlocksSwap=>(Dashing||Slamming||Sustaining)&&fighter.Model.StateTime<fighter.Model.Attack.startup+fighter.Model.Attack.active+(Sustaining?.2f:.34f);
-        public float JumpHeight=>Dashing?Mathf.Sin(Mathf.Clamp01((fighter.Model.StateTime-fighter.Model.Attack.startup-fighter.Model.Attack.active)/.34f)*Mathf.PI)*.28f:0;
+        public float JumpHeight=>Slamming&&!AerialExecution?Mathf.Sin(Mathf.Clamp01(fighter.Model.StateTime/Mathf.Max(.01f,fighter.Model.Attack.startup))*Mathf.PI)*.55f:Dashing?Mathf.Sin(Mathf.Clamp01((fighter.Model.StateTime-fighter.Model.Attack.startup-fighter.Model.Attack.active)/.34f)*Mathf.PI)*.28f:0;
         public bool DashBlocked{get;private set;}
         public float DashDistance{get;private set;}
         public float Speed=>Active&&!Dashing?Gear.Speed:1;
@@ -47,7 +50,7 @@ namespace Darklight
             drift=Make("Derrapagem Sangrenta",StrikeKind.WeaponSpecial,.06f,.38f,.62f,8,1.8f,290,2,1.5f);drift.lungeSpeed=1;drift.knockback=.5f;drift.recoveryChainFraction=.64f;
             sustain=Make("Serras Continuas",StrikeKind.Charged,.12f,.96f,.58f,5,1.55f,100,6,.7f);sustain.windupMove=.05f;sustain.recoveryMove=.1f;sustain.knockback=.04f;sustain.hitCancelFraction=1.35f;sustain.whiffCancelFraction=1.6f;sustain.recoveryChainFraction=.65f;
             finisher=Make("Investida Final",StrikeKind.WeaponSpecial,.48f,.34f,.72f,62,1.8f,100,1,5);finisher.lungeSpeed=2;finisher.cooldown=8.5f;finisher.knockback=.9f;finisher.recoveryChainFraction=.6f;finisher.windupMove=.02f;finisher.recoveryMove=.1f;finisher.finisher=true;
-            riderLoadout=l;weapon.loadout=l;weapon.icon=DarklightAbyssSpriteBank.Icon;return weapon;
+            ExpandMoves(l);riderLoadout=l;weapon.loadout=l;weapon.icon=DarklightAbyssSpriteBank.Icon;return weapon;
         }
         AttackDefinition Make(string name,StrikeKind kind,float startup,float active,float recovery,float damage,float range,float angle,int pulses,float posture)
         {
@@ -64,12 +67,19 @@ namespace Darklight
                 float distance=Vector2.Distance(transform.position,enemy.transform.position);
                 if(distance<best&&DarklightNavigation.Clear(transform.position,enemy.transform.position)){best=distance;result=enemy;}
             }
+            foreach(var enemy in game.MultiverseEnemies)
+            {
+                if(enemy==null||!enemy.gameObject.activeInHierarchy||!enemy.AcceptDamage||!enemy.Vulnerable||enemy.Health.IsDead)continue;
+                float distance=Vector2.Distance(transform.position,enemy.transform.position);
+                if(distance<best&&DarklightNavigation.Clear(transform.position,enemy.transform.position)){best=distance;result=enemy;}
+            }
             return result;
         }
         public bool AcceptStrikeTarget(DarklightCombatant target)=>!Finishing||finisherTarget!=null&&target.gameObject==finisherTarget.gameObject;
         public void BeforeCombat(float dt,ref CombatInput input)
         {
             if(game==null)return;
+            PrepareExpandedTechnique(dt,ref input);
             if(dt<=0){if(Active&&game.Active&&DarklightCombatLab.Instance?.Paused==false)CaptureStoppedCommands(ref input);return;}
             var m=fighter.Model;
             bool precise=Gear.Tick(dt,Active,m.AttackSerial,m.Attack,m.StateTime,m.AttackConnected,m.State==CombatState.Attack,!Dashing&&(input.lightPressed||input.heavyPressed||input.weaponSpecialPressed),m.State==CombatState.Hurt||m.State==CombatState.Dead,game.Form);
@@ -92,10 +102,10 @@ namespace Darklight
                 {driftQueued=true;driftSide=Vector2.Dot(input.move,new Vector2(-dashFacing.y,dashFacing.x))<0?-1:1;input.heavyPressed=false;}
                 input.heavyPressed=false;
                 if(input.skillPressed&&m.StateTime<=m.Attack.startup+m.Attack.active){slamQueued=true;driftQueued=false;input.skillPressed=false;}
-                if(driftQueued&&m.Attack==dash&&!m.ActiveThisTick&&m.StateTime>=dash.startup+dash.active)
+                if(driftQueued&&RidingAttack(m.Attack)&&!m.ActiveThisTick&&m.StateTime>=m.Attack.startup+m.Attack.active)
                 {
                     driftQueued=false;
-                    if(!DashBlocked&&game.Blood.Amount>=DriftCost&&m.TryWeaponFollowup(dash,drift))
+                    if(!DashBlocked&&game.Blood.Amount>=DriftCost&&m.TryWeaponFollowup(m.Attack,drift))
                     {game.Blood.Set(game.Blood.Amount-DriftCost);driftUsed=true;DriftDistance=0;}
                 }
                 // A deliberate mounted slam lifts the assembled bike before the automatic vault.
@@ -112,7 +122,7 @@ namespace Darklight
             if(input.weaponSpecialPressed)
             {
                 bikeBuffered=false;input.skillPressed=false;
-                AttackDefinition wanted=dash;
+                AttackDefinition wanted=input.move.sqrMagnitude>.15f?brutal:dash;
                 finisherTarget=Gear.Level==3&&game.Blood.Amount>=FinisherCost?FindFinisherTarget():null;
                 if(finisherTarget!=null)
                 {wanted=finisher;input.aim=((Vector2)finisherTarget.transform.position-(Vector2)transform.position).normalized;input.heavyPressed=false;}
@@ -124,7 +134,7 @@ namespace Darklight
             {
                 slamBuffered=false;
                 if(!CanStart(m)||m.SkillRemaining>0||game.Blood.Amount<SlamCost){input.skillPressed=false;return;}
-                SlamFromMounted=false;Reserve(slam);
+                SlamFromMounted=false;Reserve(riderLoadout.skill);
             }
         }
         public void AfterCombat()
@@ -134,12 +144,12 @@ namespace Darklight
             if(m.AttackSerial!=serial)
             {
                 serial=m.AttackSerial;paidPulses=0;
-                float cost=m.Attack==finisher?FinisherCost:m.Attack==dash?DashCost:m.Attack==slam?SlamCost:m.Attack==sustain?SustainEntryCost:0;
+                float cost=m.Attack==finisher?FinisherCost:RidingAttack(m.Attack)?DashCost:GroundSlam(m.Attack)?SlamCost:m.Attack==sustain?SustainEntryCost:0;
                 if(cost>0)
                 {
                     if(pendingAttack!=m.Attack||game.Blood.Amount<cost||m.Attack==finisher&&!Gear.TryConsumeOverload()){m.FinishAttackContact();pendingAttack=null;return;}
                     game.Blood.Set(game.Blood.Amount-cost);pendingAttack=null;
-                    if(m.Attack==dash||m.Attack==finisher){DashBlocked=false;DashDistance=0;DriftDistance=0;driftQueued=driftUsed=slamQueued=false;dashFacing=m.Facing;ResetRunOver();}
+                    if(RidingAttack(m.Attack)||m.Attack==finisher){DashBlocked=false;DashDistance=0;DriftDistance=0;driftQueued=driftUsed=slamQueued=false;dashFacing=m.Facing;ResetRunOver();}
                     game.AudioDirector?.Play("rpg-metalLatch",DarklightAudioCategory.Combat,.2f,null,.78f,.2f);
                 }
             }
@@ -150,7 +160,7 @@ namespace Darklight
                 if(game.Blood.Amount<cost){m.FinishAttackContact();return;}
                 if(cost>0){game.Blood.Set(game.Blood.Amount-cost);paidPulses|=fresh;}
             }
-            if((Slamming&&m.ActiveThisTick||Finishing&&m.AttackConnected)&&impactSerial!=m.AttackSerial)
+            if((Slamming&&!AerialExecution&&m.ActiveThisTick||Finishing&&m.AttackConnected)&&impactSerial!=m.AttackSerial)
             {
                 impactSerial=m.AttackSerial;
                 Vector3 contact=Finishing&&finisherTarget!=null?finisherTarget.transform.position:transform.position+(Vector3)m.Facing*.8f;
@@ -192,7 +202,7 @@ namespace Darklight
             if(blocked){if(contactFound)DarklightCombatFX.MotorcycleImpact(contactPoint,-delta.normalized,DarklightMotorcycleImpact.Collision);DashBlocked=true;driftQueued=slamQueued=false;fighter.Model.FinishAttackContact();Gear.Crash();}
             return delta.normalized*(allowed/step);
         }
-        public void ResetMotion(){ClearCommands();ResetRunOver();serial=impactSerial=-1;pendingAttack=null;reservation=0;DashBlocked=false;DashDistance=DriftDistance=0;driftQueued=driftUsed=slamQueued=false;SlamFromMounted=false;paidPulses=0;finisherTarget=null;dashFacing=Vector2.down;Gear.Reset();if(riderLoadout!=null)riderLoadout.weaponSpecial=dash;}
+        public void ResetMotion(){ClearCommands();ResetRunOver();serial=impactSerial=-1;pendingAttack=queuedExpansion=null;reservation=expansionUntil=0;DashBlocked=false;DashDistance=DriftDistance=0;driftQueued=driftUsed=slamQueued=false;SlamFromMounted=false;paidPulses=0;finisherTarget=null;dashFacing=Vector2.down;Gear.Reset();if(riderLoadout!=null)riderLoadout.weaponSpecial=dash;}
 
         void OnDestroy(){foreach(var asset in owned)if(asset!=null){if(Application.isPlaying)Destroy(asset);else DestroyImmediate(asset);}owned.Clear();}
     }
@@ -205,7 +215,7 @@ namespace Darklight
             AbyssRider=lab.Player.GetComponent<DarklightAbyssRider>()??lab.Player.gameObject.AddComponent<DarklightAbyssRider>();
             var original=weaponDefinitions;weaponDefinitions=new WeaponDefinition[4];System.Array.Copy(original,weaponDefinitions,Mathf.Min(3,original.Length));weaponDefinitions[3]=AbyssRider.Initialize(this);
         }
-        void StartAbyssPrototype(){DarklightAbyssSpriteBank.Preload(0);SetTrainingForm(0);SelectSkin(1,false);Weapons.Request(3);Close();Notice("PROTOTIPO NORMAL: ENGRENAGENS + INVESTIDA CURTA");}
+        void StartAbyssPrototype(){DarklightAbyssSpriteBank.Preload(0);SetTrainingForm(0);SelectSkin(0,false);Weapons.Request(3);Close();Notice("REQUIEM: ENGRENAGENS + INVESTIDA CURTA");}
         void UpdateAbyssHUD()=>PresentAbyssHUD();
     }
 }

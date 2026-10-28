@@ -22,7 +22,7 @@ namespace Darklight
         }
         void ConfigurePlaytestResources()
         {
-            Progress.level=Mathf.Max(Progress.level,12);Progress.points=Mathf.Max(Progress.points,12);Progress.weaponUnlocks=7;
+            Progress.level=Mathf.Max(Progress.level,12);Progress.points=Mathf.Max(Progress.points,12);Progress.weaponUnlocks=DarklightPlayableScope.WeaponMask;
             Progress.vampireMastery=3;Progress.vampireSkills=63;Progress.vampireSelected=0;Progress.awakeningState=2;
             Progress.formsUnlocked=3;Progress.preferredForm=0;Progress.potions=9;Progress.blood=100;
             Progress.vampireRecoveries=new float[6];Progress.resonanceRecoveries=new float[3];Progress.resonanceCooldown=0;Progress.resonanceEnergy=100;Progress.mp3Unlocked=true;

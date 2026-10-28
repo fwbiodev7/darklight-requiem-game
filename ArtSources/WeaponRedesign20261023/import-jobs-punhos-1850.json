@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 1,
+  "jobs": [
+    {
+      "name": "RockFistsNormalDiretoS_SW_W1850V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1850\\punhos-normal\\RockFistsNormalDiretoS_SW_W-v1-source.png",
+      "preservedSourceName": "RockFistsNormalDiretoS_SW_W-v1-source.png",
+      "skin": 1,
+      "weapon": 2,
+      "form": 0,
+      "columns": 3,
+      "sourceRows": 3,
+      "minimumArea": 12000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2
+          ],
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Direto da Ruína",
+          "sourceSpriteNames": [
+            "Ruin_Rock_Normal_S_Combat_02",
+            "Ruin_Rock_Normal_S_Combat_03",
+            "Ruin_Rock_Normal_S_Combat_11"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            3,
+            4,
+            5
+          ],
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "Direto da Ruína",
+          "sourceSpriteNames": [
+            "Ruin_Rock_Normal_SW_Combat_02",
+            "Ruin_Rock_Normal_SW_Combat_03",
+            "Ruin_Rock_Normal_SW_Combat_11"
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            6,
+            7,
+            8
+          ],
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "Direto da Ruína",
+          "sourceSpriteNames": [
+            "Ruin_Rock_Normal_W_Combat_02",
+            "Ruin_Rock_Normal_W_Combat_03",
+            "Ruin_Rock_Normal_W_Combat_11"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            332,
+            346
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "1": {
+          "anchor": [
+            783,
+            347
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "2": {
+          "anchor": [
+            1210,
+            346
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "3": {
+          "anchor": [
+            329,
+            660
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "4": {
+          "anchor": [
+            788,
+            660
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "5": {
+          "anchor": [
+            1216,
+            661
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "6": {
+          "anchor": [
+            346,
+            1000
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "7": {
+          "anchor": [
+            806,
+            1000
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "8": {
+          "anchor": [
+            1247,
+            1001
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        }
+      },
+      "anatomyCalibration": {
+        "sourceFrameIndex": 0,
+        "crownY": 13,
+        "soleY": 348,
+        "anatomyHeight": 335,
+        "uncertaintyPx": 6
+      },
+      "pixelsPerUnit": 169.6969696969697,
+      "calibrationGuide": {
+        "sourceFrameIndex": 0,
+        "crownY": 13,
+        "soleY": 348,
+        "anatomyHeight": 335,
+        "uncertaintyPx": 6,
+        "pixelsPerUnit": 169.6969696969697,
+        "referenceBodyPixels": 335,
+        "referencePixelsPerUnit": 169.6969696969697,
+        "referenceWorldBodyHeight": 1.974107142857143,
+        "worldVisualScale": 1.325,
+        "method": "One anatomical PPU per whole sheet, no per-frame scaling."
+      },
+      "attackPreviewDurationsMs": [
+        75,
+        65,
+        130
+      ]
+    },
+    {
+      "name": "RockFistsNormalDiretoNW_N_NE1850Selected",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1850\\punhos-normal\\RockFistsNormalDiretoNW_N_NE1850Selected-selected-whole-figures-source.png",
+      "preservedSourceName": "RockFistsNormalDiretoNW_N_NE1850Selected-selected-whole-figures-source.png",
+      "skin": 1,
+      "weapon": 2,
+      "form": 0,
+      "columns": 3,
+      "sourceRows": 3,
+      "minimumArea": 12000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2
+          ],
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "Direto da Ruína",
+          "sourceSpriteNames": [
+            "Ruin_Rock_Normal_NW_Combat_02",
+            "Ruin_Rock_Normal_NW_Combat_03",
+            "Ruin_Rock_Normal_NW_Combat_11"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            3,
+            4,
+            5
+          ],
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "Direto da Ruína",
+          "sourceSpriteNames": [
+            "Ruin_Rock_Normal_N_Combat_02",
+            "Ruin_Rock_Normal_N_Combat_03",
+            "Ruin_Rock_Normal_N_Combat_11"
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            6,
+            7,
+            8
+          ],
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "Direto da Ruína",
+          "sourceSpriteNames": [
+            "Ruin_Rock_Normal_NE_Combat_02",
+            "Ruin_Rock_Normal_NE_Combat_03",
+            "Ruin_Rock_Normal_NE_Combat_11"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            487,
+            419
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "1": {
+          "anchor": [
+            1125,
+            335
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "2": {
+          "anchor": [
+            2022,
+            419
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "3": {
+          "anchor": [
+            395,
+            977
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "4": {
+          "anchor": [
+            1157,
+            977
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "5": {
+          "anchor": [
+            1920,
+            977
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "6": {
+          "anchor": [
+            280,
+            1530
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "7": {
+          "anchor": [
+            1050,
+            1529
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "8": {
+          "anchor": [
+            1812,
+            1531
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        }
+      },
+      "anatomyCalibration": {
+        "sourceFrameIndex": 0,
+        "crownY": 111,
+        "soleY": 428,
+        "anatomyHeight": 317,
+        "uncertaintyPx": 8
+      },
+      "pixelsPerUnit": 160.5789235639982,
+      "calibrationGuide": {
+        "sourceFrameIndex": 0,
+        "crownY": 111,
+        "soleY": 428,
+        "anatomyHeight": 317,
+        "uncertaintyPx": 8,
+        "pixelsPerUnit": 160.5789235639982,
+        "referenceBodyPixels": 335,
+        "referencePixelsPerUnit": 169.6969696969697,
+        "referenceWorldBodyHeight": 1.974107142857143,
+        "worldVisualScale": 1.325,
+        "method": "One anatomical PPU per whole sheet, no per-frame scaling."
+      },
+      "attackPreviewDurationsMs": [
+        75,
+        65,
+        130
+      ]
+    },
+    {
+      "name": "RockFistsNormalDiretoE_SE1850Selected",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025Retomada1850\\punhos-normal\\RockFistsNormalDiretoE_SE1850Selected-selected-whole-figures-source.png",
+      "preservedSourceName": "RockFistsNormalDiretoE_SE1850Selected-selected-whole-figures-source.png",
+      "skin": 1,
+      "weapon": 2,
+      "form": 0,
+      "columns": 3,
+      "sourceRows": 2,
+      "minimumArea": 12000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2
+          ],
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "Direto da Ruína",
+          "sourceSpriteNames": [
+            "Ruin_Rock_Normal_E_Combat_02",
+            "Ruin_Rock_Normal_E_Combat_03",
+            "Ruin_Rock_Normal_E_Combat_11"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            3,
+            4,
+            5
+          ],
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "Direto da Ruína",
+          "sourceSpriteNames": [
+            "Ruin_Rock_Normal_SE_Combat_02",
+            "Ruin_Rock_Normal_SE_Combat_03",
+            "Ruin_Rock_Normal_SE_Combat_11"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            288,
+            488
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "1": {
+          "anchor": [
+            989,
+            487
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "2": {
+          "anchor": [
+            1600,
+            488
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "3": {
+          "anchor": [
+            295,
+            1069
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "4": {
+          "anchor": [
+            960,
+            1073
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        },
+        "5": {
+          "anchor": [
+            1594,
+            1056
+          ],
+          "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+        }
+      },
+      "anatomyCalibration": {
+        "sourceFrameIndex": 0,
+        "crownY": 46,
+        "soleY": 495,
+        "anatomyHeight": 449,
+        "uncertaintyPx": 8
+      },
+      "pixelsPerUnit": 227.4445952057892,
+      "calibrationGuide": {
+        "sourceFrameIndex": 0,
+        "crownY": 46,
+        "soleY": 495,
+        "anatomyHeight": 449,
+        "uncertaintyPx": 8,
+        "pixelsPerUnit": 227.4445952057892,
+        "referenceBodyPixels": 335,
+        "referencePixelsPerUnit": 169.6969696969697,
+        "referenceWorldBodyHeight": 1.974107142857143,
+        "worldVisualScale": 1.325,
+        "method": "One anatomical PPU per whole sheet, no per-frame scaling."
+      },
+      "attackPreviewDurationsMs": [
+        75,
+        65,
+        130
+      ]
+    }
+  ]
+}

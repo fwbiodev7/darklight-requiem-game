@@ -12,7 +12,7 @@ namespace Darklight.Editor
     public static partial class RemasterPrototype
     {
         const string Folder="Assets/Darklight/Editor/RemasterPrototype/";
-        const string Output="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/remaster-prototype-20261014/";
+        static string Output => Path.GetFullPath(Path.Combine(Application.dataPath, "../outputs/test-artifacts/remaster-prototype-20261014/")).Replace('\\', '/') + "/";
         static RenderPipelineAsset graphics,quality;
         static Camera camera;
         static bool enabled,oldHDR;

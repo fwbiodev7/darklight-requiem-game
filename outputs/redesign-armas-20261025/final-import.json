@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-25",
+  "producedNewFigures": 134,
+  "preservedPresasFigures": 18,
+  "catalogSha256": "e0eeed9edb90afc7f7d833a9720643dad48186e975a26e1c21c89eb894116742",
+  "wholeFigureSheets": 66,
+  "wholeFigures": 570,
+  "exactContextClips": 154,
+  "coreContextsWithAnyNewClip": 138,
+  "coreContextsMissingNewArt": 1398,
+  "motorcycleFiguresSeparate": 48,
+  "sourceAndAtlasHashesVerified": true,
+  "unityImportVerified": true,
+  "unityImportLog": "..\\work\\redesign-1850-final-import-retry.log",
+  "unityImportLogSha256": "0d59511c72f54e5e1158b980df28eebd342d68719f9c4fbe12e189601c49d2da",
+  "tests": [
+    {
+      "file": "gameplay-current.xml",
+      "sha256": "e49e2847fedddde3274b113f347b102a03787d278e4cabfb8f7d5db1c6c7feae",
+      "cases": 14,
+      "passed": 14,
+      "failures": []
+    },
+    {
+      "file": "audio-playback.xml",
+      "sha256": "bc41a2b6845e181482e2c4bb427a65458b67f0e9d189d9a8a802e6e1e0ce4f37",
+      "cases": 1,
+      "passed": 1,
+      "failures": []
+    },
+    {
+      "file": "gameplay-final.xml",
+      "sha256": "9a0c0be9110776cd25e795070c2f6458df2f984eab9951bb5fd9fdbaf390fa46",
+      "cases": 5,
+      "passed": 4,
+      "failures": [
+        {
+          "name": "Darklight.Tests.DarklightWeaponRedesignGameplayTests.BreathAndClothRequireTheirRealHealthAndWalkingConditions",
+          "message": "  PC04: real context must start its voice\n  Expected: True\n  But was:  False\n"
+        }
+      ]
+    }
+  ],
+  "finalVisualCasesPassed": 4,
+  "finalContextAudioCasePassed": false,
+  "normalFirstLightContextsVerified": 48,
+  "normalFirstLightFiguresObserved": 176,
+  "normalIdleContextsVerified": 48,
+  "normalIdleFiguresObserved": 192,
+  "katanaSecondLightContextsVerified": 16,
+  "katanaSecondLightFiguresObserved": 64,
+  "katanaFirstContactSeededByConfirmHit": true,
+  "subjectiveAudioListeningCertified": false,
+  "fullHumanCampaignCertified": false,
+  "physicalControllerTested": false,
+  "newBuild": false,
+  "complete": false,
+  "resumeUtc": "2026-10-26T03:27:32Z",
+  "limits": [
+    "PC04 contextual playback attempt did not start voice; cause and actual health fixture must be investigated. PC06 not reached by that failed test.",
+    "DSP playback previously observed17/19 supplied effects, not a subjective sound-quality review.",
+    "No fresh EditMode suite in this final round; prior valid tests retained without rerun.",
+    "Normal remaining actions and motorcycle cycles, transformations, AI2.0, expansion and site remain pending."
+  ]
+}

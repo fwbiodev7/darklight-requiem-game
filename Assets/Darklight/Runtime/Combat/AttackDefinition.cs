@@ -13,12 +13,16 @@ namespace Darklight
         public float damage = 15f, range = 1.6f, angle = 110f, knockback = .2f;
         [Min(1)] public int hitPulses=1;
         public float lungeSpeed, cooldown;
+        public float endLungeMultiplier=1,finalKnockback;
         public bool pullTarget,blink;
+        public DarklightRuinStrike ruinStrike;
         // Optional authored phases; old profiles retain their original sector behaviour.
         public HitShape hitShape;
         public float innerRange, width=.55f, sweepDegrees, windupMove=.42f,recoveryMove=.42f;
         public float postureDamage=1,chargeSeconds=.45f,hitstop=.035f;
         public bool launch,finisher;
+        public DarklightAirReaction airReaction;
+        public float launchSpeed=4f;
         public float hitCancelFraction=1,whiffCancelFraction=1;
         [Range(0,1)] public float recoveryChainFraction=.35f;
         public float Duration => startup + active + recovery;
@@ -31,6 +35,7 @@ namespace Darklight
         public AttackDefinition[] lights;
         public AttackDefinition heavy, charged, counter, skill, aerial, weaponSpecial;
         public AttackDefinition pauseBranch,heavyBranch,swapEntry;
+        public AttackDefinition airFinisher;
         public float attackBuffer,defenseBuffer;
         public int weapon;
     }

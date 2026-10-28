@@ -1,0 +1,598 @@
+{
+  "schemaVersion": 1,
+  "image": "RockFistsNormalDiretoS_SW_W1850V1.png",
+  "imageSha256": "0ef0e2744620217c63a1f0fec730821a9e4b512fc192b0a4bf1742314d3c2be0",
+  "nativeSize": [
+    2244,
+    1320
+  ],
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 169.6969696969697,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261025Retomada1850/punhos-normal/RockFistsNormalDiretoS_SW_W-v1-source.png",
+  "sourceSha256": "e46a33e9c176c5a647540caffd6d209c25548562555e30a205529646f6967cfd",
+  "frames": [
+    {
+      "id": "Redesign_RockFistsNormalDiretoS_SW_W1850V1_00",
+      "rect": [
+        0,
+        0,
+        748,
+        440
+      ],
+      "pivot": [
+        0.5842245989304813,
+        0.15681818181818183
+      ],
+      "durationMs": 75,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        55,
+        6,
+        463,
+        342
+      ],
+      "sourceAnchor": [
+        332,
+        346
+      ],
+      "sourcePackingAnchor": [
+        347,
+        348
+      ],
+      "supportGuide": {
+        "anchor": [
+          332,
+          346
+        ],
+        "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+      },
+      "sourceOffsetInFrame": [
+        160,
+        31
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_RockFistsNormalDiretoS_SW_W1850V1_01",
+      "rect": [
+        748,
+        0,
+        748,
+        440
+      ],
+      "pivot": [
+        0.6671122994652406,
+        0.15681818181818183
+      ],
+      "durationMs": 65,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        599,
+        0,
+        363,
+        350
+      ],
+      "sourceAnchor": [
+        783,
+        347
+      ],
+      "sourcePackingAnchor": [
+        736,
+        349
+      ],
+      "supportGuide": {
+        "anchor": [
+          783,
+          347
+        ],
+        "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+      },
+      "sourceOffsetInFrame": [
+        315,
+        24
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_RockFistsNormalDiretoS_SW_W1850V1_02",
+      "rect": [
+        1496,
+        0,
+        748,
+        440
+      ],
+      "pivot": [
+        0.5962566844919787,
+        0.15681818181818183
+      ],
+      "durationMs": 130,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        1000,
+        0,
+        504,
+        349
+      ],
+      "sourceAnchor": [
+        1210,
+        346
+      ],
+      "sourcePackingAnchor": [
+        1216,
+        348
+      ],
+      "supportGuide": {
+        "anchor": [
+          1210,
+          346
+        ],
+        "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+      },
+      "sourceOffsetInFrame": [
+        236,
+        25
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_RockFistsNormalDiretoS_SW_W1850V1_03",
+      "rect": [
+        0,
+        440,
+        748,
+        440
+      ],
+      "pivot": [
+        0.46390374331550804,
+        0.17727272727272728
+      ],
+      "durationMs": 75,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        21,
+        344,
+        503,
+        386
+      ],
+      "sourceAnchor": [
+        329,
+        660
+      ],
+      "sourcePackingAnchor": [
+        434,
+        671
+      ],
+      "supportGuide": {
+        "anchor": [
+          329,
+          660
+        ],
+        "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+      },
+      "sourceOffsetInFrame": [
+        39,
+        46
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_RockFistsNormalDiretoS_SW_W1850V1_04",
+      "rect": [
+        748,
+        440,
+        748,
+        440
+      ],
+      "pivot": [
+        0.4385026737967914,
+        0.17727272727272728
+      ],
+      "durationMs": 65,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        577,
+        343,
+        425,
+        330
+      ],
+      "sourceAnchor": [
+        788,
+        660
+      ],
+      "sourcePackingAnchor": [
+        912,
+        671
+      ],
+      "supportGuide": {
+        "anchor": [
+          788,
+          660
+        ],
+        "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+      },
+      "sourceOffsetInFrame": [
+        117,
+        45
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_RockFistsNormalDiretoS_SW_W1850V1_05",
+      "rect": [
+        1496,
+        440,
+        748,
+        440
+      ],
+      "pivot": [
+        0.46524064171123,
+        0.175
+      ],
+      "durationMs": 130,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        1033,
+        329,
+        479,
+        344
+      ],
+      "sourceAnchor": [
+        1216,
+        661
+      ],
+      "sourcePackingAnchor": [
+        1320,
+        671
+      ],
+      "supportGuide": {
+        "anchor": [
+          1216,
+          661
+        ],
+        "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+      },
+      "sourceOffsetInFrame": [
+        165,
+        31
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_RockFistsNormalDiretoS_SW_W1850V1_06",
+      "rect": [
+        0,
+        880,
+        748,
+        440
+      ],
+      "pivot": [
+        0.4732620320855615,
+        0.175
+      ],
+      "durationMs": 75,
+      "action": "attack",
+      "direction": "W",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        0,
+        672,
+        506,
+        341
+      ],
+      "sourceAnchor": [
+        346,
+        1000
+      ],
+      "sourcePackingAnchor": [
+        444,
+        1010
+      ],
+      "supportGuide": {
+        "anchor": [
+          346,
+          1000
+        ],
+        "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+      },
+      "sourceOffsetInFrame": [
+        8,
+        35
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_RockFistsNormalDiretoS_SW_W1850V1_07",
+      "rect": [
+        748,
+        880,
+        748,
+        440
+      ],
+      "pivot": [
+        0.4304812834224599,
+        0.175
+      ],
+      "durationMs": 65,
+      "action": "attack",
+      "direction": "W",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        521,
+        645,
+        495,
+        379
+      ],
+      "sourceAnchor": [
+        806,
+        1000
+      ],
+      "sourcePackingAnchor": [
+        936,
+        1010
+      ],
+      "supportGuide": {
+        "anchor": [
+          806,
+          1000
+        ],
+        "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+      },
+      "sourceOffsetInFrame": [
+        37,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_RockFistsNormalDiretoS_SW_W1850V1_08",
+      "rect": [
+        1496,
+        880,
+        748,
+        440
+      ],
+      "pivot": [
+        0.46524064171123,
+        0.17272727272727273
+      ],
+      "durationMs": 130,
+      "action": "attack",
+      "direction": "W",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        1103,
+        672,
+        430,
+        341
+      ],
+      "sourceAnchor": [
+        1247,
+        1001
+      ],
+      "sourcePackingAnchor": [
+        1351,
+        1010
+      ],
+      "supportGuide": {
+        "anchor": [
+          1247,
+          1001
+        ],
+        "method": "Manual projected midpoint of intact boot/claw supports, never armor/weapon bounds."
+      },
+      "sourceOffsetInFrame": [
+        204,
+        35
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_S",
+      "frames": [
+        "Redesign_RockFistsNormalDiretoS_SW_W1850V1_00",
+        "Redesign_RockFistsNormalDiretoS_SW_W1850V1_01",
+        "Redesign_RockFistsNormalDiretoS_SW_W1850V1_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_SW",
+      "frames": [
+        "Redesign_RockFistsNormalDiretoS_SW_W1850V1_03",
+        "Redesign_RockFistsNormalDiretoS_SW_W1850V1_04",
+        "Redesign_RockFistsNormalDiretoS_SW_W1850V1_05"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_W",
+      "frames": [
+        "Redesign_RockFistsNormalDiretoS_SW_W1850V1_06",
+        "Redesign_RockFistsNormalDiretoS_SW_W1850V1_07",
+        "Redesign_RockFistsNormalDiretoS_SW_W1850V1_08"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "attack_S",
+    "attack_SW",
+    "attack_W"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 476927,
+  "packedPixels": 476927,
+  "originalSourcePixels": 476927,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 1095937,
+    "farBeyond16pxPixels": 412,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 1.615686274509804,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ],
+  "ppuProvenance": {
+    "method": "Comparable guarded crown-to-sole anatomy, excludes raised fist/claws/FX bounds; one PPU per sheet.",
+    "referencePath": "ArtSources/WeaponRedesign20261024/candidates/ReqFistsNormalDireto_S_SW_W-v2-source.png",
+    "referenceSha256": "569470770dc7793b22cc4f3aeb7dded4ea102a8ce647d07338fb7ce1a599f7d6",
+    "referenceBodyPixels": 335,
+    "referencePixelsPerUnit": 169.6969696969697,
+    "referenceWorldBodyHeight": 1.974107142857143,
+    "measurements": [
+      {
+        "sourceFrameIndex": 0,
+        "crownY": 13,
+        "soleY": 348,
+        "anatomyHeight": 335,
+        "uncertaintyPx": 6
+      },
+      {
+        "sourceFrameIndex": 1,
+        "crownY": 12,
+        "soleY": 349,
+        "anatomyHeight": 337,
+        "uncertaintyPx": 6
+      },
+      {
+        "sourceFrameIndex": 2,
+        "crownY": 12,
+        "soleY": 348,
+        "anatomyHeight": 336,
+        "uncertaintyPx": 6
+      },
+      {
+        "sourceFrameIndex": 3,
+        "crownY": 344,
+        "soleY": 671,
+        "anatomyHeight": 327,
+        "uncertaintyPx": 6
+      },
+      {
+        "sourceFrameIndex": 4,
+        "crownY": 344,
+        "soleY": 671,
+        "anatomyHeight": 327,
+        "uncertaintyPx": 6
+      },
+      {
+        "sourceFrameIndex": 5,
+        "crownY": 344,
+        "soleY": 671,
+        "anatomyHeight": 327,
+        "uncertaintyPx": 6
+      },
+      {
+        "sourceFrameIndex": 6,
+        "crownY": 672,
+        "soleY": 1010,
+        "anatomyHeight": 338,
+        "uncertaintyPx": 6
+      },
+      {
+        "sourceFrameIndex": 7,
+        "crownY": 674,
+        "soleY": 1010,
+        "anatomyHeight": 336,
+        "uncertaintyPx": 6
+      },
+      {
+        "sourceFrameIndex": 8,
+        "crownY": 673,
+        "soleY": 1010,
+        "anatomyHeight": 337,
+        "uncertaintyPx": 6
+      }
+    ],
+    "pixelsPerUnit": 169.6969696969697,
+    "worldVisualScale": 1.325,
+    "liveCameraCheckPending": true
+  },
+  "review": {
+    "sourceSeen": true,
+    "wholeFigures": true,
+    "sourceRgbaExact": true,
+    "anatomyEdits": false,
+    "visualApproval": false,
+    "imported": false,
+    "runtimeVerified": false,
+    "findings": "Right straight punch, left armored guard, two gauntlets/two greaves. NW/N/NE coherent nuca/head/neck/back. N heels/front claws occluded; left hip chain.",
+    "limitations": "Native logical pixel grid unverified; many colors/partial alpha, pose-height variation and live camera require separate review."
+  }
+}

@@ -1,0 +1,24 @@
+DARKLIGHT REQUIEM production pixel-art animation sheet. Use case: identity-preserve; asset type: full-body character sprite sheet for Unity. Create exactly TWELVE separately drawn COMPLETE character figures, arranged as THREE ROWS OF FOUR, with true alpha TRANSPARENT background and broad clear gutters/outer padding. No labels, text, border, scenery, floor, shadow ellipse or standalone floating parts.
+
+Input roles: image 1 (purple-haired/dark-coated protagonist sheet) is the PRIMARY exact character identity and costume reference. Image 2 is authority for the ECLIPSE KATANA design, not character identity. Image 3 composite is supporting weapon/coat silhouette reference. Image 4 is eye-color reference only. Preserve the entire young character in every frame, same anatomical height and proportions. Do not copy/crop/transplant any head, eye, limb or weapon; draw every frame as one intact character.
+
+ECLIPSE form invariants: brown layered medium-long hair with the SAME distinct VIOLET STREAKS and purple tips as image 1; red eyes remain dark red #C40814 with deep #5A0000 shadows, pupils/white glints and clean peach skin #F6AE82; do NOT turn eyes violet, tint skin purple or add red stains below eyes. Preserve young face, black long coat, VIOLET inner lining and edges, purple shoulder/cuff crystals, black trousers, belt/silver buckle, silver waist accessory chain (only clothing accessory), black strapped boots and semi-chibi body proportions. Do not replace character with a generic swordsman.
+
+Replace daggers with ONE proportionate ECLIPSE KATANA firmly in the character's anatomical RIGHT hand throughout, other hand naturally free. Long elegant slightly curved DARK METAL blade, narrow brilliant violet cutting edge, violet cracks and energy veins running lengthwise, black guard with silver details, black/violet wrapped hilt. Blade about half standing body height, legible slender katana silhouette; not broad sword, scythe, chains or twin daggers. Hilt visibly aligned with gripping fingers. Keep identical length, guard and weapon identity in all frames.
+
+Camera: approved elevated 2D RPG sprite perspective, SOUTH-facing toward viewer throughout ALL TWELVE cells. No side or back directions. Keep the south-facing head/face and torso readable during the diagonal swing; a modest natural torso twist is animation, not another viewing direction. Handedness must not flip.
+
+Style: deliberate crisp square pixel-art clusters, sharp stepped contours, restrained ramps and coherent top-left light, matching the game references in density and anatomy. Not painterly, not vector, not 3D, not soft brush shading, no blur, no giant glows hiding the hand. Sharp pixels on face, eye and blade. Preserve feet, hair, hands, coat tails and full blade inside each generous cell.
+
+ROW 1: four IDLE south-facing poses in order: settled guard with katana angled safely low; gentle inhale with both feet planted and grip stable; subtle exhale/blink with clean eyelids; return to settled ready guard. Small distinct pose changes, stable boots/weapon scale.
+
+ROWS 2 and 3 are ONE CONTINUOUS EIGHT-FRAME DIAGONAL KATANA CUT, read row-major:
+frame 1: clear ready anticipation, slight knee bend, right hand brings katana across body toward high right;
+frame 2: coiled windup, blade above anatomical right shoulder, left hand counterbalances, both boots visible;
+frame 3: acceleration begins down and diagonally across front, weapon still firmly gripped;
+frame 4: main cutting CONTACT at mid-diagonal across the space in front, narrow coherent violet slash trail following actual blade arc;
+frame 5: cutting continuation downward toward anatomical left, full katana/hands visible;
+frame 6: low follow-through, body weight settles without changing body scale or showing a side view;
+frame 7: right hand draws blade back toward low ready guard, coherent cloth recovery;
+frame 8: recovery ends in the same south-ready stance used by idle.
+All eight attack frames must be real consecutive pose drawings, not duplicated idle, not eight unrelated strikes. The same right hand keeps the weapon for all eight. Leave enough free transparent room for the long blade in windup and follow-through; no clipping, no nearby sprite contact, no detached sword, no missing feet.

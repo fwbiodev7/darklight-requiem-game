@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqKatanaNormalWalkNW_N20261027SelectedRepaired3.png",
+  "imageSha256": "e18aab5e8f958fecc058f3ace22763246aaf7af3045708e168896f1018237f41",
+  "nativeSize": [
+    1236,
+    372
+  ],
+  "sourceSize": [
+    1098,
+    1433
+  ],
+  "pixelsPerUnit": 172.22222222222223,
+  "status": "packing-input-only",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261027/katana-normal/ReqKatanaNormalWalkNW_N-v2-source.png",
+  "sourceSha256": "d011db521a5f1f5d219ef5462fa099478d50fce3fc959ccb10e4dd3693fdbc5a",
+  "frames": [
+    {
+      "id": "Redesign_ReqKatanaNormalWalkNW_N20261027SelectedRepaired3_00",
+      "rect": [
+        0,
+        0,
+        412,
+        372
+      ],
+      "pivot": [
+        0.2936893203883495,
+        0.051075268817204304
+      ],
+      "durationMs": 65,
+      "action": "walk",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "walk_0",
+      "sourceFrameIndex": 9,
+      "sourceRect": [
+        64,
+        1055,
+        356,
+        349
+      ],
+      "sourceAnchor": [
+        177,
+        1400
+      ],
+      "sourcePackingAnchor": [
+        227,
+        1400
+      ],
+      "supportGuide": {
+        "anchor": [
+          177,
+          1400
+        ],
+        "method": "Canonical whole-figure head-axis to ground-support offset, measured hair-to-sole; no image alteration"
+      },
+      "sourceOffsetInFrame": [
+        8,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalWalkNW_N20261027SelectedRepaired3_01",
+      "rect": [
+        412,
+        0,
+        412,
+        372
+      ],
+      "pivot": [
+        0.4344660194174757,
+        0.051075268817204304
+      ],
+      "durationMs": 65,
+      "action": "walk",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "walk_1",
+      "sourceFrameIndex": 10,
+      "sourceRect": [
+        420,
+        1055,
+        355,
+        348
+      ],
+      "sourceAnchor": [
+        550,
+        1397
+      ],
+      "sourcePackingAnchor": [
+        542,
+        1397
+      ],
+      "supportGuide": {
+        "anchor": [
+          550,
+          1397
+        ],
+        "method": "Canonical whole-figure head-axis to ground-support offset, measured hair-to-sole; no image alteration"
+      },
+      "sourceOffsetInFrame": [
+        49,
+        11
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalWalkNW_N20261027SelectedRepaired3_02",
+      "rect": [
+        824,
+        0,
+        412,
+        372
+      ],
+      "pivot": [
+        0.35194174757281554,
+        0.051075268817204304
+      ],
+      "durationMs": 70,
+      "action": "walk",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "walk_2",
+      "sourceFrameIndex": 11,
+      "sourceRect": [
+        792,
+        1055,
+        306,
+        354
+      ],
+      "sourceAnchor": [
+        916,
+        1398
+      ],
+      "sourcePackingAnchor": [
+        942,
+        1398
+      ],
+      "supportGuide": {
+        "anchor": [
+          916,
+          1398
+        ],
+        "method": "Canonical whole-figure head-axis to ground-support offset, measured hair-to-sole; no image alteration"
+      },
+      "sourceOffsetInFrame": [
+        21,
+        10
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_N",
+      "frames": [
+        "Redesign_ReqKatanaNormalWalkNW_N20261027SelectedRepaired3_00",
+        "Redesign_ReqKatanaNormalWalkNW_N20261027SelectedRepaired3_01",
+        "Redesign_ReqKatanaNormalWalkNW_N20261027SelectedRepaired3_02"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "walk_N"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 163851,
+  "packedPixels": 163851,
+  "originalSourcePixels": 643587,
+  "selectedSourceFrameIndices": [
+    9,
+    10,
+    11
+  ],
+  "excludedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "excludedSourceReason": "Only complete selected figures retained; temporary packing input, never an active clip",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 929847,
+    "farBeyond16pxPixels": 120,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.47058823529411764,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ]
+}

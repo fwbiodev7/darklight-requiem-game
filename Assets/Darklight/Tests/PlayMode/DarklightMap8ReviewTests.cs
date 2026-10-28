@@ -13,7 +13,7 @@ namespace Darklight.Tests
 {
     public sealed class DarklightMap8ReviewTests
     {
-        const string Folder="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/mapas-reforma-20261016/map8/";
+        static string Folder => DarklightTestOutput.GetDirectory("mapas-reforma-20261016/map8");
         DarklightCampaign game;DarklightCombatLab lab;
         static void Call(object o,string method,params object[] args)=>o.GetType().GetMethod(method,BindingFlags.Instance|BindingFlags.NonPublic).Invoke(o,args);
         [UnitySetUp]public IEnumerator Setup(){DarklightAutomation.Silent=true;AudioListener.volume=0;yield return SceneManager.LoadSceneAsync("Assets/Darklight/Scenes/DarklightCampaign.unity");yield return null;yield return null;game=DarklightCampaign.Instance;lab=DarklightCombatLab.Instance;}

@@ -1,7 +1,7 @@
 using UnityEngine;
 namespace Darklight
 {
-    public enum DarklightMotorcycleImpact { Ground=1, Collision=2, RunOver=3, Finisher=4 }
+    public enum DarklightMotorcycleImpact { Ground=1, Collision=2, RunOver=3, Finisher=4, AerialGround=5 }
     [DefaultExecutionOrder(1750)]public sealed class DarklightCombatImpacts:MonoBehaviour
     {
         static DarklightCombatImpacts instance;
@@ -30,7 +30,7 @@ namespace Darklight
             }
             int form=game.PresentedForm;Color color=form==3?new Color(.55f,.86f,1):form==2?new Color(.7f,.19f,1):form==1?new Color(1,.08f,.15f):new Color(1,.49f,.19f);
             var direction=heading.sqrMagnitude>.001f?heading:(Vector2)(position-lab.Player.transform.position);if(direction.sqrMagnitude<.001f)direction=Vector2.right;
-            hits[cursor]=new Hit{p=position+Vector3.up*(motorcycle==0?.65f:.04f),direction=direction.normalized,color=color,life=motorcycle==1?.5f:motorcycle!=0?.4f:heavy?.36f:.24f,form=form,weapon=(int)game.Weapons.Equipped.id,seed=serial++,motorcycle=motorcycle,heavy=heavy,active=true};cursor=(cursor+1)%hits.Length;
+            hits[cursor]=new Hit{p=position+Vector3.up*(motorcycle==0?.65f:.04f),direction=direction.normalized,color=color,life=motorcycle==5?1.25f:motorcycle==1?.5f:motorcycle!=0?.4f:heavy?.36f:.24f,form=form,weapon=(int)game.Weapons.Equipped.id,seed=serial++,motorcycle=motorcycle,heavy=heavy,active=true};cursor=(cursor+1)%hits.Length;
         }
         void LateUpdate()
         {
@@ -60,12 +60,20 @@ namespace Darklight
                     Segment(center-Vector3.up*r,center+Vector3.up*r,r*.5f,core);Segment(center-Vector3.right*r,center+Vector3.right*r,r*.5f,core);
                 }
             }
-            display.enabled=quads>0;if(quads==0)return;mesh.Clear();mesh.SetVertices(vertices,0,quads*4);mesh.SetColors(colors,0,quads*4);mesh.SetIndices(indices,0,quads*6,MeshTopology.Triangles,0);mesh.RecalculateBounds();
+            display.enabled=quads>0;if(quads==0)return;
+            for(int i=0;i<quads*4;i++){var p=vertices[i];vertices[i]=new Vector3(Mathf.Round(p.x*64)/64,Mathf.Round(p.y*64)/64,p.z);}
+            mesh.Clear();mesh.SetVertices(vertices,0,quads*4);mesh.SetColors(colors,0,quads*4);mesh.SetIndices(indices,0,quads*6,MeshTopology.Triangles,0);mesh.RecalculateBounds();
         }
         // Short, open ground arcs leave the rider silhouette readable. No lights,
         // post-processing, spawned rigidbodies or per-impact collections are needed.
         void Motorcycle(Hit h,bool reduced,int quality)
         {
+            if(h.motorcycle==5)
+            {
+                GroundCracks(h,reduced,quality);
+                if(h.age>.5f)return;
+                h.life=.5f;h.motorcycle=1;
+            }
             float t=h.age/h.life,fade=(1-t)*(reduced?.38f:1);
             Vector3 center=transform.InverseTransformPoint(h.p);
             bool ground=h.motorcycle==1,wall=h.motorcycle==2;
@@ -102,6 +110,22 @@ namespace Darklight
                     Segment(center+new Vector3(Mathf.Cos(a)*radius,Mathf.Sin(a)*radius*.4f),center+new Vector3(Mathf.Cos(b)*radius,Mathf.Sin(b)*radius*.4f),.035f*(1-t),dust);
                     if(ground&&t<.5f&&i%2==0)
                         Segment(center+new Vector3(Mathf.Cos(a)*radius*.7f,Mathf.Sin(a)*radius*.28f),center+new Vector3(Mathf.Cos(b)*radius*.7f,Mathf.Sin(b)*radius*.28f),.018f,energy);
+                }
+            }
+        }
+        void GroundCracks(Hit h,bool reduced,int quality)
+        {
+            Vector3 center=transform.InverseTransformPoint(h.p);float fade=Mathf.Clamp01((h.life-h.age)/.4f);
+            Color crack=new Color(.12f,.08f,.10f,fade*(reduced?.5f:.85f));
+            int rays=quality==0?4:7;float radius=Mathf.Min(1,h.age*12);
+            for(int i=0;i<rays;i++)
+            {
+                float a=i*2.399963f+h.seed*.17f;Vector3 p=center;
+                for(int k=1;k<=3;k++)
+                {
+                    float r=k*.28f*radius,offset=(k%2==0?1:-1)*.13f;
+                    Vector3 q=center+new Vector3(Mathf.Cos(a+offset)*r,Mathf.Sin(a+offset)*r*.45f);
+                    Segment(p,q,.025f,crack);p=q;
                 }
             }
         }

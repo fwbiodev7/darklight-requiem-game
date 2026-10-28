@@ -1,0 +1,602 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqDaggersNormalLight1S_SW_W20261024v2-source.png",
+  "imageSha256": "b918d0e89a14e1e6bf45597a075e7cddce2d8c96890c6ffe393033b72b4d83ff",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "logicalNativeSize": null,
+  "pixelsPerUnit": 174.24242424242425,
+  "pixelsPerUnitStatus": "canonical-body-reference-proposal; coordinator calibrates during import",
+  "status": "visual-reviewed",
+  "visualApproval": false,
+  "wholeFigures": true,
+  "skin": 0,
+  "weapon": 1,
+  "form": 0,
+  "attackKey": "Presas1",
+  "frames": [
+    {
+      "id": "Presas1_S_00",
+      "spriteName": "Redesign_Requiem_Daggers_Normal_Presas1_S_00",
+      "sourceSpriteName": "Today_RequiemAttackDaggersYoungCardinal_0",
+      "rect": [
+        30,
+        20,
+        330,
+        345
+      ],
+      "pivot": [
+        0.5242424,
+        0.0289855
+      ],
+      "anchorSourcePx": [
+        203,
+        355
+      ],
+      "durationMs": 30,
+      "action": "Attack",
+      "attackKey": "Presas1",
+      "direction": "S",
+      "directionIndex": 0,
+      "skin": "Requiem",
+      "skinIndex": 0,
+      "weaponIndex": 1,
+      "form": "Normal",
+      "formIndex": 0,
+      "phase": "anticipation"
+    },
+    {
+      "id": "Presas1_S_01",
+      "spriteName": "Redesign_Requiem_Daggers_Normal_Presas1_S_01",
+      "sourceSpriteName": "Today_RequiemAttackDaggersYoungCardinal_1",
+      "rect": [
+        410,
+        40,
+        345,
+        325
+      ],
+      "pivot": [
+        0.5333333,
+        0.0338462
+      ],
+      "anchorSourcePx": [
+        594,
+        354
+      ],
+      "durationMs": 45,
+      "action": "Attack",
+      "attackKey": "Presas1",
+      "direction": "S",
+      "directionIndex": 0,
+      "skin": "Requiem",
+      "skinIndex": 0,
+      "weaponIndex": 1,
+      "form": "Normal",
+      "formIndex": 0,
+      "phase": "contact"
+    },
+    {
+      "id": "Presas1_S_02",
+      "spriteName": "Redesign_Requiem_Daggers_Normal_Presas1_S_02",
+      "sourceSpriteName": "Today_RequiemAttackDaggersYoungCardinal_2",
+      "rect": [
+        785,
+        40,
+        380,
+        325
+      ],
+      "pivot": [
+        0.4421053,
+        0.0492308
+      ],
+      "anchorSourcePx": [
+        953,
+        349
+      ],
+      "durationMs": 38,
+      "action": "Attack",
+      "attackKey": "Presas1",
+      "direction": "S",
+      "directionIndex": 0,
+      "skin": "Requiem",
+      "skinIndex": 0,
+      "weaponIndex": 1,
+      "form": "Normal",
+      "formIndex": 0,
+      "phase": "follow-through"
+    },
+    {
+      "id": "Presas1_S_03",
+      "spriteName": "Redesign_Requiem_Daggers_Normal_Presas1_S_03",
+      "sourceSpriteName": "Today_RequiemAttackDaggersYoungCardinal_3",
+      "rect": [
+        1195,
+        35,
+        310,
+        330
+      ],
+      "pivot": [
+        0.4322581,
+        0.030303
+      ],
+      "anchorSourcePx": [
+        1329,
+        355
+      ],
+      "durationMs": 38,
+      "action": "Attack",
+      "attackKey": "Presas1",
+      "direction": "S",
+      "directionIndex": 0,
+      "skin": "Requiem",
+      "skinIndex": 0,
+      "weaponIndex": 1,
+      "form": "Normal",
+      "formIndex": 0,
+      "phase": "recovery"
+    },
+    {
+      "id": "Presas1_SW_00",
+      "spriteName": "Redesign_Requiem_Daggers_Normal_Presas1_SW_00",
+      "sourceSpriteName": "Today_RequiemAttackDaggersYoungDiagonal_0",
+      "rect": [
+        30,
+        365,
+        345,
+        318
+      ],
+      "pivot": [
+        0.484058,
+        0.009434
+      ],
+      "anchorSourcePx": [
+        197,
+        680
+      ],
+      "durationMs": 30,
+      "action": "Attack",
+      "attackKey": "Presas1",
+      "direction": "SW",
+      "directionIndex": 1,
+      "skin": "Requiem",
+      "skinIndex": 0,
+      "weaponIndex": 1,
+      "form": "Normal",
+      "formIndex": 0,
+      "phase": "anticipation"
+    },
+    {
+      "id": "Presas1_SW_01",
+      "spriteName": "Redesign_Requiem_Daggers_Normal_Presas1_SW_01",
+      "sourceSpriteName": "Today_RequiemAttackDaggersYoungDiagonal_1",
+      "rect": [
+        385,
+        375,
+        395,
+        310
+      ],
+      "pivot": [
+        0.556962,
+        0.0387097
+      ],
+      "anchorSourcePx": [
+        605,
+        673
+      ],
+      "durationMs": 45,
+      "action": "Attack",
+      "attackKey": "Presas1",
+      "direction": "SW",
+      "directionIndex": 1,
+      "skin": "Requiem",
+      "skinIndex": 0,
+      "weaponIndex": 1,
+      "form": "Normal",
+      "formIndex": 0,
+      "phase": "contact"
+    },
+    {
+      "id": "Presas1_SW_02",
+      "spriteName": "Redesign_Requiem_Daggers_Normal_Presas1_SW_02",
+      "sourceSpriteName": "Today_RequiemAttackDaggersYoungDiagonal_2",
+      "rect": [
+        785,
+        365,
+        375,
+        320
+      ],
+      "pivot": [
+        0.464,
+        0.025
+      ],
+      "anchorSourcePx": [
+        959,
+        677
+      ],
+      "durationMs": 38,
+      "action": "Attack",
+      "attackKey": "Presas1",
+      "direction": "SW",
+      "directionIndex": 1,
+      "skin": "Requiem",
+      "skinIndex": 0,
+      "weaponIndex": 1,
+      "form": "Normal",
+      "formIndex": 0,
+      "phase": "follow-through"
+    },
+    {
+      "id": "Presas1_SW_03",
+      "spriteName": "Redesign_Requiem_Daggers_Normal_Presas1_SW_03",
+      "sourceSpriteName": "Today_RequiemAttackDaggersYoungDiagonal_3",
+      "rect": [
+        1200,
+        375,
+        315,
+        310
+      ],
+      "pivot": [
+        0.5238095,
+        0.0387097
+      ],
+      "anchorSourcePx": [
+        1365,
+        673
+      ],
+      "durationMs": 38,
+      "action": "Attack",
+      "attackKey": "Presas1",
+      "direction": "SW",
+      "directionIndex": 1,
+      "skin": "Requiem",
+      "skinIndex": 0,
+      "weaponIndex": 1,
+      "form": "Normal",
+      "formIndex": 0,
+      "phase": "recovery"
+    },
+    {
+      "id": "Presas1_W_00",
+      "spriteName": "Redesign_Requiem_Daggers_Normal_Presas1_W_00",
+      "sourceSpriteName": "Today_RequiemAttackDaggersYoungCardinal_4",
+      "rect": [
+        30,
+        683,
+        336,
+        327
+      ],
+      "pivot": [
+        0.5029762,
+        0.058104
+      ],
+      "anchorSourcePx": [
+        199,
+        991
+      ],
+      "durationMs": 30,
+      "action": "Attack",
+      "attackKey": "Presas1",
+      "direction": "W",
+      "directionIndex": 2,
+      "skin": "Requiem",
+      "skinIndex": 0,
+      "weaponIndex": 1,
+      "form": "Normal",
+      "formIndex": 0,
+      "phase": "anticipation"
+    },
+    {
+      "id": "Presas1_W_01",
+      "spriteName": "Redesign_Requiem_Daggers_Normal_Presas1_W_01",
+      "sourceSpriteName": "Today_RequiemAttackDaggersYoungCardinal_5",
+      "rect": [
+        366,
+        690,
+        395,
+        320
+      ],
+      "pivot": [
+        0.564557,
+        0.1
+      ],
+      "anchorSourcePx": [
+        589,
+        978
+      ],
+      "durationMs": 45,
+      "action": "Attack",
+      "attackKey": "Presas1",
+      "direction": "W",
+      "directionIndex": 2,
+      "skin": "Requiem",
+      "skinIndex": 0,
+      "weaponIndex": 1,
+      "form": "Normal",
+      "formIndex": 0,
+      "phase": "contact"
+    },
+    {
+      "id": "Presas1_W_02",
+      "spriteName": "Redesign_Requiem_Daggers_Normal_Presas1_W_02",
+      "sourceSpriteName": "Today_RequiemAttackDaggersYoungCardinal_6",
+      "rect": [
+        761,
+        690,
+        407,
+        320
+      ],
+      "pivot": [
+        0.5921376,
+        0.08125
+      ],
+      "anchorSourcePx": [
+        1002,
+        984
+      ],
+      "durationMs": 38,
+      "action": "Attack",
+      "attackKey": "Presas1",
+      "direction": "W",
+      "directionIndex": 2,
+      "skin": "Requiem",
+      "skinIndex": 0,
+      "weaponIndex": 1,
+      "form": "Normal",
+      "formIndex": 0,
+      "phase": "follow-through"
+    },
+    {
+      "id": "Presas1_W_03",
+      "spriteName": "Redesign_Requiem_Daggers_Normal_Presas1_W_03",
+      "sourceSpriteName": "Today_RequiemAttackDaggersYoungCardinal_7",
+      "rect": [
+        1180,
+        690,
+        335,
+        320
+      ],
+      "pivot": [
+        0.4925373,
+        0.090625
+      ],
+      "anchorSourcePx": [
+        1345,
+        981
+      ],
+      "durationMs": 38,
+      "action": "Attack",
+      "attackKey": "Presas1",
+      "direction": "W",
+      "directionIndex": 2,
+      "skin": "Requiem",
+      "skinIndex": 0,
+      "weaponIndex": 1,
+      "form": "Normal",
+      "formIndex": 0,
+      "phase": "recovery"
+    }
+  ],
+  "clips": [
+    {
+      "name": "Presas1_S",
+      "frames": [
+        "Presas1_S_00",
+        "Presas1_S_01",
+        "Presas1_S_02",
+        "Presas1_S_03"
+      ],
+      "sourceSpriteNames": [
+        "Today_RequiemAttackDaggersYoungCardinal_0",
+        "Today_RequiemAttackDaggersYoungCardinal_1",
+        "Today_RequiemAttackDaggersYoungCardinal_2",
+        "Today_RequiemAttackDaggersYoungCardinal_3"
+      ],
+      "durationMs": [
+        30,
+        45,
+        38,
+        38
+      ],
+      "loop": false,
+      "attackKey": "Presas1",
+      "directionIndex": 0,
+      "action": "Attack"
+    },
+    {
+      "name": "Presas1_SW",
+      "frames": [
+        "Presas1_SW_00",
+        "Presas1_SW_01",
+        "Presas1_SW_02",
+        "Presas1_SW_03"
+      ],
+      "sourceSpriteNames": [
+        "Today_RequiemAttackDaggersYoungDiagonal_0",
+        "Today_RequiemAttackDaggersYoungDiagonal_1",
+        "Today_RequiemAttackDaggersYoungDiagonal_2",
+        "Today_RequiemAttackDaggersYoungDiagonal_3"
+      ],
+      "durationMs": [
+        30,
+        45,
+        38,
+        38
+      ],
+      "loop": false,
+      "attackKey": "Presas1",
+      "directionIndex": 1,
+      "action": "Attack"
+    },
+    {
+      "name": "Presas1_W",
+      "frames": [
+        "Presas1_W_00",
+        "Presas1_W_01",
+        "Presas1_W_02",
+        "Presas1_W_03"
+      ],
+      "sourceSpriteNames": [
+        "Today_RequiemAttackDaggersYoungCardinal_4",
+        "Today_RequiemAttackDaggersYoungCardinal_5",
+        "Today_RequiemAttackDaggersYoungCardinal_6",
+        "Today_RequiemAttackDaggersYoungCardinal_7"
+      ],
+      "durationMs": [
+        30,
+        45,
+        38,
+        38
+      ],
+      "loop": false,
+      "attackKey": "Presas1",
+      "directionIndex": 2,
+      "action": "Attack"
+    }
+  ],
+  "requiredClips": [
+    "Presas1_S",
+    "Presas1_SW",
+    "Presas1_W"
+  ],
+  "quality": {
+    "alphaThreshold": 100,
+    "maxColors": 1000000,
+    "maxHeightRatio": 1.3
+  },
+  "palette": {
+    "skinBase": "#F6AE82",
+    "irisBase": "#C40814",
+    "irisShadow": "#5A0000",
+    "hair": "dark brown",
+    "equipment": "neutral silver/grey steel; black handles; no energy",
+    "coat": "black with subtle wine lining; tiny red decorative gems"
+  },
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261023/references/personagem-e-design.jpeg",
+      "sha256": "ccddc7ae6098080e518c1d5ff51c3e2a6606917b42f8b1596cc42fd4123dc4b5"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261023/references/equipment-four-forms.png",
+      "sha256": "6c8c6b05e27f16f19f2bfcad3151294b164f004c0960fa713662788f9e3f6930"
+    },
+    {
+      "path": "ArtSources/PlayerEyeReference20261020/referencia-olhos-player.png",
+      "sha256": "82ce8cb4761757ba6f3f1809fd4bf603d67eac5b7a8a7cec056c1ce178fcd949"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261024/candidates/ReqKatanaNormalLight1_S_SW_W-v1-source.png",
+      "sha256": "0c701bcea3da3682349d3d5567d99be05d7261df14b4f016d5f5a7c99af47795"
+    }
+  ],
+  "consumer": {
+    "selection": "TodayCharacterBank.Resolve Attack, then DarklightWeaponRedesignBank sourceSpriteNames exact mapping",
+    "sourceTimingMs": [
+      29.75,
+      45,
+      38,
+      38
+    ],
+    "previewTimingMs": [
+      30,
+      45,
+      38,
+      38
+    ],
+    "startupBaseMs": 35,
+    "startupProfileMultiplier": 0.85,
+    "recoveryBaseMs": 95,
+    "recoveryProfileMultiplier": 0.8
+  },
+  "review": {
+    "figuresSeen": 12,
+    "contactLightSeen": true,
+    "contactDarkSeen": true,
+    "motionPreviewSeen": false,
+    "unityImported": false,
+    "unityRuntimeVerified": false,
+    "audioStarted": false,
+    "normalIdentity": "Same Fabius as canonical Katana v1; Requiem/Rock differ by clothing only; no transformation",
+    "resolvedDefect": "SW_02 rear hand lacked its dagger in v1; replaced only whole SW_02 frame from v2 integrated ImageGen repair",
+    "remaining": "Coordinator must check clip alignment, scale and transitions in Unity; no global redesign completion claimed",
+    "alphaReview": "RGBA alpha 0..254; complete figures clean on light/dark; low-alpha RGB background does not draw a checkerboard or visible haze; never globally cleared.",
+    "technicalAudit": {
+      "errors": 0,
+      "warnings": 1,
+      "warning": "Partial alpha; light/dark static composites inspected, no apparent halo. Generated source is not a limited native palette certification."
+    },
+    "partialScope": "Requiem/Normal/Presas1/S,SW,W only; 12 complete frames; remaining skins/forms/directions/actions pending"
+  },
+  "provenance": {
+    "generator": "integrated image_gen",
+    "initialSource": "ReqDaggersNormalLight1S_SW_W20261024v1-source.png",
+    "initialSourceSha256": "99388c6b3d5b199e4629dbe102f3f0e3fa912b9f023b5527bde764c85499d988",
+    "repairSource": "ReqDaggersNormalLight1S_SW_W20261024v2-repair-generated.png",
+    "repairSourceSha256": "f86b1e3b6df8b3121930547ad2be46fd98fe9f30007cc453aa6eade4d8a12035",
+    "repairWholeFrameRect": [
+      785,
+      365,
+      375,
+      320
+    ],
+    "unchangedElevenFramesProof": [
+      {
+        "frame": "Presas1_S_00",
+        "unchangedFromV1": true
+      },
+      {
+        "frame": "Presas1_S_01",
+        "unchangedFromV1": true
+      },
+      {
+        "frame": "Presas1_S_02",
+        "unchangedFromV1": true
+      },
+      {
+        "frame": "Presas1_S_03",
+        "unchangedFromV1": true
+      },
+      {
+        "frame": "Presas1_SW_00",
+        "unchangedFromV1": true
+      },
+      {
+        "frame": "Presas1_SW_01",
+        "unchangedFromV1": true
+      },
+      {
+        "frame": "Presas1_SW_02",
+        "unchangedFromV1": false
+      },
+      {
+        "frame": "Presas1_SW_03",
+        "unchangedFromV1": true
+      },
+      {
+        "frame": "Presas1_W_00",
+        "unchangedFromV1": true
+      },
+      {
+        "frame": "Presas1_W_01",
+        "unchangedFromV1": true
+      },
+      {
+        "frame": "Presas1_W_02",
+        "unchangedFromV1": true
+      },
+      {
+        "frame": "Presas1_W_03",
+        "unchangedFromV1": true
+      }
+    ],
+    "initialPromptFile": "ReqDaggersNormalLight1S_SW_W20261024v1-prompt.txt",
+    "repairPromptFile": "ReqDaggersNormalLight1S_SW_W20261024v2-repair-prompt.txt"
+  },
+  "paletteSummary": "ReqDaggersNormalLight1S_SW_W20261024v2-palette-summary.json"
+}

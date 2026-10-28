@@ -1,0 +1,25 @@
+{
+  "status": "candidate-visual-reviewed-preparation-pending",
+  "visualApproval": false,
+  "sourceSha256": "569470770dc7793b22cc4f3aeb7dded4ea102a8ce647d07338fb7ce1a599f7d6",
+  "figuresReviewed": 9,
+  "wholeSourceInspectedDarkAndLight": true,
+  "findings": [
+    "Both gauntlets have pointed overlapping lanceolate steel dorsal/forearm plates instead of rounded boxing-glove silhouette.",
+    "Both greaves have angular shin armor and three distinct long metal toe claws.",
+    "S frontal, SW down-left and W left-facing profile; exact startup/contact/recovery poses only.",
+    "Dark-brown hair without red tips, clean warm skin, dark-red eyes, small red shoulder crystals and burgundy coat lining preserved.",
+    "No transformed fissures, aura, red equipment outline, sword or dagger."
+  ],
+  "limitations": [
+    "Bounds use alpha>32 to identify whole silhouettes, not final crop rects. S and SW bbox intervals overlap by 8-11 pixels in Y although silhouettes are separate in X; isolate each whole figure before atlas packing. Preserve source. Alpha includes faint remnants. Root handles prep/import.",
+    "Final whole-frame isolation, common canvas, calibrated PPU, pivots and technical atlas audit are pending root preparation.",
+    "No live animation playback or Unity verification performed. The existing local-file browser preview was blocked by security policy; no workaround attempted."
+  ],
+  "alphaRange": [
+    0,
+    254
+  ],
+  "fullyTransparentPixels": 982014,
+  "nativeResolutionClaimed": false
+}

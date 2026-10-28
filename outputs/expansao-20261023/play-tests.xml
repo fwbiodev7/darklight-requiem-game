@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="7" result="Passed" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-23 21:23:53Z" end-time="2026-10-23 21:24:13Z" duration="20,0344756">
+  <test-suite type="TestSuite" id="1265" name="DARKLIGHT REQUIEM" fullname="DARKLIGHT REQUIEM" runstate="Runnable" testcasecount="203" result="Passed" start-time="2026-10-23 21:23:53Z" end-time="2026-10-23 21:24:13Z" duration="20.034476" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1259" name="Darklight.PlayModeTests.dll" fullname="C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/Library/ScriptAssemblies/Darklight.PlayModeTests.dll" runstate="Runnable" testcasecount="203" result="Passed" start-time="2026-10-23 21:23:53Z" end-time="2026-10-23 21:24:13Z" duration="20.015701" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="22288" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1260" name="Darklight" fullname="Darklight" runstate="Runnable" testcasecount="203" result="Passed" start-time="2026-10-23 21:23:53Z" end-time="2026-10-23 21:24:13Z" duration="20.011036" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1261" name="Tests" fullname="Darklight.Tests" runstate="Runnable" testcasecount="203" result="Passed" start-time="2026-10-23 21:23:53Z" end-time="2026-10-23 21:24:13Z" duration="20.006796" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1070" name="DarklightBridgeDepthTests" fullname="Darklight.Tests.DarklightBridgeDepthTests" classname="Darklight.Tests.DarklightBridgeDepthTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-23 21:23:53Z" end-time="2026-10-23 21:23:56Z" duration="2.524612" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1071" name="OpaqueTreeFloorCannotConcealTheHeroOnTheBridge" fullname="Darklight.Tests.DarklightBridgeDepthTests.OpaqueTreeFloorCannotConcealTheHeroOnTheBridge" methodname="OpaqueTreeFloorCannotConcealTheHeroOnTheBridge" classname="Darklight.Tests.DarklightBridgeDepthTests" runstate="Runnable" seed="1507038365" result="Passed" start-time="2026-10-23 21:23:53Z" end-time="2026-10-23 21:23:56Z" duration="2.508594" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1103" name="DarklightExpansionGameplayTests" fullname="Darklight.Tests.DarklightExpansionGameplayTests" classname="Darklight.Tests.DarklightExpansionGameplayTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-23 21:23:56Z" end-time="2026-10-23 21:24:13Z" duration="17.470433" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1106" name="HeavyModifierBeforeSawAndParryChordSelectExpandedMoves" fullname="Darklight.Tests.DarklightExpansionGameplayTests.HeavyModifierBeforeSawAndParryChordSelectExpandedMoves" methodname="HeavyModifierBeforeSawAndParryChordSelectExpandedMoves" classname="Darklight.Tests.DarklightExpansionGameplayTests" runstate="Runnable" seed="623222592" result="Passed" start-time="2026-10-23 21:23:56Z" end-time="2026-10-23 21:23:56Z" duration="0.389792" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1104" name="RealResolverLaunchesChasesCombosThrowsAndSlams" fullname="Darklight.Tests.DarklightExpansionGameplayTests.RealResolverLaunchesChasesCombosThrowsAndSlams" methodname="RealResolverLaunchesChasesCombosThrowsAndSlams" classname="Darklight.Tests.DarklightExpansionGameplayTests" runstate="Runnable" seed="374604446" result="Passed" start-time="2026-10-23 21:23:56Z" end-time="2026-10-23 21:23:57Z" duration="0.767006" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1105" name="SixMotorcycleMovesReachContactWithoutRepeatedDamageOrAudio" fullname="Darklight.Tests.DarklightExpansionGameplayTests.SixMotorcycleMovesReachContactWithoutRepeatedDamageOrAudio" methodname="SixMotorcycleMovesReachContactWithoutRepeatedDamageOrAudio" classname="Darklight.Tests.DarklightExpansionGameplayTests" runstate="Runnable" seed="2046624710" result="Passed" start-time="2026-10-23 21:23:57Z" end-time="2026-10-23 21:23:57Z" duration="0.294600" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1109" name="ThreeBridgesCrossWithRealFixedPhysicsAndCameraInBothDirections" fullname="Darklight.Tests.DarklightExpansionGameplayTests.ThreeBridgesCrossWithRealFixedPhysicsAndCameraInBothDirections" methodname="ThreeBridgesCrossWithRealFixedPhysicsAndCameraInBothDirections" classname="Darklight.Tests.DarklightExpansionGameplayTests" runstate="Runnable" seed="349188648" result="Passed" start-time="2026-10-23 21:23:57Z" end-time="2026-10-23 21:24:11Z" duration="13.426703" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1108" name="ThreeSecretChallengesSpawnDieRewardOnceAndSurviveReload" fullname="Darklight.Tests.DarklightExpansionGameplayTests.ThreeSecretChallengesSpawnDieRewardOnceAndSurviveReload" methodname="ThreeSecretChallengesSpawnDieRewardOnceAndSurviveReload" classname="Darklight.Tests.DarklightExpansionGameplayTests" runstate="Runnable" seed="633508547" result="Passed" start-time="2026-10-23 21:24:11Z" end-time="2026-10-23 21:24:11Z" duration="0.756310" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1107" name="VirtualKeyboardRunsTheActualUpdatePathForTheSawChord" fullname="Darklight.Tests.DarklightExpansionGameplayTests.VirtualKeyboardRunsTheActualUpdatePathForTheSawChord" methodname="VirtualKeyboardRunsTheActualUpdatePathForTheSawChord" classname="Darklight.Tests.DarklightExpansionGameplayTests" runstate="Runnable" seed="1757282988" result="Passed" start-time="2026-10-23 21:24:11Z" end-time="2026-10-23 21:24:13Z" duration="1.824561" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Usuario/AppData/LocalLow/Fabio/DARKLIGHT REQUIEM\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

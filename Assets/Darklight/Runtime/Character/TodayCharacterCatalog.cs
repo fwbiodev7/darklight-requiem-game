@@ -5,15 +5,18 @@ namespace Darklight
 {
     [Serializable] public sealed class TodayCharacterPage
     {
-        public string name, kind, resourcePath, paletteResourcePath;
+        public string name, kind, resourcePath, paletteResourcePath,attackKey;
         public int skin, age, weapon;
         public int[] directions;
         public int phases;
+        public int startupFrameEnd, activeFrameEnd;
+        public int idleBlinkFrame=-1;
         public bool ownerMask;
         public string[] spriteNames;
         [NonSerialized] public Sprite[] frames;
         [NonSerialized] public Texture2D palette;
         [NonSerialized] internal bool framesAttempted, paletteAttempted;
+        [NonSerialized] internal bool descriptorChecked,descriptorValid;
     }
     public sealed class TodayCharacterCatalog : ScriptableObject
     {
@@ -25,6 +28,13 @@ namespace Darklight
         const string Root = "Darklight/TodayCharacterAnimations/";
         static TodayCharacterCatalog catalog;
         static bool catalogAttempted;
+        static readonly Dictionary<Sprite,int> frameOwners=new();
+        static readonly Dictionary<Sprite,Texture2D> frameMasks=new();
+        static bool CachedValid(TodayCharacterPage page)
+        {
+            if(!page.descriptorChecked){page.descriptorValid=ValidDescriptor(page);page.descriptorChecked=true;}
+            return page.descriptorValid;
+        }
         static TodayCharacterCatalog Catalog()
         {
             if (!catalogAttempted) { catalog = Resources.Load<TodayCharacterCatalog>("Darklight/TodayCharacterCatalog"); catalogAttempted = true; }
@@ -35,8 +45,13 @@ namespace Darklight
             if (page == null || string.IsNullOrEmpty(page.name) || page.skin < 0 || page.skin > 1 || page.age != 0 || page.weapon < 0 || page.weapon > 2 ||
                 page.directions == null || page.directions.Length == 0 || page.spriteNames == null || page.spriteNames.Length != page.directions.Length * page.phases ||
                 page.resourcePath != Root + page.name || page.paletteResourcePath != Root + page.name + "_Palette") return false;
-            int expected = page.kind == "Idle" ? 2 : page.kind == "Walk" || page.kind == "Attack" ? 4 : page.kind == "Combat" || page.kind == "GuardDodge" ? 8 : 0;
-            if (page.phases != expected || expected == 0) return false;
+            int expected = page.kind == "Motion" ? 5 : page.kind == "Idle" ? 2 : page.kind == "Walk" || page.kind == "Attack" ? 4 : page.kind == "Combat" || page.kind == "GuardDodge" ? 8 : 0;
+            bool living = LivingKind(page.kind) && page.phases >= 2 && page.phases <= 32;
+            bool detailedAttack = page.kind == "Attack" && page.phases > 4 && DarklightAttackFrameTiming.Valid(page.phases,page.startupFrameEnd,page.activeFrameEnd);
+            bool detailedIdle = page.kind == "Idle" && page.phases == 6 && page.idleBlinkFrame == 5;
+            bool detailedWalk = page.kind == "Walk" && page.phases == 6 && page.ownerMask;
+            if(!string.IsNullOrEmpty(page.attackKey)&&!detailedAttack)return false;
+            if (!living && !detailedAttack && !detailedIdle && !detailedWalk && (page.phases != expected || expected == 0)) return false;
             int seen = 0;
             foreach (int direction in page.directions)
             {
@@ -47,13 +62,14 @@ namespace Darklight
                 if (page.spriteNames[i] != "Today_" + page.name + "_" + i) return false;
             return true;
         }
-        public static TodayCharacterPage Page(int skin, int age, int weapon, int direction, string kind)
+        public static TodayCharacterPage Page(int skin, int age, int weapon, int direction, string kind,string attackKey=null)
         {
             var data = Catalog();
             if (data?.pages == null) return null;
             foreach (var page in data.pages)
                 if (page != null && page.skin == skin && page.age == 0 && page.weapon == weapon && page.kind == kind &&
-                    page.directions != null && Array.IndexOf(page.directions, direction) >= 0 && ValidDescriptor(page)) return page;
+                    string.Equals(page.attackKey??"",attackKey??"",StringComparison.Ordinal) &&
+                    page.directions != null && Array.IndexOf(page.directions, direction) >= 0 && CachedValid(page)) return page;
             return null;
         }
         static bool LoadFrames(TodayCharacterPage page)
@@ -72,22 +88,25 @@ namespace Darklight
             for (int i = 0; i < ordered.Length; i++)
                 if (!byName.TryGetValue(page.spriteNames[i], out ordered[i])) return false;
             page.frames = ordered;
+            for(int i=0;i<ordered.Length;i++)frameOwners[ordered[i]]=page.ownerMask?i+1:0;
             return true;
         }
         public static Sprite Resolve(int skin, int age, int weapon, int direction, CombatModel model, Vector2 movement)
         {
+            if(weapon==2&&DarklightRuinFistsBank.Ready)return DarklightRuinFistsBank.Resolve(skin,direction,model,movement);
             string kind = model.State == CombatState.Parry || model.State == CombatState.Dodge ? "GuardDodge" :
                 model.State == CombatState.Neutral && !model.ActiveThisTick && movement.sqrMagnitude > .01f ? "Walk" : model.State == CombatState.Neutral ? "Idle" : "Combat";
             if (model.State == CombatState.Attack || model.ActiveThisTick) kind = "Attack";
-            var page = Page(skin, age, weapon, direction, kind);
+            var page = kind=="Attack"&&model.Attack!=null?Page(skin,age,weapon,direction,kind,model.Attack.displayName):null;
+            page??=Page(skin, age, weapon, direction, kind);
             if (page == null && kind == "Idle") { kind = "Combat"; page = Page(skin, 0, weapon, direction, kind); }
             if (page == null && kind == "Attack") { kind = "Combat"; page = Page(skin, age, weapon, direction, kind); }
             if (page == null || !LoadFrames(page)) return null;
             int phase = 0;
-            if (kind == "Idle") phase = (int)(model.Clock * 2f) % page.phases;
-            else if (kind == "Walk") phase = (int)(model.Clock * 10f) % 4;
+            if (kind == "Idle") phase = DarklightIdleFrameTiming.Frame(page.phases,model.Clock,page.idleBlinkFrame);
+            else if (kind == "Walk") phase = WalkFrame(page.phases,model.Clock);
             else if (kind == "Attack")
-                phase = model.ActiveThisTick ? 1 : model.StateTime < model.Attack.startup ? 0 :
+                phase = page.phases > 4 ? DarklightAttackFrameTiming.Frame(page.phases,page.startupFrameEnd,page.activeFrameEnd,model) : model.ActiveThisTick ? 1 : model.StateTime < model.Attack.startup ? 0 :
                     model.StateTime < model.Attack.startup + model.Attack.active ? 1 :
                     model.StateTime < model.Attack.startup + model.Attack.active + model.Attack.recovery * .5f ? 2 : 3;
             else if (kind == "GuardDodge")
@@ -109,12 +128,33 @@ namespace Darklight
         }
         public static Sprite YoungIdle(int skin, int weapon, int direction, float clock)
         {
+            if(weapon==2&&DarklightRuinFistsBank.Ready)return DarklightRuinFistsBank.Idle(skin,direction,clock);
             var page = Page(skin, 0, weapon, direction, "Idle");
             if (page == null || !LoadFrames(page)) return null;
-            return page.frames[Array.IndexOf(page.directions, direction) * page.phases + (int)(clock * 2f) % page.phases];
+            return page.frames[Array.IndexOf(page.directions, direction) * page.phases + DarklightIdleFrameTiming.Frame(page.phases,clock,page.idleBlinkFrame)];
+        }
+        // Retain the existing 0.4-second stride, including when an atlas adds
+        // authored in-between poses. Never index a six-frame page modulo four.
+        public static int WalkFrame(int phases,float clock)=>Mathf.FloorToInt(Mathf.Repeat(clock, .4f)/.4f*phases)%phases;
+        static bool LivingKind(string kind) => kind=="IdleAlert" || kind=="IdleImpatient" || kind=="IdleInspect" ||
+            kind=="IdleFatigued" || kind=="IdleWounded" || kind=="StartMove" || kind=="Brake" || kind=="Turn";
+        public static Sprite LivingPose(int skin,int weapon,int direction,DarklightLivingPresentation living)
+        {
+            if(weapon==2&&DarklightRuinFistsBank.Ready)return living.Clip=="Walk"?null:DarklightRuinFistsBank.Idle(skin,direction,living.BreathClock);
+            if(living.Clip=="Walk")return null; // keep authored locomotion cadence and foot contacts
+            var page=Page(skin,0,weapon,direction,living.Clip);
+            if(page==null && DarklightMotionFrameTiming.Supports(living.Clip))page=Page(skin,0,weapon,direction,"Motion");
+            if(page==null && living.Clip.StartsWith("Idle",StringComparison.Ordinal))page=Page(skin,0,weapon,direction,"Idle");
+            if(page==null || !LoadFrames(page))return null;
+            float time=page.kind=="Idle"?living.BreathClock:living.ClipTime;
+            int frame=page.kind=="Motion" ? DarklightMotionFrameTiming.Frame(living.Clip,time) : page.kind=="Idle" ? DarklightIdleFrameTiming.Frame(page.phases,time,page.idleBlinkFrame) : living.Clip=="StartMove" || living.Clip=="Brake" || living.Clip=="Turn" ?
+                Mathf.Min(page.phases-1,(int)(time*page.phases/.14f)) : (int)(time*(page.kind=="Idle"?2f:8f))%page.phases;
+            if(page.kind=="Motion" && frame==5)return YoungIdle(skin,weapon,direction,0);
+            return page.frames[Array.IndexOf(page.directions,direction)*page.phases+frame];
         }
         public static Sprite StablePose(int skin, int age, int weapon, int direction)
         {
+            if(weapon==2&&DarklightRuinFistsBank.Ready)return DarklightRuinFistsBank.Idle(skin,direction,0);
             var page = Page(skin, 0, weapon, direction, "Idle") ?? Page(skin, 0, weapon, direction, "Combat") ?? Page(skin, age, weapon, direction, "Attack") ?? Page(skin, age, weapon, direction, "Walk");
             if (page == null || !LoadFrames(page)) return null;
             int phase = page.kind == "Attack" ? 3 : 0;
@@ -122,6 +162,8 @@ namespace Darklight
         }
         public static Texture2D Mask(Sprite sprite)
         {
+            if(DarklightRuinFistsBank.IsRuin(sprite))return DarklightRuinFistsBank.Mask(sprite);
+            if(sprite!=null && frameMasks.TryGetValue(sprite,out var cached))return cached;
             if (sprite == null || !sprite.name.StartsWith("Today_", StringComparison.Ordinal)) return null;
             int suffix = sprite.name.LastIndexOf('_');
             if (suffix <= 6) return null;
@@ -130,8 +172,9 @@ namespace Darklight
             if (data?.pages == null) return null;
             foreach (var page in data.pages)
             {
-                if (page == null || page.name != pageName || !ValidDescriptor(page) || !LoadFrames(page) || Array.IndexOf(page.frames, sprite) < 0) continue;
+                if (page == null || page.name != pageName || !CachedValid(page) || !LoadFrames(page) || Array.IndexOf(page.frames, sprite) < 0) continue;
                 if (!page.paletteAttempted) { page.palette = Resources.Load<Texture2D>(page.paletteResourcePath); page.paletteAttempted = true; }
+                foreach(var frame in page.frames)frameMasks[frame]=page.palette;
                 return page.palette;
             }
             return null;
@@ -142,19 +185,24 @@ namespace Darklight
         }
         public static int WholeFrameId(Sprite sprite)
         {
+            if(DarklightRuinFistsBank.IsRuin(sprite))return DarklightRuinFistsBank.FrameId(sprite);
             if (sprite == null || Catalog()?.pages == null) return 0;
+            if(frameOwners.TryGetValue(sprite,out int cached))return cached;
+            string name=sprite.name;
             foreach (var page in Catalog().pages)
             {
-                if (page == null || !page.ownerMask || !ValidDescriptor(page)) continue;
-                int index = Array.IndexOf(page.spriteNames, sprite.name);
-                if (index >= 0) return index + 1;
+                if (page == null || !page.ownerMask || !CachedValid(page)) continue;
+                int index = Array.IndexOf(page.spriteNames, name);
+                if (index >= 0) {frameOwners[sprite]=index+1;return index+1;}
             }
             return 0;
         }
         public static void ClearCache()
         {
             if (catalog?.pages != null) foreach (var page in catalog.pages)
-                if (page != null) { page.frames = null; page.palette = null; page.framesAttempted = page.paletteAttempted = false; }
+                if (page != null) { page.frames = null; page.palette = null; page.framesAttempted = page.paletteAttempted = page.descriptorChecked = false; }
+            frameOwners.Clear();frameMasks.Clear();
+            DarklightRuinFistsBank.ClearCache();
             catalog = null; catalogAttempted = false;
         }
     }

@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqFistsNormalIdleN20261025V2.png",
+  "imageSha256": "e2bf44d64812455929ff333b63ac5e50f7dfffbc63f324f863a0e3164deeaf55",
+  "nativeSize": [
+    2244,
+    698
+  ],
+  "sourceSize": [
+    2172,
+    724
+  ],
+  "pixelsPerUnit": 271.5151515151515,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleN-v2-source.png",
+  "sourceSha256": "6929801038785b8524f4dbceb5c2381d1ad2dff3500434603a9de95d52ab952c",
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsNormalIdleN20261025V2_00",
+      "rect": [
+        0,
+        0,
+        561,
+        698
+      ],
+      "pivot": [
+        0.47593582887700536,
+        0.07593123209169055
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "neutral-stopped",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        41,
+        111,
+        514,
+        589
+      ],
+      "sourceAnchor": [
+        270,
+        655
+      ],
+      "sourcePackingAnchor": [
+        267,
+        655
+      ],
+      "supportGuide": {
+        "anchor": [
+          270,
+          655
+        ],
+        "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+      },
+      "sourceOffsetInFrame": [
+        38,
+        101
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalIdleN20261025V2_01",
+      "rect": [
+        561,
+        0,
+        561,
+        698
+      ],
+      "pivot": [
+        0.47593582887700536,
+        0.07593123209169055
+      ],
+      "durationMs": 250,
+      "action": "idle",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "inhale",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        580,
+        18,
+        526,
+        643
+      ],
+      "sourceAnchor": [
+        820,
+        655
+      ],
+      "sourcePackingAnchor": [
+        817,
+        655
+      ],
+      "supportGuide": {
+        "anchor": [
+          820,
+          655
+        ],
+        "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+      },
+      "sourceOffsetInFrame": [
+        27,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalIdleN20261025V2_02",
+      "rect": [
+        1122,
+        0,
+        561,
+        698
+      ],
+      "pivot": [
+        0.4741532976827095,
+        0.07593123209169055
+      ],
+      "durationMs": 180,
+      "action": "idle",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "blink-or-breath-pause",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        1107,
+        55,
+        510,
+        643
+      ],
+      "sourceAnchor": [
+        1365,
+        655
+      ],
+      "sourcePackingAnchor": [
+        1363,
+        655
+      ],
+      "supportGuide": {
+        "anchor": [
+          1365,
+          655
+        ],
+        "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+      },
+      "sourceOffsetInFrame": [
+        8,
+        45
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalIdleN20261025V2_03",
+      "rect": [
+        1683,
+        0,
+        561,
+        698
+      ],
+      "pivot": [
+        0.4741532976827095,
+        0.07593123209169055
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "exhale-return",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1706,
+        112,
+        420,
+        549
+      ],
+      "sourceAnchor": [
+        1909,
+        655
+      ],
+      "sourcePackingAnchor": [
+        1907,
+        655
+      ],
+      "supportGuide": {
+        "anchor": [
+          1909,
+          655
+        ],
+        "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+      },
+      "sourceOffsetInFrame": [
+        63,
+        102
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "idle_N",
+      "frames": [
+        "Redesign_ReqFistsNormalIdleN20261025V2_00",
+        "Redesign_ReqFistsNormalIdleN20261025V2_01",
+        "Redesign_ReqFistsNormalIdleN20261025V2_02",
+        "Redesign_ReqFistsNormalIdleN20261025V2_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "idle_N"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 524591,
+  "packedPixels": 524591,
+  "originalSourcePixels": 524591,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 1047937,
+    "farBeyond16pxPixels": 146,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.5725490196078431,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Third authored idle pose is a blink, not a breathing in-between.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ],
+  "ppuProvenance": {
+    "method": "Comparable whole-body guarded stance crown-to-ground; no weapon/FX/coat bounds and no per-frame resizing.",
+    "referencePath": "ArtSources/WeaponRedesign20261024/candidates/ReqFistsNormalDireto_S_SW_W-v2-source.png",
+    "referenceSha256": "569470770dc7793b22cc4f3aeb7dded4ea102a8ce647d07338fb7ce1a599f7d6",
+    "referenceCrownY": 11,
+    "referenceSoleY": 346,
+    "referenceBodyPixels": 335,
+    "referencePixelsPerUnit": 169.6969696969697,
+    "referenceWorldBodyHeight": 1.974107142857143,
+    "measurements": [
+      {
+        "sourceFrameIndex": 0,
+        "crownY": 119,
+        "soleY": 655,
+        "anatomyHeight": 536,
+        "uncertaintyPx": 8
+      }
+    ],
+    "pixelsPerUnit": 271.5151515151515,
+    "worldVisualScale": 1.325,
+    "liveCameraCheckPending": true
+  },
+  "review": {
+    "sourceSeen": true,
+    "wholeFigures": true,
+    "anatomyEdits": false,
+    "sourceRgbaExact": true,
+    "visualApproval": false,
+    "reviewer": "weapon/form agent plus root for NW V4 neck correction",
+    "imported": false,
+    "runtimeVerified": false,
+    "findings": "Idle: neutral stopped pose is phase0, not a separate new drawing; four authored whole-body breathing phases. Corrected N V2 shows both heels with forward toe-claws occluded; NW/NE original source frames retained exactly.",
+    "limitations": "Generated pixel-cluster art has many colors and soft alpha; audit warnings do not authorize erasure. Native logical pixel grid unverified. Gameplay/camera not tested."
+  }
+}

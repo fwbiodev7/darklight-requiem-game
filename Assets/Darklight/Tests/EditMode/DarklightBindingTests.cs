@@ -11,9 +11,44 @@ namespace Darklight.Tests
         public override void Setup(){base.Setup();exists=PlayerPrefs.HasKey("Darklight.Bindings");saved=PlayerPrefs.GetString("Darklight.Bindings");PlayerPrefs.DeleteKey("Darklight.Bindings");}
         public override void TearDown(){if(exists)PlayerPrefs.SetString("Darklight.Bindings",saved);else PlayerPrefs.DeleteKey("Darklight.Bindings");PlayerPrefs.Save();base.TearDown();}
         static DarklightInput.BindingSlot Slot(DarklightInput input,string name,bool pad)=>input.Slots(name,pad)[0];
-        [Test] public void NewCampaignHasAllThreeFormsWithoutCompletingStory()
+        [Test]public void MotorcycleHeavyReachesCombatFromKeyboardWithoutStealingSawOrBike()
         {
-            var state=new DarklightProgress();Assert.That(state.FormUnlocked,Is.EqualTo(3));Assert.That(state.formsUnlocked,Is.Zero);Assert.That(state.chapter,Is.Zero);Assert.That(state.completed,Is.False);Assert.That(state.mp3Unlocked,Is.False);
+            var keyboard=InputSystem.AddDevice<Keyboard>();var obj=new GameObject("AbyssInputEditProbe");var attack=ScriptableObject.CreateInstance<AttackDefinition>();
+            try
+            {
+                var rider=obj.AddComponent<DarklightAbyssRider>();using var input=new DarklightInput();
+                Press(keyboard.xKey);var command=input.ReadAbyss(default,rider);
+                Assert.That(command.heavyPressed&&command.heavyHeld,Is.True);Assert.That(command.lightPressed||command.weaponSpecialPressed,Is.False);
+                var model=new CombatModel(new CombatLoadout{weapon=3,lights=new[]{attack},heavy=attack,charged=attack});model.Tick(.01f,command);Assert.That(model.State,Is.EqualTo(CombatState.Charging));
+                Release(keyboard.xKey);command=input.ReadAbyss(default,rider);Assert.That(command.heavyReleased,Is.True);model.Tick(.01f,command);Assert.That(model.Attack,Is.SameAs(attack));
+            }
+            finally{Object.DestroyImmediate(obj);Object.DestroyImmediate(attack);}
+        }
+        [Test]public void MotorcycleHeavyHasAnIndependentGamepadCommandAndRemappableSlot()
+        {
+            var pad=InputSystem.AddDevice<Gamepad>();var obj=new GameObject("AbyssPadInputEditProbe");
+            try
+            {
+                var rider=obj.AddComponent<DarklightAbyssRider>();using var input=new DarklightInput();Press(pad.dpad.down);
+                var command=input.ReadAbyss(default,rider);Assert.That(command.heavyPressed,Is.True);Assert.That(command.weaponSpecialPressed||command.lightPressed,Is.False);
+                Assert.That(input.Action("Aerial").WasPressedThisFrame(),Is.False);Assert.That(input.Slots("AbyssHeavy",true).Count,Is.GreaterThan(0));
+            }
+            finally{Object.DestroyImmediate(obj);}
+        }
+        [Test]public void MotorcycleMouseButtonsRetainSawAndMountedCommands()
+        {
+            var mouse=InputSystem.AddDevice<Mouse>();var obj=new GameObject("AbyssMouseEditProbe");
+            try
+            {
+                var rider=obj.AddComponent<DarklightAbyssRider>();using var input=new DarklightInput();Press(mouse.rightButton);
+                var command=input.ReadAbyss(new CombatInput{heavyPressed=true,heavyHeld=true},rider);Assert.That(command.lightPressed,Is.True);Assert.That(command.heavyPressed||command.weaponSpecialPressed,Is.False);
+                Release(mouse.rightButton);Press(mouse.leftButton);command=input.ReadAbyss(default,rider);Assert.That(command.weaponSpecialPressed,Is.True);Assert.That(command.lightPressed||command.heavyPressed,Is.False);
+            }
+            finally{Object.DestroyImmediate(obj);}
+        }
+        [Test] public void NewCampaignHasBothTransformationsWithoutCompletingStory()
+        {
+            var state=new DarklightProgress();Assert.That(state.FormUnlocked,Is.EqualTo(2));Assert.That(state.formsUnlocked,Is.Zero);Assert.That(state.chapter,Is.Zero);Assert.That(state.completed,Is.False);Assert.That(state.mp3Unlocked,Is.False);
         }
         [Test] public void KeyboardRemapSurvivesNewInputInstanceAndProducesActualAction()
         {

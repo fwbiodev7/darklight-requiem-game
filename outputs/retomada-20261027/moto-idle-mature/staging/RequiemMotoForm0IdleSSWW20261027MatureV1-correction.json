@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "image": "RequiemMotoForm0IdleSSWW20261027MatureV1-correction.png",
+  "imageSha256": "3a1ad4416ed9d4c8cb14f3612c5bd37391c2e71a876d7c91a6929dbcf03b6cdd",
+  "nativeSize": [
+    1956,
+    405
+  ],
+  "sourceSize": [
+    1448,
+    1086
+  ],
+  "pixelsPerUnit": 160.6060606060606,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261027/moto-idle-mature/RequiemMotoIdleSSWWRepair2-20261027MatureV1-source.png",
+  "sourceSha256": "0a926a8c46954a597f3bbb492be97370221d4025b802d2127f0bdb69c1c6410f",
+  "frames": [
+    {
+      "id": "Redesign_RequiemMotoForm0IdleSSWW20261027MatureV1-correction_00",
+      "rect": [
+        0,
+        0,
+        489,
+        405
+      ],
+      "pivot": [
+        0.6114519427402862,
+        0.12839506172839507
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "neutral",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        14,
+        390,
+        360,
+        356
+      ],
+      "sourceAnchor": [
+        192,
+        735
+      ],
+      "sourcePackingAnchor": [
+        89,
+        743
+      ],
+      "supportGuide": {
+        "anchor": [
+          192,
+          735
+        ],
+        "method": "Whole-source wheel contact support; center between front/rear contact where visible."
+      },
+      "sourceOffsetInFrame": [
+        121,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_RequiemMotoForm0IdleSSWW20261027MatureV1-correction_01",
+      "rect": [
+        489,
+        0,
+        489,
+        405
+      ],
+      "pivot": [
+        0.40899795501022496,
+        0.10864197530864197
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "neutral",
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        0,
+        757,
+        374,
+        329
+      ],
+      "sourceAnchor": [
+        192,
+        1050
+      ],
+      "sourcePackingAnchor": [
+        188,
+        1050
+      ],
+      "supportGuide": {
+        "anchor": [
+          192,
+          1050
+        ],
+        "method": "Whole-source wheel contact support; center between front/rear contact where visible."
+      },
+      "sourceOffsetInFrame": [
+        8,
+        68
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "idle_SW",
+      "frames": [
+        "Redesign_RequiemMotoForm0IdleSSWW20261027MatureV1-correction_00"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "idle_W",
+      "frames": [
+        "Redesign_RequiemMotoForm0IdleSSWW20261027MatureV1-correction_01"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "idle_SW",
+    "idle_W"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 149658,
+  "packedPixels": 149658,
+  "originalSourcePixels": 848809,
+  "selectedSourceFrameIndices": [
+    4,
+    8
+  ],
+  "excludedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11
+  ],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 723719,
+    "farBeyond16pxPixels": 10,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.0392156862745098,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Third authored idle pose is a blink, not a breathing in-between.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ]
+}

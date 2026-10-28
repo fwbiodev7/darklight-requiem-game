@@ -1,0 +1,59 @@
+{
+  "jobs": [
+    {
+      "name": "ReqDaggersEclipseIdleA",
+      "source": "C:/Users/Usuario/.codex/generated_images/01a16a65-852e-7ed1-a865-2fb76d9bf2e7/exec-a24e4019-2598-4187-8a3f-74de86d62087.png",
+      "form": 2,
+      "directions": [0, 1, 2]
+    },
+    {
+      "name": "ReqDaggersAbsolutoIdleA",
+      "source": "C:/Users/Usuario/.codex/generated_images/01a16a65-852e-7ed1-a865-2fb76d9bf2e7/exec-1fb8c1c5-069e-4c8e-b86c-5614ffb901fd.png",
+      "form": 3,
+      "directions": [0, 1, 2]
+    },
+    {
+      "name": "ReqDaggersNormalIdleA",
+      "source": "C:/Users/Usuario/.codex/generated_images/01a16a65-852e-7ed1-a865-2fb76d9bf2e7/exec-079b935e-17a7-4cc0-9adc-6ac17ae64b2a.png",
+      "form": 0,
+      "directions": [0, 1, 2]
+    },
+    {
+      "name": "ReqDaggersRupturaIdleA",
+      "source": "C:/Users/Usuario/.codex/generated_images/01a16a65-852e-7ed1-a865-2fb76d9bf2e7/exec-2cec9fbf-9bf7-4b86-841d-f4f08c336179.png",
+      "form": 1,
+      "directions": [0, 1, 2]
+    },
+    {
+      "name": "ReqKatanaNormalSouth",
+      "source": "C:/Users/Usuario/.codex/generated_images/01a16a65-852e-7ed1-a865-2fb76d9bf2e7/exec-dc380c49-fde9-4f0f-a83e-825fa8464ab3.png",
+      "weapon": 0,
+      "form": 0,
+      "sourceRows": 3,
+      "excludedReason": "Walking row1 rejected: legs do not alternate. Preserve complete source; retain legacy walk.",
+      "rows": [
+        {"sourceRow": 0, "direction": 0, "action": "Idle"},
+        {
+          "sourceRow": 2, "direction": 0, "action": "Attack", "attackKey": "Leve1",
+          "sourceSpriteNames": ["Today_RequiemAttackKatanaYoungCardinal_0", "Today_RequiemAttackKatanaYoungCardinal_1", "Today_RequiemAttackKatanaYoungCardinal_2", "Today_RequiemAttackKatanaYoungCardinal_3"]
+        }
+      ]
+    },
+    {
+      "name": "ReqFistsNormalSouth",
+      "source": "C:/Users/Usuario/.codex/generated_images/01a16a65-852e-7ed1-a865-2fb76d9bf2e7/exec-f6d5b331-1fd0-4cc4-a026-39f2474f6af8.png",
+      "weapon": 2,
+      "form": 0,
+      "sourceRows": 3,
+      "excludedReason": "Walking row1 rejected: legs do not alternate. Preserve complete source; retain legacy walk. Fourth attack return pose preserved for preview only; legacy punch has one recovery pose.",
+      "rows": [
+        {"sourceRow": 0, "direction": 0, "action": "Idle"},
+        {
+          "sourceRow": 2, "direction": 0, "action": "Attack", "attackKey": "Direto da Ruína",
+          "sourceSpriteNames": ["Ruin_Requiem_Normal_S_Combat_02", "Ruin_Requiem_Normal_S_Combat_03", "Ruin_Requiem_Normal_S_Combat_11"],
+          "phaseIndices": [0, 1, 2]
+        }
+      ]
+    }
+  ]
+}

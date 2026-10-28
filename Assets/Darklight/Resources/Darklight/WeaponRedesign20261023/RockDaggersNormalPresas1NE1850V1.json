@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "image": "RockDaggersNormalPresas1NE1850V1.png",
+  "imageSha256": "11158c1281e30e037058c2155f7f9eb25a6ce68d7304c31c002a968659548c2e",
+  "nativeSize": [
+    2332,
+    407
+  ],
+  "sourceSize": [
+    3200,
+    700
+  ],
+  "pixelsPerUnit": 144.44444444444446,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261025Retomada1850/presas-normal/selected-sources/RockDaggersNormalPresas1NE1850V1-source.png",
+  "sourceSha256": "3b1764129a74991147402a230bd987a5a5eb07db9f21d2d439d3101214d1b461",
+  "frames": [
+    {
+      "id": "Redesign_RockDaggersNormalPresas1NE1850V1_00",
+      "rect": [
+        0,
+        0,
+        583,
+        407
+      ],
+      "pivot": [
+        0.411663807890223,
+        0.13513513513513514
+      ],
+      "durationMs": 30,
+      "action": "attack",
+      "direction": "NE",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        223,
+        80,
+        356,
+        348
+      ],
+      "sourceAnchor": [
+        399,
+        401
+      ],
+      "sourcePackingAnchor": [
+        399,
+        401
+      ],
+      "supportGuide": {
+        "anchor": [
+          399,
+          401
+        ],
+        "method": "Manually inspected projected midpoint of grounded boot supports; not weapon/canvas fitting."
+      },
+      "sourceOffsetInFrame": [
+        64,
+        31
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_RockDaggersNormalPresas1NE1850V1_01",
+      "rect": [
+        583,
+        0,
+        583,
+        407
+      ],
+      "pivot": [
+        0.6380789022298456,
+        0.13513513513513514
+      ],
+      "durationMs": 45,
+      "action": "attack",
+      "direction": "NE",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        986,
+        80,
+        429,
+        391
+      ],
+      "sourceAnchor": [
+        1212,
+        424
+      ],
+      "sourcePackingAnchor": [
+        1080,
+        424
+      ],
+      "supportGuide": {
+        "anchor": [
+          1212,
+          424
+        ],
+        "method": "Manually inspected projected midpoint of grounded boot supports; not weapon/canvas fitting."
+      },
+      "sourceOffsetInFrame": [
+        146,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_RockDaggersNormalPresas1NE1850V1_02",
+      "rect": [
+        1166,
+        0,
+        583,
+        407
+      ],
+      "pivot": [
+        0.3481989708404803,
+        0.13513513513513514
+      ],
+      "durationMs": 38,
+      "action": "attack",
+      "direction": "NE",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "follow-through",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        1788,
+        80,
+        425,
+        340
+      ],
+      "sourceAnchor": [
+        1983,
+        377
+      ],
+      "sourcePackingAnchor": [
+        2020,
+        377
+      ],
+      "supportGuide": {
+        "anchor": [
+          1983,
+          377
+        ],
+        "method": "Manually inspected projected midpoint of grounded boot supports; not weapon/canvas fitting."
+      },
+      "sourceOffsetInFrame": [
+        8,
+        55
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_RockDaggersNormalPresas1NE1850V1_03",
+      "rect": [
+        1749,
+        0,
+        583,
+        407
+      ],
+      "pivot": [
+        0.4957118353344768,
+        0.13513513513513514
+      ],
+      "durationMs": 38,
+      "action": "attack",
+      "direction": "NE",
+      "skin": "Rock",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        2645,
+        80,
+        311,
+        319
+      ],
+      "sourceAnchor": [
+        2801,
+        375
+      ],
+      "sourcePackingAnchor": [
+        2752,
+        375
+      ],
+      "supportGuide": {
+        "anchor": [
+          2801,
+          375
+        ],
+        "method": "Manually inspected projected midpoint of grounded boot supports; not weapon/canvas fitting."
+      },
+      "sourceOffsetInFrame": [
+        133,
+        57
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_NE",
+      "frames": [
+        "Redesign_RockDaggersNormalPresas1NE1850V1_00",
+        "Redesign_RockDaggersNormalPresas1NE1850V1_01",
+        "Redesign_RockDaggersNormalPresas1NE1850V1_02",
+        "Redesign_RockDaggersNormalPresas1NE1850V1_03"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "attack_NE"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 219472,
+  "packedPixels": 219472,
+  "originalSourcePixels": 219472,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 2020528,
+    "farBeyond16pxPixels": 1326,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 5.2,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ],
+  "stagingOnly": true,
+  "imported": false,
+  "runtimeVerified": false,
+  "visualReviewed": true,
+  "visualApproval": false,
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261023/references/equipment-four-forms.png",
+      "sha256": "6c8c6b05e27f16f19f2bfcad3151294b164f004c0960fa713662788f9e3f6930"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261025Retomada1350/presas-normal/rock-normal/RockDaggersNormalIdleS_SW_W1350V1-source.png",
+      "sha256": "f573e8e858a7db27b88cb65b8cfa4cd2a986b04c979afa699bc2aed2ad3fec7f"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261025Retomada1350/katana-normal/RockKatanaNormalIdleNW_N_NE1350-source.png",
+      "sha256": "c6d16c9613c9f09664362caf94bb615a3c34df2e5d28afe98175e7276712bb60"
+    }
+  ],
+  "ppuProvenance": {
+    "pipelineInferred": 144.94949494949495,
+    "candidateAnatomical": 144.44444444444446,
+    "measurements": [
+      {
+        "sourceFrameIndex": 0,
+        "headY": 116,
+        "soleY": 401,
+        "anatomyHeight": 285
+      },
+      {
+        "sourceFrameIndex": 1,
+        "headY": 143,
+        "soleY": 424,
+        "anatomyHeight": 281
+      },
+      {
+        "sourceFrameIndex": 2,
+        "headY": 90,
+        "soleY": 377,
+        "anatomyHeight": 287
+      },
+      {
+        "sourceFrameIndex": 3,
+        "headY": 88,
+        "soleY": 375,
+        "anatomyHeight": 287
+      }
+    ],
+    "targetHeightUnits": 1.98,
+    "worldVisualScale": 1.325,
+    "method": "Manual compact canonical head-to-sole measures, one PPU per sheet, no raster scaling; S/SW/W retains previous PPU to preserve original figure world scale.",
+    "uncertainty": "Hair crown and projected crouch; camera/contact/transition remain coordinator checks."
+  },
+  "review": {
+    "sourceSeen": true,
+    "packedContactSeen": true,
+    "motionPreviewSeen": false,
+    "findings": "Complete figures selected after direction/head/body/hip/handedness/clothing/tip review; NW/N attack repaired without moving chain. No global redesign approval.",
+    "audioStarted": false
+  },
+  "generation": {
+    "tool": "integrated image_gen",
+    "promptsDirectory": "outputs/redesign-armas-20261025-retomada1850/presas-normal/sources"
+  },
+  "timingNote": "Preview30/45/38/38ms; runtime retains exact existing sourceSpriteNames and combat timing."
+}

@@ -12,11 +12,29 @@ namespace Darklight
             if(directionCache[slot]==null)
             {
                 var sprites=new Sprite[12];
-                foreach(var sprite in Resources.LoadAll<Sprite>("Darklight/AbyssPrototype/ActionF"+form+actionViews[view-2]))
-                {var parts=sprite.name.Split('_');if(int.TryParse(parts[parts.Length-1],out int index)&&index>=0&&index<12)sprites[index]=sprite;}
+                var source=Resources.LoadAll<Sprite>("Darklight/AbyssPrototype/ActionF"+form+actionViews[view-2]);
+                bool linear=System.Array.Exists(source,s=>s.name.EndsWith("_0_11",System.StringComparison.Ordinal));
+                foreach(var sprite in source)
+                {
+                    var parts=sprite.name.Split('_');int n=parts.Length;
+                    // Legacy normal pages use _0_0.._0_11; the new form
+                    // pages use four rows/three columns. Support both layouts.
+                    if(n>=4&&int.TryParse(parts[n-2],out int row)&&int.TryParse(parts[n-1],out int column))
+                    {
+                        if(linear&&row==0&&column>=0&&column<12)sprites[column]=sprite;
+                        else if(!linear&&row>=0&&row<4&&column>=0&&column<3)sprites[row*3+column]=sprite;
+                    }
+                }
                 directionCache[slot]=sprites;
             }
             return directionCache[slot][Mathf.Clamp(frame,0,11)];
+        }
+        public static bool HasCompleteDirections(int form)
+        {
+            if(form<0||form>3)return false;
+            for(int view=2;view<=4;view++)for(int pose=0;pose<12;pose++)
+                if(DirectionalFrame(form,view,pose)==null)return false;
+            return true;
         }
         static Sprite ResolveDirectional(DarklightAbyssRider rider,CombatModel model,int form)
         {

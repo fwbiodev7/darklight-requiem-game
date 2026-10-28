@@ -1,0 +1,888 @@
+{
+  "jobs": [
+    {
+      "name": "ReqKatanaRupturaSouth",
+      "source": "C:/Users/Usuario/.codex/generated_images/01a16a65-852e-7ed1-a865-2fb76d9bf2e7/exec-131b0957-4ef4-40d7-9dd8-f7ddb915a2bb.png",
+      "weapon": 0,
+      "form": 1,
+      "sourceRows": 3,
+      "excludedReason": "Only four idle figures and explicit startup/contact/recovery complete figures selected. Other attack variants preserved in original; no walking generated or implied.",
+      "supportAnchors": {
+        "5": {
+          "anchor": [
+            610,
+            680
+          ],
+          "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+          "confidence": "visual-whole-source-support"
+        },
+        "6": {
+          "anchor": [
+            945,
+            677
+          ],
+          "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+          "confidence": "visual-whole-source-support"
+        },
+        "10": {
+          "anchor": [
+            965,
+            991
+          ],
+          "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+          "confidence": "visual-whole-source-support"
+        },
+        "11": {
+          "anchor": [
+            1338,
+            1005
+          ],
+          "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+          "confidence": "visual-whole-source-support"
+        }
+      },
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 0,
+          "action": "Idle"
+        },
+        {
+          "sourceRow": 1,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Leve1",
+          "sourceIndices": [
+            5,
+            6,
+            10,
+            11
+          ],
+          "sourceSpriteNames": [
+            "Today_RequiemAttackKatanaYoungCardinal_0",
+            "Today_RequiemAttackKatanaYoungCardinal_1",
+            "Today_RequiemAttackKatanaYoungCardinal_2",
+            "Today_RequiemAttackKatanaYoungCardinal_3"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ReqKatanaEclipseSouth",
+      "source": "ArtSources/WeaponRedesign20261023/ReqKatanaEclipseSouth-source.png",
+      "weapon": 0,
+      "form": 2,
+      "sourceRows": 3,
+      "excludedReason": "Only four idle figures and explicit startup/contact/recovery complete figures selected. Other attack variants preserved in original; no walking generated or implied.",
+      "supportAnchors": {
+        "4": {
+          "anchor": [
+            224,
+            699
+          ],
+          "beforeHelperAnchor": [
+            149.24766355140187,
+            699
+          ],
+          "bootsSupport": [
+            [
+              150,
+              699
+            ],
+            [
+              298,
+              680
+            ]
+          ],
+          "guideRects": [
+            [
+              120,
+              650,
+              185,
+              705
+            ],
+            [
+              250,
+              630,
+              325,
+              680
+            ]
+          ],
+          "method": "Whole source visually inspected with coordinate grid; two manually selected boot-support guides; dark opaque sole pixels refine points, never frame-bottom or blade/FX. Source PNG unchanged.",
+          "confidence": "high-visible-two-boot-support"
+        },
+        "5": {
+          "anchor": [
+            564,
+            707
+          ],
+          "beforeHelperAnchor": [
+            638.9795918367347,
+            707
+          ],
+          "bootsSupport": [
+            [
+              491,
+              696
+            ],
+            [
+              638,
+              707
+            ]
+          ],
+          "guideRects": [
+            [
+              462,
+              650,
+              538,
+              700
+            ],
+            [
+              600,
+              660,
+              666,
+              712
+            ]
+          ],
+          "method": "Whole source visually inspected with coordinate grid; two manually selected boot-support guides; dark opaque sole pixels refine points, never frame-bottom or blade/FX. Source PNG unchanged.",
+          "confidence": "high-visible-two-boot-support"
+        },
+        "6": {
+          "anchor": [
+            901,
+            704
+          ],
+          "beforeHelperAnchor": [
+            824.257281553398,
+            704
+          ],
+          "bootsSupport": [
+            [
+              825,
+              704
+            ],
+            [
+              977,
+              687
+            ]
+          ],
+          "guideRects": [
+            [
+              790,
+              655,
+              860,
+              710
+            ],
+            [
+              930,
+              645,
+              1000,
+              691
+            ]
+          ],
+          "method": "Whole source visually inspected with coordinate grid; two manually selected boot-support guides; dark opaque sole pixels refine points, never frame-bottom or blade/FX. Source PNG unchanged.",
+          "confidence": "high-visible-two-boot-support"
+        },
+        "7": {
+          "anchor": [
+            1234,
+            698
+          ],
+          "beforeHelperAnchor": [
+            1151.8626373626373,
+            698
+          ],
+          "bootsSupport": [
+            [
+              1152,
+              698
+            ],
+            [
+              1315,
+              684
+            ]
+          ],
+          "guideRects": [
+            [
+              1120,
+              650,
+              1185,
+              705
+            ],
+            [
+              1280,
+              640,
+              1345,
+              690
+            ]
+          ],
+          "method": "Whole source visually inspected with coordinate grid; two manually selected boot-support guides; dark opaque sole pixels refine points, never frame-bottom or blade/FX. Source PNG unchanged.",
+          "confidence": "high-visible-two-boot-support"
+        },
+        "8": {
+          "anchor": [
+            226,
+            1028
+          ],
+          "beforeHelperAnchor": [
+            131.3235294117647,
+            1028
+          ],
+          "bootsSupport": [
+            [
+              132,
+              1028
+            ],
+            [
+              320,
+              1002
+            ]
+          ],
+          "guideRects": [
+            [
+              99,
+              980,
+              166,
+              1035
+            ],
+            [
+              285,
+              960,
+              352,
+              1006
+            ]
+          ],
+          "method": "Whole source visually inspected with coordinate grid; two manually selected boot-support guides; dark opaque sole pixels refine points, never frame-bottom or blade/FX. Source PNG unchanged.",
+          "confidence": "medium-FX-partly-occludes-boot"
+        },
+        "9": {
+          "anchor": [
+            565,
+            1016
+          ],
+          "beforeHelperAnchor": [
+            459.1666666666667,
+            1033
+          ],
+          "bootsSupport": [
+            [
+              460,
+              1016
+            ],
+            [
+              670,
+              1012
+            ]
+          ],
+          "guideRects": [
+            [
+              448,
+              985,
+              504,
+              1018
+            ],
+            [
+              633,
+              974,
+              700,
+              1017
+            ]
+          ],
+          "method": "Whole source visually inspected with coordinate grid; two manually selected boot-support guides; dark opaque sole pixels refine points, never frame-bottom or blade/FX. Source PNG unchanged.",
+          "confidence": "medium-FX-partly-occludes-boot"
+        },
+        "10": {
+          "anchor": [
+            933,
+            1032
+          ],
+          "beforeHelperAnchor": [
+            935.6559139784946,
+            1032
+          ],
+          "bootsSupport": [
+            [
+              868,
+              1032
+            ],
+            [
+              998,
+              1032
+            ]
+          ],
+          "guideRects": [
+            [
+              838,
+              988,
+              914,
+              1035
+            ],
+            [
+              950,
+              988,
+              1028,
+              1035
+            ]
+          ],
+          "method": "Whole source visually inspected with coordinate grid; two manually selected boot-support guides; dark opaque sole pixels refine points, never frame-bottom or blade/FX. Source PNG unchanged.",
+          "confidence": "high-visible-two-boot-support"
+        },
+        "11": {
+          "anchor": [
+            1284,
+            1038
+          ],
+          "beforeHelperAnchor": [
+            1343.5625,
+            1038
+          ],
+          "bootsSupport": [
+            [
+              1226,
+              1033
+            ],
+            [
+              1343,
+              1038
+            ]
+          ],
+          "guideRects": [
+            [
+              1195,
+              990,
+              1265,
+              1035
+            ],
+            [
+              1300,
+              995,
+              1378,
+              1045
+            ]
+          ],
+          "method": "Whole source visually inspected with coordinate grid; two manually selected boot-support guides; dark opaque sole pixels refine points, never frame-bottom or blade/FX. Source PNG unchanged.",
+          "confidence": "high-visible-two-boot-support"
+        }
+      },
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 0,
+          "action": "Idle"
+        },
+        {
+          "sourceRow": 1,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Leve1",
+          "sourceIndices": [
+            5,
+            6,
+            10,
+            11
+          ],
+          "sourceSpriteNames": [
+            "Today_RequiemAttackKatanaYoungCardinal_0",
+            "Today_RequiemAttackKatanaYoungCardinal_1",
+            "Today_RequiemAttackKatanaYoungCardinal_2",
+            "Today_RequiemAttackKatanaYoungCardinal_3"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ReqKatanaAbsolutoSouth",
+      "source": "ArtSources/WeaponRedesign20261023/ReqKatanaAbsolutoSouth-source.png",
+      "weapon": 0,
+      "form": 3,
+      "sourceRows": 3,
+      "excludedReason": "Only four idle figures and explicit startup/contact/recovery complete figures selected. Other attack variants preserved in original; no walking generated or implied.",
+      "supportAnchors": {
+        "4": {
+          "anchor": [
+            200,
+            691
+          ],
+          "beforeHelperAnchor": [
+            124.20093457943925,
+            691
+          ],
+          "bootsSupport": [
+            [
+              124,
+              691
+            ],
+            [
+              276,
+              678
+            ]
+          ],
+          "guideRects": [
+            [
+              94,
+              640,
+              159,
+              698
+            ],
+            [
+              230,
+              630,
+              302,
+              681
+            ]
+          ],
+          "method": "Whole source visually inspected with coordinate grid; two manually selected boot-support guides; dark opaque sole pixels refine points, never frame-bottom or blade/FX. Source PNG unchanged.",
+          "confidence": "high-visible-two-boot-support"
+        },
+        "5": {
+          "anchor": [
+            534,
+            691
+          ],
+          "beforeHelperAnchor": [
+            612.3137254901961,
+            691
+          ],
+          "bootsSupport": [
+            [
+              456,
+              671
+            ],
+            [
+              612,
+              691
+            ]
+          ],
+          "guideRects": [
+            [
+              419,
+              620,
+              492,
+              672
+            ],
+            [
+              574,
+              645,
+              643,
+              698
+            ]
+          ],
+          "method": "Whole source visually inspected with coordinate grid; two manually selected boot-support guides; dark opaque sole pixels refine points, never frame-bottom or blade/FX. Source PNG unchanged.",
+          "confidence": "high-visible-two-boot-support"
+        },
+        "6": {
+          "anchor": [
+            875,
+            684
+          ],
+          "beforeHelperAnchor": [
+            875.1756756756756,
+            684
+          ],
+          "bootsSupport": [
+            [
+              784,
+              684
+            ],
+            [
+              966,
+              684
+            ]
+          ],
+          "guideRects": [
+            [
+              750,
+              640,
+              839,
+              691
+            ],
+            [
+              925,
+              641,
+              999,
+              691
+            ]
+          ],
+          "method": "Whole source visually inspected with coordinate grid; two manually selected boot-support guides; dark opaque sole pixels refine points, never frame-bottom or blade/FX. Source PNG unchanged.",
+          "confidence": "high-visible-two-boot-support"
+        },
+        "7": {
+          "anchor": [
+            1245,
+            691
+          ],
+          "beforeHelperAnchor": [
+            1150.195652173913,
+            691
+          ],
+          "bootsSupport": [
+            [
+              1150,
+              691
+            ],
+            [
+              1340,
+              677
+            ]
+          ],
+          "guideRects": [
+            [
+              1118,
+              645,
+              1182,
+              698
+            ],
+            [
+              1280,
+              630,
+              1353,
+              680
+            ]
+          ],
+          "method": "Whole source visually inspected with coordinate grid; two manually selected boot-support guides; dark opaque sole pixels refine points, never frame-bottom or blade/FX. Source PNG unchanged.",
+          "confidence": "high-visible-two-boot-support"
+        },
+        "8": {
+          "anchor": [
+            272,
+            998
+          ],
+          "beforeHelperAnchor": [
+            142.02252252252254,
+            1019
+          ],
+          "bootsSupport": [
+            [
+              187,
+              974
+            ],
+            [
+              356,
+              998
+            ]
+          ],
+          "guideRects": [
+            [
+              170,
+              930,
+              239,
+              974
+            ],
+            [
+              304,
+              952,
+              385,
+              1004
+            ]
+          ],
+          "method": "Whole source visually inspected with coordinate grid; two manually selected boot-support guides; dark opaque sole pixels refine points, never frame-bottom or blade/FX. Source PNG unchanged.",
+          "confidence": "medium-FX-partly-occludes-boot"
+        },
+        "9": {
+          "anchor": [
+            624,
+            1022
+          ],
+          "beforeHelperAnchor": [
+            538.1990291262136,
+            1022
+          ],
+          "bootsSupport": [
+            [
+              538,
+              1022
+            ],
+            [
+              711,
+              1004
+            ]
+          ],
+          "guideRects": [
+            [
+              509,
+              985,
+              576,
+              1029
+            ],
+            [
+              660,
+              969,
+              731,
+              1014
+            ]
+          ],
+          "method": "Whole source visually inspected with coordinate grid; two manually selected boot-support guides; dark opaque sole pixels refine points, never frame-bottom or blade/FX. Source PNG unchanged.",
+          "confidence": "high-visible-two-boot-support"
+        },
+        "10": {
+          "anchor": [
+            965,
+            1029
+          ],
+          "beforeHelperAnchor": [
+            949.8370786516854,
+            1029
+          ],
+          "bootsSupport": [
+            [
+              904,
+              1029
+            ],
+            [
+              1026,
+              1028
+            ]
+          ],
+          "guideRects": [
+            [
+              872,
+              983,
+              953,
+              1035
+            ],
+            [
+              975,
+              987,
+              1057,
+              1035
+            ]
+          ],
+          "method": "Whole source visually inspected with coordinate grid; two manually selected boot-support guides; dark opaque sole pixels refine points, never frame-bottom or blade/FX. Source PNG unchanged.",
+          "confidence": "high-visible-two-boot-support"
+        },
+        "11": {
+          "anchor": [
+            1316,
+            1032
+          ],
+          "beforeHelperAnchor": [
+            1315.8443396226414,
+            1032
+          ],
+          "bootsSupport": [
+            [
+              1256,
+              1032
+            ],
+            [
+              1376,
+              1032
+            ]
+          ],
+          "guideRects": [
+            [
+              1225,
+              989,
+              1303,
+              1038
+            ],
+            [
+              1325,
+              989,
+              1405,
+              1038
+            ]
+          ],
+          "method": "Whole source visually inspected with coordinate grid; two manually selected boot-support guides; dark opaque sole pixels refine points, never frame-bottom or blade/FX. Source PNG unchanged.",
+          "confidence": "high-visible-two-boot-support"
+        }
+      },
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 0,
+          "action": "Idle"
+        },
+        {
+          "sourceRow": 1,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Leve1",
+          "sourceIndices": [
+            5,
+            6,
+            10,
+            11
+          ],
+          "sourceSpriteNames": [
+            "Today_RequiemAttackKatanaYoungCardinal_0",
+            "Today_RequiemAttackKatanaYoungCardinal_1",
+            "Today_RequiemAttackKatanaYoungCardinal_2",
+            "Today_RequiemAttackKatanaYoungCardinal_3"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ReqFistsRupturaSouth",
+      "source": "C:/Users/Usuario/.codex/generated_images/01a16a65-852e-7ed1-a865-2fb76d9bf2e7/exec-76f31443-839d-4d4a-b3d9-a66507703a4a.png",
+      "weapon": 2,
+      "form": 1,
+      "sourceRows": 3,
+      "excludedReason": "Only four idle figures and explicit startup/contact/recovery complete figures selected. Other attack variants preserved in original; no walking generated or implied.",
+      "supportAnchors": {
+        "5": {
+          "anchor": [
+            584,
+            672
+          ],
+          "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+          "confidence": "visual-whole-source-support"
+        },
+        "7": {
+          "anchor": [
+            1347,
+            672
+          ],
+          "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+          "confidence": "visual-whole-source-support"
+        },
+        "10": {
+          "anchor": [
+            951,
+            1009
+          ],
+          "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+          "confidence": "visual-whole-source-support"
+        }
+      },
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 0,
+          "action": "Idle"
+        },
+        {
+          "sourceRow": 1,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Direto da Ruína",
+          "sourceIndices": [
+            5,
+            7,
+            10
+          ],
+          "sourceSpriteNames": [
+            "Ruin_Requiem_Normal_S_Combat_02",
+            "Ruin_Requiem_Normal_S_Combat_03",
+            "Ruin_Requiem_Normal_S_Combat_11"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ReqFistsEclipseSouth",
+      "source": "C:/Users/Usuario/.codex/generated_images/01a16a65-852e-7ed1-a865-2fb76d9bf2e7/exec-27b853df-d823-4ffd-9f4c-81efe644f329.png",
+      "weapon": 2,
+      "form": 2,
+      "sourceRows": 3,
+      "excludedReason": "Only four idle figures and explicit startup/contact/recovery complete figures selected. Other attack variants preserved in original; no walking generated or implied.",
+      "supportAnchors": {
+        "5": {
+          "anchor": [
+            553,
+            728
+          ],
+          "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+          "confidence": "visual-whole-source-support"
+        },
+        "7": {
+          "anchor": [
+            1252,
+            727
+          ],
+          "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+          "confidence": "visual-whole-source-support"
+        },
+        "10": {
+          "anchor": [
+            921,
+            1071
+          ],
+          "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+          "confidence": "visual-whole-source-support"
+        }
+      },
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 0,
+          "action": "Idle"
+        },
+        {
+          "sourceRow": 1,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Direto da Ruína",
+          "sourceIndices": [
+            5,
+            7,
+            10
+          ],
+          "sourceSpriteNames": [
+            "Ruin_Requiem_Normal_S_Combat_02",
+            "Ruin_Requiem_Normal_S_Combat_03",
+            "Ruin_Requiem_Normal_S_Combat_11"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ReqFistsAbsolutoSouth",
+      "source": "C:/Users/Usuario/.codex/generated_images/01a16a65-852e-7ed1-a865-2fb76d9bf2e7/exec-4a9ea528-a28c-42a7-bc12-a77e2e5caa6c.png",
+      "weapon": 2,
+      "form": 3,
+      "sourceRows": 3,
+      "excludedReason": "Only four idle figures and explicit startup/contact/recovery complete figures selected. Other attack variants preserved in original; no walking generated or implied.",
+      "supportAnchors": {
+        "5": {
+          "anchor": [
+            544,
+            717
+          ],
+          "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+          "confidence": "visual-whole-source-support"
+        },
+        "7": {
+          "anchor": [
+            1270,
+            723
+          ],
+          "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+          "confidence": "visual-whole-source-support"
+        },
+        "10": {
+          "anchor": [
+            899,
+            1067
+          ],
+          "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+          "confidence": "visual-whole-source-support"
+        }
+      },
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 0,
+          "action": "Idle"
+        },
+        {
+          "sourceRow": 1,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Direto da Ruína",
+          "sourceIndices": [
+            5,
+            7,
+            10
+          ],
+          "sourceSpriteNames": [
+            "Ruin_Requiem_Normal_S_Combat_02",
+            "Ruin_Requiem_Normal_S_Combat_03",
+            "Ruin_Requiem_Normal_S_Combat_11"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -19,9 +19,25 @@ namespace Darklight
         readonly int[] history=new int[12];int cursor,count,lastWeapon=-1;float idle;
         public float Points {get;private set;}
         static readonly string[] ranks={"D","C","B","A","S","SS","SSS"};
-        public string Rank=>ranks[Mathf.Clamp((int)(Points/65),0,6)];
+        public int RankIndex=>Mathf.Clamp((int)(Points/65),0,6);
+        public string Rank=>RankName(RankIndex);
+        public static string RankName(int index)=>ranks[Mathf.Clamp(index,0,6)];
+        public float RankProgress=>RankIndex==6?1:Mathf.Clamp01((Points-RankIndex*65)/65);
+        public const float ComboWindow=3.25f;
+        float comboIdle;
+        public int ComboHits{get;private set;}
+        public int BestCombo{get;private set;}
+        public int TotalHits{get;private set;}
+        public int CompletedCombos{get;private set;}
+        public int PeakRankIndex{get;private set;}
         public int UniqueRecent {get;private set;}
         public float Hit(int move,int weapon,bool aerial=false,bool finisher=false)
+        {
+            ComboHits++;TotalHits++;comboIdle=0;BestCombo=Mathf.Max(BestCombo,ComboHits);
+            if(ComboHits==3)CompletedCombos++;
+            return Award(move,weapon,aerial,finisher);
+        }
+        float Award(int move,int weapon,bool aerial=false,bool finisher=false)
         {
             int repeated=0,unique=0;bool exists=false;
             for(int i=0;i<count;i++){if(history[i]==move){repeated++;exists=true;}bool first=true;for(int j=0;j<i;j++)if(history[j]==history[i])first=false;if(first)unique++;}
@@ -31,12 +47,12 @@ namespace Darklight
             history[cursor]=move;cursor=(cursor+1)%history.Length;count=Mathf.Min(count+1,history.Length);if(!exists)unique++;UniqueRecent=unique;
             // Two-move loops can build competence, but top ranks require a wider repertoire.
             float cap=unique<3?185:unique<5?320:450;
-            Points=Mathf.Min(cap,Points+gain);lastWeapon=weapon;idle=0;return gain;
+            Points=Mathf.Min(cap,Points+gain);lastWeapon=weapon;idle=0;PeakRankIndex=Mathf.Max(PeakRankIndex,RankIndex);return gain;
         }
-        public void Defense(bool perfect){Hit(perfect?-100:-101,lastWeapon);idle=0;}
-        public void Damage(){Points=Mathf.Max(0,Points-65);}
-        public void Tick(float dt){idle+=Mathf.Max(0,dt);if(idle>2)Points=Mathf.Max(0,Points-dt*9);}
-        public void Reset(){Points=0;cursor=count=0;lastWeapon=-1;UniqueRecent=0;idle=0;}
+        public void Defense(bool perfect){Award(perfect?-100:-101,lastWeapon);idle=0;comboIdle=0;}
+        public void Damage(){Points=Mathf.Max(0,Points-65);ComboHits=0;comboIdle=0;}
+        public void Tick(float dt){dt=Mathf.Max(0,dt);idle+=dt;comboIdle+=dt;if(idle>2)Points=Mathf.Max(0,Points-dt*9);if(comboIdle>ComboWindow)ComboHits=0;}
+        public void Reset(){Points=0;cursor=count=0;lastWeapon=-1;UniqueRecent=0;idle=comboIdle=0;ComboHits=BestCombo=TotalHits=CompletedCombos=PeakRankIndex=0;}
     }
     public static class DarklightHitGeometry
     {

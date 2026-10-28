@@ -64,14 +64,14 @@ namespace Darklight
             state=DarklightAutomation.Silent?new DarklightAtlasState():DarklightAtlasState.Load(storage);
             MakeSymbols();
             miniRoot=Rect(hud,"Minimapa",512,8,120,82);DarklightHUDTheme.Frame(miniRoot);
-            miniTitle=Text(miniRoot,"Local","MAPA",6,5,61,10,5);
-            miniBinding=Text(miniRoot,"Atalho","",61,5,27,10,4);miniBinding.alignment=TextAnchor.MiddleRight;
+            miniTitle=Text(miniRoot,"Local","MAPA",6,5,35,10,5);
+            miniBinding=Text(miniRoot,"Atalho","",42,5,44,10,4);miniBinding.alignment=TextAnchor.MiddleRight;miniBinding.resizeTextForBestFit=true;miniBinding.resizeTextMinSize=3;miniBinding.resizeTextMaxSize=4;miniBinding.lineSpacing=1;miniBinding.horizontalOverflow=HorizontalWrapMode.Overflow;miniRoot.gameObject.AddComponent<UnityEngine.UI.RectMask2D>();
             miniZoomOut=Rect(miniRoot,"DiminuirZoom",90,4,11,12);Panel(miniZoomOut,new Color(.09f,.035f,.05f));Text(miniZoomOut,"Rotulo","-",0,0,11,12,5);
             miniZoomIn=Rect(miniRoot,"AumentarZoom",103,4,11,12);Panel(miniZoomIn,new Color(.09f,.035f,.05f));Text(miniZoomIn,"Rotulo","+",0,0,11,12,5);
             miniViewport=Rect(miniRoot,"Territorio",4,18,112,60);Panel(miniViewport,Color.black);miniViewport.gameObject.AddComponent<UnityEngine.UI.RectMask2D>();miniArt=Raw(miniViewport,"Microarte",0,0,112,60,null);miniTerrain=Raw(miniViewport,"Geometria",0,0,112,60,null);MakeIcons(miniViewport,miniIcons,4);
             trackedRoot=Rect(hud,"DestinoAcompanhado",508,94,124,22);trackedContext=trackedRoot.gameObject.AddComponent<UnityEngine.CanvasGroup>();trackedContext.alpha=0;trackedContext.blocksRaycasts=false;DarklightHUDTheme.Frame(trackedRoot);
             trackedIcon=Raw(trackedRoot,"Simbolo",7,8,8,8,symbols[1]);trackedIcon.color=symbolColors[1];
-            trackedTitle=Text(trackedRoot,"Titulo","",21,5,72,11,5);trackedDistance=Text(trackedRoot,"Distancia","",94,5,24,11,5);trackedDistance.alignment=TextAnchor.MiddleRight;
+            trackedTitle=Text(trackedRoot,"Titulo","",21,5,72,11,5);trackedDistance=Text(trackedRoot,"Distancia","",94,5,24,11,5);trackedDistance.alignment=TextAnchor.MiddleRight;trackedRoot.gameObject.AddComponent<UnityEngine.UI.RectMask2D>();trackedTitle.resizeTextForBestFit=true;trackedTitle.resizeTextMinSize=4;trackedTitle.resizeTextMaxSize=5;trackedTitle.lineSpacing=1;
             trackedHUD=Text(trackedRoot,"Rotulo","",21,19,98,13,5);
             routeArrow=Raw(trackedRoot,"DirecaoDoDestino",7,35,8,8,symbols[0]);routeArrow.color=symbolColors[1];
             routeHint=Text(trackedRoot,"Orientacao","",21,35,98,11,4);
@@ -89,7 +89,7 @@ namespace Darklight
             zoomOut=SmallButton("Menos","-",300,47,22);zoomIn=SmallButton("Mais","+",325,47,22);centerButton=SmallButton("Centrar","CENTRAR",350,47,70);closeButton=SmallButton("Fechar","FECHAR",552,19,65);
             MapPanel(Rect(fullRoot,"PainelDaJornada",438,51,186,274),0);
             Text(fullRoot,"ObjetivosTitulo","OBJETIVOS",450,61,162,12,5);
-            for(int i=0;i<3;i++){objectiveRows[i]=Rect(fullRoot,"Objetivo"+i,448,77+i*19,168,17);MapPanel(objectiveRows[i],1);objectiveLabels[i]=Text(objectiveRows[i],"Rotulo","",7,0,154,17,5);}
+            for(int i=0;i<3;i++){objectiveRows[i]=Rect(fullRoot,"Objetivo"+i,448,77+i*19,168,17);MapPanel(objectiveRows[i],1);objectiveRows[i].gameObject.AddComponent<UnityEngine.UI.RectMask2D>();objectiveLabels[i]=Text(objectiveRows[i],"Rotulo","",7,2,154,13,5);objectiveLabels[i].resizeTextForBestFit=true;objectiveLabels[i].resizeTextMinSize=4;objectiveLabels[i].resizeTextMaxSize=5;objectiveLabels[i].lineSpacing=1.1f;}
             MapPanel(Rect(fullRoot,"MolduraDaDescricao",448,138,168,60),0);
             description=Text(fullRoot,"Descricao","",455,145,154,46,5);description.lineSpacing=1.5f;description.resizeTextForBestFit=true;description.resizeTextMinSize=4;description.resizeTextMaxSize=5;
             Text(fullRoot,"LegendaTitulo","LEGENDA",450,204,162,10,4);
@@ -104,9 +104,11 @@ namespace Darklight
         {var r=Rect(fullRoot,name,x,y,w,15);MapPanel(r,1);var t=Text(r,"Rotulo",label,3,0,w-6,15,5);t.alignment=TextAnchor.MiddleCenter;return r;}
         void MapPanel(RectTransform rect,int index)
         {
-            var image=rect.GetComponent<UnityEngine.UI.Image>();if(image==null)image=rect.gameObject.AddComponent<UnityEngine.UI.Image>();
-            image.sprite=game.uiArt!=null&&game.uiArt.Length>index?game.uiArt[index]:null;image.material=null;
-            image.type=UnityEngine.UI.Image.Type.Sliced;image.pixelsPerUnitMultiplier=8.333333f;image.color=Color.white;image.raycastTarget=false;
+            // Native HUD frame has actual slice borders; never stretch a complete decorated menu bitmap.
+            DarklightHUDTheme.Frame(rect,index==2?new Color(.75f,.32f,.35f):new Color(.48f,.47f,.46f));
+            var image=rect.GetComponent<UnityEngine.UI.Image>();image.sprite=null;image.type=UnityEngine.UI.Image.Type.Simple;
+            image.color=index==2?new Color(.12f,.035f,.045f,1):new Color(.015f,.019f,.024f,1);
+
         }
         public void UseStorage(string path){Flush();storage=path;state=DarklightAtlasState.Load(path);cache.Clear();geometry=null;region=-1;}
         public void ResetCampaign()
@@ -212,7 +214,7 @@ namespace Darklight
             for(int row=0;row<3;row++)
             {
                 int i=firstObjective+row;bool visible=i<objectives.Count;objectiveRows[row].gameObject.SetActive(visible);if(!visible)continue;
-                var p=objectives[i];objectiveLabels[row].text=(p.completed?"CONCLUÍDO: ":geometry.record.tracked==p.id?"SEGUINDO: ":"")+p.title;
+                var p=objectives[i];objectiveLabels[row].text=(p.completed?"OK: ":geometry.record.tracked==p.id?"* ":"")+p.title;
                 objectiveLabels[row].color=p.completed?new Color(.43f,.45f,.48f):i==focus?symbolColors[(int)p.symbol]:new Color(.8f,.78f,.73f);
                 MapPanel(objectiveRows[row],i==focus?2:1);
             }

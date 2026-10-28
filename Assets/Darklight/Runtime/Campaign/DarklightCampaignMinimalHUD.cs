@@ -27,7 +27,11 @@ namespace Darklight
             var trim=RectAt(border.transform,"Sangue",1,1,52,52).gameObject.AddComponent<DarklightHUDDiamond>();trim.color=new Color(.25f,.035f,.055f);trim.raycastTarget=false;
             var mask=RectAt(trim.transform,"Recorte",1,1,50,50).gameObject.AddComponent<DarklightHUDDiamond>();mask.color=new Color(.018f,.022f,.03f);mask.raycastTarget=false;mask.gameObject.AddComponent<UnityEngine.UI.Mask>().showMaskGraphic=true;
             hudPortrait=ImageAt(mask.transform,"Fábio",1,3,48,47,null);hudPortrait.preserveAspect=true;hudPortrait.material=null;
-            for(int i=0;i<2;i++)hudPortraits[i]=Resources.Load<Sprite>("Darklight/HUD/Portrait"+i);
+            for(int i=0;i<2;i++)
+            {
+                string path="Darklight/HUD/Portrait"+i;hudPortraits[i]=Resources.Load<Sprite>(path);
+                if(hudPortraits[i]==null){var frames=Resources.LoadAll<Sprite>(path);if(frames.Length>0)hudPortraits[i]=frames[0];}
+            }
             HUDPlace(uiRoot.Find("HabilidadeMoldura"),8,94,124,34);DarklightHUDTheme.Frame(uiRoot.Find("HabilidadeMoldura") as RectTransform);
             ImageAt(uiRoot,"EmblemaOnda",5,92,37,38,Resources.Load<Sprite>("Darklight/HUD/Wave")).preserveAspect=true;
             HUDPlace(uiRoot.Find("HabilidadeNome"),44,97,83,9,5);hudSkillName=uiRoot.Find("HabilidadeNome").GetComponent<UnityEngine.UI.Text>();hudSkillName.text="ONDA DO VÉU";
@@ -50,10 +54,11 @@ namespace Darklight
             HUDPlace(messageText.transform,203,282,232,21,5);messageText.horizontalOverflow=HorizontalWrapMode.Wrap;
             HUDPlace(powerFrame.transform,456,236,176,44);HUDPlace(powerText.transform,35,6,135,30,5);powerText.lineSpacing=1.7f;
             HUDPlace(powerFill.transform,35,37,134,2);DarklightHUDTheme.Frame(powerFrame.rectTransform);
-            lab.PixelHUD.help.gameObject.SetActive(false);
+            lab.PixelHUD.help.gameObject.SetActive(false);CreateStyleHUD();
         }
         void TickMinimalHUD()
         {
+            TickStyleHUD();
             if(hudPortrait==null)return;
             int skin=Mathf.Clamp(SelectedSkin,0,1);if(hudPortraitSkin!=skin){hudPortrait.sprite=hudPortraits[skin];hudPortraitSkin=skin;}
             energyFill.rectTransform.sizeDelta=new Vector2(106*Mathf.Clamp01(Energy/100),1);
@@ -64,7 +69,7 @@ namespace Darklight
             var dodge=lab.Input.BindingLabel("Dodge");hudDodgeKey.text=dodge=="SPACE"||dodge=="ESPAÇO"?"ESP":dodge;
             hudPauseKey.text=lab.Input.BindingLabel("Pause");hudPotionKey.text=lab.Input.BindingLabel("Potion");hudPotionCount.text="ELIXIR "+Progress.potions;
             hudCycleKey.text=lab.Input.BindingLabel("WeaponNext")+": TROCAR ARMA";
-            if(Weapons?.Equipped!=null){weaponText.text=Weapons.Equipped.id==DarklightWeaponId.AbyssRider?"CAVALEIRO":Weapons.Equipped.displayName.ToUpperInvariant();hudWeaponHint.text=Weapons.Equipped.id switch{DarklightWeaponId.Daggers=>"Golpes rápidos",DarklightWeaponId.Chain=>"Longo alcance",DarklightWeaponId.AbyssRider=>"Serra e moto",_=>"Corte preciso"};}
+            if(Weapons?.Equipped!=null){weaponText.text=Weapons.Equipped.id==DarklightWeaponId.AbyssRider?"CAVALEIRO":Weapons.Equipped.displayName.ToUpperInvariant();hudWeaponHint.text=Weapons.Equipped.id switch{DarklightWeaponId.Daggers=>"Golpes rápidos",DarklightWeaponId.Chain=>(DarklightRuinFistsBank.Ready?"Socos e chutes":"Longo alcance"),DarklightWeaponId.AbyssRider=>"Serra e moto",_=>"Corte preciso"};}
             powerFill.rectTransform.sizeDelta=new Vector2(134*Resonance.Energy/100,2);
         }
         void RestoreMinimalHUDVisibility()

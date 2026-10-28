@@ -3,17 +3,19 @@ namespace Darklight
 {
     public sealed partial class DarklightEnemy
     {
-        float guardUntil,guardReady,dodgeReadAt=-1,tacticalRecovery,posture,postureIdle,airTime,airVelocity,airHeight,airReady;
-        int aerialHits,chainRemaining;
-        public bool Airborne=>airHeight>.01f;
+        float guardUntil,guardReady,dodgeReadAt=-1,tacticalRecovery,posture,postureIdle;
+        int chainRemaining;
+        public readonly DarklightAirBody AirBody=new();
+        public bool Airborne=>AirBody.Airborne;
+        public float AirHeight=>AirBody.Height;
         public float Posture=>posture;
         public bool Guarding=>clock<guardUntil;
         void TickAerial(float dt)
         {
-            airReady=Mathf.Max(0,airReady-dt);
-            if(airHeight<=0&&airVelocity<=0)return;
-            airVelocity-=dt*8;airHeight=Mathf.Max(0,airHeight+airVelocity*dt);
-            if(airHeight==0){airVelocity=0;airReady=.8f;aerialHits=0;stagger=Mathf.Max(stagger,.2f);art.transform.localPosition=Vector3.zero;}
+            if(!AirBody.Tick(dt))return;
+            stagger=Mathf.Max(stagger,AirBody.SlamPending?.48f:.2f);state=0;timer=.6f;
+            if(art!=null)art.transform.localPosition=Vector3.zero;
+            if(AirBody.SlamPending)DarklightCombatFX.MotorcycleImpact(transform.position,Vector2.down,DarklightMotorcycleImpact.AerialGround);
         }
         bool TickTactics(DarklightCampaign game,float dt,Vector2 delta,float distance,float range,float speed,bool ranged)
         {
@@ -60,16 +62,26 @@ namespace Darklight
         }
         public void TechnicalImpact(AttackDefinition attack,int form)
         {
-            postureIdle=0;posture+=attack.postureDamage*(form==1?1.55f:form==3?1.25f:1)*(DarklightCampaign.Instance?.AbyssRider?.Posture??1);
+            postureIdle=0;posture+=attack.postureDamage*(form==1?1.55f:form>=2?1.25f:1)*(DarklightCampaign.Instance?.AbyssRider?.Posture??1);
             float threshold=Boss?8:kind==RequiemEnemyKind.Armored?4.5f:3;
             if(posture>=threshold&&clock>=tacticalRecovery)
             {posture=0;stagger=Boss?.28f:.65f;tacticalRecovery=clock+(Boss?2.2f:1);state=0;timer=.65f;guardUntil=0;}
-            if(attack.launch&&!Boss&&kind!=RequiemEnemyKind.Armored&&airReady<=0&&aerialHits<3)
-            {airHeight=Mathf.Max(.05f,airHeight);airVelocity=2.6f;aerialHits++;state=0;timer=.6f;}
-            if(attack.finisher&&!Boss&&Vulnerable&&Health.HealthPercent<=.12f)
+            // Air reactions are applied once per accepted contact by the strike resolver.
+            if(attack.finisher&&attack.airReaction!=DarklightAirReaction.Slam&&!Airborne&&!Boss&&Vulnerable&&Health.HealthPercent<=.12f)
             {DarklightCampaign.Instance?.TechnicalFinisher(transform.position);Health.TakeDamage(Health.CurrentHealth);DarklightCombatFX.Impact(transform.position,true);}
         }
-        void LateUpdate(){if(art!=null&&Airborne)art.transform.localPosition=Vector3.up*airHeight;}
+        public bool ReactAir(AttackDefinition attack,DarklightAirReaction reaction)
+        {
+            if(Health.IsDead||!AcceptDamage)return false;
+            bool accepted=AirBody.React(reaction,attack.launchSpeed,Boss||kind==RequiemEnemyKind.Armored);
+            if(accepted)
+            {
+                state=0;timer=.6f;guardUntil=0;warning?.Hide();body.linearVelocity=Vector2.zero;
+                if(reaction==DarklightAirReaction.Throw)DarklightNavigation.SafeStep(body,(DarklightCombatLab.Instance?.Player.Model.Facing??Vector2.down)*1.8f,.3f);
+            }
+            return accepted;
+        }
+        void LateUpdate(){if(art!=null&&Airborne)art.transform.localPosition=Vector3.up*AirBody.Height;}
         void BeginTacticalSequence(DarklightCampaign game)
         {chainRemaining=game.DifficultyProfile.comboLength-1;if(elite)chainRemaining++;if(Boss&&phaseTwo)chainRemaining++;}
         bool ContinueTacticalSequence(DarklightCampaign game)

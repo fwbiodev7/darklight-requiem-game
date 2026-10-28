@@ -20,7 +20,7 @@ namespace Darklight
             StopPower();Training=true;
             var practice=trainingFromMain?DarklightProgress.Load()??suspendedProgress:suspendedProgress;
             Progress=JsonUtility.FromJson<DarklightProgress>(JsonUtility.ToJson(practice));
-            Progress.weaponUnlocks=7;Progress.checkpoint=0;Progress.chapter=0;Progress.completed=false;
+            Progress.weaponUnlocks=DarklightPlayableScope.WeaponMask;Progress.checkpoint=0;Progress.chapter=0;Progress.completed=false;
             LoadMap(0);levelRoot.gameObject.SetActive(false);Destroy(levelRoot.gameObject);
             levelRoot=new GameObject("ArenaDeTreinamento").transform;Map=DarklightMapDefinition.TrainingArena();
             DarklightTrainingFloor.Build(levelRoot,Map,floorTiles[0],pixelMaterial);
@@ -48,7 +48,7 @@ namespace Darklight
             Blood.Set(100);if(!TrainingDamage&&health.HealthPercent<1)health.FullHeal();
             if(Form>0)FormTime=Mathf.Max(FormTime,180);
             if(trainingReadout!=null)trainingReadout.text="TREINO · "+DifficultyName+"\nCOMBO "+lab.Player.Model.ComboCount+" · "+Style.Rank+"\nPAUSA: ALVOS / ARMAS / FORMAS";
-            if(TrainingDamage&&health.IsDead){health.SetMaxHealth(health.MaxHealth,false);lab.Player.ResetModel();lab.Player.GetComponent<Rigidbody2D>().position=Map.Spawn;Notice("TREINO: VIDA RESTAURADA");}
+            if(TrainingDamage&&health.IsDead){StopPower();health.SetMaxHealth(health.MaxHealth,false);lab.Player.ResetModel();lab.Player.GetComponent<Rigidbody2D>().position=Map.Spawn;Notice("TREINO: VIDA RESTAURADA");}
         }
         void SpawnTraining(int type)
         {
@@ -62,7 +62,7 @@ namespace Darklight
         void SetTrainingForm(int form)
         {
             EndForm(false);lab.Player.ResetModel();
-            if(form>0){Progress.preferredForm=form;Form=form;FormTime=180;BeginFormPresentation(form,true);}
+            form=DarklightPlayableScope.Form(form);if(form>0){Progress.preferredForm=form;Form=form;FormTime=180;BeginFormPresentation(form,true);}
             Close();
         }
         void BuildTraining()
@@ -70,8 +70,8 @@ namespace Darklight
             heading.text="ARENA DE TREINAMENTO";
             bodyText.text="O progresso real fica preservado.\nSangue e tempo de forma ilimitados.\n\nLeve repetido: sequencia\nLeve, pausa, leve: variacao\nDois leves + pesado: final\nTroca de arma apos acerto\nAereo: suspender alvo leve\n\nAlvo atual: "+(TrainingPassive?"PASSIVO":"ATIVO");
             Button("RETOMAR TREINO",Close);Button("ESCOLHER INIMIGOS",()=>Open("TrainingEnemies"));
-            Button("ARMA: "+Weapons.Equipped.displayName,()=>{Weapons.Request(((int)Weapons.Equipped.id+1)%weaponDefinitions.Length);Close();});
-            Button("TESTAR CAVALEIRO · ROCK",StartAbyssPrototype);Button("GUIA DO CAVALEIRO",ShowAbyssHelp);Button("DESAFIOS DO CAVALEIRO",StartAbyssLessons);
+            Button("ARMA: "+Weapons.Equipped.displayName,()=>{Weapons.RequestNext();Close();});
+            Button("TESTAR CAVALEIRO · REQUIEM",StartAbyssPrototype);Button("GUIA DO CAVALEIRO",ShowAbyssHelp);Button("DESAFIOS DO CAVALEIRO",StartAbyssLessons);
             Button("ESCOLHER TRANSFORMACAO",()=>Open("TrainingForms"));
             Button("RECEBER DANO: "+(TrainingDamage?"SIM":"NAO"),()=>{TrainingDamage=!TrainingDamage;RefreshPanel();});
             Button("VER HITBOXES: "+(TrainingHitboxes?"SIM":"NAO"),()=>{TrainingHitboxes=!TrainingHitboxes;RefreshPanel();});
@@ -85,9 +85,9 @@ namespace Darklight
         }
         void BuildTrainingForms()
         {
-            heading.text="FORMAS NO TREINO";bodyText.text="Teste as duas aparencias e as armas com cada forma. A troca conserva as preferencias reais fora desta sessao.";
-            string[] labels={"NORMAL","RUPTURA - VERMELHA","ECLIPSE - ROXA","ABSOLUTO - BRANCA"};
-            for(int i=0;i<4;i++){int chosen=i;Button(labels[i],()=>SetTrainingForm(chosen));}
+            heading.text="FORMAS NO TREINO";bodyText.text="Teste Réquiem e suas armas com cada forma. A troca conserva as preferencias reais fora desta sessao.";
+            string[] labels={"NORMAL","RUPTURA","ECLIPSE ABSOLUTO"};
+            for(int i=0;i<labels.Length;i++){int chosen=i;Button(labels[i],()=>SetTrainingForm(chosen));}
             Button("VOLTAR",()=>Open("Training"));
         }
     }

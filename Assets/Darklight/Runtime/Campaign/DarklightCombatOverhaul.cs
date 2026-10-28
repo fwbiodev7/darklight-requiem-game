@@ -25,6 +25,7 @@ namespace Darklight
         {
             heading.text="COMBATE E TREINO";bodyText.text="Dificuldade: "+DifficultyName+"\n\nTreine combos, armas e formas sem alterar o progresso da campanha.\n\nL-L-L: sequencia\nL, pausa, L: variacao\nL-L-Pesado: final\nAereo: suspensao curta\nTroque arma apos confirmar o acerto.";
             Button("DIFICULDADE",()=>{difficultyForNewGame=false;Open("Difficulty");});
+            Button("COMBATE AÉREO · GUIA",()=>Open("AirCombat"));
             Button(Training?"FERRAMENTAS DA ARENA":"ENTRAR NA ARENA",()=>{if(Training)Open("Training");else EnterTraining();});
             Button("VOLTAR",()=>Open("Pause"));
         }
@@ -44,6 +45,7 @@ namespace Darklight
             var attack=lab.Player.Model.Attack;int weapon=(int)(Weapons?.Equipped?.id??DarklightWeaponId.Katana);
             int move=attack==null?(int)kind:attack.GetEntityId().GetHashCode()^(Form*7919);
             Style.Hit(move,weapon,kind==StrikeKind.Aerial,attack!=null&&attack.finisher);style=Style.Points;
+            if(!Training)StageStats.Hit(Style,kind==StrikeKind.WeaponSpecial||kind==StrikeKind.Skill||kind==StrikeKind.Aerial);
         }
         public void TechnicalFinisher(Vector3 target)
         {

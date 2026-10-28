@@ -42,6 +42,7 @@ namespace Darklight
                 Consider("ally","FALAR: "+AllyName,Map.Ally,2.7f);
                 if(!encounterStarted)Consider("checkpoint","SALVAR E RECUPERAR VIDA",CheckpointPoint,2.3f);
             }
+            ConsiderMultiverse(Consider);
             target=nearest;return nearest.Id!=null;
         }
         public bool TryInteract()
@@ -67,6 +68,7 @@ namespace Darklight
         }
         void PerformInteraction(DarklightInteractionTarget target)
         {
+            if(InteractMultiverse(target.Id))return;
             if(InteractAbyssSecret(target.Id))return;
             if(ExploringNewRegion)
             {
@@ -86,7 +88,11 @@ namespace Darklight
                 var fragment=levelRoot.Find("Fragmento");if(fragment!=null){fragment.gameObject.SetActive(false);Destroy(fragment.gameObject);}
                 Notice("MEMÓRIA RECUPERADA: +45 XP, +1 ELIXIR");SaveCheckpoint();return;
             }
-            if(target.Id=="checkpoint"){health.FullHeal();SaveCheckpoint();Notice("CHECKPOINT SALVO - VIDA RESTAURADA");return;}
+            if(target.Id=="checkpoint")
+            {
+                health.FullHeal();Progress.RecordReturnPoint(Progress.chapter,Progress.checkpoint,Map.SafeSpawn(target.Point));
+                if(SaveCheckpoint()){PulseCheckpoint();Notice("CHECKPOINT SALVO - VIDA RESTAURADA");}return;
+            }
             if(Progress.chapter==1)
             {
                 if(Progress.mp3Unlocked)Speak(new[]{"ÍCARO NOX|A música vem de você. O aparelho só abre o caminho. M ou PAUSA > DARK RESONANCE abre o MP3. SELECT abre o mapa."});

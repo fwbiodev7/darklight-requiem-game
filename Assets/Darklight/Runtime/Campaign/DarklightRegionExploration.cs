@@ -44,7 +44,7 @@ namespace Darklight
             AddProp("SaidaDaRegiao",extras[3],Map.Portal,1.3f);
             for(int i=0;i<Map.Art.areas.Length;i++)AddProp("MemoriaDaRegiao_"+i,extras[5],Map.Art.World(Map.Art.areas[i].point),.6f);
             Objective="EXPLORE "+Map.Art.areas[0].name.ToUpperInvariant();
-            InitializeRemaster(chapter);Close();RememberMapAreas();UpdateRegionExploration();Notice("E / A: LER MEMORIAS  |  ESC: MENU DA REGIAO");
+            BuildMultiverse(chapter);InitializeRemaster(chapter);Close();RememberMapAreas();UpdateRegionExploration();Notice("E / A: LER MEMORIAS  |  ESC: MENU DA REGIAO");
         }
         void UpdateRegionExploration()
         {

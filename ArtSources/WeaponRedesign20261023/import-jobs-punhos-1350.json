@@ -1,0 +1,1336 @@
+{
+  "schemaVersion": 1,
+  "jobs": [
+    {
+      "name": "ReqFistsNormalDiretoNW20261025V4",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\ReqFistsNormalDiretoNW-v4-source.png",
+      "preservedSourceName": "ReqFistsNormalDiretoNW-v4-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 3,
+      "sourceRows": 1,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2
+          ],
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "Direto da Ruína",
+          "sourceSpriteNames": [
+            "Ruin_Requiem_Normal_NW_Combat_02",
+            "Ruin_Requiem_Normal_NW_Combat_03",
+            "Ruin_Requiem_Normal_NW_Combat_11"
+          ]
+        }
+      ],
+      "minimumArea": 12000,
+      "excludedReason": "",
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            450,
+            659
+          ],
+          "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+        },
+        "1": {
+          "anchor": [
+            1117,
+            659
+          ],
+          "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+        },
+        "2": {
+          "anchor": [
+            1776,
+            659
+          ],
+          "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+        }
+      },
+      "anatomyCalibration": {
+        "sourceFrameIndex": 0,
+        "crownY": 108,
+        "soleY": 659,
+        "anatomyHeight": 551,
+        "uncertaintyPx": 8
+      },
+      "calibrationGuide": {
+        "sourceFrameIndex": 0,
+        "crownY": 108,
+        "soleY": 659,
+        "anatomyHeight": 551,
+        "uncertaintyPx": 8,
+        "pixelsPerUnit": 279.11352329262775,
+        "referenceBodyPixels": 335,
+        "referencePixelsPerUnit": 169.6969696969697,
+        "referenceWorldBodyHeight": 1.974107142857143,
+        "method": "One anatomical PPU per whole sheet, no weapon/FX bounds, no per-frame rescaling."
+      },
+      "pixelsPerUnit": 279.11352329262775,
+      "attackPreviewDurationsMs": [
+        75,
+        65,
+        130
+      ]
+    },
+    {
+      "name": "ReqFistsNormalDiretoN_NE20261025V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\ReqFistsNormalDiretoNW_N_NE-v1-source.png",
+      "preservedSourceName": "ReqFistsNormalDiretoNW_N_NE-v1-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 3,
+      "sourceRows": 3,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            3,
+            4,
+            5
+          ],
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "Direto da Ruína",
+          "sourceSpriteNames": [
+            "Ruin_Requiem_Normal_N_Combat_02",
+            "Ruin_Requiem_Normal_N_Combat_03",
+            "Ruin_Requiem_Normal_N_Combat_11"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            6,
+            7,
+            8
+          ],
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "Direto da Ruína",
+          "sourceSpriteNames": [
+            "Ruin_Requiem_Normal_NE_Combat_02",
+            "Ruin_Requiem_Normal_NE_Combat_03",
+            "Ruin_Requiem_Normal_NE_Combat_11"
+          ]
+        }
+      ],
+      "minimumArea": 12000,
+      "excludedReason": "First three NW figures were rejected for impossible neck orientation and replaced by complete figures in the NW V4 sheet.",
+      "supportAnchors": {
+        "3": {
+          "anchor": [
+            317,
+            673
+          ],
+          "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+        },
+        "4": {
+          "anchor": [
+            782,
+            675
+          ],
+          "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+        },
+        "5": {
+          "anchor": [
+            1234,
+            673
+          ],
+          "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+        },
+        "6": {
+          "anchor": [
+            311,
+            998
+          ],
+          "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+        },
+        "7": {
+          "anchor": [
+            782,
+            995
+          ],
+          "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+        },
+        "8": {
+          "anchor": [
+            1221,
+            998
+          ],
+          "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+        }
+      },
+      "anatomyCalibration": {
+        "sourceFrameIndex": 3,
+        "crownY": 358,
+        "soleY": 673,
+        "anatomyHeight": 315,
+        "uncertaintyPx": 6
+      },
+      "calibrationGuide": {
+        "sourceFrameIndex": 3,
+        "crownY": 358,
+        "soleY": 673,
+        "anatomyHeight": 315,
+        "uncertaintyPx": 6,
+        "pixelsPerUnit": 159.56580732700135,
+        "referenceBodyPixels": 335,
+        "referencePixelsPerUnit": 169.6969696969697,
+        "referenceWorldBodyHeight": 1.974107142857143,
+        "method": "One anatomical PPU per whole sheet, no weapon/FX bounds, no per-frame rescaling."
+      },
+      "pixelsPerUnit": 159.56580732700135,
+      "attackPreviewDurationsMs": [
+        75,
+        65,
+        130
+      ]
+    },
+    {
+      "name": "ReqFistsNormalDiretoE_SE20261025V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\ReqFistsNormalDiretoE_SE-v1-source.png",
+      "preservedSourceName": "ReqFistsNormalDiretoE_SE-v1-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 3,
+      "sourceRows": 2,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2
+          ],
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "Direto da Ruína",
+          "sourceSpriteNames": [
+            "Ruin_Requiem_Normal_E_Combat_02",
+            "Ruin_Requiem_Normal_E_Combat_03",
+            "Ruin_Requiem_Normal_E_Combat_11"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            3,
+            4,
+            5
+          ],
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "Direto da Ruína",
+          "sourceSpriteNames": [
+            "Ruin_Requiem_Normal_SE_Combat_02",
+            "Ruin_Requiem_Normal_SE_Combat_03",
+            "Ruin_Requiem_Normal_SE_Combat_11"
+          ]
+        }
+      ],
+      "minimumArea": 12000,
+      "excludedReason": "",
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            295,
+            491
+          ],
+          "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+        },
+        "1": {
+          "anchor": [
+            789,
+            488
+          ],
+          "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+        },
+        "2": {
+          "anchor": [
+            1333,
+            493
+          ],
+          "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+        },
+        "3": {
+          "anchor": [
+            310,
+            958
+          ],
+          "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+        },
+        "4": {
+          "anchor": [
+            800,
+            960
+          ],
+          "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+        },
+        "5": {
+          "anchor": [
+            1336,
+            971
+          ],
+          "method": "Inspected whole figure: projected midpoint of both boot/claw supports at ground; no anatomy edits."
+        }
+      },
+      "anatomyCalibration": {
+        "sourceFrameIndex": 0,
+        "crownY": 51,
+        "soleY": 491,
+        "anatomyHeight": 440,
+        "uncertaintyPx": 8
+      },
+      "calibrationGuide": {
+        "sourceFrameIndex": 0,
+        "crownY": 51,
+        "soleY": 491,
+        "anatomyHeight": 440,
+        "uncertaintyPx": 8,
+        "pixelsPerUnit": 222.88557213930346,
+        "referenceBodyPixels": 335,
+        "referencePixelsPerUnit": 169.6969696969697,
+        "referenceWorldBodyHeight": 1.974107142857143,
+        "method": "One anatomical PPU per whole sheet, no weapon/FX bounds, no per-frame rescaling."
+      },
+      "pixelsPerUnit": 222.88557213930346,
+      "attackPreviewDurationsMs": [
+        75,
+        65,
+        130
+      ]
+    },
+    {
+      "name": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\ReqFistsNormalIdleS_SW_W-v1-source.png",
+      "preservedSourceName": "ReqFistsNormalIdleS_SW_W-v1-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 0,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 1,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 2,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        }
+      ],
+      "minimumArea": 12000,
+      "excludedReason": "",
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            260,
+            347
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "1": {
+          "anchor": [
+            613,
+            347
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "2": {
+          "anchor": [
+            945,
+            347
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "3": {
+          "anchor": [
+            1282,
+            347
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "4": {
+          "anchor": [
+            260,
+            685
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "5": {
+          "anchor": [
+            614,
+            685
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "6": {
+          "anchor": [
+            957,
+            685
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "7": {
+          "anchor": [
+            1303,
+            685
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "8": {
+          "anchor": [
+            236,
+            1010
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "9": {
+          "anchor": [
+            591,
+            1010
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "10": {
+          "anchor": [
+            931,
+            1011
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "11": {
+          "anchor": [
+            1269,
+            1010
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        }
+      },
+      "anatomyCalibration": {
+        "sourceFrameIndex": 0,
+        "crownY": 24,
+        "soleY": 347,
+        "anatomyHeight": 323,
+        "uncertaintyPx": 6
+      },
+      "calibrationGuide": {
+        "sourceFrameIndex": 0,
+        "crownY": 24,
+        "soleY": 347,
+        "anatomyHeight": 323,
+        "uncertaintyPx": 6,
+        "pixelsPerUnit": 163.61827227498867,
+        "referenceBodyPixels": 335,
+        "referencePixelsPerUnit": 169.6969696969697,
+        "referenceWorldBodyHeight": 1.974107142857143,
+        "method": "One anatomical PPU per whole sheet, no weapon/FX bounds, no per-frame rescaling."
+      },
+      "pixelsPerUnit": 163.61827227498867,
+      "attackPreviewDurationsMs": [
+        75,
+        65,
+        130
+      ]
+    },
+    {
+      "name": "ReqFistsNormalIdleNW_NE20261025V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\ReqFistsNormalIdleNW_N_NE-v1-source.png",
+      "preservedSourceName": "ReqFistsNormalIdleNW_N_NE-v1-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 3,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 5,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        }
+      ],
+      "minimumArea": 12000,
+      "excludedReason": "Four N idle figures had wrong visible forward toe-claws; preserve NW/NE and replace only four complete N figures with V2 heel-view source.",
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            209,
+            338
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "1": {
+          "anchor": [
+            574,
+            339
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "2": {
+          "anchor": [
+            943,
+            339
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "3": {
+          "anchor": [
+            1316,
+            338
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "8": {
+          "anchor": [
+            212,
+            995
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "9": {
+          "anchor": [
+            576,
+            995
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "10": {
+          "anchor": [
+            944,
+            995
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "11": {
+          "anchor": [
+            1315,
+            995
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        }
+      },
+      "anatomyCalibration": {
+        "sourceFrameIndex": 0,
+        "crownY": 23,
+        "soleY": 338,
+        "anatomyHeight": 315,
+        "uncertaintyPx": 6
+      },
+      "calibrationGuide": {
+        "sourceFrameIndex": 0,
+        "crownY": 23,
+        "soleY": 338,
+        "anatomyHeight": 315,
+        "uncertaintyPx": 6,
+        "pixelsPerUnit": 159.56580732700135,
+        "referenceBodyPixels": 335,
+        "referencePixelsPerUnit": 169.6969696969697,
+        "referenceWorldBodyHeight": 1.974107142857143,
+        "method": "One anatomical PPU per whole sheet, no weapon/FX bounds, no per-frame rescaling."
+      },
+      "pixelsPerUnit": 159.56580732700135,
+      "attackPreviewDurationsMs": [
+        75,
+        65,
+        130
+      ]
+    },
+    {
+      "name": "ReqFistsNormalIdleN20261025V2",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\ReqFistsNormalIdleN-v2-source.png",
+      "preservedSourceName": "ReqFistsNormalIdleN-v2-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 1,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 4,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        }
+      ],
+      "minimumArea": 12000,
+      "excludedReason": "",
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            270,
+            655
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "1": {
+          "anchor": [
+            820,
+            655
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "2": {
+          "anchor": [
+            1365,
+            655
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "3": {
+          "anchor": [
+            1909,
+            655
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        }
+      },
+      "anatomyCalibration": {
+        "sourceFrameIndex": 0,
+        "crownY": 119,
+        "soleY": 655,
+        "anatomyHeight": 536,
+        "uncertaintyPx": 8
+      },
+      "calibrationGuide": {
+        "sourceFrameIndex": 0,
+        "crownY": 119,
+        "soleY": 655,
+        "anatomyHeight": 536,
+        "uncertaintyPx": 8,
+        "pixelsPerUnit": 271.5151515151515,
+        "referenceBodyPixels": 335,
+        "referencePixelsPerUnit": 169.6969696969697,
+        "referenceWorldBodyHeight": 1.974107142857143,
+        "method": "One anatomical PPU per whole sheet, no weapon/FX bounds, no per-frame rescaling."
+      },
+      "pixelsPerUnit": 271.5151515151515,
+      "attackPreviewDurationsMs": [
+        75,
+        65,
+        130
+      ]
+    },
+    {
+      "name": "ReqFistsNormalIdleE_SE20261025V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\ReqFistsNormalIdleE_SE-v1-source.png",
+      "preservedSourceName": "ReqFistsNormalIdleE_SE-v1-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 6,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 7,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        }
+      ],
+      "minimumArea": 12000,
+      "excludedReason": "",
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            272,
+            490
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "1": {
+          "anchor": [
+            647,
+            491
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "2": {
+          "anchor": [
+            1030,
+            491
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "3": {
+          "anchor": [
+            1403,
+            491
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "4": {
+          "anchor": [
+            253,
+            977
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "5": {
+          "anchor": [
+            631,
+            977
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "6": {
+          "anchor": [
+            1013,
+            980
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "7": {
+          "anchor": [
+            1398,
+            976
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        }
+      },
+      "anatomyCalibration": {
+        "sourceFrameIndex": 0,
+        "crownY": 37,
+        "soleY": 490,
+        "anatomyHeight": 453,
+        "uncertaintyPx": 8
+      },
+      "calibrationGuide": {
+        "sourceFrameIndex": 0,
+        "crownY": 37,
+        "soleY": 490,
+        "anatomyHeight": 453,
+        "uncertaintyPx": 8,
+        "pixelsPerUnit": 229.47082767978287,
+        "referenceBodyPixels": 335,
+        "referencePixelsPerUnit": 169.6969696969697,
+        "referenceWorldBodyHeight": 1.974107142857143,
+        "method": "One anatomical PPU per whole sheet, no weapon/FX bounds, no per-frame rescaling."
+      },
+      "pixelsPerUnit": 229.47082767978287,
+      "attackPreviewDurationsMs": [
+        75,
+        65,
+        130
+      ]
+    },
+    {
+      "name": "RockFistsNormalIdleS_SW_W20261025V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\RockFistsNormalIdleS_SW_W-v1-source.png",
+      "preservedSourceName": "RockFistsNormalIdleS_SW_W-v1-source.png",
+      "skin": 1,
+      "weapon": 2,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 0,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 1,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 2,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        }
+      ],
+      "minimumArea": 12000,
+      "excludedReason": "",
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            223,
+            353
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "1": {
+          "anchor": [
+            584,
+            353
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "2": {
+          "anchor": [
+            952,
+            353
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "3": {
+          "anchor": [
+            1310,
+            353
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "4": {
+          "anchor": [
+            228,
+            683
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "5": {
+          "anchor": [
+            588,
+            683
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "6": {
+          "anchor": [
+            961,
+            683
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "7": {
+          "anchor": [
+            1324,
+            683
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "8": {
+          "anchor": [
+            206,
+            1017
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "9": {
+          "anchor": [
+            575,
+            1017
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "10": {
+          "anchor": [
+            949,
+            1018
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "11": {
+          "anchor": [
+            1305,
+            1018
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        }
+      },
+      "anatomyCalibration": {
+        "sourceFrameIndex": 0,
+        "crownY": 23,
+        "soleY": 353,
+        "anatomyHeight": 330,
+        "uncertaintyPx": 6
+      },
+      "calibrationGuide": {
+        "sourceFrameIndex": 0,
+        "crownY": 23,
+        "soleY": 353,
+        "anatomyHeight": 330,
+        "uncertaintyPx": 6,
+        "pixelsPerUnit": 167.1641791044776,
+        "referenceBodyPixels": 335,
+        "referencePixelsPerUnit": 169.6969696969697,
+        "referenceWorldBodyHeight": 1.974107142857143,
+        "method": "One anatomical PPU per whole sheet, no weapon/FX bounds, no per-frame rescaling."
+      },
+      "pixelsPerUnit": 167.1641791044776,
+      "attackPreviewDurationsMs": [
+        75,
+        65,
+        130
+      ]
+    },
+    {
+      "name": "RockFistsNormalIdleNW_N_NE20261025V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\RockFistsNormalIdleNW_N_NE-v1-source.png",
+      "preservedSourceName": "RockFistsNormalIdleNW_N_NE-v1-source.png",
+      "skin": 1,
+      "weapon": 2,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 3,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 4,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 5,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        }
+      ],
+      "minimumArea": 12000,
+      "excludedReason": "",
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            217,
+            344
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "1": {
+          "anchor": [
+            572,
+            344
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "2": {
+          "anchor": [
+            943,
+            344
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "3": {
+          "anchor": [
+            1316,
+            343
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "4": {
+          "anchor": [
+            225,
+            660
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "5": {
+          "anchor": [
+            577,
+            660
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "6": {
+          "anchor": [
+            951,
+            660
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "7": {
+          "anchor": [
+            1317,
+            660
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "8": {
+          "anchor": [
+            220,
+            1000
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "9": {
+          "anchor": [
+            579,
+            997
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "10": {
+          "anchor": [
+            954,
+            998
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "11": {
+          "anchor": [
+            1318,
+            999
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        }
+      },
+      "anatomyCalibration": {
+        "sourceFrameIndex": 0,
+        "crownY": 11,
+        "soleY": 344,
+        "anatomyHeight": 333,
+        "uncertaintyPx": 6
+      },
+      "calibrationGuide": {
+        "sourceFrameIndex": 0,
+        "crownY": 11,
+        "soleY": 344,
+        "anatomyHeight": 333,
+        "uncertaintyPx": 6,
+        "pixelsPerUnit": 168.68385345997285,
+        "referenceBodyPixels": 335,
+        "referencePixelsPerUnit": 169.6969696969697,
+        "referenceWorldBodyHeight": 1.974107142857143,
+        "method": "One anatomical PPU per whole sheet, no weapon/FX bounds, no per-frame rescaling."
+      },
+      "pixelsPerUnit": 168.68385345997285,
+      "attackPreviewDurationsMs": [
+        75,
+        65,
+        130
+      ]
+    },
+    {
+      "name": "RockFistsNormalIdleE_SE20261025V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\RockFistsNormalIdleE_SE-v1-source.png",
+      "preservedSourceName": "RockFistsNormalIdleE_SE-v1-source.png",
+      "skin": 1,
+      "weapon": 2,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 6,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 7,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        }
+      ],
+      "minimumArea": 12000,
+      "excludedReason": "",
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            229,
+            505
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "1": {
+          "anchor": [
+            621,
+            505
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "2": {
+          "anchor": [
+            970,
+            504
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "3": {
+          "anchor": [
+            1337,
+            505
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "4": {
+          "anchor": [
+            215,
+            976
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "5": {
+          "anchor": [
+            603,
+            976
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "6": {
+          "anchor": [
+            973,
+            976
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        },
+        "7": {
+          "anchor": [
+            1335,
+            976
+          ],
+          "method": "Inspected whole figure: midpoint of both foot supports, ground at lower sole; perspective can occlude toe claws."
+        }
+      },
+      "anatomyCalibration": {
+        "sourceFrameIndex": 0,
+        "crownY": 25,
+        "soleY": 505,
+        "anatomyHeight": 480,
+        "uncertaintyPx": 8
+      },
+      "calibrationGuide": {
+        "sourceFrameIndex": 0,
+        "crownY": 25,
+        "soleY": 505,
+        "anatomyHeight": 480,
+        "uncertaintyPx": 8,
+        "pixelsPerUnit": 243.14789687924014,
+        "referenceBodyPixels": 335,
+        "referencePixelsPerUnit": 169.6969696969697,
+        "referenceWorldBodyHeight": 1.974107142857143,
+        "method": "One anatomical PPU per whole sheet, no weapon/FX bounds, no per-frame rescaling."
+      },
+      "pixelsPerUnit": 243.14789687924014,
+      "attackPreviewDurationsMs": [
+        75,
+        65,
+        130
+      ]
+    }
+  ]
+}

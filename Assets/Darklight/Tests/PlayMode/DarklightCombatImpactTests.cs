@@ -19,7 +19,7 @@ namespace Darklight.Tests
             var point=lab.Player.transform.position+Vector3.right*1.2f;DarklightCombatFX.Impact(point,true);yield return null;yield return null;
             var effect=lab.GetComponentInChildren<DarklightCombatImpacts>();Assert.That(effect,Is.Not.Null);var mesh=effect.GetComponent<MeshFilter>().sharedMesh;
             Assert.That(mesh.triangles.Length,Is.GreaterThan(0));Assert.That(effect.transform.parent,Is.EqualTo(lab.transform));
-            string output="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/remaster-production-20261014/captures/";Directory.CreateDirectory(output);DarklightNativeCapture.Screen(output+"impacto-branco.png");
+            string output=DarklightTestOutput.GetDirectory("remaster-production-20261014/captures");DarklightNativeCapture.Screen(output+"impacto-branco.png");
             for(int i=0;i<100;i++)DarklightCombatFX.Impact(point+Vector3.right*(i%3)*.03f,i%2==0);
             yield return null;yield return null;Assert.That(lab.GetComponentsInChildren<DarklightCombatImpacts>().Length,Is.EqualTo(1));Assert.That(mesh.vertexCount,Is.LessThanOrEqualTo(8192));
             lab.SetPaused(true);var before=mesh.vertices;var colors=mesh.colors;yield return new WaitForSecondsRealtime(.13f);

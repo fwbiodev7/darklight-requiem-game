@@ -13,12 +13,13 @@ namespace Darklight
         public float resonanceEnergy=100; public int resonanceSelected; public float[] resonanceRecoveries;
         public bool[] relics=new bool[ChapterCapacity];
         public int weaponUnlocks=1,equippedWeapon;
+        public int legacyEquippedWeapon=-1,legacyPreferredForm=-1;
         public int appearanceStage,narrativeDays,appearanceChapter;
-        public static string Path => System.IO.Path.Combine(Application.persistentDataPath,"requiem-campaign.json");
+        public static string Path => IsolatedTestPath ?? System.IO.Path.Combine(Application.persistentDataPath,"requiem-campaign.json");
         public int NeededXP => 60+level*35;
         public int MaxHealth => 100+(level-1)*8+vitality*15;
         // This edition starts with every form available; story milestones remain independent.
-        public int FormUnlocked => 3;
+        public int FormUnlocked => DarklightPlayableScope.FinalForm;
         public float Damage => 1+(level-1)*.055f+attack*.1f;
         public void Award(int amount)
         {
@@ -26,13 +27,30 @@ namespace Darklight
         }
         public void Save()
         {
-            Directory.CreateDirectory(Application.persistentDataPath);
+            Directory.CreateDirectory(System.IO.Path.GetDirectoryName(Path));
             string temp=Path+".tmp"; File.WriteAllText(temp,JsonUtility.ToJson(this,true));
-            if(File.Exists(Path))File.Replace(temp,Path,Path+".bak");else File.Move(temp,Path);
+            if(File.Exists(Path))ReplaceWithTransientRetry(temp,Path,Path+".bak");else File.Move(temp,Path);
+        }
+        static void ReplaceWithTransientRetry(string source,string destination,string backup)
+        {
+            for(int attempt=0;;attempt++)
+            {
+                try{File.Replace(source,destination,backup);return;}
+                // Windows can transiently refuse removal of the replaced file
+                // (1175). Retry only this observed error, keeping the atomic save
+                // and backup operation; all other/exhausted failures still escape.
+                catch(IOException error) when((error.HResult&0xffff)==1175&&attempt<3&&File.Exists(source)&&File.Exists(destination))
+                {System.Threading.Thread.Sleep(10<<attempt);}
+            }
         }
         public static DarklightProgress Load()
+            => LoadFromPath(Path);
+        // The same reader can validate imported/local backup files without
+        // touching the player's active save location.
+        public static DarklightProgress LoadFromPath(string savePath)
         {
-            foreach(string path in new[]{Path,Path+".bak"})
+            if(string.IsNullOrWhiteSpace(savePath))return null;
+            foreach(string path in new[]{savePath,savePath+".bak"})
                 try {if(!File.Exists(path))continue;var state=Decode(File.ReadAllText(path));if(state!=null)return state;}catch(Exception e){Debug.LogWarning("Save: "+e.Message);}
             return null;
         }
@@ -55,7 +73,7 @@ namespace Darklight
             new[]{"LYRA|Lucien caiu, mas o eclipse não terminou. Os registros apontam para uma cripta muito mais antiga que o projeto.","FÁBIO|Não vamos confundir silêncio com vitória. Quero saber quem deixou essas inscrições.","LYRA|A linhagem que protegia a fronteira usava o mesmo símbolo da sua espada. Entre na cripta e procure a memória ancestral."},
             new[]{"KAEL|O sol desapareceu. Há sobreviventes cercados na praça e um abrigo que ainda resiste.","FÁBIO|Primeiro tiramos as pessoas daqui. Depois entramos na catedral.","LYRA|Seraphine está usando o eclipse para despertar algo além do Véu. Não deixe que ela decida por você."},
             new[]{"LYRA|Os três selos antigos abrem o caminho para o trono. O Véu Profundo guarda versões distorcidas das nossas memórias.","KAEL|Há uma voz dentro dessas pedras. Se ela me alcançar, lembre quem eu era.","FÁBIO|Eu não vou abandonar você. Lucien servia a uma coisa maior: Nocthar."},
-            new[]{"KAEL|A corrupção se foi, mas ainda consigo ouvir Nocthar. O Coração do Eclipse está tentando fundir os mundos.","LYRA|Leve nossas memórias. Você não precisa destruir metade de si para salvar a outra.","FÁBIO|Katana, presas e corrente. Tudo o que aprendi me trouxe até aqui. Agora a escolha é minha."}
+            new[]{"KAEL|A corrupção se foi, mas ainda consigo ouvir Nocthar. O Coração do Eclipse está tentando fundir os mundos.","LYRA|Leve nossas memórias. Você não precisa destruir metade de si para salvar a outra.","FÁBIO|Katana, punhos e motocicleta. Tudo o que aprendi me trouxe até aqui. Agora a escolha é minha."}
         };
         public static readonly string[][] BossLines={
             new[]{"KAEL|Nao e a espada que decide quem voce e. Mostre que consegue enfrenta-la.","FABIO|Entao pare de falar e venha."},

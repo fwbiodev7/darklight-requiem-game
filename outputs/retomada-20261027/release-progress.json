@@ -1,0 +1,48 @@
+{
+  "stages": [
+    {
+      "stage": "import",
+      "started": "2026-10-28T01:11:04.422457+00:00",
+      "completed": true,
+      "exitCode": 0,
+      "ended": "2026-10-28T01:12:21.774011+00:00",
+      "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261027\\release\\import.log"
+    },
+    {
+      "stage": "edit",
+      "started": "2026-10-28T01:12:21.777416+00:00",
+      "completed": true,
+      "exitCode": 0,
+      "ended": "2026-10-28T01:12:59.077282+00:00",
+      "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261027\\release\\edit.log",
+      "cases": 82,
+      "passed": 82
+    },
+    {
+      "stage": "play",
+      "started": "2026-10-28T01:12:59.084986+00:00",
+      "completed": true,
+      "exitCode": 0,
+      "ended": "2026-10-28T01:16:15.598864+00:00",
+      "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261027\\release\\play.log",
+      "cases": 23,
+      "passed": 23
+    },
+    {
+      "stage": "build",
+      "started": "2026-10-28T01:16:15.605617+00:00",
+      "completed": true,
+      "exitCode": 0,
+      "ended": "2026-10-28T01:28:08.193343+00:00",
+      "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261027\\release\\build.log"
+    }
+  ],
+  "buildSucceeded": true,
+  "standaloneExecuted": true,
+  "manualGameplayCompleted": false,
+  "zip": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\retomada-20261027\\DarklightRequiem-Windows-20261027-221104.zip",
+  "zipBytes": 1410501399,
+  "zipSha256": "25afe58f9801d3c92f0bd39975b111ace261d3448f241f899b9b6bc697dd6387",
+  "finished": "2026-10-28T01:29:06.034731+00:00",
+  "zipCrcVerified": true
+}

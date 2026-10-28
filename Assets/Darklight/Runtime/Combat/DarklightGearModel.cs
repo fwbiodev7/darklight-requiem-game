@@ -16,7 +16,7 @@ namespace Darklight
         public static bool TimingWindow(AttackDefinition a,float time,int form)
         {
             if(a==null)return false;
-            float tolerance=form==3?.045f:0;
+            float tolerance=form>=2?.045f:0;
             return time>=a.startup+a.active-.045f-tolerance&&time<=a.startup+a.active+Mathf.Min(.14f,a.recovery*.35f)+tolerance;
         }
         public bool Tick(float dt,bool equipped,int serial,AttackDefinition attack,float time,bool connected,bool attacking,bool command,bool interrupted,int form)

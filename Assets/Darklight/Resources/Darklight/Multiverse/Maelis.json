@@ -1,0 +1,338 @@
+{
+  "schemaVersion": 1,
+  "image": "Maelis.png",
+  "imageSha256": "5166bd5bd09da5413a652764850e23a9c391c8a07db9a91e5fd13b23deb65c57",
+  "nativeSize": [
+    2080,
+    1130
+  ],
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "logicalResolution": "unverified generated pixel clusters; no quantization",
+  "pixelsPerUnit": 178.0,
+  "status": "visual-reviewed",
+  "frames": [
+    {
+      "id": "Maelis_00",
+      "rect": [
+        0,
+        0,
+        520,
+        565
+      ],
+      "pivot": [
+        0.49615384615384617,
+        0.1256637168141593
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        23,
+        23,
+        355,
+        500
+      ],
+      "sourceAnchor": [
+        174,
+        479
+      ],
+      "action": "idle",
+      "direction": "S",
+      "skin": "Maelis",
+      "form": "normal"
+    },
+    {
+      "id": "Maelis_01",
+      "rect": [
+        520,
+        0,
+        520,
+        565
+      ],
+      "pivot": [
+        0.49615384615384617,
+        0.1256637168141593
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        379,
+        16,
+        411,
+        502
+      ],
+      "sourceAnchor": [
+        571,
+        475
+      ],
+      "action": "idle",
+      "direction": "SW",
+      "skin": "Maelis",
+      "form": "normal"
+    },
+    {
+      "id": "Maelis_02",
+      "rect": [
+        1040,
+        0,
+        520,
+        565
+      ],
+      "pivot": [
+        0.49615384615384617,
+        0.1256637168141593
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        791,
+        19,
+        370,
+        509
+      ],
+      "sourceAnchor": [
+        907,
+        465
+      ],
+      "action": "idle",
+      "direction": "W",
+      "skin": "Maelis",
+      "form": "normal"
+    },
+    {
+      "id": "Maelis_03",
+      "rect": [
+        1560,
+        0,
+        520,
+        565
+      ],
+      "pivot": [
+        0.49615384615384617,
+        0.1256637168141593
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        1161,
+        37,
+        341,
+        461
+      ],
+      "sourceAnchor": [
+        1373,
+        477
+      ],
+      "action": "idle",
+      "direction": "NW",
+      "skin": "Maelis",
+      "form": "normal"
+    },
+    {
+      "id": "Maelis_04",
+      "rect": [
+        0,
+        565,
+        520,
+        565
+      ],
+      "pivot": [
+        0.49615384615384617,
+        0.1256637168141593
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        19,
+        509,
+        359,
+        515
+      ],
+      "sourceAnchor": [
+        182,
+        970
+      ],
+      "action": "idle",
+      "direction": "N",
+      "skin": "Maelis",
+      "form": "normal"
+    },
+    {
+      "id": "Maelis_05",
+      "rect": [
+        520,
+        565,
+        520,
+        565
+      ],
+      "pivot": [
+        0.49615384615384617,
+        0.1256637168141593
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        379,
+        505,
+        375,
+        503
+      ],
+      "sourceAnchor": [
+        557,
+        965
+      ],
+      "action": "idle",
+      "direction": "NE",
+      "skin": "Maelis",
+      "form": "normal"
+    },
+    {
+      "id": "Maelis_06",
+      "rect": [
+        1040,
+        565,
+        520,
+        565
+      ],
+      "pivot": [
+        0.49615384615384617,
+        0.1256637168141593
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        761,
+        479,
+        378,
+        545
+      ],
+      "sourceAnchor": [
+        1011,
+        965
+      ],
+      "action": "idle",
+      "direction": "E",
+      "skin": "Maelis",
+      "form": "normal"
+    },
+    {
+      "id": "Maelis_07",
+      "rect": [
+        1560,
+        565,
+        520,
+        565
+      ],
+      "pivot": [
+        0.49615384615384617,
+        0.1256637168141593
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        1139,
+        494,
+        375,
+        498
+      ],
+      "sourceAnchor": [
+        1359,
+        968
+      ],
+      "action": "idle",
+      "direction": "SE",
+      "skin": "Maelis",
+      "form": "normal"
+    }
+  ],
+  "clips": [
+    {
+      "name": "idle_S",
+      "frames": [
+        "Maelis_00"
+      ],
+      "loop": true,
+      "allowStatic": true
+    },
+    {
+      "name": "idle_SW",
+      "frames": [
+        "Maelis_01"
+      ],
+      "loop": true,
+      "allowStatic": true
+    },
+    {
+      "name": "idle_W",
+      "frames": [
+        "Maelis_02"
+      ],
+      "loop": true,
+      "allowStatic": true
+    },
+    {
+      "name": "idle_NW",
+      "frames": [
+        "Maelis_03"
+      ],
+      "loop": true,
+      "allowStatic": true
+    },
+    {
+      "name": "idle_N",
+      "frames": [
+        "Maelis_04"
+      ],
+      "loop": true,
+      "allowStatic": true
+    },
+    {
+      "name": "idle_NE",
+      "frames": [
+        "Maelis_05"
+      ],
+      "loop": true,
+      "allowStatic": true
+    },
+    {
+      "name": "idle_E",
+      "frames": [
+        "Maelis_06"
+      ],
+      "loop": true,
+      "allowStatic": true
+    },
+    {
+      "name": "idle_SE",
+      "frames": [
+        "Maelis_07"
+      ],
+      "loop": true,
+      "allowStatic": true
+    }
+  ],
+  "requiredClips": [
+    "idle_S",
+    "idle_SW",
+    "idle_W",
+    "idle_NW",
+    "idle_N",
+    "idle_NE",
+    "idle_E",
+    "idle_SE"
+  ],
+  "source": "ArtSources\\Multiverse20261023\\exec-0d1c1215-0756-4adb-bfc6-29fb7a14ab76.png",
+  "sourceSha256": "06c85fb8c8101ed8c321d5119a9f7b8916a140b77b5ac629b9aa29af20747c74",
+  "sourcePixels": 479072,
+  "packedPixels": 479072,
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 3
+  },
+  "warnings": [
+    "Continuous RGBA palette and soft alpha; native indexed pixel art unverified.",
+    "Eight static directional views, not animated locomotion."
+  ],
+  "references": [
+    {
+      "path": "Assets/Darklight/Art/Campaign/Enemies.png",
+      "sha256": "e63eafaff06f24e0479981228bf6f97a8423d9cc6ad1f0861696ad097ad86cd4"
+    }
+  ],
+  "generator": "built-in image_gen"
+}

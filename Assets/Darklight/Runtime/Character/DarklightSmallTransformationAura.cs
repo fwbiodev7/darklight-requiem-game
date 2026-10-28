@@ -5,6 +5,7 @@ namespace Darklight
     public sealed class DarklightSmallTransformationAura:MonoBehaviour
     {
         Mesh mesh;MeshRenderer renderer;Material material;public Sprite PresentedFrame{get;private set;}
+        DarklightCharacterView characterView;
         readonly Vector3[] vertices=new Vector3[576];readonly Color[] colors=new Color[576];readonly int[] indices=new int[864];
         public void Present(SpriteRenderer body,int form,float clock,bool dead)
         {
@@ -17,7 +18,9 @@ namespace Darklight
             bool show=form>0&&!dead&&body.sprite!=null;renderer.enabled=show;PresentedFrame=show?body.sprite:null;if(!show)return;
             transform.localPosition=Vector3.zero;transform.localRotation=Quaternion.identity;transform.localScale=Vector3.one;
             renderer.sortingLayerID=body.sortingLayerID;renderer.sortingOrder=body.sortingOrder-1;
-            var bounds=body.sprite.bounds;float h=bounds.size.y;float radius=Mathf.Clamp(h*.24f,.16f,.66f);
+            characterView??=body.GetComponentInParent<DarklightCharacterView>();
+            var bounds=characterView!=null?characterView.ReferenceBodyBounds:DarklightCharacterView.FallbackBodyBounds;
+            float h=bounds.size.y;float radius=Mathf.Clamp(h*.24f,.16f,.66f);
             Color tint=form==3?new Color(.76f,.9f,1):form==2?new Color(.66f,.12f,1):new Color(1,.06f,.12f);
             bool reduced=DarklightCampaign.Instance?.ReducedFlashes==true;
             int quads=18;
@@ -54,7 +57,7 @@ namespace Darklight
                     if(form==2)
                     {
                         Shard(new Vector3(x,y),h*.019f,new Color(.59f,.1f,1,alpha),ref quads);
-                        Shard(new Vector3(x,y),h*.006f,new Color(.9f,.65f,1,alpha),ref quads);
+                        Shard(new Vector3(x,y),h*.006f,new Color(.94f,.97f,1,alpha),ref quads);
                         continue;
                     }
                     Vector3 previous=new Vector3(x,y);
@@ -70,7 +73,19 @@ namespace Darklight
                     float a=s/18f*Mathf.PI*2,b=(s+1)/18f*Mathf.PI*2,r=radius*(1.04f+.025f*Mathf.Sin(time*Mathf.PI/3));
                     Vector3 start=new Vector3(Mathf.Cos(a)*r,bounds.min.y+.035f+Mathf.Sin(a)*radius*.23f),end=new Vector3(Mathf.Cos(b)*r,bounds.min.y+.035f+Mathf.Sin(b)*radius*.23f);
                     Segment(start,end,h*.009f,new Color(tint.r,tint.g,tint.b,.18f),ref quads);
-                    Segment(start,end,h*.003f,new Color(tint.r,tint.g,tint.b,.38f),ref quads);
+                    Segment(start,end,h*.003f,form==2?new Color(.94f,.97f,1,.58f):new Color(tint.r,tint.g,tint.b,.38f),ref quads);
+                }
+            }
+            if(form==2)
+            {
+                // Silver filaments join the existing violet crystals in the fused form.
+                for(int bolt=0;bolt<6;bolt++)
+                {
+                    float side=bolt%2==0?-1:1,t=Mathf.Repeat((reduced?0:clock)/6f+bolt*.381966f,1);
+                    var start=new Vector3(side*radius,bounds.min.y+h*(.1f+t*.6f));
+                    var end=start+new Vector3(side*h*.035f,h*.12f);
+                    Segment(start,end,h*.009f,new Color(.66f,.12f,1,.5f),ref quads);
+                    Segment(start,end,h*.003f,new Color(.94f,.97f,1,.8f),ref quads);
                 }
             }
             mesh.Clear();mesh.SetVertices(vertices,0,quads*4);mesh.SetColors(colors,0,quads*4);mesh.SetTriangles(indices,0,quads*6,0,false);mesh.RecalculateBounds();

@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "image": "AshRonin.png",
+  "imageSha256": "afe175700f7cfe7215da32d96026012d14aee86bd80e1161775d7e24e12bafe1",
+  "nativeSize": [
+    3064,
+    1226
+  ],
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "logicalResolution": "unverified generated pixel clusters; no quantization",
+  "pixelsPerUnit": 163.6,
+  "status": "visual-reviewed",
+  "frames": [
+    {
+      "id": "AshRonin_00",
+      "rect": [
+        0,
+        0,
+        766,
+        613
+      ],
+      "pivot": [
+        0.4086161879895561,
+        0.2365415986949429
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        17,
+        23,
+        383,
+        508
+      ],
+      "sourceAnchor": [
+        145,
+        476
+      ],
+      "action": "idle",
+      "direction": "S",
+      "skin": "AshRonin",
+      "form": "normal"
+    },
+    {
+      "id": "AshRonin_01",
+      "rect": [
+        766,
+        0,
+        766,
+        613
+      ],
+      "pivot": [
+        0.4086161879895561,
+        0.2365415986949429
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        400,
+        19,
+        378,
+        515
+      ],
+      "sourceAnchor": [
+        554,
+        479
+      ],
+      "action": "walk",
+      "direction": "S",
+      "skin": "AshRonin",
+      "form": "normal"
+    },
+    {
+      "id": "AshRonin_02",
+      "rect": [
+        1532,
+        0,
+        766,
+        613
+      ],
+      "pivot": [
+        0.4086161879895561,
+        0.2365415986949429
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        778,
+        19,
+        390,
+        501
+      ],
+      "sourceAnchor": [
+        953,
+        479
+      ],
+      "action": "walk",
+      "direction": "S",
+      "skin": "AshRonin",
+      "form": "normal"
+    },
+    {
+      "id": "AshRonin_03",
+      "rect": [
+        2298,
+        0,
+        766,
+        613
+      ],
+      "pivot": [
+        0.4086161879895561,
+        0.2365415986949429
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        1165,
+        55,
+        353,
+        561
+      ],
+      "sourceAnchor": [
+        1332,
+        479
+      ],
+      "action": "hurt",
+      "direction": "S",
+      "skin": "AshRonin",
+      "form": "normal"
+    },
+    {
+      "id": "AshRonin_04",
+      "rect": [
+        0,
+        613,
+        766,
+        613
+      ],
+      "pivot": [
+        0.4086161879895561,
+        0.2365415986949429
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        47,
+        563,
+        283,
+        461
+      ],
+      "sourceAnchor": [
+        72,
+        961
+      ],
+      "action": "windup",
+      "direction": "S",
+      "skin": "AshRonin",
+      "form": "normal"
+    },
+    {
+      "id": "AshRonin_05",
+      "rect": [
+        766,
+        613,
+        766,
+        613
+      ],
+      "pivot": [
+        0.4086161879895561,
+        0.2365415986949429
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        321,
+        528,
+        479,
+        496
+      ],
+      "sourceAnchor": [
+        429,
+        963
+      ],
+      "action": "contact",
+      "direction": "S",
+      "skin": "AshRonin",
+      "form": "normal"
+    },
+    {
+      "id": "AshRonin_06",
+      "rect": [
+        1532,
+        613,
+        766,
+        613
+      ],
+      "pivot": [
+        0.4086161879895561,
+        0.2365415986949429
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        809,
+        551,
+        509,
+        443
+      ],
+      "sourceAnchor": [
+        873,
+        958
+      ],
+      "action": "recovery",
+      "direction": "S",
+      "skin": "AshRonin",
+      "form": "normal"
+    },
+    {
+      "id": "AshRonin_07",
+      "rect": [
+        2298,
+        613,
+        766,
+        613
+      ],
+      "pivot": [
+        0.4086161879895561,
+        0.2365415986949429
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        1172,
+        623,
+        364,
+        379
+      ],
+      "sourceAnchor": [
+        1477,
+        955
+      ],
+      "action": "defeat",
+      "direction": "S",
+      "skin": "AshRonin",
+      "form": "normal"
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_S",
+      "frames": [
+        "AshRonin_01",
+        "AshRonin_02"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_S",
+      "frames": [
+        "AshRonin_04",
+        "AshRonin_05",
+        "AshRonin_06"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "hurt_S",
+      "frames": [
+        "AshRonin_03"
+      ],
+      "loop": false,
+      "allowStatic": true
+    },
+    {
+      "name": "defeat_S",
+      "frames": [
+        "AshRonin_07"
+      ],
+      "loop": false,
+      "allowStatic": true
+    }
+  ],
+  "requiredClips": [
+    "walk_S",
+    "attack_S",
+    "hurt_S",
+    "defeat_S"
+  ],
+  "source": "ArtSources\\Multiverse20261023\\exec-ccecf83a-d825-4252-a90b-7102ee5b7056.png",
+  "sourceSha256": "a1bd484e44b1043aa32eaa4827155b1116c8c85cd5af69085553899cc20e196b",
+  "sourcePixels": 502273,
+  "packedPixels": 502273,
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 3
+  },
+  "warnings": [
+    "Continuous RGBA palette and soft alpha; native indexed pixel art unverified.",
+    "South-facing authored animation only; no claim of eight-view coverage."
+  ],
+  "references": [
+    {
+      "path": "Assets/Darklight/Art/Campaign/Enemies.png",
+      "sha256": "e63eafaff06f24e0479981228bf6f97a8423d9cc6ad1f0861696ad097ad86cd4"
+    }
+  ],
+  "generator": "built-in image_gen"
+}

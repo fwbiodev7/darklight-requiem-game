@@ -3,10 +3,10 @@ using UnityEngine;
 namespace Darklight
 {
     public enum DarklightAudioCategory { Combat, Character, Interface, Enemy, Ambient }
-    public sealed class DarklightSoundDirector : MonoBehaviour
+    public sealed partial class DarklightSoundDirector : MonoBehaviour
     {
         const int VoiceLimit = 16;
-        sealed class Voice { public AudioSource source; public DarklightAudioCategory category; public float gain, attenuation, began; }
+        sealed class Voice { public AudioSource source; public DarklightAudioCategory category; public float gain, attenuation, began; public bool finishWhenInactive; }
         readonly Voice[] voices = new Voice[VoiceLimit];
         readonly Dictionary<string, AudioClip[]> clips = new();
         readonly Dictionary<string, int> variants = new();
@@ -14,7 +14,7 @@ namespace Darklight
         AudioClip[] allClips;
         DarklightCampaign game;
         AudioSource nature, dungeon, regional, outgoing;
-        float ambientBlend, ambientTarget, layerBlend = 1, duck, nextOccasion;
+        float windGain=.28f,veilGain=.025f, layerBlend = 1, duck, nextOccasion;
         int swingSerial = -1, region;
         public int AllocatedVoices => voices.Length;
         public int ActiveVoices { get { int n = 0; foreach (var v in voices) if (v?.source != null && v.source.isPlaying) n++; return n; } }
@@ -47,9 +47,9 @@ namespace Darklight
             if (allClips != null) foreach (var c in allClips) if (c.name.StartsWith(prefix, System.StringComparison.Ordinal)) selected.Add(c);
             selected.Sort((a, b) => string.CompareOrdinal(a.name, b.name)); return clips[prefix] = selected.ToArray();
         }
-        public bool Play(string prefix, DarklightAudioCategory category, float gain = .35f, Vector2? position = null, float pitch = 1, float interval = .04f)
+        public bool Play(string prefix, DarklightAudioCategory category, float gain = .35f, Vector2? position = null, float pitch = 1, float interval = .04f, bool finishWhenInactive = false)
         {
-            if (game == null || DarklightAutomation.Silent || category != DarklightAudioCategory.Interface && !game.Active) return false;
+            if (game == null || DarklightAutomation.Silent || category != DarklightAudioCategory.Interface && !game.Active && !finishWhenInactive) return false;
             float now = Time.unscaledTime; string key = prefix + category;
             if (ready.TryGetValue(key, out float until) && now < until) return false;
             var samples = Samples(prefix); if (samples.Length == 0) return false;
@@ -62,7 +62,7 @@ namespace Darklight
             if (voice == null || categoryCount >= CategoryVoiceLimit(category)) return false;
             ready[key] = now + interval;
             int index = variants.TryGetValue(key, out int last) ? (last + 1) % samples.Length : 0; variants[key] = index;
-            voice.category = category; voice.gain = Mathf.Clamp01(gain) * Random.Range(.94f, 1.04f); voice.attenuation = 1; voice.began = now;
+            voice.category = category; voice.gain = Mathf.Clamp01(gain) * Random.Range(.94f, 1.04f); voice.attenuation = 1; voice.began = now; voice.finishWhenInactive = finishWhenInactive;
             if (position.HasValue)
             {
                 var player = DarklightCombatLab.Instance?.Player;
@@ -79,23 +79,29 @@ namespace Darklight
         public void Swing(AttackDefinition attack, int serial, int weapon)
         {
             if (swingSerial == serial) return; swingSerial = serial;
-            Play(weapon == 2 ? "rpg-metalLatch" : weapon == 1 ? "rpg-drawKnife" : "rpg-knifeSlice", DarklightAudioCategory.Combat, attack.kind == StrikeKind.Light ? .28f : .4f, null, weapon == 1 ? 1.16f : .96f);
+            string supplied = SwingDelivery(attack, weapon);
+            Preferred(supplied, weapon >= 2 ? "rpg-metalLatch" : weapon == 1 ? "rpg-drawKnife" : "rpg-knifeSlice", DarklightAudioCategory.Combat, attack.kind == StrikeKind.Light ? .28f : .4f, null, weapon == 1 ? 1.16f : .96f);
             if (attack.kind == StrikeKind.Counter) Play("dl-power-counter", DarklightAudioCategory.Combat, .3f);
         }
         public void Contact(DarklightCombatant target, AttackDefinition attack)
         {
             var enemy = target.GetComponent<DarklightEnemy>(); bool metal = enemy != null && (enemy.kind == RequiemEnemyKind.Armored || enemy.kind == RequiemEnemyKind.Sentinel || enemy.kind == RequiemEnemyKind.Valtherion);
-            Play(metal ? attack.kind == StrikeKind.Light ? "impact-impactMetal_light" : "impact-impactMetal_heavy" : attack.kind == StrikeKind.Light ? "impact-impactPunch_medium" : "impact-impactPunch_heavy", DarklightAudioCategory.Combat, .42f, target.transform.position);
+            string impact = attack.ruinStrike == DarklightRuinStrike.Punch || attack.ruinStrike == DarklightRuinStrike.Uppercut ? "WM04" : null;
+            // The supplied punch is a body impact; armour retains its authored metal response.
+            Preferred(metal ? null : impact, metal ? attack.kind == StrikeKind.Light ? "impact-impactMetal_light" : "impact-impactMetal_heavy" : attack.kind == StrikeKind.Light ? "impact-impactPunch_medium" : "impact-impactPunch_heavy", DarklightAudioCategory.Combat, .42f, target.transform.position);
             if (attack.kind == StrikeKind.Charged) Play("dl-power-critical", DarklightAudioCategory.Combat, .26f, target.transform.position);
             if (target.Health.IsDead) Play("dl-power-finisher", DarklightAudioCategory.Combat, .3f, target.transform.position, .95f, .2f);
             else if (metal) EnemyIdentity(enemy.kind, "block", target.transform.position);
         }
         public void Footstep(TodayFootstepSurface surface, Vector2 p) => Play(TodaySurfaces.Prefix(surface), DarklightAudioCategory.Character, surface == TodayFootstepSurface.Metal ? .13f : .16f, p, 1, .13f);
+        public void Land(TodayFootstepSurface surface,Vector2 p)=>Play(TodaySurfaces.Prefix(surface),DarklightAudioCategory.Character,.24f,p,.82f,.18f);
         public void Footstep(bool wood, bool grass, Vector2 p) => Footstep(wood ? TodayFootstepSurface.Wood : grass ? TodayFootstepSurface.Grass : TodayFootstepSurface.Stone, p);
         public static string EnemyPrefix(RequiemEnemyKind kind) => "dl-enemy-" + kind.ToString().ToLowerInvariant();
         public void EnemyIdentity(RequiemEnemyKind kind, string cue, Vector2 p)
         {
             bool boss = (int)kind >= 5;
+            if(kind==RequiemEnemyKind.Crawler && (cue=="alert" || cue=="windup"))
+            { Play("dl-web-creature-alert",DarklightAudioCategory.Enemy,.14f,p,1,3.7f);return; }
             if (cue == "step")
             { Play(kind == RequiemEnemyKind.Armored || kind == RequiemEnemyKind.Sentinel ? "dl-step-metal" : kind == RequiemEnemyKind.Crawler ? "impact-footstep_grass" : "impact-footstep_concrete", DarklightAudioCategory.Enemy, boss ? .13f : .08f, p, boss ? .8f : 1.08f, .18f); return; }
             if (cue == "special")
@@ -110,7 +116,7 @@ namespace Darklight
         public static string RegionLayer(int chapter) => chapter switch { 0 => "urban", 1 => "urban", 2 => "rain", 3 => "cave", 4 => "leaves", 5 => "veil", 6 => "cave", 7 => "rain", 8 => "veil", _ => "veil" };
         public void Region(int chapter)
         {
-            region = chapter; ambientTarget = chapter == 3 || chapter == 5 || chapter >= 6 && chapter != 7 ? 1 : 0; swingSerial = -1; StopCombat();
+            region = chapter; swingSerial = -1; StopCombat();
             var clip = Resources.Load<AudioClip>("Darklight/Audio/Expansion/dl-ambient-" + (game.Map?.Art?.revision>=2&&chapter>=6?DarklightRegionAtmosphere.Bed(chapter):RegionLayer(chapter)));
             if (regional != null && regional.clip != clip)
             { outgoing.Stop(); var old = outgoing; outgoing = regional; regional = old; regional.clip = clip; layerBlend = 0; }
@@ -118,24 +124,26 @@ namespace Darklight
             nextOccasion = Time.unscaledTime + 4;
         }
         public void StopCombat() { foreach (var voice in voices) if (voice?.source != null && voice.category != DarklightAudioCategory.Interface) voice.source.Stop(); }
-        public void Awakening() { duck = 2; Play("dl-power-rupture", DarklightAudioCategory.Character, .32f, null, 1, .3f); }
-        public void Transform(int form) { duck = .8f; Play(form == 1 ? "dl-power-rupture" : form == 2 ? "dl-power-eclipse" : "dl-power-absolute", DarklightAudioCategory.Character, .32f, null, 1, .3f); }
-        public void Ability(int ability) => Play(ability == 0 ? "dl-power-claws" : ability == 1 ? "dl-power-shadow" : ability == 3 ? "dl-power-embrace" : ability == 5 ? "dl-power-judgment" : "dl-heartbeat", DarklightAudioCategory.Character, .25f, null, 1, .22f);
+        public void Awakening() { duck = 2; Preferred("PW07", "dl-power-rupture", DarklightAudioCategory.Character, .32f, null, 1, .3f); }
+        public void Transform(int form) { duck = .8f; Preferred(form == 1 ? "PW07" : form == 2 ? "PW08" : null, form == 1 ? "dl-power-rupture" : form == 2 ? "dl-power-eclipse" : "dl-power-absolute", DarklightAudioCategory.Character, .32f, null, 1, .3f); }
+        public void Ability(int ability) => Preferred(AbilityDelivery(ability), ability == 0 ? "dl-power-claws" : ability == 1 ? "dl-power-shadow" : ability == 3 ? "dl-power-embrace" : ability == 5 ? "dl-power-judgment" : "dl-heartbeat", DarklightAudioCategory.Character, .25f, null, 1, .22f);
         public void EnemyWarning(bool boss, Vector2 p) => Play(boss ? "rpg-metalLatch" : "rpg-drawKnife", DarklightAudioCategory.Enemy, boss ? .3f : .19f, p, boss ? .8f : 1, .16f);
         void Update()
         {
             if (game == null) return;
             if (DarklightAutomation.Silent) { StopAll(); return; }
             foreach (var voice in voices) if (voice?.source != null && voice.source.isPlaying)
-            { if (!game.Active && voice.category != DarklightAudioCategory.Interface) voice.source.Stop(); else voice.source.volume = Gain(voice); }
+            { if (!game.Active && voice.category != DarklightAudioCategory.Interface && !voice.finishWhenInactive) voice.source.Stop(); else voice.source.volume = Gain(voice); }
             if (nature == null || dungeon == null) return;
             if (!game.Active) { nature.Pause(); dungeon.Pause(); regional.Pause(); outgoing.Pause(); return; }
             Resume(nature); Resume(dungeon); Resume(regional); if (layerBlend < 1) Resume(outgoing);
             float dt = Time.unscaledDeltaTime; duck = Mathf.Max(0, duck - dt);
-            ambientBlend = Mathf.MoveTowards(ambientBlend, ambientTarget, dt * .6f); layerBlend = Mathf.MoveTowards(layerBlend, 1, dt / 1.4f);
+            var profile=DarklightRegionSoundProfile.ForChapter(region);
+            windGain=Mathf.MoveTowards(windGain,profile.Wind,dt*.18f);veilGain=Mathf.MoveTowards(veilGain,profile.Veil,dt*.18f);
+            layerBlend = Mathf.MoveTowards(layerBlend, 1, dt / 1.4f);
             float volume = game.AmbientVolume * (duck > 0 ? .5f : game.Resonance.Active >= 0 ? .75f : 1);
-            nature.volume = volume * .30f * (1 - ambientBlend); dungeon.volume = volume * .30f * ambientBlend;
-            regional.volume = volume * .18f * layerBlend; outgoing.volume = volume * .18f * (1 - layerBlend);
+            nature.volume = volume * windGain; dungeon.volume = volume * veilGain;
+            regional.volume = volume * profile.Regional * layerBlend; outgoing.volume = volume * profile.Regional * (1 - layerBlend);
             if (layerBlend >= 1) outgoing.Pause();
             if (Time.unscaledTime >= nextOccasion)
             {

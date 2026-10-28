@@ -12,7 +12,7 @@ namespace Darklight.Tests
 {
     public sealed class DarklightArtisticAtlasTests
     {
-        const string Folder="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/minimapa-reforma-20261015/authorial/captures/";
+        static string Folder => DarklightTestOutput.GetDirectory("revision-bugs-20261016-1957/captures/atlas");
         DarklightCampaign game;DarklightCombatLab lab;DarklightAtlas atlas;
         InputSettings.BackgroundBehavior background;InputSettings.EditorInputBehaviorInPlayMode editorInput;
         static T Field<T>(object value,string name)=>(T)value.GetType().GetField(name,BindingFlags.Instance|BindingFlags.NonPublic).GetValue(value);

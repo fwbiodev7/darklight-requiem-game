@@ -20,6 +20,9 @@ namespace Darklight
         RectTransform loadingRoot;UnityEngine.UI.Image loadingPreview,loadingPulse;
         UnityEngine.UI.Text loadingTitle,loadingChapter,loadingTeaser,loadingState,loadingHint;
         bool phaseLoading,loadingReady,loadingContinue;float loadingStarted;
+        readonly DarklightLoadingProgress loadingProgress=new();int pendingMapChapter=-1;
+        public float LoadingProgress=>loadingProgress.Value;
+        void SetLoadingProgress(float progress,string stage){if(phaseLoading)loadingProgress.Report(progress,stage);}
         public bool PhaseLoading=>phaseLoading;
         public int LoadingChapter{get;private set;}=-1;
         public static string PhaseTeaser(int chapter)=>PhaseTeasers[Mathf.Clamp(chapter,0,PhaseTeasers.Length-1)];
@@ -46,7 +49,7 @@ namespace Darklight
         }
         void ShowLoadingScreen(int chapter)
         {
-            EnsureLoadingScreen();LoadingChapter=chapter;loadingReady=false;loadingContinue=false;loadingStarted=Time.unscaledTime;
+            EnsureLoadingScreen();LoadingChapter=chapter;loadingReady=false;loadingContinue=false;loadingStarted=Time.unscaledTime;loadingProgress.Reset();
             panel="Loading";lab.SetPaused(true);AudioDirector?.StopCombat();music.Pause();ambient.Pause();
             SetHUDVisible(false);overlay.gameObject.SetActive(false);loadingRoot.gameObject.SetActive(true);loadingRoot.SetAsLastSibling();
             loadingTitle.text=DarklightStory.Places[chapter].ToUpperInvariant();loadingChapter.text="CAPÍTULO "+(chapter+1)+"  ·  "+DarklightStory.Chapters[chapter];
@@ -54,38 +57,40 @@ namespace Darklight
         }
         void TickLoadingScreen()
         {
-            if(!phaseLoading)return;loadingRoot.SetAsLastSibling();
+            if(!phaseLoading||loadingRoot==null||!loadingRoot.gameObject.activeSelf)return;loadingRoot.SetAsLastSibling();
             float elapsed=Time.unscaledTime-loadingStarted;
-            loadingState.text=loadingReady?"CAMINHO ABERTO":"PREPARANDO A PRÓXIMA FASE"+new string('.',(int)(elapsed*3)%4);
-            loadingPulse.rectTransform.anchoredPosition=new Vector2(48+Mathf.PingPong(elapsed*.45f,1)*500,-320);
-            loadingHint.text=loadingReady?(lab.Input.UsingGamepad?"A / X: CONTINUAR":"ENTER / CLIQUE: CONTINUAR"):"";
+            loadingState.text=loadingProgress.Stage+(loadingReady?"":new string('.',(int)(elapsed*3)%4));
+            loadingPulse.rectTransform.anchoredPosition=new Vector2(48,-320);loadingPulse.rectTransform.sizeDelta=new Vector2(544*loadingProgress.Value,3);
+            loadingHint.text=Mathf.RoundToInt(loadingProgress.Value*100)+"%"+(loadingReady?(lab.Input.UsingGamepad?"  A: CONTINUAR":"  ENTER: CONTINUAR"):"");
             if(loadingReady&&elapsed>.65f&&(lab.Input.Menu("Submit").WasPressedThisFrame()||UnityEngine.InputSystem.Mouse.current?.leftButton.wasPressedThisFrame==true))loadingContinue=true;
         }
         void BeginPhaseTransition(int chapter,Action load,Action ready)
         {
             if(phaseLoading)return;if(chapter<0||chapter>=DarklightStory.Chapters.Length)throw new ArgumentOutOfRangeException(nameof(chapter));
-            phaseLoading=true;ShowLoadingScreen(chapter);StartCoroutine(LoadPhase(chapter,load,ready));
+            phaseLoading=true;StartCoroutine(PortalPhase(chapter,load,ready));
         }
         IEnumerator LoadPhase(int chapter,Action load,Action ready)
         {
             // Present the loading screen before the synchronous map construction begins.
             yield return null;yield return null;
-            loadingPreview.sprite=Resources.Load<Sprite>("Darklight/Loading/preview"+(chapter+1));loadingPreview.enabled=loadingPreview.sprite!=null;
-            yield return null;yield return null;
+            var preview=Resources.LoadAsync<Sprite>("Darklight/Loading/preview"+(chapter+1));yield return preview;
+            loadingPreview.sprite=preview.asset as Sprite;loadingPreview.enabled=loadingPreview.sprite!=null;SetLoadingProgress(.04f,"CARREGANDO O DESTINO");
+            var map=Resources.LoadAsync<Sprite>("Darklight/Maps/map"+(chapter+1));yield return map;SetLoadingProgress(.10f,"CENÁRIO CARREGADO");yield return null;
             Exception failure=null;string progressBefore=JsonUtility.ToJson(Progress);
-            try{load();}catch(Exception ex){failure=ex;Progress=JsonUtility.FromJson<DarklightProgress>(progressBefore);}
+            pendingMapChapter=-1;try{load();}catch(Exception ex){failure=ex;}
+            if(failure==null&&pendingMapChapter>=0)yield return DarklightLoadingSequence.Run(BuildMapInStages(pendingMapChapter),error=>failure=error);
             if(failure==null)
             {
-                panel="Loading";lab.SetPaused(true);SetHUDVisible(false);overlay.gameObject.SetActive(false);loadingRoot.gameObject.SetActive(true);loadingReady=true;
-                while(Time.unscaledTime-loadingStarted<2.8f&&!loadingContinue)yield return null;
+                loadingProgress.Complete();panel="Loading";lab.SetPaused(true);SetHUDVisible(false);overlay.gameObject.SetActive(false);loadingRoot.gameObject.SetActive(true);loadingReady=true;
+                float readyAt=Time.unscaledTime;while(Time.unscaledTime-readyAt<.8f&&!loadingContinue)yield return null;
             }
             phaseLoading=false;LoadingChapter=-1;loadingRoot.gameObject.SetActive(false);Close();
-            if(failure!=null){Debug.LogException(failure);LoadMap(Progress.chapter);Notice("Não foi possível preparar a próxima fase.");yield break;}
+            if(failure!=null){Debug.LogException(failure);Progress=JsonUtility.FromJson<DarklightProgress>(progressBefore);LoadMap(Progress.chapter);Open("Pause");Notice("Não foi possível preparar a próxima fase. Seu ponto anterior foi preservado.");yield break;}
             ready?.Invoke();
         }
         void TravelToChapter(int chapter)
         {
-            BeginPhaseTransition(chapter,()=>{StopPower();SaveCheckpoint();Progress.chapter=chapter;Progress.checkpoint=0;Progress.bossPhase=1;Progress.missionWave=0;Progress.completed=false;LoadMap(chapter);SaveCheckpoint();},()=>Speak(DarklightStory.Introductions[chapter]));
+            BeginPhaseTransition(chapter,()=>{StopPower();SaveCheckpoint();Progress.chapter=chapter;Progress.checkpoint=0;Progress.bossPhase=1;Progress.missionWave=0;Progress.completed=false;LoadMap(chapter);},()=>{SaveCheckpoint();Speak(DarklightStory.Introductions[chapter]);});
         }
     }
 }

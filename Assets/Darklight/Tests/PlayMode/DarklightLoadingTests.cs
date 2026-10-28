@@ -10,7 +10,7 @@ namespace Darklight.Tests
 {
     public sealed class DarklightLoadingTests
     {
-        const string Output="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/remaster-production-20261014/captures/";
+        static string Output => DarklightTestOutput.GetDirectory("remaster-production-20261014/captures");
         [UnityTest]public IEnumerator NextMapPreviewTeaserAndInputShieldSurviveTheWholeTransition()
         {
             DarklightAutomation.Silent=true;AudioListener.volume=0;yield return SceneManager.LoadSceneAsync("Assets/Darklight/Scenes/DarklightCampaign.unity");yield return null;yield return null;

@@ -19,7 +19,7 @@ namespace Darklight
             var model=lab.Player.Model;if(model.State==CombatState.Hurt||model.State==CombatState.Dead||model.State==CombatState.Dodge||model.State==CombatState.Parry||model.State==CombatState.Charging)return false;
             if(model.State==CombatState.Attack&&model.StateTime<model.Attack.startup+model.Attack.active)return false;
             int skill=Progress.vampireSelected;
-            if(!Blood.Activate(skill,Progress)){Notice("PODER BLOQUEADO, SEM SANGUE OU EM RECARGA");return false;}
+            if(!Blood.Activate(skill,Progress)){Notice("PODER BLOQUEADO, SEM SANGUE OU EM RECARGA");AudioDirector?.ActionDenied();return false;}
             model.SuspendInput();vampireCast=skill;vampireCastTime=0;vampirePulses=0;Notice(DarklightVampireSkills.Names[skill]);return true;
         }
         void TickVampire(float dt)
@@ -115,7 +115,7 @@ namespace Darklight
             Button("VEU: DOMINIO "+Progress.mastery+"/5",()=>Upgrade(2),Progress.points>0&&Progress.mastery<5);
             Button("LAMINA: FORCA "+Progress.attack+"/5",()=>Upgrade(0),Progress.points>0&&Progress.attack<5);
             Button("SANGUE: VIGOR "+Progress.vitality+"/5",()=>Upgrade(1),Progress.points>0&&Progress.vitality<5);
-            Button("FORMA: "+new[]{"AUTOMATICA","RUPTURA","ECLIPSE","ABSOLUTO"}[Progress.preferredForm],()=>{Progress.preferredForm=(Progress.preferredForm+1)%(Progress.FormUnlocked+1);SaveCheckpoint();RefreshPanel();},Progress.FormUnlocked>0);
+            Button("FORMA: "+(Progress.preferredForm==0?"AUTOMATICA":DarklightPlayableScope.FormName(Progress.preferredForm)),()=>{Progress.preferredForm=(Progress.preferredForm+1)%(Progress.FormUnlocked+1);SaveCheckpoint();RefreshPanel();},Progress.FormUnlocked>0);
             Button("VOLTAR",()=>Open("Pause"));
         }
         void LearnNode(int node){if(node<0||node>1||Progress.points<1||(Progress.progressionNodes&(1<<node))!=0)return;Progress.points--;Progress.progressionNodes|=1<<node;SaveCheckpoint();RefreshPanel();}

@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "image": "MossDetonator.png",
+  "imageSha256": "33f9fb32ffaa0e31b56b9224b6828903fc288fbd6330cad31ff9234d9d436584",
+  "nativeSize": [
+    2332,
+    1232
+  ],
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "logicalResolution": "unverified generated pixel clusters; no quantization",
+  "pixelsPerUnit": 140.45454545454544,
+  "status": "visual-reviewed",
+  "frames": [
+    {
+      "id": "MossDetonator_00",
+      "rect": [
+        0,
+        0,
+        583,
+        616
+      ],
+      "pivot": [
+        0.5214408233276158,
+        0.19805194805194806
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        0,
+        23,
+        404,
+        564
+      ],
+      "sourceAnchor": [
+        185,
+        491
+      ],
+      "action": "idle",
+      "direction": "S",
+      "skin": "MossDetonator",
+      "form": "normal"
+    },
+    {
+      "id": "MossDetonator_01",
+      "rect": [
+        583,
+        0,
+        583,
+        616
+      ],
+      "pivot": [
+        0.5214408233276158,
+        0.19805194805194806
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        388,
+        17,
+        385,
+        543
+      ],
+      "sourceAnchor": [
+        527,
+        503
+      ],
+      "action": "walk",
+      "direction": "S",
+      "skin": "MossDetonator",
+      "form": "normal"
+    },
+    {
+      "id": "MossDetonator_02",
+      "rect": [
+        1166,
+        0,
+        583,
+        616
+      ],
+      "pivot": [
+        0.5214408233276158,
+        0.19805194805194806
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        767,
+        23,
+        375,
+        535
+      ],
+      "sourceAnchor": [
+        871,
+        491
+      ],
+      "action": "walk",
+      "direction": "S",
+      "skin": "MossDetonator",
+      "form": "normal"
+    },
+    {
+      "id": "MossDetonator_03",
+      "rect": [
+        1749,
+        0,
+        583,
+        616
+      ],
+      "pivot": [
+        0.5214408233276158,
+        0.19805194805194806
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        1129,
+        19,
+        407,
+        594
+      ],
+      "sourceAnchor": [
+        1425,
+        499
+      ],
+      "action": "hurt",
+      "direction": "S",
+      "skin": "MossDetonator",
+      "form": "normal"
+    },
+    {
+      "id": "MossDetonator_04",
+      "rect": [
+        0,
+        616,
+        583,
+        616
+      ],
+      "pivot": [
+        0.5214408233276158,
+        0.19805194805194806
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        0,
+        585,
+        374,
+        439
+      ],
+      "sourceAnchor": [
+        193,
+        918
+      ],
+      "action": "windup",
+      "direction": "S",
+      "skin": "MossDetonator",
+      "form": "normal"
+    },
+    {
+      "id": "MossDetonator_05",
+      "rect": [
+        583,
+        616,
+        583,
+        616
+      ],
+      "pivot": [
+        0.5214408233276158,
+        0.19805194805194806
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        329,
+        545,
+        459,
+        479
+      ],
+      "sourceAnchor": [
+        577,
+        915
+      ],
+      "action": "contact",
+      "direction": "S",
+      "skin": "MossDetonator",
+      "form": "normal"
+    },
+    {
+      "id": "MossDetonator_06",
+      "rect": [
+        1166,
+        616,
+        583,
+        616
+      ],
+      "pivot": [
+        0.5214408233276158,
+        0.19805194805194806
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        777,
+        548,
+        437,
+        476
+      ],
+      "sourceAnchor": [
+        958,
+        922
+      ],
+      "action": "recovery",
+      "direction": "S",
+      "skin": "MossDetonator",
+      "form": "normal"
+    },
+    {
+      "id": "MossDetonator_07",
+      "rect": [
+        1749,
+        616,
+        583,
+        616
+      ],
+      "pivot": [
+        0.5214408233276158,
+        0.19805194805194806
+      ],
+      "durationMs": 160,
+      "sourceRect": [
+        1139,
+        613,
+        396,
+        411
+      ],
+      "sourceAnchor": [
+        1319,
+        922
+      ],
+      "action": "defeat",
+      "direction": "S",
+      "skin": "MossDetonator",
+      "form": "normal"
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_S",
+      "frames": [
+        "MossDetonator_01",
+        "MossDetonator_02"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_S",
+      "frames": [
+        "MossDetonator_04",
+        "MossDetonator_05",
+        "MossDetonator_06"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "hurt_S",
+      "frames": [
+        "MossDetonator_03"
+      ],
+      "loop": false,
+      "allowStatic": true
+    },
+    {
+      "name": "defeat_S",
+      "frames": [
+        "MossDetonator_07"
+      ],
+      "loop": false,
+      "allowStatic": true
+    }
+  ],
+  "requiredClips": [
+    "walk_S",
+    "attack_S",
+    "hurt_S",
+    "defeat_S"
+  ],
+  "source": "ArtSources\\Multiverse20261023\\exec-1c9b67c6-67ef-4b1b-be4a-e07982b45c62.png",
+  "sourceSha256": "9bd8e52757e0856185504b5d6c5a5598936a4c7885714e0adad3f02aadfa9f50",
+  "sourcePixels": 648982,
+  "packedPixels": 648982,
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 3
+  },
+  "warnings": [
+    "Continuous RGBA palette and soft alpha; native indexed pixel art unverified.",
+    "South-facing authored animation only; no claim of eight-view coverage."
+  ],
+  "references": [
+    {
+      "path": "Assets/Darklight/Art/Campaign/Enemies.png",
+      "sha256": "e63eafaff06f24e0479981228bf6f97a8423d9cc6ad1f0861696ad097ad86cd4"
+    }
+  ],
+  "generator": "built-in image_gen"
+}

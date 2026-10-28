@@ -14,7 +14,7 @@ namespace Darklight.Tests
         [Serializable]sealed class DeliveryClip {public string name;public int frames,uniquePoses;public float damage;public bool mounted,drift,jump,combo,slam;}
         [UnityTest]public IEnumerator RecordCurrentSawsMotorcycleAndSlamFromRealUpdate()
         {
-            const string root="C:/Users/Usuario/.codex/.chatgpt-projects/g-p-6aca7556cc3c819199e34a5784ee1236/minimapa-reforma-20261015/authorial/media-current/";
+            string root = DarklightTestOutput.GetDirectory("minimapa-reforma-20261015/authorial/media-current");
             var keyboard=InputSystem.AddDevice<Keyboard>();string bindings=lab.Input.Asset.SaveBindingOverridesAsJson();int oldRate=Time.captureFramerate;Time.captureFramerate=30;
             try
             {

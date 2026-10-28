@@ -17,6 +17,7 @@ namespace Darklight
         Image energyFill,bossFill,portrait,menuBackdrop;Font font;
         Sprite UIArt(int index,Sprite fallback)=>uiArt!=null&&uiArt.Length>index?uiArt[index]:fallback;
         Sprite HUDArt(int index,Sprite fallback)=>hudArt!=null&&hudArt.Length>index?hudArt[index]:fallback;
+        Sprite WeaponIcon(WeaponDefinition weapon)=>weapon==null?null:DarklightWeaponRedesignBank.Icon((int)weapon.id,PresentedForm,weapon.icon);
         readonly List<(RectTransform rect,Text text,Image image,Action action,bool enabled)> buttons=new();
         InputActionRebindingExtensions.RebindingOperation rebinding;
         readonly Dictionary<DarklightEnemy,(RectTransform rect,Image fill)> enemyBars=new();
@@ -29,7 +30,7 @@ namespace Darklight
         {
             font=lab.PixelHUD.pixelFont;if(font.material.mainTexture!=null)font.material.mainTexture.filterMode=FilterMode.Point;uiRoot=lab.PixelHUD.transform.Find("HUD640x360") as RectTransform;
             PolishHUD();
-            weaponIcon=ImageAt(uiRoot,"ArmaEquipada",12,310,24,24,weaponDefinitions[0].icon);weaponIcon.preserveAspect=true;weaponText=TextAt(uiRoot,"Arma",42,310,196,26,5);
+            weaponIcon=ImageAt(uiRoot,"ArmaEquipada",12,310,24,24,WeaponIcon(weaponDefinitions[0]));weaponIcon.preserveAspect=true;weaponText=TextAt(uiRoot,"Arma",42,310,196,26,5);
             chapterText=TextAt(uiRoot,"Capitulo",264,31,112,10,5);chapterText.alignment=TextAnchor.MiddleCenter;
             energyText=TextAt(uiRoot,"Energia",12,78,168,10,5);energyText.alignment=TextAnchor.MiddleCenter;
             energyFill=ImageAt(uiRoot,"EnergiaBarra",12,90,132,2,null);energyFill.color=new Color(.45f,.15f,.75f);
@@ -56,10 +57,10 @@ namespace Darklight
         void LateUpdate()
         {
             if(uiRoot==null)return;
-            TickMenuPolish();UpdateEnemyBars();
-            if(Weapons?.Equipped!=null){weaponIcon.sprite=Weapons.Equipped.icon;weaponText.text=Weapons.Equipped.displayName+"  "+lab.Input.BindingLabel("WeaponNext")+"\n"+(Weapons.Equipped.id==DarklightWeaponId.Katana?lab.Input.BindingLabel("Skill")+": ONDA":lab.Player.Model.WeaponSpecialRemaining>0?"ESPECIAL: "+lab.Player.Model.WeaponSpecialRemaining.ToString("0.0")+"s":lab.Input.BindingLabel("WeaponSpecial")+": ESPECIAL");}
+            TickMenuPolish();TickGameOverArtwork();UpdateEnemyBars();
+            if(Weapons?.Equipped!=null){weaponIcon.sprite=WeaponIcon(Weapons.Equipped);weaponText.text=Weapons.Equipped.displayName+"  "+lab.Input.BindingLabel("WeaponNext")+"\n"+(Weapons.Equipped.id==DarklightWeaponId.Katana?lab.Input.BindingLabel("Skill")+": ONDA":lab.Player.Model.WeaponSpecialRemaining>0?"ESPECIAL: "+lab.Player.Model.WeaponSpecialRemaining.ToString("0.0")+"s":lab.Input.BindingLabel("WeaponSpecial")+": ESPECIAL");}
             chapterText.text=(ExploringNewRegion?"REGIÃO "+(RegionChapter+1):"CAP. "+(Progress.chapter+1))+"  "+Rank;
-            energyText.text=(Form>0?new[]{"","RUPTURA","ECLIPSE","ABSOLUTO"}[Form]+" "+FormTime.ToString("0"):"SANGUE "+Energy.ToString("0"));
+            energyText.text=(Form>0?DarklightPlayableScope.FormName(Form)+" "+FormTime.ToString("0"):"SANGUE "+Energy.ToString("0"));
             energyFill.rectTransform.sizeDelta=new Vector2(132*Mathf.Clamp01(Energy/100),2);
             Vector2 goal=ExploringNewRegion?RegionGoal:chapterCleared?Map.Portal:Map.Arenas[encounter];Vector2 delta=goal-(Vector2)lab.Player.transform.position;
             string compass=new[]{"S","SO","O","NO","N","NE","L","SE"}[DarklightCharacterView.DirectionIndex(delta)];
@@ -76,6 +77,7 @@ namespace Darklight
         {
             if(uiRoot==null)return;
             if(phaseLoading){TickLoadingScreen();return;}
+            if(screenTransitionBusy)return;
             if(bindingWaiting||rebinding!=null){TickBindingCapture();return;}
             if(Time.unscaledTime<captureAfter)return;
             TickInteractionInput();if(atlas!=null&&!Training&&atlas.TickInput())return;var input=lab.Input;
@@ -97,9 +99,10 @@ namespace Darklight
             }
             if(input.Menu("Cancel").WasPressedThisFrame())
             {
+                if(panel=="AirCombat"){Open("CombatOptions");return;}if(panel=="MotorcycleExpansion"){ShowAbyssHelp();return;}
                 if(panel=="AbyssHelp"){Open("Weapons");return;}if(panel=="Weapons"){Open("Pause");return;}if(panel=="Training"){Close();return;}if(panel=="TrainingEnemies"||panel=="TrainingForms"){Open("Training");return;}if(panel=="CombatOptions"){Open("Pause");return;}if(panel=="Difficulty"){Open(difficultyForNewGame?"Main":Training?"Training":"CombatOptions");return;}
                 if(panel=="Pause")Close();else if(panel=="Dialogue"){dialogueIndex=dialogue.Length-1;NextDialogue();}
-                else if(panel!="Main"&&panel!="Death"&&panel!="Ending")Open(panel=="Victory"||panel=="LoadGames"?"Main":panel=="Skins"?returnPanel:panel=="BindingSlot"||panel=="BindingDevice"?"Controls":panel=="BindingConflict"?"BindingSlot":panel=="Transformations"?"Pause":panel=="Controls"||panel=="Extras"?"Options":panel=="RegionDetails"?"Regions":panel=="Regions"?regionMenuReturn:returnPanel);return;
+                else if(panel!="Main"&&panel!="Death"&&panel!="Ending")Open(panel=="LoadGames"?returnPanel:panel=="Victory"?"Main":panel=="Skins"?returnPanel:panel=="BindingSlot"||panel=="BindingDevice"?"Controls":panel=="BindingConflict"?"BindingSlot":panel=="Transformations"?"Pause":panel=="Controls"||panel=="Extras"?"Options":panel=="RegionDetails"?"Regions":panel=="Regions"?regionMenuReturn:returnPanel);return;
             }
             if(input.Menu("Submit").WasPressedThisFrame())Activate(selection);
             if(Mouse.current!=null)
@@ -134,37 +137,45 @@ namespace Darklight
             if(value=="Main")StartMenuMusic();
             if(value=="Regions"&&panel!="RegionDetails")regionMenuReturn=panel=="Extras"?"Extras":"Pause";
             if(value=="Skins"&&panel!="Skins")returnPanel=panel=="Main"?"Main":"Pause";
-            if(value=="LoadGames")returnPanel="Main";
+            if(value=="LoadGames")returnPanel=panel=="Death"?"Death":"Main";
             if(value=="Options"||value=="Credits")returnPanel=panel=="Main"||panel=="Victory"?"Main":"Pause";
-            else if(value=="VampireSkills"||value=="Skills"||value=="Inventory"||value=="Weapons"||value=="AbyssHelp"||value=="Journal"||value=="MP3")returnPanel="Pause";
+            else if(value=="VampireSkills"||value=="Skills"||value=="Inventory"||value=="Weapons"||value=="WeaponCombos"||value=="StageResults"||value=="AbyssHelp"||value=="Journal"||value=="MP3")returnPanel="Pause";
             focusMemory[panel]=selection;panel=value;selection=focusMemory.TryGetValue(value,out var savedFocus)?savedFocus:0;nextNav=Time.unscaledTime+.15f;lab.SetPaused(true);AudioDirector?.StopCombat();music.Pause();ambient.Pause();RefreshPanel();
         }
-        void Close(){menuDismissFrame=Time.frameCount;StopMenuMusic();panel="";SetHUDVisible(true);overlay.gameObject.SetActive(false);lab.SetPaused(false);if(!DarklightAutomation.Silent&&(resonance>=0||HasFirstAwakeningMusic))music.UnPause();}
-        void SetHUDVisible(bool value){foreach(Transform child in uiRoot)if(child.name!="Mundo640x360"&&child.name!="Menus"&&child.name!="PassagemDeFase")child.gameObject.SetActive(value);if(loadingRoot!=null)loadingRoot.gameObject.SetActive(phaseLoading);if(value)PolishHUD();overlay.SetAsLastSibling();}
+        void Close(){menuDismissFrame=Time.frameCount;StopMenuMusic();panel="";SetHUDVisible(true);overlay.gameObject.SetActive(false);lab.SetPaused(screenTransitionBusy);if(!screenTransitionBusy&&!DarklightAutomation.Silent&&(resonance>=0||HasFirstAwakeningMusic))music.UnPause();}
+        void SetHUDVisible(bool value){foreach(Transform child in uiRoot)if(child.name!="Mundo640x360"&&child.name!="Menus"&&child.name!="PassagemDeFase"&&child.name!="TransicaoAprovada"&&child.name!="ApresentacaoAprovada")child.gameObject.SetActive(value);if(loadingRoot!=null)loadingRoot.gameObject.SetActive(phaseLoading);if(value)PolishHUD();overlay.SetAsLastSibling();}
         void ClearButtons(){foreach(var b in buttons)Destroy(b.rect.gameObject);buttons.Clear();menuBorders.Clear();}
-        void Button(string label,Action action,bool enabled=true)
+        void Button(string label,Action action,bool enabled=true,Sprite icon=null)
         {
             int i=buttons.Count;float y=62+i*28;
             var image=ImageAt(menuRoot,"Botao"+i,22,y,286,24,UIArt(enabled?1:3,extras[7]));image.color=Color.white;image.type=Image.Type.Sliced;image.pixelsPerUnitMultiplier=8.333333f;
             var text=TextAt(image.transform,"Rotulo",8,0,270,24,6);text.text=label;text.alignment=TextAnchor.MiddleCenter;
+            if(icon!=null)
+            {
+                var equipment=ImageAt(image.transform,"IconeArma",5,2,20,20,icon);equipment.preserveAspect=true;equipment.raycastTarget=false;
+                text.rectTransform.anchoredPosition=new Vector2(30,0);text.rectTransform.sizeDelta=new Vector2(248,24);
+            }
             buttons.Add((image.rectTransform,text,image,action,enabled));
             if(CinematicFront||CinematicPause)AddCinematicBorder(image,text,i);
         }
         void RefreshPanel()
         {
+            if(gameOverArtwork!=null)gameOverArtwork.gameObject.SetActive(false);
             if(panel=="Dialogue"){ShowDialogue();return;}
             if(dialogueRoot!=null)dialogueRoot.gameObject.SetActive(false);
             menuRoot.gameObject.SetActive(true);FlushAudioPreferences();draggedAudioSlider=-1;ClearButtons();settingsSliders.Clear();SetHUDVisible(!(panel=="Main"||panel=="Skins"||panel=="ConfirmNew"||((panel=="Options"||panel=="Controls"||panel=="Credits"||panel=="BindingDevice")&&returnPanel=="Main")));overlay.gameObject.SetActive(true);portrait.gameObject.SetActive(false);
             bool front=CinematicFront;
-            menuRoot.Find("Moldura").GetComponent<Image>().color=front?new Color(1,1,1,.72f):Color.white;heading.fontSize=10;heading.rectTransform.sizeDelta=new Vector2(548,24);heading.alignment=TextAnchor.UpperLeft;
+            menuRoot.Find("Moldura").GetComponent<Image>().color=front?new Color(1,1,1,.72f):Color.white;heading.fontSize=10;heading.color=Color.white;heading.rectTransform.sizeDelta=new Vector2(548,24);heading.alignment=TextAnchor.UpperLeft;
             menuBackdrop.sprite=front?menuBackground:null;menuBackdrop.color=front&&menuBackground!=null?Color.white:new Color(.02f,.02f,.04f,.88f);
             bodyText.fontSize=7;bodyText.rectTransform.anchoredPosition=new Vector2(334,-155);bodyText.rectTransform.sizeDelta=new Vector2(232,132);bodyText.alignment=TextAnchor.UpperLeft;portrait.rectTransform.anchoredPosition=new Vector2(367,-62);portrait.rectTransform.sizeDelta=new Vector2(160,82);
-            if(abyssHelpImage!=null)abyssHelpImage.gameObject.SetActive(false);
+            if(abyssHelpImage!=null)abyssHelpImage.gameObject.SetActive(false);if(resultRank!=null)resultRank.gameObject.SetActive(false);bodyText.lineSpacing=1;
             switch(panel)
             {
                 case "Main":BuildCinematicMain();break;
                 case "Difficulty":BuildDifficulty();break;
                 case "CombatOptions":BuildCombatOptions();break;
+                case "AirCombat":BuildAirGuide();break;
+                case "MotorcycleExpansion":BuildMotorcycleExpansionGuide();break;
                 case "Training":BuildTraining();break;
                 case "TrainingEnemies":BuildTrainingEnemies();break;
                 case "TrainingForms":BuildTrainingForms();break;
@@ -178,15 +189,17 @@ namespace Darklight
                 case "Pause":
                     if(ExploringNewRegion){heading.text="EXPLORAÇÃO";bodyText.text=Map.Art.title;Button("RETOMAR",Close);Button("ESCOLHER REGIÃO",()=>Open("Regions"));Button("MAPA DA FASE",()=>atlas.TryOpen());Button("OPÇÕES",()=>Open("Options"));Button("MENU PRINCIPAL",()=>Open("Main"));break;}
                     heading.text="PAUSA";bodyText.text=DarklightStory.Chapters[Progress.chapter]+"\n"+DarklightStory.Places[Progress.chapter];
-                    Button("RETOMAR",Close);Button("COMBATE E TREINO",()=>Open(Training?"Training":"CombatOptions"));Button("TRANSFORMACOES",()=>Open("Transformations"));Button("HABILIDADES",()=>Open("Skills"));Button("ARMAS",()=>Open("Weapons"));Button("INVENTARIO",()=>Open("Inventory"));Button("DIARIO",()=>Open("Journal"));Button("DARK RESONANCE",()=>Open("MP3"));Button("TROCAR SKIN",()=>Open("Skins"));Button("MAPA DA FASE",()=>atlas.TryOpen());Button("OPCOES",()=>Open("Options"));Button("MENU PRINCIPAL",()=>{if(Training){trainingFromMain=true;ExitTraining();}else{StopPower();SaveCheckpoint();Open("Main");}});if(PlaytestSession)Button("FERRAMENTAS DE TESTE",()=>Open("Playtest"));break;
+                    Button("RETOMAR",Close);Button("COMBATE E TREINO",()=>Open(Training?"Training":"CombatOptions"));Button("ESTATÍSTICAS DA FASE",()=>Open("StageResults"));Button("TRANSFORMACOES",()=>Open("Transformations"));Button("HABILIDADES",()=>Open("Skills"));Button("ARMAS",()=>Open("Weapons"));Button("INVENTARIO",()=>Open("Inventory"));Button("DIARIO",()=>Open("Journal"));Button("DARK RESONANCE",()=>Open("MP3"));Button("TROCAR SKIN",()=>Open("Skins"));Button("MAPA DA FASE",()=>atlas.TryOpen());Button("OPCOES",()=>Open("Options"));Button("MENU PRINCIPAL",()=>{if(Training){trainingFromMain=true;ExitTraining();}else{StopPower();SaveCheckpoint();Open("Main");}});if(PlaytestSession)Button("FERRAMENTAS DE TESTE",()=>Open("Playtest"));break;
+                case "StageResults":BuildStageResults();break;
+                case "WeaponCombos":BuildWeaponComboGuide();break;
                 case "Playtest":BuildPlaytestTools();break;
                 case "Skills":BuildSkillPaths();break;
                 case "VampireSkills":BuildVampireSkills();break;
                 case "Weapons":BuildWeaponGuides();break;
                 case "AbyssHelp":BuildAbyssHelp();break;
                 case "Inventory":
-                    heading.text="INVENTARIO";bodyText.text="V / LS: trocar armas\nPresas: apos Kael | Corrente: apos Matriarca\nELIXIRES: "+Progress.potions+" | MEMORIAS: "+Progress.shards+"/10\nMP3: "+(Progress.mp3Unlocked?"DESBLOQUEADO":"MISSAO FREQUENCIA DO VEU");
-                    Button("USAR ELIXIR (+45% VIDA)",()=>{UsePotion();RefreshPanel();},Progress.potions>0&&health.HealthPercent<1&&!health.IsDead);for(int i=0;i<weaponDefinitions.Length;i++){int index=i;Button(weaponDefinitions[i].displayName+(Weapons.Equipped==weaponDefinitions[i]?" - EQUIPADA":""),()=>{Weapons.Request(index);Close();},Weapons.Unlocked(i));}Button("VOLTAR",()=>Open("Pause"));break;
+                    heading.text="INVENTARIO";bodyText.text="V / LS: trocar armas\nPunhos: após Matriarca | Moto: Cripta dos Primeiros\nELIXIRES: "+Progress.potions+" | MEMORIAS: "+Progress.shards+"/10\nMP3: "+(Progress.mp3Unlocked?"DESBLOQUEADO":"MISSAO FREQUENCIA DO VEU");
+                    Button("USAR ELIXIR (+45% VIDA)",()=>{UsePotion();RefreshPanel();},Progress.potions>0&&health.HealthPercent<1&&!health.IsDead);for(int i=0;i<weaponDefinitions.Length;i++){if(!DarklightPlayableScope.WeaponActive(i))continue;int index=i;Button(weaponDefinitions[i].displayName+(Weapons.Equipped==weaponDefinitions[i]?" - EQUIPADA":""),()=>{Weapons.Request(index);Close();},Weapons.Unlocked(i),WeaponIcon(weaponDefinitions[i]));}Button("VOLTAR",()=>Open("Pause"));break;
                 case "Journal":
                     heading.text="DIARIO";bodyText.text=Objective+"\n\n"+(Progress.mp3Unlocked?"Frequencia do Veu concluida.":Progress.mp3Quest>0?"Frequencia do Veu: "+Mathf.Min(3,Progress.mp3Quest-1)+"/3 componentes. Volte a Icaro.":"Icaro Nox espera no distrito do vinil (cap. 2).")+"\nMemorias opcionais: aproxime-se dos fragmentos e use E / A.";
                     Button("VOLTAR",()=>Open("Pause"));break;
@@ -201,7 +214,7 @@ namespace Darklight
                 case "BindingSlot":BuildBindingSlot();break;
                 case "BindingConflict":BuildBindingConflict();break;
                 case "Transformations":BuildTransformations();break;
-                case "Death":if(Training){health.SetMaxHealth(health.MaxHealth,false);lab.Player.ResetModel();Open("Training");return;}heading.text="O VEU TE ALCANCOU";bodyText.text="Retome do ultimo selo libertado.\nAs habilidades e a campanha continuam suas.";Button("RETOMAR CHECKPOINT",()=>{StopPower();LoadMap(Progress.chapter);Close();});Button("MENU PRINCIPAL",()=>Open("Main"));break;
+                case "Death":if(Training){health.SetMaxHealth(health.MaxHealth,false);lab.Player.ResetModel();Open("Training");return;}BuildGameOver();break;
                 case "Ending":BuildEndings();break;
                 case "Victory":
                     heading.text="REQUIEM CONCLUIDO";bodyText.text=EndingDescription;
@@ -209,7 +222,7 @@ namespace Darklight
                 case "ChapterSelect":heading.text="REVISITAR VESPERA";bodyText.text="Rejogue com seus atributos atuais.\nO save concluido e preservado ate escolher uma fase.";for(int i=0;i<DarklightStory.Chapters.Length;i++){int chapter=i;Button((i+1)+" - "+DarklightStory.Chapters[i],()=>TravelToChapter(chapter));}Button("VOLTAR",()=>Open("Victory"));break;
                 case "Credits":heading.text="CREDITOS";bodyText.text="Criacao e protagonista: Fabio\nDesenvolvimento assistido por Codex\nPixel art: segredo-varginha-pixelart + geracao assistida\nFonte: Press Start 2P, CodeMan38 (OFL)\nMP3 pessoais: HIM e Metallica | devfabio.vercel.app\nSFX CC0: Kenney, JaggedStone e Thimras\nLicenças: AUDIO-LICENSES.json";Button("VOLTAR",()=>Open(returnPanel));break;
             }
-            RefreshAppearancePortrait();LayoutCinematicPanel(front);selection=Mathf.Clamp(selection,0,Mathf.Max(0,buttons.Count-1));if(buttons.Count>0&&!buttons[selection].enabled)MoveSelection(1);
+            RefreshAppearancePortrait();LayoutCinematicPanel(front);if(panel=="Death")LayoutGameOver();selection=Mathf.Clamp(selection,0,Mathf.Max(0,buttons.Count-1));if(buttons.Count>0&&!buttons[selection].enabled)MoveSelection(1);
         }
         
         void AddEnemyBar(DarklightEnemy enemy)
@@ -235,7 +248,7 @@ namespace Darklight
         void Upgrade(int stat)
         {if(Progress.points<=0)return;Progress.points--;if(stat==0)Progress.attack++;else if(stat==1){Progress.vitality++;health.SetMaxHealth(Progress.MaxHealth);}else Progress.mastery++;SaveCheckpoint();RefreshPanel();}
         void Finish(int ending){StopPower();Progress.ending=ending;Progress.completed=true;SaveCheckpoint();Open("Victory");Sound(3);}
-        string ActionLabel(string name)=>name switch{"AbyssSaw"=>"CAVALEIRO: SERRAS","AbyssBike"=>"CAVALEIRO: MOTO / FINAL","AbyssDrift"=>"CAVALEIRO: DERRAPAGEM","Move"=>"MOVER","Potion"=>"ELIXIR","Journal"=>"DIARIO","Pause"=>"PAUSAR","MapPan"=>"MOVER MAPA","MapCursor"=>"CURSOR DO MAPA","MapZoomIn"=>"APROXIMAR MAPA","MapZoomOut"=>"AFASTAR MAPA","MapCenter"=>"CENTRALIZAR MAPA","MapMark"=>"MARCAR MAPA","MapClear"=>"APAGAR MARCA","MapObjective"=>"OBJETIVO","Interact"=>"INTERAGIR","Light"=>"LEVE","Heavy"=>"PESADO","Dodge"=>"ESQUIVA","Parry"=>"PARRY","Skill"=>"ONDA","Transform"=>"TRANSFORMAR","MP3"=>"MP3","Map"=>"MAPA DA FASE","Power"=>"ATIVAR PODER","PowerNext"=>"PROXIMO PODER","PowerPrevious"=>"PODER ANTERIOR","WeaponNext"=>"TROCAR ARMA","Aerial"=>"ATAQUE AEREO","WeaponSpecial"=>"ESPECIAL DA ARMA","Vampire"=>"PODER DE SANGUE","VampireNext"=>"PROXIMO PODER DE SANGUE",_=>name};
+        string ActionLabel(string name)=>name switch{"AbyssHeavy"=>"CAVALEIRO: PESADO","AbyssSaw"=>"CAVALEIRO: SERRAS","AbyssBike"=>"CAVALEIRO: MOTO / FINAL","AbyssDrift"=>"CAVALEIRO: DERRAPAGEM","Move"=>"MOVER","Potion"=>"ELIXIR","Journal"=>"DIARIO","Pause"=>"PAUSAR","MapPan"=>"MOVER MAPA","MapCursor"=>"CURSOR DO MAPA","MapZoomIn"=>"APROXIMAR MAPA","MapZoomOut"=>"AFASTAR MAPA","MapCenter"=>"CENTRALIZAR MAPA","MapMark"=>"MARCAR MAPA","MapClear"=>"APAGAR MARCA","MapObjective"=>"OBJETIVO","Interact"=>"INTERAGIR","Light"=>"LEVE","Heavy"=>"PESADO","Dodge"=>"ESQUIVA","Parry"=>"PARRY","Skill"=>"ONDA","Transform"=>"TRANSFORMAR","MP3"=>"MP3","Map"=>"MAPA DA FASE","Power"=>"ATIVAR PODER","PowerNext"=>"PROXIMO PODER","PowerPrevious"=>"PODER ANTERIOR","WeaponNext"=>"TROCAR ARMA","Aerial"=>"ATAQUE AEREO","WeaponSpecial"=>"ESPECIAL DA ARMA","Vampire"=>"PODER DE SANGUE","VampireNext"=>"PROXIMO PODER DE SANGUE",_=>name};
         RectTransform RectAt(Transform parent,string name,float x,float y,float w,float h)
         {var rect=new GameObject(name,typeof(RectTransform)).GetComponent<RectTransform>();rect.SetParent(parent,false);rect.anchorMin=rect.anchorMax=rect.pivot=new Vector2(0,1);rect.anchoredPosition=new Vector2(x,-y);rect.sizeDelta=new Vector2(w,h);return rect;}
         Image ImageAt(Transform parent,string name,float x,float y,float w,float h,Sprite sprite)

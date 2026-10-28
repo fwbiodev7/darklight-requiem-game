@@ -1,0 +1,563 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqFistsRupturaDiretoS_SW_W20261025V1.png",
+  "imageSha256": "22068fdb6b4e372732fe907f7aed6d539731f246ec8f9940783f41d1be3f0d6a",
+  "nativeSize": [
+    2454,
+    1461
+  ],
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 172.22222222222223,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261023/ReqFistsRupturaDiretoS_SW_W20261025V1-source.png",
+  "sourceSha256": "48190447b0a5c0ead156d37578090c24342eeb9a0a70308890d7b5117719e75d",
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_00",
+      "rect": [
+        0,
+        0,
+        818,
+        487
+      ],
+      "pivot": [
+        0.4889975550122249,
+        0.20944558521560575
+      ],
+      "durationMs": 75,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "anticipation",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        0,
+        514,
+        446
+      ],
+      "sourceAnchor": [
+        329,
+        352
+      ],
+      "sourcePackingAnchor": [
+        376,
+        352
+      ],
+      "supportGuide": {
+        "anchor": [
+          329,
+          352
+        ],
+        "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+      },
+      "sourceOffsetInFrame": [
+        71,
+        33
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_01",
+      "rect": [
+        818,
+        0,
+        818,
+        487
+      ],
+      "pivot": [
+        0.6638141809290954,
+        0.20944558521560575
+      ],
+      "durationMs": 65,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "contact",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        591,
+        1,
+        386,
+        354
+      ],
+      "sourceAnchor": [
+        782,
+        354
+      ],
+      "sourcePackingAnchor": [
+        686,
+        354
+      ],
+      "supportGuide": {
+        "anchor": [
+          782,
+          354
+        ],
+        "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+      },
+      "sourceOffsetInFrame": [
+        352,
+        32
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_02",
+      "rect": [
+        1636,
+        0,
+        818,
+        487
+      ],
+      "pivot": [
+        0.5806845965770171,
+        0.20944558521560575
+      ],
+      "durationMs": 130,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "recovery",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        1025,
+        0,
+        477,
+        354
+      ],
+      "sourceAnchor": [
+        1214,
+        353
+      ],
+      "sourcePackingAnchor": [
+        1186,
+        353
+      ],
+      "supportGuide": {
+        "anchor": [
+          1214,
+          353
+        ],
+        "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+      },
+      "sourceOffsetInFrame": [
+        286,
+        32
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_03",
+      "rect": [
+        0,
+        487,
+        818,
+        487
+      ],
+      "pivot": [
+        0.4132029339853301,
+        0.20944558521560575
+      ],
+      "durationMs": 75,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "anticipation",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        0,
+        339,
+        559,
+        331
+      ],
+      "sourceAnchor": [
+        330,
+        669
+      ],
+      "sourcePackingAnchor": [
+        439,
+        669
+      ],
+      "supportGuide": {
+        "anchor": [
+          330,
+          669
+        ],
+        "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+      },
+      "sourceOffsetInFrame": [
+        8,
+        55
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_04",
+      "rect": [
+        818,
+        487,
+        818,
+        487
+      ],
+      "pivot": [
+        0.6882640586797066,
+        0.20944558521560575
+      ],
+      "durationMs": 65,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "contact",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        587,
+        340,
+        447,
+        332
+      ],
+      "sourceAnchor": [
+        787,
+        671
+      ],
+      "sourcePackingAnchor": [
+        671,
+        671
+      ],
+      "supportGuide": {
+        "anchor": [
+          787,
+          671
+        ],
+        "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+      },
+      "sourceOffsetInFrame": [
+        363,
+        54
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_05",
+      "rect": [
+        1636,
+        487,
+        818,
+        487
+      ],
+      "pivot": [
+        0.5183374083129584,
+        0.20944558521560575
+      ],
+      "durationMs": 130,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "recovery",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        1068,
+        297,
+        450,
+        378
+      ],
+      "sourceAnchor": [
+        1219,
+        674
+      ],
+      "sourcePackingAnchor": [
+        1242,
+        674
+      ],
+      "supportGuide": {
+        "anchor": [
+          1219,
+          674
+        ],
+        "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+      },
+      "sourceOffsetInFrame": [
+        273,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_06",
+      "rect": [
+        0,
+        974,
+        818,
+        487
+      ],
+      "pivot": [
+        0.40097799511002447,
+        0.20944558521560575
+      ],
+      "durationMs": 75,
+      "action": "attack",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "anticipation",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        47,
+        668,
+        505,
+        356
+      ],
+      "sourceAnchor": [
+        326,
+        1011
+      ],
+      "sourcePackingAnchor": [
+        445,
+        1011
+      ],
+      "supportGuide": {
+        "anchor": [
+          326,
+          1011
+        ],
+        "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+      },
+      "sourceOffsetInFrame": [
+        49,
+        42
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_07",
+      "rect": [
+        818,
+        974,
+        818,
+        487
+      ],
+      "pivot": [
+        0.3753056234718826,
+        0.20944558521560575
+      ],
+      "durationMs": 65,
+      "action": "attack",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "contact",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        571,
+        669,
+        481,
+        344
+      ],
+      "sourceAnchor": [
+        787,
+        1011
+      ],
+      "sourcePackingAnchor": [
+        927,
+        1011
+      ],
+      "supportGuide": {
+        "anchor": [
+          787,
+          1011
+        ],
+        "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+      },
+      "sourceOffsetInFrame": [
+        91,
+        43
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_08",
+      "rect": [
+        1636,
+        974,
+        818,
+        487
+      ],
+      "pivot": [
+        0.39364303178484106,
+        0.20944558521560575
+      ],
+      "durationMs": 130,
+      "action": "attack",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "recovery",
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        1065,
+        668,
+        415,
+        356
+      ],
+      "sourceAnchor": [
+        1220,
+        1011
+      ],
+      "sourcePackingAnchor": [
+        1345,
+        1011
+      ],
+      "supportGuide": {
+        "anchor": [
+          1220,
+          1011
+        ],
+        "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+      },
+      "sourceOffsetInFrame": [
+        167,
+        42
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_S",
+      "frames": [
+        "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_00",
+        "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_01",
+        "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_SW",
+      "frames": [
+        "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_03",
+        "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_04",
+        "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_05"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_W",
+      "frames": [
+        "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_06",
+        "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_07",
+        "Redesign_ReqFistsRupturaDiretoS_SW_W20261025V1_08"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "attack_S",
+    "attack_SW",
+    "attack_W"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 651309,
+  "packedPixels": 651309,
+  "originalSourcePixels": 651309,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 921555,
+    "farBeyond16pxPixels": 202,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.792156862745098,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ],
+  "calibrationGuide": {
+    "method": "Whole-source first-row crown-to-sole body median 341px; gauntlets do not extend above crown; no equipment-bound normalization",
+    "sourceFrameIndices": [
+      0,
+      1,
+      2
+    ],
+    "crownY": [
+      12,
+      12,
+      12
+    ],
+    "soleY": [
+      352,
+      354,
+      353
+    ],
+    "bodyHeightPixels": 341,
+    "pixelsPerUnit": 172.22222222222223,
+    "worldBodyHeight": 1.98,
+    "measurementTolerancePixels": 4,
+    "unityWorldScale": 1.325,
+    "worldScaleViewPending": false
+  },
+  "review": {
+    "wholeSourceSeen": true,
+    "packedContactSeen": true,
+    "motionSeen": false,
+    "unityImported": false,
+    "gameplayVerified": false,
+    "visualApproval": false,
+    "findings": "Nine intact Fabius figures, strong crimson side/lower hair/nape strands over chestnut base, both hands in physical plated gauntlets, matching greaves. Warm clean skin and dark-red eyes retained. S front, SW angled front-left, W left punch stance. No mirror, pixel recolor, assembly or resizing. Remaining five directions and idle not covered.",
+    "worldScaleComparisonSeen": true
+  },
+  "provenance": {
+    "generator": "built-in image_gen",
+    "promptFile": "ArtSources/WeaponRedesign20261025/candidates/ReqFistsRupturaDiretoS_SW_W-v1-prompt.txt",
+    "references": [
+      {
+        "path": "ArtSources/WeaponRedesign20261024/candidates/ReqFistsNormalDireto_S_SW_W-v2-source.png",
+        "sha256": "569470770dc7793b22cc4f3aeb7dded4ea102a8ce647d07338fb7ce1a599f7d6"
+      },
+      {
+        "path": "ArtSources/WeaponRedesign20261023/references/equipment-four-forms.png",
+        "sha256": "6c8c6b05e27f16f19f2bfcad3151294b164f004c0960fa713662788f9e3f6930"
+      },
+      {
+        "path": "ArtSources/WeaponRedesign20261025/candidates/ReqDaggersRupturaPresas1S_SW_W20261025V2-source.png",
+        "sha256": "667fe07ff0277404e3afa3f1b25f6cbedb77df8757d4387db8f8a6ccec38c4c1"
+      }
+    ]
+  }
+}

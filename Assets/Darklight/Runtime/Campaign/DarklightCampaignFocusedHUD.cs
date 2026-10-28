@@ -38,7 +38,7 @@ namespace Darklight
             FocusedElement(lab.PixelHUD.skillFill.name,skill);FocusedElement(lab.PixelHUD.skillText.name,skill);
             bool potion=Active&&(training||health.HealthPercent<.45f||now<focusedPotionUntil);
             FocusedElement("TeclaElixir",potion);FocusedElement("ElixiresHUD",potion);
-            if(Form>0)statusText.text=new[]{"","RUPTURA","ECLIPSE","ABSOLUTO"}[Form]+" "+FormTime.ToString("0")+"s";
+            if(Form>0)statusText.text=DarklightPlayableScope.FormName(Form)+" "+FormTime.ToString("0")+"s";
             FocusedElement("Progresso",Active&&(training||Form>0||now<focusedProgressUntil));
             FocusedElement("MP3Compacto",Active&&(training||Resonance.Active>=0||now<focusedPowerUntil));
             // Health, blood, active gear timing, boss warnings and interaction prompts remain intact.

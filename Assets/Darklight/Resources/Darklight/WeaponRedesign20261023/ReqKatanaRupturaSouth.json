@@ -1,0 +1,585 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqKatanaRupturaSouth.png",
+  "imageSha256": "01610584761dd54990f35e5c9b608a83e22de715deeea2f01f7fe4c608e9dedb",
+  "nativeSize": [
+    2476,
+    750
+  ],
+  "sourceSize": [
+    2476,
+    750
+  ],
+  "pixelsPerUnit": 164.64646464646464,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261023/publication-selected/ReqKatanaRupturaSouth-source-only-approved.png",
+  "sourceSha256": "01610584761dd54990f35e5c9b608a83e22de715deeea2f01f7fe4c608e9dedb",
+  "frames": [
+    {
+      "id": "Redesign_ReqKatanaRupturaSouth_00",
+      "rect": [
+        0,
+        0,
+        619,
+        375
+      ],
+      "pivot": [
+        0.4588045234248788,
+        0.07733333333333334
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "neutral",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        0,
+        619,
+        375
+      ],
+      "sourceAnchor": [
+        284.0,
+        346.0
+      ],
+      "sourcePackingAnchor": [
+        251,
+        338
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1,
+      "originalGeneratedSourceFrameIndex": 0,
+      "originalGeneratedSourceRect": [
+        33,
+        6,
+        359,
+        336
+      ],
+      "originalGeneratedSourceAnchor": [
+        251,
+        338
+      ],
+      "originalGeneratedSourceOffsetInFrame": [
+        66,
+        14
+      ]
+    },
+    {
+      "id": "Redesign_ReqKatanaRupturaSouth_01",
+      "rect": [
+        619,
+        0,
+        619,
+        375
+      ],
+      "pivot": [
+        0.4588045234248788,
+        0.07733333333333334
+      ],
+      "durationMs": 250,
+      "action": "idle",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "inhale",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        619,
+        0,
+        619,
+        375
+      ],
+      "sourceAnchor": [
+        903.0,
+        346.0
+      ],
+      "sourcePackingAnchor": [
+        584,
+        338
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1,
+      "originalGeneratedSourceFrameIndex": 1,
+      "originalGeneratedSourceRect": [
+        393,
+        9,
+        355,
+        332
+      ],
+      "originalGeneratedSourceAnchor": [
+        584,
+        338
+      ],
+      "originalGeneratedSourceOffsetInFrame": [
+        93,
+        17
+      ]
+    },
+    {
+      "id": "Redesign_ReqKatanaRupturaSouth_02",
+      "rect": [
+        1238,
+        0,
+        619,
+        375
+      ],
+      "pivot": [
+        0.4588045234248788,
+        0.07733333333333334
+      ],
+      "durationMs": 180,
+      "action": "idle",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "blink",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        1238,
+        0,
+        619,
+        375
+      ],
+      "sourceAnchor": [
+        1522.0,
+        346.0
+      ],
+      "sourcePackingAnchor": [
+        972,
+        337
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1,
+      "originalGeneratedSourceFrameIndex": 2,
+      "originalGeneratedSourceRect": [
+        754,
+        0,
+        366,
+        358
+      ],
+      "originalGeneratedSourceAnchor": [
+        972,
+        337
+      ],
+      "originalGeneratedSourceOffsetInFrame": [
+        66,
+        9
+      ]
+    },
+    {
+      "id": "Redesign_ReqKatanaRupturaSouth_03",
+      "rect": [
+        1857,
+        0,
+        619,
+        375
+      ],
+      "pivot": [
+        0.4588045234248788,
+        0.07733333333333334
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "return",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1857,
+        0,
+        619,
+        375
+      ],
+      "sourceAnchor": [
+        2141.0,
+        346.0
+      ],
+      "sourcePackingAnchor": [
+        1346,
+        338
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1,
+      "originalGeneratedSourceFrameIndex": 3,
+      "originalGeneratedSourceRect": [
+        1133,
+        0,
+        354,
+        348
+      ],
+      "originalGeneratedSourceAnchor": [
+        1346,
+        338
+      ],
+      "originalGeneratedSourceOffsetInFrame": [
+        71,
+        8
+      ]
+    },
+    {
+      "id": "Redesign_ReqKatanaRupturaSouth_04",
+      "rect": [
+        0,
+        375,
+        619,
+        375
+      ],
+      "pivot": [
+        0.592891760904685,
+        0.07733333333333334
+      ],
+      "durationMs": 120,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "attack_0",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        0,
+        375,
+        619,
+        375
+      ],
+      "sourceAnchor": [
+        367.0,
+        721.0
+      ],
+      "sourcePackingAnchor": [
+        527,
+        680
+      ],
+      "supportGuide": {
+        "anchor": [
+          610,
+          680
+        ],
+        "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+        "confidence": "visual-whole-source-support"
+      },
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1,
+      "originalGeneratedSourceFrameIndex": 5,
+      "originalGeneratedSourceRect": [
+        431,
+        361,
+        337,
+        327
+      ],
+      "originalGeneratedSourceAnchor": [
+        610,
+        680
+      ],
+      "originalGeneratedSourceOffsetInFrame": [
+        188,
+        27
+      ]
+    },
+    {
+      "id": "Redesign_ReqKatanaRupturaSouth_05",
+      "rect": [
+        619,
+        375,
+        619,
+        375
+      ],
+      "pivot": [
+        0.5945072697899838,
+        0.07733333333333334
+      ],
+      "durationMs": 120,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "attack_1",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        619,
+        375,
+        619,
+        375
+      ],
+      "sourceAnchor": [
+        987.0,
+        721.0
+      ],
+      "sourcePackingAnchor": [
+        861,
+        677
+      ],
+      "supportGuide": {
+        "anchor": [
+          945,
+          677
+        ],
+        "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+        "confidence": "visual-whole-source-support"
+      },
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1,
+      "originalGeneratedSourceFrameIndex": 6,
+      "originalGeneratedSourceRect": [
+        777,
+        383,
+        411,
+        299
+      ],
+      "originalGeneratedSourceAnchor": [
+        945,
+        677
+      ],
+      "originalGeneratedSourceOffsetInFrame": [
+        200,
+        52
+      ]
+    },
+    {
+      "id": "Redesign_ReqKatanaRupturaSouth_06",
+      "rect": [
+        1238,
+        375,
+        619,
+        375
+      ],
+      "pivot": [
+        0.567043618739903,
+        0.07733333333333334
+      ],
+      "durationMs": 120,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "attack_2",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        1238,
+        375,
+        619,
+        375
+      ],
+      "sourceAnchor": [
+        1589.0,
+        721.0
+      ],
+      "sourcePackingAnchor": [
+        898,
+        991
+      ],
+      "supportGuide": {
+        "anchor": [
+          965,
+          991
+        ],
+        "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+        "confidence": "visual-whole-source-support"
+      },
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1,
+      "originalGeneratedSourceFrameIndex": 10,
+      "originalGeneratedSourceRect": [
+        814,
+        682,
+        352,
+        314
+      ],
+      "originalGeneratedSourceAnchor": [
+        965,
+        991
+      ],
+      "originalGeneratedSourceOffsetInFrame": [
+        200,
+        37
+      ]
+    },
+    {
+      "id": "Redesign_ReqKatanaRupturaSouth_07",
+      "rect": [
+        1857,
+        375,
+        619,
+        375
+      ],
+      "pivot": [
+        0.3182552504038772,
+        0.07733333333333334
+      ],
+      "durationMs": 120,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Ruptura",
+      "phase": "attack_3",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        1857,
+        375,
+        619,
+        375
+      ],
+      "sourceAnchor": [
+        2054.0,
+        721.0
+      ],
+      "sourcePackingAnchor": [
+        1425,
+        1005
+      ],
+      "supportGuide": {
+        "anchor": [
+          1338,
+          1005
+        ],
+        "method": "Complete source inspected; two boot support center, y at lower boot. No source pixel changes.",
+        "confidence": "visual-whole-source-support"
+      },
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1,
+      "originalGeneratedSourceFrameIndex": 11,
+      "originalGeneratedSourceRect": [
+        1149,
+        678,
+        361,
+        346
+      ],
+      "originalGeneratedSourceAnchor": [
+        1338,
+        1005
+      ],
+      "originalGeneratedSourceOffsetInFrame": [
+        8,
+        19
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "name": "idle_S",
+      "frames": [
+        "Redesign_ReqKatanaRupturaSouth_00",
+        "Redesign_ReqKatanaRupturaSouth_01",
+        "Redesign_ReqKatanaRupturaSouth_02",
+        "Redesign_ReqKatanaRupturaSouth_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_S",
+      "frames": [
+        "Redesign_ReqKatanaRupturaSouth_04",
+        "Redesign_ReqKatanaRupturaSouth_05",
+        "Redesign_ReqKatanaRupturaSouth_06",
+        "Redesign_ReqKatanaRupturaSouth_07"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "idle_S",
+    "attack_S"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 483290,
+  "packedPixels": 483290,
+  "originalSourcePixels": 483290,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "Publication source includes only the selected complete figures; external original provenance retained",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "publicationSourceByteIdenticalToAtlas": true,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Third authored idle pose is a blink, not a breathing in-between.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ],
+  "originalGeneratedSourcePath": "ArtSources/WeaponRedesign20261023/ReqKatanaRupturaSouth-source.png",
+  "originalGeneratedSourceSha256": "79b55df59d5d7afaf91ae2b3e24099cfac0571ec60742dc1264d2dd25d212e03",
+  "originalGeneratedSourceSize": [
+    1536,
+    1024
+  ],
+  "originalGeneratedSelectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6,
+    10,
+    11
+  ],
+  "originalGeneratedExcludedSourceFrameIndices": [
+    4,
+    7,
+    8,
+    9
+  ],
+  "originalGeneratedExcludedSourceReason": "Only four idle figures and explicit startup/contact/recovery complete figures selected. Other attack variants preserved in original; no walking generated or implied.",
+  "originalGeneratedOriginalSourcePixels": 741766,
+  "originalGeneratedAlphaReview": {
+    "transparentPixels": 831098,
+    "farBeyond16pxPixels": 20,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.0784313725490196,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "publicationSourceMethod": "Byte-exact copy of approved whole-figure atlas; original mixed sheet excluded"
+}

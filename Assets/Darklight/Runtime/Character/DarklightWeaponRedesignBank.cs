@@ -34,6 +34,7 @@ namespace Darklight
         static readonly Dictionary<string,Dictionary<string,Sprite>> sheets=new(StringComparer.Ordinal);
         static readonly HashSet<Sprite> authored=new();
         static readonly Dictionary<string,Sprite> icons=new(StringComparer.Ordinal);
+        static readonly Dictionary<(DarklightWeaponRedesignPage,AttackDefinition),bool> wholeMappings=new();
         static readonly MaterialPropertyBlock block=new();
         static bool attempted,iconsAttempted;
         static int Context(int skin,int weapon,int form,int direction)=>((skin*3+weapon)*4+form)*8+direction;
@@ -144,11 +145,34 @@ namespace Darklight
             {
                 if(page.action!=action||(pass==0?string.IsNullOrEmpty(page.attackKey)||page.attackKey!=attack:!string.IsNullOrEmpty(page.attackKey)))continue;
                 float time=model.State==CombatState.Neutral?(livingTime>=0?livingTime:model.Clock):model.StateTime;
+                if(!MapsWholeSequence(page,model))continue;
                 int index=Frame(page,time,existing?.name);
                 if(index<0||!Load(page))continue;
                 sprite=page.frames[index];return true;
             }
             return false;
+        }
+        static bool MapsWholeSequence(DarklightWeaponRedesignPage page,CombatModel model)
+        {
+            if(!(page.sourceSpriteNames?.Length>0))return true;
+            var attack=page.action=="Attack"?model.Attack:null;
+            if(wholeMappings.TryGetValue((page,attack),out bool valid))return valid;
+            // Validate the original consumer for every phase before replacing the
+            // first frame. An incomplete map keeps the whole original sequence.
+            var probe=new CombatModel(model.Loadout);float angle=page.direction*Mathf.PI/4;
+            var facing=new Vector2(-Mathf.Sin(angle),-Mathf.Cos(angle));
+            var input=new CombatInput{aim=facing,move=page.action=="Walk"?facing:Vector2.zero};
+            valid=page.action=="Walk"||attack!=null&&probe.TryAirFollowup(attack,input);
+            float duration=attack!=null?attack.Duration:1;
+            if(duration<=0||duration>10)valid=false;
+            for(int tick=0;valid&&tick<=Mathf.CeilToInt(duration*1000);tick++)
+            {
+                if(attack!=null&&probe.State!=CombatState.Attack)break;
+                var original=TodayCharacterBank.Resolve(page.skin,0,page.weapon,page.direction,probe,input.move);
+                if(original==null||Array.IndexOf(page.sourceSpriteNames,original.name)<0){valid=false;break;}
+                probe.Tick(.001f,input);
+            }
+            wholeMappings[(page,attack)]=valid;return valid;
         }
         public static bool IsAuthored(Sprite sprite)=>sprite!=null&&authored.Contains(sprite);
         public static Sprite Icon(int weapon,int form,Sprite fallback)
@@ -176,6 +200,6 @@ namespace Darklight
             block.SetTexture("_VampireMask",Texture2D.blackTexture);block.SetVector("_CanonicalSkinShift",Vector4.zero);
             renderer.SetPropertyBlock(block);
         }
-        public static void ClearCache(){attempted=iconsAttempted=false;contexts.Clear();sheets.Clear();authored.Clear();icons.Clear();}
+        public static void ClearCache(){attempted=iconsAttempted=false;contexts.Clear();sheets.Clear();authored.Clear();icons.Clear();wholeMappings.Clear();}
     }
 }

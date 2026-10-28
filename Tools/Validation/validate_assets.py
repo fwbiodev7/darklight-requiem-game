@@ -26,15 +26,18 @@ def run_validation(project_root="."):
         "coverage": {},
         "issues": []
     }
+    wr_cat={}
 
     def record_issue(level, category, message, path=""):
-        results["summary"][level.lower()] = results["summary"].get(level.lower(), 0) + 1
+        results["summary"][{"ERROR":"errors","WARNING":"warnings","INFO":"info","BLOCKED":"blocked"}[level]]+=1
         results["issues"].append({
             "level": level,
             "category": category,
             "message": message,
             "path": path.replace('\\', '/')
         })
+    if not os.path.isdir(resources_dir):
+        record_issue("ERROR","MISSING_RESOURCES","Resources directory does not exist",resources_dir)
 
     # 1. Validate all JSON syntax in Resources and ArtSources
     json_count = 0
@@ -90,6 +93,13 @@ def run_validation(project_root="."):
 
     # 4. Check for duplicate PNG files by exact SHA256 in Resources
     hash_to_files = defaultdict(list)
+    png_sizes={}
+    png_hashes={}
+    try:
+        from PIL import Image
+    except ImportError:
+        Image=None
+        record_issue("BLOCKED","MISSING_PILLOW","PNG integrity verification requires the existing Pillow tool environment")
     png_count = 0
     for root, _, files in os.walk(resources_dir):
         for f in files:
@@ -97,6 +107,15 @@ def run_validation(project_root="."):
                 png_count += 1
                 p = os.path.join(root, f)
                 h = sha256_file(p)
+                png_hashes[os.path.normcase(os.path.abspath(p))]=h
+                if Image is not None:
+                    try:
+                        with Image.open(p) as image:
+                            if image.format!="PNG":raise ValueError("Resource is not a PNG")
+                            png_sizes[os.path.normcase(os.path.abspath(p))]=list(image.size)
+                            image.verify()
+                    except Exception as error:
+                        record_issue("ERROR","CORRUPT_PNG",str(error),p)
                 hash_to_files[h].append(os.path.relpath(p, project_root).replace('\\', '/'))
 
     duplicates_found = 0
@@ -104,18 +123,27 @@ def run_validation(project_root="."):
         if len(flist) > 1:
             duplicates_found += 1
             record_issue("INFO", "DUPLICATE_ASSET", f"Identical PNG content ({len(flist)} copies): {flist}")
+    for page in wr_cat.get("pages",[]):
+        name=page.get("resourcePath","")
+        actual=os.path.normcase(os.path.abspath(os.path.join(resources_dir,name+".png")))
+        if page.get("imageSha256") and png_hashes.get(actual)!=page["imageSha256"]:
+            record_issue("ERROR","PNG_HASH_MISMATCH","Catalog hash differs from the resource",name)
+        if Image is not None and page.get("nativeSize") and png_sizes.get(actual)!=page["nativeSize"]:
+            record_issue("ERROR","PNG_DIMENSIONS","Catalog dimensions differ from the native PNG",name)
 
-    # 5. Coverage matrix
-    record_issue("BLOCKED", "COVERAGE_GAP", "Moto com Requiem: Nao ha pranchas autorais com o piloto Requiem no clone.", "Assets/Darklight/Runtime/Character/DarklightMotorcycleRedesignBank.cs")
-    record_issue("WARNING", "COVERAGE_GAP", "Katana Transformaçoes (Ruptura/Eclipse/Absoluto): Possuem apenas vista Sul autoral no redesign.", "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/catalog.json")
-
+    # Report actual authored descriptors, never a hardcoded completion claim.
+    moto=[]
+    bank=os.path.dirname(wr_cat_path)
+    for name in sorted(os.listdir(bank)) if os.path.isdir(bank) else []:
+        if name.startswith("RequiemMoto") and name.endswith(".json"):
+            with open(os.path.join(bank,name),encoding="utf-8-sig") as stream:
+                sheet=json.load(stream)
+            moto.append(dict(manifest=name,figures=len(sheet.get("frames",[])),status=sheet.get("status")))
     results["coverage"] = {
-        "Katana": {"forms": {0: "Normal (Idle 8 dir, Leve1 8 dir, Leve2 8 dir, Walk South)", 1: "Ruptura (South only)", 2: "Eclipse (South only)", 3: "Absoluto (South only)"}},
-        "PunhosDaRuina": {"status": "Complete 128 pages (2 skins x 4 forms x 8 directions x 2 banks)"},
-        "Moto": {
-            "Rock": "4 forms x 8 directions + 4 slam phases",
-            "Requiem": "BLOCKED_ABSENT_IN_CLONE: No Requiem rider authored sheets present"
-        },
+        "redesign_clips":len(wr_cat.get("pages",[])) if os.path.isfile(wr_cat_path) else 0,
+        "requiem_motorcycle_sheets":moto,
+        "complete":False,
+        "limit":"Inventory is not animation completion, approval or runtime verification",
         "total_pngs_checked": png_count,
         "total_jsons_checked": json_count,
         "duplicate_hash_clusters": duplicates_found
@@ -139,3 +167,4 @@ if __name__ == "__main__":
     print(f"Info: {s.get('info', 0)}")
     print(f"Blocked: {s.get('blocked', 0)}")
     print(f"Output written to outputs/validation/assets_validation.json")
+    sys.exit(1 if s["errors"] or s["blocked"] else 0)

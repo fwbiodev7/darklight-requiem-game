@@ -1,3 +1,5 @@
+> **Histórico superado em 26/10:** seguir [ESCOPO-CANONICO-20261026.md](ESCOPO-CANONICO-20261026.md). Agora Fabius é somente Réquiem, com Katana/Punhos/Moto; formas Normal/Ruptura/Eclipse Absoluto; Lucius somente Normal/Nexo Fenrir. Moto não é exclusiva de Rock. As referências e restrições de anatomia/olhos/cabelo aqui preservadas continuam válidas quando compatíveis. A suspensão de Play/áudio deste registro foi substituída pelo pedido explícito de testes de 26/10.
+
 # Contrato visual da retomada — 25/10/2026
 
 Pedido ativo: continuar o jogo Unity e terminar o escopo de ontem pelas referências reanexadas. Minecraft permanece pausado. Fontes, sprites corretos, saves, eventos, colisões e identidades aprovadas são preservados. Não iniciar Play nem áudio por conta própria.

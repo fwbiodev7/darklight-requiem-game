@@ -39,7 +39,7 @@ namespace Darklight.Tests
         }
         [UnityTest]public IEnumerator CaptureRealNormalPrototypeSeparatedAssembledAndTransitions()
         {
-            static string folder => DarklightTestOutput.GetDirectory("cavaleiro-sprites-20261015/capturas");
+            string folder = DarklightTestOutput.GetDirectory("cavaleiro-sprites-20261015/capturas");
             var view=fighter.GetComponent<DarklightCharacterView>();var art=fighter.transform.Find("FabioVisual").GetComponent<SpriteRenderer>();
             var target=game.MapEnemies[0];target.transform.position=(Vector3)game.Map.Spawn+new Vector3(2.8f,1.8f);target.GetComponent<Rigidbody2D>().position=target.transform.position;Physics2D.SyncTransforms();
             var follow=lab.WorldCamera.GetComponent<DarklightLabCamera>();follow.enabled=false;
@@ -104,7 +104,7 @@ namespace Darklight.Tests
         }
         [UnityTest]public IEnumerator AuthoredFormsRenderTheirOwnCompleteSheetsInRealUnityFrames()
         {
-            static string folder => DarklightTestOutput.GetDirectory("cavaleiro-sprites-20261015/capturas");
+            string folder = DarklightTestOutput.GetDirectory("cavaleiro-sprites-20261015/capturas");
             var view=fighter.GetComponent<DarklightCharacterView>();var art=fighter.transform.Find("FabioVisual").GetComponent<SpriteRenderer>();
             var follow=lab.WorldCamera.GetComponent<DarklightLabCamera>();follow.enabled=false;
             var textures=new System.Collections.Generic.HashSet<Texture>();
@@ -225,7 +225,7 @@ namespace Darklight.Tests
         {
             var keyboard=UnityEngine.InputSystem.InputSystem.AddDevice<UnityEngine.InputSystem.Keyboard>();
             string bindings=UnityEngine.InputSystem.InputActionRebindingExtensions.SaveBindingOverridesAsJson(lab.Input.Asset);
-            static string root => DarklightTestOutput.GetDirectory("cavaleiro-sprites-20261015/capturas/clipes");
+            string root = DarklightTestOutput.GetDirectory("cavaleiro-sprites-20261015/capturas/clipes");
             try
             {
                 UnityEngine.InputSystem.InputActionRebindingExtensions.ApplyBindingOverride(lab.Input.Action("AbyssBike"),0,"<Keyboard>/p");

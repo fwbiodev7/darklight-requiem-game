@@ -60,7 +60,7 @@ namespace Darklight
             TickMenuPolish();TickGameOverArtwork();UpdateEnemyBars();
             if(Weapons?.Equipped!=null){weaponIcon.sprite=WeaponIcon(Weapons.Equipped);weaponText.text=Weapons.Equipped.displayName+"  "+lab.Input.BindingLabel("WeaponNext")+"\n"+(Weapons.Equipped.id==DarklightWeaponId.Katana?lab.Input.BindingLabel("Skill")+": ONDA":lab.Player.Model.WeaponSpecialRemaining>0?"ESPECIAL: "+lab.Player.Model.WeaponSpecialRemaining.ToString("0.0")+"s":lab.Input.BindingLabel("WeaponSpecial")+": ESPECIAL");}
             chapterText.text=(ExploringNewRegion?"REGIÃO "+(RegionChapter+1):"CAP. "+(Progress.chapter+1))+"  "+Rank;
-            energyText.text=(Form>0?new[]{"","RUPTURA","ECLIPSE","ABSOLUTO"}[Form]+" "+FormTime.ToString("0"):"SANGUE "+Energy.ToString("0"));
+            energyText.text=(Form>0?DarklightPlayableScope.FormName(Form)+" "+FormTime.ToString("0"):"SANGUE "+Energy.ToString("0"));
             energyFill.rectTransform.sizeDelta=new Vector2(132*Mathf.Clamp01(Energy/100),2);
             Vector2 goal=ExploringNewRegion?RegionGoal:chapterCleared?Map.Portal:Map.Arenas[encounter];Vector2 delta=goal-(Vector2)lab.Player.transform.position;
             string compass=new[]{"S","SO","O","NO","N","NE","L","SE"}[DarklightCharacterView.DirectionIndex(delta)];
@@ -198,8 +198,8 @@ namespace Darklight
                 case "Weapons":BuildWeaponGuides();break;
                 case "AbyssHelp":BuildAbyssHelp();break;
                 case "Inventory":
-                    heading.text="INVENTARIO";bodyText.text="V / LS: trocar armas\nPresas: após Kael | Punhos: após Matriarca\nELIXIRES: "+Progress.potions+" | MEMORIAS: "+Progress.shards+"/10\nMP3: "+(Progress.mp3Unlocked?"DESBLOQUEADO":"MISSAO FREQUENCIA DO VEU");
-                    Button("USAR ELIXIR (+45% VIDA)",()=>{UsePotion();RefreshPanel();},Progress.potions>0&&health.HealthPercent<1&&!health.IsDead);for(int i=0;i<weaponDefinitions.Length;i++){int index=i;Button(weaponDefinitions[i].displayName+(Weapons.Equipped==weaponDefinitions[i]?" - EQUIPADA":""),()=>{Weapons.Request(index);Close();},Weapons.Unlocked(i),WeaponIcon(weaponDefinitions[i]));}Button("VOLTAR",()=>Open("Pause"));break;
+                    heading.text="INVENTARIO";bodyText.text="V / LS: trocar armas\nPunhos: após Matriarca | Moto: Cripta dos Primeiros\nELIXIRES: "+Progress.potions+" | MEMORIAS: "+Progress.shards+"/10\nMP3: "+(Progress.mp3Unlocked?"DESBLOQUEADO":"MISSAO FREQUENCIA DO VEU");
+                    Button("USAR ELIXIR (+45% VIDA)",()=>{UsePotion();RefreshPanel();},Progress.potions>0&&health.HealthPercent<1&&!health.IsDead);for(int i=0;i<weaponDefinitions.Length;i++){if(!DarklightPlayableScope.WeaponActive(i))continue;int index=i;Button(weaponDefinitions[i].displayName+(Weapons.Equipped==weaponDefinitions[i]?" - EQUIPADA":""),()=>{Weapons.Request(index);Close();},Weapons.Unlocked(i),WeaponIcon(weaponDefinitions[i]));}Button("VOLTAR",()=>Open("Pause"));break;
                 case "Journal":
                     heading.text="DIARIO";bodyText.text=Objective+"\n\n"+(Progress.mp3Unlocked?"Frequencia do Veu concluida.":Progress.mp3Quest>0?"Frequencia do Veu: "+Mathf.Min(3,Progress.mp3Quest-1)+"/3 componentes. Volte a Icaro.":"Icaro Nox espera no distrito do vinil (cap. 2).")+"\nMemorias opcionais: aproxime-se dos fragmentos e use E / A.";
                     Button("VOLTAR",()=>Open("Pause"));break;

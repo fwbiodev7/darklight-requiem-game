@@ -1,0 +1,489 @@
+{
+  "schemaVersion": 1,
+  "image": "ContactBursts.png",
+  "imageSha256": "594945fddd58227a70cd7684272d14416f71ad101c7eef68844c624a19b1cf6e",
+  "nativeSize": [
+    1448,
+    1086
+  ],
+  "sourceSize": [
+    1448,
+    1086
+  ],
+  "sourcePath": "ArtSources/CombatContacts20261027/selected/ContactBursts-v3-source.png",
+  "sourceSha256": "594945fddd58227a70cd7684272d14416f71ad101c7eef68844c624a19b1cf6e",
+  "pixelsPerUnit": 512,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "wholeEffects": true,
+  "containsCharacters": false,
+  "assetType": "contact-vfx",
+  "columns": 4,
+  "rows": 3,
+  "rectangleOrigin": "top-left",
+  "frames": [
+    {
+      "id": "Redesign_Contact_00",
+      "rect": [
+        0,
+        0,
+        362,
+        384
+      ],
+      "pivot": [
+        0.48066298342541436,
+        0.43229166666666663
+      ],
+      "durationMs": 25,
+      "action": "Punch",
+      "direction": "S",
+      "phase": "birth",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        0,
+        362,
+        384
+      ],
+      "sourceAnchor": [
+        174,
+        218
+      ],
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_Contact_01",
+      "rect": [
+        362,
+        0,
+        362,
+        384
+      ],
+      "pivot": [
+        0.4696132596685083,
+        0.43229166666666663
+      ],
+      "durationMs": 40,
+      "action": "Punch",
+      "direction": "S",
+      "phase": "peak",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        362,
+        0,
+        362,
+        384
+      ],
+      "sourceAnchor": [
+        532,
+        218
+      ],
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_Contact_02",
+      "rect": [
+        724,
+        0,
+        362,
+        384
+      ],
+      "pivot": [
+        0.5414364640883977,
+        0.43229166666666663
+      ],
+      "durationMs": 45,
+      "action": "Punch",
+      "direction": "S",
+      "phase": "fragments",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        724,
+        0,
+        362,
+        384
+      ],
+      "sourceAnchor": [
+        920,
+        218
+      ],
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_Contact_03",
+      "rect": [
+        1086,
+        0,
+        362,
+        384
+      ],
+      "pivot": [
+        0.5220994475138122,
+        0.43229166666666663
+      ],
+      "durationMs": 55,
+      "action": "Punch",
+      "direction": "S",
+      "phase": "dissipation",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1086,
+        0,
+        362,
+        384
+      ],
+      "sourceAnchor": [
+        1275,
+        218
+      ],
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_Contact_04",
+      "rect": [
+        0,
+        384,
+        362,
+        312
+      ],
+      "pivot": [
+        0.48066298342541436,
+        0.46474358974358976
+      ],
+      "durationMs": 25,
+      "action": "Katana",
+      "direction": "S",
+      "phase": "birth",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        0,
+        384,
+        362,
+        312
+      ],
+      "sourceAnchor": [
+        174,
+        551
+      ],
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_Contact_05",
+      "rect": [
+        362,
+        384,
+        362,
+        312
+      ],
+      "pivot": [
+        0.47790055248618785,
+        0.46474358974358976
+      ],
+      "durationMs": 40,
+      "action": "Katana",
+      "direction": "S",
+      "phase": "peak",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        362,
+        384,
+        362,
+        312
+      ],
+      "sourceAnchor": [
+        535,
+        551
+      ],
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_Contact_06",
+      "rect": [
+        724,
+        384,
+        362,
+        312
+      ],
+      "pivot": [
+        0.5524861878453039,
+        0.46474358974358976
+      ],
+      "durationMs": 45,
+      "action": "Katana",
+      "direction": "S",
+      "phase": "fragments",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        724,
+        384,
+        362,
+        312
+      ],
+      "sourceAnchor": [
+        924,
+        551
+      ],
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_Contact_07",
+      "rect": [
+        1086,
+        384,
+        362,
+        312
+      ],
+      "pivot": [
+        0.5220994475138122,
+        0.46474358974358976
+      ],
+      "durationMs": 55,
+      "action": "Katana",
+      "direction": "S",
+      "phase": "dissipation",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        1086,
+        384,
+        362,
+        312
+      ],
+      "sourceAnchor": [
+        1275,
+        551
+      ],
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_Contact_08",
+      "rect": [
+        0,
+        696,
+        362,
+        390
+      ],
+      "pivot": [
+        0.4889502762430939,
+        0.5410256410256411
+      ],
+      "durationMs": 25,
+      "action": "Heavy",
+      "direction": "S",
+      "phase": "birth",
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        0,
+        696,
+        362,
+        390
+      ],
+      "sourceAnchor": [
+        177,
+        875
+      ],
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_Contact_09",
+      "rect": [
+        362,
+        696,
+        362,
+        390
+      ],
+      "pivot": [
+        0.47790055248618785,
+        0.5410256410256411
+      ],
+      "durationMs": 40,
+      "action": "Heavy",
+      "direction": "S",
+      "phase": "peak",
+      "sourceFrameIndex": 9,
+      "sourceRect": [
+        362,
+        696,
+        362,
+        390
+      ],
+      "sourceAnchor": [
+        535,
+        875
+      ],
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_Contact_10",
+      "rect": [
+        724,
+        696,
+        362,
+        390
+      ],
+      "pivot": [
+        0.5580110497237569,
+        0.5410256410256411
+      ],
+      "durationMs": 45,
+      "action": "Heavy",
+      "direction": "S",
+      "phase": "fragments",
+      "sourceFrameIndex": 10,
+      "sourceRect": [
+        724,
+        696,
+        362,
+        390
+      ],
+      "sourceAnchor": [
+        926,
+        875
+      ],
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_Contact_11",
+      "rect": [
+        1086,
+        696,
+        362,
+        390
+      ],
+      "pivot": [
+        0.5220994475138122,
+        0.5410256410256411
+      ],
+      "durationMs": 55,
+      "action": "Heavy",
+      "direction": "S",
+      "phase": "dissipation",
+      "sourceFrameIndex": 11,
+      "sourceRect": [
+        1086,
+        696,
+        362,
+        390
+      ],
+      "sourceAnchor": [
+        1275,
+        875
+      ],
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "Punch",
+      "frames": [
+        "Redesign_Contact_00",
+        "Redesign_Contact_01",
+        "Redesign_Contact_02",
+        "Redesign_Contact_03"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "Katana",
+      "frames": [
+        "Redesign_Contact_04",
+        "Redesign_Contact_05",
+        "Redesign_Contact_06",
+        "Redesign_Contact_07"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "Heavy",
+      "frames": [
+        "Redesign_Contact_08",
+        "Redesign_Contact_09",
+        "Redesign_Contact_10",
+        "Redesign_Contact_11"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "Punch",
+    "Katana",
+    "Heavy"
+  ],
+  "quality": {
+    "alphaThreshold": 8,
+    "maxColors": 256,
+    "maxHeightRatio": 32
+  },
+  "sourceRgbaExactReconstruction": true,
+  "sourceScale": 1,
+  "sourceEdited": false,
+  "anatomyEdits": false,
+  "coordinatorReviewed": false,
+  "humanApproved": false,
+  "unityImported": false,
+  "runtimeVerified": false,
+  "logicalResolution": "Generated native raster 1448x1086; exact indexed logical grid unverified",
+  "notes": [
+    "12 complete contact effects; source preserved and delivered PNG copied byte-for-byte.",
+    "Agent visually reviewed all whole motifs against the complete canonical Katana sheet and complete v1 source.",
+    "v1/v2 rejected for broad soft halos; v3 selected for compact graphic contours and distinct temporal stages.",
+    "Residual generated fractional-alpha edge texture and palette expansion remain; binary alpha and 12-16 indexed colors are NOT achieved.",
+    "No threshold, palette quantization, cleanup, recolor or background removal was applied.",
+    "All 12 cell boundaries have alpha <=2/255 (no visible crossing). Every detached particle remains in its complete motif.",
+    "PPU512 retained; full cell width is 0.70703125world units. Verify contact size and occlusion in Unity.",
+    "Pivots manually estimated emission origins, approximate uncertainty8 native pixels.",
+    "Point filter/no mipmaps/uncompressed; 25/40/45/55ms=165ms per clip; non-looping.",
+    "visual-reviewed records agent inspection, not perfect indexed-pixel compliance, human approval, Unity import or runtime verification."
+  ],
+  "agentReviewed": true
+}

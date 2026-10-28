@@ -13,7 +13,7 @@ namespace Darklight.Tests
     {
         [UnityTest]public IEnumerator RealInputsChainSawBikeDriftSlamAndReturnAcrossFourForms()
         {
-            static string root => DarklightTestOutput.GetDirectory("cavaleiro-sprites-20261015/capturas/flow");
+            string root = DarklightTestOutput.GetDirectory("cavaleiro-sprites-20261015/capturas/flow");
             var keys=InputSystem.AddDevice<Keyboard>();string bindings=lab.Input.Asset.SaveBindingOverridesAsJson();int oldRate=Time.captureFramerate;
             try
             {

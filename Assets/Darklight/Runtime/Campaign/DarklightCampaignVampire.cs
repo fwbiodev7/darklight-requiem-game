@@ -115,7 +115,7 @@ namespace Darklight
             Button("VEU: DOMINIO "+Progress.mastery+"/5",()=>Upgrade(2),Progress.points>0&&Progress.mastery<5);
             Button("LAMINA: FORCA "+Progress.attack+"/5",()=>Upgrade(0),Progress.points>0&&Progress.attack<5);
             Button("SANGUE: VIGOR "+Progress.vitality+"/5",()=>Upgrade(1),Progress.points>0&&Progress.vitality<5);
-            Button("FORMA: "+new[]{"AUTOMATICA","RUPTURA","ECLIPSE","ABSOLUTO"}[Progress.preferredForm],()=>{Progress.preferredForm=(Progress.preferredForm+1)%(Progress.FormUnlocked+1);SaveCheckpoint();RefreshPanel();},Progress.FormUnlocked>0);
+            Button("FORMA: "+(Progress.preferredForm==0?"AUTOMATICA":DarklightPlayableScope.FormName(Progress.preferredForm)),()=>{Progress.preferredForm=(Progress.preferredForm+1)%(Progress.FormUnlocked+1);SaveCheckpoint();RefreshPanel();},Progress.FormUnlocked>0);
             Button("VOLTAR",()=>Open("Pause"));
         }
         void LearnNode(int node){if(node<0||node>1||Progress.points<1||(Progress.progressionNodes&(1<<node))!=0)return;Progress.points--;Progress.progressionNodes|=1<<node;SaveCheckpoint();RefreshPanel();}

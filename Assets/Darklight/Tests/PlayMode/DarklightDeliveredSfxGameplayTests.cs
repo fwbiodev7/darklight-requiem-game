@@ -148,7 +148,7 @@ namespace Darklight.Tests
         {
             game.EnterTraining();yield return null;yield return null;
             var fighter=lab.Player;var target=game.MapEnemies[0].GetComponent<DarklightCombatant>();
-            foreach(int weapon in new[]{1,2,0})
+            foreach(int weapon in new[]{0,2,3})
             {
                 fighter.ResetModel();game.Weapons.Request(weapon);game.Weapons.BeforeTick(.2f,true);
                 Assert.That((int)game.Weapons.Equipped.id,Is.EqualTo(weapon));
@@ -156,12 +156,12 @@ namespace Darklight.Tests
                 game.WeaponSwing(attack,100+weapon);game.WeaponHit(target,attack,100+weapon);
                 yield return null;yield return null;AssertSilentAndPreserved();
             }
-            foreach(int form in new[]{1,2,3})
+            foreach(int form in new[]{1,2,0})
             {
                 Call(game,"SetTrainingForm",form);Call(game,"TickFormPresentation",1f);
                 Assert.That(game.PresentedForm,Is.EqualTo(form));
                 game.AudioDirector.Transform(form);game.TransformationMusic.EvaluateMix(.2f);
-                yield return null;Assert.That(game.TransformationMusic.HasTheme,Is.True);AssertSilentAndPreserved();
+                yield return null;Assert.That(game.TransformationMusic.HasTheme,Is.EqualTo(form>0));AssertSilentAndPreserved();
             }
             game.ExitTraining();
             foreach(int chapter in new[]{4,9,1})

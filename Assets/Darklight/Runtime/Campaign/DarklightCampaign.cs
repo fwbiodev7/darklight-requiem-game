@@ -23,10 +23,10 @@ namespace Darklight
         public int Form {get;private set;}
         public float FormTime {get;private set;}
         public string Rank => Style.Rank;
-        public float DamageMultiplier => Progress.Damage*(Form==0?1:Form==1?1.5f:Form==2?1.65f:2)*Resonance.Damage*(Blood.FrenzyRemaining>0?1.1f:1);
-        public float AttackSpeed => Mathf.Min(1.85f,(Form==1?1.04f:Form==2?1.22f:Form==3?1.32f:1)*Resonance.Speed*(Blood.FrenzyRemaining>0?1.2f:1));
-        public float MovementSpeed => (Form==2?1.22f:Form==3?1.18f:Form==1?1.08f:1)*Resonance.Agility;
-        public float IncomingMultiplier => (Form==3?.75f:Form==1?1.12f:1)*(Resonance.Active==1?.9f:1);
+        public float DamageMultiplier => Progress.Damage*(Form==0?1:Form==1?1.5f:2)*Resonance.Damage*(Blood.FrenzyRemaining>0?1.1f:1);
+        public float AttackSpeed => Mathf.Min(1.85f,(Form==1?1.04f:Form==2?1.32f:1)*Resonance.Speed*(Blood.FrenzyRemaining>0?1.2f:1));
+        public float MovementSpeed => (Form==2?1.22f:Form==1?1.08f:1)*Resonance.Agility;
+        public float IncomingMultiplier => (Form==2?.75f:Form==1?1.12f:1)*(Resonance.Active==1?.9f:1);
         public bool WearingHeadphones => phonesTime>0;
         public bool Active => panel==""&&!deathMenuPending&&!screenTransitionBusy;
         public string Objective {get;private set;}="";
@@ -42,7 +42,7 @@ namespace Darklight
         public DarklightMapDefinition Map {get;private set;}
         public float EnemyTimeScale => slowTime>0?.55f:1;
         public Sprite[] formFrames;
-        public float StrikeRangeBonus => Form==3?.15f:0;
+        public float StrikeRangeBonus => Form==2?.15f:0;
         float style,idleStyle,noticeTime,resonanceTime,resonanceCooldown,phonesTime;
         readonly float[] rhythmSamples=new float[256];float rhythmEnvelope;MaterialPropertyBlock resonanceBlock;
         
@@ -241,8 +241,8 @@ namespace Darklight
                 Vector2 step=lab.Player.Model.Facing*2.2f;var rb=lab.Player.GetComponent<Rigidbody2D>();
                 bool blocked=false;foreach(var hit in Physics2D.CircleCastAll(rb.position,.25f,step.normalized,step.magnitude))if(!hit.collider.isTrigger&&hit.collider.GetComponentInParent<DarklightCombatant>()==null)blocked=true;
                 if(!blocked)rb.position+=step;
-                foreach(var enemy in enemies)if(enemy!=null&&!enemy.Health.IsDead&&Vector2.Distance(enemy.transform.position,rb.position)<3.5f)enemy.GetComponent<DarklightCombatant>().Receive(24*DamageMultiplier,Vector2.up);
-                Notice("PASSO DO ECLIPSE");
+                foreach(var enemy in enemies)if(enemy!=null&&!enemy.Health.IsDead&&Vector2.Distance(enemy.transform.position,rb.position)<5f)enemy.GetComponent<DarklightCombatant>().Receive(34*DamageMultiplier,Vector2.up);
+                slowTime=2.5f;Notice("PASSO DO JUIZO — ECLIPSE ABSOLUTO");
             }
             else
             {
@@ -293,7 +293,7 @@ namespace Darklight
             }
             resonanceBlock ??= new MaterialPropertyBlock();resonanceBlock.SetFloat("_ResonanceTint",1);aura.SetPropertyBlock(resonanceBlock);
             float pulse=ReducedFlashes?1:1+.08f*beat;aura.transform.localScale=Vector3.one*(2.5f*DarklightCharacterView.WorldVisualScale/aura.sprite.bounds.size.y)*pulse;
-            aura.color=phonesTime>0?new Color(.6f,.7f,1,.45f):Form==3?new Color(1,.9f,.65f,.65f):Form==2?new Color(.7f,.3f,1,.7f):resonance>=0?new Color(DarklightResonance.Colors[resonance].r,DarklightResonance.Colors[resonance].g,DarklightResonance.Colors[resonance].b,.6f):new Color(1,.2f,.3f,.6f);
+            aura.color=phonesTime>0?new Color(.6f,.7f,1,.45f):Form==3?new Color(1,.9f,.65f,.65f):Form==2?new Color(.78f,.65f,1,.7f):resonance>=0?new Color(DarklightResonance.Colors[resonance].r,DarklightResonance.Colors[resonance].g,DarklightResonance.Colors[resonance].b,.6f):new Color(1,.2f,.3f,.6f);
         }
         public void Fire(Vector3 position,Vector2 direction,float damage,float speed)
         {var obj=new GameObject("CorteDoVeu");obj.transform.position=position;var sprite=obj.AddComponent<SpriteRenderer>();sprite.sprite=extras[5];sprite.sharedMaterial=pixelMaterial;sprite.sortingOrder=140;obj.transform.localScale=Vector3.one*.38f/sprite.sprite.bounds.size.y;var projectile=obj.AddComponent<DarklightProjectile>();projectile.direction=direction;projectile.damage=damage;projectile.speed=speed;}

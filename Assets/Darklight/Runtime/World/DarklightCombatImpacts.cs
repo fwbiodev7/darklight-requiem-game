@@ -60,7 +60,9 @@ namespace Darklight
                     Segment(center-Vector3.up*r,center+Vector3.up*r,r*.5f,core);Segment(center-Vector3.right*r,center+Vector3.right*r,r*.5f,core);
                 }
             }
-            display.enabled=quads>0;if(quads==0)return;mesh.Clear();mesh.SetVertices(vertices,0,quads*4);mesh.SetColors(colors,0,quads*4);mesh.SetIndices(indices,0,quads*6,MeshTopology.Triangles,0);mesh.RecalculateBounds();
+            display.enabled=quads>0;if(quads==0)return;
+            for(int i=0;i<quads*4;i++){var p=vertices[i];vertices[i]=new Vector3(Mathf.Round(p.x*64)/64,Mathf.Round(p.y*64)/64,p.z);}
+            mesh.Clear();mesh.SetVertices(vertices,0,quads*4);mesh.SetColors(colors,0,quads*4);mesh.SetIndices(indices,0,quads*6,MeshTopology.Triangles,0);mesh.RecalculateBounds();
         }
         // Short, open ground arcs leave the rider silhouette readable. No lights,
         // post-processing, spawned rigidbodies or per-impact collections are needed.

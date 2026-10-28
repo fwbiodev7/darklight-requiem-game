@@ -1,0 +1,95 @@
+{
+  "character": "Fabius",
+  "skin": 0,
+  "weapon": 0,
+  "form": 0,
+  "action": "Walk",
+  "directions": [
+    1,
+    2
+  ],
+  "frameCount": 12,
+  "phasesPerDirection": 6,
+  "loopMs": 400,
+  "layout": {
+    "columns": 3,
+    "rows": 4
+  },
+  "status": "human-approved-source-v1",
+  "nativeWorldVisualScale": 1.325,
+  "noAnatomicalAssembly": true,
+  "preserveApprovedFigures": true,
+  "references": [
+    "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleS_SW_W20261025-source.png",
+    "ArtSources/WeaponRedesign20261024/candidates/ReqKatanaNormalNeutralWalkS20261024V5-source.png",
+    "ArtSources/PlayerEyeReference20261020/referencia-olhos-player.png"
+  ],
+  "artComplete": false,
+  "reviewedForIntegration": false,
+  "imported": false,
+  "runtimeVerified": false,
+  "reason": "V1 selected by later explicit human visual approval and now packed intact as a separate fragment. V2 remains rejected; shared catalog/import/runtime unchanged.",
+  "sources": [
+    {
+      "path": "ArtSources/WeaponRedesign20261026/katana-normal/ReqKatanaNormalWalkSW_W-v1-source.png",
+      "sha256": "233f498a8e69f2ed2b2fe3b06baf9b069a4df82a069bb930b616e6ec2eed00e5",
+      "dimensions": [
+        1098,
+        1433
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261026/katana-normal/ReqKatanaNormalWalkSW_W-v2-source.png",
+      "sha256": "7a5526cde699ba49cb15133d805caef983ff2388ab0c03d28e1ffda9e034adc5",
+      "dimensions": [
+        1098,
+        1433
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    }
+  ],
+  "referenceHashes": [
+    {
+      "path": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleS_SW_W20261025-source.png",
+      "sha256": "a2cb1ed3cc05b971f4ca0929679d8a2d1dd4e25878ec64566ebd47388c0d0248"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261024/candidates/ReqKatanaNormalNeutralWalkS20261024V5-source.png",
+      "sha256": "b9271d801277048a4b851117afa3c6e02ee9a4a2d95b58a536791bf267cb97a2"
+    },
+    {
+      "path": "ArtSources/PlayerEyeReference20261020/referencia-olhos-player.png",
+      "sha256": "82ce8cb4761757ba6f3f1809fd4bf603d67eac5b7a8a7cec056c1ce178fcd949"
+    }
+  ],
+  "generationCount": 2,
+  "preparedActiveClips": 0,
+  "preservedApprovedWalkS": true,
+  "requestedPreservationOfRows1And3Succeeded": false,
+  "technicalReviewBeforeHumanApproval": {
+    "status": "candidate-rejected",
+    "reason": "Both V1/V2 retain the same near boot leading in opposing gait phases. No new Walk clip is integrated."
+  },
+  "humanApproved": true,
+  "approvedVersion": "v1",
+  "selectedSource": "ArtSources/WeaponRedesign20261026/katana-normal/ReqKatanaNormalWalkSW_W-v1-source.png",
+  "selectedSourceSha256": "233f498a8e69f2ed2b2fe3b06baf9b069a4df82a069bb930b616e6ec2eed00e5",
+  "approvalAuthority": "User visually approved displayed V1 after the initial technical rejection; latest explicit instruction takes precedence",
+  "rejectedSourcePaths": [
+    "ArtSources/WeaponRedesign20261026/katana-normal/ReqKatanaNormalWalkSW_W-v2-source.png"
+  ],
+  "selectedForPackaging": true,
+  "packaged": true,
+  "packagedName": "ReqKatanaNormalWalkSW_W20261026ApprovedV1",
+  "preparedClips": 2,
+  "sourceRgbaExactReconstruction": true
+}

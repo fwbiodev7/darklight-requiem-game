@@ -1,107 +1,47 @@
-#!/usr/bin/env python3
-"""
-Integration and Transfer Verifier for DARKLIGHT: REQUIEM.
-Compares local Antigravity technical branch against base commit and generates
-a structured integration manifest for Codex Ultra:
-- Base commit & working branch
-- File categorization (runtime, tests, tools, docs)
-- List of safe, independent commits ready for cherry-pick / merge
-- Explicit warning on boundaries (Codex 26/10 exclusive domains)
-"""
-
-import os
-import sys
-import subprocess
+"""Audit committed technical changes between explicit Git references; fail closed."""
+import argparse
 import json
+from pathlib import Path
+import subprocess
 
-def get_git_output(cmd, cwd="."):
-    try:
-        return subprocess.check_output(cmd, cwd=cwd, text=True, stderr=subprocess.DEVNULL).strip()
-    except Exception:
-        return ""
+DEFAULT_BASE="b719c527c736009e3ff560fd124ad07f67ae30d0"
 
-def verify_integration(project_root="."):
-    base_commit = "b719c527c736009e3ff560fd124ad07f67ae30d0"
-    current_head = get_git_output(["git", "rev-parse", "HEAD"], project_root)
-    current_branch = get_git_output(["git", "branch", "--show-current"], project_root)
+def get_git_output(cmd,cwd="."):
+    return subprocess.check_output(cmd,cwd=cwd,text=True,encoding="utf-8",stderr=subprocess.PIPE).strip()
 
-    # Get log of commits between base and current HEAD
-    commits_raw = get_git_output(["git", "log", f"{base_commit}..HEAD", "--oneline"], project_root)
-    commits = []
-    if commits_raw:
-        for line in commits_raw.splitlines():
-            parts = line.split(" ", 1)
-            commits.append({"hash": parts[0], "subject": parts[1] if len(parts) > 1 else ""})
-
-    # Get changed files
-    diff_raw = get_git_output(["git", "diff", "--name-status", base_commit, "HEAD"], project_root)
-    categorized = {
-        "docs": [],
-        "tests": [],
-        "tools": [],
-        "runtime": [],
-        "editor": []
-    }
-
-    if diff_raw:
-        for line in diff_raw.splitlines():
-            parts = line.split("\t", 1)
-            if len(parts) == 2:
-                status, path = parts
-                path = path.replace('\\', '/')
-                item = {"status": status, "path": path}
-                if path.startswith("Docs/"):
-                    categorized["docs"].append(item)
-                elif "Tests/" in path:
-                    categorized["tests"].append(item)
-                elif path.startswith("Tools/"):
-                    categorized["tools"].append(item)
-                elif "Runtime/" in path:
-                    categorized["runtime"].append(item)
-                elif "Editor/" in path:
-                    categorized["editor"].append(item)
-
-    manifest = {
-        "repository": "fwbiodev7/darklight-requiem-game",
-        "base_commit": base_commit,
-        "head_commit": current_head,
-        "branch": current_branch,
-        "commits_ahead_count": len(commits),
-        "commits": commits,
-        "file_summary": {
-            "docs_count": len(categorized["docs"]),
-            "tests_count": len(categorized["tests"]),
-            "tools_count": len(categorized["tools"]),
-            "runtime_count": len(categorized["runtime"]),
-            "editor_count": len(categorized["editor"])
-        },
-        "categorized_files": categorized,
-        "codex_safety_guarantees": {
-            "runtime_code_modified": len(categorized["runtime"]) > 0,
-            "art_modified_or_generated": False,
-            "save_enums_corrupted": False,
-            "rock_selectors_removed": False,
-            "eclipse_absoluto_overwritten": False
-        }
-    }
-
-    out_file = os.path.join(project_root, "outputs", "validation", "integration_manifest.json")
-    os.makedirs(os.path.dirname(out_file), exist_ok=True)
-    with open(out_file, 'w', encoding='utf-8') as f:
-        json.dump(manifest, f, indent=2)
-
+def verify_integration(project_root=".",base_commit=DEFAULT_BASE,ref="HEAD",output_root=None):
+    git=lambda *args:get_git_output(["git",*args],project_root)
+    base=git("rev-parse",base_commit+"^{commit}");head=git("rev-parse",ref+"^{commit}")
+    categorized={key:[] for key in ("docs","tests","tools","runtime","editor","art","other")}
+    for line in git("diff","--no-renames","--name-status",base,head).splitlines():
+        status,path=line.split("\t",1);lower=path.lower()
+        if lower.endswith((".png",".jpg",".jpeg",".psd",".aseprite",".anim",".controller",".prefab",".unity")) or path.startswith(("ArtSources/","Assets/Darklight/Art/")):category="art"
+        elif path.startswith("Docs/"):category="docs"
+        elif "/Tests/" in path:category="tests"
+        elif path.startswith("Tools/"):category="tools"
+        elif "/Runtime/" in path:category="runtime"
+        elif "/Editor/" in path:category="editor"
+        else:category="other"
+        categorized[category].append(dict(status=status,path=path))
+    commits=[]
+    for row in git("log","--format=%H %s",base+".."+head).splitlines():
+        sha,subject=row.split(" ",1);commits.append(dict(hash=sha,subject=subject))
+    manifest=dict(repository="fwbiodev7/darklight-requiem-game",base_commit=base,head_commit=head,
+        branch=git("branch","--show-current"),comparison_ref=ref,commits_ahead_count=len(commits),commits=commits,
+        file_summary={key+"_count":len(value) for key,value in categorized.items()},categorized_files=categorized,
+        technical_boundary_passed=not categorized["runtime"] and not categorized["art"],
+        runtime_code_modified=bool(categorized["runtime"]),art_modified_or_generated=bool(categorized["art"]),
+        limits=["Committed reference comparison only; working-tree changes are not included", "No Unity compilation, save compatibility or gameplay claim follows from this inventory"])
+    target=Path(output_root or Path(project_root)/"outputs/validation");target.mkdir(parents=True,exist_ok=True)
+    (target/"integration_manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     return manifest
 
-if __name__ == "__main__":
-    root = sys.argv[1] if len(sys.argv) > 1 else "."
-    m = verify_integration(root)
-    print(f"=== Integration Transfer Manifest ===")
-    print(f"Branch: {m['branch']} (HEAD: {m['head_commit'][:7]})")
-    print(f"Base: {m['base_commit'][:7]}")
-    print(f"Commits Ahead: {m['commits_ahead_count']}")
-    print(f"Files Modified:")
-    print(f"  Docs: {m['file_summary']['docs_count']}")
-    print(f"  Tests: {m['file_summary']['tests_count']}")
-    print(f"  Tools: {m['file_summary']['tools_count']}")
-    print(f"  Runtime: {m['file_summary']['runtime_count']} (must be 0)")
-    print(f"Manifest written to outputs/validation/integration_manifest.json")
+if __name__=="__main__":
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument("project",nargs="?",default=".")
+    parser.add_argument("--base",default=DEFAULT_BASE);parser.add_argument("--ref",default="HEAD");parser.add_argument("--output")
+    args=parser.parse_args()
+    try:result=verify_integration(args.project,args.base,args.ref,args.output)
+    except (subprocess.CalledProcessError,ValueError,OSError) as error:
+        print(json.dumps(dict(status="ERROR",error=str(error))));raise SystemExit(2)
+    print(json.dumps(dict(status="PASS" if result["technical_boundary_passed"] else "FAIL",files=result["file_summary"],head=result["head_commit"])))
+    raise SystemExit(0 if result["technical_boundary_passed"] else 1)

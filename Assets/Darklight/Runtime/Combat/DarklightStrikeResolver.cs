@@ -31,6 +31,8 @@ namespace Darklight
                     float damage=model.AttackDamage*(game?.AbyssRider?.Damage??1)*(game?.DamageMultiplier??1)*(game?.VampireDamage(attack.kind)??1);
                     if(!target.Receive(damage,delta.normalized*force))continue;
                     model.ConfirmHit();
+                    fighter.GetComponent<DarklightCharacterView>()?.ConfirmContactPose(model.Facing);
+                    DarklightCombatLab.Instance?.WorldCamera.GetComponent<DarklightLabCamera>()?.ConfirmContact(point);
                     DarklightCombatLab.Instance?.Coach?.Record(DarklightLesson.Strike);
                     hitstop=Mathf.Max(hitstop,attack.hitPulses>1?.012f:attack.hitstop+(game?.Form==1?.008f:0));
                     game?.WeaponHit(target,attack,model.AttackSerial);
@@ -42,7 +44,7 @@ namespace Darklight
                     {enemy?.ReactAir(attack,reaction);fighter.AirCombo?.ConfirmContact(enemy,attack);}
                     game?.AbyssRider?.ConfirmRunOverHit(enemy,attack);
                     if(attack.pullTarget)enemy?.PullToward(body.position,game?.Form==2?2.1f:1.6f);
-                    DarklightCombatFX.Impact(target.transform.position+Vector3.up*(enemy?.AirHeight??0),attack.kind!=StrikeKind.Light);
+                    DarklightCombatFX.Impact((Vector3)point+Vector3.up*(enemy?.AirHeight??0),attack.kind!=StrikeKind.Light);
                 }
             }
             if(hitstop>0)DarklightCombatLab.Instance.Hitstop(Mathf.Min(.065f,hitstop));

@@ -8,7 +8,7 @@ namespace Darklight
         public static void Impact(Vector3 position,bool heavy)
         {
             var game=DarklightCampaign.Instance;if(game==null)return;
-            DarklightCombatImpacts.Emit(position,heavy);
+            if(!DarklightPixelContactBurst.TryEmit(position,heavy))DarklightCombatImpacts.Emit(position,heavy);
             DarklightCombatLab.Instance.WorldCamera.GetComponent<DarklightLabCamera>().Impulse(heavy?2:1);
         }
         public static void MotorcycleImpact(Vector3 position,Vector2 direction,DarklightMotorcycleImpact kind)

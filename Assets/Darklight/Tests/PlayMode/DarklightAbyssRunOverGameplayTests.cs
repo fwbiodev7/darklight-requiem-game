@@ -13,7 +13,7 @@ namespace Darklight.Tests
     {
         [UnityTest]public IEnumerator CaptureRunOverPrototypeFromRealInputs()
         {
-            static string root => DarklightTestOutput.GetDirectory("cavaleiro-sprites-20261015/capturas/runover");
+            string root = DarklightTestOutput.GetDirectory("cavaleiro-sprites-20261015/capturas/runover");
             var pad=InputSystem.AddDevice<Gamepad>();int oldRate=Time.captureFramerate;string bindings=lab.Input.Asset.SaveBindingOverridesAsJson();
             try
             {

@@ -14,8 +14,8 @@ namespace Darklight
         public void ShowAbyssHelp()=>Open("AbyssHelp");
         void BuildWeaponGuides()
         {
-            heading.text="ARMAS";bodyText.text="Escolha uma arma ou consulte o guia.\n\nCavaleiro do Abismo: exclusivo da skin Rock.\n\nNa campanha, desperte o motor selado junto à memória da Cripta dos Primeiros.\n\nA arena permite testar a arma e suas formas sem alterar a campanha.";
-            for(int i=0;i<3;i++){int index=i;Button(weaponDefinitions[i].displayName,()=>{Weapons.Request(index);Close();},Weapons.Unlocked(i),WeaponIcon(weaponDefinitions[i]));}
+            heading.text="ARMAS";bodyText.text="Escolha uma arma ou consulte o guia.\n\nCavaleiro do Abismo: motocicleta de Réquiem.\n\nNa campanha, desperte o motor selado junto à memória da Cripta dos Primeiros.\n\nA arena permite testar a arma e suas formas sem alterar a campanha.";
+            for(int i=0;i<weaponDefinitions.Length;i++){if(!DarklightPlayableScope.WeaponActive(i))continue;int index=i;Button(weaponDefinitions[i].displayName,()=>{Weapons.Request(index);Close();},Weapons.Unlocked(i),WeaponIcon(weaponDefinitions[i]));}
             Button("COMBOS E ESPECIAIS",()=>{guideWeapon=Mathf.Clamp((int)(Weapons?.Equipped?.id??DarklightWeaponId.Katana),0,2);Open("WeaponCombos");});Button("CAVALEIRO DO ABISMO · GUIA",ShowAbyssHelp);Button("VOLTAR",()=>Open("Pause"));
         }
         void BuildAbyssHelp()
@@ -34,7 +34,7 @@ namespace Darklight
         }
         void StartAbyssLessons()
         {
-            if(!Training)EnterTraining();SelectSkin(1,false);SetTrainingForm(0);Progress.abyssTutorialSeen=true;AbyssRider.ResetLessons();Weapons.Request(3);Close();Notice("TREINO CAVALEIRO: SIGA AS ETAPAS NO CANTO DA TELA");
+            if(!Training)EnterTraining();SelectSkin(0,false);SetTrainingForm(0);Progress.abyssTutorialSeen=true;AbyssRider.ResetLessons();Weapons.Request(3);Close();Notice("TREINO CAVALEIRO: SIGA AS ETAPAS NO CANTO DA TELA");
         }
         void PresentAbyssHUD()
         {

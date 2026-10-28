@@ -46,9 +46,9 @@ namespace Darklight.Tests
             }
             finally{Object.DestroyImmediate(obj);}
         }
-        [Test] public void NewCampaignHasAllThreeFormsWithoutCompletingStory()
+        [Test] public void NewCampaignHasBothTransformationsWithoutCompletingStory()
         {
-            var state=new DarklightProgress();Assert.That(state.FormUnlocked,Is.EqualTo(3));Assert.That(state.formsUnlocked,Is.Zero);Assert.That(state.chapter,Is.Zero);Assert.That(state.completed,Is.False);Assert.That(state.mp3Unlocked,Is.False);
+            var state=new DarklightProgress();Assert.That(state.FormUnlocked,Is.EqualTo(2));Assert.That(state.formsUnlocked,Is.Zero);Assert.That(state.chapter,Is.Zero);Assert.That(state.completed,Is.False);Assert.That(state.mp3Unlocked,Is.False);
         }
         [Test] public void KeyboardRemapSurvivesNewInputInstanceAndProducesActualAction()
         {

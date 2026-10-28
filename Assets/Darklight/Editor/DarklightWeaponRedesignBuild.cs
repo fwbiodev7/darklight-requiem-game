@@ -25,6 +25,7 @@ namespace Darklight.Editor
             public int errors,warnings,redesignPages,redesignSheets,redesignFigures,deliveredEffects,totalAudioResources;
             public ulong bytes;public double seconds;
             public bool redesignComplete,audioEnabledForInteractiveLaunch,automationSilent=true,audioAuditioned=false,autoRunPlayer=false;
+            public string activeSkin="Réquiem",activeForms="Normal / Ruptura / Eclipse Absoluto",activeWeapons="Katana / Punhos da Ruína / Moto";
         }
         [Serializable] sealed class AudioEntry{public string id,original,sha256,asset,assetSha256;}
         [Serializable] sealed class AudioManifest{public int sourceCount,preparedCount,deferredCount;public AudioEntry[] sources;}
@@ -61,6 +62,7 @@ namespace Darklight.Editor
         {
             var files=Directory.GetFiles("Assets/Darklight","*.cs",SearchOption.AllDirectories)
                 .Concat(Directory.GetFiles(Art,"*",SearchOption.AllDirectories).Where(p=>!p.EndsWith(".meta",StringComparison.OrdinalIgnoreCase)))
+                .Concat(Directory.GetFiles("Assets/Darklight/Resources/Darklight/CombatContacts20261027","*",SearchOption.AllDirectories).Where(p=>!p.EndsWith(".meta",StringComparison.OrdinalIgnoreCase)))
                 .Concat(Directory.GetFiles(Audio,"*.wav",SearchOption.TopDirectoryOnly))
                 .Append("ArtSources/AudioDelivery20261023/manifest.json");
             foreach(string path in files)
@@ -110,9 +112,23 @@ namespace Darklight.Editor
                 Require(frames.All(s=>s.texture.width==page.nativeSize[0]&&s.texture.height==page.nativeSize[1]&&
                     Mathf.Abs(s.pixelsPerUnit-page.pixelsPerUnit)<.001f),"Catalog scale/dimensions disagree: "+page.id);
             }
-            foreach(int form in new[]{0,1,2,3})foreach(int direction in new[]{0,1,2})
-                Require(catalog.pages.Any(p=>p.skin==0&&p.weapon==1&&p.form==form&&p.direction==direction&&p.action=="Idle"&&p.spriteNames.Length==4),
-                    "The reviewed four-pose dagger idle is required for form/direction "+form+"/"+direction);
+            // Preserve and validate legacy sheets, but gate delivery on the active arsenal.
+            foreach(int weapon in new[]{0,2})foreach(int direction in Enumerable.Range(0,8))
+                Require(catalog.pages.Any(p=>p.skin==0&&p.weapon==weapon&&p.form==0&&p.direction==direction&&p.action=="Idle"&&p.spriteNames.Length==4),
+                    "Missing reviewed Requiem Normal idle for weapon/direction "+weapon+"/"+direction);
+            string motorcycle=Art+"RequiemMotoForm0Ride8SlamS20261027V3.png";
+            var motorcycleFrames=ValidateSheet(motorcycle);sheets[motorcycle]=motorcycleFrames;
+            Require(motorcycleFrames.Length==12,"Require eight Requiem motorcycle views and four whole slam phases");
+            string motorcycleIdle=Art+"RequiemMotoForm0IdleSSWW20261027MatureV1.png";
+            var idleFrames=ValidateSheet(motorcycleIdle);sheets[motorcycleIdle]=idleFrames;
+            Require(idleFrames.Length==12,"Require the complete four-phase mounted idle in S/SW/W");
+            string rearIdle=Art+"RequiemMotoForm0IdleNW_N_NE20261027MatureV1.png";
+            var rearIdleFrames=ValidateSheet(rearIdle);sheets[rearIdle]=rearIdleFrames;
+            Require(rearIdleFrames.Length==12,"Require the complete four-phase rear mounted idle in NW/N/NE");
+            string sideIdle=Art+"RequiemMotoForm0IdleE_SE20261027MatureV1.png";
+            var sideIdleFrames=ValidateSheet(sideIdle);sheets[sideIdle]=sideIdleFrames;
+            Require(sideIdleFrames.Length==8,"Require four-phase mature mounted idle in E/SE");
+            Require(ValidateSheet("Assets/Darklight/Resources/Darklight/CombatContacts20261027/ContactBursts.png").Length==12,"Require the authored pixel-art contact clips");
             string icons=Art+"EquipmentIcons.png";
             if(File.Exists(icons))
             {
@@ -172,12 +188,12 @@ namespace Darklight.Editor
             var receipt=new Receipt
             {
                 editMode=ValidateGate(Argument("-darklightRedesignEditResults"),57,
-                    ("DarklightDeliveredSfxTests",4),("DarklightAudioExpansionTests",7),("DarklightTechnicalDeliveryTests",3),("DarklightWeaponRedesignTests",7)),
+                    ("DarklightDeliveredSfxTests",4),("DarklightAudioExpansionTests",7),("DarklightTechnicalDeliveryTests",3),("DarklightWeaponRedesignTests",7),("DarklightSimplifiedScopeTests",3),("DarklightSaveContractTests",6),("DarklightTestOutputTests",5)),
                 playMode=ValidateGate(Argument("-darklightRedesignPlayResults"),12,
-                    ("DarklightDeliveredSfxGameplayTests",2),("DarklightWeaponRedesignGameplayTests",3))
+                    ("DarklightDeliveredSfxGameplayTests",2),("DarklightWeaponRedesignGameplayTests",3),("DarklightSimplifiedScopeGameplayTests",3))
             };
             ValidateFreshness(receipt.editMode,receipt.playMode);ValidateRedesign(receipt);ValidateAudio(receipt);
-            string root=Path.GetFullPath("outputs/redesign-armas-20261023"),output=Path.Combine(root,"Windows");
+            string root=Path.GetFullPath("outputs/retomada-20261027"),output=Path.Combine(root,"Windows");
             Directory.CreateDirectory(root);receipt.previousRedesignBuild=PreservePrevious(root,output);Directory.CreateDirectory(output);
             receipt.executable=Path.Combine(output,"DarklightRequiem.exe");
             try

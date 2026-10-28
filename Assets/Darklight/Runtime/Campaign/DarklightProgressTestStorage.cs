@@ -11,15 +11,35 @@ namespace Darklight
 #if UNITY_EDITOR
                 return editorTestPath;
 #else
-                return null;
+                return playerTestPath;
 #endif
             }
         }
         public static bool HasIsolatedTestStorage=>IsolatedTestPath!=null;
+#if !UNITY_EDITOR
+        static string playerTestPath;
+        // Explicit standalone QA only. Normal launches keep their existing save location.
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void ConfigureStandaloneTestStorage()
+        {
+            playerTestPath=null;
+            var args=Environment.GetCommandLineArgs();int index=Array.IndexOf(args,"--darklight-isolated-session");
+            if(index<0)return;
+            if(index+1>=args.Length||args[index+1].StartsWith("-",StringComparison.Ordinal))
+                throw new ArgumentException("--darklight-isolated-session requires a QA output directory");
+            string root=System.IO.Path.GetFullPath(args[index+1]);
+            string real=System.IO.Path.GetFullPath(Application.persistentDataPath).TrimEnd(System.IO.Path.DirectorySeparatorChar);
+            if(root.Equals(real,StringComparison.OrdinalIgnoreCase)||root.StartsWith(real+System.IO.Path.DirectorySeparatorChar,StringComparison.OrdinalIgnoreCase))
+                throw new ArgumentException("Standalone QA must not use the user's save directory");
+            string session=System.IO.Path.Combine(root,"session-"+Guid.NewGuid().ToString("N"));
+            System.IO.Directory.CreateDirectory(session);
+            playerTestPath=System.IO.Path.Combine(session,"isolated-campaign.json");
+            System.IO.File.WriteAllText(System.IO.Path.Combine(root,"active-session.txt"),session);
+        }
+#endif
 #if UNITY_EDITOR
         static string editorTestPath;
-        // Editor-only isolation for full campaign tests. A player build can never
-        // redirect its save, and a fixture can never select the user's save folder.
+        // Editor fixtures and explicit standalone QA use distinct process-local scopes.
         public static IDisposable IsolateStorageForTests(string path)
         {
             string absolute=System.IO.Path.GetFullPath(path);

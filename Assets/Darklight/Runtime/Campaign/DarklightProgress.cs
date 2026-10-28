@@ -13,12 +13,13 @@ namespace Darklight
         public float resonanceEnergy=100; public int resonanceSelected; public float[] resonanceRecoveries;
         public bool[] relics=new bool[ChapterCapacity];
         public int weaponUnlocks=1,equippedWeapon;
+        public int legacyEquippedWeapon=-1,legacyPreferredForm=-1;
         public int appearanceStage,narrativeDays,appearanceChapter;
         public static string Path => IsolatedTestPath ?? System.IO.Path.Combine(Application.persistentDataPath,"requiem-campaign.json");
         public int NeededXP => 60+level*35;
         public int MaxHealth => 100+(level-1)*8+vitality*15;
         // This edition starts with every form available; story milestones remain independent.
-        public int FormUnlocked => 3;
+        public int FormUnlocked => DarklightPlayableScope.FinalForm;
         public float Damage => 1+(level-1)*.055f+attack*.1f;
         public void Award(int amount)
         {
@@ -72,7 +73,7 @@ namespace Darklight
             new[]{"LYRA|Lucien caiu, mas o eclipse não terminou. Os registros apontam para uma cripta muito mais antiga que o projeto.","FÁBIO|Não vamos confundir silêncio com vitória. Quero saber quem deixou essas inscrições.","LYRA|A linhagem que protegia a fronteira usava o mesmo símbolo da sua espada. Entre na cripta e procure a memória ancestral."},
             new[]{"KAEL|O sol desapareceu. Há sobreviventes cercados na praça e um abrigo que ainda resiste.","FÁBIO|Primeiro tiramos as pessoas daqui. Depois entramos na catedral.","LYRA|Seraphine está usando o eclipse para despertar algo além do Véu. Não deixe que ela decida por você."},
             new[]{"LYRA|Os três selos antigos abrem o caminho para o trono. O Véu Profundo guarda versões distorcidas das nossas memórias.","KAEL|Há uma voz dentro dessas pedras. Se ela me alcançar, lembre quem eu era.","FÁBIO|Eu não vou abandonar você. Lucien servia a uma coisa maior: Nocthar."},
-            new[]{"KAEL|A corrupção se foi, mas ainda consigo ouvir Nocthar. O Coração do Eclipse está tentando fundir os mundos.","LYRA|Leve nossas memórias. Você não precisa destruir metade de si para salvar a outra.","FÁBIO|Katana, presas e corrente. Tudo o que aprendi me trouxe até aqui. Agora a escolha é minha."}
+            new[]{"KAEL|A corrupção se foi, mas ainda consigo ouvir Nocthar. O Coração do Eclipse está tentando fundir os mundos.","LYRA|Leve nossas memórias. Você não precisa destruir metade de si para salvar a outra.","FÁBIO|Katana, punhos e motocicleta. Tudo o que aprendi me trouxe até aqui. Agora a escolha é minha."}
         };
         public static readonly string[][] BossLines={
             new[]{"KAEL|Nao e a espada que decide quem voce e. Mostre que consegue enfrenta-la.","FABIO|Entao pare de falar e venha."},

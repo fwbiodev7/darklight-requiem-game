@@ -11,12 +11,12 @@ namespace Darklight.Tests
 {
     public sealed partial class DarklightWeaponRedesignGameplayTests
     {
-        const string Review1850="outputs/redesign-armas-20261025-retomada1850/gameplay";
+        const string Review1850="outputs/retomada-20261027/gameplay";
 
         [UnityTest] public IEnumerator KatanaSecondLightUsesItsDeclaredFiguresAfterConfirmedFirstContact()
         {
             int contexts=0,figures=0;
-            for(int skin=0;skin<2;skin++)for(int direction=0;direction<8;direction++)
+            for(int skin=0;skin<1;skin++)for(int direction=0;direction<8;direction++)
             {
                 var page=catalog.pages.Single(p=>p.skin==skin&&p.weapon==0&&p.form==0&&p.direction==direction&&p.action=="Attack"&&p.attackKey=="Leve2");
                 Context(skin,0,0,direction);Tick(Facing(direction),new CombatInput{lightPressed=true});
@@ -45,7 +45,7 @@ namespace Darklight.Tests
         [UnityTest] public IEnumerator CurrentNormalFirstLightsUseDeclaredArtAndReturnToIdle()
         {
             int checkedContexts=0,pending=0,observedFigures=0;
-            for(int skin=0;skin<2;skin++)for(int weapon=0;weapon<3;weapon++)for(int direction=0;direction<8;direction++)
+            for(int skin=0;skin<1;skin++)foreach(int weapon in new[]{0,2})for(int direction=0;direction<8;direction++)
             {
                 Context(skin,weapon,0,direction);Tick(Facing(direction),new CombatInput{lightPressed=true});
                 Assert.That(fighter.Model.State,Is.EqualTo(CombatState.Attack));
@@ -74,10 +74,10 @@ namespace Darklight.Tests
                 "{\"declaredContextsVerified\":"+checkedContexts+",\"pendingContextsWithoutNewAttackArt\":"+pending+",\"distinctObservedFigures\":"+observedFigures+",\"campaignRendered\":true,\"audio\":false}");
         }
 
-        [UnityTest] public IEnumerator CurrentNormalIdlePagesReachTheCampaignInBothSkins()
+        [UnityTest] public IEnumerator CurrentNormalIdlePagesReachTheCampaignInRequiem()
         {
             int contexts=0,figures=0;
-            foreach(var page in catalog.pages.Where(p=>p.form==0&&p.action=="Idle"))
+            foreach(var page in catalog.pages.Where(p=>p.skin==0&&DarklightPlayableScope.WeaponActive(p.weapon)&&p.form==0&&p.action=="Idle"))
             {
                 Context(page.skin,page.weapon,0,page.direction);
                 var observed=new HashSet<string>(StringComparer.Ordinal);
@@ -95,29 +95,26 @@ namespace Darklight.Tests
                 "{\"contexts\":"+contexts+",\"distinctObservedFigures\":"+figures+",\"campaignRendered\":true,\"isolatedSave\":true,\"audio\":false,\"humanPlay\":false}");
         }
 
-        [UnityTest] public IEnumerator RockKatanaFirstLightUsesItsNewPhasesInAllEightDirections()
+        [UnityTest] public IEnumerator ArchivedRockKatanaFirstLightRemainsPreservedWithoutReactivatingSkin()
         {
             int figures=0;
             for(int direction=0;direction<8;direction++)
             {
                 var page=catalog.pages.Single(p=>p.skin==1&&p.weapon==0&&p.form==0&&p.direction==direction&&p.action=="Attack"&&p.attackKey=="Leve1");
-                Context(1,0,0,direction);Tick(Facing(direction),new CombatInput{lightPressed=true});
-                Assert.That(fighter.Model.State,Is.EqualTo(CombatState.Attack));
-                var observed=new HashSet<string>(StringComparer.Ordinal);bool contact=false;
-                for(int tick=0;tick<160&&fighter.Model.State==CombatState.Attack;tick++)
+                var probe=new CombatModel(fighter.loadout);Assert.That(probe.TryAirFollowup(fighter.loadout.lights[0],new CombatInput{aim=Facing(direction)}),Is.True);
+                var seen=new HashSet<Sprite>();
+                while(probe.State==CombatState.Attack)
                 {
-                    Present(fighter.Model.Motion);AssertAuthored(page);observed.Add(art.sprite.name);
-                    if(fighter.Model.ActiveThisTick&&!contact){Capture("1850-rock-katana-d"+direction+"-contact");contact=true;}
-                    Tick(Facing(direction));
+                    var original=TodayCharacterBank.Resolve(1,0,0,direction,probe,Vector2.zero);
+                    Assert.That(DarklightWeaponRedesignBank.TryResolve(1,0,0,direction,probe,Vector2.zero,original,out var sprite),Is.True);
+                    Assert.That(page.spriteNames,Does.Contain(sprite.name));seen.Add(sprite);
+                    probe.Tick(.01f,new CombatInput{aim=Facing(direction)});
                 }
-                Assert.That(contact,Is.True);Assert.That(observed.Count,Is.EqualTo(page.spriteNames.Distinct().Count()));
-                figures+=observed.Count;Assert.That(fighter.Model.State,Is.EqualTo(CombatState.Neutral));
-                Present();Assert.That(view.UsesWeaponRedesignSprite,Is.True,"Authored Rock idle must resume after its first light");
-                AssertSilent();yield return null;
+                Assert.That(seen.Count,Is.EqualTo(4));figures+=seen.Count;yield return null;
             }
-            Directory.CreateDirectory(Review1850);
-            File.WriteAllText(Path.Combine(Review1850,"rock-katana-first-light-result.json"),
-                "{\"directions\":8,\"distinctObservedFigures\":"+figures+",\"campaignRendered\":true,\"contactAndIdleReturn\":true,\"audio\":false}");
+            Assert.That(game.SelectedSkin,Is.Zero);AssertSilent();
+            Report("archived-rock-first-light",8,figures,"Archived bank only. Rock cannot be selected in gameplay; these figures are excluded from active redesign coverage.");
         }
+
     }
 }

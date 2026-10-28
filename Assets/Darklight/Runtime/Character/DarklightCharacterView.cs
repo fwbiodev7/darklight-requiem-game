@@ -10,6 +10,14 @@ namespace Darklight
         bool rock,previewing;int previewForm;WeaponDefinition previewWeapon;
         SpriteRenderer display;CharacterAppearanceSystem appearance;DarklightOriginalVampireView originalForms;
         int trailSerial=-1;float nextTrail,airHeight;
+        Vector2 contactOffset;float contactUntil;
+        public int ConfirmedContactPresentations{get;private set;}
+        public void ConfirmContactPose(Vector2 facing)
+        {
+            ConfirmedContactPresentations++;
+            if(DarklightCampaign.Instance?.ReducedFlashes==true){contactUntil=0;return;}
+            contactOffset=facing.normalized*.055f;contactUntil=Time.unscaledTime+.14f;
+        }
         DarklightCombatTrail combatTrail;DarklightAbyssLocomotion abyssLocomotion;
         readonly DarklightLivingPresentation living=new();
         HealthSystem livingHealth;
@@ -17,6 +25,7 @@ namespace Darklight
         public bool UsesWholeCharacterSprite{get;private set;}
         public bool UsesWeaponRedesignSprite{get;private set;}
         public bool UsesPoseFallback{get;private set;}
+        public bool UsesMotorcyclePoseFallback{get;private set;}
         public static Bounds FallbackBodyBounds=>new Bounds(Vector3.up*1.315f,new Vector3(1.5f,2.63f,0));
         // Effects use normal frontal katana idle for this skin, independently
         // of the displayed attack, direction, weapon or transformation.
@@ -52,7 +61,10 @@ namespace Darklight
             if(display==null||display.transform==transform)return;
             var camera=DarklightCombatLab.Instance?.WorldCamera;
             float grid=camera==null?48f:(camera.targetTexture!=null?camera.targetTexture.height:720f)/(camera.orthographicSize*2f);
-            var p=transform.position;display.transform.position=new Vector3(Mathf.Round(p.x*grid)/grid,Mathf.Round((p.y+airHeight)*grid)/grid,p.z);
+            var p=transform.position;
+            if(DarklightCombatLab.Instance?.Paused!=true&&contactUntil>Time.unscaledTime)
+            {float t=(contactUntil-Time.unscaledTime)/.14f;p+=(Vector3)contactOffset*(t*t);}
+            display.transform.position=new Vector3(Mathf.Round(p.x*grid)/grid,Mathf.Round((p.y+airHeight)*grid)/grid,p.z);
         }
         public void Present(CombatModel model,Vector2 movement)
         {
@@ -63,7 +75,11 @@ namespace Darklight
             airHeight=!ruinFists&&model.State==CombatState.Attack&&model.Attack.kind==StrikeKind.Aerial?Mathf.Sin(Mathf.Clamp01(model.StateTime/model.Attack.Duration)*Mathf.PI)*.35f:0;
             if(!previewing&&game?.AbyssRider?.Active==true)airHeight+=game.AbyssRider.JumpHeight+game.AbyssRider.RunOverLift;
             if(!previewing&&GetComponent<DarklightFighter>()?.AirCombo is {Active:true} air)airHeight=air.Height;
-            var selected=!previewing&&skin==1&&game?.AbyssRider?.Active==true?DarklightAbyssSpriteBank.Resolve(game.AbyssRider,model):TodayCharacterBank.Resolve(skin,0,weapon,direction,model,movement);
+            UsesMotorcyclePoseFallback=false;
+            bool riding=!previewing&&game?.AbyssRider?.Active==true;
+            bool riderFallback=true;
+            var selected=riding?DarklightMotorcycleRedesignBank.ResolveRequiem(game.AbyssRider,model,game.PresentedForm,out riderFallback,movement):TodayCharacterBank.Resolve(skin,0,weapon,direction,model,movement);
+            if(riding){UsesMotorcyclePoseFallback=riderFallback;selected??=TodayCharacterBank.StablePose(0,0,0,direction);}
             if(!previewing)
             {
                 livingHealth??=GetComponent<HealthSystem>();

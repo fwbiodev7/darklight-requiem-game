@@ -1,4 +1,6 @@
-> Atualizacao de entrega: o usuario autorizou a montagem autonoma de toda a campanha. As etapas de jogo deste roteiro foram integradas em DarklightCampaign; a versao possui seis mapas, cinco familias de inimigos, elites, seis chefes, RPG, tres formas, menus, save e Dark Resonance. O roteiro abaixo preserva o planejamento original. A verificacao desta entrega foi limitada a compilacao, build e abertura; testes de gameplay e balanceamento ficam para o usuario. Site/publicacao nao foram executados. Guia atual: outputs/campanha/LEIA-ME.md.
+> **Escopo vigente em 26/10:** seguir [contrato canônico](../ESCOPO-CANONICO-20261026.md), [pendências](../PENDENCIAS-20261026.md) e [LDD](LDD.md). A ordem atual é Réquiem Normal → Ruptura → Eclipse Absoluto → Combat AI 2.0 → Sangue do Abismo → site. O roteiro abaixo é histórico: não restaurar Rock/Presas ou Eclipse/Absoluto separadas, não antecipar Lucius e não tratar fases antigas como novas entregas. Compilação, build, execução e campanha manual continuam estados distintos.
+
+> Atualizacao histórica de entrega: o usuario autorizou a montagem autonoma de toda a campanha. As etapas de jogo deste roteiro foram integradas em DarklightCampaign; a versao possui seis mapas originais e ampliações posteriores, familias de inimigos, elites, chefes, RPG, formas, menus, save e Dark Resonance. O roteiro abaixo preserva o planejamento original. A verificacao daquela entrega foi limitada a compilacao, build e abertura. Guia histórico: outputs/campanha/LEIA-ME.md.
 
 # DARKLIGHT: REQUIEM — plano de montagem do jogo
 

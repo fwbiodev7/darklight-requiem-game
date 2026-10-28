@@ -6,7 +6,7 @@ namespace Darklight
     {
         public readonly DarklightGearModel Gear=new();
         public const float DashCost=18,MaximumDashDistance=2.4f;
-        public bool Active=>game!=null&&game.SelectedSkin==1&&game.Weapons?.Equipped?.id==DarklightWeaponId.AbyssRider;
+        public bool Active=>game!=null&&game.SelectedSkin==0&&game.Weapons?.Equipped?.id==DarklightWeaponId.AbyssRider;
         public bool Dashing=>Active&&fighter.Model.State==CombatState.Attack&&(RidingAttack(fighter.Model.Attack)||fighter.Model.Attack==drift||fighter.Model.Attack==finisher);
         public bool Sustaining=>Active&&fighter.Model.State==CombatState.Attack&&fighter.Model.Attack==sustain;
         public bool CanFinish=>Active&&Gear.Level==3&&fighter.Model.WeaponSpecialRemaining<=0&&game.Blood.Amount>=FinisherCost&&FindFinisherTarget()!=null;
@@ -212,7 +212,7 @@ namespace Darklight
             AbyssRider=lab.Player.GetComponent<DarklightAbyssRider>()??lab.Player.gameObject.AddComponent<DarklightAbyssRider>();
             var original=weaponDefinitions;weaponDefinitions=new WeaponDefinition[4];System.Array.Copy(original,weaponDefinitions,Mathf.Min(3,original.Length));weaponDefinitions[3]=AbyssRider.Initialize(this);
         }
-        void StartAbyssPrototype(){DarklightAbyssSpriteBank.Preload(0);SetTrainingForm(0);SelectSkin(1,false);Weapons.Request(3);Close();Notice("PROTOTIPO NORMAL: ENGRENAGENS + INVESTIDA CURTA");}
+        void StartAbyssPrototype(){DarklightAbyssSpriteBank.Preload(0);SetTrainingForm(0);SelectSkin(0,false);Weapons.Request(3);Close();Notice("REQUIEM: ENGRENAGENS + INVESTIDA CURTA");}
         void UpdateAbyssHUD()=>PresentAbyssHUD();
     }
 }

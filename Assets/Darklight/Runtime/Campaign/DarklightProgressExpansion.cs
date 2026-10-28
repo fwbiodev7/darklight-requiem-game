@@ -36,20 +36,20 @@ namespace Darklight
                 if(s.vampireMastery>0){s.awakeningState=2;s.vampireSkills|=1;s.narrativeMilestones|=1L;}
             }
             s.version=CurrentVersion;
-            s.expansionFlags&=15;s.missionWeaponHits&=7;s.missionWave=Mathf.Clamp(s.missionWave,0,2);s.bossPhase=Mathf.Clamp(s.bossPhase,1,3);
+            s.expansionFlags&=15;s.missionWeaponHits&=15;s.missionWave=Mathf.Clamp(s.missionWave,0,2);s.bossPhase=Mathf.Clamp(s.bossPhase,1,3);
             s.weaponUnlocks=(s.weaponUnlocks&15)|1;s.equippedWeapon=Mathf.Clamp(s.equippedWeapon,0,3);
             if((s.weaponUnlocks&(1<<s.equippedWeapon))==0)s.equippedWeapon=0;
             s.appearanceStage=0;s.narrativeDays=Mathf.Clamp(s.narrativeDays,0,36500);s.appearanceChapter=Mathf.Clamp(s.appearanceChapter,0,ChapterCapacity-1);
             s.checkpoint=Mathf.Clamp(s.checkpoint,0,4);s.potions=Mathf.Clamp(s.potions,0,99);
             s.attack=Mathf.Clamp(s.attack,0,5);s.vitality=Mathf.Clamp(s.vitality,0,5);s.mastery=Mathf.Clamp(s.mastery,0,5);s.points=Mathf.Max(0,s.points);s.xp=Mathf.Max(0,s.xp);
-            s.formsUnlocked=Mathf.Clamp(s.formsUnlocked,0,3);s.preferredForm=Mathf.Clamp(s.preferredForm,0,s.FormUnlocked);
+            s.formsUnlocked=Mathf.Clamp(s.formsUnlocked,0,3);DarklightPlayableScope.Migrate(s);
             var relics=new bool[ChapterCapacity];if(s.relics!=null)Array.Copy(s.relics,relics,Mathf.Min(s.relics.Length,ChapterCapacity));s.relics=relics;
             s.resonanceEnergy=json.Contains("\"resonanceEnergy\"")?DarklightBlood.Finite(s.resonanceEnergy,0,100):100;
             s.resonanceSelected=Mathf.Clamp(s.resonanceSelected,0,2);s.resonanceCooldown=DarklightBlood.Finite(s.resonanceCooldown,0,120);
             var resonance=new float[3];for(int i=0;i<3;i++)resonance[i]=DarklightBlood.Finite(s.resonanceRecoveries!=null&&i<s.resonanceRecoveries.Length?s.resonanceRecoveries[i]:s.resonanceCooldown,0,120);s.resonanceRecoveries=resonance;
             s.blood=DarklightBlood.Finite(s.blood,0,100);s.vampireMastery=Mathf.Clamp(s.vampireMastery,0,3);s.vampireSkills&=63;s.vampireSelected=Mathf.Clamp(s.vampireSelected,0,5);s.awakeningState=Mathf.Clamp(s.awakeningState,0,2);
             var recoveries=new float[6];for(int i=0;i<6;i++)recoveries[i]=DarklightBlood.Finite(s.vampireRecoveries!=null&&i<s.vampireRecoveries.Length?s.vampireRecoveries[i]:0,0,120);s.vampireRecoveries=recoveries;
-            s.NormalizeStageResults();return s;
+            DarklightPlayableScope.Migrate(s);s.NormalizeStageResults();return s;
         }
     }
 }

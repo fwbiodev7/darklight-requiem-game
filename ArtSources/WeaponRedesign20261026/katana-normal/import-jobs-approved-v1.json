@@ -1,0 +1,147 @@
+{
+  "jobs": [
+    {
+      "name": "ReqKatanaNormalWalkSW_W20261026ApprovedV1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261026\\katana-normal\\ReqKatanaNormalWalkSW_W-v1-source.png",
+      "preservedSourceName": "ReqKatanaNormalWalkSW_W20261026ApprovedV1-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 3,
+      "sourceRows": 4,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "direction": 1,
+          "action": "Walk",
+          "durationMs": [
+            65,
+            65,
+            70,
+            65,
+            65,
+            70
+          ],
+          "loop": true
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 2,
+          "action": "Walk",
+          "durationMs": [
+            65,
+            65,
+            70,
+            65,
+            65,
+            70
+          ],
+          "loop": true
+        }
+      ],
+      "minimumArea": 10000,
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            232,
+            359
+          ],
+          "method": "Whole-source projected boot-support midpoint; no anatomical crop"
+        },
+        "1": {
+          "anchor": [
+            570,
+            363
+          ],
+          "method": "Whole-source projected boot-support midpoint; no anatomical crop"
+        },
+        "2": {
+          "anchor": [
+            935,
+            359
+          ],
+          "method": "Whole-source projected boot-support midpoint; no anatomical crop"
+        },
+        "3": {
+          "anchor": [
+            238,
+            703
+          ],
+          "method": "Whole-source projected boot-support midpoint; no anatomical crop"
+        },
+        "4": {
+          "anchor": [
+            574,
+            703
+          ],
+          "method": "Whole-source projected boot-support midpoint; no anatomical crop"
+        },
+        "5": {
+          "anchor": [
+            934,
+            703
+          ],
+          "method": "Whole-source projected boot-support midpoint; no anatomical crop"
+        },
+        "6": {
+          "anchor": [
+            280,
+            1040
+          ],
+          "method": "Whole-source projected boot-support midpoint; no anatomical crop"
+        },
+        "7": {
+          "anchor": [
+            588,
+            1043
+          ],
+          "method": "Whole-source projected boot-support midpoint; no anatomical crop"
+        },
+        "8": {
+          "anchor": [
+            960,
+            1043
+          ],
+          "method": "Whole-source projected boot-support midpoint; no anatomical crop"
+        },
+        "9": {
+          "anchor": [
+            268,
+            1389
+          ],
+          "method": "Whole-source projected boot-support midpoint; no anatomical crop"
+        },
+        "10": {
+          "anchor": [
+            590,
+            1384
+          ],
+          "method": "Whole-source projected boot-support midpoint; no anatomical crop"
+        },
+        "11": {
+          "anchor": [
+            960,
+            1389
+          ],
+          "method": "Whole-source projected boot-support midpoint; no anatomical crop"
+        }
+      }
+    }
+  ]
+}

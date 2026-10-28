@@ -30,7 +30,12 @@ def audit_metadata(project_root="."):
     }
 
     def record_issue(level, category, message, path=""):
-        results["summary"][level.lower()] = results["summary"].get(level.lower(), 0) + 1
+        counter={"ERROR":"errors","WARNING":"warnings","INFO":"info"}[level]
+        results["summary"][counter]+=1
+        results.setdefault("issues",[]).append(dict(level=level,category=category,message=message,path=path))
+
+    if not os.path.isdir(assets_dir):
+        record_issue("ERROR","MISSING_ASSETS","Assets directory does not exist")
 
     # 1. Check for missing .meta files and collect all GUIDs
     guid_to_path = {}
@@ -108,13 +113,14 @@ def audit_metadata(project_root="."):
                 content = f.read()
             matches = set(GUID_PATTERN.findall(content))
             for g in matches:
-                if g not in guid_to_path:
+                if g not in guid_to_path and not g.startswith("0000000000000000"):
                     # Note: could be Unity builtin, record as warning if unresolvable
                     results["broken_yaml_references"].append({
                         "file": rel,
                         "guid": g
                     })
                     broken_refs_count += 1
+                    record_issue("WARNING","UNRESOLVED_YAML_GUID","Reference is not in local Assets; may belong to a package",rel)
         except Exception as e:
             record_issue("WARNING", "YAML_READ_ERROR", f"Could not parse YAML {rel}: {e}")
 
@@ -141,3 +147,4 @@ if __name__ == "__main__":
     print(f"Case Collisions: {len(res['case_collisions'])}")
     print(f"Broken YAML Refs: {res['broken_yaml_references_count']}")
     print(f"Output written to outputs/validation/metadata_audit.json")
+    sys.exit(1 if s["errors"] else 0)

@@ -18,7 +18,7 @@ namespace Darklight.Tests
     // model while paused. These do not certify human input, physical controls or sound.
     public sealed partial class DarklightWeaponRedesignGameplayTests
     {
-        const string Folder="outputs/redesign-armas-20261023/unity-play";
+        const string Folder="outputs/retomada-20261027/unity-play";
         IDisposable storage;DarklightCampaign game;DarklightCombatLab lab;DarklightFighter fighter;
         DarklightCharacterView view;SpriteRenderer art;DarklightWeaponRedesignCatalog catalog;
         readonly Dictionary<string,string> protectedSaves=new();string preferences;
@@ -112,68 +112,62 @@ namespace Darklight.Tests
                 "Date: 2026-10-23\nContexts checked: "+contexts+"\nDistinct observed frames: "+figures+"\n"+details+
                 "\nActual campaign CharacterView and world camera rendered in PlayMode. Combat model stepped deterministically with gameplay paused.\nAudio disabled. Isolated test save. This is not human play, physical controller, all-combo, whole-redesign or listening certification.\n");
         }
-        [UnityTest] public IEnumerator RequiemDaggersNormalAndRupturaUseFourNewIdleFramesInThreeDirections()
+        [UnityTest] public IEnumerator ArchivedDaggerIdleAssetsRemainReadableOutsideActiveSelectors()
         {
             int contexts=0,figures=0;
             foreach(int form in new[]{0,1})foreach(int direction in new[]{0,1,2})
             {
-                var page=catalog.pages.SingleOrDefault(p=>p.skin==0&&p.weapon==1&&p.form==form&&p.direction==direction&&p.action=="Idle");
-                Assert.That(page,Is.Not.Null,"Both reviewed dagger sheets are mandatory: form="+form+" direction="+direction);
-                Assert.That(page.spriteNames.Distinct().Count(),Is.EqualTo(4));Context(0,1,form,direction);
-                var seen=new HashSet<string>(StringComparer.Ordinal);
+                var page=catalog.pages.Single(p=>p.skin==0&&p.weapon==1&&p.form==form&&p.direction==direction&&p.action=="Idle");
+                var model=new CombatModel(new CombatLoadout());var seen=new HashSet<Sprite>();
                 for(int tick=0;tick<155;tick++)
                 {
-                    Tick(Facing(direction));AssertAuthored(page);
-                    Assert.That(art.sprite.name.StartsWith("Today_RequiemCombatDaggers",StringComparison.Ordinal),Is.False,"Idle cannot alternate legacy Combat 0/5");
-                    if(seen.Add(art.sprite.name))Capture(page.id+"-idle-"+Array.IndexOf(page.spriteNames,art.sprite.name));
+                    model.Tick(.01f,default);
+                    Assert.That(DarklightWeaponRedesignBank.TryResolve(0,1,form,direction,model,Vector2.zero,null,out var sprite),Is.True);
+                    Assert.That(page.spriteNames,Does.Contain(sprite.name));seen.Add(sprite);
                 }
-                Assert.That(seen.Count,Is.EqualTo(4),page.id+": all four supplied idle poses must appear");contexts++;figures+=seen.Count;
-                AssertSilent();yield return null;
+                Assert.That(seen.Count,Is.EqualTo(4));contexts++;figures+=seen.Count;
+                Assert.That(game.Weapons.Unlocked(1),Is.False,"Archive validation cannot reactivate Presas");yield return null;
             }
-            Report("mandatory-dagger-idle",contexts,figures,"Normal/Ruptura, S/SW/W: four distinct authored figures per exact context; no mirror, old owner mask or form recolor.");
+            Report("archived-dagger-idle",contexts,figures,"Legacy asset readability only; Presas is unavailable in active gameplay. This does not certify active character coverage.");
         }
-        [UnityTest] public IEnumerator DaggerIdleReturnsAfterLegacyAttackAndWeaponFormDirectionChanges()
+
+        [UnityTest] public IEnumerator RequiemNormalIdleReturnsAfterEachWholeAttackSequence()
         {
             int contexts=0,legacyAttacks=0;
-            foreach(int form in new[]{0,1})foreach(int direction in new[]{0,1,2})
+            foreach(int weapon in new[]{0,2})foreach(int direction in new[]{0,1,2})
             {
-                Context(0,1,form,direction);Assert.That(view.UsesWeaponRedesignSprite,Is.True);
-                var idle=art.sprite;Tick(Facing(direction),new CombatInput{lightPressed=true});
-                Assert.That(fighter.Model.State,Is.EqualTo(CombatState.Attack));
-                bool legacy=false,contact=false;
-                for(int tick=0;tick<160&&fighter.Model.State==CombatState.Attack;tick++)
+                Context(0,weapon,0,direction);Assert.That(view.UsesWeaponRedesignSprite,Is.True);
+                foreach(var attack in new[]{fighter.loadout.lights[0],fighter.loadout.heavy})
                 {
-                    Present(fighter.Model.Motion);
-                    if(!view.UsesWeaponRedesignSprite)legacy=true;
-                    Assert.That(art.sprite,Is.Not.SameAs(idle),"An attack cannot remain frozen on its idle figure");
-                    if(fighter.Model.ActiveThisTick&&!contact){Capture("daggers-f"+form+"-d"+direction+"-attack-contact");contact=true;}
-                    Tick(Facing(direction));
+                    fighter.ResetModel();Assert.That(fighter.Model.TryAirFollowup(attack,new CombatInput{aim=Facing(direction)}),Is.True);
+                    bool? authored=null;bool contact=false;
+                    for(int tick=0;tick<220&&fighter.Model.State==CombatState.Attack;tick++)
+                    {
+                        Present(fighter.Model.Motion);
+                        authored??=view.UsesWeaponRedesignSprite;
+                        Assert.That(view.UsesWeaponRedesignSprite,Is.EqualTo(authored.Value),"One attack must keep one coherent source sequence");
+                        contact|=fighter.Model.ActiveThisTick;Tick(Facing(direction));
+                    }
+                    Assert.That(contact,Is.True);Assert.That(fighter.Model.State,Is.EqualTo(CombatState.Neutral));Present();
+                    Assert.That(view.UsesWeaponRedesignSprite,Is.True,"Exact normal idle must resume");
+                    if(authored==false)legacyAttacks++;contexts++;
                 }
-                Assert.That(contact,Is.True);Assert.That(fighter.Model.State,Is.EqualTo(CombatState.Neutral));Present();
-                Assert.That(view.UsesWeaponRedesignSprite,Is.True,"Returning to neutral must restore the exact redesigned idle");
-                Assert.That(art.flipX,Is.False);Capture("daggers-f"+form+"-d"+direction+"-returned-idle");
-                if(legacy)legacyAttacks++;contexts++;yield return null;
+                yield return null;
             }
-            Assert.That(legacyAttacks,Is.GreaterThan(0),"At least one uncovered attack must preserve its approved legacy animation");
-            foreach(int weapon in new[]{0,2})
-            {
-                Context(0,weapon,1,0);Assert.That(art.sprite.name.Contains("ReqDaggers"),Is.False,"Switching weapon cannot reuse a redesigned dagger figure");
-                Capture("switch-weapon-"+weapon);
-            }
-            Context(1,1,0,0);Assert.That(art.sprite.name.Contains("Redesign_ReqDaggers"),Is.False,"Rock cannot borrow Requiem figures");
-            Context(0,1,3,4);Assert.That(art.sprite.name.Contains("Redesign_ReqDaggersNormalIdleA"),Is.False,"Absoluto/back cannot borrow Normal/front");
-            AssertSilent();Report("transitions",contexts,0,"Idle -> attack -> idle verified; "+legacyAttacks+" contexts used approved legacy attack coverage. Weapon, form, skin and direction changes checked without borrowing another context.");
+            Assert.That(legacyAttacks,Is.GreaterThan(0),"Uncovered techniques retain whole legacy sequences");
+            AssertSilent();Report("active-transitions",contexts,0,"Réquiem Normal Katana/Punhos: authored and legacy attacks stay coherent for their complete sequence and return to exact idle; no transformed-art approval implied.");
         }
+
         static IEnumerable<AttackDefinition> Attacks(CombatLoadout loadout)
         {
             var candidates=new List<AttackDefinition>(loadout.lights??Array.Empty<AttackDefinition>());
             candidates.AddRange(new[]{loadout.heavy,loadout.charged,loadout.counter,loadout.skill,loadout.aerial,loadout.weaponSpecial,loadout.pauseBranch,loadout.heavyBranch,loadout.swapEntry,loadout.airFinisher});
             return candidates.Where(a=>a!=null).Distinct();
         }
-        [UnityTest] public IEnumerator RequiemFistsSouthFirstPunchUsesIndependentFiguresInEveryFormWithoutPaletteFilters()
+        [UnityTest] public IEnumerator RequiemNormalAndRupturaFistsSouthPunchUseIndependentFiguresWithoutPaletteFilters()
         {
             var contactSprites=new HashSet<Sprite>();int figures=0;
-            for(int form=0;form<4;form++)
+            for(int form=0;form<2;form++)
             {
                 var page=catalog.pages.SingleOrDefault(p=>p.skin==0&&p.weapon==2&&p.form==form&&p.direction==0&&p.action=="Attack"&&p.attackKey=="Direto da Ruína");
                 Assert.That(page,Is.Not.Null,"An independent south punch is required for form "+form);
@@ -194,15 +188,16 @@ namespace Darklight.Tests
                 Assert.That(seen.Count,Is.EqualTo(page.spriteNames.Distinct().Count()),"Startup, contact and recovery must all use authored figures");
                 figures+=seen.Count;AssertSilent();yield return null;
             }
-            Assert.That(contactSprites.Count,Is.EqualTo(4),"Every form must own an independent attack figure instead of recoloring the Normal sprite");
-            Report("fists-south-all-forms",4,figures,"Direto da Ruína south: real model startup/contact/recovery rendered for all four forms. Independent complete figures, no inherited Ruin Fists or vampire palette filter, no duplicated centered legacy punch streak. Other directions and techniques retain their recorded coverage.");
+            Assert.That(contactSprites.Count,Is.EqualTo(2),"Every form must own an independent attack figure instead of recoloring the Normal sprite");
+            Report("fists-south-normal-ruptura",2,figures,"Direto da Ruína south: real model startup/contact/recovery rendered for Normal and Ruptura only; archived Eclipse/Absoluto art is not certification of the fused form. Independent complete figures, no inherited Ruin Fists or vampire palette filter, no duplicated centered legacy punch streak. Other directions and techniques retain their recorded coverage.");
         }
         [UnityTest] public IEnumerator OtherDeclaredIdleAndAttackPagesReachTheCampaignConsumer()
         {
             int contexts=0,figures=0;
             foreach(var page in catalog.pages)
             {
-                bool mandatory=page.skin==0&&page.weapon==1&&page.form<2&&page.direction<3&&page.action=="Idle";
+                if(page.skin!=0||!DarklightPlayableScope.WeaponActive(page.weapon)||page.form>=2)continue;
+                bool mandatory=false;
                 if(mandatory||page.action!="Idle"&&page.action!="Walk"&&page.action!="Attack")continue;
                 Context(page.skin,page.weapon,page.form,page.direction);var seen=new HashSet<string>(StringComparer.Ordinal);
                 if(page.action=="Idle")

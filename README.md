@@ -1,45 +1,17 @@
 # DARKLIGHT: REQUIEM
 
-RPG 2D em pixel art de Fábio Ronaldo. **Beta 1.0 em desenvolvimento.**
+Escopo vigente em **26/10/2026**: Fabius com a skin Réquiem, katana, Punhos da Ruína e moto; formas Normal, Ruptura e Eclipse Absoluto. Rock, Presas e as formas antigas permanecem como legado preservado. Contrato e limitações: [escopo canônico](Docs/Darklight/ESCOPO-CANONICO-20261026.md), [pendências atuais](Docs/Darklight/PENDENCIAS-20261026.md), [GDD](Docs/Darklight/Planejamento/GDD.md) e [LDD](Docs/Darklight/Planejamento/LDD.md). A definição do novo escopo não certifica redesign, integração ou testes concluídos.
 
-Um eclipse abre fendas em Vespera. Fábio, Lyra e Kael atravessam a cidade e o Véu, enfrentando as consequências do Projeto Eclipse.
+Campanha original em seis capítulos com ampliações existentes, cinco famílias de Ecos, elites e chefes. Combate com combos, carregado, esquiva, parry, habilidade, estilo, combate aéreo e poderes de forma. XP, árvore curta, elixires, memórias, diálogos, dois finais e save independente. Dark Resonance opcional com os cinco MP3 fornecidos. Menus e HUD em pixel art; teclado/mouse, controle e remapeamento.
 
-## Beta 1.0 — 16/10/2026
+Abra `Assets/Darklight/Scenes/DarklightCampaign.unity`. O menu oferece também o laboratório de combate separado. Caminhos antigos de build abaixo são históricos; a entrega de 26/10 deve constar no checkpoint final com ZIP e evidências de execução fora do Editor.
 
-Cavaleiro do Abismo exclusivo da skin Rock, fases8–10 reformadas, dez miniartes detalhadas e HUD contextual. Atlas com texturas do jogo e novos ícones; pontos de retorno e portais maiores.
+Os testes de 26/10 incluem Unity e execução fora do Editor, conforme o pedido do usuário; consultar as evidências do checkpoint final. Compilação e abertura não comprovam balanceamento, duração, campanha jogada até o fim ou controle físico. O redesign permanece parcial: distinguir ciclos completos de poses direcionais estáticas e de efeitos. Sincronização musical fina exige avaliação própria.
 
-[Baixar Beta 1.0 para Windows — build1.0.8](https://github.com/fwbiodev7/darklight-requiem-game/releases/tag/v1.0.0-beta.5). Extraia o ZIP inteiro e abra `DarklightRequiem.exe`.
+Projeto original de Varginha preservado; conteúdo antigo da cópia arquivado fora do projeto. O backup privado e a integração de branches de 26/10 têm autorização específica, com validação obrigatória do backup antes de qualquer merge e sem merge definitivo na main.
 
-43 testes atuais de gameplay e118 de Editor aprovados. Build:0 erros/1 aviso conhecido. Verificação automatizada do executável em quatro resoluções e12 cenários. [Resultados, capturas e limitações](Docs/Darklight/Reviews/Beta-1.0-5/RELATORIO.md). Controle físico e avaliação humana de áudio, fluidez e balanceamento continuam pendentes; correção anatômica das transformações e catálogo completo de ataques/pilotagem em oito direções ainda não estão concluídos.
+## Histórico da montagem inicial
 
-O [vídeo de divulgação de25s](Docs/Darklight/Media/Darklight-Requiem-Gameplay-Roteiro-25s.mp4) permanece preservado. [Guia de comandos](Docs/Darklight/Delivery/2026-10-16/LEIA-ME-BETA.txt).
+## Revisão dos seis mapas — 10/10/2026
 
-## Atualização de 14/10/2026
-
-Protagonistas exclusivamente jovens, secundários no mesmo traço, três formas com figuras próprias, auras contínuas e entrada de transformação mais forte. Transformações liberadas desde o primeiro capítulo, com pelo menos três minutos de ação. Iluminação e sombras na campanha, novos efeitos de combate, correção de saltos laterais das animações, remapeamento de teclado/controle e telas de passagem com pequenas ilustrações do próximo destino.
-
-Leia [as mudanças, evidências e pendências](Docs/REMASTER-20261014.md). O criador pediu para encerrar os testes e concluir o commit; não houve nova rodada após a integração final. Esta prévia não é uma edição definitiva certificada.
-
-## Jogar
-
-O download anterior é a [Alpha 0.1 para Windows](https://github.com/fwbiodev7/darklight-requiem-game/releases/tag/v0.1.0-alpha), com [guia próprio](ALPHA-0.1.md). Novos pacotes, quando disponíveis, aparecem em [Releases](https://github.com/fwbiodev7/darklight-requiem-game/releases). Na Beta atual, extraia o pacote completo e abra `DarklightRequiem.exe` na pasta extraída.
-
-[Site do jogo](https://darklight-requiem.zfabiobrronaldo.chatgpt.site).
-
-## Comandos da nova prévia
-
-WASD / analógico esquerdo: mover; mouse esquerdo / X: leve; mouse direito / Y: pesado; Espaço / B: esquiva; Q / LB: parry; E / A: interagir; V / LS: trocar arma; T / LT / L2: transformar; R / RT / R2: elixir; Tab / Select: mapa; Esc / Start: pausa. O personagem acompanha a direção de movimento.
-
-No Cavaleiro: botão direito = serras; esquerdo = moto; R montado = derrapagem; F = esmagamento. No controle: X, Y, direcional cima montado e RB, respectivamente. Consulte o guia dentro do jogo se remapeou comandos.
-
-Em Pausa → Transformações, escolha a forma. Em Pausa → Controles, ajuste atalhos por dispositivo, resolva conflitos ou restaure os padrões. Os comandos podem diferir da Alpha 0.1 publicada.
-
-## Abrir na Unity
-
-Unity **6000.6.0f1**. Dependências em `Packages`. Cena: `Assets/Darklight/Scenes/DarklightCampaign.unity`. O projeto usa URP 2D. Importar e compilar não comprova gameplay ou desempenho.
-
-O modo temporário `--requiem-playtest` preserva a campanha. Ferramentas de captura e diagnóstico só são iniciadas explicitamente; não reproduzir áudio ou executar testes sem autorização do criador.
-
-## Recursos e licenças
-
-Figuras completas e metadados de importação preservados. Press Start 2P acompanha sua licença OFL; efeitos e ambientes CC0 têm manifesto em `Assets/Darklight/Resources/Darklight/Audio/AUDIO-LICENSES.json`. Músicas fornecidas pelo criador não recebem licença de redistribuição por estarem no protótipo. Não incluir caches, credenciais, builds ou saves pessoais nos commits.
+Os fundos ampliados foram substituídos por 24 peças de piso e 24 peças de arquitetura. Os seis capítulos agora usam pisos repetíveis, fachadas, portas e mobiliário próprios, com colisões na base e transparência de oclusão. A câmera continua em 640 × 360 e enquadra o corpo de Fábio. Arte do protagonista e HUD preservados. Capturas reais dos seis mapas e manifesto em outputs/mapas-refeitos/. Compilação e abertura verificadas; jogabilidade e controle físico permanecem para teste manual.

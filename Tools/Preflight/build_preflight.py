@@ -6,14 +6,14 @@ Validates build readiness without triggering a full compile:
 - Unity project version consistency
 - Essential packages and manifest validity
 - Assembly definitions integrity
-- Forbidden / private files in tree
-- Exclusions of test-artifacts and saves
+Publication privacy and Unity execution are separate checks.
 """
 
 import os
 import sys
 import json
 import re
+from pathlib import Path
 
 def run_preflight(project_root="."):
     results = {
@@ -77,8 +77,36 @@ def run_preflight(project_root="."):
     if not os.path.exists(runtime_asmdef):
         record_issue("FAIL", "Missing Darklight.Runtime.asmdef")
 
-    # 5. Check for private/suspicious paths in tracked git files
-    suspicious_patterns = [r"\.codex", r"remaster-prototype-20261014", r"cavaleiro-sprites"]
+    definitions={};guids={}
+    for folder in ("Assets","Packages","Library/PackageCache"):
+        for path in Path(project_root,folder).rglob("*.asmdef"):
+            try:
+                definition=json.loads(path.read_text(encoding="utf-8-sig"));name=definition["name"]
+                if name in definitions:record_issue("FAIL",f"Duplicate assembly name: {name}")
+                definitions[name]=(path,definition)
+                meta=Path(str(path)+".meta")
+                if meta.is_file():
+                    match=re.search(r"(?m)^guid:\s*(\w+)",meta.read_text(encoding="utf-8-sig"))
+                    if match:guids[match[1]]=name
+            except (ValueError,KeyError,OSError) as error:record_issue("FAIL",f"Invalid assembly definition {path}: {error}")
+    unresolved=[]
+    for name,(path,definition) in definitions.items():
+        if not path.is_relative_to(Path(project_root,"Assets")):continue
+        for reference in definition.get("references",[]):
+            resolved=guids.get(reference[5:]) if reference.startswith("GUID:") else reference
+            if resolved not in definitions:unresolved.append(dict(assembly=name,reference=reference))
+    results["checks"]["project_assembly_count"]=sum(p.is_relative_to(Path(project_root,"Assets")) for p,_ in definitions.values())
+    results["checks"]["unresolved_assembly_references"]=unresolved
+    for entry in unresolved:record_issue("FAIL",f"Unresolved assembly reference: {entry}")
+    settings=Path(project_root,"ProjectSettings/EditorBuildSettings.asset");enabled=[]
+    if settings.is_file():
+        enabled=re.findall(r"- enabled:\s*1\s+path:\s*([^\r\n]+)",settings.read_text(encoding="utf-8-sig"))
+        for scene in enabled:
+            if not Path(project_root,scene.strip()).is_file():record_issue("FAIL",f"Enabled scene is missing: {scene}")
+    else:record_issue("FAIL","Missing EditorBuildSettings.asset")
+    results["checks"]["enabled_scenes"]=enabled
+    if "Assets/Darklight/Scenes/DarklightCampaign.unity" not in enabled:record_issue("FAIL","The campaign scene is not enabled in build settings")
+    results["limits"]=["Does not compile or execute Unity", "Does not certify gameplay or artistic approval", "Publication privacy and save/build exclusions require the separate reviewed allowlist"]
     # Check if outputs/ directory has build artifacts
     out_dir = os.path.join(project_root, "outputs")
     results["checks"]["outputs_directory_present"] = os.path.exists(out_dir)

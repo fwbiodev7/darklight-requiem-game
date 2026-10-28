@@ -33,7 +33,7 @@ namespace Darklight
             new[]{"Os registros de Lucien levam à cripta. Aproxime-se da inscrição e interaja para descobrir a origem da linhagem.","Recupere a memória após enfrentar os guardiões. Interaja com o vestígio para ouvir o ancestral.","Os antigos guardiões foram corrompidos. Liberte a passagem para o salão dos juramentos.","Valtherion alterna peso, sangue e velocidade. Leia seus sinais e aproveite a recuperação dos golpes."},
             new[]{"Proteja o grupo encurralado derrotando a patrulha. Interaja com os sobreviventes para conduzi-los ao abrigo.","Defenda o abrigo em três ondas. O checkpoint registra cada onda concluída.","Abra caminho pela fortaleza para interromper a origem do eclipse permanente.","Seraphine alterna investidas, invocações e ataques amplos. Sua vida não precisa ser sacrificada ao sangue."},
             new[]{"Enfrente as criaturas da fortaleza e recolha o primeiro selo antigo.","O selo do sangue guarda uma versão distorcida dos caçadores de Vespera.","O último selo revela a influência de Nocthar. Recupere-o para alcançar o trono.","Enfraqueça a corrupção até Kael ajoelhar. Aproxime-se e interaja para purificá-lo. Kael deve sobreviver."},
-            new[]{"Atravesse os últimos guardiões do Coração do Eclipse.","Leia a memória de Lyra para reunir as energias humana e ancestral.","Use katana, adagas e corrente contra os guardiões. Cada arma deve acertar um alvo durante este desafio.","Rei do Vazio, Eclipse Vivo e Réquiem Final: três fases com sinais próprios. O despertar de Absoluto continua sob seu controle."}
+            new[]{"Atravesse os últimos guardiões do Coração do Eclipse.","Leia a memória de Lyra para reunir as energias humana e ancestral.","Use katana, Punhos da Ruína e motocicleta contra os guardiões. Cada arma deve acertar um alvo durante este desafio.","Rei do Vazio, Eclipse Vivo e Réquiem Final: três fases com sinais próprios. O despertar de Eclipse Absoluto continua sob seu controle."}
         };
         string MissionTitle=>ExpandedChapter?MissionTitles[Progress.chapter-6][Mathf.Clamp(encounter,0,3)]:Goal();
         string MissionDescription=>ExpandedChapter?MissionDescriptions[Progress.chapter-6][Mathf.Clamp(encounter,0,3)]:"Liberte o selo marcado e elimine seus guardiões.";
@@ -72,14 +72,14 @@ namespace Darklight
             }
             if(NarrativeInteractionStage&&!completingNarrativeInteraction)
             {encounterStarted=false;NarrativeCombatDone=true;Objective=MissionTitle+" — INTERAJA";return true;}
-            if(Progress.chapter==9&&encounter==2&&(Progress.missionWeaponHits&7)!=7)
+            if(Progress.chapter==9&&encounter==2&&(Progress.missionWeaponHits&DarklightPlayableScope.WeaponMask)!=DarklightPlayableScope.WeaponMask)
             {
                 encounterStarted=false;Notice("USE AS TRÊS ARMAS — "+WeaponTrialCount+" / 3");BeginNarrativeEncounter();return true;
             }
             if(Progress.chapter==9&&encounter==2)Progress.expansionFlags|=WeaponsMastered;
             return false;
         }
-        public int WeaponTrialCount=>((Progress.missionWeaponHits&1)!=0?1:0)+((Progress.missionWeaponHits&2)!=0?1:0)+((Progress.missionWeaponHits&4)!=0?1:0);
+        public int WeaponTrialCount=>((Progress.missionWeaponHits&1)!=0?1:0)+((Progress.missionWeaponHits&8)!=0?1:0)+((Progress.missionWeaponHits&4)!=0?1:0);
         void RecordWeaponTrial()
         {if(ExpandedChapter&&Progress.chapter==9&&encounter==2)Progress.missionWeaponHits|=1<<(int)Weapons.Equipped.id;}
         bool NarrativeTarget(out DarklightInteractionTarget target)
@@ -135,7 +135,7 @@ namespace Darklight
         public void FinalAwakening()
         {
             Progress.formsUnlocked=Mathf.Max(Progress.formsUnlocked,3);Progress.CompleteMilestone(9,3);
-            Blood.Gain(65);Notice("ABSOLUTO DESPERTO — "+lab.Input.BindingLabel("Transform")+": TRANSFORMAR");SaveCheckpoint();
+            Blood.Gain(65);Notice("ECLIPSE ABSOLUTO DESPERTO — "+lab.Input.BindingLabel("Transform")+": TRANSFORMAR");SaveCheckpoint();
         }
         internal void SpawnBossSupport(Vector2 origin)
         {

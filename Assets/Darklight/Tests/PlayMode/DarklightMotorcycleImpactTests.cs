@@ -66,7 +66,7 @@ namespace Darklight.Tests
         }
         [UnityTest]public IEnumerator CaptureMotorcycleImpactInRealGameplayAcrossFourForms()
         {
-            static string root => DarklightTestOutput.GetDirectory("cavaleiro-final-20261016/impact-captures");
+            string root = DarklightTestOutput.GetDirectory("cavaleiro-final-20261016/impact-captures");
             var keys=InputSystem.AddDevice<Keyboard>();string bindings=lab.Input.Asset.SaveBindingOverridesAsJson();int oldRate=Time.captureFramerate;
             try
             {

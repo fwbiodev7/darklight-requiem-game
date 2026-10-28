@@ -62,7 +62,7 @@ namespace Darklight
         }
         public void TechnicalImpact(AttackDefinition attack,int form)
         {
-            postureIdle=0;posture+=attack.postureDamage*(form==1?1.55f:form==3?1.25f:1)*(DarklightCampaign.Instance?.AbyssRider?.Posture??1);
+            postureIdle=0;posture+=attack.postureDamage*(form==1?1.55f:form>=2?1.25f:1)*(DarklightCampaign.Instance?.AbyssRider?.Posture??1);
             float threshold=Boss?8:kind==RequiemEnemyKind.Armored?4.5f:3;
             if(posture>=threshold&&clock>=tacticalRecovery)
             {posture=0;stagger=Boss?.28f:.65f;tacticalRecovery=clock+(Boss?2.2f:1);state=0;timer=.65f;guardUntil=0;}

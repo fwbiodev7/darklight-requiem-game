@@ -1,4 +1,4 @@
-> Checkpoint mais recente: **FECHAMENTO-20261025-RETOMADA1850.md** e recibos em `outputs/redesign-armas-20261025-retomada1850`. Os estados anteriores abaixo são históricos; não repetir trabalho consolidado.
+> **Histórico:** o escopo e a lista vigente estão em [PENDENCIAS-20261026.md](PENDENCIAS-20261026.md) e [ESCOPO-CANONICO-20261026.md](ESCOPO-CANONICO-20261026.md). Rock/Presas saíram do gameplay ativo; moto passou para Réquiem; Eclipse/Absoluto foram fundidos. O fechamento de 25/10 e recibos em `outputs/redesign-armas-20261025-retomada1850` permanecem evidências históricas; não repetir trabalho consolidado nem tratar as prioridades antigas abaixo como atuais.
 
 # Pendências — 25/10/2026
 

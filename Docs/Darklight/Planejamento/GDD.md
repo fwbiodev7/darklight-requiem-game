@@ -1,6 +1,8 @@
 # DARKLIGHT: REQUIEM — GDD consolidado
 
-Revisão: 10/10/2026. A autorização mais recente permite montar autonomamente a campanha completa. A versão atual contém os seis capítulos, cinco famílias de inimigos e elites, seis chefes, três formas, RPG, menus, save e Dark Resonance. O usuário fará os testes manuais; não confundir compilação/abertura com campanha ou balanceamento validados. Fábio e HUD preservam a referência aprovada com spikes pequenos.
+Revisão de escopo: **26/10/2026**. O [contrato canônico atual](../ESCOPO-CANONICO-20261026.md) prevalece sobre descrições antigas: Fabius somente Réquiem, katana/Punhos da Ruína/moto, Normal/Ruptura/Eclipse Absoluto. Lucius tem somente Normal/Nexo Fenrir e aguarda o redesign de Fabius; O Encapuzado preserva a identidade oculta até Sangue do Abismo. Rock, Presas e formas substituídas permanecem como legado. Ver [cobertura e pendências reais](../PENDENCIAS-20261026.md) e [LDD vigente](LDD.md).
+
+A base de 10/10 contém seis capítulos com ampliações posteriores, famílias de inimigos/elites, chefes, RPG, menus, save e Dark Resonance. As descrições históricas abaixo não certificam o novo escopo implementado. Compilação, testes automatizados, abertura standalone, campanha humana e balanceamento são estados distintos. Fabius e HUD preservam as referências aprovadas.
 
 ## Visão do jogo
 
@@ -24,7 +26,7 @@ Explorar → observar um encontro → combinar ataques e defesas → ganhar esti
 
 ## Combate
 
-Movimento em oito direções, mira independente e leitura clara dos ataques. Réquiem oferece leve, pesado e carregado; combos iniciais: leve/leve/leve, leve/leve/pesado, leve/pesado, pesado carregado, esquiva/ataque, parry/contra-ataque e habilidade/ataque.
+Movimento em oito direções, mira independente e leitura clara dos ataques. Arsenal ativo: katana, Punhos da Ruína e moto para Réquiem, preservando combate aéreo e suas finalizações. Katana oferece leve, pesado e carregado; combos iniciais: leve/leve/leve, leve/leve/pesado, leve/pesado, pesado carregado, esquiva/ataque, parry/contra-ataque e habilidade/ataque. Moto mantém Serra Infernal, Giro Devastador, Esmagamento Vertical, Roda Destruidora, Cavalgada Brutal e Execução Aérea Motorizada. A redução do seletor preserva timings, controles e mecânicas existentes; não renumerar IDs persistidos de forma destrutiva.
 
 Definir cada golpe por antecipação, contato, recuperação, alcance, dano, stagger e cancelamentos. Input buffering permite antecipar a próxima ação sem disparar ações durante pausa ou diálogo. Cada golpe acerta cada alvo uma vez, salvo ataques explicitamente definidos como múltiplos. Esquiva, parry perfeito, invulnerabilidade, hitstop e super armor precisam de janelas legíveis e verificáveis. Finalizadores e repertório ampliado entram após o núcleo estar estável.
 
@@ -38,7 +40,9 @@ Kael Voss é o primeiro chefe: fase 1 com combos, parry, esquivas, investidas e 
 
 ## Transformações
 
-Normal → Ruptura → Eclipse → Absoluto. Implementar primeiro Normal/Ruptura: energia ganha em combate, ativação, duração, novas habilidades e retorno seguro. Eclipse e Absoluto pertencem à campanha ampliada. Modificadores devem ser removidos ao expirar, morrer ou transitar de cena, sem multiplicar permanentemente os atributos.
+Normal → Ruptura → Eclipse Absoluto. Normal mantém cabelo castanho natural. Ruptura tem mechas vermelhas intensas; Eclipse Absoluto funde a energia violeta de Eclipse com branco-prateado e elementos de Absoluto, preservando os poderes úteis e removendo redundâncias. As antigas Eclipse e Absoluto não são opções independentes. Energia ganha em combate, ativação, duração e retorno seguro continuam; modificadores devem ser removidos ao expirar, morrer ou transitar de cena, sem multiplicar permanentemente os atributos. Migrar progressão antiga sem apagar saves.
+
+Prioridade artística: concluir Normal antes de Ruptura e Eclipse Absoluto. Manter anatomia adulta, corte canônico e oito direções reais, `WorldVisualScale = 1.325`, PPU pelo corpo e olhos/pele preservados. Clips antigos de Eclipse/Absoluto são candidatos para revisão da fusão, não arte combinada aprovada. Substituir ações progressivamente com sequências completas; não misturar fases antigas e novas no mesmo golpe.
 
 ## Dark Resonance — opcional, integrado à campanha
 
@@ -87,9 +91,9 @@ As funções de cada capítulo abaixo são propostas de montagem sobre os títul
 | 1. A Noite da Ruptura | Ataque em Vespera, Réquiem, investigação inicial, Kael e despertar | Núcleo completo da primeira experiência |
 | 2. Vozes do Abismo | Lyra conduz a investigação, exploração de novos distritos e pistas do Véu; missão do MP3 disponível | Missões, persistência, inimigos ampliados |
 | 3. Sangue Desperto | Revelar ligação de Fábio com o Véu e aprofundar Ruptura | Progressão e encontros que testem domínio do combate |
-| 4. O Projeto Eclipse | Investigar Lucien e a organização, novos conflitos e despertar de Eclipse | Segunda forma, ambientes e chefes próprios |
+| 4. O Projeto Eclipse | Investigar Lucien e a organização, novos conflitos e progressão da forma fundida | Eclipse Absoluto, ambientes e chefes próprios; migração compatível |
 | 5. Além do Véu | Explorar a dimensão e consequências das escolhas | Regras de exploração e progressão entre regiões |
-| 6. O Último Eclipse | Confronto final, Absoluto e desfechos | Campanha integrada, estados narrativos e save verificados |
+| 6. O Último Eclipse | Confronto final, domínio de Eclipse Absoluto e desfechos | Campanha integrada, estados narrativos e save verificados |
 
 Cada capítulo precisa de começo, objetivo, exploração, encontros, chefe/momento central, recompensa, transição e possibilidade de retomar o save. Não preencher a duração com repetição obrigatória. Nenhuma duração da campanha foi medida.
 

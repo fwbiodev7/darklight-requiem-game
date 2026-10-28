@@ -1,6 +1,14 @@
 # DARKLIGHT: REQUIEM — instruções do projeto
 
+## Direção vigente — 27/10/2026
+- Réquiem é a única skin ativa; Katana, Punhos e Moto; Normal, Ruptura e Eclipse Absoluto. Instruções históricas contrárias abaixo estão superadas pelo contrato ESCOPO-CANONICO-20261026.md.
+- O usuário exige revisão e correção autônomas das artes, sem pedir aprovação a cada lote. As animações aprovadas da Katana são a referência principal de identidade, desenho e maturidade, inclusive para o piloto da moto. PPU não corrige proporções ou rosto infantilizados.
+- Usar agentes com contexto curto e tarefas independentes, conforme .codex/config.toml e .codex/agents/. Arte: gpt-6.1-sol/high; auditorias simples: gpt-6-luna/high. No máximo três subagentes simultâneos. A coordenação permanece responsável pela integração e execução única da Unity.
+- Não deixar arte corrigível parada aguardando aprovação humana; corrigir figuras completas afetadas e preservar as corretas. Registrar candidato/revisado/importado/testado separadamente. Não declarar o trabalho inteiro concluído por terminar um lote.
+
 ## Encerramento e retomada automáticos — autorização permanente de 25/10/2026
+- Autorização específica da retomada18h50 de25/10: executar Play Mode e auditoria/reprodução controlada dos sons existentes, com saves isolados e preservação de preferências/originais. Registrar reprodução técnica, saída medida e avaliação auditiva como estados distintos. Essa autorização supera a suspensão abaixo somente nesta rodada; não inclui adquirir/substituir/redistribuir músicas comerciais.
+- Ajuste explícito da retomada13h50: encerrar esta rodada perto de **15% restantes**, com commit/push e checkpoint. Este horário/limiar supera os10% anteriores na rodada atual. Ordem artística reiterada: **Normal de Réquiem e Rock com todas as armas/ações → transformações → Lucius/O Encapuzado**. Manter moto exclusiva deRock.
 - Em todas as próximas sessões deste trabalho, acompanhar o saldo de uso quando houver trabalho sustentado. Perto de 10% restantes, não iniciar novos lotes; concluir ou preservar com segurança os que estiverem em voo.
 - Antes de encerrar por limite, salvar checkpoint datado com concluído, produzido, revisado, integrado, testado e pendente, fontes/hashes, falhas, agentes/fragmentos e próximos passos exatos. Não confundir esses estados nem declarar conclusão global parcial.
 - Fazer commit/push do escopo DARKLIGHT autorizado pela cópia isolada, excluindo rejeitadas/superadas, saves, caches, MP3 originais, builds e outros projetos. Preservar alterações alheias.

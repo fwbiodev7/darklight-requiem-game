@@ -14,7 +14,8 @@ namespace Darklight.Tests
         [SetUp]
         public void SetUp()
         {
-            string testDir = DarklightTestOutput.GetDirectory("save-contracts");
+            string testDir = Path.GetFullPath(Path.Combine(Application.dataPath, "../work/save-contracts"));
+            Directory.CreateDirectory(testDir);
             isolatedSavePath = Path.Combine(testDir, "test-save-" + Guid.NewGuid().ToString("N") + ".json").Replace('\\', '/');
             storageScope = DarklightProgress.IsolateStorageForTests(isolatedSavePath);
         }
@@ -106,7 +107,8 @@ namespace Darklight.Tests
             Assert.That(recovered.chapter, Is.EqualTo(1));
             Assert.That(recovered.checkpoint, Is.EqualTo(4));
             Assert.That(recovered.level, Is.EqualTo(3));
-            Assert.That(recovered.equippedWeapon, Is.EqualTo(1));
+            Assert.That(recovered.equippedWeapon, Is.Zero);
+            Assert.That(recovered.legacyEquippedWeapon, Is.EqualTo(1));
         }
 
         [Test]

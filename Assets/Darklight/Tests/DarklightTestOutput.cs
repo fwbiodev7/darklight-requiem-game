@@ -48,8 +48,13 @@ namespace Darklight.Tests
             if (string.IsNullOrWhiteSpace(category))
                 category = DefaultSubfolder;
 
-            // Sanitize path against directory traversal
-            category = category.Replace("..", "").Trim('/', '\\');
+            if (Path.IsPathRooted(category))
+                throw new ArgumentException("Test output categories must be relative", nameof(category));
+            category = category.Replace('\\', '/');
+            foreach (string segment in category.Split('/'))
+                if (segment == ".." || segment.IndexOf(':') >= 0)
+                    throw new ArgumentException("Test output categories cannot traverse outside Root", nameof(category));
+            category = category.Trim('/');
             if (string.IsNullOrWhiteSpace(category))
                 category = DefaultSubfolder;
 
@@ -58,7 +63,8 @@ namespace Darklight.Tests
 
             // Security check: ensure path cannot escape Root
             string rootNormalized = Root;
-            if (!fullPath.StartsWith(rootNormalized, StringComparison.OrdinalIgnoreCase))
+            if (!fullPath.Equals(rootNormalized, StringComparison.OrdinalIgnoreCase) &&
+                !fullPath.StartsWith(rootNormalized + "/", StringComparison.OrdinalIgnoreCase))
             {
                 fullPath = rootNormalized + "/" + DefaultSubfolder;
             }
@@ -81,6 +87,8 @@ namespace Darklight.Tests
         {
             string dir = GetDirectory(category);
             string safeName = Path.GetFileName(fileName);
+            if (string.IsNullOrWhiteSpace(safeName) || safeName == "." || safeName == "..")
+                throw new ArgumentException("A test artifact needs a file name", nameof(fileName));
             return dir + safeName;
         }
     }

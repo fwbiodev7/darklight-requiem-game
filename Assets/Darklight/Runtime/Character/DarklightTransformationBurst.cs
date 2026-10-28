@@ -39,7 +39,7 @@ namespace Darklight
                 float x=(i%2==0?-1:1)*(.48f+i%3*.19f),height=.65f+rise*(2.1f+i%4*.35f);
                 if(form==2)
                 {
-                    Vector3 p=new Vector3(x,.3f+Mathf.Repeat(progress*2+i*.33f,1)*height);Shard(p,.105f*energy,tint);Shard(p,.035f*energy,new Color(.91f,.72f,1,energy));continue;
+                    Vector3 p=new Vector3(x,.3f+Mathf.Repeat(progress*2+i*.33f,1)*height);Shard(p,.105f*energy,tint);Shard(p,.035f*energy,new Color(.94f,.97f,1,energy));continue;
                 }
                 Vector3 previous=new Vector3(x,.1f);
                 for(int j=1;j<=8;j++)
@@ -53,7 +53,7 @@ namespace Darklight
             if(form==2)
             {
                 for(int i=0;i<32;i++){float a=progress*5+i/32f*4.5f,b=progress*5+(i+1)/32f*4.5f;Segment(Vector3.up*1.4f+new Vector3(Mathf.Cos(a),Mathf.Sin(a))*.85f,Vector3.up*1.4f+new Vector3(Mathf.Cos(b),Mathf.Sin(b))*.85f,.04f,tint);}
-                for(int i=0;i<4;i++)Segment(new Vector3((i-1.5f)*.3f,.1f),new Vector3((i-1.5f)*.35f,2.5f*rise),.0125f,tint);
+                for(int i=0;i<4;i++)Segment(new Vector3((i-1.5f)*.3f,.1f),new Vector3((i-1.5f)*.35f,2.5f*rise),.0125f,new Color(.94f,.97f,1,energy));
             }
             for(int i=0;i<8;i++){float a=i*2.39996f+progress*3;Vector3 d=new Vector3(Mathf.Cos(a),Mathf.Sin(a));Segment(Vector3.up*1.4f+d*.8f,Vector3.up*1.4f+d*(.9f+energy*.55f),.009f,tint);}
             mesh.Clear();mesh.SetVertices(vertices,0,quads*4);mesh.SetColors(colors,0,quads*4);mesh.SetTriangles(indices,0,quads*6,0,false);mesh.RecalculateBounds();

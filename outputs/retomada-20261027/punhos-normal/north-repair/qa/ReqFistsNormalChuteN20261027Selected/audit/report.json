@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\retomada-20261027\\punhos-normal\\north-repair\\payload\\ReqFistsNormalChuteN20261027Selected.png",
+  "sourceSha256": "37f05503fcc01995cc0596b94dbad7077db6bc302af4579774d775c7eda77200",
+  "errors": [],
+  "warnings": [
+    "Redesign_ReqFistsNormalChuteN20261027Selected_00: 26280 colors exceed declared 256",
+    "Redesign_ReqFistsNormalChuteN20261027Selected_01: 26085 colors exceed declared 256",
+    "Redesign_ReqFistsNormalChuteN20261027Selected_02: 25633 colors exceed declared 256",
+    "More than 10% of visible samples have partial alpha; inspect halos/native pixel rendering"
+  ],
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsNormalChuteN20261027Selected_00",
+      "rect": [
+        0,
+        0,
+        309,
+        377
+      ],
+      "bbox": [
+        46,
+        12,
+        301,
+        369
+      ],
+      "visiblePixels": 38933,
+      "colors": 26280,
+      "partialAlphaPixels": 38843,
+      "pixelSha256": "27d27b34e9a7838da6a67d71a955a1ad7ad62956d292925739c9e8ec36f9edc1"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalChuteN20261027Selected_01",
+      "rect": [
+        309,
+        0,
+        309,
+        377
+      ],
+      "bbox": [
+        8,
+        8,
+        255,
+        328
+      ],
+      "visiblePixels": 42475,
+      "colors": 26085,
+      "partialAlphaPixels": 42363,
+      "pixelSha256": "367f641734ba6fd53be013e749db4484b998d7f6d11b7323a311668be65f8e97"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalChuteN20261027Selected_02",
+      "rect": [
+        618,
+        0,
+        309,
+        377
+      ],
+      "bbox": [
+        16,
+        10,
+        244,
+        335
+      ],
+      "visiblePixels": 38516,
+      "colors": 25633,
+      "partialAlphaPixels": 38449,
+      "pixelSha256": "4fcc7a04af1518089d16d074b0d2db6687488e6bd70fdad07dd099604973b6c9"
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_N",
+      "frames": 3,
+      "distinctPoses": 3
+    }
+  ],
+  "overlaps": [],
+  "visualApproval": false,
+  "runtimeVerified": false
+}

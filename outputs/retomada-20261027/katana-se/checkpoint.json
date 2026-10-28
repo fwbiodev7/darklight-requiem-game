@@ -1,0 +1,220 @@
+{
+  "date": "2026-10-27",
+  "status": "candidate-retained-not-active",
+  "sourcePath": "ArtSources/WeaponRedesign20261027/katana-se/ReqKatanaNormalWalkSE20261027V1-source.png",
+  "sourceSha256": "5285d045fee0b8ba58a2cbb8985834a0a1c4e3bafa0a6700f614f90ccbae5a06",
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "generatedCalls": 1,
+  "repairCalls": 0,
+  "wholeFigures": 8,
+  "allFiguresComplete": true,
+  "wholeFigureRects": [
+    {
+      "index": 0,
+      "grid": [
+        61,
+        56,
+        414,
+        418
+      ],
+      "rect": [
+        59,
+        54,
+        416,
+        420
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 362,
+      "anchor": [
+        275.27777777777777,
+        418
+      ],
+      "componentArea": 52127
+    },
+    {
+      "index": 1,
+      "grid": [
+        501,
+        54,
+        842,
+        419
+      ],
+      "rect": [
+        499,
+        52,
+        844,
+        421
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 365,
+      "anchor": [
+        714.32,
+        419
+      ],
+      "componentArea": 50676
+    },
+    {
+      "index": 2,
+      "grid": [
+        915,
+        54,
+        1264,
+        419
+      ],
+      "rect": [
+        913,
+        52,
+        1266,
+        421
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 365,
+      "anchor": [
+        1136.408163265306,
+        419
+      ],
+      "componentArea": 49760
+    },
+    {
+      "index": 3,
+      "grid": [
+        1365,
+        52,
+        1711,
+        421
+      ],
+      "rect": [
+        1363,
+        50,
+        1713,
+        423
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 369,
+      "anchor": [
+        1568.967741935484,
+        421
+      ],
+      "componentArea": 51788
+    },
+    {
+      "index": 4,
+      "grid": [
+        54,
+        466,
+        405,
+        833
+      ],
+      "rect": [
+        52,
+        464,
+        407,
+        835
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 367,
+      "anchor": [
+        281.0233644859813,
+        833
+      ],
+      "componentArea": 53732
+    },
+    {
+      "index": 5,
+      "grid": [
+        512,
+        467,
+        853,
+        831
+      ],
+      "rect": [
+        510,
+        465,
+        855,
+        833
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 364,
+      "anchor": [
+        730.1629213483146,
+        831
+      ],
+      "componentArea": 51215
+    },
+    {
+      "index": 6,
+      "grid": [
+        939,
+        468,
+        1285,
+        833
+      ],
+      "rect": [
+        937,
+        466,
+        1287,
+        835
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 365,
+      "anchor": [
+        1162.9772727272727,
+        833
+      ],
+      "componentArea": 52738
+    },
+    {
+      "index": 7,
+      "grid": [
+        1377,
+        466,
+        1724,
+        837
+      ],
+      "rect": [
+        1375,
+        464,
+        1726,
+        839
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 371,
+      "anchor": [
+        1582.3727272727272,
+        837
+      ],
+      "componentArea": 52403
+    }
+  ],
+  "identityReviewed": true,
+  "gaitAccepted": false,
+  "defect": "Second half repeats the same leading/support leg as first half; indices4-7 need whole-figure selective repair before walking integration.",
+  "correctFiguresToPreserve": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "maximumFurtherRepairCalls": 1,
+  "intendedDurationMs": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+  ],
+  "intendedLoopMs": 400,
+  "pixelsPerUnit": "not finalized: candidate held before gait repair",
+  "packaged": false,
+  "unityImported": false,
+  "runtimeVerified": false,
+  "resourceCreated": false,
+  "catalogModified": false,
+  "nextAction": "Respect new Moto dual-saw priority; retain source/prompt and reuse first4complete figures after one selective whole-figure repair of last4."
+}

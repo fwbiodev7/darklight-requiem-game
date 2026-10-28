@@ -23,13 +23,13 @@ namespace Darklight
         public DarklightWeaponRedesignPage[] pages;
     }
 
-    // Opt-in whole figures. Missing contexts continue through the existing authored
-    // consumer; they never borrow a redesigned direction, form or weapon.
+    // Attack presentation never returns to the retired character design. Missing
+    // techniques share a reviewed whole attack from the same weapon/direction.
     public static class DarklightWeaponRedesignBank
     {
         [Serializable] sealed class IconSheet{public string status;public bool wholeFigures;}
         public const string Root="Darklight/WeaponRedesign20261023/";
-        public const string FallbackPolicy="approved-existing-same-context";
+        public const string FallbackPolicy="redesign-only-whole-figure-same-direction";
         static readonly Dictionary<int,List<DarklightWeaponRedesignPage>> contexts=new();
         static readonly Dictionary<string,Dictionary<string,Sprite>> sheets=new(StringComparer.Ordinal);
         static readonly HashSet<Sprite> authored=new();
@@ -138,7 +138,16 @@ namespace Darklight
             Sprite existing,out Sprite sprite,string livingClip=null,float livingTime=-1)
         {
             sprite=null;if(model==null||skin<0||skin>1||weapon<0||weapon>2||form<0||form>3||direction<0||direction>7)return false;
-            LoadCatalog();if(!contexts.TryGetValue(Context(skin,weapon,form,direction),out var entries))return false;
+            LoadCatalog();
+            if(skin==0&&(weapon==0||weapon==2)&&form<3)
+            {
+                if(model.State==CombatState.Attack&&model.Attack!=null)
+                    return TryResolveAttack(weapon,form,direction,model,out sprite);
+                string requested=Action(model,movement,livingClip);
+                float time=model.State==CombatState.Neutral?(livingTime>=0?livingTime:model.Clock):model.StateTime;
+                return TryCurrentPose(weapon,form,direction,requested,time,out sprite);
+            }
+            if(!contexts.TryGetValue(Context(skin,weapon,form,direction),out var entries))return false;
             string action=Action(model,movement,livingClip),attack=model.Attack?.displayName??"";
             // Named contacts first, then an explicit mapping of an existing phase.
             for(int pass=0;pass<2;pass++)foreach(var page in entries)
@@ -149,6 +158,56 @@ namespace Darklight
                 int index=Frame(page,time,existing?.name);
                 if(index<0||!Load(page))continue;
                 sprite=page.frames[index];return true;
+            }
+            return false;
+        }
+        public static Sprite CurrentIdle(int weapon,int direction,int form=0)
+        {
+            LoadCatalog();return TryCurrentPose(weapon,form,direction,"Idle",0,out var sprite)?sprite:null;
+        }
+        static bool TryCurrentPose(int weapon,int form,int direction,string requested,float time,out Sprite sprite)
+        {
+            sprite=null;
+            for(int sourceFormPass=0;sourceFormPass<(form==0?1:2);sourceFormPass++)
+            {
+                int sourceForm=sourceFormPass==0?form:0;
+                if(!contexts.TryGetValue(Context(0,weapon,sourceForm,direction),out var entries))continue;
+                // Missing locomotion/transitions use new Walk or new Idle. Other
+                // missing actions hold new Idle rather than revive retired frames.
+                string motion=requested=="Run"||requested=="StartMove"||requested=="Brake"||requested=="Turn"?"Walk":"Idle";
+                for(int pass=0;pass<3;pass++)foreach(var page in entries)
+                {
+                    string action=pass==0?requested:pass==1?motion:"Idle";
+                    if(page.action!=action||!Load(page))continue;
+                    int index=page.durationMs?.Length==page.frames.Length?Frame(page,time):
+                        Mathf.FloorToInt(Mathf.Max(0,time)*10)%page.frames.Length;
+                    if(index<0)continue;sprite=page.frames[index];return true;
+                }
+            }
+            return false;
+        }
+        static bool TryResolveAttack(int weapon,int form,int direction,CombatModel model,out Sprite sprite)
+        {
+            sprite=null;string key=model.Attack.displayName;
+            // Prefer this technique, then the reviewed primary strike of this form.
+            // Until all transformed directions are drawn, the new Normal figure
+            // keeps the current identity; it is never recolored into a fake form.
+            for(int sourceFormPass=0;sourceFormPass<(form==0?1:2);sourceFormPass++)
+            {
+                int sourceForm=sourceFormPass==0?form:0;
+                if(!contexts.TryGetValue(Context(0,weapon,sourceForm,direction),out var entries))continue;
+                for(int pass=0;pass<2;pass++)foreach(var page in entries)
+                {
+                    if(page.action!="Attack"||page.attackKey!=(pass==0?key:weapon==0?"Leve1":"Direto da Ruína")||!Load(page))continue;
+                    int count=page.frames.Length,index;
+                    var attack=model.Attack;float time=Mathf.Max(0,model.StateTime);
+                    if(count==1)index=0;
+                    else if(count==2)index=time<attack.startup?0:1;
+                    else if(time<attack.startup)
+                        index=Mathf.Min(count-3,Mathf.FloorToInt(time/Mathf.Max(.0001f,attack.startup)*(count-2)));
+                    else index=time<attack.startup+attack.active?count-2:count-1;
+                    sprite=page.frames[index];return true;
+                }
             }
             return false;
         }

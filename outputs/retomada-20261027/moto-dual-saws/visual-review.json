@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-27",
+  "status": "visual-reviewed-packaged",
+  "figures": 12,
+  "readyDirections": 8,
+  "frontAttackPhases": 4,
+  "contactSeen": true,
+  "decodedGifPhasesSeen": true,
+  "livePlaybackObserved": false,
+  "humanApproval": false,
+  "unityImportedByArtAgent": false,
+  "runtimeVerifiedByArtAgent": false,
+  "coordinatorReportedAtlasReview": true,
+  "coordinatorReportedUnityGatesStarted": true,
+  "assetsFrozenAfterCoordinatorNotice": true,
+  "generationCalls": 4,
+  "originalWholeFiguresPreserved": 8,
+  "completeFiguresRepaired": 4,
+  "anatomicalAssembly": false,
+  "individualResizing": false,
+  "pixelRecoloring": false,
+  "alphaRemoval": false,
+  "twoArmsTwoGripsReviewed": true,
+  "wholeOutfitLongSleevesReviewed": true,
+  "normalNeutralHardwareReviewed": true,
+  "eightDirectionsReviewed": true,
+  "normalFaceHairAdultIdentityReviewed": true,
+  "qa": {
+    "name": "ReqMotoNormalDualSaws8AttackS20261027V1",
+    "errors": 0,
+    "warnings": 13
+  },
+  "references": [
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleS_SW_W20261025.png",
+      "sha256": "8a5c11fa94a9adef8706e32020776e34bb9c59ab09d24e1a44476357dd138379"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261026/katana-normal/ReqKatanaNormalWalkSW_W-v1-source.png",
+      "sha256": "233f498a8e69f2ed2b2fe3b06baf9b069a4df82a069bb930b616e6ec2eed00e5"
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/AbyssPrototype/Join.png",
+      "sha256": "a97bd4794e9e477e09e28b50eb2b798748ed290f94baf6ee0a09b3471e3969bd"
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/AbyssPrototype/Attack.png",
+      "sha256": "68e6bd64588f7b7e49eb1cff5c629329fac59cc77696134f102738d1e20afe28"
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/AbyssPrototype/ActionF0W.png",
+      "sha256": "c27876cc4183245f9f0dfaf21eb03eff28cf6a621f826d6f498beb2acf1f13f6"
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/AbyssPrototype/ActionF0NW.png",
+      "sha256": "cdfafbe3c4d3268c4c07fe8c40759ca845d7bc44d7be7a4d2291d433d92ae90f"
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/AbyssPrototype/ActionF0N.png",
+      "sha256": "61f73fc984f347111ba0e815a4f7bc6d7ef4162027c970e5a45f58db50d491ed"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261023/references/equipment-four-forms.png",
+      "sha256": "6c8c6b05e27f16f19f2bfcad3151294b164f004c0960fa713662788f9e3f6930"
+    }
+  ],
+  "sourceLineage": [
+    {
+      "path": "ArtSources/WeaponRedesign20261027/moto-dual-saws/ReqMotoNormalDualSaws8AttackS20261027V1-repair-source.png",
+      "sha256": "9af10afa750b40effb42fcaeeadd387d83aa2ca892ff5958f6544a3d2b02a132",
+      "selectedForFinal": false
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261027/moto-dual-saws/ReqMotoNormalDualSaws8AttackS20261027V1-repair2-source.png",
+      "sha256": "aedade4a48a47ace8a1308d1e1186fbc876babaead70e461e68e3079d7f33c64",
+      "selectedForFinal": true
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261027/moto-dual-saws/ReqMotoNormalDualSaws8AttackS20261027V1-repair3-source.png",
+      "sha256": "32cf3b554c2d0208c96a93bc12d381c1564427a7b35446de0a2a1cc00bb000c6",
+      "selectedForFinal": true
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261027/moto-dual-saws/ReqMotoNormalDualSaws8AttackS20261027V1-source.png",
+      "sha256": "dd93f2f1b14954a4f09e3007401100622182759c5fd09336e13b2dc9868cabf4",
+      "selectedForFinal": true
+    }
+  ],
+  "remaining": [
+    "Other Moto attack families and eight-direction split/rejoin choreography",
+    "Coordinator Unity import/runtime/build gates",
+    "Katana Walk SE gait correction remains outside active integration"
+  ]
+}

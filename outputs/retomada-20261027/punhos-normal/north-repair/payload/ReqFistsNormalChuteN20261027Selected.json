@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqFistsNormalChuteN20261027Selected.png",
+  "imageSha256": "37f05503fcc01995cc0596b94dbad7077db6bc302af4579774d775c7eda77200",
+  "nativeSize": [
+    927,
+    377
+  ],
+  "sourceSize": [
+    927,
+    377
+  ],
+  "pixelsPerUnit": 158.58585858585857,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261027/punhos-normal/ReqFistsNormalChuteN20261027Selected-source.png",
+  "sourceSha256": "37f05503fcc01995cc0596b94dbad7077db6bc302af4579774d775c7eda77200",
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsNormalChuteN20261027Selected_00",
+      "rect": [
+        0,
+        0,
+        309,
+        377
+      ],
+      "pivot": [
+        0.49514563106796117,
+        0.14854111405835543
+      ],
+      "durationMs": 75,
+      "action": "attack",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        46,
+        12,
+        255,
+        357
+      ],
+      "sourceAnchor": [
+        153,
+        321
+      ],
+      "sourcePackingAnchor": [
+        153,
+        321
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        46,
+        12
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalChuteN20261027Selected_01",
+      "rect": [
+        309,
+        0,
+        309,
+        377
+      ],
+      "pivot": [
+        0.49514563106796117,
+        0.14854111405835543
+      ],
+      "durationMs": 85,
+      "action": "attack",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        317,
+        8,
+        247,
+        320
+      ],
+      "sourceAnchor": [
+        462,
+        321
+      ],
+      "sourcePackingAnchor": [
+        462,
+        321
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        8,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalChuteN20261027Selected_02",
+      "rect": [
+        618,
+        0,
+        309,
+        377
+      ],
+      "pivot": [
+        0.49514563106796117,
+        0.14854111405835543
+      ],
+      "durationMs": 160,
+      "action": "attack",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        634,
+        10,
+        228,
+        325
+      ],
+      "sourceAnchor": [
+        771,
+        321
+      ],
+      "sourcePackingAnchor": [
+        771,
+        321
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        16,
+        10
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_N",
+      "frames": [
+        "Redesign_ReqFistsNormalChuteN20261027Selected_00",
+        "Redesign_ReqFistsNormalChuteN20261027Selected_01",
+        "Redesign_ReqFistsNormalChuteN20261027Selected_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "attack_N"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 119924,
+  "packedPixels": 119924,
+  "originalSourcePixels": 119924,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 229555,
+    "farBeyond16pxPixels": 29,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.11372549019607843,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ],
+  "pixelsPerUnitCalibration": {
+    "pixelsPerUnit": 158.58585858585857,
+    "worldVisualScale": 1.325,
+    "targetBodyWorldHeight": 1.98,
+    "method": "Same single anatomical PPU as the nine NE/E/SE figures from this generated sheet; no individual resizing.",
+    "nativeNorthHairToSole": [
+      306,
+      310,
+      306
+    ],
+    "poseVariation": "Foreshortened kick/coat can occlude the far leg; use the shared body scale."
+  },
+  "provenance": {
+    "wholeFigureReplacementOnly": true,
+    "repairedOriginalFrameIndex": 1,
+    "preservedOriginalFigures": 11,
+    "sources": [
+      {
+        "path": "ArtSources/WeaponRedesign20261027/punhos-normal/ReqFistsNormalChuteN_NE_E_SE20261027V1-source.png",
+        "sha256": "3483dcc3a17f40af742ada752605f8f7ec7c61f01954de67d247fbb54e0c9b37"
+      },
+      {
+        "path": "ArtSources/WeaponRedesign20261027/punhos-normal/ReqFistsNormalChuteN20261027V2-repair-source.png",
+        "sha256": "eebfbfc39f01beb86ef915d38fbfeb9d9e33d8faecca1dccc06bfc8ae627df9d"
+      }
+    ],
+    "proof": "outputs/retomada-20261027/punhos-normal/north-repair/fixed-twelve/replacement-proof.json",
+    "anatomicalAssembly": false
+  },
+  "review": {
+    "wholeSourceSeen": true,
+    "packedContactSeen": true,
+    "motionSeen": false,
+    "humanApproved": false,
+    "technicalCoordinatorAccepted": true,
+    "unityImported": false,
+    "runtimeVerified": false,
+    "limitation": "Far kicking leg is strongly foreshortened and mostly hidden by torso/coat; contact readability is limited in this north view.",
+    "finding": "North back/nape/spine coherent; incorrect westward extension removed. No further generation attempted.",
+    "technicalAcceptanceAuthority": "Root agent inspected the complete V2 sheet; no human approval inferred"
+  }
+}

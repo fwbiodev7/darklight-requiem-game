@@ -2,7 +2,7 @@
 
 ## Limites e base de integração
 
-- Trabalhe em clone próprio, baseado na cópia de publicação e na branch `integracao-completa-20261026` em `f26ecf4`. O histórico Antigravity já foi preservado por fast-forward; confirme a base antes de qualquer análise.
+- Trabalhe em clone próprio, baseado no HEAD remoto da branch `integracao-completa-20261026`. Consulte o SHA ao iniciar; `f26ecf4` é a base histórica do apoio Antigravity e já existem checkpoints posteriores. O histórico foi preservado por fast-forward.
 - Compare as branches `17` e `20` por arquivo e intenção: há 220 diferenças. Produza inventário de mudanças, riscos, sobreposições e recomendações; não faça merge cego nem reescreva o histórico.
 - Não altere `Assets/Darklight/Runtime/`, arte/fontes visuais, a branch principal ou a cópia de publicação. Não integre nem publique alterações. Entregue relatórios e propostas revisáveis.
 - O checkout raiz desta sessão é legado (`codex/fundacao-darklight`, `412cd5f`); as verificações da integração abaixo foram executadas explicitamente na cópia `work/publicacao-20261021`, branch e hash declarados acima. Não use o checkout raiz para inferir o conteúdo das branches 17/20 nem para validar a integração publicada.
@@ -25,7 +25,7 @@ Use uma execução por filtro, com o runner `Tools/Testing/run_tests.py`; confir
 
 Esses testes de áudio afirmam o modo silencioso e não são uma avaliação auditiva. Não iniciar música nem alegar teste físico de controle. Use `--nographics` somente para filtros que não dependam de renderização. O filtro PlayMode de controles pode precisar de gráficos; não o execute com `--nographics`.
 
-## Verificação técnica desta revisão
+## Auditorias históricas da base f26 — não são o gate atual
 
 - Corrigido `run_tests.py`: antes, XML com raiz arbitrária ou contadores `passed`/`failed` incompatíveis ainda podia resultar em `PASSED`. Agora exige `<test-run>` e contadores coerentes. Adicionados testes para XML NUnit legado e resumo incompatível.
 - Os fixtures do teste de contrato agora ficam sob `outputs/tooling-fixtures` dentro do projeto e são removidos ao fim do teste.

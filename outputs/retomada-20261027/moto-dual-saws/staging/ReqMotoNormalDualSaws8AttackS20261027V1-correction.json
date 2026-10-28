@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqMotoNormalDualSaws8AttackS20261027V1-correction.png",
+  "imageSha256": "143abec2109ea6471a35f772430afa8c9ef27886c2e45274f81c022e075a8b5c",
+  "nativeSize": [
+    1624,
+    361
+  ],
+  "sourceSize": [
+    1448,
+    1086
+  ],
+  "pixelsPerUnit": 162.12121212121212,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261027/moto-dual-saws/ReqMotoNormalDualSaws8AttackS20261027V1-repair2-source.png",
+  "sourceSha256": "aedade4a48a47ace8a1308d1e1186fbc876babaead70e461e68e3079d7f33c64",
+  "frames": [
+    {
+      "id": "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1-correction_00",
+      "rect": [
+        0,
+        0,
+        406,
+        361
+      ],
+      "pivot": [
+        0.41133004926108374,
+        0.05817174515235457
+      ],
+      "durationMs": 160,
+      "action": "idle",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "neutral",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        394,
+        16,
+        332,
+        337
+      ],
+      "sourceAnchor": [
+        553,
+        345
+      ],
+      "sourcePackingAnchor": [
+        606,
+        345
+      ],
+      "supportGuide": {
+        "anchor": [
+          553,
+          345
+        ],
+        "method": "Whole-source inspected boot support."
+      },
+      "sourceOffsetInFrame": [
+        8,
+        11
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1-correction_01",
+      "rect": [
+        406,
+        0,
+        406,
+        361
+      ],
+      "pivot": [
+        0.5788177339901478,
+        0.05817174515235457
+      ],
+      "durationMs": 160,
+      "action": "idle",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "neutral",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        753,
+        17,
+        335,
+        337
+      ],
+      "sourceAnchor": [
+        925,
+        341
+      ],
+      "sourcePackingAnchor": [
+        910,
+        341
+      ],
+      "supportGuide": {
+        "anchor": [
+          925,
+          341
+        ],
+        "method": "Whole-source inspected boot support."
+      },
+      "sourceOffsetInFrame": [
+        63,
+        16
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1-correction_02",
+      "rect": [
+        812,
+        0,
+        406,
+        361
+      ],
+      "pivot": [
+        0.541871921182266,
+        0.05817174515235457
+      ],
+      "durationMs": 160,
+      "action": "idle",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "neutral",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        745,
+        354,
+        343,
+        341
+      ],
+      "sourceAnchor": [
+        925,
+        686
+      ],
+      "sourcePackingAnchor": [
+        925,
+        686
+      ],
+      "supportGuide": {
+        "anchor": [
+          925,
+          686
+        ],
+        "method": "Whole-source inspected boot support."
+      },
+      "sourceOffsetInFrame": [
+        40,
+        8
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "idle_SW",
+      "frames": [
+        "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1-correction_00"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "idle_W",
+      "frames": [
+        "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1-correction_01"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "idle_E",
+      "frames": [
+        "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1-correction_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "idle_SW",
+    "idle_W",
+    "idle_E"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 186105,
+  "packedPixels": 186105,
+  "originalSourcePixels": 796197,
+  "selectedSourceFrameIndices": [
+    1,
+    2,
+    6
+  ],
+  "excludedSourceFrameIndices": [
+    0,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 776331,
+    "farBeyond16pxPixels": 19,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.07450980392156863,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Third authored idle pose is a blink, not a breathing in-between.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ]
+}

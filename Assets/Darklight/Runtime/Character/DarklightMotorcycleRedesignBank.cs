@@ -21,7 +21,44 @@ namespace Darklight
             public bool wholeFigures;
             public Motorcycle motorcycle;
             public MotorcycleIdle motorcycleIdle;
+            public DualSaws motorcycleDualSaws;
         }
+        [Serializable] sealed class DualSaws {public int skin,form;public bool onFoot,dualSaws,staticReadyViews;public string[] ready,attackSouth;}
+        sealed class DualPage {public Sprite[] ready,attack;}
+        static DualPage dualPage;static bool dualAttempted;
+        static readonly HashSet<Sprite> dualSprites=new();
+        public static string RequiemDualSawsResource=>DarklightWeaponRedesignBank.Root+"ReqMotoNormalDualSaws8AttackS20261027V1";
+        static DualPage LoadDualSaws()
+        {
+            if(dualAttempted)return dualPage;dualAttempted=true;
+            var text=Resources.Load<TextAsset>(RequiemDualSawsResource);if(text==null)return null;
+            var sheet=JsonUtility.FromJson<Sheet>(text.text);var entry=sheet?.motorcycleDualSaws;
+            if(sheet==null||!sheet.wholeFigures||sheet.nativeSize?.Length!=2||sheet.pixelsPerUnit<=0||sheet.status!="visual-reviewed"&&sheet.status!="imported"&&sheet.status!="runtime-verified"||
+                entry==null||entry.skin!=0||entry.form!=0||!entry.onFoot||!entry.dualSaws||entry.ready?.Length!=8||entry.attackSouth?.Length!=4)return null;
+            var sprites=new Dictionary<string,Sprite>(StringComparer.Ordinal);
+            foreach(var sprite in Resources.LoadAll<Sprite>(RequiemDualSawsResource))
+                if(sprite.texture.width!=sheet.nativeSize[0]||sprite.texture.height!=sheet.nativeSize[1]||Mathf.Abs(sprite.pixelsPerUnit-sheet.pixelsPerUnit)>.001f||!sprites.TryAdd(sprite.name,sprite))return null;
+            var page=new DualPage{ready=new Sprite[8],attack=new Sprite[4]};var names=new HashSet<string>();
+            for(int i=0;i<12;i++)
+            {
+                string name=i<8?entry.ready[i]:entry.attackSouth[i-8];
+                if(name==null||!name.StartsWith("Redesign_",StringComparison.Ordinal)||!names.Add(name)||!sprites.TryGetValue(name,out var sprite))return null;
+                if(i<8)page.ready[i]=sprite;else page.attack[i-8]=sprite;
+            }
+            dualPage=page;foreach(var sprite in page.ready){authored.Add(sprite);dualSprites.Add(sprite);}
+            foreach(var sprite in page.attack){authored.Add(sprite);dualSprites.Add(sprite);}return page;
+        }
+        public static Sprite DualSawsPose(int direction,CombatModel model=null)
+        {
+            var page=LoadDualSaws();if(page==null||direction<0||direction>7)return null;
+            if(direction==0&&model?.State==CombatState.Attack&&model.Attack!=null)
+            {
+                var a=model.Attack;float t=model.StateTime;
+                return page.attack[t<a.startup*.5f?0:t<a.startup?1:t<a.startup+a.active?2:3];
+            }
+            return page.ready[direction];
+        }
+        public static bool IsDualSaws(Sprite sprite)=>sprite!=null&&dualSprites.Contains(sprite);
         [Serializable] sealed class IdleClip {public int direction;public string[] frames;public int[] durationMs;}
         [Serializable] sealed class MotorcycleIdle {public int form,skin;public IdleClip[] clips;}
         sealed class IdlePage {public Sprite[] frames;public int[] durationMs;public int totalMs;}
@@ -128,6 +165,11 @@ namespace Darklight
             poseFallback=true;
             if(rider==null||model==null||!rider.Active)return null;
             int direction=DarklightCharacterView.DirectionIndex(model.Facing);
+            if(!rider.MountedPresentation)
+            {
+                var saws=DualSawsPose(direction,model);
+                if(saws!=null){poseFallback=model.State!=CombatState.Attack||direction!=0;return saws;}
+            }
             if(model.State==CombatState.Neutral&&movement.sqrMagnitude<=.01f)
             {
                 var idle=Idle(form,direction,model.Clock);
@@ -155,6 +197,6 @@ namespace Darklight
             block.SetTexture("_VampireMask",Texture2D.blackTexture);block.SetVector("_CanonicalSkinShift",Vector4.zero);
             renderer.SetPropertyBlock(block);
         }
-        public static void ClearCache(){Array.Clear(pages,0,pages.Length);Array.Clear(attempted,0,attempted.Length);Array.Clear(idlePages,0,idlePages.Length);idleAttempted=false;authored.Clear();}
+        public static void ClearCache(){Array.Clear(pages,0,pages.Length);Array.Clear(attempted,0,attempted.Length);Array.Clear(idlePages,0,idlePages.Length);idleAttempted=dualAttempted=false;dualPage=null;dualSprites.Clear();authored.Clear();}
     }
 }

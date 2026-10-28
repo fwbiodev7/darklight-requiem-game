@@ -269,7 +269,7 @@ def main():
     jobs = json.loads(args.jobs.read_text(encoding='utf-8'))['jobs']
     catalog_path = RES / 'catalog.json'
     catalog = json.loads(catalog_path.read_text(encoding='utf-8')) if catalog_path.exists() else dict(
-        schemaVersion=1, complete=False, fallbackPolicy='approved-existing-same-context', pages=[])
+        schemaVersion=1, complete=False, fallbackPolicy='redesign-only-whole-figure-same-direction', pages=[])
     summaries = []
     for job in jobs:
         manifest, pages = prepare(job)

@@ -48,10 +48,11 @@ namespace Darklight.Tests
             {
                 float angle=d*Mathf.PI/4;var facing=new Vector2(-Mathf.Sin(angle),-Mathf.Cos(angle));
                 fighter.Model.Tick(.01f,new CombatInput{aim=facing});view.Present(fighter.Model,facing);
-                var expected=DarklightMotorcycleRedesignBank.Riding(0,d,0);
-                Assert.That(expected,Is.Not.Null,"Missing full Réquiem rider view "+d);
+                var expected=DarklightMotorcycleRedesignBank.DualSawsPose(d,fighter.Model);
+                Assert.That(expected,Is.Not.Null,"Missing on-foot Réquiem dual-saw view "+d);
                 Assert.That(art.sprite,Is.SameAs(expected));Assert.That(seen.Add(expected),Is.True,"Real eight-view coverage");
-                Assert.That(view.UsesMotorcyclePoseFallback,Is.True,"Static pose is not a walking or idle animation");
+                Assert.That(DarklightMotorcycleRedesignBank.IsDualSaws(art.sprite),Is.True);
+                Assert.That(view.UsesMotorcyclePoseFallback,Is.True,"Static ready pose is not a walking or idle animation");
                 Assert.That(art.transform.localScale,Is.EqualTo(Vector3.one*DarklightCharacterView.WorldVisualScale));
             }
             yield return null;
@@ -64,22 +65,48 @@ namespace Darklight.Tests
             DarklightMotorcycleRedesignBank.ClearCache();
             for(int d=0;d<8;d++)
             {
-                fighter.ResetModel();float angle=d*Mathf.PI/4;var facing=new Vector2(-Mathf.Sin(angle),-Mathf.Cos(angle));
+                float angle=d*Mathf.PI/4;var facing=new Vector2(-Mathf.Sin(angle),-Mathf.Cos(angle));
                 var seen=new System.Collections.Generic.HashSet<Sprite>();
-                foreach(float dt in new[]{.001f,.35f,.25f,.18f})
+                foreach(float dt in new[]{.001f,.36f,.61f,.80f})
                 {
-                    fighter.Model.Tick(dt,new CombatInput{aim=facing});view.Present(fighter.Model,Vector2.zero);
-                    var expected=DarklightMotorcycleRedesignBank.Idle(0,d,fighter.Model.Clock);
+                    var expected=DarklightMotorcycleRedesignBank.Idle(0,d,dt);
                     Assert.That(expected,Is.Not.Null,"Missing mounted idle direction "+d);
-                    Assert.That(art.sprite,Is.SameAs(expected));Assert.That(seen.Add(expected),Is.True,"Four distinct full idle figures");
-                    Assert.That(view.UsesMotorcyclePoseFallback,Is.False);
-                    Assert.That(art.transform.localScale,Is.EqualTo(Vector3.one*DarklightCharacterView.WorldVisualScale));
+                    Assert.That(DarklightMotorcycleRedesignBank.IsAuthored(expected),Is.True);
+                    Assert.That(DarklightMotorcycleRedesignBank.IsDualSaws(expected),Is.False);
+                    seen.Add(expected);
                 }
-                view.Present(fighter.Model,facing);
-                Assert.That(art.sprite,Is.SameAs(DarklightMotorcycleRedesignBank.Riding(0,d,0)),"Moving must leave stationary idle");
+                Assert.That(seen.Count,Is.EqualTo(4),"Mounted source has four distinct idle figures per direction");
+                fighter.ResetModel();fighter.Model.Tick(.01f,new CombatInput{aim=facing});view.Present(fighter.Model,Vector2.zero);
+                Assert.That(art.sprite,Is.SameAs(DarklightMotorcycleRedesignBank.DualSawsPose(d,fighter.Model)),"On-foot consumer must not use mounted idle frames");
+                Assert.That(DarklightMotorcycleRedesignBank.IsDualSaws(art.sprite),Is.True);
                 Assert.That(view.UsesMotorcyclePoseFallback,Is.True);
+                view.Present(fighter.Model,facing);
+                Assert.That(art.sprite,Is.SameAs(DarklightMotorcycleRedesignBank.DualSawsPose(d,fighter.Model)),"Moving on foot still uses the dual-saw presentation, not a mounted idle loop");
             }
             Assert.That(DarklightMotorcycleRedesignBank.Idle(1,0,.1f),Is.Null,"Normal idle is not transformed art");
+            yield return null;
+        }
+        [UnityTest] public IEnumerator RealWeaponSpecialMountsDuringDashThenReturnsToDualSaws()
+        {
+            game.Weapons.Request(3);game.Weapons.BeforeTick(.2f,true);Call(game,"SetTrainingForm",0);
+            var fighter=lab.Player;var view=fighter.GetComponent<DarklightCharacterView>();
+            var art=fighter.transform.Find("FabioVisual").GetComponent<SpriteRenderer>();
+            DarklightMotorcycleRedesignBank.ClearCache();fighter.ResetModel();
+            var dash=game.Weapons.Equipped.loadout.weaponSpecial;
+            Assert.That(dash,Is.Not.Null,"The real Requiem Moto loadout supplies its weapon special");
+            Assert.That(fighter.Model.TryAirFollowup(dash,new CombatInput{aim=Vector2.down}),Is.True,"Start the actual dash attack through the combat model");
+            Assert.That(game.AbyssRider.MountedPresentation,Is.True,"Vehicle technique owns the mounted presentation");
+            view.Present(fighter.Model,Vector2.zero);
+            var mounted=DarklightMotorcycleRedesignBank.Riding(0,0,0);
+            Assert.That(mounted,Is.Not.Null);Assert.That(art.sprite,Is.SameAs(mounted));
+            Assert.That(DarklightMotorcycleRedesignBank.IsAuthored(art.sprite),Is.True);
+            Assert.That(DarklightMotorcycleRedesignBank.IsDualSaws(art.sprite),Is.False);
+
+            fighter.ResetModel();
+            Assert.That(game.AbyssRider.MountedPresentation,Is.False,"Neutral state releases the vehicle presentation");
+            view.Present(fighter.Model,Vector2.zero);
+            Assert.That(art.sprite,Is.SameAs(DarklightMotorcycleRedesignBank.DualSawsPose(0,fighter.Model)));
+            Assert.That(DarklightMotorcycleRedesignBank.IsDualSaws(art.sprite),Is.True);
             yield return null;
         }
     }

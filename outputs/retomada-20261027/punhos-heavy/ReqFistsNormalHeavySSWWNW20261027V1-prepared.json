@@ -1,0 +1,70 @@
+{
+  "name": "ReqFistsNormalHeavySSWWNW20261027V1",
+  "status": "visual-reviewed",
+  "attackKey": "Ascensão da Ruína",
+  "directions": [
+    "S",
+    "SW",
+    "W",
+    "NW"
+  ],
+  "figures": 12,
+  "clips": 4,
+  "timingsMs": [
+    140,
+    120,
+    280
+  ],
+  "totalMs": 540,
+  "sourcePath": "ArtSources/WeaponRedesign20261027/punhos-heavy/ReqFistsNormalHeavySSWWNW20261027V1-source.png",
+  "sourceSha256": "2eb1245864bd06f11a177ace0a7814e6df1d646f014f68f5e94502f3b9958d36",
+  "imageSha256": "4f7a6ef3fce32df68fa40961d4f5d312530023d09a9437c204c0567cdaba0dc8",
+  "nativeSize": [
+    1644,
+    1716
+  ],
+  "sourceSize": [
+    1086,
+    1448
+  ],
+  "pixelsPerUnit": 147.97979797979798,
+  "exactWholeFigureRgba": true,
+  "sourcePixels": 545683,
+  "rasterCleanup": false,
+  "anatomicalAssembly": false,
+  "agentReviewed": true,
+  "sourceWholeSheetSeen": true,
+  "packedContactSeen": true,
+  "animationPlaybackSeen": false,
+  "humanApproved": false,
+  "unityImported": false,
+  "runtimeVerified": false,
+  "qa": {
+    "name": "ReqFistsNormalHeavySSWWNW20261027V1",
+    "errors": 0,
+    "warnings": 13
+  },
+  "references": [
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalDiretoSSWW20261025V2.png",
+      "sha256": "e6bc3867059b97cd1f96cf588ab8fc297fbf39823fd2b598a0dd80687299494e"
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalChuteSSWWNW20261026Selected.png",
+      "sha256": "2eb38887ca38b73a8acce03d98a9d9c39e8012d3eb5535ca73c41a4063f35bbc"
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleS_SW_W20261025.png",
+      "sha256": "8a5c11fa94a9adef8706e32020776e34bb9c59ab09d24e1a44476357dd138379"
+    }
+  ],
+  "visualFindings": [
+    "12 complete authored figures and real directions verified in full source and packed contact.",
+    "Anticipation loads low fist and knees; contact rises through hip torque; recovery returns toward guard.",
+    "Neutral silver equipment on both hands/boots, natural brown canonical hair and stern identity.",
+    "Raised-fist silhouette is late uppercut follow-through and excludes generated effects.",
+    "13 audit warnings are palette/partial-alpha inspection notices; no structural errors."
+  ],
+  "generationCalls": 1,
+  "scale72ppuContactSeen": true
+}

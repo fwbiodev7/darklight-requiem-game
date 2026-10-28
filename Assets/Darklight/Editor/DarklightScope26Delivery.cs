@@ -22,6 +22,7 @@ namespace Darklight.Editor
             if(!File.Exists(sideIdlePath))throw new FileNotFoundException("Missing mature Requiem side mounted idle sheet",sideIdlePath);
             DarklightWeaponRedesignImporter.ImportStandalone(sideIdlePath);
             DarklightWeaponRedesignImporter.ImportStandalone("Assets/Darklight/Resources/Darklight/CombatContacts20261027/ContactBursts.png");
+            DarklightWeaponRedesignImporter.ImportStandalone("Assets/Darklight/Resources/"+DarklightMotorcycleRedesignBank.RequiemDualSawsResource+".png");
             AssetDatabase.SaveAssets();DarklightWeaponRedesignBank.ClearCache();DarklightMotorcycleRedesignBank.ClearCache();
             Debug.Log("SCOPE_20261026_IMPORTED: whole figures preserved; runtime verification remains separate.");
         }

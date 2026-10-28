@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-27",
+  "status": "STATIC_ASSET_VERIFICATION_PASS",
+  "filesChanged": [
+    "Assets/Darklight/Runtime/World/DarklightPixelContactBurst.cs",
+    "Assets/Darklight/Runtime/World/DarklightCombatFX.cs",
+    "Assets/Darklight/Tests/PlayMode/DarklightApprovedWalkGameplayTests.cs",
+    "Assets/Darklight/Resources/Darklight/CombatContacts20261027/ContactBursts.json"
+  ],
+  "contentBoundsAlphaThreshold": 8,
+  "pixelFramesModified": false,
+  "atlasSha256": "594945fddd58227a70cd7684272d14416f71ad101c7eef68844c624a19b1cf6e",
+  "sourceSha256": "594945fddd58227a70cd7684272d14416f71ad101c7eef68844c624a19b1cf6e",
+  "sourceHashVerified": true,
+  "frameData": [
+    {
+      "clip": "Punch",
+      "durationMs": 260,
+      "contentSize": [
+        [
+          178,
+          158
+        ],
+        [
+          285,
+          281
+        ],
+        [
+          284,
+          276
+        ],
+        [
+          119,
+          157
+        ]
+      ],
+      "maxVisiblePixels": 285
+    },
+    {
+      "clip": "Katana",
+      "durationMs": 260,
+      "contentSize": [
+        [
+          205,
+          201
+        ],
+        [
+          261,
+          260
+        ],
+        [
+          279,
+          256
+        ],
+        [
+          116,
+          119
+        ]
+      ],
+      "maxVisiblePixels": 279
+    },
+    {
+      "clip": "Heavy",
+      "durationMs": 260,
+      "contentSize": [
+        [
+          202,
+          172
+        ],
+        [
+          318,
+          299
+        ],
+        [
+          286,
+          266
+        ],
+        [
+          123,
+          166
+        ]
+      ],
+      "maxVisiblePixels": 318
+    }
+  ],
+  "targetVisibleDiameterWorld": {
+    "Punch": 1.4,
+    "Katana": 1.65,
+    "Heavy": 2.1
+  },
+  "reducedFlashesScaleFactor": 0.72,
+  "durationsMsPerPhase": [
+    35,
+    65,
+    65,
+    95
+  ],
+  "durationPerClipMs": 260,
+  "impactMeshLayeredOnConfirmedHit": true,
+  "meshHonorsReducedFlashesAndQuality": true,
+  "whiffTestAssertsNoBurstOrImpactMesh": true,
+  "testUpdatedButNotExecuted": true,
+  "unityExecuted": false,
+  "gitOperations": false
+}

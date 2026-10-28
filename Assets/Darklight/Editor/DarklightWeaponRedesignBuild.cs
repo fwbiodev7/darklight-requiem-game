@@ -119,6 +119,9 @@ namespace Darklight.Editor
             string motorcycle=Art+"RequiemMotoForm0Ride8SlamS20261027V3.png";
             var motorcycleFrames=ValidateSheet(motorcycle);sheets[motorcycle]=motorcycleFrames;
             Require(motorcycleFrames.Length==12,"Require eight Requiem motorcycle views and four whole slam phases");
+            string dualSaws="Assets/Darklight/Resources/"+DarklightMotorcycleRedesignBank.RequiemDualSawsResource+".png";
+            var dualFrames=ValidateSheet(dualSaws);sheets[dualSaws]=dualFrames;
+            Require(dualFrames.Length==12,"Require eight on-foot dual-saw views and four whole attack phases");
             string motorcycleIdle=Art+"RequiemMotoForm0IdleSSWW20261027MatureV1.png";
             var idleFrames=ValidateSheet(motorcycleIdle);sheets[motorcycleIdle]=idleFrames;
             Require(idleFrames.Length==12,"Require the complete four-phase mounted idle in S/SW/W");

@@ -7,6 +7,9 @@ namespace Darklight
         public readonly DarklightGearModel Gear=new();
         public const float DashCost=18,MaximumDashDistance=2.4f;
         public bool Active=>game!=null&&game.SelectedSkin==0&&game.Weapons?.Equipped?.id==DarklightWeaponId.AbyssRider;
+        // Equipping this weapon means holding the separated wheel-saws. Vehicle
+        // presentation belongs to riding techniques and their committed phases.
+        public bool MountedPresentation=>Active&&(Dashing||Slamming&&SlamFromMounted);
         public bool Dashing=>Active&&fighter.Model.State==CombatState.Attack&&(RidingAttack(fighter.Model.Attack)||fighter.Model.Attack==drift||fighter.Model.Attack==finisher);
         public bool Sustaining=>Active&&fighter.Model.State==CombatState.Attack&&fighter.Model.Attack==sustain;
         public bool CanFinish=>Active&&Gear.Level==3&&fighter.Model.WeaponSpecialRemaining<=0&&game.Blood.Amount>=FinisherCost&&FindFinisherTarget()!=null;

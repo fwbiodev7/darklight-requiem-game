@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-27",
+  "publicationPath": "work/publicacao-20261021",
+  "publicationHead": "ce985ad2f6cd5148f7dcea51d8b911b7807b5fee",
+  "helper": "Tools/AnimationPreview/prepare_scope_publication_20261026.py",
+  "activeWorkspaceArtifactsModified": false,
+  "moto": [
+    {
+      "name": "RequiemMotoForm0Ride8SlamS20261027V3",
+      "sourcePath": "ArtSources/WeaponRedesign20261027/moto-maturity/RequiemMotoNormalMaturity20261027V3-source.png",
+      "sourceExists": true,
+      "sourceHashMatchesManifest": true,
+      "sourceHashMatchesAtlas": false,
+      "atlasHashMatchesManifest": true,
+      "excludedSourceFrameIndices": [],
+      "frameSourcePaths": [],
+      "frameMissing": [],
+      "frameHashMismatches": 0,
+      "additionalSources": [],
+      "ok": true
+    },
+    {
+      "name": "RequiemMotoForm0IdleSSWW20261027MatureV1",
+      "sourcePath": "ArtSources/WeaponRedesign20261023/publication-selected/RequiemMotoForm0IdleSSWW20261027MatureV1-source-only-approved.png",
+      "sourceExists": true,
+      "sourceHashMatchesManifest": true,
+      "sourceHashMatchesAtlas": true,
+      "atlasHashMatchesManifest": true,
+      "excludedSourceFrameIndices": [],
+      "frameSourcePaths": [
+        "ArtSources/WeaponRedesign20261023/publication-selected/RequiemMotoForm0IdleSSWW20261027MatureV1-source-only-approved.png"
+      ],
+      "frameMissing": [],
+      "frameHashMismatches": 0,
+      "additionalSources": [],
+      "ok": true
+    },
+    {
+      "name": "RequiemMotoForm0IdleNW_N_NE20261027MatureV1",
+      "sourcePath": "ArtSources/WeaponRedesign20261027/moto-idle-mature/RequiemMotoForm0IdleNW_N_NE20261027MatureV1-source.png",
+      "sourceExists": true,
+      "sourceHashMatchesManifest": true,
+      "sourceHashMatchesAtlas": false,
+      "atlasHashMatchesManifest": true,
+      "excludedSourceFrameIndices": [],
+      "frameSourcePaths": [],
+      "frameMissing": [],
+      "frameHashMismatches": 0,
+      "additionalSources": [],
+      "ok": true
+    },
+    {
+      "name": "RequiemMotoForm0IdleE_SE20261027MatureV1",
+      "sourcePath": "ArtSources/WeaponRedesign20261027/moto-idle-mature/RequiemMotoForm0IdleE_SE20261027MatureV1-source.png",
+      "sourceExists": true,
+      "sourceHashMatchesManifest": true,
+      "sourceHashMatchesAtlas": false,
+      "atlasHashMatchesManifest": true,
+      "excludedSourceFrameIndices": [],
+      "frameSourcePaths": [],
+      "frameMissing": [],
+      "frameHashMismatches": 0,
+      "additionalSources": [],
+      "ok": true
+    }
+  ],
+  "fx": [
+    {
+      "descriptor": "ContactBursts.json",
+      "sourcePath": "ArtSources/CombatContacts20261027/selected/ContactBursts-v3-source.png",
+      "sourceExists": true,
+      "sourceHashMatches": true,
+      "atlasExists": true,
+      "atlasHashMatches": true
+    }
+  ],
+  "catalog": {
+    "pages": 166,
+    "missingRuntimeAtlases": [],
+    "missingSources": []
+  },
+  "mixedSourcesExcluded": [
+    "ArtSources/WeaponRedesign20261027/moto-idle-mature/RequiemMotoForm0IdleSSWW20261027MatureV1-source.png",
+    "ArtSources/WeaponRedesign20261027/moto-idle-mature/RequiemMotoIdleSSWWRepair2-20261027MatureV1-source.png"
+  ],
+  "publishedMixedSources": [],
+  "failures": [],
+  "result": "PASS",
+  "copyRun": {
+    "copied": true,
+    "copiedHashesVerified": true,
+    "branch": "integracao-completa-20261026",
+    "head": "ce985ad2f6cd5148f7dcea51d8b911b7807b5fee",
+    "staged": false,
+    "committed": false,
+    "pushed": false,
+    "helperDryRunAndCopySucceeded": true
+  },
+  "sourceOnlyRebase": {
+    "descriptor": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/RequiemMotoForm0IdleSSWW20261027MatureV1.json",
+    "selectedSource": "ArtSources/WeaponRedesign20261023/publication-selected/RequiemMotoForm0IdleSSWW20261027MatureV1-source-only-approved.png",
+    "selectedSourceSha256": "704ede799dd5d4d4a59780ffd181d243b13c9a26807277fdd8fadde3235f3884",
+    "runtimeAtlasSha256": "704ede799dd5d4d4a59780ffd181d243b13c9a26807277fdd8fadde3235f3884",
+    "sourceEqualsAtlas": true,
+    "excludedMixedSourcesAbsent": true
+  },
+  "attackAudit": "outputs/retomada-20261027/attack-legacy-audit.json",
+  "helperSha256": "74d4b9a29dbabedc1f83d198e4dcc6c32d99f902ce4bfb5d9c6b8f20d86d9901"
+}

@@ -133,29 +133,29 @@ namespace Darklight.Tests
 
         [UnityTest] public IEnumerator RequiemNormalIdleReturnsAfterEachWholeAttackSequence()
         {
-            int contexts=0,legacyAttacks=0;
-            foreach(int weapon in new[]{0,2})foreach(int direction in new[]{0,1,2})
+            int contexts=0;
+            foreach(int weapon in new[]{0,2})for(int form=0;form<3;form++)for(int direction=0;direction<8;direction++)
             {
-                Context(0,weapon,0,direction);Assert.That(view.UsesWeaponRedesignSprite,Is.True);
-                foreach(var attack in new[]{fighter.loadout.lights[0],fighter.loadout.heavy})
+                Context(0,weapon,form,direction);
+                foreach(var attack in Attacks(fighter.loadout))
                 {
                     fighter.ResetModel();Assert.That(fighter.Model.TryAirFollowup(attack,new CombatInput{aim=Facing(direction)}),Is.True);
-                    bool? authored=null;bool contact=false;
+                    bool contact=false;var seen=new HashSet<Sprite>();
                     for(int tick=0;tick<220&&fighter.Model.State==CombatState.Attack;tick++)
                     {
                         Present(fighter.Model.Motion);
-                        authored??=view.UsesWeaponRedesignSprite;
-                        Assert.That(view.UsesWeaponRedesignSprite,Is.EqualTo(authored.Value),"One attack must keep one coherent source sequence");
+                        Assert.That(view.UsesWeaponRedesignSprite,Is.True,$"No retired attack figure: weapon={weapon}, form={form}, direction={direction}, attack={attack.displayName}, time={fighter.Model.StateTime}");
+                        Assert.That(art.sprite.name,Does.StartWith("Redesign_"));seen.Add(art.sprite);
                         contact|=fighter.Model.ActiveThisTick;Tick(Facing(direction));
                     }
                     Assert.That(contact,Is.True);Assert.That(fighter.Model.State,Is.EqualTo(CombatState.Neutral));Present();
-                    Assert.That(view.UsesWeaponRedesignSprite,Is.True,"Exact normal idle must resume");
-                    if(authored==false)legacyAttacks++;contexts++;
+                    if(form==0)Assert.That(view.UsesWeaponRedesignSprite,Is.True,"Exact normal idle must resume");
+                    Assert.That(seen.Count,Is.GreaterThanOrEqualTo(3),"Anticipation, contact and recovery must use new complete figures");contexts++;
                 }
                 yield return null;
             }
-            Assert.That(legacyAttacks,Is.GreaterThan(0),"Uncovered techniques retain whole legacy sequences");
-            AssertSilent();Report("active-transitions",contexts,0,"Réquiem Normal Katana/Punhos: authored and legacy attacks stay coherent for their complete sequence and return to exact idle; no transformed-art approval implied.");
+            Assert.That(contexts,Is.GreaterThan(400));
+            AssertSilent();Report("active-transitions",contexts,0,"All Katana/Punhos attacks in eight directions and three active forms use reviewed redesign figures for the complete sequence. Techniques without dedicated art share the primary attack; transformed directions without art use the new Normal figure without palette filters. Unique choreography and transformed coverage remain pending.");
         }
 
         static IEnumerable<AttackDefinition> Attacks(CombatLoadout loadout)

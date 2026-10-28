@@ -89,7 +89,9 @@ namespace Darklight.Tests
                 {
                     bool declared=false;
                     foreach(var page in catalog.pages)if(page.skin==skin&&page.weapon==weapon&&page.form==form&&page.direction==direction&&page.action=="Idle"&&!(page.sourceSpriteNames?.Length>0))declared=true;
-                    Assert.That(DarklightWeaponRedesignBank.TryResolve(skin,weapon,form,direction,model,Vector2.zero,null,out _),Is.EqualTo(declared),$"skin={skin}, weapon={weapon}, form={form}, direction={direction}: no direction/form borrowing");
+                    bool active=skin==0&&(weapon==0||weapon==2)&&form<3;
+                    Assert.That(DarklightWeaponRedesignBank.TryResolve(skin,weapon,form,direction,model,Vector2.zero,null,out var resolved),Is.EqualTo(declared||active),$"skin={skin}, weapon={weapon}, form={form}, direction={direction}");
+                    if(active)Assert.That(resolved.name,Does.StartWith("Redesign_"),"Active players never return to retired designs; missing forms retain the new Normal identity");
                 }
             }
             finally{Object.DestroyImmediate(holder);DarklightWeaponRedesignBank.ClearCache();}

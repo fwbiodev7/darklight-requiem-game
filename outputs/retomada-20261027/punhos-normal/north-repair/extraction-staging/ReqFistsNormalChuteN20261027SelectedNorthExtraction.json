@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqFistsNormalChuteN20261027SelectedNorthExtraction.png",
+  "imageSha256": "37f05503fcc01995cc0596b94dbad7077db6bc302af4579774d775c7eda77200",
+  "nativeSize": [
+    927,
+    377
+  ],
+  "sourceSize": [
+    1545,
+    1872
+  ],
+  "pixelsPerUnit": 154.54545454545456,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261027/punhos-normal/ReqFistsNormalChuteN20261027SelectedNorthExtraction-source.png",
+  "sourceSha256": "fbbff5acdb34bb39f721c6e93978aaae5d921076357ab3377a82bb29555eea23",
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsNormalChuteN20261027SelectedNorthExtraction_00",
+      "rect": [
+        0,
+        0,
+        309,
+        377
+      ],
+      "pivot": [
+        0.49514563106796117,
+        0.14854111405835543
+      ],
+      "durationMs": 120,
+      "action": "attack",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "attack_0",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        137,
+        88,
+        255,
+        357
+      ],
+      "sourceAnchor": [
+        244,
+        397
+      ],
+      "sourcePackingAnchor": [
+        244,
+        397
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        46,
+        12
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalChuteN20261027SelectedNorthExtraction_01",
+      "rect": [
+        309,
+        0,
+        309,
+        377
+      ],
+      "pivot": [
+        0.49514563106796117,
+        0.14854111405835543
+      ],
+      "durationMs": 120,
+      "action": "attack",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "attack_1",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        613,
+        84,
+        247,
+        320
+      ],
+      "sourceAnchor": [
+        758,
+        397
+      ],
+      "sourcePackingAnchor": [
+        758,
+        397
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        8,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalChuteN20261027SelectedNorthExtraction_02",
+      "rect": [
+        618,
+        0,
+        309,
+        377
+      ],
+      "pivot": [
+        0.49514563106796117,
+        0.14854111405835543
+      ],
+      "durationMs": 120,
+      "action": "attack",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "attack_2",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        1137,
+        86,
+        228,
+        325
+      ],
+      "sourceAnchor": [
+        1274,
+        397
+      ],
+      "sourcePackingAnchor": [
+        1274,
+        397
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        16,
+        10
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_N",
+      "frames": [
+        "Redesign_ReqFistsNormalChuteN20261027SelectedNorthExtraction_00",
+        "Redesign_ReqFistsNormalChuteN20261027SelectedNorthExtraction_01",
+        "Redesign_ReqFistsNormalChuteN20261027SelectedNorthExtraction_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "attack_N"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 119924,
+  "packedPixels": 119924,
+  "originalSourcePixels": 500216,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2
+  ],
+  "excludedSourceFrameIndices": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "excludedSourceReason": "Other eleven sprites are proved unchanged; this descriptor extracts only north, not duplicate NE/E/SE clips.",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 2392024,
+    "farBeyond16pxPixels": 306,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 1.2,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ]
+}

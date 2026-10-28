@@ -1,0 +1,289 @@
+{
+  "status": "candidate-rejected-for-integration",
+  "sourcePath": "ArtSources/WeaponRedesign20261027/katana-normal/ReqKatanaNormalWalkNE_E-v4-source.png",
+  "sourceSha256": "7fcb6e3da7da69f8950df4dc82986e1346bc19b50ef50467e72e8e70cd3de596",
+  "sourceSize": [
+    1086,
+    1448
+  ],
+  "frames": [
+    {
+      "index": 0,
+      "grid": [
+        28,
+        35,
+        396,
+        372
+      ],
+      "rect": [
+        26,
+        33,
+        398,
+        374
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 337,
+      "anchor": [
+        163.41463414634146,
+        372
+      ],
+      "componentArea": 51023
+    },
+    {
+      "index": 1,
+      "grid": [
+        410,
+        33,
+        759,
+        374
+      ],
+      "rect": [
+        408,
+        31,
+        761,
+        376
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 341,
+      "anchor": [
+        538.3823529411765,
+        374
+      ],
+      "componentArea": 48597
+    },
+    {
+      "index": 2,
+      "grid": [
+        809,
+        38,
+        1084,
+        373
+      ],
+      "rect": [
+        807,
+        36,
+        1086,
+        375
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 335,
+      "anchor": [
+        902.7467532467532,
+        373
+      ],
+      "componentArea": 44256
+    },
+    {
+      "index": 3,
+      "grid": [
+        27,
+        382,
+        391,
+        716
+      ],
+      "rect": [
+        25,
+        380,
+        393,
+        718
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 334,
+      "anchor": [
+        209.03846153846155,
+        716
+      ],
+      "componentArea": 47905
+    },
+    {
+      "index": 4,
+      "grid": [
+        424,
+        386,
+        759,
+        721
+      ],
+      "rect": [
+        422,
+        384,
+        761,
+        723
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 335,
+      "anchor": [
+        530.3765432098766,
+        721
+      ],
+      "componentArea": 44552
+    },
+    {
+      "index": 5,
+      "grid": [
+        779,
+        385,
+        1084,
+        722
+      ],
+      "rect": [
+        777,
+        383,
+        1086,
+        724
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 337,
+      "anchor": [
+        904.4893617021277,
+        722
+      ],
+      "componentArea": 45889
+    },
+    {
+      "index": 6,
+      "grid": [
+        34,
+        732,
+        349,
+        1059
+      ],
+      "rect": [
+        32,
+        730,
+        351,
+        1061
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 327,
+      "anchor": [
+        150.95238095238096,
+        1059
+      ],
+      "componentArea": 45803
+    },
+    {
+      "index": 7,
+      "grid": [
+        413,
+        732,
+        730,
+        1061
+      ],
+      "rect": [
+        411,
+        730,
+        732,
+        1063
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 329,
+      "anchor": [
+        523.0921052631579,
+        1061
+      ],
+      "componentArea": 45775
+    },
+    {
+      "index": 8,
+      "grid": [
+        776,
+        732,
+        1084,
+        1062
+      ],
+      "rect": [
+        774,
+        730,
+        1086,
+        1064
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 330,
+      "anchor": [
+        892.078947368421,
+        1062
+      ],
+      "componentArea": 46025
+    },
+    {
+      "index": 9,
+      "grid": [
+        27,
+        1067,
+        353,
+        1403
+      ],
+      "rect": [
+        25,
+        1065,
+        355,
+        1405
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 336,
+      "anchor": [
+        238.36885245901638,
+        1403
+      ],
+      "componentArea": 46979
+    },
+    {
+      "index": 10,
+      "grid": [
+        403,
+        1067,
+        695,
+        1409
+      ],
+      "rect": [
+        401,
+        1065,
+        697,
+        1411
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 342,
+      "anchor": [
+        542.5,
+        1409
+      ],
+      "componentArea": 43290
+    },
+    {
+      "index": 11,
+      "grid": [
+        764,
+        1067,
+        1075,
+        1409
+      ],
+      "rect": [
+        762,
+        1065,
+        1077,
+        1411
+      ],
+      "touchesExtractionEdge": false,
+      "bodyHeight": 342,
+      "anchor": [
+        893.3095238095239,
+        1409
+      ],
+      "componentArea": 47207
+    }
+  ],
+  "wholeFigures": true,
+  "unityImported": false,
+  "runtimeVerified": false,
+  "selected": false,
+  "defects": [
+    "E opposite contact retains the same visual leading leg despite explicit repair instructions.",
+    "V4 body heights337-342px versus V1 roughly313-325px; mixing would introduce visible size pop."
+  ],
+  "improvements": [
+    "E passing pose now has a lifted knee and close feet.",
+    "NE opposite passing has closer foot support."
+  ],
+  "generationCalls": 2,
+  "nextAction": "Preserve as candidate only; do not activate. Root redirected artistic priority to specific Punhos Heavy choreography."
+}

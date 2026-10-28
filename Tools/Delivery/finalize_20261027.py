@@ -44,6 +44,7 @@ def main():
     selection=json.loads((ROOT/"work/retomada-20261026/final-gate-selection.json").read_text())
     edits=selection["editClasses"]+["Darklight.Tests.DarklightSaveContractTests","Darklight.Tests.DarklightTestOutputTests"]
     play=selection["playFilters"]+[
+        "Darklight.Tests.DarklightWeaponRedesignGameplayTests.EveryActiveWeaponStateExcludesRetiredCharacterFrames",
         "Darklight.Tests.DarklightWeaponRedesignGameplayTests.ReviewedKatanaWalkLoopsReachAllDeclaredFramesAndReturnToIdle",
         "Darklight.Tests.DarklightWeaponRedesignGameplayTests.ConfirmedContactEmphasizesWholePoseButWhiffsDoNot"]
     stamp=datetime.now().strftime("%H%M%S")

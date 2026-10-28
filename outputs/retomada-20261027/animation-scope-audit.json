@@ -1,0 +1,4109 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-27",
+  "scope": {
+    "skin": "Requiem",
+    "weapons": [
+      "Katana",
+      "Punhos",
+      "Moto"
+    ],
+    "forms": [
+      "Normal",
+      "Ruptura",
+      "Eclipse Absoluto fundido"
+    ],
+    "directions": [
+      "S",
+      "SW",
+      "W",
+      "NW",
+      "N",
+      "NE",
+      "E",
+      "SE"
+    ],
+    "semantics": [
+      "Idle",
+      "IdleAlert",
+      "IdleImpatient",
+      "IdleInspect",
+      "IdleFatigued",
+      "IdleWounded",
+      "Walk",
+      "Run",
+      "StartMove",
+      "Brake",
+      "Turn",
+      "Charging",
+      "Guard (not a distinct bank action)",
+      "Parry",
+      "Dodge",
+      "Hurt",
+      "Dead",
+      "Transformation",
+      "all loadout attack keys"
+    ],
+    "basis": "Current additive bank catalog plus current runtime loadout/profile definitions and active motorcycle descriptors.",
+    "activeWeapons": [
+      "Katana (ID 0)",
+      "Punhos (ID 2)",
+      "Moto / dual-saw on-foot (ID 3)",
+      "Moto montada (ID 3)"
+    ],
+    "legacyForms": {
+      "form2": "old Eclipse art; does not certify the fused violet/silver Eclipse Absoluto design",
+      "form3": "legacy and outside active playable scope"
+    }
+  },
+  "catalog": {
+    "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/catalog.json",
+    "complete": false,
+    "activeRequiemKatanaPunhosForm0_1Pages": 67,
+    "activeMultiframePages": 67,
+    "activeStatusCounts": {
+      "visual-reviewed": 67
+    },
+    "legacyForm2_3PagesExcluded": 8,
+    "allCatalogPages": 174
+  },
+  "matrix": [
+    {
+      "weapon": "Katana",
+      "weaponIndex": 0,
+      "form": "Normal",
+      "formIndex": 0,
+      "states": {
+        "Idle": {
+          "presentDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "pageCount": 8,
+          "missingDirections": []
+        },
+        "Alert": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Walk": {
+          "presentDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N"
+          ],
+          "pageCount": 5,
+          "missingDirections": [
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Move transitions": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Charging": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Guard/Parry": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dodge": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Hurt": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dead": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Transformation": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        }
+      },
+      "attacks": [
+        {
+          "attackKey": "Leve1",
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "exactPages": 8,
+          "multiFrame": true,
+          "status": "exact clip present",
+          "sourcePageStatus": [
+            "visual-reviewed"
+          ],
+          "mappedFromSourceFrames": true
+        },
+        {
+          "attackKey": "Leve2",
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "exactPages": 8,
+          "multiFrame": true,
+          "status": "exact clip present",
+          "sourcePageStatus": [
+            "visual-reviewed"
+          ],
+          "mappedFromSourceFrames": true
+        },
+        {
+          "attackKey": "Leve3",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Pesado",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Carregado",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "ContraAtaque",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "OndaDoVeu",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "KatanaAerial",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Corte do Crepúsculo",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Eclipse Partido",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Corte do Silencio",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Ruptura Precisa",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        }
+      ],
+      "catalogPageCount": 29,
+      "catalogClipStatusCounts": {
+        "visual-reviewed": 29
+      }
+    },
+    {
+      "weapon": "Katana",
+      "weaponIndex": 0,
+      "form": "Ruptura",
+      "formIndex": 1,
+      "states": {
+        "Idle": {
+          "presentDirections": [
+            "S"
+          ],
+          "pageCount": 1,
+          "missingDirections": [
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Alert": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Walk": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Move transitions": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Charging": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Guard/Parry": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dodge": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Hurt": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dead": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Transformation": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        }
+      },
+      "attacks": [
+        {
+          "attackKey": "Leve1",
+          "directions": [
+            "S"
+          ],
+          "missingDirections": [
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 1,
+          "multiFrame": true,
+          "status": "exact clip present",
+          "sourcePageStatus": [
+            "visual-reviewed"
+          ],
+          "mappedFromSourceFrames": true
+        },
+        {
+          "attackKey": "Leve2",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Leve3",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Pesado",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Carregado",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "ContraAtaque",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "OndaDoVeu",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "KatanaAerial",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Corte do Crepúsculo",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Eclipse Partido",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Corte do Silencio",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Ruptura Precisa",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        }
+      ],
+      "catalogPageCount": 2,
+      "catalogClipStatusCounts": {
+        "visual-reviewed": 2
+      }
+    },
+    {
+      "weapon": "Katana",
+      "weaponIndex": 0,
+      "form": "Eclipse Absoluto fundido",
+      "formIndex": 2,
+      "states": {
+        "Idle": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Alert": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Walk": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Move transitions": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Charging": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Guard/Parry": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dodge": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Hurt": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dead": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Transformation": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        }
+      },
+      "attacks": [
+        {
+          "attackKey": "Leve1",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Leve2",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Leve3",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Pesado",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Carregado",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "ContraAtaque",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "OndaDoVeu",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "KatanaAerial",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Corte do Crepúsculo",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Eclipse Partido",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Corte do Silencio",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Ruptura Precisa",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        }
+      ],
+      "sourceClassification": "Form-2 legacy Eclipse sources excluded; no approved/imported fused violet-silver source confirmed."
+    },
+    {
+      "weapon": "Punhos",
+      "weaponIndex": 2,
+      "form": "Normal",
+      "formIndex": 0,
+      "states": {
+        "Idle": {
+          "presentDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "pageCount": 8,
+          "missingDirections": []
+        },
+        "Alert": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Walk": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Move transitions": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Charging": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Guard/Parry": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dodge": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Hurt": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dead": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Transformation": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        }
+      },
+      "attacks": [
+        {
+          "attackKey": "Direto da Ruína",
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "exactPages": 8,
+          "multiFrame": true,
+          "status": "exact clip present",
+          "sourcePageStatus": [
+            "visual-reviewed"
+          ],
+          "mappedFromSourceFrames": true
+        },
+        {
+          "attackKey": "Chute Quebra-Osso",
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "exactPages": 8,
+          "multiFrame": true,
+          "status": "exact clip present",
+          "sourcePageStatus": [
+            "visual-reviewed"
+          ],
+          "mappedFromSourceFrames": true
+        },
+        {
+          "attackKey": "Giro Devastador",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Martelo da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Ascensão da Ruína",
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "exactPages": 8,
+          "multiFrame": true,
+          "status": "exact clip present",
+          "sourcePageStatus": [
+            "visual-reviewed"
+          ],
+          "mappedFromSourceFrames": true
+        },
+        {
+          "attackKey": "Juízo da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Resposta Brutal",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Cataclismo da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Queda da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Espiral da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Órbita Devastadora",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Sentença da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        }
+      ],
+      "catalogPageCount": 32,
+      "catalogClipStatusCounts": {
+        "visual-reviewed": 32
+      }
+    },
+    {
+      "weapon": "Punhos",
+      "weaponIndex": 2,
+      "form": "Ruptura",
+      "formIndex": 1,
+      "states": {
+        "Idle": {
+          "presentDirections": [
+            "S"
+          ],
+          "pageCount": 1,
+          "missingDirections": [
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Alert": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Walk": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Move transitions": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Charging": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Guard/Parry": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dodge": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Hurt": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dead": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Transformation": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        }
+      },
+      "attacks": [
+        {
+          "attackKey": "Direto da Ruína",
+          "directions": [
+            "S",
+            "SW",
+            "W"
+          ],
+          "missingDirections": [
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 3,
+          "multiFrame": true,
+          "status": "exact clip present",
+          "sourcePageStatus": [
+            "visual-reviewed"
+          ],
+          "mappedFromSourceFrames": true
+        },
+        {
+          "attackKey": "Chute Quebra-Osso",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Giro Devastador",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Martelo da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Ascensão da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Juízo da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Resposta Brutal",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Cataclismo da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Queda da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Espiral da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Órbita Devastadora",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        },
+        {
+          "attackKey": "Sentença da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence",
+          "sourcePageStatus": [],
+          "mappedFromSourceFrames": false
+        }
+      ],
+      "catalogPageCount": 4,
+      "catalogClipStatusCounts": {
+        "visual-reviewed": 4
+      }
+    },
+    {
+      "weapon": "Punhos",
+      "weaponIndex": 2,
+      "form": "Eclipse Absoluto fundido",
+      "formIndex": 2,
+      "states": {
+        "Idle": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Alert": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Walk": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Move transitions": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Charging": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Guard/Parry": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dodge": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Hurt": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dead": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Transformation": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        }
+      },
+      "attacks": [
+        {
+          "attackKey": "Direto da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Chute Quebra-Osso",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Giro Devastador",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Martelo da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Ascensão da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Juízo da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Resposta Brutal",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Cataclismo da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Queda da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Espiral da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Órbita Devastadora",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        },
+        {
+          "attackKey": "Sentença da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "excluded legacy Eclipse art; active fused-form art missing"
+        }
+      ],
+      "sourceClassification": "Form-2 legacy Eclipse sources excluded; no approved/imported fused violet-silver source confirmed."
+    }
+  ],
+  "motorcycle": {
+    "activeDescriptors": [
+      {
+        "resource": "RequiemMotoForm0Ride8SlamS20261027V3",
+        "exists": true,
+        "status": "visual-reviewed",
+        "sourcePath": "ArtSources/WeaponRedesign20261027/moto-maturity/RequiemMotoNormalMaturity20261027V3-source.png",
+        "sourceExists": true,
+        "sourceSha256Matches": true,
+        "clips": [
+          {
+            "name": "ride_S",
+            "direction": "S",
+            "frames": 1,
+            "countedAsAnimation": false
+          },
+          {
+            "name": "ride_SW",
+            "direction": "SW",
+            "frames": 1,
+            "countedAsAnimation": false
+          },
+          {
+            "name": "ride_W",
+            "direction": "W",
+            "frames": 1,
+            "countedAsAnimation": false
+          },
+          {
+            "name": "ride_NW",
+            "direction": "NW",
+            "frames": 1,
+            "countedAsAnimation": false
+          },
+          {
+            "name": "ride_N",
+            "direction": "N",
+            "frames": 1,
+            "countedAsAnimation": false
+          },
+          {
+            "name": "ride_NE",
+            "direction": "NE",
+            "frames": 1,
+            "countedAsAnimation": false
+          },
+          {
+            "name": "ride_E",
+            "direction": "E",
+            "frames": 1,
+            "countedAsAnimation": false
+          },
+          {
+            "name": "ride_SE",
+            "direction": "SE",
+            "frames": 1,
+            "countedAsAnimation": false
+          },
+          {
+            "name": "slam_S",
+            "direction": "S",
+            "frames": 4,
+            "countedAsAnimation": true
+          }
+        ],
+        "notes": [
+          "Whole figures only, no anatomy assembly, no scaling/recoloring or alpha removal.",
+          "Eight STATIC mounted advancing views; these are not idle or locomotion cycles.",
+          "Only the four south Esmagamento Vertical phases are newly authored as an action sequence."
+        ]
+      },
+      {
+        "resource": "RequiemMotoForm0IdleSSWW20261027MatureV1",
+        "exists": true,
+        "status": "visual-reviewed",
+        "sourcePath": "ArtSources/WeaponRedesign20261027/moto-idle-mature/RequiemMotoForm0IdleSSWW20261027MatureV1-source.png",
+        "sourceExists": true,
+        "sourceSha256Matches": true,
+        "clips": [
+          {
+            "name": "idle_S",
+            "direction": "S",
+            "frames": 4,
+            "countedAsAnimation": true
+          },
+          {
+            "name": "idle_SW",
+            "direction": "SW",
+            "frames": 4,
+            "countedAsAnimation": true
+          },
+          {
+            "name": "idle_W",
+            "direction": "W",
+            "frames": 4,
+            "countedAsAnimation": true
+          }
+        ],
+        "notes": [
+          "Four genuinely drawn complete-figure phases: neutral, inhale, exhale/blink, return.",
+          "No anatomy montage, raster deformation, mirroring or individual rescaling.",
+          "All selected nonzero-alpha source RGBA retained exactly; source beneath zero alpha preserved in originals."
+        ]
+      },
+      {
+        "resource": "RequiemMotoForm0IdleNW_N_NE20261027MatureV1",
+        "exists": true,
+        "status": "visual-reviewed",
+        "sourcePath": "ArtSources/WeaponRedesign20261027/moto-idle-mature/RequiemMotoForm0IdleNW_N_NE20261027MatureV1-source.png",
+        "sourceExists": true,
+        "sourceSha256Matches": true,
+        "clips": [
+          {
+            "name": "idle_NW",
+            "direction": "NW",
+            "frames": 4,
+            "countedAsAnimation": true
+          },
+          {
+            "name": "idle_N",
+            "direction": "N",
+            "frames": 4,
+            "countedAsAnimation": true
+          },
+          {
+            "name": "idle_NE",
+            "direction": "NE",
+            "frames": 4,
+            "countedAsAnimation": true
+          }
+        ],
+        "notes": [
+          "Four genuinely drawn complete-figure phases: neutral, inhale, exhale/blink, return.",
+          "No anatomy montage, raster deformation, mirroring or individual rescaling.",
+          "All selected nonzero-alpha source RGBA retained exactly; source beneath zero alpha preserved in originals."
+        ]
+      },
+      {
+        "resource": "RequiemMotoForm0IdleE_SE20261027MatureV1",
+        "exists": true,
+        "status": "visual-reviewed",
+        "sourcePath": "ArtSources/WeaponRedesign20261027/moto-idle-mature/RequiemMotoForm0IdleE_SE20261027MatureV1-source.png",
+        "sourceExists": true,
+        "sourceSha256Matches": true,
+        "clips": [
+          {
+            "name": "idle_E",
+            "direction": "E",
+            "frames": 4,
+            "countedAsAnimation": true
+          },
+          {
+            "name": "idle_SE",
+            "direction": "SE",
+            "frames": 4,
+            "countedAsAnimation": true
+          }
+        ],
+        "notes": [
+          "Four genuinely drawn complete-figure phases: neutral, inhale, exhale/blink, return.",
+          "No anatomy montage, raster deformation, mirroring or individual rescaling.",
+          "All selected nonzero-alpha source RGBA retained exactly; source beneath zero alpha preserved in originals."
+        ]
+      }
+    ],
+    "dualSawCandidateFiles": [
+      "ArtSources/WeaponRedesign20261027/moto-dual-saws/prepare_dual_saws.py",
+      "ArtSources/WeaponRedesign20261027/moto-dual-saws/ReqMotoNormalDualSaws8AttackS20261027V1-repair-source.png",
+      "ArtSources/WeaponRedesign20261027/moto-dual-saws/ReqMotoNormalDualSaws8AttackS20261027V1-source.png"
+    ],
+    "coverageInterpretation": "Normal idle is 8-direction animated. Ride8Slam has 8 static ride poses and one 4-frame South slam. Ride poses do not count as ride/locomotion animation; one South slam does not constitute eight attack animations. No dual-saw candidate is imported into production descriptor bank."
+  },
+  "runtimePolicy": {
+    "evidence": "DarklightWeaponRedesignBank.TryCurrentPose uses exact request, then new Walk for Run/StartMove/Brake/Turn, then Idle; TryResolveAttack prefers exact key then Leve1/Direto da Ruína in same direction and may use Normal form as source for transformed forms. Parent reports active legacy presentation is now suppressed. Motorcycle ResolveRequiem uses exact idle, exact South slam when available, else static ride direction/form0 pose.",
+    "interpretation": "Fallback guarantees retired legacy sprites are not presented but shared clips/poses are runtime continuity only; they do not satisfy authored exact state/form/attack coverage. Transformation has no distinct exact action clips in current addon catalog."
+  },
+  "gapsAndDependencies": [
+    "Katana and Punhos Normal/Ruptura: add the listed missing exact clips per state, attack key, and direction. The runtime can share a primary same-weapon sequence, but this does not fulfill named-move authored coverage.",
+    "Eclipse Absoluto fused violet/silver: create and import dedicated artwork for both Katana and Punhos; old form-2 Eclipse sheets are legacy and excluded. Then complete all states, all real attack keys, and eight directions.",
+    "Katana: Leve1/Leve2 only have complete Normal 8-direction sequences; current Ruptura has Leve1 South only. All other listed attacks and states lack exact clips in those forms.",
+    "Punhos: Direto da Ruína and Chute Quebra-Osso have complete Normal 8-direction sequences; Ruptura Direto is S/SW/W only. All other listed attacks and states lack exact clips in those forms.",
+    "Locomotion: five exact Walk contexts exist; no exact Run/StartMove/Brake/Turn contexts. Add full cycles/transitions in the active forms and directions.",
+    "Defense/reaction/transformation: no exact Charging, Parry/Guard, Dodge, Hurt, Dead, or Transformation clips exist in active Katana/Punhos contexts. Guard has no distinct bank action today.",
+    "Moto dual-saw on-foot (ID 3): finish repair of the candidate and author final attack-specific sequences for all 20 real moves, eight directions, and three active forms; import/review each descriptor. The current 8 views + 4 South frames are partial generic material only.",
+    "Moto mounted (ID 3): Normal idle loops are present in all eight directions; eight ride views are static poses. Only two ground-slam move keys share one South four-frame clip. Add unique clips for every remaining move/state/direction/form and mounted Ruptura/Eclipse Absoluto descriptors.",
+    "The moto is a separate weapon/loadout, not Katana/Punhos: track dual-saw on-foot and mounted motorcycle as separate presentations with their own complete attack/motion contracts.",
+    "After art production, run Unity import/runtime verification; current source/page review flags do not prove runtime verification."
+  ],
+  "limitations": [
+    "Active scope is Requiem, weapon IDs 0/2/3, forms 0/1/2. Old Eclipse raw form2 and legacy form3 are separately reported.",
+    "Structural/source inventory only; does not certify visual quality, final repair, import or runtime.",
+    "Shared fallback, static pose and old form-specific art do not count as exact authored coverage.",
+    "No Unity scene or tests were run."
+  ],
+  "sourceFiles": [
+    "Tools/AnimationPreview/audit_weapon_redesign.py",
+    "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/catalog.json",
+    "Assets/Darklight/Runtime/Character/DarklightWeaponRedesignBank.cs",
+    "Assets/Darklight/Runtime/Character/DarklightMotorcycleRedesignBank.cs",
+    "Assets/Darklight/Runtime/Combat/DarklightCombatProfiles.cs",
+    "Assets/Darklight/Runtime/Combat/DarklightRuinFistsProfile.cs",
+    "Assets/Darklight/Data/Weapons/Requiem.asset"
+  ],
+  "legacyMatrix": [
+    {
+      "weapon": "Katana",
+      "weaponIndex": 0,
+      "form": "Eclipse",
+      "formIndex": 2,
+      "states": {
+        "Idle": {
+          "presentDirections": [
+            "S"
+          ],
+          "pageCount": 1,
+          "missingDirections": [
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Alert": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Walk": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Move transitions": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Charging": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Guard/Parry": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dodge": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Hurt": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dead": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Transformation": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        }
+      },
+      "attacks": [
+        {
+          "attackKey": "Leve1",
+          "directions": [
+            "S"
+          ],
+          "missingDirections": [
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 1,
+          "multiFrame": true,
+          "status": "authored exact clip"
+        },
+        {
+          "attackKey": "Leve2",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Leve3",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Pesado",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Carregado",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "ContraAtaque",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "OndaDoVeu",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "KatanaAerial",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Corte do Crepúsculo",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Eclipse Partido",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Corte do Silencio",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Ruptura Precisa",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        }
+      ],
+      "legacyClassification": "old Eclipse design (form 2), not fused Eclipse Absoluto coverage",
+      "catalogPageCount": 2
+    },
+    {
+      "weapon": "Katana",
+      "weaponIndex": 0,
+      "form": "Eclipse Absoluto",
+      "formIndex": 3,
+      "states": {
+        "Idle": {
+          "presentDirections": [
+            "S"
+          ],
+          "pageCount": 1,
+          "missingDirections": [
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Alert": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Walk": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Move transitions": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Charging": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Guard/Parry": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dodge": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Hurt": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dead": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Transformation": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        }
+      },
+      "attacks": [
+        {
+          "attackKey": "Leve1",
+          "directions": [
+            "S"
+          ],
+          "missingDirections": [
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 1,
+          "multiFrame": true,
+          "status": "authored exact clip"
+        },
+        {
+          "attackKey": "Leve2",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Leve3",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Pesado",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Carregado",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "ContraAtaque",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "OndaDoVeu",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "KatanaAerial",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Corte do Crepúsculo",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Eclipse Partido",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Corte do Silencio",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Ruptura Precisa",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        }
+      ],
+      "legacyClassification": "legacy form 3, outside active scope",
+      "catalogPageCount": 2
+    },
+    {
+      "weapon": "Punhos",
+      "weaponIndex": 2,
+      "form": "Eclipse",
+      "formIndex": 2,
+      "states": {
+        "Idle": {
+          "presentDirections": [
+            "S"
+          ],
+          "pageCount": 1,
+          "missingDirections": [
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Alert": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Walk": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Move transitions": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Charging": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Guard/Parry": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dodge": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Hurt": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dead": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Transformation": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        }
+      },
+      "attacks": [
+        {
+          "attackKey": "Direto da Ruína",
+          "directions": [
+            "S"
+          ],
+          "missingDirections": [
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 1,
+          "multiFrame": true,
+          "status": "authored exact clip"
+        },
+        {
+          "attackKey": "Chute Quebra-Osso",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Giro Devastador",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Martelo da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Ascensão da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Juízo da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Resposta Brutal",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Cataclismo da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Queda da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Espiral da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Órbita Devastadora",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Sentença da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        }
+      ],
+      "legacyClassification": "old Eclipse design (form 2), not fused Eclipse Absoluto coverage",
+      "catalogPageCount": 2
+    },
+    {
+      "weapon": "Punhos",
+      "weaponIndex": 2,
+      "form": "Eclipse Absoluto",
+      "formIndex": 3,
+      "states": {
+        "Idle": {
+          "presentDirections": [
+            "S"
+          ],
+          "pageCount": 1,
+          "missingDirections": [
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Alert": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Walk": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Move transitions": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Charging": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Guard/Parry": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dodge": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Hurt": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Dead": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        },
+        "Transformation": {
+          "presentDirections": [],
+          "pageCount": 0,
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ]
+        }
+      },
+      "attacks": [
+        {
+          "attackKey": "Direto da Ruína",
+          "directions": [
+            "S"
+          ],
+          "missingDirections": [
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 1,
+          "multiFrame": true,
+          "status": "authored exact clip"
+        },
+        {
+          "attackKey": "Chute Quebra-Osso",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Giro Devastador",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Martelo da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Ascensão da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Juízo da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Resposta Brutal",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Cataclismo da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Queda da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Espiral da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Órbita Devastadora",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        },
+        {
+          "attackKey": "Sentença da Ruína",
+          "directions": [],
+          "missingDirections": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "exactPages": 0,
+          "multiFrame": false,
+          "status": "missing exact art; runtime may share same-weapon/new direction sequence"
+        }
+      ],
+      "legacyClassification": "legacy form 3, outside active scope",
+      "catalogPageCount": 2
+    }
+  ],
+  "motoActiveCoverage": {
+    "attackKeys": [
+      "Serra de Entrada",
+      "Dentes Cruzados",
+      "Giro das Engrenagens",
+      "Quebra de Eixo",
+      "Sobrecarga das Serras",
+      "Contra-Eixo",
+      "Esmagamento do Abismo",
+      "Ascensao Serrilhada",
+      "Engate Preciso",
+      "Queda do Motor",
+      "Investida Demoniaca",
+      "Derrapagem Sangrenta",
+      "Serras Continuas",
+      "Investida Final",
+      "Serra Infernal",
+      "Giro Devastador",
+      "Esmagamento Vertical",
+      "Roda Destruidora",
+      "Cavalgada Brutal",
+      "Execucao Aerea Motorizada"
+    ],
+    "dualSawOnFoot": {
+      "activeForms": [
+        "Normal",
+        "Ruptura",
+        "Eclipse Absoluto fundido"
+      ],
+      "productionExactAnimationDirectionsByForm": {
+        "Normal": [],
+        "Ruptura": [],
+        "Eclipse Absoluto fundido": []
+      },
+      "candidateSourceFiles": [
+        {
+          "path": "ArtSources/WeaponRedesign20261027/moto-dual-saws/ReqMotoNormalDualSaws8AttackS20261027V1-repair-source.png",
+          "sha256": "9af10afa750b40effb42fcaeeadd387d83aa2ca892ff5958f6544a3d2b02a132",
+          "bytes": 1952869
+        },
+        {
+          "path": "ArtSources/WeaponRedesign20261027/moto-dual-saws/ReqMotoNormalDualSaws8AttackS20261027V1-source.png",
+          "sha256": "dd93f2f1b14954a4f09e3007401100622182759c5fd09336e13b2dc9868cabf4",
+          "bytes": 1943087
+        }
+      ],
+      "candidateStatus": "partial source only; unrepaired final; no catalog/runtime production descriptor",
+      "candidateCoverage": "8 directional views + 4 South frames (partial generic clip; not 8 attacks; not active imported coverage)",
+      "productionDescriptorExists": false,
+      "productionResource": "Darklight/WeaponRedesign20261023/ReqMotoNormalDualSaws8AttackS20261027V1"
+    },
+    "mountedMotorcycle": {
+      "activeForms": [
+        "Normal",
+        "Ruptura",
+        "Eclipse Absoluto fundido"
+      ],
+      "normalIdle": [
+        "S",
+        "SW",
+        "W",
+        "NW",
+        "N",
+        "NE",
+        "E",
+        "SE"
+      ],
+      "idleFramesPerDirection": 4,
+      "normalStaticRideViews": [
+        "S",
+        "SW",
+        "W",
+        "NW",
+        "N",
+        "NE",
+        "E",
+        "SE"
+      ],
+      "animatedGroundSlam": {
+        "attackKeys": [
+          "Esmagamento do Abismo",
+          "Esmagamento Vertical"
+        ],
+        "directions": [
+          "S"
+        ],
+        "frames": 4,
+        "semantic": "one generic South ground-slam sequence shared by two moves; not a unique clip per attack"
+      },
+      "otherAttackKeysMissing": [
+        "Serra de Entrada",
+        "Dentes Cruzados",
+        "Giro das Engrenagens",
+        "Quebra de Eixo",
+        "Sobrecarga das Serras",
+        "Contra-Eixo",
+        "Ascensao Serrilhada",
+        "Engate Preciso",
+        "Queda do Motor",
+        "Investida Demoniaca",
+        "Derrapagem Sangrenta",
+        "Serras Continuas",
+        "Investida Final",
+        "Serra Infernal",
+        "Giro Devastador",
+        "Roda Destruidora",
+        "Cavalgada Brutal",
+        "Execucao Aerea Motorizada"
+      ],
+      "rupturaDescriptors": false,
+      "fusedEclipseAbsoluteDescriptors": false,
+      "interpretation": "Static ride views are poses, not locomotion/attack animation. Normal mounted idle has 8 actual loops. Form 1/2 mounted new descriptors are absent; a Normal/static presentation fallback is not authored form coverage."
+    }
+  },
+  "legacyAuditorContext": {
+    "tool": "Tools/AnimationPreview/audit_weapon_redesign.py",
+    "sheets": 73,
+    "wholeFigures": 642,
+    "exactContextClips": 174,
+    "uniqueRuntimeReferencedFigures": 639,
+    "unreferencedPhysicalFigures": 3,
+    "explicitLegacyPhaseHolds": 0,
+    "structuralErrors": 0,
+    "scopeNote": "Aggregates historical skins/weapons/forms; retained only as structural evidence, not active coverage headline."
+  },
+  "catalogCurrent": {
+    "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/catalog.json",
+    "completeFlag": false,
+    "activeRequiemKatanaPunhosPagesForms0_1": 67,
+    "legacyRequiemKatanaPunhosPagesForms2_3": 8,
+    "allPages": 174
+  },
+  "testChanges": {
+    "path": "Assets/Darklight/Tests/PlayMode/DarklightSimplifiedScopeGameplayTests.cs",
+    "updated": "Preserved the two existing UnityTest method names/filters; first view assertion now expects eight-direction on-foot DualSawsPose; idle test validates all 4 authored mounted-idle frames directly and asserts on-foot consumer uses DualSawsPose; added actual weaponSpecial TryAirFollowup test asserting mounted Riding sprite during dash and DualSawsPose after reset.",
+    "unityExecuted": false
+  },
+  "coordinationUpdate": {
+    "motoDualSaws": "selected/imported 22:12; runtime requires latest gate",
+    "readyViews": 8,
+    "genericSouthAttackFrames": 4,
+    "completeAttackChoreography": false
+  }
+}

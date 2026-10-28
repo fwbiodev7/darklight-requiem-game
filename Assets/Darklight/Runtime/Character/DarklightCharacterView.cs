@@ -33,7 +33,7 @@ namespace Darklight
         {
             get
             {
-                var neutral=TodayCharacterBank.StablePose(rock?1:0,0,0,0);
+                var neutral=rock?TodayCharacterBank.StablePose(1,0,0,0):DarklightWeaponRedesignBank.CurrentIdle(0,0);
                 return neutral!=null&&neutral.bounds.size.y>0?neutral.bounds:FallbackBodyBounds;
             }
         }
@@ -45,7 +45,7 @@ namespace Darklight
         {
             baseIdle??=idle;baseWalk??=walk;baseSlash??=slash;baseActions??=actions;baseMotion??=motion;
             rock=index==1;idle=rock?skinIdle:baseIdle;motion=rock?skinMotion:baseMotion;actions=rock?skinActions:baseActions;slash=rock?skinSlash:baseSlash;walk=rock?null:baseWalk;
-            if(display!=null){display.sprite=TodayCharacterBank.StablePose(index,0,0,0)??(idle?.Length>0?idle[0]:display.sprite);display.transform.localScale=RenderScale;}
+            if(display!=null){display.sprite=index==0?DarklightWeaponRedesignBank.CurrentIdle(0,0):TodayCharacterBank.StablePose(index,0,0,0)??(idle?.Length>0?idle[0]:display.sprite);display.transform.localScale=RenderScale;}
         }
         public void PresentPreview(CombatModel model,Vector2 movement,int skin,int ignoredAge,int form,WeaponDefinition weapon)
         {
@@ -77,15 +77,17 @@ namespace Darklight
             if(!previewing&&GetComponent<DarklightFighter>()?.AirCombo is {Active:true} air)airHeight=air.Height;
             UsesMotorcyclePoseFallback=false;
             bool riding=!previewing&&game?.AbyssRider?.Active==true;
+            bool currentOnly=skin==0&&(weapon==0||weapon==2||weapon==3);
             bool riderFallback=true;
-            var selected=riding?DarklightMotorcycleRedesignBank.ResolveRequiem(game.AbyssRider,model,game.PresentedForm,out riderFallback,movement):TodayCharacterBank.Resolve(skin,0,weapon,direction,model,movement);
-            if(riding){UsesMotorcyclePoseFallback=riderFallback;selected??=TodayCharacterBank.StablePose(0,0,0,direction);}
+            var selected=riding?DarklightMotorcycleRedesignBank.ResolveRequiem(game.AbyssRider,model,game.PresentedForm,out riderFallback,movement):
+                weapon==3&&currentOnly?DarklightMotorcycleRedesignBank.DualSawsPose(direction,model)??DarklightMotorcycleRedesignBank.Riding(0,direction,0):currentOnly?null:TodayCharacterBank.Resolve(skin,0,weapon,direction,model,movement);
+            if(riding)UsesMotorcyclePoseFallback=riderFallback;
             if(!previewing)
             {
                 livingHealth??=GetComponent<HealthSystem>();
                 living.Observe(model.Clock,model.State,movement,livingHealth!=null?livingHealth.HealthPercent:1,game?.Form??0,
                     game?.PresentationThreat??false,game?.Transforming==true);
-                if(model.State==CombatState.Neutral && game?.Transforming!=true && game?.AbyssRider?.Active!=true)
+                if(!currentOnly&&model.State==CombatState.Neutral && game?.Transforming!=true && game?.AbyssRider?.Active!=true)
                     selected=TodayCharacterBank.LivingPose(skin,weapon,direction,living)??selected;
             }
             bool locomotionSelected=false;
@@ -96,15 +98,15 @@ namespace Darklight
                 if(gait!=null){selected=gait;locomotionSelected=true;}
             }
             UsesPoseFallback=false;UsesUserWholeSprite=false;
-            if(selected==null){selected=TodayCharacterBank.StablePose(skin,0,weapon,direction);UsesPoseFallback=selected!=null;}
-            if(selected==null){selected=DarklightUserSpriteBank.Resolve(skin,0,weapon,model,movement);UsesUserWholeSprite=selected!=null;}
+            if(selected==null&&!currentOnly){selected=TodayCharacterBank.StablePose(skin,0,weapon,direction);UsesPoseFallback=selected!=null;}
+            if(selected==null&&!currentOnly){selected=DarklightUserSpriteBank.Resolve(skin,0,weapon,model,movement);UsesUserWholeSprite=selected!=null;}
             UsesWeaponRedesignSprite=DarklightWeaponRedesignBank.TryResolve(skin,weapon,previewing?previewForm:game?.PresentedForm??0,
                 direction,model,movement,selected,out var redesigned,previewing?null:living.Clip,
                 previewing?-1:living.Clip=="Idle"?living.BreathClock:living.ClipTime);
             if(UsesWeaponRedesignSprite){selected=redesigned;UsesPoseFallback=UsesUserWholeSprite=false;}
-            if(selected!=null)display.sprite=selected;
+            if(selected!=null||currentOnly)display.sprite=selected;
             display.transform.localScale=RenderScale;display.flipX=!UsesWeaponRedesignSprite&&!DarklightMotorcycleRedesignBank.IsAuthored(selected)&&(locomotionSelected?abyssLocomotion.Mirror:!previewing&&game?.AbyssRider?.Active==true?DarklightAbyssSpriteBank.Mirror(model):UsesUserWholeSprite&&model.Facing.x<-.1f);
-            display.transform.localRotation=model.State==CombatState.Dead&&(UsesPoseFallback||UsesUserWholeSprite)?Quaternion.Euler(0,0,-75):Quaternion.Euler(0,0,!previewing&&game?.AbyssRider?.Active==true?game.AbyssRider.LeanAngle+game.AbyssRider.RunOverPitch:0);
+            display.transform.localRotation=model.State==CombatState.Dead&&(UsesPoseFallback||UsesUserWholeSprite)?Quaternion.Euler(0,0,-75):Quaternion.Euler(0,0,!previewing&&game?.AbyssRider?.MountedPresentation==true?game.AbyssRider.LeanAngle+game.AbyssRider.RunOverPitch:0);
             UsesWholeCharacterSprite=selected!=null&&!UsesUserWholeSprite;
             display.color=model.State==CombatState.Hurt?new Color(1,.4f,.4f):model.State==CombatState.Parry?new Color(.7f,.8f,1):Color.white;
             display.sortingOrder=100-Mathf.RoundToInt(transform.position.y*10f);appearance?.Present(display,direction,skin,game?.Form??0,model);

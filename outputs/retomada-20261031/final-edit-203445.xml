@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="137" result="Failed(Child)" total="137" passed="136" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:25Z" duration="1,4842443">
+  <test-suite type="TestSuite" id="1000" name="DARKLIGHT REQUIEM" fullname="DARKLIGHT REQUIEM" runstate="Runnable" testcasecount="314" result="Failed" site="Child" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:25Z" duration="1.484244" total="137" passed="136" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1393" name="Darklight.EditModeTests.dll" fullname="C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/Library/ScriptAssemblies/Darklight.EditModeTests.dll" runstate="Runnable" testcasecount="314" result="Failed" site="Child" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:25Z" duration="1.470856" total="137" passed="136" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="28780" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1394" name="Darklight" fullname="Darklight" runstate="Runnable" testcasecount="314" result="Failed" site="Child" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:25Z" duration="1.465148" total="137" passed="136" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1395" name="Tests" fullname="Darklight.Tests" runstate="Runnable" testcasecount="314" result="Failed" site="Child" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:25Z" duration="1.459791" total="137" passed="136" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1001" name="DarklightAirControllerTests" fullname="Darklight.Tests.DarklightAirControllerTests" classname="Darklight.Tests.DarklightAirControllerTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.080903" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1004" name="ChaseCannotCrossAStaticWallAndRecoversInsteadOfHanging" fullname="Darklight.Tests.DarklightAirControllerTests.ChaseCannotCrossAStaticWallAndRecoversInsteadOfHanging" methodname="ChaseCannotCrossAStaticWallAndRecoversInsteadOfHanging" classname="Darklight.Tests.DarklightAirControllerTests" runstate="Runnable" seed="673044522" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.057545" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1003" name="HitstopBuffersChaseWithoutQueuingTheGroundLauncher" fullname="Darklight.Tests.DarklightAirControllerTests.HitstopBuffersChaseWithoutQueuingTheGroundLauncher" methodname="HitstopBuffersChaseWithoutQueuingTheGroundLauncher" classname="Darklight.Tests.DarklightAirControllerTests" runstate="Runnable" seed="201967241" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.003940" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1002" name="LaunchDoesNotAutomaticallyChaseOrDealUncommandedDamage" fullname="Darklight.Tests.DarklightAirControllerTests.LaunchDoesNotAutomaticallyChaseOrDealUncommandedDamage" methodname="LaunchDoesNotAutomaticallyChaseOrDealUncommandedDamage" classname="Darklight.Tests.DarklightAirControllerTests" runstate="Runnable" seed="1776092779" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.001380" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1005" name="DarklightAirExpansionTests" fullname="Darklight.Tests.DarklightAirExpansionTests" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" testcasecount="17" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.069985" total="17" passed="17" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="ParameterizedMethod" id="1020" name="AirCancelRequiresAHitAndRecoveryAndCanRedirect" fullname="Darklight.Tests.DarklightAirExpansionTests.AirCancelRequiresAHitAndRecoveryAndCanRedirect" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.008090" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1012" name="AirCancelRequiresAHitAndRecoveryAndCanRedirect(0)" fullname="Darklight.Tests.DarklightAirExpansionTests.AirCancelRequiresAHitAndRecoveryAndCanRedirect(0)" methodname="AirCancelRequiresAHitAndRecoveryAndCanRedirect" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="1946305109" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.001882" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1013" name="AirCancelRequiresAHitAndRecoveryAndCanRedirect(1)" fullname="Darklight.Tests.DarklightAirExpansionTests.AirCancelRequiresAHitAndRecoveryAndCanRedirect(1)" methodname="AirCancelRequiresAHitAndRecoveryAndCanRedirect" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="1776062033" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.000249" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1014" name="AirCancelRequiresAHitAndRecoveryAndCanRedirect(2)" fullname="Darklight.Tests.DarklightAirExpansionTests.AirCancelRequiresAHitAndRecoveryAndCanRedirect(2)" methodname="AirCancelRequiresAHitAndRecoveryAndCanRedirect" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="1967839885" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.000116" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1015" name="AirCancelRequiresAHitAndRecoveryAndCanRedirect(3)" fullname="Darklight.Tests.DarklightAirExpansionTests.AirCancelRequiresAHitAndRecoveryAndCanRedirect(3)" methodname="AirCancelRequiresAHitAndRecoveryAndCanRedirect" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="562221426" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.000090" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1016" name="AirCancelRequiresAHitAndRecoveryAndCanRedirect(4)" fullname="Darklight.Tests.DarklightAirExpansionTests.AirCancelRequiresAHitAndRecoveryAndCanRedirect(4)" methodname="AirCancelRequiresAHitAndRecoveryAndCanRedirect" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="1100795194" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.000087" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1017" name="AirCancelRequiresAHitAndRecoveryAndCanRedirect(5)" fullname="Darklight.Tests.DarklightAirExpansionTests.AirCancelRequiresAHitAndRecoveryAndCanRedirect(5)" methodname="AirCancelRequiresAHitAndRecoveryAndCanRedirect" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="587630146" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.000111" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1018" name="AirCancelRequiresAHitAndRecoveryAndCanRedirect(6)" fullname="Darklight.Tests.DarklightAirExpansionTests.AirCancelRequiresAHitAndRecoveryAndCanRedirect(6)" methodname="AirCancelRequiresAHitAndRecoveryAndCanRedirect" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="1177664354" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.000089" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1019" name="AirCancelRequiresAHitAndRecoveryAndCanRedirect(7)" fullname="Darklight.Tests.DarklightAirExpansionTests.AirCancelRequiresAHitAndRecoveryAndCanRedirect(7)" methodname="AirCancelRequiresAHitAndRecoveryAndCanRedirect" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="562518663" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.000088" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1009" name="AirComboCannotRelauchOrSuspendForever" fullname="Darklight.Tests.DarklightAirExpansionTests.AirComboCannotRelauchOrSuspendForever" methodname="AirComboCannotRelauchOrSuspendForever" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="2031869114" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.000336" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1008" name="BossAndArmorRejectLaunchAndFollowups" fullname="Darklight.Tests.DarklightAirExpansionTests.BossAndArmorRejectLaunchAndFollowups" methodname="BossAndArmorRejectLaunchAndFollowups" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="2078337149" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.000165" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1007" name="DifferentLaunchForcesChangeApexWithoutMovingTheGroundPlane" fullname="Darklight.Tests.DarklightAirExpansionTests.DifferentLaunchForcesChangeApexWithoutMovingTheGroundPlane" methodname="DifferentLaunchForcesChangeApexWithoutMovingTheGroundPlane" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="1471741182" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.000174" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1006" name="HitstopFreezesAirPhysicsAndImmunity" fullname="Darklight.Tests.DarklightAirExpansionTests.HitstopFreezesAirPhysicsAndImmunity" methodname="HitstopFreezesAirPhysicsAndImmunity" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="286398617" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.000210" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1022" name="SixMotorcycleMovesRetainAllOriginalLightsAndBoundContactPulses" fullname="Darklight.Tests.DarklightAirExpansionTests.SixMotorcycleMovesRetainAllOriginalLightsAndBoundContactPulses" methodname="SixMotorcycleMovesRetainAllOriginalLightsAndBoundContactPulses" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="656211202" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.054490" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1010" name="SlamLandsExactlyOnceAndCannotBeCancelledByAnotherHit" fullname="Darklight.Tests.DarklightAirExpansionTests.SlamLandsExactlyOnceAndCannotBeCancelledByAnotherHit" methodname="SlamLandsExactlyOnceAndCannotBeCancelledByAnotherHit" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="1465825916" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.000362" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1011" name="ThrowLeavesAWindowForTheSecondChase" fullname="Darklight.Tests.DarklightAirExpansionTests.ThrowLeavesAWindowForTheSecondChase" methodname="ThrowLeavesAWindowForTheSecondChase" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="54993816" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.000301" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1023" name="WheelSurgeAcceleratesAlongTheCommittedFacingAndStopsInRecovery" fullname="Darklight.Tests.DarklightAirExpansionTests.WheelSurgeAcceleratesAlongTheCommittedFacingAndStopsInRecovery" methodname="WheelSurgeAcceleratesAlongTheCommittedFacingAndStopsInRecovery" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="665344683" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.000717" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1021" name="WhiffCannotEnterAnAirFinisherDuringRecovery" fullname="Darklight.Tests.DarklightAirExpansionTests.WhiffCannotEnterAnAirFinisherDuringRecovery" methodname="WhiffCannotEnterAnAirFinisherDuringRecovery" classname="Darklight.Tests.DarklightAirExpansionTests" runstate="Runnable" seed="1516491697" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:23Z" duration="0.000478" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1034" name="DarklightAudioCompletionTests" fullname="Darklight.Tests.DarklightAudioCompletionTests" classname="Darklight.Tests.DarklightAudioCompletionTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:24Z" duration="0.155808" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1042" name="ExistingCompletionBanksExistAndRemainBlockedBySilentAutomation" fullname="Darklight.Tests.DarklightAudioCompletionTests.ExistingCompletionBanksExistAndRemainBlockedBySilentAutomation" methodname="ExistingCompletionBanksExistAndRemainBlockedBySilentAutomation" classname="Darklight.Tests.DarklightAudioCompletionTests" runstate="Runnable" seed="1218648557" result="Passed" start-time="2026-10-31 23:36:23Z" end-time="2026-10-31 23:36:24Z" duration="0.143172" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1036" name="FormDissipationAndFrenzyExpiryHaveIndependentSingleEdges" fullname="Darklight.Tests.DarklightAudioCompletionTests.FormDissipationAndFrenzyExpiryHaveIndependentSingleEdges" methodname="FormDissipationAndFrenzyExpiryHaveIndependentSingleEdges" classname="Darklight.Tests.DarklightAudioCompletionTests" runstate="Runnable" seed="1326499504" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000538" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1035" name="HeadphoneEquipCompletionIsQuietButRemovalAndInterruptionNotifyOnce" fullname="Darklight.Tests.DarklightAudioCompletionTests.HeadphoneEquipCompletionIsQuietButRemovalAndInterruptionNotifyOnce" methodname="HeadphoneEquipCompletionIsQuietButRemovalAndInterruptionNotifyOnce" classname="Darklight.Tests.DarklightAudioCompletionTests" runstate="Runnable" seed="1402445578" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000354" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1037" name="PauseDeathAndMapBaselinesDoNotReplayOldPowerEndsOnResume" fullname="Darklight.Tests.DarklightAudioCompletionTests.PauseDeathAndMapBaselinesDoNotReplayOldPowerEndsOnResume" methodname="PauseDeathAndMapBaselinesDoNotReplayOldPowerEndsOnResume" classname="Darklight.Tests.DarklightAudioCompletionTests" runstate="Runnable" seed="1692879277" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000239" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1038" name="RealBloodRecoveryWaitsForResourcesAndNotifiesOnlyOnce" fullname="Darklight.Tests.DarklightAudioCompletionTests.RealBloodRecoveryWaitsForResourcesAndNotifiesOnlyOnce" methodname="RealBloodRecoveryWaitsForResourcesAndNotifiesOnlyOnce" classname="Darklight.Tests.DarklightAudioCompletionTests" runstate="Runnable" seed="660919262" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.001898" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1039" name="RealResonanceDurationDoesNotCountAsCooldownCompletion" fullname="Darklight.Tests.DarklightAudioCompletionTests.RealResonanceDurationDoesNotCountAsCooldownCompletion" methodname="RealResonanceDurationDoesNotCountAsCooldownCompletion" classname="Darklight.Tests.DarklightAudioCompletionTests" runstate="Runnable" seed="2113456270" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000706" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1040" name="SelectionAndLoadCannotManufactureCooldownNotifications" fullname="Darklight.Tests.DarklightAudioCompletionTests.SelectionAndLoadCannotManufactureCooldownNotifications" methodname="SelectionAndLoadCannotManufactureCooldownNotifications" classname="Darklight.Tests.DarklightAudioCompletionTests" runstate="Runnable" seed="554759474" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000312" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1041" name="SimultaneousCompletionsCoalesceWithoutRepeatedCue" fullname="Darklight.Tests.DarklightAudioCompletionTests.SimultaneousCompletionsCoalesceWithoutRepeatedCue" methodname="SimultaneousCompletionsCoalesceWithoutRepeatedCue" classname="Darklight.Tests.DarklightAudioCompletionTests" runstate="Runnable" seed="2123771347" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000174" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1043" name="DarklightAudioExpansionTests" fullname="Darklight.Tests.DarklightAudioExpansionTests" classname="Darklight.Tests.DarklightAudioExpansionTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.025056" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1048" name="ContactCadenceRequiresWalkingAndRealDisplacement" fullname="Darklight.Tests.DarklightAudioExpansionTests.ContactCadenceRequiresWalkingAndRealDisplacement" methodname="ContactCadenceRequiresWalkingAndRealDisplacement" classname="Darklight.Tests.DarklightAudioExpansionTests" runstate="Runnable" seed="493136096" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000849" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1045" name="EveryEnemyAndBossHasItsOwnIdentityAndBossSignature" fullname="Darklight.Tests.DarklightAudioExpansionTests.EveryEnemyAndBossHasItsOwnIdentityAndBossSignature" methodname="EveryEnemyAndBossHasItsOwnIdentityAndBossSignature" classname="Darklight.Tests.DarklightAudioExpansionTests" runstate="Runnable" seed="1219833607" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.003525" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1044" name="EveryTerrainHasDistinctPrefixAndSeveralImportedSamples" fullname="Darklight.Tests.DarklightAudioExpansionTests.EveryTerrainHasDistinctPrefixAndSeveralImportedSamples" methodname="EveryTerrainHasDistinctPrefixAndSeveralImportedSamples" classname="Darklight.Tests.DarklightAudioExpansionTests" runstate="Runnable" seed="1601026798" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.007248" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1049" name="HigherPriorityTerrainAreaOverridesRegionalFloor" fullname="Darklight.Tests.DarklightAudioExpansionTests.HigherPriorityTerrainAreaOverridesRegionalFloor" methodname="HigherPriorityTerrainAreaOverridesRegionalFloor" classname="Darklight.Tests.DarklightAudioExpansionTests" runstate="Runnable" seed="1803075983" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.002429" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1046" name="OriginalExpansionIsMonoAndBoundedWithStreamedAmbientLayers" fullname="Darklight.Tests.DarklightAudioExpansionTests.OriginalExpansionIsMonoAndBoundedWithStreamedAmbientLayers" methodname="OriginalExpansionIsMonoAndBoundedWithStreamedAmbientLayers" classname="Darklight.Tests.DarklightAudioExpansionTests" runstate="Runnable" seed="1951877313" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.002530" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1047" name="SkinThemesUseStreamingStereoAndBackgroundLoading" fullname="Darklight.Tests.DarklightAudioExpansionTests.SkinThemesUseStreamingStereoAndBackgroundLoading" methodname="SkinThemesUseStreamingStereoAndBackgroundLoading" classname="Darklight.Tests.DarklightAudioExpansionTests" runstate="Runnable" seed="714214475" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.004187" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1050" name="VoiceCapsAndPriorityPredicatesKeepCrowdsAndTransitionsBounded" fullname="Darklight.Tests.DarklightAudioExpansionTests.VoiceCapsAndPriorityPredicatesKeepCrowdsAndTransitionsBounded" methodname="VoiceCapsAndPriorityPredicatesKeepCrowdsAndTransitionsBounded" classname="Darklight.Tests.DarklightAudioExpansionTests" runstate="Runnable" seed="2123400677" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000482" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1054" name="DarklightBindingTests" fullname="Darklight.Tests.DarklightBindingTests" classname="Darklight.Tests.DarklightBindingTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.245803" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1061" name="ConflictingTriggerIsRejectedAndExplicitSwapPreservesBothActions" fullname="Darklight.Tests.DarklightBindingTests.ConflictingTriggerIsRejectedAndExplicitSwapPreservesBothActions" methodname="ConflictingTriggerIsRejectedAndExplicitSwapPreservesBothActions" classname="Darklight.Tests.DarklightBindingTests" runstate="Runnable" seed="747907203" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.113853" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1062" name="DeviceRestorePreservesOtherDeviceAndMapContextDoesNotCauseFalseConflict" fullname="Darklight.Tests.DarklightBindingTests.DeviceRestorePreservesOtherDeviceAndMapContextDoesNotCauseFalseConflict" methodname="DeviceRestorePreservesOtherDeviceAndMapContextDoesNotCauseFalseConflict" classname="Darklight.Tests.DarklightBindingTests" runstate="Runnable" seed="1409196282" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.018872" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1059" name="KeyboardRemapSurvivesNewInputInstanceAndProducesActualAction" fullname="Darklight.Tests.DarklightBindingTests.KeyboardRemapSurvivesNewInputInstanceAndProducesActualAction" methodname="KeyboardRemapSurvivesNewInputInstanceAndProducesActualAction" classname="Darklight.Tests.DarklightBindingTests" runstate="Runnable" seed="511972889" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.051657" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1063" name="LegacyBindingsMigrateDespiteRandomOldIdentifiers" fullname="Darklight.Tests.DarklightBindingTests.LegacyBindingsMigrateDespiteRandomOldIdentifiers" methodname="LegacyBindingsMigrateDespiteRandomOldIdentifiers" classname="Darklight.Tests.DarklightBindingTests" runstate="Runnable" seed="593139816" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.007086" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1056" name="MotorcycleHeavyHasAnIndependentGamepadCommandAndRemappableSlot" fullname="Darklight.Tests.DarklightBindingTests.MotorcycleHeavyHasAnIndependentGamepadCommandAndRemappableSlot" methodname="MotorcycleHeavyHasAnIndependentGamepadCommandAndRemappableSlot" classname="Darklight.Tests.DarklightBindingTests" runstate="Runnable" seed="1409839865" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.008039" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1055" name="MotorcycleHeavyReachesCombatFromKeyboardWithoutStealingSawOrBike" fullname="Darklight.Tests.DarklightBindingTests.MotorcycleHeavyReachesCombatFromKeyboardWithoutStealingSawOrBike" methodname="MotorcycleHeavyReachesCombatFromKeyboardWithoutStealingSawOrBike" classname="Darklight.Tests.DarklightBindingTests" runstate="Runnable" seed="1123497253" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.004479" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1057" name="MotorcycleMouseButtonsRetainSawAndMountedCommands" fullname="Darklight.Tests.DarklightBindingTests.MotorcycleMouseButtonsRetainSawAndMountedCommands" methodname="MotorcycleMouseButtonsRetainSawAndMountedCommands" classname="Darklight.Tests.DarklightBindingTests" runstate="Runnable" seed="1034452748" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.025365" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1060" name="MovementCompositePartCanBeChangedAndSaved" fullname="Darklight.Tests.DarklightBindingTests.MovementCompositePartCanBeChangedAndSaved" methodname="MovementCompositePartCanBeChangedAndSaved" classname="Darklight.Tests.DarklightBindingTests" runstate="Runnable" seed="1635176737" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.006375" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1058" name="NewCampaignHasBothTransformationsWithoutCompletingStory" fullname="Darklight.Tests.DarklightBindingTests.NewCampaignHasBothTransformationsWithoutCompletingStory" methodname="NewCampaignHasBothTransformationsWithoutCompletingStory" classname="Darklight.Tests.DarklightBindingTests" runstate="Runnable" seed="1198288672" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.001846" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1064" name="UnusedOptionalGamepadSlotCanBeAssignedAndEmergencyMenuCannotBeStolen" fullname="Darklight.Tests.DarklightBindingTests.UnusedOptionalGamepadSlotCanBeAssignedAndEmergencyMenuCannotBeStolen" methodname="UnusedOptionalGamepadSlotCanBeAssignedAndEmergencyMenuCannotBeStolen" classname="Darklight.Tests.DarklightBindingTests" runstate="Runnable" seed="590894834" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.002826" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1068" name="DarklightCombatBufferRegressionTests" fullname="Darklight.Tests.DarklightCombatBufferRegressionTests" classname="Darklight.Tests.DarklightCombatBufferRegressionTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.022309" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="ParameterizedMethod" id="1072" name="ConfirmedSpecialCancelConsumesCompetingBufferedLight" fullname="Darklight.Tests.DarklightCombatBufferRegressionTests.ConfirmedSpecialCancelConsumesCompetingBufferedLight" classname="Darklight.Tests.DarklightCombatBufferRegressionTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.004824" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1069" name="ConfirmedSpecialCancelConsumesCompetingBufferedLight(Skill)" fullname="Darklight.Tests.DarklightCombatBufferRegressionTests.ConfirmedSpecialCancelConsumesCompetingBufferedLight(Skill)" methodname="ConfirmedSpecialCancelConsumesCompetingBufferedLight" classname="Darklight.Tests.DarklightCombatBufferRegressionTests" runstate="Runnable" seed="1757848993" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.001361" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1070" name="ConfirmedSpecialCancelConsumesCompetingBufferedLight(Aerial)" fullname="Darklight.Tests.DarklightCombatBufferRegressionTests.ConfirmedSpecialCancelConsumesCompetingBufferedLight(Aerial)" methodname="ConfirmedSpecialCancelConsumesCompetingBufferedLight" classname="Darklight.Tests.DarklightCombatBufferRegressionTests" runstate="Runnable" seed="1517577301" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000250" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1071" name="ConfirmedSpecialCancelConsumesCompetingBufferedLight(WeaponSpecial)" fullname="Darklight.Tests.DarklightCombatBufferRegressionTests.ConfirmedSpecialCancelConsumesCompetingBufferedLight(WeaponSpecial)" methodname="ConfirmedSpecialCancelConsumesCompetingBufferedLight" classname="Darklight.Tests.DarklightCombatBufferRegressionTests" runstate="Runnable" seed="1332141889" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000192" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="ParameterizedMethod" id="1076" name="MissingOptionalSkillDoesNotCrashOrDiscardValidLight" fullname="Darklight.Tests.DarklightCombatBufferRegressionTests.MissingOptionalSkillDoesNotCrashOrDiscardValidLight" classname="Darklight.Tests.DarklightCombatBufferRegressionTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.003685" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1074" name="MissingOptionalSkillDoesNotCrashOrDiscardValidLight(0)" fullname="Darklight.Tests.DarklightCombatBufferRegressionTests.MissingOptionalSkillDoesNotCrashOrDiscardValidLight(0)" methodname="MissingOptionalSkillDoesNotCrashOrDiscardValidLight" classname="Darklight.Tests.DarklightCombatBufferRegressionTests" runstate="Runnable" seed="482948935" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.001427" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1075" name="MissingOptionalSkillDoesNotCrashOrDiscardValidLight(2)" fullname="Darklight.Tests.DarklightCombatBufferRegressionTests.MissingOptionalSkillDoesNotCrashOrDiscardValidLight(2)" methodname="MissingOptionalSkillDoesNotCrashOrDiscardValidLight" classname="Darklight.Tests.DarklightCombatBufferRegressionTests" runstate="Runnable" seed="443165646" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000134" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1073" name="ReleasingChargedAttackConsumesLightBufferedDuringCharge" fullname="Darklight.Tests.DarklightCombatBufferRegressionTests.ReleasingChargedAttackConsumesLightBufferedDuringCharge" methodname="ReleasingChargedAttackConsumesLightBufferedDuringCharge" classname="Darklight.Tests.DarklightCombatBufferRegressionTests" runstate="Runnable" seed="2072992308" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000597" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1077" name="DarklightCombatTests" fullname="Darklight.Tests.DarklightCombatTests" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.048947" total="26" passed="26" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1081" name="BufferChainsAndSuspensionClearsIt" fullname="Darklight.Tests.DarklightCombatTests.BufferChainsAndSuspensionClearsIt" methodname="BufferChainsAndSuspensionClearsIt" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="642491699" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.001137" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1078" name="ContactIsUniqueAndWindupCannotDamage" fullname="Darklight.Tests.DarklightCombatTests.ContactIsUniqueAndWindupCannotDamage" methodname="ContactIsUniqueAndWindupCannotDamage" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="34404205" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000445" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1096" name="DeathCancelsAttackAndFutureInputs" fullname="Darklight.Tests.DarklightCombatTests.DeathCancelsAttackAndFutureInputs" methodname="DeathCancelsAttackAndFutureInputs" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="1662788368" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000334" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1093" name="DifferentCommandsCannotExtendAnOldDodge" fullname="Darklight.Tests.DarklightCombatTests.DifferentCommandsCannotExtendAnOldDodge" methodname="DifferentCommandsCannotExtendAnOldDodge" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="130948385" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000370" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1105" name="DirectionMatchesTheEightViewContract" fullname="Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.010258" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1097" name="DirectionMatchesTheEightViewContract(0,-1,0)" fullname="Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract(0,-1,0)" methodname="DirectionMatchesTheEightViewContract" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="2023716717" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.001111" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1098" name="DirectionMatchesTheEightViewContract(-1,-1,1)" fullname="Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract(-1,-1,1)" methodname="DirectionMatchesTheEightViewContract" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="1883993501" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000580" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1099" name="DirectionMatchesTheEightViewContract(-1,0,2)" fullname="Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract(-1,0,2)" methodname="DirectionMatchesTheEightViewContract" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="1862817690" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000196" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1100" name="DirectionMatchesTheEightViewContract(-1,1,3)" fullname="Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract(-1,1,3)" methodname="DirectionMatchesTheEightViewContract" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="1191570040" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000237" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1101" name="DirectionMatchesTheEightViewContract(0,1,4)" fullname="Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract(0,1,4)" methodname="DirectionMatchesTheEightViewContract" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="1694712858" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000239" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1102" name="DirectionMatchesTheEightViewContract(1,1,5)" fullname="Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract(1,1,5)" methodname="DirectionMatchesTheEightViewContract" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="189715101" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000179" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1103" name="DirectionMatchesTheEightViewContract(1,0,6)" fullname="Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract(1,0,6)" methodname="DirectionMatchesTheEightViewContract" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="1549607183" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000191" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1104" name="DirectionMatchesTheEightViewContract(1,-1,7)" fullname="Darklight.Tests.DarklightCombatTests.DirectionMatchesTheEightViewContract(1,-1,7)" methodname="DirectionMatchesTheEightViewContract" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="400523702" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000204" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1087" name="DodgeHasLimitedInvulnerabilityAndCooldown" fullname="Darklight.Tests.DarklightCombatTests.DodgeHasLimitedInvulnerabilityAndCooldown" methodname="DodgeHasLimitedInvulnerabilityAndCooldown" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="1261868008" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000892" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1088" name="DodgeOnlyCancelsDuringRecovery" fullname="Darklight.Tests.DarklightCombatTests.DodgeOnlyCancelsDuringRecovery" methodname="DodgeOnlyCancelsDuringRecovery" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="1787766473" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000415" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1086" name="HeavyFinishesALightCombo" fullname="Darklight.Tests.DarklightCombatTests.HeavyFinishesALightCombo" methodname="HeavyFinishesALightCombo" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="1890696375" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000632" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1080" name="HitstopPreservesInputWithoutAdvancingContact" fullname="Darklight.Tests.DarklightCombatTests.HitstopPreservesInputWithoutAdvancingContact" methodname="HitstopPreservesInputWithoutAdvancingContact" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="1231973640" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000445" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1085" name="HoldingHeavyChoosesTheChargedProfile" fullname="Darklight.Tests.DarklightCombatTests.HoldingHeavyChoosesTheChargedProfile" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.006741" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1083" name="HoldingHeavyChoosesTheChargedProfile(0.1f,Heavy)" fullname="Darklight.Tests.DarklightCombatTests.HoldingHeavyChoosesTheChargedProfile(0.1f,Heavy)" methodname="HoldingHeavyChoosesTheChargedProfile" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="583824070" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000674" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1084" name="HoldingHeavyChoosesTheChargedProfile(0.7f,Charged)" fullname="Darklight.Tests.DarklightCombatTests.HoldingHeavyChoosesTheChargedProfile(0.7f,Charged)" methodname="HoldingHeavyChoosesTheChargedProfile" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="737055836" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000254" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1079" name="LargeFrameCrossesContactWithoutLosingTheHit" fullname="Darklight.Tests.DarklightCombatTests.LargeFrameCrossesContactWithoutLosingTheHit" methodname="LargeFrameCrossesContactWithoutLosingTheHit" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="1506808378" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000354" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1090" name="LateParryDoesNotDefend" fullname="Darklight.Tests.DarklightCombatTests.LateParryDoesNotDefend" methodname="LateParryDoesNotDefend" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="1311028392" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000458" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1094" name="ParryCancelsRecoveryButNeverDeletesTheContactFrame" fullname="Darklight.Tests.DarklightCombatTests.ParryCancelsRecoveryButNeverDeletesTheContactFrame" methodname="ParryCancelsRecoveryButNeverDeletesTheContactFrame" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="856943915" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000459" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1091" name="ParryCannotProtectTheCharactersBack" fullname="Darklight.Tests.DarklightCombatTests.ParryCannotProtectTheCharactersBack" methodname="ParryCannotProtectTheCharactersBack" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="1369569332" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000530" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1089" name="ParryOpensCounterThenExpires" fullname="Darklight.Tests.DarklightCombatTests.ParryOpensCounterThenExpires" methodname="ParryOpensCounterThenExpires" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="422072898" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000331" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1092" name="SkillCooldownCannotBeBypassedWithRepeatedInputs" fullname="Darklight.Tests.DarklightCombatTests.SkillCooldownCannotBeBypassedWithRepeatedInputs" methodname="SkillCooldownCannotBeBypassedWithRepeatedInputs" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="1234188440" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000362" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1095" name="SkillsDoNotCarryAnUnwantedQueuedLightIntoRecovery" fullname="Darklight.Tests.DarklightCombatTests.SkillsDoNotCarryAnUnwantedQueuedLightIntoRecovery" methodname="SkillsDoNotCarryAnUnwantedQueuedLightIntoRecovery" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="1751710351" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000406" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1082" name="ThreeLightsThenResetAfterInactivity" fullname="Darklight.Tests.DarklightCombatTests.ThreeLightsThenResetAfterInactivity" methodname="ThreeLightsThenResetAfterInactivity" classname="Darklight.Tests.DarklightCombatTests" runstate="Runnable" seed="1371383949" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000340" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1141" name="DarklightDeliveredSfxTests" fullname="Darklight.Tests.DarklightDeliveredSfxTests" classname="Darklight.Tests.DarklightDeliveredSfxTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.041222" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1145" name="DeliveredRequestsCannotAllocateOrPlayUnderSilentAutomation" fullname="Darklight.Tests.DarklightDeliveredSfxTests.DeliveredRequestsCannotAllocateOrPlayUnderSilentAutomation" methodname="DeliveredRequestsCannotAllocateOrPlayUnderSilentAutomation" classname="Darklight.Tests.DarklightDeliveredSfxTests" runstate="Runnable" seed="1035097447" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000818" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1143" name="ImportedDeliveryIsBoundedMonoPcmWithPeakHeadroom" fullname="Darklight.Tests.DarklightDeliveredSfxTests.ImportedDeliveryIsBoundedMonoPcmWithPeakHeadroom" methodname="ImportedDeliveryIsBoundedMonoPcmWithPeakHeadroom" classname="Darklight.Tests.DarklightDeliveredSfxTests" runstate="Runnable" seed="1091431221" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.030561" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1142" name="SuppliedCatalogueContainsNineteenCuesAndRejectsUnreviewedLongSources" fullname="Darklight.Tests.DarklightDeliveredSfxTests.SuppliedCatalogueContainsNineteenCuesAndRejectsUnreviewedLongSources" methodname="SuppliedCatalogueContainsNineteenCuesAndRejectsUnreviewedLongSources" classname="Darklight.Tests.DarklightDeliveredSfxTests" runstate="Runnable" seed="1011022707" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000679" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1144" name="WeaponAndPowerMappingsPreserveSemanticFallbacks" fullname="Darklight.Tests.DarklightDeliveredSfxTests.WeaponAndPowerMappingsPreserveSemanticFallbacks" methodname="WeaponAndPowerMappingsPreserveSemanticFallbacks" classname="Darklight.Tests.DarklightDeliveredSfxTests" runstate="Runnable" seed="1304367675" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000662" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1154" name="DarklightExpansionTests" fullname="Darklight.Tests.DarklightExpansionTests" classname="Darklight.Tests.DarklightExpansionTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.011451" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1161" name="AbilitiesHaveIndependentCostsAndRecoveryWithoutPermanentBuffOnReload" fullname="Darklight.Tests.DarklightExpansionTests.AbilitiesHaveIndependentCostsAndRecoveryWithoutPermanentBuffOnReload" methodname="AbilitiesHaveIndependentCostsAndRecoveryWithoutPermanentBuffOnReload" classname="Darklight.Tests.DarklightExpansionTests" runstate="Runnable" seed="932574977" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000668" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1160" name="CombatRewardsCannotBeMultipliedByTargetsOrPulses" fullname="Darklight.Tests.DarklightExpansionTests.CombatRewardsCannotBeMultipliedByTargetsOrPulses" methodname="CombatRewardsCannotBeMultipliedByTargetsOrPulses" classname="Darklight.Tests.DarklightExpansionTests" runstate="Runnable" seed="1536764262" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000447" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1162" name="HealingSharesCeilingAndStopsDuringPause" fullname="Darklight.Tests.DarklightExpansionTests.HealingSharesCeilingAndStopsDuringPause" methodname="HealingSharesCeilingAndStopsDuringPause" classname="Darklight.Tests.DarklightExpansionTests" runstate="Runnable" seed="91385359" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000435" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1155" name="LegacyMigrationRemovesVisualAgeAndPreservesRewardsFinaleAndRelics" fullname="Darklight.Tests.DarklightExpansionTests.LegacyMigrationRemovesVisualAgeAndPreservesRewardsFinaleAndRelics" methodname="LegacyMigrationRemovesVisualAgeAndPreservesRewardsFinaleAndRelics" classname="Darklight.Tests.DarklightExpansionTests" runstate="Runnable" seed="1737725098" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.002612" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1159" name="UnsupportedOrCorruptSavesAreRejected" fullname="Darklight.Tests.DarklightExpansionTests.UnsupportedOrCorruptSavesAreRejected" classname="Darklight.Tests.DarklightExpansionTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.002587" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1156" name="UnsupportedOrCorruptSavesAreRejected(&quot;bad-json&quot;)" fullname="Darklight.Tests.DarklightExpansionTests.UnsupportedOrCorruptSavesAreRejected(&quot;bad-json&quot;)" methodname="UnsupportedOrCorruptSavesAreRejected" classname="Darklight.Tests.DarklightExpansionTests" runstate="Runnable" seed="644574749" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000323" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1157" name="UnsupportedOrCorruptSavesAreRejected(&quot;{\&quot;version\&quot;:3,\&quot;chapter\&quot;:0,\&quot;level\&quot;:1}&quot;)" fullname="Darklight.Tests.DarklightExpansionTests.UnsupportedOrCorruptSavesAreRejected(&quot;{\&quot;version\&quot;:3,\&quot;chapter\&quot;:0,\&quot;level\&quot;:1}&quot;)" methodname="UnsupportedOrCorruptSavesAreRejected" classname="Darklight.Tests.DarklightExpansionTests" runstate="Runnable" seed="276922056" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000078" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1158" name="UnsupportedOrCorruptSavesAreRejected(&quot;{\&quot;version\&quot;:1,\&quot;chapter\&quot;:-1,\&quot;level\&quot;:1}&quot;)" fullname="Darklight.Tests.DarklightExpansionTests.UnsupportedOrCorruptSavesAreRejected(&quot;{\&quot;version\&quot;:1,\&quot;chapter\&quot;:-1,\&quot;level\&quot;:1}&quot;)" methodname="UnsupportedOrCorruptSavesAreRejected" classname="Darklight.Tests.DarklightExpansionTests" runstate="Runnable" seed="1090637737" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000056" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1163" name="VampireMasteryDoesNotFollowAgeOrGrantFreeAdvancedPowers" fullname="Darklight.Tests.DarklightExpansionTests.VampireMasteryDoesNotFollowAgeOrGrantFreeAdvancedPowers" methodname="VampireMasteryDoesNotFollowAgeOrGrantFreeAdvancedPowers" classname="Darklight.Tests.DarklightExpansionTests" runstate="Runnable" seed="1011294676" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000678" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1263" name="DarklightSaveContractTests" fullname="Darklight.Tests.DarklightSaveContractTests" classname="Darklight.Tests.DarklightSaveContractTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.029627" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1269" name="AudioPreferencesClampVolumeSafely" fullname="Darklight.Tests.DarklightSaveContractTests.AudioPreferencesClampVolumeSafely" methodname="AudioPreferencesClampVolumeSafely" classname="Darklight.Tests.DarklightSaveContractTests" runstate="Runnable" seed="503729123" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.001427" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1266" name="CorruptPrimarySaveFallsBackGracefullyToBackup" fullname="Darklight.Tests.DarklightSaveContractTests.CorruptPrimarySaveFallsBackGracefullyToBackup" methodname="CorruptPrimarySaveFallsBackGracefullyToBackup" classname="Darklight.Tests.DarklightSaveContractTests" runstate="Runnable" seed="1004141431" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.004940" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1267" name="MissingSaveFilesReturnNullWithoutThrowing" fullname="Darklight.Tests.DarklightSaveContractTests.MissingSaveFilesReturnNullWithoutThrowing" methodname="MissingSaveFilesReturnNullWithoutThrowing" classname="Darklight.Tests.DarklightSaveContractTests" runstate="Runnable" seed="1897825595" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.001322" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1264" name="NewProgressHasConsistentInitialContract" fullname="Darklight.Tests.DarklightSaveContractTests.NewProgressHasConsistentInitialContract" methodname="NewProgressHasConsistentInitialContract" classname="Darklight.Tests.DarklightSaveContractTests" runstate="Runnable" seed="471038469" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000757" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1265" name="SaveAndLoadRoundtripPreservesAllCoreProgressFields" fullname="Darklight.Tests.DarklightSaveContractTests.SaveAndLoadRoundtripPreservesAllCoreProgressFields" methodname="SaveAndLoadRoundtripPreservesAllCoreProgressFields" classname="Darklight.Tests.DarklightSaveContractTests" runstate="Runnable" seed="1657630519" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.010101" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1268" name="WeaponEnumIdsMaintainStrictNumericalContinuity" fullname="Darklight.Tests.DarklightSaveContractTests.WeaponEnumIdsMaintainStrictNumericalContinuity" methodname="WeaponEnumIdsMaintainStrictNumericalContinuity" classname="Darklight.Tests.DarklightSaveContractTests" runstate="Runnable" seed="1313559811" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000931" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1272" name="DarklightSimplifiedScopeTests" fullname="Darklight.Tests.DarklightSimplifiedScopeTests" classname="Darklight.Tests.DarklightSimplifiedScopeTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.003923" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1275" name="EclipseAbsolutoPreservesVioletDodgeAndWhiteConfirmedSkillLink" fullname="Darklight.Tests.DarklightSimplifiedScopeTests.EclipseAbsolutoPreservesVioletDodgeAndWhiteConfirmedSkillLink" methodname="EclipseAbsolutoPreservesVioletDodgeAndWhiteConfirmedSkillLink" classname="Darklight.Tests.DarklightSimplifiedScopeTests" runstate="Runnable" seed="2139766804" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000695" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1274" name="NewCampaignDoesNotGainMotorOrLateProgressFromMigration" fullname="Darklight.Tests.DarklightSimplifiedScopeTests.NewCampaignDoesNotGainMotorOrLateProgressFromMigration" methodname="NewCampaignDoesNotGainMotorOrLateProgressFromMigration" classname="Darklight.Tests.DarklightSimplifiedScopeTests" runstate="Runnable" seed="2035918710" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000327" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1273" name="OldRemovedSelectionsMigrateWithoutLosingProgressOrUnlockHistory" fullname="Darklight.Tests.DarklightSimplifiedScopeTests.OldRemovedSelectionsMigrateWithoutLosingProgressOrUnlockHistory" methodname="OldRemovedSelectionsMigrateWithoutLosingProgressOrUnlockHistory" classname="Darklight.Tests.DarklightSimplifiedScopeTests" runstate="Runnable" seed="427131480" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000713" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1302" name="DarklightTechnicalCombatTests" fullname="Darklight.Tests.DarklightTechnicalCombatTests" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" testcasecount="21" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.045377" total="21" passed="21" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1307" name="ConfirmedHitAllowsWeaponChangeWithoutClearingCombo" fullname="Darklight.Tests.DarklightTechnicalCombatTests.ConfirmedHitAllowsWeaponChangeWithoutClearingCombo" methodname="ConfirmedHitAllowsWeaponChangeWithoutClearingCombo" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="1442710316" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.001222" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1319" name="DifficultiesChangeCoordinationReactionAndPatterns" fullname="Darklight.Tests.DarklightTechnicalCombatTests.DifficultiesChangeCoordinationReactionAndPatterns" methodname="DifficultiesChangeCoordinationReactionAndPatterns" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="439551810" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000537" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1306" name="ExpiredBufferedAttackDoesNotFireAfterLongRecovery" fullname="Darklight.Tests.DarklightTechnicalCombatTests.ExpiredBufferedAttackDoesNotFireAfterLongRecovery" methodname="ExpiredBufferedAttackDoesNotFireAfterLongRecovery" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="1857556039" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000306" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1320" name="ExtremeRequiresCompletionAndOldSaveDefaultsRemainValid" fullname="Darklight.Tests.DarklightTechnicalCombatTests.ExtremeRequiresCompletionAndOldSaveDefaultsRemainValid" methodname="ExtremeRequiresCompletionAndOldSaveDefaultsRemainValid" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="1157091526" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000367" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1322" name="HotModelAndStyleLoopDoNotAllocateAfterWarmup" fullname="Darklight.Tests.DarklightTechnicalCombatTests.HotModelAndStyleLoopDoNotAllocateAfterWarmup" methodname="HotModelAndStyleLoopDoNotAllocateAfterWarmup" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="1738082733" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.004722" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1303" name="IntentionalPauseSelectsItsOwnBranch" fullname="Darklight.Tests.DarklightTechnicalCombatTests.IntentionalPauseSelectsItsOwnBranch" methodname="IntentionalPauseSelectsItsOwnBranch" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="1322687450" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000455" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1305" name="LargeFramePreservesEveryAuthoredContactPulse" fullname="Darklight.Tests.DarklightTechnicalCombatTests.LargeFramePreservesEveryAuthoredContactPulse" methodname="LargeFramePreservesEveryAuthoredContactPulse" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="2045156887" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.001055" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1317" name="RepeatingOneOrTwoMovesCannotFarmTopRanks" fullname="Darklight.Tests.DarklightTechnicalCombatTests.RepeatingOneOrTwoMovesCannotFarmTopRanks" methodname="RepeatingOneOrTwoMovesCannotFarmTopRanks" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="682551806" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000415" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1316" name="ThrustGeometryHonorsFacingAndWidthInEveryDirection" fullname="Darklight.Tests.DarklightTechnicalCombatTests.ThrustGeometryHonorsFacingAndWidthInEveryDirection" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.010062" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1308" name="ThrustGeometryHonorsFacingAndWidthInEveryDirection(0)" fullname="Darklight.Tests.DarklightTechnicalCombatTests.ThrustGeometryHonorsFacingAndWidthInEveryDirection(0)" methodname="ThrustGeometryHonorsFacingAndWidthInEveryDirection" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="1523176396" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.001273" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1309" name="ThrustGeometryHonorsFacingAndWidthInEveryDirection(1)" fullname="Darklight.Tests.DarklightTechnicalCombatTests.ThrustGeometryHonorsFacingAndWidthInEveryDirection(1)" methodname="ThrustGeometryHonorsFacingAndWidthInEveryDirection" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="1789615458" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000224" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1310" name="ThrustGeometryHonorsFacingAndWidthInEveryDirection(2)" fullname="Darklight.Tests.DarklightTechnicalCombatTests.ThrustGeometryHonorsFacingAndWidthInEveryDirection(2)" methodname="ThrustGeometryHonorsFacingAndWidthInEveryDirection" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="740542822" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000161" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1311" name="ThrustGeometryHonorsFacingAndWidthInEveryDirection(3)" fullname="Darklight.Tests.DarklightTechnicalCombatTests.ThrustGeometryHonorsFacingAndWidthInEveryDirection(3)" methodname="ThrustGeometryHonorsFacingAndWidthInEveryDirection" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="1107460272" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000170" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1312" name="ThrustGeometryHonorsFacingAndWidthInEveryDirection(4)" fullname="Darklight.Tests.DarklightTechnicalCombatTests.ThrustGeometryHonorsFacingAndWidthInEveryDirection(4)" methodname="ThrustGeometryHonorsFacingAndWidthInEveryDirection" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="1352309504" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000152" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1313" name="ThrustGeometryHonorsFacingAndWidthInEveryDirection(5)" fullname="Darklight.Tests.DarklightTechnicalCombatTests.ThrustGeometryHonorsFacingAndWidthInEveryDirection(5)" methodname="ThrustGeometryHonorsFacingAndWidthInEveryDirection" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="1579873201" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000147" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1314" name="ThrustGeometryHonorsFacingAndWidthInEveryDirection(6)" fullname="Darklight.Tests.DarklightTechnicalCombatTests.ThrustGeometryHonorsFacingAndWidthInEveryDirection(6)" methodname="ThrustGeometryHonorsFacingAndWidthInEveryDirection" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="1005241910" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000149" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1315" name="ThrustGeometryHonorsFacingAndWidthInEveryDirection(7)" fullname="Darklight.Tests.DarklightTechnicalCombatTests.ThrustGeometryHonorsFacingAndWidthInEveryDirection(7)" methodname="ThrustGeometryHonorsFacingAndWidthInEveryDirection" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="1536788934" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000151" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1321" name="TrainingMapHasConnectedWalkableAnchors" fullname="Darklight.Tests.DarklightTechnicalCombatTests.TrainingMapHasConnectedWalkableAnchors" methodname="TrainingMapHasConnectedWalkableAnchors" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="543395768" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.003117" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1304" name="TwoLightsAndHeavySelectTheFinisherBranch" fullname="Darklight.Tests.DarklightTechnicalCombatTests.TwoLightsAndHeavySelectTheFinisherBranch" methodname="TwoLightsAndHeavySelectTheFinisherBranch" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="1268764428" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000382" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1318" name="VariedEffectiveMovesCanReachSSSAndDamageReducesRank" fullname="Darklight.Tests.DarklightTechnicalCombatTests.VariedEffectiveMovesCanReachSSSAndDamageReducesRank" methodname="VariedEffectiveMovesCanReachSSSAndDamageReducesRank" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="152547920" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000409" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1323" name="VioletDodgePreservesTheComboForAnExtension" fullname="Darklight.Tests.DarklightTechnicalCombatTests.VioletDodgePreservesTheComboForAnExtension" methodname="VioletDodgePreservesTheComboForAnExtension" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="1096615458" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000400" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1324" name="WhiteFormCanLinkAConfirmedHitIntoItsSkill" fullname="Darklight.Tests.DarklightTechnicalCombatTests.WhiteFormCanLinkAConfirmedHitIntoItsSkill" methodname="WhiteFormCanLinkAConfirmedHitIntoItsSkill" classname="Darklight.Tests.DarklightTechnicalCombatTests" runstate="Runnable" seed="365226698" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000375" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1325" name="DarklightTechnicalDeliveryTests" fullname="Darklight.Tests.DarklightTechnicalDeliveryTests" classname="Darklight.Tests.DarklightTechnicalDeliveryTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.279849" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1328" name="EveryFormHasAllTwelveDirectionalActionPoses" fullname="Darklight.Tests.DarklightTechnicalDeliveryTests.EveryFormHasAllTwelveDirectionalActionPoses" methodname="EveryFormHasAllTwelveDirectionalActionPoses" classname="Darklight.Tests.DarklightTechnicalDeliveryTests" runstate="Runnable" seed="1882277034" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.273104" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1327" name="ExistingAudioCuesResolveWithoutStartingAnySource" fullname="Darklight.Tests.DarklightTechnicalDeliveryTests.ExistingAudioCuesResolveWithoutStartingAnySource" methodname="ExistingAudioCuesResolveWithoutStartingAnySource" classname="Darklight.Tests.DarklightTechnicalDeliveryTests" runstate="Runnable" seed="1329515012" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.003864" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1326" name="LandingContactIsUniquePausedSafelyAndDiscardedByDeathOrMapChange" fullname="Darklight.Tests.DarklightTechnicalDeliveryTests.LandingContactIsUniquePausedSafelyAndDiscardedByDeathOrMapChange" methodname="LandingContactIsUniquePausedSafelyAndDiscardedByDeathOrMapChange" classname="Darklight.Tests.DarklightTechnicalDeliveryTests" runstate="Runnable" seed="1342849386" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000401" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1329" name="DarklightTestOutputTests" fullname="Darklight.Tests.DarklightTestOutputTests" classname="Darklight.Tests.DarklightTestOutputTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.019953" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1335" name="AbsoluteAndEmptyFileTargetsAreRejected" fullname="Darklight.Tests.DarklightTestOutputTests.AbsoluteAndEmptyFileTargetsAreRejected" methodname="AbsoluteAndEmptyFileTargetsAreRejected" classname="Darklight.Tests.DarklightTestOutputTests" runstate="Runnable" seed="636332313" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.001869" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1330" name="NestedArtifactsRemainUnderThePortableRoot" fullname="Darklight.Tests.DarklightTestOutputTests.NestedArtifactsRemainUnderThePortableRoot" methodname="NestedArtifactsRemainUnderThePortableRoot" classname="Darklight.Tests.DarklightTestOutputTests" runstate="Runnable" seed="249389711" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.001307" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1334" name="TraversalCannotCreateExternalArtifactDirectories" fullname="Darklight.Tests.DarklightTestOutputTests.TraversalCannotCreateExternalArtifactDirectories" classname="Darklight.Tests.DarklightTestOutputTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.010472" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1331" name="TraversalCannotCreateExternalArtifactDirectories(&quot;../outside&quot;)" fullname="Darklight.Tests.DarklightTestOutputTests.TraversalCannotCreateExternalArtifactDirectories(&quot;../outside&quot;)" methodname="TraversalCannotCreateExternalArtifactDirectories" classname="Darklight.Tests.DarklightTestOutputTests" runstate="Runnable" seed="1788326046" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000397" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1332" name="TraversalCannotCreateExternalArtifactDirectories(&quot;nested/../../outside&quot;)" fullname="Darklight.Tests.DarklightTestOutputTests.TraversalCannotCreateExternalArtifactDirectories(&quot;nested/../../outside&quot;)" methodname="TraversalCannotCreateExternalArtifactDirectories" classname="Darklight.Tests.DarklightTestOutputTests" runstate="Runnable" seed="1111053062" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000122" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1333" name="TraversalCannotCreateExternalArtifactDirectories(&quot;..\\outside&quot;)" fullname="Darklight.Tests.DarklightTestOutputTests.TraversalCannotCreateExternalArtifactDirectories(&quot;..\\outside&quot;)" methodname="TraversalCannotCreateExternalArtifactDirectories" classname="Darklight.Tests.DarklightTestOutputTests" runstate="Runnable" seed="221025635" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.000092" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+          <test-suite type="TestFixture" id="1379" name="DarklightWeaponRedesignTests" fullname="Darklight.Tests.DarklightWeaponRedesignTests" classname="Darklight.Tests.DarklightWeaponRedesignTests" runstate="Runnable" testcasecount="10" result="Failed" site="Child" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:25Z" duration="0.262562" total="10" passed="9" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1386" name="ActionSelectionRetainsLivingIdleAndMovementTransitions" fullname="Darklight.Tests.DarklightWeaponRedesignTests.ActionSelectionRetainsLivingIdleAndMovementTransitions" methodname="ActionSelectionRetainsLivingIdleAndMovementTransitions" classname="Darklight.Tests.DarklightWeaponRedesignTests" runstate="Runnable" seed="1746670236" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:24Z" duration="0.001663" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1389" name="AuthoredFistPunchesUseIndependentWholeFiguresAndClearEveryLegacyPalette" fullname="Darklight.Tests.DarklightWeaponRedesignTests.AuthoredFistPunchesUseIndependentWholeFiguresAndClearEveryLegacyPalette" methodname="AuthoredFistPunchesUseIndependentWholeFiguresAndClearEveryLegacyPalette" classname="Darklight.Tests.DarklightWeaponRedesignTests" runstate="Runnable" seed="1598207090" result="Passed" start-time="2026-10-31 23:36:24Z" end-time="2026-10-31 23:36:25Z" duration="0.143179" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1382" name="CombatRequiresExactExistingPhaseMappingAndCannotUseIdleTiming" fullname="Darklight.Tests.DarklightWeaponRedesignTests.CombatRequiresExactExistingPhaseMappingAndCannotUseIdleTiming" methodname="CombatRequiresExactExistingPhaseMappingAndCannotUseIdleTiming" classname="Darklight.Tests.DarklightWeaponRedesignTests" runstate="Runnable" seed="954030145" result="Passed" start-time="2026-10-31 23:36:25Z" end-time="2026-10-31 23:36:25Z" duration="0.001037" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1381" name="IdleTimingsLoopUsingTheirDeclaredDurationsWithoutResampling" fullname="Darklight.Tests.DarklightWeaponRedesignTests.IdleTimingsLoopUsingTheirDeclaredDurationsWithoutResampling" methodname="IdleTimingsLoopUsingTheirDeclaredDurationsWithoutResampling" classname="Darklight.Tests.DarklightWeaponRedesignTests" runstate="Runnable" seed="1077205645" result="Passed" start-time="2026-10-31 23:36:25Z" end-time="2026-10-31 23:36:25Z" duration="0.000303" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1387" name="ImportedIdleContextsResolveTheirOwnFiguresAndClearPreviousFormMasks" fullname="Darklight.Tests.DarklightWeaponRedesignTests.ImportedIdleContextsResolveTheirOwnFiguresAndClearPreviousFormMasks" methodname="ImportedIdleContextsResolveTheirOwnFiguresAndClearPreviousFormMasks" classname="Darklight.Tests.DarklightWeaponRedesignTests" runstate="Runnable" seed="810890048" result="Failed" start-time="2026-10-31 23:36:25Z" end-time="2026-10-31 23:36:25Z" duration="0.093261" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected string length 33 but was 52. Strings differ at index 18.
+  Expected: "Redesign_ReqKatanaEclipseSouth_00"
+  But was:  "Redesign_ReqKatanaNormalNeutralIdleS_SW_W20261025_00"
+  -----------------------------^
+]]></message>
+                <stack-trace><![CDATA[at Darklight.Tests.DarklightWeaponRedesignTests.ImportedIdleContextsResolveTheirOwnFiguresAndClearPreviousFormMasks () [0x0010d] in C:\Users\Usuario\Documents\Codex\2026-10-10\f\darklight-requiem-main\Assets\Darklight\Tests\EditMode\DarklightWeaponRedesignTests.cs:94
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1384" name="MotorcycleAndArchivedSkinContextsNeverCollide" fullname="Darklight.Tests.DarklightWeaponRedesignTests.MotorcycleAndArchivedSkinContextsNeverCollide" methodname="MotorcycleAndArchivedSkinContextsNeverCollide" classname="Darklight.Tests.DarklightWeaponRedesignTests" runstate="Runnable" seed="173348329" result="Passed" start-time="2026-10-31 23:36:25Z" end-time="2026-10-31 23:36:25Z" duration="0.000301" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1383" name="MotorcycleAttackRequiresExplicitPreparationContactAndRecovery" fullname="Darklight.Tests.DarklightWeaponRedesignTests.MotorcycleAttackRequiresExplicitPreparationContactAndRecovery" methodname="MotorcycleAttackRequiresExplicitPreparationContactAndRecovery" classname="Darklight.Tests.DarklightWeaponRedesignTests" runstate="Runnable" seed="1722281028" result="Passed" start-time="2026-10-31 23:36:25Z" end-time="2026-10-31 23:36:25Z" duration="0.000254" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1380" name="OnlyReviewedWholeFiguresWithPreservedSourcesCanActivate" fullname="Darklight.Tests.DarklightWeaponRedesignTests.OnlyReviewedWholeFiguresWithPreservedSourcesCanActivate" methodname="OnlyReviewedWholeFiguresWithPreservedSourcesCanActivate" classname="Darklight.Tests.DarklightWeaponRedesignTests" runstate="Runnable" seed="1230399255" result="Passed" start-time="2026-10-31 23:36:25Z" end-time="2026-10-31 23:36:25Z" duration="0.000276" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1388" name="OptionalEquipmentIconsKeepLegacyFallbackOutsideExactWeaponAndForm" fullname="Darklight.Tests.DarklightWeaponRedesignTests.OptionalEquipmentIconsKeepLegacyFallbackOutsideExactWeaponAndForm" methodname="OptionalEquipmentIconsKeepLegacyFallbackOutsideExactWeaponAndForm" classname="Darklight.Tests.DarklightWeaponRedesignTests" runstate="Runnable" seed="696414219" result="Passed" start-time="2026-10-31 23:36:25Z" end-time="2026-10-31 23:36:25Z" duration="0.014069" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1385" name="PartialCatalogCannotShadowAnotherDirectionFormWeaponOrClip" fullname="Darklight.Tests.DarklightWeaponRedesignTests.PartialCatalogCannotShadowAnotherDirectionFormWeaponOrClip" methodname="PartialCatalogCannotShadowAnotherDirectionFormWeaponOrClip" classname="Darklight.Tests.DarklightWeaponRedesignTests" runstate="Runnable" seed="830142221" result="Passed" start-time="2026-10-31 23:36:25Z" end-time="2026-10-31 23:36:25Z" duration="0.000438" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Usuario/AppData/LocalLow/Fabio/DARKLIGHT REQUIEM\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/Fabio/DARKLIGHT REQUIEM\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

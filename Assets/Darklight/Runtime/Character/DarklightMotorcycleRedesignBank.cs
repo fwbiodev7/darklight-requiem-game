@@ -22,7 +22,58 @@ namespace Darklight
             public Motorcycle motorcycle;
             public MotorcycleIdle motorcycleIdle;
             public DualSaws motorcycleDualSaws;
+            public Transition motorcycleTransition;
+            public Frame[] frames;
         }
+        [Serializable] sealed class Frame {public string id;public int durationMs;}
+        [Serializable] sealed class Transition {public int skin,weapon,form,direction,dualSawModules;public bool onFootAndMounted;public string[] assemble,separate;}
+        sealed class TransitionPage {public Sprite[] assemble,separate;public int[] assembleMs,separateMs;}
+        static readonly TransitionPage[] transitionPages=new TransitionPage[8];
+        static readonly bool[] transitionAttempted=new bool[8];
+        static readonly HashSet<Sprite> transitionSprites=new();
+        static readonly string[] directionNames={"S","SW","W","NW","N","NE","E","SE"};
+        public static string TransitionResource(int direction)=>direction<0||direction>7?null:
+            DarklightWeaponRedesignBank.Root+"ReqMotoNormalJoinSeparate"+directionNames[direction]+"20261028V1";
+        static TransitionPage LoadTransition(int direction)
+        {
+            if(direction<0||direction>7)return null;
+            if(transitionAttempted[direction])return transitionPages[direction];transitionAttempted[direction]=true;
+            string resource=TransitionResource(direction);var text=Resources.Load<TextAsset>(resource);if(text==null)return null;
+            var sheet=JsonUtility.FromJson<Sheet>(text.text);var entry=sheet?.motorcycleTransition;
+            if(sheet==null||!sheet.wholeFigures||sheet.nativeSize?.Length!=2||sheet.pixelsPerUnit<=0||
+                sheet.status!="visual-reviewed"&&sheet.status!="imported"&&sheet.status!="runtime-verified"||
+                entry==null||entry.skin!=0||entry.weapon!=3||entry.form!=0||entry.direction!=direction||
+                !entry.onFootAndMounted||entry.dualSawModules!=2||entry.assemble==null||entry.assemble.Length<2||entry.separate==null||entry.separate.Length<2||sheet.frames==null)return null;
+            var sprites=new Dictionary<string,Sprite>(StringComparer.Ordinal);var timings=new Dictionary<string,int>(StringComparer.Ordinal);
+            foreach(var sprite in Resources.LoadAll<Sprite>(resource))
+                if(sprite.texture.width!=sheet.nativeSize[0]||sprite.texture.height!=sheet.nativeSize[1]||
+                    Mathf.Abs(sprite.pixelsPerUnit-sheet.pixelsPerUnit)>.001f||!sprites.TryAdd(sprite.name,sprite))return null;
+            foreach(var frame in sheet.frames)
+                if(frame==null||string.IsNullOrEmpty(frame.id)||frame.durationMs<=0||!timings.TryAdd(frame.id,frame.durationMs))return null;
+            var page=new TransitionPage{assemble=new Sprite[entry.assemble.Length],separate=new Sprite[entry.separate.Length],
+                assembleMs=new int[entry.assemble.Length],separateMs=new int[entry.separate.Length]};
+            for(int phase=0;phase<2;phase++)
+            {
+                var names=phase==0?entry.assemble:entry.separate;var frames=phase==0?page.assemble:page.separate;var ms=phase==0?page.assembleMs:page.separateMs;
+                var used=new HashSet<string>(StringComparer.Ordinal);
+                for(int i=0;i<names.Length;i++)
+                    if(names[i]==null||!names[i].StartsWith("Redesign_",StringComparison.Ordinal)||!used.Add(names[i])||
+                        !sprites.TryGetValue(names[i],out frames[i])||!timings.TryGetValue(names[i],out ms[i]))return null;
+            }
+            transitionPages[direction]=page;
+            foreach(var sprite in page.assemble){authored.Add(sprite);transitionSprites.Add(sprite);}
+            foreach(var sprite in page.separate){authored.Add(sprite);transitionSprites.Add(sprite);}return page;
+        }
+        public static Sprite TransitionPose(int direction,bool assemble,float progress)
+        {
+            var page=LoadTransition(direction);if(page==null||float.IsNaN(progress)||float.IsInfinity(progress))return null;
+            var frames=assemble?page.assemble:page.separate;var timings=assemble?page.assembleMs:page.separateMs;
+            int duration=0;foreach(int ms in timings)duration+=ms;
+            float time=Mathf.Clamp01(progress)*duration;
+            for(int i=0;i<frames.Length;i++){if(time<timings[i])return frames[i];time-=timings[i];}
+            return frames[frames.Length-1];
+        }
+        public static bool IsTransition(Sprite sprite)=>sprite!=null&&transitionSprites.Contains(sprite);
         [Serializable] sealed class DualSaws {public int skin,form;public bool onFoot,dualSaws,staticReadyViews;public string[] ready,attackSouth;}
         sealed class DualPage {public Sprite[] ready,attack;}
         static DualPage dualPage;static bool dualAttempted;
@@ -165,6 +216,15 @@ namespace Darklight
             poseFallback=true;
             if(rider==null||model==null||!rider.Active)return null;
             int direction=DarklightCharacterView.DirectionIndex(model.Facing);
+            // Fit the reviewed mechanism to the existing committed windows. No
+            // attack delay, damage event, input lock or new combat clock is added.
+            if(rider.Dashing&&model.State==CombatState.Attack&&model.Attack!=null)
+            {
+                var a=model.Attack;float t=model.StateTime;Sprite transition=null;
+                if(t<a.startup)transition=TransitionPose(direction,true,t/Mathf.Max(.001f,a.startup));
+                else if(t>=a.startup+a.active)transition=TransitionPose(direction,false,(t-a.startup-a.active)/Mathf.Max(.001f,a.recovery));
+                if(transition!=null){poseFallback=false;return transition;}
+            }
             if(!rider.MountedPresentation)
             {
                 var saws=DualSawsPose(direction,model);
@@ -197,6 +257,6 @@ namespace Darklight
             block.SetTexture("_VampireMask",Texture2D.blackTexture);block.SetVector("_CanonicalSkinShift",Vector4.zero);
             renderer.SetPropertyBlock(block);
         }
-        public static void ClearCache(){Array.Clear(pages,0,pages.Length);Array.Clear(attempted,0,attempted.Length);Array.Clear(idlePages,0,idlePages.Length);idleAttempted=dualAttempted=false;dualPage=null;dualSprites.Clear();authored.Clear();}
+        public static void ClearCache(){Array.Clear(pages,0,pages.Length);Array.Clear(attempted,0,attempted.Length);Array.Clear(idlePages,0,idlePages.Length);Array.Clear(transitionPages,0,transitionPages.Length);Array.Clear(transitionAttempted,0,transitionAttempted.Length);transitionSprites.Clear();idleAttempted=dualAttempted=false;dualPage=null;dualSprites.Clear();authored.Clear();}
     }
 }

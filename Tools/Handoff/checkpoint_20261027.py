@@ -42,6 +42,8 @@ def document():
     archive=release.get('zip')
     zip_text=f"ZIP: `{Path(archive).name}`; {release.get('zipBytes',0)} bytes; SHA-256 `{release.get('zipSha256','pendente')}`." if archive else 'ZIP desta revisão: ainda pendente.'
     native_text=(f"Standalone automático: {automatic['samples']} cenários, success={automatic['success']}. Execução sem ativar a janela; medir foco separadamente. Recibo em `{automatic['folder']}/result.json`." if automatic else 'Standalone desta revisão: pendente. A build anterior abriu o menu fora do Editor; Computer Use foi interrompido pelo Escape humano e não certifica gameplay completo. Os seis arquivos de save da campanha permaneceram idênticos; somente um arquivo de analytics Unity mudou. As quatro chaves de sessão Unity alteradas foram restauradas; preferências preservadas após restauração.')
+    if automatic and automatic['storage'].get('preferencesPreservedAfterRestoration') is False:
+        native_text+=' Os saves permaneceram intactos, mas o auxiliar de27/10 não reverteu as preferências de posição/resolução da janela. Esse recibo não certifica preservação de todas as preferências. O auxiliar foi corrigido em28/10; a nova restauração requer validação própria.'
     text=f'''# DARKLIGHT: REQUIEM — concluídos e pendências para 28/10/2026
 
 Atualizado em {datetime.now():%d/%m/%Y %H:%M:%S}, Brasília. Documento único da rodada. O redesign completo continua parcial.

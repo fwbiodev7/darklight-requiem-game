@@ -40,6 +40,23 @@ namespace Darklight.Tests
             Assert.That(DarklightWeaponRedesignBank.Frame(page,0,"Other_weapon_contact"),Is.EqualTo(-1));
             page.sourceSpriteNames[3]=page.sourceSpriteNames[2];Assert.That(DarklightWeaponRedesignBank.ValidPage(page),Is.False);
         }
+        [Test] public void MotorcycleAttackRequiresExplicitPreparationContactAndRecovery()
+        {
+            var page=Idle();page.weapon=3;page.action="Attack";page.attackKey="Dentes Cruzados";page.loop=false;
+            Assert.That(DarklightWeaponRedesignBank.ValidPage(page),Is.False);
+            page.startupFrames=2;page.activeFrames=1;
+            Assert.That(DarklightWeaponRedesignBank.ValidPage(page),Is.True);
+            page.activeFrames=2;
+            Assert.That(DarklightWeaponRedesignBank.ValidPage(page),Is.False,"The impact cannot consume all recovery figures");
+        }
+        [Test] public void MotorcycleAndArchivedSkinContextsNeverCollide()
+        {
+            var motorcycle=Idle();motorcycle.weapon=3;
+            var archive=Idle();archive.skin=1;archive.weapon=0;archive.id="ArchiveOtherSkin";
+            var catalog=new DarklightWeaponRedesignCatalog{schemaVersion=1,fallbackPolicy=DarklightWeaponRedesignBank.FallbackPolicy,
+                pages=new[]{motorcycle,archive}};
+            Assert.That(DarklightWeaponRedesignBank.ValidCatalog(catalog),Is.True);
+        }
         [Test] public void PartialCatalogCannotShadowAnotherDirectionFormWeaponOrClip()
         {
             var normal=Idle();var eclipse=Idle();eclipse.id="EclipseIdleS";eclipse.form=2;
@@ -72,6 +89,7 @@ namespace Darklight.Tests
                 var model=new CombatModel(new CombatLoadout());var properties=new MaterialPropertyBlock();int verified=0;
                 foreach(var page in catalog.pages)
                 {
+                    if(page.skin==0&&page.form==2&&(page.weapon==0||page.weapon==2||page.weapon==3)&&!page.fusedEclipse)continue;
                     if(page.action!="Idle"||page.sourceSpriteNames?.Length>0)continue;
                     Assert.That(DarklightWeaponRedesignBank.TryResolve(page.skin,page.weapon,page.form,page.direction,model,Vector2.zero,null,out var sprite),Is.True,page.id);
                     Assert.That(sprite.name,Is.EqualTo(page.spriteNames[0]));Assert.That(sprite.pixelsPerUnit,Is.EqualTo(page.pixelsPerUnit).Within(.001f));
@@ -125,7 +143,8 @@ namespace Darklight.Tests
             try
             {
                 DarklightWeaponRedesignBank.ClearCache();
-                for(int form=0;form<4;form++)
+                Texture normalTexture=null;
+                for(int form=0;form<3;form++)
                 {
                     var model=new CombatModel(loadout);
                     model.Tick(.001f,new CombatInput{lightPressed=true,aim=Vector2.down});
@@ -158,7 +177,9 @@ namespace Darklight.Tests
                         Assert.That(properties.GetVector("_CanonicalSkinShift"),Is.EqualTo(Vector4.zero));
                     }
                     Assert.That(phases.Count,Is.EqualTo(3),"Startup, contact and recovery require their three supplied figures");
-                    Assert.That(textures.Add(texture),Is.True,"Every authored form must have its own full source texture");
+                    if(form==0)normalTexture=texture;
+                    if(form<2)Assert.That(textures.Add(texture),Is.True,"Normal and Ruptura have independent reviewed figures");
+                    else Assert.That(texture,Is.SameAs(normalTexture),"Until fused Eclipse art exists, preserve the new Normal figure without recoloring retired form-2 art");
                 }
             }
             finally

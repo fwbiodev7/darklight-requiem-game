@@ -97,6 +97,11 @@ namespace Darklight.Tests
             Assert.That(fighter.Model.TryAirFollowup(dash,new CombatInput{aim=Vector2.down}),Is.True,"Start the actual dash attack through the combat model");
             Assert.That(game.AbyssRider.MountedPresentation,Is.True,"Vehicle technique owns the mounted presentation");
             view.Present(fighter.Model,Vector2.zero);
+            var assembly=DarklightMotorcycleRedesignBank.TransitionPose(0,true,0);
+            Assert.That(assembly,Is.Not.Null,"The reviewed assembly now owns the dash preparation");
+            Assert.That(art.sprite,Is.SameAs(assembly));
+            fighter.Model.Tick(dash.startup+.01f,default);
+            view.Present(fighter.Model,Vector2.zero);
             var mounted=DarklightMotorcycleRedesignBank.Riding(0,0,0);
             Assert.That(mounted,Is.Not.Null);Assert.That(art.sprite,Is.SameAs(mounted));
             Assert.That(DarklightMotorcycleRedesignBank.IsAuthored(art.sprite),Is.True);

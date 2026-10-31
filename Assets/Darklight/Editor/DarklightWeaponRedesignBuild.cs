@@ -196,7 +196,16 @@ namespace Darklight.Editor
                     ("DarklightDeliveredSfxGameplayTests",2),("DarklightWeaponRedesignGameplayTests",3),("DarklightSimplifiedScopeGameplayTests",3))
             };
             ValidateFreshness(receipt.editMode,receipt.playMode);ValidateRedesign(receipt);ValidateAudio(receipt);
-            string root=Path.GetFullPath("outputs/retomada-20261027"),output=Path.Combine(root,"Windows");
+            string root=Path.GetFullPath("outputs/retomada-20261027");
+            var arguments=Environment.GetCommandLineArgs();int outputIndex=Array.IndexOf(arguments,"-darklightReleaseOutput");
+            if(outputIndex>=0)
+            {
+                Require(outputIndex+1<arguments.Length&&!arguments[outputIndex+1].StartsWith("-",StringComparison.Ordinal),"Provide a release output folder");
+                root=Path.GetFullPath(arguments[outputIndex+1]);
+                string allowed=Path.GetFullPath("outputs")+Path.DirectorySeparatorChar;
+                Require(root.StartsWith(allowed,StringComparison.OrdinalIgnoreCase),"Release output must remain inside this project's outputs folder");
+            }
+            string output=Path.Combine(root,"Windows");
             Directory.CreateDirectory(root);receipt.previousRedesignBuild=PreservePrevious(root,output);Directory.CreateDirectory(output);
             receipt.executable=Path.Combine(output,"DarklightRequiem.exe");
             try

@@ -8,9 +8,10 @@ namespace Darklight
     {
         public string id,action,attackKey,resourcePath,imageSha256,sourcePath,sourceSha256,status;
         public int skin,weapon,form,direction;
+        public int startupFrames,activeFrames;
         public int[] sourceSize,nativeSize,durationMs;
         public float pixelsPerUnit;
-        public bool wholeFigures,loop;
+        public bool wholeFigures,loop,fusedEclipse;
         public string[] spriteNames,sourceSpriteNames;
         [NonSerialized] internal Sprite[] frames;
         [NonSerialized] internal bool attempted;
@@ -37,7 +38,7 @@ namespace Darklight
         static readonly Dictionary<(DarklightWeaponRedesignPage,AttackDefinition),bool> wholeMappings=new();
         static readonly MaterialPropertyBlock block=new();
         static bool attempted,iconsAttempted;
-        static int Context(int skin,int weapon,int form,int direction)=>((skin*3+weapon)*4+form)*8+direction;
+        static int Context(int skin,int weapon,int form,int direction)=>((skin*4+weapon)*4+form)*8+direction;
         public static bool Sha256(string value)
         {
             if(value==null||value.Length!=64)return false;
@@ -52,7 +53,7 @@ namespace Darklight
             action=="Dodge"||action=="Parry"||action=="Hurt"||action=="Dead"||action=="Transformation";
         public static bool ValidPage(DarklightWeaponRedesignPage page)
         {
-            if(page==null||string.IsNullOrEmpty(page.id)||page.skin<0||page.skin>1||page.weapon<0||page.weapon>2||
+            if(page==null||string.IsNullOrEmpty(page.id)||page.skin<0||page.skin>1||page.weapon<0||page.weapon>3||
                 page.form<0||page.form>3||page.direction<0||page.direction>7||!KnownAction(page.action)||!page.wholeFigures||
                 page.status!="visual-reviewed"&&page.status!="imported"&&page.status!="runtime-verified"||
                 string.IsNullOrEmpty(page.resourcePath)||!page.resourcePath.StartsWith(Root,StringComparison.Ordinal)||
@@ -70,7 +71,9 @@ namespace Darklight
                 foreach(string name in page.sourceSpriteNames)if(string.IsNullOrEmpty(name)||!names.Add(name))return false;
                 return true;
             }
-            if(!TimedAction(page.action)||page.durationMs?.Length!=page.spriteNames.Length)return false;
+            bool authoredAttack=page.action=="Attack"&&page.startupFrames>0&&page.activeFrames>0&&
+                page.startupFrames<page.spriteNames.Length&&page.activeFrames<page.spriteNames.Length-page.startupFrames;
+            if((!TimedAction(page.action)&&!authoredAttack)||page.durationMs?.Length!=page.spriteNames.Length)return false;
             foreach(int duration in page.durationMs)if(duration<=0)return false;
             return true;
         }
@@ -91,6 +94,10 @@ namespace Darklight
             if(!ValidCatalog(data)){Debug.LogError("Weapon redesign catalog rejected: invalid descriptor or duplicate context");return;}
             foreach(var page in data.pages)
             {
+                // Archived form 2 is the former Eclipse, not the fused violet/silver form.
+                // Its descriptors remain readable, but only explicitly authored fusion
+                // pages may enter the active resolver; gaps retain the new Normal art.
+                if(page.skin==0&&page.form==2&&(page.weapon==0||page.weapon==2||page.weapon==3)&&!page.fusedEclipse)continue;
                 int key=Context(page.skin,page.weapon,page.form,page.direction);
                 if(!contexts.TryGetValue(key,out var entries))contexts[key]=entries=new();
                 entries.Add(page);
@@ -137,9 +144,9 @@ namespace Darklight
         public static bool TryResolve(int skin,int weapon,int form,int direction,CombatModel model,Vector2 movement,
             Sprite existing,out Sprite sprite,string livingClip=null,float livingTime=-1)
         {
-            sprite=null;if(model==null||skin<0||skin>1||weapon<0||weapon>2||form<0||form>3||direction<0||direction>7)return false;
+            sprite=null;if(model==null||skin<0||skin>1||weapon<0||weapon>3||form<0||form>3||direction<0||direction>7)return false;
             LoadCatalog();
-            if(skin==0&&(weapon==0||weapon==2)&&form<3)
+            if(skin==0&&(weapon==0||weapon==2||weapon==3)&&form<3)
             {
                 if(model.State==CombatState.Attack&&model.Attack!=null)
                     return TryResolveAttack(weapon,form,direction,model,out sprite);
@@ -198,10 +205,18 @@ namespace Darklight
                 if(!contexts.TryGetValue(Context(0,weapon,sourceForm,direction),out var entries))continue;
                 for(int pass=0;pass<2;pass++)foreach(var page in entries)
                 {
-                    if(page.action!="Attack"||page.attackKey!=(pass==0?key:weapon==0?"Leve1":"Direto da Ruína")||!Load(page))continue;
+                    if(page.action!="Attack"||page.attackKey!=(pass==0?key:weapon==0?"Leve1":weapon==3?"Serra de Entrada":"Direto da Ruína")||!Load(page))continue;
                     int count=page.frames.Length,index;
                     var attack=model.Attack;float time=Mathf.Max(0,model.StateTime);
-                    if(count==1)index=0;
+                    if(page.startupFrames>0&&page.activeFrames>0)
+                    {
+                        int start,countInPhase;float progress;
+                        if(time<attack.startup){start=0;countInPhase=page.startupFrames;progress=time/Mathf.Max(.0001f,attack.startup);}
+                        else if(time<attack.startup+attack.active){start=page.startupFrames;countInPhase=page.activeFrames;progress=(time-attack.startup)/Mathf.Max(.0001f,attack.active);}
+                        else {start=page.startupFrames+page.activeFrames;countInPhase=count-start;progress=(time-attack.startup-attack.active)/Mathf.Max(.0001f,attack.recovery);}
+                        index=start+Mathf.Min(countInPhase-1,Mathf.FloorToInt(Mathf.Clamp01(progress)*countInPhase));
+                    }
+                    else if(count==1)index=0;
                     else if(count==2)index=time<attack.startup?0:1;
                     else if(time<attack.startup)
                         index=Mathf.Min(count-3,Mathf.FloorToInt(time/Mathf.Max(.0001f,attack.startup)*(count-2)));

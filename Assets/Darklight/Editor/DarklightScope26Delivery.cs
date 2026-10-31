@@ -23,6 +23,11 @@ namespace Darklight.Editor
             DarklightWeaponRedesignImporter.ImportStandalone(sideIdlePath);
             DarklightWeaponRedesignImporter.ImportStandalone("Assets/Darklight/Resources/Darklight/CombatContacts20261027/ContactBursts.png");
             DarklightWeaponRedesignImporter.ImportStandalone("Assets/Darklight/Resources/"+DarklightMotorcycleRedesignBank.RequiemDualSawsResource+".png");
+            for(int direction=0;direction<8;direction++)
+            {
+                string transition="Assets/Darklight/Resources/"+DarklightMotorcycleRedesignBank.TransitionResource(direction)+".png";
+                if(File.Exists(transition))DarklightWeaponRedesignImporter.ImportStandalone(transition);
+            }
             AssetDatabase.SaveAssets();DarklightWeaponRedesignBank.ClearCache();DarklightMotorcycleRedesignBank.ClearCache();
             Debug.Log("SCOPE_20261026_IMPORTED: whole figures preserved; runtime verification remains separate.");
         }

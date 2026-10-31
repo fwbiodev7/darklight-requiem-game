@@ -100,8 +100,9 @@ namespace Darklight
             UsesPoseFallback=false;UsesUserWholeSprite=false;
             if(selected==null&&!currentOnly){selected=TodayCharacterBank.StablePose(skin,0,weapon,direction);UsesPoseFallback=selected!=null;}
             if(selected==null&&!currentOnly){selected=DarklightUserSpriteBank.Resolve(skin,0,weapon,model,movement);UsesUserWholeSprite=selected!=null;}
-            UsesWeaponRedesignSprite=DarklightWeaponRedesignBank.TryResolve(skin,weapon,previewing?previewForm:game?.PresentedForm??0,
-                direction,model,movement,selected,out var redesigned,previewing?null:living.Clip,
+            Sprite redesigned=null;
+            UsesWeaponRedesignSprite=(!riding||game?.AbyssRider?.MountedPresentation!=true)&&DarklightWeaponRedesignBank.TryResolve(skin,weapon,previewing?previewForm:game?.PresentedForm??0,
+                direction,model,movement,selected,out redesigned,previewing?null:living.Clip,
                 previewing?-1:living.Clip=="Idle"?living.BreathClock:living.ClipTime);
             if(UsesWeaponRedesignSprite){selected=redesigned;UsesPoseFallback=UsesUserWholeSprite=false;}
             if(selected!=null||currentOnly)display.sprite=selected;

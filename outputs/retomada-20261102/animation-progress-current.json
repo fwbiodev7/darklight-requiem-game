@@ -1,0 +1,2423 @@
+{
+  "updatedUtc": "2026-11-02T19:58:06.148729+00:00",
+  "scope": "Réquiem Normal; session delivery totals only",
+  "complete": false,
+  "testsDeferredByUser": true,
+  "currentRuntimeChangesTested": false,
+  "catalogSha256": "a5c997ce80f2944b58aab4375dbad6ae8461d62f3c9e95a71d9774b2c7d3fde6",
+  "totals": {
+    "clips": 89,
+    "figures": 324,
+    "sheets": 33,
+    "unityImportedClips": 89,
+    "historicallyRuntimeVerifiedClips": 15
+  },
+  "coverage": {
+    "Katana": {
+      "OnFoot": {
+        "Attack:Leve1": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqKatanaNormalNeutralLight1S_Wv1_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralLight1S_Wv1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "W",
+              "id": "ReqKatanaNormalNeutralLight1S_Wv1_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralLight1S_Wv1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqKatanaNormalNeutralLight1SWv2_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralLight1SWv2",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqKatanaNormalNeutralLeve1NW_N20261025_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralLeve1NW_N20261025",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "N",
+              "id": "ReqKatanaNormalNeutralLeve1NW_N20261025_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralLeve1NW_N20261025",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqKatanaNormalNeutralLeve1NE20261025_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralLeve1NE20261025",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "E",
+              "id": "ReqKatanaNormalNeutralLeve1E_SE20261025_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralLeve1E_SE20261025",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqKatanaNormalNeutralLeve1E_SE20261025_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralLeve1E_SE20261025",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            }
+          ]
+        },
+        "Walk": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqKatanaNormalNeutralWalkS20261024V5_Walk_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralWalkS20261024V5",
+              "figures": 6,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqKatanaNormalWalkSW_W20261026ApprovedV1_Walk_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalWalkSW_W20261026ApprovedV1",
+              "figures": 6,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "W",
+              "id": "ReqKatanaNormalWalkSW_W20261026ApprovedV1_Walk_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalWalkSW_W20261026ApprovedV1",
+              "figures": 6,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqKatanaNormalWalkNW_N20261027Selected_Walk_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalWalkNW_N20261027Selected",
+              "figures": 6,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "N",
+              "id": "ReqKatanaNormalWalkNW_N20261027Selected_Walk_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalWalkNW_N20261027Selected",
+              "figures": 6,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_Walk_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": true,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "E",
+              "id": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_Walk_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": true,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_Walk_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": true,
+              "statusScope": "session-receipt"
+            }
+          ]
+        },
+        "Idle": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqKatanaNormalNeutralIdleS_SW_W20261025_Idle_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleS_SW_W20261025",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqKatanaNormalNeutralIdleS_SW_W20261025_Idle_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleS_SW_W20261025",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "W",
+              "id": "ReqKatanaNormalNeutralIdleS_SW_W20261025_Idle_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleS_SW_W20261025",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqKatanaNormalNeutralIdleNW_N_NE20261025_Idle_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleNW_N_NE20261025",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "N",
+              "id": "ReqKatanaNormalNeutralIdleNW_N_NE20261025_Idle_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleNW_N_NE20261025",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqKatanaNormalNeutralIdleNW_N_NE20261025_Idle_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleNW_N_NE20261025",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "E",
+              "id": "ReqKatanaNormalNeutralIdleE_SE20261025_Idle_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleE_SE20261025",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqKatanaNormalNeutralIdleE_SE20261025_Idle_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleE_SE20261025",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            }
+          ]
+        },
+        "Attack:Leve2": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqKatanaNormalLeve2S_SW_W1850_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve2S_SW_W1850",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqKatanaNormalLeve2S_SW_W1850_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve2S_SW_W1850",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "W",
+              "id": "ReqKatanaNormalLeve2S_SW_W1850_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve2S_SW_W1850",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqKatanaNormalLeve2NW_N_NE1850_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve2NW_N_NE1850",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "N",
+              "id": "ReqKatanaNormalLeve2NW_N_NE1850_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve2NW_N_NE1850",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqKatanaNormalLeve2NW_N_NE1850_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve2NW_N_NE1850",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "E",
+              "id": "ReqKatanaNormalLeve2E_SE1850_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve2E_SE1850",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqKatanaNormalLeve2E_SE1850_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve2E_SE1850",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            }
+          ]
+        },
+        "Attack:Leve3": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqKatanaNormalLeve3S_SW_W20261028Selected_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve3S_SW_W20261028Selected",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqKatanaNormalLeve3S_SW_W20261028Selected_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve3S_SW_W20261028Selected",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "W",
+              "id": "ReqKatanaNormalLeve3S_SW_W20261028Selected_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve3S_SW_W20261028Selected",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "E",
+              "id": "ReqKatanaNormalLeve3E_SE20261028Selected_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve3E_SE20261028Selected",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqKatanaNormalLeve3E_SE20261028Selected_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve3E_SE20261028Selected",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqKatanaNormalLeve3NW_N_NE20261101V1_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve3NW_N_NE20261101V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "N",
+              "id": "ReqKatanaNormalLeve3NW_N_NE20261101V1_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve3NW_N_NE20261101V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqKatanaNormalLeve3NW_N_NE20261101V1_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve3NW_N_NE20261101V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            }
+          ]
+        },
+        "Dodge": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqKatanaNormalDodgeS_SW_W20261101RepairV2_Dodge_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalDodgeS_SW_W20261101RepairV2",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqKatanaNormalDodgeS_SW_W20261101RepairV2_Dodge_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalDodgeS_SW_W20261101RepairV2",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "W",
+              "id": "ReqKatanaNormalDodgeS_SW_W20261101RepairV2_Dodge_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalDodgeS_SW_W20261101RepairV2",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqKatanaNormalDodgeNW_N20261101RepairV2_Dodge_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalDodgeNW_N20261101RepairV2",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "N",
+              "id": "ReqKatanaNormalDodgeNW_N20261101RepairV2_Dodge_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalDodgeNW_N20261101RepairV2",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "E",
+              "id": "ReqKatanaNormalDodgeE_SE20261101RepairV2_Dodge_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalDodgeE_SE20261101RepairV2",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqKatanaNormalDodgeE_SE20261101RepairV2_Dodge_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalDodgeE_SE20261101RepairV2",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqKatanaNormalDodgeNE20261101RepairV6_Dodge_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalDodgeNE20261101RepairV6",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            }
+          ]
+        },
+        "Attack:Pesado": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "E",
+              "id": "ReqKatanaNormalPesadoE_SE20261102V1_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalPesadoE_SE20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": true,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqKatanaNormalPesadoE_SE20261102V1_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalPesadoE_SE20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": true,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqKatanaNormalPesadoNW_N_NE20261102V2_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalPesadoNW_N_NE20261102V2",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": true,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "N",
+              "id": "ReqKatanaNormalPesadoNW_N_NE20261102V2_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalPesadoNW_N_NE20261102V2",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": true,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqKatanaNormalPesadoNW_N_NE20261102V2_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalPesadoNW_N_NE20261102V2",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": true,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "S",
+              "id": "ReqKatanaNormalPesadoS_SW_W20261102V1_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalPesadoS_SW_W20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": true,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqKatanaNormalPesadoS_SW_W20261102V1_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalPesadoS_SW_W20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": true,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "W",
+              "id": "ReqKatanaNormalPesadoS_SW_W20261102V1_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalPesadoS_SW_W20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": true,
+              "statusScope": "session-receipt"
+            }
+          ]
+        },
+        "Attack:Carregado": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "E",
+              "id": "ReqKatanaNormalCarregadoE_SE20261102V1_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalCarregadoE_SE20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqKatanaNormalCarregadoE_SE20261102V1_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalCarregadoE_SE20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "N",
+              "id": "ReqKatanaNormalCarregadoN_NE20261102V3_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalCarregadoN_NE20261102V3",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqKatanaNormalCarregadoN_NE20261102V3_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalCarregadoN_NE20261102V3",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "S",
+              "id": "ReqKatanaNormalCarregadoS_SW20261102V2_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalCarregadoS_SW20261102V2",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqKatanaNormalCarregadoS_SW20261102V2_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalCarregadoS_SW20261102V2",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "W",
+              "id": "ReqKatanaNormalCarregadoW_NW20261102V2_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalCarregadoW_NW20261102V2",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqKatanaNormalCarregadoW_NW20261102V2_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalCarregadoW_NW20261102V2",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            }
+          ]
+        },
+        "Attack:ContraAtaque": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqKatanaNormalContraAtaqueS_SW_W20261102V1_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalContraAtaqueS_SW_W20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqKatanaNormalContraAtaqueS_SW_W20261102V1_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalContraAtaqueS_SW_W20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "W",
+              "id": "ReqKatanaNormalContraAtaqueS_SW_W20261102V1_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalContraAtaqueS_SW_W20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqKatanaNormalContraAtaqueNW_N_NE20261102V1_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalContraAtaqueNW_N_NE20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "N",
+              "id": "ReqKatanaNormalContraAtaqueNW_N_NE20261102V1_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalContraAtaqueNW_N_NE20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqKatanaNormalContraAtaqueNW_N_NE20261102V1_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalContraAtaqueNW_N_NE20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "E",
+              "id": "ReqKatanaNormalContraAtaqueE_SE20261102V1_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalContraAtaqueE_SE20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqKatanaNormalContraAtaqueE_SE20261102V1_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalContraAtaqueE_SE20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            }
+          ]
+        },
+        "Attack:OndaDoVeu": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqKatanaNormalOndaDoVeuS_SW20261102V1_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalOndaDoVeuS_SW20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqKatanaNormalOndaDoVeuS_SW20261102V1_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalOndaDoVeuS_SW20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "W",
+              "id": "ReqKatanaNormalOndaDoVeuW_NW_N20261102V1_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalOndaDoVeuW_NW_N20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqKatanaNormalOndaDoVeuW_NW_N20261102V1_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalOndaDoVeuW_NW_N20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "N",
+              "id": "ReqKatanaNormalOndaDoVeuW_NW_N20261102V1_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalOndaDoVeuW_NW_N20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqKatanaNormalOndaDoVeuNE_E_SE20261102V1_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalOndaDoVeuNE_E_SE20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "E",
+              "id": "ReqKatanaNormalOndaDoVeuNE_E_SE20261102V1_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalOndaDoVeuNE_E_SE20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqKatanaNormalOndaDoVeuNE_E_SE20261102V1_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalOndaDoVeuNE_E_SE20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            }
+          ]
+        },
+        "Attack:KatanaAerial": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqKatanaNormalKatanaAerialS_SW_W20261102V1_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalKatanaAerialS_SW_W20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqKatanaNormalKatanaAerialS_SW_W20261102V1_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalKatanaAerialS_SW_W20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "W",
+              "id": "ReqKatanaNormalKatanaAerialS_SW_W20261102V1_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalKatanaAerialS_SW_W20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqKatanaNormalKatanaAerialNW_N_NE20261102V5_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalKatanaAerialNW_N_NE20261102V5",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "N",
+              "id": "ReqKatanaNormalKatanaAerialNW_N_NE20261102V5_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalKatanaAerialNW_N_NE20261102V5",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqKatanaNormalKatanaAerialNW_N_NE20261102V5_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalKatanaAerialNW_N_NE20261102V5",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "E",
+              "id": "ReqKatanaNormalKatanaAerialE_SE20261102V5_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalKatanaAerialE_SE20261102V5",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqKatanaNormalKatanaAerialE_SE20261102V5_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalKatanaAerialE_SE20261102V5",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            }
+          ]
+        }
+      }
+    },
+    "Punhos": {
+      "OnFoot": {
+        "Attack:Direto da Ruína": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqFistsNormalDiretoSSWW20261025V2_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalDiretoSSWW20261025V2",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqFistsNormalDiretoSSWW20261025V2_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalDiretoSSWW20261025V2",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "W",
+              "id": "ReqFistsNormalDiretoSSWW20261025V2_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalDiretoSSWW20261025V2",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqFistsNormalDiretoNW20261025V4_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalDiretoNW20261025V4",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "N",
+              "id": "ReqFistsNormalDiretoN_NE20261025V1_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalDiretoN_NE20261025V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqFistsNormalDiretoN_NE20261025V1_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalDiretoN_NE20261025V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "E",
+              "id": "ReqFistsNormalDiretoE_SE20261025V1_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalDiretoE_SE20261025V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqFistsNormalDiretoE_SE20261025V1_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalDiretoE_SE20261025V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            }
+          ]
+        },
+        "Idle": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqFistsNormalIdleS_SW_W20261025V1_Idle_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalIdleS_SW_W20261025V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqFistsNormalIdleS_SW_W20261025V1_Idle_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalIdleS_SW_W20261025V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "W",
+              "id": "ReqFistsNormalIdleS_SW_W20261025V1_Idle_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalIdleS_SW_W20261025V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqFistsNormalIdleNW_NE20261025V1_Idle_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalIdleNW_NE20261025V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqFistsNormalIdleNW_NE20261025V1_Idle_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalIdleNW_NE20261025V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "N",
+              "id": "ReqFistsNormalIdleN20261025V2_Idle_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalIdleN20261025V2",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "E",
+              "id": "ReqFistsNormalIdleE_SE20261025V1_Idle_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalIdleE_SE20261025V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqFistsNormalIdleE_SE20261025V1_Idle_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalIdleE_SE20261025V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            }
+          ]
+        },
+        "Attack:Chute Quebra-Osso": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqFistsNormalChuteSSWWNW20261026Selected_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalChuteSSWWNW20261026Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqFistsNormalChuteSSWWNW20261026Selected_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalChuteSSWWNW20261026Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "W",
+              "id": "ReqFistsNormalChuteSSWWNW20261026Selected_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalChuteSSWWNW20261026Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqFistsNormalChuteSSWWNW20261026Selected_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalChuteSSWWNW20261026Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqFistsNormalChuteNE_E_SE20261027Selected_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalChuteNE_E_SE20261027Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "E",
+              "id": "ReqFistsNormalChuteNE_E_SE20261027Selected_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalChuteNE_E_SE20261027Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqFistsNormalChuteNE_E_SE20261027Selected_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalChuteNE_E_SE20261027Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "N",
+              "id": "ReqFistsNormalChuteN20261027Selected_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalChuteN20261027Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            }
+          ]
+        },
+        "Attack:Ascensão da Ruína": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqFistsNormalHeavySSWWNW20261027V1_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalHeavySSWWNW20261027V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqFistsNormalHeavySSWWNW20261027V1_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalHeavySSWWNW20261027V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "W",
+              "id": "ReqFistsNormalHeavySSWWNW20261027V1_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalHeavySSWWNW20261027V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqFistsNormalHeavySSWWNW20261027V1_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalHeavySSWWNW20261027V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "N",
+              "id": "ReqFistsNormalHeavyNNEESE20261027V1_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalHeavyNNEESE20261027V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqFistsNormalHeavyNNEESE20261027V1_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalHeavyNNEESE20261027V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "E",
+              "id": "ReqFistsNormalHeavyNNEESE20261027V1_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalHeavyNNEESE20261027V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqFistsNormalHeavyNNEESE20261027V1_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalHeavyNNEESE20261027V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            }
+          ]
+        },
+        "Attack:Giro Devastador": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqFistsNormalGiroSSWWNW20261028V1_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalGiroSSWWNW20261028V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqFistsNormalGiroSSWWNW20261028V1_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalGiroSSWWNW20261028V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "W",
+              "id": "ReqFistsNormalGiroSSWWNW20261028V1_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalGiroSSWWNW20261028V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqFistsNormalGiroSSWWNW20261028V1_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalGiroSSWWNW20261028V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "N",
+              "id": "ReqFistsNormalGiroNNEESE20261028Selected_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalGiroNNEESE20261028Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqFistsNormalGiroNNEESE20261028Selected_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalGiroNNEESE20261028Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "E",
+              "id": "ReqFistsNormalGiroNNEESE20261028Selected_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalGiroNNEESE20261028Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqFistsNormalGiroNNEESE20261028Selected_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalGiroNNEESE20261028Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            }
+          ]
+        },
+        "Walk": {
+          "directions": [
+            "S",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [
+            "SW"
+          ],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqFistsNormalWalkS20261101V2Selected_Walk_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalWalkS20261101V2Selected",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "N",
+              "id": "ReqFistsNormalWalkN20261102NaturalV1_Walk_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalWalkN20261102NaturalV1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": true,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqFistsNormalWalkNE_SE20261102FeetFixedV3_Walk_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalWalkNE_SE20261102FeetFixedV3",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": true,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqFistsNormalWalkNE_SE20261102FeetFixedV3_Walk_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalWalkNE_SE20261102FeetFixedV3",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": true,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqFistsNormalWalkNW20261102NaturalV2Selected_Walk_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalWalkNW20261102NaturalV2Selected",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": true,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "W",
+              "id": "ReqFistsNormalWalkW20261102V9Complete_Walk_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalWalkW20261102V9Complete",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "E",
+              "id": "ReqFistsNormalWalkE20261102V11Complete_Walk_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalWalkE20261102V11Complete",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            }
+          ]
+        },
+        "Dodge": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqFistsNormalDodgeS_SW_W20261101V1_Dodge_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalDodgeS_SW_W20261101V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqFistsNormalDodgeS_SW_W20261101V1_Dodge_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalDodgeS_SW_W20261101V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "W",
+              "id": "ReqFistsNormalDodgeS_SW_W20261101V1_Dodge_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalDodgeS_SW_W20261101V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqFistsNormalDodgeNW_N_NE20261101V1_Dodge_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalDodgeNW_N_NE20261101V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "N",
+              "id": "ReqFistsNormalDodgeNW_N_NE20261101V1_Dodge_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalDodgeNW_N_NE20261101V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqFistsNormalDodgeNW_N_NE20261101V1_Dodge_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalDodgeNW_N_NE20261101V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "E",
+              "id": "ReqFistsNormalDodgeE_SE20261101V1_Dodge_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalDodgeE_SE20261101V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqFistsNormalDodgeE_SE20261101V1_Dodge_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalDodgeE_SE20261101V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            }
+          ]
+        },
+        "Attack:Martelo da Ruína": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqFistsNormalMarteloS_SW_W_NW20261102V1_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalMarteloS_SW_W_NW20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqFistsNormalMarteloS_SW_W_NW20261102V1_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalMarteloS_SW_W_NW20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "W",
+              "id": "ReqFistsNormalMarteloS_SW_W_NW20261102V1_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalMarteloS_SW_W_NW20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqFistsNormalMarteloS_SW_W_NW20261102V1_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalMarteloS_SW_W_NW20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "N",
+              "id": "ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "E",
+              "id": "ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            }
+          ]
+        },
+        "Attack:Juízo da Ruína": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqFistsNormalJuizoS_SW_W_NW20261102V1_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalJuizoS_SW_W_NW20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqFistsNormalJuizoS_SW_W_NW20261102V1_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalJuizoS_SW_W_NW20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "W",
+              "id": "ReqFistsNormalJuizoS_SW_W_NW20261102V1_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalJuizoS_SW_W_NW20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqFistsNormalJuizoS_SW_W_NW20261102V1_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalJuizoS_SW_W_NW20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "N",
+              "id": "ReqFistsNormalJuizoN_NE_E_SE20261102V1_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalJuizoN_NE_E_SE20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqFistsNormalJuizoN_NE_E_SE20261102V1_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalJuizoN_NE_E_SE20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "E",
+              "id": "ReqFistsNormalJuizoN_NE_E_SE20261102V1_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalJuizoN_NE_E_SE20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqFistsNormalJuizoN_NE_E_SE20261102V1_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalJuizoN_NE_E_SE20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            }
+          ]
+        },
+        "Attack:Resposta Brutal": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqFistsNormalRespostaS_SW_W_NW20261102V1_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalRespostaS_SW_W_NW20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqFistsNormalRespostaS_SW_W_NW20261102V1_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalRespostaS_SW_W_NW20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "W",
+              "id": "ReqFistsNormalRespostaS_SW_W_NW20261102V1_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalRespostaS_SW_W_NW20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqFistsNormalRespostaS_SW_W_NW20261102V1_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalRespostaS_SW_W_NW20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "N",
+              "id": "ReqFistsNormalRespostaN_NE_E_SE20261102V1_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalRespostaN_NE_E_SE20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqFistsNormalRespostaN_NE_E_SE20261102V1_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalRespostaN_NE_E_SE20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "E",
+              "id": "ReqFistsNormalRespostaN_NE_E_SE20261102V1_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalRespostaN_NE_E_SE20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqFistsNormalRespostaN_NE_E_SE20261102V1_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalRespostaN_NE_E_SE20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            }
+          ]
+        },
+        "Attack:Cataclismo da Ruína": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqFistsNormalCataclismoS_SW_W_NW20261102V1_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalCataclismoS_SW_W_NW20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqFistsNormalCataclismoS_SW_W_NW20261102V1_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalCataclismoS_SW_W_NW20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "W",
+              "id": "ReqFistsNormalCataclismoS_SW_W_NW20261102V1_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalCataclismoS_SW_W_NW20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqFistsNormalCataclismoS_SW_W_NW20261102V1_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalCataclismoS_SW_W_NW20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "N",
+              "id": "ReqFistsNormalCataclismoN_NE_E_SE20261102V1_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalCataclismoN_NE_E_SE20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqFistsNormalCataclismoN_NE_E_SE20261102V1_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalCataclismoN_NE_E_SE20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "E",
+              "id": "ReqFistsNormalCataclismoN_NE_E_SE20261102V1_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalCataclismoN_NE_E_SE20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqFistsNormalCataclismoN_NE_E_SE20261102V1_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqFistsNormalCataclismoN_NE_E_SE20261102V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            }
+          ]
+        }
+      }
+    },
+    "Moto": {
+      "OnFoot": {
+        "Attack:Dentes Cruzados": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "SW",
+              "id": "ReqMotoNormalDentesSW_W20261028V1_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalDentesSW_W20261028V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "W",
+              "id": "ReqMotoNormalDentesSW_W20261028V1_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalDentesSW_W20261028V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqMotoNormalDentesNW_N_NE20261031V1_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalDentesNW_N_NE20261031V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "N",
+              "id": "ReqMotoNormalDentesNW_N_NE20261031V1_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalDentesNW_N_NE20261031V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqMotoNormalDentesNW_N_NE20261031V1_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalDentesNW_N_NE20261031V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "S",
+              "id": "ReqMotoNormalDentesS_E_SE20261031V1_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalDentesS_E_SE20261031V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "E",
+              "id": "ReqMotoNormalDentesS_E_SE20261031V1_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalDentesS_E_SE20261031V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqMotoNormalDentesS_E_SE20261031V1_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalDentesS_E_SE20261031V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            }
+          ]
+        },
+        "Dodge": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqMotoNormalDodgeS_SW_W20261101Selected_Dodge_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalDodgeS_SW_W20261101Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqMotoNormalDodgeS_SW_W20261101Selected_Dodge_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalDodgeS_SW_W20261101Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "W",
+              "id": "ReqMotoNormalDodgeS_SW_W20261101Selected_Dodge_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalDodgeS_SW_W20261101Selected",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqMotoNormalDodgeNW_N_NE20261101V1_Dodge_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalDodgeNW_N_NE20261101V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "N",
+              "id": "ReqMotoNormalDodgeNW_N_NE20261101V1_Dodge_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalDodgeNW_N_NE20261101V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqMotoNormalDodgeNW_N_NE20261101V1_Dodge_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalDodgeNW_N_NE20261101V1",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "E",
+              "id": "ReqMotoNormalDodgeE_SE20261101V5FistsAligned_Dodge_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalDodgeE_SE20261101V5FistsAligned",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqMotoNormalDodgeE_SE20261101V5FistsAligned_Dodge_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalDodgeE_SE20261101V5FistsAligned",
+              "figures": 3,
+              "visualReviewed": true,
+              "unityImported": null,
+              "runtimeVerified": null,
+              "statusScope": "previous-session-see-historical-receipts"
+            }
+          ]
+        },
+        "Attack:Serra de Entrada": {
+          "directions": [
+            "S",
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE",
+            "E",
+            "SE"
+          ],
+          "missingDirections": [],
+          "clips": [
+            {
+              "direction": "S",
+              "id": "ReqMotoNormalSerraEntradaS_SW20261102V1_Attack_S",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalSerraEntradaS_SW20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SW",
+              "id": "ReqMotoNormalSerraEntradaS_SW20261102V1_Attack_SW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalSerraEntradaS_SW20261102V1",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "W",
+              "id": "ReqMotoNormalSerraEntradaW_NW_N20261102Selected_Attack_W",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalSerraEntradaW_NW_N20261102Selected",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NW",
+              "id": "ReqMotoNormalSerraEntradaW_NW_N20261102Selected_Attack_NW",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalSerraEntradaW_NW_N20261102Selected",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "N",
+              "id": "ReqMotoNormalSerraEntradaW_NW_N20261102Selected_Attack_N",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalSerraEntradaW_NW_N20261102Selected",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "NE",
+              "id": "ReqMotoNormalSerraEntradaNE_E_SE20261102Selected_Attack_NE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalSerraEntradaNE_E_SE20261102Selected",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "E",
+              "id": "ReqMotoNormalSerraEntradaNE_E_SE20261102Selected_Attack_E",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalSerraEntradaNE_E_SE20261102Selected",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            },
+            {
+              "direction": "SE",
+              "id": "ReqMotoNormalSerraEntradaNE_E_SE20261102Selected_Attack_SE",
+              "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalSerraEntradaNE_E_SE20261102Selected",
+              "figures": 4,
+              "visualReviewed": true,
+              "unityImported": true,
+              "runtimeVerified": false,
+              "statusScope": "session-receipt"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "runtimeSupportPendingFinalQA": [
+    "Mounted/OnFoot explicit presentation contexts",
+    "Death StateTime while combat clock remains frozen",
+    "Contactless aerial chase phases"
+  ],
+  "latestUserOrder": "Finalize Fabius Normal today, preserve approved compact proportions; integrate finished art immediately, defer test suites until production is complete.",
+  "scopeAuthority": "Docs/Darklight/ESCOPO-ENXUTO-FABIUS-20261102.md",
+  "requiredNewStateFamilies": [
+    "Parry",
+    "Hurt",
+    "Dead"
+  ],
+  "removedFromGenerationQueue": [
+    "4 extra Katana techniques",
+    "4 extra Fists techniques",
+    "5 unique aerial sequences per weapon",
+    "12 separate state/idle variants",
+    "18 unique Moto technique clips"
+  ],
+  "intentionalSharedAnimations": true,
+  "gameplayDamageAndCommandsUnchanged": true,
+  "remainingCoreWork": [
+    "Fists Walk SW",
+    "Moto on-foot Walk eight directions",
+    "Defense/damage/death",
+    "Only proven Moto impact/riding defects",
+    "Final functional validation"
+  ]
+}

@@ -30,12 +30,77 @@
       ]
     }
   ],
-  "newClips": 15,
-  "newFigures": 60,
+  "newClips": 89,
+  "newFigures": 324,
   "existingPngCountPreserved": 116,
   "allOriginalPngHashesUnchanged": true,
-  "unityImported": false,
+  "unityImported": true,
   "runtimeVerified": false,
-  "buildCancelledByUser": true,
-  "transformationsDeferred": true
+  "buildCancelledByUser": false,
+  "transformationsDeferred": false,
+  "runtimeVerification": {
+    "scope": "Unity PlayMode isolated CombatModel and CharacterView; no campaign scene or graphics certification",
+    "tests": 3,
+    "passed": 3,
+    "xml": "outputs/retomada-20261102/integration-play-113249.xml",
+    "xmlSha256": "08578513678e5805c61c108854cbe5eb9f1356de10d656ecd01ee31ad9e9cbb5",
+    "headless": true,
+    "campaignSceneValidated": false,
+    "graphicsValidated": false,
+    "testTimeUtc": "2026-11-02T14:41:12.491630+00:00"
+  },
+  "first15Checkpoint": {
+    "tasks": [
+      {
+        "task": "katana-pesado",
+        "pages": 8,
+        "figures": 32,
+        "sheets": [
+          "ReqKatanaNormalPesadoE_SE20261102V1",
+          "ReqKatanaNormalPesadoNW_N_NE20261102V2",
+          "ReqKatanaNormalPesadoS_SW_W20261102V1"
+        ]
+      },
+      {
+        "task": "katana-walk",
+        "pages": 3,
+        "figures": 12,
+        "sheets": [
+          "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact"
+        ]
+      },
+      {
+        "task": "punhos-walk",
+        "pages": 4,
+        "figures": 16,
+        "sheets": [
+          "ReqFistsNormalWalkN20261102NaturalV1",
+          "ReqFistsNormalWalkNE_SE20261102FeetFixedV3",
+          "ReqFistsNormalWalkNW20261102NaturalV2Selected"
+        ]
+      }
+    ],
+    "newClips": 15,
+    "newFigures": 60,
+    "unityImported": true,
+    "runtimeVerified": true,
+    "runtimeVerification": {
+      "scope": "Unity PlayMode isolated CombatModel and CharacterView; no campaign scene or graphics certification",
+      "tests": 3,
+      "passed": 3,
+      "xml": "outputs/retomada-20261102/integration-play-113249.xml",
+      "xmlSha256": "08578513678e5805c61c108854cbe5eb9f1356de10d656ecd01ee31ad9e9cbb5",
+      "headless": true,
+      "campaignSceneValidated": false,
+      "graphicsValidated": false,
+      "testTimeUtc": "2026-11-02T14:41:12.491630+00:00"
+    }
+  },
+  "updatedUtc": "2026-11-02T19:58:06.148729+00:00",
+  "sheets": 33,
+  "testsDeferredByUser": true,
+  "currentRuntimeChangesTested": false,
+  "currentProductionIncludesTransformations": false,
+  "tasksScope": "Historical first15 packet; current deliveries in art-integration.json",
+  "latestAnimationProgress": "outputs/retomada-20261102/animation-progress-current.json"
 }

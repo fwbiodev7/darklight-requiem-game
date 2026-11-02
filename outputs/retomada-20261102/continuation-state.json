@@ -1,12 +1,14 @@
 {
-  "updatedUtc": "2026-11-02T13:31:33.828770+00:00",
-  "buildCancelledByUser": true,
-  "transformationsDeferredByUser": true,
+  "updatedUtc": "2026-11-02T19:58:06.148729+00:00",
+  "buildCancelledByUser": false,
+  "transformationsDeferredByUser": false,
   "priority": [
-    "Finish Fists Walk E/W/SW without marching",
-    "Import and validate the15 newly integrated Normal clips",
-    "Complete real Normal animation gaps",
-    "Gothic Eclipse graphical and atmosphere plan"
+    "Finish Fabius Normal with3weapon agents",
+    "Gothic Eclipse graphics/atmosphere",
+    "Lucius Normal",
+    "Fabius and Lucius transformations",
+    "Combat AI2.0",
+    "Validate,optimize,Windows build and publication"
   ],
   "localImplementation": {
     "integratedFiles": true,
@@ -40,14 +42,16 @@
         ]
       }
     ],
-    "newClips": 15,
-    "newFigures": 60,
+    "newClips": 89,
+    "newFigures": 324,
     "existingPngCountPreserved": 116,
     "allOriginalPngHashesUnchanged": true,
     "unityImported": false,
     "runtimeVerified": false,
-    "buildCancelledByUser": true,
-    "transformationsDeferred": true
+    "buildCancelledByUser": false,
+    "transformationsDeferred": false,
+    "allSessionClipsUnityImported": true,
+    "previousValidation": "First15clips passed3isolatedPlayMode tests before latest runtime changes; see integration-play-115427.xml"
   },
   "currentCoverage": {
     "0": {
@@ -119,8 +123,8 @@
   },
   "catalogPages": 238,
   "fabiusComplete": false,
-  "unityImported": false,
-  "runtimeVerified": false,
+  "unityImported": true,
+  "runtimeVerified": true,
   "testsFromPreviousSession": {
     "EditMode": 144,
     "PlayMode": 30,
@@ -141,6 +145,119 @@
     "resumeUtc": "2026-11-02T17:19:50Z",
     "resumeLocal": "2026-11-02T14:19:50-03:00"
   },
-  "lastConfirmedCommit": "f1c1334ef506680c04d57414f6d5dc6e9ec258d6",
-  "newImagesPublished": false
+  "lastConfirmedCommit": "bb4cb6935db62939763c781b174fc9317597508e",
+  "newImagesPublished": false,
+  "pushSucceeded": true,
+  "masterRequest": "Docs/Darklight/RETOMADA-MESTRE-20261102.md",
+  "buildAuthorized": true,
+  "transformationsAuthorizedAtStage": 4,
+  "currentOperation": "Gate15 passed;3artagents by weapon released",
+  "oldQuotaSuspensionsSuperseded": true,
+  "runtimeVerification": {
+    "scope": "Unity PlayMode isolated CombatModel and CharacterView; no campaign scene or graphics certification",
+    "tests": 3,
+    "passed": 3,
+    "xml": "outputs/retomada-20261102/integration-play-113249.xml",
+    "xmlSha256": "08578513678e5805c61c108854cbe5eb9f1356de10d656ecd01ee31ad9e9cbb5",
+    "headless": true,
+    "campaignSceneValidated": false,
+    "graphicsValidated": false,
+    "testTimeUtc": "2026-11-02T14:41:12.491630+00:00"
+  },
+  "currentGates": {
+    "stages": [
+      {
+        "stage": "import-reviewed",
+        "started": "2026-11-02T13:51:43.005553+00:00",
+        "completed": true,
+        "exitCode": 0,
+        "ended": "2026-11-02T14:00:17.013215+00:00",
+        "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261102\\integration-105143\\import-reviewed.log",
+        "stopReason": null
+      },
+      {
+        "stage": "integration-play",
+        "started": "2026-11-02T14:00:17.026829+00:00",
+        "completed": false,
+        "exitCode": 1,
+        "ended": "2026-11-02T14:01:04.023264+00:00",
+        "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261102\\integration-105143\\integration-play.log",
+        "stopReason": "Stopped before system RAM exhaustion"
+      },
+      {
+        "stage": "integration-play",
+        "started": "2026-11-02T14:02:53.328109+00:00",
+        "completed": false,
+        "exitCode": 3221225477,
+        "ended": "2026-11-02T14:04:27.954417+00:00",
+        "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261102\\integration-110253\\integration-play.log",
+        "stopReason": null
+      },
+      {
+        "stage": "integration-play",
+        "started": "2026-11-02T14:16:14.675051+00:00",
+        "completed": false,
+        "exitCode": 1,
+        "ended": "2026-11-02T14:16:51.011518+00:00",
+        "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261102\\integration-111614\\integration-play.log",
+        "stopReason": "Stopped before system RAM exhaustion"
+      },
+      {
+        "stage": "integration-play",
+        "started": "2026-11-02T14:24:23.360672+00:00",
+        "completed": false,
+        "exitCode": 1,
+        "ended": "2026-11-02T14:25:00.652473+00:00",
+        "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261102\\integration-112423\\integration-play.log",
+        "stopReason": "Stopped before system RAM exhaustion"
+      },
+      {
+        "stage": "integration-play",
+        "started": "2026-11-02T14:32:49.031407+00:00",
+        "completed": true,
+        "exitCode": 0,
+        "ended": "2026-11-02T14:33:28.606501+00:00",
+        "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261102\\integration-113249\\integration-play.log",
+        "stopReason": null,
+        "cases": 3,
+        "passed": 3
+      }
+    ],
+    "buildSucceeded": false,
+    "buildAttempted": false,
+    "importAndFocusedTestsOnly": true,
+    "runtimeVerified": true,
+    "isolatedRuntime": true,
+    "campaignSceneValidated": false,
+    "graphicsValidated": false,
+    "finished": "2026-11-02T14:33:28.617569+00:00"
+  },
+  "testsDeferredByUser": true,
+  "currentFocus": "Fabius Réquiem Normal; attacks and walks before remaining states",
+  "latestAnimationProgress": "outputs/retomada-20261102/animation-progress-current.json",
+  "sessionDeliveryTotals": {
+    "clips": 89,
+    "figures": 324,
+    "sheets": 33,
+    "unityImportedClips": 89,
+    "historicallyRuntimeVerifiedClips": 15
+  },
+  "currentRuntimeChangesTested": false,
+  "complete": false,
+  "scopeAuthority": "Docs/Darklight/ESCOPO-ENXUTO-FABIUS-20261102.md",
+  "remainingCoreWork": [
+    "Fists Walk SW",
+    "Moto on-foot Walk eight directions",
+    "Defense/damage/death",
+    "Only proven Moto impact/riding defects",
+    "Final functional validation"
+  ],
+  "cancelledExpansionQueue": [
+    "4 extra Katana techniques",
+    "4 extra Fists techniques",
+    "5 unique aerial sequences per weapon",
+    "12 separate state/idle variants",
+    "18 unique Moto technique clips"
+  ],
+  "nextResumeLocal": "2026-11-02T21:15:45-03:00"
 }

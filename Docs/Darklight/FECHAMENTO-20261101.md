@@ -88,3 +88,10 @@ Retomada existente atualizada para o reset confirmado1793589500 mais60segundos (
 O usuário reportou travamento intenso. Na conferência seguinte não havia Unity nem runner Python ativos; a tentativa headless ficou sem saída válida, portanto build atual INCOMPLETA e não aberta como nova. Último log:work/retomada-20261101/build-headless-211339/build-headless.log. Causa não confirmada. Os gates144Edit/30Play permanecem aprovados; não certificam executável. O cache Library/PlayerDataCache cresceu para váriosGB durante a tentativa; foi removido somente após verificar ausência de Unity, liberando espaço sem alterar fontes.
 
 Antes de outra build: diagnosticar a leitura/serialização de texturas e consumo de memória, identificar recursos envolvidos e impor limite/monitoramento. Não repetir a mesma tentativa pesada no computador. A build válida anterior permanece em Windows-previous-20261101-225920-5d7737, mas não contém as últimas mudanças; não apresentá-la como entrega atual. Nenhuma nova geração de arte nesta margem final.
+
+
+## Nova tentativa expressamente solicitada — build protegida
+
+Executada nova tentativa com run_guarded_build_20261101.py, prioridade BelowNormal e2workers, sem dispositivo gráfico do editor. O monitor encerrou a árvore do processo antes de esgotar memória:2476797952bytes deRAM livres, abaixo da reserva2.5GiB, em2026-11-02T00:31:42Z. Build NÃO concluída; nenhum executável atualizado. Gates144Edit/30Play anteriores reutilizados, sem nova alteração C#.
+
+Inventário conservador por cabeçalhosPNG/teto de importação:986PNGs emResources, estimativa6.41GiB por uma cópiaRGBA. Isso não é medição deRAM daUnity. A cópia de publicação também tem979PNGs; trocar apenas de checkout não resolveria o volume. Próximo passo: identificar recursos legados/superados realmente sem consumidores e excluí-los do empacotamento preservando originais/GUIDs, ou obter maisRAM disponível. Manter monitor ativo; não repetir tentativa sem limite nem baixar as reservas. Evidências:build-resource-monitor.json e resource-texture-footprint.json.

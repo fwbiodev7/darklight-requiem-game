@@ -123,6 +123,7 @@ def main():
         'Tools/Delivery/prepare_action_particles_20261101.py',
         'Tools/Delivery/check_atmosphere_20261101.py',
         'Tools/Delivery/retry_windows_build_20261101.py',
+        'Tools/Delivery/run_guarded_build_20261101.py',
         'Tools/Delivery/prepare_selective_katana_repair_20261101.py',
         'Tools/Delivery/prepare_proportion_audit_20261101.py',
         'Tools/Delivery/finalize_proportion_audit_20261101.py',

@@ -59,6 +59,15 @@
         "completed": false,
         "interrupted": true,
         "observedUtc": "2026-11-02T00:22:11.529599+00:00"
+      },
+      {
+        "stage": "build-guarded",
+        "started": "2026-11-02T00:30:12.258345+00:00",
+        "completed": false,
+        "exitCode": 1,
+        "ended": "2026-11-02T00:31:42.425624+00:00",
+        "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261101\\build-headless-213012\\build-guarded.log",
+        "stopReason": "Stopped before system RAM exhaustion"
       }
     ],
     "buildSucceeded": false,
@@ -66,7 +75,7 @@
     "manualGameplayCompleted": false,
     "zip": null,
     "freeBytesBeforeBuild": 11621605376,
-    "error": "Headless build interrupted: Unity and runner no longer running after reported computer stall; no successful executable produced. Root cause unconfirmed."
+    "error": "Stopped before system RAM exhaustion"
   },
   "particlesBasicFrames": 12,
   "weaponSpecificParticleStylePending": false,
@@ -96,9 +105,14 @@
   "atmosphereTextures": 6,
   "atmosphereOpacityReduced": true,
   "visualAudit": "176 prepared figures statically compatible after5 whole-figure repairs and9 directed reviews;18 unintegrated Parry candidates blocked",
-  "buildStatus": "Interrupted; no updated playable build",
+  "buildStatus": "Retry stopped by memory guard at2.31GiB availableRAM; no new executable",
   "atmosphereStatus": "Base softened,144Edit/30Play passed; full Gothic Eclipse pending",
   "gothicEclipsePlan": "Docs/Darklight/GOTHIC-ECLIPSE-PLANO-20261101.md",
-  "nextPriority": "Diagnose build native texture memory/cache failure safely before any new large Unity attempt; preserve PC responsiveness. Then deliver build and continue Fabius attacks/walks.",
-  "buildMemoryRisk": "Unity+runner disappeared during headless build after user reported severe system stall. Do not repeat unchanged build blindly."
+  "nextPriority": "Reduce safe-to-exclude retired Resources build footprint without deleting original art, or obtain additional available RAM; use run_guarded_build_20261101.py for future attempts. Do not lower protection thresholds.",
+  "buildMemoryRisk": "Unity+runner disappeared during headless build after user reported severe system stall. Do not repeat unchanged build blindly.",
+  "lastConfirmedCommit": "5b4d591e20d9f92821522f80dd93ac0c0d691ebe",
+  "pushSucceeded": true,
+  "latestGitReceipt": "outputs/retomada-20261101/final-git-receipt.json",
+  "resourcePngCount": 986,
+  "resourceSingleRgbaEstimateGiB": 6.41
 }

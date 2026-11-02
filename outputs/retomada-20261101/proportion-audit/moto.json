@@ -1,0 +1,2272 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-01",
+  "auditor": "fabius_audit",
+  "scope": "READ-ONLY proporções Moto NORMAL: Dodge24, Dentes32, transiçãoS12; 24idles por direção como referências",
+  "authority": "Katana Réquiem aprovada; V5 Moto E/SE explicitamente aprovada em01/11; preservação integral",
+  "currentOrderFromParent": "Fabius → partículas → atmosfera → Lucius; novos Parry pausados para esta auditoria",
+  "counts": {
+    "primaryAnimationFigures": 56,
+    "transitionUniqueFigures": 12,
+    "allAnimationFigures": 68,
+    "referenceIdles": 24,
+    "confirmedAnatomyDefects": 0,
+    "cameraAdvisories": 1
+  },
+  "method": {
+    "nativeWholeFiguresInspected": true,
+    "gameScaleWholeFiguresInspected": true,
+    "worldVisualScale": 1.325,
+    "previewPixelsPerWorldUnit": 80,
+    "scaleFormula": "native pixels × (1.325 × 80 / descriptor.pixelsPerUnit)",
+    "pivotSource": "descriptor; roda/veículo só para posicionamento, não para medir anatomia",
+    "nearestNeighborPreviews": true,
+    "completeRectangleCanvas": [
+      796,
+      379
+    ],
+    "noAnatomyReshape": true,
+    "noArtEdits": true,
+    "noUnityRun": true,
+    "noNewPlaybackObservation": true,
+    "comparisonIndex": "outputs/retomada-20261101/proportion-audit/comparison-index.json",
+    "comparisonIndexSha256": "6d3017d59425bb74d3ec1f39673bba02734586b68134eab811da31fa67b22fa2"
+  },
+  "consumerEvidence": [
+    {
+      "path": "Assets/Darklight/Runtime/Character/DarklightCharacterView.cs",
+      "line": 6,
+      "fact": "WorldVisualScale=1.325f"
+    },
+    {
+      "path": "Assets/Darklight/Runtime/Character/DarklightMotorcycleRedesignBank.cs",
+      "line": 67,
+      "fact": "TransitionPose usa sequência e duração dos quadros; limites de veículo não definem corpo"
+    },
+    {
+      "path": "Assets/Darklight/Runtime/Character/DarklightMotorcycleRedesignBank.cs",
+      "line": 81,
+      "fact": "RequiemDualSawsResource aponta para ReqMotoNormalDualSaws8AttackS20261027V1"
+    }
+  ],
+  "findings": [
+    {
+      "id": "MOTO-PROP-01",
+      "severity": "no-confirmed-defect",
+      "sheets": [
+        "ReqMotoNormalDentesSW_W20261028V1",
+        "ReqMotoNormalDentesNW_N_NE20261031V1",
+        "ReqMotoNormalDentesS_E_SE20261031V1",
+        "ReqMotoNormalDodgeS_SW_W20261101Selected",
+        "ReqMotoNormalDodgeNW_N_NE20261101V1",
+        "ReqMotoNormalDodgeE_SE20261101V5FistsAligned"
+      ],
+      "frameScope": "all 56 Dodge/Dentes figures",
+      "observation": "Cabeça, cabelo compacto e massa de tórax permanecem compatíveis com os idles; coxa/canela/botas visíveis acompanham flexão, avanço e rotação. Não foi identificado alongamento inequívoco de pernas nas versões vigentes. Serras e abas do sobretudo ampliam o retângulo sem medir comprimento anatômico.",
+      "action": "Preservar todas as figuras vigentes; nenhuma correção anatômica específica justificada nesta revisão estática.",
+      "confidence": "visual qualitativa; articulações parcialmente ocluídas, sem estimativa esquelética numérica"
+    },
+    {
+      "id": "MOTO-CAMERA-01",
+      "severity": "advisory-camera",
+      "frameIds": [
+        "Redesign_ReqMotoNormalDodgeE_SE20261101V5FistsAligned_00",
+        "Redesign_ReqMotoNormalDodgeE_SE20261101V5FistsAligned_02"
+      ],
+      "comparison": "Moto idle E Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_06",
+      "observation": "Prontidão e recuperação E V5 têm tronco/rosto mais frontais (três quartos) que o idle E de perfil. Diferença de orientação, não evidência de perna alongada.",
+      "action": "Registrar para continuidade de câmera; não editar/revogar a aprovação humana do conjunto V5.",
+      "humanApprovedPreserved": true
+    },
+    {
+      "id": "MOTO-CROUCH-01",
+      "severity": "no-confirmed-defect",
+      "frameIds": [
+        "Redesign_ReqMotoNormalDodgeE_SE20261101V5FistsAligned_01",
+        "Redesign_ReqMotoNormalDodgeE_SE20261101V5FistsAligned_04",
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_07",
+        "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_07"
+      ],
+      "observation": "Poses baixas examinadas também em figuras inteiras nativas: joelhos flexionados, coxas encurtadas pela pose e botas apoiadas; não confundir baixa altura ou sobreposição com variação real de comprimento.",
+      "action": "Preservar"
+    },
+    {
+      "id": "MOTO-LUNGE-01",
+      "severity": "no-confirmed-defect",
+      "frameIds": [
+        "Redesign_ReqMotoNormalDentesSW_W20261028V1_02",
+        "Redesign_ReqMotoNormalDentesSW_W20261028V1_06"
+      ],
+      "observation": "Avanço ativo SW/W estende a perna traseira e dobra a dianteira; a linha do sobretudo acompanha a rotação. A largura maior do gesto não demonstra alongamento do membro.",
+      "action": "Preservar; não ajustar escala por largura de arma/corpo"
+    },
+    {
+      "id": "MOTO-TRANSITION-01",
+      "severity": "limited-by-occlusion",
+      "sheet": "ReqMotoNormalJoinSeparateS20261028V1",
+      "frameIds": [
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_00",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_01",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_02",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_03",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_04",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_05",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_06",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_07",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_08",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_09",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_10",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_11"
+      ],
+      "observation": "Cabeça, cabelo e tórax coerentes no reunir/separar S. Quadros03–05 montados têm pernas abertas/encurtadas pela perspectiva e veículo cobrindo quadril/coxa. O pivô de roda muda e a caixa da moto não representa a altura humana. Não se identifica alongamento evidente nas partes visíveis.",
+      "action": "Preservar. Não declarar medição anatômica completa dos segmentos encobertos."
+    },
+    {
+      "id": "MOTO-IDENTITY-01",
+      "severity": "no-confirmed-defect",
+      "referenceCount": 24,
+      "observation": "Idles Moto comparados por direção com Katana/Punhos: silhueta de cabeça/cabelo, porte e roupa compatíveis em escala real. Garras/armaduras dos pés de Punhos e discos de Moto acrescentam volume de equipamento; não equivalem a pés/pernas corporais maiores.",
+      "action": "Preservar; identidade é critério visual, PPU não a certifica."
+    }
+  ],
+  "animationSheets": [
+    {
+      "name": "ReqMotoNormalDentesSW_W20261028V1",
+      "descriptor": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalDentesSW_W20261028V1.json",
+      "descriptorSha256": "911e127b1dd2b8d31cf40b2aee30296318894c1fa3b41d0a1573d1a2efdd3938",
+      "image": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalDentesSW_W20261028V1.png",
+      "imageSha256": "ae42cfe291b1865ad76655fe566162040fd9fa9a4bfff2680797e6a2e6732b1c",
+      "matchesDeclaredImageHash": true,
+      "nativeSize": [
+        2348,
+        1142
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "pixelsPerUnit": 195.95959595959596,
+      "sources": [
+        {
+          "path": "ArtSources/WeaponRedesign20261028/moto/ReqMotoNormalDentesSW_W20261028V1-source.png",
+          "sha256": "2ef6724f15a3c2acbf875af66307a25334922f94b73f2fa40c8735d57da7cbee",
+          "matchesDeclared": true
+        }
+      ],
+      "frameIds": [
+        "Redesign_ReqMotoNormalDentesSW_W20261028V1_00",
+        "Redesign_ReqMotoNormalDentesSW_W20261028V1_01",
+        "Redesign_ReqMotoNormalDentesSW_W20261028V1_02",
+        "Redesign_ReqMotoNormalDentesSW_W20261028V1_03",
+        "Redesign_ReqMotoNormalDentesSW_W20261028V1_04",
+        "Redesign_ReqMotoNormalDentesSW_W20261028V1_05",
+        "Redesign_ReqMotoNormalDentesSW_W20261028V1_06",
+        "Redesign_ReqMotoNormalDentesSW_W20261028V1_07"
+      ],
+      "frames": [
+        {
+          "id": "Redesign_ReqMotoNormalDentesSW_W20261028V1_00",
+          "direction": "SW",
+          "phase": "preparation",
+          "durationMs": 150,
+          "rect": [
+            0,
+            0,
+            587,
+            571
+          ],
+          "pivot": [
+            0.5195911413969335,
+            0.2329246935201401
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesSW_W20261028V1_01",
+          "direction": "SW",
+          "phase": "coil",
+          "durationMs": 150,
+          "rect": [
+            587,
+            0,
+            587,
+            571
+          ],
+          "pivot": [
+            0.5195911413969335,
+            0.2329246935201401
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesSW_W20261028V1_02",
+          "direction": "SW",
+          "phase": "crossed_contact",
+          "durationMs": 280,
+          "rect": [
+            1174,
+            0,
+            587,
+            571
+          ],
+          "pivot": [
+            0.5195911413969335,
+            0.2329246935201401
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesSW_W20261028V1_03",
+          "direction": "SW",
+          "phase": "recovery",
+          "durationMs": 400,
+          "rect": [
+            1761,
+            0,
+            587,
+            571
+          ],
+          "pivot": [
+            0.5195911413969335,
+            0.2329246935201401
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesSW_W20261028V1_04",
+          "direction": "W",
+          "phase": "preparation",
+          "durationMs": 150,
+          "rect": [
+            0,
+            571,
+            587,
+            571
+          ],
+          "pivot": [
+            0.5195911413969335,
+            0.2329246935201401
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesSW_W20261028V1_05",
+          "direction": "W",
+          "phase": "coil",
+          "durationMs": 150,
+          "rect": [
+            587,
+            571,
+            587,
+            571
+          ],
+          "pivot": [
+            0.5195911413969335,
+            0.2329246935201401
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesSW_W20261028V1_06",
+          "direction": "W",
+          "phase": "crossed_contact",
+          "durationMs": 280,
+          "rect": [
+            1174,
+            571,
+            587,
+            571
+          ],
+          "pivot": [
+            0.5195911413969335,
+            0.2329246935201401
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesSW_W20261028V1_07",
+          "direction": "W",
+          "phase": "recovery",
+          "durationMs": 400,
+          "rect": [
+            1761,
+            571,
+            587,
+            571
+          ],
+          "pivot": [
+            0.5195911413969335,
+            0.2329246935201401
+          ]
+        }
+      ],
+      "descriptorStatus": "visual-reviewed",
+      "descriptorImported": null,
+      "descriptorRuntimeVerified": null,
+      "assetFilePresent": true,
+      "comparisonPreview": "outputs/retomada-20261101/proportion-audit/moto/ReqMotoNormalDentesSW_W20261028V1-worldscale.png",
+      "matchesComparisonIndexImageHash": true
+    },
+    {
+      "name": "ReqMotoNormalDentesNW_N_NE20261031V1",
+      "descriptor": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalDentesNW_N_NE20261031V1.json",
+      "descriptorSha256": "c2a76b856da54a546c6e1899339336759da8aa092be4629b30b07843ae6ac399",
+      "image": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalDentesNW_N_NE20261031V1.png",
+      "imageSha256": "fb5f2c6f554f59c1b35b63f7fc2c042d022cc1458a6f1bcf3af2baeaa9288c1d",
+      "matchesDeclaredImageHash": true,
+      "nativeSize": [
+        2780,
+        1140
+      ],
+      "sourceSize": [
+        1512,
+        1040
+      ],
+      "pixelsPerUnit": 146.46464646464648,
+      "sources": [
+        {
+          "path": "ArtSources/WeaponRedesign20261031/moto/ReqMotoNormalDentesNW_N_NE20261031V1-source.png",
+          "sha256": "4dba99abfbb3d4e95cfc417c47a5d577ae853ff125fef7d013c6dc58f717d40b",
+          "matchesDeclared": true
+        }
+      ],
+      "frameIds": [
+        "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_00",
+        "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_01",
+        "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_02",
+        "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_03",
+        "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_04",
+        "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_05",
+        "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_06",
+        "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_07",
+        "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_08",
+        "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_09",
+        "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_10",
+        "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_11"
+      ],
+      "frames": [
+        {
+          "id": "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_00",
+          "direction": "NW",
+          "phase": "preparation",
+          "durationMs": 150,
+          "rect": [
+            0,
+            0,
+            695,
+            380
+          ],
+          "pivot": [
+            0.5870503597122302,
+            0.11315789473684211
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_01",
+          "direction": "NW",
+          "phase": "coil",
+          "durationMs": 150,
+          "rect": [
+            695,
+            0,
+            695,
+            380
+          ],
+          "pivot": [
+            0.45611510791366905,
+            0.11315789473684211
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_02",
+          "direction": "NW",
+          "phase": "crossed_contact",
+          "durationMs": 280,
+          "rect": [
+            1390,
+            0,
+            695,
+            380
+          ],
+          "pivot": [
+            0.3942446043165468,
+            0.11315789473684211
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_03",
+          "direction": "NW",
+          "phase": "recovery",
+          "durationMs": 400,
+          "rect": [
+            2085,
+            0,
+            695,
+            380
+          ],
+          "pivot": [
+            0.6762589928057554,
+            0.11315789473684211
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_04",
+          "direction": "N",
+          "phase": "preparation",
+          "durationMs": 150,
+          "rect": [
+            0,
+            380,
+            695,
+            380
+          ],
+          "pivot": [
+            0.5798561151079137,
+            0.11315789473684211
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_05",
+          "direction": "N",
+          "phase": "coil",
+          "durationMs": 150,
+          "rect": [
+            695,
+            380,
+            695,
+            380
+          ],
+          "pivot": [
+            0.6014388489208633,
+            0.11315789473684211
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_06",
+          "direction": "N",
+          "phase": "crossed_contact",
+          "durationMs": 280,
+          "rect": [
+            1390,
+            380,
+            695,
+            380
+          ],
+          "pivot": [
+            0.7266187050359713,
+            0.11315789473684211
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_07",
+          "direction": "N",
+          "phase": "recovery",
+          "durationMs": 400,
+          "rect": [
+            2085,
+            380,
+            695,
+            380
+          ],
+          "pivot": [
+            0.5697841726618705,
+            0.11315789473684211
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_08",
+          "direction": "NE",
+          "phase": "preparation",
+          "durationMs": 150,
+          "rect": [
+            0,
+            760,
+            695,
+            380
+          ],
+          "pivot": [
+            0.4892086330935252,
+            0.11315789473684211
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_09",
+          "direction": "NE",
+          "phase": "coil",
+          "durationMs": 150,
+          "rect": [
+            695,
+            760,
+            695,
+            380
+          ],
+          "pivot": [
+            0.5539568345323741,
+            0.11315789473684211
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_10",
+          "direction": "NE",
+          "phase": "crossed_contact",
+          "durationMs": 280,
+          "rect": [
+            1390,
+            760,
+            695,
+            380
+          ],
+          "pivot": [
+            0.42589928057553955,
+            0.11315789473684211
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesNW_N_NE20261031V1_11",
+          "direction": "NE",
+          "phase": "recovery",
+          "durationMs": 400,
+          "rect": [
+            2085,
+            760,
+            695,
+            380
+          ],
+          "pivot": [
+            0.5021582733812949,
+            0.11315789473684211
+          ]
+        }
+      ],
+      "descriptorStatus": "visual-reviewed",
+      "descriptorImported": null,
+      "descriptorRuntimeVerified": null,
+      "assetFilePresent": true,
+      "comparisonPreview": "outputs/retomada-20261101/proportion-audit/moto/ReqMotoNormalDentesNW_N_NE20261031V1-worldscale.png",
+      "matchesComparisonIndexImageHash": true
+    },
+    {
+      "name": "ReqMotoNormalDentesS_E_SE20261031V1",
+      "descriptor": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalDentesS_E_SE20261031V1.json",
+      "descriptorSha256": "2aa8ee95ec6a5da4173aaae3531844eb48367650fc6f6b16e3b34c137a693e2a",
+      "image": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalDentesS_E_SE20261031V1.png",
+      "imageSha256": "71c2f240e42d5b90210f060fc6ec97521200c87d54d292ea5789620c3f0ec2cf",
+      "matchesDeclaredImageHash": true,
+      "nativeSize": [
+        2712,
+        1209
+      ],
+      "sourceSize": [
+        1470,
+        1070
+      ],
+      "pixelsPerUnit": 156.8181818181818,
+      "sources": [
+        {
+          "path": "ArtSources/WeaponRedesign20261031/moto/ReqMotoNormalDentesS_E_SE20261031V1-source.png",
+          "sha256": "dc7f8c1eab5ce4fb7e3b2dcdaa4135425f2ce0ae2afa0f4c80a0518ad01d699e",
+          "matchesDeclared": true
+        }
+      ],
+      "frameIds": [
+        "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_00",
+        "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_01",
+        "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_02",
+        "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_03",
+        "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_04",
+        "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_05",
+        "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_06",
+        "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_07",
+        "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_08",
+        "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_09",
+        "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_10",
+        "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_11"
+      ],
+      "frames": [
+        {
+          "id": "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_00",
+          "direction": "S",
+          "phase": "preparation",
+          "durationMs": 150,
+          "rect": [
+            0,
+            0,
+            678,
+            403
+          ],
+          "pivot": [
+            0.4528023598820059,
+            0.11166253101736973
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_01",
+          "direction": "S",
+          "phase": "coil",
+          "durationMs": 150,
+          "rect": [
+            678,
+            0,
+            678,
+            403
+          ],
+          "pivot": [
+            0.41297935103244837,
+            0.11166253101736973
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_02",
+          "direction": "S",
+          "phase": "crossed_contact",
+          "durationMs": 280,
+          "rect": [
+            1356,
+            0,
+            678,
+            403
+          ],
+          "pivot": [
+            0.5870206489675516,
+            0.11166253101736973
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_03",
+          "direction": "S",
+          "phase": "recovery",
+          "durationMs": 400,
+          "rect": [
+            2034,
+            0,
+            678,
+            403
+          ],
+          "pivot": [
+            0.4351032448377581,
+            0.11166253101736973
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_04",
+          "direction": "E",
+          "phase": "preparation",
+          "durationMs": 150,
+          "rect": [
+            0,
+            403,
+            678,
+            403
+          ],
+          "pivot": [
+            0.4646017699115044,
+            0.11166253101736973
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_05",
+          "direction": "E",
+          "phase": "coil",
+          "durationMs": 150,
+          "rect": [
+            678,
+            403,
+            678,
+            403
+          ],
+          "pivot": [
+            0.3141592920353982,
+            0.11166253101736973
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_06",
+          "direction": "E",
+          "phase": "crossed_contact",
+          "durationMs": 280,
+          "rect": [
+            1356,
+            403,
+            678,
+            403
+          ],
+          "pivot": [
+            0.6607669616519174,
+            0.11166253101736973
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_07",
+          "direction": "E",
+          "phase": "recovery",
+          "durationMs": 400,
+          "rect": [
+            2034,
+            403,
+            678,
+            403
+          ],
+          "pivot": [
+            0.4970501474926254,
+            0.11166253101736973
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_08",
+          "direction": "SE",
+          "phase": "preparation",
+          "durationMs": 150,
+          "rect": [
+            0,
+            806,
+            678,
+            403
+          ],
+          "pivot": [
+            0.3023598820058997,
+            0.11166253101736973
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_09",
+          "direction": "SE",
+          "phase": "coil",
+          "durationMs": 150,
+          "rect": [
+            678,
+            806,
+            678,
+            403
+          ],
+          "pivot": [
+            0.2831858407079646,
+            0.11166253101736973
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_10",
+          "direction": "SE",
+          "phase": "crossed_contact",
+          "durationMs": 280,
+          "rect": [
+            1356,
+            806,
+            678,
+            403
+          ],
+          "pivot": [
+            0.6253687315634219,
+            0.11166253101736973
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDentesS_E_SE20261031V1_11",
+          "direction": "SE",
+          "phase": "recovery",
+          "durationMs": 400,
+          "rect": [
+            2034,
+            806,
+            678,
+            403
+          ],
+          "pivot": [
+            0.551622418879056,
+            0.11166253101736973
+          ]
+        }
+      ],
+      "descriptorStatus": "visual-reviewed",
+      "descriptorImported": null,
+      "descriptorRuntimeVerified": null,
+      "assetFilePresent": true,
+      "comparisonPreview": "outputs/retomada-20261101/proportion-audit/moto/ReqMotoNormalDentesS_E_SE20261031V1-worldscale.png",
+      "matchesComparisonIndexImageHash": true
+    },
+    {
+      "name": "ReqMotoNormalDodgeS_SW_W20261101Selected",
+      "descriptor": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalDodgeS_SW_W20261101Selected.json",
+      "descriptorSha256": "46643347c2204c5e38def6d467bce0e95657def2c464af707804e4244f53d818",
+      "image": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalDodgeS_SW_W20261101Selected.png",
+      "imageSha256": "52dfebe78202e630144169cc78b611a0e6be2c50b72bce968a58973b9d0fd924",
+      "matchesDeclaredImageHash": true,
+      "nativeSize": [
+        2073,
+        1122
+      ],
+      "sourceSize": [
+        2169,
+        1218
+      ],
+      "pixelsPerUnit": 157.57575757575756,
+      "sources": [
+        {
+          "path": "ArtSources/WeaponRedesign20261101/moto-dodge/ReqMotoNormalDodgeS_SW_W20261101Selected-source.png",
+          "sha256": "f1ec5145a6dc093b4bb0abc1007d0e554a81fb5124d8b87a0b262b0825f6e3dd",
+          "matchesDeclared": true
+        }
+      ],
+      "frameIds": [
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_00",
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_01",
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_02",
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_03",
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_04",
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_05",
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_06",
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_07",
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_08"
+      ],
+      "frames": [
+        {
+          "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_00",
+          "direction": "S",
+          "phase": "anticipation",
+          "durationMs": 40,
+          "rect": [
+            0,
+            0,
+            691,
+            374
+          ],
+          "pivot": [
+            0.39363241678726485,
+            0.11764705882352941
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_01",
+          "direction": "S",
+          "phase": "low_evading_lunge",
+          "durationMs": 150,
+          "rect": [
+            691,
+            0,
+            691,
+            374
+          ],
+          "pivot": [
+            0.44862518089725034,
+            0.11764705882352941
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_02",
+          "direction": "S",
+          "phase": "recovery",
+          "durationMs": 40,
+          "rect": [
+            1382,
+            0,
+            691,
+            374
+          ],
+          "pivot": [
+            0.37337192474674386,
+            0.11764705882352941
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_03",
+          "direction": "SW",
+          "phase": "anticipation",
+          "durationMs": 40,
+          "rect": [
+            0,
+            374,
+            691,
+            374
+          ],
+          "pivot": [
+            0.37771345875542695,
+            0.11764705882352941
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_04",
+          "direction": "SW",
+          "phase": "low_evading_lunge",
+          "durationMs": 150,
+          "rect": [
+            691,
+            374,
+            691,
+            374
+          ],
+          "pivot": [
+            0.44862518089725034,
+            0.11764705882352941
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_05",
+          "direction": "SW",
+          "phase": "recovery",
+          "durationMs": 40,
+          "rect": [
+            1382,
+            374,
+            691,
+            374
+          ],
+          "pivot": [
+            0.37337192474674386,
+            0.11764705882352941
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_06",
+          "direction": "W",
+          "phase": "anticipation",
+          "durationMs": 40,
+          "rect": [
+            0,
+            748,
+            691,
+            374
+          ],
+          "pivot": [
+            0.44862518089725034,
+            0.11764705882352941
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_07",
+          "direction": "W",
+          "phase": "low_evading_lunge",
+          "durationMs": 150,
+          "rect": [
+            691,
+            748,
+            691,
+            374
+          ],
+          "pivot": [
+            0.6193921852387844,
+            0.11764705882352941
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_08",
+          "direction": "W",
+          "phase": "recovery",
+          "durationMs": 40,
+          "rect": [
+            1382,
+            748,
+            691,
+            374
+          ],
+          "pivot": [
+            0.44862518089725034,
+            0.11764705882352941
+          ]
+        }
+      ],
+      "descriptorStatus": "visual-reviewed",
+      "descriptorImported": null,
+      "descriptorRuntimeVerified": null,
+      "assetFilePresent": true,
+      "comparisonPreview": "outputs/retomada-20261101/proportion-audit/moto/ReqMotoNormalDodgeS_SW_W20261101Selected-worldscale.png",
+      "matchesComparisonIndexImageHash": true
+    },
+    {
+      "name": "ReqMotoNormalDodgeNW_N_NE20261101V1",
+      "descriptor": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalDodgeNW_N_NE20261101V1.json",
+      "descriptorSha256": "bbc4d742e474ec08d9bab729ebf09c076c93b3f8dda8a243c02b261b9d881c9f",
+      "image": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalDodgeNW_N_NE20261101V1.png",
+      "imageSha256": "3abe10055546375aadf5d8c1e39aa889f3ebacc3d4b5105cffc42bd7e087af65",
+      "matchesDeclaredImageHash": true,
+      "nativeSize": [
+        2232,
+        1257
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ],
+      "pixelsPerUnit": 175.25252525252526,
+      "sources": [
+        {
+          "path": "ArtSources/WeaponRedesign20261101/moto-dodge/ReqMotoNormalDodgeNW_N_NE20261101V1-source.png",
+          "sha256": "a503c9829bd22778bf714c11d1bd3d1183360fa160e316a490225e3a784cf1d9",
+          "matchesDeclared": true
+        }
+      ],
+      "frameIds": [
+        "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_00",
+        "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_01",
+        "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_02",
+        "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_03",
+        "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_04",
+        "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_05",
+        "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_06",
+        "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_07",
+        "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_08"
+      ],
+      "frames": [
+        {
+          "id": "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_00",
+          "direction": "NW",
+          "phase": "anticipation",
+          "durationMs": 40,
+          "rect": [
+            0,
+            0,
+            744,
+            419
+          ],
+          "pivot": [
+            0.6317204301075269,
+            0.1288782816229117
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_01",
+          "direction": "NW",
+          "phase": "low_evading_lunge",
+          "durationMs": 150,
+          "rect": [
+            744,
+            0,
+            744,
+            419
+          ],
+          "pivot": [
+            0.6021505376344086,
+            0.1288782816229117
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_02",
+          "direction": "NW",
+          "phase": "recovery",
+          "durationMs": 40,
+          "rect": [
+            1488,
+            0,
+            744,
+            419
+          ],
+          "pivot": [
+            0.6303763440860215,
+            0.1288782816229117
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_03",
+          "direction": "N",
+          "phase": "anticipation",
+          "durationMs": 40,
+          "rect": [
+            0,
+            419,
+            744,
+            419
+          ],
+          "pivot": [
+            0.6061827956989247,
+            0.1288782816229117
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_04",
+          "direction": "N",
+          "phase": "low_evading_lunge",
+          "durationMs": 150,
+          "rect": [
+            744,
+            419,
+            744,
+            419
+          ],
+          "pivot": [
+            0.42338709677419356,
+            0.1288782816229117
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_05",
+          "direction": "N",
+          "phase": "recovery",
+          "durationMs": 40,
+          "rect": [
+            1488,
+            419,
+            744,
+            419
+          ],
+          "pivot": [
+            0.6182795698924731,
+            0.1288782816229117
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_06",
+          "direction": "NE",
+          "phase": "anticipation",
+          "durationMs": 40,
+          "rect": [
+            0,
+            838,
+            744,
+            419
+          ],
+          "pivot": [
+            0.44086021505376344,
+            0.1288782816229117
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_07",
+          "direction": "NE",
+          "phase": "low_evading_lunge",
+          "durationMs": 150,
+          "rect": [
+            744,
+            838,
+            744,
+            419
+          ],
+          "pivot": [
+            0.28091397849462363,
+            0.1288782816229117
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeNW_N_NE20261101V1_08",
+          "direction": "NE",
+          "phase": "recovery",
+          "durationMs": 40,
+          "rect": [
+            1488,
+            838,
+            744,
+            419
+          ],
+          "pivot": [
+            0.43010752688172044,
+            0.1288782816229117
+          ]
+        }
+      ],
+      "descriptorStatus": "visual-reviewed",
+      "descriptorImported": null,
+      "descriptorRuntimeVerified": null,
+      "assetFilePresent": true,
+      "comparisonPreview": "outputs/retomada-20261101/proportion-audit/moto/ReqMotoNormalDodgeNW_N_NE20261101V1-worldscale.png",
+      "matchesComparisonIndexImageHash": true
+    },
+    {
+      "name": "ReqMotoNormalDodgeE_SE20261101V5FistsAligned",
+      "descriptor": "outputs/retomada-20261101/moto-dodge/staging/ReqMotoNormalDodgeE_SE20261101V5FistsAligned.json",
+      "descriptorSha256": "726d5bd1c6d92512a46e8d0d21821141392bd6650a1209e2a3a9006e0052f396",
+      "image": "outputs/retomada-20261101/moto-dodge/staging/ReqMotoNormalDodgeE_SE20261101V5FistsAligned.png",
+      "imageSha256": "5e4d4cdd0b9ca9748324cd59d90158bcf0931b994aa254dbd15bd6c65d4d8668",
+      "matchesDeclaredImageHash": true,
+      "nativeSize": [
+        1803,
+        1110
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 221.46464646464648,
+      "sources": [
+        {
+          "path": "ArtSources/WeaponRedesign20261101/moto-dodge/ReqMotoNormalDodgeE_SE20261101V5-fists-identity-source.png",
+          "sha256": "b9f90071250bcd9b3eb8dd094d798ed63dd33ff0076195c8052c3be90c7d132a",
+          "matchesDeclared": true
+        }
+      ],
+      "frameIds": [
+        "Redesign_ReqMotoNormalDodgeE_SE20261101V5FistsAligned_00",
+        "Redesign_ReqMotoNormalDodgeE_SE20261101V5FistsAligned_01",
+        "Redesign_ReqMotoNormalDodgeE_SE20261101V5FistsAligned_02",
+        "Redesign_ReqMotoNormalDodgeE_SE20261101V5FistsAligned_03",
+        "Redesign_ReqMotoNormalDodgeE_SE20261101V5FistsAligned_04",
+        "Redesign_ReqMotoNormalDodgeE_SE20261101V5FistsAligned_05"
+      ],
+      "frames": [
+        {
+          "id": "Redesign_ReqMotoNormalDodgeE_SE20261101V5FistsAligned_00",
+          "direction": "E",
+          "phase": "anticipation",
+          "durationMs": 40,
+          "rect": [
+            0,
+            0,
+            601,
+            555
+          ],
+          "pivot": [
+            0.5074875207986689,
+            0.10810810810810811
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeE_SE20261101V5FistsAligned_01",
+          "direction": "E",
+          "phase": "low_evading_lunge",
+          "durationMs": 150,
+          "rect": [
+            601,
+            0,
+            601,
+            555
+          ],
+          "pivot": [
+            0.5058236272878536,
+            0.10810810810810811
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeE_SE20261101V5FistsAligned_02",
+          "direction": "E",
+          "phase": "recovery",
+          "durationMs": 40,
+          "rect": [
+            1202,
+            0,
+            601,
+            555
+          ],
+          "pivot": [
+            0.4858569051580699,
+            0.10810810810810811
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeE_SE20261101V5FistsAligned_03",
+          "direction": "SE",
+          "phase": "anticipation",
+          "durationMs": 40,
+          "rect": [
+            0,
+            555,
+            601,
+            555
+          ],
+          "pivot": [
+            0.5524126455906821,
+            0.10810810810810811
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeE_SE20261101V5FistsAligned_04",
+          "direction": "SE",
+          "phase": "low_evading_lunge",
+          "durationMs": 150,
+          "rect": [
+            601,
+            555,
+            601,
+            555
+          ],
+          "pivot": [
+            0.4841930116472546,
+            0.10810810810810811
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDodgeE_SE20261101V5FistsAligned_05",
+          "direction": "SE",
+          "phase": "recovery",
+          "durationMs": 40,
+          "rect": [
+            1202,
+            555,
+            601,
+            555
+          ],
+          "pivot": [
+            0.5074875207986689,
+            0.10810810810810811
+          ]
+        }
+      ],
+      "descriptorStatus": "visual-reviewed",
+      "descriptorImported": null,
+      "descriptorRuntimeVerified": null,
+      "assetFilePresent": true,
+      "comparisonPreview": "outputs/retomada-20261101/proportion-audit/moto/ReqMotoNormalDodgeE_SE20261101V5FistsAligned-worldscale.png",
+      "matchesComparisonIndexImageHash": true
+    },
+    {
+      "name": "ReqMotoNormalJoinSeparateS20261028V1",
+      "descriptor": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalJoinSeparateS20261028V1.json",
+      "descriptorSha256": "151407de439241836c7726ed8dee56dd2b2ff7b0dc23985d446d595524608234",
+      "image": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalJoinSeparateS20261028V1.png",
+      "imageSha256": "4f63735225303a5aeb55d5ee64ebd44e17ab76bb7e59a66501bb7eff963abc49",
+      "matchesDeclaredImageHash": true,
+      "nativeSize": [
+        1632,
+        1224
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 146.46464646464648,
+      "sources": [
+        {
+          "path": "ArtSources/WeaponRedesign20261028/moto/ReqMotoNormalJoinSeparateS20261028V1-repair2-source.png",
+          "sha256": "8ad82bb9e2425d0c368cbadaae3fd3cff89916e09f90f4330c958e789c267597",
+          "matchesDeclared": true
+        },
+        {
+          "path": "ArtSources/WeaponRedesign20261028/moto/ReqMotoNormalJoinSeparateS20261028V1-source.png",
+          "sha256": "4e4a053220612b6764b1fd1773cefe0a63a595ce0cb8669778295a7581a4a330",
+          "matchesDeclared": true
+        }
+      ],
+      "frameIds": [
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_00",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_01",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_02",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_03",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_04",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_05",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_06",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_07",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_08",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_09",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_10",
+        "Redesign_ReqMotoNormalJoinSeparateS20261028V1_11"
+      ],
+      "frames": [
+        {
+          "id": "Redesign_ReqMotoNormalJoinSeparateS20261028V1_00",
+          "direction": "S",
+          "phase": "two_separate_hand_saws",
+          "durationMs": 140,
+          "rect": [
+            0,
+            0,
+            408,
+            408
+          ],
+          "pivot": [
+            0.5073529411764706,
+            0.14215686274509803
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalJoinSeparateS20261028V1_01",
+          "direction": "S",
+          "phase": "lower_and_approach",
+          "durationMs": 120,
+          "rect": [
+            408,
+            0,
+            408,
+            408
+          ],
+          "pivot": [
+            0.5073529411764706,
+            0.14215686274509803
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalJoinSeparateS20261028V1_02",
+          "direction": "S",
+          "phase": "folding_bridge_engaged",
+          "durationMs": 140,
+          "rect": [
+            816,
+            0,
+            408,
+            408
+          ],
+          "pivot": [
+            0.5073529411764706,
+            0.14215686274509803
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalJoinSeparateS20261028V1_03",
+          "direction": "S",
+          "phase": "straddle_unfolded_chassis",
+          "durationMs": 160,
+          "rect": [
+            1224,
+            0,
+            408,
+            408
+          ],
+          "pivot": [
+            0.5073529411764706,
+            0.14215686274509803
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalJoinSeparateS20261028V1_04",
+          "direction": "S",
+          "phase": "lower_to_saddle",
+          "durationMs": 120,
+          "rect": [
+            0,
+            408,
+            408,
+            408
+          ],
+          "pivot": [
+            0.5073529411764706,
+            0.14215686274509803
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalJoinSeparateS20261028V1_05",
+          "direction": "S",
+          "phase": "mounted_ready",
+          "durationMs": 220,
+          "rect": [
+            408,
+            408,
+            408,
+            408
+          ],
+          "pivot": [
+            0.5073529411764706,
+            0.14215686274509803
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalJoinSeparateS20261028V1_06",
+          "direction": "S",
+          "phase": "release_and_rise",
+          "durationMs": 140,
+          "rect": [
+            816,
+            408,
+            408,
+            408
+          ],
+          "pivot": [
+            0.5073529411764706,
+            0.14215686274509803
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalJoinSeparateS20261028V1_07",
+          "direction": "S",
+          "phase": "opening_bridge",
+          "durationMs": 140,
+          "rect": [
+            1224,
+            408,
+            408,
+            408
+          ],
+          "pivot": [
+            0.5073529411764706,
+            0.14215686274509803
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalJoinSeparateS20261028V1_08",
+          "direction": "S",
+          "phase": "folding_spine",
+          "durationMs": 140,
+          "rect": [
+            0,
+            816,
+            408,
+            408
+          ],
+          "pivot": [
+            0.5073529411764706,
+            0.14215686274509803
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalJoinSeparateS20261028V1_09",
+          "direction": "S",
+          "phase": "pull_modules_apart",
+          "durationMs": 120,
+          "rect": [
+            408,
+            816,
+            408,
+            408
+          ],
+          "pivot": [
+            0.5073529411764706,
+            0.14215686274509803
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalJoinSeparateS20261028V1_10",
+          "direction": "S",
+          "phase": "lower_hand_saws",
+          "durationMs": 120,
+          "rect": [
+            816,
+            816,
+            408,
+            408
+          ],
+          "pivot": [
+            0.5073529411764706,
+            0.14215686274509803
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalJoinSeparateS20261028V1_11",
+          "direction": "S",
+          "phase": "on_foot_ready",
+          "durationMs": 220,
+          "rect": [
+            1224,
+            816,
+            408,
+            408
+          ],
+          "pivot": [
+            0.5073529411764706,
+            0.14215686274509803
+          ]
+        }
+      ],
+      "descriptorStatus": "visual-reviewed",
+      "descriptorImported": null,
+      "descriptorRuntimeVerified": null,
+      "assetFilePresent": true
+    }
+  ],
+  "idleReferences": [
+    {
+      "name": "ReqKatanaNormalNeutralIdleS_SW_W20261025",
+      "descriptor": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleS_SW_W20261025.json",
+      "descriptorSha256": "56f8fc7ad278c46880c6d5b518a69123e5477219a30b7163557a64978e240ba5",
+      "image": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleS_SW_W20261025.png",
+      "imageSha256": "8a5c11fa94a9adef8706e32020776e34bb9c59ab09d24e1a44476357dd138379",
+      "matchesDeclaredImageHash": true,
+      "nativeSize": [
+        1776,
+        1047
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 157.57575757575756,
+      "sources": [
+        {
+          "path": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleS_SW_W20261025-source.png",
+          "sha256": "a2cb1ed3cc05b971f4ca0929679d8a2d1dd4e25878ec64566ebd47388c0d0248",
+          "matchesDeclared": true
+        }
+      ],
+      "frameIds": [
+        "Redesign_ReqKatanaNormalNeutralIdleS_SW_W20261025_00",
+        "Redesign_ReqKatanaNormalNeutralIdleS_SW_W20261025_04",
+        "Redesign_ReqKatanaNormalNeutralIdleS_SW_W20261025_08"
+      ],
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalNeutralIdleS_SW_W20261025_00",
+          "direction": "S",
+          "phase": "neutral",
+          "durationMs": 350,
+          "rect": [
+            0,
+            0,
+            444,
+            349
+          ],
+          "pivot": [
+            0.5945945945945946,
+            0.054441260744985676
+          ]
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalNeutralIdleS_SW_W20261025_04",
+          "direction": "SW",
+          "phase": "neutral",
+          "durationMs": 350,
+          "rect": [
+            0,
+            349,
+            444,
+            349
+          ],
+          "pivot": [
+            0.49774774774774777,
+            0.09169054441260745
+          ]
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalNeutralIdleS_SW_W20261025_08",
+          "direction": "W",
+          "phase": "neutral",
+          "durationMs": 350,
+          "rect": [
+            0,
+            698,
+            444,
+            349
+          ],
+          "pivot": [
+            0.6058558558558559,
+            0.0830945558739255
+          ]
+        }
+      ],
+      "descriptorStatus": "visual-reviewed",
+      "descriptorImported": false,
+      "descriptorRuntimeVerified": false,
+      "assetFilePresent": true
+    },
+    {
+      "name": "ReqKatanaNormalNeutralIdleNW_N_NE20261025",
+      "descriptor": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleNW_N_NE20261025.json",
+      "descriptorSha256": "2c1fe7cca312d6fd190808485b863e03d2356660c83c761cf24e78ea4b99ce9b",
+      "image": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleNW_N_NE20261025.png",
+      "imageSha256": "2889cf460675557432c2de5f0b4e52f7bebfe14f7b7e34330008adf74336a7a2",
+      "matchesDeclaredImageHash": true,
+      "nativeSize": [
+        2180,
+        1149
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 154.2929292929293,
+      "sources": [
+        {
+          "path": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleNW_N_NE20261025-source.png",
+          "sha256": "e631dd7fec0bd0d89851fb9ceb9dfe72f193fc22f227f113431b0825d3051387",
+          "matchesDeclared": true
+        }
+      ],
+      "frameIds": [
+        "Redesign_ReqKatanaNormalNeutralIdleNW_N_NE20261025_00",
+        "Redesign_ReqKatanaNormalNeutralIdleNW_N_NE20261025_04",
+        "Redesign_ReqKatanaNormalNeutralIdleNW_N_NE20261025_08"
+      ],
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalNeutralIdleNW_N_NE20261025_00",
+          "direction": "NW",
+          "phase": "neutral",
+          "durationMs": 350,
+          "rect": [
+            0,
+            0,
+            545,
+            383
+          ],
+          "pivot": [
+            0.5119266055045871,
+            0.1122715404699739
+          ]
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalNeutralIdleNW_N_NE20261025_04",
+          "direction": "N",
+          "phase": "neutral",
+          "durationMs": 350,
+          "rect": [
+            0,
+            383,
+            545,
+            383
+          ],
+          "pivot": [
+            0.4073394495412844,
+            0.09138381201044386
+          ]
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalNeutralIdleNW_N_NE20261025_08",
+          "direction": "NE",
+          "phase": "neutral",
+          "durationMs": 350,
+          "rect": [
+            0,
+            766,
+            545,
+            383
+          ],
+          "pivot": [
+            0.381651376146789,
+            0.11488250652741515
+          ]
+        }
+      ],
+      "descriptorStatus": "visual-reviewed",
+      "descriptorImported": false,
+      "descriptorRuntimeVerified": false,
+      "assetFilePresent": true
+    },
+    {
+      "name": "ReqKatanaNormalNeutralIdleE_SE20261025",
+      "descriptor": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleE_SE20261025.json",
+      "descriptorSha256": "2c33ad4f6e6b8a71cda0108d4c29b0e7cab80e35adbf3fc54dc7e9be69347e3f",
+      "image": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleE_SE20261025.png",
+      "imageSha256": "861a5244e1f1d145044fea586ca78f4b59db890cfddcd7fc8e930b3f181c8bcb",
+      "matchesDeclaredImageHash": true,
+      "nativeSize": [
+        2028,
+        968
+      ],
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "pixelsPerUnit": 194.6969696969697,
+      "sources": [
+        {
+          "path": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleE_SE20261025-source.png",
+          "sha256": "5863115c5f1ba5b54d9cd8b2d387e203d3d1293b9724c576c2360c6e84bb8443",
+          "matchesDeclared": true
+        }
+      ],
+      "frameIds": [
+        "Redesign_ReqKatanaNormalNeutralIdleE_SE20261025_00",
+        "Redesign_ReqKatanaNormalNeutralIdleE_SE20261025_04"
+      ],
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalNeutralIdleE_SE20261025_00",
+          "direction": "E",
+          "phase": "neutral",
+          "durationMs": 350,
+          "rect": [
+            0,
+            0,
+            507,
+            484
+          ],
+          "pivot": [
+            0.4970414201183432,
+            0.08677685950413223
+          ]
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalNeutralIdleE_SE20261025_04",
+          "direction": "SE",
+          "phase": "neutral",
+          "durationMs": 350,
+          "rect": [
+            0,
+            484,
+            507,
+            484
+          ],
+          "pivot": [
+            0.5424063116370809,
+            0.09504132231404959
+          ]
+        }
+      ],
+      "descriptorStatus": "visual-reviewed",
+      "descriptorImported": false,
+      "descriptorRuntimeVerified": false,
+      "assetFilePresent": true
+    },
+    {
+      "name": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "descriptor": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleS_SW_W20261025V1.json",
+      "descriptorSha256": "fee63624de6bc7c733f4bc684fafe9ee9908bac6099444aebf552d200faa4972",
+      "image": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleS_SW_W20261025V1.png",
+      "imageSha256": "6a15d28a66cef8b5f6bf579afa1c02d0f5d57047b6fe4ca65c3e370e36c778af",
+      "matchesDeclaredImageHash": true,
+      "nativeSize": [
+        2340,
+        1245
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 163.61827227498867,
+      "sources": [
+        {
+          "path": "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleS_SW_W-v1-source.png",
+          "sha256": "8c142514ee7e1a98545cff3d0d30769a89a0cabc409932319e52537856698f0d",
+          "matchesDeclared": true
+        }
+      ],
+      "frameIds": [
+        "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_00",
+        "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_04",
+        "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_08"
+      ],
+      "frames": [
+        {
+          "id": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_00",
+          "direction": "S",
+          "phase": "neutral-stopped",
+          "durationMs": 350,
+          "rect": [
+            0,
+            0,
+            585,
+            415
+          ],
+          "pivot": [
+            0.5418803418803418,
+            0.16626506024096385
+          ]
+        },
+        {
+          "id": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_04",
+          "direction": "SW",
+          "phase": "neutral-stopped",
+          "durationMs": 350,
+          "rect": [
+            0,
+            415,
+            585,
+            415
+          ],
+          "pivot": [
+            0.4581196581196581,
+            0.16626506024096385
+          ]
+        },
+        {
+          "id": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_08",
+          "direction": "W",
+          "phase": "neutral-stopped",
+          "durationMs": 350,
+          "rect": [
+            0,
+            830,
+            585,
+            415
+          ],
+          "pivot": [
+            0.5384615384615384,
+            0.16626506024096385
+          ]
+        }
+      ],
+      "descriptorStatus": "visual-reviewed",
+      "descriptorImported": null,
+      "descriptorRuntimeVerified": null,
+      "assetFilePresent": true
+    },
+    {
+      "name": "ReqFistsNormalIdleNW_NE20261025V1",
+      "descriptor": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleNW_NE20261025V1.json",
+      "descriptorSha256": "69df0128c66c00f15411056bc5913818f6bbd6384367df4b98cf1b8fd3112fd8",
+      "image": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleNW_NE20261025V1.png",
+      "imageSha256": "f302effa11a44da2d63863c5645011976ca6d2f57a63221a6c7df2226b67f181",
+      "matchesDeclaredImageHash": true,
+      "nativeSize": [
+        2276,
+        744
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 159.56580732700135,
+      "sources": [
+        {
+          "path": "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleNW_N_NE-v1-source.png",
+          "sha256": "ed7fe8c38cbd21a6ead39ad48d3f2dc93ae7ba8f4e42a7514d81ea3255bc42cf",
+          "matchesDeclared": true
+        }
+      ],
+      "frameIds": [
+        "Redesign_ReqFistsNormalIdleNW_NE20261025V1_00",
+        "Redesign_ReqFistsNormalIdleNW_NE20261025V1_04"
+      ],
+      "frames": [
+        {
+          "id": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_00",
+          "direction": "NW",
+          "phase": "neutral-stopped",
+          "durationMs": 350,
+          "rect": [
+            0,
+            0,
+            569,
+            372
+          ],
+          "pivot": [
+            0.6239015817223199,
+            0.0456989247311828
+          ]
+        },
+        {
+          "id": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_04",
+          "direction": "NE",
+          "phase": "neutral-stopped",
+          "durationMs": 350,
+          "rect": [
+            0,
+            372,
+            569,
+            372
+          ],
+          "pivot": [
+            0.37961335676625657,
+            0.0456989247311828
+          ]
+        }
+      ],
+      "descriptorStatus": "visual-reviewed",
+      "descriptorImported": null,
+      "descriptorRuntimeVerified": null,
+      "assetFilePresent": true
+    },
+    {
+      "name": "ReqFistsNormalIdleN20261025V2",
+      "descriptor": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleN20261025V2.json",
+      "descriptorSha256": "e88ad79d298e2aa0f7e6cb94b03dc1e4a0c16aa42885be484afdda43856aa3dd",
+      "image": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleN20261025V2.png",
+      "imageSha256": "e2bf44d64812455929ff333b63ac5e50f7dfffbc63f324f863a0e3164deeaf55",
+      "matchesDeclaredImageHash": true,
+      "nativeSize": [
+        2244,
+        698
+      ],
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "pixelsPerUnit": 271.5151515151515,
+      "sources": [
+        {
+          "path": "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleN-v2-source.png",
+          "sha256": "6929801038785b8524f4dbceb5c2381d1ad2dff3500434603a9de95d52ab952c",
+          "matchesDeclared": true
+        }
+      ],
+      "frameIds": [
+        "Redesign_ReqFistsNormalIdleN20261025V2_00"
+      ],
+      "frames": [
+        {
+          "id": "Redesign_ReqFistsNormalIdleN20261025V2_00",
+          "direction": "N",
+          "phase": "neutral-stopped",
+          "durationMs": 350,
+          "rect": [
+            0,
+            0,
+            561,
+            698
+          ],
+          "pivot": [
+            0.47593582887700536,
+            0.07593123209169055
+          ]
+        }
+      ],
+      "descriptorStatus": "visual-reviewed",
+      "descriptorImported": null,
+      "descriptorRuntimeVerified": null,
+      "assetFilePresent": true
+    },
+    {
+      "name": "ReqFistsNormalIdleE_SE20261025V1",
+      "descriptor": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleE_SE20261025V1.json",
+      "descriptorSha256": "528051e5ae9e4aadb156fca58d02e96e9f6d935e7a6cec2fe2632ee239c6cfc6",
+      "image": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleE_SE20261025V1.png",
+      "imageSha256": "6d32b807a2848b10166c239a2dd61481a78df58be75cd5405a9f1ee9634f05a3",
+      "matchesDeclaredImageHash": true,
+      "nativeSize": [
+        1700,
+        1038
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 229.47082767978287,
+      "sources": [
+        {
+          "path": "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleE_SE-v1-source.png",
+          "sha256": "bed205352d9cfa1b1433941f484deb7bae0d932024177f5704fed1082087327e",
+          "matchesDeclared": true
+        }
+      ],
+      "frameIds": [
+        "Redesign_ReqFistsNormalIdleE_SE20261025V1_00",
+        "Redesign_ReqFistsNormalIdleE_SE20261025V1_04"
+      ],
+      "frames": [
+        {
+          "id": "Redesign_ReqFistsNormalIdleE_SE20261025V1_00",
+          "direction": "E",
+          "phase": "neutral-stopped",
+          "durationMs": 350,
+          "rect": [
+            0,
+            0,
+            425,
+            519
+          ],
+          "pivot": [
+            0.5976470588235294,
+            0.038535645472061654
+          ]
+        },
+        {
+          "id": "Redesign_ReqFistsNormalIdleE_SE20261025V1_04",
+          "direction": "SE",
+          "phase": "neutral-stopped",
+          "durationMs": 350,
+          "rect": [
+            0,
+            519,
+            425,
+            519
+          ],
+          "pivot": [
+            0.6776470588235294,
+            0.038535645472061654
+          ]
+        }
+      ],
+      "descriptorStatus": "visual-reviewed",
+      "descriptorImported": null,
+      "descriptorRuntimeVerified": null,
+      "assetFilePresent": true
+    },
+    {
+      "name": "ReqMotoNormalDualSaws8AttackS20261027V1",
+      "descriptor": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalDualSaws8AttackS20261027V1.json",
+      "descriptorSha256": "a6a2a506c07ed6bd2fc3880b5a7320017499ebaa94f273716411b1721c9a09c8",
+      "image": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalDualSaws8AttackS20261027V1.png",
+      "imageSha256": "9b2be90d8fa2d748514c9b4d2bcff506138654fa8841eb3419fabae2cb51d965",
+      "matchesDeclaredImageHash": true,
+      "nativeSize": [
+        1692,
+        1164
+      ],
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "pixelsPerUnit": 157.57575757575756,
+      "sources": [
+        {
+          "path": "ArtSources/WeaponRedesign20261027/moto-dual-saws/ReqMotoNormalDualSaws8AttackS20261027V1-repair2-source.png",
+          "sha256": "aedade4a48a47ace8a1308d1e1186fbc876babaead70e461e68e3079d7f33c64",
+          "matchesDeclared": true
+        },
+        {
+          "path": "ArtSources/WeaponRedesign20261027/moto-dual-saws/ReqMotoNormalDualSaws8AttackS20261027V1-source.png",
+          "sha256": "dd93f2f1b14954a4f09e3007401100622182759c5fd09336e13b2dc9868cabf4",
+          "matchesDeclared": true
+        }
+      ],
+      "frameIds": [
+        "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_00",
+        "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_01",
+        "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_02",
+        "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_03",
+        "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_04",
+        "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_05",
+        "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_06",
+        "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_07"
+      ],
+      "frames": [
+        {
+          "id": "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_00",
+          "direction": "S",
+          "phase": "static_ready",
+          "durationMs": 160,
+          "rect": [
+            0,
+            0,
+            423,
+            388
+          ],
+          "pivot": [
+            0.4799054373522459,
+            0.08762886597938144
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_01",
+          "direction": "SW",
+          "phase": "static_ready",
+          "durationMs": 160,
+          "rect": [
+            423,
+            0,
+            423,
+            388
+          ],
+          "pivot": [
+            0.4799054373522459,
+            0.08762886597938144
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_02",
+          "direction": "W",
+          "phase": "static_ready",
+          "durationMs": 160,
+          "rect": [
+            846,
+            0,
+            423,
+            388
+          ],
+          "pivot": [
+            0.4799054373522459,
+            0.08762886597938144
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_03",
+          "direction": "NW",
+          "phase": "static_ready",
+          "durationMs": 160,
+          "rect": [
+            1269,
+            0,
+            423,
+            388
+          ],
+          "pivot": [
+            0.4799054373522459,
+            0.08762886597938144
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_04",
+          "direction": "N",
+          "phase": "static_ready",
+          "durationMs": 160,
+          "rect": [
+            0,
+            388,
+            423,
+            388
+          ],
+          "pivot": [
+            0.4799054373522459,
+            0.08762886597938144
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_05",
+          "direction": "NE",
+          "phase": "static_ready",
+          "durationMs": 160,
+          "rect": [
+            423,
+            388,
+            423,
+            388
+          ],
+          "pivot": [
+            0.4799054373522459,
+            0.08762886597938144
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_06",
+          "direction": "E",
+          "phase": "static_ready",
+          "durationMs": 160,
+          "rect": [
+            846,
+            388,
+            423,
+            388
+          ],
+          "pivot": [
+            0.4799054373522459,
+            0.08762886597938144
+          ]
+        },
+        {
+          "id": "Redesign_ReqMotoNormalDualSaws8AttackS20261027V1_07",
+          "direction": "SE",
+          "phase": "static_ready",
+          "durationMs": 160,
+          "rect": [
+            1269,
+            388,
+            423,
+            388
+          ],
+          "pivot": [
+            0.4799054373522459,
+            0.08762886597938144
+          ]
+        }
+      ],
+      "descriptorStatus": "visual-reviewed",
+      "descriptorImported": null,
+      "descriptorRuntimeVerified": null,
+      "assetFilePresent": true
+    }
+  ],
+  "humanApprovalV5": {
+    "date": "2026-11-01",
+    "feedbackLiteral": "aprovado esse ultimo gerado baseado em fists walk de moto finish ficou bom",
+    "sourcePath": "ArtSources/WeaponRedesign20261101/moto-dodge/ReqMotoNormalDodgeE_SE20261101V5-fists-identity-source.png",
+    "sourceSha256": "b9f90071250bcd9b3eb8dd094d798ed63dd33ff0076195c8052c3be90c7d132a",
+    "scope": "Six complete E/SE on-foot Moto dual-saw Dodge figures in V5, exact generated source approved. Future Moto fidelity authority together with approved FistsWalk; no aesthetic edits after approval."
+  },
+  "states": {
+    "thisAudit": "visual-reviewed-static/native/game-equivalent-scale",
+    "artChangedByThisAudit": false,
+    "importedByThisAudit": false,
+    "runtimeVerifiedByThisAudit": false,
+    "earlier18DodgeParentReported": "importados;143 EditMode/28 PlayMode relatados pela coordenação, não reexecutados aqui",
+    "V5ESEReceiptState": {
+      "imported": false,
+      "runtimeVerified": false,
+      "stagingOnly": true
+    },
+    "note": "Estados dos metadados/receipt são registrados como encontrados; não substituem a integração posterior pela coordenação."
+  },
+  "limits": [
+    "Revisão qualitativa de proporção visível; sem landmarks anatômicos numéricos inventados.",
+    "Tórax/coxa/quadril parcialmente cobertos por casaco, braços, serras e veículo.",
+    "Escala equivalente é prévia estática e não substitui execução Unity/playback.",
+    "Versões rejeitadas anteriores E/SE V1/V2/V3/V4 não foram reintroduzidas nem contam como arte vigente.",
+    "Nenhuma aprovação humana global de animações é inferida desta auditoria."
+  ],
+  "previews": [
+    {
+      "path": "outputs/retomada-20261101/proportion-audit/moto/cross-canonical-idles-worldscale.png",
+      "sha256": "441d153b74ed3f047420d8a056e291cb4d27c416a3462e5f7cf2140425b54ed8"
+    },
+    {
+      "path": "outputs/retomada-20261101/proportion-audit/moto/ReqMotoNormalDentesNW_N_NE20261031V1-worldscale.png",
+      "sha256": "5259edb50566a9ea8d580a475736aef7ee4c0f3f5858892df52bc5b00cee8df9"
+    },
+    {
+      "path": "outputs/retomada-20261101/proportion-audit/moto/ReqMotoNormalDentesS_E_SE20261031V1-worldscale.png",
+      "sha256": "2eea8006c53b4cca3314c764dab9e02cd16cf5f952385ce842db691928cb992f"
+    },
+    {
+      "path": "outputs/retomada-20261101/proportion-audit/moto/ReqMotoNormalDentesSW_W20261028V1-worldscale.png",
+      "sha256": "5aa61867f4f3b8544db976a92fbe654f68044faa7398ac1fb715d66cf385a790"
+    },
+    {
+      "path": "outputs/retomada-20261101/proportion-audit/moto/ReqMotoNormalDodgeE_SE20261101V5FistsAligned-worldscale.png",
+      "sha256": "5b2363575cb2da1f4b18a94cc834aa669ad66170cb85dbe67c2bf18b6c78c3bc"
+    },
+    {
+      "path": "outputs/retomada-20261101/proportion-audit/moto/ReqMotoNormalDodgeNW_N_NE20261101V1-worldscale.png",
+      "sha256": "8c15ac1f0b9db1f693c835bb15ecdd9eb32b9ff949efe1a405563ecfab3287f1"
+    },
+    {
+      "path": "outputs/retomada-20261101/proportion-audit/moto/ReqMotoNormalDodgeS_SW_W20261101Selected-worldscale.png",
+      "sha256": "165cb8fa91a781a44ee72fb4a1e3b9c6aa2dff4ac3fae7dfa6a575db1aecb465"
+    },
+    {
+      "path": "outputs/retomada-20261101/proportion-audit/moto/transition-S-native1x.png",
+      "sha256": "2c5784328b3d8d7944d69f4e6900f980ac165086c5ffbd2170352f6c6af94792"
+    },
+    {
+      "path": "outputs/retomada-20261101/proportion-audit/moto/transition-S-worldscale.png",
+      "sha256": "4d7debed0472badf8f67dc873f195f940bb55ee4b080df7cc52b2be15689e822"
+    }
+  ],
+  "integrity": {
+    "allImageAndSourceDeclaredHashesMatch": true,
+    "inventoryEntries": 15,
+    "sourceArtModifiedByAuditor": false
+  }
+}

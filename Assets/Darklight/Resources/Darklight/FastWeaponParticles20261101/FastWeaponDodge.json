@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 1,
+  "image": "FastWeaponDodge.png",
+  "imageSha256": "e4da6b903b2b7aec37d9a084408cf8c9ef9e8162f25c5f0087414fda684a39a6",
+  "sourcePath": "ArtSources/FastWeaponParticles20261101/FastWeaponDodgeV2-source.png",
+  "sourceSha256": "e4da6b903b2b7aec37d9a084408cf8c9ef9e8162f25c5f0087414fda684a39a6",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 256,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "wholeEffects": true,
+  "containsCharacters": false,
+  "assetType": "weapon-dodge-vfx",
+  "rectangleOrigin": "top-left",
+  "frames": [
+    {
+      "id": "Redesign_FastDodge_Katana_00",
+      "rect": [
+        0,
+        0,
+        450,
+        380
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 25,
+      "action": "Dodge",
+      "weapon": "Katana",
+      "direction": "Effect",
+      "phase": "onset",
+      "sourceRect": [
+        0,
+        0,
+        450,
+        380
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_FastDodge_Katana_01",
+      "rect": [
+        450,
+        0,
+        640,
+        380
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 50,
+      "action": "Dodge",
+      "weapon": "Katana",
+      "direction": "Effect",
+      "phase": "peak",
+      "sourceRect": [
+        450,
+        0,
+        640,
+        380
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_FastDodge_Katana_02",
+      "rect": [
+        1090,
+        0,
+        446,
+        380
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 70,
+      "action": "Dodge",
+      "weapon": "Katana",
+      "direction": "Effect",
+      "phase": "dissipation",
+      "sourceRect": [
+        1090,
+        0,
+        446,
+        380
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_FastDodge_Punhos_00",
+      "rect": [
+        0,
+        380,
+        450,
+        300
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 25,
+      "action": "Dodge",
+      "weapon": "Punhos",
+      "direction": "Effect",
+      "phase": "onset",
+      "sourceRect": [
+        0,
+        380,
+        450,
+        300
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_FastDodge_Punhos_01",
+      "rect": [
+        450,
+        380,
+        640,
+        300
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 50,
+      "action": "Dodge",
+      "weapon": "Punhos",
+      "direction": "Effect",
+      "phase": "peak",
+      "sourceRect": [
+        450,
+        380,
+        640,
+        300
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_FastDodge_Punhos_02",
+      "rect": [
+        1090,
+        380,
+        446,
+        300
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 70,
+      "action": "Dodge",
+      "weapon": "Punhos",
+      "direction": "Effect",
+      "phase": "dissipation",
+      "sourceRect": [
+        1090,
+        380,
+        446,
+        300
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_FastDodge_Moto_00",
+      "rect": [
+        0,
+        680,
+        450,
+        344
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 25,
+      "action": "Dodge",
+      "weapon": "Moto",
+      "direction": "Effect",
+      "phase": "onset",
+      "sourceRect": [
+        0,
+        680,
+        450,
+        344
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_FastDodge_Moto_01",
+      "rect": [
+        450,
+        680,
+        640,
+        344
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 50,
+      "action": "Dodge",
+      "weapon": "Moto",
+      "direction": "Effect",
+      "phase": "peak",
+      "sourceRect": [
+        450,
+        680,
+        640,
+        344
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_FastDodge_Moto_02",
+      "rect": [
+        1090,
+        680,
+        446,
+        344
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 70,
+      "action": "Dodge",
+      "weapon": "Moto",
+      "direction": "Effect",
+      "phase": "dissipation",
+      "sourceRect": [
+        1090,
+        680,
+        446,
+        344
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "Katana",
+      "frames": [
+        "Redesign_FastDodge_Katana_00",
+        "Redesign_FastDodge_Katana_01",
+        "Redesign_FastDodge_Katana_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "Punhos",
+      "frames": [
+        "Redesign_FastDodge_Punhos_00",
+        "Redesign_FastDodge_Punhos_01",
+        "Redesign_FastDodge_Punhos_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "Moto",
+      "frames": [
+        "Redesign_FastDodge_Moto_00",
+        "Redesign_FastDodge_Moto_01",
+        "Redesign_FastDodge_Moto_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "Katana",
+    "Punhos",
+    "Moto"
+  ],
+  "sourcePixelsPreserved": true,
+  "sourceScale": 1,
+  "logicalPixelResolution": null,
+  "logicalPixelGridVerified": false,
+  "unityImported": false,
+  "runtimeVerified": false,
+  "visualReview": {
+    "contactNative": true,
+    "wholeFrameNearest2x": true,
+    "allNineEffects": true,
+    "alphaComposited": true,
+    "temporalPhasesReviewed": true,
+    "animatedPlaybackObserved": false,
+    "humanApproved": false
+  },
+  "notes": [
+    "Whole independent effects; no characters, body parts, weapons, wheels or scene tiles.",
+    "Real measured seams x450/1090, y380/680; max boundary alpha1/255. No visible motif crosses seams at alpha8.",
+    "Native generated raster preserved byte-for-byte. No alpha cleanup, color edit, resampling or palette quantization.",
+    "Hidden RGB glows are not visible: validate by compositing alpha, not by displaying raw RGB alone.",
+    "PPU256 follows the existing basic particle sheet. Actual size and occlusion need coordinator Unity validation.",
+    "25/50/70ms=145ms per nonlooping clip. GIF uses approximate20/50/70ms; APNG carries exact durations.",
+    "Pivot0.5/0.5 as requested; varying real frame rectangles preserve full effects and native pixels.",
+    "Generated source has broad RGB ramps and partial alpha; exact indexed pixel grid is unverified."
+  ]
+}

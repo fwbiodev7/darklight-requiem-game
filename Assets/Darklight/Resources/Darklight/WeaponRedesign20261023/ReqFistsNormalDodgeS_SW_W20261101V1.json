@@ -1,0 +1,613 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqFistsNormalDodgeS_SW_W20261101V1.png",
+  "imageSha256": "6730abb57d135a48bab7cf3b9d003cf44978a589009d0c7e54c9070e89a939fc",
+  "nativeSize": [
+    2388,
+    1314
+  ],
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 163.63636363636363,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeS_SW_W20261101V1-source.png",
+  "sourceSha256": "b62ba6bf8b4a31f8f7d3fa3bfedfd1ad2a84d30f8c1f0b5fbb9a850d0553d92a",
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_00",
+      "rect": [
+        0,
+        0,
+        796,
+        438
+      ],
+      "pivot": [
+        0.5012562814070352,
+        0.19863013698630136
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        9,
+        520,
+        335
+      ],
+      "sourceAnchor": [
+        300,
+        340
+      ],
+      "sourcePackingAnchor": [
+        300,
+        340
+      ],
+      "supportGuide": {
+        "anchor": [
+          300,
+          340
+        ],
+        "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+      },
+      "sourceOffsetInFrame": [
+        99,
+        20
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_01",
+      "rect": [
+        796,
+        0,
+        796,
+        438
+      ],
+      "pivot": [
+        0.6708542713567839,
+        0.2054794520547945
+      ],
+      "durationMs": 150,
+      "action": "dodge",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "low-evasive-lunge",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        519,
+        29,
+        491,
+        339
+      ],
+      "sourceAnchor": [
+        756,
+        338
+      ],
+      "sourcePackingAnchor": [
+        621,
+        341
+      ],
+      "supportGuide": {
+        "anchor": [
+          756,
+          338
+        ],
+        "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+      },
+      "sourceOffsetInFrame": [
+        297,
+        39
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_02",
+      "rect": [
+        1592,
+        0,
+        796,
+        438
+      ],
+      "pivot": [
+        0.5062814070351759,
+        0.19863013698630136
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        1015,
+        9,
+        499,
+        341
+      ],
+      "sourceAnchor": [
+        1243,
+        341
+      ],
+      "sourcePackingAnchor": [
+        1239,
+        341
+      ],
+      "supportGuide": {
+        "anchor": [
+          1243,
+          341
+        ],
+        "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+      },
+      "sourceOffsetInFrame": [
+        175,
+        19
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_03",
+      "rect": [
+        0,
+        438,
+        796,
+        438
+      ],
+      "pivot": [
+        0.3869346733668342,
+        0.2328767123287671
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        0,
+        341,
+        528,
+        419
+      ],
+      "sourceAnchor": [
+        291,
+        666
+      ],
+      "sourcePackingAnchor": [
+        382,
+        681
+      ],
+      "supportGuide": {
+        "anchor": [
+          291,
+          666
+        ],
+        "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+      },
+      "sourceOffsetInFrame": [
+        17,
+        11
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_04",
+      "rect": [
+        796,
+        438,
+        796,
+        438
+      ],
+      "pivot": [
+        0.33668341708542715,
+        0.2100456621004566
+      ],
+      "durationMs": 150,
+      "action": "dodge",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "low-evasive-lunge",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        551,
+        359,
+        494,
+        321
+      ],
+      "sourceAnchor": [
+        785,
+        668
+      ],
+      "sourcePackingAnchor": [
+        916,
+        673
+      ],
+      "supportGuide": {
+        "anchor": [
+          785,
+          668
+        ],
+        "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+      },
+      "sourceOffsetInFrame": [
+        34,
+        37
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_05",
+      "rect": [
+        1592,
+        438,
+        796,
+        438
+      ],
+      "pivot": [
+        0.41331658291457285,
+        0.2328767123287671
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        1121,
+        349,
+        387,
+        333
+      ],
+      "sourceAnchor": [
+        1272,
+        666
+      ],
+      "sourcePackingAnchor": [
+        1342,
+        681
+      ],
+      "supportGuide": {
+        "anchor": [
+          1272,
+          666
+        ],
+        "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+      },
+      "sourceOffsetInFrame": [
+        178,
+        19
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_06",
+      "rect": [
+        0,
+        876,
+        796,
+        438
+      ],
+      "pivot": [
+        0.4824120603015075,
+        0.24885844748858446
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        17,
+        670,
+        463,
+        354
+      ],
+      "sourceAnchor": [
+        276,
+        991
+      ],
+      "sourcePackingAnchor": [
+        291,
+        1013
+      ],
+      "supportGuide": {
+        "anchor": [
+          276,
+          991
+        ],
+        "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+      },
+      "sourceOffsetInFrame": [
+        125,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_07",
+      "rect": [
+        796,
+        876,
+        796,
+        438
+      ],
+      "pivot": [
+        0.3015075376884422,
+        0.21689497716894976
+      ],
+      "durationMs": 150,
+      "action": "dodge",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "low-evasive-lunge",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        561,
+        711,
+        463,
+        286
+      ],
+      "sourceAnchor": [
+        793,
+        986
+      ],
+      "sourcePackingAnchor": [
+        952,
+        994
+      ],
+      "supportGuide": {
+        "anchor": [
+          793,
+          986
+        ],
+        "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+      },
+      "sourceOffsetInFrame": [
+        8,
+        68
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_08",
+      "rect": [
+        1592,
+        876,
+        796,
+        438
+      ],
+      "pivot": [
+        0.4899497487437186,
+        0.24885844748858446
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        1137,
+        671,
+        369,
+        353
+      ],
+      "sourceAnchor": [
+        1255,
+        991
+      ],
+      "sourcePackingAnchor": [
+        1264,
+        1013
+      ],
+      "supportGuide": {
+        "anchor": [
+          1255,
+          991
+        ],
+        "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+      },
+      "sourceOffsetInFrame": [
+        272,
+        9
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "dodge_S",
+      "frames": [
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_00",
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_01",
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "dodge_SW",
+      "frames": [
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_03",
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_04",
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_05"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "dodge_W",
+      "frames": [
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_06",
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_07",
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_08"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "dodge_S",
+    "dodge_SW",
+    "dodge_W"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.65
+  },
+  "sourcePixels": 537968,
+  "packedPixels": 537968,
+  "originalSourcePixels": 537968,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 1034896,
+    "farBeyond16pxPixels": 857,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 3.3607843137254902,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete whole figures only; no mirroring, anatomical assembly, source resizing, background removal or source color edits.",
+    "Source-to-atlas RGBA exact reconstruction proved by existing whole-figure preparer.",
+    "Low lunge intentionally bends knees/hips and lowers standing height; maxHeightRatio1.65 allows that pose without pretending constant bounding-box height.",
+    "Recovery supplies body PPU calibration; no per-frame rescaling.",
+    "Native generated raster; logical indexed-pixel resolution unverified.",
+    "Candidate staging only. Unity import/state timing, invulnerability and continuous motion need consumer verification."
+  ],
+  "visualApproval": false,
+  "imported": false,
+  "runtimeVerified": false,
+  "pixelsPerUnitCalibration": {
+    "method": "Whole recovery hair-to-sole measurements, excluding deliberate crouched lunge; no equipment-extents scaling or anatomical resize",
+    "measurements": [
+      {
+        "sourceFrameIndex": 2,
+        "hairY": 18,
+        "soleY": 341,
+        "bodyHeightPixels": 323
+      },
+      {
+        "sourceFrameIndex": 5,
+        "hairY": 357,
+        "soleY": 681,
+        "bodyHeightPixels": 324
+      },
+      {
+        "sourceFrameIndex": 8,
+        "hairY": 671,
+        "soleY": 1013,
+        "bodyHeightPixels": 342
+      }
+    ],
+    "bodyHeightUnits": 1.98,
+    "worldVisualScale": 1.325,
+    "measurementUncertaintyPixels": 4,
+    "visualScaleCheckPending": true
+  },
+  "phaseNames": [
+    "anticipation",
+    "low-evasive-lunge",
+    "recovery"
+  ],
+  "stateTiming": {
+    "durationMs": [
+      40,
+      150,
+      40
+    ],
+    "totalMs": 230,
+    "loop": false,
+    "invulnerabilityStartMs": 20,
+    "invulnerabilityEndMs": 190,
+    "invulnerabilityOwnedByRuntime": true
+  },
+  "referenceImages": [
+    {
+      "path": "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleS_SW_W-v1-source.png",
+      "sha256": "8c142514ee7e1a98545cff3d0d30769a89a0cabc409932319e52537856698f0d"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleS_SW_W20261025-source.png",
+      "sha256": "a2cb1ed3cc05b971f4ca0929679d8a2d1dd4e25878ec64566ebd47388c0d0248"
+    }
+  ],
+  "visualReview": {
+    "date": "2026-11-01",
+    "status": "visual-reviewed",
+    "visualApproval": false,
+    "wholeSourceInspected": true,
+    "nativeContactInspected": true,
+    "nearestNeighborContactInspected": true,
+    "continuousMotionViewed": false,
+    "reviewMethod": "Whole native source plus ordered complete figures at native and2x nearest-neighbor scale",
+    "sourceFigures": 9,
+    "acceptedFigures": 9,
+    "directions": [
+      "S",
+      "SW",
+      "W"
+    ],
+    "gait": false,
+    "actionReview": "All3directions show raised guard/loaded knees, distinctly lower evasive lunge with extended trailing leg, then higher upright recovery; head size/equipment stay consistent.",
+    "identityReview": "Mature canonical Fabius face, short brown haircut, clean peach skin, dark red irises, black-red coat, hip chain, entire silver gauntlets and claw greaves preserved.",
+    "alphaReview": "Source alpha retained exactly. Maximum alpha beyond16px silhouette is1/255; no visible external background. Partial-alpha/high-color raster warning remains.",
+    "supportReview": "Source coordinates of complete two-boot support midpoints annotated; ground plane follows pose, no bounding-box centering from coat/gauntlets. Runtime contact alignment pending.",
+    "timing": {
+      "durationMs": [
+        40,
+        150,
+        40
+      ],
+      "totalMs": 230,
+      "loop": false,
+      "invulnerabilityWindowMs": [
+        20,
+        190
+      ],
+      "runtimeInvulnerabilityTested": false
+    },
+    "imported": false,
+    "runtimeVerified": false,
+    "notes": [
+      "Native/source resolution is reported separately; indexed pixel-art logical grid unverified.",
+      "Motion GIF/HTML generated; no continuous playback or Unity test performed by this agent.",
+      "No new generation after coordinator83%usage/17%remaining stop instruction.",
+      "NW/N/NE/E/SE not generated."
+    ]
+  }
+}

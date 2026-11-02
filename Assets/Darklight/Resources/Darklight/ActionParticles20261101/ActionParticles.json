@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 1,
+  "image": "ActionParticles.png",
+  "imageSha256": "1ab05bec1448a513e8dbaa8716816bbf1c16e989b6afdd8677e867a96a34a334",
+  "sourcePath": "ArtSources/ActionParticles20261101/ActionParticlesV1-source.png",
+  "sourceSha256": "1ab05bec1448a513e8dbaa8716816bbf1c16e989b6afdd8677e867a96a34a334",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 256,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "frames": [
+    {
+      "id": "Redesign_ActionParticle_Dodge_00",
+      "rect": [
+        0,
+        0,
+        512,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 30,
+      "action": "Dodge",
+      "direction": "Effect",
+      "contentSize": [
+        512,
+        256
+      ],
+      "sourceRect": [
+        0,
+        0,
+        512,
+        256
+      ]
+    },
+    {
+      "id": "Redesign_ActionParticle_Dodge_01",
+      "rect": [
+        512,
+        0,
+        512,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 70,
+      "action": "Dodge",
+      "direction": "Effect",
+      "contentSize": [
+        512,
+        256
+      ],
+      "sourceRect": [
+        512,
+        0,
+        512,
+        256
+      ]
+    },
+    {
+      "id": "Redesign_ActionParticle_Dodge_02",
+      "rect": [
+        1024,
+        0,
+        512,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 70,
+      "action": "Dodge",
+      "direction": "Effect",
+      "contentSize": [
+        512,
+        256
+      ],
+      "sourceRect": [
+        1024,
+        0,
+        512,
+        256
+      ]
+    },
+    {
+      "id": "Redesign_ActionParticle_Defense_00",
+      "rect": [
+        0,
+        256,
+        512,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 25,
+      "action": "Defense",
+      "direction": "Effect",
+      "contentSize": [
+        512,
+        256
+      ],
+      "sourceRect": [
+        0,
+        256,
+        512,
+        256
+      ]
+    },
+    {
+      "id": "Redesign_ActionParticle_Defense_01",
+      "rect": [
+        512,
+        256,
+        512,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 50,
+      "action": "Defense",
+      "direction": "Effect",
+      "contentSize": [
+        512,
+        256
+      ],
+      "sourceRect": [
+        512,
+        256,
+        512,
+        256
+      ]
+    },
+    {
+      "id": "Redesign_ActionParticle_Defense_02",
+      "rect": [
+        1024,
+        256,
+        512,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 75,
+      "action": "Defense",
+      "direction": "Effect",
+      "contentSize": [
+        512,
+        256
+      ],
+      "sourceRect": [
+        1024,
+        256,
+        512,
+        256
+      ]
+    },
+    {
+      "id": "Redesign_ActionParticle_Damage_00",
+      "rect": [
+        0,
+        512,
+        512,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 20,
+      "action": "Damage",
+      "direction": "Effect",
+      "contentSize": [
+        512,
+        256
+      ],
+      "sourceRect": [
+        0,
+        512,
+        512,
+        256
+      ]
+    },
+    {
+      "id": "Redesign_ActionParticle_Damage_01",
+      "rect": [
+        512,
+        512,
+        512,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 50,
+      "action": "Damage",
+      "direction": "Effect",
+      "contentSize": [
+        512,
+        256
+      ],
+      "sourceRect": [
+        512,
+        512,
+        512,
+        256
+      ]
+    },
+    {
+      "id": "Redesign_ActionParticle_Damage_02",
+      "rect": [
+        1024,
+        512,
+        512,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 65,
+      "action": "Damage",
+      "direction": "Effect",
+      "contentSize": [
+        512,
+        256
+      ],
+      "sourceRect": [
+        1024,
+        512,
+        512,
+        256
+      ]
+    },
+    {
+      "id": "Redesign_ActionParticle_Death_00",
+      "rect": [
+        0,
+        768,
+        512,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 50,
+      "action": "Death",
+      "direction": "Effect",
+      "contentSize": [
+        512,
+        256
+      ],
+      "sourceRect": [
+        0,
+        768,
+        512,
+        256
+      ]
+    },
+    {
+      "id": "Redesign_ActionParticle_Death_01",
+      "rect": [
+        512,
+        768,
+        512,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 90,
+      "action": "Death",
+      "direction": "Effect",
+      "contentSize": [
+        512,
+        256
+      ],
+      "sourceRect": [
+        512,
+        768,
+        512,
+        256
+      ]
+    },
+    {
+      "id": "Redesign_ActionParticle_Death_02",
+      "rect": [
+        1024,
+        768,
+        512,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 130,
+      "action": "Death",
+      "direction": "Effect",
+      "contentSize": [
+        512,
+        256
+      ],
+      "sourceRect": [
+        1024,
+        768,
+        512,
+        256
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "name": "Dodge",
+      "frames": [
+        "Redesign_ActionParticle_Dodge_00",
+        "Redesign_ActionParticle_Dodge_01",
+        "Redesign_ActionParticle_Dodge_02"
+      ],
+      "loop": false
+    },
+    {
+      "name": "Defense",
+      "frames": [
+        "Redesign_ActionParticle_Defense_00",
+        "Redesign_ActionParticle_Defense_01",
+        "Redesign_ActionParticle_Defense_02"
+      ],
+      "loop": false
+    },
+    {
+      "name": "Damage",
+      "frames": [
+        "Redesign_ActionParticle_Damage_00",
+        "Redesign_ActionParticle_Damage_01",
+        "Redesign_ActionParticle_Damage_02"
+      ],
+      "loop": false
+    },
+    {
+      "name": "Death",
+      "frames": [
+        "Redesign_ActionParticle_Death_00",
+        "Redesign_ActionParticle_Death_01",
+        "Redesign_ActionParticle_Death_02"
+      ],
+      "loop": false
+    }
+  ],
+  "review": "Twelve complete neutral effects; restrained separate overlay, no character recoloring. Soft alpha/glow retained, not quantized or cleaned.",
+  "candidate": false,
+  "unityImported": false,
+  "runtimeVerified": false
+}

@@ -1,0 +1,41 @@
+{
+  "reviewedAt": "2026-11-01",
+  "scope": "read-only targeted build-crash diagnosis",
+  "unityVersion": "6000.6.0f1 (6000.6.0.63725)",
+  "currentBuild": {
+    "progress": "outputs/retomada-20261101/release-progress.json",
+    "log": "work/retomada-20261101/release-195201/build.log",
+    "crashReport": "C:/Users/Usuario/AppData/Local/Temp/Unity/Editor/Crashes/Crash_2026-11-01_230046262/build.log",
+    "exitCode": 2147483651,
+    "importExitCode": 0,
+    "editMode": {"passed": 144, "cases": 144},
+    "playMode": {"passed": 28, "cases": 28},
+    "buildSucceeded": false,
+    "standaloneExecuted": false,
+    "stackPhase": "BuildPlayer → SerializedFile::ReadObject → Texture2D::Transfer<StreamedBinaryRead> → SharedTextureData allocation",
+    "allocatorFrames": ["MimallocPrimErrorHandler", "_mi_error_message", "_mi_malloc_generic", "MimallocAllocator::Allocate"],
+    "allocatorFailureText": null,
+    "textureAssetIdentified": null,
+    "precedingLogEvidence": "Repeated Evict-before-extend reclaimed-content warnings; not unique to this crash.",
+    "environment": {"physicalMemoryMB": 16176, "diskFreeBytesBeforeBuild": 10819047424, "batchMode": true, "x64": true}
+  },
+  "comparison": {
+    "log": "work/retomada-20261101/release-094232/build.log",
+    "result": "Build Successful / Build Finished, Result: Success",
+    "unityVersion": "6000.6.0f1",
+    "incrementalBuild": "Tundra build success; 0 items updated, 524 evaluated",
+    "alsoHadEvictBeforeExtendWarnings": true
+  },
+  "diagnosis": {
+    "supported": "Native allocator error while Unity deserialized Texture2D shared data during Player build.",
+    "unconfirmed": ["system-wide out-of-memory", "particular corrupt/oversized texture", "Burst/native plugin/graphics backend cause"],
+    "confidence": "stack phase high; root cause undetermined"
+  },
+  "retry": [
+    "At most one controlled retry in a fresh Unity process, keeping 6000.6.0f1 and the same inputs/options/target.",
+    "Record available RAM/commit and ensure no concurrent Unity/build process.",
+    "Do not clear Library or change allocator parameters, Burst, native plugins, graphics backend, or Editor version for the first retry.",
+    "If it repeats, compare crash phase/log and then isolate texture assets by evidence."
+  ],
+  "limits": ["Crash dump not inspected.", "No Unity process started.", "No definitive root cause inferred."]
+}

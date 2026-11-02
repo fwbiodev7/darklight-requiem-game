@@ -81,6 +81,9 @@ namespace Darklight.Tests
         {
             Assert.That(view.UsesWeaponRedesignSprite,Is.True,page.id+": redesigned figure must reach CharacterView");
             Assert.That(page.spriteNames,Does.Contain(art.sprite.name));Assert.That(art.flipX,Is.False,"Every new direction was drawn explicitly");
+            int index=System.Array.IndexOf(page.spriteNames,art.sprite.name);
+            float density=page.framePixelsPerUnit?.Length==page.spriteNames.Length?page.framePixelsPerUnit[index]:page.pixelsPerUnit;
+            Assert.That(art.sprite.pixelsPerUnit,Is.EqualTo(density).Within(.001f),"Measured native resolution must retain the canonical render scale");
             var block=new MaterialPropertyBlock();art.GetPropertyBlock(block);
             Assert.That(block.GetFloat("_VampireForm"),Is.Zero);Assert.That(block.GetFloat("_WholeFrameId"),Is.Zero);
             Assert.That(block.GetFloat("_RuinFists"),Is.Zero,"Authored whole figures must not inherit the Ruin Fists palette filter");

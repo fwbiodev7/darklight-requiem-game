@@ -1,0 +1,758 @@
+{
+  "date": "2026-11-01",
+  "scope": {
+    "skin": 0,
+    "form": 0,
+    "directions": [
+      "S",
+      "SW",
+      "W",
+      "NW",
+      "N",
+      "NE",
+      "E",
+      "SE"
+    ],
+    "weapons": [
+      "Katana",
+      "Punhos da Ruína",
+      "Moto"
+    ]
+  },
+  "catalogSnapshot": {
+    "source": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/catalog.json",
+    "pages": 85,
+    "katana": {
+      "pages": 37,
+      "idleDirs": 8,
+      "walkDirs": [
+        "S",
+        "SW",
+        "W",
+        "NW",
+        "N"
+      ],
+      "attackPages": 24,
+      "attackKeys": [
+        "Leve1",
+        "Leve2",
+        "Leve3"
+      ]
+    },
+    "fists": {
+      "pages": 40,
+      "idleDirs": 8,
+      "walkDirs": [],
+      "attackPages": 32,
+      "attackKeys": [
+        "Direto da Ruína",
+        "Chute Quebra-Osso",
+        "Giro Devastador",
+        "Ascensão da Ruína"
+      ]
+    },
+    "moto": {
+      "pages": 8,
+      "attackPages": 8,
+      "attackKeys": [
+        "Dentes Cruzados"
+      ],
+      "note": "WeaponRedesignBank only resolves the on-foot dual-saw context; CharacterView excludes it while mounted."
+    }
+  },
+  "runtimeContracts": {
+    "weaponRedesign": "Assets/Darklight/Runtime/Character/DarklightWeaponRedesignBank.cs: Action, ValidPage, TryResolve, TryCurrentPose, TryResolveAttack",
+    "presentation": "Assets/Darklight/Runtime/Character/DarklightCharacterView.cs: Present",
+    "attackLoadouts": "Assets/Darklight/Runtime/Combat/DarklightCombatProfiles.cs; Assets/Darklight/Runtime/Combat/DarklightRuinFistsProfile.cs; Assets/Darklight/Runtime/Campaign/DarklightAbyssRider.cs",
+    "motorcycleBank": "Assets/Darklight/Runtime/Character/DarklightMotorcycleRedesignBank.cs",
+    "timingRule": "One full named Attack clip per key+direction; existing timings choose startup/active/recovery frames. Do not split those into separate generated clips."
+  },
+  "loadouts": {
+    "katana": {
+      "runtimeNamedAttacks": [
+        {
+          "key": "Leve1",
+          "phases": [
+            0.055,
+            0.075,
+            0.14
+          ],
+          "coverage": "8/8"
+        },
+        {
+          "key": "Leve2",
+          "phases": [
+            0.065,
+            0.08,
+            0.15
+          ],
+          "coverage": "8/8"
+        },
+        {
+          "key": "Leve3",
+          "phases": [
+            0.08,
+            0.1,
+            0.18
+          ],
+          "coverage": "8/8"
+        },
+        {
+          "key": "Pesado",
+          "phases": [
+            0.1,
+            0.11,
+            0.2
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Carregado",
+          "phases": [
+            0.15,
+            0.14,
+            0.23
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "ContraAtaque",
+          "phases": [
+            0.035,
+            0.09,
+            0.13
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "OndaDoVeu",
+          "phases": [
+            0.085,
+            0.12,
+            0.18
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "KatanaAerial",
+          "phases": [
+            0.065,
+            0.09,
+            0.14
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Corte do Silencio",
+          "phases": [
+            0.08,
+            0.1,
+            0.18
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Ruptura Precisa",
+          "phases": [
+            0.1,
+            0.11,
+            0.2
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Corte do Crepúsculo",
+          "phases": [
+            0.12,
+            0.16,
+            0.25
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Eclipse Partido",
+          "phases": [
+            0.16,
+            0.22,
+            0.3
+          ],
+          "coverage": "0/8"
+        }
+      ],
+      "missingAttackPages": 72,
+      "walkGap": [
+        "NE",
+        "E",
+        "SE"
+      ],
+      "stateFallbacks": [
+        "Charging",
+        "Dodge",
+        "Parry",
+        "Hurt",
+        "Dead"
+      ],
+      "airComboKeys": [
+        {
+          "phases": [
+            0.08,
+            0,
+            0.12
+          ],
+          "key": "Perseguição Aérea"
+        },
+        {
+          "phases": [
+            0.08,
+            0.16,
+            0.18
+          ],
+          "key": "Sequência Suspensa"
+        },
+        {
+          "phases": [
+            0.08,
+            0.12,
+            0.18
+          ],
+          "key": "Chute de Ruptura"
+        },
+        {
+          "phases": [
+            0.08,
+            0.12,
+            0.18
+          ],
+          "key": "Arremesso Celeste"
+        },
+        {
+          "phases": [
+            0.18,
+            0.12,
+            0.3
+          ],
+          "key": "Impacto Descendente"
+        }
+      ],
+      "missingAttackPagesIncludingAirCombo": 112
+    },
+    "fists": {
+      "runtimeNamedAttacks": [
+        {
+          "key": "Direto da Ruína",
+          "phases": [
+            0.075,
+            0.065,
+            0.13
+          ],
+          "coverage": "8/8"
+        },
+        {
+          "key": "Chute Quebra-Osso",
+          "phases": [
+            0.075,
+            0.085,
+            0.16
+          ],
+          "coverage": "8/8"
+        },
+        {
+          "key": "Giro Devastador",
+          "phases": [
+            0.11,
+            0.12,
+            0.2
+          ],
+          "coverage": "8/8"
+        },
+        {
+          "key": "Martelo da Ruína",
+          "phases": [
+            0.16,
+            0.1,
+            0.26
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Ascensão da Ruína",
+          "phases": [
+            0.14,
+            0.12,
+            0.28
+          ],
+          "coverage": "8/8"
+        },
+        {
+          "key": "Juízo da Ruína",
+          "phases": [
+            0.22,
+            0.14,
+            0.4
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Resposta Brutal",
+          "phases": [
+            0.065,
+            0.1,
+            0.24
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Cataclismo da Ruína",
+          "phases": [
+            0.28,
+            0.16,
+            0.44
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Queda da Ruína",
+          "phases": [
+            0.21,
+            0.12,
+            0.3
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Espiral da Ruína",
+          "phases": [
+            0.18,
+            0.4,
+            0.38
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Órbita Devastadora",
+          "phases": [
+            0.16,
+            0.14,
+            0.25
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Sentença da Ruína",
+          "phases": [
+            0.22,
+            0.12,
+            0.32
+          ],
+          "coverage": "0/8"
+        }
+      ],
+      "missingAttackPages": 64,
+      "walkGap": {
+        "catalogDirs": [],
+        "southCandidateFrames": 4,
+        "candidateAssetsIntegrated": false,
+        "pendingDirs": [
+          "S",
+          "SW",
+          "W",
+          "NW",
+          "N",
+          "NE",
+          "E",
+          "SE"
+        ],
+        "review": "outputs/retomada-20261101/punhos-walk/visual-review.json; whole South figures selected, continuous gait/import/runtime not verified; SW/W rejected for repeated leading boot"
+      },
+      "stateFallbacks": [
+        "Charging",
+        "Dodge",
+        "Parry",
+        "Hurt",
+        "Dead"
+      ],
+      "airComboKeys": [
+        {
+          "phases": [
+            0.08,
+            0,
+            0.12
+          ],
+          "key": "Perseguição Aérea"
+        },
+        {
+          "phases": [
+            0.08,
+            0.16,
+            0.18
+          ],
+          "key": "Sequência Suspensa"
+        },
+        {
+          "phases": [
+            0.08,
+            0.12,
+            0.18
+          ],
+          "key": "Chute de Ruptura"
+        },
+        {
+          "phases": [
+            0.08,
+            0.12,
+            0.18
+          ],
+          "key": "Arremesso Celeste"
+        }
+      ],
+      "missingAttackPagesIncludingAirCombo": 96
+    },
+    "moto": {
+      "runtimeNamedAttacks": [
+        {
+          "key": "Serra de Entrada",
+          "phases": [
+            0.25,
+            0.24,
+            0.37
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Dentes Cruzados",
+          "phases": [
+            0.3,
+            0.28,
+            0.4
+          ],
+          "coverage": "8/8 (on foot only)"
+        },
+        {
+          "key": "Giro das Engrenagens",
+          "phases": [
+            0.32,
+            0.3,
+            0.48
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Quebra de Eixo",
+          "phases": [
+            0.42,
+            0.2,
+            0.58
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Sobrecarga das Serras",
+          "phases": [
+            0.5,
+            0.3,
+            0.72
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Contra-Eixo",
+          "phases": [
+            0.13,
+            0.18,
+            0.4
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Esmagamento do Abismo",
+          "phases": [
+            0.68,
+            0.14,
+            0.8
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Ascensao Serrilhada",
+          "phases": [
+            0.3,
+            0.18,
+            0.58
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Engate Preciso",
+          "phases": [
+            0.22,
+            0.26,
+            0.34
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Queda do Motor",
+          "phases": [
+            0.44,
+            0.2,
+            0.65
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Investida Demoniaca",
+          "phases": [
+            0.44,
+            0.31,
+            0.62
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Derrapagem Sangrenta",
+          "phases": [
+            0.06,
+            0.38,
+            0.62
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Serras Continuas",
+          "phases": [
+            0.12,
+            0.96,
+            0.58
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "key": "Investida Final",
+          "phases": [
+            0.48,
+            0.34,
+            0.72
+          ],
+          "coverage": "0/8"
+        },
+        {
+          "coverage": "0/8",
+          "key": "Serra Infernal",
+          "phases": [
+            0.22,
+            0.56,
+            0.36
+          ]
+        },
+        {
+          "coverage": "0/8",
+          "key": "Giro Devastador",
+          "phases": [
+            0.32,
+            0.42,
+            0.46
+          ]
+        },
+        {
+          "coverage": "0/8",
+          "key": "Esmagamento Vertical",
+          "phases": [
+            0.58,
+            0.16,
+            0.58
+          ]
+        },
+        {
+          "coverage": "0/8",
+          "key": "Roda Destruidora",
+          "phases": [
+            0.24,
+            0.48,
+            0.4
+          ]
+        },
+        {
+          "coverage": "0/8",
+          "key": "Cavalgada Brutal",
+          "phases": [
+            0.32,
+            0.46,
+            0.54
+          ]
+        },
+        {
+          "coverage": "0/8",
+          "key": "Execução Aérea Motorizada",
+          "phases": [
+            0.16,
+            0.3,
+            0.4
+          ]
+        }
+      ],
+      "missingAttackPages": 184,
+      "motorcycleBank": {
+        "activeSkinForm": "0/0",
+        "ridingStaticDirections": 8,
+        "idleAnimatedDirections": 8,
+        "idleFramesPerDirection": 4,
+        "southSlamPhases": 4,
+        "southJoinFrames": 6,
+        "southSeparateFrames": 7,
+        "dualSawsReadyDirections": 8,
+        "dualSawsAttackFramesSouth": 4,
+        "walkCycleDirections": 0,
+        "note": "These skin 0 / form 0 bank entries are permitted for Réquiem by ESCOPO-CANONICO-20261026.md; they are independent of the 8 Dentes Cruzados catalog pages. ResolveRequiem uses ride fallback for un-authored attacks/context, not proof of per-key clips."
+      },
+      "walkCandidate": {
+        "producedFrames": 24,
+        "acceptedCycles": 0,
+        "importedPages": 0,
+        "source": "outputs/retomada-20261101/moto-walk/REPORT.md"
+      },
+      "expandedAndAirComboKeys": [
+        {
+          "phases": [
+            0.22,
+            0.56,
+            0.36
+          ],
+          "key": "Serra Infernal"
+        },
+        {
+          "phases": [
+            0.32,
+            0.42,
+            0.46
+          ],
+          "key": "Giro Devastador"
+        },
+        {
+          "phases": [
+            0.58,
+            0.16,
+            0.58
+          ],
+          "key": "Esmagamento Vertical"
+        },
+        {
+          "phases": [
+            0.24,
+            0.48,
+            0.4
+          ],
+          "key": "Roda Destruidora"
+        },
+        {
+          "phases": [
+            0.32,
+            0.46,
+            0.54
+          ],
+          "key": "Cavalgada Brutal"
+        },
+        {
+          "phases": [
+            0.16,
+            0.3,
+            0.4
+          ],
+          "key": "Execução Aérea Motorizada"
+        },
+        {
+          "phases": [
+            0.08,
+            0,
+            0.12
+          ],
+          "key": "Perseguição Aérea"
+        },
+        {
+          "phases": [
+            0.08,
+            0.16,
+            0.18
+          ],
+          "key": "Sequência Suspensa"
+        },
+        {
+          "phases": [
+            0.08,
+            0.12,
+            0.18
+          ],
+          "key": "Chute de Ruptura"
+        },
+        {
+          "phases": [
+            0.08,
+            0.12,
+            0.18
+          ],
+          "key": "Arremesso Celeste"
+        }
+      ],
+      "missingAttackPagesIncludingExpandedAirCombo": 216
+    }
+  },
+  "nonAttackContextGaps": {
+    "currentlyAuthoredPerWeapon": 0,
+    "requestedDistinctActions": [
+      "Charging",
+      "Dodge",
+      "Parry",
+      "Hurt",
+      "Dead"
+    ],
+    "pagesNeededForFullEightDirectionCoverage": 120,
+    "fallback": "all resolve to new Idle or Walk in TryCurrentPose; this is visual fallback only, not completed action coverage",
+    "validPageBlocker": "ValidPage accepts these names in KnownAction but plain timed clips fail the !TimedAction && !authoredAttack check; sourceSpriteNames shortcut passes shape checks, but MapsWholeSequence only permits Walk or Attack sequences, so they still do not resolve as authored. Coordinator plans the required runtime validation fix.",
+    "transformation": "Deferred by the 01/11 order; do after Normal and atmosphere."
+  },
+  "noRedundantClipWork": {
+    "runStartBrakeTurn": "runtime alias to Walk in TryCurrentPose; author Walk once per direction, don't create duplicate clips for these labels",
+    "idleMoodVariants": "IdleAlert/IdleImpatient/IdleInspect/IdleFatigued/IdleWounded resolve to Idle fallback here; don't make separate pages unless design explicitly requires distinct acting",
+    "attackPhases": "startup/contact/recovery are frame phases of one named key+direction page, not three clips"
+  },
+  "priorityAndLimits": {
+    "order": [
+      "Fabius Normal",
+      "Lucius Normal",
+      "atmosphere",
+      "transformations for both last"
+    ],
+    "fallbackCaveat": "old TodayCharacterBank / DarklightAbyssSpriteBank or default idle/ride poses keep the actor drawable but are not counted as redesign completion",
+    "visualStates": {
+      "candidate": "not equivalent to catalog/Assets import",
+      "catalog": "not equivalent to runtime validation",
+      "runtimeValidated": "not human campaign/playback or global completion"
+    },
+    "motoPolicy": "The 26/10 canonical contract explicitly allows the motorcycle for Fabius Réquiem; source art for the Rock rider still requires separate review."
+  },
+  "evidence": [
+    "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/catalog.json",
+    "Assets/Darklight/Runtime/Character/DarklightWeaponRedesignBank.cs",
+    "Assets/Darklight/Runtime/Character/DarklightCharacterView.cs",
+    "Assets/Darklight/Runtime/Character/DarklightMotorcycleRedesignBank.cs",
+    "Assets/Darklight/Runtime/Campaign/DarklightAbyssRider.cs",
+    "Assets/Darklight/Runtime/Combat/DarklightCombatProfiles.cs",
+    "Assets/Darklight/Runtime/Combat/DarklightRuinFistsProfile.cs",
+    "Assets/Darklight/Data/Weapons/Requiem.asset",
+    "Assets/Darklight/Data/Attacks/Leve1.asset, Leve2.asset, Leve3.asset, Pesado.asset, Carregado.asset, ContraAtaque.asset, OndaDoVeu.asset",
+    "Assets/Darklight/Data/Weapons/KatanaAerial.asset",
+    "outputs/retomada-20261101/punhos-walk/visual-review.json",
+    "outputs/retomada-20261101/moto-walk/REPORT.md",
+    "outputs/retomada-20261101/katana-walk/CHECKPOINT.md"
+  ],
+  "formRestrictedAttackKeys": {
+    "confirmedRupturaOrEclipseOnly": [],
+    "evidence": [
+      "Assets/Darklight/Runtime/Campaign/DarklightPlayableScope.cs: FinalForm=2",
+      "Assets/Darklight/Runtime/Combat/DarklightCombatProfiles.cs: global Katana Eclipse Partido assignment",
+      "Assets/Darklight/Runtime/Campaign/DarklightCampaign.cs: FormAbility returns at Form==0",
+      "Assets/Darklight/Runtime/Combat/CombatModel.cs: pending skill follow-up gated when FormStyle>=2"
+    ],
+    "rationale": "No separate form-only AttackDefinition keys found in scoped loadout/skill consumers. FormAbility runs only when Form>0 after a Skill contact; Eclipse Partido is assigned globally by DarklightCombatProfiles for katana, despite its name. CombatModel FormStyle>=2 only gates chaining pendingSkill during an existing attack, not availability of the skill from Neutral."
+  }
+}
+

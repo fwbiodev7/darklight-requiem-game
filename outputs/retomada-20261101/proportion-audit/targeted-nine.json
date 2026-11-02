@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-01",
+  "scope": "Somente nove figuras pendentes da auditoria176; não substitui a auditoria global.",
+  "state": "targeted-static-review-complete",
+  "counts": {
+    "reviewed": 9,
+    "APROVADA-compatible": 9,
+    "CORRECAO_NECESSARIA-confirmed": 0,
+    "BLOQUEADA-insufficient evidence": 0
+  },
+  "methods": {
+    "wholeFiguresOnly": true,
+    "nativeAndPlannedUnityCompared": true,
+    "worldVisualScale": 1.325,
+    "consumerRead": "DarklightWeaponRedesignBank consome durationMs; importador usa spritePixelsPerUnit/FilterMode.Point; CharacterView fixa1.325. Nenhum parâmetro alterado.",
+    "timings": "GiroN00=110ms,N02=200ms; DodgePunhos guard/recovery=40ms; KatanaSWlow=150ms",
+    "noHiddenAnatomyMeasurements": true,
+    "ppuDoesNotRepairAnatomy": true
+  },
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_00",
+      "direction": "NW",
+      "phase": "anticipation",
+      "durationMs": 40,
+      "decision": "APROVADA-compatible",
+      "confidence": "moderate-high",
+      "referenceIdle": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_00",
+      "referenceAuthority": "Idle aprovado conforme coordenação; aprovação humana nova não emitida",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634",
+      "nativeWholeFigureSeen": true,
+      "plannedUnityScaleSeen": true,
+      "pixelsPerUnit": 153.03030303030303,
+      "reason": "Tufos laterais, topete e término da nuca na gola permanecem compatíveis com o Idle da mesma direção. Joelhos flexionados, tronco rebaixado e guardas erguidas encurtam a silhueta do corpo e aumentam a impressão relativa da cabeça; não há crescimento de cabelo confirmado. Diferença localizada de textura não exige redesenho.",
+      "action": "Preservar figura inteira pixel a pixel; sem correção artística indicada nesta revisão.",
+      "evidence": [
+        "outputs/retomada-20261101/proportion-audit/punhos/ReqFistsNormalDodgeNW_N_NE20261101V1-worldscale.png",
+        "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+        "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleNW_N_NE-v1-source.png"
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_02",
+      "direction": "NW",
+      "phase": "recovery",
+      "durationMs": 40,
+      "decision": "APROVADA-compatible",
+      "confidence": "moderate-high",
+      "referenceIdle": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_00",
+      "referenceAuthority": "Idle aprovado conforme coordenação; aprovação humana nova não emitida",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634",
+      "nativeWholeFigureSeen": true,
+      "plannedUnityScaleSeen": true,
+      "pixelsPerUnit": 153.03030303030303,
+      "reason": "Tufos laterais, topete e término da nuca na gola permanecem compatíveis com o Idle da mesma direção. Joelhos flexionados, tronco rebaixado e guardas erguidas encurtam a silhueta do corpo e aumentam a impressão relativa da cabeça; não há crescimento de cabelo confirmado. Diferença localizada de textura não exige redesenho.",
+      "action": "Preservar figura inteira pixel a pixel; sem correção artística indicada nesta revisão.",
+      "evidence": [
+        "outputs/retomada-20261101/proportion-audit/punhos/ReqFistsNormalDodgeNW_N_NE20261101V1-worldscale.png",
+        "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+        "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleNW_N_NE-v1-source.png"
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_03",
+      "direction": "N",
+      "phase": "anticipation",
+      "durationMs": 40,
+      "decision": "APROVADA-compatible",
+      "confidence": "moderate-high",
+      "referenceIdle": "Redesign_ReqFistsNormalIdleN20261025V2_00",
+      "referenceAuthority": "Idle aprovado conforme coordenação; aprovação humana nova não emitida",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634",
+      "nativeWholeFigureSeen": true,
+      "plannedUnityScaleSeen": true,
+      "pixelsPerUnit": 153.03030303030303,
+      "reason": "Tufos laterais, topete e término da nuca na gola permanecem compatíveis com o Idle da mesma direção. Joelhos flexionados, tronco rebaixado e guardas erguidas encurtam a silhueta do corpo e aumentam a impressão relativa da cabeça; não há crescimento de cabelo confirmado. Diferença localizada de textura não exige redesenho.",
+      "action": "Preservar figura inteira pixel a pixel; sem correção artística indicada nesta revisão.",
+      "evidence": [
+        "outputs/retomada-20261101/proportion-audit/punhos/ReqFistsNormalDodgeNW_N_NE20261101V1-worldscale.png",
+        "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+        "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleN-v2-source.png"
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_05",
+      "direction": "N",
+      "phase": "recovery",
+      "durationMs": 40,
+      "decision": "APROVADA-compatible",
+      "confidence": "moderate-high",
+      "referenceIdle": "Redesign_ReqFistsNormalIdleN20261025V2_00",
+      "referenceAuthority": "Idle aprovado conforme coordenação; aprovação humana nova não emitida",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634",
+      "nativeWholeFigureSeen": true,
+      "plannedUnityScaleSeen": true,
+      "pixelsPerUnit": 153.03030303030303,
+      "reason": "Tufos laterais, topete e término da nuca na gola permanecem compatíveis com o Idle da mesma direção. Joelhos flexionados, tronco rebaixado e guardas erguidas encurtam a silhueta do corpo e aumentam a impressão relativa da cabeça; não há crescimento de cabelo confirmado. Diferença localizada de textura não exige redesenho.",
+      "action": "Preservar figura inteira pixel a pixel; sem correção artística indicada nesta revisão.",
+      "evidence": [
+        "outputs/retomada-20261101/proportion-audit/punhos/ReqFistsNormalDodgeNW_N_NE20261101V1-worldscale.png",
+        "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+        "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleN-v2-source.png"
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_06",
+      "direction": "NE",
+      "phase": "anticipation",
+      "durationMs": 40,
+      "decision": "APROVADA-compatible",
+      "confidence": "moderate-high",
+      "referenceIdle": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_04",
+      "referenceAuthority": "Idle aprovado conforme coordenação; aprovação humana nova não emitida",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634",
+      "nativeWholeFigureSeen": true,
+      "plannedUnityScaleSeen": true,
+      "pixelsPerUnit": 153.03030303030303,
+      "reason": "Tufos laterais, topete e término da nuca na gola permanecem compatíveis com o Idle da mesma direção. Joelhos flexionados, tronco rebaixado e guardas erguidas encurtam a silhueta do corpo e aumentam a impressão relativa da cabeça; não há crescimento de cabelo confirmado. Diferença localizada de textura não exige redesenho.",
+      "action": "Preservar figura inteira pixel a pixel; sem correção artística indicada nesta revisão.",
+      "evidence": [
+        "outputs/retomada-20261101/proportion-audit/punhos/ReqFistsNormalDodgeNW_N_NE20261101V1-worldscale.png",
+        "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+        "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleNW_N_NE-v1-source.png"
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_08",
+      "direction": "NE",
+      "phase": "recovery",
+      "durationMs": 40,
+      "decision": "APROVADA-compatible",
+      "confidence": "moderate-high",
+      "referenceIdle": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_04",
+      "referenceAuthority": "Idle aprovado conforme coordenação; aprovação humana nova não emitida",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634",
+      "nativeWholeFigureSeen": true,
+      "plannedUnityScaleSeen": true,
+      "pixelsPerUnit": 153.03030303030303,
+      "reason": "Tufos laterais, topete e término da nuca na gola permanecem compatíveis com o Idle da mesma direção. Joelhos flexionados, tronco rebaixado e guardas erguidas encurtam a silhueta do corpo e aumentam a impressão relativa da cabeça; não há crescimento de cabelo confirmado. Diferença localizada de textura não exige redesenho.",
+      "action": "Preservar figura inteira pixel a pixel; sem correção artística indicada nesta revisão.",
+      "evidence": [
+        "outputs/retomada-20261101/proportion-audit/punhos/ReqFistsNormalDodgeNW_N_NE20261101V1-worldscale.png",
+        "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+        "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleNW_N_NE-v1-source.png"
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_00",
+      "direction": "N",
+      "phase": "chamber-and-counterturn",
+      "durationMs": 110,
+      "decision": "APROVADA-compatible",
+      "confidence": "moderate",
+      "referenceIdle": "Redesign_ReqFistsNormalIdleN20261025V2_00",
+      "referenceAuthority": "Idle aprovado conforme coordenação; aprovação humana nova não emitida",
+      "sourcePath": "ArtSources/WeaponRedesign20261028/punhos-normal/ReqFistsNormalGiroNNEESE20261028Selected-source.png",
+      "sourceSha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98",
+      "nativeWholeFigureSeen": true,
+      "plannedUnityScaleSeen": true,
+      "pixelsPerUnit": 172.4747474747475,
+      "reason": "A cabeça está projetada para frente entre as guardas erguidas: maior exposição da coroa radial e sobreposição das mechas compactam a nuca. Não há aumento demonstrável de comprimento ou volume nem extensão da nuca além da gola. A textura mais arredondada, isolada, não confirma mudança do corte. Figura inteira mantém porte, roupa e equipamento compatíveis.",
+      "action": "Preservar figura inteira pixel a pixel; sem correção artística indicada nesta revisão.",
+      "evidence": [
+        "outputs/retomada-20261101/proportion-audit/punhos/independent-N-whole-native.png",
+        "outputs/retomada-20261101/proportion-audit/punhos/independent-N-whole-planned-unity.png"
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_02",
+      "direction": "N",
+      "phase": "landed-guard-recovery",
+      "durationMs": 200,
+      "decision": "APROVADA-compatible",
+      "confidence": "moderate",
+      "referenceIdle": "Redesign_ReqFistsNormalIdleN20261025V2_00",
+      "referenceAuthority": "Idle aprovado conforme coordenação; aprovação humana nova não emitida",
+      "sourcePath": "ArtSources/WeaponRedesign20261028/punhos-normal/ReqFistsNormalGiroNNEESE20261028Selected-source.png",
+      "sourceSha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98",
+      "nativeWholeFigureSeen": true,
+      "plannedUnityScaleSeen": true,
+      "pixelsPerUnit": 172.4747474747475,
+      "reason": "A cabeça está projetada para frente entre as guardas erguidas: maior exposição da coroa radial e sobreposição das mechas compactam a nuca. Não há aumento demonstrável de comprimento ou volume nem extensão da nuca além da gola. A textura mais arredondada, isolada, não confirma mudança do corte. Figura inteira mantém porte, roupa e equipamento compatíveis.",
+      "action": "Preservar figura inteira pixel a pixel; sem correção artística indicada nesta revisão.",
+      "evidence": [
+        "outputs/retomada-20261101/proportion-audit/punhos/independent-N-whole-native.png",
+        "outputs/retomada-20261101/proportion-audit/punhos/independent-N-whole-planned-unity.png"
+      ]
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_04",
+      "direction": "SW",
+      "phase": "dodge-low-lunge",
+      "durationMs": 150,
+      "decision": "APROVADA-compatible",
+      "confidence": "moderate-with-occlusion-limit",
+      "referenceIdle": "Redesign_ReqKatanaNormalNeutralIdleS_SW_W20261025_04",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeS_SW_W20261101V1-source.png",
+      "sourceSha256": "e8eabe37e97e224689d52a4b54cf0d6a3259bdb5cd3106d49939cd15bf2af841",
+      "nativeWholeFigureSeen": true,
+      "plannedUnityScaleSeen": true,
+      "pixelsPerUnit": 154.54546,
+      "reason": "A pose baixa e aberta é visualmente plausível: os trechos visíveis de coxa, joelho, canela e botas mantêm continuidade e não exibem extensão desproporcional inequívoca diante do Idle SW. A pelve coberta e a rotação limitam inferências sobre comprimentos ósseos exatos, mas não constituem uma incerteza visual material isolada nesta figura. Não há indicação suficiente para redesenho.",
+      "action": "Preservar figura inteira pixel a pixel. Compatibilidade visual estática com limite de oclusão; validar sequência/contato na rodada normal da coordenação sem inferir anatomia oculta.",
+      "evidence": [
+        "outputs/retomada-20261101/proportion-audit/katana-previews/SW-Dodge-1-focus-world.png",
+        "outputs/retomada-20261101/proportion-audit/katana-previews/SW-native.png"
+      ]
+    }
+  ],
+  "evidenceHashes": [
+    {
+      "path": "outputs/retomada-20261101/proportion-audit/punhos/independent-N-whole-native.png",
+      "sha256": "aebdb7a742bf4e01e83e4e9f33dca2c004c1b2c1be87434a7fea49191d9a6f83"
+    },
+    {
+      "path": "outputs/retomada-20261101/proportion-audit/punhos/independent-N-whole-planned-unity.png",
+      "sha256": "87d722688e419d25859efd8f74c46cb57720eba579ec81c737267ac6cb0a3417"
+    },
+    {
+      "path": "outputs/retomada-20261101/proportion-audit/punhos/ReqFistsNormalDodgeNW_N_NE20261101V1-worldscale.png",
+      "sha256": "4b8736abeeb096ef2efd4187a4e3aa236f2e5e99ae7a2c34824525237ddfc5b2"
+    },
+    {
+      "path": "outputs/retomada-20261101/proportion-audit/katana-previews/SW-Dodge-1-focus-world.png",
+      "sha256": "8188978dfeaffd0d151b23b8298d253819ffd16ea96a8b5b5dc703253dab8f7a"
+    },
+    {
+      "path": "outputs/retomada-20261101/proportion-audit/katana-previews/SW-native.png",
+      "sha256": "4675fe9bd36dc55c75d12869c6b6715ccd59c601f240999e027b38afeaa130d5"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "858e4028ea2f508d3312c9352452a8c76751accf520ab18557d113a259e70eb0"
+    },
+    {
+      "path": "Docs/Darklight/ESCOPO-CANONICO-20261026.md",
+      "sha256": "83ecd878f911849ae6dacbbf2f798bce2fc1d7f2a9af25922e2eeca57e714456"
+    },
+    {
+      "path": "Assets/Darklight/Runtime/Character/DarklightCharacterView.cs",
+      "sha256": "c5ba676c599fe7a89403ea5bc3657d6e1de3e0b709fd083785eecd25168f29f8"
+    },
+    {
+      "path": "Assets/Darklight/Runtime/Character/DarklightWeaponRedesignBank.cs",
+      "sha256": "f2c8ae41b8baf41ecd5faff7832f04ff576a83b0b8d775a24764e96579ddaa73"
+    },
+    {
+      "path": "Assets/Darklight/Editor/DarklightWeaponRedesignImporter.cs",
+      "sha256": "dada44fe90f355a14235224c06550d39fc3ddad712df75dc90ade22b1631d9ab"
+    },
+    {
+      "path": "outputs/retomada-20261101/punhos-dodge/staging/ReqFistsNormalDodgeNW_N_NE20261101V1.json",
+      "sha256": "c2729aedb50c85886039f74532503a155f0cb2401ae8ea7193488bc4c7e2e95e"
+    },
+    {
+      "path": "outputs/retomada-20261101/punhos-dodge/staging/ReqFistsNormalDodgeNW_N_NE20261101V1.png",
+      "sha256": "824fe55244b3ea38e04590a7d78762eaf5a65e8f6f5ec479d53c9bd019a69027"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+      "sha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634"
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleNW_NE20261025V1.json",
+      "sha256": "69df0128c66c00f15411056bc5913818f6bbd6384367df4b98cf1b8fd3112fd8"
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleNW_NE20261025V1.png",
+      "sha256": "f302effa11a44da2d63863c5645011976ca6d2f57a63221a6c7df2226b67f181"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleNW_N_NE-v1-source.png",
+      "sha256": "ed7fe8c38cbd21a6ead39ad48d3f2dc93ae7ba8f4e42a7514d81ea3255bc42cf"
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleN20261025V2.json",
+      "sha256": "e88ad79d298e2aa0f7e6cb94b03dc1e4a0c16aa42885be484afdda43856aa3dd"
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleN20261025V2.png",
+      "sha256": "e2bf44d64812455929ff333b63ac5e50f7dfffbc63f324f863a0e3164deeaf55"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleN-v2-source.png",
+      "sha256": "6929801038785b8524f4dbceb5c2381d1ad2dff3500434603a9de95d52ab952c"
+    },
+    {
+      "path": "outputs/retomada-20261031/punhos/giro24/staged/ReqFistsNormalGiroNNEESE20261028Selected.json",
+      "sha256": "78af43c7dbfa4a598984da5969c0f920a9c82d85689c1245760b87a9d4a604c3"
+    },
+    {
+      "path": "outputs/retomada-20261031/punhos/giro24/staged/ReqFistsNormalGiroNNEESE20261028Selected.png",
+      "sha256": "6328adb4be8544ac3d822b1ac894f7eeccdcda9da9dba48ce307162bd287f19f"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261028/punhos-normal/ReqFistsNormalGiroNNEESE20261028Selected-source.png",
+      "sha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeS_SW_W20261101V1-source.png",
+      "sha256": "e8eabe37e97e224689d52a4b54cf0d6a3259bdb5cd3106d49939cd15bf2af841"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleS_SW_W20261025-source.png",
+      "sha256": "a2cb1ed3cc05b971f4ca0929679d8a2d1dd4e25878ec64566ebd47388c0d0248"
+    }
+  ],
+  "states": {
+    "candidateArtProduced": false,
+    "visualReviewed": 9,
+    "newHumanApproval": false,
+    "importedByReviewer": false,
+    "runtimeVerifiedByReviewer": false,
+    "sourcesModified": false,
+    "assetsModified": false,
+    "runtimeModified": false,
+    "unityExecuted": false,
+    "gitExecuted": false
+  },
+  "limits": [
+    "Aprovação compatible significa compatibilidade estática das partes visíveis; não certifica gameplay, importação, contato ou campanha humana.",
+    "DodgePunhos traseiro usa PPU do descriptor no comparativo planejado; este revisor não executou importação nem consultou estado da Unity.",
+    "Oclusão não é defeito por si só e não autoriza inventar comprimento de ossos.",
+    "Nenhuma conclusão altera os cinco defeitos de katana confirmados fora deste escopo."
+  ],
+  "toolIssues": [
+    "Uma tentativa de abrir referência com nome NW_NE falhou; caminho real NW_N_NE localizado no relatório e aberto com êxito. Duas buscas iniciais em Assets/Darklight/Scripts falharam; consumidor real encontrado em Assets/Darklight/Runtime/Character e lido. Sem bloqueio de ferramenta remanescente."
+  ]
+}

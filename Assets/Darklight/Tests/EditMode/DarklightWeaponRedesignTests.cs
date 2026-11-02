@@ -30,6 +30,35 @@ namespace Darklight.Tests
             Assert.That(DarklightWeaponRedesignBank.Frame(page,1.131f),Is.EqualTo(0));
             page.loop=false;Assert.That(DarklightWeaponRedesignBank.Frame(page,50),Is.EqualTo(3));
         }
+        [TestCase("Dodge")][TestCase("Parry")][TestCase("Hurt")][TestCase("Dead")][TestCase("Transformation")]
+        public void AuthoredStateClipsUseTheirOwnTimingAndHoldTheFinalPose(string action)
+        {
+            var page=Idle();page.action=action;page.loop=false;
+            page.spriteNames=new[]{"Redesign_State_00","Redesign_State_01","Redesign_State_02"};
+            page.durationMs=new[]{40,150,40};
+            Assert.That(DarklightWeaponRedesignBank.ValidPage(page),Is.True,"No legacy source names required");
+            Assert.That(DarklightWeaponRedesignBank.Frame(page,.041f),Is.EqualTo(1));
+            Assert.That(DarklightWeaponRedesignBank.Frame(page,.191f),Is.EqualTo(2));
+            Assert.That(DarklightWeaponRedesignBank.Frame(page,50),Is.EqualTo(2));
+            page.loop=true;Assert.That(DarklightWeaponRedesignBank.ValidPage(page),Is.False,"A one-shot state must not restart while held");
+            page.loop=false;page.durationMs=new[]{40,150};
+            Assert.That(DarklightWeaponRedesignBank.ValidPage(page),Is.False,"Every complete figure needs a duration");
+            page.durationMs=new[]{40,0,40};Assert.That(DarklightWeaponRedesignBank.ValidPage(page),Is.False);
+        }
+        [Test] public void AuthoredChargingMayLoopWithoutLegacySpriteNames()
+        {
+            var page=Idle();page.action="Charging";
+            Assert.That(DarklightWeaponRedesignBank.ValidPage(page),Is.True);
+        }
+        [Test] public void WholeFigureRasterDensitiesMustMatchEveryDeclaredFrame()
+        {
+            var page=Idle();page.framePixelsPerUnit=new[]{128f,128f,256f,128f};
+            Assert.That(DarklightWeaponRedesignBank.ValidPage(page),Is.True);
+            page.framePixelsPerUnit=new[]{128f};Assert.That(DarklightWeaponRedesignBank.ValidPage(page),Is.False);
+            page.framePixelsPerUnit=new[]{128f,0f,128f,128f};Assert.That(DarklightWeaponRedesignBank.ValidPage(page),Is.False);
+            page.framePixelsPerUnit=new[]{128f,float.NaN,128f,128f};Assert.That(DarklightWeaponRedesignBank.ValidPage(page),Is.False);
+            page.framePixelsPerUnit=new[]{128f,float.PositiveInfinity,128f,128f};Assert.That(DarklightWeaponRedesignBank.ValidPage(page),Is.False);
+        }
         [Test] public void CombatRequiresExactExistingPhaseMappingAndCannotUseIdleTiming()
         {
             var page=Idle();page.action="Attack";page.attackKey="Corte duplo";

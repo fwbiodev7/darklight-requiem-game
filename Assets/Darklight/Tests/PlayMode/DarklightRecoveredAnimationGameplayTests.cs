@@ -12,8 +12,12 @@ namespace Darklight.Tests
         [UnityTest] public IEnumerator RecoveredMovesVisitEveryAuthoredPhaseAndPreserveContactTiming()
         {
             int contexts=0,figures=0;
-            foreach(var page in catalog.pages.Where(p=>p.skin==0&&p.form==0&&p.action=="Attack"&&
-                (p.attackKey=="Giro Devastador"||p.attackKey=="Leve3"||p.attackKey=="Dentes Cruzados")))
+            var pages=catalog.pages.Where(p=>p.skin==0&&p.form==0&&p.action=="Attack"&&
+                (p.attackKey=="Giro Devastador"||p.attackKey=="Leve3"||p.attackKey=="Dentes Cruzados")).ToArray();
+            foreach(var move in new[]{(weapon:0,key:"Leve3"),(weapon:2,key:"Giro Devastador"),(weapon:3,key:"Dentes Cruzados")})
+                Assert.That(pages.Where(p=>p.weapon==move.weapon&&p.attackKey==move.key).Select(p=>p.direction),
+                    Is.EquivalentTo(Enumerable.Range(0,8)),move.key+": require an exact authored clip in every direction, without fallback");
+            foreach(var page in pages)
             {
                 Context(0,page.weapon,0,page.direction);
                 var attack=Attacks(fighter.loadout).Single(a=>a.displayName==page.attackKey);
@@ -39,8 +43,8 @@ namespace Darklight.Tests
                 Present();Assert.That(art.sprite,Is.Not.Null);contexts++;figures+=seen.Count;
                 yield return null;
             }
-            Assert.That(contexts,Is.GreaterThanOrEqualTo(15));
-            Report("recovered-20261031",contexts,figures,"Newly recovered attacks rendered from real weapon loadouts; every startup/contact/recovery figure observed; gameplay timings unchanged. Missing directions remain pending.");
+            Assert.That(contexts,Is.EqualTo(24));
+            Report("recovered-20261101",contexts,figures,"Leve3, Giro Devastador and Dentes Cruzados each rendered in eight exact authored directions from real loadouts; every startup/contact/recovery figure observed; gameplay timings unchanged. Other animations/forms remain pending.");
         }
 
         [UnityTest] public IEnumerator RecoveredMotorcycleTransitionUsesWholeStartupAndRecoveryFigures()

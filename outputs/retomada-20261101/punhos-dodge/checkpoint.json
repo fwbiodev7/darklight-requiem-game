@@ -1,0 +1,95 @@
+{
+  "date": "2026-11-01",
+  "actor": "Fabius",
+  "skin": "Requiem",
+  "form": "Normal",
+  "weapon": "Punhos",
+  "action": "Dodge",
+  "produced": 24,
+  "visualReviewed": 24,
+  "clips": 8,
+  "completedDirections": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+  ],
+  "pendingDirections": [],
+  "sourceAtlasReceipts": [
+    {
+      "name": "ReqFistsNormalDodgeS_SW_W20261101V1",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeS_SW_W20261101V1-source.png",
+      "sourceSha256": "b62ba6bf8b4a31f8f7d3fa3bfedfd1ad2a84d30f8c1f0b5fbb9a850d0553d92a",
+      "imageSha256": "6730abb57d135a48bab7cf3b9d003cf44978a589009d0c7e54c9070e89a939fc",
+      "pixelsPerUnit": 163.63636363636363,
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "nativeSize": [
+        2388,
+        1314
+      ],
+      "qa": {
+        "name": "ReqFistsNormalDodgeS_SW_W20261101V1",
+        "errors": 0,
+        "warnings": 10
+      }
+    },
+    {
+      "name": "ReqFistsNormalDodgeNW_N_NE20261101V1",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634",
+      "imageSha256": "824fe55244b3ea38e04590a7d78762eaf5a65e8f6f5ec479d53c9bd019a69027",
+      "pixelsPerUnit": 153.03030303030303,
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "nativeSize": [
+        2304,
+        1440
+      ],
+      "qa": {
+        "name": "ReqFistsNormalDodgeNW_N_NE20261101V1",
+        "errors": 0,
+        "warnings": 10
+      }
+    },
+    {
+      "name": "ReqFistsNormalDodgeE_SE20261101V1",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeE_SE20261101V1-source.png",
+      "sourceSha256": "05358a068b6edadb79f39beaf39f131901dacfd282cc929fb5f464dbe3a3b5bc",
+      "imageSha256": "1bc81059217daa2a79bd5dd8fbfb824007ede9e07349b487107678e3ee16e7e2",
+      "pixelsPerUnit": 233.08080808080808,
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "nativeSize": [
+        1698,
+        1198
+      ],
+      "qa": {
+        "name": "ReqFistsNormalDodgeE_SE20261101V1",
+        "errors": 0,
+        "warnings": 7
+      }
+    }
+  ],
+  "protectedFront": {
+    "sourceUnchanged": true,
+    "atlasUnchanged": true
+  },
+  "integratedByThisAgent": false,
+  "runtimeVerifiedByThisAgent": false,
+  "coordinatorIntegrationState": "See main integration receipts; this staging task does not infer global Unity status.",
+  "nextSteps": [
+    "Coordinator integrate only incremental fragment-back/fragment-right and new staging PNG/JSON.",
+    "Verify native Dodge230ms nonloop, invulnerability20–190ms, support/scale and Idle transition in Unity."
+  ]
+}

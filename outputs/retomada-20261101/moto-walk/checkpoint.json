@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-01",
+  "scope": "Fabius Requiem Normal on-foot dual-saw Walk",
+  "state": "blocked-animation-quality-after-two-attempts",
+  "complete": false,
+  "attemptLimit": 2,
+  "attempts": 2,
+  "candidateFiguresProduced": 24,
+  "visualReviewedWalkClips": 0,
+  "preparedImportableSheets": 0,
+  "integrated": false,
+  "unityImported": false,
+  "runtimeVerified": false,
+  "sources": [
+    {
+      "name": "ReqMotoNormalWalkS_SW_W20261101V1",
+      "path": "ArtSources/WeaponRedesign20261101/moto-walk/ReqMotoNormalWalkS_SW_W20261101V1-source.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "e0d4ef57253bed3bc75daeb91db5a21c01f3f04af1c4b7de2d32b3628863b7ab",
+      "alphaMinimum": 0,
+      "alphaMaximum": 254,
+      "zeroAlphaPixels": 872404,
+      "opaquePixels": 0,
+      "transparent_background_requested": true
+    },
+    {
+      "name": "ReqMotoNormalWalkS20261101V2",
+      "path": "ArtSources/WeaponRedesign20261101/moto-walk/ReqMotoNormalWalkS20261101V2-source.png",
+      "size": [
+        1374,
+        1145
+      ],
+      "sha256": "dbaee5652e92c27b892394d22e52f059ea1dff6aaf53159ecd3ead222c4c0fc6",
+      "alphaMinimum": 0,
+      "alphaMaximum": 255,
+      "zeroAlphaPixels": 979774,
+      "opaquePixels": 1347,
+      "transparent_background_requested": true
+    }
+  ],
+  "references": [
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalDualSaws8AttackS20261027V1.png",
+      "sha256": "9b2be90d8fa2d748514c9b4d2bcff506138654fa8841eb3419fabae2cb51d965",
+      "size": [
+        1692,
+        1164
+      ],
+      "wholeImageSeen": true
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralWalkS20261024V5.png",
+      "sha256": "294a40dfa1a7b1603940ff73f7550ef71f1f750cc40a8df575b1e81e695e52d3",
+      "size": [
+        1698,
+        1028
+      ],
+      "wholeImageSeen": true
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleS_SW_W20261025-source.png",
+      "sha256": "a2cb1ed3cc05b971f4ca0929679d8a2d1dd4e25878ec64566ebd47388c0d0248",
+      "size": [
+        1536,
+        1024
+      ],
+      "wholeImageSeen": true
+    }
+  ],
+  "sourceCorrectPixelsPreserved": true,
+  "anatomyAssembly": false,
+  "redrawingByScript": false,
+  "sourceRescaling": false,
+  "alphaRemoval": false,
+  "generatedWith": "Integrated image_gen, transparent_background=true for both calls",
+  "attempt1": {
+    "directions": [
+      "S",
+      "SW",
+      "W"
+    ],
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "result": "rejected-walk",
+    "defects": [
+      "Each row repeats the same leading leg; opposite contacts and clear alternate passage are missing.",
+      "Background/halo visible in preview; actual PNG has real zero-alpha regions. No opaque-background claim is made."
+    ]
+  },
+  "attempt2": {
+    "directions": [
+      "S"
+    ],
+    "sourceSize": [
+      1374,
+      1145
+    ],
+    "result": "candidate-contacts-only-not-a-loop",
+    "validContactCandidates": {
+      "rightLegLeadingSourceIndices": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "leftLegLeadingSourceIndices": [
+        4,
+        5,
+        11
+      ]
+    },
+    "defects": [
+      "Authored frame3 repeats right-leg lead instead of opposite contact.",
+      "Source4/5/11 reverse leading foot, but clear support/passing/forward-swing phase coverage is still insufficient for a faithful loop.",
+      "No complete S/SW/W cycle can be promoted; remaining five directions were not generated."
+    ]
+  },
+  "diagnostics": [
+    {
+      "path": "outputs/retomada-20261101/moto-walk/diagnostic-authored-first-six.gif",
+      "sourceFrameIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "frameDurationMs": 110,
+      "approvedWalk": false,
+      "livePlaybackObserved": false
+    },
+    {
+      "path": "outputs/retomada-20261101/moto-walk/diagnostic-authored-second-six.gif",
+      "sourceFrameIndices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "frameDurationMs": 110,
+      "approvedWalk": false,
+      "livePlaybackObserved": false
+    }
+  ],
+  "remainingDirections": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+  ],
+  "nextExactStep": "Preserve complete contact candidates4/5/11 from V2; obtain newly authored COMPLETE whole-figure S passages with left-leg and right-leg swing/support clearly distinguished. Do not construct limbs or mirror figures. Reopen generation only in a fresh bounded task; then validate all loop phases before preparing import pages.",
+  "toolFailure": false,
+  "quotaFailure": false,
+  "filesOutsideAssignedScopeModified": false
+}

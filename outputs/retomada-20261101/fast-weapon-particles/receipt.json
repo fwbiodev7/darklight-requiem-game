@@ -1,0 +1,226 @@
+{
+  "status": "visual-reviewed",
+  "produced": true,
+  "visualReviewed": true,
+  "imported": false,
+  "runtimeVerified": false,
+  "generationCalls": 2,
+  "selectedSource": "ArtSources/FastWeaponParticles20261101/FastWeaponDodgeV2-source.png",
+  "selectedSha256": "e4da6b903b2b7aec37d9a084408cf8c9ef9e8162f25c5f0087414fda684a39a6",
+  "sourceBytesUnchanged": true,
+  "rejectedSource": "ArtSources/FastWeaponParticles20261101/FastWeaponDodgeV1-source.png",
+  "rejectionReason": "Excessive alpha halos and broad peaks before targeted correction.",
+  "alpha": {
+    "zero": 1075059,
+    "partial": 497805,
+    "minimum": 0,
+    "maximum": 254
+  },
+  "frames": [
+    {
+      "id": "Redesign_FastDodge_Katana_00",
+      "rect": [
+        0,
+        0,
+        450,
+        380
+      ],
+      "visibleBoundsAlpha8": [
+        80,
+        203,
+        413,
+        335
+      ],
+      "edgeAlphaMax": 1,
+      "nonzeroAlpha": 25648,
+      "visibleAtAlpha8": 13403,
+      "visibleAtAlpha32": 10969,
+      "alphaMass": 2336809
+    },
+    {
+      "id": "Redesign_FastDodge_Katana_01",
+      "rect": [
+        450,
+        0,
+        640,
+        380
+      ],
+      "visibleBoundsAlpha8": [
+        61,
+        141,
+        590,
+        346
+      ],
+      "edgeAlphaMax": 1,
+      "nonzeroAlpha": 72584,
+      "visibleAtAlpha8": 44427,
+      "visibleAtAlpha32": 39088,
+      "alphaMass": 8714661
+    },
+    {
+      "id": "Redesign_FastDodge_Katana_02",
+      "rect": [
+        1090,
+        0,
+        446,
+        380
+      ],
+      "visibleBoundsAlpha8": [
+        32,
+        210,
+        393,
+        337
+      ],
+      "edgeAlphaMax": 1,
+      "nonzeroAlpha": 29633,
+      "visibleAtAlpha8": 10717,
+      "visibleAtAlpha32": 8417,
+      "alphaMass": 1675687
+    },
+    {
+      "id": "Redesign_FastDodge_Punhos_00",
+      "rect": [
+        0,
+        380,
+        450,
+        300
+      ],
+      "visibleBoundsAlpha8": [
+        62,
+        107,
+        400,
+        250
+      ],
+      "edgeAlphaMax": 1,
+      "nonzeroAlpha": 36843,
+      "visibleAtAlpha8": 21994,
+      "visibleAtAlpha32": 18739,
+      "alphaMass": 3997810
+    },
+    {
+      "id": "Redesign_FastDodge_Punhos_01",
+      "rect": [
+        450,
+        380,
+        640,
+        300
+      ],
+      "visibleBoundsAlpha8": [
+        45,
+        54,
+        634,
+        268
+      ],
+      "edgeAlphaMax": 1,
+      "nonzeroAlpha": 93721,
+      "visibleAtAlpha8": 60012,
+      "visibleAtAlpha32": 53136,
+      "alphaMass": 11729921
+    },
+    {
+      "id": "Redesign_FastDodge_Punhos_02",
+      "rect": [
+        1090,
+        380,
+        446,
+        300
+      ],
+      "visibleBoundsAlpha8": [
+        73,
+        124,
+        405,
+        258
+      ],
+      "edgeAlphaMax": 1,
+      "nonzeroAlpha": 33456,
+      "visibleAtAlpha8": 14271,
+      "visibleAtAlpha32": 11980,
+      "alphaMass": 2550195
+    },
+    {
+      "id": "Redesign_FastDodge_Moto_00",
+      "rect": [
+        0,
+        680,
+        450,
+        344
+      ],
+      "visibleBoundsAlpha8": [
+        64,
+        85,
+        432,
+        250
+      ],
+      "edgeAlphaMax": 1,
+      "nonzeroAlpha": 44347,
+      "visibleAtAlpha8": 30823,
+      "visibleAtAlpha32": 27822,
+      "alphaMass": 6246130
+    },
+    {
+      "id": "Redesign_FastDodge_Moto_01",
+      "rect": [
+        450,
+        680,
+        640,
+        344
+      ],
+      "visibleBoundsAlpha8": [
+        72,
+        25,
+        604,
+        279
+      ],
+      "edgeAlphaMax": 1,
+      "nonzeroAlpha": 106121,
+      "visibleAtAlpha8": 83465,
+      "visibleAtAlpha32": 77125,
+      "alphaMass": 17675541
+    },
+    {
+      "id": "Redesign_FastDodge_Moto_02",
+      "rect": [
+        1090,
+        680,
+        446,
+        344
+      ],
+      "visibleBoundsAlpha8": [
+        34,
+        86,
+        407,
+        267
+      ],
+      "edgeAlphaMax": 1,
+      "nonzeroAlpha": 55452,
+      "visibleAtAlpha8": 31046,
+      "visibleAtAlpha32": 24871,
+      "alphaMass": 5007437
+    }
+  ],
+  "clipDurationMs": 145,
+  "framesPerClip": 3,
+  "references": [
+    {
+      "path": "ArtSources/ActionParticles20261101/references/Biblioteca de Partículas Darklight_ Requiem.png",
+      "sha256": "e8d792f4caaf8261916e44b7ce2e8f79a30e702eaaaa47261349e4517dcfd249"
+    },
+    {
+      "path": "ArtSources/ActionParticles20261101/references/Imagem do ChatGPT 1 de nov. de 2026, 10_16_04-1.png",
+      "sha256": "9a47b117b6d9c18587659582afaaa81834e399c7f38016dfaf55cb7e4a532e20"
+    },
+    {
+      "path": "ArtSources/ActionParticles20261101/references/Imagem do ChatGPT 1 de nov. de 2026, 10_16_05-2.png",
+      "sha256": "18ef7de36de8f421ad38050ae193018ec85b54897d74726ccf6e2b1352293d36"
+    },
+    {
+      "path": "ArtSources/ActionParticles20261101/references/Imagem do ChatGPT 1 de nov. de 2026, 10_16_05-3.png",
+      "sha256": "e85e0489066e048914816fd69f049631ce296f3ceef5a9254ffbebc56090da28"
+    }
+  ],
+  "consumersConsulted": [
+    "Assets/Darklight/Editor/DarklightWeaponRedesignImporter.cs",
+    "Assets/Darklight/Runtime/World/DarklightActionParticles.cs"
+  ],
+  "limitation": "Existing Runtime consumes generic12frames, not this9frame weapon sheet; coordinator integration required."
+}

@@ -69,6 +69,7 @@ namespace Darklight
         public void Present(CombatModel model,Vector2 movement)
         {
             if(display==null)return;
+            if(!previewing)DarklightActionParticles.Observe(this,model);
             int direction=DirectionIndex(model.Facing),skin=rock?1:0;
             var game=DarklightCampaign.Instance;var equipped=previewing?previewWeapon:game?.Weapons?.Equipped;int weapon=equipped==null?0:(int)equipped.id;
             bool ruinFists=weapon==2&&DarklightRuinFistsBank.Ready;
@@ -109,7 +110,8 @@ namespace Darklight
             display.transform.localScale=RenderScale;display.flipX=!UsesWeaponRedesignSprite&&!DarklightMotorcycleRedesignBank.IsAuthored(selected)&&(locomotionSelected?abyssLocomotion.Mirror:!previewing&&game?.AbyssRider?.Active==true?DarklightAbyssSpriteBank.Mirror(model):UsesUserWholeSprite&&model.Facing.x<-.1f);
             display.transform.localRotation=model.State==CombatState.Dead&&(UsesPoseFallback||UsesUserWholeSprite)?Quaternion.Euler(0,0,-75):Quaternion.Euler(0,0,!previewing&&game?.AbyssRider?.MountedPresentation==true?game.AbyssRider.LeanAngle+game.AbyssRider.RunOverPitch:0);
             UsesWholeCharacterSprite=selected!=null&&!UsesUserWholeSprite;
-            display.color=model.State==CombatState.Hurt?new Color(1,.4f,.4f):model.State==CombatState.Parry?new Color(.7f,.8f,1):Color.white;
+            bool authored=DarklightWeaponRedesignBank.IsAuthored(display.sprite)||DarklightMotorcycleRedesignBank.IsAuthored(display.sprite);
+            display.color=authored?Color.white:model.State==CombatState.Hurt?new Color(1,.4f,.4f):model.State==CombatState.Parry?new Color(.7f,.8f,1):Color.white;
             display.sortingOrder=100-Mathf.RoundToInt(transform.position.y*10f);appearance?.Present(display,direction,skin,game?.Form??0,model);
             originalForms??=GetComponent<DarklightOriginalVampireView>()??gameObject.AddComponent<DarklightOriginalVampireView>();
             originalForms.Present(display,skin,0,direction,previewing?previewForm:game?.PresentedForm??0,model.Clock,model.State==CombatState.Dead,UsesUserWholeSprite||UsesWholeCharacterSprite,model.State==CombatState.Dodge,!previewing);

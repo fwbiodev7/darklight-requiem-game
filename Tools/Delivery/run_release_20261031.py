@@ -1,8 +1,11 @@
 """Reuse the proven sequential gates, with fresh dated output and additional regression coverage."""
 from datetime import datetime
+import argparse
 import hashlib
 import json
 from pathlib import Path
+import re
+import shutil
 import sys
 import zipfile
 
@@ -15,6 +18,18 @@ release.OUT,release.WORK=OUT,WORK
 
 
 def main():
+    global OUT, WORK
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--session-date',default='20261031')
+    parser.add_argument('--skip-import',action='store_true')
+    parser.add_argument('--tests-only',action='store_true')
+    args=parser.parse_args()
+    if not re.fullmatch(r'\d{8}',args.session_date):
+        raise ValueError('Session date must use YYYYMMDD')
+    datetime.strptime(args.session_date,'%Y%m%d')
+    OUT=ROOT/('outputs/retomada-'+args.session_date)
+    WORK=ROOT/('work/retomada-'+args.session_date)/('release-'+datetime.now().strftime('%H%M%S'))
+    release.OUT,release.WORK=OUT,WORK
     OUT.mkdir(parents=True,exist_ok=True);WORK.mkdir(parents=True,exist_ok=True)
     if (ROOT/'Temp/UnityLockfile').exists():
         raise RuntimeError('Unity project already locked; do not launch another instance')
@@ -27,6 +42,11 @@ def main():
         'Darklight.Tests.DarklightWeaponRedesignGameplayTests.ReviewedKatanaWalkLoopsReachAllDeclaredFramesAndReturnToIdle',
         'Darklight.Tests.DarklightWeaponRedesignGameplayTests.ConfirmedContactEmphasizesWholePoseButWhiffsDoNot',
         'Darklight.Tests.DarklightWeaponRedesignGameplayTests.RecoveredMovesVisitEveryAuthoredPhaseAndPreserveContactTiming',
+        'Darklight.Tests.DarklightWeaponRedesignGameplayTests.ActionParticlesEmitOnceForRealStatesAndRespectLimits',
+        'Darklight.Tests.DarklightWeaponRedesignGameplayTests.CatalogDodgeClipsRunThroughRealCombatClockAndReturnToIdle',
+        'Darklight.Tests.DarklightWeaponRedesignGameplayTests.ReviewedFistsSouthWalkLoopsAllFramesAndSettlesToIdle',
+        'Darklight.Tests.DarklightWeaponRedesignGameplayTests.PixelAtmospherePreservesGeometryAndCharacterAndCapturesGameplay',
+        'Darklight.Tests.DarklightWeaponRedesignGameplayTests.WeaponDodgeParticlesAreDistinctAndExpireQuickly',
         'Darklight.Tests.DarklightWeaponRedesignGameplayTests.RecoveredMotorcycleTransitionUsesWholeStartupAndRecoveryFigures']
     stamp=datetime.now().strftime('%H%M%S')
     edit=OUT/('final-edit-'+stamp+'.xml');played=OUT/('final-play-'+stamp+'.xml')
@@ -46,6 +66,10 @@ def main():
     release.execute('play',['-runTests','-testPlatform','PlayMode','-testFilter',';'.join(play),'-testResults',str(played)],xml=played)
     if '--tests-only' in sys.argv:
         return
+    free=shutil.disk_usage(ROOT).free
+    release.state['freeBytesBeforeBuild']=free;release.save()
+    if free<4*1024**3:
+        raise RuntimeError('Less than 4 GiB free before Windows build; preserve sources and previous builds')
     release.execute('build',['-quit','-executeMethod','Darklight.Editor.DarklightWeaponRedesignBuild.Build',
         '-darklightRedesignEditResults',str(edit),'-darklightRedesignPlayResults',str(played),
         '-darklightReleaseOutput',str(OUT)],timeout=900)
@@ -53,7 +77,10 @@ def main():
     if receipt.get('result')!='Succeeded' or not (OUT/'Windows/DarklightRequiem.exe').is_file():
         raise RuntimeError('No successful new build/executable')
     release.state['buildSucceeded']=True;release.save()
-    archive=OUT/('DarklightRequiem-Windows-20261031-'+stamp+'.zip')
+    build_bytes=sum(path.stat().st_size for path in (OUT/'Windows').rglob('*') if path.is_file())
+    if shutil.disk_usage(ROOT).free<build_bytes+512*1024**2:
+        raise RuntimeError('Build succeeded but insufficient disk space to safely create ZIP')
+    archive=OUT/('DarklightRequiem-Windows-'+args.session_date+'-'+stamp+'.zip')
     with zipfile.ZipFile(archive,'x',zipfile.ZIP_DEFLATED,compresslevel=3) as bundle:
         for path in sorted((OUT/'Windows').rglob('*')):
             if path.is_file() and path.suffix.lower()!='.pdb' and not any('DoNotShip' in part for part in path.parts):

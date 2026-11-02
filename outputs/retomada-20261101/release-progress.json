@@ -1,0 +1,54 @@
+{
+  "stages": [
+    {
+      "stage": "import",
+      "started": "2026-11-01T23:57:31.516713+00:00",
+      "completed": true,
+      "exitCode": 0,
+      "ended": "2026-11-01T23:58:56.936105+00:00",
+      "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261101\\release-205731\\import.log",
+      "recovery": "Exact successful tool receipt; stopped pipeline before build for user visual feedback"
+    },
+    {
+      "stage": "edit",
+      "started": "2026-11-02T00:04:40.057044+00:00",
+      "completed": true,
+      "exitCode": 0,
+      "ended": "2026-11-02T00:05:22.243051+00:00",
+      "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261101\\release-210439\\edit.log",
+      "cases": 144,
+      "passed": 144
+    },
+    {
+      "stage": "play",
+      "started": "2026-11-02T00:05:22.249319+00:00",
+      "completed": true,
+      "exitCode": 0,
+      "ended": "2026-11-02T00:08:51.594891+00:00",
+      "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261101\\release-210439\\play.log",
+      "cases": 30,
+      "passed": 30
+    },
+    {
+      "stage": "build",
+      "started": "2026-11-02T00:08:51.599169+00:00",
+      "completed": false,
+      "exitCode": 2147483651,
+      "ended": "2026-11-02T00:11:15.627831+00:00",
+      "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261101\\release-210439\\build.log"
+    },
+    {
+      "stage": "build-headless",
+      "started": "2026-11-02T00:13:39.155529+00:00",
+      "completed": false,
+      "interrupted": true,
+      "observedUtc": "2026-11-02T00:22:11.529599+00:00"
+    }
+  ],
+  "buildSucceeded": false,
+  "standaloneExecuted": false,
+  "manualGameplayCompleted": false,
+  "zip": null,
+  "freeBytesBeforeBuild": 11621605376,
+  "error": "Headless build interrupted: Unity and runner no longer running after reported computer stall; no successful executable produced. Root cause unconfirmed."
+}

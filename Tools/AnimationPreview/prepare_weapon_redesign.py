@@ -23,7 +23,8 @@ PIPE = ROOT / 'Tools/Skills/pixel-art-sprite-sheet-master/scripts/sprite_pipelin
 DIRECTIONS = ['S', 'SW', 'W', 'NW', 'N', 'NE', 'E', 'SE']
 DURATIONS = [350, 250, 180, 350]
 TIMED_ACTIONS = {'Idle', 'Walk', 'Run', 'IdleAlert', 'IdleImpatient', 'IdleInspect',
-                 'IdleFatigued', 'IdleWounded', 'StartMove', 'Brake', 'Turn'}
+                 'IdleFatigued', 'IdleWounded', 'StartMove', 'Brake', 'Turn',
+                 'Dodge', 'Parry', 'Hurt', 'Dead', 'Charging', 'Transformation'}
 LOOP_ACTIONS = {'Idle', 'Walk', 'Run'}
 
 

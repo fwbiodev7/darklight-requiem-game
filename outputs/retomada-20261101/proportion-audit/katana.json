@@ -1,0 +1,3273 @@
+{
+  "date": "2026-11-01",
+  "status": "independent-static-audit-complete",
+  "scope": "Katana Normal:32Leve3+24Dodge whole frames versus8matching Idle baselines",
+  "newFrames": 56,
+  "baselineIdleFrames": 8,
+  "directions": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+  ],
+  "catalogSha256": "8a498a742ef1a2a79cb8657a2470b392a54104046f0a24eeff9100103c292ea1",
+  "inventory": [
+    {
+      "pageId": "ReqKatanaNormalNeutralIdleS_SW_W20261025_Idle_S",
+      "action": "Idle",
+      "direction": "S",
+      "sourcePath": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleS_SW_W20261025-source.png",
+      "sourceSha256": "a2cb1ed3cc05b971f4ca0929679d8a2d1dd4e25878ec64566ebd47388c0d0248",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleS_SW_W20261025",
+      "imageSha256": "8a5c11fa94a9adef8706e32020776e34bb9c59ab09d24e1a44476357dd138379",
+      "atlasHashMatches": true,
+      "ppuCatalog": 157.57575757575756,
+      "ppuUnityMeta": 157.57576,
+      "ppuUsedForPreview": 157.57576,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalNeutralIdleS_SW_W20261025_00",
+          "phase": "neutral",
+          "rect": [
+            0,
+            0,
+            444,
+            349
+          ],
+          "pivot": [
+            0.5945945945945946,
+            0.054441260744985676
+          ],
+          "sourceFrameIndex": 0,
+          "sourceRect": [
+            35,
+            32,
+            333,
+            307
+          ],
+          "sourceAnchor": [
+            246,
+            336
+          ],
+          "durationMs": 350,
+          "auditStatus": "baseline",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalLeve3S_SW_W20261028Selected_Attack_S",
+      "action": "Leve3",
+      "direction": "S",
+      "sourcePath": "ArtSources/WeaponRedesign20261028/katana-normal/ReqKatanaNormalLeve3S_SW_W20261028Selected-source.png",
+      "sourceSha256": "05a79e4db8b489877b9cad53ca87d0a7b5ebdbd0bb7b8bceed4b83acd23807d5",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve3S_SW_W20261028Selected",
+      "imageSha256": "fbeea302e111668a7c3754aa63c8ef8fa7d6a4e19041454a408e65a5376bd5a6",
+      "atlasHashMatches": true,
+      "ppuCatalog": 145.45454545454547,
+      "ppuUnityMeta": 145.45454,
+      "ppuUsedForPreview": 145.45454,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3S_SW_W20261028Selected_00",
+          "phase": "attack_0",
+          "rect": [
+            0,
+            0,
+            584,
+            396
+          ],
+          "pivot": [
+            0.6095890410958904,
+            0.10606060606060606
+          ],
+          "sourceFrameIndex": 0,
+          "sourceRect": [
+            193,
+            34,
+            339,
+            330
+          ],
+          "sourceAnchor": [
+            356,
+            354
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3S_SW_W20261028Selected_01",
+          "phase": "attack_1",
+          "rect": [
+            584,
+            0,
+            584,
+            396
+          ],
+          "pivot": [
+            0.5907534246575342,
+            0.10606060606060606
+          ],
+          "sourceFrameIndex": 1,
+          "sourceRect": [
+            738,
+            16,
+            315,
+            343
+          ],
+          "sourceAnchor": [
+            885,
+            354
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3S_SW_W20261028Selected_02",
+          "phase": "attack_2",
+          "rect": [
+            1168,
+            0,
+            584,
+            396
+          ],
+          "pivot": [
+            0.7294520547945206,
+            0.12878787878787878
+          ],
+          "sourceFrameIndex": 2,
+          "sourceRect": [
+            1207,
+            8,
+            343,
+            358
+          ],
+          "sourceAnchor": [
+            1400,
+            327
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3S_SW_W20261028Selected_03",
+          "phase": "attack_3",
+          "rect": [
+            1752,
+            0,
+            584,
+            396
+          ],
+          "pivot": [
+            0.583904109589041,
+            0.10606060606060606
+          ],
+          "sourceFrameIndex": 3,
+          "sourceRect": [
+            1759,
+            26,
+            354,
+            362
+          ],
+          "sourceAnchor": [
+            1961,
+            354
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalDodgeS_SW_W20261101V1_Dodge_S",
+      "action": "Dodge",
+      "direction": "S",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeS_SW_W20261101V1-source.png",
+      "sourceSha256": "e8eabe37e97e224689d52a4b54cf0d6a3259bdb5cd3106d49939cd15bf2af841",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalDodgeS_SW_W20261101V1",
+      "imageSha256": "c9dcb3731dc99d1d19878594a6906c15c5a68282fc6b3329fc1c0aa66d026a37",
+      "atlasHashMatches": true,
+      "ppuCatalog": 154.54545454545456,
+      "ppuUnityMeta": 154.54546,
+      "ppuUsedForPreview": 154.54546,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_00",
+          "phase": "anticipation",
+          "rect": [
+            0,
+            0,
+            821,
+            380
+          ],
+          "pivot": [
+            0.49573690621193667,
+            0.12368421052631579
+          ],
+          "sourceFrameIndex": 0,
+          "sourceRect": [
+            31,
+            33,
+            411,
+            321
+          ],
+          "sourceAnchor": [
+            281,
+            343
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "Larger mass tendency versus Idle; secondary caution, not a global rejection",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_01",
+          "phase": "dodge-low-lunge",
+          "rect": [
+            821,
+            0,
+            821,
+            380
+          ],
+          "pivot": [
+            0.43118148599269185,
+            0.12368421052631579
+          ],
+          "sourceFrameIndex": 1,
+          "sourceRect": [
+            489,
+            47,
+            517,
+            345
+          ],
+          "sourceAnchor": [
+            810,
+            353
+          ],
+          "durationMs": 150,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_02",
+          "phase": "recovery",
+          "rect": [
+            1642,
+            0,
+            821,
+            380
+          ],
+          "pivot": [
+            0.34348355663824603,
+            0.12368421052631579
+          ],
+          "sourceFrameIndex": 2,
+          "sourceRect": [
+            1049,
+            15,
+            415,
+            331
+          ],
+          "sourceAnchor": [
+            1311,
+            340
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "Larger mass tendency versus Idle; secondary caution, not a global rejection",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalNeutralIdleS_SW_W20261025_Idle_SW",
+      "action": "Idle",
+      "direction": "SW",
+      "sourcePath": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleS_SW_W20261025-source.png",
+      "sourceSha256": "a2cb1ed3cc05b971f4ca0929679d8a2d1dd4e25878ec64566ebd47388c0d0248",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleS_SW_W20261025",
+      "imageSha256": "8a5c11fa94a9adef8706e32020776e34bb9c59ab09d24e1a44476357dd138379",
+      "atlasHashMatches": true,
+      "ppuCatalog": 157.57575757575756,
+      "ppuUnityMeta": 157.57576,
+      "ppuUsedForPreview": 157.57576,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalNeutralIdleS_SW_W20261025_04",
+          "phase": "neutral",
+          "rect": [
+            0,
+            349,
+            444,
+            349
+          ],
+          "pivot": [
+            0.49774774774774777,
+            0.09169054441260745
+          ],
+          "sourceFrameIndex": 4,
+          "sourceRect": [
+            26,
+            353,
+            360,
+            322
+          ],
+          "sourceAnchor": [
+            229,
+            656
+          ],
+          "durationMs": 350,
+          "auditStatus": "baseline",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalLeve3S_SW_W20261028Selected_Attack_SW",
+      "action": "Leve3",
+      "direction": "SW",
+      "sourcePath": "ArtSources/WeaponRedesign20261028/katana-normal/ReqKatanaNormalLeve3S_SW_W20261028Selected-source.png",
+      "sourceSha256": "05a79e4db8b489877b9cad53ca87d0a7b5ebdbd0bb7b8bceed4b83acd23807d5",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve3S_SW_W20261028Selected",
+      "imageSha256": "fbeea302e111668a7c3754aa63c8ef8fa7d6a4e19041454a408e65a5376bd5a6",
+      "atlasHashMatches": true,
+      "ppuCatalog": 145.45454545454547,
+      "ppuUnityMeta": 145.45454,
+      "ppuUsedForPreview": 145.45454,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3S_SW_W20261028Selected_04",
+          "phase": "attack_0",
+          "rect": [
+            0,
+            396,
+            584,
+            396
+          ],
+          "pivot": [
+            0.4794520547945205,
+            0.10606060606060606
+          ],
+          "sourceFrameIndex": 4,
+          "sourceRect": [
+            152,
+            409,
+            334,
+            350
+          ],
+          "sourceAnchor": [
+            280,
+            750
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3S_SW_W20261028Selected_05",
+          "phase": "attack_1",
+          "rect": [
+            584,
+            396,
+            584,
+            396
+          ],
+          "pivot": [
+            0.5958904109589042,
+            0.10606060606060606
+          ],
+          "sourceFrameIndex": 5,
+          "sourceRect": [
+            753,
+            404,
+            315,
+            351
+          ],
+          "sourceAnchor": [
+            888,
+            750
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3S_SW_W20261028Selected_06",
+          "phase": "attack_2",
+          "rect": [
+            1168,
+            396,
+            584,
+            396
+          ],
+          "pivot": [
+            0.7191780821917808,
+            0.1111111111111111
+          ],
+          "sourceFrameIndex": 6,
+          "sourceRect": [
+            1213,
+            413,
+            327,
+            326
+          ],
+          "sourceAnchor": [
+            1394,
+            730
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3S_SW_W20261028Selected_07",
+          "phase": "attack_3",
+          "rect": [
+            1752,
+            396,
+            584,
+            396
+          ],
+          "pivot": [
+            0.5958904109589042,
+            0.10606060606060606
+          ],
+          "sourceFrameIndex": 7,
+          "sourceRect": [
+            1750,
+            431,
+            375,
+            351
+          ],
+          "sourceAnchor": [
+            1968,
+            750
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalDodgeS_SW_W20261101V1_Dodge_SW",
+      "action": "Dodge",
+      "direction": "SW",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeS_SW_W20261101V1-source.png",
+      "sourceSha256": "e8eabe37e97e224689d52a4b54cf0d6a3259bdb5cd3106d49939cd15bf2af841",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalDodgeS_SW_W20261101V1",
+      "imageSha256": "c9dcb3731dc99d1d19878594a6906c15c5a68282fc6b3329fc1c0aa66d026a37",
+      "atlasHashMatches": true,
+      "ppuCatalog": 154.54545454545456,
+      "ppuUnityMeta": 154.54546,
+      "ppuUsedForPreview": 154.54546,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_03",
+          "phase": "anticipation",
+          "rect": [
+            0,
+            380,
+            821,
+            380
+          ],
+          "pivot": [
+            0.3105968331303289,
+            0.12368421052631579
+          ],
+          "sourceFrameIndex": 3,
+          "sourceRect": [
+            39,
+            354,
+            449,
+            358
+          ],
+          "sourceAnchor": [
+            286,
+            673
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "Larger mass tendency versus Idle; secondary caution, not a global rejection",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_04",
+          "phase": "dodge-low-lunge",
+          "rect": [
+            821,
+            380,
+            821,
+            380
+          ],
+          "pivot": [
+            0.5456760048721072,
+            0.12368421052631579
+          ],
+          "sourceFrameIndex": 4,
+          "sourceRect": [
+            553,
+            415,
+            499,
+            281
+          ],
+          "sourceAnchor": [
+            786,
+            673
+          ],
+          "durationMs": 150,
+          "auditStatus": "borderline-review",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "SW low pose: pelvis hidden/rotation makes extension borderline; preserve until focused confirmation",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_05",
+          "phase": "recovery",
+          "rect": [
+            1642,
+            380,
+            821,
+            380
+          ],
+          "pivot": [
+            0.3215590742996346,
+            0.12368421052631579
+          ],
+          "sourceFrameIndex": 5,
+          "sourceRect": [
+            1071,
+            365,
+            435,
+            316
+          ],
+          "sourceAnchor": [
+            1323,
+            676
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "Larger mass tendency versus Idle; secondary caution, not a global rejection",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalNeutralIdleS_SW_W20261025_Idle_W",
+      "action": "Idle",
+      "direction": "W",
+      "sourcePath": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleS_SW_W20261025-source.png",
+      "sourceSha256": "a2cb1ed3cc05b971f4ca0929679d8a2d1dd4e25878ec64566ebd47388c0d0248",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleS_SW_W20261025",
+      "imageSha256": "8a5c11fa94a9adef8706e32020776e34bb9c59ab09d24e1a44476357dd138379",
+      "atlasHashMatches": true,
+      "ppuCatalog": 157.57575757575756,
+      "ppuUnityMeta": 157.57576,
+      "ppuUsedForPreview": 157.57576,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalNeutralIdleS_SW_W20261025_08",
+          "phase": "neutral",
+          "rect": [
+            0,
+            698,
+            444,
+            349
+          ],
+          "pivot": [
+            0.6058558558558559,
+            0.0830945558739255
+          ],
+          "sourceFrameIndex": 8,
+          "sourceRect": [
+            21,
+            675,
+            364,
+            321
+          ],
+          "sourceAnchor": [
+            236,
+            984
+          ],
+          "durationMs": 350,
+          "auditStatus": "baseline",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalLeve3S_SW_W20261028Selected_Attack_W",
+      "action": "Leve3",
+      "direction": "W",
+      "sourcePath": "ArtSources/WeaponRedesign20261028/katana-normal/ReqKatanaNormalLeve3S_SW_W20261028Selected-source.png",
+      "sourceSha256": "05a79e4db8b489877b9cad53ca87d0a7b5ebdbd0bb7b8bceed4b83acd23807d5",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve3S_SW_W20261028Selected",
+      "imageSha256": "fbeea302e111668a7c3754aa63c8ef8fa7d6a4e19041454a408e65a5376bd5a6",
+      "atlasHashMatches": true,
+      "ppuCatalog": 145.45454545454547,
+      "ppuUnityMeta": 145.45454,
+      "ppuUsedForPreview": 145.45454,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3S_SW_W20261028Selected_08",
+          "phase": "attack_0",
+          "rect": [
+            0,
+            792,
+            584,
+            396
+          ],
+          "pivot": [
+            0.3818493150684932,
+            0.10606060606060606
+          ],
+          "sourceFrameIndex": 8,
+          "sourceRect": [
+            29,
+            804,
+            359,
+            345
+          ],
+          "sourceAnchor": [
+            223,
+            1146
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3S_SW_W20261028Selected_09",
+          "phase": "attack_1",
+          "rect": [
+            584,
+            792,
+            584,
+            396
+          ],
+          "pivot": [
+            0.398972602739726,
+            0.10606060606060606
+          ],
+          "sourceFrameIndex": 9,
+          "sourceRect": [
+            659,
+            800,
+            310,
+            363
+          ],
+          "sourceAnchor": [
+            773,
+            1146
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3S_SW_W20261028Selected_10",
+          "phase": "attack_2",
+          "rect": [
+            1168,
+            792,
+            584,
+            396
+          ],
+          "pivot": [
+            0.6284246575342466,
+            0.10606060606060606
+          ],
+          "sourceFrameIndex": 10,
+          "sourceRect": [
+            1149,
+            807,
+            351,
+            323
+          ],
+          "sourceAnchor": [
+            1341,
+            1128
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3S_SW_W20261028Selected_11",
+          "phase": "attack_3",
+          "rect": [
+            1752,
+            792,
+            584,
+            396
+          ],
+          "pivot": [
+            0.4023972602739726,
+            0.10606060606060606
+          ],
+          "sourceFrameIndex": 11,
+          "sourceRect": [
+            1628,
+            827,
+            355,
+            322
+          ],
+          "sourceAnchor": [
+            1855,
+            1146
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalDodgeS_SW_W20261101V1_Dodge_W",
+      "action": "Dodge",
+      "direction": "W",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeS_SW_W20261101V1-source.png",
+      "sourceSha256": "e8eabe37e97e224689d52a4b54cf0d6a3259bdb5cd3106d49939cd15bf2af841",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalDodgeS_SW_W20261101V1",
+      "imageSha256": "c9dcb3731dc99d1d19878594a6906c15c5a68282fc6b3329fc1c0aa66d026a37",
+      "atlasHashMatches": true,
+      "ppuCatalog": 154.54545454545456,
+      "ppuUnityMeta": 154.54546,
+      "ppuUsedForPreview": 154.54546,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_06",
+          "phase": "anticipation",
+          "rect": [
+            0,
+            760,
+            821,
+            380
+          ],
+          "pivot": [
+            0.4774665042630938,
+            0.12368421052631579
+          ],
+          "sourceFrameIndex": 6,
+          "sourceRect": [
+            0,
+            685,
+            522,
+            339
+          ],
+          "sourceAnchor": [
+            241,
+            986
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "Larger mass tendency versus Idle; secondary caution, not a global rejection",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_07",
+          "phase": "dodge-low-lunge",
+          "rect": [
+            821,
+            760,
+            821,
+            380
+          ],
+          "pivot": [
+            0.5785627283800243,
+            0.12368421052631579
+          ],
+          "sourceFrameIndex": 7,
+          "sourceRect": [
+            553,
+            679,
+            563,
+            313
+          ],
+          "sourceAnchor": [
+            778,
+            985
+          ],
+          "durationMs": 150,
+          "auditStatus": "whole-frame-correction-needed",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "See targeted finding",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_08",
+          "phase": "recovery",
+          "rect": [
+            1642,
+            760,
+            821,
+            380
+          ],
+          "pivot": [
+            0.47503045066991473,
+            0.12368421052631579
+          ],
+          "sourceFrameIndex": 8,
+          "sourceRect": [
+            1125,
+            681,
+            411,
+            307
+          ],
+          "sourceAnchor": [
+            1295,
+            981
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "Larger mass tendency versus Idle; secondary caution, not a global rejection",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalNeutralIdleNW_N_NE20261025_Idle_NW",
+      "action": "Idle",
+      "direction": "NW",
+      "sourcePath": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleNW_N_NE20261025-source.png",
+      "sourceSha256": "e631dd7fec0bd0d89851fb9ceb9dfe72f193fc22f227f113431b0825d3051387",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleNW_N_NE20261025",
+      "imageSha256": "2889cf460675557432c2de5f0b4e52f7bebfe14f7b7e34330008adf74336a7a2",
+      "atlasHashMatches": true,
+      "ppuCatalog": 154.2929292929293,
+      "ppuUnityMeta": 154.29292,
+      "ppuUsedForPreview": 154.29292,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalNeutralIdleNW_N_NE20261025_00",
+          "phase": "neutral",
+          "rect": [
+            0,
+            0,
+            545,
+            383
+          ],
+          "pivot": [
+            0.5119266055045871,
+            0.1122715404699739
+          ],
+          "sourceFrameIndex": 0,
+          "sourceRect": [
+            17,
+            0,
+            413,
+            350
+          ],
+          "sourceAnchor": [
+            180,
+            330
+          ],
+          "durationMs": 350,
+          "auditStatus": "baseline",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalLeve3NW_N_NE20261101V1_Attack_NW",
+      "action": "Leve3",
+      "direction": "NW",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-normal/ReqKatanaNormalLeve3NW_N_NE20261101V1-source.png",
+      "sourceSha256": "4026c67640515f6583e49a004876038a6dd3ed14d82b3c828f15b2214777be15",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve3NW_N_NE20261101V1",
+      "imageSha256": "db7629b55237ad494e21dd75cf03d3551256b18ae5036b49cb4e771402cd1c33",
+      "atlasHashMatches": true,
+      "ppuCatalog": 139.3939393939394,
+      "ppuUnityMeta": 139.39394,
+      "ppuUsedForPreview": 139.39394,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3NW_N_NE20261101V1_00",
+          "phase": "preparation",
+          "rect": [
+            0,
+            0,
+            560,
+            328
+          ],
+          "pivot": [
+            0.5535714285714286,
+            0.06707317073170732
+          ],
+          "sourceFrameIndex": 0,
+          "sourceRect": [
+            82,
+            17,
+            285,
+            288
+          ],
+          "sourceAnchor": [
+            196,
+            297
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3NW_N_NE20261101V1_01",
+          "phase": "windup",
+          "rect": [
+            560,
+            0,
+            560,
+            328
+          ],
+          "pivot": [
+            0.55,
+            0.06707317073170732
+          ],
+          "sourceFrameIndex": 1,
+          "sourceRect": [
+            476,
+            0,
+            319,
+            303
+          ],
+          "sourceAnchor": [
+            650,
+            298
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3NW_N_NE20261101V1_02",
+          "phase": "contact",
+          "rect": [
+            1120,
+            0,
+            560,
+            328
+          ],
+          "pivot": [
+            0.5660714285714286,
+            0.06707317073170732
+          ],
+          "sourceFrameIndex": 2,
+          "sourceRect": [
+            857,
+            55,
+            443,
+            250
+          ],
+          "sourceAnchor": [
+            1065,
+            295
+          ],
+          "durationMs": 100,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3NW_N_NE20261101V1_03",
+          "phase": "recovery",
+          "rect": [
+            1680,
+            0,
+            560,
+            328
+          ],
+          "pivot": [
+            0.5303571428571429,
+            0.06707317073170732
+          ],
+          "sourceFrameIndex": 3,
+          "sourceRect": [
+            1311,
+            17,
+            381,
+            286
+          ],
+          "sourceAnchor": [
+            1489,
+            297
+          ],
+          "durationMs": 180,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalDodgeNW_N20261101Selected_Dodge_NW",
+      "action": "Dodge",
+      "direction": "NW",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeNW_N_NE20261101V1-source.png",
+      "sourceSha256": "67ea4960e6715dfb6217d7358da647d207d8a8f2c5193483b6a96ee40005c5c2",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalDodgeNW_N20261101Selected",
+      "imageSha256": "187f654a786407eaf7466dbddaa714b6dd5d13e5e3812b1ff4a9194300fc7c20",
+      "atlasHashMatches": true,
+      "ppuCatalog": 161.36363636363637,
+      "ppuUnityMeta": 161.36363,
+      "ppuUsedForPreview": 161.36363,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeNW_N20261101Selected_00",
+          "phase": "anticipation",
+          "rect": [
+            0,
+            0,
+            747,
+            412
+          ],
+          "pivot": [
+            0.5903614457831325,
+            0.17475728155339806
+          ],
+          "sourceFrameIndex": 0,
+          "sourceRect": [
+            37,
+            9,
+            419,
+            331
+          ],
+          "sourceAnchor": [
+            201,
+            331
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeNW_N20261101Selected_01",
+          "phase": "dodge-low-lunge",
+          "rect": [
+            747,
+            0,
+            747,
+            412
+          ],
+          "pivot": [
+            0.3333333333333333,
+            0.17475728155339806
+          ],
+          "sourceFrameIndex": 1,
+          "sourceRect": [
+            483,
+            7,
+            563,
+            361
+          ],
+          "sourceAnchor": [
+            724,
+            331
+          ],
+          "durationMs": 150,
+          "auditStatus": "whole-frame-correction-needed",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "See targeted finding",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeNW_N20261101Selected_02",
+          "phase": "recovery",
+          "rect": [
+            1494,
+            0,
+            747,
+            412
+          ],
+          "pivot": [
+            0.5970548862115127,
+            0.17475728155339806
+          ],
+          "sourceFrameIndex": 2,
+          "sourceRect": [
+            1046,
+            0,
+            468,
+            360
+          ],
+          "sourceAnchor": [
+            1221,
+            332
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalNeutralIdleNW_N_NE20261025_Idle_N",
+      "action": "Idle",
+      "direction": "N",
+      "sourcePath": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleNW_N_NE20261025-source.png",
+      "sourceSha256": "e631dd7fec0bd0d89851fb9ceb9dfe72f193fc22f227f113431b0825d3051387",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleNW_N_NE20261025",
+      "imageSha256": "2889cf460675557432c2de5f0b4e52f7bebfe14f7b7e34330008adf74336a7a2",
+      "atlasHashMatches": true,
+      "ppuCatalog": 154.2929292929293,
+      "ppuUnityMeta": 154.29292,
+      "ppuUsedForPreview": 154.29292,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalNeutralIdleNW_N_NE20261025_04",
+          "phase": "neutral",
+          "rect": [
+            0,
+            383,
+            545,
+            383
+          ],
+          "pivot": [
+            0.4073394495412844,
+            0.09138381201044386
+          ],
+          "sourceFrameIndex": 4,
+          "sourceRect": [
+            9,
+            352,
+            421,
+            328
+          ],
+          "sourceAnchor": [
+            189,
+            668
+          ],
+          "durationMs": 350,
+          "auditStatus": "baseline",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalLeve3NW_N_NE20261101V1_Attack_N",
+      "action": "Leve3",
+      "direction": "N",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-normal/ReqKatanaNormalLeve3NW_N_NE20261101V1-source.png",
+      "sourceSha256": "4026c67640515f6583e49a004876038a6dd3ed14d82b3c828f15b2214777be15",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve3NW_N_NE20261101V1",
+      "imageSha256": "db7629b55237ad494e21dd75cf03d3551256b18ae5036b49cb4e771402cd1c33",
+      "atlasHashMatches": true,
+      "ppuCatalog": 139.3939393939394,
+      "ppuUnityMeta": 139.39394,
+      "ppuUsedForPreview": 139.39394,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3NW_N_NE20261101V1_04",
+          "phase": "preparation",
+          "rect": [
+            0,
+            328,
+            560,
+            328
+          ],
+          "pivot": [
+            0.5089285714285714,
+            0.06707317073170732
+          ],
+          "sourceFrameIndex": 4,
+          "sourceRect": [
+            79,
+            319,
+            372,
+            283
+          ],
+          "sourceAnchor": [
+            203,
+            596
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3NW_N_NE20261101V1_05",
+          "phase": "windup",
+          "rect": [
+            560,
+            328,
+            560,
+            328
+          ],
+          "pivot": [
+            0.5232142857142857,
+            0.06707317073170732
+          ],
+          "sourceFrameIndex": 5,
+          "sourceRect": [
+            452,
+            304,
+            365,
+            294
+          ],
+          "sourceAnchor": [
+            645,
+            595
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3NW_N_NE20261101V1_06",
+          "phase": "contact",
+          "rect": [
+            1120,
+            328,
+            560,
+            328
+          ],
+          "pivot": [
+            0.3125,
+            0.06707317073170732
+          ],
+          "sourceFrameIndex": 6,
+          "sourceRect": [
+            865,
+            352,
+            449,
+            259
+          ],
+          "sourceAnchor": [
+            1032,
+            597
+          ],
+          "durationMs": 100,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3NW_N_NE20261101V1_07",
+          "phase": "recovery",
+          "rect": [
+            1680,
+            328,
+            560,
+            328
+          ],
+          "pivot": [
+            0.5160714285714286,
+            0.06707317073170732
+          ],
+          "sourceFrameIndex": 7,
+          "sourceRect": [
+            1410,
+            318,
+            294,
+            282
+          ],
+          "sourceAnchor": [
+            1517,
+            597
+          ],
+          "durationMs": 180,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalDodgeNW_N20261101Selected_Dodge_N",
+      "action": "Dodge",
+      "direction": "N",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeNW_N_NE20261101V1-source.png",
+      "sourceSha256": "67ea4960e6715dfb6217d7358da647d207d8a8f2c5193483b6a96ee40005c5c2",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalDodgeNW_N20261101Selected",
+      "imageSha256": "187f654a786407eaf7466dbddaa714b6dd5d13e5e3812b1ff4a9194300fc7c20",
+      "atlasHashMatches": true,
+      "ppuCatalog": 161.36363636363637,
+      "ppuUnityMeta": 161.36363,
+      "ppuUsedForPreview": 161.36363,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeNW_N20261101Selected_03",
+          "phase": "anticipation",
+          "rect": [
+            0,
+            412,
+            747,
+            412
+          ],
+          "pivot": [
+            0.5033467202141901,
+            0.17475728155339806
+          ],
+          "sourceFrameIndex": 3,
+          "sourceRect": [
+            0,
+            339,
+            526,
+            335
+          ],
+          "sourceAnchor": [
+            209,
+            670
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeNW_N20261101Selected_04",
+          "phase": "dodge-low-lunge",
+          "rect": [
+            747,
+            412,
+            747,
+            412
+          ],
+          "pivot": [
+            0.40829986613119146,
+            0.17475728155339806
+          ],
+          "sourceFrameIndex": 4,
+          "sourceRect": [
+            537,
+            367,
+            545,
+            337
+          ],
+          "sourceAnchor": [
+            768,
+            682
+          ],
+          "durationMs": 150,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeNW_N20261101Selected_05",
+          "phase": "recovery",
+          "rect": [
+            1494,
+            412,
+            747,
+            412
+          ],
+          "pivot": [
+            0.4243641231593039,
+            0.17475728155339806
+          ],
+          "sourceFrameIndex": 5,
+          "sourceRect": [
+            1119,
+            344,
+            404,
+            392
+          ],
+          "sourceAnchor": [
+            1264,
+            672
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalNeutralIdleNW_N_NE20261025_Idle_NE",
+      "action": "Idle",
+      "direction": "NE",
+      "sourcePath": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleNW_N_NE20261025-source.png",
+      "sourceSha256": "e631dd7fec0bd0d89851fb9ceb9dfe72f193fc22f227f113431b0825d3051387",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleNW_N_NE20261025",
+      "imageSha256": "2889cf460675557432c2de5f0b4e52f7bebfe14f7b7e34330008adf74336a7a2",
+      "atlasHashMatches": true,
+      "ppuCatalog": 154.2929292929293,
+      "ppuUnityMeta": 154.29292,
+      "ppuUsedForPreview": 154.29292,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalNeutralIdleNW_N_NE20261025_08",
+          "phase": "neutral",
+          "rect": [
+            0,
+            766,
+            545,
+            383
+          ],
+          "pivot": [
+            0.381651376146789,
+            0.11488250652741515
+          ],
+          "sourceFrameIndex": 8,
+          "sourceRect": [
+            0,
+            680,
+            415,
+            344
+          ],
+          "sourceAnchor": [
+            200,
+            988
+          ],
+          "durationMs": 350,
+          "auditStatus": "baseline",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalLeve3NW_N_NE20261101V1_Attack_NE",
+      "action": "Leve3",
+      "direction": "NE",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-normal/ReqKatanaNormalLeve3NW_N_NE20261101V1-source.png",
+      "sourceSha256": "4026c67640515f6583e49a004876038a6dd3ed14d82b3c828f15b2214777be15",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve3NW_N_NE20261101V1",
+      "imageSha256": "db7629b55237ad494e21dd75cf03d3551256b18ae5036b49cb4e771402cd1c33",
+      "atlasHashMatches": true,
+      "ppuCatalog": 139.3939393939394,
+      "ppuUnityMeta": 139.39394,
+      "ppuUsedForPreview": 139.39394,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3NW_N_NE20261101V1_08",
+          "phase": "preparation",
+          "rect": [
+            0,
+            656,
+            560,
+            328
+          ],
+          "pivot": [
+            0.38571428571428573,
+            0.06707317073170732
+          ],
+          "sourceFrameIndex": 8,
+          "sourceRect": [
+            51,
+            608,
+            344,
+            280
+          ],
+          "sourceAnchor": [
+            172,
+            886
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3NW_N_NE20261101V1_09",
+          "phase": "windup",
+          "rect": [
+            560,
+            656,
+            560,
+            328
+          ],
+          "pivot": [
+            0.5571428571428572,
+            0.06707317073170732
+          ],
+          "sourceFrameIndex": 9,
+          "sourceRect": [
+            513,
+            598,
+            313,
+            298
+          ],
+          "sourceAnchor": [
+            664,
+            889
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3NW_N_NE20261101V1_10",
+          "phase": "contact",
+          "rect": [
+            1120,
+            656,
+            560,
+            328
+          ],
+          "pivot": [
+            0.3142857142857143,
+            0.06707317073170732
+          ],
+          "sourceFrameIndex": 10,
+          "sourceRect": [
+            855,
+            642,
+            405,
+            258
+          ],
+          "sourceAnchor": [
+            998,
+            894
+          ],
+          "durationMs": 100,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3NW_N_NE20261101V1_11",
+          "phase": "recovery",
+          "rect": [
+            1680,
+            656,
+            560,
+            328
+          ],
+          "pivot": [
+            0.38035714285714284,
+            0.06707317073170732
+          ],
+          "sourceFrameIndex": 11,
+          "sourceRect": [
+            1379,
+            608,
+            320,
+            291
+          ],
+          "sourceAnchor": [
+            1505,
+            891
+          ],
+          "durationMs": 180,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalDodgeNE20261101V5_Dodge_NE",
+      "action": "Dodge",
+      "direction": "NE",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeNE20261101V5-source.png",
+      "sourceSha256": "277c5cfda3da67a4501a01798eb7fa389d048d19b6cb57c594002ff3ad6eaa75",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalDodgeNE20261101V5",
+      "imageSha256": "6132fa3bae8f41c770df736a60a6f7607e800225c2e923f9705f508c8e17eb79",
+      "atlasHashMatches": true,
+      "ppuCatalog": 242.92929292929293,
+      "ppuUnityMeta": null,
+      "ppuUsedForPreview": 242.92929292929293,
+      "metaPpuVerified": false,
+      "humanApprovedPerCoordinator": true,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeNE20261101V5_00",
+          "phase": "anticipation",
+          "rect": [
+            0,
+            0,
+            918,
+            649
+          ],
+          "pivot": [
+            0.2788671023965142,
+            0.11248073959938366
+          ],
+          "sourceFrameIndex": 0,
+          "sourceRect": [
+            82,
+            160,
+            645,
+            492
+          ],
+          "sourceAnchor": [
+            330,
+            646
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeNE20261101V5_01",
+          "phase": "dodge-low-lunge",
+          "rect": [
+            918,
+            0,
+            918,
+            649
+          ],
+          "pivot": [
+            0.4215686274509804,
+            0.11248073959938366
+          ],
+          "sourceFrameIndex": 1,
+          "sourceRect": [
+            771,
+            71,
+            757,
+            633
+          ],
+          "sourceAnchor": [
+            1005,
+            639
+          ],
+          "durationMs": 150,
+          "auditStatus": "whole-frame-correction-needed",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "See targeted finding",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeNE20261101V5_02",
+          "phase": "recovery",
+          "rect": [
+            1836,
+            0,
+            918,
+            649
+          ],
+          "pivot": [
+            0.28322440087145967,
+            0.11248073959938366
+          ],
+          "sourceFrameIndex": 2,
+          "sourceRect": [
+            1564,
+            160,
+            594,
+            486
+          ],
+          "sourceAnchor": [
+            1790,
+            643
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Rear view/face occluded: no fabricated face-age judgement",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalNeutralIdleE_SE20261025_Idle_E",
+      "action": "Idle",
+      "direction": "E",
+      "sourcePath": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleE_SE20261025-source.png",
+      "sourceSha256": "5863115c5f1ba5b54d9cd8b2d387e203d3d1293b9724c576c2360c6e84bb8443",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleE_SE20261025",
+      "imageSha256": "861a5244e1f1d145044fea586ca78f4b59db890cfddcd7fc8e930b3f181c8bcb",
+      "atlasHashMatches": true,
+      "ppuCatalog": 194.6969696969697,
+      "ppuUnityMeta": 194.69698,
+      "ppuUsedForPreview": 194.69698,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalNeutralIdleE_SE20261025_00",
+          "phase": "neutral",
+          "rect": [
+            0,
+            0,
+            507,
+            484
+          ],
+          "pivot": [
+            0.4970414201183432,
+            0.08677685950413223
+          ],
+          "sourceFrameIndex": 0,
+          "sourceRect": [
+            0,
+            0,
+            470,
+            448
+          ],
+          "sourceAnchor": [
+            244,
+            434
+          ],
+          "durationMs": 350,
+          "auditStatus": "baseline",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalLeve3E_SE20261028Selected_Attack_E",
+      "action": "Leve3",
+      "direction": "E",
+      "sourcePath": "ArtSources/WeaponRedesign20261028/katana-normal/ReqKatanaNormalLeve3E_SE20261028Selected-source.png",
+      "sourceSha256": "1b85c791eb859ab95b5db82abd1dfd00fd87738fd6426643c25b0e7cfe7eaac8",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve3E_SE20261028Selected",
+      "imageSha256": "092f91433428047933ab15a90aceeca1da610d6f7a3be557c8ad0a1df66b5fc5",
+      "atlasHashMatches": true,
+      "ppuCatalog": 178.2828282828283,
+      "ppuUnityMeta": 178.28282,
+      "ppuUsedForPreview": 178.28282,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3E_SE20261028Selected_00",
+          "phase": "attack_0",
+          "rect": [
+            0,
+            0,
+            618,
+            485
+          ],
+          "pivot": [
+            0.5566343042071198,
+            0.088659793814433
+          ],
+          "sourceFrameIndex": 0,
+          "sourceRect": [
+            142,
+            20,
+            390,
+            433
+          ],
+          "sourceAnchor": [
+            344,
+            442
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3E_SE20261028Selected_01",
+          "phase": "attack_1",
+          "rect": [
+            618,
+            0,
+            618,
+            485
+          ],
+          "pivot": [
+            0.5355987055016181,
+            0.088659793814433
+          ],
+          "sourceFrameIndex": 1,
+          "sourceRect": [
+            671,
+            24,
+            467,
+            453
+          ],
+          "sourceAnchor": [
+            928,
+            442
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3E_SE20261028Selected_02",
+          "phase": "attack_2",
+          "rect": [
+            1236,
+            0,
+            618,
+            485
+          ],
+          "pivot": [
+            0.558252427184466,
+            0.088659793814433
+          ],
+          "sourceFrameIndex": 2,
+          "sourceRect": [
+            1335,
+            20,
+            448,
+            455
+          ],
+          "sourceAnchor": [
+            1539,
+            442
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3E_SE20261028Selected_03",
+          "phase": "attack_3",
+          "rect": [
+            1854,
+            0,
+            618,
+            485
+          ],
+          "pivot": [
+            0.5048543689320388,
+            0.088659793814433
+          ],
+          "sourceFrameIndex": 3,
+          "sourceRect": [
+            1881,
+            8,
+            421,
+            447
+          ],
+          "sourceAnchor": [
+            2103,
+            442
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalDodgeE_SE20261101V1_Dodge_E",
+      "action": "Dodge",
+      "direction": "E",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeE_SE20261101V1-source.png",
+      "sourceSha256": "474020086461fb6c64243fa552fe7959730482df7eee0f2c5c910987d0a8868a",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalDodgeE_SE20261101V1",
+      "imageSha256": "0ca59df6487ead5aa456a2b099f00e9b2b15c23b9c387428b805130466873e7a",
+      "atlasHashMatches": true,
+      "ppuCatalog": 201.76767676767676,
+      "ppuUnityMeta": 201.76767,
+      "ppuUsedForPreview": 201.76767,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_00",
+          "phase": "anticipation",
+          "rect": [
+            0,
+            0,
+            670,
+            551
+          ],
+          "pivot": [
+            0.3850746268656716,
+            0.16152450090744103
+          ],
+          "sourceFrameIndex": 0,
+          "sourceRect": [
+            0,
+            35,
+            488,
+            477
+          ],
+          "sourceAnchor": [
+            230,
+            474
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "Larger mass tendency versus Idle; secondary caution, not a global rejection",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_01",
+          "phase": "dodge-low-lunge",
+          "rect": [
+            670,
+            0,
+            670,
+            551
+          ],
+          "pivot": [
+            0.517910447761194,
+            0.16152450090744103
+          ],
+          "sourceFrameIndex": 1,
+          "sourceRect": [
+            521,
+            17,
+            551,
+            515
+          ],
+          "sourceAnchor": [
+            757,
+            471
+          ],
+          "durationMs": 150,
+          "auditStatus": "whole-frame-correction-needed",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "See targeted finding",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_02",
+          "phase": "recovery",
+          "rect": [
+            1340,
+            0,
+            670,
+            551
+          ],
+          "pivot": [
+            0.3686567164179104,
+            0.16152450090744103
+          ],
+          "sourceFrameIndex": 2,
+          "sourceRect": [
+            1071,
+            27,
+            453,
+            479
+          ],
+          "sourceAnchor": [
+            1310,
+            475
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "Larger mass tendency versus Idle; secondary caution, not a global rejection",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalNeutralIdleE_SE20261025_Idle_SE",
+      "action": "Idle",
+      "direction": "SE",
+      "sourcePath": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleE_SE20261025-source.png",
+      "sourceSha256": "5863115c5f1ba5b54d9cd8b2d387e203d3d1293b9724c576c2360c6e84bb8443",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleE_SE20261025",
+      "imageSha256": "861a5244e1f1d145044fea586ca78f4b59db890cfddcd7fc8e930b3f181c8bcb",
+      "atlasHashMatches": true,
+      "ppuCatalog": 194.6969696969697,
+      "ppuUnityMeta": 194.69698,
+      "ppuUsedForPreview": 194.69698,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalNeutralIdleE_SE20261025_04",
+          "phase": "neutral",
+          "rect": [
+            0,
+            484,
+            507,
+            484
+          ],
+          "pivot": [
+            0.5424063116370809,
+            0.09504132231404959
+          ],
+          "sourceFrameIndex": 4,
+          "sourceRect": [
+            0,
+            457,
+            464,
+            430
+          ],
+          "sourceAnchor": [
+            242,
+            849
+          ],
+          "durationMs": 350,
+          "auditStatus": "baseline",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalLeve3E_SE20261028Selected_Attack_SE",
+      "action": "Leve3",
+      "direction": "SE",
+      "sourcePath": "ArtSources/WeaponRedesign20261028/katana-normal/ReqKatanaNormalLeve3E_SE20261028Selected-source.png",
+      "sourceSha256": "1b85c791eb859ab95b5db82abd1dfd00fd87738fd6426643c25b0e7cfe7eaac8",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalLeve3E_SE20261028Selected",
+      "imageSha256": "092f91433428047933ab15a90aceeca1da610d6f7a3be557c8ad0a1df66b5fc5",
+      "atlasHashMatches": true,
+      "ppuCatalog": 178.2828282828283,
+      "ppuUnityMeta": 178.28282,
+      "ppuUsedForPreview": 178.28282,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3E_SE20261028Selected_04",
+          "phase": "attack_0",
+          "rect": [
+            0,
+            485,
+            618,
+            485
+          ],
+          "pivot": [
+            0.343042071197411,
+            0.088659793814433
+          ],
+          "sourceFrameIndex": 4,
+          "sourceRect": [
+            8,
+            509,
+            431,
+            433
+          ],
+          "sourceAnchor": [
+            212,
+            934
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3E_SE20261028Selected_05",
+          "phase": "attack_1",
+          "rect": [
+            618,
+            485,
+            618,
+            485
+          ],
+          "pivot": [
+            0.5711974110032363,
+            0.088659793814433
+          ],
+          "sourceFrameIndex": 5,
+          "sourceRect": [
+            741,
+            525,
+            428,
+            413
+          ],
+          "sourceAnchor": [
+            950,
+            934
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3E_SE20261028Selected_06",
+          "phase": "attack_2",
+          "rect": [
+            1236,
+            485,
+            618,
+            485
+          ],
+          "pivot": [
+            0.5825242718446602,
+            0.088659793814433
+          ],
+          "sourceFrameIndex": 6,
+          "sourceRect": [
+            1262,
+            476,
+            461,
+            378
+          ],
+          "sourceAnchor": [
+            1473,
+            844
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalLeve3E_SE20261028Selected_07",
+          "phase": "attack_3",
+          "rect": [
+            1854,
+            485,
+            618,
+            485
+          ],
+          "pivot": [
+            0.5275080906148867,
+            0.088659793814433
+          ],
+          "sourceFrameIndex": 7,
+          "sourceRect": [
+            1880,
+            558,
+            415,
+            386
+          ],
+          "sourceAnchor": [
+            2117,
+            934
+          ],
+          "durationMs": 120,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    },
+    {
+      "pageId": "ReqKatanaNormalDodgeE_SE20261101V1_Dodge_SE",
+      "action": "Dodge",
+      "direction": "SE",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeE_SE20261101V1-source.png",
+      "sourceSha256": "474020086461fb6c64243fa552fe7959730482df7eee0f2c5c910987d0a8868a",
+      "sourceHashMatches": true,
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalDodgeE_SE20261101V1",
+      "imageSha256": "0ca59df6487ead5aa456a2b099f00e9b2b15c23b9c387428b805130466873e7a",
+      "atlasHashMatches": true,
+      "ppuCatalog": 201.76767676767676,
+      "ppuUnityMeta": 201.76767,
+      "ppuUsedForPreview": 201.76767,
+      "metaPpuVerified": true,
+      "humanApprovedPerCoordinator": false,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_03",
+          "phase": "anticipation",
+          "rect": [
+            0,
+            551,
+            670,
+            551
+          ],
+          "pivot": [
+            0.3970149253731343,
+            0.16152450090744103
+          ],
+          "sourceFrameIndex": 3,
+          "sourceRect": [
+            0,
+            525,
+            496,
+            471
+          ],
+          "sourceAnchor": [
+            213,
+            962
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "Larger mass tendency versus Idle; secondary caution, not a global rejection",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_04",
+          "phase": "dodge-low-lunge",
+          "rect": [
+            670,
+            551,
+            670,
+            551
+          ],
+          "pivot": [
+            0.4343283582089552,
+            0.16152450090744103
+          ],
+          "sourceFrameIndex": 4,
+          "sourceRect": [
+            495,
+            532,
+            575,
+            492
+          ],
+          "sourceAnchor": [
+            757,
+            943
+          ],
+          "durationMs": 150,
+          "auditStatus": "whole-frame-correction-needed",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "No independently confirmed hair-cut/volume defect; pitch/rotation considered",
+            "limbs": "See targeted finding",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_05",
+          "phase": "recovery",
+          "rect": [
+            1340,
+            551,
+            670,
+            551
+          ],
+          "pivot": [
+            0.3805970149253731,
+            0.16152450090744103
+          ],
+          "sourceFrameIndex": 5,
+          "sourceRect": [
+            1091,
+            537,
+            445,
+            453
+          ],
+          "sourceAnchor": [
+            1318,
+            965
+          ],
+          "durationMs": 40,
+          "auditStatus": "no-confirmed-limb-disproportion",
+          "staticReview": {
+            "wholeFigureNativeSeen": true,
+            "wholeFigureWorldScaleSeen": true,
+            "faceAge": "Mature canonical family retained where visible; no confirmed infantile redesign",
+            "equipment": "Katana, outfit, boots and dominant-hand presentation retained; low frames flagged for limbs separately.",
+            "headHair": "Larger mass tendency versus Idle; secondary caution, not a global rejection",
+            "limbs": "No confirmed extension requiring regeneration; crouch/foreshortening not classified from bounding height alone",
+            "feet": "Complete boots retained; rotated heel/sole projection is not automatically enlarged anatomy",
+            "originalModified": false
+          }
+        }
+      ]
+    }
+  ],
+  "sourceAndAtlasHashesMatch": true,
+  "ppuMetaPending": [
+    "ReqKatanaNormalDodgeNE20261101V5_Dodge_NE"
+  ],
+  "worldVisualScale": 1.325,
+  "mainPreviewPixelsPerWorldUnit": 80,
+  "focusPreviewPixelsPerWorldUnit": 160,
+  "renderMethod": "Native complete-figure previews plus uniform whole-figure world projection1.325*pxWorld/PPU. Preview-only alpha<=8 outer padding trimmed with4px margin; visible anatomy/weapon remains whole. No source asset writes.",
+  "visualInspectionComplete": true,
+  "findings": [
+    {
+      "id": "leg-W",
+      "severity": "selective-whole-frame-correction-needed",
+      "confidence": "high visual mismatch; numeric landmarks approximate",
+      "direction": "W",
+      "frameId": "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_07",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeS_SW_W20261101V1-source.png",
+      "sourceSha256": "e8eabe37e97e224689d52a4b54cf0d6a3259bdb5cd3106d49939cd15bf2af841",
+      "atlasSha256": "c9dcb3731dc99d1d19878594a6906c15c5a68282fc6b3329fc1c0aa66d026a37",
+      "ppu": 154.54546,
+      "evidence": "katana-previews/W-Dodge-1-focus-world.png",
+      "nativeEvidence": "katana-previews/W-native.png",
+      "finding": "Extended thigh+shin path grows relative to both head and torso compared with same-direction approved Idle. This is visible articulated-segment disproportion, not merely lower pose height, wider bounding box or weapon extent.",
+      "measurements": {
+        "method": "Manual approximate landmarks on complete previews at1.325x160pxWorld/PPU; visible leg path, hip partly hidden by coat. Screening estimates, not anatomical bone reconstruction.",
+        "uncertaintyPx": 20,
+        "baseline": {
+          "landmarks": {
+            "hairY": 45,
+            "chinY": 174,
+            "neck": [
+              385,
+              190
+            ],
+            "hip": [
+              395,
+              319
+            ],
+            "knee": [
+              402,
+              379
+            ],
+            "ankle": [
+              399,
+              435
+            ]
+          },
+          "projectedThighPx": 60.4,
+          "projectedShinPx": 56.1,
+          "projectedHeadPx": 129,
+          "projectedTorsoPx": 129.4,
+          "legToHead": 0.9,
+          "legToTorso": 0.9
+        },
+        "pose": {
+          "landmarks": {
+            "hairY": 117,
+            "chinY": 260,
+            "neck": [
+              174,
+              261
+            ],
+            "hip": [
+              280,
+              343
+            ],
+            "knee": [
+              405,
+              380
+            ],
+            "ankle": [
+              498,
+              419
+            ]
+          },
+          "projectedThighPx": 130.4,
+          "projectedShinPx": 100.8,
+          "projectedHeadPx": 143,
+          "projectedTorsoPx": 134.0,
+          "legToHead": 1.62,
+          "legToTorso": 1.73
+        }
+      },
+      "preserveOriginal": true,
+      "humanApprovedPreserve": false,
+      "recommendation": "If correction is undertaken, regenerate only this affected whole figure with the matching approved Idle; keep complete head/body/weapon together and preserve all correct neighboring figures. Do not resize/recolor body parts or use PPU to mask the drawing mismatch."
+    },
+    {
+      "id": "leg-E",
+      "severity": "selective-whole-frame-correction-needed",
+      "confidence": "high visual mismatch; numeric landmarks approximate",
+      "direction": "E",
+      "frameId": "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_01",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeE_SE20261101V1-source.png",
+      "sourceSha256": "474020086461fb6c64243fa552fe7959730482df7eee0f2c5c910987d0a8868a",
+      "atlasSha256": "0ca59df6487ead5aa456a2b099f00e9b2b15c23b9c387428b805130466873e7a",
+      "ppu": 201.76767,
+      "evidence": "katana-previews/E-Dodge-1-focus-world.png",
+      "nativeEvidence": "katana-previews/E-native.png",
+      "finding": "Extended thigh+shin path grows relative to both head and torso compared with same-direction approved Idle. This is visible articulated-segment disproportion, not merely lower pose height, wider bounding box or weapon extent.",
+      "measurements": {
+        "method": "Manual approximate landmarks on complete previews at1.325x160pxWorld/PPU; visible leg path, hip partly hidden by coat. Screening estimates, not anatomical bone reconstruction.",
+        "uncertaintyPx": 20,
+        "baseline": {
+          "landmarks": {
+            "hairY": 45,
+            "chinY": 174,
+            "neck": [
+              320,
+              193
+            ],
+            "hip": [
+              297,
+              310
+            ],
+            "knee": [
+              262,
+              375
+            ],
+            "ankle": [
+              250,
+              438
+            ]
+          },
+          "projectedThighPx": 73.8,
+          "projectedShinPx": 64.1,
+          "projectedHeadPx": 129,
+          "projectedTorsoPx": 119.2,
+          "legToHead": 1.07,
+          "legToTorso": 1.16
+        },
+        "pose": {
+          "landmarks": {
+            "hairY": 112,
+            "chinY": 249,
+            "neck": [
+              461,
+              244
+            ],
+            "hip": [
+              343,
+              337
+            ],
+            "knee": [
+              212,
+              369
+            ],
+            "ankle": [
+              97,
+              426
+            ]
+          },
+          "projectedThighPx": 134.9,
+          "projectedShinPx": 128.4,
+          "projectedHeadPx": 137,
+          "projectedTorsoPx": 150.2,
+          "legToHead": 1.92,
+          "legToTorso": 1.75
+        }
+      },
+      "preserveOriginal": true,
+      "humanApprovedPreserve": false,
+      "recommendation": "If correction is undertaken, regenerate only this affected whole figure with the matching approved Idle; keep complete head/body/weapon together and preserve all correct neighboring figures. Do not resize/recolor body parts or use PPU to mask the drawing mismatch."
+    },
+    {
+      "id": "leg-SE",
+      "severity": "selective-whole-frame-correction-needed",
+      "confidence": "high visual mismatch; numeric landmarks approximate",
+      "direction": "SE",
+      "frameId": "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_04",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeE_SE20261101V1-source.png",
+      "sourceSha256": "474020086461fb6c64243fa552fe7959730482df7eee0f2c5c910987d0a8868a",
+      "atlasSha256": "0ca59df6487ead5aa456a2b099f00e9b2b15c23b9c387428b805130466873e7a",
+      "ppu": 201.76767,
+      "evidence": "katana-previews/SE-Dodge-1-focus-world.png",
+      "nativeEvidence": "katana-previews/SE-native.png",
+      "finding": "Extended thigh+shin path grows relative to both head and torso compared with same-direction approved Idle. This is visible articulated-segment disproportion, not merely lower pose height, wider bounding box or weapon extent.",
+      "measurements": {
+        "method": "Manual approximate landmarks on complete previews at1.325x160pxWorld/PPU; visible leg path, hip partly hidden by coat. Screening estimates, not anatomical bone reconstruction.",
+        "uncertaintyPx": 20,
+        "baseline": {
+          "landmarks": {
+            "hairY": 45,
+            "chinY": 185,
+            "neck": [
+              340,
+              196
+            ],
+            "hip": [
+              310,
+              310
+            ],
+            "knee": [
+              256,
+              375
+            ],
+            "ankle": [
+              248,
+              423
+            ]
+          },
+          "projectedThighPx": 84.5,
+          "projectedShinPx": 48.7,
+          "projectedHeadPx": 140,
+          "projectedTorsoPx": 117.9,
+          "legToHead": 0.95,
+          "legToTorso": 1.13
+        },
+        "pose": {
+          "landmarks": {
+            "hairY": 92,
+            "chinY": 241,
+            "neck": [
+              433,
+              238
+            ],
+            "hip": [
+              347,
+              308
+            ],
+            "knee": [
+              216,
+              353
+            ],
+            "ankle": [
+              94,
+              419
+            ]
+          },
+          "projectedThighPx": 138.5,
+          "projectedShinPx": 138.7,
+          "projectedHeadPx": 149,
+          "projectedTorsoPx": 110.9,
+          "legToHead": 1.86,
+          "legToTorso": 2.5
+        }
+      },
+      "preserveOriginal": true,
+      "humanApprovedPreserve": false,
+      "recommendation": "If correction is undertaken, regenerate only this affected whole figure with the matching approved Idle; keep complete head/body/weapon together and preserve all correct neighboring figures. Do not resize/recolor body parts or use PPU to mask the drawing mismatch."
+    },
+    {
+      "id": "leg-NW",
+      "severity": "selective-whole-frame-correction-needed",
+      "confidence": "high visual mismatch; numeric landmarks approximate",
+      "direction": "NW",
+      "frameId": "Redesign_ReqKatanaNormalDodgeNW_N20261101Selected_01",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeNW_N_NE20261101V1-source.png",
+      "sourceSha256": "67ea4960e6715dfb6217d7358da647d207d8a8f2c5193483b6a96ee40005c5c2",
+      "atlasSha256": "187f654a786407eaf7466dbddaa714b6dd5d13e5e3812b1ff4a9194300fc7c20",
+      "ppu": 161.36363,
+      "evidence": "katana-previews/NW-Dodge-1-focus-world.png",
+      "nativeEvidence": "katana-previews/NW-native.png",
+      "finding": "Extended thigh+shin path grows relative to both head and torso compared with same-direction approved Idle. This is visible articulated-segment disproportion, not merely lower pose height, wider bounding box or weapon extent.",
+      "measurements": {
+        "method": "Manual approximate landmarks on complete previews at1.325x160pxWorld/PPU; visible leg path, hip partly hidden by coat. Screening estimates, not anatomical bone reconstruction.",
+        "uncertaintyPx": 20,
+        "baseline": {
+          "landmarks": {
+            "hairY": 47,
+            "chinY": 174,
+            "neck": [
+              269,
+              185
+            ],
+            "hip": [
+              289,
+              303
+            ],
+            "knee": [
+              348,
+              373
+            ],
+            "ankle": [
+              366,
+              430
+            ]
+          },
+          "projectedThighPx": 91.5,
+          "projectedShinPx": 59.8,
+          "projectedHeadPx": 127,
+          "projectedTorsoPx": 119.7,
+          "legToHead": 1.19,
+          "legToTorso": 1.26
+        },
+        "pose": {
+          "landmarks": {
+            "hairY": 110,
+            "chinY": 242,
+            "neck": [
+              164,
+              228
+            ],
+            "hip": [
+              288,
+              324
+            ],
+            "knee": [
+              421,
+              372
+            ],
+            "ankle": [
+              506,
+              426
+            ]
+          },
+          "projectedThighPx": 141.4,
+          "projectedShinPx": 100.7,
+          "projectedHeadPx": 132,
+          "projectedTorsoPx": 156.8,
+          "legToHead": 1.83,
+          "legToTorso": 1.54
+        }
+      },
+      "preserveOriginal": true,
+      "humanApprovedPreserve": false,
+      "recommendation": "If correction is undertaken, regenerate only this affected whole figure with the matching approved Idle; keep complete head/body/weapon together and preserve all correct neighboring figures. Do not resize/recolor body parts or use PPU to mask the drawing mismatch."
+    },
+    {
+      "id": "leg-NE",
+      "severity": "selective-whole-frame-correction-needed",
+      "confidence": "high visual mismatch; numeric landmarks approximate",
+      "direction": "NE",
+      "frameId": "Redesign_ReqKatanaNormalDodgeNE20261101V5_01",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeNE20261101V5-source.png",
+      "sourceSha256": "277c5cfda3da67a4501a01798eb7fa389d048d19b6cb57c594002ff3ad6eaa75",
+      "atlasSha256": "6132fa3bae8f41c770df736a60a6f7607e800225c2e923f9705f508c8e17eb79",
+      "ppu": 242.92929292929293,
+      "evidence": "katana-previews/NE-Dodge-1-focus-world.png",
+      "nativeEvidence": "katana-previews/NE-native.png",
+      "finding": "Extended thigh+shin path grows relative to both head and torso compared with same-direction approved Idle. This is visible articulated-segment disproportion, not merely lower pose height, wider bounding box or weapon extent.",
+      "measurements": {
+        "method": "Manual approximate landmarks on complete previews at1.325x160pxWorld/PPU; visible leg path, hip partly hidden by coat. Screening estimates, not anatomical bone reconstruction.",
+        "uncertaintyPx": 20,
+        "baseline": {
+          "landmarks": {
+            "hairY": 45,
+            "chinY": 176,
+            "neck": [
+              340,
+              188
+            ],
+            "hip": [
+              343,
+              300
+            ],
+            "knee": [
+              366,
+              376
+            ],
+            "ankle": [
+              369,
+              438
+            ]
+          },
+          "projectedThighPx": 79.4,
+          "projectedShinPx": 62.1,
+          "projectedHeadPx": 131,
+          "projectedTorsoPx": 112.0,
+          "legToHead": 1.08,
+          "legToTorso": 1.26
+        },
+        "pose": {
+          "landmarks": {
+            "hairY": 96,
+            "chinY": 229,
+            "neck": [
+              438,
+              216
+            ],
+            "hip": [
+              314,
+              303
+            ],
+            "knee": [
+              184,
+              367
+            ],
+            "ankle": [
+              78,
+              428
+            ]
+          },
+          "projectedThighPx": 144.9,
+          "projectedShinPx": 122.3,
+          "projectedHeadPx": 133,
+          "projectedTorsoPx": 151.5,
+          "legToHead": 2.01,
+          "legToTorso": 1.76
+        }
+      },
+      "preserveOriginal": true,
+      "humanApprovedPreserve": true,
+      "recommendation": "If correction is undertaken, regenerate only this affected whole figure with the matching approved Idle; keep complete head/body/weapon together and preserve all correct neighboring figures. Do not resize/recolor body parts or use PPU to mask the drawing mismatch."
+    }
+  ],
+  "reviewedNewFrames": 56,
+  "reviewedBaselines": 8,
+  "secondaryCautions": [
+    {
+      "frameId": "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_04",
+      "confidence": "medium",
+      "finding": "SW low pose is less clear than five flagged extension cases; preserve original and recheck pelvis/leg articulation before correcting.",
+      "evidence": "katana-previews/SW-Dodge-1-focus-world.png"
+    },
+    {
+      "frameIds": [
+        "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_00",
+        "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_02",
+        "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_03",
+        "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_05",
+        "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_06",
+        "Redesign_ReqKatanaNormalDodgeS_SW_W20261101V1_08",
+        "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_00",
+        "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_02",
+        "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_03",
+        "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_05"
+      ],
+      "confidence": "medium",
+      "finding": "Dodge frontal/side guard head/hair masses appear broader than matching Idle; strongest S0/S2. This is a secondary identity warning, not proof of infantile redesign and not permission to regenerate all sheets.",
+      "evidence": "katana-previews/S-Dodge-0-focus-world.png",
+      "approximateSample": "S0 hair width about+15–20%; crown-to-chin/head-to-torso also higher by visual estimate. Pose/landmark uncertainty remains; not an exact percentage measurement."
+    }
+  ],
+  "retainedSummary": {
+    "leve3Frames": 32,
+    "leve3": "All32 inspected native/world; no confirmed selective limb defect. Keep approved drawings; normal attack articulation/raised sword/bent knees not errors by themselves.",
+    "dodgeNoConfirmedLimbDefect": 18,
+    "dodgeBorderline": 1,
+    "dodgeSelectiveIssues": 5
+  },
+  "humanApprovedNEV5": {
+    "preserve": true,
+    "visualApprovalNotRevoked": true,
+    "sourceSha256": "277c5cfda3da67a4501a01798eb7fa389d048d19b6cb57c594002ff3ad6eaa75",
+    "importVerified": false,
+    "reason": "Coordinator explicitly approved art; .png.meta not present at audit snapshot, so preview used declared PPU242.9292929 and no actual Unity import is claimed."
+  },
+  "limitations": [
+    "Read-only static anatomy/identity audit, not playback or new Unity tests.",
+    "Manual projected joint landmarks have20px uncertainty and covered pelvis; numbers are screening evidence, not a bone-length certification.",
+    "No anatomy defect inferred solely from frame/bounding-box height, transparency margins, sword size or older preview clipping.",
+    "Main comparison canvases were regenerated to include full rectangles; focused/native comparisons also preserve complete visible figures.",
+    "No art/Assets/catalog/Runtime/Unity/Git writes by this audit."
+  ],
+  "newParryPreservation": {
+    "path": "ArtSources/WeaponRedesign20261101/punhos-parry/ReqFistsNormalParryS_SW_W20261101V1-source.png",
+    "sha256": "591c6741ea7825480dfce3e9afb5cb388122fa3e5bead218f6a5848bc8a2f944",
+    "frames": 9,
+    "prepared": false,
+    "reviewed": false,
+    "imported": false
+  }
+}

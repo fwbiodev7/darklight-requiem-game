@@ -23,11 +23,17 @@ def context(page):
 
 
 def main():
+    global OUT
     parser = argparse.ArgumentParser()
     parser.add_argument('--staged', type=Path, required=True)
     parser.add_argument('--pages', type=Path)
     parser.add_argument('--names', nargs='+', required=True)
+    parser.add_argument('--output', type=Path, default=OUT,
+                        help='Session receipts folder inside this project outputs')
     args = parser.parse_args()
+    OUT = args.output.resolve()
+    if not OUT.is_relative_to((ROOT / 'outputs').resolve()):
+        raise ValueError('Integration receipts must stay inside project outputs')
     fragment = read(args.pages) if args.pages else {'pages': []}
     pages = fragment if isinstance(fragment, list) else fragment['pages']
     catalog_path = BANK / 'catalog.json'

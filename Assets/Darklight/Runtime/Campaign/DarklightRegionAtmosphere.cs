@@ -60,6 +60,7 @@ namespace Darklight
         void InitializeRegionAtmosphere(int chapter)
         {
             regionAtmosphere=null;
+            DarklightAtmosphereController.Attach(this,levelRoot,lab.WorldCamera,chapter);
             if(Map?.Art==null||Map.Art.revision<2||chapter<6)return;
             var go=new GameObject("AtmosferaDaRegiao");go.transform.SetParent(levelRoot,false);
             regionAtmosphere=go.AddComponent<DarklightRegionAtmosphere>();regionAtmosphere.Initialize(this,chapter);

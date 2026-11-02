@@ -11,6 +11,7 @@ namespace Darklight
         public int startupFrames,activeFrames;
         public int[] sourceSize,nativeSize,durationMs;
         public float pixelsPerUnit;
+        public float[] framePixelsPerUnit;
         public bool wholeFigures,loop,fusedEclipse;
         public string[] spriteNames,sourceSpriteNames;
         [NonSerialized] internal Sprite[] frames;
@@ -36,6 +37,7 @@ namespace Darklight
         static readonly HashSet<Sprite> authored=new();
         static readonly Dictionary<string,Sprite> icons=new(StringComparer.Ordinal);
         static readonly Dictionary<(DarklightWeaponRedesignPage,AttackDefinition),bool> wholeMappings=new();
+        static readonly Dictionary<(Sprite,float),Sprite> densitySprites=new();
         static readonly MaterialPropertyBlock block=new();
         static bool attempted,iconsAttempted;
         static int Context(int skin,int weapon,int form,int direction)=>((skin*4+weapon)*4+form)*8+direction;
@@ -49,8 +51,9 @@ namespace Darklight
         static bool TimedAction(string action)=>action=="Idle"||action=="Walk"||action=="Run"||
             action=="IdleAlert"||action=="IdleImpatient"||action=="IdleInspect"||
             action=="IdleFatigued"||action=="IdleWounded"||action=="StartMove"||action=="Brake"||action=="Turn";
-        static bool KnownAction(string action)=>TimedAction(action)||action=="Attack"||action=="Charging"||
-            action=="Dodge"||action=="Parry"||action=="Hurt"||action=="Dead"||action=="Transformation";
+        static bool TimedStateAction(string action)=>action=="Charging"||action=="Dodge"||action=="Parry"||
+            action=="Hurt"||action=="Dead"||action=="Transformation";
+        static bool KnownAction(string action)=>TimedAction(action)||TimedStateAction(action)||action=="Attack";
         public static bool ValidPage(DarklightWeaponRedesignPage page)
         {
             if(page==null||string.IsNullOrEmpty(page.id)||page.skin<0||page.skin>1||page.weapon<0||page.weapon>3||
@@ -62,6 +65,12 @@ namespace Darklight
                 !page.sourcePath.StartsWith("ArtSources/",StringComparison.Ordinal)||page.sourcePath.Contains("..")||
                 !Size(page.nativeSize)||!Size(page.sourceSize)||page.pixelsPerUnit<=0||float.IsNaN(page.pixelsPerUnit)||float.IsInfinity(page.pixelsPerUnit)||
                 page.spriteNames==null||page.spriteNames.Length==0)return false;
+            if(page.framePixelsPerUnit?.Length>0)
+            {
+                if(page.framePixelsPerUnit.Length!=page.spriteNames.Length)return false;
+                foreach(float density in page.framePixelsPerUnit)
+                    if(density<=0||float.IsNaN(density)||float.IsInfinity(density))return false;
+            }
             foreach(string name in page.spriteNames)if(string.IsNullOrEmpty(name)||!name.StartsWith("Redesign_",StringComparison.Ordinal))return false;
             if(!string.IsNullOrEmpty(page.attackKey)&&page.action!="Attack")return false;
             if(page.sourceSpriteNames?.Length>0)
@@ -73,7 +82,11 @@ namespace Darklight
             }
             bool authoredAttack=page.action=="Attack"&&page.startupFrames>0&&page.activeFrames>0&&
                 page.startupFrames<page.spriteNames.Length&&page.activeFrames<page.spriteNames.Length-page.startupFrames;
-            if((!TimedAction(page.action)&&!authoredAttack)||page.durationMs?.Length!=page.spriteNames.Length)return false;
+            // New state clips follow the existing combat clock directly; they
+            // do not need names from a retired character animation to activate.
+            if(TimedStateAction(page.action)&&page.action!="Charging"&&page.loop)return false;
+            if((!TimedAction(page.action)&&!TimedStateAction(page.action)&&!authoredAttack)||
+                page.durationMs?.Length!=page.spriteNames.Length)return false;
             foreach(int duration in page.durationMs)if(duration<=0)return false;
             return true;
         }
@@ -120,6 +133,21 @@ namespace Darklight
                 var sprite=result[i];
                 if(sprite.texture.width!=page.nativeSize[0]||sprite.texture.height!=page.nativeSize[1]||
                     Mathf.Abs(sprite.pixelsPerUnit-page.pixelsPerUnit)>.001f)return false;
+                // A repaired complete figure can have a different native raster
+                // density. Keep its RGBA pixels and the renderer's canonical
+                // scale; only express the measured pixels per world unit.
+                if(page.framePixelsPerUnit?.Length==result.Length&&
+                    Mathf.Abs(page.framePixelsPerUnit[i]-sprite.pixelsPerUnit)>.001f)
+                {
+                    float density=page.framePixelsPerUnit[i];
+                    if(!densitySprites.TryGetValue((sprite,density),out var adjusted))
+                    {
+                        var pivot=new Vector2(sprite.pivot.x/sprite.rect.width,sprite.pivot.y/sprite.rect.height);
+                        adjusted=Sprite.Create(sprite.texture,sprite.rect,pivot,density,0,SpriteMeshType.FullRect);
+                        adjusted.name=sprite.name;densitySprites[(sprite,density)]=adjusted;
+                    }
+                    result[i]=adjusted;
+                }
             }
             page.frames=result;foreach(var sprite in result)authored.Add(sprite);return true;
         }
@@ -274,6 +302,14 @@ namespace Darklight
             block.SetTexture("_VampireMask",Texture2D.blackTexture);block.SetVector("_CanonicalSkinShift",Vector4.zero);
             renderer.SetPropertyBlock(block);
         }
-        public static void ClearCache(){attempted=iconsAttempted=false;contexts.Clear();sheets.Clear();authored.Clear();icons.Clear();wholeMappings.Clear();}
+        public static void ClearCache()
+        {
+            foreach(var sprite in densitySprites.Values)if(sprite!=null)
+            {
+                if(Application.isPlaying)UnityEngine.Object.Destroy(sprite);
+                else UnityEngine.Object.DestroyImmediate(sprite);
+            }
+            densitySprites.Clear();attempted=iconsAttempted=false;contexts.Clear();sheets.Clear();authored.Clear();icons.Clear();wholeMappings.Clear();
+        }
     }
 }

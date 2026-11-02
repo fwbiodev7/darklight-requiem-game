@@ -196,6 +196,11 @@ namespace Darklight.Editor
                     ("DarklightDeliveredSfxGameplayTests",2),("DarklightWeaponRedesignGameplayTests",3),("DarklightSimplifiedScopeGameplayTests",3))
             };
             ValidateFreshness(receipt.editMode,receipt.playMode);ValidateRedesign(receipt);ValidateAudio(receipt);
+            // Gate checks load many source textures and clips. Release unused
+            // validation assets before the native Player serialization peak.
+            long memoryBefore=UnityEngine.Profiling.Profiler.GetTotalAllocatedMemoryLong();
+            EditorUtility.UnloadUnusedAssetsImmediate();GC.Collect();
+            Debug.Log("BUILD_MEMORY_PREP: before="+memoryBefore+" after="+UnityEngine.Profiling.Profiler.GetTotalAllocatedMemoryLong());
             string root=Path.GetFullPath("outputs/retomada-20261027");
             var arguments=Environment.GetCommandLineArgs();int outputIndex=Array.IndexOf(arguments,"-darklightReleaseOutput");
             if(outputIndex>=0)

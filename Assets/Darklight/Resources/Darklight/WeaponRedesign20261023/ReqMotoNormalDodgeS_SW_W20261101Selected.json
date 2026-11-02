@@ -1,0 +1,537 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqMotoNormalDodgeS_SW_W20261101Selected.png",
+  "imageSha256": "52dfebe78202e630144169cc78b611a0e6be2c50b72bce968a58973b9d0fd924",
+  "nativeSize": [
+    2073,
+    1122
+  ],
+  "sourceSize": [
+    2169,
+    1218
+  ],
+  "pixelsPerUnit": 157.57575757575756,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261101/moto-dodge/ReqMotoNormalDodgeS_SW_W20261101Selected-source.png",
+  "sourceSha256": "f1ec5145a6dc093b4bb0abc1007d0e554a81fb5124d8b87a0b262b0825f6e3dd",
+  "frames": [
+    {
+      "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_00",
+      "rect": [
+        0,
+        0,
+        691,
+        374
+      ],
+      "pivot": [
+        0.39363241678726485,
+        0.11764705882352941
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        24,
+        31,
+        494,
+        318
+      ],
+      "sourceAnchor": [
+        288,
+        346
+      ],
+      "sourcePackingAnchor": [
+        326,
+        346
+      ],
+      "supportGuide": {
+        "anchor": [
+          288,
+          346
+        ],
+        "method": "Whole-figure two-boot support midpoint inspected; no anatomical edit."
+      },
+      "sourceOffsetInFrame": [
+        8,
+        15
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_01",
+      "rect": [
+        691,
+        0,
+        691,
+        374
+      ],
+      "pivot": [
+        0.44862518089725034,
+        0.11764705882352941
+      ],
+      "durationMs": 150,
+      "action": "dodge",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "low_evading_lunge",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        861,
+        64,
+        525,
+        297
+      ],
+      "sourceAnchor": [
+        1049,
+        346
+      ],
+      "sourcePackingAnchor": [
+        1049,
+        346
+      ],
+      "supportGuide": {
+        "anchor": [
+          1049,
+          346
+        ],
+        "method": "Whole-figure two-boot support midpoint inspected; no anatomical edit."
+      },
+      "sourceOffsetInFrame": [
+        122,
+        48
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_02",
+      "rect": [
+        1382,
+        0,
+        691,
+        374
+      ],
+      "pivot": [
+        0.37337192474674386,
+        0.11764705882352941
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        1483,
+        30,
+        465,
+        330
+      ],
+      "sourceAnchor": [
+        1720,
+        346
+      ],
+      "sourcePackingAnchor": [
+        1772,
+        346
+      ],
+      "supportGuide": {
+        "anchor": [
+          1720,
+          346
+        ],
+        "method": "Whole-figure two-boot support midpoint inspected; no anatomical edit."
+      },
+      "sourceOffsetInFrame": [
+        21,
+        14
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_03",
+      "rect": [
+        0,
+        374,
+        691,
+        374
+      ],
+      "pivot": [
+        0.37771345875542695,
+        0.11764705882352941
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        88,
+        443,
+        444,
+        319
+      ],
+      "sourceAnchor": [
+        277,
+        752
+      ],
+      "sourcePackingAnchor": [
+        326,
+        752
+      ],
+      "supportGuide": {
+        "anchor": [
+          277,
+          752
+        ],
+        "method": "Whole-figure two-boot support midpoint inspected; no anatomical edit."
+      },
+      "sourceOffsetInFrame": [
+        72,
+        21
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_04",
+      "rect": [
+        691,
+        374,
+        691,
+        374
+      ],
+      "pivot": [
+        0.44862518089725034,
+        0.11764705882352941
+      ],
+      "durationMs": 150,
+      "action": "dodge",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "low_evading_lunge",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        917,
+        474,
+        505,
+        299
+      ],
+      "sourceAnchor": [
+        1049,
+        752
+      ],
+      "sourcePackingAnchor": [
+        1049,
+        752
+      ],
+      "supportGuide": {
+        "anchor": [
+          1049,
+          752
+        ],
+        "method": "Whole-figure two-boot support midpoint inspected; no anatomical edit."
+      },
+      "sourceOffsetInFrame": [
+        178,
+        52
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_05",
+      "rect": [
+        1382,
+        374,
+        691,
+        374
+      ],
+      "pivot": [
+        0.37337192474674386,
+        0.11764705882352941
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        1481,
+        432,
+        431,
+        341
+      ],
+      "sourceAnchor": [
+        1720,
+        752
+      ],
+      "sourcePackingAnchor": [
+        1772,
+        752
+      ],
+      "supportGuide": {
+        "anchor": [
+          1720,
+          752
+        ],
+        "method": "Whole-figure two-boot support midpoint inspected; no anatomical edit."
+      },
+      "sourceOffsetInFrame": [
+        19,
+        10
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_06",
+      "rect": [
+        0,
+        748,
+        691,
+        374
+      ],
+      "pivot": [
+        0.44862518089725034,
+        0.11764705882352941
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        213,
+        849,
+        418,
+        345
+      ],
+      "sourceAnchor": [
+        326,
+        1158
+      ],
+      "sourcePackingAnchor": [
+        326,
+        1158
+      ],
+      "supportGuide": {
+        "anchor": [
+          326,
+          1158
+        ],
+        "method": "Whole-figure two-boot support midpoint inspected; no anatomical edit."
+      },
+      "sourceOffsetInFrame": [
+        197,
+        21
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_07",
+      "rect": [
+        691,
+        748,
+        691,
+        374
+      ],
+      "pivot": [
+        0.6193921852387844,
+        0.11764705882352941
+      ],
+      "durationMs": 150,
+      "action": "dodge",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "low_evading_lunge",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        826,
+        870,
+        517,
+        289
+      ],
+      "sourceAnchor": [
+        1090,
+        1151
+      ],
+      "sourcePackingAnchor": [
+        972,
+        1151
+      ],
+      "supportGuide": {
+        "anchor": [
+          1090,
+          1151
+        ],
+        "method": "Whole-figure two-boot support midpoint inspected; no anatomical edit."
+      },
+      "sourceOffsetInFrame": [
+        164,
+        49
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_08",
+      "rect": [
+        1382,
+        748,
+        691,
+        374
+      ],
+      "pivot": [
+        0.44862518089725034,
+        0.11764705882352941
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        1607,
+        836,
+        429,
+        324
+      ],
+      "sourceAnchor": [
+        1772,
+        1158
+      ],
+      "sourcePackingAnchor": [
+        1772,
+        1158
+      ],
+      "supportGuide": {
+        "anchor": [
+          1772,
+          1158
+        ],
+        "method": "Whole-figure two-boot support midpoint inspected; no anatomical edit."
+      },
+      "sourceOffsetInFrame": [
+        145,
+        8
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "Dodge_S",
+      "frames": [
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_00",
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_01",
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "Dodge_SW",
+      "frames": [
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_03",
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_04",
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_05"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "Dodge_W",
+      "frames": [
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_06",
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_07",
+        "Redesign_ReqMotoNormalDodgeS_SW_W20261101Selected_08"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "Dodge_S",
+    "Dodge_SW",
+    "Dodge_W"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 591469,
+  "packedPixels": 591469,
+  "originalSourcePixels": 591469,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 2050373,
+    "farBeyond16pxPixels": 376,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 1.4745098039215687,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete Fabius Requiem Normal on-foot Dodge figures with exactly two handheld saws. No anatomy assembly, mirroring, scale/recolor/alpha cleaning.",
+    "Dodge explicit durations40/150/40ms,230ms total; Normal invulnerability20–190ms is runtime-owned, not an animation event.",
+    "Native generated raster, indexed pixel grid unverified. One body-calibrated PPU for whole sheet; PPU does not repair anatomy.",
+    "Native timed Dodge consumer support is coordinated by main; no Runtime/import/Unity claimed here."
+  ],
+  "worldVisualScale": 1.325,
+  "pixelsPerUnitCalibration": {
+    "bodyHeightSourcePixels": 312,
+    "worldBodyHeight": 1.98,
+    "method": "Median standing recovery crown-to-sole in original source2/5/8=312/309/320px; both saws excluded. Native whole-figure selective repair preserves eight original drawings pixel-for-pixel. Common PPU, no drawing scaling; PPU does not repair anatomy.",
+    "measurementUncertaintyPixels": 5
+  },
+  "dodgeTiming": {
+    "durationMs": 230,
+    "invulnerabilityStartMs": 20,
+    "invulnerabilityEndExclusiveMs": 190,
+    "phaseDurationMs": [
+      40,
+      150,
+      40
+    ]
+  },
+  "review": {
+    "wholeSourceSeen": true,
+    "contactSeen": true,
+    "nearest2xWholeFiguresSeen": true,
+    "decodedGifPhasesSeen": true,
+    "humanApproval": false,
+    "livePlaybackObserved": false,
+    "unityImported": false,
+    "runtimeVerified": false
+  }
+}

@@ -22,6 +22,9 @@ namespace Darklight.Editor
             if(!File.Exists(sideIdlePath))throw new FileNotFoundException("Missing mature Requiem side mounted idle sheet",sideIdlePath);
             DarklightWeaponRedesignImporter.ImportStandalone(sideIdlePath);
             DarklightWeaponRedesignImporter.ImportStandalone("Assets/Darklight/Resources/Darklight/CombatContacts20261027/ContactBursts.png");
+            DarklightWeaponRedesignImporter.ImportStandalone("Assets/Darklight/Resources/"+DarklightActionParticles.Resource+".png");
+            DarklightWeaponRedesignImporter.ImportStandalone("Assets/Darklight/Resources/Darklight/FastWeaponParticles20261101/FastWeaponDodge.png");
+            DarklightWeaponRedesignImporter.ImportStandalone("Assets/Darklight/Resources/Darklight/AtmosphereTextures20261101/AtmosphereTextures.png");
             DarklightWeaponRedesignImporter.ImportStandalone("Assets/Darklight/Resources/"+DarklightMotorcycleRedesignBank.RequiemDualSawsResource+".png");
             for(int direction=0;direction<8;direction++)
             {

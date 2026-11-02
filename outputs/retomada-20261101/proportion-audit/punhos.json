@@ -1,0 +1,1625 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-01",
+  "scope": "Independent Punhos audit vs corresponding approved Idle: WalkS4, Dodge24, Giro24, Parry source9",
+  "state": "audit-complete-with-localized-warnings-and-import-limits",
+  "auditedPreparedFigures": 52,
+  "auditedCandidateFigures": 9,
+  "referenceIdleFigures": 32,
+  "anatomyHighConfidenceDefects": 0,
+  "localizedIdentityWarnings": 2,
+  "unityImportPendingSheets": 2,
+  "sourceArtModified": false,
+  "assetsModified": false,
+  "runtimeModified": false,
+  "unityExecuted": false,
+  "gitExecuted": false,
+  "methods": {
+    "nativeSourcesWholeSeen": true,
+    "matchingIdleDirectionsCompared": true,
+    "headTorsoThighShinFeetHairEquipmentAgeChecked": true,
+    "helperComparisonIndex": "outputs/retomada-20261101/proportion-audit/comparison-index.json",
+    "helperPreviewOnlyWVS": 1.325,
+    "helperPreviewOnlyPixelsPerWorldUnit": 80,
+    "fullRectangleCanvasRegenerated": true,
+    "staticAudit": true,
+    "ppuDoesNotRepairAnatomy": true,
+    "projectionLimit": "Deep flexion, kick extension and foreshortening change silhouette/projected lengths; hidden bone lengths cannot be proved from these sprites.",
+    "automatedColorBandMeasurementsRejected": "Hair/coat/metal-shadow overlap made a brown-pixel width heuristic unreliable; no numerical hair-growth claim or pass/fail uses that heuristic."
+  },
+  "findings": [
+    {
+      "id": "P-F01",
+      "severity": "warning",
+      "category": "hair-silhouette",
+      "confidence": "medium",
+      "sheet": "ReqFistsNormalGiroNNEESE20261028Selected",
+      "frameIds": [
+        "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_00",
+        "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_02"
+      ],
+      "sourceFrameIndices": [
+        0,
+        2
+      ],
+      "sourcePath": "ArtSources/WeaponRedesign20261028/punhos-normal/ReqFistsNormalGiroNNEESE20261028Selected-source.png",
+      "sourceSha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98",
+      "referenceIdle": "Redesign_ReqFistsNormalIdleN20261025V2_00",
+      "description": "Giro N chamber/recovery has a rounder layered nape/dome compared with the pointed/tousled Idle N outline. Difference is visible in source and planned Unity scale; it is not a leg-length diagnosis.",
+      "action": "Targeted whole-figure identity review for these two N figures before any redraw; preserve all other correct figures. PPU cannot repair haircut.",
+      "evidence": [
+        "outputs/retomada-20261101/proportion-audit/punhos/independent-N-whole-native.png",
+        "outputs/retomada-20261101/proportion-audit/punhos/independent-N-whole-planned-unity.png"
+      ],
+      "limits": "Pose/turning can change overlap of locks; no calibrated scalp/hidden-neck measurement. Do not infer exact percentage of hair growth."
+    },
+    {
+      "id": "P-F02",
+      "severity": "warning",
+      "category": "head-hair-volume",
+      "confidence": "low-to-medium",
+      "sheet": "ReqFistsNormalDodgeNW_N_NE20261101V1",
+      "frameIds": [
+        "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_00",
+        "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_02",
+        "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_03",
+        "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_05",
+        "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_06",
+        "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_08"
+      ],
+      "sourceFrameIndices": [
+        0,
+        2,
+        3,
+        5,
+        6,
+        8
+      ],
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634",
+      "description": "Rear Dodge anticipation/recovery reads slightly broader/rounder in head/hair than corresponding rear idles. Low phase intentionally inclines torso/head, so it was excluded from like-pose warning.",
+      "action": "Recheck whole rear standing-like poses with the new approved Fists identity authority; do not compensate anatomy through PPU or regenerate the entire weapon.",
+      "evidence": [
+        "outputs/retomada-20261101/proportion-audit/punhos/ReqFistsNormalDodgeNW_N_NE20261101V1-worldscale.png",
+        "outputs/retomada-20261101/proportion-audit/punhos/independent-N-whole-native.png",
+        "outputs/retomada-20261101/proportion-audit/punhos/independent-N-whole-planned-unity.png"
+      ],
+      "limits": "Descriptor PPU153.0303 is planned; rear Dodge .png.meta was absent at audit. Width is qualitative, not a measured growth claim."
+    },
+    {
+      "id": "P-F03",
+      "severity": "pending-validation",
+      "category": "actual-unity-scale",
+      "confidence": "high",
+      "sheets": [
+        "ReqFistsNormalDodgeNW_N_NE20261101V1",
+        "ReqFistsNormalDodgeE_SE20261101V1"
+      ],
+      "description": "No actual .png.meta found for rear/right Dodge at this audit; world-scale panels use descriptor PPU only.",
+      "action": "Coordinator import then verify actual spritePixelsToUnits, foot support and playback. Auditor did not run Unity."
+    },
+    {
+      "id": "P-F04",
+      "severity": "pending-preparation",
+      "category": "parry-candidate",
+      "confidence": "high",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-parry/ReqFistsNormalParryS_SW_W20261101V1-source.png",
+      "sourceSha256": "591c6741ea7825480dfce3e9afb5cb388122fa3e5bead218f6a5848bc8a2f944",
+      "description": "Parry source exists but producer confirms no descriptor/PPU/anchors/staging. Native anatomical look can be screened; real Unity scale cannot be audited yet.",
+      "action": "Keep candidate. Prepare source-preserving metadata/clip timing and review scale after preparation; do not infer approval from user praise of FistsWalk."
+    }
+  ],
+  "sheets": [
+    {
+      "name": "ReqFistsNormalWalkS20261101V2Selected",
+      "kind": "Walk",
+      "descriptorPath": "outputs/retomada-20261101/punhos-walk/staging/ReqFistsNormalWalkS20261101V2Selected.json",
+      "descriptorSha256": "98aa081d2752e108e5930b5e12324a0cd40dc57be79ac7e3ab433db867b97b85",
+      "imagePath": "outputs/retomada-20261101/punhos-walk/staging/ReqFistsNormalWalkS20261101V2Selected.png",
+      "imageSha256": "6cbbc2e1694e37a0d50ad32c680635bc6d14c07ea2bca06927e532e5bee7c94d",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-walk/ReqFistsNormalWalkS_SW_W20261101V2-source.png",
+      "sourceSha256": "69df7ad59d4c7e5e66f5a6b74cce721db9310f3fe480b06ee642c426b9dc1103",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "nativeSize": [
+        1880,
+        365
+      ],
+      "pixelsPerUnit": 170.95959595959596,
+      "worldVisualScale": 1.325,
+      "figures": 4,
+      "directions": [
+        "S"
+      ],
+      "sourceHashMatchesDescriptor": true,
+      "imageHashMatchesDescriptor": true,
+      "wholeFigures": true,
+      "sourceScale": 1,
+      "metaPath": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkS20261101V2Selected.png.meta",
+      "metaPixelsPerUnit": 170.9596,
+      "metaMatchesDescriptor": true,
+      "unityImportExecutedByAuditor": false
+    },
+    {
+      "name": "ReqFistsNormalDodgeE_SE20261101V1",
+      "kind": "Dodge",
+      "descriptorPath": "outputs/retomada-20261101/punhos-dodge/staging/ReqFistsNormalDodgeE_SE20261101V1.json",
+      "descriptorSha256": "a8ff4590cf6c01805f98875360a6ef78a5ee1cc162f8c48513b6bcd7a9b423cd",
+      "imagePath": "outputs/retomada-20261101/punhos-dodge/staging/ReqFistsNormalDodgeE_SE20261101V1.png",
+      "imageSha256": "1bc81059217daa2a79bd5dd8fbfb824007ede9e07349b487107678e3ee16e7e2",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeE_SE20261101V1-source.png",
+      "sourceSha256": "05358a068b6edadb79f39beaf39f131901dacfd282cc929fb5f464dbe3a3b5bc",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "nativeSize": [
+        1698,
+        1198
+      ],
+      "pixelsPerUnit": 233.08080808080808,
+      "worldVisualScale": 1.325,
+      "figures": 6,
+      "directions": [
+        "E",
+        "SE"
+      ],
+      "sourceHashMatchesDescriptor": true,
+      "imageHashMatchesDescriptor": true,
+      "wholeFigures": true,
+      "sourceScale": 1,
+      "metaPath": null,
+      "metaPixelsPerUnit": null,
+      "metaMatchesDescriptor": null,
+      "unityImportExecutedByAuditor": false
+    },
+    {
+      "name": "ReqFistsNormalDodgeNW_N_NE20261101V1",
+      "kind": "Dodge",
+      "descriptorPath": "outputs/retomada-20261101/punhos-dodge/staging/ReqFistsNormalDodgeNW_N_NE20261101V1.json",
+      "descriptorSha256": "c2729aedb50c85886039f74532503a155f0cb2401ae8ea7193488bc4c7e2e95e",
+      "imagePath": "outputs/retomada-20261101/punhos-dodge/staging/ReqFistsNormalDodgeNW_N_NE20261101V1.png",
+      "imageSha256": "824fe55244b3ea38e04590a7d78762eaf5a65e8f6f5ec479d53c9bd019a69027",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "nativeSize": [
+        2304,
+        1440
+      ],
+      "pixelsPerUnit": 153.03030303030303,
+      "worldVisualScale": 1.325,
+      "figures": 9,
+      "directions": [
+        "N",
+        "NE",
+        "NW"
+      ],
+      "sourceHashMatchesDescriptor": true,
+      "imageHashMatchesDescriptor": true,
+      "wholeFigures": true,
+      "sourceScale": 1,
+      "metaPath": null,
+      "metaPixelsPerUnit": null,
+      "metaMatchesDescriptor": null,
+      "unityImportExecutedByAuditor": false
+    },
+    {
+      "name": "ReqFistsNormalDodgeS_SW_W20261101V1",
+      "kind": "Dodge",
+      "descriptorPath": "outputs/retomada-20261101/punhos-dodge/staging/ReqFistsNormalDodgeS_SW_W20261101V1.json",
+      "descriptorSha256": "6a4df15f87963e199bc15649621f8298743c103be53ed70d9135ad465cb0314d",
+      "imagePath": "outputs/retomada-20261101/punhos-dodge/staging/ReqFistsNormalDodgeS_SW_W20261101V1.png",
+      "imageSha256": "6730abb57d135a48bab7cf3b9d003cf44978a589009d0c7e54c9070e89a939fc",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-dodge/ReqFistsNormalDodgeS_SW_W20261101V1-source.png",
+      "sourceSha256": "b62ba6bf8b4a31f8f7d3fa3bfedfd1ad2a84d30f8c1f0b5fbb9a850d0553d92a",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "nativeSize": [
+        2388,
+        1314
+      ],
+      "pixelsPerUnit": 163.63636363636363,
+      "worldVisualScale": 1.325,
+      "figures": 9,
+      "directions": [
+        "S",
+        "SW",
+        "W"
+      ],
+      "sourceHashMatchesDescriptor": true,
+      "imageHashMatchesDescriptor": true,
+      "wholeFigures": true,
+      "sourceScale": 1,
+      "metaPath": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalDodgeS_SW_W20261101V1.png.meta",
+      "metaPixelsPerUnit": 163.63637,
+      "metaMatchesDescriptor": true,
+      "unityImportExecutedByAuditor": false
+    },
+    {
+      "name": "ReqFistsNormalGiroNNEESE20261028Selected",
+      "kind": "Giro",
+      "descriptorPath": "outputs/retomada-20261031/punhos/giro24/staged/ReqFistsNormalGiroNNEESE20261028Selected.json",
+      "descriptorSha256": "78af43c7dbfa4a598984da5969c0f920a9c82d85689c1245760b87a9d4a604c3",
+      "imagePath": "outputs/retomada-20261031/punhos/giro24/staged/ReqFistsNormalGiroNNEESE20261028Selected.png",
+      "imageSha256": "6328adb4be8544ac3d822b1ac894f7eeccdcda9da9dba48ce307162bd287f19f",
+      "sourcePath": "ArtSources/WeaponRedesign20261028/punhos-normal/ReqFistsNormalGiroNNEESE20261028Selected-source.png",
+      "sourceSha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98",
+      "sourceSize": [
+        1317,
+        1552
+      ],
+      "nativeSize": [
+        1317,
+        1580
+      ],
+      "pixelsPerUnit": 172.4747474747475,
+      "worldVisualScale": 1.325,
+      "figures": 12,
+      "directions": [
+        "E",
+        "N",
+        "NE",
+        "SE"
+      ],
+      "sourceHashMatchesDescriptor": true,
+      "imageHashMatchesDescriptor": true,
+      "wholeFigures": true,
+      "sourceScale": 1,
+      "metaPath": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalGiroNNEESE20261028Selected.png.meta",
+      "metaPixelsPerUnit": 172.47475,
+      "metaMatchesDescriptor": true,
+      "unityImportExecutedByAuditor": false
+    },
+    {
+      "name": "ReqFistsNormalGiroSSWWNW20261028V1",
+      "kind": "Giro",
+      "descriptorPath": "outputs/retomada-20261031/punhos/giro24/staged/ReqFistsNormalGiroSSWWNW20261028V1.json",
+      "descriptorSha256": "e51c0f27f8c45d2f9a27d47044bf634c8c58c86d01006085ec2cf2e67a8b1228",
+      "imagePath": "outputs/retomada-20261031/punhos/giro24/staged/ReqFistsNormalGiroSSWWNW20261028V1.png",
+      "imageSha256": "bbf8aa77eb26151985a10ffd1bcf85d05eb4c13b2032c2048e7b8403f2d5b8e9",
+      "sourcePath": "ArtSources/WeaponRedesign20261028/punhos-normal/ReqFistsNormalGiroSSWWNW20261028V1-source.png",
+      "sourceSha256": "3fa921a30bad16d647edb94efdd7d757b7e50e87ee721941c22716f0d62f3403",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nativeSize": [
+        1494,
+        1676
+      ],
+      "pixelsPerUnit": 162.12121212121212,
+      "worldVisualScale": 1.325,
+      "figures": 12,
+      "directions": [
+        "NW",
+        "S",
+        "SW",
+        "W"
+      ],
+      "sourceHashMatchesDescriptor": true,
+      "imageHashMatchesDescriptor": true,
+      "wholeFigures": true,
+      "sourceScale": 1,
+      "metaPath": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalGiroSSWWNW20261028V1.png.meta",
+      "metaPixelsPerUnit": 162.12122,
+      "metaMatchesDescriptor": true,
+      "unityImportExecutedByAuditor": false
+    }
+  ],
+  "references": [
+    {
+      "name": "ReqFistsNormalIdleE_SE20261025V1",
+      "kind": "reference-idle",
+      "descriptorPath": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleE_SE20261025V1.json",
+      "descriptorSha256": "528051e5ae9e4aadb156fca58d02e96e9f6d935e7a6cec2fe2632ee239c6cfc6",
+      "imagePath": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleE_SE20261025V1.png",
+      "imageSha256": "6d32b807a2848b10166c239a2dd61481a78df58be75cd5405a9f1ee9634f05a3",
+      "sourcePath": "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleE_SE-v1-source.png",
+      "sourceSha256": "bed205352d9cfa1b1433941f484deb7bae0d932024177f5704fed1082087327e",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "nativeSize": [
+        1700,
+        1038
+      ],
+      "pixelsPerUnit": 229.47082767978287,
+      "worldVisualScale": 1.325,
+      "figures": 8,
+      "directions": [
+        "E",
+        "SE"
+      ],
+      "sourceHashMatchesDescriptor": true,
+      "imageHashMatchesDescriptor": true,
+      "wholeFigures": true,
+      "sourceScale": 1,
+      "metaPath": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleE_SE20261025V1.png.meta",
+      "metaPixelsPerUnit": 229.47083,
+      "metaMatchesDescriptor": true,
+      "unityImportExecutedByAuditor": false
+    },
+    {
+      "name": "ReqFistsNormalIdleN20261025V2",
+      "kind": "reference-idle",
+      "descriptorPath": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleN20261025V2.json",
+      "descriptorSha256": "e88ad79d298e2aa0f7e6cb94b03dc1e4a0c16aa42885be484afdda43856aa3dd",
+      "imagePath": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleN20261025V2.png",
+      "imageSha256": "e2bf44d64812455929ff333b63ac5e50f7dfffbc63f324f863a0e3164deeaf55",
+      "sourcePath": "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleN-v2-source.png",
+      "sourceSha256": "6929801038785b8524f4dbceb5c2381d1ad2dff3500434603a9de95d52ab952c",
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "nativeSize": [
+        2244,
+        698
+      ],
+      "pixelsPerUnit": 271.5151515151515,
+      "worldVisualScale": 1.325,
+      "figures": 4,
+      "directions": [
+        "N"
+      ],
+      "sourceHashMatchesDescriptor": true,
+      "imageHashMatchesDescriptor": true,
+      "wholeFigures": true,
+      "sourceScale": 1,
+      "metaPath": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleN20261025V2.png.meta",
+      "metaPixelsPerUnit": 271.51514,
+      "metaMatchesDescriptor": true,
+      "unityImportExecutedByAuditor": false
+    },
+    {
+      "name": "ReqFistsNormalIdleNW_NE20261025V1",
+      "kind": "reference-idle",
+      "descriptorPath": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleNW_NE20261025V1.json",
+      "descriptorSha256": "69df0128c66c00f15411056bc5913818f6bbd6384367df4b98cf1b8fd3112fd8",
+      "imagePath": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleNW_NE20261025V1.png",
+      "imageSha256": "f302effa11a44da2d63863c5645011976ca6d2f57a63221a6c7df2226b67f181",
+      "sourcePath": "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleNW_N_NE-v1-source.png",
+      "sourceSha256": "ed7fe8c38cbd21a6ead39ad48d3f2dc93ae7ba8f4e42a7514d81ea3255bc42cf",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "nativeSize": [
+        2276,
+        744
+      ],
+      "pixelsPerUnit": 159.56580732700135,
+      "worldVisualScale": 1.325,
+      "figures": 8,
+      "directions": [
+        "NE",
+        "NW"
+      ],
+      "sourceHashMatchesDescriptor": true,
+      "imageHashMatchesDescriptor": true,
+      "wholeFigures": true,
+      "sourceScale": 1,
+      "metaPath": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleNW_NE20261025V1.png.meta",
+      "metaPixelsPerUnit": 159.56581,
+      "metaMatchesDescriptor": true,
+      "unityImportExecutedByAuditor": false
+    },
+    {
+      "name": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "kind": "reference-idle",
+      "descriptorPath": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleS_SW_W20261025V1.json",
+      "descriptorSha256": "fee63624de6bc7c733f4bc684fafe9ee9908bac6099444aebf552d200faa4972",
+      "imagePath": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleS_SW_W20261025V1.png",
+      "imageSha256": "6a15d28a66cef8b5f6bf579afa1c02d0f5d57047b6fe4ca65c3e370e36c778af",
+      "sourcePath": "ArtSources/WeaponRedesign20261025/candidates/ReqFistsNormalIdleS_SW_W-v1-source.png",
+      "sourceSha256": "8c142514ee7e1a98545cff3d0d30769a89a0cabc409932319e52537856698f0d",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "nativeSize": [
+        2340,
+        1245
+      ],
+      "pixelsPerUnit": 163.61827227498867,
+      "worldVisualScale": 1.325,
+      "figures": 12,
+      "directions": [
+        "S",
+        "SW",
+        "W"
+      ],
+      "sourceHashMatchesDescriptor": true,
+      "imageHashMatchesDescriptor": true,
+      "wholeFigures": true,
+      "sourceScale": 1,
+      "metaPath": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleS_SW_W20261025V1.png.meta",
+      "metaPixelsPerUnit": 163.61827,
+      "metaMatchesDescriptor": true,
+      "unityImportExecutedByAuditor": false
+    }
+  ],
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsNormalWalkS20261101V2Selected_00",
+      "sheet": "ReqFistsNormalWalkS20261101V2Selected",
+      "index": 0,
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        17,
+        15,
+        409,
+        345
+      ],
+      "phase": "walk_0",
+      "direction": "S",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "69df7ad59d4c7e5e66f5a6b74cce721db9310f3fe480b06ee642c426b9dc1103"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkS20261101V2Selected_01",
+      "sheet": "ReqFistsNormalWalkS20261101V2Selected",
+      "index": 1,
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        475,
+        11,
+        263,
+        348
+      ],
+      "phase": "walk_1",
+      "direction": "S",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "69df7ad59d4c7e5e66f5a6b74cce721db9310f3fe480b06ee642c426b9dc1103"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkS20261101V2Selected_02",
+      "sheet": "ReqFistsNormalWalkS20261101V2Selected",
+      "index": 2,
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        779,
+        13,
+        313,
+        346
+      ],
+      "phase": "walk_2",
+      "direction": "S",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "69df7ad59d4c7e5e66f5a6b74cce721db9310f3fe480b06ee642c426b9dc1103"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkS20261101V2Selected_03",
+      "sheet": "ReqFistsNormalWalkS20261101V2Selected",
+      "index": 3,
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1150,
+        14,
+        298,
+        345
+      ],
+      "phase": "walk_3",
+      "direction": "S",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "69df7ad59d4c7e5e66f5a6b74cce721db9310f3fe480b06ee642c426b9dc1103"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeE_SE20261101V1_00",
+      "sheet": "ReqFistsNormalDodgeE_SE20261101V1",
+      "index": 0,
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        3,
+        530,
+        517
+      ],
+      "phase": "anticipation",
+      "direction": "E",
+      "idleSheet": "ReqFistsNormalIdleE_SE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleE_SE20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "05358a068b6edadb79f39beaf39f131901dacfd282cc929fb5f464dbe3a3b5bc"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeE_SE20261101V1_01",
+      "sheet": "ReqFistsNormalDodgeE_SE20261101V1",
+      "index": 1,
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        498,
+        9,
+        536,
+        540
+      ],
+      "phase": "low-evasive-lunge",
+      "direction": "E",
+      "idleSheet": "ReqFistsNormalIdleE_SE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleE_SE20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "05358a068b6edadb79f39beaf39f131901dacfd282cc929fb5f464dbe3a3b5bc"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeE_SE20261101V1_02",
+      "sheet": "ReqFistsNormalDodgeE_SE20261101V1",
+      "index": 2,
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        1007,
+        11,
+        521,
+        503
+      ],
+      "phase": "recovery",
+      "direction": "E",
+      "idleSheet": "ReqFistsNormalIdleE_SE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleE_SE20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "05358a068b6edadb79f39beaf39f131901dacfd282cc929fb5f464dbe3a3b5bc"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeE_SE20261101V1_03",
+      "sheet": "ReqFistsNormalDodgeE_SE20261101V1",
+      "index": 3,
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        0,
+        461,
+        486,
+        563
+      ],
+      "phase": "anticipation",
+      "direction": "SE",
+      "idleSheet": "ReqFistsNormalIdleE_SE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleE_SE20261025V1_04",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "05358a068b6edadb79f39beaf39f131901dacfd282cc929fb5f464dbe3a3b5bc"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeE_SE20261101V1_04",
+      "sheet": "ReqFistsNormalDodgeE_SE20261101V1",
+      "index": 4,
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        485,
+        549,
+        543,
+        475
+      ],
+      "phase": "low-evasive-lunge",
+      "direction": "SE",
+      "idleSheet": "ReqFistsNormalIdleE_SE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleE_SE20261025V1_04",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "05358a068b6edadb79f39beaf39f131901dacfd282cc929fb5f464dbe3a3b5bc"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeE_SE20261101V1_05",
+      "sheet": "ReqFistsNormalDodgeE_SE20261101V1",
+      "index": 5,
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        1021,
+        509,
+        501,
+        515
+      ],
+      "phase": "recovery",
+      "direction": "SE",
+      "idleSheet": "ReqFistsNormalIdleE_SE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleE_SE20261025V1_04",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "05358a068b6edadb79f39beaf39f131901dacfd282cc929fb5f464dbe3a3b5bc"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_00",
+      "sheet": "ReqFistsNormalDodgeNW_N_NE20261101V1",
+      "index": 0,
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        19,
+        522,
+        311
+      ],
+      "phase": "anticipation",
+      "direction": "NW",
+      "idleSheet": "ReqFistsNormalIdleNW_NE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_00",
+      "anatomyDisposition": "preserve-pending-localized-hair-identity-review",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634",
+      "findingIds": [
+        "P-F02"
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_01",
+      "sheet": "ReqFistsNormalDodgeNW_N_NE20261101V1",
+      "index": 1,
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        523,
+        19,
+        511,
+        381
+      ],
+      "phase": "low-evasive-lunge",
+      "direction": "NW",
+      "idleSheet": "ReqFistsNormalIdleNW_NE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_02",
+      "sheet": "ReqFistsNormalDodgeNW_N_NE20261101V1",
+      "index": 2,
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        1063,
+        19,
+        455,
+        318
+      ],
+      "phase": "recovery",
+      "direction": "NW",
+      "idleSheet": "ReqFistsNormalIdleNW_NE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_00",
+      "anatomyDisposition": "preserve-pending-localized-hair-identity-review",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634",
+      "findingIds": [
+        "P-F02"
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_03",
+      "sheet": "ReqFistsNormalDodgeNW_N_NE20261101V1",
+      "index": 3,
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        0,
+        333,
+        514,
+        363
+      ],
+      "phase": "anticipation",
+      "direction": "N",
+      "idleSheet": "ReqFistsNormalIdleN20261025V2",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleN20261025V2_00",
+      "anatomyDisposition": "preserve-pending-localized-hair-identity-review",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634",
+      "findingIds": [
+        "P-F02"
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_04",
+      "sheet": "ReqFistsNormalDodgeNW_N_NE20261101V1",
+      "index": 4,
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        553,
+        377,
+        475,
+        321
+      ],
+      "phase": "low-evasive-lunge",
+      "direction": "N",
+      "idleSheet": "ReqFistsNormalIdleN20261025V2",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleN20261025V2_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_05",
+      "sheet": "ReqFistsNormalDodgeNW_N_NE20261101V1",
+      "index": 5,
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        1029,
+        337,
+        395,
+        327
+      ],
+      "phase": "recovery",
+      "direction": "N",
+      "idleSheet": "ReqFistsNormalIdleN20261025V2",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleN20261025V2_00",
+      "anatomyDisposition": "preserve-pending-localized-hair-identity-review",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634",
+      "findingIds": [
+        "P-F02"
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_06",
+      "sheet": "ReqFistsNormalDodgeNW_N_NE20261101V1",
+      "index": 6,
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        0,
+        663,
+        460,
+        317
+      ],
+      "phase": "anticipation",
+      "direction": "NE",
+      "idleSheet": "ReqFistsNormalIdleNW_NE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_04",
+      "anatomyDisposition": "preserve-pending-localized-hair-identity-review",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634",
+      "findingIds": [
+        "P-F02"
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_07",
+      "sheet": "ReqFistsNormalDodgeNW_N_NE20261101V1",
+      "index": 7,
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        481,
+        694,
+        515,
+        298
+      ],
+      "phase": "low-evasive-lunge",
+      "direction": "NE",
+      "idleSheet": "ReqFistsNormalIdleNW_NE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_04",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_08",
+      "sheet": "ReqFistsNormalDodgeNW_N_NE20261101V1",
+      "index": 8,
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        997,
+        581,
+        539,
+        443
+      ],
+      "phase": "recovery",
+      "direction": "NE",
+      "idleSheet": "ReqFistsNormalIdleNW_NE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_04",
+      "anatomyDisposition": "preserve-pending-localized-hair-identity-review",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "a798da542f69862a87341a5ed468c59581bee704f3d68e3a549fb2b5b3cd1634",
+      "findingIds": [
+        "P-F02"
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_00",
+      "sheet": "ReqFistsNormalDodgeS_SW_W20261101V1",
+      "index": 0,
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        9,
+        520,
+        335
+      ],
+      "phase": "anticipation",
+      "direction": "S",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "b62ba6bf8b4a31f8f7d3fa3bfedfd1ad2a84d30f8c1f0b5fbb9a850d0553d92a"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_01",
+      "sheet": "ReqFistsNormalDodgeS_SW_W20261101V1",
+      "index": 1,
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        519,
+        29,
+        491,
+        339
+      ],
+      "phase": "low-evasive-lunge",
+      "direction": "S",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "b62ba6bf8b4a31f8f7d3fa3bfedfd1ad2a84d30f8c1f0b5fbb9a850d0553d92a"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_02",
+      "sheet": "ReqFistsNormalDodgeS_SW_W20261101V1",
+      "index": 2,
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        1015,
+        9,
+        499,
+        341
+      ],
+      "phase": "recovery",
+      "direction": "S",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "b62ba6bf8b4a31f8f7d3fa3bfedfd1ad2a84d30f8c1f0b5fbb9a850d0553d92a"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_03",
+      "sheet": "ReqFistsNormalDodgeS_SW_W20261101V1",
+      "index": 3,
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        0,
+        341,
+        528,
+        419
+      ],
+      "phase": "anticipation",
+      "direction": "SW",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_04",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "b62ba6bf8b4a31f8f7d3fa3bfedfd1ad2a84d30f8c1f0b5fbb9a850d0553d92a"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_04",
+      "sheet": "ReqFistsNormalDodgeS_SW_W20261101V1",
+      "index": 4,
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        551,
+        359,
+        494,
+        321
+      ],
+      "phase": "low-evasive-lunge",
+      "direction": "SW",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_04",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "b62ba6bf8b4a31f8f7d3fa3bfedfd1ad2a84d30f8c1f0b5fbb9a850d0553d92a"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_05",
+      "sheet": "ReqFistsNormalDodgeS_SW_W20261101V1",
+      "index": 5,
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        1121,
+        349,
+        387,
+        333
+      ],
+      "phase": "recovery",
+      "direction": "SW",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_04",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "b62ba6bf8b4a31f8f7d3fa3bfedfd1ad2a84d30f8c1f0b5fbb9a850d0553d92a"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_06",
+      "sheet": "ReqFistsNormalDodgeS_SW_W20261101V1",
+      "index": 6,
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        17,
+        670,
+        463,
+        354
+      ],
+      "phase": "anticipation",
+      "direction": "W",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_08",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "b62ba6bf8b4a31f8f7d3fa3bfedfd1ad2a84d30f8c1f0b5fbb9a850d0553d92a"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_07",
+      "sheet": "ReqFistsNormalDodgeS_SW_W20261101V1",
+      "index": 7,
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        561,
+        711,
+        463,
+        286
+      ],
+      "phase": "low-evasive-lunge",
+      "direction": "W",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_08",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "b62ba6bf8b4a31f8f7d3fa3bfedfd1ad2a84d30f8c1f0b5fbb9a850d0553d92a"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_08",
+      "sheet": "ReqFistsNormalDodgeS_SW_W20261101V1",
+      "index": 8,
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        1137,
+        671,
+        369,
+        353
+      ],
+      "phase": "recovery",
+      "direction": "W",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_08",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "b62ba6bf8b4a31f8f7d3fa3bfedfd1ad2a84d30f8c1f0b5fbb9a850d0553d92a"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_00",
+      "sheet": "ReqFistsNormalGiroNNEESE20261028Selected",
+      "index": 0,
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        67,
+        11,
+        279,
+        359
+      ],
+      "phase": "chamber-and-counterturn",
+      "direction": "N",
+      "idleSheet": "ReqFistsNormalIdleN20261025V2",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleN20261025V2_00",
+      "anatomyDisposition": "preserve-pending-localized-hair-identity-review",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98",
+      "findingIds": [
+        "P-F01"
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_01",
+      "sheet": "ReqFistsNormalGiroNNEESE20261028Selected",
+      "index": 1,
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        477,
+        42,
+        354,
+        323
+      ],
+      "phase": "rotating-sweep-contact",
+      "direction": "N",
+      "idleSheet": "ReqFistsNormalIdleN20261025V2",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleN20261025V2_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_02",
+      "sheet": "ReqFistsNormalGiroNNEESE20261028Selected",
+      "index": 2,
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        953,
+        8,
+        272,
+        357
+      ],
+      "phase": "landed-guard-recovery",
+      "direction": "N",
+      "idleSheet": "ReqFistsNormalIdleN20261025V2",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleN20261025V2_00",
+      "anatomyDisposition": "preserve-pending-localized-hair-identity-review",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98",
+      "findingIds": [
+        "P-F01"
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_03",
+      "sheet": "ReqFistsNormalGiroNNEESE20261028Selected",
+      "index": 3,
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        81,
+        399,
+        293,
+        360
+      ],
+      "phase": "chamber-and-counterturn",
+      "direction": "NE",
+      "idleSheet": "ReqFistsNormalIdleNW_NE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_04",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_04",
+      "sheet": "ReqFistsNormalGiroNNEESE20261028Selected",
+      "index": 4,
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        465,
+        407,
+        386,
+        348
+      ],
+      "phase": "rotating-sweep-contact",
+      "direction": "NE",
+      "idleSheet": "ReqFistsNormalIdleNW_NE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_04",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_05",
+      "sheet": "ReqFistsNormalGiroNNEESE20261028Selected",
+      "index": 5,
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        987,
+        398,
+        290,
+        357
+      ],
+      "phase": "landed-guard-recovery",
+      "direction": "NE",
+      "idleSheet": "ReqFistsNormalIdleNW_NE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_04",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_06",
+      "sheet": "ReqFistsNormalGiroNNEESE20261028Selected",
+      "index": 6,
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        106,
+        784,
+        287,
+        356
+      ],
+      "phase": "chamber-and-counterturn",
+      "direction": "E",
+      "idleSheet": "ReqFistsNormalIdleE_SE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleE_SE20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_07",
+      "sheet": "ReqFistsNormalGiroNNEESE20261028Selected",
+      "index": 7,
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        447,
+        785,
+        412,
+        357
+      ],
+      "phase": "rotating-sweep-contact",
+      "direction": "E",
+      "idleSheet": "ReqFistsNormalIdleE_SE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleE_SE20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_08",
+      "sheet": "ReqFistsNormalGiroNNEESE20261028Selected",
+      "index": 8,
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        993,
+        785,
+        273,
+        351
+      ],
+      "phase": "landed-guard-recovery",
+      "direction": "E",
+      "idleSheet": "ReqFistsNormalIdleE_SE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleE_SE20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_09",
+      "sheet": "ReqFistsNormalGiroNNEESE20261028Selected",
+      "index": 9,
+      "sourceFrameIndex": 9,
+      "sourceRect": [
+        35,
+        1178,
+        328,
+        365
+      ],
+      "phase": "chamber-and-counterturn",
+      "direction": "SE",
+      "idleSheet": "ReqFistsNormalIdleE_SE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleE_SE20261025V1_04",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_10",
+      "sheet": "ReqFistsNormalGiroNNEESE20261028Selected",
+      "index": 10,
+      "sourceFrameIndex": 10,
+      "sourceRect": [
+        476,
+        1191,
+        394,
+        347
+      ],
+      "phase": "rotating-sweep-contact",
+      "direction": "SE",
+      "idleSheet": "ReqFistsNormalIdleE_SE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleE_SE20261025V1_04",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_11",
+      "sheet": "ReqFistsNormalGiroNNEESE20261028Selected",
+      "index": 11,
+      "sourceFrameIndex": 11,
+      "sourceRect": [
+        1015,
+        1189,
+        277,
+        355
+      ],
+      "phase": "landed-guard-recovery",
+      "direction": "SE",
+      "idleSheet": "ReqFistsNormalIdleE_SE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleE_SE20261025V1_04",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "5fd073c32c2d19225afd9df685f492598a80a6ab6dabbbd2319a6e7a40445d98"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_00",
+      "sheet": "ReqFistsNormalGiroSSWWNW20261028V1",
+      "index": 0,
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        48,
+        15,
+        295,
+        349
+      ],
+      "phase": "chamber-and-counterturn",
+      "direction": "S",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "3fa921a30bad16d647edb94efdd7d757b7e50e87ee721941c22716f0d62f3403"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_01",
+      "sheet": "ReqFistsNormalGiroSSWWNW20261028V1",
+      "index": 1,
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        372,
+        16,
+        377,
+        350
+      ],
+      "phase": "rotating-sweep-contact",
+      "direction": "S",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "3fa921a30bad16d647edb94efdd7d757b7e50e87ee721941c22716f0d62f3403"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_02",
+      "sheet": "ReqFistsNormalGiroSSWWNW20261028V1",
+      "index": 2,
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        749,
+        31,
+        321,
+        333
+      ],
+      "phase": "landed-guard-recovery",
+      "direction": "S",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "3fa921a30bad16d647edb94efdd7d757b7e50e87ee721941c22716f0d62f3403"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_03",
+      "sheet": "ReqFistsNormalGiroSSWWNW20261028V1",
+      "index": 3,
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        80,
+        377,
+        262,
+        339
+      ],
+      "phase": "chamber-and-counterturn",
+      "direction": "SW",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_04",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "3fa921a30bad16d647edb94efdd7d757b7e50e87ee721941c22716f0d62f3403"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_04",
+      "sheet": "ReqFistsNormalGiroSSWWNW20261028V1",
+      "index": 4,
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        354,
+        377,
+        404,
+        334
+      ],
+      "phase": "rotating-sweep-contact",
+      "direction": "SW",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_04",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "3fa921a30bad16d647edb94efdd7d757b7e50e87ee721941c22716f0d62f3403"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_05",
+      "sheet": "ReqFistsNormalGiroSSWWNW20261028V1",
+      "index": 5,
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        793,
+        385,
+        267,
+        347
+      ],
+      "phase": "landed-guard-recovery",
+      "direction": "SW",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_04",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "3fa921a30bad16d647edb94efdd7d757b7e50e87ee721941c22716f0d62f3403"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_06",
+      "sheet": "ReqFistsNormalGiroSSWWNW20261028V1",
+      "index": 6,
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        50,
+        722,
+        290,
+        350
+      ],
+      "phase": "chamber-and-counterturn",
+      "direction": "W",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_08",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "3fa921a30bad16d647edb94efdd7d757b7e50e87ee721941c22716f0d62f3403"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_07",
+      "sheet": "ReqFistsNormalGiroSSWWNW20261028V1",
+      "index": 7,
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        349,
+        713,
+        423,
+        366
+      ],
+      "phase": "rotating-sweep-contact",
+      "direction": "W",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_08",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "3fa921a30bad16d647edb94efdd7d757b7e50e87ee721941c22716f0d62f3403"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_08",
+      "sheet": "ReqFistsNormalGiroSSWWNW20261028V1",
+      "index": 8,
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        826,
+        735,
+        244,
+        343
+      ],
+      "phase": "landed-guard-recovery",
+      "direction": "W",
+      "idleSheet": "ReqFistsNormalIdleS_SW_W20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleS_SW_W20261025V1_08",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "3fa921a30bad16d647edb94efdd7d757b7e50e87ee721941c22716f0d62f3403"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_09",
+      "sheet": "ReqFistsNormalGiroSSWWNW20261028V1",
+      "index": 9,
+      "sourceFrameIndex": 9,
+      "sourceRect": [
+        0,
+        1073,
+        355,
+        375
+      ],
+      "phase": "chamber-and-counterturn",
+      "direction": "NW",
+      "idleSheet": "ReqFistsNormalIdleNW_NE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "3fa921a30bad16d647edb94efdd7d757b7e50e87ee721941c22716f0d62f3403"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_10",
+      "sheet": "ReqFistsNormalGiroSSWWNW20261028V1",
+      "index": 10,
+      "sourceFrameIndex": 10,
+      "sourceRect": [
+        378,
+        1079,
+        400,
+        369
+      ],
+      "phase": "rotating-sweep-contact",
+      "direction": "NW",
+      "idleSheet": "ReqFistsNormalIdleNW_NE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "3fa921a30bad16d647edb94efdd7d757b7e50e87ee721941c22716f0d62f3403"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_11",
+      "sheet": "ReqFistsNormalGiroSSWWNW20261028V1",
+      "index": 11,
+      "sourceFrameIndex": 11,
+      "sourceRect": [
+        785,
+        1079,
+        287,
+        369
+      ],
+      "phase": "landed-guard-recovery",
+      "direction": "NW",
+      "idleSheet": "ReqFistsNormalIdleNW_NE20261025V1",
+      "idleFrameId": "Redesign_ReqFistsNormalIdleNW_NE20261025V1_00",
+      "anatomyDisposition": "preserve-no-isolated-stretched-bone-defect",
+      "assessmentConfidence": "medium",
+      "sourceSha256": "3fa921a30bad16d647edb94efdd7d757b7e50e87ee721941c22716f0d62f3403"
+    }
+  ],
+  "parryCandidate": {
+    "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-parry/ReqFistsNormalParryS_SW_W20261101V1-source.png",
+    "sourceSha256": "591c6741ea7825480dfce3e9afb5cb388122fa3e5bead218f6a5848bc8a2f944",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "figures": 9,
+    "directions": [
+      "S",
+      "SW",
+      "W"
+    ],
+    "state": "candidate-source-only",
+    "pixelsPerUnit": null,
+    "unityScaleVerified": false,
+    "metadataMissing": true,
+    "producerConfirmation": "fists_walk confirmed no staging/manifest/PPU/anchors yet",
+    "nativeWholeSourceSeen": true,
+    "visualConclusion": "No obvious long thigh/shin or infant face isolated in source. Head/body/gear remain consistent with front idle family; no import/animation approval inferred.",
+    "preview": "outputs/retomada-20261101/proportion-audit/punhos/independent-Parry-source-native.png"
+  },
+  "helperComparisons": [
+    {
+      "weapon": 2,
+      "sheet": "ReqFistsNormalGiroSSWWNW20261028V1",
+      "figures": 12,
+      "preview": "outputs/retomada-20261101/proportion-audit/punhos/ReqFistsNormalGiroSSWWNW20261028V1-worldscale.png",
+      "imageSha256": "bbf8aa77eb26151985a10ffd1bcf85d05eb4c13b2032c2048e7b8403f2d5b8e9",
+      "spriteNames": [
+        "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_00",
+        "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_01",
+        "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_02",
+        "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_03",
+        "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_04",
+        "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_05",
+        "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_06",
+        "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_07",
+        "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_08",
+        "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_09",
+        "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_10",
+        "Redesign_ReqFistsNormalGiroSSWWNW20261028V1_11"
+      ]
+    },
+    {
+      "weapon": 2,
+      "sheet": "ReqFistsNormalGiroNNEESE20261028Selected",
+      "figures": 12,
+      "preview": "outputs/retomada-20261101/proportion-audit/punhos/ReqFistsNormalGiroNNEESE20261028Selected-worldscale.png",
+      "imageSha256": "6328adb4be8544ac3d822b1ac894f7eeccdcda9da9dba48ce307162bd287f19f",
+      "spriteNames": [
+        "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_00",
+        "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_01",
+        "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_02",
+        "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_03",
+        "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_04",
+        "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_05",
+        "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_06",
+        "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_07",
+        "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_08",
+        "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_09",
+        "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_10",
+        "Redesign_ReqFistsNormalGiroNNEESE20261028Selected_11"
+      ]
+    },
+    {
+      "weapon": 2,
+      "sheet": "ReqFistsNormalWalkS20261101V2Selected",
+      "figures": 4,
+      "preview": "outputs/retomada-20261101/proportion-audit/punhos/ReqFistsNormalWalkS20261101V2Selected-worldscale.png",
+      "imageSha256": "6cbbc2e1694e37a0d50ad32c680635bc6d14c07ea2bca06927e532e5bee7c94d",
+      "spriteNames": [
+        "Redesign_ReqFistsNormalWalkS20261101V2Selected_00",
+        "Redesign_ReqFistsNormalWalkS20261101V2Selected_01",
+        "Redesign_ReqFistsNormalWalkS20261101V2Selected_02",
+        "Redesign_ReqFistsNormalWalkS20261101V2Selected_03"
+      ]
+    },
+    {
+      "weapon": 2,
+      "sheet": "ReqFistsNormalDodgeS_SW_W20261101V1",
+      "figures": 9,
+      "preview": "outputs/retomada-20261101/proportion-audit/punhos/ReqFistsNormalDodgeS_SW_W20261101V1-worldscale.png",
+      "imageSha256": "6730abb57d135a48bab7cf3b9d003cf44978a589009d0c7e54c9070e89a939fc",
+      "spriteNames": [
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_00",
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_01",
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_02",
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_03",
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_04",
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_05",
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_06",
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_07",
+        "Redesign_ReqFistsNormalDodgeS_SW_W20261101V1_08"
+      ]
+    },
+    {
+      "weapon": 2,
+      "sheet": "ReqFistsNormalDodgeNW_N_NE20261101V1",
+      "figures": 9,
+      "preview": "outputs/retomada-20261101/proportion-audit/punhos/ReqFistsNormalDodgeNW_N_NE20261101V1-worldscale.png",
+      "imageSha256": "824fe55244b3ea38e04590a7d78762eaf5a65e8f6f5ec479d53c9bd019a69027",
+      "spriteNames": [
+        "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_00",
+        "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_01",
+        "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_02",
+        "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_03",
+        "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_04",
+        "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_05",
+        "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_06",
+        "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_07",
+        "Redesign_ReqFistsNormalDodgeNW_N_NE20261101V1_08"
+      ]
+    },
+    {
+      "weapon": 2,
+      "sheet": "ReqFistsNormalDodgeE_SE20261101V1",
+      "figures": 6,
+      "preview": "outputs/retomada-20261101/proportion-audit/punhos/ReqFistsNormalDodgeE_SE20261101V1-worldscale.png",
+      "imageSha256": "1bc81059217daa2a79bd5dd8fbfb824007ede9e07349b487107678e3ee16e7e2",
+      "spriteNames": [
+        "Redesign_ReqFistsNormalDodgeE_SE20261101V1_00",
+        "Redesign_ReqFistsNormalDodgeE_SE20261101V1_01",
+        "Redesign_ReqFistsNormalDodgeE_SE20261101V1_02",
+        "Redesign_ReqFistsNormalDodgeE_SE20261101V1_03",
+        "Redesign_ReqFistsNormalDodgeE_SE20261101V1_04",
+        "Redesign_ReqFistsNormalDodgeE_SE20261101V1_05"
+      ]
+    }
+  ],
+  "independentPreviews": [
+    {
+      "path": "outputs/retomada-20261101/proportion-audit/punhos/independent-N-whole-native.png",
+      "sha256": "aebdb7a742bf4e01e83e4e9f33dca2c004c1b2c1be87434a7fea49191d9a6f83",
+      "wholeRectanglesPreserved": true,
+      "mode": "native1x unchanged full frame rectangle",
+      "size": [
+        4035,
+        796
+      ]
+    },
+    {
+      "path": "outputs/retomada-20261101/proportion-audit/punhos/independent-N-whole-planned-unity.png",
+      "sha256": "87d722688e419d25859efd8f74c46cb57720eba579ec81c737267ac6cb0a3417",
+      "wholeRectanglesPreserved": true,
+      "mode": "planned Unity scale WVS1.325,160px/world,descriptor PPU",
+      "size": [
+        5525,
+        736
+      ]
+    }
+  ],
+  "conclusion": "No clear stretched-thigh/shin defect requiring a skeletal redraw isolated among52 prepared figures. Preserve WalkS4 and existing correct anatomy. Rear hair silhouette/volume warnings are localized and not a blanket rejection. Native candidate Parry is not imported/approved by this audit.",
+  "limits": [
+    "Import/meta presence does not prove runtime playback; auditor ran no Unity.",
+    "Rear/right Dodge actual scale pending import.",
+    "Parry has no PPU/descriptor.",
+    "Static visual judgment is not a human approval and does not extend user praise of FistsWalk to all candidates.",
+    "Helpers initially clipped preview rectangles; regenerated panels were used and preview clipping was not classified as asset damage."
+  ]
+}

@@ -123,6 +123,10 @@ namespace Darklight
                     SliderRow("PERSONAGEM",()=>PlayerVolume,v=>SetVolume("Darklight.Player",v,x=>PlayerVolume=x));break;
                 case 2:
                     Button("QUALIDADE: "+DarklightRemaster.QualityNames[DarklightRemaster.QualityLevel],()=>{GetComponent<DarklightRemaster>()?.SetQuality((DarklightRemaster.QualityLevel+settingsDirection+4)%4);RefreshPanel();});
+                    Button("ATMOSFERA: "+(PlayerPrefs.GetInt("Darklight.Atmosphere",1)==1?"ATIVA":"DESATIVADA"),()=>{
+                        bool value=PlayerPrefs.GetInt("Darklight.Atmosphere",1)!=1;
+                        PlayerPrefs.SetInt("Darklight.Atmosphere",value?1:0);
+                        DarklightAtmosphereController.Current?.SetEffectsEnabled(value);RefreshPanel();});
                     Button("TELA: "+(Screen.fullScreen?"CHEIA":"JANELA"),()=>{Screen.fullScreen=!Screen.fullScreen;PlayerPrefs.SetInt("Darklight.Fullscreen",Screen.fullScreen?1:0);RefreshPanel();});
                     Button("RESOLUCAO: "+Screen.width+" x "+Screen.height,()=>CycleResolution());
                     Button("SINCRONIZACAO: "+(QualitySettings.vSyncCount>0?"SIM":"NAO"),()=>{QualitySettings.vSyncCount=QualitySettings.vSyncCount>0?0:1;PlayerPrefs.SetInt("Darklight.VSync",QualitySettings.vSyncCount);RefreshPanel();});

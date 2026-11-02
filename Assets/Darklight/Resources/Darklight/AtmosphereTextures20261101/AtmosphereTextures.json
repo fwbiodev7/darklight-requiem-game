@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "image": "AtmosphereTextures.png",
+  "imageSha256": "a23e47fed495fae83104f7c538bda9a1301a2b6f077f3e2948d05326872a95a8",
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "source": "ArtSources/AtmosphereTextures20261101/AtmosphereTextures-pixel-v2-source.png",
+  "sourceSha256": "a23e47fed495fae83104f7c538bda9a1301a2b6f077f3e2948d05326872a95a8",
+  "origin": "top-left",
+  "rectConvention": "x,y,width,height; Unity reader must invert y",
+  "pixelsPerUnit": 256,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "staticTextures": true,
+  "frames": [
+    {
+      "id": "Redesign_Atmosphere_fog_0",
+      "name": "fog_0",
+      "rect": [
+        0,
+        0,
+        520,
+        502
+      ],
+      "x": 0,
+      "y": 0,
+      "width": 520,
+      "height": 502,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 1,
+      "action": "atmosphere",
+      "direction": "none",
+      "kind": "fog_ground",
+      "description": "low thin ground mist",
+      "wholeFigure": true
+    },
+    {
+      "id": "Redesign_Atmosphere_fog_1",
+      "name": "fog_1",
+      "rect": [
+        520,
+        0,
+        522,
+        502
+      ],
+      "x": 520,
+      "y": 0,
+      "width": 522,
+      "height": 502,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 1,
+      "action": "atmosphere",
+      "direction": "none",
+      "kind": "fog_bank",
+      "description": "layered dense fogbank",
+      "wholeFigure": true
+    },
+    {
+      "id": "Redesign_Atmosphere_fog_2",
+      "name": "fog_2",
+      "rect": [
+        1042,
+        0,
+        494,
+        502
+      ],
+      "x": 1042,
+      "y": 0,
+      "width": 494,
+      "height": 502,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 1,
+      "action": "atmosphere",
+      "direction": "none",
+      "kind": "fog_veil",
+      "description": "wispy drifting veil",
+      "wholeFigure": true
+    },
+    {
+      "id": "Redesign_Atmosphere_moon_0",
+      "name": "moon_0",
+      "rect": [
+        0,
+        502,
+        520,
+        522
+      ],
+      "x": 0,
+      "y": 502,
+      "width": 520,
+      "height": 522,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 1,
+      "action": "atmosphere",
+      "direction": "none",
+      "kind": "moon_broad",
+      "description": "broad diagonal cold moonbeam",
+      "wholeFigure": true
+    },
+    {
+      "id": "Redesign_Atmosphere_moon_1",
+      "name": "moon_1",
+      "rect": [
+        520,
+        502,
+        522,
+        522
+      ],
+      "x": 520,
+      "y": 502,
+      "width": 522,
+      "height": 522,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 1,
+      "action": "atmosphere",
+      "direction": "none",
+      "kind": "moon_rays",
+      "description": "narrow angled moon rays",
+      "wholeFigure": true
+    },
+    {
+      "id": "Redesign_Atmosphere_moon_2",
+      "name": "moon_2",
+      "rect": [
+        1042,
+        502,
+        494,
+        522
+      ],
+      "x": 1042,
+      "y": 502,
+      "width": 494,
+      "height": 522,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "durationMs": 1,
+      "action": "atmosphere",
+      "direction": "none",
+      "kind": "moon_haze",
+      "description": "pale blue luminous haze",
+      "wholeFigure": true
+    }
+  ],
+  "clips": [],
+  "references": [
+    {
+      "path": "ArtSources/AtmosphereReference20261101/moonlit-forest-reference.png",
+      "sha256": "437def92828c783ea697c487ab4343fe0aeabd90d23829a436b9a1c4233a5bb7",
+      "size": [
+        527,
+        299
+      ],
+      "role": "full style reference; scenery not copied"
+    },
+    {
+      "path": "ArtSources/AtmosphereReference20261101/gothic-ruins-reference.png",
+      "sha256": "9f1333c49cd5cb03362ba762a76b93cd33a7255706e9517a3dd11f39cd10bc40",
+      "size": [
+        340,
+        405
+      ],
+      "role": "full style reference; scenery not copied"
+    }
+  ],
+  "generation": {
+    "mode": "integrated imagegen",
+    "calls": 2,
+    "prompt": "ArtSources/AtmosphereTextures20261101/prompt-pixel-v2.txt",
+    "promptSha256": "30170f07c886b03bb38d6f6e3b0802a98e6a341e8181c472cdbf5798dd43d277",
+    "version": "pixel-v2"
+  },
+  "integrationContract": {
+    "suggestedFilter": "Point",
+    "mipmaps": false,
+    "compression": "uncompressed RGBA",
+    "drawBelowActors": true,
+    "maxRendererOpacity": 0.12,
+    "timing": "static texture; consumer controls slow drift, no frame animation",
+    "noSceneOrGameplayChanges": true
+  },
+  "review": {
+    "visual": "Pixel-art V2 preserves all six V1 effect motifs in cold blue-gray and pale moonlight. Deliberate square clusters, stepped edges, restrained dithering, no scenery or added effects. Native source preserved without resizing or recoloring.",
+    "alpha": "Real generated alpha preserved untouched; actual effect boundaries measured rather than assuming regular cells. See per-frame alpha edges in QA.",
+    "runtimeVerified": false,
+    "imported": false
+  },
+  "sourcePath": "ArtSources/AtmosphereTextures20261101/AtmosphereTextures-pixel-v2-source.png"
+}

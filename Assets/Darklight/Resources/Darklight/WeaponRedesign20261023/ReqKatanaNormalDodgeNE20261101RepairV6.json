@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqKatanaNormalDodgeNE20261101RepairV6.png",
+  "imageSha256": "d989f683c109c93cf6a83395c58b6590c0684e760cb228b78ad6c037aac166a7",
+  "nativeSize": [
+    4704,
+    1056
+  ],
+  "sourceSize": [
+    4704,
+    1056
+  ],
+  "pixelsPerUnit": 242.92929292929293,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/KatanaSelectiveRepair20261101/selected-packs/ReqKatanaNormalDodgeNE20261101RepairV6-source-only-reviewed.png",
+  "sourceSha256": "d989f683c109c93cf6a83395c58b6590c0684e760cb228b78ad6c037aac166a7",
+  "frames": [
+    {
+      "id": "Redesign_ReqKatanaNormalDodgeNE20261101RepairV6_00",
+      "rect": [
+        16,
+        16,
+        918,
+        649
+      ],
+      "pivot": [
+        0.2788671023965142,
+        0.11248073959938366
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        16,
+        16,
+        918,
+        649
+      ],
+      "sourceAnchor": [
+        272.0,
+        592.0
+      ],
+      "sourcePackingAnchor": [
+        459,
+        646
+      ],
+      "supportGuide": {
+        "anchor": [
+          330,
+          646
+        ],
+        "method": "Manual midpoint of two whole boot supports,NE anticipation"
+      },
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1,
+      "renderPixelsPerUnit": 242.92929292929293,
+      "originalWholeFigureId": "Redesign_ReqKatanaNormalDodgeNE20261101V5_00",
+      "wholeFigureRepaired": false
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalDodgeNE20261101RepairV6_01",
+      "rect": [
+        1584,
+        16,
+        1536,
+        1024
+      ],
+      "pivot": [
+        0.4583333333333333,
+        0.1455078125
+      ],
+      "durationMs": 150,
+      "action": "dodge",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "dodge-low-lunge",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        1584,
+        16,
+        1536,
+        1024
+      ],
+      "sourceAnchor": [
+        2288.0,
+        891.0
+      ],
+      "sourcePackingAnchor": [
+        1003,
+        639
+      ],
+      "supportGuide": {
+        "anchor": [
+          1005,
+          639
+        ],
+        "method": "Manual midpoint rear pushing boot and front planted boot,NE low lunge"
+      },
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1,
+      "renderPixelsPerUnit": 454.7480916030534,
+      "originalWholeFigureId": "Redesign_ReqKatanaNormalDodgeNE20261101V5_01",
+      "wholeFigureRepaired": true
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalDodgeNE20261101RepairV6_02",
+      "rect": [
+        3152,
+        16,
+        918,
+        649
+      ],
+      "pivot": [
+        0.28322440087145967,
+        0.11248073959938366
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        3152,
+        16,
+        918,
+        649
+      ],
+      "sourceAnchor": [
+        3412.0,
+        592.0
+      ],
+      "sourcePackingAnchor": [
+        1915,
+        643
+      ],
+      "supportGuide": {
+        "anchor": [
+          1790,
+          643
+        ],
+        "method": "Manual midpoint of two whole boot supports,NE recovery"
+      },
+      "sourceOffsetInFrame": [
+        0,
+        0
+      ],
+      "sourceScale": 1,
+      "renderPixelsPerUnit": 242.92929292929293,
+      "originalWholeFigureId": "Redesign_ReqKatanaNormalDodgeNE20261101V5_02",
+      "wholeFigureRepaired": false
+    }
+  ],
+  "clips": [
+    {
+      "name": "dodge_NE",
+      "frames": [
+        "Redesign_ReqKatanaNormalDodgeNE20261101RepairV6_00",
+        "Redesign_ReqKatanaNormalDodgeNE20261101RepairV6_01",
+        "Redesign_ReqKatanaNormalDodgeNE20261101RepairV6_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "dodge_NE"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 672436,
+  "packedPixels": 409969,
+  "originalSourcePixels": 672436,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "Only declared complete direction rows selected; other source rows preserved but excluded.",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 1162559,
+    "farBeyond16pxPixels": 39,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.15294117647058825,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "3 whole figures only; no source pixel edits or anatomical assembly.",
+    "Normal Dodge230ms: preparation40ms, low lunge150ms, recovery40ms.",
+    "Runtime invulnerability20<=t<190ms is independent of sprite preview.",
+    "Native generated raster; indexed pixel grid unverified.",
+    "Coordinator must supply native timedDodge consumer before import."
+  ],
+  "agentStaticArtReviewed": true,
+  "contactViewed": true,
+  "motionPreviewViewed": false,
+  "unityImported": false,
+  "runtimeVerified": false,
+  "ppuCalibration": {
+    "method": "Median complete anticipation/recovery body height; low lunge excluded",
+    "sourceFrameIndices": [
+      0,
+      2
+    ],
+    "bodyHeightPixels": 481.0,
+    "bodyWorldHeight": 1.98
+  },
+  "humanApproved": false,
+  "humanApproval": {
+    "humanApproved": true,
+    "date": "2026-11-01",
+    "feedback": "aprovado essa versao do conjunto NE tambem de fabius audit",
+    "sourcePath": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeNE20261101V5-source.png",
+    "sourceSha256": "277c5cfda3da67a4501a01798eb7fa389d048d19b6cb57c594002ff3ad6eaa75",
+    "scope": "V5 complete3figureNE art/source2172x724; import/runtime separate",
+    "receivedThroughCoordinator": true
+  },
+  "wholePhaseStripsViewed": true,
+  "visualReview": "Three full NE figures consistent scale,anatomicalright katanaallphases,cleanlight/dark silhouettes,483/479pxguardsand428pxintentionalcrouch; humanapprovedartpixelsunchanged.",
+  "motionPreviewLimitation": "Interactive playback unobserved in subagent; prior IABvisibility/socket limitation. Whole GIF phases viewed and40/150/40ms confirmed; real Unity playback owned by coordinator.",
+  "additionalSources": [],
+  "nativeRgbaPixelsPreserved": true,
+  "frameDensityPurpose": "Native image resolution only; limb drawing corrected separately",
+  "preservesHumanApprovedOriginals": true
+}

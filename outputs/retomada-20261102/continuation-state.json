@@ -1,0 +1,146 @@
+{
+  "updatedUtc": "2026-11-02T13:31:33.828770+00:00",
+  "buildCancelledByUser": true,
+  "transformationsDeferredByUser": true,
+  "priority": [
+    "Finish Fists Walk E/W/SW without marching",
+    "Import and validate the15 newly integrated Normal clips",
+    "Complete real Normal animation gaps",
+    "Gothic Eclipse graphical and atmosphere plan"
+  ],
+  "localImplementation": {
+    "integratedFiles": true,
+    "tasks": [
+      {
+        "task": "katana-pesado",
+        "pages": 8,
+        "figures": 32,
+        "sheets": [
+          "ReqKatanaNormalPesadoE_SE20261102V1",
+          "ReqKatanaNormalPesadoNW_N_NE20261102V2",
+          "ReqKatanaNormalPesadoS_SW_W20261102V1"
+        ]
+      },
+      {
+        "task": "katana-walk",
+        "pages": 3,
+        "figures": 12,
+        "sheets": [
+          "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact"
+        ]
+      },
+      {
+        "task": "punhos-walk",
+        "pages": 4,
+        "figures": 16,
+        "sheets": [
+          "ReqFistsNormalWalkN20261102NaturalV1",
+          "ReqFistsNormalWalkNE_SE20261102FeetFixedV3",
+          "ReqFistsNormalWalkNW20261102NaturalV2Selected"
+        ]
+      }
+    ],
+    "newClips": 15,
+    "newFigures": 60,
+    "existingPngCountPreserved": 116,
+    "allOriginalPngHashesUnchanged": true,
+    "unityImported": false,
+    "runtimeVerified": false,
+    "buildCancelledByUser": true,
+    "transformationsDeferred": true
+  },
+  "currentCoverage": {
+    "0": {
+      "Walk": [
+        "S",
+        "SW",
+        "W",
+        "NW",
+        "N",
+        "NE",
+        "E",
+        "SE"
+      ],
+      "Dodge": [
+        "S",
+        "SW",
+        "W",
+        "NW",
+        "N",
+        "E",
+        "SE",
+        "NE"
+      ],
+      "Parry": [],
+      "Charging": [],
+      "Hurt": [],
+      "Dead": []
+    },
+    "2": {
+      "Walk": [
+        "S",
+        "N",
+        "NE",
+        "SE",
+        "NW"
+      ],
+      "Dodge": [
+        "S",
+        "SW",
+        "W",
+        "NW",
+        "N",
+        "NE",
+        "E",
+        "SE"
+      ],
+      "Parry": [],
+      "Charging": [],
+      "Hurt": [],
+      "Dead": []
+    },
+    "3": {
+      "Walk": [],
+      "Dodge": [
+        "S",
+        "SW",
+        "W",
+        "NW",
+        "N",
+        "NE",
+        "E",
+        "SE"
+      ],
+      "Parry": [],
+      "Charging": [],
+      "Hurt": [],
+      "Dead": []
+    }
+  },
+  "catalogPages": 238,
+  "fabiusComplete": false,
+  "unityImported": false,
+  "runtimeVerified": false,
+  "testsFromPreviousSession": {
+    "EditMode": 144,
+    "PlayMode": 30,
+    "validateNewAssets": false
+  },
+  "fistsWalkRemaining": [
+    "E",
+    "W",
+    "SW"
+  ],
+  "diskFreeBytes": 29983133696,
+  "diskTargetAchieved": true,
+  "sourceOfTruth": "Docs/Darklight/FECHAMENTO-20261102.md",
+  "pendingList": "Docs/Darklight/PENDENCIAS-ANIMACOES-20261102.md",
+  "automation": {
+    "id": "retomar-redesign-completo-do-darklight",
+    "thread": "01a19705-3c7a-7352-806f-6d3262c2bd3d",
+    "resumeUtc": "2026-11-02T17:19:50Z",
+    "resumeLocal": "2026-11-02T14:19:50-03:00"
+  },
+  "lastConfirmedCommit": "f1c1334ef506680c04d57414f6d5dc6e9ec258d6",
+  "newImagesPublished": false
+}

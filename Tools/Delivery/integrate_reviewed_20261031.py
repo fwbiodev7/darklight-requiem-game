@@ -59,11 +59,18 @@ def main():
                 raise ValueError('Unreviewed catalog page: ' + page['id'])
             if page['action'] == 'Attack' and not page.get('sourceSpriteNames'):
                 # These selected four-frame cuts use two preparations, one contact, one recovery.
-                if page['attackKey'] not in ('Dentes Cruzados', 'Leve3') or len(page['spriteNames']) != 4:
-                    raise ValueError('No explicit combat phase contract: ' + page['id'])
-                page['startupFrames'], page['activeFrames'] = 2, 1
-                if not page.get('durationMs'):
-                    page['durationMs'] = [40, 40, 100, 180]
+                startup, active = page.get('startupFrames'), page.get('activeFrames')
+                explicit = (type(startup) is int and type(active) is int and startup > 0 and
+                            active > 0 and startup + active < len(page['spriteNames']))
+                if not explicit:
+                    if page['attackKey'] not in ('Dentes Cruzados', 'Leve3') or len(page['spriteNames']) != 4:
+                        raise ValueError('No explicit combat phase contract: ' + page['id'])
+                    page['startupFrames'], page['activeFrames'] = 2, 1
+                    if not page.get('durationMs'):
+                        page['durationMs'] = [40, 40, 100, 180]
+                durations = page.get('durationMs', [])
+                if len(durations) != len(page['spriteNames']) or any(type(t) is not int or t <= 0 for t in durations):
+                    raise ValueError('Invalid authored attack durations: ' + page['id'])
         if not selected and not sheet.get('motorcycleTransition'):
             raise ValueError('No selected consumer for reviewed sheet: ' + name)
         for suffix in ('.png', '.json'):

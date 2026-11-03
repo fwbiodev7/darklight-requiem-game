@@ -1,0 +1,507 @@
+{
+  "imageSha256": "3c8ecfc94b09416670e47e6982ac148cb4757d750af40f40139025c6acbca493",
+  "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtN_NE_E_SE20261103V1-source.png",
+  "sourceSha256": "219e531d1b5ddcc109c847fb6f24a9e591cc8ed5b4da0cdf274393c4c7dd7ef1",
+  "nativeSize": [
+    766,
+    1580
+  ],
+  "sourceSize": [
+    1024,
+    1536
+  ],
+  "pixelsPerUnit": 168.1818181818182,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "schemaVersion": 1,
+  "image": "ReqKatanaNormalHurtN_NE_E_SE20261103V1LayoutV2.png",
+  "frames": [
+    {
+      "id": "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_00",
+      "rect": [
+        8,
+        8,
+        332,
+        347
+      ],
+      "pivot": [
+        0.4006024096385542,
+        0.03458213256484155
+      ],
+      "durationMs": 60,
+      "action": "hurt",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceRect": [
+        118,
+        42,
+        332,
+        347
+      ],
+      "sourceAnchor": [
+        251,
+        377
+      ],
+      "sourcePackingAnchor": [
+        251,
+        377
+      ],
+      "sourceFrameIndex": 0,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          251,
+          377
+        ],
+        "method": "Manual projected support between grounded soles; body recoil is retained around this ground support."
+      },
+      "pixelsPerUnit": 168.1818181818182,
+      "visibleAlphaBoundsInFrame": [
+        10,
+        10,
+        322,
+        337
+      ]
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_01",
+      "rect": [
+        391,
+        8,
+        367,
+        376
+      ],
+      "pivot": [
+        0.42779291553133514,
+        0.03191489361702127
+      ],
+      "durationMs": 120,
+      "action": "hurt",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "reaction",
+      "sourceRect": [
+        545,
+        13,
+        367,
+        376
+      ],
+      "sourceAnchor": [
+        702,
+        377
+      ],
+      "sourcePackingAnchor": [
+        702,
+        377
+      ],
+      "sourceFrameIndex": 1,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          702,
+          377
+        ],
+        "method": "Manual projected support between grounded soles; body recoil is retained around this ground support."
+      },
+      "pixelsPerUnit": 168.1818181818182,
+      "visibleAlphaBoundsInFrame": [
+        10,
+        10,
+        357,
+        366
+      ]
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_02",
+      "rect": [
+        8,
+        403,
+        333,
+        353
+      ],
+      "pivot": [
+        0.37237237237237236,
+        0.03682719546742208
+      ],
+      "durationMs": 60,
+      "action": "hurt",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceRect": [
+        116,
+        423,
+        333,
+        353
+      ],
+      "sourceAnchor": [
+        240,
+        763
+      ],
+      "sourcePackingAnchor": [
+        240,
+        763
+      ],
+      "sourceFrameIndex": 2,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          240,
+          763
+        ],
+        "method": "Manual projected support between grounded soles; body recoil is retained around this ground support."
+      },
+      "pixelsPerUnit": 168.1818181818182,
+      "visibleAlphaBoundsInFrame": [
+        10,
+        10,
+        323,
+        343
+      ]
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_03",
+      "rect": [
+        391,
+        403,
+        353,
+        379
+      ],
+      "pivot": [
+        0.4192634560906516,
+        0.03430079155672827
+      ],
+      "durationMs": 120,
+      "action": "hurt",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "reaction",
+      "sourceRect": [
+        569,
+        396,
+        353,
+        379
+      ],
+      "sourceAnchor": [
+        717,
+        762
+      ],
+      "sourcePackingAnchor": [
+        717,
+        762
+      ],
+      "sourceFrameIndex": 3,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          717,
+          762
+        ],
+        "method": "Manual projected support between grounded soles; body recoil is retained around this ground support."
+      },
+      "pixelsPerUnit": 168.1818181818182,
+      "visibleAlphaBoundsInFrame": [
+        10,
+        10,
+        343,
+        369
+      ]
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_04",
+      "rect": [
+        8,
+        798,
+        319,
+        351
+      ],
+      "pivot": [
+        0.4012539184952978,
+        0.03703703703703709
+      ],
+      "durationMs": 60,
+      "action": "hurt",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceRect": [
+        117,
+        801,
+        319,
+        351
+      ],
+      "sourceAnchor": [
+        245,
+        1139
+      ],
+      "sourcePackingAnchor": [
+        245,
+        1139
+      ],
+      "sourceFrameIndex": 4,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          245,
+          1139
+        ],
+        "method": "Manual projected support between grounded soles; body recoil is retained around this ground support."
+      },
+      "pixelsPerUnit": 168.1818181818182,
+      "visibleAlphaBoundsInFrame": [
+        10,
+        10,
+        309,
+        341
+      ]
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_05",
+      "rect": [
+        391,
+        798,
+        323,
+        377
+      ],
+      "pivot": [
+        0.43962848297213625,
+        0.03448275862068961
+      ],
+      "durationMs": 120,
+      "action": "hurt",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "reaction",
+      "sourceRect": [
+        596,
+        777,
+        323,
+        377
+      ],
+      "sourceAnchor": [
+        738,
+        1141
+      ],
+      "sourcePackingAnchor": [
+        738,
+        1141
+      ],
+      "sourceFrameIndex": 5,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          738,
+          1141
+        ],
+        "method": "Manual projected support between grounded soles; body recoil is retained around this ground support."
+      },
+      "pixelsPerUnit": 168.1818181818182,
+      "visibleAlphaBoundsInFrame": [
+        10,
+        10,
+        313,
+        367
+      ]
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_06",
+      "rect": [
+        8,
+        1193,
+        254,
+        352
+      ],
+      "pivot": [
+        0.5236220472440944,
+        0.03409090909090906
+      ],
+      "durationMs": 60,
+      "action": "hurt",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceRect": [
+        107,
+        1178,
+        254,
+        352
+      ],
+      "sourceAnchor": [
+        240,
+        1518
+      ],
+      "sourcePackingAnchor": [
+        240,
+        1518
+      ],
+      "sourceFrameIndex": 6,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          240,
+          1518
+        ],
+        "method": "Manual projected support between grounded soles; body recoil is retained around this ground support."
+      },
+      "pixelsPerUnit": 168.1818181818182,
+      "visibleAlphaBoundsInFrame": [
+        10,
+        10,
+        244,
+        342
+      ]
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_07",
+      "rect": [
+        391,
+        1193,
+        301,
+        377
+      ],
+      "pivot": [
+        0.5581395348837209,
+        0.03183023872679047
+      ],
+      "durationMs": 120,
+      "action": "hurt",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "reaction",
+      "sourceRect": [
+        579,
+        1153,
+        301,
+        377
+      ],
+      "sourceAnchor": [
+        747,
+        1518
+      ],
+      "sourcePackingAnchor": [
+        747,
+        1518
+      ],
+      "sourceFrameIndex": 7,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          747,
+          1518
+        ],
+        "method": "Manual projected support between grounded soles; body recoil is retained around this ground support."
+      },
+      "pixelsPerUnit": 168.1818181818182,
+      "visibleAlphaBoundsInFrame": [
+        10,
+        10,
+        291,
+        367
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "name": "Hurt_N",
+      "frames": [
+        "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_00",
+        "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_01"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": false,
+      "intentionalStaticReason": ""
+    },
+    {
+      "name": "Hurt_NE",
+      "frames": [
+        "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_02",
+        "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_03"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": false,
+      "intentionalStaticReason": ""
+    },
+    {
+      "name": "Hurt_E",
+      "frames": [
+        "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_04",
+        "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_05"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": false,
+      "intentionalStaticReason": ""
+    },
+    {
+      "name": "Hurt_SE",
+      "frames": [
+        "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_06",
+        "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_07"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": false,
+      "intentionalStaticReason": ""
+    }
+  ],
+  "requiredClips": [
+    "Hurt_N",
+    "Hurt_NE",
+    "Hurt_E",
+    "Hurt_SE"
+  ],
+  "worldVisualScale": 1.325,
+  "sourcePixelResampling": false,
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoS_SW20261102V2-source.png",
+      "sha256": "5205a9673d20fe2703b5d6057960c457d61138e0b0dc5862c77099d2ff9827f1",
+      "role": "Current approved compact proportions, identity, outfit and katana"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoW_NW20261102V2-source.png",
+      "sha256": "1cd4551daa59d049b46e8e4c93ff95588e0341ed053e8e02a368a5760b05d417",
+      "role": "Current approved left/back clothing and anatomy"
+    }
+  ],
+  "review": {
+    "staticVisualReviewed": true,
+    "wholeFigures": true,
+    "expressionAuthority": "User explicitly approved these expressive charming Hurt faces; source PNGs are preserved without recoloring, facial edits or anatomical resampling.",
+    "timing": "Contact60ms then reaction120ms =180ms; reaction is already visible during shortened120ms ResistsStagger hurt. Runtime owns return to neutral.",
+    "loop": false,
+    "density": "Constant168.181818PPU across both phases; matched skull/trunk native density to current approved compact Carregado figures. Never normalized by bent-body bounding height.",
+    "nativePixelResampling": false,
+    "imported": false,
+    "runtimeVerified": false,
+    "motionReview": "Consecutive full-figure phases inspected statically; finite GIF previews authored, runtime playback deferred."
+  },
+  "quality": {
+    "alphaThreshold": 16,
+    "maxColors": 65536,
+    "maxHeightRatio": 2.5
+  },
+  "generationReferences": [
+    {
+      "path": "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalParry8Dirs20261103V2-source.png",
+      "sha256": "c6852630da43215640a61db69b3cdd7c2e8458f2bdc2970af167221e1b4c6a87"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtS_SW_W_NW20261103V1-source.png",
+      "sha256": "95aee57b551ddd5e846a5ccd2ba77048da71a41d938a7c80d0c6972ea900d1a2"
+    }
+  ],
+  "layoutRepairOf": "ReqKatanaNormalHurtN_NE_E_SE20261103V1",
+  "layoutRepair": "Repacked whole rectangles with 8px margins. No figure edits, resampling, pivot or density changes."
+}

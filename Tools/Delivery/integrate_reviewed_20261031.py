@@ -19,7 +19,7 @@ def sha(path):
 
 
 def context(page):
-    return tuple(page[k] for k in ('skin', 'weapon', 'form', 'direction', 'action')) + (page.get('attackKey') or '',)
+    return tuple(page[k] for k in ('skin', 'weapon', 'form', 'direction', 'action')) + (page.get('attackKey') or '', 'Mounted' if page.get('presentation') == 'Mounted' else 'OnFoot')
 
 
 def main():
@@ -27,7 +27,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--staged', type=Path, required=True)
     parser.add_argument('--pages', type=Path)
-    parser.add_argument('--names', nargs='+', required=True)
+    parser.add_argument('--names', nargs='+', help='Reviewed sheet names; defaults to every resource in --pages')
+    parser.add_argument('--check-only', action='store_true', help='Check delivery contracts without copying files, writing receipts or running Unity/tests')
     parser.add_argument('--output', type=Path, default=OUT,
                         help='Session receipts folder inside this project outputs')
     args = parser.parse_args()
@@ -36,6 +37,10 @@ def main():
         raise ValueError('Integration receipts must stay inside project outputs')
     fragment = read(args.pages) if args.pages else {'pages': []}
     pages = fragment if isinstance(fragment, list) else fragment['pages']
+    if args.names is None:
+        args.names = list(dict.fromkeys(page['resourcePath'].rsplit('/', 1)[-1] for page in pages))
+        if not args.names:
+            raise ValueError('Provide --names or a nonempty reviewed pages fragment')
     catalog_path = BANK / 'catalog.json'
     catalog = read(catalog_path)
     deliveries = []
@@ -50,6 +55,18 @@ def main():
         source = (ROOT / sheet['sourcePath']).resolve()
         if not source.is_relative_to((ROOT / 'ArtSources').resolve()) or sha(source) != sheet['sourceSha256']:
             raise ValueError('Preserved source missing or changed: ' + name)
+        # Match Unity's rectangle gate before starting a costly Editor import.
+        width, height = sheet['nativeSize']
+        rectangles = []
+        for frame in sheet['frames']:
+            x, y, w, h = frame['rect']
+            if x < 0 or y < 0 or w < 1 or h < 1 or x + w > width or y + h > height:
+                raise ValueError('Out-of-bounds whole figure: ' + frame['id'])
+            for other in rectangles:
+                ox, oy, ow, oh = other
+                if min(x + w, ox + ow) > max(x, ox) and min(y + h, oy + oh) > max(y, oy):
+                    raise ValueError('Overlapping whole figure: ' + frame['id'])
+            rectangles.append((x, y, w, h))
         selected = [p for p in pages if p['resourcePath'].rsplit('/', 1)[-1] == name]
         for page in selected:
             for key in ('imageSha256', 'sourcePath', 'sourceSha256', 'nativeSize', 'sourceSize', 'pixelsPerUnit'):
@@ -61,7 +78,8 @@ def main():
                 # These selected four-frame cuts use two preparations, one contact, one recovery.
                 startup, active = page.get('startupFrames'), page.get('activeFrames')
                 explicit = (type(startup) is int and type(active) is int and startup > 0 and
-                            active > 0 and startup + active < len(page['spriteNames']))
+                            (active > 0 or active == 0 and page.get('contactless') is True) and
+                            startup + active < len(page['spriteNames']))
                 if not explicit:
                     if page['attackKey'] not in ('Dentes Cruzados', 'Leve3') or len(page['spriteNames']) != 4:
                         raise ValueError('No explicit combat phase contract: ' + page['id'])
@@ -84,9 +102,10 @@ def main():
                     if prior.get(key) != sheet.get(key):
                         raise ValueError('An existing drawing/import contract differs: ' + str(target) + '/' + key)
                 backup = OUT / 'before-reviewed-metadata' / target.name
-                backup.parent.mkdir(parents=True, exist_ok=True)
-                if not backup.exists():
-                    shutil.copy2(target, backup)
+                if not args.check_only:
+                    backup.parent.mkdir(parents=True, exist_ok=True)
+                    if not backup.exists():
+                        shutil.copy2(target, backup)
             prepared.append((origin, target))
         contexts = {context(p) for p in selected}
         catalog['pages'] = [p for p in catalog['pages'] if context(p) not in contexts] + selected
@@ -97,6 +116,11 @@ def main():
     keys = [context(p) for p in catalog['pages']]
     if len(keys) != len(set(keys)):
         raise ValueError('Duplicate catalog context')
+    if args.check_only:
+        print(json.dumps({'contractsValid': True, 'sheets': len(deliveries),
+                          'figures': sum(d['figures'] for d in deliveries),
+                          'catalogPages': sum(d['pages'] for d in deliveries), 'assetsModified': False}))
+        return
     OUT.mkdir(parents=True, exist_ok=True)
     snapshot = OUT / 'catalog-before-integration.json'
     if not snapshot.exists():

@@ -1,0 +1,513 @@
+{
+  "imageSha256": "43466c8d06201e1ad2eab1b15e7d8304cf837c7fd3cd7d3fd8d7a83f8fc319b2",
+  "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalHurtN_NE_E_SE20261103V1-source.png",
+  "sourceSha256": "78af4e4a5cab98fa210262cfd3074f4f2a2adb6d7b0af7aa794a676570469268",
+  "nativeSize": [
+    750,
+    1588
+  ],
+  "sourceSize": [
+    1024,
+    1536
+  ],
+  "pixelsPerUnit": 181.50252525252523,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "schemaVersion": 1,
+  "image": "ReqMotoNormalHurtN_NE_E_SE20261103V1LayoutV2.png",
+  "frames": [
+    {
+      "id": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_00",
+      "rect": [
+        8,
+        8,
+        349,
+        323
+      ],
+      "pivot": [
+        0.47564469914040114,
+        0.03095975232198145
+      ],
+      "durationMs": 60,
+      "action": "hurt",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceRect": [
+        90,
+        67,
+        349,
+        323
+      ],
+      "sourceAnchor": [
+        256,
+        380
+      ],
+      "sourcePackingAnchor": [
+        256,
+        380
+      ],
+      "sourceFrameIndex": 0,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          256,
+          380
+        ],
+        "method": "Manual support midpoint between grounded soles; torso/head recoil retained."
+      },
+      "pixelsPerUnit": 181.50252525252523,
+      "visibleAlphaBoundsInFrame": [
+        8,
+        8,
+        341,
+        315
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_01",
+      "rect": [
+        383,
+        8,
+        359,
+        380
+      ],
+      "pivot": [
+        0.47075208913649025,
+        0.02631578947368418
+      ],
+      "durationMs": 120,
+      "action": "hurt",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "reaction",
+      "sourceRect": [
+        544,
+        11,
+        359,
+        380
+      ],
+      "sourceAnchor": [
+        713,
+        381
+      ],
+      "sourcePackingAnchor": [
+        713,
+        381
+      ],
+      "sourceFrameIndex": 1,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          713,
+          381
+        ],
+        "method": "Manual support midpoint between grounded soles; torso/head recoil retained."
+      },
+      "pixelsPerUnit": 181.50252525252523,
+      "visibleAlphaBoundsInFrame": [
+        8,
+        8,
+        351,
+        372
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_02",
+      "rect": [
+        8,
+        405,
+        338,
+        328
+      ],
+      "pivot": [
+        0.4526627218934911,
+        0.030487804878048808
+      ],
+      "durationMs": 60,
+      "action": "hurt",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceRect": [
+        91,
+        438,
+        338,
+        328
+      ],
+      "sourceAnchor": [
+        244,
+        756
+      ],
+      "sourcePackingAnchor": [
+        244,
+        756
+      ],
+      "sourceFrameIndex": 2,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          244,
+          756
+        ],
+        "method": "Manual support midpoint between grounded soles; torso/head recoil retained."
+      },
+      "pixelsPerUnit": 181.50252525252523,
+      "visibleAlphaBoundsInFrame": [
+        8,
+        8,
+        330,
+        320
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_03",
+      "rect": [
+        383,
+        405,
+        356,
+        380
+      ],
+      "pivot": [
+        0.4241573033707865,
+        0.02631578947368418
+      ],
+      "durationMs": 120,
+      "action": "hurt",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "reaction",
+      "sourceRect": [
+        573,
+        388,
+        356,
+        380
+      ],
+      "sourceAnchor": [
+        724,
+        758
+      ],
+      "sourcePackingAnchor": [
+        724,
+        758
+      ],
+      "sourceFrameIndex": 3,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          724,
+          758
+        ],
+        "method": "Manual support midpoint between grounded soles; torso/head recoil retained."
+      },
+      "pixelsPerUnit": 181.50252525252523,
+      "visibleAlphaBoundsInFrame": [
+        8,
+        8,
+        348,
+        372
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_04",
+      "rect": [
+        8,
+        802,
+        286,
+        333
+      ],
+      "pivot": [
+        0.4825174825174825,
+        0.03003003003003002
+      ],
+      "durationMs": 60,
+      "action": "hurt",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceRect": [
+        109,
+        812,
+        286,
+        333
+      ],
+      "sourceAnchor": [
+        247,
+        1135
+      ],
+      "sourcePackingAnchor": [
+        247,
+        1135
+      ],
+      "sourceFrameIndex": 4,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          247,
+          1135
+        ],
+        "method": "Manual support midpoint between grounded soles; torso/head recoil retained."
+      },
+      "pixelsPerUnit": 181.50252525252523,
+      "visibleAlphaBoundsInFrame": [
+        8,
+        8,
+        278,
+        325
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_05",
+      "rect": [
+        383,
+        802,
+        296,
+        377
+      ],
+      "pivot": [
+        0.4560810810810811,
+        0.02652519893899208
+      ],
+      "durationMs": 120,
+      "action": "hurt",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "reaction",
+      "sourceRect": [
+        591,
+        767,
+        296,
+        377
+      ],
+      "sourceAnchor": [
+        726,
+        1134
+      ],
+      "sourcePackingAnchor": [
+        726,
+        1134
+      ],
+      "sourceFrameIndex": 5,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          726,
+          1134
+        ],
+        "method": "Manual support midpoint between grounded soles; torso/head recoil retained."
+      },
+      "pixelsPerUnit": 181.50252525252523,
+      "visibleAlphaBoundsInFrame": [
+        8,
+        8,
+        288,
+        369
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_06",
+      "rect": [
+        8,
+        1199,
+        322,
+        343
+      ],
+      "pivot": [
+        0.43478260869565216,
+        0.029154518950437303
+      ],
+      "durationMs": 60,
+      "action": "hurt",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceRect": [
+        116,
+        1189,
+        322,
+        343
+      ],
+      "sourceAnchor": [
+        256,
+        1522
+      ],
+      "sourcePackingAnchor": [
+        256,
+        1522
+      ],
+      "sourceFrameIndex": 6,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          256,
+          1522
+        ],
+        "method": "Manual support midpoint between grounded soles; torso/head recoil retained."
+      },
+      "pixelsPerUnit": 181.50252525252523,
+      "visibleAlphaBoundsInFrame": [
+        8,
+        8,
+        314,
+        335
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_07",
+      "rect": [
+        383,
+        1199,
+        337,
+        381
+      ],
+      "pivot": [
+        0.5044510385756676,
+        0.026246719160105014
+      ],
+      "durationMs": 120,
+      "action": "hurt",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "reaction",
+      "sourceRect": [
+        569,
+        1152,
+        337,
+        381
+      ],
+      "sourceAnchor": [
+        739,
+        1523
+      ],
+      "sourcePackingAnchor": [
+        739,
+        1523
+      ],
+      "sourceFrameIndex": 7,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          739,
+          1523
+        ],
+        "method": "Manual support midpoint between grounded soles; torso/head recoil retained."
+      },
+      "pixelsPerUnit": 181.50252525252523,
+      "visibleAlphaBoundsInFrame": [
+        8,
+        3,
+        329,
+        373
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "name": "Hurt_N",
+      "frames": [
+        "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_00",
+        "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_01"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": false,
+      "intentionalStaticReason": ""
+    },
+    {
+      "name": "Hurt_NE",
+      "frames": [
+        "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_02",
+        "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_03"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": false,
+      "intentionalStaticReason": ""
+    },
+    {
+      "name": "Hurt_E",
+      "frames": [
+        "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_04",
+        "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_05"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": false,
+      "intentionalStaticReason": ""
+    },
+    {
+      "name": "Hurt_SE",
+      "frames": [
+        "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_06",
+        "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_07"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": false,
+      "intentionalStaticReason": ""
+    }
+  ],
+  "requiredClips": [
+    "Hurt_N",
+    "Hurt_NE",
+    "Hurt_E",
+    "Hurt_SE"
+  ],
+  "worldVisualScale": 1.325,
+  "sourcePixelResampling": false,
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoS_SW20261102V2-source.png",
+      "sha256": "5205a9673d20fe2703b5d6057960c457d61138e0b0dc5862c77099d2ff9827f1",
+      "role": "Current approved compact proportions, identity, outfit and katana"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoW_NW20261102V2-source.png",
+      "sha256": "1cd4551daa59d049b46e8e4c93ff95588e0341ed053e8e02a368a5760b05d417",
+      "role": "Current approved left/back clothing and anatomy"
+    }
+  ],
+  "review": {
+    "wholeFigures": true,
+    "staticVisualReviewed": true,
+    "loop": false,
+    "expressionDirection": "Preserve approved expressive charming Hurt identity across equipment. Moto Parry user-approved equipment/appearance authority retained.",
+    "equipment": "Two separate black/silver circular saws safely outboard of body throughout contact and recoil, black gloves and plain black strapped boots; no incompatible sword/gauntlets reused.",
+    "densityGuide": {
+      "referencePPU": 157.82828282828282,
+      "referenceNativeCranialWidth": 140,
+      "sourceNativeCranialWidth": 161,
+      "method": "Native skull/trunk density, same fixed PPU across both phases; never crouch/weapon AABB height."
+    },
+    "timing": "Contact60ms, reaction120ms; default180ms Hurt and shortened120ms resistance both show reaction. Consumer owns neutral return.",
+    "nativePixelResampling": false,
+    "imported": false,
+    "runtimeVerified": false,
+    "motionReview": "Consecutive complete poses inspected statically; finite GIF authored; runtime/Unity review deferred."
+  },
+  "quality": {
+    "alphaThreshold": 16,
+    "maxColors": 65536,
+    "maxHeightRatio": 2.5
+  },
+  "generationReferences": [
+    {
+      "path": "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtN_NE_E_SE20261103V1-source.png",
+      "sha256": "219e531d1b5ddcc109c847fb6f24a9e591cc8ed5b4da0cdf274393c4c7dd7ef1"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalParry8Dirs20261103V1-source.png",
+      "sha256": "43d49af540d146e091ca69837ed7a90af48b97d01aeea18ae151857f4cc6a260"
+    }
+  ],
+  "layoutRepairOf": "ReqMotoNormalHurtN_NE_E_SE20261103V1",
+  "layoutRepair": "Repacked whole rectangles with 8px margins. No figure edits, resampling, pivot or density changes."
+}

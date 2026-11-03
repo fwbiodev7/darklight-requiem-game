@@ -46,7 +46,9 @@ def main():
         requiredNewStateFamilies=['Parry','Hurt','Dead'],
         removedFromGenerationQueue=['4 extra Katana techniques','4 extra Fists techniques','5 unique aerial sequences per weapon','12 separate state/idle variants','18 unique Moto technique clips'],
         intentionalSharedAnimations=True,gameplayDamageAndCommandsUnchanged=True,
-        remainingCoreWork=['Fists Walk SW','Moto on-foot Walk W/E','Defense/damage/death functional validation','Only proven Moto impact/riding defects','Final functional validation'])
+        remainingCoreWork=[weapon+' '+action+': '+','.join(DIRS[d] for d in range(8) if DIRS[d] not in modes.get('OnFoot',{}).get(action,{}).get('directions',[]))
+            for weapon,modes in coverage.items() for action in ('Walk','Dodge','Parry','Hurt','Dead')
+            if len(modes.get('OnFoot',{}).get(action,{}).get('directions',[]))<8])
     write(OUT/'animation-progress-current.json',state)
     continuation=read(OUT/'continuation-state.json')
     continuation.update(updatedUtc=state['updatedUtc'],buildCancelledByUser=False,transformationsDeferredByUser=True,

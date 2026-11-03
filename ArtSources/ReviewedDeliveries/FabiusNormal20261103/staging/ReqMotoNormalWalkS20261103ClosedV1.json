@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqMotoNormalWalkS20261103ClosedV1.png",
+  "imageSha256": "df5548f8d20b7cc49282832308bcdc4cf77e9a8de8931fb27c4e248f92ce9a67",
+  "nativeSize": [
+    2000,
+    443
+  ],
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "pixelsPerUnit": 195.95959595959596,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261103/moto-walk-close/ReqMotoNormalWalkS_SW20261103V1-source.png",
+  "sourceSha256": "57dbd686199548f4252ddac53cfc41fe3d52a48115f3422ac3c7b8ef01314304",
+  "frames": [
+    {
+      "id": "Redesign_ReqMotoNormalWalkS20261103ClosedV1_00",
+      "rect": [
+        0,
+        0,
+        500,
+        443
+      ],
+      "pivot": [
+        0.462,
+        0.06772009029345373
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        27,
+        436,
+        400
+      ],
+      "sourceAnchor": [
+        221,
+        421
+      ],
+      "sourcePackingAnchor": [
+        238,
+        420
+      ],
+      "supportGuide": {
+        "anchor": [
+          221,
+          421
+        ],
+        "method": "Manually inspected pelvis projection at common planted sole ground",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        10,
+        19
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 195.95959595959596
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkS20261103ClosedV1_01",
+      "rect": [
+        500,
+        0,
+        500,
+        443
+      ],
+      "pivot": [
+        0.446,
+        0.06320541760722348
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A_low",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        450,
+        21,
+        435,
+        420
+      ],
+      "sourceAnchor": [
+        665,
+        421
+      ],
+      "sourcePackingAnchor": [
+        690,
+        418
+      ],
+      "supportGuide": {
+        "anchor": [
+          665,
+          421
+        ],
+        "method": "Manually inspected pelvis projection at common planted sole ground",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        8,
+        15
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 195.95959595959596
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkS20261103ClosedV1_02",
+      "rect": [
+        1000,
+        0,
+        500,
+        443
+      ],
+      "pivot": [
+        0.546,
+        0.06997742663656885
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B_opposite",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        902,
+        17,
+        427,
+        425
+      ],
+      "sourceAnchor": [
+        1110,
+        421
+      ],
+      "sourcePackingAnchor": [
+        1085,
+        421
+      ],
+      "supportGuide": {
+        "anchor": [
+          1110,
+          421
+        ],
+        "method": "Manually inspected pelvis projection at common planted sole ground",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        65,
+        8
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 195.95959595959596
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkS20261103ClosedV1_03",
+      "rect": [
+        1500,
+        0,
+        500,
+        443
+      ],
+      "pivot": [
+        0.532,
+        0.06320541760722348
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B_low",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1337,
+        30,
+        407,
+        411
+      ],
+      "sourceAnchor": [
+        1552,
+        421
+      ],
+      "sourcePackingAnchor": [
+        1534,
+        418
+      ],
+      "supportGuide": {
+        "anchor": [
+          1552,
+          421
+        ],
+        "method": "Manually inspected pelvis projection at common planted sole ground",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        51,
+        24
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 195.95959595959596
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_S",
+      "frames": [
+        "Redesign_ReqMotoNormalWalkS20261103ClosedV1_00",
+        "Redesign_ReqMotoNormalWalkS20261103ClosedV1_01",
+        "Redesign_ReqMotoNormalWalkS20261103ClosedV1_02",
+        "Redesign_ReqMotoNormalWalkS20261103ClosedV1_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "walk_S"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 315378,
+  "packedPixels": 315378,
+  "originalSourcePixels": 614428,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "excludedSourceFrameIndices": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 959110,
+    "farBeyond16pxPixels": 641,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 2.5137254901960784,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ],
+  "presentation": "OnFoot",
+  "worldVisualScale": 1.325,
+  "motorcycleContext": "onFoot-DualSaws",
+  "framePixelsPerUnit": [
+    195.95959595959596,
+    195.95959595959596,
+    195.95959595959596,
+    195.95959595959596
+  ],
+  "pixelsPerUnitCalibration": {
+    "method": "Whole standing crown-to-sole source density per compatible pair. Equipment excluded. No source resampling or anatomical resizing.",
+    "bodyHeightUnits": 1.98,
+    "bodyHeightPixels": [
+      388,
+      388,
+      388,
+      388
+    ],
+    "uncertaintyPixels": 5
+  },
+  "review": {
+    "wholeSourceSeen": true,
+    "nearestWholeFiguresSeen": true,
+    "staticContactSeen": true,
+    "continuousMotionViewed": false,
+    "imported": false,
+    "runtimeVerified": false,
+    "humanApproved": false
+  },
+  "reviewNotes": [
+    "S alternates left/right front contact and low passing; fixed straight front camera. SW row remains candidate, repeated dominant support.",
+    "Reviewed native contact and whole figures at nearest2x: head-body maturity matches canonical stylization; two complete saws, both hands, clean skin, dark-red eyes, left/right contact A/B leg alternation, low passing, fixed S camera. Continuous playback and Unity/runtime pending."
+  ],
+  "integrationBlocked": false,
+  "phases": [
+    "contact_A",
+    "passing_A_low",
+    "contact_B_opposite",
+    "passing_B_low"
+  ]
+}

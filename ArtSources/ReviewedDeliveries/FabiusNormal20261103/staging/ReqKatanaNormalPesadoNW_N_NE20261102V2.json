@@ -1,0 +1,777 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqKatanaNormalPesadoNW_N_NE20261102V2.png",
+  "imageSha256": "0d327a394627f23a8d75428bdb4234f56a45e4f981dc87f8c016dded3d3c1795",
+  "nativeSize": [
+    3584,
+    1029
+  ],
+  "sourceSize": [
+    3584,
+    1029
+  ],
+  "pixelsPerUnit": 135.35353535353536,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261102/katana-pesado/ReqKatanaNormalPesadoNW_N_NE20261102V2-source.png",
+  "sourceSha256": "0d327a394627f23a8d75428bdb4234f56a45e4f981dc87f8c016dded3d3c1795",
+  "frames": [
+    {
+      "id": "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_00",
+      "rect": [
+        393,
+        669,
+        356,
+        347
+      ],
+      "pivot": [
+        0.300561797752809,
+        0.09798270893371763
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        46,
+        21,
+        352,
+        343
+      ],
+      "sourceAnchor": [
+        151,
+        332
+      ],
+      "sourcePackingAnchor": [
+        163,
+        332
+      ],
+      "supportGuide": {
+        "anchor": [
+          151,
+          332
+        ],
+        "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+      },
+      "sourceOffsetInFrame": [
+        143,
+        31
+      ],
+      "sourceScale": 1,
+      "attackKey": "Pesado",
+      "gameplayPhase": "startup"
+    },
+    {
+      "id": "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_01",
+      "rect": [
+        753,
+        669,
+        461,
+        346
+      ],
+      "pivot": [
+        0.5184381778741866,
+        0.028901734104046284
+      ],
+      "durationMs": 110,
+      "action": "attack",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "active-impact",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        343,
+        0,
+        457,
+        342
+      ],
+      "sourceAnchor": [
+        580,
+        334
+      ],
+      "sourcePackingAnchor": [
+        498,
+        334
+      ],
+      "supportGuide": {
+        "anchor": [
+          580,
+          334
+        ],
+        "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+      },
+      "sourceOffsetInFrame": [
+        105,
+        8
+      ],
+      "sourceScale": 1,
+      "attackKey": "Pesado",
+      "gameplayPhase": "active"
+    },
+    {
+      "id": "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_02",
+      "rect": [
+        2746,
+        0,
+        446,
+        394
+      ],
+      "pivot": [
+        0.5515695067264574,
+        0.15482233502538068
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "follow-through",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        736,
+        3,
+        442,
+        390
+      ],
+      "sourceAnchor": [
+        980,
+        334
+      ],
+      "sourcePackingAnchor": [
+        942,
+        334
+      ],
+      "supportGuide": {
+        "anchor": [
+          980,
+          334
+        ],
+        "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+      },
+      "sourceOffsetInFrame": [
+        54,
+        11
+      ],
+      "sourceScale": 1,
+      "attackKey": "Pesado",
+      "gameplayPhase": "recovery"
+    },
+    {
+      "id": "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_03",
+      "rect": [
+        0,
+        669,
+        389,
+        360
+      ],
+      "pivot": [
+        0.46272493573264784,
+        0.09999999999999998
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1151,
+        15,
+        385,
+        356
+      ],
+      "sourceAnchor": [
+        1329,
+        337
+      ],
+      "sourcePackingAnchor": [
+        1280,
+        337
+      ],
+      "supportGuide": {
+        "anchor": [
+          1329,
+          337
+        ],
+        "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+      },
+      "sourceOffsetInFrame": [
+        131,
+        20
+      ],
+      "sourceScale": 1,
+      "attackKey": "Pesado",
+      "gameplayPhase": "recovery"
+    },
+    {
+      "id": "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_04",
+      "rect": [
+        1218,
+        669,
+        373,
+        333
+      ],
+      "pivot": [
+        0.32707774798927614,
+        0.0780780780780781
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        63,
+        369,
+        369,
+        329
+      ],
+      "sourceAnchor": [
+        183,
+        674
+      ],
+      "sourcePackingAnchor": [
+        237,
+        674
+      ],
+      "supportGuide": {
+        "anchor": [
+          183,
+          674
+        ],
+        "method": "Manual grounded two-boot support midpoint in intact source."
+      },
+      "sourceOffsetInFrame": [
+        86,
+        37
+      ],
+      "sourceScale": 1,
+      "attackKey": "Pesado",
+      "gameplayPhase": "startup"
+    },
+    {
+      "id": "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_05",
+      "rect": [
+        1317,
+        0,
+        1425,
+        577
+      ],
+      "pivot": [
+        0.43157894736842106,
+        0.013864818024263426
+      ],
+      "durationMs": 110,
+      "action": "attack",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "active-impact",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        449,
+        353,
+        373,
+        328
+      ],
+      "sourceAnchor": [
+        603,
+        675
+      ],
+      "sourcePackingAnchor": [
+        535,
+        675
+      ],
+      "supportGuide": {
+        "anchor": [
+          603,
+          675
+        ],
+        "method": "Manual grounded two-boot support midpoint in intact source."
+      },
+      "sourceOffsetInFrame": [
+        174,
+        20
+      ],
+      "sourceScale": 1,
+      "attackKey": "Pesado",
+      "gameplayPhase": "active"
+    },
+    {
+      "id": "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_06",
+      "rect": [
+        1965,
+        669,
+        401,
+        329
+      ],
+      "pivot": [
+        0.42643391521197005,
+        0.13373860182370823
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "follow-through",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        803,
+        393,
+        397,
+        325
+      ],
+      "sourceAnchor": [
+        972,
+        676
+      ],
+      "sourcePackingAnchor": [
+        1019,
+        676
+      ],
+      "supportGuide": {
+        "anchor": [
+          972,
+          676
+        ],
+        "method": "Manual grounded two-boot support midpoint in intact source."
+      },
+      "sourceOffsetInFrame": [
+        44,
+        59
+      ],
+      "sourceScale": 1,
+      "attackKey": "Pesado",
+      "gameplayPhase": "recovery"
+    },
+    {
+      "id": "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_07",
+      "rect": [
+        2370,
+        669,
+        331,
+        329
+      ],
+      "pivot": [
+        0.4199395770392749,
+        0.06990881458966569
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        1209,
+        371,
+        327,
+        325
+      ],
+      "sourceAnchor": [
+        1346,
+        675
+      ],
+      "sourcePackingAnchor": [
+        1394,
+        675
+      ],
+      "supportGuide": {
+        "anchor": [
+          1346,
+          675
+        ],
+        "method": "Manual grounded two-boot support midpoint in intact source."
+      },
+      "sourceOffsetInFrame": [
+        75,
+        38
+      ],
+      "sourceScale": 1,
+      "attackKey": "Pesado",
+      "gameplayPhase": "recovery"
+    },
+    {
+      "id": "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_08",
+      "rect": [
+        1595,
+        669,
+        366,
+        330
+      ],
+      "pivot": [
+        0.36885245901639346,
+        0.12121212121212122
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        30,
+        698,
+        362,
+        326
+      ],
+      "sourceAnchor": [
+        163,
+        986
+      ],
+      "sourcePackingAnchor": [
+        230,
+        986
+      ],
+      "supportGuide": {
+        "anchor": [
+          163,
+          986
+        ],
+        "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+      },
+      "sourceOffsetInFrame": [
+        60,
+        54
+      ],
+      "sourceScale": 1,
+      "attackKey": "Pesado",
+      "gameplayPhase": "startup"
+    },
+    {
+      "id": "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_09",
+      "rect": [
+        0,
+        0,
+        1313,
+        665
+      ],
+      "pivot": [
+        0.44097486671744096,
+        0.007518796992481258
+      ],
+      "durationMs": 110,
+      "action": "attack",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "active-impact",
+      "sourceFrameIndex": 9,
+      "sourceRect": [
+        405,
+        661,
+        409,
+        333
+      ],
+      "sourceAnchor": [
+        583,
+        988
+      ],
+      "sourcePackingAnchor": [
+        560,
+        988
+      ],
+      "supportGuide": {
+        "anchor": [
+          583,
+          988
+        ],
+        "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+      },
+      "sourceOffsetInFrame": [
+        105,
+        15
+      ],
+      "sourceScale": 1,
+      "attackKey": "Pesado",
+      "gameplayPhase": "active"
+    },
+    {
+      "id": "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_10",
+      "rect": [
+        3034,
+        669,
+        426,
+        281
+      ],
+      "pivot": [
+        0.41784037558685444,
+        0.017793594306049876
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "follow-through",
+      "sourceFrameIndex": 10,
+      "sourceRect": [
+        793,
+        718,
+        422,
+        277
+      ],
+      "sourceAnchor": [
+        969,
+        992
+      ],
+      "sourcePackingAnchor": [
+        1045,
+        992
+      ],
+      "supportGuide": {
+        "anchor": [
+          969,
+          992
+        ],
+        "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+      },
+      "sourceOffsetInFrame": [
+        8,
+        68
+      ],
+      "sourceScale": 1,
+      "attackKey": "Pesado",
+      "gameplayPhase": "recovery"
+    },
+    {
+      "id": "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_11",
+      "rect": [
+        2705,
+        669,
+        325,
+        309
+      ],
+      "pivot": [
+        0.5015384615384615,
+        0.11003236245954695
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 11,
+      "sourceRect": [
+        1215,
+        719,
+        321,
+        305
+      ],
+      "sourceAnchor": [
+        1376,
+        992
+      ],
+      "sourcePackingAnchor": [
+        1394,
+        992
+      ],
+      "supportGuide": {
+        "anchor": [
+          1376,
+          992
+        ],
+        "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+      },
+      "sourceOffsetInFrame": [
+        81,
+        69
+      ],
+      "sourceScale": 1,
+      "attackKey": "Pesado",
+      "gameplayPhase": "recovery"
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_NW",
+      "frames": [
+        "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_00",
+        "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_01",
+        "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_02",
+        "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_03"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_N",
+      "frames": [
+        "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_04",
+        "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_05",
+        "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_06",
+        "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_07"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_NE",
+      "frames": [
+        "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_08",
+        "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_09",
+        "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_10",
+        "Redesign_ReqKatanaPesadoRearOriginal12Baseline20261102_11"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "attack_NW",
+    "attack_N",
+    "attack_NE"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 538832,
+  "packedPixels": 538832,
+  "originalSourcePixels": 538832,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 1034032,
+    "farBeyond16pxPixels": 1258,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 4.933333333333334,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ],
+  "originalSources": [
+    {
+      "path": "ArtSources/WeaponRedesign20261102/katana-pesado/ReqKatanaNormalPesadoNW_N_NE20261102V1-source.png",
+      "sha256": "38e3d3e54bdd91c6a2028d5ff7f66726148d1c857aaa3018e8dc883b921451e8"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261102/katana-pesado/ReqKatanaPesadoTwoWholeRepairs20261102V2-source.png",
+      "sha256": "2ed911a51849d38facfed2fabbb0661c4ebffc5e9f0999931209af1b52bf8ae5"
+    }
+  ],
+  "replacedSourceFrameIndices": [
+    5,
+    9
+  ],
+  "retainedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    10,
+    11
+  ],
+  "reviewFindings": [
+    "User screenshot maps N anticipation/impact and NE anticipation/impact, not N four-phase clip.",
+    "Only N source5 and NE source9 replaced as complete figures: double blade removed; firm attached right wrist/grip.",
+    "Other ten rear figures copied byte-exact with integer padding, front twelve atlas unchanged.",
+    "User explicitly requested original N phases retained; prior differentiation-only rejection is superseded.",
+    "Repaired native figures were not resized. Per-frame PPU uses intact same-pose hair-to-sole ratio, excludes blade.",
+    "Static contact checked; motion preview remains blocked by browser URL policy; no Unity tests."
+  ],
+  "ppuProvenance": {
+    "method": "Preserve prior PPU for every untouched frame; repaired body same-pose hair-to-sole calibration, no bitmap resizing.",
+    "measurements": [
+      {
+        "sourceFrameIndex": 5,
+        "oldHairY": 431,
+        "oldSoleY": 675,
+        "oldBody": 244,
+        "newHairY": 251,
+        "newSoleY": 581,
+        "newBody": 330,
+        "ppu": 185.10928961748633
+      },
+      {
+        "sourceFrameIndex": 9,
+        "oldHairY": 726,
+        "oldSoleY": 988,
+        "oldBody": 262,
+        "newHairY": 655,
+        "newSoleY": 991,
+        "newBody": 336,
+        "ppu": 173.58315984270183
+      }
+    ]
+  },
+  "staticVisualReviewed": true,
+  "visualReviewed": false,
+  "motionPreviewReviewed": false,
+  "imported": false,
+  "runtimeVerified": false,
+  "attackKey": "Pesado",
+  "stagingOnly": true,
+  "worldVisualScale": 1.325,
+  "startupFrames": 1,
+  "activeFrames": 1,
+  "durationMs": [
+    100,
+    110,
+    100,
+    100
+  ],
+  "framePixelsPerUnit": [
+    135.35353535353536,
+    135.35353535353536,
+    135.35353535353536,
+    135.35353535353536,
+    136.86868686868686,
+    185.10928961748633,
+    136.86868686868686,
+    136.86868686868686,
+    135.35353535353536,
+    173.58315984270183,
+    135.35353535353536,
+    135.35353535353536
+  ],
+  "rectanglePacking": "variable-rectangles-shelves",
+  "compaction": {
+    "method": "Only RGBA0000 border pixels trimmed; offsets applied to pivots, no scaling/recoloring/alpha loss.",
+    "width": 3584,
+    "height": 1029,
+    "rawBytes": 14751744,
+    "exactWholeFrameReconstruction": true
+  },
+  "reviewScope": "static whole figure review; continuous motion/import/runtime pending"
+}

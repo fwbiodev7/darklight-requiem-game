@@ -126,3 +126,8 @@ Verificar branch/remoto/HEAD/status/index e usar allowlist explícita. Não incl
 Entregar recibo com arquivos aplicados/existentes/rejeitados/adaptados, hashes, testes realmente executados, falhas, commit/push e próxima prioridade. Encerrar sua posse dos arquivos no controle de integração.
 
 Ordem posterior continua: concluir e validar Fabius → Gothic Eclipse → Lucius Normal → transformações → Combate IA2.0 → QA/build Windows final. Os pacotes Antigravity anteriores exigem nova comparação com o código atual e `git apply --check`; não aplicá-los todos nem sobrescrever melhorias mais recentes.
+
+
+## Atualização de 03/11/2026 — retorno conferido
+
+Antes de integrar, ler `Docs/Darklight/RETORNO-ANTIGRAVITY-E-RETOMADA-20261103.md`. Uma tentativa com uma só folha também parou por RAM no refresh de áudio, com 7.69 GiB de commit disponível. Não repetir aberturas apenas reduzindo a lista de sprites. As 16 folhas essenciais preservam seus hashes; as três caminhadas continuam pendentes e os candidatos novos não foram promovidos. Faíscas Moto continuam aguardando gameplay. Plano do prólogo salvo no GDD, para depois de Lucius Normal e antes das transformações. O arquivo de controle continua sendo a autoridade para troca de responsável.

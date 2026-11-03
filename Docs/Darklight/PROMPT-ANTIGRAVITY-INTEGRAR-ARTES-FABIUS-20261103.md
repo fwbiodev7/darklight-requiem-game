@@ -136,3 +136,8 @@ Antes de integrar, ler `Docs/Darklight/RETORNO-ANTIGRAVITY-E-RETOMADA-20261103.m
 ## Importação e QA concluídos posteriormente em 03/11/2026
 
 Ler `Docs/Darklight/FABIUS-IMPORTACAO-E-QA-20261103.md` antes dos relatos anteriores: 167 clips/492 figuras/52 folhas ativas agora importados; 3 PlayMode isolados passaram para os 15 clips iniciais. Três atlas Hurt têm substitutos LayoutV2 com RGBA integral preservado; não reintegrar suas versões antigas do snapshot congelado. Fontes e pacote anterior permanecem preservados. Fabius ainda requer Punhos SW, Moto W/E e QA dos estados/faíscas. Respeitar controle de responsabilidade; nenhuma aprovação global ou build nova.
+
+
+## QA essencial posterior — sete testes aprovados
+
+Ler `Docs/Darklight/FABIUS-ESTADOS-QA-20261103.md`: 72 clips/144 figuras de estados essenciais passaram em isolamento, junto dos 15 clips iniciais. Despacho/contato/oclusão das faíscas Moto passou nas oito direções; renderização da malha na campanha permanece pendente. Três caminhadas continuam sem arte aprovada. Exceção de RAM autorizada pelo usuário aplica-se somente ao filtro isolado; padrões de importação/build não foram reduzidos. Usar os recibos mais recentes e conferir controle antes de escrever.

@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqFistsNormalWalkE20261102V11Complete.png",
+  "imageSha256": "45f04aa44bb9287f52d98a7d15c6fe8bc2bc4acfa706a0d4243d6c1f26e8647e",
+  "nativeSize": [
+    1166,
+    1060
+  ],
+  "sourceSize": [
+    1166,
+    1060
+  ],
+  "pixelsPerUnit": 214.3939393939394,
+  "framePixelsPerUnit": [
+    214.3939393939394,
+    214.3939393939394,
+    209.59595959595958,
+    209.59595959595958
+  ],
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/technical-source/Walk_w2_d6.png",
+  "sourceSha256": "45f04aa44bb9287f52d98a7d15c6fe8bc2bc4acfa706a0d4243d6c1f26e8647e",
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsNormalWalkE20261102V11Complete_00",
+      "rect": [
+        0,
+        0,
+        583,
+        530
+      ],
+      "pivot": [
+        0.48027444253859347,
+        0.09433962264150944
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        0,
+        583,
+        530
+      ],
+      "sourceAnchor": [
+        280,
+        480
+      ],
+      "sourceScale": 1,
+      "lineage": {
+        "image": "outputs/retomada-20261102/punhos-walk/staging/ReqFistsNormalWalkE_W20261102NaturalV3FootTracks.png",
+        "imageSha256": "bbab055472b8179b98f7d32902d44bc03c9e5f6c4d73dd3875b5497794e9be1d",
+        "frameId": "Redesign_ReqFistsNormalWalkE_W20261102NaturalV3FootTracks_00",
+        "rect": [
+          0,
+          0,
+          583,
+          530
+        ],
+        "pixelsPerUnit": 214.3939393939394
+      }
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkE20261102V11Complete_01",
+      "rect": [
+        583,
+        0,
+        583,
+        530
+      ],
+      "pivot": [
+        0.48027444253859347,
+        0.09433962264150944
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        583,
+        0,
+        583,
+        530
+      ],
+      "sourceAnchor": [
+        863,
+        480
+      ],
+      "sourceScale": 1,
+      "lineage": {
+        "image": "outputs/retomada-20261102/punhos-walk/staging/ReqFistsNormalWalkE_W20261102NaturalV3FootTracks.png",
+        "imageSha256": "bbab055472b8179b98f7d32902d44bc03c9e5f6c4d73dd3875b5497794e9be1d",
+        "frameId": "Redesign_ReqFistsNormalWalkE_W20261102NaturalV3FootTracks_01",
+        "rect": [
+          583,
+          0,
+          583,
+          530
+        ],
+        "pixelsPerUnit": 214.3939393939394
+      }
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkE20261102V11Complete_02",
+      "rect": [
+        0,
+        530,
+        583,
+        530
+      ],
+      "pivot": [
+        0.48027444253859347,
+        0.1320754716981132
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        0,
+        530,
+        583,
+        530
+      ],
+      "sourceAnchor": [
+        280,
+        990
+      ],
+      "sourceScale": 1,
+      "lineage": {
+        "image": "outputs/retomada-20261102/normal-fists-completion/staging/ReqFistsNormalWalkE_SW20261102V11OppositeHalf.png",
+        "imageSha256": "ee051e55881b3f53333d8bcfb1b08ab9c69605a412509977d1b2a0f41027cf90",
+        "frameId": "Redesign_ReqFistsNormalWalkE_SW20261102V11OppositeHalf_00",
+        "rect": [
+          0,
+          0,
+          543,
+          497
+        ],
+        "pixelsPerUnit": 209.59595959595958
+      }
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkE20261102V11Complete_03",
+      "rect": [
+        583,
+        530,
+        583,
+        530
+      ],
+      "pivot": [
+        0.48027444253859347,
+        0.1320754716981132
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        583,
+        530,
+        583,
+        530
+      ],
+      "sourceAnchor": [
+        863,
+        990
+      ],
+      "sourceScale": 1,
+      "lineage": {
+        "image": "outputs/retomada-20261102/normal-fists-completion/staging/ReqFistsNormalWalkE_SW20261102V11OppositeHalf.png",
+        "imageSha256": "ee051e55881b3f53333d8bcfb1b08ab9c69605a412509977d1b2a0f41027cf90",
+        "frameId": "Redesign_ReqFistsNormalWalkE_SW20261102V11OppositeHalf_01",
+        "rect": [
+          543,
+          0,
+          543,
+          497
+        ],
+        "pixelsPerUnit": 209.59595959595958
+      }
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_E",
+      "frames": [
+        "Redesign_ReqFistsNormalWalkE20261102V11Complete_00",
+        "Redesign_ReqFistsNormalWalkE20261102V11Complete_01",
+        "Redesign_ReqFistsNormalWalkE20261102V11Complete_02",
+        "Redesign_ReqFistsNormalWalkE20261102V11Complete_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "walk_E"
+  ],
+  "logicalResolution": "Native raster; logical pixel grid unverified",
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "notes": [
+    "Full figures only; first2 original W frames byte-identical; opposite2 complete authored figures selected.",
+    "Individual PPU expresses native raster density only. WorldVisualScale1.325 unchanged.",
+    "Static review only; continuous motion, Unity and runtime pending.",
+    "Do not infer gait from global boot x-order; examine each own hip/knee/heel/toe support."
+  ],
+  "provenance": {
+    "originalAuthoredSource": {
+      "path": "ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalWalkE20261102V11Complete-source.png",
+      "sha256": "45f04aa44bb9287f52d98a7d15c6fe8bc2bc4acfa706a0d4243d6c1f26e8647e",
+      "size": [
+        1166,
+        1060
+      ],
+      "rawSourceAvailable": false,
+      "rawSourcePathAvailable": false,
+      "rawSourceContentExactMatchInReviewedAtlas": true,
+      "note": "Original authored-source provenance. Technical source is the immutable reviewed atlas copy; no raw-source recovery is claimed."
+    },
+    "derivedFromReviewedAtlas": {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalWalkE20261102V11Complete.png",
+      "sha256": "45f04aa44bb9287f52d98a7d15c6fe8bc2bc4acfa706a0d4243d6c1f26e8647e",
+      "size": [
+        1166,
+        1060
+      ]
+    }
+  }
+}

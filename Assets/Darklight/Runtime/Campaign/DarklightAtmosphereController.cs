@@ -11,7 +11,31 @@ namespace Darklight
         public bool EffectsEnabled { get; private set; } = true;
         public bool AllRegionsEnabled { get; private set; } = true;
         public int PresetIndex { get; private set; }
-        public string ActivePresetName => Presets[PresetIndex].Name;
+        public string ActivePresetName => UsesGothicEclipse ? GothicPreset.DisplayName : Presets[PresetIndex].Name;
+        public bool GothicEclipseEnabled => gothicEclipseEnabled;
+        public bool UsesGothicEclipse => gothicEclipseEnabled && PresetIndex==0;
+        [SerializeField] bool gothicEclipseEnabled=true;
+        [SerializeField] DarklightAtmospherePreset gothicEclipsePreset;
+        DarklightAtmospherePreset runtimePreset;
+        bool ownsRuntimePreset;
+        DarklightAtmospherePreset GothicPreset
+        {
+            get
+            {
+                if(gothicEclipsePreset!=null) return gothicEclipsePreset;
+                if(runtimePreset==null)
+                {
+                    runtimePreset=Resources.Load<DarklightAtmospherePreset>(DarklightAtmospherePreset.RuaResourcePath);
+                    if(runtimePreset==null)
+                    {
+                        runtimePreset=ScriptableObject.CreateInstance<DarklightAtmospherePreset>();
+                        runtimePreset.hideFlags=HideFlags.HideAndDontSave;
+                        ownsRuntimePreset=true;
+                    }
+                }
+                return runtimePreset;
+            }
+        }
         public int ActiveParticleCount { get; private set; }
         public int MaxParticles => 88;
         public float Intensity { get => intensity; set { intensity = Mathf.Clamp01(value); Refresh(); } }
@@ -108,6 +132,10 @@ namespace Darklight
         static float Fraction(int seed) => (seed%101)/101f;
         public void SetEffectsEnabled(bool enabled) { EffectsEnabled=enabled; Refresh(); }
         public void SetAllRegionsEnabled(bool enabled) { AllRegionsEnabled=enabled; Refresh(); }
+        // False restores the existing map atmosphere; the settings switch disables all overlays.
+        public void SetGothicEclipseEnabled(bool enabled) { gothicEclipseEnabled=enabled; Refresh(); }
+        public void SetGothicEclipsePreset(DarklightAtmospherePreset preset) { gothicEclipsePreset=preset; Refresh(); }
+        bool Enclosed => PresetIndex==2 || PresetIndex==3 || PresetIndex==6 || PresetIndex==7 || PresetIndex==9;
         bool Allowed => EffectsEnabled && isActiveAndEnabled && (PresetIndex==0 || AllRegionsEnabled) && intensity>0 && built && mapRoot!=null && view!=null;
 
         void Build()
@@ -183,19 +211,24 @@ namespace Darklight
             // Pausing freezes the world clock, but must preserve its lighting and fog.
             visible=Allowed;
             var preset=Presets[PresetIndex];
+            var gothic=UsesGothicEclipse ? GothicPreset : null;
             foreach(var item in originals)
                 if(item.Key!=null) item.Key.color=item.Value;
             if(filterMaterial!=null)
             {
-                filterMaterial.SetColor("_FilterColor",preset.Ground);
-                filterMaterial.SetFloat("_Strength",.28f*intensity);
+                // Reuse the single map-only filter; Remaster remains the sole light/Volume owner.
+                filterMaterial.SetColor("_FilterColor",gothic!=null ? gothic.GroundPalette : preset.Ground);
+                filterMaterial.SetFloat("_Strength",(gothic!=null ? gothic.GroundStrength : .28f)*intensity);
+                filterMaterial.SetFloat("_MapExposure",gothic!=null ? gothic.MapExposureStops : 0);
             }
             foreach(var item in filters) if(item.Value!=null)
             {
                 item.Value.enabled=visible && item.Key!=null && item.Key.enabled;
                 if(item.Key!=null) item.Value.color=originals[item.Key];
             }
-            int rain=quality==0 ? preset.Rain/4 : quality==1 ? preset.Rain/2 : preset.Rain;
+            // Retain Remaster quality budgets and the existing pool. Interiors never receive rain.
+            int requestedRain=Enclosed ? 0 : gothic!=null ? gothic.RainDrops : preset.Rain;
+            int rain=quality==0 ? requestedRain/4 : quality==1 ? requestedRain/2 : requestedRain;
             int motes=quality==0 ? 4 : quality==1 ? 8 : 14;
             ActiveParticleCount=visible ? Mathf.Min(MaxParticles,Mathf.RoundToInt((rain+motes)*intensity)) : 0;
             for(int i=0;i<particles.Length;i++)
@@ -215,16 +248,17 @@ namespace Darklight
             for(int i=0;i<fog.Length;i++) if(fog[i]!=null)
             {
                 // One low veil per map; atlas variants are alternatives, never stacked.
-                fog[i].enabled=visible && i==PresetIndex%fog.Length;
+                fog[i].enabled=visible && i==(gothic!=null ? gothic.FogVariant : PresetIndex%fog.Length);
                 fog[i].sprite=fogArt[i]!=null ? fogArt[i] : soft;
-                var color=fogArt[i]!=null ? new Color(.66f,.79f,.81f) : preset.Fog;
-                color.a=.045f*intensity; fog[i].color=color;
+                var color=gothic!=null ? gothic.FogColor : fogArt[i]!=null ? new Color(.66f,.79f,.81f) : preset.Fog;
+                color.a=(gothic!=null ? gothic.FogOpacity : .045f)*intensity; fog[i].color=color;
             }
             for(int i=0;i<moon.Length;i++) if(moon[i]!=null)
             {
-                moon[i].enabled=visible && quality>0 && i==(PresetIndex+1)%moon.Length;
-                bool enclosed=PresetIndex==2 || PresetIndex==3 || PresetIndex==6 || PresetIndex==7 || PresetIndex==9;
-                moon[i].color=new Color(.67f,.83f,.98f,(enclosed?.015f:.04f)*intensity);
+                moon[i].enabled=visible && quality>0 && i==(gothic!=null ? gothic.MoonVariant : (PresetIndex+1)%moon.Length);
+                var color=gothic!=null ? gothic.MoonColor : new Color(.67f,.83f,.98f);
+                color.a=(gothic!=null ? gothic.MoonOpacity : Enclosed?.015f:.04f)*intensity;
+                moon[i].color=color;
             }
         }
         void LateUpdate()
@@ -238,12 +272,13 @@ namespace Darklight
             float height=view.orthographicSize*2, width=height*view.aspect;
             Vector3 center=view.transform.position; center.z=0;
             var preset=Presets[PresetIndex];
+            var gothic=UsesGothicEclipse ? GothicPreset : null;
             for(int i=0;i<fog.Length;i++)
             {
                 // Fog stays behind every actor and prop. Slow drift has no flashes or opacity pulse.
-                float drift=reduced ? 0 : Mathf.Sin(clock*.045f+i*2)*.15f;
+                float drift=reduced ? 0 : Mathf.Sin(clock*(gothic!=null ? gothic.FogDriftSpeed : .045f)+i*2)*.15f;
                 fog[i].transform.position=center+new Vector3(width*drift*.2f,-height*.36f,0);
-                Fit(fog[i],width*1.45f,height*.42f);
+                Fit(fog[i],width*1.45f,height*(gothic!=null ? gothic.FogHeight : .42f));
             }
             for(int i=0;i<moon.Length;i++)
             {
@@ -254,11 +289,12 @@ namespace Darklight
             for(int i=0;i<ActiveParticleCount;i++)
             {
                 var p=particles[i];
-                p.Position.x+=dt*preset.Wind*p.Speed*(p.Rain?.20f:.045f);
+                p.Position.x+=dt*(gothic!=null ? gothic.Wind : preset.Wind)*p.Speed*(p.Rain?.20f:.045f);
                 p.Position.y+=dt*(p.Rain ? -1.1f*p.Speed : .012f);
                 if(p.Position.y < -1.1f) p.Position.y+=2.2f;
                 if(p.Position.y > 1.1f) p.Position.y-=2.2f;
                 if(p.Position.x > 1.1f) p.Position.x-=2.2f;
+                if(p.Position.x < -1.1f) p.Position.x+=2.2f;
                 p.View.transform.position=center+new Vector3(p.Position.x*width*.5f,p.Position.y*height*.5f,0);
                 particles[i]=p;
             }
@@ -285,6 +321,7 @@ namespace Darklight
             if(soft!=null) Destroy(soft); if(drop!=null) Destroy(drop);
             if(texture!=null) Destroy(texture); if(material!=null) Destroy(material);
             if(filterMaterial!=null) Destroy(filterMaterial);
+            if(ownsRuntimePreset && runtimePreset!=null) Destroy(runtimePreset);
             foreach(var sprite in atlasSlices) if(sprite!=null) Destroy(sprite);
         }
     }

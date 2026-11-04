@@ -1,0 +1,248 @@
+--- /dev/null
++++ b/Assets/Darklight/Runtime/Campaign/DarklightAtmospherePreset.cs
+@@ -0,0 +1,44 @@
++using UnityEngine;
++
++namespace Darklight
++{
++    // First-map scenery preset. Exposure never touches the global Volume or actors.
++    [CreateAssetMenu(fileName="GothicEclipseRuaDasCinzas", menuName="Darklight/Atmosphere/Gothic Eclipse preset")]
++    public sealed class DarklightAtmospherePreset : ScriptableObject
++    {
++        public const string RuaResourcePath="Darklight/Atmosphere/GothicEclipseRuaDasCinzas";
++        [SerializeField] string displayName="Gothic Eclipse / Rua das Cinzas";
++        [Header("Scenery palette only")]
++        [SerializeField] Color groundPalette=new Color(.72f,.80f,.93f);
++        [SerializeField, Range(0,1)] float groundStrength=.32f;
++        [SerializeField, Range(-.5f,.5f)] float mapExposureStops=-.15f;
++        [Header("Existing low fog overlay")]
++        [SerializeField] Color fogColor=new Color(.55f,.67f,.79f);
++        [SerializeField, Range(0,.1f)] float fogOpacity=.055f;
++        [SerializeField, Range(0,2)] int fogVariant=0;
++        [SerializeField, Range(.2f,.6f)] float fogHeight=.38f;
++        [SerializeField, Range(0,.1f)] float fogDriftSpeed=.035f;
++        [Header("Existing moon overlay")]
++        [SerializeField] Color moonColor=new Color(.65f,.78f,.98f);
++        [SerializeField, Range(0,.08f)] float moonOpacity=.045f;
++        [SerializeField, Range(0,2)] int moonVariant=1;
++        [Header("Existing rain pool; exterior only")]
++        [SerializeField, Range(0,74)] int rainDrops=64;
++        [SerializeField, Range(-1,1)] float wind=.40f;
++
++        public string DisplayName=>string.IsNullOrEmpty(displayName)?"Gothic Eclipse":displayName;
++        public Color GroundPalette=>groundPalette;
++        public float GroundStrength=>Mathf.Clamp01(groundStrength);
++        public float MapExposureStops=>Mathf.Clamp(mapExposureStops,-.5f,.5f);
++        public Color FogColor=>fogColor;
++        public float FogOpacity=>Mathf.Clamp(fogOpacity,0,.1f);
++        public int FogVariant=>Mathf.Clamp(fogVariant,0,2);
++        public float FogHeight=>Mathf.Clamp(fogHeight,.2f,.6f);
++        public float FogDriftSpeed=>Mathf.Clamp(fogDriftSpeed,0,.1f);
++        public Color MoonColor=>moonColor;
++        public float MoonOpacity=>Mathf.Clamp(moonOpacity,0,.08f);
++        public int MoonVariant=>Mathf.Clamp(moonVariant,0,2);
++        public int RainDrops=>Mathf.Clamp(rainDrops,0,74);
++        public float Wind=>Mathf.Clamp(wind,-1,1);
++    }
++}
+--- /dev/null
++++ b/Assets/Darklight/Editor/DarklightAtmospherePresetFactory.cs
+@@ -0,0 +1,34 @@
++using UnityEditor;
++using UnityEngine;
++
++namespace Darklight.Editor
++{
++    public static class DarklightAtmospherePresetFactory
++    {
++        // Optional: runtime uses identical defaults without an authored asset.
++        // AssetDatabase creates its own GUID; never hand-author a .meta file.
++        [MenuItem("Darklight/Atmosphere/Create or select Rua das Cinzas preset")]
++        public static void CreateOrSelectRuaPreset()
++        {
++            const string parent="Assets/Darklight/Resources/Darklight";
++            const string folder=parent+"/Atmosphere";
++            const string path=folder+"/GothicEclipseRuaDasCinzas.asset";
++            if(!AssetDatabase.IsValidFolder(folder)) AssetDatabase.CreateFolder(parent,"Atmosphere");
++            var preset=AssetDatabase.LoadAssetAtPath<DarklightAtmospherePreset>(path);
++            if(preset==null)
++            {
++                // Preserve a conflicting asset instead of overwriting it.
++                if(AssetDatabase.LoadMainAssetAtPath(path)!=null)
++                {
++                    Debug.LogError("An unrelated asset already occupies "+path);
++                    return;
++                }
++                preset=ScriptableObject.CreateInstance<DarklightAtmospherePreset>();
++                AssetDatabase.CreateAsset(preset,path);
++                AssetDatabase.SaveAssets();
++            }
++            Selection.activeObject=preset;
++            EditorGUIUtility.PingObject(preset);
++        }
++    }
++}
+--- a/Assets/Darklight/Runtime/Campaign/DarklightAtmosphereController.cs
++++ b/Assets/Darklight/Runtime/Campaign/DarklightAtmosphereController.cs
+@@ -11,7 +11,31 @@
+         public bool EffectsEnabled { get; private set; } = true;
+         public bool AllRegionsEnabled { get; private set; } = true;
+         public int PresetIndex { get; private set; }
+-        public string ActivePresetName => Presets[PresetIndex].Name;
++        public string ActivePresetName => UsesGothicEclipse ? GothicPreset.DisplayName : Presets[PresetIndex].Name;
++        public bool GothicEclipseEnabled => gothicEclipseEnabled;
++        public bool UsesGothicEclipse => gothicEclipseEnabled && PresetIndex==0;
++        [SerializeField] bool gothicEclipseEnabled=true;
++        [SerializeField] DarklightAtmospherePreset gothicEclipsePreset;
++        DarklightAtmospherePreset runtimePreset;
++        bool ownsRuntimePreset;
++        DarklightAtmospherePreset GothicPreset
++        {
++            get
++            {
++                if(gothicEclipsePreset!=null) return gothicEclipsePreset;
++                if(runtimePreset==null)
++                {
++                    runtimePreset=Resources.Load<DarklightAtmospherePreset>(DarklightAtmospherePreset.RuaResourcePath);
++                    if(runtimePreset==null)
++                    {
++                        runtimePreset=ScriptableObject.CreateInstance<DarklightAtmospherePreset>();
++                        runtimePreset.hideFlags=HideFlags.HideAndDontSave;
++                        ownsRuntimePreset=true;
++                    }
++                }
++                return runtimePreset;
++            }
++        }
+         public int ActiveParticleCount { get; private set; }
+         public int MaxParticles => 88;
+         public float Intensity { get => intensity; set { intensity = Mathf.Clamp01(value); Refresh(); } }
+@@ -108,6 +132,10 @@
+         static float Fraction(int seed) => (seed%101)/101f;
+         public void SetEffectsEnabled(bool enabled) { EffectsEnabled=enabled; Refresh(); }
+         public void SetAllRegionsEnabled(bool enabled) { AllRegionsEnabled=enabled; Refresh(); }
++        // False restores the existing map atmosphere; the settings switch disables all overlays.
++        public void SetGothicEclipseEnabled(bool enabled) { gothicEclipseEnabled=enabled; Refresh(); }
++        public void SetGothicEclipsePreset(DarklightAtmospherePreset preset) { gothicEclipsePreset=preset; Refresh(); }
++        bool Enclosed => PresetIndex==2 || PresetIndex==3 || PresetIndex==6 || PresetIndex==7 || PresetIndex==9;
+         bool Allowed => EffectsEnabled && isActiveAndEnabled && (PresetIndex==0 || AllRegionsEnabled) && intensity>0 && built && mapRoot!=null && view!=null;
+ 
+         void Build()
+@@ -183,19 +211,24 @@
+             // Pausing freezes the world clock, but must preserve its lighting and fog.
+             visible=Allowed;
+             var preset=Presets[PresetIndex];
++            var gothic=UsesGothicEclipse ? GothicPreset : null;
+             foreach(var item in originals)
+                 if(item.Key!=null) item.Key.color=item.Value;
+             if(filterMaterial!=null)
+             {
+-                filterMaterial.SetColor("_FilterColor",preset.Ground);
+-                filterMaterial.SetFloat("_Strength",.28f*intensity);
++                // Reuse the single map-only filter; Remaster remains the sole light/Volume owner.
++                filterMaterial.SetColor("_FilterColor",gothic!=null ? gothic.GroundPalette : preset.Ground);
++                filterMaterial.SetFloat("_Strength",(gothic!=null ? gothic.GroundStrength : .28f)*intensity);
++                filterMaterial.SetFloat("_MapExposure",gothic!=null ? gothic.MapExposureStops : 0);
+             }
+             foreach(var item in filters) if(item.Value!=null)
+             {
+                 item.Value.enabled=visible && item.Key!=null && item.Key.enabled;
+                 if(item.Key!=null) item.Value.color=originals[item.Key];
+             }
+-            int rain=quality==0 ? preset.Rain/4 : quality==1 ? preset.Rain/2 : preset.Rain;
++            // Retain Remaster quality budgets and the existing pool. Interiors never receive rain.
++            int requestedRain=Enclosed ? 0 : gothic!=null ? gothic.RainDrops : preset.Rain;
++            int rain=quality==0 ? requestedRain/4 : quality==1 ? requestedRain/2 : requestedRain;
+             int motes=quality==0 ? 4 : quality==1 ? 8 : 14;
+             ActiveParticleCount=visible ? Mathf.Min(MaxParticles,Mathf.RoundToInt((rain+motes)*intensity)) : 0;
+             for(int i=0;i<particles.Length;i++)
+@@ -215,16 +248,17 @@
+             for(int i=0;i<fog.Length;i++) if(fog[i]!=null)
+             {
+                 // One low veil per map; atlas variants are alternatives, never stacked.
+-                fog[i].enabled=visible && i==PresetIndex%fog.Length;
++                fog[i].enabled=visible && i==(gothic!=null ? gothic.FogVariant : PresetIndex%fog.Length);
+                 fog[i].sprite=fogArt[i]!=null ? fogArt[i] : soft;
+-                var color=fogArt[i]!=null ? new Color(.66f,.79f,.81f) : preset.Fog;
+-                color.a=.045f*intensity; fog[i].color=color;
++                var color=gothic!=null ? gothic.FogColor : fogArt[i]!=null ? new Color(.66f,.79f,.81f) : preset.Fog;
++                color.a=(gothic!=null ? gothic.FogOpacity : .045f)*intensity; fog[i].color=color;
+             }
+             for(int i=0;i<moon.Length;i++) if(moon[i]!=null)
+             {
+-                moon[i].enabled=visible && quality>0 && i==(PresetIndex+1)%moon.Length;
+-                bool enclosed=PresetIndex==2 || PresetIndex==3 || PresetIndex==6 || PresetIndex==7 || PresetIndex==9;
+-                moon[i].color=new Color(.67f,.83f,.98f,(enclosed?.015f:.04f)*intensity);
++                moon[i].enabled=visible && quality>0 && i==(gothic!=null ? gothic.MoonVariant : (PresetIndex+1)%moon.Length);
++                var color=gothic!=null ? gothic.MoonColor : new Color(.67f,.83f,.98f);
++                color.a=(gothic!=null ? gothic.MoonOpacity : Enclosed?.015f:.04f)*intensity;
++                moon[i].color=color;
+             }
+         }
+         void LateUpdate()
+@@ -238,12 +272,13 @@
+             float height=view.orthographicSize*2, width=height*view.aspect;
+             Vector3 center=view.transform.position; center.z=0;
+             var preset=Presets[PresetIndex];
++            var gothic=UsesGothicEclipse ? GothicPreset : null;
+             for(int i=0;i<fog.Length;i++)
+             {
+                 // Fog stays behind every actor and prop. Slow drift has no flashes or opacity pulse.
+-                float drift=reduced ? 0 : Mathf.Sin(clock*.045f+i*2)*.15f;
++                float drift=reduced ? 0 : Mathf.Sin(clock*(gothic!=null ? gothic.FogDriftSpeed : .045f)+i*2)*.15f;
+                 fog[i].transform.position=center+new Vector3(width*drift*.2f,-height*.36f,0);
+-                Fit(fog[i],width*1.45f,height*.42f);
++                Fit(fog[i],width*1.45f,height*(gothic!=null ? gothic.FogHeight : .42f));
+             }
+             for(int i=0;i<moon.Length;i++)
+             {
+@@ -254,11 +289,12 @@
+             for(int i=0;i<ActiveParticleCount;i++)
+             {
+                 var p=particles[i];
+-                p.Position.x+=dt*preset.Wind*p.Speed*(p.Rain?.20f:.045f);
++                p.Position.x+=dt*(gothic!=null ? gothic.Wind : preset.Wind)*p.Speed*(p.Rain?.20f:.045f);
+                 p.Position.y+=dt*(p.Rain ? -1.1f*p.Speed : .012f);
+                 if(p.Position.y < -1.1f) p.Position.y+=2.2f;
+                 if(p.Position.y > 1.1f) p.Position.y-=2.2f;
+                 if(p.Position.x > 1.1f) p.Position.x-=2.2f;
++                if(p.Position.x < -1.1f) p.Position.x+=2.2f;
+                 p.View.transform.position=center+new Vector3(p.Position.x*width*.5f,p.Position.y*height*.5f,0);
+                 particles[i]=p;
+             }
+@@ -285,6 +321,7 @@
+             if(soft!=null) Destroy(soft); if(drop!=null) Destroy(drop);
+             if(texture!=null) Destroy(texture); if(material!=null) Destroy(material);
+             if(filterMaterial!=null) Destroy(filterMaterial);
++            if(ownsRuntimePreset && runtimePreset!=null) Destroy(runtimePreset);
+             foreach(var sprite in atlasSlices) if(sprite!=null) Destroy(sprite);
+         }
+     }
+--- a/Assets/Darklight/Resources/Darklight/Rendering/AtmosphereOverlay.shader
++++ b/Assets/Darklight/Resources/Darklight/Rendering/AtmosphereOverlay.shader
+@@ -5,6 +5,7 @@
+         _GroundFilter ("Ground filter only", Float) = 0
+         _FilterColor ("Cold mineral palette", Color) = (.76,.85,.91,1)
+         _Strength ("Filter opacity", Range(0,1)) = .6
++        _MapExposure ("Scenery exposure stops", Range(-.5,.5)) = 0
+     }
+     SubShader
+     {
+@@ -15,7 +16,7 @@
+         struct A { float4 vertex:POSITION; float2 uv:TEXCOORD0; fixed4 color:COLOR; };
+         struct V { float4 vertex:SV_POSITION; float2 uv:TEXCOORD0; fixed4 color:COLOR; };
+         sampler2D _MainTex;
+-        float _GroundFilter,_Strength; fixed4 _FilterColor;
++        float _GroundFilter,_Strength,_MapExposure; fixed4 _FilterColor;
+         V vert(A a) { V v; v.vertex=UnityObjectToClipPos(a.vertex); v.uv=a.uv; v.color=a.color; return v; }
+         fixed4 frag(V v):SV_Target {
+             fixed4 c=tex2D(_MainTex,v.uv)*v.color;
+@@ -25,6 +26,8 @@
+                 // Selective map-only contrast, green-gray shadows and pale cold highlights.
+                 float3 cold=desaturated*_FilterColor.rgb;
+                 cold=lerp(cold,cold*float3(.82,.94,1.02),saturate(1-luma)*.25);
++                // Exposure applies only inside the existing ground-filter branch.
++                cold*=exp2(_MapExposure);
+                 c.rgb=saturate((cold-.012)*1.04);
+                 c.a*=_Strength;
+             }

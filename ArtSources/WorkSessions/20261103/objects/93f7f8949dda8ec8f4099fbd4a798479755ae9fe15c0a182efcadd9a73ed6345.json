@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "complete": false,
+  "fallbackPolicy": "redesign-only-whole-figure-same-direction",
+  "pages": [
+    {
+      "id": "ReqKatanaNormalWalkNWholeRepair20261103V1_Walk_N",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "direction": 4,
+      "action": "Walk",
+      "attackKey": "",
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqKatanaNormalWalkNWholeRepair20261103V1",
+      "imageSha256": "c9aa277ab5157f0b0f068fa79fbaac492c0a2cc8a3b890768013ade39cf124be",
+      "sourcePath": "ArtSources/WeaponRedesign20261103/katana-walk-n-whole-repair/ReqKatanaNormalWalkNWholeRepair20261103V1-source.png",
+      "sourceSha256": "c9aa277ab5157f0b0f068fa79fbaac492c0a2cc8a3b890768013ade39cf124be",
+      "sourceSize": [
+        1680,
+        1040
+      ],
+      "nativeSize": [
+        1680,
+        1040
+      ],
+      "pixelsPerUnit": 168.93939393939394,
+      "framePixelsPerUnit": [
+        168.93939393939394,
+        168.93939393939394,
+        168.93939393939394,
+        168.93939393939394,
+        168.93939393939394,
+        168.93939393939394
+      ],
+      "status": "candidate",
+      "wholeFigures": true,
+      "loop": true,
+      "spriteNames": [
+        "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_00",
+        "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_01",
+        "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_02",
+        "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_03",
+        "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_04",
+        "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_05"
+      ],
+      "sourceSpriteNames": [],
+      "durationMs": [
+        65,
+        65,
+        70,
+        65,
+        65,
+        70
+      ],
+      "worldVisualScale": 1.325
+    }
+  ],
+  "replaceOnlyContext": {
+    "skin": 0,
+    "weapon": 0,
+    "form": 0,
+    "direction": 4,
+    "action": "Walk"
+  },
+  "supersedesPageId": "ReqKatanaNormalWalkNW_N20261027Selected_Walk_N",
+  "apply": false,
+  "reasons": [
+    "New candidates visibly/sample-wise lighten the hair versus approved IdleN; palette gate failed. New full figures are not final.",
+    "Continuous playback, low passing/loop5->0 and actual runtime registration remain unreviewed."
+  ]
+}

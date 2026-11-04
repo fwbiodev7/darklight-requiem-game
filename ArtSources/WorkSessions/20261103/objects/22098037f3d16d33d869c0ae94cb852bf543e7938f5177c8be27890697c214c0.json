@@ -1,0 +1,103 @@
+{
+  "state": "PENDING_WITH_REASON",
+  "reason": "W opposite-support correction not solved in one batch; SWv2 color gate remains open.",
+  "attemptCount": 3,
+  "candidate": true,
+  "visualReviewedStatic": true,
+  "visualApproval": false,
+  "integrationEligible": false,
+  "imported": false,
+  "runtimeVerified": false,
+  "continuousMotionViewed": false,
+  "sourcePixelsUnchanged": true,
+  "wholeFiguresOnly": true,
+  "anatomyEdits": false,
+  "mirrored": false,
+  "scaled": false,
+  "generatedUsing": "built-in imagegen",
+  "attempts": [
+    {
+      "image": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\attempt-01-south-support.png",
+      "sha256": "29e8754d222b9c900fabb315133c4e0ee140cf237c92bef52a06cd7284950c07",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "manifest": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\attempt-01.json",
+      "prompt": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\attempt-01-prompt.txt",
+      "references": [
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\reference-south-full-02.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\reference-south-full-03.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\darklight-requiem-game\\ArtSources\\WeaponRedesign20261026\\katana-normal\\ReqKatanaNormalWalkSW_W-v1-source.png"
+      ],
+      "audit": {
+        "errors": 0,
+        "warnings": 4
+      },
+      "preview": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\preview-01\\preview.html",
+      "contactViewed": true
+    },
+    {
+      "image": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\attempt-02-pose-preserve.png",
+      "sha256": "4a13ba5725c7866273b9fbbbe459fc2ae75dd0562d181b8c1cfcf76aefbbd6ac",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "manifest": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\attempt-02.json",
+      "prompt": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\attempt-02-prompt.txt",
+      "references": [
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\reference-south-full-00.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\reference-south-full-01.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\darklight-requiem-game\\ArtSources\\WeaponRedesign20261026\\katana-normal\\ReqKatanaNormalWalkSW_W-v1-source.png"
+      ],
+      "audit": {
+        "errors": 0,
+        "warnings": 5
+      },
+      "preview": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\preview-02\\preview.html",
+      "contactViewed": true
+    },
+    {
+      "image": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\attempt-03-cycle.png",
+      "sha256": "c0eaacb48f46d9eb29b73b974efaffae16b5092c8a50324d1402ba8383600c8c",
+      "nativeSize": [
+        1199,
+        1312
+      ],
+      "manifest": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\attempt-03-cycle.json",
+      "prompt": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\attempt-03-prompt.txt",
+      "references": [
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\attempt-02-pose-preserve.png",
+        "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\darklight-requiem-game\\ArtSources\\WeaponRedesign20261026\\katana-normal\\ReqKatanaNormalWalkSW_W-v1-source.png"
+      ],
+      "audit": {
+        "errors": 0,
+        "warnings": 9
+      },
+      "preview": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\preview-03\\preview.html",
+      "contactViewed": true,
+      "oppositePartialFigure": {
+        "frameId": "inspect_attempt03_03",
+        "rect": [
+          599,
+          656,
+          600,
+          656
+        ],
+        "wholeFrameCopy": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\attempt-03-opposite-full-03.png",
+        "sha256": "d19287ec54df54ec47aa665ef42810adb3502684976182125c688beb4815e061",
+        "rgbaExact": true
+      }
+    }
+  ],
+  "additionalAttemptAuthorization": "Coordinator explicitly authorized one four-phase full-sheet hypothesis after initial2attempts; no further calls.",
+  "canonicalProportion": "Approved Katana belt-to-sole relation requested; no PPU correction; proportion in engine unverified",
+  "historicalStandaloneAttemptsState": "PENDING_WITH_REASON",
+  "latestCycle": "cycle-v2/handoff.json",
+  "latestReport": "cycle-v2/REPORT.md",
+  "userRejectedFrame": "cycle-v1/frame-03-native.png",
+  "latestWReview": "ew-consistency-v1/REPORT.md",
+  "wPages": "ew-consistency-v1/PAGES.json",
+  "swColorCanonical": false
+}

@@ -1,0 +1,541 @@
+{
+  "schemaVersion": 1,
+  "coordinateSystem": "bottom-left",
+  "sourceSha256": "767e7abd96e85a63a628ac47ba7a39c79feda2fdb7f09633081e6f7b377c3214",
+  "image": "ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst.png",
+  "imageSize": [
+    1920,
+    1680
+  ],
+  "pixelsPerUnit": 148.0,
+  "frames": [
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_00",
+      "rect": [
+        0,
+        1120,
+        480,
+        560
+      ],
+      "pivot": [
+        0.5,
+        0.25
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        0,
+        313,
+        410
+      ],
+      "sourceOffsetInFrame": [
+        50,
+        52
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 148.0,
+      "sourceAnchor": [
+        190,
+        368
+      ],
+      "supportGuide": {
+        "method": "Manually observed belt/pelvis projection and sole-ground by complete figure; integer whole-frame registration only",
+        "uncertaintyPixels": 6
+      },
+      "functionalReviewPending": true
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_01",
+      "rect": [
+        480,
+        1120,
+        480,
+        560
+      ],
+      "pivot": [
+        0.5,
+        0.25
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A_low",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        313,
+        0,
+        314,
+        410
+      ],
+      "sourceOffsetInFrame": [
+        58,
+        52
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 148.0,
+      "sourceAnchor": [
+        495,
+        368
+      ],
+      "supportGuide": {
+        "method": "Manually observed belt/pelvis projection and sole-ground by complete figure; integer whole-frame registration only",
+        "uncertaintyPixels": 6
+      },
+      "functionalReviewPending": true
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_02",
+      "rect": [
+        960,
+        1120,
+        480,
+        560
+      ],
+      "pivot": [
+        0.5,
+        0.25
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B_proposed",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        627,
+        0,
+        313,
+        410
+      ],
+      "sourceOffsetInFrame": [
+        67,
+        52
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 148.0,
+      "sourceAnchor": [
+        800,
+        368
+      ],
+      "supportGuide": {
+        "method": "Manually observed belt/pelvis projection and sole-ground by complete figure; integer whole-frame registration only",
+        "uncertaintyPixels": 6
+      },
+      "functionalReviewPending": true
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_03",
+      "rect": [
+        1440,
+        1120,
+        480,
+        560
+      ],
+      "pivot": [
+        0.5,
+        0.25
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B_proposed",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        940,
+        0,
+        314,
+        410
+      ],
+      "sourceOffsetInFrame": [
+        74,
+        52
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 148.0,
+      "sourceAnchor": [
+        1106,
+        368
+      ],
+      "supportGuide": {
+        "method": "Manually observed belt/pelvis projection and sole-ground by complete figure; integer whole-frame registration only",
+        "uncertaintyPixels": 6
+      },
+      "functionalReviewPending": true
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_04",
+      "rect": [
+        0,
+        560,
+        480,
+        560
+      ],
+      "pivot": [
+        0.5,
+        0.25
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        0,
+        410,
+        313,
+        390
+      ],
+      "sourceOffsetInFrame": [
+        67,
+        75
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 148.0,
+      "sourceAnchor": [
+        173,
+        755
+      ],
+      "supportGuide": {
+        "method": "Manually observed belt/pelvis projection and sole-ground by complete figure; integer whole-frame registration only",
+        "uncertaintyPixels": 6
+      },
+      "functionalReviewPending": false
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_05",
+      "rect": [
+        480,
+        560,
+        480,
+        560
+      ],
+      "pivot": [
+        0.5,
+        0.25
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A_low",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        313,
+        410,
+        314,
+        390
+      ],
+      "sourceOffsetInFrame": [
+        76,
+        75
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 148.0,
+      "sourceAnchor": [
+        477,
+        755
+      ],
+      "supportGuide": {
+        "method": "Manually observed belt/pelvis projection and sole-ground by complete figure; integer whole-frame registration only",
+        "uncertaintyPixels": 6
+      },
+      "functionalReviewPending": false
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_06",
+      "rect": [
+        960,
+        560,
+        480,
+        560
+      ],
+      "pivot": [
+        0.5,
+        0.25
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B_proposed",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        627,
+        410,
+        313,
+        390
+      ],
+      "sourceOffsetInFrame": [
+        85,
+        75
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 148.0,
+      "sourceAnchor": [
+        782,
+        755
+      ],
+      "supportGuide": {
+        "method": "Manually observed belt/pelvis projection and sole-ground by complete figure; integer whole-frame registration only",
+        "uncertaintyPixels": 6
+      },
+      "functionalReviewPending": false
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_07",
+      "rect": [
+        1440,
+        560,
+        480,
+        560
+      ],
+      "pivot": [
+        0.5,
+        0.25
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B_proposed",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        940,
+        410,
+        314,
+        390
+      ],
+      "sourceOffsetInFrame": [
+        95,
+        75
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 148.0,
+      "sourceAnchor": [
+        1085,
+        755
+      ],
+      "supportGuide": {
+        "method": "Manually observed belt/pelvis projection and sole-ground by complete figure; integer whole-frame registration only",
+        "uncertaintyPixels": 6
+      },
+      "functionalReviewPending": false
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_08",
+      "rect": [
+        0,
+        0,
+        480,
+        560
+      ],
+      "pivot": [
+        0.5,
+        0.25
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        0,
+        800,
+        313,
+        454
+      ],
+      "sourceOffsetInFrame": [
+        80,
+        75
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 148.0,
+      "sourceAnchor": [
+        160,
+        1145
+      ],
+      "supportGuide": {
+        "method": "Manually observed belt/pelvis projection and sole-ground by complete figure; integer whole-frame registration only",
+        "uncertaintyPixels": 6
+      },
+      "functionalReviewPending": true
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_09",
+      "rect": [
+        480,
+        0,
+        480,
+        560
+      ],
+      "pivot": [
+        0.5,
+        0.25
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A_low",
+      "sourceFrameIndex": 9,
+      "sourceRect": [
+        313,
+        800,
+        314,
+        454
+      ],
+      "sourceOffsetInFrame": [
+        87,
+        75
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 148.0,
+      "sourceAnchor": [
+        466,
+        1145
+      ],
+      "supportGuide": {
+        "method": "Manually observed belt/pelvis projection and sole-ground by complete figure; integer whole-frame registration only",
+        "uncertaintyPixels": 6
+      },
+      "functionalReviewPending": true
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_10",
+      "rect": [
+        960,
+        0,
+        480,
+        560
+      ],
+      "pivot": [
+        0.5,
+        0.25
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B_proposed",
+      "sourceFrameIndex": 10,
+      "sourceRect": [
+        627,
+        800,
+        313,
+        454
+      ],
+      "sourceOffsetInFrame": [
+        96,
+        75
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 148.0,
+      "sourceAnchor": [
+        771,
+        1145
+      ],
+      "supportGuide": {
+        "method": "Manually observed belt/pelvis projection and sole-ground by complete figure; integer whole-frame registration only",
+        "uncertaintyPixels": 6
+      },
+      "functionalReviewPending": true
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_11",
+      "rect": [
+        1440,
+        0,
+        480,
+        560
+      ],
+      "pivot": [
+        0.5,
+        0.25
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B_proposed",
+      "sourceFrameIndex": 11,
+      "sourceRect": [
+        940,
+        800,
+        314,
+        454
+      ],
+      "sourceOffsetInFrame": [
+        105,
+        75
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 148.0,
+      "sourceAnchor": [
+        1075,
+        1145
+      ],
+      "supportGuide": {
+        "method": "Manually observed belt/pelvis projection and sole-ground by complete figure; integer whole-frame registration only",
+        "uncertaintyPixels": 6
+      },
+      "functionalReviewPending": true
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_NW",
+      "frames": [
+        "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_00",
+        "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_01",
+        "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_02",
+        "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "walk_N",
+      "frames": [
+        "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_04",
+        "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_05",
+        "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_06",
+        "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_07"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "walk_NE",
+      "frames": [
+        "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_08",
+        "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_09",
+        "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_10",
+        "Redesign_ReqMotoNormalWalkNW_N_NECorrected20261103ApprovedFirst_11"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "automaticUnityImport": false
+}

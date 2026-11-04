@@ -1,0 +1,80 @@
+{
+  "method": "Median independent head height, head width, crown-to-belt, neck-to-belt, belt-to-pelvis; no bounding-box/floor normalization",
+  "referencePpu": 162.37373737373738,
+  "reference": {
+    "crownY": 25,
+    "chinY": 134,
+    "beltY": 185,
+    "neckY": 145,
+    "headWidth": 138,
+    "pelvisY": 229
+  },
+  "small": {
+    "crownY": 44,
+    "chinY": 230,
+    "beltY": 322,
+    "neckY": 247,
+    "headWidth": 245,
+    "pelvisY": 400
+  },
+  "large": {
+    "crownY": 80,
+    "chinY": 454,
+    "beltY": 646,
+    "neckY": 493,
+    "headWidth": 500,
+    "pelvisY": 806
+  },
+  "smallToKatanaRatios": {
+    "headHeight": 1.7064220183486238,
+    "crownToBelt": 1.7375,
+    "neckToBelt": 1.875,
+    "headWidth": 1.7753623188405796,
+    "beltToPelvis": 1.7727272727272727
+  },
+  "largeToSmallRatios": {
+    "headHeight": 2.010752688172043,
+    "crownToBelt": 2.035971223021583,
+    "neckToBelt": 2.04,
+    "headWidth": 2.0408163265306123,
+    "beltToPelvis": 2.051282051282051
+  },
+  "proposedFramePixelsPerUnit": [
+    287.8443526170799,
+    287.8443526170799,
+    287.8443526170799,
+    587.202479338843
+  ],
+  "uncertaintyRelative": 0.06,
+  "landmarkUncertaintyPixels": {
+    "reference": 4,
+    "small": 7,
+    "large": 14
+  },
+  "projectedGroundAnchors": [
+    [
+      292,
+      593
+    ],
+    [
+      246,
+      590
+    ],
+    [
+      252,
+      600
+    ],
+    [
+      515,
+      1186
+    ]
+  ],
+  "groundAnchorUncertaintyPixels": [
+    5,
+    5,
+    5,
+    10
+  ],
+  "worldVisualScale": 1.325,
+  "limits": "Single scalar density cannot change relative limb lengths or anatomy. Ratio disagreement remains visible in overlays and is not corrected by PPU."
+}

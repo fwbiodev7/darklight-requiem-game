@@ -1,0 +1,4801 @@
+{
+  "audit": "read-only, no Unity/Git/Assets writes",
+  "project_root_relative": ".",
+  "base_commit": "852e612cd38d12845c2bc0134e9c1af4fb610d26",
+  "hash_search": {
+    "source_paths": 52,
+    "unique_source_sha256_targets": 52,
+    "source_sha256_targets_with_exact_match_in_Assets": 0,
+    "source_sha256_targets_with_exact_match_in_ArtSources": 22,
+    "source_sha_equals_reviewed_png_for_sheets": 22,
+    "unique_source_targets_unmatched_anywhere_in_checkout": 30,
+    "cost": {
+      "Assets_PNGs": {
+        "png_count": 1041,
+        "bytes_hashed": 1166414715,
+        "wall_seconds": 3.206
+      },
+      "ArtSources_PNGs": {
+        "png_count": 303,
+        "bytes_hashed": 519681508,
+        "wall_seconds": 1.413
+      },
+      "scope": "SHA256 over PNG bytes only; local warm/unspecified filesystem cache; elapsed wall time is approximate"
+    },
+    "exact_matches": {
+      "Assets": {},
+      "ArtSources": {
+        "ac2c3ab156dfdd2a230831294e9a0cb3be054c66773b5542d9dc0d6645c4a9ea": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalHurtN_NE_E_SE20261103V1.png"
+        ],
+        "acd02800c3d1e5d7fbee3bc31b97384f5f253dc50fd66bdb12c2e7c828607229": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalDeadS_SW_W_NW20261103V1.png"
+        ],
+        "5b0fdc10428a80c70596ef3ac4df9aab54d0d485a5fc29a1ee0cbe4ac0af71cf": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalParry8Dirs20261103V3.png"
+        ],
+        "65080e32f86d78c6edc7f130d8169d8d154aea32aecbe3bb51ee402671c8b1df": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalDeadS_SW_W20261103V1Selected.png"
+        ],
+        "219e531d1b5ddcc109c847fb6f24a9e591cc8ed5b4da0cdf274393c4c7dd7ef1": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalHurtN_NE_E_SE20261103V1.png"
+        ],
+        "d79456cb6b5955e62df7e5bab9caeab60b8b0a49ab54af76a2e1367e61d15726": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalDeadN_NE_E_SE20261103V1.png"
+        ],
+        "78af4e4a5cab98fa210262cfd3074f4f2a2adb6d7b0af7aa794a676570469268": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalHurtN_NE_E_SE20261103V1.png"
+        ],
+        "43d49af540d146e091ca69837ed7a90af48b97d01aeea18ae151857f4cc6a260": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalParry8Dirs20261103V1.png"
+        ],
+        "0d327a394627f23a8d75428bdb4234f56a45e4f981dc87f8c016dded3d3c1795": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalPesadoNW_N_NE20261102V2.png"
+        ],
+        "8710c460798b15f7534cb024f8099dbb5655a05280b3e00d6e412a1a40712303": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalHurtS_SW_W_NW20261103V1.png"
+        ],
+        "778290a7c5716d273503f918123e9d620bcd78fc704d142791708754e0560837": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalDeadNW20261103V2Selected.png"
+        ],
+        "0e70c6557df50eb689e897e31b32c39e5e976ae3685d547265307aaa2e0a87e5": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalDeadN_NE_E_SE20261103V1.png"
+        ],
+        "210896d6cc7e571ad290ce6bbcfdd5c964b23b4b7cd411f97a4e379b38989112": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact.png"
+        ],
+        "42de6b5d29c205a1d637364bcd7b0e1ec22c2473434d7a42a509731dd99d0c1a": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalDeadN_NE_E_SE20261103V1.png"
+        ],
+        "45f04aa44bb9287f52d98a7d15c6fe8bc2bc4acfa706a0d4243d6c1f26e8647e": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalWalkE20261102V11Complete.png"
+        ],
+        "2acdd294b908d9aae305b6fe843e774e1fbbede7b03e1f4ed667e279b7d1b9ce": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalWalkNE_SE20261102FeetFixedV3.png"
+        ],
+        "53928ed994f0a8220bf40c019c5a2ae600edc21e05ae162f3a4fe11d3f2eb86b": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalHurtS_SW_W_NW20261103V1.png"
+        ],
+        "5b8f2c3c5894032cc599a15868b9b9c71631ee931dad654e4d4558beaef1ca8c": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected.png"
+        ],
+        "6f3f3a05a6962097d91c42c8e5994e4282774d72b32d44fe83936727cd76c0a9": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalDeadS_SW_W_NW20261103V1.png"
+        ],
+        "0740ef48d6714f72d7e452c9d9c9d7c289b6b5dd4a2460d4533a6f813a425def": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalParry8Dirs20261103V1.png"
+        ],
+        "5e78a4357742b7105243ecc9787862d7502831256124a901a75370e9d6c59bae": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalHurtS_SW_W_NW20261103V2.png"
+        ],
+        "fc277495b34eac9754a0072ef71e592195464acff99fd8580923bd8249d125d4": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalWalkW20261102V9Complete.png"
+        ]
+      }
+    },
+    "source_records": [
+      {
+        "sheet": "ReqFistsNormalCataclismoN_NE_E_SE20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalCataclismoN_NE_E_SE20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "6222d7d6029155aa508ece77c16e30079d75d1815b384ff7593e40dfc3a7ed83",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqFistsNormalCataclismoS_SW_W_NW20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalCataclismoS_SW_W_NW20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "c55282264768856ebc652d26ba85b1803a65d3a78ad3f26f8c55946f66e66db9",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqFistsNormalDeadN_NE_E_SE20261103V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqFistsNormalDeadN_NE_E_SE20261103V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "0e70c6557df50eb689e897e31b32c39e5e976ae3685d547265307aaa2e0a87e5",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalDeadN_NE_E_SE20261103V1.png"
+        ]
+      },
+      {
+        "sheet": "ReqFistsNormalDeadS_SW_W_NW20261103V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqFistsNormalDeadS_SW_W_NW20261103V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "acd02800c3d1e5d7fbee3bc31b97384f5f253dc50fd66bdb12c2e7c828607229",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalDeadS_SW_W_NW20261103V1.png"
+        ]
+      },
+      {
+        "sheet": "ReqFistsNormalHurtN_NE_E_SE20261103V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqFistsNormalHurtN_NE_E_SE20261103V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "ac2c3ab156dfdd2a230831294e9a0cb3be054c66773b5542d9dc0d6645c4a9ea",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalHurtN_NE_E_SE20261103V1.png"
+        ]
+      },
+      {
+        "sheet": "ReqFistsNormalHurtS_SW_W_NW20261103V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqFistsNormalHurtS_SW_W_NW20261103V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "53928ed994f0a8220bf40c019c5a2ae600edc21e05ae162f3a4fe11d3f2eb86b",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalHurtS_SW_W_NW20261103V1.png"
+        ]
+      },
+      {
+        "sheet": "ReqFistsNormalJuizoN_NE_E_SE20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalJuizoN_NE_E_SE20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "a75cc0e7d4ca28d248ab46cab4122830f9e32945e876ebe19aff4d806947799a",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqFistsNormalJuizoS_SW_W_NW20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalJuizoS_SW_W_NW20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "119eb97c2fe7d4a6f696e5ebe897d085c9cdbeecb27ff8bc6a6f1df050c0c894",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "5b8f2c3c5894032cc599a15868b9b9c71631ee931dad654e4d4558beaef1ca8c",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected.png"
+        ]
+      },
+      {
+        "sheet": "ReqFistsNormalMarteloS_SW_W_NW20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalMarteloS_SW_W_NW20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "635a0305122a07ba9020fc6326e7027c6ac0e4caf8dc42381543029eb7b2ec8b",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqFistsNormalParry8Dirs20261103V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqFistsNormalParry8Dirs20261103V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "0740ef48d6714f72d7e452c9d9c9d7c289b6b5dd4a2460d4533a6f813a425def",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalParry8Dirs20261103V1.png"
+        ]
+      },
+      {
+        "sheet": "ReqFistsNormalRespostaN_NE_E_SE20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalRespostaN_NE_E_SE20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "736554b16476e3b6566b3f5048ec8281093d42d0f3fddeafdb255f493a6c0ef5",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqFistsNormalRespostaS_SW_W_NW20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalRespostaS_SW_W_NW20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "ce21b2688c1abcbafd1145e42f6ffd101b2344ac8e948e33c68aa29941b1b251",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqFistsNormalWalkE20261102V11Complete.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalWalkE20261102V11Complete-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "45f04aa44bb9287f52d98a7d15c6fe8bc2bc4acfa706a0d4243d6c1f26e8647e",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalWalkE20261102V11Complete.png"
+        ]
+      },
+      {
+        "sheet": "ReqFistsNormalWalkN20261102NaturalV1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/punhos-walk/ReqFistsNormalWalkN20261102NaturalV1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "9e7105f86a4495a1e7b33c52da1455781f2e10d22ce5a8737bc8cc113e1880c4",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqFistsNormalWalkNE_SE20261102FeetFixedV3.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/punhos-walk/ReqFistsNormalWalkNE_SE20261102FeetFixedV3-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "2acdd294b908d9aae305b6fe843e774e1fbbede7b03e1f4ed667e279b7d1b9ce",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalWalkNE_SE20261102FeetFixedV3.png"
+        ]
+      },
+      {
+        "sheet": "ReqFistsNormalWalkNW20261102NaturalV2Selected.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/punhos-walk/ReqFistsNormalWalkNW_W_SW20261102NaturalV2Nposes-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "fb194e85835a62972027b3a1c551a72238276eaee0400220f71b29eb4ab0abd6",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqFistsNormalWalkW20261102V9Complete.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalWalkW20261102V9Complete-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "fc277495b34eac9754a0072ef71e592195464acff99fd8580923bd8249d125d4",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalWalkW20261102V9Complete.png"
+        ]
+      },
+      {
+        "sheet": "ReqKatanaNormalCarregadoE_SE20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoE_SE20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "624c1e3d95caad85fe4b08d452f14375b6b6018fe2be48015b9be16e749d19b5",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqKatanaNormalCarregadoN_NE20261102V3.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoN_NE20261102V3-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "5573e4d42e61570aecbd9a610344a399240140ad32054ed07de142994fe39165",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqKatanaNormalCarregadoS_SW20261102V2.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoS_SW20261102V2-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "5205a9673d20fe2703b5d6057960c457d61138e0b0dc5862c77099d2ff9827f1",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqKatanaNormalCarregadoW_NW20261102V2.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoW_NW20261102V2-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "1cd4551daa59d049b46e8e4c93ff95588e0341ed053e8e02a368a5760b05d417",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqKatanaNormalContraAtaqueE_SE20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalContraAtaqueE_SE20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "1c6d42b402ccef291e98579d24290b83bc4b6344e72aef9d70861c20b22b1a6c",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqKatanaNormalContraAtaqueNW_N_NE20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalContraAtaqueNW_N_NE20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "8d4c02d2568ae0e7f3b08905160bcd771b4829e5a6d28591cd55e2b789d5922c",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqKatanaNormalContraAtaqueS_SW_W20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalContraAtaqueS_SW_W20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "900ab982b75e4a21333c1eb70c7a541abd6b0a50d45666f1c3e311a551408ecd",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqKatanaNormalDeadN_NE_E_SE20261103V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalDeadN_NE_E_SE20261103V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "42de6b5d29c205a1d637364bcd7b0e1ec22c2473434d7a42a509731dd99d0c1a",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalDeadN_NE_E_SE20261103V1.png"
+        ]
+      },
+      {
+        "sheet": "ReqKatanaNormalDeadS_SW_W_NW20261103V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalDeadS_SW_W_NW20261103V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "6f3f3a05a6962097d91c42c8e5994e4282774d72b32d44fe83936727cd76c0a9",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalDeadS_SW_W_NW20261103V1.png"
+        ]
+      },
+      {
+        "sheet": "ReqKatanaNormalHurtN_NE_E_SE20261103V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtN_NE_E_SE20261103V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "219e531d1b5ddcc109c847fb6f24a9e591cc8ed5b4da0cdf274393c4c7dd7ef1",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalHurtN_NE_E_SE20261103V1.png"
+        ]
+      },
+      {
+        "sheet": "ReqKatanaNormalHurtS_SW_W_NW20261103V2.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtS_SW_W_NW20261103V2-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "5e78a4357742b7105243ecc9787862d7502831256124a901a75370e9d6c59bae",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalHurtS_SW_W_NW20261103V2.png"
+        ]
+      },
+      {
+        "sheet": "ReqKatanaNormalKatanaAerialE_SE20261102V5.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalKatanaAerialE_SE20261102V5-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "f2e0a254659f1177e24e6644b5a024477fe22e2594c16e98de45af351c60459d",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqKatanaNormalKatanaAerialNW_N_NE20261102V5.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalKatanaAerialNW_N_NE20261102V5-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "76109dccb6f782ab83b0df16b7ba06c1ccfb7134f1869ca697ba242cb78322da",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqKatanaNormalKatanaAerialS_SW_W20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalKatanaAerialS_SW_W20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "a0814a3d4702d747f0b10019fcd4a0df548aeec4821f962c04f51b63d4fa85b1",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqKatanaNormalOndaDoVeuNE_E_SE20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalOndaDoVeuNE_E_SE20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "7d538801a337aca3ee94e8016fd77f75ceecd4494cb407994c6377daf1255eba",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqKatanaNormalOndaDoVeuS_SW20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalOndaDoVeuS_SW20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "2707e4c7066ae57ad2ba84fd723c9da9022bd83d4f49dc8412d7a6d8e9218a2b",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqKatanaNormalOndaDoVeuW_NW_N20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalOndaDoVeuW_NW_N20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "7cc1a1564a8c4ff1fe0d024c174adb71fb0e4de7acff26124c909cb2207e9519",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqKatanaNormalParry8Dirs20261103V3.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalParry8Dirs20261103V3-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "5b0fdc10428a80c70596ef3ac4df9aab54d0d485a5fc29a1ee0cbe4ac0af71cf",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalParry8Dirs20261103V3.png"
+        ]
+      },
+      {
+        "sheet": "ReqKatanaNormalPesadoE_SE20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/katana-pesado/ReqKatanaNormalPesadoE_SE20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "309a1e364a2a85c50ed535c5ceabfc7153e92c1760c117fb11c21248c7ea4a21",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqKatanaNormalPesadoNW_N_NE20261102V2.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/katana-pesado/ReqKatanaNormalPesadoNW_N_NE20261102V2-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "0d327a394627f23a8d75428bdb4234f56a45e4f981dc87f8c016dded3d3c1795",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalPesadoNW_N_NE20261102V2.png"
+        ]
+      },
+      {
+        "sheet": "ReqKatanaNormalPesadoS_SW_W20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/katana-pesado/ReqKatanaNormalPesadoS_SW_W20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "00f3b2b3e869761606b8dcf720f48ac8d764d4a11c0e39ce24e5705dd1978127",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/katana-walk/ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "210896d6cc7e571ad290ce6bbcfdd5c964b23b4b7cd411f97a4e379b38989112",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact.png"
+        ]
+      },
+      {
+        "sheet": "ReqMotoNormalDeadNW20261103V2Selected.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadNW20261103V2Selected-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "778290a7c5716d273503f918123e9d620bcd78fc704d142791708754e0560837",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalDeadNW20261103V2Selected.png"
+        ]
+      },
+      {
+        "sheet": "ReqMotoNormalDeadN_NE_E_SE20261103V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadN_NE_E_SE20261103V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "d79456cb6b5955e62df7e5bab9caeab60b8b0a49ab54af76a2e1367e61d15726",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalDeadN_NE_E_SE20261103V1.png"
+        ]
+      },
+      {
+        "sheet": "ReqMotoNormalDeadS_SW_W20261103V1Selected.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W20261103V1Selected-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "65080e32f86d78c6edc7f130d8169d8d154aea32aecbe3bb51ee402671c8b1df",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalDeadS_SW_W20261103V1Selected.png"
+        ]
+      },
+      {
+        "sheet": "ReqMotoNormalHurtN_NE_E_SE20261103V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalHurtN_NE_E_SE20261103V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "78af4e4a5cab98fa210262cfd3074f4f2a2adb6d7b0af7aa794a676570469268",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalHurtN_NE_E_SE20261103V1.png"
+        ]
+      },
+      {
+        "sheet": "ReqMotoNormalHurtS_SW_W_NW20261103V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalHurtS_SW_W_NW20261103V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "8710c460798b15f7534cb024f8099dbb5655a05280b3e00d6e412a1a40712303",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalHurtS_SW_W_NW20261103V1.png"
+        ]
+      },
+      {
+        "sheet": "ReqMotoNormalParry8Dirs20261103V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalParry8Dirs20261103V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "43d49af540d146e091ca69837ed7a90af48b97d01aeea18ae151857f4cc6a260",
+        "sourceSha_equals_reviewed_png": true,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": [
+          "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalParry8Dirs20261103V1.png"
+        ]
+      },
+      {
+        "sheet": "ReqMotoNormalSerraEntradaNE_E_SE20261102Selected.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaNE_E_SE20261102Selected-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "17089e3da30b32a79511c96b07359e814ae1d5ae0c2fa747315ac02065e84d63",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqMotoNormalSerraEntradaS_SW20261102V1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaS_SW_W20261102V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "8b670735a7d68aa51e4427f2d40e9069c4c146eab58752ce70a10e0c37e2c5f6",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqMotoNormalSerraEntradaW_NW_N20261102Selected.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaW_NW_N20261102Selected-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "a6847bde91eaf4a9ddf520cbcff330a1efb2d3c5cccba2ceb0a68818d21a0ddb",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqMotoNormalWalkNW_N_NE20261103ClosedV2.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/moto-walk-close/ReqMotoNormalWalkNW_N_NE20261103V2-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "2a42ec990bc9ed2c0e1c3cd79c43079a061d5f02685eb6786e0ef31ae2d15657",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqMotoNormalWalkS20261103ClosedV1.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/moto-walk-close/ReqMotoNormalWalkS_SW20261103V1-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "57dbd686199548f4252ddac53cfc41fe3d52a48115f3422ac3c7b8ef01314304",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      },
+      {
+        "sheet": "ReqMotoNormalWalkSW_SE20261103ClosedV2.png",
+        "sourcePath": "ArtSources/WeaponRedesign20261103/moto-walk-close/ReqMotoNormalWalkSW_SE20261103V2-source.png",
+        "sourcePath_exists": false,
+        "sourceSha256": "bf4e4c65f717acdcd2139368ea7b2bb08dfda3c1e81d09b50126a3dc711f78d5",
+        "sourceSha_equals_reviewed_png": false,
+        "exact_content_paths_in_Assets": [],
+        "exact_content_paths_in_ArtSources": []
+      }
+    ]
+  },
+  "context_matrix": {
+    "key_fields": [
+      "skin",
+      "weapon",
+      "form",
+      "direction",
+      "action",
+      "attackKey"
+    ],
+    "published_catalog": {
+      "pages": 223,
+      "unique_context_keys": 223,
+      "complete": false
+    },
+    "staged": {
+      "pages": 167,
+      "unique_context_keys": 167,
+      "exact_context_matches": 0,
+      "essential_16sheets_72clips": 72,
+      "other_36sheets_95clips": 95
+    },
+    "classification_counts": {
+      "other:same_direction_weapon_form_action_other_attackKey": 80,
+      "other:same_direction_weapon_form_other_action": 15,
+      "essential:same_direction_weapon_form_other_action": 72
+    },
+    "weapon_names": {
+      "0": "Katana",
+      "2": "Fists",
+      "3": "Motorcycle"
+    },
+    "weapon_action_matrix": [
+      {
+        "scope": "essential",
+        "weapon": 0,
+        "action": "Dead",
+        "clips": 8,
+        "different_action": 8
+      },
+      {
+        "scope": "essential",
+        "weapon": 0,
+        "action": "Hurt",
+        "clips": 8,
+        "different_action": 8
+      },
+      {
+        "scope": "essential",
+        "weapon": 0,
+        "action": "Parry",
+        "clips": 8,
+        "different_action": 8
+      },
+      {
+        "scope": "essential",
+        "weapon": 2,
+        "action": "Dead",
+        "clips": 8,
+        "different_action": 8
+      },
+      {
+        "scope": "essential",
+        "weapon": 2,
+        "action": "Hurt",
+        "clips": 8,
+        "different_action": 8
+      },
+      {
+        "scope": "essential",
+        "weapon": 2,
+        "action": "Parry",
+        "clips": 8,
+        "different_action": 8
+      },
+      {
+        "scope": "essential",
+        "weapon": 3,
+        "action": "Dead",
+        "clips": 8,
+        "different_action": 8
+      },
+      {
+        "scope": "essential",
+        "weapon": 3,
+        "action": "Hurt",
+        "clips": 8,
+        "different_action": 8
+      },
+      {
+        "scope": "essential",
+        "weapon": 3,
+        "action": "Parry",
+        "clips": 8,
+        "different_action": 8
+      },
+      {
+        "scope": "other",
+        "weapon": 0,
+        "action": "Attack",
+        "clips": 40,
+        "different_attackKey": 40
+      },
+      {
+        "scope": "other",
+        "weapon": 0,
+        "action": "Walk",
+        "clips": 3,
+        "different_action": 3
+      },
+      {
+        "scope": "other",
+        "weapon": 2,
+        "action": "Attack",
+        "clips": 32,
+        "different_attackKey": 32
+      },
+      {
+        "scope": "other",
+        "weapon": 2,
+        "action": "Walk",
+        "clips": 6,
+        "different_action": 6
+      },
+      {
+        "scope": "other",
+        "weapon": 3,
+        "action": "Attack",
+        "clips": 8,
+        "different_attackKey": 8
+      },
+      {
+        "scope": "other",
+        "weapon": 3,
+        "action": "Walk",
+        "clips": 6,
+        "different_action": 6
+      }
+    ],
+    "per_sheet_matrix": [
+      {
+        "scope": "essential",
+        "sheet": "ReqFistsNormalDeadN_NE_E_SE20261103V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_direction_other_action": 4
+        }
+      },
+      {
+        "scope": "essential",
+        "sheet": "ReqFistsNormalDeadS_SW_W_NW20261103V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_direction_other_action": 4
+        }
+      },
+      {
+        "scope": "essential",
+        "sheet": "ReqFistsNormalHurtN_NE_E_SE20261103V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_direction_other_action": 4
+        }
+      },
+      {
+        "scope": "essential",
+        "sheet": "ReqFistsNormalHurtS_SW_W_NW20261103V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_direction_other_action": 4
+        }
+      },
+      {
+        "scope": "essential",
+        "sheet": "ReqFistsNormalParry8Dirs20261103V1-source.png",
+        "clips": 8,
+        "comparison_counts": {
+          "same_direction_other_action": 8
+        }
+      },
+      {
+        "scope": "essential",
+        "sheet": "ReqKatanaNormalDeadN_NE_E_SE20261103V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_direction_other_action": 4
+        }
+      },
+      {
+        "scope": "essential",
+        "sheet": "ReqKatanaNormalDeadS_SW_W_NW20261103V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_direction_other_action": 4
+        }
+      },
+      {
+        "scope": "essential",
+        "sheet": "ReqKatanaNormalHurtN_NE_E_SE20261103V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_direction_other_action": 4
+        }
+      },
+      {
+        "scope": "essential",
+        "sheet": "ReqKatanaNormalHurtS_SW_W_NW20261103V2-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_direction_other_action": 4
+        }
+      },
+      {
+        "scope": "essential",
+        "sheet": "ReqKatanaNormalParry8Dirs20261103V3-source.png",
+        "clips": 8,
+        "comparison_counts": {
+          "same_direction_other_action": 8
+        }
+      },
+      {
+        "scope": "essential",
+        "sheet": "ReqMotoNormalDeadNW20261103V2Selected-source.png",
+        "clips": 1,
+        "comparison_counts": {
+          "same_direction_other_action": 1
+        }
+      },
+      {
+        "scope": "essential",
+        "sheet": "ReqMotoNormalDeadN_NE_E_SE20261103V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_direction_other_action": 4
+        }
+      },
+      {
+        "scope": "essential",
+        "sheet": "ReqMotoNormalDeadS_SW_W20261103V1Selected-source.png",
+        "clips": 3,
+        "comparison_counts": {
+          "same_direction_other_action": 3
+        }
+      },
+      {
+        "scope": "essential",
+        "sheet": "ReqMotoNormalHurtN_NE_E_SE20261103V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_direction_other_action": 4
+        }
+      },
+      {
+        "scope": "essential",
+        "sheet": "ReqMotoNormalHurtS_SW_W_NW20261103V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_direction_other_action": 4
+        }
+      },
+      {
+        "scope": "essential",
+        "sheet": "ReqMotoNormalParry8Dirs20261103V1-source.png",
+        "clips": 8,
+        "comparison_counts": {
+          "same_direction_other_action": 8
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalPesadoE_SE20261102V1-source.png",
+        "clips": 2,
+        "comparison_counts": {
+          "same_action_other_attackKey": 2
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalPesadoNW_N_NE20261102V2-source.png",
+        "clips": 3,
+        "comparison_counts": {
+          "same_action_other_attackKey": 3
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalPesadoS_SW_W20261102V1-source.png",
+        "clips": 3,
+        "comparison_counts": {
+          "same_action_other_attackKey": 3
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact-source.png",
+        "clips": 3,
+        "comparison_counts": {
+          "same_direction_other_action": 3
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqFistsNormalCataclismoN_NE_E_SE20261102V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_action_other_attackKey": 4
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqFistsNormalCataclismoS_SW_W_NW20261102V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_action_other_attackKey": 4
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqFistsNormalJuizoN_NE_E_SE20261102V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_action_other_attackKey": 4
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqFistsNormalJuizoS_SW_W_NW20261102V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_action_other_attackKey": 4
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_action_other_attackKey": 4
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqFistsNormalMarteloS_SW_W_NW20261102V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_action_other_attackKey": 4
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqFistsNormalRespostaN_NE_E_SE20261102V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_action_other_attackKey": 4
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqFistsNormalRespostaS_SW_W_NW20261102V1-source.png",
+        "clips": 4,
+        "comparison_counts": {
+          "same_action_other_attackKey": 4
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqFistsNormalWalkE20261102V11Complete-source.png",
+        "clips": 1,
+        "comparison_counts": {
+          "same_direction_other_action": 1
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqFistsNormalWalkW20261102V9Complete-source.png",
+        "clips": 1,
+        "comparison_counts": {
+          "same_direction_other_action": 1
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalCarregadoE_SE20261102V1-source.png",
+        "clips": 2,
+        "comparison_counts": {
+          "same_action_other_attackKey": 2
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalCarregadoN_NE20261102V3-source.png",
+        "clips": 2,
+        "comparison_counts": {
+          "same_action_other_attackKey": 2
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalCarregadoS_SW20261102V2-source.png",
+        "clips": 2,
+        "comparison_counts": {
+          "same_action_other_attackKey": 2
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalCarregadoW_NW20261102V2-source.png",
+        "clips": 2,
+        "comparison_counts": {
+          "same_action_other_attackKey": 2
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalContraAtaqueE_SE20261102V1-source.png",
+        "clips": 2,
+        "comparison_counts": {
+          "same_action_other_attackKey": 2
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalContraAtaqueNW_N_NE20261102V1-source.png",
+        "clips": 3,
+        "comparison_counts": {
+          "same_action_other_attackKey": 3
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalContraAtaqueS_SW_W20261102V1-source.png",
+        "clips": 3,
+        "comparison_counts": {
+          "same_action_other_attackKey": 3
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalKatanaAerialE_SE20261102V5-source.png",
+        "clips": 2,
+        "comparison_counts": {
+          "same_action_other_attackKey": 2
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalKatanaAerialNW_N_NE20261102V5-source.png",
+        "clips": 3,
+        "comparison_counts": {
+          "same_action_other_attackKey": 3
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalKatanaAerialS_SW_W20261102V1-source.png",
+        "clips": 3,
+        "comparison_counts": {
+          "same_action_other_attackKey": 3
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalOndaDoVeuNE_E_SE20261102V1-source.png",
+        "clips": 3,
+        "comparison_counts": {
+          "same_action_other_attackKey": 3
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalOndaDoVeuS_SW20261102V1-source.png",
+        "clips": 2,
+        "comparison_counts": {
+          "same_action_other_attackKey": 2
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqKatanaNormalOndaDoVeuW_NW_N20261102V1-source.png",
+        "clips": 3,
+        "comparison_counts": {
+          "same_action_other_attackKey": 3
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqMotoNormalSerraEntradaNE_E_SE20261102Selected-source.png",
+        "clips": 3,
+        "comparison_counts": {
+          "same_action_other_attackKey": 3
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqMotoNormalSerraEntradaS_SW_W20261102V1-source.png",
+        "clips": 2,
+        "comparison_counts": {
+          "same_action_other_attackKey": 2
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqMotoNormalSerraEntradaW_NW_N20261102Selected-source.png",
+        "clips": 3,
+        "comparison_counts": {
+          "same_action_other_attackKey": 3
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqFistsNormalWalkN20261102NaturalV1-source.png",
+        "clips": 1,
+        "comparison_counts": {
+          "same_direction_other_action": 1
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqFistsNormalWalkNE_SE20261102FeetFixedV3-source.png",
+        "clips": 2,
+        "comparison_counts": {
+          "same_direction_other_action": 2
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqFistsNormalWalkNW_W_SW20261102NaturalV2Nposes-source.png",
+        "clips": 1,
+        "comparison_counts": {
+          "same_direction_other_action": 1
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqMotoNormalWalkNW_N_NE20261103V2-source.png",
+        "clips": 3,
+        "comparison_counts": {
+          "same_direction_other_action": 3
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqMotoNormalWalkSW_SE20261103V2-source.png",
+        "clips": 2,
+        "comparison_counts": {
+          "same_direction_other_action": 2
+        }
+      },
+      {
+        "scope": "other",
+        "sheet": "ReqMotoNormalWalkS_SW20261103V1-source.png",
+        "clips": 1,
+        "comparison_counts": {
+          "same_direction_other_action": 1
+        }
+      }
+    ],
+    "contexts": [
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalPesadoE_SE20261102V1_Attack_E",
+        "source_sheet": "ReqKatanaNormalPesadoE_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "Pesado"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalPesadoE_SE20261102V1_Attack_SE",
+        "source_sheet": "ReqKatanaNormalPesadoE_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "Pesado"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalPesadoNW_N_NE20261102V2_Attack_NW",
+        "source_sheet": "ReqKatanaNormalPesadoNW_N_NE20261102V2-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "Pesado"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalPesadoNW_N_NE20261102V2_Attack_N",
+        "source_sheet": "ReqKatanaNormalPesadoNW_N_NE20261102V2-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "Pesado"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalPesadoNW_N_NE20261102V2_Attack_NE",
+        "source_sheet": "ReqKatanaNormalPesadoNW_N_NE20261102V2-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "Pesado"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalPesadoS_SW_W20261102V1_Attack_S",
+        "source_sheet": "ReqKatanaNormalPesadoS_SW_W20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Pesado"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalPesadoS_SW_W20261102V1_Attack_SW",
+        "source_sheet": "ReqKatanaNormalPesadoS_SW_W20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "Pesado"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalPesadoS_SW_W20261102V1_Attack_W",
+        "source_sheet": "ReqKatanaNormalPesadoS_SW_W20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "Pesado"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_Walk_NE",
+        "source_sheet": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 5,
+          "action": "Walk",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_Walk_E",
+        "source_sheet": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 6,
+          "action": "Walk",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_Walk_SE",
+        "source_sheet": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 7,
+          "action": "Walk",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalWalkN20261102NaturalV1_Walk_N",
+        "source_sheet": "ReqFistsNormalWalkN20261102NaturalV1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 4,
+          "action": "Walk",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalWalkNE_SE20261102FeetFixedV3_Walk_NE",
+        "source_sheet": "ReqFistsNormalWalkNE_SE20261102FeetFixedV3-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 5,
+          "action": "Walk",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalWalkNE_SE20261102FeetFixedV3_Walk_SE",
+        "source_sheet": "ReqFistsNormalWalkNE_SE20261102FeetFixedV3-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 7,
+          "action": "Walk",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalWalkNW20261102NaturalV2Selected_Walk_NW",
+        "source_sheet": "ReqFistsNormalWalkNW_W_SW20261102NaturalV2Nposes-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 3,
+          "action": "Walk",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalCarregadoE_SE20261102V1_Attack_E",
+        "source_sheet": "ReqKatanaNormalCarregadoE_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "Carregado"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalCarregadoE_SE20261102V1_Attack_SE",
+        "source_sheet": "ReqKatanaNormalCarregadoE_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "Carregado"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalCarregadoN_NE20261102V3_Attack_N",
+        "source_sheet": "ReqKatanaNormalCarregadoN_NE20261102V3-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "Carregado"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalCarregadoN_NE20261102V3_Attack_NE",
+        "source_sheet": "ReqKatanaNormalCarregadoN_NE20261102V3-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "Carregado"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalCarregadoS_SW20261102V2_Attack_S",
+        "source_sheet": "ReqKatanaNormalCarregadoS_SW20261102V2-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Carregado"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalCarregadoS_SW20261102V2_Attack_SW",
+        "source_sheet": "ReqKatanaNormalCarregadoS_SW20261102V2-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "Carregado"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalCarregadoW_NW20261102V2_Attack_W",
+        "source_sheet": "ReqKatanaNormalCarregadoW_NW20261102V2-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "Carregado"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalCarregadoW_NW20261102V2_Attack_NW",
+        "source_sheet": "ReqKatanaNormalCarregadoW_NW20261102V2-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "Carregado"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalWalkW20261102V9Complete_Walk_W",
+        "source_sheet": "ReqFistsNormalWalkW20261102V9Complete-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 2,
+          "action": "Walk",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalContraAtaqueS_SW_W20261102V1_Attack_S",
+        "source_sheet": "ReqKatanaNormalContraAtaqueS_SW_W20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "ContraAtaque"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalContraAtaqueS_SW_W20261102V1_Attack_SW",
+        "source_sheet": "ReqKatanaNormalContraAtaqueS_SW_W20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "ContraAtaque"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalContraAtaqueS_SW_W20261102V1_Attack_W",
+        "source_sheet": "ReqKatanaNormalContraAtaqueS_SW_W20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "ContraAtaque"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalContraAtaqueNW_N_NE20261102V1_Attack_NW",
+        "source_sheet": "ReqKatanaNormalContraAtaqueNW_N_NE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "ContraAtaque"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalContraAtaqueNW_N_NE20261102V1_Attack_N",
+        "source_sheet": "ReqKatanaNormalContraAtaqueNW_N_NE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "ContraAtaque"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalContraAtaqueNW_N_NE20261102V1_Attack_NE",
+        "source_sheet": "ReqKatanaNormalContraAtaqueNW_N_NE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "ContraAtaque"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalContraAtaqueE_SE20261102V1_Attack_E",
+        "source_sheet": "ReqKatanaNormalContraAtaqueE_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "ContraAtaque"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalContraAtaqueE_SE20261102V1_Attack_SE",
+        "source_sheet": "ReqKatanaNormalContraAtaqueE_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "ContraAtaque"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalWalkE20261102V11Complete_Walk_E",
+        "source_sheet": "ReqFistsNormalWalkE20261102V11Complete-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 6,
+          "action": "Walk",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalOndaDoVeuS_SW20261102V1_Attack_S",
+        "source_sheet": "ReqKatanaNormalOndaDoVeuS_SW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "OndaDoVeu"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalOndaDoVeuS_SW20261102V1_Attack_SW",
+        "source_sheet": "ReqKatanaNormalOndaDoVeuS_SW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "OndaDoVeu"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalOndaDoVeuW_NW_N20261102V1_Attack_W",
+        "source_sheet": "ReqKatanaNormalOndaDoVeuW_NW_N20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "OndaDoVeu"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalOndaDoVeuW_NW_N20261102V1_Attack_NW",
+        "source_sheet": "ReqKatanaNormalOndaDoVeuW_NW_N20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "OndaDoVeu"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalOndaDoVeuW_NW_N20261102V1_Attack_N",
+        "source_sheet": "ReqKatanaNormalOndaDoVeuW_NW_N20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "OndaDoVeu"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalOndaDoVeuNE_E_SE20261102V1_Attack_NE",
+        "source_sheet": "ReqKatanaNormalOndaDoVeuNE_E_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "OndaDoVeu"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalOndaDoVeuNE_E_SE20261102V1_Attack_E",
+        "source_sheet": "ReqKatanaNormalOndaDoVeuNE_E_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "OndaDoVeu"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalOndaDoVeuNE_E_SE20261102V1_Attack_SE",
+        "source_sheet": "ReqKatanaNormalOndaDoVeuNE_E_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "OndaDoVeu"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalMarteloS_SW_W_NW20261102V1_Attack_S",
+        "source_sheet": "ReqFistsNormalMarteloS_SW_W_NW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Martelo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalMarteloS_SW_W_NW20261102V1_Attack_SW",
+        "source_sheet": "ReqFistsNormalMarteloS_SW_W_NW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "Martelo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalMarteloS_SW_W_NW20261102V1_Attack_W",
+        "source_sheet": "ReqFistsNormalMarteloS_SW_W_NW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "Martelo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalMarteloS_SW_W_NW20261102V1_Attack_NW",
+        "source_sheet": "ReqFistsNormalMarteloS_SW_W_NW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "Martelo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected_Attack_N",
+        "source_sheet": "ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "Martelo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected_Attack_NE",
+        "source_sheet": "ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "Martelo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected_Attack_E",
+        "source_sheet": "ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "Martelo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected_Attack_SE",
+        "source_sheet": "ReqFistsNormalMarteloN_NE_E_SE20261102V2Selected-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "Martelo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalJuizoS_SW_W_NW20261102V1_Attack_S",
+        "source_sheet": "ReqFistsNormalJuizoS_SW_W_NW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Juízo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalJuizoS_SW_W_NW20261102V1_Attack_SW",
+        "source_sheet": "ReqFistsNormalJuizoS_SW_W_NW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "Juízo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalJuizoS_SW_W_NW20261102V1_Attack_W",
+        "source_sheet": "ReqFistsNormalJuizoS_SW_W_NW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "Juízo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalJuizoS_SW_W_NW20261102V1_Attack_NW",
+        "source_sheet": "ReqFistsNormalJuizoS_SW_W_NW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "Juízo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalJuizoN_NE_E_SE20261102V1_Attack_N",
+        "source_sheet": "ReqFistsNormalJuizoN_NE_E_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "Juízo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalJuizoN_NE_E_SE20261102V1_Attack_NE",
+        "source_sheet": "ReqFistsNormalJuizoN_NE_E_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "Juízo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalJuizoN_NE_E_SE20261102V1_Attack_E",
+        "source_sheet": "ReqFistsNormalJuizoN_NE_E_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "Juízo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalJuizoN_NE_E_SE20261102V1_Attack_SE",
+        "source_sheet": "ReqFistsNormalJuizoN_NE_E_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "Juízo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalRespostaS_SW_W_NW20261102V1_Attack_S",
+        "source_sheet": "ReqFistsNormalRespostaS_SW_W_NW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Resposta Brutal"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalRespostaS_SW_W_NW20261102V1_Attack_SW",
+        "source_sheet": "ReqFistsNormalRespostaS_SW_W_NW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "Resposta Brutal"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalRespostaS_SW_W_NW20261102V1_Attack_W",
+        "source_sheet": "ReqFistsNormalRespostaS_SW_W_NW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "Resposta Brutal"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalRespostaS_SW_W_NW20261102V1_Attack_NW",
+        "source_sheet": "ReqFistsNormalRespostaS_SW_W_NW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "Resposta Brutal"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalRespostaN_NE_E_SE20261102V1_Attack_N",
+        "source_sheet": "ReqFistsNormalRespostaN_NE_E_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "Resposta Brutal"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalRespostaN_NE_E_SE20261102V1_Attack_NE",
+        "source_sheet": "ReqFistsNormalRespostaN_NE_E_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "Resposta Brutal"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalRespostaN_NE_E_SE20261102V1_Attack_E",
+        "source_sheet": "ReqFistsNormalRespostaN_NE_E_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "Resposta Brutal"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalRespostaN_NE_E_SE20261102V1_Attack_SE",
+        "source_sheet": "ReqFistsNormalRespostaN_NE_E_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "Resposta Brutal"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalKatanaAerialS_SW_W20261102V1_Attack_S",
+        "source_sheet": "ReqKatanaNormalKatanaAerialS_SW_W20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "KatanaAerial"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalKatanaAerialS_SW_W20261102V1_Attack_SW",
+        "source_sheet": "ReqKatanaNormalKatanaAerialS_SW_W20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "KatanaAerial"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalKatanaAerialS_SW_W20261102V1_Attack_W",
+        "source_sheet": "ReqKatanaNormalKatanaAerialS_SW_W20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "KatanaAerial"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalKatanaAerialNW_N_NE20261102V5_Attack_NW",
+        "source_sheet": "ReqKatanaNormalKatanaAerialNW_N_NE20261102V5-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "KatanaAerial"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalKatanaAerialNW_N_NE20261102V5_Attack_N",
+        "source_sheet": "ReqKatanaNormalKatanaAerialNW_N_NE20261102V5-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "KatanaAerial"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalKatanaAerialNW_N_NE20261102V5_Attack_NE",
+        "source_sheet": "ReqKatanaNormalKatanaAerialNW_N_NE20261102V5-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "KatanaAerial"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalKatanaAerialE_SE20261102V5_Attack_E",
+        "source_sheet": "ReqKatanaNormalKatanaAerialE_SE20261102V5-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "KatanaAerial"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqKatanaNormalKatanaAerialE_SE20261102V5_Attack_SE",
+        "source_sheet": "ReqKatanaNormalKatanaAerialE_SE20261102V5-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "KatanaAerial"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Leve1",
+          "Leve2",
+          "Leve3"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqMotoNormalSerraEntradaS_SW20261102V1_Attack_S",
+        "source_sheet": "ReqMotoNormalSerraEntradaS_SW_W20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Serra de Entrada"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Dentes Cruzados"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqMotoNormalSerraEntradaS_SW20261102V1_Attack_SW",
+        "source_sheet": "ReqMotoNormalSerraEntradaS_SW_W20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "Serra de Entrada"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Dentes Cruzados"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqMotoNormalSerraEntradaW_NW_N20261102Selected_Attack_W",
+        "source_sheet": "ReqMotoNormalSerraEntradaW_NW_N20261102Selected-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "Serra de Entrada"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Dentes Cruzados"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqMotoNormalSerraEntradaW_NW_N20261102Selected_Attack_NW",
+        "source_sheet": "ReqMotoNormalSerraEntradaW_NW_N20261102Selected-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "Serra de Entrada"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Dentes Cruzados"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqMotoNormalSerraEntradaW_NW_N20261102Selected_Attack_N",
+        "source_sheet": "ReqMotoNormalSerraEntradaW_NW_N20261102Selected-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "Serra de Entrada"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Dentes Cruzados"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqMotoNormalSerraEntradaNE_E_SE20261102Selected_Attack_NE",
+        "source_sheet": "ReqMotoNormalSerraEntradaNE_E_SE20261102Selected-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "Serra de Entrada"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Dentes Cruzados"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqMotoNormalSerraEntradaNE_E_SE20261102Selected_Attack_E",
+        "source_sheet": "ReqMotoNormalSerraEntradaNE_E_SE20261102Selected-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "Serra de Entrada"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Dentes Cruzados"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqMotoNormalSerraEntradaNE_E_SE20261102Selected_Attack_SE",
+        "source_sheet": "ReqMotoNormalSerraEntradaNE_E_SE20261102Selected-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "Serra de Entrada"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Dentes Cruzados"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalCataclismoS_SW_W_NW20261102V1_Attack_S",
+        "source_sheet": "ReqFistsNormalCataclismoS_SW_W_NW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Cataclismo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalCataclismoS_SW_W_NW20261102V1_Attack_SW",
+        "source_sheet": "ReqFistsNormalCataclismoS_SW_W_NW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "Cataclismo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalCataclismoS_SW_W_NW20261102V1_Attack_W",
+        "source_sheet": "ReqFistsNormalCataclismoS_SW_W_NW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "Cataclismo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalCataclismoS_SW_W_NW20261102V1_Attack_NW",
+        "source_sheet": "ReqFistsNormalCataclismoS_SW_W_NW20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "Cataclismo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalCataclismoN_NE_E_SE20261102V1_Attack_N",
+        "source_sheet": "ReqFistsNormalCataclismoN_NE_E_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "Cataclismo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalCataclismoN_NE_E_SE20261102V1_Attack_NE",
+        "source_sheet": "ReqFistsNormalCataclismoN_NE_E_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "Cataclismo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalCataclismoN_NE_E_SE20261102V1_Attack_E",
+        "source_sheet": "ReqFistsNormalCataclismoN_NE_E_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "Cataclismo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqFistsNormalCataclismoN_NE_E_SE20261102V1_Attack_SE",
+        "source_sheet": "ReqFistsNormalCataclismoN_NE_E_SE20261102V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "Cataclismo da Ruína"
+        },
+        "comparison": "same_direction_weapon_form_action_other_attackKey",
+        "existing_attackKeys_same_action": [
+          "Direto da Ruína",
+          "Chute Quebra-Osso",
+          "Ascensão da Ruína",
+          "Giro Devastador"
+        ],
+        "existing_actions_same_direction": [
+          "Attack"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalParry8Dirs20261103V3_Parry_S",
+        "source_sheet": "ReqKatanaNormalParry8Dirs20261103V3-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 0,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalParry8Dirs20261103V3_Parry_SW",
+        "source_sheet": "ReqKatanaNormalParry8Dirs20261103V3-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 1,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalParry8Dirs20261103V3_Parry_W",
+        "source_sheet": "ReqKatanaNormalParry8Dirs20261103V3-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 2,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalParry8Dirs20261103V3_Parry_NW",
+        "source_sheet": "ReqKatanaNormalParry8Dirs20261103V3-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 3,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalParry8Dirs20261103V3_Parry_N",
+        "source_sheet": "ReqKatanaNormalParry8Dirs20261103V3-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 4,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalParry8Dirs20261103V3_Parry_NE",
+        "source_sheet": "ReqKatanaNormalParry8Dirs20261103V3-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 5,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalParry8Dirs20261103V3_Parry_E",
+        "source_sheet": "ReqKatanaNormalParry8Dirs20261103V3-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 6,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalParry8Dirs20261103V3_Parry_SE",
+        "source_sheet": "ReqKatanaNormalParry8Dirs20261103V3-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 7,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalHurtS_SW_W_NW20261103V2_Hurt_S",
+        "source_sheet": "ReqKatanaNormalHurtS_SW_W_NW20261103V2-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 0,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalHurtS_SW_W_NW20261103V2_Hurt_SW",
+        "source_sheet": "ReqKatanaNormalHurtS_SW_W_NW20261103V2-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 1,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalHurtS_SW_W_NW20261103V2_Hurt_W",
+        "source_sheet": "ReqKatanaNormalHurtS_SW_W_NW20261103V2-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 2,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalHurtS_SW_W_NW20261103V2_Hurt_NW",
+        "source_sheet": "ReqKatanaNormalHurtS_SW_W_NW20261103V2-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 3,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalHurtN_NE_E_SE20261103V1_Hurt_N",
+        "source_sheet": "ReqKatanaNormalHurtN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 4,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalHurtN_NE_E_SE20261103V1_Hurt_NE",
+        "source_sheet": "ReqKatanaNormalHurtN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 5,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalHurtN_NE_E_SE20261103V1_Hurt_E",
+        "source_sheet": "ReqKatanaNormalHurtN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 6,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalHurtN_NE_E_SE20261103V1_Hurt_SE",
+        "source_sheet": "ReqKatanaNormalHurtN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 7,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalDeadS_SW_W_NW20261103V1_Dead_S",
+        "source_sheet": "ReqKatanaNormalDeadS_SW_W_NW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 0,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalDeadS_SW_W_NW20261103V1_Dead_SW",
+        "source_sheet": "ReqKatanaNormalDeadS_SW_W_NW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 1,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalDeadS_SW_W_NW20261103V1_Dead_W",
+        "source_sheet": "ReqKatanaNormalDeadS_SW_W_NW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 2,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalDeadS_SW_W_NW20261103V1_Dead_NW",
+        "source_sheet": "ReqKatanaNormalDeadS_SW_W_NW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 3,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalDeadN_NE_E_SE20261103V1_Dead_N",
+        "source_sheet": "ReqKatanaNormalDeadN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 4,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalDeadN_NE_E_SE20261103V1_Dead_NE",
+        "source_sheet": "ReqKatanaNormalDeadN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 5,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalDeadN_NE_E_SE20261103V1_Dead_E",
+        "source_sheet": "ReqKatanaNormalDeadN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 6,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqKatanaNormalDeadN_NE_E_SE20261103V1_Dead_SE",
+        "source_sheet": "ReqKatanaNormalDeadN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 0,
+          "form": 0,
+          "direction": 7,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqMotoNormalWalkS20261103ClosedV1_Walk_S",
+        "source_sheet": "ReqMotoNormalWalkS_SW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 0,
+          "action": "Walk",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqMotoNormalWalkNW_N_NE20261103ClosedV2_Walk_NW",
+        "source_sheet": "ReqMotoNormalWalkNW_N_NE20261103V2-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 3,
+          "action": "Walk",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqMotoNormalWalkNW_N_NE20261103ClosedV2_Walk_N",
+        "source_sheet": "ReqMotoNormalWalkNW_N_NE20261103V2-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 4,
+          "action": "Walk",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqMotoNormalWalkNW_N_NE20261103ClosedV2_Walk_NE",
+        "source_sheet": "ReqMotoNormalWalkNW_N_NE20261103V2-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 5,
+          "action": "Walk",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqMotoNormalWalkSW_SE20261103ClosedV2_Walk_SW",
+        "source_sheet": "ReqMotoNormalWalkSW_SE20261103V2-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 1,
+          "action": "Walk",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "other",
+        "staged_id": "ReqMotoNormalWalkSW_SE20261103ClosedV2_Walk_SE",
+        "source_sheet": "ReqMotoNormalWalkSW_SE20261103V2-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 7,
+          "action": "Walk",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalParry8Dirs20261103V1_Parry_S",
+        "source_sheet": "ReqFistsNormalParry8Dirs20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 0,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalParry8Dirs20261103V1_Parry_SW",
+        "source_sheet": "ReqFistsNormalParry8Dirs20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 1,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalParry8Dirs20261103V1_Parry_W",
+        "source_sheet": "ReqFistsNormalParry8Dirs20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 2,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalParry8Dirs20261103V1_Parry_NW",
+        "source_sheet": "ReqFistsNormalParry8Dirs20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 3,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalParry8Dirs20261103V1_Parry_N",
+        "source_sheet": "ReqFistsNormalParry8Dirs20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 4,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalParry8Dirs20261103V1_Parry_NE",
+        "source_sheet": "ReqFistsNormalParry8Dirs20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 5,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalParry8Dirs20261103V1_Parry_E",
+        "source_sheet": "ReqFistsNormalParry8Dirs20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 6,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalParry8Dirs20261103V1_Parry_SE",
+        "source_sheet": "ReqFistsNormalParry8Dirs20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 7,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalHurtS_SW_W_NW20261103V1_Hurt_S",
+        "source_sheet": "ReqFistsNormalHurtS_SW_W_NW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 0,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalHurtS_SW_W_NW20261103V1_Hurt_SW",
+        "source_sheet": "ReqFistsNormalHurtS_SW_W_NW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 1,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalHurtS_SW_W_NW20261103V1_Hurt_W",
+        "source_sheet": "ReqFistsNormalHurtS_SW_W_NW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 2,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalHurtS_SW_W_NW20261103V1_Hurt_NW",
+        "source_sheet": "ReqFistsNormalHurtS_SW_W_NW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 3,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalHurtN_NE_E_SE20261103V1_Hurt_N",
+        "source_sheet": "ReqFistsNormalHurtN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 4,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalHurtN_NE_E_SE20261103V1_Hurt_NE",
+        "source_sheet": "ReqFistsNormalHurtN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 5,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalHurtN_NE_E_SE20261103V1_Hurt_E",
+        "source_sheet": "ReqFistsNormalHurtN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 6,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalHurtN_NE_E_SE20261103V1_Hurt_SE",
+        "source_sheet": "ReqFistsNormalHurtN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 7,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalDeadS_SW_W_NW20261103V1_Dead_S",
+        "source_sheet": "ReqFistsNormalDeadS_SW_W_NW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 0,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle",
+          "Walk"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalDeadS_SW_W_NW20261103V1_Dead_SW",
+        "source_sheet": "ReqFistsNormalDeadS_SW_W_NW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 1,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalDeadS_SW_W_NW20261103V1_Dead_W",
+        "source_sheet": "ReqFistsNormalDeadS_SW_W_NW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 2,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalDeadS_SW_W_NW20261103V1_Dead_NW",
+        "source_sheet": "ReqFistsNormalDeadS_SW_W_NW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 3,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalDeadN_NE_E_SE20261103V1_Dead_N",
+        "source_sheet": "ReqFistsNormalDeadN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 4,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalDeadN_NE_E_SE20261103V1_Dead_NE",
+        "source_sheet": "ReqFistsNormalDeadN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 5,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalDeadN_NE_E_SE20261103V1_Dead_E",
+        "source_sheet": "ReqFistsNormalDeadN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 6,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqFistsNormalDeadN_NE_E_SE20261103V1_Dead_SE",
+        "source_sheet": "ReqFistsNormalDeadN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 2,
+          "form": 0,
+          "direction": 7,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge",
+          "Idle"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalParry8Dirs20261103V1_Parry_S",
+        "source_sheet": "ReqMotoNormalParry8Dirs20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 0,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalParry8Dirs20261103V1_Parry_SW",
+        "source_sheet": "ReqMotoNormalParry8Dirs20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 1,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalParry8Dirs20261103V1_Parry_W",
+        "source_sheet": "ReqMotoNormalParry8Dirs20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 2,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalParry8Dirs20261103V1_Parry_NW",
+        "source_sheet": "ReqMotoNormalParry8Dirs20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 3,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalParry8Dirs20261103V1_Parry_N",
+        "source_sheet": "ReqMotoNormalParry8Dirs20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 4,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalParry8Dirs20261103V1_Parry_NE",
+        "source_sheet": "ReqMotoNormalParry8Dirs20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 5,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalParry8Dirs20261103V1_Parry_E",
+        "source_sheet": "ReqMotoNormalParry8Dirs20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 6,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalParry8Dirs20261103V1_Parry_SE",
+        "source_sheet": "ReqMotoNormalParry8Dirs20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 7,
+          "action": "Parry",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalHurtS_SW_W_NW20261103V1_Hurt_S",
+        "source_sheet": "ReqMotoNormalHurtS_SW_W_NW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 0,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalHurtS_SW_W_NW20261103V1_Hurt_SW",
+        "source_sheet": "ReqMotoNormalHurtS_SW_W_NW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 1,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalHurtS_SW_W_NW20261103V1_Hurt_W",
+        "source_sheet": "ReqMotoNormalHurtS_SW_W_NW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 2,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalHurtS_SW_W_NW20261103V1_Hurt_NW",
+        "source_sheet": "ReqMotoNormalHurtS_SW_W_NW20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 3,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalHurtN_NE_E_SE20261103V1_Hurt_N",
+        "source_sheet": "ReqMotoNormalHurtN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 4,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalHurtN_NE_E_SE20261103V1_Hurt_NE",
+        "source_sheet": "ReqMotoNormalHurtN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 5,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalHurtN_NE_E_SE20261103V1_Hurt_E",
+        "source_sheet": "ReqMotoNormalHurtN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 6,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalHurtN_NE_E_SE20261103V1_Hurt_SE",
+        "source_sheet": "ReqMotoNormalHurtN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 7,
+          "action": "Hurt",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalDeadS_SW_W20261103V1Selected_Dead_S",
+        "source_sheet": "ReqMotoNormalDeadS_SW_W20261103V1Selected-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 0,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalDeadS_SW_W20261103V1Selected_Dead_SW",
+        "source_sheet": "ReqMotoNormalDeadS_SW_W20261103V1Selected-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 1,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalDeadS_SW_W20261103V1Selected_Dead_W",
+        "source_sheet": "ReqMotoNormalDeadS_SW_W20261103V1Selected-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 2,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalDeadNW20261103V2Selected_Dead_NW",
+        "source_sheet": "ReqMotoNormalDeadNW20261103V2Selected-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 3,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalDeadN_NE_E_SE20261103V1_Dead_N",
+        "source_sheet": "ReqMotoNormalDeadN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 4,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalDeadN_NE_E_SE20261103V1_Dead_NE",
+        "source_sheet": "ReqMotoNormalDeadN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 5,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalDeadN_NE_E_SE20261103V1_Dead_E",
+        "source_sheet": "ReqMotoNormalDeadN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 6,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      },
+      {
+        "scope": "essential",
+        "staged_id": "ReqMotoNormalDeadN_NE_E_SE20261103V1_Dead_SE",
+        "source_sheet": "ReqMotoNormalDeadN_NE_E_SE20261103V1-source.png",
+        "context": {
+          "skin": 0,
+          "weapon": 3,
+          "form": 0,
+          "direction": 7,
+          "action": "Dead",
+          "attackKey": ""
+        },
+        "comparison": "same_direction_weapon_form_other_action",
+        "existing_attackKeys_same_action": [],
+        "existing_actions_same_direction": [
+          "Attack",
+          "Dodge"
+        ]
+      }
+    ]
+  },
+  "geometry_overlaps": {
+    "method": "Pillow RGBA alpha histogram within each geometric rect intersection; no images or descriptors changed. Rect coordinates are top-left source coordinates converted by the importer to Unity bottom-left.",
+    "overlapping_sheets": [
+      {
+        "sheet": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalHurtN_NE_E_SE20261103V1.png",
+        "pixels_outside_all_frame_rects_alpha_nonzero": 775,
+        "frame_pairs": [
+          {
+            "frame_a": "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_05",
+            "frame_b": "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_07",
+            "intersection_xywh": [
+              578,
+              1152,
+              250,
+              1
+            ],
+            "pixels": 250,
+            "alpha_nonzero": 48,
+            "alpha_histogram_nonzero": {
+              "1": 48
+            },
+            "max_alpha": 1,
+            "alpha_bbox_local": [
+              73,
+              0,
+              235,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "sheet": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalHurtN_NE_E_SE20261103V1.png",
+        "pixels_outside_all_frame_rects_alpha_nonzero": 6092,
+        "frame_pairs": [
+          {
+            "frame_a": "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_05",
+            "frame_b": "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_07",
+            "intersection_xywh": [
+              596,
+              1153,
+              284,
+              1
+            ],
+            "pixels": 284,
+            "alpha_nonzero": 28,
+            "alpha_histogram_nonzero": {
+              "1": 28
+            },
+            "max_alpha": 1,
+            "alpha_bbox_local": [
+              101,
+              0,
+              214,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "sheet": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalHurtN_NE_E_SE20261103V1.png",
+        "pixels_outside_all_frame_rects_alpha_nonzero": 4810,
+        "frame_pairs": [
+          {
+            "frame_a": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_01",
+            "frame_b": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_03",
+            "intersection_xywh": [
+              573,
+              388,
+              330,
+              3
+            ],
+            "pixels": 990,
+            "alpha_nonzero": 98,
+            "alpha_histogram_nonzero": {
+              "1": 95,
+              "2": 3
+            },
+            "max_alpha": 2,
+            "alpha_bbox_local": [
+              2,
+              0,
+              133,
+              3
+            ]
+          },
+          {
+            "frame_a": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_03",
+            "frame_b": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_05",
+            "intersection_xywh": [
+              591,
+              767,
+              296,
+              1
+            ],
+            "pixels": 296,
+            "alpha_nonzero": 56,
+            "alpha_histogram_nonzero": {
+              "1": 56
+            },
+            "max_alpha": 1,
+            "alpha_bbox_local": [
+              93,
+              0,
+              223,
+              1
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "technical_source_review": {
+    "raw_source_paths_missing": 52,
+    "reviewed_atlas_pngs_and_descriptors_self_contained_for_reimport": true,
+    "feasible_staging_strategy": "Create a new descriptor revision whose technical sourcePath points to the immutable reviewed PNG in ReviewedDeliveries, with sourceSha256 set to its actual PNG SHA and sourceSize=nativeSize. Preserve old generator path/hash in explicit provenance fields marked original-source-missing; do not call reviewed atlas the raw generator source. The importer deserializes only its known DTO fields, so extra provenance fields survive on disk but are ignored by runtime import code. Use the existing rects/pivots/PPU, after the overlap gate is resolved.",
+    "limits": "For 22 sheets original sourceSha256 exactly equals a reviewed atlas PNG present in staging; the other 30 unique sourceSha targets have no exact PNG content match in Assets or ArtSources. A derived descriptor cannot reconstruct those 30 raw source images or prove their generator/edit history. PAGES remains complete=false and static-reviewed; this is technical importability, not runtime/gameplay approval.",
+    "not_executed": true
+  },
+  "next_step_recommendation": {
+    "status": "PENDING_WITH_REASON",
+    "reasons": [
+      "30/52 unique upstream source hashes are not present anywhere in Assets/ArtSources; only the archived reviewed atlases/descriptors are available for derived technical source metadata.",
+      "Three essential Hurt sheets have rect intersections with alpha 1 or 2 only; importer still rejects every geometric overlap.",
+      "All 167 staged context keys are absent from catalog; 80 attack contexts share an existing directional action slot but have new attackKey values; 72 essential Parry/Hurt/Dead and 15 Walk contexts are new action states. Integrator/catalog/runtime owner must decide coverage and implementation."
+    ]
+  }
+}

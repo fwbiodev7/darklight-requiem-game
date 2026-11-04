@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "complete": false,
+  "fallbackPolicy": "redesign-only-whole-figure-same-direction",
+  "pages": [
+    {
+      "id": "ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_Walk_W",
+      "action": "Walk",
+      "attackKey": "",
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3",
+      "imageSha256": "98119e4642e3f744337957bf6fb06feb42ff108fd37e26a423125b2292666a98",
+      "sourcePath": "ArtSources/WeaponRedesign20261103/moto-walk-school-approved/V3-source.png",
+      "sourceSha256": "5de9d53e5e1a6976a7824d6bdc6c12f324757c81547c2b1e5584e92ea684e01e",
+      "status": "visual-reviewed",
+      "skin": 0,
+      "weapon": 3,
+      "form": 0,
+      "direction": 2,
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "nativeSize": [
+        1920,
+        1040
+      ],
+      "durationMs": [
+        120,
+        120,
+        120,
+        120
+      ],
+      "pixelsPerUnit": 186.36363636363637,
+      "framePixelsPerUnit": [
+        186.36363636363637,
+        186.36363636363637,
+        186.36363636363637,
+        186.36363636363637
+      ],
+      "wholeFigures": true,
+      "loop": true,
+      "fusedEclipse": false,
+      "spriteNames": [
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_00",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_01",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_02",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_03"
+      ],
+      "sourceSpriteNames": [],
+      "presentation": "OnFoot",
+      "worldVisualScale": 1.325,
+      "humanApproved": true,
+      "approvalSource": "Usuário: seleção V3 e captura identificadora de 2026-11-03, confirmadas pela coordenação e pelo agente",
+      "runtimeVerified": false
+    },
+    {
+      "id": "ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_Walk_E",
+      "action": "Walk",
+      "attackKey": "",
+      "resourcePath": "Darklight/WeaponRedesign20261023/ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3",
+      "imageSha256": "98119e4642e3f744337957bf6fb06feb42ff108fd37e26a423125b2292666a98",
+      "sourcePath": "ArtSources/WeaponRedesign20261103/moto-walk-school-approved/V3-source.png",
+      "sourceSha256": "5de9d53e5e1a6976a7824d6bdc6c12f324757c81547c2b1e5584e92ea684e01e",
+      "status": "visual-reviewed",
+      "skin": 0,
+      "weapon": 3,
+      "form": 0,
+      "direction": 6,
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "nativeSize": [
+        1920,
+        1040
+      ],
+      "durationMs": [
+        120,
+        120,
+        120,
+        120
+      ],
+      "pixelsPerUnit": 186.36363636363637,
+      "framePixelsPerUnit": [
+        186.36363636363637,
+        186.36363636363637,
+        186.36363636363637,
+        186.36363636363637
+      ],
+      "wholeFigures": true,
+      "loop": true,
+      "fusedEclipse": false,
+      "spriteNames": [
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_04",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_05",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_06",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_07"
+      ],
+      "sourceSpriteNames": [],
+      "presentation": "OnFoot",
+      "worldVisualScale": 1.325,
+      "humanApproved": true,
+      "approvalSource": "Usuário: seleção V3 e captura identificadora de 2026-11-03, confirmadas pela coordenação e pelo agente",
+      "runtimeVerified": false
+    }
+  ],
+  "integrationInstructions": "Merge exactly two pages after source/resource/GUID checks, do not overwrite whole existing catalog. Extra approval/OnFoot/worldVisualScale metadata is documentary; bank ignores unknown fields."
+}

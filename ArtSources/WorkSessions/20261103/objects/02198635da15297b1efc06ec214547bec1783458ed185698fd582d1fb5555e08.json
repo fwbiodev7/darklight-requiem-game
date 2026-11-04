@@ -1,0 +1,280 @@
+{
+  "status": "PENDING_WITH_REASON",
+  "scope": "Light static density QA, NW/N/NE prioritized; S/SW/SE gait observation only",
+  "candidatePpu160": "placeholder, not applied or approved",
+  "manualLandmarks": true,
+  "manualUncertaintyPixels": 6,
+  "measurementLimit": "Back view chin and true neck root occluded. Hair-base is a silhouette landmark, not exact anatomical nape. Differences under about10% are not resolved confidently.",
+  "allMeasurementsNative": true,
+  "rectanglesVisuallyConfirmedWholeFigures": true,
+  "worldVisualScaleAssumed": 1.325,
+  "rows": [
+    {
+      "direction": "NW",
+      "candidateFrameIndex": 0,
+      "candidateRect": [
+        0,
+        0,
+        377,
+        347
+      ],
+      "canonicalFrameIndex": 0,
+      "canonicalRect": [
+        0,
+        0,
+        436,
+        379
+      ],
+      "canonicalManifest": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\darklight-requiem-game\\Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalWalkNW_N20261027Selected.json",
+      "canonicalPpu": 168.93939393939394,
+      "candidate": {
+        "crownY": 55,
+        "hairBaseY": 135,
+        "beltCenterY": 177,
+        "soleEdgeY": 314,
+        "hairHeadSpanPx": 80,
+        "exposedBackTorsoPx": 42,
+        "crownToBeltPx": 122,
+        "beltToSolePx": 137,
+        "legOverUpperBody": 1.123,
+        "hairHeadOverBackTorso": 1.905
+      },
+      "canonical": {
+        "crownY": 23,
+        "hairBaseY": 120,
+        "beltCenterY": 179,
+        "soleEdgeY": 357,
+        "hairHeadSpanPx": 97,
+        "exposedBackTorsoPx": 59,
+        "crownToBeltPx": 156,
+        "beltToSolePx": 178,
+        "legOverUpperBody": 1.141,
+        "hairHeadOverBackTorso": 1.644
+      },
+      "densityEstimates": {
+        "fromHairHeadSpan": 139.3,
+        "fromExposedBackTorso": 120.3,
+        "fromCrownToBelt": 132.1
+      },
+      "applyPpu": null,
+      "reason": "Head-derived and torso-derived densities disagree; no PPU can restore anatomical ratio. Redraw complete figures against canonical head+torso before final calibration.",
+      "staticOppositeSupportsObserved": true,
+      "framesInspected": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "playbackReviewed": false
+    },
+    {
+      "direction": "N",
+      "candidateFrameIndex": 4,
+      "candidateRect": [
+        0,
+        347,
+        377,
+        348
+      ],
+      "canonicalFrameIndex": 6,
+      "canonicalRect": [
+        0,
+        758,
+        436,
+        379
+      ],
+      "canonicalManifest": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\darklight-requiem-game\\Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalWalkNW_N20261027Selected.json",
+      "canonicalPpu": 168.93939393939394,
+      "candidate": {
+        "crownY": 37,
+        "hairBaseY": 117,
+        "beltCenterY": 161,
+        "soleEdgeY": 308,
+        "hairHeadSpanPx": 80,
+        "exposedBackTorsoPx": 44,
+        "crownToBeltPx": 124,
+        "beltToSolePx": 147,
+        "legOverUpperBody": 1.185,
+        "hairHeadOverBackTorso": 1.818
+      },
+      "canonical": {
+        "crownY": 31,
+        "hairBaseY": 124,
+        "beltCenterY": 187,
+        "soleEdgeY": 357,
+        "hairHeadSpanPx": 93,
+        "exposedBackTorsoPx": 63,
+        "crownToBeltPx": 156,
+        "beltToSolePx": 170,
+        "legOverUpperBody": 1.09,
+        "hairHeadOverBackTorso": 1.476
+      },
+      "densityEstimates": {
+        "fromHairHeadSpan": 145.3,
+        "fromExposedBackTorso": 118.0,
+        "fromCrownToBelt": 134.3
+      },
+      "applyPpu": null,
+      "reason": "Head-derived and torso-derived densities disagree; no PPU can restore anatomical ratio. Redraw complete figures against canonical head+torso before final calibration.",
+      "staticOppositeSupportsObserved": true,
+      "framesInspected": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "playbackReviewed": false
+    },
+    {
+      "direction": "NE",
+      "candidateFrameIndex": 8,
+      "candidateRect": [
+        0,
+        695,
+        377,
+        348
+      ],
+      "canonicalFrameIndex": 0,
+      "canonicalRect": [
+        2,
+        973,
+        371,
+        436
+      ],
+      "canonicalManifest": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\darklight-requiem-game\\ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact.json",
+      "canonicalPpu": 173.23232323232324,
+      "candidate": {
+        "crownY": 41,
+        "hairBaseY": 124,
+        "beltCenterY": 165,
+        "soleEdgeY": 306,
+        "hairHeadSpanPx": 83,
+        "exposedBackTorsoPx": 41,
+        "crownToBeltPx": 124,
+        "beltToSolePx": 141,
+        "legOverUpperBody": 1.137,
+        "hairHeadOverBackTorso": 2.024
+      },
+      "canonical": {
+        "crownY": 77,
+        "hairBaseY": 173,
+        "beltCenterY": 236,
+        "soleEdgeY": 422,
+        "hairHeadSpanPx": 96,
+        "exposedBackTorsoPx": 63,
+        "crownToBeltPx": 159,
+        "beltToSolePx": 186,
+        "legOverUpperBody": 1.17,
+        "hairHeadOverBackTorso": 1.524
+      },
+      "densityEstimates": {
+        "fromHairHeadSpan": 149.8,
+        "fromExposedBackTorso": 112.7,
+        "fromCrownToBelt": 135.1
+      },
+      "applyPpu": null,
+      "reason": "Head-derived and torso-derived densities disagree; no PPU can restore anatomical ratio. Redraw complete figures against canonical head+torso before final calibration.",
+      "staticOppositeSupportsObserved": true,
+      "framesInspected": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "playbackReviewed": false
+    }
+  ],
+  "neCrossCheck": {
+    "frameIndex": 1,
+    "canonicalPpu": 173.23232323232324,
+    "candidateFrameIndex": 8,
+    "canonical": {
+      "crownY": 55,
+      "hairBaseY": 148,
+      "beltCenterY": 213,
+      "soleEdgeY": 399,
+      "hairHeadSpanPx": 93,
+      "exposedBackTorsoPx": 65,
+      "crownToBeltPx": 158,
+      "beltToSolePx": 186,
+      "legOverUpperBody": 1.177,
+      "hairHeadOverBackTorso": 1.431
+    },
+    "densityFromHead": 154.6,
+    "densityFromTorso": 109.3,
+    "densityFromCrownToBelt": 136.0
+  },
+  "neLargeFrameWarning": {
+    "index": 3,
+    "actualPpu": 414.64646464646466,
+    "doNotUseSheetPpu173ForThisFrame": true,
+    "excludedFromManualRepresentativeMeasurement": true
+  },
+  "proposal": {
+    "apply": false,
+    "densityAfterArtCorrection": "Re-measure complete head+torso with canonical per-frame density. Current coroa-cinto estimates132â€“136 and head estimates139â€“155 are diagnostics only, not a final uniform PPU.",
+    "anatomicalAction": "Correct complete figures of NW/N/NE to canonical relative head and torso proportions; retain compact legs and opposite supports. No generation performed by this delegate."
+  },
+  "staticSixDirectionCoverage": {
+    "NW": "Opposite planted boot A/B visible; 4 static frames inspected",
+    "N": "Opposite planted boot A/B visible; 4 static frames inspected",
+    "NE": "Opposite planted boot A/B visible; 4 static frames inspected",
+    "S": "A/B front boot alternation visible in original front candidate; static only",
+    "SW": "A/B appear to repeat same leading visible leg; coordinator-owned correction, not modified",
+    "SE": "A/B appear to repeat same leading visible leg; coordinator-owned correction, not modified"
+  },
+  "registrationCaveat": "Candidate pivots [.5,.1] are placeholders: frames2/3 silhouettes displaced about32â€“36px horizontally relative to0/1; pelvis registration must be measured, not automatic bbox centering. Core sole edges NW314/N308/NE306 differ from default pivot y~312â€“313. No metadata applied.",
+  "approvedV3": {
+    "sourceSha256": "5de9d53e5e1a6976a7824d6bdc6c12f324757c81547c2b1e5584e92ea684e01e",
+    "unchanged": true,
+    "descriptorChanged": false
+  },
+  "sources": [
+    {
+      "manifest": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\moto-six-directions\\MotoWalkNW_N_NE-proportion-candidate\\MotoWalkNW_N_NE-proportion-candidate.json",
+      "manifestSha256": "847e964f1aac7f696de40dddc86faa77f17b118b59accc1ffd246ca263c668bc",
+      "image": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\moto-six-directions\\MotoWalkNW_N_NE-proportion-candidate\\MotoWalkNW_N_NE-proportion-candidate.png",
+      "imageSha256": "a83f57f776b5b1be45d066914217e37f731400b7b49a0b01f5c1ca07da754d83",
+      "sheetPpu": 160,
+      "framePixelsPerUnit": null,
+      "effectiveFrameDensityRule": "framePixelsPerUnit[index] if present, otherwise sheet pixelsPerUnit; per-frame renderPixelsPerUnit agrees for NE"
+    },
+    {
+      "manifest": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\darklight-requiem-game\\Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalWalkNW_N20261027Selected.json",
+      "manifestSha256": "72a6845de7382baf57c18ab3faf6373d9f9b27092ae2e46262c1406d397642bb",
+      "image": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\darklight-requiem-game\\Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalWalkNW_N20261027Selected.png",
+      "imageSha256": "b1d0a1faac94dba30ca6bf5d213a31ae860e51888675c817ca87e038e624c8f5",
+      "sheetPpu": 168.93939393939394,
+      "framePixelsPerUnit": null,
+      "effectiveFrameDensityRule": "framePixelsPerUnit[index] if present, otherwise sheet pixelsPerUnit; per-frame renderPixelsPerUnit agrees for NE"
+    },
+    {
+      "manifest": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\darklight-requiem-game\\ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact.json",
+      "manifestSha256": "8908eed25b74f0b74553f53955e7b25774a948624acd95274719d9c12816fc12",
+      "image": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\darklight-requiem-game\\ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact.png",
+      "imageSha256": "210896d6cc7e571ad290ce6bbcfdd5c964b23b4b7cd411f97a4e379b38989112",
+      "sheetPpu": 173.23232323232324,
+      "framePixelsPerUnit": [
+        173.23232323232324,
+        173.23232323232324,
+        173.23232323232324,
+        414.64646464646466,
+        173.23232323232324,
+        173.23232323232324,
+        173.23232323232324,
+        173.23232323232324,
+        173.23232323232324,
+        173.23232323232324,
+        173.23232323232324,
+        173.23232323232324
+      ],
+      "effectiveFrameDensityRule": "framePixelsPerUnit[index] if present, otherwise sheet pixelsPerUnit; per-frame renderPixelsPerUnit agrees for NE"
+    }
+  ],
+  "sourceWrites": false,
+  "assetsWrites": false,
+  "gitRun": false,
+  "unityRun": false,
+  "imageGeneration": false,
+  "playbackReviewed": false
+}

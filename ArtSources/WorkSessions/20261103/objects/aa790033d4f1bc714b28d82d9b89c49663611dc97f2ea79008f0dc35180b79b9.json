@@ -1,0 +1,793 @@
+{
+  "status": "READY_FOR_COORDINATOR for this Katana/Fists Walk staging pack only",
+  "scope": {
+    "skin": 0,
+    "form": 0,
+    "weapons": [
+      0,
+      2
+    ],
+    "actions": [
+      "Walk"
+    ],
+    "moto_walk_included": false
+  },
+  "catalogComparison": {
+    "currentCatalogPages": 297,
+    "complete": false,
+    "walk_contexts": 9,
+    "exact_context_matches": 0,
+    "contexts": [
+      {
+        "id": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_Walk_NE",
+        "weapon": 0,
+        "direction": 5,
+        "action": "Walk",
+        "exact_context_in_current_catalog": false,
+        "atlas": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact.png"
+      },
+      {
+        "id": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_Walk_E",
+        "weapon": 0,
+        "direction": 6,
+        "action": "Walk",
+        "exact_context_in_current_catalog": false,
+        "atlas": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact.png"
+      },
+      {
+        "id": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_Walk_SE",
+        "weapon": 0,
+        "direction": 7,
+        "action": "Walk",
+        "exact_context_in_current_catalog": false,
+        "atlas": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact.png"
+      },
+      {
+        "id": "ReqFistsNormalWalkN20261102NaturalV1_Walk_N",
+        "weapon": 2,
+        "direction": 4,
+        "action": "Walk",
+        "exact_context_in_current_catalog": false,
+        "atlas": "ReqFistsNormalWalkN20261102NaturalV1.png"
+      },
+      {
+        "id": "ReqFistsNormalWalkNE_SE20261102FeetFixedV3_Walk_NE",
+        "weapon": 2,
+        "direction": 5,
+        "action": "Walk",
+        "exact_context_in_current_catalog": false,
+        "atlas": "ReqFistsNormalWalkNE_SE20261102FeetFixedV3.png"
+      },
+      {
+        "id": "ReqFistsNormalWalkNE_SE20261102FeetFixedV3_Walk_SE",
+        "weapon": 2,
+        "direction": 7,
+        "action": "Walk",
+        "exact_context_in_current_catalog": false,
+        "atlas": "ReqFistsNormalWalkNE_SE20261102FeetFixedV3.png"
+      },
+      {
+        "id": "ReqFistsNormalWalkNW20261102NaturalV2Selected_Walk_NW",
+        "weapon": 2,
+        "direction": 3,
+        "action": "Walk",
+        "exact_context_in_current_catalog": false,
+        "atlas": "ReqFistsNormalWalkNW20261102NaturalV2Selected.png"
+      },
+      {
+        "id": "ReqFistsNormalWalkW20261102V9Complete_Walk_W",
+        "weapon": 2,
+        "direction": 2,
+        "action": "Walk",
+        "exact_context_in_current_catalog": false,
+        "atlas": "ReqFistsNormalWalkW20261102V9Complete.png"
+      },
+      {
+        "id": "ReqFistsNormalWalkE20261102V11Complete_Walk_E",
+        "weapon": 2,
+        "direction": 6,
+        "action": "Walk",
+        "exact_context_in_current_catalog": false,
+        "atlas": "ReqFistsNormalWalkE20261102V11Complete.png"
+      }
+    ]
+  },
+  "totals": {
+    "sheets": 6,
+    "clips": 9,
+    "frames": 36
+  },
+  "sha256_policy": "computed only the six selected archived atlas PNG hashes; descriptor/PAGES/catalog/full Assets hashes were not recomputed",
+  "static_contracts": {
+    "VerifySheet": "passed for six sheets",
+    "ValidPage": "passed for nine Walk pages",
+    "rects_in_bounds": true,
+    "rects_nonoverlapping": true
+  },
+  "rgba_proof": {
+    "frames_checked": 36,
+    "frames_exact": 36,
+    "operation": "read-only byte comparison of each original/output RGBA crop"
+  },
+  "source_files": [
+    {
+      "sheet": "ReqFistsNormalWalkE20261102V11Complete.png",
+      "source_sha256": "45f04aa44bb9287f52d98a7d15c6fe8bc2bc4acfa706a0d4243d6c1f26e8647e",
+      "atlas_copy_byte_exact": true,
+      "technical_source_copy_byte_exact": true,
+      "nativeSize": [
+        1166,
+        1060
+      ],
+      "sourceSize": [
+        1166,
+        1060
+      ],
+      "frame_count": 4,
+      "frames": [
+        {
+          "id": "Redesign_ReqFistsNormalWalkE20261102V11Complete_00",
+          "rect": [
+            0,
+            0,
+            583,
+            530
+          ],
+          "pivot": [
+            0.48027444253859347,
+            0.09433962264150944
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkE20261102V11Complete_01",
+          "rect": [
+            583,
+            0,
+            583,
+            530
+          ],
+          "pivot": [
+            0.48027444253859347,
+            0.09433962264150944
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkE20261102V11Complete_02",
+          "rect": [
+            0,
+            530,
+            583,
+            530
+          ],
+          "pivot": [
+            0.48027444253859347,
+            0.1320754716981132
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkE20261102V11Complete_03",
+          "rect": [
+            583,
+            530,
+            583,
+            530
+          ],
+          "pivot": [
+            0.48027444253859347,
+            0.1320754716981132
+          ],
+          "rgba_exact": true
+        }
+      ],
+      "old_source": {
+        "path": "ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalWalkE20261102V11Complete-source.png",
+        "sha256": "45f04aa44bb9287f52d98a7d15c6fe8bc2bc4acfa706a0d4243d6c1f26e8647e",
+        "size": [
+          1166,
+          1060
+        ],
+        "rawSourceAvailable": false,
+        "rawSourcePathAvailable": false,
+        "rawSourceContentExactMatchInReviewedAtlas": true
+      }
+    },
+    {
+      "sheet": "ReqFistsNormalWalkN20261102NaturalV1.png",
+      "source_sha256": "a6915f62431b385c7eb63ed365f9d109dfaa5bf44c5eb0f62df379af1ddfa1d7",
+      "atlas_copy_byte_exact": true,
+      "technical_source_copy_byte_exact": true,
+      "nativeSize": [
+        1768,
+        446
+      ],
+      "sourceSize": [
+        1768,
+        446
+      ],
+      "frame_count": 4,
+      "frames": [
+        {
+          "id": "Redesign_ReqFistsNormalWalkN20261102NaturalV1_00",
+          "rect": [
+            0,
+            0,
+            442,
+            446
+          ],
+          "pivot": [
+            0.4457013574660634,
+            0.033632286995515695
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkN20261102NaturalV1_01",
+          "rect": [
+            442,
+            0,
+            442,
+            446
+          ],
+          "pivot": [
+            0.4457013574660634,
+            0.033632286995515695
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkN20261102NaturalV1_02",
+          "rect": [
+            884,
+            0,
+            442,
+            446
+          ],
+          "pivot": [
+            0.4457013574660634,
+            0.033632286995515695
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkN20261102NaturalV1_03",
+          "rect": [
+            1326,
+            0,
+            442,
+            446
+          ],
+          "pivot": [
+            0.4457013574660634,
+            0.033632286995515695
+          ],
+          "rgba_exact": true
+        }
+      ],
+      "old_source": {
+        "path": "ArtSources/WeaponRedesign20261102/punhos-walk/ReqFistsNormalWalkN20261102NaturalV1-source.png",
+        "sha256": "9e7105f86a4495a1e7b33c52da1455781f2e10d22ce5a8737bc8cc113e1880c4",
+        "size": [
+          1774,
+          887
+        ],
+        "rawSourceAvailable": false,
+        "rawSourcePathAvailable": false,
+        "rawSourceContentExactMatchInReviewedAtlas": false
+      }
+    },
+    {
+      "sheet": "ReqFistsNormalWalkNE_SE20261102FeetFixedV3.png",
+      "source_sha256": "2acdd294b908d9aae305b6fe843e774e1fbbede7b03e1f4ed667e279b7d1b9ce",
+      "atlas_copy_byte_exact": true,
+      "technical_source_copy_byte_exact": true,
+      "nativeSize": [
+        4180,
+        1644
+      ],
+      "sourceSize": [
+        4180,
+        1644
+      ],
+      "frame_count": 8,
+      "frames": [
+        {
+          "id": "Redesign_ReqFistsNormalWalkNE_SE20261102FeetFixedV3_00",
+          "rect": [
+            0,
+            0,
+            1045,
+            822
+          ],
+          "pivot": [
+            0.5904306220095694,
+            0.08637469586374691
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkNE_SE20261102FeetFixedV3_01",
+          "rect": [
+            1045,
+            0,
+            1045,
+            822
+          ],
+          "pivot": [
+            0.5904306220095694,
+            0.08637469586374691
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkNE_SE20261102FeetFixedV3_02",
+          "rect": [
+            2090,
+            0,
+            1045,
+            822
+          ],
+          "pivot": [
+            0.5904306220095694,
+            0.08637469586374691
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkNE_SE20261102FeetFixedV3_03",
+          "rect": [
+            3135,
+            0,
+            1045,
+            822
+          ],
+          "pivot": [
+            0.5904306220095694,
+            0.08637469586374691
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkNE_SE20261102FeetFixedV3_04",
+          "rect": [
+            0,
+            822,
+            1045,
+            822
+          ],
+          "pivot": [
+            0.5904306220095694,
+            0.08637469586374691
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkNE_SE20261102FeetFixedV3_05",
+          "rect": [
+            1045,
+            822,
+            1045,
+            822
+          ],
+          "pivot": [
+            0.5904306220095694,
+            0.08637469586374691
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkNE_SE20261102FeetFixedV3_06",
+          "rect": [
+            2090,
+            822,
+            1045,
+            822
+          ],
+          "pivot": [
+            0.5904306220095694,
+            0.08637469586374691
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkNE_SE20261102FeetFixedV3_07",
+          "rect": [
+            3135,
+            822,
+            1045,
+            822
+          ],
+          "pivot": [
+            0.5904306220095694,
+            0.08637469586374691
+          ],
+          "rgba_exact": true
+        }
+      ],
+      "old_source": {
+        "path": "ArtSources/WeaponRedesign20261102/punhos-walk/ReqFistsNormalWalkNE_SE20261102FeetFixedV3-source.png",
+        "sha256": "2acdd294b908d9aae305b6fe843e774e1fbbede7b03e1f4ed667e279b7d1b9ce",
+        "size": [
+          4180,
+          1644
+        ],
+        "rawSourceAvailable": false,
+        "rawSourcePathAvailable": false,
+        "rawSourceContentExactMatchInReviewedAtlas": true
+      }
+    },
+    {
+      "sheet": "ReqFistsNormalWalkNW20261102NaturalV2Selected.png",
+      "source_sha256": "040513425f079b0661f6fec31d860d67b4e0d41c5a4a1ec7243bb0b4eadc5e11",
+      "atlas_copy_byte_exact": true,
+      "technical_source_copy_byte_exact": true,
+      "nativeSize": [
+        1400,
+        387
+      ],
+      "sourceSize": [
+        1400,
+        387
+      ],
+      "frame_count": 4,
+      "frames": [
+        {
+          "id": "Redesign_ReqFistsNormalWalkNW20261102NaturalV2Selected_00",
+          "rect": [
+            0,
+            0,
+            350,
+            387
+          ],
+          "pivot": [
+            0.44,
+            0.05426356589147287
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkNW20261102NaturalV2Selected_01",
+          "rect": [
+            350,
+            0,
+            350,
+            387
+          ],
+          "pivot": [
+            0.44571428571428573,
+            0.05167958656330749
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkNW20261102NaturalV2Selected_02",
+          "rect": [
+            700,
+            0,
+            350,
+            387
+          ],
+          "pivot": [
+            0.40285714285714286,
+            0.05426356589147287
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkNW20261102NaturalV2Selected_03",
+          "rect": [
+            1050,
+            0,
+            350,
+            387
+          ],
+          "pivot": [
+            0.45714285714285713,
+            0.05426356589147287
+          ],
+          "rgba_exact": true
+        }
+      ],
+      "old_source": {
+        "path": "ArtSources/WeaponRedesign20261102/punhos-walk/ReqFistsNormalWalkNW_W_SW20261102NaturalV2Nposes-source.png",
+        "sha256": "fb194e85835a62972027b3a1c551a72238276eaee0400220f71b29eb4ab0abd6",
+        "size": [
+          1450,
+          1085
+        ],
+        "rawSourceAvailable": false,
+        "rawSourcePathAvailable": false,
+        "rawSourceContentExactMatchInReviewedAtlas": false
+      }
+    },
+    {
+      "sheet": "ReqFistsNormalWalkW20261102V9Complete.png",
+      "source_sha256": "fc277495b34eac9754a0072ef71e592195464acff99fd8580923bd8249d125d4",
+      "atlas_copy_byte_exact": true,
+      "technical_source_copy_byte_exact": true,
+      "nativeSize": [
+        1166,
+        1060
+      ],
+      "sourceSize": [
+        1166,
+        1060
+      ],
+      "frame_count": 4,
+      "frames": [
+        {
+          "id": "Redesign_ReqFistsNormalWalkW20261102V9Complete_00",
+          "rect": [
+            0,
+            0,
+            583,
+            530
+          ],
+          "pivot": [
+            0.48027444253859347,
+            0.09433962264150944
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkW20261102V9Complete_01",
+          "rect": [
+            583,
+            0,
+            583,
+            530
+          ],
+          "pivot": [
+            0.48027444253859347,
+            0.09433962264150944
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkW20261102V9Complete_02",
+          "rect": [
+            0,
+            530,
+            583,
+            530
+          ],
+          "pivot": [
+            0.2161234991423671,
+            0.3660377358490566
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqFistsNormalWalkW20261102V9Complete_03",
+          "rect": [
+            583,
+            530,
+            583,
+            530
+          ],
+          "pivot": [
+            0.2161234991423671,
+            0.3660377358490566
+          ],
+          "rgba_exact": true
+        }
+      ],
+      "old_source": {
+        "path": "ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalWalkW20261102V9Complete-source.png",
+        "sha256": "fc277495b34eac9754a0072ef71e592195464acff99fd8580923bd8249d125d4",
+        "size": [
+          1166,
+          1060
+        ],
+        "rawSourceAvailable": false,
+        "rawSourcePathAvailable": false,
+        "rawSourceContentExactMatchInReviewedAtlas": true
+      }
+    },
+    {
+      "sheet": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact.png",
+      "source_sha256": "210896d6cc7e571ad290ce6bbcfdd5c964b23b4b7cd411f97a4e379b38989112",
+      "atlas_copy_byte_exact": true,
+      "technical_source_copy_byte_exact": true,
+      "nativeSize": [
+        1726,
+        1799
+      ],
+      "sourceSize": [
+        1726,
+        1799
+      ],
+      "frame_count": 12,
+      "frames": [
+        {
+          "id": "Redesign_ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_00",
+          "rect": [
+            2,
+            973,
+            371,
+            436
+          ],
+          "pivot": [
+            0.5390835579514824,
+            0.032110091743119296
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_01",
+          "rect": [
+            691,
+            973,
+            297,
+            401
+          ],
+          "pivot": [
+            0.5218855218855218,
+            0.004987531172069848
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_02",
+          "rect": [
+            992,
+            973,
+            316,
+            396
+          ],
+          "pivot": [
+            0.5379746835443038,
+            0.005050505050505083
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_03",
+          "rect": [
+            2,
+            2,
+            1437,
+            967
+          ],
+          "pivot": [
+            0.32080723729993044,
+            0.012409513960703222
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_04",
+          "rect": [
+            297,
+            1413,
+            358,
+            383
+          ],
+          "pivot": [
+            0.5921787709497207,
+            0.044386422976501305
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_05",
+          "rect": [
+            1312,
+            973,
+            302,
+            391
+          ],
+          "pivot": [
+            0.5695364238410596,
+            0.05882352941176472
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_06",
+          "rect": [
+            1001,
+            1413,
+            314,
+            373
+          ],
+          "pivot": [
+            0.5764331210191083,
+            0.013404825737265424
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_07",
+          "rect": [
+            1319,
+            1413,
+            277,
+            368
+          ],
+          "pivot": [
+            0.5703971119133574,
+            0.005434782608695676
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_08",
+          "rect": [
+            659,
+            1413,
+            338,
+            377
+          ],
+          "pivot": [
+            0.5828402366863905,
+            0.018567639257294433
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_09",
+          "rect": [
+            377,
+            973,
+            310,
+            423
+          ],
+          "pivot": [
+            0.5838709677419355,
+            0.1063829787234043
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_10",
+          "rect": [
+            1443,
+            2,
+            281,
+            379
+          ],
+          "pivot": [
+            0.5836298932384342,
+            0.0079155672823219
+          ],
+          "rgba_exact": true
+        },
+        {
+          "id": "Redesign_ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact_11",
+          "rect": [
+            2,
+            1413,
+            291,
+            384
+          ],
+          "pivot": [
+            0.5876288659793816,
+            0.01302083333333337
+          ],
+          "rgba_exact": true
+        }
+      ],
+      "old_source": {
+        "path": "ArtSources/WeaponRedesign20261102/katana-walk/ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact-source.png",
+        "sha256": "210896d6cc7e571ad290ce6bbcfdd5c964b23b4b7cd411f97a4e379b38989112",
+        "size": [
+          1726,
+          1799
+        ],
+        "rawSourceAvailable": false,
+        "rawSourcePathAvailable": false,
+        "rawSourceContentExactMatchInReviewedAtlas": true
+      }
+    }
+  ],
+  "project_mutations": {
+    "Assets": false,
+    "ArtSources": false,
+    "Git": false,
+    "Unity": false
+  },
+  "runtimeApproved": false
+}

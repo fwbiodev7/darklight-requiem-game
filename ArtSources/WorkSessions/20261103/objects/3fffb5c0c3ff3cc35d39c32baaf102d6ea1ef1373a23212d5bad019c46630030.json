@@ -1,0 +1,31 @@
+{
+  "status": "READY_FOR_COORDINATOR",
+  "applied": false,
+  "sourceUnchanged": true,
+  "targetManifest": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\continuacao-escola-20261103\\moto-walk\\ReqMotoNormalWalkW_E20261103SchoolV2.json",
+  "targetManifestSha256": "7f77a3eae87fca799d7599f23429406ea64152bef6e6573f026656f5c8d16930",
+  "keepPixelsPerUnit": 186.36363636363637,
+  "ppuEvidence": "Retain uniform PPU: crown-to-belt gives Moto W 0.9122, E 0.8961 versus Moto S 0.9032 and SW 0.9040 world units (manual uncertainty). Previous total-height derivation is superseded as justification; no visual/anatomical scaling correction applied.",
+  "requiredBeforeImport": [
+    "Temporal review by coordinator: W/E four-phase cycle 4->1, low swing/contact and foot sliding/idle transitions",
+    "Stage exact composite source under declared ArtSources path; verify SHA256 f7183e8e8c255aab2b22dd60b58dfb09ee81b2c38583ad8d3ddd71d25baed9e0",
+    "After real review, coordinator may set status visual-reviewed and update review fields; no automatic status promotion",
+    "Import actual RGBA32/Point/NPOTNone/uncompressed/MipmapOff slices with stable GUID/name tracking and actual max size >=1920",
+    "Add only Walk pages skin0 weapon3 form0 W=2/E=6 using existing bank, four IDs+120ms/loop; verify OnFoot path selects them and Mounted path retains motorcycle"
+  ],
+  "replaceIntegrationBlockReason": "Pending actual W/E temporal review, exact source installation, bounded catalog/import configuration and Unity verification; independent of any absent home package or unrelated older sheets.",
+  "optionalRegistrationProposal": {
+    "applyOnlyAfterTemporalReview": true,
+    "currentPivotPixel": [
+      240,
+      420
+    ],
+    "candidatePivotPixel": [
+      240,
+      419
+    ],
+    "reason": "Core sole edge419 for all W and E contact; E passing420. A uniform 1px root shift would reduce W static 1px gap without altering source. Difference is within manual uncertainty and need not be applied before seeing runtime.",
+    "notAnArtCorrection": true
+  },
+  "noImageGenerationNeeded": "No concrete mature-proportion defect established; do not regenerate correct complete figures speculatively."
+}

@@ -1,0 +1,194 @@
+{
+  "ok": true,
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\ew-consistency-v1\\W-B-candidates8-source.png",
+  "sourceSha256": "b2a6431574fd2772a3a048b0ec56f0dfcb98215b25484cc9e3abfdae20372233",
+  "errors": [],
+  "warnings": [
+    "inspect_W_B_candidate_00: visible pixels touch frame edge; inspect clipping",
+    "inspect_W_B_candidate_00: 34912 colors exceed declared 256",
+    "inspect_W_B_candidate_01: visible pixels touch frame edge; inspect clipping",
+    "inspect_W_B_candidate_01: 34882 colors exceed declared 256",
+    "inspect_W_B_candidate_02: visible pixels touch frame edge; inspect clipping",
+    "inspect_W_B_candidate_02: 36186 colors exceed declared 256",
+    "inspect_W_B_candidate_03: visible pixels touch frame edge; inspect clipping",
+    "inspect_W_B_candidate_03: 33968 colors exceed declared 256",
+    "inspect_W_B_candidate_04: visible pixels touch frame edge; inspect clipping",
+    "inspect_W_B_candidate_04: 35139 colors exceed declared 256",
+    "inspect_W_B_candidate_05: visible pixels touch frame edge; inspect clipping",
+    "inspect_W_B_candidate_05: 34446 colors exceed declared 256",
+    "inspect_W_B_candidate_06: visible pixels touch frame edge; inspect clipping",
+    "inspect_W_B_candidate_06: 34308 colors exceed declared 256",
+    "inspect_W_B_candidate_07: visible pixels touch frame edge; inspect clipping",
+    "inspect_W_B_candidate_07: 33706 colors exceed declared 256",
+    "More than 10% of visible samples have partial alpha; inspect halos/native pixel rendering"
+  ],
+  "frames": [
+    {
+      "id": "inspect_W_B_candidate_00",
+      "rect": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "bbox": [
+        0,
+        7,
+        443,
+        443
+      ],
+      "visiblePixels": 74327,
+      "colors": 34912,
+      "partialAlphaPixels": 74286,
+      "pixelSha256": "b958b993736297bf0e7562d50e4dabb25518cfc1a9f384e9d34f6e954bcac2b8"
+    },
+    {
+      "id": "inspect_W_B_candidate_01",
+      "rect": [
+        443,
+        0,
+        444,
+        443
+      ],
+      "bbox": [
+        0,
+        0,
+        444,
+        443
+      ],
+      "visiblePixels": 77470,
+      "colors": 34882,
+      "partialAlphaPixels": 77446,
+      "pixelSha256": "b9ca0925adeb2f082101ee924751bd0253f3e9279ef00ef35eb57e162fcbe11b"
+    },
+    {
+      "id": "inspect_W_B_candidate_02",
+      "rect": [
+        887,
+        0,
+        443,
+        443
+      ],
+      "bbox": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "visiblePixels": 76369,
+      "colors": 36186,
+      "partialAlphaPixels": 76338,
+      "pixelSha256": "7b87a099c6e378b14fd27739225043168a8c0542e1624c8b07c5ea6558c09545"
+    },
+    {
+      "id": "inspect_W_B_candidate_03",
+      "rect": [
+        1330,
+        0,
+        444,
+        443
+      ],
+      "bbox": [
+        0,
+        0,
+        430,
+        443
+      ],
+      "visiblePixels": 77295,
+      "colors": 33968,
+      "partialAlphaPixels": 77236,
+      "pixelSha256": "c1d2792746df5acd02f30c8cc94b2b36a6e3c2a91bc4beef7eab8a5b6011f7f6"
+    },
+    {
+      "id": "inspect_W_B_candidate_04",
+      "rect": [
+        0,
+        443,
+        443,
+        444
+      ],
+      "bbox": [
+        0,
+        0,
+        443,
+        444
+      ],
+      "visiblePixels": 76770,
+      "colors": 35139,
+      "partialAlphaPixels": 76707,
+      "pixelSha256": "e569dc02937846bde0092904a0a08d7663fef7efc1a05e1a19227ccb0eb0935a"
+    },
+    {
+      "id": "inspect_W_B_candidate_05",
+      "rect": [
+        443,
+        443,
+        444,
+        444
+      ],
+      "bbox": [
+        0,
+        0,
+        444,
+        444
+      ],
+      "visiblePixels": 70304,
+      "colors": 34446,
+      "partialAlphaPixels": 70275,
+      "pixelSha256": "8f195dc933a67ad7d253e26efae1d39a997eb968897fd3e48572082b4cbd49f4"
+    },
+    {
+      "id": "inspect_W_B_candidate_06",
+      "rect": [
+        887,
+        443,
+        443,
+        444
+      ],
+      "bbox": [
+        0,
+        0,
+        443,
+        444
+      ],
+      "visiblePixels": 73500,
+      "colors": 34308,
+      "partialAlphaPixels": 73480,
+      "pixelSha256": "fc11bec5d1104b8ff7ccf2b7f4df3183f26804b7df0f7ea39be85bd86304088d"
+    },
+    {
+      "id": "inspect_W_B_candidate_07",
+      "rect": [
+        1330,
+        443,
+        444,
+        444
+      ],
+      "bbox": [
+        0,
+        0,
+        438,
+        444
+      ],
+      "visiblePixels": 72362,
+      "colors": 33706,
+      "partialAlphaPixels": 72327,
+      "pixelSha256": "0cad26fe1f0451e3ed5001b9d739af22465f8d5df1d458ea7e066686b39094f3"
+    }
+  ],
+  "clips": [
+    {
+      "name": "inspection_contact_B_variants_REJECTED",
+      "frames": 4,
+      "distinctPoses": 4
+    },
+    {
+      "name": "inspection_passing_B_variants_REJECTED",
+      "frames": 4,
+      "distinctPoses": 4
+    }
+  ],
+  "overlaps": [],
+  "visualApproval": false,
+  "runtimeVerified": false
+}

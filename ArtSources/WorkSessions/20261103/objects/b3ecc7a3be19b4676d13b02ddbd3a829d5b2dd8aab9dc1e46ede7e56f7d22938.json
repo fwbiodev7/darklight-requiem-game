@@ -1,0 +1,105 @@
+{
+  "ok": true,
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\cycle-v2\\ReqFistsNormalWalkSW20261103CycleV2.png",
+  "sourceSha256": "ec7f4fa53504106dcbf35067d6a12c4507be8746bef45a6c121de3836810882f",
+  "errors": [],
+  "warnings": [
+    "Redesign_ReqFistsNormalWalkSW20261103CycleV2_00: visible pixels touch frame edge; inspect clipping",
+    "Redesign_ReqFistsNormalWalkSW20261103CycleV2_00: 67229 colors exceed declared 256",
+    "Redesign_ReqFistsNormalWalkSW20261103CycleV2_01: visible pixels touch frame edge; inspect clipping",
+    "Redesign_ReqFistsNormalWalkSW20261103CycleV2_01: 64474 colors exceed declared 256",
+    "Redesign_ReqFistsNormalWalkSW20261103CycleV2_02: visible pixels touch frame edge; inspect clipping",
+    "Redesign_ReqFistsNormalWalkSW20261103CycleV2_02: 65873 colors exceed declared 256",
+    "Redesign_ReqFistsNormalWalkSW20261103CycleV2_03: visible pixels touch frame edge; inspect clipping",
+    "Redesign_ReqFistsNormalWalkSW20261103CycleV2_03: 142887 colors exceed declared 256",
+    "More than 10% of visible samples have partial alpha; inspect halos/native pixel rendering"
+  ],
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsNormalWalkSW20261103CycleV2_00",
+      "rect": [
+        0,
+        0,
+        599,
+        656
+      ],
+      "bbox": [
+        0,
+        21,
+        599,
+        652
+      ],
+      "visiblePixels": 136387,
+      "colors": 67229,
+      "partialAlphaPixels": 136302,
+      "pixelSha256": "5022b2505a7cd2e7105c8fb90dcff9e02c119b62b29a3f35e9d591c8e18b14e5"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkSW20261103CycleV2_01",
+      "rect": [
+        599,
+        0,
+        600,
+        656
+      ],
+      "bbox": [
+        0,
+        23,
+        576,
+        656
+      ],
+      "visiblePixels": 127806,
+      "colors": 64474,
+      "partialAlphaPixels": 127688,
+      "pixelSha256": "987fd9c39f056241bb1e904fd7d4e3649372eb3cdcccbce9c0d361b21e9a948b"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkSW20261103CycleV2_02",
+      "rect": [
+        1199,
+        0,
+        600,
+        656
+      ],
+      "bbox": [
+        0,
+        3,
+        570,
+        656
+      ],
+      "visiblePixels": 130396,
+      "colors": 65873,
+      "partialAlphaPixels": 130318,
+      "pixelSha256": "8c0012e8023ce3a1538d63618794fd40778fc4dbb9ee1829cbd1fff25d9b9272"
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkSW20261103CycleV2_03",
+      "rect": [
+        1799,
+        0,
+        1199,
+        1312
+      ],
+      "bbox": [
+        0,
+        15,
+        1187,
+        1296
+      ],
+      "visiblePixels": 467351,
+      "colors": 142887,
+      "partialAlphaPixels": 467167,
+      "pixelSha256": "8e204fc61d985fa179f70af114016b0e5cbd41769481e87d90d4909f8fe62c2f"
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_SW",
+      "frames": 4,
+      "distinctPoses": 4
+    }
+  ],
+  "overlaps": [],
+  "visualApproval": false,
+  "runtimeVerified": false
+}

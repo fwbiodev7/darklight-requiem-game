@@ -1,0 +1,20 @@
+{
+  "status": "PENDING_WITH_REASON",
+  "workProduced": true,
+  "apply": false,
+  "correctFramesPreservedExact": 3,
+  "newWholeCandidatesSelected": 3,
+  "oneImageGeneration": true,
+  "noFurtherGeneration": true,
+  "currentAuthorityVerified": true,
+  "hairPaletteGatePassed": false,
+  "continuousMotionViewed": false,
+  "imported": false,
+  "runtimeVerified": false,
+  "reasons": [
+    "New candidates visibly/sample-wise lighten the hair versus approved IdleN; palette gate failed. New full figures are not final.",
+    "Continuous playback, low passing/loop5->0 and actual runtime registration remain unreviewed."
+  ],
+  "sourceVerificationByCoordinator": "origin/integracao-completa-20261026 = HEAD852e612, previous-day work confirmed",
+  "noIntegrationAtBudgetStop": true
+}

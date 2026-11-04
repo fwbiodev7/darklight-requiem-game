@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqFistsNormalWalkW20261102V9Complete.png",
+  "imageSha256": "fc277495b34eac9754a0072ef71e592195464acff99fd8580923bd8249d125d4",
+  "nativeSize": [
+    1166,
+    1060
+  ],
+  "sourceSize": [
+    1166,
+    1060
+  ],
+  "pixelsPerUnit": 214.3939393939394,
+  "framePixelsPerUnit": [
+    214.3939393939394,
+    214.3939393939394,
+    159.59595959595958,
+    159.59595959595958
+  ],
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalWalkW20261102V9Complete-source.png",
+  "sourceSha256": "fc277495b34eac9754a0072ef71e592195464acff99fd8580923bd8249d125d4",
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsNormalWalkW20261102V9Complete_00",
+      "rect": [
+        0,
+        0,
+        583,
+        530
+      ],
+      "pivot": [
+        0.48027444253859347,
+        0.09433962264150944
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        0,
+        583,
+        530
+      ],
+      "sourceAnchor": [
+        280,
+        480
+      ],
+      "sourceScale": 1,
+      "lineage": {
+        "image": "outputs/retomada-20261102/punhos-walk/staging/ReqFistsNormalWalkE_W20261102NaturalV3FootTracks.png",
+        "imageSha256": "bbab055472b8179b98f7d32902d44bc03c9e5f6c4d73dd3875b5497794e9be1d",
+        "frameId": "Redesign_ReqFistsNormalWalkE_W20261102NaturalV3FootTracks_04",
+        "rect": [
+          0,
+          530,
+          583,
+          530
+        ],
+        "pixelsPerUnit": 214.3939393939394
+      }
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkW20261102V9Complete_01",
+      "rect": [
+        583,
+        0,
+        583,
+        530
+      ],
+      "pivot": [
+        0.48027444253859347,
+        0.09433962264150944
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        583,
+        0,
+        583,
+        530
+      ],
+      "sourceAnchor": [
+        863,
+        480
+      ],
+      "sourceScale": 1,
+      "lineage": {
+        "image": "outputs/retomada-20261102/punhos-walk/staging/ReqFistsNormalWalkE_W20261102NaturalV3FootTracks.png",
+        "imageSha256": "bbab055472b8179b98f7d32902d44bc03c9e5f6c4d73dd3875b5497794e9be1d",
+        "frameId": "Redesign_ReqFistsNormalWalkE_W20261102NaturalV3FootTracks_05",
+        "rect": [
+          583,
+          530,
+          583,
+          530
+        ],
+        "pixelsPerUnit": 214.3939393939394
+      }
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkW20261102V9Complete_02",
+      "rect": [
+        0,
+        530,
+        583,
+        530
+      ],
+      "pivot": [
+        0.2161234991423671,
+        0.3660377358490566
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        0,
+        530,
+        583,
+        530
+      ],
+      "sourceAnchor": [
+        126,
+        866
+      ],
+      "sourceScale": 1,
+      "lineage": {
+        "image": "outputs/retomada-20261102/normal-fists-completion/staging/ReqFistsNormalWalkW20261102V9OppositeHalf.png",
+        "imageSha256": "1ffb8866fce9937506a155551697db14bc439127b57412b57d60f5257c53fd3a",
+        "frameId": "Redesign_ReqFistsNormalWalkW20261102V9OppositeHalf_00",
+        "rect": [
+          0,
+          0,
+          379,
+          358
+        ],
+        "pixelsPerUnit": 159.59595959595958
+      }
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkW20261102V9Complete_03",
+      "rect": [
+        583,
+        530,
+        583,
+        530
+      ],
+      "pivot": [
+        0.2161234991423671,
+        0.3660377358490566
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        583,
+        530,
+        583,
+        530
+      ],
+      "sourceAnchor": [
+        709,
+        866
+      ],
+      "sourceScale": 1,
+      "lineage": {
+        "image": "outputs/retomada-20261102/normal-fists-completion/staging/ReqFistsNormalWalkW20261102V9OppositeHalf.png",
+        "imageSha256": "1ffb8866fce9937506a155551697db14bc439127b57412b57d60f5257c53fd3a",
+        "frameId": "Redesign_ReqFistsNormalWalkW20261102V9OppositeHalf_01",
+        "rect": [
+          379,
+          0,
+          379,
+          358
+        ],
+        "pixelsPerUnit": 159.59595959595958
+      }
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_W",
+      "frames": [
+        "Redesign_ReqFistsNormalWalkW20261102V9Complete_00",
+        "Redesign_ReqFistsNormalWalkW20261102V9Complete_01",
+        "Redesign_ReqFistsNormalWalkW20261102V9Complete_02",
+        "Redesign_ReqFistsNormalWalkW20261102V9Complete_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "walk_W"
+  ],
+  "logicalResolution": "Native raster; logical pixel grid unverified",
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "notes": [
+    "Full figures only; first2 original W frames byte-identical; opposite2 complete authored figures selected.",
+    "Individual PPU expresses native raster density only. WorldVisualScale1.325 unchanged.",
+    "Static review only; continuous motion, Unity and runtime pending.",
+    "Do not infer gait from global boot x-order; examine each own hip/knee/heel/toe support."
+  ]
+}

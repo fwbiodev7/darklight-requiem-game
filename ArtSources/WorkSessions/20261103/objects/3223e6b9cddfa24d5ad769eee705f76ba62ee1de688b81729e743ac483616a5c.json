@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\moto-qa\\katana-walk-n-repair\\staging-v1\\ReqKatanaNormalWalkNWholeRepair20261103V1.png",
+  "sourceSha256": "c9aa277ab5157f0b0f068fa79fbaac492c0a2cc8a3b890768013ade39cf124be",
+  "errors": [],
+  "warnings": [
+    "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_00: 27824 colors exceed declared 256",
+    "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_01: 28377 colors exceed declared 256",
+    "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_02: 28171 colors exceed declared 256",
+    "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_03: 25444 colors exceed declared 256",
+    "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_04: 25309 colors exceed declared 256",
+    "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_05: 24503 colors exceed declared 256",
+    "walk_N: apparent height variation; inspect anatomy versus intentional pose/effects",
+    "More than 10% of visible samples have partial alpha; inspect halos/native pixel rendering"
+  ],
+  "frames": [
+    {
+      "id": "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_00",
+      "rect": [
+        0,
+        0,
+        560,
+        520
+      ],
+      "bbox": [
+        160,
+        85,
+        516,
+        427
+      ],
+      "visiblePixels": 50948,
+      "colors": 27824,
+      "partialAlphaPixels": 50847,
+      "pixelSha256": "af10789c53bb50e24e313d4d5c6284ea05d5f06a2cc01d0eb60e3dae834fde02"
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_01",
+      "rect": [
+        560,
+        0,
+        560,
+        520
+      ],
+      "bbox": [
+        178,
+        87,
+        515,
+        426
+      ],
+      "visiblePixels": 50276,
+      "colors": 28377,
+      "partialAlphaPixels": 50174,
+      "pixelSha256": "3d5be69988f4779ad9e27a01c694663c4318a39632dcf114d59694f13df75659"
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_02",
+      "rect": [
+        1120,
+        0,
+        560,
+        520
+      ],
+      "bbox": [
+        152,
+        87,
+        468,
+        426
+      ],
+      "visiblePixels": 49252,
+      "colors": 28171,
+      "partialAlphaPixels": 49109,
+      "pixelSha256": "7e343c84209ea9c7473df92bf9b7738e4d16f81d1a3e219c358ae1c1125080f5"
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_03",
+      "rect": [
+        0,
+        520,
+        560,
+        520
+      ],
+      "bbox": [
+        72,
+        57,
+        490,
+        446
+      ],
+      "visiblePixels": 54727,
+      "colors": 25444,
+      "partialAlphaPixels": 54499,
+      "pixelSha256": "ff092de6badf72fca06f7ea7b7d8d9a583d5cf81e65a90804196a53e62014408"
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_04",
+      "rect": [
+        560,
+        520,
+        560,
+        520
+      ],
+      "bbox": [
+        72,
+        57,
+        490,
+        474
+      ],
+      "visiblePixels": 54451,
+      "colors": 25309,
+      "partialAlphaPixels": 54265,
+      "pixelSha256": "8aa6b7630c1ffc263236b9e6cdd7f9931741b50fffcfbf3e507135c6102a7d9c"
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalWalkNWholeRepair20261103V1_05",
+      "rect": [
+        1120,
+        520,
+        560,
+        520
+      ],
+      "bbox": [
+        72,
+        63,
+        490,
+        474
+      ],
+      "visiblePixels": 51107,
+      "colors": 24503,
+      "partialAlphaPixels": 50899,
+      "pixelSha256": "b948eb45f6fc38f237b7e14dd10052e528a08e714956d586675c877d99a97d6e"
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_N",
+      "frames": 6,
+      "distinctPoses": 6
+    }
+  ],
+  "overlaps": [],
+  "visualApproval": false,
+  "runtimeVerified": false
+}

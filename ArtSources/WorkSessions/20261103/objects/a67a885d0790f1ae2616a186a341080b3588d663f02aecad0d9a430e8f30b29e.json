@@ -1,0 +1,42 @@
+{
+  "scope": "Inspeção visual estática dos 18 boards de Attack atuais e arquivados (Katana, Punhos, Moto). Não cobre Idle/Walk/Dodge/Dead/Hurt/Parry, que estão com o coordenador.",
+  "method": "Observação direta dos boards PNG fornecidos, em prévias reduzidas salvas apenas em work/animation-review-previews. Nenhum PNG original foi alterado.",
+  "boardsViewed": [
+    "attack-Katana-Leve1.png", "attack-Katana-Leve2.png", "attack-Katana-Leve3.png",
+    "archive-attack-Katana-Carregado.png", "archive-attack-Katana-ContraAtaque.png", "archive-attack-Katana-KatanaAerial.png", "archive-attack-Katana-OndaDoVeu.png", "archive-attack-Katana-Pesado.png",
+    "attack-Punhos-Direto_da_Ruina.png", "attack-Punhos-Chute_Quebra-Osso.png", "attack-Punhos-Ascensao_da_Ruina.png", "attack-Punhos-Giro_Devastador.png",
+    "archive-attack-Punhos-Cataclismo_da_Ruina.png", "archive-attack-Punhos-Juizo_da_Ruina.png", "archive-attack-Punhos-Martelo_da_Ruina.png", "archive-attack-Punhos-Resposta_Brutal.png",
+    "attack-Moto-Dentes_Cruzados.png", "archive-attack-Moto-Serra_de_Entrada.png"
+  ],
+  "overallFinding": {
+    "head": "Nas 18 folhas, a cabeça mantém aparência e escala visual semelhantes em relação ao uniforme e ombros. Os quadros vistos não mostram mudança persistente do tamanho da cabeça.",
+    "trunk": "Não vi alteração persistente de comprimento/largura do tronco entre famílias. Inclinação e compactação variam com o golpe: sobretudo nos quadros de impacto baixo dos ataques de Punhos e nas investidas de Katana/Moto.",
+    "legs": "Não vi encurtamento/alongamento persistente das pernas como característica entre famílias. Joelhos flexionados, base aberta, perna de apoio única e pernas recolhidas coincidem com poses de impacto, chute/giro ou salto.",
+    "limit": "Isto é julgamento qualitativo de sprites estáticos nos boards, não medição de pixels por osso nem comparação em runtime. Variações de perspectiva/direção e posição do quadro podem aparentar mudança de altura."
+  },
+  "byBoard": [
+    {"board":"attack-Katana-Leve1.png","observation":"Quatro poses por direção; corpo geralmente em base baixa com joelhos flexionados. Braço/katana descrevem arco e cruzam o tronco. A cabeça permanece no mesmo conjunto de proporções; diferenças de altura acompanham inclinação/agachamento."},
+    {"board":"attack-Katana-Leve2.png","observation":"Combo em quatro quadros, alternando lâmina baixa, giro/arcada e preparação elevada. Tronco gira, pernas permanecem em base de apoio; não há mudança morfológica visível."},
+    {"board":"attack-Katana-Leve3.png","observation":"Golpe pesado com lâmina erguida nos quadros iniciais, corte baixo no terceiro e retorno no quarto. O terceiro quadro comprime tronco e dobra joelhos; é a pose do corte, não uma figura menor."},
+    {"board":"archive-attack-Katana-Carregado.png","observation":"Preparação com espada elevada, seguida de corte e recuperação. Em várias direções o quadro de corte baixa o centro do corpo e abre a base. Silhueta da cabeça e proporções do uniforme se mantêm."},
+    {"board":"archive-attack-Katana-ContraAtaque.png","observation":"Golpe de resposta predominantemente ereto: braço/lâmina estende para a frente e retorna à guarda. Menos compressão de pernas que Carregado/Pesado; sem alteração física observável."},
+    {"board":"archive-attack-Katana-KatanaAerial.png","observation":"Quadros 1–2 mostram pernas recolhidas e corpo suspenso; quadros 0/3 ficam baixos. É a leitura visual de salto/ataque aéreo, não pernas menores ou tronco encurtado."},
+    {"board":"archive-attack-Katana-OndaDoVeu.png","observation":"Corte amplo horizontal, braço/lâmina atravessam a frente do corpo; o quadro de impacto baixa o tronco e flexiona joelhos, seguido de retorno mais vertical."},
+    {"board":"archive-attack-Katana-Pesado.png","observation":"Quatro poses com avanço/lunge e lâmina baixa. Algumas direções têm passada ampla e tronco projetado; a variação está concentrada na postura do golpe."},
+    {"board":"attack-Punhos-Direto_da_Ruina.png","observation":"Três quadros de guarda, soco estendido e recuperação. O braço/luva em primeiro plano altera a largura percebida; cabeça, tronco e pernas não mostram deriva de proporção entre quadros."},
+    {"board":"attack-Punhos-Chute_Quebra-Osso.png","observation":"A perna atacante sobe/estende e a outra sustenta a figura. A altura aparente da pelve e do tronco acompanha o chute; não é evidência de mudança no comprimento das pernas."},
+    {"board":"attack-Punhos-Ascensao_da_Ruina.png","observation":"Punho sobe em arco enquanto a outra mão protege. Há flexão e rotação de tronco, mas a base continua apoiada na maioria das poses mostradas; o board não demonstra salto claro."},
+    {"board":"attack-Punhos-Giro_Devastador.png","observation":"Chute giratório: uma perna se estende lateralmente, a outra funciona como apoio e o tronco roda. A silhueta alongada é direcional/posicional, sem mudança anatômica persistente."},
+    {"board":"archive-attack-Punhos-Cataclismo_da_Ruina.png","observation":"Quadro central abaixa muito a cabeça e dobra o tronco para aproximar as mãos do chão; quadro final volta à guarda. Compactação marcante é pose de impacto/agachamento."},
+    {"board":"archive-attack-Punhos-Juizo_da_Ruina.png","observation":"Preparação com braço elevado, contato muito baixo com tronco dobrado e recuperação. A diferença de altura da cabeça entre contato e retorno vem da flexão visível."},
+    {"board":"archive-attack-Punhos-Martelo_da_Ruina.png","observation":"Dois braços sobre a cabeça, impacto com ambas as mãos próximas ao chão e retorno ereto. É o exemplo mais claro de mudança de altura por agachamento; proporção cabeça/torso não muda de forma persistente."},
+    {"board":"archive-attack-Punhos-Resposta_Brutal.png","observation":"Guarda defensiva, soco curto e retorno à guarda. Postura relativamente alta e estável; sem diferença anatômica evidente."},
+    {"board":"attack-Moto-Dentes_Cruzados.png","observation":"Ataque em pé com motosserras duplas; o quadro de ação inclina o tronco e amplia a base, com retorno simétrico. As serras aumentam muito a largura visual, não os braços/corpo."},
+    {"board":"archive-attack-Moto-Serra_de_Entrada.png","observation":"Figura a pé com motosserras, investe e baixa o tronco no quadro de contato; restante volta a uma postura alta. Os boards não mostram motocicleta montada. O abaixamento é da investida, não redução anatômica."}
+  ],
+  "comparison": {
+    "currentVersusArchive": "Nos boards inspecionados, as famílias atuais e arquivadas mantêm a mesma identidade visual geral (cabeça/cabelo, uniforme, luvas/armas e escala relativa). As diferenças mais fortes são ações e silhuetas: salto em KatanaAerial, lunge/corte baixo em Pesado/Carregado, contato ao chão nos Punhos Cataclismo/Juízo/Martelo, e chutes/giro nas famílias atuais de Punhos.",
+    "heightReading": "A posição superior/inferior do sprite nos quadros não deve ser usada isoladamente como altura física: os painéis não trazem rastreamento de âncora corporal e exibem poses em perspectivas/direções diferentes.",
+    "runtime": "Boards rotulam as sequências como simulação/preview e indicam Unity não verificada (ou arquivo revisado ainda não aplicado). Não atestam importação, temporização em jogo, movimento natural em playback ou correspondência com referência oficial."
+  }
+}

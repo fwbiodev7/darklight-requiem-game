@@ -1,0 +1,230 @@
+{
+  "status": "VISUAL_REVIEW_COMPLETE_8_DIRECTIONS",
+  "scope": "Visual body-scale comparison stopped after W boards/crops; no further UI or heavy inspection. No project/assets/Unity/Git changes.",
+  "visualBoardsActuallyInspected": [
+    "cross-action-S-W.png",
+    "Moto Parry W extracted crop",
+    "Katana Idle W extracted crop",
+    "Katana Parry W extracted crop",
+    "Moto Walk V3 W extracted crop",
+    "Moto Hurt W extracted crop",
+    "work/body-ratio-previews/parry-cardinal.png (S/W/N/E for Katana/Fists/Moto)",
+    "work/body-ratio-previews/parry-diagonal.png (SW/NW/NE/SE for Katana/Fists/Moto)"
+  ],
+  "data": {
+    "MotoParryW": {
+      "page": "ReqMotoNormalParry8Dirs20261103V1_Parry_W",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "pagePPU": 176.99314574314573,
+      "frameRectPx": [
+        331,
+        417
+      ],
+      "pivot": [
+        0.48942598187311176,
+        0.023980815347721784
+      ]
+    },
+    "KatanaParryW": {
+      "page": "ReqKatanaNormalParry8Dirs20261103V3_Parry_W",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "pagePPU": 178.6,
+      "frameRectPx": [
+        274,
+        371
+      ],
+      "pivot": [
+        0.4854014598540146,
+        0.03234501347708896
+      ]
+    },
+    "KatanaIdleW": {
+      "page": "ReqKatanaNormalNeutralIdleS_SW_W20261025_Idle_W",
+      "nativeSize": [
+        1776,
+        1047
+      ],
+      "pagePPU": 157.57575757575756,
+      "frameRectPx": [
+        444,
+        349
+      ],
+      "pivot": [
+        0.6058558558558559,
+        0.0830945558739255
+      ]
+    },
+    "MotoWalkV3W": {
+      "page": "ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_Walk_W",
+      "nativeSize": [
+        1920,
+        1040
+      ],
+      "pagePPU": 186.36363636363637,
+      "frameRectPx": [
+        480,
+        520
+      ],
+      "sourceRectPx": [
+        0,
+        0,
+        443,
+        444
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ]
+    },
+    "MotoHurtW": {
+      "page": "ReqMotoNormalHurtS_SW_W_NW20261103V1_Hurt_W",
+      "nativeSize": [
+        1024,
+        1536
+      ],
+      "pagePPU": 181.50252525252523,
+      "frameRectPx": [
+        373,
+        365
+      ],
+      "sourceRectPx": [
+        74,
+        21,
+        408,
+        360
+      ],
+      "pivot": [
+        0.4718498659517426,
+        0.0273972602739726
+      ]
+    }
+  },
+  "approxLandmarkReadsFromWPreviewPx": {
+    "definition": "Approximate visual coordinates in each extracted frame, origin top-left. Crown is top of head silhouette; chin, belt center and foot contact are manually read from a 20px grid. Hair/weapon silhouette is not used as the full-body height. These readings are preliminary, not pixel-segmented measurements.",
+    "MotoParryW": {
+      "crownY": 5,
+      "chinY": 114,
+      "beltY": 207,
+      "soleY": 391,
+      "ppu": 176.99314574314573,
+      "segmentsWorldApprox": {
+        "crown-chin": 0.616,
+        "chin-belt": 0.525,
+        "belt-sole": 1.04
+      }
+    },
+    "KatanaParryW": {
+      "crownY": 18,
+      "chinY": 126,
+      "beltY": 199,
+      "soleY": 360,
+      "ppu": 178.6,
+      "segmentsWorldApprox": {
+        "crown-chin": 0.605,
+        "chin-belt": 0.409,
+        "belt-sole": 0.902
+      }
+    },
+    "MotoWalkV3W": {
+      "crownY": 56,
+      "chinY": 153,
+      "beltY": 237,
+      "soleY": 411,
+      "ppu": 186.36363636363637,
+      "segmentsWorldApprox": {
+        "crown-chin": 0.521,
+        "chin-belt": 0.451,
+        "belt-sole": 0.934
+      }
+    },
+    "KatanaIdleW": {
+      "crownY": 20,
+      "chinY": 128,
+      "beltY": 184,
+      "soleY": 326,
+      "ppu": 157.57575757575756,
+      "segmentsWorldApprox": {
+        "crown-chin": 0.685,
+        "chin-belt": 0.355,
+        "belt-sole": 0.901
+      }
+    },
+    "MotoHurtW": {
+      "crownY": 44,
+      "chinY": 130,
+      "beltY": 184,
+      "soleY": 348,
+      "ppu": 181.50252525252523,
+      "segmentsWorldApprox": {
+        "crown-chin": 0.474,
+        "chin-belt": 0.298,
+        "belt-sole": 0.904
+      }
+    }
+  },
+  "preliminaryFinding": "Moto Parry W appears larger in world scale than Moto Walk V3 W and Katana Parry/Idle W. Approximate Moto Parry vs Moto Walk landmark segment ratios are +18% crown-chin, +16% chin-belt, +11% belt-sole; this W-only sample is relatively uniform and could support a global page scale candidate near +15% PPU (about 203.4 instead of 176.99) if other directions confirm. Compared with Katana Parry W, crown-chin is nearly equal (+2%), but chin-belt is about +28% and belt-sole about +15%; this is not uniform, so no Katana-based PPU correction is justified. Moto Hurt W is strongly crouched/front-angled; segment ratios cannot be compared as if the pose were neutral.",
+  "eightDirectionMetadataAlreadyReadBeforeStop": {
+    "note": "All Parry pages of the three weapons share one PPU per sheet; raw rect heights are storage crop dimensions, not anatomical height. Eight directions were not visually inspected.",
+    "Katana": {
+      "ppu": 178.6,
+      "rectHeightsPx": [
+        365,
+        367,
+        371,
+        366,
+        366,
+        366,
+        368,
+        369
+      ]
+    },
+    "Fists": {
+      "ppu": 184.91548134405275,
+      "rectHeightsPx": [
+        391,
+        394,
+        394,
+        387,
+        391,
+        383,
+        393,
+        393
+      ]
+    },
+    "Moto": {
+      "ppu": 176.99314574314573,
+      "rectHeightsPx": [
+        420,
+        419,
+        417,
+        419,
+        417,
+        421,
+        420,
+        420
+      ]
+    }
+  },
+  "nextActionCandidate": "Do not edit PPU based on this partial W-only read. The apparent Moto scale increase versus Moto Walk is roughly uniform in the three visible segments, but the comparison against Katana differs by segment and poses differ. Coordinator should inspect E plus the remaining six Parry directions and use consistent pose/landmarks before deciding between a uniform Parry-sheet framePPU adjustment and anatomy correction. No framePPU candidate is approved by this partial audit.",
+  "eightDirectionVisualFinding": {
+    "MotoParry": "All eight Moto Parry sprites appear larger in body scale than same-direction Katana Parry; the difference remains visible in W/E side profiles and front/rear directions, not explained by saw-blade width alone. Head, coat/trunk and legs are enlarged/expanded, with W torso and lower-body segments diverging from the Katana segment proportions. The W head-crown-to-chin segment is near Katana; chin-to-belt and belt-to-sole are visibly longer on Moto, so this is not a single uniform enlargement relative to Katana.",
+    "intraMoto": "Moto Parry is also visibly larger than Moto Walk V3 W in overall body scale; W manual segment readings from the prior note are approximately +11–18%, but that is one pose/direction and walk is not neutral. Do not use that alone as proof of a correct uniform multiplier.",
+    "textureDensity": "Moto Parry and Katana Parry use 1774x887 native atlases and similar page PPU (176.99 vs 178.6); each sheet uses one PPU uniformly in all eight pages. The visible difference is authored figure geometry, not a materially different texture density setting. Atlas crop height range is storage metadata only and was not used as body height.",
+    "diagonalAndCardinal": "The relative scale difference is visible in all eight orientations; side W/E and front N/S are particularly clear. No single direction alone appears to account for the mismatch.",
+    "comparisons": "Fists Parry also appears slightly enlarged relative to Katana, but its gauntlets/boots make silhouette width less comparable. Moto Parry is the clearest scale/anatomy mismatch."
+  },
+  "framePpuRecommendation": "Do not change framePixelsPerUnit. Comparison with Katana shows discordant segment ratios (W: crown-chin close, torso and lower body larger), so uniform PPU would shrink the head and limbs while failing to fix relative anatomy. Root should generate corrected complete Moto Parry figures in all eight directions: preserve head scale close to Katana Parry, shorten/reduce torso between chin and belt, and reduce lower-body/leg scale to Katana proportion while keeping sole/support anchors. Keep dual-saw silhouettes out of body-width judgments. Recheck E/W plus all directions after generation.",
+  "hairMaterialFinding": "On same-scale cross-action S/W and the Parry boards, essential Hurt/Dead/Parry hair highlights read lighter and more copper/red than Katana Idle W brown. Difference is hue/value of hair highlight material, not a body-size landmark; strongest visual shift is Moto Parry and Fists Parry/Hurt. Standardize against Katana Idle brown hair reference without using hair bounds to infer height.",
+  "overallFinding": {
+    "head": "Across the eight Moto Parry directions, head/crown-to-chin is near Katana in W but the overall head silhouette/hair mass looks larger in several views. Keep the face/head anatomical scale close to Katana; do not infer scale from hair bbox alone.",
+    "trunk": "Moto Parry has a visibly longer/larger torso segment from chin/shoulder level down to belt than Katana Parry in W, with the same general tendency across front/diagonal panels. This is a segment-ratio mismatch, not density.",
+    "legs": "The belt-to-sole segment is also larger in Moto W than Katana W; keep ground/support anchors and shorten/reduce leg proportions rather than applying global PPU.",
+    "limit": "Qualitative visual review of the eight crop previews; W landmark coordinates are approximate manually read values from the existing 20px grid. No exact skeletal segmentation. User stopped earlier; resumed work completed eight-direction visual review."
+  }
+}

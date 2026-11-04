@@ -1,0 +1,35 @@
+{
+  "state": "READY_FOR_COORDINATOR",
+  "candidateCycleComplete": true,
+  "visualReview": "Static corrected passingB: screen-right planted, screen-left low free boot with raised heel/lowered toe; arms relaxed; same SW context",
+  "continuousMotionReviewPending": true,
+  "integrationEligible": false,
+  "imported": false,
+  "runtimeVerified": false,
+  "atlas": "ReqFistsNormalWalkSW20261103CycleV2.png",
+  "manifest": "ReqFistsNormalWalkSW20261103CycleV2.json",
+  "proposedPage": "proposed-page-NOT-INTEGRATED.json",
+  "preview": "simulacao-nearest-world-preview.html",
+  "proportionComparison": "simulacao-nearest-proportion-comparison.png",
+  "overlay": "simulacao-nearest-proportion-overlay.png",
+  "framePixelsPerUnit": [
+    287.8443526170799,
+    287.8443526170799,
+    287.8443526170799,
+    587.202479338843
+  ],
+  "uncertaintyRelative": 0.06,
+  "loopMs": 400,
+  "wholeFrameRgbaExact": true,
+  "requiredCoordinatorActions": [
+    "Review temporal motion and proportional consistency in world-scale preview",
+    "Confirm pivots/densities within reported uncertainty",
+    "Copy source atlas to proposed ArtSources path and validate actual hashes/resources/GUIDs before integration"
+  ],
+  "replacesOnlyWholeFrame": 3,
+  "first3UnchangedProof": "first3-unchanged-proof.json",
+  "userRejectedPriorFrame03": true,
+  "oldFrame03MustNotBeIntegrated": true,
+  "editAttempts": 2,
+  "firstEditRejectedReason": "Support/free boot screen order reverted"
+}

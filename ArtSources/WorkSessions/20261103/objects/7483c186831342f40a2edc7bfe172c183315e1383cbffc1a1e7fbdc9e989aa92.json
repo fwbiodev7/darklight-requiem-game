@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "image": "attempt-02-pose-preserve.png",
+  "imageSha256": "4a13ba5725c7866273b9fbbbe459fc2ae75dd0562d181b8c1cfcf76aefbbd6ac",
+  "nativeSize": [
+    1774,
+    887
+  ],
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "pixelsPerUnit": 1,
+  "status": "candidate-rejected",
+  "wholeFigures": true,
+  "integrationEligible": false,
+  "imported": false,
+  "runtimeVerified": false,
+  "visualApproval": false,
+  "ppuPurpose": "Diagnostic pixel-space only; no Unity scale proposed",
+  "frames": [
+    {
+      "id": "inspect_attempt02_00",
+      "rect": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "pivot": [
+        0.5,
+        0.08
+      ],
+      "durationMs": 200,
+      "action": "incomplete_opposite_half_inspection",
+      "direction": "SW_UNCONFIRMED",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "old_contact_repeated",
+      "sourceScale": 1
+    },
+    {
+      "id": "inspect_attempt02_01",
+      "rect": [
+        887,
+        0,
+        887,
+        887
+      ],
+      "pivot": [
+        0.5,
+        0.08
+      ],
+      "durationMs": 200,
+      "action": "incomplete_opposite_half_inspection",
+      "direction": "SW_UNCONFIRMED",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "chain_side_support_candidate",
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "inspection_incomplete_half_attempt02",
+      "frames": [
+        "inspect_attempt02_00",
+        "inspect_attempt02_01"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "inspection_incomplete_half_attempt02"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.3
+  },
+  "notes": [
+    "Two complete generated figures; no resizing, reflection, deformation or member assembly.",
+    "First figure repeats prior leading leg. Second shows chain-side support, but only one phase; uniform opposite half not established."
+  ]
+}

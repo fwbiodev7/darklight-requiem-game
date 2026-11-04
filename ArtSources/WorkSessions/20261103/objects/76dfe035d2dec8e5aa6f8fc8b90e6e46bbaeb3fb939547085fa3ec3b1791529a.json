@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "image": "attempt-03-cycle.png",
+  "imageSha256": "c0eaacb48f46d9eb29b73b974efaffae16b5092c8a50324d1402ba8383600c8c",
+  "nativeSize": [
+    1199,
+    1312
+  ],
+  "sourceSize": [
+    1199,
+    1312
+  ],
+  "pixelsPerUnit": 1,
+  "status": "candidate-rejected",
+  "wholeFigures": true,
+  "integrationEligible": false,
+  "imported": false,
+  "runtimeVerified": false,
+  "visualApproval": false,
+  "ppuPurpose": "Diagnostic pixel-space only, not a proportion or size correction",
+  "frames": [
+    {
+      "id": "inspect_attempt03_00",
+      "rect": [
+        0,
+        0,
+        599,
+        656
+      ],
+      "pivot": [
+        0.5,
+        0.08
+      ],
+      "durationMs": 100,
+      "action": "walk_incomplete_candidate",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contactA_candidate",
+      "sourceScale": 1
+    },
+    {
+      "id": "inspect_attempt03_01",
+      "rect": [
+        599,
+        0,
+        600,
+        656
+      ],
+      "pivot": [
+        0.5,
+        0.08
+      ],
+      "durationMs": 100,
+      "action": "walk_incomplete_candidate",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passingA_candidate",
+      "sourceScale": 1
+    },
+    {
+      "id": "inspect_attempt03_02",
+      "rect": [
+        0,
+        656,
+        599,
+        656
+      ],
+      "pivot": [
+        0.5,
+        0.08
+      ],
+      "durationMs": 100,
+      "action": "walk_incomplete_candidate",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contactB_requested_but_same_lead",
+      "sourceScale": 1
+    },
+    {
+      "id": "inspect_attempt03_03",
+      "rect": [
+        599,
+        656,
+        600,
+        656
+      ],
+      "pivot": [
+        0.5,
+        0.08
+      ],
+      "durationMs": 100,
+      "action": "walk_incomplete_candidate",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "opposite_support_partial",
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "inspection_incomplete_cycle_attempt03",
+      "frames": [
+        "inspect_attempt03_00",
+        "inspect_attempt03_01",
+        "inspect_attempt03_02",
+        "inspect_attempt03_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "inspection_incomplete_cycle_attempt03"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.3
+  },
+  "notes": [
+    "Four complete newly generated figures, no resizing or anatomical assembly.",
+    "Frames00/01/02 retain the old supporting hip/leg; only03 appears to switch. Does not establish both halves of a coherent walk.",
+    "Canonical belt-to-sole proportion requested from approved Katana, not certified in engine."
+  ]
+}

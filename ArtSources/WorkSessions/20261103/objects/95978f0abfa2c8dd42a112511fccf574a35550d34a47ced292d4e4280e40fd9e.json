@@ -1,0 +1,63 @@
+{
+  "ok": true,
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\punhos-sw\\attempt-02-pose-preserve.png",
+  "sourceSha256": "4a13ba5725c7866273b9fbbbe459fc2ae75dd0562d181b8c1cfcf76aefbbd6ac",
+  "errors": [],
+  "warnings": [
+    "inspect_attempt02_00: visible pixels touch frame edge; inspect clipping",
+    "inspect_attempt02_00: 105472 colors exceed declared 256",
+    "inspect_attempt02_01: visible pixels touch frame edge; inspect clipping",
+    "inspect_attempt02_01: 101016 colors exceed declared 256",
+    "More than 10% of visible samples have partial alpha; inspect halos/native pixel rendering"
+  ],
+  "frames": [
+    {
+      "id": "inspect_attempt02_00",
+      "rect": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "bbox": [
+        0,
+        19,
+        887,
+        887
+      ],
+      "visiblePixels": 267987,
+      "colors": 105472,
+      "partialAlphaPixels": 267867,
+      "pixelSha256": "19a2b0caec9ceb1110e3b57f1515166909dae44a1f6bd542412b37ce1f4378eb"
+    },
+    {
+      "id": "inspect_attempt02_01",
+      "rect": [
+        887,
+        0,
+        887,
+        887
+      ],
+      "bbox": [
+        1,
+        23,
+        887,
+        887
+      ],
+      "visiblePixels": 253148,
+      "colors": 101016,
+      "partialAlphaPixels": 253073,
+      "pixelSha256": "fc69510553510de49d01ec0e7f8bab1eb32b9edfa8896775ef41f6c957ba1826"
+    }
+  ],
+  "clips": [
+    {
+      "name": "inspection_incomplete_half_attempt02",
+      "frames": 2,
+      "distinctPoses": 2
+    }
+  ],
+  "overlaps": [],
+  "visualApproval": false,
+  "runtimeVerified": false
+}

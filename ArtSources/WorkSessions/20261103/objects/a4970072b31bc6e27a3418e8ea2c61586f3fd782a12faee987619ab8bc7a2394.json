@@ -1,0 +1,32 @@
+{
+  "status": "static-comparison-only",
+  "board": "SW-v2-hair-comparison-NN.png",
+  "items": [
+    {
+      "label": "KatanaIdleSW",
+      "ppu": 157.57575757575756
+    },
+    {
+      "label": "PunhosIdleSW",
+      "ppu": 163.61827227498867
+    },
+    {
+      "label": "SWcycleV2-00",
+      "ppu": 287.8443526170799
+    },
+    {
+      "label": "SWcycleV2-02",
+      "ppu": 287.8443526170799
+    },
+    {
+      "label": "SWcycleV2-03",
+      "ppu": 587.202479338843
+    }
+  ],
+  "temporalViewed": false,
+  "sourcePixelsModified": false,
+  "findings": "SW00/02/03 have warmer/lighter copper crown highlights than canonical KatanaIdleSW, especially03; whole-figure correction needed where confirmed.",
+  "canonicalHairUniformity": false,
+  "only03CorrectionWouldBeInsufficient": true,
+  "edited": false
+}

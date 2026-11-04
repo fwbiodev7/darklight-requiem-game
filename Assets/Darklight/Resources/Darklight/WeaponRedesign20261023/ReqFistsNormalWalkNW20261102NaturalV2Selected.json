@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqFistsNormalWalkNW20261102NaturalV2Selected.png",
+  "imageSha256": "040513425f079b0661f6fec31d860d67b4e0d41c5a4a1ec7243bb0b4eadc5e11",
+  "nativeSize": [
+    1400,
+    387
+  ],
+  "sourceSize": [
+    1400,
+    387
+  ],
+  "pixelsPerUnit": 176.76767676767676,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/technical-source/Walk_w2_d3.png",
+  "sourceSha256": "040513425f079b0661f6fec31d860d67b4e0d41c5a4a1ec7243bb0b4eadc5e11",
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsNormalWalkNW20261102NaturalV2Selected_00",
+      "rect": [
+        0,
+        0,
+        350,
+        387
+      ],
+      "pivot": [
+        0.44,
+        0.05426356589147287
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "walk_0",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        52,
+        14,
+        290,
+        363
+      ],
+      "sourceAnchor": [
+        180,
+        367
+      ],
+      "sourcePackingAnchor": [
+        182,
+        367
+      ],
+      "supportGuide": {
+        "anchor": [
+          180,
+          367
+        ],
+        "method": "Measured pelvis/body-axis projection onto shared row ground plane, independent of which boot is raised; full source RGBA unchanged",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        26,
+        13
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkNW20261102NaturalV2Selected_01",
+      "rect": [
+        350,
+        0,
+        350,
+        387
+      ],
+      "pivot": [
+        0.44571428571428573,
+        0.05167958656330749
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "walk_1",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        396,
+        14,
+        313,
+        365
+      ],
+      "sourceAnchor": [
+        544,
+        367
+      ],
+      "sourcePackingAnchor": [
+        544,
+        366
+      ],
+      "supportGuide": {
+        "anchor": [
+          544,
+          367
+        ],
+        "method": "Measured pelvis/body-axis projection onto shared row ground plane, independent of which boot is raised; full source RGBA unchanged",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        8,
+        14
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkNW20261102NaturalV2Selected_02",
+      "rect": [
+        700,
+        0,
+        350,
+        387
+      ],
+      "pivot": [
+        0.40285714285714286,
+        0.05426356589147287
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "walk_2",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        786,
+        9,
+        322,
+        368
+      ],
+      "sourceAnchor": [
+        907,
+        367
+      ],
+      "sourcePackingAnchor": [
+        922,
+        367
+      ],
+      "supportGuide": {
+        "anchor": [
+          907,
+          367
+        ],
+        "method": "Measured pelvis/body-axis projection onto shared row ground plane, independent of which boot is raised; full source RGBA unchanged",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        20,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkNW20261102NaturalV2Selected_03",
+      "rect": [
+        1050,
+        0,
+        350,
+        387
+      ],
+      "pivot": [
+        0.45714285714285713,
+        0.05426356589147287
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "walk_3",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1139,
+        14,
+        295,
+        365
+      ],
+      "sourceAnchor": [
+        1270,
+        367
+      ],
+      "sourcePackingAnchor": [
+        1266,
+        367
+      ],
+      "supportGuide": {
+        "anchor": [
+          1270,
+          367
+        ],
+        "method": "Measured pelvis/body-axis projection onto shared row ground plane, independent of which boot is raised; full source RGBA unchanged",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        29,
+        13
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_NW",
+      "frames": [
+        "Redesign_ReqFistsNormalWalkNW20261102NaturalV2Selected_00",
+        "Redesign_ReqFistsNormalWalkNW20261102NaturalV2Selected_01",
+        "Redesign_ReqFistsNormalWalkNW20261102NaturalV2Selected_02",
+        "Redesign_ReqFistsNormalWalkNW20261102NaturalV2Selected_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "walk_NW"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 212221,
+  "packedPixels": 212221,
+  "originalSourcePixels": 577793,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "excludedSourceFrameIndices": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 995457,
+    "farBeyond16pxPixels": 227,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.8901960784313725,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending.",
+    "Only source0-3/NW selected; W/SW excluded. Fixed row body-axis support guides authored; continuous loop still pending."
+  ],
+  "visualApproval": false,
+  "imported": false,
+  "runtimeVerified": false,
+  "referenceImages": [
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkS20261101V2Selected.png",
+      "sha256": "6cbbc2e1694e37a0d50ad32c680635bc6d14c07ea2bca06927e532e5bee7c94d"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261102/punhos-walk/reference-user-natural-walk.png",
+      "sha256": "d8a54976c753e8c5a972199dd148487222df58f7e35bea7262601ab07a46ef67"
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleS_SW_W20261025.png",
+      "sha256": "8a5c11fa94a9adef8706e32020776e34bb9c59ab09d24e1a44476357dd138379"
+    }
+  ],
+  "gaitAuthority": "User explicitly approved restrained natural low walk in clipboard reference; do not impose high-knee march.",
+  "pixelsPerUnitCalibration": {
+    "method": "Median first direction whole body hair-to-sole/1.98 units; original RGBA and body proportions unchanged",
+    "bodyHeightUnits": 1.98,
+    "worldVisualScale": 1.325,
+    "measurements": [
+      {
+        "sourceFrameIndex": 0,
+        "hairY": 17,
+        "soleY": 367,
+        "bodyHeightPixels": 350
+      },
+      {
+        "sourceFrameIndex": 1,
+        "hairY": 17,
+        "soleY": 366,
+        "bodyHeightPixels": 349
+      },
+      {
+        "sourceFrameIndex": 2,
+        "hairY": 17,
+        "soleY": 367,
+        "bodyHeightPixels": 350
+      },
+      {
+        "sourceFrameIndex": 3,
+        "hairY": 17,
+        "soleY": 367,
+        "bodyHeightPixels": 350
+      },
+      {
+        "sourceFrameIndex": 4,
+        "hairY": 392,
+        "soleY": 731,
+        "bodyHeightPixels": 339
+      },
+      {
+        "sourceFrameIndex": 5,
+        "hairY": 393,
+        "soleY": 727,
+        "bodyHeightPixels": 334
+      },
+      {
+        "sourceFrameIndex": 6,
+        "hairY": 393,
+        "soleY": 723,
+        "bodyHeightPixels": 330
+      },
+      {
+        "sourceFrameIndex": 7,
+        "hairY": 393,
+        "soleY": 731,
+        "bodyHeightPixels": 338
+      },
+      {
+        "sourceFrameIndex": 8,
+        "hairY": 748,
+        "soleY": 1067,
+        "bodyHeightPixels": 319
+      },
+      {
+        "sourceFrameIndex": 9,
+        "hairY": 748,
+        "soleY": 1060,
+        "bodyHeightPixels": 312
+      },
+      {
+        "sourceFrameIndex": 10,
+        "hairY": 748,
+        "soleY": 1067,
+        "bodyHeightPixels": 319
+      },
+      {
+        "sourceFrameIndex": 11,
+        "hairY": 748,
+        "soleY": 1067,
+        "bodyHeightPixels": 319
+      }
+    ],
+    "visualScaleCheckPending": true
+  },
+  "visualReview": {
+    "date": "2026-11-02",
+    "status": "visual-reviewed",
+    "reviewScope": "Static whole-figure source/contact review only; not a continuous-motion or runtime certification.",
+    "wholeSourceInspected": true,
+    "nativeContactInspected": true,
+    "continuousMotionViewed": false,
+    "visualApproval": false,
+    "imported": false,
+    "runtimeVerified": false,
+    "pending": [
+      "Continuous motion/foot slide/loop return/Idle transitions and Unity import/runtime remain pending."
+    ],
+    "computerUseStoppedReason": "CUA could not determine current Chrome URL safely; no further CUA attempts."
+  },
+  "continuousMotionViewed": false,
+  "reviewScope": "static whole figure review; continuous motion/import/runtime pending",
+  "provenance": {
+    "originalAuthoredSource": {
+      "path": "ArtSources/WeaponRedesign20261102/punhos-walk/ReqFistsNormalWalkNW_W_SW20261102NaturalV2Nposes-source.png",
+      "sha256": "fb194e85835a62972027b3a1c551a72238276eaee0400220f71b29eb4ab0abd6",
+      "size": [
+        1450,
+        1085
+      ],
+      "rawSourceAvailable": false,
+      "rawSourcePathAvailable": false,
+      "rawSourceContentExactMatchInReviewedAtlas": false,
+      "note": "Original authored-source provenance. Technical source is the immutable reviewed atlas copy; no raw-source recovery is claimed."
+    },
+    "derivedFromReviewedAtlas": {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalWalkNW20261102NaturalV2Selected.png",
+      "sha256": "040513425f079b0661f6fec31d860d67b4e0d41c5a4a1ec7243bb0b4eadc5e11",
+      "size": [
+        1400,
+        387
+      ]
+    }
+  }
+}

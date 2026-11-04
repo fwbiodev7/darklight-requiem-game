@@ -1,0 +1,1265 @@
+{
+  "scope": {
+    "catalog": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/catalog.json",
+    "catalogTotalPages": 306,
+    "activeNormalPages": 193,
+    "weapons": {
+      "0": "Katana",
+      "2": "Fists",
+      "3": "Moto"
+    },
+    "form": 0,
+    "skin": 0,
+    "actions": [
+      "Idle",
+      "Walk",
+      "Attack",
+      "Dodge",
+      "Dead",
+      "Hurt",
+      "Parry"
+    ],
+    "directions": [
+      "S",
+      "SW",
+      "W",
+      "NW",
+      "N",
+      "NE",
+      "E",
+      "SE"
+    ],
+    "scopeNote": "Static catalog/JSON/C# audit only; no Unity/import/playback or visual naturalness verification."
+  },
+  "validation": {
+    "sidecarsLoaded": 69,
+    "missingSidecars": [],
+    "issueCounts": {
+      "attack_phase_counts_not_explicit": 48,
+      "catalog_descriptor_duration_mismatch": 5
+    },
+    "spriteNamesResolved": 582,
+    "spriteNamesTotal": 582,
+    "loopAndTimingSummary": {
+      "Dead/Hurt/Parry pages": 72,
+      "looping among Dead/Hurt/Parry": [],
+      "positive duration pages": 193
+    },
+    "gaps": [
+      {
+        "weapon": "Fists",
+        "action": "Walk",
+        "directions_present": [
+          "S",
+          "W",
+          "NW",
+          "N",
+          "NE",
+          "E",
+          "SE"
+        ],
+        "directions_missing": [
+          "SW"
+        ],
+        "directions_extra": [],
+        "result": "gap"
+      },
+      {
+        "weapon": "Moto",
+        "action": "Walk",
+        "directions_present": [
+          "W",
+          "E"
+        ],
+        "directions_missing": [
+          "S",
+          "SW",
+          "NW",
+          "N",
+          "NE",
+          "SE"
+        ],
+        "directions_extra": [],
+        "result": "gap"
+      }
+    ],
+    "essentialFrameCounts": {
+      "Katana/Parry": {
+        "pages": 8,
+        "directions_present": [
+          "S",
+          "SW",
+          "W",
+          "NW",
+          "N",
+          "NE",
+          "E",
+          "SE"
+        ],
+        "totalFrames": 8,
+        "frameCountsByDirection": {
+          "S": 1,
+          "SW": 1,
+          "W": 1,
+          "NW": 1,
+          "N": 1,
+          "NE": 1,
+          "E": 1,
+          "SE": 1
+        }
+      },
+      "Katana/Hurt": {
+        "pages": 8,
+        "directions_present": [
+          "S",
+          "SW",
+          "W",
+          "NW",
+          "N",
+          "NE",
+          "E",
+          "SE"
+        ],
+        "totalFrames": 16,
+        "frameCountsByDirection": {
+          "N": 2,
+          "NE": 2,
+          "E": 2,
+          "SE": 2,
+          "S": 2,
+          "SW": 2,
+          "W": 2,
+          "NW": 2
+        }
+      },
+      "Katana/Dead": {
+        "pages": 8,
+        "directions_present": [
+          "S",
+          "SW",
+          "W",
+          "NW",
+          "N",
+          "NE",
+          "E",
+          "SE"
+        ],
+        "totalFrames": 24,
+        "frameCountsByDirection": {
+          "N": 3,
+          "NE": 3,
+          "E": 3,
+          "SE": 3,
+          "S": 3,
+          "SW": 3,
+          "W": 3,
+          "NW": 3
+        }
+      },
+      "Fists/Parry": {
+        "pages": 8,
+        "directions_present": [
+          "S",
+          "SW",
+          "W",
+          "NW",
+          "N",
+          "NE",
+          "E",
+          "SE"
+        ],
+        "totalFrames": 8,
+        "frameCountsByDirection": {
+          "S": 1,
+          "SW": 1,
+          "W": 1,
+          "NW": 1,
+          "N": 1,
+          "NE": 1,
+          "E": 1,
+          "SE": 1
+        }
+      },
+      "Fists/Hurt": {
+        "pages": 8,
+        "directions_present": [
+          "S",
+          "SW",
+          "W",
+          "NW",
+          "N",
+          "NE",
+          "E",
+          "SE"
+        ],
+        "totalFrames": 16,
+        "frameCountsByDirection": {
+          "N": 2,
+          "NE": 2,
+          "E": 2,
+          "SE": 2,
+          "S": 2,
+          "SW": 2,
+          "W": 2,
+          "NW": 2
+        }
+      },
+      "Fists/Dead": {
+        "pages": 8,
+        "directions_present": [
+          "S",
+          "SW",
+          "W",
+          "NW",
+          "N",
+          "NE",
+          "E",
+          "SE"
+        ],
+        "totalFrames": 24,
+        "frameCountsByDirection": {
+          "N": 3,
+          "NE": 3,
+          "E": 3,
+          "SE": 3,
+          "S": 3,
+          "SW": 3,
+          "W": 3,
+          "NW": 3
+        }
+      },
+      "Moto/Parry": {
+        "pages": 8,
+        "directions_present": [
+          "S",
+          "SW",
+          "W",
+          "NW",
+          "N",
+          "NE",
+          "E",
+          "SE"
+        ],
+        "totalFrames": 8,
+        "frameCountsByDirection": {
+          "S": 1,
+          "SW": 1,
+          "W": 1,
+          "NW": 1,
+          "N": 1,
+          "NE": 1,
+          "E": 1,
+          "SE": 1
+        }
+      },
+      "Moto/Hurt": {
+        "pages": 8,
+        "directions_present": [
+          "S",
+          "SW",
+          "W",
+          "NW",
+          "N",
+          "NE",
+          "E",
+          "SE"
+        ],
+        "totalFrames": 16,
+        "frameCountsByDirection": {
+          "N": 2,
+          "NE": 2,
+          "E": 2,
+          "SE": 2,
+          "S": 2,
+          "SW": 2,
+          "W": 2,
+          "NW": 2
+        }
+      },
+      "Moto/Dead": {
+        "pages": 8,
+        "directions_present": [
+          "S",
+          "SW",
+          "W",
+          "NW",
+          "N",
+          "NE",
+          "E",
+          "SE"
+        ],
+        "totalFrames": 24,
+        "frameCountsByDirection": {
+          "NW": 3,
+          "N": 3,
+          "NE": 3,
+          "E": 3,
+          "SE": 3,
+          "S": 3,
+          "SW": 3,
+          "W": 3
+        }
+      }
+    },
+    "actionPageCounts": {
+      "Katana/Attack": 24,
+      "Katana/Walk": 8,
+      "Fists/Attack": 32,
+      "Katana/Idle": 8,
+      "Fists/Idle": 8,
+      "Moto/Attack": 8,
+      "Fists/Walk": 7,
+      "Moto/Dodge": 8,
+      "Fists/Dodge": 8,
+      "Katana/Dodge": 8,
+      "Fists/Dead": 8,
+      "Fists/Hurt": 8,
+      "Fists/Parry": 8,
+      "Katana/Dead": 8,
+      "Katana/Hurt": 8,
+      "Katana/Parry": 8,
+      "Moto/Dead": 8,
+      "Moto/Hurt": 8,
+      "Moto/Parry": 8,
+      "Moto/Walk": 2
+    },
+    "walkDurations": [
+      {
+        "weapon": "Katana",
+        "direction": "S",
+        "frames": 6,
+        "durationMs": 400.0,
+        "frameDurationsMs": [
+          66.66666666666667,
+          66.66666666666667,
+          66.66666666666667,
+          66.66666666666667,
+          66.66666666666667,
+          66.66666666666667
+        ]
+      },
+      {
+        "weapon": "Katana",
+        "direction": "SW",
+        "frames": 6,
+        "durationMs": 400,
+        "frameDurationsMs": [
+          65.0,
+          65.0,
+          70.0,
+          65.0,
+          65.0,
+          70.0
+        ]
+      },
+      {
+        "weapon": "Katana",
+        "direction": "W",
+        "frames": 6,
+        "durationMs": 400,
+        "frameDurationsMs": [
+          65.0,
+          65.0,
+          70.0,
+          65.0,
+          65.0,
+          70.0
+        ]
+      },
+      {
+        "weapon": "Katana",
+        "direction": "NW",
+        "frames": 6,
+        "durationMs": 400,
+        "frameDurationsMs": [
+          65.0,
+          65.0,
+          70.0,
+          65.0,
+          65.0,
+          70.0
+        ]
+      },
+      {
+        "weapon": "Katana",
+        "direction": "N",
+        "frames": 6,
+        "durationMs": 400,
+        "frameDurationsMs": [
+          65.0,
+          65.0,
+          70.0,
+          65.0,
+          65.0,
+          70.0
+        ]
+      },
+      {
+        "weapon": "Katana",
+        "direction": "NE",
+        "frames": 4,
+        "durationMs": 400,
+        "frameDurationsMs": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      {
+        "weapon": "Katana",
+        "direction": "E",
+        "frames": 4,
+        "durationMs": 400,
+        "frameDurationsMs": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      {
+        "weapon": "Katana",
+        "direction": "SE",
+        "frames": 4,
+        "durationMs": 400,
+        "frameDurationsMs": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      {
+        "weapon": "Fists",
+        "direction": "S",
+        "frames": 4,
+        "durationMs": 400,
+        "frameDurationsMs": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      {
+        "weapon": "Fists",
+        "direction": "W",
+        "frames": 4,
+        "durationMs": 400,
+        "frameDurationsMs": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      {
+        "weapon": "Fists",
+        "direction": "NW",
+        "frames": 4,
+        "durationMs": 400,
+        "frameDurationsMs": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      {
+        "weapon": "Fists",
+        "direction": "N",
+        "frames": 4,
+        "durationMs": 400,
+        "frameDurationsMs": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      {
+        "weapon": "Fists",
+        "direction": "NE",
+        "frames": 4,
+        "durationMs": 400,
+        "frameDurationsMs": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      {
+        "weapon": "Fists",
+        "direction": "E",
+        "frames": 4,
+        "durationMs": 400,
+        "frameDurationsMs": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      {
+        "weapon": "Fists",
+        "direction": "SE",
+        "frames": 4,
+        "durationMs": 400,
+        "frameDurationsMs": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      {
+        "weapon": "Moto",
+        "direction": "W",
+        "frames": 4,
+        "durationMs": 480,
+        "frameDurationsMs": [
+          120.0,
+          120.0,
+          120.0,
+          120.0
+        ]
+      },
+      {
+        "weapon": "Moto",
+        "direction": "E",
+        "frames": 4,
+        "durationMs": 480,
+        "frameDurationsMs": [
+          120.0,
+          120.0,
+          120.0,
+          120.0
+        ]
+      }
+    ],
+    "attackDescriptorPhasePatterns": {
+      "attack_0|attack_1|attack_2|attack_3": {
+        "pages": 21,
+        "example": "ReqKatanaNormalNeutralLight1S_Wv1_Attack_S"
+      },
+      "attack_0|attack_1|attack_2": {
+        "pages": 3,
+        "example": "ReqFistsNormalDiretoSSWW20261025V2_Attack_S"
+      },
+      "anticipation|contact|recovery": {
+        "pages": 21,
+        "example": "ReqFistsNormalDiretoNW20261025V4_Attack_NW"
+      },
+      "chamber-and-counterturn|rotating-sweep-contact|landed-guard-recovery": {
+        "pages": 8,
+        "example": "ReqFistsNormalGiroSSWWNW20261028V1_Attack_S"
+      },
+      "preparation|coil|crossed_contact|recovery": {
+        "pages": 8,
+        "example": "ReqMotoNormalDentesSW_W20261028V1_Attack_SW"
+      },
+      "preparation|windup|contact|recovery": {
+        "pages": 3,
+        "example": "ReqKatanaNormalLeve3NW_N_NE20261101V1_Attack_NW"
+      }
+    },
+    "attackPhaseFinding": "Catalog pages omit startupFrames and activeFrames on some Attack rows; where absent runtime uses count-based fallback (4 frames => 2/1/1; 3 frames => 1/1/1). Descriptor phase labels are listed per frame in CSV and summarized by exact pattern in JSON; labels are authored metadata, not visual/naturalness evidence.",
+    "walkAssessment": "Duration comparisons describe authored clock only. No movement-speed/travel-distance metadata was found in this audit; asymmetry cannot be translated to world-space step cadence."
+  },
+  "runtime": {
+    "tryResolveAttack": {
+      "location": "Assets/Darklight/Runtime/Character/DarklightWeaponRedesignBank.cs",
+      "definition": [
+        224,
+        "static bool TryResolveAttack(int weapon,int form,int direction,CombatModel model,out Sprite sprite)"
+      ],
+      "keyRead": [
+        226,
+        "sprite=null;string key=model.Attack.displayName;"
+      ],
+      "fallbackLines": [
+        [
+          236,
+          "if(page.action!=\"Attack\"||page.attackKey!=(pass==0?key:weapon==0?\"Leve1\":weapon==3?\"Serra de Entrada\":\"Direto da Ruína\")||!Load(page))continue;"
+        ]
+      ],
+      "behavior": "active Normal Katana/Fists/Moto path calls this resolver on Attack; resolver compares displayName against catalog attackKey, then tries one weapon-specific primary key. Missing key falls through as unresolved/pose fallback at caller level."
+    },
+    "motorIdle": {
+      "location": "Assets/Darklight/Runtime/Character/DarklightMotorcycleRedesignBank.cs",
+      "definition": [
+        102,
+        "public static Sprite DualSawsPose(int direction,CombatModel model=null)"
+      ],
+      "assessment": "Moto idle is consumed through dedicated DualSawsPose/Requiem dual-saws presentation, so absence of catalog Idle pages is not a coverage gap."
+    },
+    "guardContact": {
+      "runtimeSourceFilesWithLiteral": [],
+      "assessment": "guardContact metadata exists in catalog/Parry descriptors but no literal C# reader was found under Runtime; metadata preservation does not mean gameplay collision consumes it."
+    },
+    "actionParticles": {
+      "location": "Assets/Darklight/Runtime/World/DarklightActionParticles.cs",
+      "fixedHeightLine": [
+        [
+          84,
+          "float height=kind==DarklightActionParticleKind.Dodge?.12f:kind==DarklightActionParticleKind.Death?.4f:.85f;"
+        ]
+      ],
+      "assessment": "Observe places Dodge at +0.12, Death +0.4, other mapped states (including Parry/Hurt) +0.85 world units from owner.transform.position; no descriptor guardContact/pose-dependent offset here."
+    }
+  },
+  "currentCatalogAttackKeys": [
+    {
+      "weapon": "Katana",
+      "keys": [
+        {
+          "attackKey": "Leve1",
+          "pages": 8,
+          "directions": [
+            "E",
+            "N",
+            "NE",
+            "NW",
+            "S",
+            "SE",
+            "SW",
+            "W"
+          ],
+          "frameCounts": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "attackKey": "Leve2",
+          "pages": 8,
+          "directions": [
+            "E",
+            "N",
+            "NE",
+            "NW",
+            "S",
+            "SE",
+            "SW",
+            "W"
+          ],
+          "frameCounts": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "attackKey": "Leve3",
+          "pages": 8,
+          "directions": [
+            "E",
+            "N",
+            "NE",
+            "NW",
+            "S",
+            "SE",
+            "SW",
+            "W"
+          ],
+          "frameCounts": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "weapon": "Fists",
+      "keys": [
+        {
+          "attackKey": "Ascensão da Ruína",
+          "pages": 8,
+          "directions": [
+            "E",
+            "N",
+            "NE",
+            "NW",
+            "S",
+            "SE",
+            "SW",
+            "W"
+          ],
+          "frameCounts": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "attackKey": "Chute Quebra-Osso",
+          "pages": 8,
+          "directions": [
+            "E",
+            "N",
+            "NE",
+            "NW",
+            "S",
+            "SE",
+            "SW",
+            "W"
+          ],
+          "frameCounts": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "attackKey": "Direto da Ruína",
+          "pages": 8,
+          "directions": [
+            "E",
+            "N",
+            "NE",
+            "NW",
+            "S",
+            "SE",
+            "SW",
+            "W"
+          ],
+          "frameCounts": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "attackKey": "Giro Devastador",
+          "pages": 8,
+          "directions": [
+            "E",
+            "N",
+            "NE",
+            "NW",
+            "S",
+            "SE",
+            "SW",
+            "W"
+          ],
+          "frameCounts": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "weapon": "Moto",
+      "keys": [
+        {
+          "attackKey": "Dentes Cruzados",
+          "pages": 8,
+          "directions": [
+            "E",
+            "N",
+            "NE",
+            "NW",
+            "S",
+            "SE",
+            "SW",
+            "W"
+          ],
+          "frameCounts": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ]
+        }
+      ]
+    }
+  ],
+  "archivedAttackFamilies": {
+    "archive": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/PAGES.json",
+    "archivePages": 167,
+    "error": null,
+    "families": [
+      {
+        "weapon": "Fists",
+        "attackKey": "Cataclismo da Ruína",
+        "archivedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "archivedPageCount": 8,
+        "frameCounts": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "exactAppliedDirections": [],
+        "unappliedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "displayNameLiteralEvidence": [
+          {
+            "source": "Runtime C# attack-name construction",
+            "path": "Assets/Darklight/Runtime/Combat/DarklightRuinFistsProfile.cs",
+            "line": 45
+          }
+        ],
+        "routeAssessment": "Exact name has source literal evidence; resolver can select it only when CombatModel.Attack.displayName equals this string and a catalog page exists in the exact context. Current archived exact-context pages are not applied."
+      },
+      {
+        "weapon": "Fists",
+        "attackKey": "Juízo da Ruína",
+        "archivedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "archivedPageCount": 8,
+        "frameCounts": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "exactAppliedDirections": [],
+        "unappliedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "displayNameLiteralEvidence": [
+          {
+            "source": "Runtime C# attack-name construction",
+            "path": "Assets/Darklight/Runtime/Combat/DarklightRuinFistsProfile.cs",
+            "line": 41
+          }
+        ],
+        "routeAssessment": "Exact name has source literal evidence; resolver can select it only when CombatModel.Attack.displayName equals this string and a catalog page exists in the exact context. Current archived exact-context pages are not applied."
+      },
+      {
+        "weapon": "Fists",
+        "attackKey": "Martelo da Ruína",
+        "archivedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "archivedPageCount": 8,
+        "frameCounts": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "exactAppliedDirections": [],
+        "unappliedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "displayNameLiteralEvidence": [
+          {
+            "source": "Runtime C# attack-name construction",
+            "path": "Assets/Darklight/Runtime/Combat/DarklightRuinFistsProfile.cs",
+            "line": 37
+          }
+        ],
+        "routeAssessment": "Exact name has source literal evidence; resolver can select it only when CombatModel.Attack.displayName equals this string and a catalog page exists in the exact context. Current archived exact-context pages are not applied."
+      },
+      {
+        "weapon": "Fists",
+        "attackKey": "Resposta Brutal",
+        "archivedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "archivedPageCount": 8,
+        "frameCounts": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "exactAppliedDirections": [],
+        "unappliedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "displayNameLiteralEvidence": [
+          {
+            "source": "Runtime C# attack-name construction",
+            "path": "Assets/Darklight/Runtime/Combat/DarklightRuinFistsProfile.cs",
+            "line": 43
+          }
+        ],
+        "routeAssessment": "Exact name has source literal evidence; resolver can select it only when CombatModel.Attack.displayName equals this string and a catalog page exists in the exact context. Current archived exact-context pages are not applied."
+      },
+      {
+        "weapon": "Katana",
+        "attackKey": "Carregado",
+        "archivedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "archivedPageCount": 8,
+        "frameCounts": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "exactAppliedDirections": [],
+        "unappliedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "displayNameLiteralEvidence": [
+          {
+            "source": "AttackDefinition displayName asset",
+            "path": "Assets/Darklight/Data/Attacks/Carregado.asset",
+            "line": 15
+          }
+        ],
+        "routeAssessment": "Exact name has source literal evidence; resolver can select it only when CombatModel.Attack.displayName equals this string and a catalog page exists in the exact context. Current archived exact-context pages are not applied."
+      },
+      {
+        "weapon": "Katana",
+        "attackKey": "ContraAtaque",
+        "archivedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "archivedPageCount": 8,
+        "frameCounts": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "exactAppliedDirections": [],
+        "unappliedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "displayNameLiteralEvidence": [
+          {
+            "source": "AttackDefinition displayName asset",
+            "path": "Assets/Darklight/Data/Attacks/ContraAtaque.asset",
+            "line": 15
+          }
+        ],
+        "routeAssessment": "Exact name has source literal evidence; resolver can select it only when CombatModel.Attack.displayName equals this string and a catalog page exists in the exact context. Current archived exact-context pages are not applied."
+      },
+      {
+        "weapon": "Katana",
+        "attackKey": "KatanaAerial",
+        "archivedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "archivedPageCount": 8,
+        "frameCounts": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "exactAppliedDirections": [],
+        "unappliedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "displayNameLiteralEvidence": [],
+        "routeAssessment": "No matching runtime/Data literal found by scoped source scan; exact-name reachability is unconfirmed."
+      },
+      {
+        "weapon": "Katana",
+        "attackKey": "OndaDoVeu",
+        "archivedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "archivedPageCount": 8,
+        "frameCounts": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "exactAppliedDirections": [],
+        "unappliedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "displayNameLiteralEvidence": [
+          {
+            "source": "AttackDefinition displayName asset",
+            "path": "Assets/Darklight/Data/Attacks/OndaDoVeu.asset",
+            "line": 15
+          }
+        ],
+        "routeAssessment": "Exact name has source literal evidence; resolver can select it only when CombatModel.Attack.displayName equals this string and a catalog page exists in the exact context. Current archived exact-context pages are not applied."
+      },
+      {
+        "weapon": "Katana",
+        "attackKey": "Pesado",
+        "archivedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "archivedPageCount": 8,
+        "frameCounts": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "exactAppliedDirections": [],
+        "unappliedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "displayNameLiteralEvidence": [
+          {
+            "source": "AttackDefinition displayName asset",
+            "path": "Assets/Darklight/Data/Attacks/Pesado.asset",
+            "line": 15
+          }
+        ],
+        "routeAssessment": "Exact name has source literal evidence; resolver can select it only when CombatModel.Attack.displayName equals this string and a catalog page exists in the exact context. Current archived exact-context pages are not applied."
+      },
+      {
+        "weapon": "Moto",
+        "attackKey": "Serra de Entrada",
+        "archivedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "archivedPageCount": 8,
+        "frameCounts": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "exactAppliedDirections": [],
+        "unappliedDirections": [
+          "E",
+          "N",
+          "NE",
+          "NW",
+          "S",
+          "SE",
+          "SW",
+          "W"
+        ],
+        "displayNameLiteralEvidence": [
+          {
+            "source": "Runtime C# attack-name construction",
+            "path": "Assets/Darklight/Runtime/Campaign/DarklightAbyssRider.cs",
+            "line": 41
+          }
+        ],
+        "routeAssessment": "Exact name has source literal evidence; resolver can select it only when CombatModel.Attack.displayName equals this string and a catalog page exists in the exact context. Current archived exact-context pages are not applied."
+      }
+    ],
+    "note": "Exact route requires model.Attack.displayName == attackKey. Archived-only keys do not become runtime selectable merely by being staged; key source/attack model mapping is separate."
+  },
+  "csvRows": 193
+}

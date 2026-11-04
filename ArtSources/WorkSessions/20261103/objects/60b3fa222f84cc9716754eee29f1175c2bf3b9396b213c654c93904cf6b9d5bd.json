@@ -1,0 +1,29 @@
+{
+  "state": "READY_FOR_COORDINATOR",
+  "candidateCycleComplete": true,
+  "visualReview": "static support alternation A/A/B/B with separate low passing-B figure",
+  "continuousMotionReviewPending": true,
+  "integrationEligible": false,
+  "imported": false,
+  "runtimeVerified": false,
+  "atlas": "ReqFistsNormalWalkSW20261103CycleV1.png",
+  "manifest": "ReqFistsNormalWalkSW20261103CycleV1.json",
+  "proposedPage": "proposed-page-NOT-INTEGRATED.json",
+  "preview": "simulacao-nearest-world-preview.html",
+  "proportionComparison": "simulacao-nearest-proportion-comparison.png",
+  "overlay": "simulacao-nearest-proportion-overlay.png",
+  "framePixelsPerUnit": [
+    287.8443526170799,
+    287.8443526170799,
+    287.8443526170799,
+    580.3313560828224
+  ],
+  "uncertaintyRelative": 0.06,
+  "loopMs": 400,
+  "wholeFrameRgbaExact": true,
+  "requiredCoordinatorActions": [
+    "Review temporal motion and proportional consistency in world-scale preview",
+    "Confirm pivots/densities within reported uncertainty",
+    "Copy source atlas to proposed ArtSources path and validate actual hashes/resources/GUIDs before integration"
+  ]
+}

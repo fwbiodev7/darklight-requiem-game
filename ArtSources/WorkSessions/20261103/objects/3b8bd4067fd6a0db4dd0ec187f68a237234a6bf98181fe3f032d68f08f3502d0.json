@@ -1,0 +1,143 @@
+{
+  "status": "STOPPED_BY_USER_BEFORE_GENERATION",
+  "reason": "User physically interrupted screen control with Esc; coordinator requested safe checkpoint only.",
+  "imageGenerationStarted": false,
+  "imageGenerationInFlight": false,
+  "newArtCreated": false,
+  "correctiveAtlasCreated": false,
+  "pagesCreated": false,
+  "sourceModified": false,
+  "assetsModified": false,
+  "gitRun": false,
+  "unityRun": false,
+  "imagesInspected": [
+    "walk-Katana board",
+    "full Katana Idle NW/N/NE atlas",
+    "walk-0-ruler.png",
+    "walk-1-ruler.png",
+    "walk-2-ruler.png",
+    "walk-3-ruler.png",
+    "walk-4-ruler.png",
+    "walk-5-ruler.png",
+    "idle-N-ruler.png"
+  ],
+  "references": [
+    {
+      "manifest": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\darklight-requiem-game\\Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalWalkNW_N20261027Selected.json",
+      "manifestSha256": "72a6845de7382baf57c18ab3faf6373d9f9b27092ae2e46262c1406d397642bb",
+      "image": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\darklight-requiem-game\\Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalWalkNW_N20261027Selected.png",
+      "imageSha256": "b1d0a1faac94dba30ca6bf5d213a31ae860e51888675c817ca87e038e624c8f5",
+      "pixelsPerUnit": 168.93939393939394,
+      "framePixelsPerUnit": null,
+      "relevantFrameIndices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "wholeFrameExtractsCreated": true
+    },
+    {
+      "manifest": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\darklight-requiem-game\\Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalNeutralIdleNW_N_NE20261025.json",
+      "manifestSha256": "ead2fec4dcfabf523b02e68c7987476e717d085be36d0c8e2e790ee7b39a3943",
+      "image": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\darklight-requiem-game\\Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalNeutralIdleNW_N_NE20261025.png",
+      "imageSha256": "2889cf460675557432c2de5f0b4e52f7bebfe14f7b7e34330008adf74336a7a2",
+      "pixelsPerUnit": 154.2929292929293,
+      "framePixelsPerUnit": null,
+      "relevantFrameIndices": [
+        4
+      ],
+      "wholeFrameExtractsCreated": true
+    }
+  ],
+  "manualLandmarks": [
+    {
+      "walkIndex": 0,
+      "sourceIndex": 6,
+      "crownY": 31,
+      "hairBaseY": 125,
+      "beltY": 186,
+      "pelvisY": 249,
+      "kneeYApprox": 284,
+      "soleY": 356
+    },
+    {
+      "walkIndex": 1,
+      "sourceIndex": 7,
+      "crownY": 31,
+      "hairBaseY": 125,
+      "beltY": 186,
+      "pelvisY": 250,
+      "kneeYApprox": 285,
+      "soleY": 356
+    },
+    {
+      "walkIndex": 2,
+      "sourceIndex": 8,
+      "crownY": 31,
+      "hairBaseY": 125,
+      "beltY": 186,
+      "pelvisY": 247,
+      "kneeYApprox": 282,
+      "soleY": 356
+    },
+    {
+      "walkIndex": 3,
+      "sourceIndex": 9,
+      "crownY": 15,
+      "hairBaseY": 115,
+      "beltY": 176,
+      "pelvisY": 244,
+      "kneeYApprox": 283,
+      "soleY": 355
+    },
+    {
+      "walkIndex": 4,
+      "sourceIndex": 10,
+      "crownY": 19,
+      "hairBaseY": 118,
+      "beltY": 179,
+      "pelvisY": 245,
+      "kneeYApprox": 282,
+      "soleY": 355
+    },
+    {
+      "walkIndex": 5,
+      "sourceIndex": 11,
+      "crownY": 18,
+      "hairBaseY": 118,
+      "beltY": 178,
+      "pelvisY": 245,
+      "kneeYApprox": 282,
+      "soleY": 355
+    }
+  ],
+  "manualUncertaintyPixels": 4,
+  "chinObservable": false,
+  "neckRootObservable": false,
+  "occludedLandmarks": [
+    "chin in pure back view",
+    "true pelvis joint hidden by coat",
+    "knees partly occluded; listed positions are approximate"
+  ],
+  "finding": "Group0..2 has stable crown31/belt186. Group3..5 crown15–19/belt176–179 at nearly same sole355–356. Head silhouette/shoulder volume also appears about5–7% larger; vertical translation alone does not explain silhouette difference. Requires final same-angle/density confirmation before calling it anatomy defect or drawing.",
+  "canonicalIdleN": {
+    "sourceIndex": 4,
+    "pixelsPerUnit": 154.2929292929293,
+    "crownYApprox": 45,
+    "hairBaseYApprox": 136,
+    "beltYApprox": 193,
+    "soleYApprox": 346,
+    "hairPaletteAuthority": true
+  },
+  "pending": [
+    "Confirm silhouette/head/shoulder-size difference independently of legitimate hip bob and opposite-leg perspective; do not infer whole anatomy from bbox height.",
+    "If defect confirmed, correct only source indices9/10/11 as complete figures using correct walk6/7/8 plus approved IdleN; preserve6/7/8 pixel exactly.",
+    "Use approved dark brown KatanaIdleN hair palette without unexplained lightening; protect skin, metals and red cloth.",
+    "One targeted8–12 complete-figure generation sheet if needed, no montage/stretch/mirror/PPU compensation.",
+    "Package self-contained staged PNG+JSON+pages/source hashes and correct-frame pixel proof, then coordinator reviews/imports."
+  ],
+  "approvedMotoSourcesPreserved": true
+}

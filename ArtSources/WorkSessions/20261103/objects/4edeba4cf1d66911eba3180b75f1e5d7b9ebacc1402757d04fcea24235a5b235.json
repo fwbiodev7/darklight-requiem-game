@@ -1,0 +1,411 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqMotoNormalWalkW_EShortLegs20261103V4.png",
+  "imageSha256": "39f41e18e21d7c8ef323a1b71e60a34f28a98976b5280f4e502a70ba223f6df5",
+  "nativeSize": [
+    1920,
+    1040
+  ],
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "sourcePath": "ArtSources/WeaponRedesign20261103/moto-walk-short-legs/ReqMotoNormalWalkW_EShortLegs20261103V4-source.png",
+  "sourceSha256": "6baabe147926c850648e098733294fc42213581041c1a464f716060347bbb476",
+  "preservedSourceFile": "ReqMotoNormalWalkW_EShortLegs20261103V4-source.png",
+  "pixelsPerUnit": 186.36363636363637,
+  "framePixelsPerUnit": [
+    186.36363636363637,
+    186.36363636363637,
+    186.36363636363637,
+    186.36363636363637,
+    186.36363636363637,
+    186.36363636363637,
+    186.36363636363637,
+    186.36363636363637
+  ],
+  "status": "candidate",
+  "wholeFigures": true,
+  "presentation": "OnFoot",
+  "motorcycleContext": "onFoot-DualSaws",
+  "worldVisualScale": 1.325,
+  "frames": [
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_EShortLegs20261103V4_00",
+      "rect": [
+        0,
+        0,
+        480,
+        520
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        0,
+        443,
+        444
+      ],
+      "sourceOffsetInFrame": [
+        19,
+        49
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "sourceAnchor": [
+        221,
+        371
+      ],
+      "supportGuide": {
+        "method": "Manually inspected whole-figure soles; shared ground per direction, integer frame registration only",
+        "uncertaintyPixels": 3
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_EShortLegs20261103V4_01",
+      "rect": [
+        480,
+        0,
+        480,
+        520
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A_low",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        443,
+        0,
+        444,
+        444
+      ],
+      "sourceOffsetInFrame": [
+        19,
+        49
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "sourceAnchor": [
+        664,
+        371
+      ],
+      "supportGuide": {
+        "method": "Manually inspected whole-figure soles; shared ground per direction, integer frame registration only",
+        "uncertaintyPixels": 3
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_EShortLegs20261103V4_02",
+      "rect": [
+        960,
+        0,
+        480,
+        520
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B_opposite",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        887,
+        0,
+        443,
+        444
+      ],
+      "sourceOffsetInFrame": [
+        19,
+        49
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "sourceAnchor": [
+        1108,
+        371
+      ],
+      "supportGuide": {
+        "method": "Manually inspected whole-figure soles; shared ground per direction, integer frame registration only",
+        "uncertaintyPixels": 3
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_EShortLegs20261103V4_03",
+      "rect": [
+        1440,
+        0,
+        480,
+        520
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B_low",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1330,
+        0,
+        444,
+        444
+      ],
+      "sourceOffsetInFrame": [
+        19,
+        49
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "sourceAnchor": [
+        1551,
+        371
+      ],
+      "supportGuide": {
+        "method": "Manually inspected whole-figure soles; shared ground per direction, integer frame registration only",
+        "uncertaintyPixels": 3
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_EShortLegs20261103V4_04",
+      "rect": [
+        0,
+        520,
+        480,
+        520
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        0,
+        444,
+        443,
+        443
+      ],
+      "sourceOffsetInFrame": [
+        19,
+        52
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "sourceAnchor": [
+        221,
+        812
+      ],
+      "supportGuide": {
+        "method": "Manually inspected whole-figure soles; shared ground per direction, integer frame registration only",
+        "uncertaintyPixels": 3
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_EShortLegs20261103V4_05",
+      "rect": [
+        480,
+        520,
+        480,
+        520
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A_low",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        443,
+        444,
+        444,
+        443
+      ],
+      "sourceOffsetInFrame": [
+        19,
+        52
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "sourceAnchor": [
+        664,
+        812
+      ],
+      "supportGuide": {
+        "method": "Manually inspected whole-figure soles; shared ground per direction, integer frame registration only",
+        "uncertaintyPixels": 3
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_EShortLegs20261103V4_06",
+      "rect": [
+        960,
+        520,
+        480,
+        520
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B_opposite",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        887,
+        444,
+        443,
+        443
+      ],
+      "sourceOffsetInFrame": [
+        19,
+        52
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "sourceAnchor": [
+        1108,
+        812
+      ],
+      "supportGuide": {
+        "method": "Manually inspected whole-figure soles; shared ground per direction, integer frame registration only",
+        "uncertaintyPixels": 3
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_EShortLegs20261103V4_07",
+      "rect": [
+        1440,
+        520,
+        480,
+        520
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B_low",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        1330,
+        444,
+        444,
+        443
+      ],
+      "sourceOffsetInFrame": [
+        19,
+        52
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "sourceAnchor": [
+        1551,
+        812
+      ],
+      "supportGuide": {
+        "method": "Manually inspected whole-figure soles; shared ground per direction, integer frame registration only",
+        "uncertaintyPixels": 3
+      }
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_W",
+      "frames": [
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103V4_00",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103V4_01",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103V4_02",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103V4_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "walk_E",
+      "frames": [
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103V4_04",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103V4_05",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103V4_06",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103V4_07"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "walk_W",
+    "walk_E"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourceScale": 1,
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "anatomyRedrawn": true,
+  "logicalResolution": "Native generated raster; indexed logical grid unverified",
+  "integrationBlocked": true,
+  "integrationBlockReason": "Candidate: coordinator must review new short-leg proportions and temporal W/E cycle, then stage exact source, catalog and slices; Unity runtime pending. No dependence on home package or old52 sheets.",
+  "review": {
+    "wholeSourceSeen": true,
+    "staticContactSeen": true,
+    "continuousMotionViewed": false,
+    "humanApproved": false,
+    "imported": false,
+    "runtimeVerified": false
+  },
+  "pixelsPerUnitCalibration": {
+    "method": "Retain previous uniform native density for transparent before/after comparison. PPU was not used to shorten legs. All8 full figures redrawn; no resampling; common worldVisualScale1.325.",
+    "provisional": true
+  },
+  "notes": [
+    "Direct user feedback supersedes previous proportion judgment. Old source preserved; this is full-figure authored redraw.",
+    "SourceScale1; no anatomy montage, scaling, compression, deformation, mirroring, recolor or alpha cleanup.",
+    "ArtSources sourcePath is proposed; not installed. Import blocked until actual coordinator review."
+  ]
+}

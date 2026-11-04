@@ -1,0 +1,438 @@
+{
+  "schemaVersion": 1,
+  "coordinateSystem": "bottom-left",
+  "sourceSha256": "5b009d6cbad3a144b7513a1d8444d6fb13e95c24b3a460bdea52bee697502f3d",
+  "image": "ReqMotoNormalWalkW_E20261103SchoolV2.png",
+  "imageSize": [
+    1840,
+    928
+  ],
+  "pixelsPerUnit": 186.36363636363637,
+  "frames": [
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_E20261103SchoolV2_00",
+      "rect": [
+        0,
+        464,
+        460,
+        464
+      ],
+      "pivot": [
+        0.5,
+        0.09482758620689657
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        0,
+        443,
+        444
+      ],
+      "sourceOffsetInFrame": [
+        9,
+        20
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "provenance": {
+        "source": "ReqMotoNormalWalkW_E20261103V1-source.png",
+        "sourceSha256": "de182d85db157b71610f09fc50c6c5bcf5e3c7cfd8deb28d9762fa963b569a63",
+        "rect": [
+          0,
+          0,
+          443,
+          444
+        ]
+      },
+      "supportGuide": {
+        "anchor": [
+          221,
+          400
+        ],
+        "method": "Manual common sole ground and inferred pelvis projection; fixed camera; integer whole-frame registration",
+        "uncertaintyPixels": 4
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_E20261103SchoolV2_01",
+      "rect": [
+        460,
+        464,
+        460,
+        464
+      ],
+      "pivot": [
+        0.5,
+        0.09482758620689657
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A_low",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        443,
+        0,
+        444,
+        444
+      ],
+      "sourceOffsetInFrame": [
+        9,
+        20
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "provenance": {
+        "source": "ReqMotoNormalWalkW_E20261103V1-source.png",
+        "sourceSha256": "de182d85db157b71610f09fc50c6c5bcf5e3c7cfd8deb28d9762fa963b569a63",
+        "rect": [
+          443,
+          0,
+          444,
+          444
+        ]
+      },
+      "supportGuide": {
+        "anchor": [
+          664,
+          400
+        ],
+        "method": "Manual common sole ground and inferred pelvis projection; fixed camera; integer whole-frame registration",
+        "uncertaintyPixels": 4
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_E20261103SchoolV2_02",
+      "rect": [
+        920,
+        464,
+        460,
+        464
+      ],
+      "pivot": [
+        0.5,
+        0.09482758620689657
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B_opposite",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        887,
+        0,
+        443,
+        444
+      ],
+      "sourceOffsetInFrame": [
+        9,
+        20
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "provenance": {
+        "source": "ReqMotoNormalWalkW_E20261103V2-source.png",
+        "sourceSha256": "79122fa979fc4249ad8adf0d599be6172552867e43a02d0ff109abd0c2ebbb9b",
+        "rect": [
+          887,
+          0,
+          443,
+          444
+        ]
+      },
+      "supportGuide": {
+        "anchor": [
+          1108,
+          400
+        ],
+        "method": "Manual common sole ground and inferred pelvis projection; fixed camera; integer whole-frame registration",
+        "uncertaintyPixels": 4
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_E20261103SchoolV2_03",
+      "rect": [
+        1380,
+        464,
+        460,
+        464
+      ],
+      "pivot": [
+        0.5,
+        0.09482758620689657
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B_low",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1330,
+        0,
+        444,
+        444
+      ],
+      "sourceOffsetInFrame": [
+        9,
+        20
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "provenance": {
+        "source": "ReqMotoNormalWalkW_E20261103V2-source.png",
+        "sourceSha256": "79122fa979fc4249ad8adf0d599be6172552867e43a02d0ff109abd0c2ebbb9b",
+        "rect": [
+          1330,
+          0,
+          444,
+          444
+        ]
+      },
+      "supportGuide": {
+        "anchor": [
+          1551,
+          400
+        ],
+        "method": "Manual common sole ground and inferred pelvis projection; fixed camera; integer whole-frame registration",
+        "uncertaintyPixels": 4
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_E20261103SchoolV2_04",
+      "rect": [
+        0,
+        0,
+        460,
+        464
+      ],
+      "pivot": [
+        0.5,
+        0.09482758620689657
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        0,
+        444,
+        443,
+        443
+      ],
+      "sourceOffsetInFrame": [
+        9,
+        20
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "provenance": {
+        "source": "ReqMotoNormalWalkW_E20261103V1-source.png",
+        "sourceSha256": "de182d85db157b71610f09fc50c6c5bcf5e3c7cfd8deb28d9762fa963b569a63",
+        "rect": [
+          0,
+          444,
+          443,
+          443
+        ]
+      },
+      "supportGuide": {
+        "anchor": [
+          221,
+          844
+        ],
+        "method": "Manual common sole ground and inferred pelvis projection; fixed camera; integer whole-frame registration",
+        "uncertaintyPixels": 4
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_E20261103SchoolV2_05",
+      "rect": [
+        460,
+        0,
+        460,
+        464
+      ],
+      "pivot": [
+        0.5,
+        0.09482758620689657
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A_low",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        443,
+        444,
+        444,
+        443
+      ],
+      "sourceOffsetInFrame": [
+        9,
+        20
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "provenance": {
+        "source": "ReqMotoNormalWalkW_E20261103V1-source.png",
+        "sourceSha256": "de182d85db157b71610f09fc50c6c5bcf5e3c7cfd8deb28d9762fa963b569a63",
+        "rect": [
+          443,
+          444,
+          444,
+          443
+        ]
+      },
+      "supportGuide": {
+        "anchor": [
+          664,
+          844
+        ],
+        "method": "Manual common sole ground and inferred pelvis projection; fixed camera; integer whole-frame registration",
+        "uncertaintyPixels": 4
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_E20261103SchoolV2_06",
+      "rect": [
+        920,
+        0,
+        460,
+        464
+      ],
+      "pivot": [
+        0.5,
+        0.09482758620689657
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B_opposite",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        887,
+        444,
+        443,
+        443
+      ],
+      "sourceOffsetInFrame": [
+        9,
+        20
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "provenance": {
+        "source": "ReqMotoNormalWalkW_E20261103V2-source.png",
+        "sourceSha256": "79122fa979fc4249ad8adf0d599be6172552867e43a02d0ff109abd0c2ebbb9b",
+        "rect": [
+          887,
+          444,
+          443,
+          443
+        ]
+      },
+      "supportGuide": {
+        "anchor": [
+          1108,
+          844
+        ],
+        "method": "Manual common sole ground and inferred pelvis projection; fixed camera; integer whole-frame registration",
+        "uncertaintyPixels": 4
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_E20261103SchoolV2_07",
+      "rect": [
+        1380,
+        0,
+        460,
+        464
+      ],
+      "pivot": [
+        0.5,
+        0.09482758620689657
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B_low",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        1330,
+        444,
+        444,
+        443
+      ],
+      "sourceOffsetInFrame": [
+        9,
+        20
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "provenance": {
+        "source": "ReqMotoNormalWalkW_E20261103V2-source.png",
+        "sourceSha256": "79122fa979fc4249ad8adf0d599be6172552867e43a02d0ff109abd0c2ebbb9b",
+        "rect": [
+          1330,
+          444,
+          444,
+          443
+        ]
+      },
+      "supportGuide": {
+        "anchor": [
+          1551,
+          844
+        ],
+        "method": "Manual common sole ground and inferred pelvis projection; fixed camera; integer whole-frame registration",
+        "uncertaintyPixels": 4
+      }
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_W",
+      "frames": [
+        "Redesign_ReqMotoNormalWalkW_E20261103SchoolV2_00",
+        "Redesign_ReqMotoNormalWalkW_E20261103SchoolV2_01",
+        "Redesign_ReqMotoNormalWalkW_E20261103SchoolV2_02",
+        "Redesign_ReqMotoNormalWalkW_E20261103SchoolV2_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "walk_E",
+      "frames": [
+        "Redesign_ReqMotoNormalWalkW_E20261103SchoolV2_04",
+        "Redesign_ReqMotoNormalWalkW_E20261103SchoolV2_05",
+        "Redesign_ReqMotoNormalWalkW_E20261103SchoolV2_06",
+        "Redesign_ReqMotoNormalWalkW_E20261103SchoolV2_07"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "automaticUnityImport": false
+}

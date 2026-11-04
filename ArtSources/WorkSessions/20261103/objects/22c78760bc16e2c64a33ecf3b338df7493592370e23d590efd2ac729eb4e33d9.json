@@ -1,0 +1,35 @@
+{
+  "kind": "static integrity and scope review; not gameplay validation",
+  "patch_apply_check": "passed: git apply --check --ignore-space-change",
+  "files": [
+    {
+      "path": "Assets/Darklight/Runtime/Campaign/DarklightAtmospherePreset.cs",
+      "source_unchanged_or_new_absent": true,
+      "staged_hash_matches": true
+    },
+    {
+      "path": "Assets/Darklight/Editor/DarklightAtmospherePresetFactory.cs",
+      "source_unchanged_or_new_absent": true,
+      "staged_hash_matches": true
+    },
+    {
+      "path": "Assets/Darklight/Runtime/Campaign/DarklightAtmosphereController.cs",
+      "source_unchanged_or_new_absent": true,
+      "staged_hash_matches": true
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/Rendering/AtmosphereOverlay.shader",
+      "source_unchanged_or_new_absent": true,
+      "staged_hash_matches": true
+    }
+  ],
+  "scope_review": [
+    "No new Light2D, Volume, material instance, texture, map/actor scan or shader pipeline change. Existing filter receives new map-only exposure.",
+    "Existing quality pool remains 88; rain cap 74 plus 14 motes fits at intensity 1.",
+    "Original fallback branches remain; enclosed regions intentionally suppress legacy rain.",
+    "No .meta or .asset authored by hand; editor factory optional."
+  ],
+  "unity_compile": "not run",
+  "shader_compile": "not run",
+  "play_mode_build_screenshots_performance": "not run"
+}

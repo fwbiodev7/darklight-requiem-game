@@ -1,0 +1,171 @@
+{
+  "scope": "Somente checkout da escola e staging desta rodada; nÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â£o transfere posse do workspace de casa",
+  "projectRoot": "C:/Users/Usuario/Documents/Codex/2026-11-03/ba/outputs/darklight-requiem-game",
+  "baseCommit": "852e612cd38d12845c2bc0134e9c1af4fb610d26",
+  "integrationOwner": "Codex /root",
+  "state": "SAFE_CHECKPOINT_AT_REQUESTED_10_PERCENT_WINDOW",
+  "checked": {
+    "trackedTreeClean": true,
+    "unityImportBuildGitWritersDetected": false
+  },
+  "writers": {
+    "root": [
+      "local staging metadata, audit and reports",
+      "outputs/fechamento-fabius-20261103/moto-six-directions"
+    ],
+    "fists_sw": [
+      "outputs/fechamento-fabius-20261103/punhos-sw"
+    ],
+    "moto_qa": [
+      "outputs/fechamento-fabius-20261103/moto-qa"
+    ],
+    "source_audit": [
+      "outputs/fechamento-fabius-20261103/source-audit"
+    ]
+  },
+  "protected": [
+    "Assets",
+    "catalog.json",
+    "*.meta",
+    "existing ArtSources",
+    "house workspace"
+  ],
+  "gate": "Only integrationOwner can authorize a bounded local integration after target/package/hash/GUID/resource checks; delegates cannot run Unity, mutate Git or edit protected paths",
+  "handoff": "Delegates report READY_FOR_COORDINATOR or PENDING_WITH_REASON; coordinator records actual reviewed/imported/runtime states separately",
+  "latestUserCorrection": "Moto Walk legs must match Katana canonical anatomy in all directions; no global PPU compensation",
+  "allowedAssetTargets": [
+    "Assets/Darklight/Editor/DarklightAtmospherePresetFactory.cs",
+    "Assets/Darklight/Resources/Darklight/Rendering/AtmosphereOverlay.shader",
+    "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkE20261102V11Complete.json",
+    "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkE20261102V11Complete.png",
+    "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkN20261102NaturalV1.json",
+    "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkN20261102NaturalV1.png",
+    "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkNE_SE20261102FeetFixedV3.json",
+    "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkNE_SE20261102FeetFixedV3.png",
+    "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkNW20261102NaturalV2Selected.json",
+    "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkNW20261102NaturalV2Selected.png",
+    "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkW20261102V9Complete.json",
+    "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkW20261102V9Complete.png",
+    "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact.json",
+    "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairSelectedCompact.png",
+    "Assets/Darklight/Runtime/Campaign/DarklightAtmosphereController.cs",
+    "Assets/Darklight/Runtime/Campaign/DarklightAtmospherePreset.cs",
+    "Assets\\Darklight\\Editor\\DarklightFabiusBoundedImport.cs",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqFistsNormalDeadN_NE_E_SE20261103V1.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqFistsNormalDeadN_NE_E_SE20261103V1.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqFistsNormalDeadS_SW_W_NW20261103V1.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqFistsNormalDeadS_SW_W_NW20261103V1.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqFistsNormalHurtN_NE_E_SE20261103V1.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqFistsNormalHurtN_NE_E_SE20261103V1.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqFistsNormalHurtS_SW_W_NW20261103V1.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqFistsNormalHurtS_SW_W_NW20261103V1.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqFistsNormalParry8Dirs20261103V1.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqFistsNormalParry8Dirs20261103V1.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalDeadN_NE_E_SE20261103V1.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalDeadN_NE_E_SE20261103V1.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalDeadS_SW_W_NW20261103V1.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalDeadS_SW_W_NW20261103V1.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalHurtN_NE_E_SE20261103V1.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalHurtN_NE_E_SE20261103V1.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalHurtS_SW_W_NW20261103V2.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalHurtS_SW_W_NW20261103V2.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalParry8Dirs20261103V3.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqKatanaNormalParry8Dirs20261103V3.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqMotoNormalDeadNW20261103V2Selected.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqMotoNormalDeadNW20261103V2Selected.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqMotoNormalDeadN_NE_E_SE20261103V1.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqMotoNormalDeadN_NE_E_SE20261103V1.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqMotoNormalDeadS_SW_W20261103V1Selected.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqMotoNormalDeadS_SW_W20261103V1Selected.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqMotoNormalHurtN_NE_E_SE20261103V1.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqMotoNormalHurtN_NE_E_SE20261103V1.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqMotoNormalHurtS_SW_W_NW20261103V1.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqMotoNormalHurtS_SW_W_NW20261103V1.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqMotoNormalParry8Dirs20261103V1.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqMotoNormalParry8Dirs20261103V1.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3.json",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3.png",
+    "Assets\\Darklight\\Resources\\Darklight\\WeaponRedesign20261023\\catalog.json"
+  ],
+  "allowedNewSources": [
+    "ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\technical-source\\ReqFistsNormalDeadN_NE_E_SE20261103V1.png",
+    "ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\technical-source\\ReqFistsNormalDeadS_SW_W_NW20261103V1.png",
+    "ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\technical-source\\ReqFistsNormalHurtN_NE_E_SE20261103V1.png",
+    "ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\technical-source\\ReqFistsNormalHurtS_SW_W_NW20261103V1.png",
+    "ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\technical-source\\ReqFistsNormalParry8Dirs20261103V1.png",
+    "ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\technical-source\\ReqKatanaNormalDeadN_NE_E_SE20261103V1.png",
+    "ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\technical-source\\ReqKatanaNormalDeadS_SW_W_NW20261103V1.png",
+    "ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\technical-source\\ReqKatanaNormalHurtN_NE_E_SE20261103V1.png",
+    "ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\technical-source\\ReqKatanaNormalHurtS_SW_W_NW20261103V2.png",
+    "ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\technical-source\\ReqKatanaNormalParry8Dirs20261103V3.png",
+    "ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\technical-source\\ReqMotoNormalDeadNW20261103V2Selected.png",
+    "ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\technical-source\\ReqMotoNormalDeadN_NE_E_SE20261103V1.png",
+    "ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\technical-source\\ReqMotoNormalDeadS_SW_W20261103V1Selected.png",
+    "ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\technical-source\\ReqMotoNormalHurtN_NE_E_SE20261103V1.png",
+    "ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\technical-source\\ReqMotoNormalHurtS_SW_W_NW20261103V1.png",
+    "ArtSources\\ReviewedDeliveries\\FabiusNormal20261103\\staging\\technical-source\\ReqMotoNormalParry8Dirs20261103V1.png",
+    "ArtSources\\WeaponRedesign20261103\\moto-walk-school-approved\\V3-source.png"
+  ],
+  "metaPolicy": "New targets may receive new Unity metas; existing metas/pixels must remain unchanged",
+  "activeUnityPid": null,
+  "stopReason": "Stopped before resource exhaustion: availableRAMBytes",
+  "nextResumeLocal": "2026-11-03T13:11:17-03:00",
+  "approvalFrozen": {
+    "version": "Moto lateral V3",
+    "sourceSha256": "5de9d53e5e1a6976a7824d6bdc6c12f324757c81547c2b1e5584e92ea684e01e",
+    "humanApproved": true
+  },
+  "appliedInAssets": {
+    "sheets": 23,
+    "clips": 83,
+    "frames": 188,
+    "verifiedUnityImport": false,
+    "runtimeVerified": false
+  },
+  "resumeReason": "More RAM and package/compiler cache now available; bounded retry2atlases",
+  "activeRequest": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\fechamento-fabius-20261103\\unity\\resume-1311-batch01\\request.json",
+  "latestHumanBuildAuthorization": {
+    "when": "After Fabius closure and Gothic Eclipse graphical evolution completed",
+    "deliver": [
+      "integrated build",
+      "real gameplay screenshots"
+    ],
+    "buildNow": false
+  },
+  "lastUnityRun": "unity/resume-1311-batch01",
+  "lastUnityStopReason": "Stopped before resource exhaustion: availableRAMBytes",
+  "lastAppliedIncrement": "reviewed-katana-fists-walks",
+  "gothicEclipse": {
+    "state": "FIRST_INCREMENT_APPLIED_TO_PROJECT",
+    "files": 4,
+    "receipt": "C:\\Users\\Usuario\\Documents\\Codex\\2026-11-03\\ba\\outputs\\gothic-eclipse-20261103\\start\\application-receipt.json",
+    "unityCompiled": false,
+    "runtimeVerified": false,
+    "authorization": "Recent human request: finish animation feedback and start Gothic Eclipse now; build and gameplay screenshots after graphical evolution is complete."
+  },
+  "latestHumanDirection": "Correct and implement confirmed proportion/anatomy errors without approval; unify hair palette using approved Katana Idle reference. Preserve approved sources and V3. Gothic first increment applied; build/gameplay screenshots after completion.",
+  "computerUse": "STOPPED_BY_PHYSICAL_ESCAPE_NO_FURTHER_UI_CALLS",
+  "anatomyAndPaletteCorrections": {
+    "state": "GENERATED_CANDIDATES_NOT_APPLIED",
+    "agents": [
+      "fists_sw_repair",
+      "moto_walk",
+      "audit_sources"
+    ],
+    "next": "Use verified home-commit reviewed atlases as authority; inspect Parry attempt3 hair/anatomy and exact frame layout; finish only valid whole-figure replacements. KatanaN candidate requires hair matching; PunchW candidates fail opposite support. Preserve approved V3."
+  },
+  "latestUsageRead": {
+    "primaryRemainingPercent": 10,
+    "weeklyRemainingPercent": 23,
+    "source": "codex-app-tools get_usage_limits",
+    "reason": "Stop new tasks at requested10%; preserve results only."
+  },
+  "referenceAuthority": {
+    "verifiedRemoteHead": "852e612cd38d12845c2bc0134e9c1af4fb610d26",
+    "commitDate": "2026-11-02T22:08:02-03:00",
+    "sourceReceipt": "source-audit/remote-authority-confirmed.json",
+    "use": "Reviewed deliveries committed from home",
+    "excluded": "Legacy red-katana screenshot/art",
+    "noResetOrOverwrite": true
+  }
+}

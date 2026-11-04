@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3.png",
+  "imageSha256": "98119e4642e3f744337957bf6fb06feb42ff108fd37e26a423125b2292666a98",
+  "nativeSize": [
+    1920,
+    1040
+  ],
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "sourcePath": "ArtSources/WeaponRedesign20261103/moto-walk-school-approved/V3-source.png",
+  "sourceSha256": "5de9d53e5e1a6976a7824d6bdc6c12f324757c81547c2b1e5584e92ea684e01e",
+  "preservedSourceFile": "V3-source.png",
+  "pixelsPerUnit": 186.36363636363637,
+  "framePixelsPerUnit": [
+    186.36363636363637,
+    186.36363636363637,
+    186.36363636363637,
+    186.36363636363637,
+    186.36363636363637,
+    186.36363636363637,
+    186.36363636363637,
+    186.36363636363637
+  ],
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "humanApproved": true,
+  "approvalSource": "Usuário: seleção V3 e captura identificadora de 2026-11-03, confirmadas pela coordenação e pelo agente",
+  "approval": {
+    "humanApproved": true,
+    "approvalSource": "Usuário: seleção V3 e captura identificadora de 2026-11-03, confirmadas pela coordenação e pelo agente",
+    "quote": "a caminhada lateral da moto ficou boa agora mantenha assim e aprovado a primeira versão",
+    "clarification": "a primeira é essa aqui",
+    "sourceSha256": "5de9d53e5e1a6976a7824d6bdc6c12f324757c81547c2b1e5584e92ea684e01e",
+    "evidenceFile": "approval-user-capture-20261103.png",
+    "evidenceSha256": "e0062c0c103dc15bd5125ab38264726c55b27402a865ba4807087fd9f11c7988",
+    "generatedOriginal": "C:/Users/Usuario/.codex/generated_images/01a1a123-e551-7b53-9c9a-1835d2ae3e9c/exec-727f6fa0-10ba-4629-bd44-ddc0d523559b.png",
+    "visualMatchChecked": true,
+    "copyMatchesGeneratedSha256": true,
+    "scope": "Frozen source pixels of V3 only, not V4, temporal playback or Unity runtime"
+  },
+  "presentation": "OnFoot",
+  "motorcycleContext": "onFoot-DualSaws",
+  "worldVisualScale": 1.325,
+  "frames": [
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_00",
+      "rect": [
+        0,
+        0,
+        480,
+        520
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        0,
+        443,
+        444
+      ],
+      "sourceOffsetInFrame": [
+        19,
+        27
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "sourceAnchor": [
+        221,
+        393
+      ],
+      "supportGuide": {
+        "method": "V3-specific manually inspected pelvis projection and sole ground. Shared W source ground393; E source ground396. Whole-frame integer offset, no V4 ground inherited.",
+        "uncertaintyPixels": 4
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_01",
+      "rect": [
+        480,
+        0,
+        480,
+        520
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A_low",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        443,
+        0,
+        444,
+        444
+      ],
+      "sourceOffsetInFrame": [
+        19,
+        27
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "sourceAnchor": [
+        664,
+        393
+      ],
+      "supportGuide": {
+        "method": "V3-specific manually inspected pelvis projection and sole ground. Shared W source ground393; E source ground396. Whole-frame integer offset, no V4 ground inherited.",
+        "uncertaintyPixels": 4
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_02",
+      "rect": [
+        960,
+        0,
+        480,
+        520
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B_opposite",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        887,
+        0,
+        443,
+        444
+      ],
+      "sourceOffsetInFrame": [
+        19,
+        27
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "sourceAnchor": [
+        1108,
+        393
+      ],
+      "supportGuide": {
+        "method": "V3-specific manually inspected pelvis projection and sole ground. Shared W source ground393; E source ground396. Whole-frame integer offset, no V4 ground inherited.",
+        "uncertaintyPixels": 4
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_03",
+      "rect": [
+        1440,
+        0,
+        480,
+        520
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B_low",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1330,
+        0,
+        444,
+        444
+      ],
+      "sourceOffsetInFrame": [
+        19,
+        27
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "sourceAnchor": [
+        1551,
+        393
+      ],
+      "supportGuide": {
+        "method": "V3-specific manually inspected pelvis projection and sole ground. Shared W source ground393; E source ground396. Whole-frame integer offset, no V4 ground inherited.",
+        "uncertaintyPixels": 4
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_04",
+      "rect": [
+        0,
+        520,
+        480,
+        520
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        0,
+        444,
+        443,
+        443
+      ],
+      "sourceOffsetInFrame": [
+        19,
+        24
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "sourceAnchor": [
+        221,
+        840
+      ],
+      "supportGuide": {
+        "method": "V3-specific manually inspected pelvis projection and sole ground. Shared W source ground393; E source ground396. Whole-frame integer offset, no V4 ground inherited.",
+        "uncertaintyPixels": 4
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_05",
+      "rect": [
+        480,
+        520,
+        480,
+        520
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A_low",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        443,
+        444,
+        444,
+        443
+      ],
+      "sourceOffsetInFrame": [
+        19,
+        24
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "sourceAnchor": [
+        664,
+        840
+      ],
+      "supportGuide": {
+        "method": "V3-specific manually inspected pelvis projection and sole ground. Shared W source ground393; E source ground396. Whole-frame integer offset, no V4 ground inherited.",
+        "uncertaintyPixels": 4
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_06",
+      "rect": [
+        960,
+        520,
+        480,
+        520
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B_opposite",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        887,
+        444,
+        443,
+        443
+      ],
+      "sourceOffsetInFrame": [
+        19,
+        24
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "sourceAnchor": [
+        1108,
+        840
+      ],
+      "supportGuide": {
+        "method": "V3-specific manually inspected pelvis projection and sole ground. Shared W source ground393; E source ground396. Whole-frame integer offset, no V4 ground inherited.",
+        "uncertaintyPixels": 4
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_07",
+      "rect": [
+        1440,
+        520,
+        480,
+        520
+      ],
+      "pivot": [
+        0.5,
+        0.1923076923076923
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B_low",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        1330,
+        444,
+        444,
+        443
+      ],
+      "sourceOffsetInFrame": [
+        19,
+        24
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 186.36363636363637,
+      "sourceAnchor": [
+        1551,
+        840
+      ],
+      "supportGuide": {
+        "method": "V3-specific manually inspected pelvis projection and sole ground. Shared W source ground393; E source ground396. Whole-frame integer offset, no V4 ground inherited.",
+        "uncertaintyPixels": 4
+      }
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_W",
+      "frames": [
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_00",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_01",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_02",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "walk_E",
+      "frames": [
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_04",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_05",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_06",
+        "Redesign_ReqMotoNormalWalkW_EShortLegs20261103ApprovedV3_07"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "walk_W",
+    "walk_E"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourceScale": 1,
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "anatomyRedrawn": true,
+  "logicalResolution": "Native generated RGBA raster; indexed pixel grid unverified",
+  "integrationBlocked": false,
+  "integrationReadyForCoordinator": true,
+  "review": {
+    "wholeSourceSeen": true,
+    "staticContactSeen": true,
+    "continuousMotionViewed": false,
+    "humanApproved": true,
+    "imported": false,
+    "runtimeVerified": false
+  },
+  "pixelsPerUnitCalibration": {
+    "method": "Same constant native density186.363636 and worldVisualScale1.325 retained by explicit coordinator instruction after exact V3 source approval; PPU not used to change approved anatomy.",
+    "provisionalRuntimeCalibration": true
+  },
+  "notes": [
+    "Only whole-frame slicing/padding and integer registration; all approved source RGBA values preserved. No source resampling, deformation, mirroring, recoloring, alpha cleaning, member assembly or new generation after approval.",
+    "Visual approval identifies exactly V3 source hash; V4 is unapproved and must not replace it.",
+    "SourcePath is proposed; coordinator must install exact source and import atlas/slices/catalog. No Assets/Git/Unity writes performed by delegate.",
+    "Playback, idle transitions, root registration in motion and Unity runtime remain unverified."
+  ]
+}

@@ -1,0 +1,554 @@
+{
+  "audit": "read-only source and published-assets snapshot",
+  "branch": "integracao-completa-20261026",
+  "head": "852e612cd38d12845c2bc0134e9c1af4fb610d26",
+  "delivery_manifest": {
+    "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/manifest.json",
+    "sha256": "5e4f3731f2ea1f08b45debe972ee8b36f73df824b2a8cdfed463c0f1909f31ed",
+    "totals": {
+      "sheets": 52,
+      "clips": 167,
+      "frames": 492
+    },
+    "listed_files": 104,
+    "png_sheets": 52,
+    "png_sha256_valid": 52,
+    "source_paths_present": 0,
+    "manifest_file_hashes_valid": 101,
+    "manifest_file_hash_count": 104,
+    "manifest_hash_issues": [
+      {
+        "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalWalkNW_N_NE20261103ClosedV2.json",
+        "manifest_sha256": "38fbba15cf0f80cd3628ca494713395309235c5c43255974cc488caea02eebe8",
+        "actual_sha256": "ef335158fba5c97abd7f02ef8a3c406c24564780038b9fdef237c544c33d4a9e",
+        "status": "mismatch"
+      },
+      {
+        "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalWalkS20261103ClosedV1.json",
+        "manifest_sha256": "43bf87c78b5a6e765d66f07a8754dbda70f3a33931f2458eb38e872d2a6ff315",
+        "actual_sha256": "0d3da30420658ee15bc8d7bac835e1ac1e64edb5c55ebe02ed78ff8e2cef1b7d",
+        "status": "mismatch"
+      },
+      {
+        "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalWalkSW_SE20261103ClosedV2.json",
+        "manifest_sha256": "efb11254ee9a8d42456f5fd9ad715cf64c415ba317bb519e3aa9d140f8c6db3a",
+        "actual_sha256": "2581615d375721453b8217404810fea7beddc1e961219cc46600f590b1993f3f",
+        "status": "mismatch"
+      }
+    ]
+  },
+  "pages": {
+    "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/PAGES.json",
+    "complete": false,
+    "clips": 167,
+    "frames": 492,
+    "essential_sheets": 16,
+    "essential_geometry_check": {
+      "valid": 13,
+      "total": 16,
+      "method": "independent PNG IHDR/descriptor rect bounds and overlap check; integrator --check-only unavailable",
+      "invalid_sheets": [
+        {
+          "sheet": "ReqFistsNormalHurtN_NE_E_SE20261103V1.png",
+          "findings": [
+            {
+              "type": "overlap",
+              "frame": "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_07",
+              "other_frame": "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_05",
+              "rect": [
+                561,
+                1152,
+                309,
+                379
+              ],
+              "other_rect": [
+                578,
+                776,
+                250,
+                377
+              ]
+            }
+          ]
+        },
+        {
+          "sheet": "ReqKatanaNormalHurtN_NE_E_SE20261103V1.png",
+          "findings": [
+            {
+              "type": "overlap",
+              "frame": "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_07",
+              "other_frame": "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_05",
+              "rect": [
+                579,
+                1153,
+                301,
+                377
+              ],
+              "other_rect": [
+                596,
+                777,
+                323,
+                377
+              ]
+            }
+          ]
+        },
+        {
+          "sheet": "ReqMotoNormalHurtN_NE_E_SE20261103V1.png",
+          "findings": [
+            {
+              "type": "overlap",
+              "frame": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_03",
+              "other_frame": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_01",
+              "rect": [
+                573,
+                388,
+                356,
+                380
+              ],
+              "other_rect": [
+                544,
+                11,
+                359,
+                380
+              ]
+            },
+            {
+              "type": "overlap",
+              "frame": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_05",
+              "other_frame": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_03",
+              "rect": [
+                591,
+                767,
+                296,
+                377
+              ],
+              "other_rect": [
+                573,
+                388,
+                356,
+                380
+              ]
+            }
+          ]
+        }
+      ],
+      "result": "13/16 pass simple bounds/non-overlap; 3 Hurt sheets have frame-rect overlaps and would fail the shipped VerifySheet equivalent"
+    }
+  },
+  "assets": {
+    "exact_hash_matches_for_staging_sheets": 0,
+    "catalog_path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/catalog.json",
+    "catalog_exists": true,
+    "catalog_complete": false,
+    "catalog_pages": 223,
+    "catalog_sheets": 92,
+    "catalog_frames": 803,
+    "staged_clip_ids_already_in_catalog": 0,
+    "staged_actions": {
+      "Attack": 80,
+      "Walk": 15,
+      "Parry": 24,
+      "Hurt": 24,
+      "Dead": 24
+    },
+    "published_catalog_actions": {
+      "Idle": 78,
+      "Attack": 115,
+      "Walk": 6,
+      "Dodge": 24
+    }
+  },
+  "integrator": {
+    "expected": "import_ready_packet_20261102.py --check-only",
+    "script_present": false,
+    "checkout_integrator": "Assets/Darklight/Editor/DarklightWeaponRedesignImporter.cs",
+    "check_only_supported": false,
+    "result": "not_run; checkout only contains legacy Unity importer whose Import menu mutates texture import settings/catalog; no check-only mode; original ArtSources paths absent"
+  },
+  "issues": [
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalWalkNW_N_NE20261103ClosedV2.json",
+      "issue": "manifest_hash_mismatch_or_missing",
+      "actual": "ef335158fba5c97abd7f02ef8a3c406c24564780038b9fdef237c544c33d4a9e"
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalWalkS20261103ClosedV1.json",
+      "issue": "manifest_hash_mismatch_or_missing",
+      "actual": "0d3da30420658ee15bc8d7bac835e1ac1e64edb5c55ebe02ed78ff8e2cef1b7d"
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalWalkSW_SE20261103ClosedV2.json",
+      "issue": "manifest_hash_mismatch_or_missing",
+      "actual": "2581615d375721453b8217404810fea7beddc1e961219cc46600f590b1993f3f"
+    }
+  ],
+  "essential_sheets": [
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalDeadN_NE_E_SE20261103V1.png",
+      "sha256": "0e70c6557df50eb689e897e31b32c39e5e976ae3685d547265307aaa2e0a87e5",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "descriptorSize": [
+        1536,
+        1024
+      ],
+      "frames": 12,
+      "geometry_ok": true,
+      "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqFistsNormalDeadN_NE_E_SE20261103V1-source.png",
+      "source_present": false,
+      "exact_asset_png_match": [],
+      "geometry_findings": []
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalDeadS_SW_W_NW20261103V1.png",
+      "sha256": "acd02800c3d1e5d7fbee3bc31b97384f5f253dc50fd66bdb12c2e7c828607229",
+      "nativeSize": [
+        1333,
+        1180
+      ],
+      "descriptorSize": [
+        1333,
+        1180
+      ],
+      "frames": 12,
+      "geometry_ok": true,
+      "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqFistsNormalDeadS_SW_W_NW20261103V1-source.png",
+      "source_present": false,
+      "exact_asset_png_match": [],
+      "geometry_findings": []
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalHurtN_NE_E_SE20261103V1.png",
+      "sha256": "ac2c3ab156dfdd2a230831294e9a0cb3be054c66773b5542d9dc0d6645c4a9ea",
+      "nativeSize": [
+        1024,
+        1536
+      ],
+      "descriptorSize": [
+        1024,
+        1536
+      ],
+      "frames": 8,
+      "geometry_ok": false,
+      "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqFistsNormalHurtN_NE_E_SE20261103V1-source.png",
+      "source_present": false,
+      "exact_asset_png_match": [],
+      "geometry_findings": [
+        {
+          "type": "overlap",
+          "frame": "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_07",
+          "other_frame": "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_05",
+          "rect": [
+            561,
+            1152,
+            309,
+            379
+          ],
+          "other_rect": [
+            578,
+            776,
+            250,
+            377
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalHurtS_SW_W_NW20261103V1.png",
+      "sha256": "53928ed994f0a8220bf40c019c5a2ae600edc21e05ae162f3a4fe11d3f2eb86b",
+      "nativeSize": [
+        1024,
+        1536
+      ],
+      "descriptorSize": [
+        1024,
+        1536
+      ],
+      "frames": 8,
+      "geometry_ok": true,
+      "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqFistsNormalHurtS_SW_W_NW20261103V1-source.png",
+      "source_present": false,
+      "exact_asset_png_match": [],
+      "geometry_findings": []
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalParry8Dirs20261103V1.png",
+      "sha256": "0740ef48d6714f72d7e452c9d9c9d7c289b6b5dd4a2460d4533a6f813a425def",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "descriptorSize": [
+        1774,
+        887
+      ],
+      "frames": 8,
+      "geometry_ok": true,
+      "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqFistsNormalParry8Dirs20261103V1-source.png",
+      "source_present": false,
+      "exact_asset_png_match": [],
+      "geometry_findings": []
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalDeadN_NE_E_SE20261103V1.png",
+      "sha256": "42de6b5d29c205a1d637364bcd7b0e1ec22c2473434d7a42a509731dd99d0c1a",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "descriptorSize": [
+        1536,
+        1024
+      ],
+      "frames": 12,
+      "geometry_ok": true,
+      "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalDeadN_NE_E_SE20261103V1-source.png",
+      "source_present": false,
+      "exact_asset_png_match": [],
+      "geometry_findings": []
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalDeadS_SW_W_NW20261103V1.png",
+      "sha256": "6f3f3a05a6962097d91c42c8e5994e4282774d72b32d44fe83936727cd76c0a9",
+      "nativeSize": [
+        1333,
+        1180
+      ],
+      "descriptorSize": [
+        1333,
+        1180
+      ],
+      "frames": 12,
+      "geometry_ok": true,
+      "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalDeadS_SW_W_NW20261103V1-source.png",
+      "source_present": false,
+      "exact_asset_png_match": [],
+      "geometry_findings": []
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalHurtN_NE_E_SE20261103V1.png",
+      "sha256": "219e531d1b5ddcc109c847fb6f24a9e591cc8ed5b4da0cdf274393c4c7dd7ef1",
+      "nativeSize": [
+        1024,
+        1536
+      ],
+      "descriptorSize": [
+        1024,
+        1536
+      ],
+      "frames": 8,
+      "geometry_ok": false,
+      "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtN_NE_E_SE20261103V1-source.png",
+      "source_present": false,
+      "exact_asset_png_match": [],
+      "geometry_findings": [
+        {
+          "type": "overlap",
+          "frame": "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_07",
+          "other_frame": "Redesign_ReqKatanaNormalHurtN_NE_E_SE20261103V1_05",
+          "rect": [
+            579,
+            1153,
+            301,
+            377
+          ],
+          "other_rect": [
+            596,
+            777,
+            323,
+            377
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalHurtS_SW_W_NW20261103V2.png",
+      "sha256": "5e78a4357742b7105243ecc9787862d7502831256124a901a75370e9d6c59bae",
+      "nativeSize": [
+        1024,
+        1536
+      ],
+      "descriptorSize": [
+        1024,
+        1536
+      ],
+      "frames": 8,
+      "geometry_ok": true,
+      "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtS_SW_W_NW20261103V2-source.png",
+      "source_present": false,
+      "exact_asset_png_match": [],
+      "geometry_findings": []
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalParry8Dirs20261103V3.png",
+      "sha256": "5b0fdc10428a80c70596ef3ac4df9aab54d0d485a5fc29a1ee0cbe4ac0af71cf",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "descriptorSize": [
+        1774,
+        887
+      ],
+      "frames": 8,
+      "geometry_ok": true,
+      "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalParry8Dirs20261103V3-source.png",
+      "source_present": false,
+      "exact_asset_png_match": [],
+      "geometry_findings": []
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalDeadNW20261103V2Selected.png",
+      "sha256": "778290a7c5716d273503f918123e9d620bcd78fc704d142791708754e0560837",
+      "nativeSize": [
+        1536,
+        384
+      ],
+      "descriptorSize": [
+        1536,
+        384
+      ],
+      "frames": 3,
+      "geometry_ok": true,
+      "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadNW20261103V2Selected-source.png",
+      "source_present": false,
+      "exact_asset_png_match": [],
+      "geometry_findings": []
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalDeadN_NE_E_SE20261103V1.png",
+      "sha256": "d79456cb6b5955e62df7e5bab9caeab60b8b0a49ab54af76a2e1367e61d15726",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "descriptorSize": [
+        1536,
+        1024
+      ],
+      "frames": 12,
+      "geometry_ok": true,
+      "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadN_NE_E_SE20261103V1-source.png",
+      "source_present": false,
+      "exact_asset_png_match": [],
+      "geometry_findings": []
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalDeadS_SW_W20261103V1Selected.png",
+      "sha256": "65080e32f86d78c6edc7f130d8169d8d154aea32aecbe3bb51ee402671c8b1df",
+      "nativeSize": [
+        1536,
+        1152
+      ],
+      "descriptorSize": [
+        1536,
+        1152
+      ],
+      "frames": 9,
+      "geometry_ok": true,
+      "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W20261103V1Selected-source.png",
+      "source_present": false,
+      "exact_asset_png_match": [],
+      "geometry_findings": []
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalHurtN_NE_E_SE20261103V1.png",
+      "sha256": "78af4e4a5cab98fa210262cfd3074f4f2a2adb6d7b0af7aa794a676570469268",
+      "nativeSize": [
+        1024,
+        1536
+      ],
+      "descriptorSize": [
+        1024,
+        1536
+      ],
+      "frames": 8,
+      "geometry_ok": false,
+      "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalHurtN_NE_E_SE20261103V1-source.png",
+      "source_present": false,
+      "exact_asset_png_match": [],
+      "geometry_findings": [
+        {
+          "type": "overlap",
+          "frame": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_03",
+          "other_frame": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_01",
+          "rect": [
+            573,
+            388,
+            356,
+            380
+          ],
+          "other_rect": [
+            544,
+            11,
+            359,
+            380
+          ]
+        },
+        {
+          "type": "overlap",
+          "frame": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_05",
+          "other_frame": "Redesign_ReqMotoNormalHurtN_NE_E_SE20261103V1_03",
+          "rect": [
+            591,
+            767,
+            296,
+            377
+          ],
+          "other_rect": [
+            573,
+            388,
+            356,
+            380
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalHurtS_SW_W_NW20261103V1.png",
+      "sha256": "8710c460798b15f7534cb024f8099dbb5655a05280b3e00d6e412a1a40712303",
+      "nativeSize": [
+        1024,
+        1536
+      ],
+      "descriptorSize": [
+        1024,
+        1536
+      ],
+      "frames": 8,
+      "geometry_ok": true,
+      "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalHurtS_SW_W_NW20261103V1-source.png",
+      "source_present": false,
+      "exact_asset_png_match": [],
+      "geometry_findings": []
+    },
+    {
+      "path": "ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalParry8Dirs20261103V1.png",
+      "sha256": "43d49af540d146e091ca69837ed7a90af48b97d01aeea18ae151857f4cc6a260",
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "descriptorSize": [
+        1774,
+        887
+      ],
+      "frames": 8,
+      "geometry_ok": true,
+      "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalParry8Dirs20261103V1-source.png",
+      "source_present": false,
+      "exact_asset_png_match": [],
+      "geometry_findings": []
+    }
+  ],
+  "conclusion": [
+    "52/52 staged source PNGs have no byte-identical counterpart in Assets.",
+    "Staged catalog PAGES.json lists 167 clips / 492 frames, all 52 clip ids differ from the published catalog; staged actions Attack/Parry/Hurt/Dead/Walk, while published catalog actions are Attack/Idle/Dodge/Walk.",
+    "Independent geometry screening found 13/16 essential sheets pass frame bounds/non-overlap; 3 Hurt sheets have frame-rect overlaps. The requested integrator --check-only could not run because its script is absent.",
+    "All listed sheets remain staging-only; FabiusNormal README states runtime and game assets are not published.",
+    "The 52 sourcePath files referenced by descriptors are absent in this checkout (the README says complete local handoff/original sources are required), so a package-ready dry-run cannot pass source/hash availability gates.",
+    "Manifest SHA-256 is valid for 101/104 listed files; three Moto walk JSON sidecars differ from the recorded hashes and need manifest/descriptor reconciliation."
+  ]
+}

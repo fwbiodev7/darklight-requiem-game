@@ -1,0 +1,74 @@
+{
+  "status": "initial-manual-estimates-not-validated",
+  "uncertaintyPixels": [
+    6,
+    10
+  ],
+  "notUsedForPpu": true,
+  "notes": [
+    "Pelvis and knees can be partly occluded; verify joint identity before ratio comparison.",
+    "No bounding-box normalization; do not infer anatomy solely from pixel heights."
+  ],
+  "figures": [
+    {
+      "figure": "fists-W-00",
+      "crownY": 64,
+      "chinY": 190,
+      "beltY": 264,
+      "pelvisY": 315,
+      "kneeY": 360,
+      "soleY": 480,
+      "ppu": 214.3939393939394
+    },
+    {
+      "figure": "fists-W-02",
+      "crownY": 23,
+      "chinY": 127,
+      "beltY": 184,
+      "pelvisY": 227,
+      "kneeY": 264,
+      "soleY": 334,
+      "ppu": 159.59595959595958
+    },
+    {
+      "figure": "fists-E-00",
+      "crownY": 55,
+      "chinY": 184,
+      "beltY": 264,
+      "pelvisY": 320,
+      "kneeY": 365,
+      "soleY": 480,
+      "ppu": 214.3939393939394
+    },
+    {
+      "figure": "fists-E-02",
+      "crownY": 44,
+      "chinY": 177,
+      "beltY": 247,
+      "pelvisY": 300,
+      "kneeY": 350,
+      "soleY": 445,
+      "ppu": 209.59595959595958
+    },
+    {
+      "figure": "katana-W-06",
+      "crownY": 38,
+      "chinY": 140,
+      "beltY": 216,
+      "pelvisY": 250,
+      "kneeY": 290,
+      "soleY": 344,
+      "ppu": 162.37373737373738
+    },
+    {
+      "figure": "katana-E-04",
+      "crownY": 16,
+      "chinY": 129,
+      "beltY": 186,
+      "pelvisY": 230,
+      "kneeY": 284,
+      "soleY": 357,
+      "ppu": 173.23232323232324
+    }
+  ]
+}

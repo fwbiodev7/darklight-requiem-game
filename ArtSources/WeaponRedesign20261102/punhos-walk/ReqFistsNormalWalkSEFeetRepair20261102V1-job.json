@@ -1,0 +1,45 @@
+{
+  "jobs": [
+    {
+      "name": "ReqFistsNormalWalkSEFeetRepair20261102V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261102\\punhos-walk\\ReqFistsNormalWalkSEFeetRepair20261102V1-source.png",
+      "preservedSourceName": "ReqFistsNormalWalkSEFeetRepair20261102V1-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 2,
+      "sourceRows": 1,
+      "minimumArea": 5000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 7,
+          "action": "Walk",
+          "durationMs": [
+            100,
+            100
+          ],
+          "loop": true
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            661,
+            750
+          ],
+          "method": "Whole body pelvis projection on common ground plane",
+          "uncertaintyPixels": 6
+        },
+        "1": {
+          "anchor": [
+            1498,
+            750
+          ],
+          "method": "Whole body pelvis projection on common ground plane",
+          "uncertaintyPixels": 6
+        }
+      }
+    }
+  ]
+}

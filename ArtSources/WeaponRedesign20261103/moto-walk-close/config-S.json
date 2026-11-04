@@ -1,0 +1,63 @@
+{
+  "name": "ReqMotoNormalWalkS20261103ClosedV1",
+  "source": "ReqMotoNormalWalkS_SW20261103V1-source.png",
+  "sourceRows": 2,
+  "directions": [
+    "S"
+  ],
+  "sourceIndices": [
+    [
+      0,
+      1,
+      2,
+      3
+    ]
+  ],
+  "frameBodyHeightPixels": [
+    388,
+    388,
+    388,
+    388
+  ],
+  "nearestWholeFiguresSeen": true,
+  "staticContactSeen": true,
+  "supportAnchors": {
+    "0": {
+      "anchor": [
+        221,
+        421
+      ],
+      "method": "Manually inspected pelvis projection at common planted sole ground",
+      "uncertaintyPixels": 4
+    },
+    "1": {
+      "anchor": [
+        665,
+        421
+      ],
+      "method": "Manually inspected pelvis projection at common planted sole ground",
+      "uncertaintyPixels": 4
+    },
+    "2": {
+      "anchor": [
+        1110,
+        421
+      ],
+      "method": "Manually inspected pelvis projection at common planted sole ground",
+      "uncertaintyPixels": 4
+    },
+    "3": {
+      "anchor": [
+        1552,
+        421
+      ],
+      "method": "Manually inspected pelvis projection at common planted sole ground",
+      "uncertaintyPixels": 4
+    }
+  },
+  "reviewNotes": [
+    "S alternates left/right front contact and low passing; fixed straight front camera. SW row remains candidate, repeated dominant support.",
+    "Reviewed native contact and whole figures at nearest2x: head-body maturity matches canonical stylization; two complete saws, both hands, clean skin, dark-red eyes, left/right contact A/B leg alternation, low passing, fixed S camera. Continuous playback and Unity/runtime pending."
+  ],
+  "visualReviewed": true
+}

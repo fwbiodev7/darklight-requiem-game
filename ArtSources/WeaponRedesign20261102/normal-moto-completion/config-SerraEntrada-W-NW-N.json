@@ -1,0 +1,397 @@
+{
+  "name": "ReqMotoNormalSerraEntradaW_NW_N20261102Selected",
+  "source": "ReqMotoNormalSerraEntradaW_NW_N20261102Selected-source.png",
+  "sourceRows": 3,
+  "directions": [
+    "W",
+    "NW",
+    "N"
+  ],
+  "columns": 4,
+  "action": "Attack",
+  "attackKey": "Serra de Entrada",
+  "presentation": "OnFoot",
+  "durationMs": [
+    125,
+    125,
+    240,
+    370
+  ],
+  "phaseNames": [
+    "early_windup",
+    "late_windup",
+    "active_cut",
+    "recovery"
+  ],
+  "startupFrames": 2,
+  "activeFrames": 1,
+  "runtimeTimingsMs": {
+    "startup": 250,
+    "active": 240,
+    "recovery": 370
+  },
+  "bodyMeasurements": [
+    {
+      "source": "original W standing",
+      "bodyHeightPixels": 309
+    }
+  ],
+  "framePixelsPerUnit": [
+    156.06060606060606,
+    156.06060606060606,
+    152.52525252525254,
+    152.52525252525254,
+    152.02020202020202,
+    152.02020202020202,
+    152.02020202020202,
+    152.02020202020202,
+    154.54545454545456,
+    154.54545454545456,
+    154.54545454545456,
+    154.54545454545456
+  ],
+  "supportAnchors": {
+    "0": {
+      "anchor": [
+        221,
+        356
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "1": {
+      "anchor": [
+        662,
+        356
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "2": {
+      "anchor": [
+        1103,
+        356
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "3": {
+      "anchor": [
+        1544,
+        356
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "4": {
+      "anchor": [
+        221,
+        762
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "5": {
+      "anchor": [
+        662,
+        762
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "6": {
+      "anchor": [
+        1103,
+        762
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "7": {
+      "anchor": [
+        1544,
+        762
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "8": {
+      "anchor": [
+        221,
+        1168
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "9": {
+      "anchor": [
+        662,
+        1168
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "10": {
+      "anchor": [
+        1103,
+        1168
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "11": {
+      "anchor": [
+        1544,
+        1168
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    }
+  },
+  "visualReviewed": false,
+  "wholeSourceSeen": true,
+  "nearestWholeFiguresSeen": false,
+  "staticContactSeen": false,
+  "sourceFigureProvenance": [
+    {
+      "sourcePath": "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaS_SW_W20261102V1-source.png",
+      "sourceSha256": "8b670735a7d68aa51e4427f2d40e9069c4c146eab58752ce70a10e0c37e2c5f6",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        30,
+        741,
+        324,
+        315
+      ],
+      "sourceAnchor": [
+        175,
+        1053
+      ],
+      "figureRGBAHash": "7637bc9605c9725d80c54a836c173099d8ffc8232257005467ff9158daa6d10b"
+    },
+    {
+      "sourcePath": "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaS_SW_W20261102V1-source.png",
+      "sourceSha256": "8b670735a7d68aa51e4427f2d40e9069c4c146eab58752ce70a10e0c37e2c5f6",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceFrameIndex": 9,
+      "sourceRect": [
+        393,
+        734,
+        315,
+        322
+      ],
+      "sourceAnchor": [
+        568,
+        1053
+      ],
+      "figureRGBAHash": "23c3dd222262c24766e1cc601bde43688f362f0d545454897aa3657291952e41"
+    },
+    {
+      "sourcePath": "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaW_NW_N20261102V2-source.png",
+      "sourceSha256": "ed32fb430e0e72d9e48f13e64ac8a1339bfec1d5c423f36780ed7353d6e146b8",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        699,
+        35,
+        398,
+        332
+      ],
+      "sourceAnchor": [
+        901,
+        349
+      ],
+      "figureRGBAHash": "48ab8516f340676631c1a91309a81ed7a6ee5305b971d69dab22d81e4b17f1c3"
+    },
+    {
+      "sourcePath": "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaW_NW_N20261102V2-source.png",
+      "sourceSha256": "ed32fb430e0e72d9e48f13e64ac8a1339bfec1d5c423f36780ed7353d6e146b8",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1137,
+        37,
+        299,
+        322
+      ],
+      "sourceAnchor": [
+        1283,
+        347
+      ],
+      "figureRGBAHash": "f4f05b51c717eefc32cc7a958e2d7c0c17e95d5d141505f52abf0bb36544f9fb"
+    },
+    {
+      "sourcePath": "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaW_NW_N20261102V2-source.png",
+      "sourceSha256": "ed32fb430e0e72d9e48f13e64ac8a1339bfec1d5c423f36780ed7353d6e146b8",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        14,
+        376,
+        350,
+        351
+      ],
+      "sourceAnchor": [
+        170,
+        704
+      ],
+      "figureRGBAHash": "bea6102950115f19ed3f6e7231bf26aa722a0467741e40c062faf868eebe02a3"
+    },
+    {
+      "sourcePath": "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaW_NW_N20261102V2-source.png",
+      "sourceSha256": "ed32fb430e0e72d9e48f13e64ac8a1339bfec1d5c423f36780ed7353d6e146b8",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        403,
+        390,
+        294,
+        335
+      ],
+      "sourceAnchor": [
+        530,
+        702
+      ],
+      "figureRGBAHash": "76b255a3222ae47427dfc2a0eddfec5b188c3f2d874af02d51bf2f946cadc157"
+    },
+    {
+      "sourcePath": "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaW_NW_N20261102V2-source.png",
+      "sourceSha256": "ed32fb430e0e72d9e48f13e64ac8a1339bfec1d5c423f36780ed7353d6e146b8",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        697,
+        398,
+        409,
+        300
+      ],
+      "sourceAnchor": [
+        902,
+        694
+      ],
+      "figureRGBAHash": "972d0d6a67dc6103a132c9f7a47f3ac3175ae710aaaff9b69c045bff7c10ea87"
+    },
+    {
+      "sourcePath": "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaW_NW_N20261102V2-source.png",
+      "sourceSha256": "ed32fb430e0e72d9e48f13e64ac8a1339bfec1d5c423f36780ed7353d6e146b8",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        1123,
+        380,
+        325,
+        335
+      ],
+      "sourceAnchor": [
+        1285,
+        708
+      ],
+      "figureRGBAHash": "70ce33fc76de77fd8b87c4ea575d3e383a738bfc058e095745deb8b4b6eb4cce"
+    },
+    {
+      "sourcePath": "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaW_NW_N20261102V2-source.png",
+      "sourceSha256": "ed32fb430e0e72d9e48f13e64ac8a1339bfec1d5c423f36780ed7353d6e146b8",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        0,
+        728,
+        357,
+        327
+      ],
+      "sourceAnchor": [
+        185,
+        1052
+      ],
+      "figureRGBAHash": "cb620a3307a725abf2ad75fccc15acbd794452dd3b5444e55534ec981ffd0e41"
+    },
+    {
+      "sourcePath": "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaW_NW_N20261102V2-source.png",
+      "sourceSha256": "ed32fb430e0e72d9e48f13e64ac8a1339bfec1d5c423f36780ed7353d6e146b8",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceFrameIndex": 9,
+      "sourceRect": [
+        368,
+        728,
+        330,
+        338
+      ],
+      "sourceAnchor": [
+        529,
+        1052
+      ],
+      "figureRGBAHash": "298510597f98421e5cd5d36aba55ab077c696073fe197d85233f4bc80ed0e244"
+    },
+    {
+      "sourcePath": "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaW_NW_N20261102V2-source.png",
+      "sourceSha256": "ed32fb430e0e72d9e48f13e64ac8a1339bfec1d5c423f36780ed7353d6e146b8",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceFrameIndex": 10,
+      "sourceRect": [
+        709,
+        712,
+        387,
+        374
+      ],
+      "sourceAnchor": [
+        905,
+        1052
+      ],
+      "figureRGBAHash": "46dc0b99cea4d4c6ed75f75b8b947cdc5f223ff355b0bab95407fee57ae3bda3"
+    },
+    {
+      "sourcePath": "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaW_NW_N20261102V2-source.png",
+      "sourceSha256": "ed32fb430e0e72d9e48f13e64ac8a1339bfec1d5c423f36780ed7353d6e146b8",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceFrameIndex": 11,
+      "sourceRect": [
+        1111,
+        745,
+        328,
+        313
+      ],
+      "sourceAnchor": [
+        1278,
+        1055
+      ],
+      "figureRGBAHash": "4a537ad0d79aef1d60e0ccc77ea648b2365d45cb49f40b41a4612fa0907e5e46"
+    }
+  ]
+}

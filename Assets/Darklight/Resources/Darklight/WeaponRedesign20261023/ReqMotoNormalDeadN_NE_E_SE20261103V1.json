@@ -1,0 +1,715 @@
+{
+  "imageSha256": "d79456cb6b5955e62df7e5bab9caeab60b8b0a49ab54af76a2e1367e61d15726",
+  "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadN_NE_E_SE20261103V1-source.png",
+  "sourceSha256": "d79456cb6b5955e62df7e5bab9caeab60b8b0a49ab54af76a2e1367e61d15726",
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 142.04545454545453,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "schemaVersion": 1,
+  "image": "ReqMotoNormalDeadN_NE_E_SE20261103V1.png",
+  "frames": [
+    {
+      "id": "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_00",
+      "rect": [
+        118,
+        6,
+        274,
+        262
+      ],
+      "pivot": [
+        0.5,
+        0.022900763358778664
+      ],
+      "durationMs": 180,
+      "action": "dead",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "collapse",
+      "sourceRect": [
+        118,
+        6,
+        274,
+        262
+      ],
+      "sourceAnchor": [
+        255,
+        262
+      ],
+      "sourcePackingAnchor": [
+        255,
+        262
+      ],
+      "sourceFrameIndex": 0,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          255,
+          262
+        ],
+        "method": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints."
+      },
+      "pixelsPerUnit": 142.04545454545453,
+      "visibleAlphaBoundsInFrame": [
+        4,
+        4,
+        270,
+        258
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_01",
+      "rect": [
+        562,
+        55,
+        325,
+        215
+      ],
+      "pivot": [
+        0.42153846153846153,
+        0.027906976744186074
+      ],
+      "durationMs": 220,
+      "action": "dead",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "fall-ground-contact",
+      "sourceRect": [
+        562,
+        55,
+        325,
+        215
+      ],
+      "sourceAnchor": [
+        699,
+        264
+      ],
+      "sourcePackingAnchor": [
+        699,
+        264
+      ],
+      "sourceFrameIndex": 1,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          699,
+          264
+        ],
+        "method": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints."
+      },
+      "pixelsPerUnit": 142.04545454545453,
+      "visibleAlphaBoundsInFrame": [
+        4,
+        4,
+        321,
+        211
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_02",
+      "rect": [
+        1039,
+        136,
+        407,
+        142
+      ],
+      "pivot": [
+        0.44471744471744473,
+        0.04225352112676062
+      ],
+      "durationMs": 1000,
+      "action": "dead",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "corpse-rest-hold",
+      "sourceRect": [
+        1039,
+        136,
+        407,
+        142
+      ],
+      "sourceAnchor": [
+        1220,
+        272
+      ],
+      "sourcePackingAnchor": [
+        1220,
+        272
+      ],
+      "sourceFrameIndex": 2,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          1220,
+          272
+        ],
+        "method": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints."
+      },
+      "pixelsPerUnit": 142.04545454545453,
+      "visibleAlphaBoundsInFrame": [
+        4,
+        4,
+        403,
+        138
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_03",
+      "rect": [
+        122,
+        275,
+        247,
+        243
+      ],
+      "pivot": [
+        0.4979757085020243,
+        0.024691358024691357
+      ],
+      "durationMs": 180,
+      "action": "dead",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "collapse",
+      "sourceRect": [
+        122,
+        275,
+        247,
+        243
+      ],
+      "sourceAnchor": [
+        245,
+        512
+      ],
+      "sourcePackingAnchor": [
+        245,
+        512
+      ],
+      "sourceFrameIndex": 3,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          245,
+          512
+        ],
+        "method": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints."
+      },
+      "pixelsPerUnit": 142.04545454545453,
+      "visibleAlphaBoundsInFrame": [
+        4,
+        4,
+        243,
+        239
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_04",
+      "rect": [
+        545,
+        312,
+        329,
+        208
+      ],
+      "pivot": [
+        0.44680851063829785,
+        0.028846153846153855
+      ],
+      "durationMs": 220,
+      "action": "dead",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "fall-ground-contact",
+      "sourceRect": [
+        545,
+        312,
+        329,
+        208
+      ],
+      "sourceAnchor": [
+        692,
+        514
+      ],
+      "sourcePackingAnchor": [
+        692,
+        514
+      ],
+      "sourceFrameIndex": 4,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          692,
+          514
+        ],
+        "method": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints."
+      },
+      "pixelsPerUnit": 142.04545454545453,
+      "visibleAlphaBoundsInFrame": [
+        4,
+        4,
+        325,
+        204
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_05",
+      "rect": [
+        1040,
+        391,
+        413,
+        138
+      ],
+      "pivot": [
+        0.4358353510895884,
+        0.04347826086956519
+      ],
+      "durationMs": 1000,
+      "action": "dead",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "corpse-rest-hold",
+      "sourceRect": [
+        1040,
+        391,
+        413,
+        138
+      ],
+      "sourceAnchor": [
+        1220,
+        523
+      ],
+      "sourcePackingAnchor": [
+        1220,
+        523
+      ],
+      "sourceFrameIndex": 5,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          1220,
+          523
+        ],
+        "method": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints."
+      },
+      "pixelsPerUnit": 142.04545454545453,
+      "visibleAlphaBoundsInFrame": [
+        4,
+        4,
+        409,
+        134
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_06",
+      "rect": [
+        127,
+        520,
+        214,
+        243
+      ],
+      "pivot": [
+        0.5186915887850467,
+        0.024691358024691357
+      ],
+      "durationMs": 180,
+      "action": "dead",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "collapse",
+      "sourceRect": [
+        127,
+        520,
+        214,
+        243
+      ],
+      "sourceAnchor": [
+        238,
+        757
+      ],
+      "sourcePackingAnchor": [
+        238,
+        757
+      ],
+      "sourceFrameIndex": 6,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          238,
+          757
+        ],
+        "method": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints."
+      },
+      "pixelsPerUnit": 142.04545454545453,
+      "visibleAlphaBoundsInFrame": [
+        4,
+        4,
+        210,
+        239
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_07",
+      "rect": [
+        551,
+        559,
+        296,
+        203
+      ],
+      "pivot": [
+        0.46959459459459457,
+        0.029556650246305383
+      ],
+      "durationMs": 220,
+      "action": "dead",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "fall-ground-contact",
+      "sourceRect": [
+        551,
+        559,
+        296,
+        203
+      ],
+      "sourceAnchor": [
+        690,
+        756
+      ],
+      "sourcePackingAnchor": [
+        690,
+        756
+      ],
+      "sourceFrameIndex": 7,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          690,
+          756
+        ],
+        "method": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints."
+      },
+      "pixelsPerUnit": 142.04545454545453,
+      "visibleAlphaBoundsInFrame": [
+        4,
+        4,
+        292,
+        199
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_08",
+      "rect": [
+        1034,
+        631,
+        411,
+        139
+      ],
+      "pivot": [
+        0.4282238442822384,
+        0.043165467625899234
+      ],
+      "durationMs": 1000,
+      "action": "dead",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "corpse-rest-hold",
+      "sourceRect": [
+        1034,
+        631,
+        411,
+        139
+      ],
+      "sourceAnchor": [
+        1210,
+        764
+      ],
+      "sourcePackingAnchor": [
+        1210,
+        764
+      ],
+      "sourceFrameIndex": 8,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          1210,
+          764
+        ],
+        "method": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints."
+      },
+      "pixelsPerUnit": 142.04545454545453,
+      "visibleAlphaBoundsInFrame": [
+        4,
+        4,
+        407,
+        135
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_09",
+      "rect": [
+        122,
+        768,
+        223,
+        249
+      ],
+      "pivot": [
+        0.5246636771300448,
+        0.02409638554216864
+      ],
+      "durationMs": 180,
+      "action": "dead",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "collapse",
+      "sourceRect": [
+        122,
+        768,
+        223,
+        249
+      ],
+      "sourceAnchor": [
+        239,
+        1011
+      ],
+      "sourcePackingAnchor": [
+        239,
+        1011
+      ],
+      "sourceFrameIndex": 9,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          239,
+          1011
+        ],
+        "method": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints."
+      },
+      "pixelsPerUnit": 142.04545454545453,
+      "visibleAlphaBoundsInFrame": [
+        4,
+        4,
+        219,
+        245
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_10",
+      "rect": [
+        537,
+        805,
+        304,
+        216
+      ],
+      "pivot": [
+        0.4868421052631579,
+        0.02777777777777779
+      ],
+      "durationMs": 220,
+      "action": "dead",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "fall-ground-contact",
+      "sourceRect": [
+        537,
+        805,
+        304,
+        216
+      ],
+      "sourceAnchor": [
+        685,
+        1015
+      ],
+      "sourcePackingAnchor": [
+        685,
+        1015
+      ],
+      "sourceFrameIndex": 10,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          685,
+          1015
+        ],
+        "method": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints."
+      },
+      "pixelsPerUnit": 142.04545454545453,
+      "visibleAlphaBoundsInFrame": [
+        4,
+        4,
+        300,
+        212
+      ]
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_11",
+      "rect": [
+        1028,
+        879,
+        399,
+        138
+      ],
+      "pivot": [
+        0.44360902255639095,
+        0.04347826086956519
+      ],
+      "durationMs": 1000,
+      "action": "dead",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "corpse-rest-hold",
+      "sourceRect": [
+        1028,
+        879,
+        399,
+        138
+      ],
+      "sourceAnchor": [
+        1205,
+        1011
+      ],
+      "sourcePackingAnchor": [
+        1205,
+        1011
+      ],
+      "sourceFrameIndex": 11,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          1205,
+          1011
+        ],
+        "method": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints."
+      },
+      "pixelsPerUnit": 142.04545454545453,
+      "visibleAlphaBoundsInFrame": [
+        4,
+        4,
+        395,
+        134
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "name": "Dead_N",
+      "frames": [
+        "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_00",
+        "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_01",
+        "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_02"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": true,
+      "intentionalStaticReason": ""
+    },
+    {
+      "name": "Dead_NE",
+      "frames": [
+        "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_03",
+        "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_04",
+        "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_05"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": true,
+      "intentionalStaticReason": ""
+    },
+    {
+      "name": "Dead_E",
+      "frames": [
+        "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_06",
+        "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_07",
+        "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_08"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": true,
+      "intentionalStaticReason": ""
+    },
+    {
+      "name": "Dead_SE",
+      "frames": [
+        "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_09",
+        "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_10",
+        "Redesign_ReqMotoNormalDeadN_NE_E_SE20261103V1_11"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": true,
+      "intentionalStaticReason": ""
+    }
+  ],
+  "requiredClips": [
+    "Dead_N",
+    "Dead_NE",
+    "Dead_E",
+    "Dead_SE"
+  ],
+  "worldVisualScale": 1.325,
+  "sourcePixelResampling": false,
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoS_SW20261102V2-source.png",
+      "sha256": "5205a9673d20fe2703b5d6057960c457d61138e0b0dc5862c77099d2ff9827f1",
+      "role": "Current approved compact proportions, identity, outfit and katana"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoW_NW20261102V2-source.png",
+      "sha256": "1cd4551daa59d049b46e8e4c93ff95588e0341ed053e8e02a368a5760b05d417",
+      "role": "Current approved left/back clothing and anatomy"
+    }
+  ],
+  "review": {
+    "wholeFigures": true,
+    "staticVisualReviewed": true,
+    "loop": false,
+    "expressionDirection": "Approved expressive charming character identity preserved, no speculative face redesign.",
+    "equipment": "Both black/silver circular saws, black gloves and plain strapped boots. NW fall/rest repaired because original corpse saws were cut at native canvas bottom.",
+    "densityGuide": {
+      "referencePPU": 157.82828282828282,
+      "referenceNativeCranialWidth": 140,
+      "originalSourceNativeCranialWidth": 126,
+      "method": "Skull/trunk native raster-density comparison, never normalized by bent/lying body height. Selected repair uses its own native density; no source pixel resampling."
+    },
+    "timing": "180ms collapse,220ms ground fall,1000ms final corpse authored hold; consumer clamps final frame indefinitely, no return Idle/no death loop.",
+    "nativePixelResampling": false,
+    "imported": false,
+    "runtimeVerified": false,
+    "motionReview": "Whole consecutive poses inspected statically, finite GIF authored; Unity/runtime validation deferred."
+  },
+  "quality": {
+    "alphaThreshold": 16,
+    "maxColors": 65536,
+    "maxHeightRatio": 2.5
+  },
+  "generationReferences": [
+    {
+      "path": "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalDeadN_NE_E_SE20261103V1-source.png",
+      "sha256": "42de6b5d29c205a1d637364bcd7b0e1ec22c2473434d7a42a509731dd99d0c1a"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalParry8Dirs20261103V1-source.png",
+      "sha256": "43d49af540d146e091ca69837ed7a90af48b97d01aeea18ae151857f4cc6a260"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png",
+      "sha256": "28d369c2b934bc3ceca5e92ef317ed9fdba37bdde44fb49bbd7e47f7d252b075"
+    }
+  ]
+}

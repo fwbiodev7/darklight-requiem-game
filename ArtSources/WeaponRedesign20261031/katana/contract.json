@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-31",
+  "scope": "Requiem / Katana / Normal",
+  "identityAuthority": "Approved Katana identity, mature proportions; brown canonical haircut; red eyes; black/burgundy neutral equipment",
+  "worldVisualScale": 1.325,
+  "generationMode": "Built-in integrated imagegen, transparent_background=true",
+  "newSheets": [
+    {"source": "ReqKatanaNormalWalkE-v1-source.png", "prompt": "ReqKatanaNormalWalkE-v1-prompt.txt", "figures": 8, "status": "candidate-rejected-for-integration", "defect": "Same leading leg at opposite contacts"},
+    {"source": "ReqKatanaNormalWalkE-v2-source.png", "prompt": "ReqKatanaNormalWalkE-v2-prompt.txt", "figures": 8, "status": "candidate-rejected-for-integration", "defect": "Opposite-half correction still keeps foreground leg behind"},
+    {"source": "ReqKatanaNormalWalkSE-v1-source.png", "prompt": "ReqKatanaNormalWalkSE-v1-prompt.txt", "figures": 8, "status": "candidate-rejected-for-integration", "defect": "Same support and too close to E orientation"},
+    {"source": "ReqKatanaNormalWalkSE-v2-source.png", "prompt": "ReqKatanaNormalWalkSE-v2-prompt.txt", "figures": 8, "status": "candidate-rejected-for-integration", "defect": "SE orientation recovered but same leading/support boot repeats"}
+  ],
+  "referenceMethod": "Complete inspected sheets; final SE repair uses one intact SE atlas frame, technical whole-frame extraction only",
+  "referenceProvenance": "references/whole-frame-reference-provenance.json",
+  "sourceHashes": "source-hashes.json",
+  "sourcePixelsPreserved": true,
+  "anatomicalAssembly": false,
+  "mirroring": false,
+  "generatedWalkingClipsAccepted": 0,
+  "attemptLimitReached": true,
+  "newGenerationStopped": true,
+  "importedByThisAgent": false,
+  "runtimeVerifiedByThisAgent": false
+}

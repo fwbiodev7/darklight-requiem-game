@@ -1,0 +1,606 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqKatanaNormalCarregadoS_SW20261102V2.png",
+  "imageSha256": "18b571d64b56d3fd1e242adf09fafd72feb37f79992a3b7ffef499fd927da7ec",
+  "nativeSize": [
+    1792,
+    1035
+  ],
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 168.1818181818182,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoS_SW20261102V2-source.png",
+  "sourceSha256": "5205a9673d20fe2703b5d6057960c457d61138e0b0dc5862c77099d2ff9827f1",
+  "frames": [
+    {
+      "id": "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_00",
+      "rect": [
+        0,
+        553,
+        406,
+        482
+      ],
+      "pivot": [
+        0.4729064039408867,
+        0.02904564315352698
+      ],
+      "durationMs": 150,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        0,
+        402,
+        478
+      ],
+      "sourceAnchor": [
+        190,
+        466
+      ],
+      "sourcePackingAnchor": [
+        267,
+        467
+      ],
+      "supportGuide": {
+        "anchor": [
+          190,
+          466
+        ],
+        "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+      },
+      "sourceOffsetInFrame": [
+        2,
+        2
+      ],
+      "sourceScale": 1,
+      "gameplayPhase": "startup",
+      "attackKey": "Carregado"
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_01",
+      "rect": [
+        386,
+        0,
+        432,
+        531
+      ],
+      "pivot": [
+        0.4722222222222222,
+        0.14312617702448216
+      ],
+      "durationMs": 140,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "active-contact",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        374,
+        13,
+        428,
+        527
+      ],
+      "sourceAnchor": [
+        576,
+        466
+      ],
+      "sourcePackingAnchor": [
+        663,
+        467
+      ],
+      "supportGuide": {
+        "anchor": [
+          576,
+          466
+        ],
+        "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+      },
+      "sourceOffsetInFrame": [
+        2,
+        2
+      ],
+      "sourceScale": 1,
+      "gameplayPhase": "active",
+      "attackKey": "Carregado"
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_02",
+      "rect": [
+        0,
+        0,
+        382,
+        549
+      ],
+      "pivot": [
+        0.6178010471204188,
+        0.17486338797814205
+      ],
+      "durationMs": 115,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "follow-through",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        760,
+        19,
+        378,
+        545
+      ],
+      "sourceAnchor": [
+        994,
+        470
+      ],
+      "sourcePackingAnchor": [
+        1071,
+        471
+      ],
+      "supportGuide": {
+        "anchor": [
+          994,
+          470
+        ],
+        "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+      },
+      "sourceOffsetInFrame": [
+        2,
+        2
+      ],
+      "sourceScale": 1,
+      "gameplayPhase": "recovery",
+      "attackKey": "Carregado"
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_03",
+      "rect": [
+        822,
+        0,
+        463,
+        526
+      ],
+      "pivot": [
+        0.7105831533477321,
+        0.14638783269961975
+      ],
+      "durationMs": 115,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1063,
+        19,
+        459,
+        522
+      ],
+      "sourceAnchor": [
+        1390,
+        466
+      ],
+      "sourcePackingAnchor": [
+        1389,
+        467
+      ],
+      "supportGuide": {
+        "anchor": [
+          1390,
+          466
+        ],
+        "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+      },
+      "sourceOffsetInFrame": [
+        2,
+        2
+      ],
+      "sourceScale": 1,
+      "gameplayPhase": "recovery",
+      "attackKey": "Carregado"
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_04",
+      "rect": [
+        1289,
+        0,
+        389,
+        492
+      ],
+      "pivot": [
+        0.390745501285347,
+        0.12195121951219512
+      ],
+      "durationMs": 150,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        31,
+        512,
+        385,
+        488
+      ],
+      "sourceAnchor": [
+        181,
+        942
+      ],
+      "sourcePackingAnchor": [
+        258,
+        943
+      ],
+      "supportGuide": {
+        "anchor": [
+          181,
+          942
+        ],
+        "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+      },
+      "sourceOffsetInFrame": [
+        2,
+        2
+      ],
+      "sourceScale": 1,
+      "gameplayPhase": "startup",
+      "attackKey": "Carregado"
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_05",
+      "rect": [
+        410,
+        553,
+        440,
+        447
+      ],
+      "pivot": [
+        0.4909090909090909,
+        0.10738255033557043
+      ],
+      "durationMs": 140,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "active-contact",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        364,
+        547,
+        436,
+        443
+      ],
+      "sourceAnchor": [
+        578,
+        944
+      ],
+      "sourcePackingAnchor": [
+        661,
+        945
+      ],
+      "supportGuide": {
+        "anchor": [
+          578,
+          944
+        ],
+        "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+      },
+      "sourceOffsetInFrame": [
+        2,
+        2
+      ],
+      "sourceScale": 1,
+      "gameplayPhase": "active",
+      "attackKey": "Carregado"
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_06",
+      "rect": [
+        1231,
+        553,
+        409,
+        408
+      ],
+      "pivot": [
+        0.5623471882640587,
+        0.044117647058823484
+      ],
+      "durationMs": 115,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "follow-through",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        769,
+        566,
+        405,
+        404
+      ],
+      "sourceAnchor": [
+        997,
+        954
+      ],
+      "sourcePackingAnchor": [
+        1082,
+        955
+      ],
+      "supportGuide": {
+        "anchor": [
+          997,
+          954
+        ],
+        "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+      },
+      "sourceOffsetInFrame": [
+        2,
+        2
+      ],
+      "sourceScale": 1,
+      "gameplayPhase": "recovery",
+      "attackKey": "Carregado"
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_07",
+      "rect": [
+        854,
+        553,
+        373,
+        423
+      ],
+      "pivot": [
+        0.6166219839142091,
+        0.01891252955082745
+      ],
+      "durationMs": 115,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        1167,
+        541,
+        369,
+        419
+      ],
+      "sourceAnchor": [
+        1395,
+        954
+      ],
+      "sourcePackingAnchor": [
+        1440,
+        955
+      ],
+      "supportGuide": {
+        "anchor": [
+          1395,
+          954
+        ],
+        "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+      },
+      "sourceOffsetInFrame": [
+        2,
+        2
+      ],
+      "sourceScale": 1,
+      "gameplayPhase": "recovery",
+      "attackKey": "Carregado"
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_S",
+      "frames": [
+        "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_00",
+        "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_01",
+        "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_02",
+        "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_03"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_SW",
+      "frames": [
+        "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_04",
+        "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_05",
+        "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_06",
+        "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_07"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "attack_S",
+    "attack_SW"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 469061,
+  "packedPixels": 469061,
+  "originalSourcePixels": 469061,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 1103803,
+    "farBeyond16pxPixels": 606,
+    "farBeyond16pxMaxAlpha": 2,
+    "farBeyond16pxOpaqueEquivalent": 2.380392156862745,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ],
+  "visualReviewed": true,
+  "imported": false,
+  "runtimeVerified": false,
+  "worldVisualScale": 1.325,
+  "startupFrames": 1,
+  "activeFrames": 1,
+  "durationMs": [
+    150,
+    140,
+    115,
+    115
+  ],
+  "attackKey": "Carregado",
+  "stagingOnly": true,
+  "gameplayContactVerified": false,
+  "proportionCorrection": "Whole figures redrawn with approved compact thighs/shins/boots; no scaling or anatomical assembly",
+  "ppuProvenance": {
+    "purpose": "Native raster density only; proportions reviewed before calibration",
+    "targetBodyHeightUnits": 1.98,
+    "measurements": [
+      {
+        "frame": 3,
+        "hairY": 142,
+        "soleY": 467,
+        "bodyHeight": 325
+      },
+      {
+        "frame": 7,
+        "hairY": 614,
+        "soleY": 955,
+        "bodyHeight": 341
+      }
+    ]
+  },
+  "packing": "compact variable whole-frame rectangles; RGBA0000-only trims",
+  "compactionProof": [
+    {
+      "frameId": "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_00",
+      "exactRgba": true,
+      "originalRgbaSha256": "e1fee532a5a3343f8174490c929f713c63d3533d45753e025b8bfc76e552bf51",
+      "trimRgba0000": [
+        65,
+        6,
+        471,
+        488
+      ]
+    },
+    {
+      "frameId": "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_01",
+      "exactRgba": true,
+      "originalRgbaSha256": "4392ffc3c46e27b4d581e1dd7a617d8a3dedbf6a62e9347e03ba2d4466bd92f4",
+      "trimRgba0000": [
+        43,
+        19,
+        475,
+        550
+      ]
+    },
+    {
+      "frameId": "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_02",
+      "exactRgba": true,
+      "originalRgbaSha256": "8de56336eae8003023867ef7825bba6b41fd235d90f944cb09baa0cc003cf131",
+      "trimRgba0000": [
+        21,
+        21,
+        403,
+        570
+      ]
+    },
+    {
+      "frameId": "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_03",
+      "exactRgba": true,
+      "originalRgbaSha256": "d52352c432b396b996d12476cb1d059036a1ed6f82271f27026c9a9e02a2bc65",
+      "trimRgba0000": [
+        6,
+        25,
+        469,
+        551
+      ]
+    },
+    {
+      "frameId": "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_04",
+      "exactRgba": true,
+      "originalRgbaSha256": "7763190acd0945841575b212a97092a86525fdca80ef87b31e58590f4ebe81de",
+      "trimRgba0000": [
+        105,
+        42,
+        494,
+        534
+      ]
+    },
+    {
+      "frameId": "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_05",
+      "exactRgba": true,
+      "originalRgbaSha256": "e1da8dc5ab09e2bedca4996e7f73da66cee243f68571608690593b88f476454a",
+      "trimRgba0000": [
+        35,
+        75,
+        475,
+        522
+      ]
+    },
+    {
+      "frameId": "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_06",
+      "exactRgba": true,
+      "originalRgbaSha256": "d95845276336f14d6d75eafa0e3fbdd0395a60c907d770317627ca322bba3f5d",
+      "trimRgba0000": [
+        19,
+        84,
+        428,
+        492
+      ]
+    },
+    {
+      "frameId": "Redesign_ReqKatanaNormalCarregadoS_SW20261102V2_07",
+      "exactRgba": true,
+      "originalRgbaSha256": "212c7b6d575f40bbbd1a17d3187472c36741fd0541cad3162142bc833876f1c3",
+      "trimRgba0000": [
+        59,
+        59,
+        432,
+        482
+      ]
+    }
+  ],
+  "staticVisualReviewed": true,
+  "motionVisualReviewed": false,
+  "humanApproved": false,
+  "reviewMethod": "Complete source/reference comparison and all 32 packed complete figures inspected; phase poses/contact order checked statically. Animated previews generated, interactive playback unavailable: IAB unavailable, browser inventory empty.",
+  "reviewFindings": [
+    "Compact thighs, shins and stocky boots restored by complete-figure redraw; no anatomical scaling, head/limb grafts or recolor",
+    "Normal hair, mature approved face, coat and steel katana preserved; N/NE use real back views; no mirror",
+    "High loaded guard -> diagonal active cut -> low follow-through -> low guard; some rear-view recovery motion subtle; gameplay contact not certified",
+    "All pixels selected from source preserved; alpha and high-color warnings retained as source raster limitations"
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "date": "2026-11-02",
+  "task": "Punhos Normal Walk SW/W/NW",
+  "generationTool": "built-in image_gen.imagegen",
+  "generationCalls": 2,
+  "wholeFiguresPerCall": 12,
+  "producedFigures": 24,
+  "reviewedFigures": 24,
+  "readyFigures": 0,
+  "readyClips": 0,
+  "imported": false,
+  "runtimeVerified": false,
+  "visualApproval": false,
+  "transformation": false,
+  "anatomyAssembly": false,
+  "mirroring": false,
+  "buildRun": false,
+  "sheets": [
+    {
+      "name": "ReqFistsNormalWalkSW_W_NW20261102V1",
+      "status": "candidate-rejected",
+      "frames": 12,
+      "directions": [
+        "SW",
+        "W",
+        "NW"
+      ],
+      "sourcePath": "ArtSources/WeaponRedesign20261102/punhos-walk/ReqFistsNormalWalkSW_W_NW20261102V1-source.png",
+      "sourceSha256": "7172d092f3ae11d176a9d89ea42f329a9eadcea9824b39a7db19a2ba1bc17697",
+      "imageSha256": "ea73eb9ab2c92ad8c00a8fac995bc599d44891d3ca5f6187678edeb96d8e6262",
+      "sourceSize": [
+        1447,
+        1087
+      ],
+      "nativeSize": [
+        2312,
+        1296
+      ],
+      "pixelsPerUnit": 162.62626262626262,
+      "sourceRgbaExactReconstruction": true,
+      "alphaReview": {
+        "transparentPixels": 1016663,
+        "farBeyond16pxPixels": 514,
+        "farBeyond16pxMaxAlpha": 1,
+        "farBeyond16pxOpaqueEquivalent": 2.015686274509804,
+        "backgroundRemoved": false,
+        "everySelectedNonzeroAlphaPixelRetained": true
+      },
+      "qa": {
+        "name": "ReqFistsNormalWalkSW_W_NW20261102V1",
+        "errors": 0,
+        "warnings": 15
+      },
+      "imported": false,
+      "runtimeVerified": false,
+      "review": {
+        "date": "2026-11-02",
+        "status": "candidate-rejected",
+        "reason": "Repeated leading leg; complete four-phase walk not achieved.",
+        "wholeSourceInspected": true,
+        "nativeContactInspected": true,
+        "nearestNeighborContactInspected": false,
+        "gifGenerated": true,
+        "gifOpened": false,
+        "continuousMotionViewed": false,
+        "continuousMotionLimit": "view_image displays GIF as one static frame; no continuous browser or Unity playback performed.",
+        "identity": "Compact natural brown hair, clean warm skin, dark-red visible eyes, black/red coat and silver claw equipment broadly retained; gait rejection prevents promotion.",
+        "directions": {
+          "SW": "00/02 retain foreground shin/boot ahead down-left; 01/03 plant that same foreground boot and lift the far boot. No exchanged leg order.",
+          "W": "04/06 retain foreground boot leftward ahead of hips and far boot trailing right; 05/07 again plant foreground boot and lift far boot. Arms also alternate between profile and more frontal shoulders.",
+          "NW": "08/10 retain foreground leg extended forward-left and far heel to right/back; toe angle changes do not establish an opposite contact. 09/11 plant foreground boot, far boot lifted."
+        },
+        "oppositeContactsProven": false,
+        "completeClips": 0,
+        "visualApproval": false,
+        "imported": false,
+        "runtimeVerified": false
+      }
+    },
+    {
+      "name": "ReqFistsNormalWalkSW_W_NW20261102V2",
+      "status": "candidate-rejected",
+      "frames": 12,
+      "directions": [
+        "SW",
+        "W",
+        "NW"
+      ],
+      "sourcePath": "ArtSources/WeaponRedesign20261102/punhos-walk/ReqFistsNormalWalkSW_W_NW20261102V2-source.png",
+      "sourceSha256": "a8b38bd3b4e2056911583576c6121aaefa80191ecfa124d71c7ef4a958c009ee",
+      "imageSha256": "56cf457389399290d3e65263497dc11647e35097567d0d89d6a9ffe1cb773a7c",
+      "sourceSize": [
+        1446,
+        1087
+      ],
+      "nativeSize": [
+        2152,
+        1203
+      ],
+      "pixelsPerUnit": 166.41414141414143,
+      "sourceRgbaExactReconstruction": true,
+      "alphaReview": {
+        "transparentPixels": 953547,
+        "farBeyond16pxPixels": 154,
+        "farBeyond16pxMaxAlpha": 1,
+        "farBeyond16pxOpaqueEquivalent": 0.6039215686274509,
+        "backgroundRemoved": false,
+        "everySelectedNonzeroAlphaPixelRetained": true
+      },
+      "qa": {
+        "name": "ReqFistsNormalWalkSW_W_NW20261102V2",
+        "errors": 0,
+        "warnings": 13
+      },
+      "imported": false,
+      "runtimeVerified": false,
+      "review": {
+        "date": "2026-11-02",
+        "status": "candidate-rejected",
+        "reason": "Repeated leading leg; complete four-phase walk not achieved.",
+        "wholeSourceInspected": true,
+        "nativeContactInspected": true,
+        "nearestNeighborContactInspected": true,
+        "gifGenerated": true,
+        "gifOpened": true,
+        "continuousMotionViewed": false,
+        "continuousMotionLimit": "view_image displays GIF as one static frame; no continuous browser or Unity playback performed.",
+        "identity": "Compact natural brown hair, clean warm skin, dark-red visible eyes, black/red coat and silver claw equipment broadly retained; gait rejection prevents promotion.",
+        "directions": {
+          "SW": "00/02 again show foreground boot forward-left, far boot behind/right. 01/03 lift far boot, repeating V1 half-cycle despite opposite-contact whole-figure references.",
+          "W": "04/06 again foreground boot forward-left with far boot behind/right. 05/07 still plant foreground boot and lift far boot. Passing shoulder view becomes more frontal, deviating from stable W profile.",
+          "NW": "08/10 still foreground claw boot extended leftward and far heel right/back. 09/11 now appear to plant far boot and lift near boot, a potentially opposite passage; no matching opposite contact exists, so no complete NW clip is promotable."
+        },
+        "oppositeContactsProven": false,
+        "completeClips": 0,
+        "visualApproval": false,
+        "imported": false,
+        "runtimeVerified": false
+      }
+    }
+  ],
+  "pending": [
+    "SW/W/NW need proven opposite whole-figure contacts before a valid 4x100ms loop can be selected.",
+    "NW V2 has possible opposite passing poses09/11; these alone do not complete the cycle.",
+    "No further generation under this two-call task; do not repeat the same near/far prompts.",
+    "No Unity import, runtime, transitions or world-scale verification performed."
+  ]
+}

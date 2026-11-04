@@ -1,0 +1,66 @@
+{
+  "jobs": [
+    {
+      "name": "ReqFistsNormalWalkS20261101V2Selected",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261101\\punhos-walk\\ReqFistsNormalWalkS_SW_W20261101V2-source.png",
+      "preservedSourceName": "ReqFistsNormalWalkS_SW_W20261101V2-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 8000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 0,
+          "action": "Walk",
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "durationMs": [
+            100,
+            100,
+            100,
+            100
+          ],
+          "loop": true
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            268,
+            355
+          ],
+          "method": "Torso ground projection at active supporting claw-boot sole plane; full figure unchanged"
+        },
+        "1": {
+          "anchor": [
+            598,
+            355
+          ],
+          "method": "Torso ground projection at active supporting claw-boot sole plane; full figure unchanged"
+        },
+        "2": {
+          "anchor": [
+            939,
+            355
+          ],
+          "method": "Torso ground projection at active supporting claw-boot sole plane; full figure unchanged"
+        },
+        "3": {
+          "anchor": [
+            1275,
+            355
+          ],
+          "method": "Torso ground projection at active supporting claw-boot sole plane; full figure unchanged"
+        }
+      },
+      "excludedReason": "SW/W repeated same leading leg; never promote these eight figures."
+    }
+  ]
+}

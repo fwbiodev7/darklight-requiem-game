@@ -1,0 +1,116 @@
+{
+  "name": "ReqMotoNormalWalkSW_SE20261103ClosedV2",
+  "source": "ReqMotoNormalWalkSW_SE20261103V2-source.png",
+  "sourceRows": 2,
+  "directions": [
+    "SW",
+    "SE"
+  ],
+  "sourceIndices": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6,
+      7
+    ]
+  ],
+  "frameBodyHeightPixels": [],
+  "densityPixelsPerUnit": [
+    198,
+    198,
+    198,
+    198,
+    198,
+    198,
+    198,
+    198
+  ],
+  "densityCalibration": {
+    "method": "Uniform198PPU all8; invariant crown-to-waist/head versus S source, never per-pose leg/saw extent. No resampling.",
+    "reference": "ReqMotoNormalWalkS20261103ClosedV1",
+    "referenceCrownToWaistPixels": 178,
+    "referencePixelsPerUnit": 195.95959595959596,
+    "sourceCrownToWaistPixelsApprox": 180,
+    "pixelsPerUnit": 198,
+    "uncertaintyPixels": 5
+  },
+  "nearestWholeFiguresSeen": true,
+  "staticContactSeen": true,
+  "reviewNotes": [
+    "Explicit viewer-left lower heel in contactA and viewer-right lower heel in contactB. Fixed front-left SW/front-right SE camera all4. Uniform scale all8.",
+    "Native/worldscale contact and nearest2x whole figures inspected. Opposite low supports clear, camera front-left/right fixed by row, complete two saws/grips, head/trunk scale stable across all4 phases. No per-cell image fit or pose-specific PPU."
+  ],
+  "supportAnchors": {
+    "0": {
+      "anchor": [
+        207,
+        421
+      ],
+      "method": "Common ground; manually projected waist/root of entire figure",
+      "uncertaintyPixels": 4
+    },
+    "1": {
+      "anchor": [
+        651,
+        421
+      ],
+      "method": "Common ground; manually projected waist/root of entire figure",
+      "uncertaintyPixels": 4
+    },
+    "2": {
+      "anchor": [
+        1095,
+        421
+      ],
+      "method": "Common ground; manually projected waist/root of entire figure",
+      "uncertaintyPixels": 4
+    },
+    "3": {
+      "anchor": [
+        1538,
+        421
+      ],
+      "method": "Common ground; manually projected waist/root of entire figure",
+      "uncertaintyPixels": 4
+    },
+    "4": {
+      "anchor": [
+        247,
+        865
+      ],
+      "method": "Common ground; manually projected waist/root of entire figure",
+      "uncertaintyPixels": 4
+    },
+    "5": {
+      "anchor": [
+        692,
+        865
+      ],
+      "method": "Common ground; manually projected waist/root of entire figure",
+      "uncertaintyPixels": 4
+    },
+    "6": {
+      "anchor": [
+        1136,
+        865
+      ],
+      "method": "Common ground; manually projected waist/root of entire figure",
+      "uncertaintyPixels": 4
+    },
+    "7": {
+      "anchor": [
+        1579,
+        865
+      ],
+      "method": "Common ground; manually projected waist/root of entire figure",
+      "uncertaintyPixels": 4
+    }
+  },
+  "visualReviewed": true
+}

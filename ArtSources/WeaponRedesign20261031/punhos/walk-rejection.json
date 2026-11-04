@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-31",
+  "generatedBy": "integrated imagegen",
+  "generated": 3,
+  "promoted": 0,
+  "retriesStoppedByCoordinator": true,
+  "candidates": [
+    {
+      "version": 1,
+      "status": "candidate-rejected",
+      "reason": "Same leading boot repeats across most poses; clear passing phase missing.",
+      "sourcePath": "ArtSources\\WeaponRedesign20261031\\punhos\\ReqFistsNormalWalkS20261031V1-source.png",
+      "sourceSha256": "b0c1d4fdf82c7a1cd8d39a7716a97256db4110b42aa8907a3c6e6f8d2513f909",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentPixels": 910308,
+      "imported": false,
+      "runtimeVerified": false,
+      "completeFigures": true,
+      "anatomicalAssembly": false,
+      "promptPath": "ArtSources\\WeaponRedesign20261031\\punhos\\ReqFistsNormalWalkS20261031V1-prompt.txt"
+    },
+    {
+      "version": 2,
+      "status": "candidate-rejected",
+      "reason": "Targeted repair still repeats the leading boot and unclear passing; no promotion.",
+      "sourcePath": "ArtSources\\WeaponRedesign20261031\\punhos\\ReqFistsNormalWalkS20261031V2-source.png",
+      "sourceSha256": "213f4450a32e3bfb6f2722290c495e443ac75d22a4f96b661f8a49d12d176073",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentPixels": 873245,
+      "imported": false,
+      "runtimeVerified": false,
+      "completeFigures": true,
+      "anatomicalAssembly": false,
+      "promptPath": "ArtSources\\WeaponRedesign20261031\\punhos\\ReqFistsNormalWalkS20261031V2-prompt.txt"
+    },
+    {
+      "version": 3,
+      "status": "candidate-rejected",
+      "reason": "Opposite contacts improved, but rendered opaque backdrop and missing readable passing phases.",
+      "sourcePath": "ArtSources\\WeaponRedesign20261031\\punhos\\ReqFistsNormalWalkS20261031V3-source.png",
+      "sourceSha256": "d25a2bf4e6bddb302210f5281f594d2a40aea24ddef50c5d61b1109456e6ab28",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentPixels": 919755,
+      "imported": false,
+      "runtimeVerified": false,
+      "completeFigures": true,
+      "anatomicalAssembly": false,
+      "promptPath": "ArtSources\\WeaponRedesign20261031\\punhos\\ReqFistsNormalWalkS20261031V3-prompt.txt"
+    }
+  ],
+  "nextAttempt": "Require a proven eight-phase south-facing whole-figure reference or a different articulated-pose approach; do not reuse repeated-boot candidates."
+}

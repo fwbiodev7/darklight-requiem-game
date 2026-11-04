@@ -1,0 +1,134 @@
+{
+  "jobs": [
+    {
+      "name": "ReqKatanaNormalWalkNE_E_SE20261102V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261102\\katana-walk\\ReqKatanaNormalWalkNE_E_SE20261102V1-source.png",
+      "preservedSourceName": "ReqKatanaNormalWalkNE_E_SE20261102V1-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 5000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 5,
+          "action": "Walk",
+          "loop": true,
+          "durationMs": [
+            100,
+            100,
+            100,
+            100
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 6,
+          "action": "Walk",
+          "loop": true,
+          "durationMs": [
+            100,
+            100,
+            100,
+            100
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 7,
+          "action": "Walk",
+          "loop": true,
+          "durationMs": [
+            100,
+            100,
+            100,
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ReqKatanaNormalWalkNE_E_SE20261102V2",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261102\\katana-walk\\ReqKatanaNormalWalkNE_E_SE20261102V2-source.png",
+      "preservedSourceName": "ReqKatanaNormalWalkNE_E_SE20261102V2-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 3,
+      "sourceRows": 3,
+      "minimumArea": 5000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            3,
+            6
+          ],
+          "direction": 5,
+          "action": "Walk",
+          "loop": true,
+          "durationMs": [
+            100,
+            100,
+            100
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            1,
+            4,
+            7
+          ],
+          "direction": 6,
+          "action": "Walk",
+          "loop": true,
+          "durationMs": [
+            100,
+            100,
+            100
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            2,
+            5,
+            8
+          ],
+          "direction": 7,
+          "action": "Walk",
+          "loop": true,
+          "durationMs": [
+            100,
+            100,
+            100
+          ]
+        }
+      ]
+    }
+  ],
+  "diagnosticOnly": true,
+  "neverImport": true
+}

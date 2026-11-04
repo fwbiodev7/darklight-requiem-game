@@ -1,0 +1,226 @@
+{
+  "name": "ReqMotoNormalDualSaws8AttackS20261027V1",
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261027\\moto-dual-saws\\ReqMotoNormalDualSaws8AttackS20261027V1-source.png",
+  "preservedSourceName": "ReqMotoNormalDualSaws8AttackS20261027V1-source.png",
+  "skin": 0,
+  "weapon": 3,
+  "form": 0,
+  "columns": 4,
+  "sourceRows": 3,
+  "rows": [
+    {
+      "sourceRow": 0,
+      "sourceIndices": [
+        0
+      ],
+      "direction": 0,
+      "action": "Idle",
+      "durationMs": [
+        160
+      ],
+      "loop": false
+    },
+    {
+      "sourceRow": 0,
+      "sourceIndices": [
+        1
+      ],
+      "direction": 1,
+      "action": "Idle",
+      "durationMs": [
+        160
+      ],
+      "loop": false
+    },
+    {
+      "sourceRow": 0,
+      "sourceIndices": [
+        2
+      ],
+      "direction": 2,
+      "action": "Idle",
+      "durationMs": [
+        160
+      ],
+      "loop": false
+    },
+    {
+      "sourceRow": 0,
+      "sourceIndices": [
+        3
+      ],
+      "direction": 3,
+      "action": "Idle",
+      "durationMs": [
+        160
+      ],
+      "loop": false
+    },
+    {
+      "sourceRow": 1,
+      "sourceIndices": [
+        4
+      ],
+      "direction": 4,
+      "action": "Idle",
+      "durationMs": [
+        160
+      ],
+      "loop": false
+    },
+    {
+      "sourceRow": 1,
+      "sourceIndices": [
+        5
+      ],
+      "direction": 5,
+      "action": "Idle",
+      "durationMs": [
+        160
+      ],
+      "loop": false
+    },
+    {
+      "sourceRow": 1,
+      "sourceIndices": [
+        6
+      ],
+      "direction": 6,
+      "action": "Idle",
+      "durationMs": [
+        160
+      ],
+      "loop": false
+    },
+    {
+      "sourceRow": 1,
+      "sourceIndices": [
+        7
+      ],
+      "direction": 7,
+      "action": "Idle",
+      "durationMs": [
+        160
+      ],
+      "loop": false
+    },
+    {
+      "sourceRow": 2,
+      "sourceIndices": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "direction": 0,
+      "action": "Attack",
+      "attackKey": "Dual Saws - Front Alternating Cut"
+    }
+  ],
+  "minimumArea": 15000,
+  "supportAnchors": {
+    "0": {
+      "anchor": [
+        208,
+        328
+      ],
+      "method": "Whole-source inspected ground under pelvis/planted boots; saw bounds excluded."
+    },
+    "1": {
+      "anchor": [
+        558,
+        338
+      ],
+      "method": "Whole-source inspected ground under pelvis/planted boots; saw bounds excluded."
+    },
+    "2": {
+      "anchor": [
+        928,
+        335
+      ],
+      "method": "Whole-source inspected ground under pelvis/planted boots; saw bounds excluded."
+    },
+    "3": {
+      "anchor": [
+        1299,
+        337
+      ],
+      "method": "Whole-source inspected ground under pelvis/planted boots; saw bounds excluded."
+    },
+    "4": {
+      "anchor": [
+        208,
+        672
+      ],
+      "method": "Whole-source inspected ground under pelvis/planted boots; saw bounds excluded."
+    },
+    "5": {
+      "anchor": [
+        571,
+        675
+      ],
+      "method": "Whole-source inspected ground under pelvis/planted boots; saw bounds excluded."
+    },
+    "6": {
+      "anchor": [
+        924,
+        675
+      ],
+      "method": "Whole-source inspected ground under pelvis/planted boots; saw bounds excluded."
+    },
+    "7": {
+      "anchor": [
+        1298,
+        677
+      ],
+      "method": "Whole-source inspected ground under pelvis/planted boots; saw bounds excluded."
+    },
+    "8": {
+      "anchor": [
+        210,
+        1024
+      ],
+      "method": "Whole-source inspected ground under pelvis/planted boots; saw bounds excluded."
+    },
+    "9": {
+      "anchor": [
+        565,
+        1018
+      ],
+      "method": "Whole-source inspected ground under pelvis/planted boots; saw bounds excluded."
+    },
+    "10": {
+      "anchor": [
+        910,
+        1025
+      ],
+      "method": "Whole-source inspected ground under pelvis/planted boots; saw bounds excluded."
+    },
+    "11": {
+      "anchor": [
+        1275,
+        1021
+      ],
+      "method": "Whole-source inspected ground under pelvis/planted boots; saw bounds excluded."
+    }
+  },
+  "wholeFigureReplacements": {
+    "source": "ReqMotoNormalDualSaws8AttackS20261027V1-repair2-source.png",
+    "sourceFrameMap": {
+      "1": 1,
+      "2": 2,
+      "6": 6
+    },
+    "untouchedOriginalFrames": [
+      0,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  }
+}

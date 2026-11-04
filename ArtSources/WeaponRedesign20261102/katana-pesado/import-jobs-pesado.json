@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 1,
+  "stagingOnly": true,
+  "jobs": [
+    {
+      "name": "ReqKatanaNormalPesadoS_SW_W20261102V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261102\\katana-pesado\\ReqKatanaNormalPesadoS_SW_W20261102V1-source.png",
+      "preservedSourceName": "ReqKatanaNormalPesadoS_SW_W20261102V1-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Pesado",
+          "loop": false,
+          "durationMs": [
+            100,
+            110,
+            100,
+            100
+          ],
+          "startupFrames": 1,
+          "activeFrames": 1
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "Pesado",
+          "loop": false,
+          "durationMs": [
+            100,
+            110,
+            100,
+            100
+          ],
+          "startupFrames": 1,
+          "activeFrames": 1
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "Pesado",
+          "loop": false,
+          "durationMs": [
+            100,
+            110,
+            100,
+            100
+          ],
+          "startupFrames": 1,
+          "activeFrames": 1
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            220,
+            340
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "1": {
+          "anchor": [
+            607,
+            340
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "2": {
+          "anchor": [
+            977,
+            340
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "3": {
+          "anchor": [
+            1370,
+            340
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "4": {
+          "anchor": [
+            192,
+            675
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "5": {
+          "anchor": [
+            601,
+            662
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "6": {
+          "anchor": [
+            985,
+            668
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "7": {
+          "anchor": [
+            1378,
+            675
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "8": {
+          "anchor": [
+            201,
+            989
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "9": {
+          "anchor": [
+            615,
+            978
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "10": {
+          "anchor": [
+            1007,
+            989
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "11": {
+          "anchor": [
+            1396,
+            994
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        }
+      },
+      "excludedReason": "",
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "durationMs": [
+        100,
+        110,
+        100,
+        100
+      ]
+    },
+    {
+      "name": "ReqKatanaNormalPesadoNW_NE20261102V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261102\\katana-pesado\\ReqKatanaNormalPesadoNW_N_NE20261102V1-source.png",
+      "preservedSourceName": "ReqKatanaNormalPesadoNW_N_NE20261102V1-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "Pesado",
+          "loop": false,
+          "durationMs": [
+            100,
+            110,
+            100,
+            100
+          ],
+          "startupFrames": 1,
+          "activeFrames": 1
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "Pesado",
+          "loop": false,
+          "durationMs": [
+            100,
+            110,
+            100,
+            100
+          ],
+          "startupFrames": 1,
+          "activeFrames": 1
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            151,
+            332
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "1": {
+          "anchor": [
+            580,
+            334
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "2": {
+          "anchor": [
+            980,
+            334
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "3": {
+          "anchor": [
+            1329,
+            337
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "8": {
+          "anchor": [
+            163,
+            986
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "9": {
+          "anchor": [
+            583,
+            988
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "10": {
+          "anchor": [
+            969,
+            992
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        },
+        "11": {
+          "anchor": [
+            1376,
+            992
+          ],
+          "method": "Manual projected midpoint of grounded boot support in intact source; no anatomy alteration."
+        }
+      },
+      "excludedReason": "All four complete N figures excluded: active pose repeats overhead Leve3 motif rather than distinct transverse heavy slash. No regeneration after criterion failure.",
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "durationMs": [
+        100,
+        110,
+        100,
+        100
+      ]
+    }
+  ]
+}

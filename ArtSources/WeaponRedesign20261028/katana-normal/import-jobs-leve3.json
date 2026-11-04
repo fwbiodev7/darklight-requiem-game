@@ -1,0 +1,161 @@
+{
+  "jobs": [
+    {
+      "name": "ReqKatanaNormalLeve3S_SW_W20261028Selected",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261028\\katana-normal\\ReqKatanaNormalLeve3S_SW_W20261028Selected-source.png",
+      "preservedSourceName": "ReqKatanaNormalLeve3S_SW_W20261028Selected-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Leve3",
+          "durationMs": [
+            40,
+            40,
+            100,
+            180
+          ],
+          "loop": false
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "Leve3",
+          "durationMs": [
+            40,
+            40,
+            100,
+            180
+          ],
+          "loop": false
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "Leve3",
+          "durationMs": [
+            40,
+            40,
+            100,
+            180
+          ],
+          "loop": false
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            356,
+            354
+          ],
+          "method": "Transferred original full-figure support anchor; no rescale"
+        },
+        "1": {
+          "anchor": [
+            885,
+            354
+          ],
+          "method": "Transferred original full-figure support anchor; no rescale"
+        },
+        "2": {
+          "anchor": [
+            1400,
+            327
+          ],
+          "method": "Transferred original full-figure support anchor; no rescale"
+        },
+        "3": {
+          "anchor": [
+            1961,
+            354
+          ],
+          "method": "Transferred original full-figure support anchor; no rescale"
+        },
+        "4": {
+          "anchor": [
+            280,
+            750
+          ],
+          "method": "Transferred original full-figure support anchor; no rescale"
+        },
+        "5": {
+          "anchor": [
+            888,
+            750
+          ],
+          "method": "Transferred original full-figure support anchor; no rescale"
+        },
+        "6": {
+          "anchor": [
+            1394,
+            730
+          ],
+          "method": "Transferred original full-figure support anchor; no rescale"
+        },
+        "7": {
+          "anchor": [
+            1968,
+            750
+          ],
+          "method": "Transferred original full-figure support anchor; no rescale"
+        },
+        "8": {
+          "anchor": [
+            223,
+            1146
+          ],
+          "method": "Transferred original full-figure support anchor; no rescale"
+        },
+        "9": {
+          "anchor": [
+            773,
+            1146
+          ],
+          "method": "Transferred original full-figure support anchor; no rescale"
+        },
+        "10": {
+          "anchor": [
+            1341,
+            1128
+          ],
+          "method": "Transferred original full-figure support anchor; no rescale"
+        },
+        "11": {
+          "anchor": [
+            1855,
+            1146
+          ],
+          "method": "Transferred original full-figure support anchor; no rescale"
+        }
+      }
+    }
+  ],
+  "activationAllowed": false
+}

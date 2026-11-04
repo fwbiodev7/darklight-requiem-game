@@ -1,0 +1,612 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqFistsNormalRespostaS_SW_W_NW20261102V1.png",
+  "imageSha256": "3d917e840b1f6b47cca29997239a4ae9a14b1c853bd3d39a246d2b738135c351",
+  "nativeSize": [
+    1596,
+    1528
+  ],
+  "sourceSize": [
+    1086,
+    1448
+  ],
+  "pixelsPerUnit": 170.7070707070707,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalRespostaS_SW_W_NW20261102V1-source.png",
+  "sourceSha256": "ce21b2688c1abcbafd1145e42f6ffd101b2344ac8e948e33c68aa29941b1b251",
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_00",
+      "rect": [
+        0,
+        0,
+        532,
+        382
+      ],
+      "pivot": [
+        0.4981203007518797,
+        0.04712041884816754
+      ],
+      "durationMs": 65,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "startup",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        43,
+        12,
+        314,
+        347
+      ],
+      "sourceAnchor": [
+        262,
+        356
+      ],
+      "sourcePackingAnchor": [
+        262,
+        356
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        46,
+        20
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_01",
+      "rect": [
+        532,
+        0,
+        532,
+        382
+      ],
+      "pivot": [
+        0.4981203007518797,
+        0.04712041884816754
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "active_contact",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        404,
+        12,
+        325,
+        347
+      ],
+      "sourceAnchor": [
+        508,
+        356
+      ],
+      "sourcePackingAnchor": [
+        508,
+        356
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        161,
+        20
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_02",
+      "rect": [
+        1064,
+        0,
+        532,
+        382
+      ],
+      "pivot": [
+        0.4981203007518797,
+        0.04712041884816754
+      ],
+      "durationMs": 240,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        780,
+        13,
+        289,
+        344
+      ],
+      "sourceAnchor": [
+        859,
+        354
+      ],
+      "sourcePackingAnchor": [
+        859,
+        354
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        186,
+        23
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_03",
+      "rect": [
+        0,
+        382,
+        532,
+        382
+      ],
+      "pivot": [
+        0.4981203007518797,
+        0.04712041884816754
+      ],
+      "durationMs": 65,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "startup",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        0,
+        369,
+        383,
+        347
+      ],
+      "sourceAnchor": [
+        257,
+        711
+      ],
+      "sourcePackingAnchor": [
+        257,
+        711
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        8,
+        22
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_04",
+      "rect": [
+        532,
+        382,
+        532,
+        382
+      ],
+      "pivot": [
+        0.4981203007518797,
+        0.04712041884816754
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "active_contact",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        388,
+        368,
+        360,
+        352
+      ],
+      "sourceAnchor": [
+        489,
+        713
+      ],
+      "sourcePackingAnchor": [
+        489,
+        713
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        164,
+        19
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_05",
+      "rect": [
+        1064,
+        382,
+        532,
+        382
+      ],
+      "pivot": [
+        0.4981203007518797,
+        0.04712041884816754
+      ],
+      "durationMs": 240,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        794,
+        368,
+        274,
+        344
+      ],
+      "sourceAnchor": [
+        838,
+        708
+      ],
+      "sourcePackingAnchor": [
+        838,
+        708
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        221,
+        24
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_06",
+      "rect": [
+        0,
+        764,
+        532,
+        382
+      ],
+      "pivot": [
+        0.4981203007518797,
+        0.04712041884816754
+      ],
+      "durationMs": 65,
+      "action": "attack",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "startup",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        64,
+        722,
+        293,
+        355
+      ],
+      "sourceAnchor": [
+        230,
+        1076
+      ],
+      "sourcePackingAnchor": [
+        230,
+        1076
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        99,
+        10
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_07",
+      "rect": [
+        532,
+        764,
+        532,
+        382
+      ],
+      "pivot": [
+        0.4981203007518797,
+        0.04712041884816754
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "active_contact",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        381,
+        709,
+        372,
+        361
+      ],
+      "sourceAnchor": [
+        526,
+        1065
+      ],
+      "sourcePackingAnchor": [
+        526,
+        1065
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        120,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_08",
+      "rect": [
+        1064,
+        764,
+        532,
+        382
+      ],
+      "pivot": [
+        0.4981203007518797,
+        0.04712041884816754
+      ],
+      "durationMs": 240,
+      "action": "attack",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        753,
+        725,
+        332,
+        349
+      ],
+      "sourceAnchor": [
+        982,
+        1070
+      ],
+      "sourcePackingAnchor": [
+        982,
+        1070
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        36,
+        19
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_09",
+      "rect": [
+        0,
+        1146,
+        532,
+        382
+      ],
+      "pivot": [
+        0.4981203007518797,
+        0.04712041884816754
+      ],
+      "durationMs": 65,
+      "action": "attack",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "startup",
+      "sourceFrameIndex": 9,
+      "sourceRect": [
+        45,
+        1077,
+        330,
+        337
+      ],
+      "sourceAnchor": [
+        126,
+        1405
+      ],
+      "sourcePackingAnchor": [
+        126,
+        1405
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        184,
+        36
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_10",
+      "rect": [
+        532,
+        1146,
+        532,
+        382
+      ],
+      "pivot": [
+        0.4981203007518797,
+        0.04712041884816754
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "active_contact",
+      "sourceFrameIndex": 10,
+      "sourceRect": [
+        396,
+        1070,
+        358,
+        333
+      ],
+      "sourceAnchor": [
+        619,
+        1400
+      ],
+      "sourcePackingAnchor": [
+        619,
+        1400
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        42,
+        34
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_11",
+      "rect": [
+        1064,
+        1146,
+        532,
+        382
+      ],
+      "pivot": [
+        0.4981203007518797,
+        0.04712041884816754
+      ],
+      "durationMs": 240,
+      "action": "attack",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 11,
+      "sourceRect": [
+        755,
+        1065,
+        323,
+        353
+      ],
+      "sourceAnchor": [
+        840,
+        1408
+      ],
+      "sourcePackingAnchor": [
+        840,
+        1408
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        180,
+        21
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_S",
+      "frames": [
+        "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_00",
+        "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_01",
+        "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_SW",
+      "frames": [
+        "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_03",
+        "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_04",
+        "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_05"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_W",
+      "frames": [
+        "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_06",
+        "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_07",
+        "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_08"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_NW",
+      "frames": [
+        "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_09",
+        "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_10",
+        "Redesign_ReqFistsNormalRespostaS_SW_W_NW20261102V1_11"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "attack_S",
+    "attack_SW",
+    "attack_W",
+    "attack_NW"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 686123,
+  "packedPixels": 686123,
+  "originalSourcePixels": 686123,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 886405,
+    "farBeyond16pxPixels": 158,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.6196078431372549,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ],
+  "timingAuthority": "Assets/Darklight/Runtime/Combat/DarklightRuinFistsProfile.cs",
+  "testsExecuted": false,
+  "framePixelsPerUnit": [
+    170.7070707070707,
+    170.7070707070707,
+    170.7070707070707,
+    170.2020202020202,
+    170.2020202020202,
+    170.2020202020202,
+    172.72727272727272,
+    172.72727272727272,
+    172.72727272727272,
+    167.17171717171718,
+    167.17171717171718,
+    167.17171717171718
+  ],
+  "densityMethod": "Each row upright recovery crown-to-sole/1.98; overhead gauntlets and low contact pose excluded from scale reference.",
+  "staticContactViewed": true,
+  "continuousMotionViewed": false,
+  "imported": false,
+  "runtimeVerified": false
+}

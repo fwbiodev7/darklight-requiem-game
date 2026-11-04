@@ -1,0 +1,79 @@
+{
+  "tool": "built-in-imagegen",
+  "jobs": [
+    {
+      "name": "ReqFistsNormalWalkSW20261103V24Closed",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261103\\fists-sw-pose-transfer\\ReqFistsNormalWalkSW20261103V24MotoPose-source.png",
+      "preservedSourceName": "ReqFistsNormalWalkSW20261103V24MotoPose-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 5000,
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            338,
+            347
+          ],
+          "method": "Pelvis/body-axis projection onto each authored sole support plane, translation-only, no anatomy edits",
+          "uncertaintyPixels": 3
+        },
+        "1": {
+          "anchor": [
+            823,
+            344
+          ],
+          "method": "Pelvis/body-axis projection onto each authored sole support plane, translation-only, no anatomy edits",
+          "uncertaintyPixels": 3
+        },
+        "2": {
+          "anchor": [
+            1315,
+            343
+          ],
+          "method": "Pelvis/body-axis projection onto each authored sole support plane, translation-only, no anatomy edits",
+          "uncertaintyPixels": 3
+        },
+        "3": {
+          "anchor": [
+            1808,
+            340
+          ],
+          "method": "Pelvis/body-axis projection onto each authored sole support plane, translation-only, no anatomy edits",
+          "uncertaintyPixels": 3
+        }
+      },
+      "excludedReason": "Second alternative complete four-phase cycle not selected; top four already coherent and coordinator visually reviewed.",
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 1,
+          "action": "Walk",
+          "durationMs": [
+            100,
+            100,
+            100,
+            100
+          ],
+          "phaseIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "loop": true
+        }
+      ]
+    }
+  ],
+  "editTarget": "V24-MotoSW-four-whole-figures-edit-target.png",
+  "identityEquipmentOnlyReference": "V24-FistsSW-A-equipment-only-reference.png"
+}

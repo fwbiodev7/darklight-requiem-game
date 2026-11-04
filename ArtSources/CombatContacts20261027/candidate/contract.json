@@ -1,0 +1,72 @@
+{
+  "name": "CombatContactsNormal20261027V1",
+  "status": "candidate",
+  "assetType": "separate-contact-vfx",
+  "figureCount": 0,
+  "motifs": 12,
+  "gridColumns": 4,
+  "gridRows": 3,
+  "clips": [
+    {
+      "name": "punch-impact-normal",
+      "row": 0,
+      "frames": 4,
+      "palette": "cream-white-warm-amber"
+    },
+    {
+      "name": "katana-metal-contact",
+      "row": 1,
+      "frames": 4,
+      "palette": "white-silver-gray"
+    },
+    {
+      "name": "heavy-ground-contact",
+      "row": 2,
+      "frames": 4,
+      "palette": "neutral-stone-gray-smoke"
+    }
+  ],
+  "phases": [
+    "birth",
+    "peak",
+    "fragments",
+    "dissipation"
+  ],
+  "charactersIncluded": false,
+  "weaponCatalogChanged": false,
+  "runtimeImplementation": false,
+  "referenceHashes": [
+    {
+      "path": "ArtSources/WeaponRedesign20261024/candidates/ReqKatanaNormalNeutralLight1S_Wv1-source.png",
+      "sha256": "0c701bcea3da3682349d3d5567d99be05d7261df14b4f016d5f5a7c99af47795",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261024/candidates/ReqFistsNormalDireto_S_SW_W-v2-source.png",
+      "sha256": "569470770dc7793b22cc4f3aeb7dded4ea102a8ce647d07338fb7ce1a599f7d6",
+      "size": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "sourcePath": "ArtSources/CombatContacts20261027/candidate/ContactBursts-v1-source.png",
+  "sourceSha256": "8a425e136d55db6bf073027bd460f1e2a9253239bd5946a5aca329ff4df217e0",
+  "durationMs": [
+    25,
+    40,
+    45,
+    55
+  ],
+  "clipDurationMs": 165,
+  "coordinatorReviewed": false,
+  "knownLimits": [
+    "Soft-alpha glow generated despite the no-bloom request",
+    "Palette exceeds requested12-16colors"
+  ],
+  "unityImported": false,
+  "runtimeVerified": false
+}

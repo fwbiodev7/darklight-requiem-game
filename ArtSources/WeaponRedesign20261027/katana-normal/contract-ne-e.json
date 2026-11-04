@@ -1,0 +1,78 @@
+{
+  "name": "ReqKatanaNormalWalkNE_E20261027V1",
+  "status": "candidate",
+  "frames": 12,
+  "clips": 2,
+  "directions": [
+    5,
+    6
+  ],
+  "phasesPerDirection": 6,
+  "durationMs": [
+    65,
+    65,
+    70,
+    65,
+    65,
+    70
+  ],
+  "loopMs": 400,
+  "worldVisualScale": 1.325,
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleE_SE20261025-source.png",
+      "sha256": "5863115c5f1ba5b54d9cd8b2d387e203d3d1293b9724c576c2360c6e84bb8443",
+      "size": [
+        1774,
+        887
+      ]
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleNW_N_NE20261025-source.png",
+      "sha256": "e631dd7fec0bd0d89851fb9ceb9dfe72f193fc22f227f113431b0825d3051387",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261026/katana-normal/ReqKatanaNormalWalkSW_W-v1-source.png",
+      "sha256": "233f498a8e69f2ed2b2fe3b06baf9b069a4df82a069bb930b616e6ec2eed00e5",
+      "size": [
+        1098,
+        1433
+      ]
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261027/katana-normal/ReqKatanaNormalWalkNW_N20261027Selected-source.png",
+      "sha256": "27cedecb25443d27c729a1a87f10b9196f44c2acd9759257d447f4e0d7c06452",
+      "size": [
+        1260,
+        1516
+      ]
+    }
+  ],
+  "protectedWalkSources": [
+    {
+      "path": "ArtSources/WeaponRedesign20261024/candidates/ReqKatanaNormalNeutralWalkS20261024V5-source.png",
+      "sha256": "b9271d801277048a4b851117afa3c6e02ee9a4a2d95b58a536791bf267cb97a2"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261026/katana-normal/ReqKatanaNormalWalkSW_W-v1-source.png",
+      "sha256": "233f498a8e69f2ed2b2fe3b06baf9b069a4df82a069bb930b616e6ec2eed00e5"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261027/katana-normal/ReqKatanaNormalWalkNW_N20261027Selected-source.png",
+      "sha256": "27cedecb25443d27c729a1a87f10b9196f44c2acd9759257d447f4e0d7c06452"
+    }
+  ],
+  "wholeFiguresOnly": true,
+  "anatomicalAssembly": false,
+  "sourceEdits": false,
+  "candidateName": "ReqKatanaNormalWalkNE_E20261027CandidateV1",
+  "priorWalkSourcesUnchanged": true,
+  "coordinatorReviewed": false,
+  "unityImported": false,
+  "runtimeVerified": false,
+  "gaitReviewPending": true
+}

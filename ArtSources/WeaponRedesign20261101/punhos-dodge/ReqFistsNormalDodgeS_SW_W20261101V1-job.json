@@ -1,0 +1,115 @@
+{
+  "jobs": [
+    {
+      "name": "ReqFistsNormalDodgeS_SW_W20261101V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261101\\punhos-dodge\\ReqFistsNormalDodgeS_SW_W20261101V1-source.png",
+      "preservedSourceName": "ReqFistsNormalDodgeS_SW_W20261101V1-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 3,
+      "sourceRows": 3,
+      "minimumArea": 8000,
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            300,
+            340
+          ],
+          "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+        },
+        "1": {
+          "anchor": [
+            756,
+            338
+          ],
+          "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+        },
+        "2": {
+          "anchor": [
+            1243,
+            341
+          ],
+          "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+        },
+        "3": {
+          "anchor": [
+            291,
+            666
+          ],
+          "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+        },
+        "4": {
+          "anchor": [
+            785,
+            668
+          ],
+          "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+        },
+        "5": {
+          "anchor": [
+            1272,
+            666
+          ],
+          "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+        },
+        "6": {
+          "anchor": [
+            276,
+            991
+          ],
+          "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+        },
+        "7": {
+          "anchor": [
+            793,
+            986
+          ],
+          "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+        },
+        "8": {
+          "anchor": [
+            1255,
+            991
+          ],
+          "method": "Whole-source visual midpoint of the two complete supporting claw-boots; projected ground plane, uncertainty6px; not coat or gauntlet bounds"
+        }
+      },
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 0,
+          "action": "Dodge",
+          "durationMs": [
+            40,
+            150,
+            40
+          ],
+          "loop": false
+        },
+        {
+          "sourceRow": 1,
+          "direction": 1,
+          "action": "Dodge",
+          "durationMs": [
+            40,
+            150,
+            40
+          ],
+          "loop": false
+        },
+        {
+          "sourceRow": 2,
+          "direction": 2,
+          "action": "Dodge",
+          "durationMs": [
+            40,
+            150,
+            40
+          ],
+          "loop": false
+        }
+      ]
+    }
+  ]
+}

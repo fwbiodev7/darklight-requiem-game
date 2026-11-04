@@ -1,0 +1,115 @@
+{
+  "name": "ReqMotoNormalWalkSW_SE20261103ClosedV2",
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261103\\moto-walk-close\\ReqMotoNormalWalkSW_SE20261103V2-source.png",
+  "preservedSourceName": "ReqMotoNormalWalkSW_SE20261103V2-source.png",
+  "skin": 0,
+  "weapon": 3,
+  "form": 0,
+  "columns": 4,
+  "sourceRows": 2,
+  "minimumArea": 5000,
+  "rows": [
+    {
+      "sourceRow": 0,
+      "sourceIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "direction": 1,
+      "action": "Walk",
+      "loop": true,
+      "durationMs": [
+        120,
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "sourceRow": 1,
+      "sourceIndices": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "direction": 7,
+      "action": "Walk",
+      "loop": true,
+      "durationMs": [
+        120,
+        120,
+        120,
+        120
+      ]
+    }
+  ],
+  "supportAnchors": {
+    "0": {
+      "anchor": [
+        207,
+        421
+      ],
+      "method": "Common ground; manually projected waist/root of entire figure",
+      "uncertaintyPixels": 4
+    },
+    "1": {
+      "anchor": [
+        651,
+        421
+      ],
+      "method": "Common ground; manually projected waist/root of entire figure",
+      "uncertaintyPixels": 4
+    },
+    "2": {
+      "anchor": [
+        1095,
+        421
+      ],
+      "method": "Common ground; manually projected waist/root of entire figure",
+      "uncertaintyPixels": 4
+    },
+    "3": {
+      "anchor": [
+        1538,
+        421
+      ],
+      "method": "Common ground; manually projected waist/root of entire figure",
+      "uncertaintyPixels": 4
+    },
+    "4": {
+      "anchor": [
+        247,
+        865
+      ],
+      "method": "Common ground; manually projected waist/root of entire figure",
+      "uncertaintyPixels": 4
+    },
+    "5": {
+      "anchor": [
+        692,
+        865
+      ],
+      "method": "Common ground; manually projected waist/root of entire figure",
+      "uncertaintyPixels": 4
+    },
+    "6": {
+      "anchor": [
+        1136,
+        865
+      ],
+      "method": "Common ground; manually projected waist/root of entire figure",
+      "uncertaintyPixels": 4
+    },
+    "7": {
+      "anchor": [
+        1579,
+        865
+      ],
+      "method": "Common ground; manually projected waist/root of entire figure",
+      "uncertaintyPixels": 4
+    }
+  }
+}

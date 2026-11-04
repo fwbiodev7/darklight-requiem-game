@@ -1,0 +1,153 @@
+{
+  "name": "ReqFistsRupturaDiretoS_SW_W20261025V1",
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\ReqFistsRupturaDiretoS_SW_W-v1-source.png",
+  "skin": 0,
+  "weapon": 2,
+  "form": 1,
+  "columns": 3,
+  "sourceRows": 3,
+  "minimumArea": 15000,
+  "rows": [
+    {
+      "sourceRow": 0,
+      "direction": 0,
+      "action": "Attack",
+      "attackKey": "Direto da Ruína",
+      "sourceSpriteNames": [
+        "Ruin_Requiem_Normal_S_Combat_02",
+        "Ruin_Requiem_Normal_S_Combat_03",
+        "Ruin_Requiem_Normal_S_Combat_11"
+      ]
+    },
+    {
+      "sourceRow": 1,
+      "direction": 1,
+      "action": "Attack",
+      "attackKey": "Direto da Ruína",
+      "sourceSpriteNames": [
+        "Ruin_Requiem_Normal_SW_Combat_02",
+        "Ruin_Requiem_Normal_SW_Combat_03",
+        "Ruin_Requiem_Normal_SW_Combat_11"
+      ]
+    },
+    {
+      "sourceRow": 2,
+      "direction": 2,
+      "action": "Attack",
+      "attackKey": "Direto da Ruína",
+      "sourceSpriteNames": [
+        "Ruin_Requiem_Normal_W_Combat_02",
+        "Ruin_Requiem_Normal_W_Combat_03",
+        "Ruin_Requiem_Normal_W_Combat_11"
+      ]
+    }
+  ],
+  "supportAnchors": {
+    "0": {
+      "anchor": [
+        329,
+        352
+      ],
+      "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+    },
+    "1": {
+      "anchor": [
+        782,
+        354
+      ],
+      "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+    },
+    "2": {
+      "anchor": [
+        1214,
+        353
+      ],
+      "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+    },
+    "3": {
+      "anchor": [
+        330,
+        669
+      ],
+      "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+    },
+    "4": {
+      "anchor": [
+        787,
+        671
+      ],
+      "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+    },
+    "5": {
+      "anchor": [
+        1219,
+        674
+      ],
+      "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+    },
+    "6": {
+      "anchor": [
+        326,
+        1011
+      ],
+      "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+    },
+    "7": {
+      "anchor": [
+        787,
+        1011
+      ],
+      "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+    },
+    "8": {
+      "anchor": [
+        1220,
+        1011
+      ],
+      "method": "Inspected ground support midpoint between armored feet, not lowest single claw"
+    }
+  },
+  "calibrationGuide": {
+    "method": "Whole-source first-row crown-to-sole body median 341px; gauntlets do not extend above crown; no equipment-bound normalization",
+    "sourceFrameIndices": [
+      0,
+      1,
+      2
+    ],
+    "crownY": [
+      12,
+      12,
+      12
+    ],
+    "soleY": [
+      352,
+      354,
+      353
+    ],
+    "bodyHeightPixels": 341,
+    "pixelsPerUnit": 172.22222222222223,
+    "worldBodyHeight": 1.98,
+    "measurementTolerancePixels": 4,
+    "unityWorldScale": 1.325,
+    "worldScaleViewPending": true
+  },
+  "visualFindings": "Nine intact Fabius figures, strong crimson side/lower hair/nape strands over chestnut base, both hands in physical plated gauntlets, matching greaves. Warm clean skin and dark-red eyes retained. S front, SW angled front-left, W left punch stance. No mirror, pixel recolor, assembly or resizing. Remaining five directions and idle not covered.",
+  "provenance": {
+    "generator": "built-in image_gen",
+    "promptFile": "ArtSources/WeaponRedesign20261025/candidates/ReqFistsRupturaDiretoS_SW_W-v1-prompt.txt",
+    "references": [
+      {
+        "path": "ArtSources/WeaponRedesign20261024/candidates/ReqFistsNormalDireto_S_SW_W-v2-source.png",
+        "sha256": "569470770dc7793b22cc4f3aeb7dded4ea102a8ce647d07338fb7ce1a599f7d6"
+      },
+      {
+        "path": "ArtSources/WeaponRedesign20261023/references/equipment-four-forms.png",
+        "sha256": "6c8c6b05e27f16f19f2bfcad3151294b164f004c0960fa713662788f9e3f6930"
+      },
+      {
+        "path": "ArtSources/WeaponRedesign20261025/candidates/ReqDaggersRupturaPresas1S_SW_W20261025V2-source.png",
+        "sha256": "667fe07ff0277404e3afa3f1b25f6cbedb77df8757d4387db8f8a6ccec38c4c1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "name": "ReqMotoNormalSerraEntradaNE_E_SE20261102V1",
+  "source": "ReqMotoNormalSerraEntradaNE_E_SE20261102V1-source.png",
+  "directions": [
+    "NE",
+    "E",
+    "SE"
+  ],
+  "columns": 4,
+  "action": "Attack",
+  "attackKey": "Serra de Entrada",
+  "presentation": "OnFoot",
+  "durationMs": [
+    125,
+    125,
+    240,
+    370
+  ],
+  "phaseNames": [
+    "early_windup",
+    "late_windup",
+    "active_cut",
+    "recovery"
+  ],
+  "startupFrames": 2,
+  "activeFrames": 1,
+  "runtimeTimingsMs": {
+    "startup": 250,
+    "active": 240,
+    "recovery": 370
+  },
+  "bodyMeasurements": [
+    {
+      "sourceFrameIndex": 3,
+      "bodyHeightPixels": 325
+    },
+    {
+      "sourceFrameIndex": 7,
+      "bodyHeightPixels": 314
+    },
+    {
+      "sourceFrameIndex": 11,
+      "bodyHeightPixels": 314
+    }
+  ],
+  "visualReviewed": false,
+  "wholeSourceSeen": true,
+  "nearestWholeFiguresSeen": false,
+  "staticContactSeen": false,
+  "supportAnchors": {
+    "0": {
+      "anchor": [
+        188,
+        359
+      ],
+      "method": "Native boot ground midpoint by direction; full source visually inspected",
+      "uncertaintyPixels": 10
+    },
+    "1": {
+      "anchor": [
+        552,
+        359
+      ],
+      "method": "Native boot ground midpoint by direction; full source visually inspected",
+      "uncertaintyPixels": 10
+    },
+    "2": {
+      "anchor": [
+        913,
+        358
+      ],
+      "method": "Native boot ground midpoint by direction; full source visually inspected",
+      "uncertaintyPixels": 10
+    },
+    "3": {
+      "anchor": [
+        1275,
+        359
+      ],
+      "method": "Native boot ground midpoint by direction; full source visually inspected",
+      "uncertaintyPixels": 10
+    },
+    "4": {
+      "anchor": [
+        189,
+        711
+      ],
+      "method": "Native boot ground midpoint by direction; full source visually inspected",
+      "uncertaintyPixels": 10
+    },
+    "5": {
+      "anchor": [
+        552,
+        710
+      ],
+      "method": "Native boot ground midpoint by direction; full source visually inspected",
+      "uncertaintyPixels": 10
+    },
+    "6": {
+      "anchor": [
+        913,
+        709
+      ],
+      "method": "Native boot ground midpoint by direction; full source visually inspected",
+      "uncertaintyPixels": 10
+    },
+    "7": {
+      "anchor": [
+        1275,
+        713
+      ],
+      "method": "Native boot ground midpoint by direction; full source visually inspected",
+      "uncertaintyPixels": 10
+    },
+    "8": {
+      "anchor": [
+        188,
+        1057
+      ],
+      "method": "Native boot ground midpoint by direction; full source visually inspected",
+      "uncertaintyPixels": 10
+    },
+    "9": {
+      "anchor": [
+        552,
+        1058
+      ],
+      "method": "Native boot ground midpoint by direction; full source visually inspected",
+      "uncertaintyPixels": 10
+    },
+    "10": {
+      "anchor": [
+        913,
+        1054
+      ],
+      "method": "Native boot ground midpoint by direction; full source visually inspected",
+      "uncertaintyPixels": 10
+    },
+    "11": {
+      "anchor": [
+        1275,
+        1060
+      ],
+      "method": "Native boot ground midpoint by direction; full source visually inspected",
+      "uncertaintyPixels": 10
+    }
+  }
+}

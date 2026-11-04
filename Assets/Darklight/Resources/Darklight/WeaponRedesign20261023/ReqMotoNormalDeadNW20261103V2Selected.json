@@ -1,0 +1,286 @@
+{
+  "imageSha256": "778290a7c5716d273503f918123e9d620bcd78fc704d142791708754e0560837",
+  "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadNW20261103V2Selected-source.png",
+  "sourceSha256": "778290a7c5716d273503f918123e9d620bcd78fc704d142791708754e0560837",
+  "nativeSize": [
+    1536,
+    384
+  ],
+  "sourceSize": [
+    1536,
+    384
+  ],
+  "pixelsPerUnit": 142.04545454545453,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "schemaVersion": 1,
+  "image": "ReqMotoNormalDeadNW20261103V2Selected.png",
+  "frames": [
+    {
+      "id": "Redesign_ReqMotoNormalDeadNW20261103V2Selected_00",
+      "rect": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "pivot": [
+        0.5,
+        0.08854166666666663
+      ],
+      "durationMs": 180,
+      "action": "dead",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "collapse",
+      "sourceRect": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "sourceAnchor": [
+        256,
+        350
+      ],
+      "sourcePackingAnchor": [
+        256,
+        350
+      ],
+      "sourceFrameIndex": 0,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          256,
+          350
+        ],
+        "method": "Manual projected pelvis/torso ground support; collapse/fall/rest have distinct intentional origins. Not automated feet-bottom alignment."
+      },
+      "pixelsPerUnit": 142.04545454545453,
+      "visibleAlphaBoundsInFrame": [
+        81,
+        84,
+        357,
+        352
+      ],
+      "originalSourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png",
+      "originalSourceRect": [
+        43,
+        894,
+        288,
+        280
+      ],
+      "originalSourceAnchor": [
+        224,
+        1166
+      ],
+      "sourceRGBAEqualityVerified": true
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDeadNW20261103V2Selected_01",
+      "rect": [
+        512,
+        0,
+        512,
+        384
+      ],
+      "pivot": [
+        0.5,
+        0.08854166666666663
+      ],
+      "durationMs": 220,
+      "action": "dead",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "fall-ground-contact",
+      "sourceRect": [
+        512,
+        0,
+        512,
+        384
+      ],
+      "sourceAnchor": [
+        768,
+        350
+      ],
+      "sourcePackingAnchor": [
+        768,
+        350
+      ],
+      "sourceFrameIndex": 1,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          768,
+          350
+        ],
+        "method": "Manual projected pelvis/torso ground support; collapse/fall/rest have distinct intentional origins. Not automated feet-bottom alignment."
+      },
+      "pixelsPerUnit": 157.82828282828282,
+      "visibleAlphaBoundsInFrame": [
+        66,
+        76,
+        429,
+        352
+      ],
+      "originalSourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadRepair8Figures20261103V2-source.png",
+      "originalSourceRect": [
+        59,
+        446,
+        375,
+        288
+      ],
+      "originalSourceAnchor": [
+        255,
+        726
+      ],
+      "sourceRGBAEqualityVerified": true
+    },
+    {
+      "id": "Redesign_ReqMotoNormalDeadNW20261103V2Selected_02",
+      "rect": [
+        1024,
+        0,
+        512,
+        384
+      ],
+      "pivot": [
+        0.5,
+        0.08854166666666663
+      ],
+      "durationMs": 1000,
+      "action": "dead",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "corpse-rest-hold",
+      "sourceRect": [
+        1024,
+        0,
+        512,
+        384
+      ],
+      "sourceAnchor": [
+        1280,
+        350
+      ],
+      "sourcePackingAnchor": [
+        1280,
+        350
+      ],
+      "sourceFrameIndex": 2,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          1280,
+          350
+        ],
+        "method": "Manual projected pelvis/torso ground support; collapse/fall/rest have distinct intentional origins. Not automated feet-bottom alignment."
+      },
+      "pixelsPerUnit": 157.82828282828282,
+      "visibleAlphaBoundsInFrame": [
+        28,
+        164,
+        484,
+        352
+      ],
+      "originalSourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadRepair8Figures20261103V2-source.png",
+      "originalSourceRect": [
+        510,
+        533,
+        468,
+        200
+      ],
+      "originalSourceAnchor": [
+        744,
+        725
+      ],
+      "sourceRGBAEqualityVerified": true
+    }
+  ],
+  "clips": [
+    {
+      "name": "Dead_NW",
+      "frames": [
+        "Redesign_ReqMotoNormalDeadNW20261103V2Selected_00",
+        "Redesign_ReqMotoNormalDeadNW20261103V2Selected_01",
+        "Redesign_ReqMotoNormalDeadNW20261103V2Selected_02"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": true,
+      "intentionalStaticReason": ""
+    }
+  ],
+  "requiredClips": [
+    "Dead_NW"
+  ],
+  "worldVisualScale": 1.325,
+  "sourcePixelResampling": false,
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoS_SW20261102V2-source.png",
+      "sha256": "5205a9673d20fe2703b5d6057960c457d61138e0b0dc5862c77099d2ff9827f1",
+      "role": "Current approved compact proportions, identity, outfit and katana"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoW_NW20261102V2-source.png",
+      "sha256": "1cd4551daa59d049b46e8e4c93ff95588e0341ed053e8e02a368a5760b05d417",
+      "role": "Current approved left/back clothing and anatomy"
+    }
+  ],
+  "review": {
+    "wholeFigures": true,
+    "staticVisualReviewed": true,
+    "loop": false,
+    "expressionDirection": "Approved expressive charming character identity preserved, no speculative face redesign.",
+    "equipment": "Both black/silver circular saws, black gloves and plain strapped boots. NW fall/rest repaired because original corpse saws were cut at native canvas bottom.",
+    "densityGuide": {
+      "referencePPU": 157.82828282828282,
+      "referenceNativeCranialWidth": 140,
+      "originalSourceNativeCranialWidth": 126,
+      "method": "Skull/trunk native raster-density comparison, never normalized by bent/lying body height. Selected repair uses its own native density; no source pixel resampling."
+    },
+    "timing": "180ms collapse,220ms ground fall,1000ms final corpse authored hold; consumer clamps final frame indefinitely, no return Idle/no death loop.",
+    "nativePixelResampling": false,
+    "imported": false,
+    "runtimeVerified": false,
+    "motionReview": "Whole consecutive poses inspected statically, finite GIF authored; Unity/runtime validation deferred."
+  },
+  "quality": {
+    "alphaThreshold": 16,
+    "maxColors": 65536,
+    "maxHeightRatio": 2.5
+  },
+  "generationReferences": [
+    {
+      "path": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png",
+      "sha256": "28d369c2b934bc3ceca5e92ef317ed9fdba37bdde44fb49bbd7e47f7d252b075"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadRepair8Figures20261103V2-source.png",
+      "sha256": "6242e12cf2ab586f3eab96bd4824ef2b2b7b3f77104c21aadda6e4f597179640"
+    }
+  ],
+  "sourceArtifacts": [
+    {
+      "path": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png",
+      "sha256": "28d369c2b934bc3ceca5e92ef317ed9fdba37bdde44fb49bbd7e47f7d252b075",
+      "nativeSize": [
+        1333,
+        1180
+      ]
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadRepair8Figures20261103V2-source.png",
+      "sha256": "6242e12cf2ab586f3eab96bd4824ef2b2b7b3f77104c21aadda6e4f597179640",
+      "nativeSize": [
+        1024,
+        1536
+      ]
+    }
+  ],
+  "derivedWholeFigurePacking": true
+}

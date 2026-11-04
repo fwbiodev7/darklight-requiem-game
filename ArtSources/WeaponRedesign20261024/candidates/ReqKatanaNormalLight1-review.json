@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "status": "visual-reviewed-candidate",
+  "visualApproval": false,
+  "imported": false,
+  "runtimeVerified": false,
+  "objective": "Réquiem Normal / Katana / ataque leve 1, S(0), SW(1), W(2), quatro fases por direção.",
+  "generation": {
+    "tool": "built-in image_gen.imagegen",
+    "sourcePreserved": true,
+    "anatomicalCompositing": false,
+    "mirroring": false,
+    "warping": false
+  },
+  "selection": {
+    "S": {
+      "version": 1,
+      "row": 0
+    },
+    "SW": {
+      "version": 2,
+      "row": 1
+    },
+    "W": {
+      "version": 1,
+      "row": 2
+    },
+    "policy": "Preservar S/W v1 pixel a pixel; selecionar somente os quatro quadros inteiros SW v2. Nenhuma montagem anatômica."
+  },
+  "timingsMs": [
+    55,
+    75,
+    70,
+    70
+  ],
+  "timingsStatus": "contrato existente preservado como metadado; gameplay não alterado",
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261023/references/personagem-e-design.jpeg",
+      "sha256": "ccddc7ae6098080e518c1d5ff51c3e2a6606917b42f8b1596cc42fd4123dc4b5",
+      "role": "Identidade/corpo Réquiem, com exclusão explícita do equipamento Ruptura e das mechas vermelhas."
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261023/references/equipment-four-forms.png",
+      "sha256": "6c8c6b05e27f16f19f2bfcad3151294b164f004c0960fa713662788f9e3f6930",
+      "role": "Coluna NORMAL: aço, cabo preto/prata, sem fissura/energia/aura."
+    },
+    {
+      "path": "ArtSources/PlayerEyeReference20261020/referencia-olhos-player.png",
+      "sha256": "82ce8cb4761757ba6f3f1809fd4bf603d67eac5b7a8a7cec056c1ce178fcd949",
+      "role": "Desenho/identidade dos olhos, íris #C40814/#5A0000, pele limpa #F6AE82; excluir cabelo vermelho da captura."
+    }
+  ],
+  "visualAssessment": {
+    "inspected": "Ambas as folhas integrais (24 figuras), v1/v2 sobre fundo claro e v2 sobre fundo escuro; sem recortes anatômicos.",
+    "count": "12 figuras inteiras em cada fonte; cabeça, corpo, katana e duas botas presentes; quatro poses de ataque distintas por linha.",
+    "phases": "Antecipação com joelhos flexionados e arma alta; contato com extensão/lunge; seguimento baixo cruzado; recuperação em guarda.",
+    "rightHand": "Empunhadura visualmente ligada à mão direita em todas as fases selecionadas; sem troca de mão deliberada.",
+    "neutral": "Lâmina aço/prata e cabo preto/prata, sem fissuras energéticas ou aura; cabelo castanho escuro; casaco preto com forro vinho, cristais pequenos vermelhos sem glow.",
+    "v1": "S e W legíveis e aproveitáveis para seleção; SW rejeitado por orientação frontal demais.",
+    "v2": "SW com nariz/face, ombros, pés e caudas do casaco em diagonal abaixo-esquerda mais explícita; S/W v2 não selecionados para preservar os v1.",
+    "limitations": [
+      "Fonte gerada 1536x1024 não comprova resolução lógica nativa de pixel art; não foi aplicado downscale ou repintura.",
+      "Alpha real medido 0..254, com pixels semitransparentes inclusive nos sprites; sem remoção global de cores/alpha. Prévia em fundo claro/escuro não mostrou tabuleiro desenhado ou halo dominante.",
+      "Alguns retângulos da v1 têm margem curta para ponta de katana/cauda, sobretudo contato/seguimento W. Os sourceRects são irregulares e devem receber padding transparente ao empacotar, sem cortar pixels.",
+      "Âncoras das prévias são propostas por inspeção, não pivôs medidos/importados na Unity.",
+      "Prévia animada técnica gerada; não certifica eventos de contato ou integração e não recebeu aprovação do usuário."
+    ]
+  },
+  "prompts": {
+    "v1": "Use case: stylized-concept.\nAsset type: game pixel-art candidate spritesheet, DARKLIGHT REQUIEM. Generate ONE new transparent RGBA PNG of exactly 12 WHOLE CHARACTER attack drawings, arranged three well-spaced rows and four columns. Desired landscape source about 1536 x 1024 or larger at same ratio. No labels, text, grid, background, checkerboard texture, props, floor or external shadow.\n\nREFERENCES AND AUTHORITY:\nImage 1 personagem-e-design.jpeg: use only the LEFT REQUIEM character identity, young adult, body proportions, split long black coat silhouette, hair shape, boots. Its red transformed equipment, glowing katana and vivid red hair streaks are REJECTED for this Normal form. Do not reproduce those.\nImage 2 equipment-four-forms.png: authoritative equipment is ONLY the LEFT NORMAL COLUMN, top-row katana: silver steel gently curved blade, fine neutral gray steel facets, black handle with silver diamond wrap and black/silver guard. No red blade, no red fissures, no energy or aura. Ignore all Ruptura/Eclipse/Absoluto columns.\nImage 3 referencia-olhos-player.png: eye drawing and face identity ONLY. Dark red visible irises, base #C40814 and shadow #5A0000, pupil, white highlights, clean skin. Do not copy the red hair streaks from it. Skin base #F6AE82, natural shadows, no red lower eyelids/under-eye stain.\n\nIDENTITY AND PIXEL STYLE:\nSame untransformed Requiem in all twelve figures: young adult man; 3.5 to 4 heads tall; compact mature RPG proportions, not toddler or giant head. Very dark brown layered medium hair, without red transformed streaks. Same clean warm peach face, same dark red eyes, same costume. Black long split-tail coat with subtle dark wine inner lining, black fitted clothes, black belt and small silver buckle, fitted black boots and glove details. A few previously established decorative crystals may be dark red, opaque, tiny and non-glowing. No bright red body spikes or arm transformation. Neutral materials on all equipment. Lighting from upper left. Deliberate square pixel clusters, crisp dark outlines, restrained material ramps, pixel-art native appearance, no blur, no smooth painted airbrush, no 3D render.\n\nCAMERA AND LAYOUT:\nConsistent slightly elevated top-down RPG camera, seeing top of hair/shoulders and boots, same body scale across every drawing. Three rows: row 1 S / south, facing the viewer-bottom/front; row 2 SW / southwest, facing diagonally down-left, show front-left oblique view; row 3 W / west, facing LEFT, true left-facing profile adapted to same elevated RPG camera. Every phase in a row keeps its specified facing even during torso twist. No rear view. Do not mirror rows or rotate flattened sprites.\nUse four columns for phases of the SAME first light katana slash, attackLight1, ordered left-to-right: anticipation; contact; follow-through; recovery.\nLeave generous REAL TRANSPARENT margins all around EACH entire figure including the sword tip, elbows and both boots; large empty gutters between every figure. Nothing may touch adjacent figures or image edges. Do not crop head, hair, either foot, hand, coat tails or any part of blade. Exactly one entire person plus their one katana per cell; no separate body/weapon pieces.\n\nACTION FOR EVERY ROW:\nThis is a readable dynamic single LIGHT SLASH sequence with actual new full-body articulation, not idle drawings with different sword angles.\nColumn 1 ANTICIPATION: knees flex and weight shifts onto rear leg, right shoulder rotates back, right elbow bends and lifts katana over/right-behind shoulder for a real windup, left hand counterbalances in front; intact sword hilt clearly joins the RIGHT hand.\nColumn 2 CONTACT: front leg lunges toward that row's facing, torso leans and twists into strike, right shoulder and elbow extend katana forward across target plane; a SMALL thin silver/white directional cut arc near blade is allowed but never hides the body; left arm counters behind. Both boots distinct and connected.\nColumn 3 FOLLOW-THROUGH: weight fully passes to front leg, knees and hips lower, right elbow carries blade across and down past target to opposite side, torso follows the strike, left arm swings for balance, coat tails respond. Different body silhouette and wrist/weapon position from contact.\nColumn 4 RECOVERY: pulls weight back from lunge into rising balanced compact guard, right elbow folds back in, silver blade retracts to a neutral ready position, left hand returns near torso; distinct from windup.\nHold the katana in the SAME anatomically RIGHT hand in ALL twelve drawings, never swap hands. In front S this is generally the image-left arm; in SW/W follow genuine anatomical rotation and occlusion. No dual-wielding, no duplicate blade, no extra arms, no hand detached from hilt.\n\nAll twelve figures must be separately and newly drawn full head+body+arms+katana+two boots together. Preserve character identity, hair, age, coat, neutral blade/handle and eye/skin palette. No anatomical cut-and-paste, no mirrored pose, no warp. Real alpha transparency; do not draw a checkerboard. No red/purple/cyan energy, no red cracks, no red glowing sword, no magical aura.",
+    "v2": "Use case: stylized-concept.\nAsset type: game pixel-art candidate spritesheet, DARKLIGHT REQUIEM. Generate ONE new transparent RGBA PNG of exactly 12 WHOLE CHARACTER attack drawings, arranged three well-spaced rows and four columns. Desired landscape source about 1536 x 1024 or larger at same ratio. No labels, text, grid, background, checkerboard texture, props, floor or external shadow.\n\nREFERENCES AND AUTHORITY:\nImage 1 personagem-e-design.jpeg: use only the LEFT REQUIEM character identity, young adult, body proportions, split long black coat silhouette, hair shape, boots. Its red transformed equipment, glowing katana and vivid red hair streaks are REJECTED for this Normal form. Do not reproduce those.\nImage 2 equipment-four-forms.png: authoritative equipment is ONLY the LEFT NORMAL COLUMN, top-row katana: silver steel gently curved blade, fine neutral gray steel facets, black handle with silver diamond wrap and black/silver guard. No red blade, no red fissures, no energy or aura. Ignore all Ruptura/Eclipse/Absoluto columns.\nImage 3 referencia-olhos-player.png: eye drawing and face identity ONLY. Dark red visible irises, base #C40814 and shadow #5A0000, pupil, white highlights, clean skin. Do not copy the red hair streaks from it. Skin base #F6AE82, natural shadows, no red lower eyelids/under-eye stain.\n\nIDENTITY AND PIXEL STYLE:\nSame untransformed Requiem in all twelve figures: young adult man; 3.5 to 4 heads tall; compact mature RPG proportions, not toddler or giant head. Very dark brown layered medium hair, without red transformed streaks. Same clean warm peach face, same dark red eyes, same costume. Black long split-tail coat with subtle dark wine inner lining, black fitted clothes, black belt and small silver buckle, fitted black boots and glove details. A few previously established decorative crystals may be dark red, opaque, tiny and non-glowing. No bright red body spikes or arm transformation. Neutral materials on all equipment. Lighting from upper left. Deliberate square pixel clusters, crisp dark outlines, restrained material ramps, pixel-art native appearance, no blur, no smooth painted airbrush, no 3D render.\n\nCAMERA AND LAYOUT:\nConsistent slightly elevated top-down RPG camera, seeing top of hair/shoulders and boots, same body scale across every drawing. Three rows: row 1 S / south, facing the viewer-bottom/front; row 2 SW / southwest, facing diagonally down-left, show front-left oblique view; row 3 W / west, facing LEFT, true left-facing profile adapted to same elevated RPG camera. Every phase in a row keeps its specified facing even during torso twist. No rear view. Do not mirror rows or rotate flattened sprites.\nUse four columns for phases of the SAME first light katana slash, attackLight1, ordered left-to-right: anticipation; contact; follow-through; recovery.\nLeave generous REAL TRANSPARENT margins all around EACH entire figure including the sword tip, elbows and both boots; large empty gutters between every figure. Nothing may touch adjacent figures or image edges. Do not crop head, hair, either foot, hand, coat tails or any part of blade. Exactly one entire person plus their one katana per cell; no separate body/weapon pieces.\n\nACTION FOR EVERY ROW:\nThis is a readable dynamic single LIGHT SLASH sequence with actual new full-body articulation, not idle drawings with different sword angles.\nColumn 1 ANTICIPATION: knees flex and weight shifts onto rear leg, right shoulder rotates back, right elbow bends and lifts katana over/right-behind shoulder for a real windup, left hand counterbalances in front; intact sword hilt clearly joins the RIGHT hand.\nColumn 2 CONTACT: front leg lunges toward that row's facing, torso leans and twists into strike, right shoulder and elbow extend katana forward across target plane; a SMALL thin silver/white directional cut arc near blade is allowed but never hides the body; left arm counters behind. Both boots distinct and connected.\nColumn 3 FOLLOW-THROUGH: weight fully passes to front leg, knees and hips lower, right elbow carries blade across and down past target to opposite side, torso follows the strike, left arm swings for balance, coat tails respond. Different body silhouette and wrist/weapon position from contact.\nColumn 4 RECOVERY: pulls weight back from lunge into rising balanced compact guard, right elbow folds back in, silver blade retracts to a neutral ready position, left hand returns near torso; distinct from windup.\nHold the katana in the SAME anatomically RIGHT hand in ALL twelve drawings, never swap hands. In front S this is generally the image-left arm; in SW/W follow genuine anatomical rotation and occlusion. No dual-wielding, no duplicate blade, no extra arms, no hand detached from hilt.\n\nAll twelve figures must be separately and newly drawn full head+body+arms+katana+two boots together. Preserve character identity, hair, age, coat, neutral blade/handle and eye/skin palette. No anatomical cut-and-paste, no mirrored pose, no warp. Real alpha transparency; do not draw a checkerboard. No red/purple/cyan energy, no red cracks, no red glowing sword, no magical aura.\n\nCORRECTION PRIORITY: The southwest row MUST look clearly DIFFERENT from the south row. Draw row 2 as a strong 45-degree down-LEFT orientation throughout all four phases: nose points diagonally toward bottom-left, near eye clearly larger than far eye, far cheek/eye narrowly foreshortened, shoulders/hips and both feet point diagonally down-left, near coat panel occludes the far panel. Do not use front-facing faces in this row. Row 1 is frontal with symmetric two-eye face; row 2 is distinctly left three-quarter with asymmetric face width; row 3 is left profile with one visible eye. A pose lean alone is not a new direction. Every row must preserve these face/torso/feet view relationships even at contact and recovery.\n\nNo diffuse background haze, no glow, no cast shadows, no gradients outside silhouettes. Crisp fully opaque colored pixels INSIDE each sprite with clean transparent alpha OUTSIDE. Silver arcs are tiny crisp solid pixel marks near the cutting edge, no light bloom or blur."
+  }
+}

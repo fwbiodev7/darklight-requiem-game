@@ -1,0 +1,151 @@
+{
+  "tool": "built-in-imagegen",
+  "jobs": [
+    {
+      "name": "ReqFistsNormalWalkSW20261103V23BFidelitySelected",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261103\\fists-sw-pose-transfer\\ReqFistsNormalWalkSW20261103V23BFidelitySelected-source.png",
+      "preservedSourceName": "ReqFistsNormalWalkSW20261103V23BFidelitySelected-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 1,
+      "minimumArea": 5000,
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            234,
+            420
+          ],
+          "method": "Measured pelvis-ground projection; full figure unchanged",
+          "uncertaintyPixels": 4
+        },
+        "1": {
+          "anchor": [
+            655,
+            420
+          ],
+          "method": "Measured pelvis-ground projection; full figure unchanged",
+          "uncertaintyPixels": 4
+        },
+        "2": {
+          "anchor": [
+            1097,
+            425
+          ],
+          "method": "Measured pelvis-ground projection; full figure unchanged",
+          "uncertaintyPixels": 4
+        },
+        "3": {
+          "anchor": [
+            1532,
+            427
+          ],
+          "method": "Measured pelvis-ground projection; full figure unchanged",
+          "uncertaintyPixels": 4
+        }
+      },
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 1,
+          "action": "Walk",
+          "durationMs": [
+            100,
+            100,
+            100,
+            100
+          ],
+          "phaseIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "loop": true
+        }
+      ]
+    }
+  ],
+  "wholeFigureSelection": [
+    {
+      "frame": 0,
+      "source": "ArtSources/WeaponRedesign20261103/fists-sw-pose-transfer/ReqFistsNormalWalkSW20261103V22PoseSelected-source.png",
+      "sourceSha256": "ad587247aa66c3d616bdc3d62473c859868ec31ff0c599797250d9df5a861de5",
+      "sourceWholeFigureRect": [
+        0,
+        0,
+        444,
+        444
+      ],
+      "selectedSheetOffset": [
+        0,
+        0
+      ],
+      "rgbaSha256": "344803e234dc84c5da64068ce985cd17b2ae6cc9f64daa459cab3c0e5a67c70b",
+      "rgbaExact": true,
+      "completeFigure": true
+    },
+    {
+      "frame": 1,
+      "source": "ArtSources/WeaponRedesign20261103/fists-sw-pose-transfer/ReqFistsNormalWalkSW20261103V22PoseSelected-source.png",
+      "sourceSha256": "ad587247aa66c3d616bdc3d62473c859868ec31ff0c599797250d9df5a861de5",
+      "sourceWholeFigureRect": [
+        444,
+        0,
+        444,
+        444
+      ],
+      "selectedSheetOffset": [
+        444,
+        0
+      ],
+      "rgbaSha256": "e96a752e14c7d30a976344dd847e217d297d5f32070f3417484f39a433dae5dd",
+      "rgbaExact": true,
+      "completeFigure": true
+    },
+    {
+      "frame": 2,
+      "source": "ArtSources/WeaponRedesign20261103/fists-sw-pose-transfer/ReqFistsNormalWalkSW20261103V23BFidelity-source.png",
+      "sourceSha256": "394431984e470497c8318b42f63a353c0edc139bd631c6be41b633300ca9cbe5",
+      "sourceWholeFigureRect": [
+        965,
+        1,
+        276,
+        441
+      ],
+      "selectedSheetOffset": [
+        968,
+        1
+      ],
+      "rgbaSha256": "06db238caee7888dfe1050d248602b693edef8c71d12d359725fee76f36407b7",
+      "rgbaExact": true,
+      "completeFigure": true
+    },
+    {
+      "frame": 3,
+      "source": "ArtSources/WeaponRedesign20261103/fists-sw-pose-transfer/ReqFistsNormalWalkSW20261103V23BFidelity-source.png",
+      "sourceSha256": "394431984e470497c8318b42f63a353c0edc139bd631c6be41b633300ca9cbe5",
+      "sourceWholeFigureRect": [
+        1436,
+        0,
+        280,
+        444
+      ],
+      "selectedSheetOffset": [
+        1412,
+        0
+      ],
+      "rgbaSha256": "0726ec2507e9895a88b0eb2efd142e9e276e6912c36f1d197ead87d9841f6c1b",
+      "rgbaExact": true,
+      "completeFigure": true
+    }
+  ],
+  "lastAllowedGeneration": true
+}

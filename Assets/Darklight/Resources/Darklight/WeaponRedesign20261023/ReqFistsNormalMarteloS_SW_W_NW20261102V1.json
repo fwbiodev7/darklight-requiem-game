@@ -1,0 +1,618 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqFistsNormalMarteloS_SW_W_NW20261102V1.png",
+  "imageSha256": "33fd6688e0ecb4b679303848cde0fe361049d0f4f2495f7e6c1bee23b8627504",
+  "nativeSize": [
+    1947,
+    1452
+  ],
+  "sourceSize": [
+    1312,
+    1199
+  ],
+  "pixelsPerUnit": 142.42424242424244,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalMarteloS_SW_W_NW20261102V1-source.png",
+  "sourceSha256": "635a0305122a07ba9020fc6326e7027c6ac0e4caf8dc42381543029eb7b2ec8b",
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_00",
+      "rect": [
+        0,
+        0,
+        649,
+        363
+      ],
+      "pivot": [
+        0.576271186440678,
+        0.14325068870523416
+      ],
+      "durationMs": 160,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "startup",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        0,
+        438,
+        303
+      ],
+      "sourceAnchor": [
+        366,
+        302
+      ],
+      "sourcePackingAnchor": [
+        366,
+        302
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        8,
+        9
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_01",
+      "rect": [
+        649,
+        0,
+        649,
+        363
+      ],
+      "pivot": [
+        0.576271186440678,
+        0.14325068870523416
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "active_contact",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        497,
+        25,
+        343,
+        283
+      ],
+      "sourceAnchor": [
+        658,
+        302
+      ],
+      "sourcePackingAnchor": [
+        658,
+        302
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        213,
+        34
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_02",
+      "rect": [
+        1298,
+        0,
+        649,
+        363
+      ],
+      "pivot": [
+        0.576271186440678,
+        0.14325068870523416
+      ],
+      "durationMs": 260,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        897,
+        17,
+        285,
+        298
+      ],
+      "sourceAnchor": [
+        1101,
+        307
+      ],
+      "sourcePackingAnchor": [
+        1101,
+        307
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        170,
+        21
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_03",
+      "rect": [
+        0,
+        363,
+        649,
+        363
+      ],
+      "pivot": [
+        0.576271186440678,
+        0.14325068870523416
+      ],
+      "durationMs": 160,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "startup",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        0,
+        302,
+        460,
+        338
+      ],
+      "sourceAnchor": [
+        355,
+        596
+      ],
+      "sourcePackingAnchor": [
+        355,
+        596
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        19,
+        17
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_04",
+      "rect": [
+        649,
+        363,
+        649,
+        363
+      ],
+      "pivot": [
+        0.576271186440678,
+        0.14325068870523416
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "active_contact",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        535,
+        363,
+        315,
+        238
+      ],
+      "sourceAnchor": [
+        725,
+        596
+      ],
+      "sourcePackingAnchor": [
+        725,
+        596
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        184,
+        78
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_05",
+      "rect": [
+        1298,
+        363,
+        649,
+        363
+      ],
+      "pivot": [
+        0.576271186440678,
+        0.14325068870523416
+      ],
+      "durationMs": 260,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        931,
+        299,
+        363,
+        304
+      ],
+      "sourceAnchor": [
+        1103,
+        602
+      ],
+      "sourcePackingAnchor": [
+        1103,
+        602
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        202,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_06",
+      "rect": [
+        0,
+        726,
+        649,
+        363
+      ],
+      "pivot": [
+        0.576271186440678,
+        0.14325068870523416
+      ],
+      "durationMs": 160,
+      "action": "attack",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "startup",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        41,
+        589,
+        425,
+        290
+      ],
+      "sourceAnchor": [
+        330,
+        878
+      ],
+      "sourcePackingAnchor": [
+        330,
+        878
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        85,
+        22
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_07",
+      "rect": [
+        649,
+        726,
+        649,
+        363
+      ],
+      "pivot": [
+        0.576271186440678,
+        0.14325068870523416
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "active_contact",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        521,
+        661,
+        335,
+        235
+      ],
+      "sourceAnchor": [
+        701,
+        876
+      ],
+      "sourcePackingAnchor": [
+        701,
+        876
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        194,
+        96
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_08",
+      "rect": [
+        1298,
+        726,
+        649,
+        363
+      ],
+      "pivot": [
+        0.576271186440678,
+        0.14325068870523416
+      ],
+      "durationMs": 260,
+      "action": "attack",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        949,
+        603,
+        325,
+        285
+      ],
+      "sourceAnchor": [
+        1085,
+        886
+      ],
+      "sourcePackingAnchor": [
+        1085,
+        886
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        238,
+        28
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_09",
+      "rect": [
+        0,
+        1089,
+        649,
+        363
+      ],
+      "pivot": [
+        0.576271186440678,
+        0.14325068870523416
+      ],
+      "durationMs": 160,
+      "action": "attack",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "startup",
+      "sourceFrameIndex": 9,
+      "sourceRect": [
+        39,
+        879,
+        443,
+        301
+      ],
+      "sourceAnchor": [
+        306,
+        1163
+      ],
+      "sourcePackingAnchor": [
+        306,
+        1163
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        107,
+        27
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_10",
+      "rect": [
+        649,
+        1089,
+        649,
+        363
+      ],
+      "pivot": [
+        0.576271186440678,
+        0.14325068870523416
+      ],
+      "durationMs": 100,
+      "action": "attack",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "active_contact",
+      "sourceFrameIndex": 10,
+      "sourceRect": [
+        545,
+        912,
+        311,
+        258
+      ],
+      "sourceAnchor": [
+        635,
+        1168
+      ],
+      "sourcePackingAnchor": [
+        635,
+        1168
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        284,
+        55
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_11",
+      "rect": [
+        1298,
+        1089,
+        649,
+        363
+      ],
+      "pivot": [
+        0.576271186440678,
+        0.14325068870523416
+      ],
+      "durationMs": 260,
+      "action": "attack",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 11,
+      "sourceRect": [
+        950,
+        887,
+        332,
+        292
+      ],
+      "sourceAnchor": [
+        1015,
+        1170
+      ],
+      "sourcePackingAnchor": [
+        1015,
+        1170
+      ],
+      "supportGuide": null,
+      "sourceOffsetInFrame": [
+        309,
+        28
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_S",
+      "frames": [
+        "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_00",
+        "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_01",
+        "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_SW",
+      "frames": [
+        "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_03",
+        "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_04",
+        "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_05"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_W",
+      "frames": [
+        "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_06",
+        "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_07",
+        "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_08"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_NW",
+      "frames": [
+        "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_09",
+        "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_10",
+        "Redesign_ReqFistsNormalMarteloS_SW_W_NW20261102V1_11"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "attack_S",
+    "attack_SW",
+    "attack_W",
+    "attack_NW"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 517068,
+  "packedPixels": 517068,
+  "originalSourcePixels": 517068,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 1056020,
+    "farBeyond16pxPixels": 248,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.9725490196078431,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ],
+  "timingAuthority": "Assets/Darklight/Runtime/Combat/DarklightRuinFistsProfile.cs",
+  "testsExecuted": false,
+  "framePixelsPerUnit": [
+    142.42424242424244,
+    142.42424242424244,
+    142.42424242424244,
+    141.41414141414143,
+    141.41414141414143,
+    141.41414141414143,
+    142.92929292929293,
+    142.92929292929293,
+    142.92929292929293,
+    142.42424242424244,
+    142.42424242424244,
+    142.42424242424244
+  ],
+  "densityMethod": "Each row upright recovery crown-to-sole/1.98; overhead gauntlets and low contact pose excluded from scale reference.",
+  "staticContactViewed": true,
+  "continuousMotionViewed": false,
+  "imported": false,
+  "runtimeVerified": false,
+  "attackKey": "Martelo da Ruína",
+  "phaseTimingMs": [
+    160,
+    100,
+    260
+  ]
+}

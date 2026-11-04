@@ -1,0 +1,71 @@
+{
+  "jobs": [
+    {
+      "name": "ReqFistsNormalWalkS_SW_W20261101V2",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261101\\punhos-walk\\ReqFistsNormalWalkS_SW_W20261101V2-source.png",
+      "preservedSourceName": "ReqFistsNormalWalkS_SW_W20261101V2-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 8000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 0,
+          "action": "Walk",
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "durationMs": [
+            100,
+            100,
+            100,
+            100
+          ],
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "direction": 1,
+          "action": "Walk",
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "durationMs": [
+            100,
+            100,
+            100,
+            100
+          ],
+          "loop": true
+        },
+        {
+          "sourceRow": 2,
+          "direction": 2,
+          "action": "Walk",
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "durationMs": [
+            100,
+            100,
+            100,
+            100
+          ],
+          "loop": true
+        }
+      ]
+    }
+  ]
+}

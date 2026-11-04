@@ -1,0 +1,114 @@
+{
+  "jobs": [
+    {
+      "name": "ReqKatanaNormalLeve3E_SE20261028Selected",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261028\\katana-normal\\ReqKatanaNormalLeve3E_SE20261028Selected-source.png",
+      "preservedSourceName": "ReqKatanaNormalLeve3E_SE20261028Selected-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "Leve3",
+          "loop": false,
+          "durationMs": [
+            40,
+            40,
+            100,
+            180
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "Leve3",
+          "loop": false,
+          "durationMs": [
+            40,
+            40,
+            100,
+            180
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            344,
+            442
+          ],
+          "method": "Transferred complete figure boot support"
+        },
+        "1": {
+          "anchor": [
+            928,
+            442
+          ],
+          "method": "Transferred complete figure boot support"
+        },
+        "2": {
+          "anchor": [
+            1539,
+            442
+          ],
+          "method": "Transferred complete figure boot support"
+        },
+        "3": {
+          "anchor": [
+            2103,
+            442
+          ],
+          "method": "Transferred complete figure boot support"
+        },
+        "4": {
+          "anchor": [
+            212,
+            934
+          ],
+          "method": "Transferred complete figure boot support"
+        },
+        "5": {
+          "anchor": [
+            950,
+            934
+          ],
+          "method": "Transferred complete figure boot support"
+        },
+        "6": {
+          "anchor": [
+            1473,
+            844
+          ],
+          "method": "Transferred complete figure boot support"
+        },
+        "7": {
+          "anchor": [
+            2117,
+            934
+          ],
+          "method": "Transferred complete figure boot support"
+        }
+      }
+    }
+  ],
+  "activationAllowed": false
+}

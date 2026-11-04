@@ -1,0 +1,49 @@
+{
+  "name": "ReqMotoNormalWalkWE20261103V3Candidate",
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261103\\moto-walk-close\\ReqMotoNormalWalkWE20261103V3-source.png",
+  "preservedSourceName": "ReqMotoNormalWalkWE20261103V3-source.png",
+  "skin": 0,
+  "weapon": 3,
+  "form": 0,
+  "columns": 4,
+  "sourceRows": 2,
+  "minimumArea": 5000,
+  "rows": [
+    {
+      "sourceRow": 0,
+      "sourceIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "direction": 2,
+      "action": "Walk",
+      "loop": true,
+      "durationMs": [
+        120,
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "sourceRow": 1,
+      "sourceIndices": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "direction": 6,
+      "action": "Walk",
+      "loop": true,
+      "durationMs": [
+        120,
+        120,
+        120,
+        120
+      ]
+    }
+  ]
+}

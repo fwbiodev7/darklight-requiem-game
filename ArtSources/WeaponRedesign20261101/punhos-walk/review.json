@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-01",
+  "generationTool": "integrated imagegen",
+  "attempts": 2,
+  "promotedWholeFigures": 4,
+  "rejectedDirections": [
+    "SW",
+    "W"
+  ],
+  "candidateSheets": [
+    {
+      "version": "V1",
+      "status": "candidate-rejected-as-complete-sheet",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-walk/ReqFistsNormalWalkS_SW_W20261101V1-source.png",
+      "sourceSha256": "9c27b193fe0d20dc51c9676d01ab5b29f6ddd1be7eaffbec210daaf59b9618c0",
+      "reason": "Repeated leading boot in SW/W; V1 South passing unclear. V2 only South four whole figures selected separately."
+    },
+    {
+      "version": "V2",
+      "status": "candidate-rejected-as-complete-sheet",
+      "sourcePath": "ArtSources/WeaponRedesign20261101/punhos-walk/ReqFistsNormalWalkS_SW_W20261101V2-source.png",
+      "sourceSha256": "69df7ad59d4c7e5e66f5a6b74cce721db9310f3fe480b06ee642c426b9dc1103",
+      "reason": "Repeated leading boot in SW/W; V1 South passing unclear. V2 only South four whole figures selected separately."
+    }
+  ],
+  "proposedKatanaConversion": {
+    "sourcePath": "ArtSources/WeaponRedesign20261026/katana-normal/ReqKatanaNormalWalkSW_W-v1-source.png",
+    "sourceSha256": "233f498a8e69f2ed2b2fe3b06baf9b069a4df82a069bb930b616e6ec2eed00e5",
+    "attempted": false,
+    "reason": "Whole source inspected: same leading boot recurs in six SW and six W phases. Required proven opposing contacts were not present, so no conversion generation spent."
+  },
+  "imported": false,
+  "runtimeVerified": false
+}

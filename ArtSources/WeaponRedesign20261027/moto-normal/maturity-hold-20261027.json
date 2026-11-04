@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-27",
+  "authority": "Latest explicit human feedback supplied by coordinator",
+  "humanFeedback": "mantenha fidelidade design na moto pq ta parecendo meio criança se baseie principalmente nas animações da katana q estao impecaveis",
+  "status": "held-for-katana-identity-and-maturity-correction",
+  "primaryAuthorities": [
+    "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleS_SW_W20261025-source.png",
+    "ArtSources/WeaponRedesign20261026/katana-normal/ReqKatanaNormalWalkSW_W-v1-source.png"
+  ],
+  "secondaryMotorcycleAuthority": "Hardware only; prior rider drawings must not override the canonical Katana character",
+  "affectedCandidates": [
+    "RequiemMotoForm0IdleNW_N_NE20261027V1",
+    "ArtSources/WeaponRedesign20261027/moto-normal/RequiemMotoNormalIdleE_SE-v1-source.png"
+  ],
+  "previousRearTechnicalAcceptanceSuperseded": true,
+  "previousRearOrientationFindingsPreserved": true,
+  "rearFaceAndNapeOrientationCorrectnessIsNotMaturityApproval": true,
+  "eastSoutheastPackaged": false,
+  "promoteToDelivery": false,
+  "sourcePixelsModified": false,
+  "runtimeOrResourceDescriptorModifiedByThisReview": false,
+  "integrationState": "Managed by coordinator; no new runtime/import assertion made by this review",
+  "reviewMethod": "Manual landmark estimates on inspected complete source sheets; no head/body crop, anatomical montage or image edit",
+  "uncertaintyPixels": 10,
+  "standingKatanaExamples": [
+    {
+      "source": "Katana approved Idle, W first pose",
+      "hairTopYApprox": 680,
+      "chinYApprox": 776,
+      "soleYApprox": 993,
+      "headIncludingHairPixelsApprox": 96,
+      "crownToSolePixelsApprox": 313,
+      "headToProjectedBodyApprox": 0.307
+    },
+    {
+      "source": "Katana approved Walk V1, W first pose",
+      "hairTopYApprox": 731,
+      "chinYApprox": 842,
+      "soleYApprox": 1040,
+      "headIncludingHairPixelsApprox": 111,
+      "crownToSolePixelsApprox": 309,
+      "headToProjectedBodyApprox": 0.359
+    }
+  ],
+  "mountedEastSoutheastExamples": [
+    {
+      "direction": "E first pose",
+      "hairTopYApprox": 71,
+      "chinYApprox": 177,
+      "visibleBootSoleYApprox": 351,
+      "headIncludingHairPixelsApprox": 106,
+      "crownToVisibleBootPixelsApprox": 280,
+      "headToProjectedMountedBodyApprox": 0.379
+    },
+    {
+      "direction": "SE first pose",
+      "hairTopYApprox": 458,
+      "chinYApprox": 579,
+      "visibleBootSoleYApprox": 755,
+      "headIncludingHairPixelsApprox": 121,
+      "crownToVisibleBootPixelsApprox": 297,
+      "headToProjectedMountedBodyApprox": 0.407
+    }
+  ],
+  "measurementLimits": [
+    "These are approximate manual source-sheet readings, not segmentation or a certified anatomy metric.",
+    "Mounted poses compress projected height, so standing and seated ratios cannot be treated as equivalent physical-height measurements.",
+    "Rear rider hips, thighs and boots are partly occluded; an accurate head/full-body ratio is not available there.",
+    "PPU changes world size uniformly but cannot change head/torso ratios, facial construction, limb lengths or perceived age."
+  ],
+  "visualFindings": [
+    "The E/SE candidate tends toward a larger round head/cheek impression relative to the visible seated rider, with more compact visible leg articulation than the canonical standing Katana poses.",
+    "The canonical Katana face has the selected sharper eye/jaw read and exact layered hair silhouette; copying a previous motorcycle rider as the primary identity reference propagates drift.",
+    "Rear NW/N/NE keeps coherent nape and torso orientation, but hidden faces and occluded limbs cannot certify that canonical maturity and anatomy were preserved.",
+    "Do not solve this by globally shrinking heads, stretching torsos/legs or transplanting Katana heads; redraw affected complete rider-and-bike figures against the coordinated mature base."
+  ],
+  "nextStep": "Await the coordinated mature motorcycle Base12 built primarily from whole Katana Idle and approved Walk V1. Align subsequent idle sheets to that exact identity; no new generation before coordination."
+}

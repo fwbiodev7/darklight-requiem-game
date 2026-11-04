@@ -1,0 +1,17 @@
+{
+  "tool": "image_gen__imagegen",
+  "mode": "built-in",
+  "selectedVersion": "v3",
+  "intent": "generate",
+  "transparent_background": true,
+  "referenceInputPaths": [],
+  "sourceGeneratedFile": "C:/Users/Usuario/.codex/generated_images/01a17fd9-c0b1-7cc3-bd3d-2d7e2c3cc441/exec-48b02322-798f-4a7c-bf3e-8dd0a2fa7627.png",
+  "prompt": "Create a production GAME PIXEL ART spritesheet of 12 tiny hard-edged combat contact effects. This is FLAT SPRITE ART, not lighting illustration. Each color is flat and each visible pixel 100% opaque, all empty space alpha=0. There is NO GLOW whatsoever. No haze, bloom, aura, vignette, gradient or translucent cloud. Transparent RGBA background. Layout is 4 columns and 3 rows, equally spaced, centered complete motifs within each cell with generous transparent margins. NO checkerboard texture. NO letters or grid. Native visual design in 96x96 logical pixels per cell, with clearly square pixel staircase boundaries; 4x3 sprites arranged in one landscape canvas. Use a small clean palette, at most 16 colors: ivory, white, amber, ochre for punch, cold white/silver/navy gray for metal, cool gray/dark gray for heavy. Row 1 four frame animation of punch contact: first compact ivory/amber star, second larger angular starburst, third several outward amber solid shards with empty center, fourth 3 small solid square embers with empty center. Row 2 four frame animation of metal contact: first fine white diagonal line spark, second angular X-shaped white-silver slash flash with navy outline, third outward thin solid angular silver shards, fourth 3 tiny silver fragments. Row 3 four frame animation of heavy impact: first compact white impact spark surrounded by 2 small rock chunks, second strong angular white impact flash surrounded by 4 gray rock chunks and tiny solid gray dust clusters, third separated outward falling gray rocks and small stepped flat gray dust puffs with hollow transparent center, fourth two tiny falling fragments and a small flat gray dust puff. Every motif complete, no clipped particles or adjacent bleed. Same source point for each animation, distinctive temporal stages. Suitable for DARKLIGHT mature dark-fantasy pixel art combat with crisp hard edges. Colors do not emit light onto surrounding pixels. The only illumination is flat white drawn core pixels. Think indexed-palette Aseprite VFX sprite sheet, unfiltered nearest-neighbor game art. The background must be completely transparent everywhere outside the opaque drawn clusters.",
+  "promptCompliance": "Complete 12 motifs, real alpha, no broad soft halos. Strict binary alpha, exact indexed colors and equal row heights were not achieved; actual whole-effect rects are measured in delivered JSON. No raster cleanup applied.",
+  "otherRevisions": [
+    {"version": "v1", "path": "ArtSources/CombatContacts20261027/candidate/ContactBursts-v1-source.png", "reasonNotSelected": "Broad soft halos"},
+    {"version": "v2", "path": "ArtSources/CombatContacts20261027/revisions/ContactBursts-v2-halo-rejected.png", "reasonNotSelected": "Edit retained broad soft halos"},
+    {"version": "v4", "path": "ArtSources/CombatContacts20261027/revisions/ContactBursts-v4-source.png", "reasonNotSelected": "Stronger blue fringing than v3, no alpha improvement"},
+    {"version": "v5", "path": "ArtSources/CombatContacts20261027/revisions/ContactBursts-v5-source.png", "reasonNotSelected": "Simpler but less coherent punch fragmentation, no edge improvement"}
+  ]
+}

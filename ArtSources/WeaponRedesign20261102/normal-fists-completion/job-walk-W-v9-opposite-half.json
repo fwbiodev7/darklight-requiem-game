@@ -1,0 +1,32 @@
+{
+  "jobs": [
+    {
+      "name": "ReqFistsNormalWalkW20261102V9OppositeHalf",
+      "source": "C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/ArtSources/WeaponRedesign20261102/normal-fists-completion/ReqFistsNormalWalkW_E_SW20261102V9CompactPose-source.png",
+      "preservedSourceName": "ReqFistsNormalWalkW_E_SW20261102V9CompactPose-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 4000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 2,
+          "action": "Walk",
+          "sourceIndices": [
+            0,
+            1
+          ],
+          "durationMs": [
+            100,
+            100
+          ],
+          "loop": false
+        }
+      ],
+      "excludedReason": "Only missing W contactB and passingB selected. E/SW not proven; W alternatives excluded."
+    }
+  ]
+}

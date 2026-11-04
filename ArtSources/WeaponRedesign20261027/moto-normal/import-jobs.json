@@ -1,0 +1,139 @@
+{
+  "jobs": [
+    {
+      "name": "RequiemMotoForm0IdleNW_N_NE20261027V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261027\\moto-normal\\RequiemMotoNormalIdleNW_N_NE-v1-source.png",
+      "preservedSourceName": "RequiemMotoNormalIdleNW_N_NE-v1-source.png",
+      "skin": 0,
+      "weapon": 3,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 15000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 3,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "direction": 4,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        },
+        {
+          "sourceRow": 2,
+          "direction": 5,
+          "action": "Idle",
+          "durationMs": [
+            350,
+            250,
+            180,
+            350
+          ],
+          "loop": true
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            205,
+            342
+          ],
+          "method": "Whole-source tire-contact support, excludes protruding metallic blade tips"
+        },
+        "1": {
+          "anchor": [
+            580,
+            341
+          ],
+          "method": "Whole-source tire-contact support, excludes protruding metallic blade tips"
+        },
+        "2": {
+          "anchor": [
+            964,
+            342
+          ],
+          "method": "Whole-source tire-contact support, excludes protruding metallic blade tips"
+        },
+        "3": {
+          "anchor": [
+            1342,
+            341
+          ],
+          "method": "Whole-source tire-contact support, excludes protruding metallic blade tips"
+        },
+        "4": {
+          "anchor": [
+            181,
+            662
+          ],
+          "method": "Whole-source tire-contact support, excludes protruding metallic blade tips"
+        },
+        "5": {
+          "anchor": [
+            578,
+            662
+          ],
+          "method": "Whole-source tire-contact support, excludes protruding metallic blade tips"
+        },
+        "6": {
+          "anchor": [
+            955,
+            662
+          ],
+          "method": "Whole-source tire-contact support, excludes protruding metallic blade tips"
+        },
+        "7": {
+          "anchor": [
+            1348,
+            662
+          ],
+          "method": "Whole-source tire-contact support, excludes protruding metallic blade tips"
+        },
+        "8": {
+          "anchor": [
+            194,
+            980
+          ],
+          "method": "Whole-source tire-contact support, excludes protruding metallic blade tips"
+        },
+        "9": {
+          "anchor": [
+            578,
+            980
+          ],
+          "method": "Whole-source tire-contact support, excludes protruding metallic blade tips"
+        },
+        "10": {
+          "anchor": [
+            962,
+            980
+          ],
+          "method": "Whole-source tire-contact support, excludes protruding metallic blade tips"
+        },
+        "11": {
+          "anchor": [
+            1346,
+            980
+          ],
+          "method": "Whole-source tire-contact support, excludes protruding metallic blade tips"
+        }
+      }
+    }
+  ]
+}

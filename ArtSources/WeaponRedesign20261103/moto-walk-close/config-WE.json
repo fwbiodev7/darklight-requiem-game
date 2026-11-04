@@ -1,0 +1,86 @@
+{
+  "name": "ReqMotoNormalWalkWE20261103V2Candidate",
+  "source": "ReqMotoNormalWalkWE20261103V2-source.png",
+  "sourceRows": 2,
+  "directions": [
+    "W",
+    "E"
+  ],
+  "sourceIndices": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6,
+      7
+    ]
+  ],
+  "frameBodyHeightPixels": [
+    407,
+    407,
+    307,
+    307,
+    400,
+    400,
+    400,
+    400
+  ],
+  "nearestWholeFiguresSeen": true,
+  "staticContactSeen": false,
+  "reviewNotes": [
+    "Candidate only: camera coherent, complete saws; leg ownership still under independent review. Source whole poses preserved at different native densities; PPU adjusts only rendering density, never anatomy.",
+    "Earlier whole-height PPU155.05 for W B was invalid because it enlarged head and normalized knee flexion. Replaced by provisional invariant head/trunk168 for review only. Drawing and leg ownership remain unresolved; do not promote."
+  ],
+  "densityPixelsPerUnit": [
+    205.55555555555557,
+    205.55555555555557,
+    168,
+    168,
+    202.02020202020202,
+    202.02020202020202,
+    202.02020202020202,
+    202.02020202020202
+  ],
+  "densityCalibration": {
+    "method": "Provisional REVIEW ONLY density based on complete-figure crown-to-waist and compact hair width, not leg flexion or equipment. Original source pose sheet combined two native densities; no anatomy resampled.",
+    "measurements": [
+      {
+        "frames": [
+          0,
+          1
+        ],
+        "crownToWaistPixelsApprox": 180,
+        "compactHairWidthPixelsApprox": 173,
+        "pixelsPerUnit": 205.55555555555557
+      },
+      {
+        "frames": [
+          2,
+          3
+        ],
+        "crownToWaistPixelsApprox": 150,
+        "compactHairWidthPixelsApprox": 143,
+        "pixelsPerUnit": 168
+      },
+      {
+        "frames": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "crownToWaistPixelsApprox": 177,
+        "compactHairWidthPixelsApprox": 172,
+        "pixelsPerUnit": 202.02020202020202
+      }
+    ],
+    "uncertaintyPixels": 6,
+    "provisional": true,
+    "integrationBlocked": true
+  }
+}

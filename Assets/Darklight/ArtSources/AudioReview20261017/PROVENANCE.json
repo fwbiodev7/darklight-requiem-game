@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-17",
+  "auditioned": false,
+  "musicDownloaded": false,
+  "sources": [
+    {
+      "file": "Monster.wav",
+      "author": "mikeask",
+      "page": "https://opengameart.org/content/monster-5",
+      "url": "https://opengameart.org/sites/default/files/Monster.wav",
+      "license": "CC0-1.0",
+      "sha256": "da4ececf812b931502d34526adbdba9b9685c67fa3918f359af5213d8b689e87"
+    },
+    {
+      "file": "enemy_sounds.ogg",
+      "author": "AbNormalHumanBeing",
+      "page": "https://opengameart.org/content/enemy-sounds",
+      "url": "https://opengameart.org/sites/default/files/enemy_sounds.ogg",
+      "license": "CC0-1.0",
+      "sha256": "ffd24c13e8455cf836b1a19a3ddaef853c4b743f5d59506d79d124981d9673dc",
+      "status": "source atlas for later cue review; not routed into gameplay"
+    }
+  ],
+  "prepared": {
+    "file": "Assets\\Darklight\\Resources\\Darklight\\Audio\\Review20261017\\dl-web-creature-alert.wav",
+    "seconds": 3.589795918367347,
+    "peak": 0.5,
+    "channels": 1,
+    "sampleRate": 22050,
+    "sha256": "75d68f2320d0520934368e6bcf3200eb9ffa02cb39ac0a9a4f11a0fafc58ddbb",
+    "processing": "stereo to mono; 2:1 averaged resample; silence trim; peak 0.5; 8ms edge fades"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "name": "ReqMotoNormalSerraEntradaS_SW20261102V1",
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261102\\normal-moto-completion\\ReqMotoNormalSerraEntradaS_SW_W20261102V1-source.png",
+  "preservedSourceName": "ReqMotoNormalSerraEntradaS_SW_W20261102V1-source.png",
+  "skin": 0,
+  "weapon": 3,
+  "form": 0,
+  "columns": 4,
+  "sourceRows": 3,
+  "minimumArea": 5000,
+  "rows": [
+    {
+      "sourceRow": 0,
+      "direction": 0,
+      "action": "Attack",
+      "attackKey": "Serra de Entrada",
+      "loop": false,
+      "durationMs": [
+        125,
+        125,
+        240,
+        370
+      ],
+      "sourceIndices": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "sourceRow": 1,
+      "direction": 1,
+      "action": "Attack",
+      "attackKey": "Serra de Entrada",
+      "loop": false,
+      "durationMs": [
+        125,
+        125,
+        240,
+        370
+      ],
+      "sourceIndices": [
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "supportAnchors": {
+    "0": {
+      "anchor": [
+        209,
+        350
+      ],
+      "method": "Source measured ground support midpoint between two boots; equipment excluded",
+      "uncertaintyPixels": 8
+    },
+    "1": {
+      "anchor": [
+        572,
+        351
+      ],
+      "method": "Source measured ground support midpoint between two boots; equipment excluded",
+      "uncertaintyPixels": 8
+    },
+    "2": {
+      "anchor": [
+        908,
+        350
+      ],
+      "method": "Source measured ground support midpoint between two boots; equipment excluded",
+      "uncertaintyPixels": 8
+    },
+    "3": {
+      "anchor": [
+        1292,
+        351
+      ],
+      "method": "Source measured ground support midpoint between two boots; equipment excluded",
+      "uncertaintyPixels": 8
+    },
+    "4": {
+      "anchor": [
+        184,
+        705
+      ],
+      "method": "Source measured ground support midpoint between two boots; equipment excluded",
+      "uncertaintyPixels": 8
+    },
+    "5": {
+      "anchor": [
+        560,
+        705
+      ],
+      "method": "Source measured ground support midpoint between two boots; equipment excluded",
+      "uncertaintyPixels": 8
+    },
+    "6": {
+      "anchor": [
+        903,
+        707
+      ],
+      "method": "Source measured ground support midpoint between two boots; equipment excluded",
+      "uncertaintyPixels": 8
+    },
+    "7": {
+      "anchor": [
+        1288,
+        706
+      ],
+      "method": "Source measured ground support midpoint between two boots; equipment excluded",
+      "uncertaintyPixels": 8
+    }
+  }
+}

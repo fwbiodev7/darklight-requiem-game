@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqKatanaNormalDodgeE_SE20261101V1.png",
+  "imageSha256": "0ca59df6487ead5aa456a2b099f00e9b2b15c23b9c387428b805130466873e7a",
+  "nativeSize": [
+    2010,
+    1102
+  ],
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 201.76767676767676,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261101/katana-dodge/ReqKatanaNormalDodgeE_SE20261101V1-source.png",
+  "sourceSha256": "474020086461fb6c64243fa552fe7959730482df7eee0f2c5c910987d0a8868a",
+  "frames": [
+    {
+      "id": "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_00",
+      "rect": [
+        0,
+        0,
+        670,
+        551
+      ],
+      "pivot": [
+        0.3850746268656716,
+        0.16152450090744103
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        35,
+        488,
+        477
+      ],
+      "sourceAnchor": [
+        230,
+        474
+      ],
+      "sourcePackingAnchor": [
+        159,
+        474
+      ],
+      "supportGuide": {
+        "anchor": [
+          230,
+          474
+        ],
+        "method": "Manual midpoint of two whole boot supports,E anticipation"
+      },
+      "sourceOffsetInFrame": [
+        28,
+        23
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_01",
+      "rect": [
+        670,
+        0,
+        670,
+        551
+      ],
+      "pivot": [
+        0.517910447761194,
+        0.16152450090744103
+      ],
+      "durationMs": 150,
+      "action": "dodge",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "dodge-low-lunge",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        521,
+        17,
+        551,
+        515
+      ],
+      "sourceAnchor": [
+        757,
+        471
+      ],
+      "sourcePackingAnchor": [
+        597,
+        471
+      ],
+      "supportGuide": {
+        "anchor": [
+          757,
+          471
+        ],
+        "method": "Manual midpoint rear pushing toe and front planted boot,E low lunge"
+      },
+      "sourceOffsetInFrame": [
+        111,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_02",
+      "rect": [
+        1340,
+        0,
+        670,
+        551
+      ],
+      "pivot": [
+        0.3686567164179104,
+        0.16152450090744103
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        1071,
+        27,
+        453,
+        479
+      ],
+      "sourceAnchor": [
+        1310,
+        475
+      ],
+      "sourcePackingAnchor": [
+        1250,
+        475
+      ],
+      "supportGuide": {
+        "anchor": [
+          1310,
+          475
+        ],
+        "method": "Manual midpoint of two whole boot supports,E recovery"
+      },
+      "sourceOffsetInFrame": [
+        8,
+        14
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_03",
+      "rect": [
+        0,
+        551,
+        670,
+        551
+      ],
+      "pivot": [
+        0.3970149253731343,
+        0.16152450090744103
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "anticipation",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        0,
+        525,
+        496,
+        471
+      ],
+      "sourceAnchor": [
+        213,
+        962
+      ],
+      "sourcePackingAnchor": [
+        134,
+        962
+      ],
+      "supportGuide": {
+        "anchor": [
+          213,
+          962
+        ],
+        "method": "Manual midpoint of two whole boot supports,SE anticipation"
+      },
+      "sourceOffsetInFrame": [
+        53,
+        25
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_04",
+      "rect": [
+        670,
+        551,
+        670,
+        551
+      ],
+      "pivot": [
+        0.4343283582089552,
+        0.16152450090744103
+      ],
+      "durationMs": 150,
+      "action": "dodge",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "dodge-low-lunge",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        495,
+        532,
+        575,
+        492
+      ],
+      "sourceAnchor": [
+        757,
+        943
+      ],
+      "sourcePackingAnchor": [
+        653,
+        943
+      ],
+      "supportGuide": {
+        "anchor": [
+          757,
+          943
+        ],
+        "method": "Manual midpoint rear pushing toe and front planted boot,SE low lunge"
+      },
+      "sourceOffsetInFrame": [
+        29,
+        51
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_05",
+      "rect": [
+        1340,
+        551,
+        670,
+        551
+      ],
+      "pivot": [
+        0.3805970149253731,
+        0.16152450090744103
+      ],
+      "durationMs": 40,
+      "action": "dodge",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        1091,
+        537,
+        445,
+        453
+      ],
+      "sourceAnchor": [
+        1318,
+        965
+      ],
+      "sourcePackingAnchor": [
+        1250,
+        965
+      ],
+      "supportGuide": {
+        "anchor": [
+          1318,
+          965
+        ],
+        "method": "Manual midpoint of two whole boot supports,SE recovery"
+      },
+      "sourceOffsetInFrame": [
+        28,
+        34
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "dodge_E",
+      "frames": [
+        "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_00",
+        "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_01",
+        "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "dodge_SE",
+      "frames": [
+        "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_03",
+        "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_04",
+        "Redesign_ReqKatanaNormalDodgeE_SE20261101V1_05"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "dodge_E",
+    "dodge_SE"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 542798,
+  "packedPixels": 542798,
+  "originalSourcePixels": 542798,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "Only declared complete direction rows selected; other source rows preserved but excluded.",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 1030066,
+    "farBeyond16pxPixels": 706,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 2.768627450980392,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "6 whole figures only; no source pixel edits or anatomical assembly.",
+    "Normal Dodge230ms: preparation40ms, low lunge150ms, recovery40ms.",
+    "Runtime invulnerability20<=t<190ms is independent of sprite preview.",
+    "Native generated raster; indexed pixel grid unverified.",
+    "Coordinator must supply native timedDodge consumer before import."
+  ],
+  "agentStaticArtReviewed": true,
+  "contactViewed": true,
+  "motionPreviewViewed": false,
+  "unityImported": false,
+  "runtimeVerified": false,
+  "ppuCalibration": {
+    "method": "Median complete anticipation/recovery body height; low lunge excluded",
+    "sourceFrameIndices": [
+      0,
+      2,
+      3,
+      5
+    ],
+    "bodyHeightPixels": 399.5,
+    "bodyWorldHeight": 1.98
+  },
+  "wholePhaseStripsViewed": true,
+  "visualReview": "E/SE exact approved camera/identity/right-near-hand katana consistent all3 phases; clear plantedfront knee,rearpush,lowtorso and recovery; allcomplete; graybackground beneath zeroalpha not artwork; light/dark previews clean."
+}

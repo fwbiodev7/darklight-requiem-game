@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-21",
+  "status": "in-progress",
+  "approvedWeaponDesign": true,
+  "approvedName": "Punhos da Ruína",
+  "productionCatalogPublished": false,
+  "productionBanksCertified": 0,
+  "targetBanks": 128,
+  "candidatesAreNotCoverage": true,
+  "absoluteHair": {
+    "reference": "ArtSources/AbsoluteHairReference20261021/referencia-cabelo-absoluto.png",
+    "sha256": "b5ede92bb2fc3a7a6e236910359a2ff32e2477a9455b7f952549847befb8f304",
+    "reviewedCandidates": [
+      "Requiem_Absoluto_SE_Combat_HairV2",
+      "Rock_Absoluto_SE_Combat_HairV2",
+      "absoluto-cardinal-hair-v2"
+    ],
+    "review": "Full white waves end above belt, on upper/mid back. Supersedes longer hair candidates. Remaining directions/actions still missing."
+  },
+  "walking": {
+    "preview": "outputs/punhos-ruina-20261021/caminhada-guiada-v11/preview/preview.html",
+    "previousPreview": "outputs/punhos-ruina-20261021/caminhada-baixa-v5/preview/preview.html",
+    "frames": 8,
+    "cycleSeconds": 0.6,
+    "lowKneesReviewed": true,
+    "integerGroundAnchors": true,
+    "sourceRGBAConserved": false,
+    "rgbaPreservedForUnscaledFrames": true,
+    "wholeFigureScalingOnly": true,
+    "oppositeLegContactConfirmed": false,
+    "allLoopsVisuallyCertified": false,
+    "unityImported": false,
+    "excluded": [
+      "walk-west-marching-rejected",
+      "walk-west-text-only-v7"
+    ],
+    "review": "V11 has lower knees, improved arm counter-swing and stable ground anchors; all eight frames and playback controls were inspected. Leg overlap/support exchange remains insufficiently clear for final certification. Four Requiem whole frames are unchanged; four Rock whole figures use one uniform nearest-neighbor scale. Preview V10 scaling error was corrected in V11."
+  },
+  "directionalExpansion": {
+    "automaticBulkStopped": true,
+    "review": "Correct full-view references improve body facing, but N contacts still extend laterally and some SW strikes change orientation. Candidates remain outside production; do not count filenames as coverage.",
+    "latestAttempt": "RefocusedV3: Rock Normal S/W, Requiem Normal N/SW"
+  },
+  "validation": {
+    "assembliesCompiled": [
+      "Darklight.Runtime",
+      "Darklight.Editor",
+      "Darklight.EditModeTests"
+    ],
+    "compileErrors": 0,
+    "unityEditModeExecuted": 6,
+    "unityEditModePassed": 6,
+    "unityEditModeFailed": 0,
+    "testXml": "../work/ruin-fists-cadence-editmode-20261021.xml",
+    "playStarted": false,
+    "musicStarted": false,
+    "audioAuditioned": false,
+    "physicalControllerTested": false,
+    "newBuild": false
+  },
+  "completionInstruction": {
+    "notificationSoundAuthorized": true,
+    "onlyWhenComplete": true,
+    "thenCommitAndPush": true,
+    "github": "https://github.com/fwbiodev7/darklight-requiem-game.git",
+    "soundPlayed": false,
+    "commitCreated": false,
+    "pushed": false
+  }
+}

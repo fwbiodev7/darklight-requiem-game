@@ -1,0 +1,519 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqMotoNormalSerraEntradaS_SW20261102V1.png",
+  "imageSha256": "6b3572d2b7f3c10c2775b569346ab743ed6ec81bfac3916819aa217369074215",
+  "nativeSize": [
+    2204,
+    754
+  ],
+  "sourceSize": [
+    1448,
+    1086
+  ],
+  "pixelsPerUnit": 157.82828282828282,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaS_SW_W20261102V1-source.png",
+  "sourceSha256": "8b670735a7d68aa51e4427f2d40e9069c4c146eab58752ce70a10e0c37e2c5f6",
+  "frames": [
+    {
+      "id": "Redesign_ReqMotoNormalSerraEntradaS_SW20261102V1_00",
+      "rect": [
+        0,
+        0,
+        551,
+        377
+      ],
+      "pivot": [
+        0.4900181488203267,
+        0.10875331564986737
+      ],
+      "durationMs": 125,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "early_windup",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        33,
+        382,
+        330
+      ],
+      "sourceAnchor": [
+        209,
+        350
+      ],
+      "sourcePackingAnchor": [
+        209,
+        350
+      ],
+      "supportGuide": {
+        "anchor": [
+          209,
+          350
+        ],
+        "method": "Source measured ground support midpoint between two boots; equipment excluded",
+        "uncertaintyPixels": 8
+      },
+      "sourceOffsetInFrame": [
+        61,
+        19
+      ],
+      "sourceScale": 1,
+      "attackKey": "Serra de Entrada"
+    },
+    {
+      "id": "Redesign_ReqMotoNormalSerraEntradaS_SW20261102V1_01",
+      "rect": [
+        551,
+        0,
+        551,
+        377
+      ],
+      "pivot": [
+        0.49183303085299457,
+        0.10875331564986737
+      ],
+      "durationMs": 125,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "late_windup",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        403,
+        23,
+        366,
+        337
+      ],
+      "sourceAnchor": [
+        572,
+        351
+      ],
+      "sourcePackingAnchor": [
+        571,
+        351
+      ],
+      "supportGuide": {
+        "anchor": [
+          572,
+          351
+        ],
+        "method": "Source measured ground support midpoint between two boots; equipment excluded",
+        "uncertaintyPixels": 8
+      },
+      "sourceOffsetInFrame": [
+        102,
+        8
+      ],
+      "sourceScale": 1,
+      "attackKey": "Serra de Entrada"
+    },
+    {
+      "id": "Redesign_ReqMotoNormalSerraEntradaS_SW20261102V1_02",
+      "rect": [
+        1102,
+        0,
+        551,
+        377
+      ],
+      "pivot": [
+        0.6279491833030852,
+        0.10875331564986737
+      ],
+      "durationMs": 240,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "active_cut",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        758,
+        27,
+        336,
+        356
+      ],
+      "sourceAnchor": [
+        908,
+        350
+      ],
+      "sourcePackingAnchor": [
+        832,
+        350
+      ],
+      "supportGuide": {
+        "anchor": [
+          908,
+          350
+        ],
+        "method": "Source measured ground support midpoint between two boots; equipment excluded",
+        "uncertaintyPixels": 8
+      },
+      "sourceOffsetInFrame": [
+        196,
+        13
+      ],
+      "sourceScale": 1,
+      "attackKey": "Serra de Entrada"
+    },
+    {
+      "id": "Redesign_ReqMotoNormalSerraEntradaS_SW20261102V1_03",
+      "rect": [
+        1653,
+        0,
+        551,
+        377
+      ],
+      "pivot": [
+        0.4900181488203267,
+        0.10875331564986737
+      ],
+      "durationMs": 370,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1115,
+        35,
+        333,
+        332
+      ],
+      "sourceAnchor": [
+        1292,
+        351
+      ],
+      "sourcePackingAnchor": [
+        1292,
+        351
+      ],
+      "supportGuide": {
+        "anchor": [
+          1292,
+          351
+        ],
+        "method": "Source measured ground support midpoint between two boots; equipment excluded",
+        "uncertaintyPixels": 8
+      },
+      "sourceOffsetInFrame": [
+        93,
+        20
+      ],
+      "sourceScale": 1,
+      "attackKey": "Serra de Entrada"
+    },
+    {
+      "id": "Redesign_ReqMotoNormalSerraEntradaS_SW20261102V1_04",
+      "rect": [
+        0,
+        377,
+        551,
+        377
+      ],
+      "pivot": [
+        0.3484573502722323,
+        0.10875331564986737
+      ],
+      "durationMs": 125,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "early_windup",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        14,
+        390,
+        366,
+        331
+      ],
+      "sourceAnchor": [
+        184,
+        705
+      ],
+      "sourcePackingAnchor": [
+        262,
+        705
+      ],
+      "supportGuide": {
+        "anchor": [
+          184,
+          705
+        ],
+        "method": "Source measured ground support midpoint between two boots; equipment excluded",
+        "uncertaintyPixels": 8
+      },
+      "sourceOffsetInFrame": [
+        22,
+        21
+      ],
+      "sourceScale": 1,
+      "attackKey": "Serra de Entrada"
+    },
+    {
+      "id": "Redesign_ReqMotoNormalSerraEntradaS_SW20261102V1_05",
+      "rect": [
+        551,
+        377,
+        551,
+        377
+      ],
+      "pivot": [
+        0.3647912885662432,
+        0.10875331564986737
+      ],
+      "durationMs": 125,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "late_windup",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        383,
+        380,
+        353,
+        345
+      ],
+      "sourceAnchor": [
+        560,
+        705
+      ],
+      "sourcePackingAnchor": [
+        629,
+        705
+      ],
+      "supportGuide": {
+        "anchor": [
+          560,
+          705
+        ],
+        "method": "Source measured ground support midpoint between two boots; equipment excluded",
+        "uncertaintyPixels": 8
+      },
+      "sourceOffsetInFrame": [
+        24,
+        11
+      ],
+      "sourceScale": 1,
+      "attackKey": "Serra de Entrada"
+    },
+    {
+      "id": "Redesign_ReqMotoNormalSerraEntradaS_SW20261102V1_06",
+      "rect": [
+        1102,
+        377,
+        551,
+        377
+      ],
+      "pivot": [
+        0.6352087114337568,
+        0.10875331564986737
+      ],
+      "durationMs": 240,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "active_cut",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        745,
+        411,
+        351,
+        308
+      ],
+      "sourceAnchor": [
+        903,
+        707
+      ],
+      "sourcePackingAnchor": [
+        823,
+        707
+      ],
+      "supportGuide": {
+        "anchor": [
+          903,
+          707
+        ],
+        "method": "Source measured ground support midpoint between two boots; equipment excluded",
+        "uncertaintyPixels": 8
+      },
+      "sourceOffsetInFrame": [
+        192,
+        40
+      ],
+      "sourceScale": 1,
+      "attackKey": "Serra de Entrada"
+    },
+    {
+      "id": "Redesign_ReqMotoNormalSerraEntradaS_SW20261102V1_07",
+      "rect": [
+        1653,
+        377,
+        551,
+        377
+      ],
+      "pivot": [
+        0.36116152450090744,
+        0.10875331564986737
+      ],
+      "durationMs": 370,
+      "action": "attack",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        1097,
+        388,
+        351,
+        327
+      ],
+      "sourceAnchor": [
+        1288,
+        706
+      ],
+      "sourcePackingAnchor": [
+        1359,
+        706
+      ],
+      "supportGuide": {
+        "anchor": [
+          1288,
+          706
+        ],
+        "method": "Source measured ground support midpoint between two boots; equipment excluded",
+        "uncertaintyPixels": 8
+      },
+      "sourceOffsetInFrame": [
+        8,
+        18
+      ],
+      "sourceScale": 1,
+      "attackKey": "Serra de Entrada"
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_S",
+      "frames": [
+        "Redesign_ReqMotoNormalSerraEntradaS_SW20261102V1_00",
+        "Redesign_ReqMotoNormalSerraEntradaS_SW20261102V1_01",
+        "Redesign_ReqMotoNormalSerraEntradaS_SW20261102V1_02",
+        "Redesign_ReqMotoNormalSerraEntradaS_SW20261102V1_03"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_SW",
+      "frames": [
+        "Redesign_ReqMotoNormalSerraEntradaS_SW20261102V1_04",
+        "Redesign_ReqMotoNormalSerraEntradaS_SW20261102V1_05",
+        "Redesign_ReqMotoNormalSerraEntradaS_SW20261102V1_06",
+        "Redesign_ReqMotoNormalSerraEntradaS_SW20261102V1_07"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "attack_S",
+    "attack_SW"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 480842,
+  "packedPixels": 480842,
+  "originalSourcePixels": 720160,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "excludedSourceFrameIndices": [
+    8,
+    9,
+    10,
+    11
+  ],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 852368,
+    "farBeyond16pxPixels": 67,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.2627450980392157,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ],
+  "presentation": "OnFoot",
+  "motorcycleContext": "onFoot-DualSaws",
+  "worldVisualScale": 1.325,
+  "pixelsPerUnitCalibration": {
+    "bodyHeightUnits": 1.98,
+    "method": "Native crown-to-sole density from indicated recovered/standing full figures; saws excluded; action foreshortening not normalized away",
+    "measures": [
+      {
+        "sourceFrameIndex": 3,
+        "bodyHeightPixels": 312
+      },
+      {
+        "sourceFrameIndex": 7,
+        "bodyHeightPixels": 313
+      }
+    ],
+    "uncertaintyPixels": 5
+  },
+  "review": {
+    "wholeSourceSeen": true,
+    "nearestWholeFiguresSeen": false,
+    "staticContactSeen": true,
+    "continuousMotionViewed": false,
+    "humanApproved": false,
+    "imported": false,
+    "runtimeVerified": false,
+    "activeWholeFiguresAt2xSeen": true,
+    "remainingFramesNativeViewed": true,
+    "limits": "Static full-figure native contacts and all eight active full figures inspected at2x. Playback, automated audits, Unity and gameplay tests deferred by user."
+  },
+  "deferredValidation": "User requested ALL TESTS AFTER package implementation; no audits, automated tests, Unity or motion playback executed",
+  "authoredPhases": {
+    "startupFrames": 2,
+    "activeFrames": 1,
+    "recoveryFrames": 1,
+    "runtimeTimingsMs": {
+      "startup": 250,
+      "active": 240,
+      "recovery": 370
+    },
+    "eventsChanged": false
+  },
+  "attackKey": "Serra de Entrada"
+}

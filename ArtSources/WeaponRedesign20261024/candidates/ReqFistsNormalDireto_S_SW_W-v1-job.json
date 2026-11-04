@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "job": "ReqFistsNormalDireto_S_SW_W-v1",
+  "status": "generated-and-visual-reviewed",
+  "tool": "built-in-imagegen",
+  "identityAuthority": "ArtSources/WeaponRedesign20261024/candidates/ReqKatanaNormalLight1_S_SW_W-v1-source.png",
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261024/candidates/ReqKatanaNormalLight1_S_SW_W-v1-source.png",
+      "sha256": "0c701bcea3da3682349d3d5567d99be05d7261df14b4f016d5f5a7c99af47795",
+      "inspectedWhole": true
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261023/references/equipment-four-forms.png",
+      "sha256": "6c8c6b05e27f16f19f2bfcad3151294b164f004c0960fa713662788f9e3f6930",
+      "inspectedWhole": true
+    },
+    {
+      "path": "ArtSources/PlayerEyeReference20261020/referencia-olhos-player.png",
+      "sha256": "82ce8cb4761757ba6f3f1809fd4bf603d67eac5b7a8a7cec056c1ce178fcd949",
+      "inspectedWhole": true
+    }
+  ],
+  "directions": [
+    "S",
+    "SW",
+    "W"
+  ],
+  "skin": 0,
+  "form": 0,
+  "weapon": 2,
+  "phases": [
+    "anticipation",
+    "contact",
+    "follow-through",
+    "recovery"
+  ],
+  "dominantHand": "right",
+  "physicsChanged": false,
+  "sourceConsumer": "Assets/Darklight/Runtime/Character/DarklightRuinFistsBank.cs",
+  "consumerIndices": [
+    2,
+    3,
+    11
+  ],
+  "consumerTimingsMs": [
+    75,
+    65,
+    130
+  ],
+  "fourToThreeMapping": {
+    "anticipation": "02",
+    "contact": "03",
+    "follow-through": null,
+    "recovery": "11"
+  },
+  "previewClips": [
+    {
+      "id": "0-2-0-0-Attack:light1",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "direction": 0,
+      "action": "Attack:light1",
+      "label": "Golpe: Direto da Ruína",
+      "current": [
+        {
+          "frame": "d8b60ec23f7b4b1756da",
+          "durationMs": 75,
+          "phase": "Antecipação",
+          "sourceName": "Ruin_Requiem_Normal_S_Combat_02"
+        },
+        {
+          "frame": "f02190a13c6ec4b2ad2a",
+          "durationMs": 65,
+          "phase": "Contato",
+          "sourceName": "Ruin_Requiem_Normal_S_Combat_03"
+        },
+        {
+          "frame": "fc56264480c2543245b0",
+          "durationMs": 130,
+          "phase": "Recuperação",
+          "sourceName": "Ruin_Requiem_Normal_S_Combat_11"
+        }
+      ],
+      "legacy": [
+        {
+          "frame": "bf64b5c602fbc21e2661",
+          "durationMs": 75,
+          "phase": "Antecipação",
+          "sourceName": "Ruin_Requiem_Normal_S_Combat_02"
+        },
+        {
+          "frame": "77064ec63e2eb680c34b",
+          "durationMs": 65,
+          "phase": "Contato",
+          "sourceName": "Ruin_Requiem_Normal_S_Combat_03"
+        },
+        {
+          "frame": "e57ede6fc20d6b60b92e",
+          "durationMs": 130,
+          "phase": "Recuperação",
+          "sourceName": "Ruin_Requiem_Normal_S_Combat_11"
+        }
+      ],
+      "loop": false,
+      "attackKey": "Direto da Ruína",
+      "contacts": 1
+    },
+    {
+      "id": "0-2-0-1-Attack:light1",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "direction": 1,
+      "action": "Attack:light1",
+      "label": "Golpe: Direto da Ruína",
+      "current": [
+        {
+          "frame": "0330a2f9dad8d5f310e6",
+          "durationMs": 75,
+          "phase": "Antecipação",
+          "sourceName": "Ruin_Requiem_Normal_SW_Combat_02"
+        },
+        {
+          "frame": "c57ba3e37fd2e6bd8f04",
+          "durationMs": 65,
+          "phase": "Contato",
+          "sourceName": "Ruin_Requiem_Normal_SW_Combat_03"
+        },
+        {
+          "frame": "435953f88d5e75f689dd",
+          "durationMs": 130,
+          "phase": "Recuperação",
+          "sourceName": "Ruin_Requiem_Normal_SW_Combat_11"
+        }
+      ],
+      "legacy": [
+        {
+          "frame": "0330a2f9dad8d5f310e6",
+          "durationMs": 75,
+          "phase": "Antecipação",
+          "sourceName": "Ruin_Requiem_Normal_SW_Combat_02"
+        },
+        {
+          "frame": "c57ba3e37fd2e6bd8f04",
+          "durationMs": 65,
+          "phase": "Contato",
+          "sourceName": "Ruin_Requiem_Normal_SW_Combat_03"
+        },
+        {
+          "frame": "435953f88d5e75f689dd",
+          "durationMs": 130,
+          "phase": "Recuperação",
+          "sourceName": "Ruin_Requiem_Normal_SW_Combat_11"
+        }
+      ],
+      "loop": false,
+      "attackKey": "Direto da Ruína",
+      "contacts": 1
+    },
+    {
+      "id": "0-2-0-2-Attack:light1",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "direction": 2,
+      "action": "Attack:light1",
+      "label": "Golpe: Direto da Ruína",
+      "current": [
+        {
+          "frame": "e1b9ba4c4ab1bbe9b33e",
+          "durationMs": 75,
+          "phase": "Antecipação",
+          "sourceName": "Ruin_Requiem_Normal_W_Combat_02"
+        },
+        {
+          "frame": "14532bafff06b739c8a0",
+          "durationMs": 65,
+          "phase": "Contato",
+          "sourceName": "Ruin_Requiem_Normal_W_Combat_03"
+        },
+        {
+          "frame": "f4562b8427e3d28cd3eb",
+          "durationMs": 130,
+          "phase": "Recuperação",
+          "sourceName": "Ruin_Requiem_Normal_W_Combat_11"
+        }
+      ],
+      "legacy": [
+        {
+          "frame": "e1b9ba4c4ab1bbe9b33e",
+          "durationMs": 75,
+          "phase": "Antecipação",
+          "sourceName": "Ruin_Requiem_Normal_W_Combat_02"
+        },
+        {
+          "frame": "14532bafff06b739c8a0",
+          "durationMs": 65,
+          "phase": "Contato",
+          "sourceName": "Ruin_Requiem_Normal_W_Combat_03"
+        },
+        {
+          "frame": "f4562b8427e3d28cd3eb",
+          "durationMs": 130,
+          "phase": "Recuperação",
+          "sourceName": "Ruin_Requiem_Normal_W_Combat_11"
+        }
+      ],
+      "loop": false,
+      "attackKey": "Direto da Ruína",
+      "contacts": 1
+    }
+  ],
+  "alphaRequired": true,
+  "wholeFiguresOnly": true,
+  "source": "ReqFistsNormalDireto_S_SW_W-v1-source.png",
+  "sourceSha256": "dc502817bd7f67d7d7c38a425016d4ce52505506cb508fd5e852251dd91b208e",
+  "generatedImageOrigin": "C:/Users/Usuario/.codex/generated_images/01a17020-9993-7ca0-a7fb-2b2703d71fc1/exec-bbaebc88-5636-4b36-a6e5-8c801327c22b.png",
+  "sourceAlphaPreserved": true,
+  "wholeFigureRects": [
+    [
+      0,
+      0,
+      384,
+      363
+    ],
+    [
+      384,
+      0,
+      384,
+      363
+    ],
+    [
+      768,
+      0,
+      432,
+      363
+    ],
+    [
+      1200,
+      0,
+      336,
+      363
+    ],
+    [
+      0,
+      363,
+      384,
+      318
+    ],
+    [
+      384,
+      363,
+      384,
+      318
+    ],
+    [
+      768,
+      363,
+      432,
+      318
+    ],
+    [
+      1200,
+      363,
+      336,
+      318
+    ],
+    [
+      0,
+      681,
+      384,
+      343
+    ],
+    [
+      384,
+      681,
+      384,
+      343
+    ],
+    [
+      768,
+      681,
+      432,
+      343
+    ],
+    [
+      1200,
+      681,
+      336,
+      343
+    ]
+  ],
+  "promptFile": "ReqFistsNormalDireto_S_SW_W-v1-prompt.txt"
+}

@@ -1,0 +1,282 @@
+{
+  "name": "RequiemMotoForm0Ride8SlamS20261027V3",
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261027\\moto-maturity\\RequiemMotoNormalMaturity20261027V3-source.png",
+  "preservedSourceName": "RequiemMotoNormalMaturity20261027V3-source.png",
+  "skin": 0,
+  "weapon": 3,
+  "form": 0,
+  "columns": 4,
+  "sourceRows": 3,
+  "rows": [
+    {
+      "sourceRow": 0,
+      "sourceIndices": [
+        0
+      ],
+      "direction": 0,
+      "action": "Idle",
+      "durationMs": [
+        160
+      ],
+      "loop": false
+    },
+    {
+      "sourceRow": 0,
+      "sourceIndices": [
+        1
+      ],
+      "direction": 1,
+      "action": "Idle",
+      "durationMs": [
+        160
+      ],
+      "loop": false
+    },
+    {
+      "sourceRow": 0,
+      "sourceIndices": [
+        2
+      ],
+      "direction": 2,
+      "action": "Idle",
+      "durationMs": [
+        160
+      ],
+      "loop": false
+    },
+    {
+      "sourceRow": 0,
+      "sourceIndices": [
+        3
+      ],
+      "direction": 3,
+      "action": "Idle",
+      "durationMs": [
+        160
+      ],
+      "loop": false
+    },
+    {
+      "sourceRow": 1,
+      "sourceIndices": [
+        4
+      ],
+      "direction": 4,
+      "action": "Idle",
+      "durationMs": [
+        160
+      ],
+      "loop": false
+    },
+    {
+      "sourceRow": 1,
+      "sourceIndices": [
+        5
+      ],
+      "direction": 5,
+      "action": "Idle",
+      "durationMs": [
+        160
+      ],
+      "loop": false
+    },
+    {
+      "sourceRow": 1,
+      "sourceIndices": [
+        6
+      ],
+      "direction": 6,
+      "action": "Idle",
+      "durationMs": [
+        160
+      ],
+      "loop": false
+    },
+    {
+      "sourceRow": 1,
+      "sourceIndices": [
+        7
+      ],
+      "direction": 7,
+      "action": "Idle",
+      "durationMs": [
+        160
+      ],
+      "loop": false
+    },
+    {
+      "sourceRow": 2,
+      "sourceIndices": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "direction": 0,
+      "action": "Attack",
+      "attackKey": "Esmagamento Vertical"
+    }
+  ],
+  "minimumArea": 15000,
+  "calibrationGuide": {
+    "date": "2026-10-27",
+    "wholeSourceReviewed": true,
+    "technicalCoordinatorAccepted": true,
+    "humanApproval": false,
+    "sourceFrameIndex": 9,
+    "hairY": 738,
+    "soleY": 1003,
+    "bodyHeightSourcePixels": 265,
+    "measurementUncertaintyPixels": 4,
+    "worldBodyHeight": 1.98,
+    "worldVisualScale": 1.325,
+    "pixelsPerUnit": 133.83838383838383,
+    "method": "Whole standing adult rider in overhead-lift figure: crown-to-boot sole; overhead bike excluded. One PPU for all twelve; no individual resizing.",
+    "primaryIdentityReferences": [
+      "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleS_SW_W20261025-source.png",
+      "ArtSources/WeaponRedesign20261026/katana-normal/ReqKatanaNormalWalkSW_W-v1-source.png"
+    ],
+    "supportAnchors": [
+      [
+        166,
+        333
+      ],
+      [
+        551,
+        335
+      ],
+      [
+        987,
+        329
+      ],
+      [
+        1387,
+        329
+      ],
+      [
+        173,
+        656
+      ],
+      [
+        550,
+        647
+      ],
+      [
+        972,
+        647
+      ],
+      [
+        1380,
+        669
+      ],
+      [
+        185,
+        1004
+      ],
+      [
+        570,
+        1003
+      ],
+      [
+        974,
+        991
+      ],
+      [
+        1320,
+        992
+      ]
+    ],
+    "visualScaleCheckPending": true,
+    "limits": [
+      "Eight static riding directions and four south slam phases; no mounted idle, true movement cycle or all-technique coverage.",
+      "Native indexed pixel grid unverified; partial alpha/palette warnings remain visible.",
+      "Identity/maturity accepted technically by coordinator, not new human approval."
+    ]
+  },
+  "supportAnchors": {
+    "0": {
+      "anchor": [
+        166,
+        333
+      ],
+      "method": "Whole-frame inspected tire or boot ground support; pivot excludes overhead machinery and sharp blade extremities."
+    },
+    "1": {
+      "anchor": [
+        551,
+        335
+      ],
+      "method": "Whole-frame inspected tire or boot ground support; pivot excludes overhead machinery and sharp blade extremities."
+    },
+    "2": {
+      "anchor": [
+        987,
+        329
+      ],
+      "method": "Whole-frame inspected tire or boot ground support; pivot excludes overhead machinery and sharp blade extremities."
+    },
+    "3": {
+      "anchor": [
+        1387,
+        329
+      ],
+      "method": "Whole-frame inspected tire or boot ground support; pivot excludes overhead machinery and sharp blade extremities."
+    },
+    "4": {
+      "anchor": [
+        173,
+        656
+      ],
+      "method": "Whole-frame inspected tire or boot ground support; pivot excludes overhead machinery and sharp blade extremities."
+    },
+    "5": {
+      "anchor": [
+        550,
+        647
+      ],
+      "method": "Whole-frame inspected tire or boot ground support; pivot excludes overhead machinery and sharp blade extremities."
+    },
+    "6": {
+      "anchor": [
+        972,
+        647
+      ],
+      "method": "Whole-frame inspected tire or boot ground support; pivot excludes overhead machinery and sharp blade extremities."
+    },
+    "7": {
+      "anchor": [
+        1380,
+        669
+      ],
+      "method": "Whole-frame inspected tire or boot ground support; pivot excludes overhead machinery and sharp blade extremities."
+    },
+    "8": {
+      "anchor": [
+        185,
+        1004
+      ],
+      "method": "Whole-frame inspected tire or boot ground support; pivot excludes overhead machinery and sharp blade extremities."
+    },
+    "9": {
+      "anchor": [
+        570,
+        1003
+      ],
+      "method": "Whole-frame inspected tire or boot ground support; pivot excludes overhead machinery and sharp blade extremities."
+    },
+    "10": {
+      "anchor": [
+        974,
+        991
+      ],
+      "method": "Whole-frame inspected tire or boot ground support; pivot excludes overhead machinery and sharp blade extremities."
+    },
+    "11": {
+      "anchor": [
+        1320,
+        992
+      ],
+      "method": "Whole-frame inspected tire or boot ground support; pivot excludes overhead machinery and sharp blade extremities."
+    }
+  }
+}

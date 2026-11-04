@@ -13,3 +13,4 @@
 - `GothicEclipseOptimizer.cs`:
   - `CollectMetrics()`: Coleta contagem de emissores, partículas vivas e luzes 2D sem alocação de memória no heap (zero garbage collection).
   - `CullDistantAtmosphere()`: Congela emissores de partículas além do raio configurado de visibilidade (ex: 25 unidades da câmera), aliviando consumo de CPU e GPU.
+

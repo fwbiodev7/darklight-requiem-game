@@ -29,3 +29,4 @@
   - Manter `S00`, `S02` e `S03` intactos, preservando a base de apoio no solo.
 - **Teste de Validação**:
   - Rodar o teste em EditMode de alinhamento (`DarklightAnimationAlignment.cs`) para certificar que a oscilação do delta X não ultrapassa o limiar de translação suave (máximo 2.5px entre passagens).
+

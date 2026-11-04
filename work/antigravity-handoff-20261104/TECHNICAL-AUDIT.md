@@ -22,3 +22,4 @@
 | **Campanha & 10 Fases** | 10 capítulos estruturados via matriz de títulos e diálogos em `DarklightCampaignNarrative.cs`. | Risco de duplicação de conclusão de missão ou perda de progresso após reload. | Desenvolvido `CampaignProgressionController.cs` com validação de pré-requisitos e prevenção de duplo disparo. |
 | **Menus & Configurações** | Gerenciado via PlayerPrefs diretamente em `DarklightCampaign.cs`. | Falta de abstração para controle desacoplado de preferências e estados de navegação. | Desenvolvido `UIPreferencesBridge.cs` com serialização e fallback seguro. |
 | **IA de Combate** | Máquina de estados em `DarklightEnemy.cs` (0=Vigiando, 1=Preparando, 2=Ataque). | Risco de loop infinito em windup caso o player saia do alcance durante a preparação. | Desenvolvido `AISafetyValidator.cs` para desvencilhamento de estados bloqueados. |
+

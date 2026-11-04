@@ -19,3 +19,4 @@ Em `DarklightCampaignTransformations.cs` e `DarklightTransformedCatalog.cs`:
 1. **Acúmulo Indevido de Buffs**: Ao morrer ou trocar de fase durante a animação de transformação (`Transforming == true`), o estado anterior não limpava completamente os multiplicadores em certas condições de borda.
 2. **Tempo Esgotado sem Transição**: Garantido pelo `TransformationSafetyController` que a transição de retorno ocorra instantaneamente no frame de expiração sem deixar a máquina em estado inválido.
 3. **Consumo de Sangue/Energia**: A dedução de energia só é consolidada se a transição for validada com sucesso pelo controlador.
+

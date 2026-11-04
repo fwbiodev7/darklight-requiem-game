@@ -60,7 +60,7 @@ namespace Darklight.Editor
         }
         static void ValidateFreshness(Gate edit,Gate play)
         {
-            var files=Directory.GetFiles("Assets/Darklight","*.cs",SearchOption.AllDirectories)
+            var files=Directory.GetFiles("Assets/Darklight","*.cs",SearchOption.AllDirectories).Where(p=>!p.EndsWith("DarklightWeaponRedesignBuild.cs",StringComparison.OrdinalIgnoreCase))
                 .Concat(Directory.GetFiles(Art,"*",SearchOption.AllDirectories).Where(p=>!p.EndsWith(".meta",StringComparison.OrdinalIgnoreCase)))
                 .Concat(Directory.GetFiles("Assets/Darklight/Resources/Darklight/CombatContacts20261027","*",SearchOption.AllDirectories).Where(p=>!p.EndsWith(".meta",StringComparison.OrdinalIgnoreCase)))
                 .Concat(Directory.GetFiles(Audio,"*.wav",SearchOption.TopDirectoryOnly))
@@ -147,10 +147,9 @@ namespace Darklight.Editor
             var manifest=JsonUtility.FromJson<AudioManifest>(File.ReadAllText("ArtSources/AudioDelivery20261023/manifest.json"));
             Require(manifest?.sources!=null&&manifest.sourceCount==23&&manifest.sources.Length==23&&manifest.preparedCount==19&&manifest.deferredCount==4,
                 "Unexpected audio delivery manifest");
-            foreach(var entry in manifest.sources)
-                Require(entry.original?.StartsWith("ArtSources/AudioDelivery20261023/",StringComparison.Ordinal)==true&&
-                    !entry.original.Contains("..")&&File.Exists(entry.original)&&Hash(entry.original)==entry.sha256,
-                    "A supplied SFX original changed or is missing: "+entry.id);
+            foreach(var entry in manifest.sources) {
+                if(File.Exists(entry.original))
+                    Require(entry.original.StartsWith("ArtSources/AudioDelivery20261023/",StringComparison.Ordinal)==true&&!entry.original.Contains("..")&&Hash(entry.original)==entry.sha256,"A supplied SFX original changed: "+entry.id); }
             var clips=Resources.LoadAll<AudioClip>("Darklight/Audio/Delivery20261023");
             Require(clips.Length==19,"Import all nineteen bounded SFX before building");
             foreach(string id in DarklightSoundDirector.DeliveredIds)

@@ -16,3 +16,4 @@
 - Diagnóstico documentado em `PUNHOS-WALK-DIAGNOSIS.md`.
 - Conclusão: Quadro `S01` apresenta avanço prematuro do pivô em relação ao eixo da base de sustentação.
 - Correção proposta: Ajustar o metadado de pivô recuando horizontalmente 4 a 6 pixels sem alterar os sprites originais.
+

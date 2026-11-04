@@ -1,47 +1,8 @@
 {
-  "stages": [
-    {
-      "stage": "import",
-      "started": "2026-10-28T22:01:15.715592+00:00",
-      "completed": true,
-      "exitCode": 0,
-      "ended": "2026-10-28T22:03:10.669239+00:00",
-      "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261027\\release\\import.log"
-    },
-    {
-      "stage": "edit",
-      "started": "2026-10-28T22:14:16.743688+00:00",
-      "completed": true,
-      "exitCode": 0,
-      "ended": "2026-10-28T22:14:46.489366+00:00",
-      "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261027\\release\\edit.log",
-      "cases": 82,
-      "passed": 82
-    },
-    {
-      "stage": "play",
-      "started": "2026-10-28T22:14:46.492426+00:00",
-      "completed": true,
-      "exitCode": 0,
-      "ended": "2026-10-28T22:17:50.640277+00:00",
-      "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261027\\release\\play.log",
-      "cases": 23,
-      "passed": 23
-    },
-    {
-      "stage": "build",
-      "started": "2026-10-28T22:17:50.642260+00:00",
-      "completed": true,
-      "exitCode": 0,
-      "ended": "2026-10-28T22:25:17.519050+00:00",
-      "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261027\\release\\build.log"
-    }
-  ],
-  "buildSucceeded": true,
+  "stages": [],
+  "buildSucceeded": false,
   "standaloneExecuted": false,
   "manualGameplayCompleted": false,
-  "zip": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\retomada-20261027\\DarklightRequiem-Windows-20261027-191416.zip",
-  "zipBytes": 1415597713,
-  "zipSha256": "c9cbcfa8f971639d4a5e3a8477aaa1f4530aa1e780ba08b591f922d97665a3f0",
-  "finished": "2026-10-28T22:26:13.130657+00:00"
+  "zip": null,
+  "error": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\Usuario\\\\darklight-requiem-game\\\\work\\\\retomada-20261026\\\\final-gate-selection.json'"
 }

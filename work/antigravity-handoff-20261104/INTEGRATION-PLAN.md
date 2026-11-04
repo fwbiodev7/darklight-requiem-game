@@ -23,3 +23,4 @@
 
 6. **Diagnóstico QA (`work/antigravity-qa/`)**:
    - Utilizar o relatório `PUNHOS-WALK-DIAGNOSIS.md` para ajustar o pivô do frame `S01` no Sprite Editor.
+

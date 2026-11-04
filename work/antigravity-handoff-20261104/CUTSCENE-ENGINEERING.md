@@ -18,3 +18,4 @@ O sistema técnico de cutscenes foi projetado para permitir que o Codex monte ci
 7. **`ICutsceneCamera`**: Contrato para posicionamento de câmera, foco em atores, zoom e screen shake.
 8. **`CutsceneSequenceValidator`**: Validador preventivo que checa dependências e referências nulas antes do início da execução.
 9. **`CutsceneTests`**: Suíte de 18 testes unitários que validam todo o ciclo de vida, skip, cancelamento por morte, restauração de input e idempotência sem necessitar da Unity aberta.
+

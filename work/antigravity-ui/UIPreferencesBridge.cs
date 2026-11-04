@@ -82,3 +82,4 @@ namespace Darklight.UI
         void TogglePause();
     }
 }
+

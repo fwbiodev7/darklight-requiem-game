@@ -169,3 +169,10 @@ Ajuste final do HUD: minimapa no canto superior direito; Onda do Véu abaixo del
 
 HUD compacto inspirado nas referências do usuário: retrato em losango que acompanha a skin, barras de vida/energia, progresso, arma e atalhos, elixires e interação contextual. Minimap direito com comando TAB/SELECT, seguido por Onda do Véu e cartão do objetivo acompanhado. Dados reais de gameplay e bindings preservados; arte das molduras reaproveitada da folha fornecida, sem texto estático no atlas. Conferidas ambas as skins, cinco resoluções, diálogo, pausa, mapa completo e gamepad simulado. 58/58 testes de lógica e35/35 de gameplay aprovados. Sessão solicitada pode abrir no Jardim dos Ecos com --requiem-start-map=4; carregar essa sessão não sobrescreve a campanha no início.
 
+
+
+## Prólogo cinematográfico — planejamento de 03/11/2026
+
+Plano completo: [Prólogo cinematográfico jogável](PROLOGO-CINEMATOGRAFICO-20261103.md). Estado: planejado; implementação somente após Lucius Normal concluído e validado, antes de transformações e Combate IA 2.0. Ordem vigente: Fabius Normal → Gothic Eclipse → Lucius Normal → prólogo → transformações → Combate IA 2.0. A implementação do prólogo não foi iniciada.
+
+Estrutura narrativa: infância e duelo amistoso com espadas de madeira → transição para confronto futuro entre os irmãos → corte antes do resultado → campanha como flashback → retorno ao mesmo confronto no final. Tutorial não letal de 4–6 minutos; teaser de 60–120 segundos. Preservar mapas, progressão, saves e o mistério sobre o destino dos irmãos; sprites infantis próprios, sem reduzir os adultos.

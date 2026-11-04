@@ -1,0 +1,161 @@
+{
+  "jobs": [
+    {
+      "name": "ReqKatanaNormalLeve3NW_N_NE20261101V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261101\\katana-normal\\ReqKatanaNormalLeve3NW_N_NE20261101V1-source.png",
+      "preservedSourceName": "ReqKatanaNormalLeve3NW_N_NE20261101V1-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            196,
+            297
+          ],
+          "method": "Manual whole-figure midpoint of both boot supports; no pixel manipulation"
+        },
+        "1": {
+          "anchor": [
+            650,
+            298
+          ],
+          "method": "Manual whole-figure midpoint of both boot supports; no pixel manipulation"
+        },
+        "2": {
+          "anchor": [
+            1065,
+            295
+          ],
+          "method": "Manual whole-figure midpoint of both boot supports; no pixel manipulation"
+        },
+        "3": {
+          "anchor": [
+            1489,
+            297
+          ],
+          "method": "Manual whole-figure midpoint of both boot supports; no pixel manipulation"
+        },
+        "4": {
+          "anchor": [
+            203,
+            596
+          ],
+          "method": "Manual whole-figure midpoint of both boot supports; no pixel manipulation"
+        },
+        "5": {
+          "anchor": [
+            645,
+            595
+          ],
+          "method": "Manual whole-figure midpoint of both boot supports; no pixel manipulation"
+        },
+        "6": {
+          "anchor": [
+            1032,
+            597
+          ],
+          "method": "Manual whole-figure midpoint of both boot supports; no pixel manipulation"
+        },
+        "7": {
+          "anchor": [
+            1517,
+            597
+          ],
+          "method": "Manual whole-figure midpoint of both boot supports; no pixel manipulation"
+        },
+        "8": {
+          "anchor": [
+            172,
+            886
+          ],
+          "method": "Manual whole-figure midpoint of both boot supports; no pixel manipulation"
+        },
+        "9": {
+          "anchor": [
+            664,
+            889
+          ],
+          "method": "Manual whole-figure midpoint of both boot supports; no pixel manipulation"
+        },
+        "10": {
+          "anchor": [
+            998,
+            894
+          ],
+          "method": "Manual whole-figure midpoint of both boot supports; no pixel manipulation"
+        },
+        "11": {
+          "anchor": [
+            1505,
+            891
+          ],
+          "method": "Manual whole-figure midpoint of both boot supports; no pixel manipulation"
+        }
+      },
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "Leve3",
+          "loop": false,
+          "durationMs": [
+            40,
+            40,
+            100,
+            180
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "Leve3",
+          "loop": false,
+          "durationMs": [
+            40,
+            40,
+            100,
+            180
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "Leve3",
+          "loop": false,
+          "durationMs": [
+            40,
+            40,
+            100,
+            180
+          ]
+        }
+      ]
+    }
+  ],
+  "stagingOnly": true
+}

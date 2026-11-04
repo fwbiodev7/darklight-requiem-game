@@ -1,0 +1,52 @@
+{
+  "name": "ReqFistsNormalChuteN20261027Selected",
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261027\\punhos-normal\\ReqFistsNormalChuteN20261027Selected-source.png",
+  "skin": 0,
+  "weapon": 2,
+  "form": 0,
+  "columns": 3,
+  "sourceRows": 1,
+  "minimumArea": 15000,
+  "rows": [
+    {
+      "sourceRow": 0,
+      "direction": 4,
+      "action": "Attack",
+      "attackKey": "Chute Quebra-Osso",
+      "sourceSpriteNames": [
+        "Ruin_Requiem_Normal_N_Combat_04",
+        "Ruin_Requiem_Normal_N_Combat_05",
+        "Ruin_Requiem_Normal_N_Combat_11"
+      ]
+    }
+  ],
+  "calibrationGuide": {
+    "pixelsPerUnit": 158.58585858585857,
+    "worldVisualScale": 1.325,
+    "targetBodyWorldHeight": 1.98,
+    "method": "Same single anatomical PPU as the nine NE/E/SE figures from this generated sheet; no individual resizing.",
+    "nativeNorthHairToSole": [
+      306,
+      310,
+      306
+    ],
+    "poseVariation": "Foreshortened kick/coat can occlude the far leg; use the shared body scale."
+  },
+  "provenance": {
+    "wholeFigureReplacementOnly": true,
+    "repairedOriginalFrameIndex": 1,
+    "preservedOriginalFigures": 11,
+    "sources": [
+      {
+        "path": "ArtSources/WeaponRedesign20261027/punhos-normal/ReqFistsNormalChuteN_NE_E_SE20261027V1-source.png",
+        "sha256": "3483dcc3a17f40af742ada752605f8f7ec7c61f01954de67d247fbb54e0c9b37"
+      },
+      {
+        "path": "ArtSources/WeaponRedesign20261027/punhos-normal/ReqFistsNormalChuteN20261027V2-repair-source.png",
+        "sha256": "eebfbfc39f01beb86ef915d38fbfeb9d9e33d8faecca1dccc06bfc8ae627df9d"
+      }
+    ],
+    "proof": "outputs/retomada-20261027/punhos-normal/north-repair/fixed-twelve/replacement-proof.json",
+    "anatomicalAssembly": false
+  }
+}

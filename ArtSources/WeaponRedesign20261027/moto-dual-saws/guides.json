@@ -1,0 +1,233 @@
+{
+  "date": "2026-10-27",
+  "wholeSourceReviewed": true,
+  "humanApproval": false,
+  "worldBodyHeight": 1.98,
+  "worldVisualScale": 1.325,
+  "pixelsPerUnit": 157.57575757575756,
+  "bodyHeightSourcePixels": 312,
+  "measurementUncertaintyPixels": 6,
+  "method": "Median inspected crown-to-boot sole of eight complete standing ready figures; saw/teeth/fork bounds excluded. One PPU for all twelve. No per-frame resizing.",
+  "identityAuthority": "Approved Katana Normal idle and SW/W walk; legacy Rock serves hardware mechanism only.",
+  "bodyMeasurements": [
+    {
+      "frame": 0,
+      "hairY": 26,
+      "soleY": 328,
+      "height": 302
+    },
+    {
+      "frame": 1,
+      "source": "repair2",
+      "hairY": 22,
+      "soleY": 345,
+      "height": 323
+    },
+    {
+      "frame": 2,
+      "source": "repair2",
+      "hairY": 24,
+      "soleY": 341,
+      "height": 317
+    },
+    {
+      "frame": 3,
+      "hairY": 31,
+      "soleY": 337,
+      "height": 306
+    },
+    {
+      "frame": 4,
+      "hairY": 363,
+      "soleY": 672,
+      "height": 309
+    },
+    {
+      "frame": 5,
+      "hairY": 364,
+      "soleY": 675,
+      "height": 311
+    },
+    {
+      "frame": 6,
+      "source": "repair2",
+      "hairY": 365,
+      "soleY": 686,
+      "height": 321
+    },
+    {
+      "frame": 7,
+      "hairY": 364,
+      "soleY": 677,
+      "height": 313
+    }
+  ],
+  "supportAnchors": [
+    [
+      208,
+      328
+    ],
+    [
+      558,
+      338
+    ],
+    [
+      928,
+      335
+    ],
+    [
+      1299,
+      337
+    ],
+    [
+      208,
+      672
+    ],
+    [
+      571,
+      675
+    ],
+    [
+      924,
+      675
+    ],
+    [
+      1298,
+      677
+    ],
+    [
+      210,
+      1024
+    ],
+    [
+      565,
+      1018
+    ],
+    [
+      910,
+      1025
+    ],
+    [
+      1275,
+      1021
+    ]
+  ],
+  "repairSource": "ReqMotoNormalDualSaws8AttackS20261027V1-repair2-source.png",
+  "replacements": {
+    "1": 1,
+    "2": 2,
+    "6": 6
+  },
+  "repairSupportAnchors": [
+    [
+      208,
+      329
+    ],
+    [
+      553,
+      345
+    ],
+    [
+      925,
+      341
+    ],
+    [
+      1299,
+      340
+    ],
+    [
+      208,
+      675
+    ],
+    [
+      571,
+      679
+    ],
+    [
+      925,
+      686
+    ],
+    [
+      1298,
+      681
+    ],
+    [
+      210,
+      1024
+    ],
+    [
+      565,
+      1018
+    ],
+    [
+      910,
+      1025
+    ],
+    [
+      1275,
+      1021
+    ]
+  ],
+  "clothingRepair": {
+    "source": "ReqMotoNormalDualSaws8AttackS20261027V1-repair3-source.png",
+    "map": {
+      "10": 10
+    },
+    "anchors": [
+      [
+        215,
+        344
+      ],
+      [
+        569,
+        357
+      ],
+      [
+        943,
+        353
+      ],
+      [
+        1314,
+        353
+      ],
+      [
+        215,
+        699
+      ],
+      [
+        582,
+        703
+      ],
+      [
+        943,
+        709
+      ],
+      [
+        1314,
+        705
+      ],
+      [
+        215,
+        1060
+      ],
+      [
+        580,
+        1054
+      ],
+      [
+        930,
+        1057
+      ],
+      [
+        1299,
+        1059
+      ]
+    ],
+    "identificationAlphaThreshold": 224,
+    "reason": "Whole-figure sleeves to wrists; higher ownership-identification threshold separates touching low-alpha edge halos, without removing any selected RGBA pixels."
+  },
+  "allEarlierSourcesPreserved": true,
+  "visualScaleCheckPending": true,
+  "anatomicalAssembly": false,
+  "individualResizing": false
+}

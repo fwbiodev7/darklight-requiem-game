@@ -1,0 +1,223 @@
+{
+  "date": "2026-11-02",
+  "newAuthorization": "User explicitly said continue Fists Walk all directions; earlier two-call limit superseded. Natural low-walk clipboard ref approved for mechanics only.",
+  "generationTool": "built-in image_gen.imagegen",
+  "totalGenerationCalls": 5,
+  "newNaturalCalls": 3,
+  "newNaturalFigures": 32,
+  "newNaturalPreparedFigures": 28,
+  "newNaturalConfiguredClips": 7,
+  "newStaticReviewedClips": 1,
+  "newReadyDirections": [
+    "N"
+  ],
+  "candidateDirections": [
+    "NE",
+    "E",
+    "SE",
+    "NW",
+    "W",
+    "SW"
+  ],
+  "existingSouth": {
+    "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkS20261101V2Selected.png",
+    "sha256": "6cbbc2e1694e37a0d50ad32c680635bc6d14c07ea2bca06927e532e5bee7c94d",
+    "preserved": true
+  },
+  "fullDirectionMatrixProduced": true,
+  "fullDirectionMatrixValidated": false,
+  "computerUseStopped": true,
+  "continuousMotionViewed": false,
+  "imported": false,
+  "runtimeVerified": false,
+  "sheets": [
+    {
+      "name": "ReqFistsNormalWalkNE_E_SE20261102NaturalV1",
+      "status": "candidate",
+      "frames": 12,
+      "directions": [
+        "NE",
+        "E",
+        "SE"
+      ],
+      "sourcePath": "ArtSources/WeaponRedesign20261102/punhos-walk/ReqFistsNormalWalkNE_E_SE20261102NaturalV1-source.png",
+      "sourceSha256": "7a2d2cf751765ffd2d323e965171cd6682bb2580b50ec999ec851225f0671e3b",
+      "imageSha256": "b9db7d17552e72d383c214738de3564542c4dfeb71e434c191fb4eaaec93b3db",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "nativeSize": [
+        1880,
+        1254
+      ],
+      "pixelsPerUnit": 171.21212121212122,
+      "sourceRgbaExactReconstruction": true,
+      "alphaReview": {
+        "transparentPixels": 1010185,
+        "farBeyond16pxPixels": 905,
+        "farBeyond16pxMaxAlpha": 2,
+        "farBeyond16pxOpaqueEquivalent": 3.596078431372549,
+        "backgroundRemoved": false,
+        "everySelectedNonzeroAlphaPixelRetained": true
+      },
+      "qa": {
+        "name": "ReqFistsNormalWalkNE_E_SE20261102NaturalV1",
+        "errors": 0,
+        "warnings": 14
+      },
+      "imported": false,
+      "runtimeVerified": false,
+      "review": {
+        "date": "2026-11-02",
+        "status": "candidate",
+        "method": "Static full-source/contact review; original RGBA intact; no anatomy montage, resize, mirroring or color edits.",
+        "observations": {
+          "directions": [
+            "NE",
+            "E",
+            "SE"
+          ],
+          "style": "Matches user natural low-walk reference: subdued step, no exaggerated knee march; NE rear quarter/E profile/SE front quarter present; silver equipment without blade.",
+          "limitations": "Leg order/contact exchange is not independently proven by static figures; recurring leading-boot tendency remains. Continuous cycle must be reviewed before promotion."
+        },
+        "wholeSourceInspected": true,
+        "nativeContactInspected": true,
+        "continuousMotionViewed": false,
+        "computerUseStoppedReason": "CUA could not determine current Chrome URL on Windows with sufficient confidence to enforce policy; no later UI action or alternate UI surface attempted.",
+        "visualApproval": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "styleAlignedWithUserNaturalReference": true,
+        "completeOpposingContactReview": false,
+        "pending": [
+          "Continuous motion, support/foot slide, loop return, idle transition and Unity import/runtime not verified."
+        ]
+      }
+    },
+    {
+      "name": "ReqFistsNormalWalkNW_W_SW20261102NaturalV1",
+      "status": "candidate",
+      "frames": 12,
+      "directions": [
+        "NW",
+        "W",
+        "SW"
+      ],
+      "sourcePath": "ArtSources/WeaponRedesign20261102/punhos-walk/ReqFistsNormalWalkNW_W_SW20261102NaturalV1-source.png",
+      "sourceSha256": "cbdb43f3c100e539e3451ef10c0844ae96862ac18cc949c57e7225d76a87b7b7",
+      "imageSha256": "2417165bcdd7d73087631ac173261534f6146e3bfe87dedd2b909b5e37e748f0",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "nativeSize": [
+        1768,
+        1329
+      ],
+      "pixelsPerUnit": 164.64646464646464,
+      "sourceRgbaExactReconstruction": true,
+      "alphaReview": {
+        "transparentPixels": 1022864,
+        "farBeyond16pxPixels": 305,
+        "farBeyond16pxMaxAlpha": 1,
+        "farBeyond16pxOpaqueEquivalent": 1.196078431372549,
+        "backgroundRemoved": false,
+        "everySelectedNonzeroAlphaPixelRetained": true
+      },
+      "qa": {
+        "name": "ReqFistsNormalWalkNW_W_SW20261102NaturalV1",
+        "errors": 0,
+        "warnings": 14
+      },
+      "imported": false,
+      "runtimeVerified": false,
+      "review": {
+        "date": "2026-11-02",
+        "status": "candidate",
+        "method": "Static full-source/contact review; original RGBA intact; no anatomy montage, resize, mirroring or color edits.",
+        "observations": {
+          "directions": [
+            "NW",
+            "W",
+            "SW"
+          ],
+          "style": "Quiet low foot placement, same silver equipment, coherent adult proportions and left cameras. Chain is retained on anatomical left hip according to left-view references.",
+          "limitations": "Four drawings remain strongly similar; complete opposing stance exchange is not independently proven. Continuous motion pending; do not claim complete validated gait."
+        },
+        "wholeSourceInspected": true,
+        "nativeContactInspected": true,
+        "continuousMotionViewed": false,
+        "computerUseStoppedReason": "CUA could not determine current Chrome URL on Windows with sufficient confidence to enforce policy; no later UI action or alternate UI surface attempted.",
+        "visualApproval": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "styleAlignedWithUserNaturalReference": true,
+        "completeOpposingContactReview": false,
+        "pending": [
+          "Continuous motion, support/foot slide, loop return, idle transition and Unity import/runtime not verified."
+        ]
+      }
+    },
+    {
+      "name": "ReqFistsNormalWalkN20261102NaturalV1",
+      "status": "visual-reviewed",
+      "frames": 4,
+      "directions": [
+        "N"
+      ],
+      "sourcePath": "ArtSources/WeaponRedesign20261102/punhos-walk/ReqFistsNormalWalkN20261102NaturalV1-source.png",
+      "sourceSha256": "9e7105f86a4495a1e7b33c52da1455781f2e10d22ce5a8737bc8cc113e1880c4",
+      "imageSha256": "a6915f62431b385c7eb63ed365f9d109dfaa5bf44c5eb0f62df379af1ddfa1d7",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "nativeSize": [
+        1768,
+        446
+      ],
+      "pixelsPerUnit": 202.27272727272728,
+      "sourceRgbaExactReconstruction": true,
+      "alphaReview": {
+        "transparentPixels": 1064185,
+        "farBeyond16pxPixels": 208,
+        "farBeyond16pxMaxAlpha": 1,
+        "farBeyond16pxOpaqueEquivalent": 0.8156862745098039,
+        "backgroundRemoved": false,
+        "everySelectedNonzeroAlphaPixelRetained": true
+      },
+      "qa": {
+        "name": "ReqFistsNormalWalkN20261102NaturalV1",
+        "errors": 0,
+        "warnings": 5
+      },
+      "imported": false,
+      "runtimeVerified": false,
+      "review": {
+        "date": "2026-11-02",
+        "status": "visual-reviewed",
+        "method": "Static full-source/contact review; original RGBA intact; no anatomy montage, resize, mirroring or color edits.",
+        "observations": {
+          "directions": [
+            "N"
+          ],
+          "style": "Selected source4-7: true straight rear view, left sole lifts in5 and right sole lifts in6, supported boots alternate visibly. Low ankle/heel motion without high-knee march; unchanged compact haircut and chain viewer-right.",
+          "limitations": "Loop timing/foot slide and idle transition still need continuous-motion consumer review; no runtime claim."
+        },
+        "wholeSourceInspected": true,
+        "nativeContactInspected": true,
+        "continuousMotionViewed": false,
+        "computerUseStoppedReason": "CUA could not determine current Chrome URL on Windows with sufficient confidence to enforce policy; no later UI action or alternate UI surface attempted.",
+        "visualApproval": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "styleAlignedWithUserNaturalReference": true,
+        "completeOpposingContactReview": true,
+        "pending": [
+          "Continuous motion, support/foot slide, loop return, idle transition and Unity import/runtime not verified."
+        ]
+      }
+    }
+  ]
+}

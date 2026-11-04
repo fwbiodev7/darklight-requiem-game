@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-25",
+  "owner": "/root/moto_ruptura",
+  "status": "rejected-not-imported",
+  "userVisualApproval": false,
+  "publishSource": false,
+  "source": "ArtSources/WeaponRedesign20261025/candidates/RockMotorcycleRupturaRide8SlamS-v2-source.png",
+  "sourceSha256": "fa9d41b7989b9fc54b5073a591bd3023248fc416a80e80fa8bc08490f71a273b",
+  "wholeSourceInspected": true,
+  "errors": [
+    "11 connected figures instead of 12: mounted NE touches overhead-windup motorcycle.",
+    "Recovery whole figure reaches right source boundary x1536 and is clipped.",
+    "Hair silhouette/volume increased beyond Normal in unchanged candidates; approval of stronger red hair color does not approve growth."
+  ],
+  "hairBandEvidence": {
+    "method": "Numeric bounds of opaque samples in narrow hair-only horizontal bands, on full source arrays; no partial image references or cutouts saved. Compare full Normal and V2 sources visually.",
+    "normalReference": "ArtSources/WeaponRedesign20261024/candidates/RockMotorcycleNormalRedesign_Ride8_SlamS-v2-source.png",
+    "sourceWidthsPx": {
+      "S": {
+        "Normal": 111,
+        "V2": 124
+      },
+      "N": {
+        "Normal": 108,
+        "V2": 132
+      },
+      "W": {
+        "Normal": 117,
+        "V2": 140
+      },
+      "NW": {
+        "Normal": 118,
+        "V2": 130
+      }
+    }
+  },
+  "nextCorrection": "Regenerate only complete affected figures with stronger crimson hair color confined to the original Normal haircut/length/volume; preserve natural skin and dark-red irises. Do not integrate V2 while its other nine figures fail haircut identity."
+}

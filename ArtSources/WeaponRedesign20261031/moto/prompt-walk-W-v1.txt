@@ -1,0 +1,18 @@
+Use case: stylized-concept. Production pixel-art sprite sheet, transparent background.
+Create a NEW eight-frame WALK cycle for adult Requiem carrying exactly TWO separate hand-held wheel-saws, facing WEST (screen left) throughout. Reference1 is the approved Katana identity/maturity/clothing/compact brown hair; reference2 is the canonical two-saw hardware. Keep the full same character, head, both arms, both hands, two legs, two boots and both saws in every frame. This is a complete figure sheet, not body parts. Same adult proportions as the Katana, dark-red eyes, warm skin, black long-sleeved coat with burgundy lining, silver details and hip chain, black pants and strapped boots. Normal neutral weapon materials, black/silver, no transformation glow. No katana in output, no bike. Crisp colored clusters matching the references.
+
+Layout: FOUR columns, TWO rows, eight full figures in sequence, generous transparent gutters and outer margins, consistent native drawing scale and ground height. Side/profile view at the game's slight elevated RPG camera; all face LEFT. Hold one saw beside each hip, arms steady and slightly spread so neither wheel hides the knees/boots. Exactly two arms and two hands total, one complete wheel-saw per hand. Two saw modules must stay separated. Preserve the asymmetrical belt chain on its anatomical side.
+
+The reason for this sheet is to show a REAL alternating gait. Frame1 and frame5 are opposite contacts: DIFFERENT ANATOMICAL LEGS are forward. The character's foreground/near leg is closest to viewer. The background/far leg is visibly darker and passes BEHIND the foreground shin when they cross. Draw each thigh and shin continuously from pelvis to its own boot. Keep knees visible below the coat slit. Do NOT repeat the large foreground boot ahead-left in both contacts. In frame5, that foreground boot must be BEHIND the pelvis on SCREEN RIGHT and the smaller darker far boot is planted AHEAD on SCREEN LEFT.
+
+Read left to right, top to bottom:
+1 NEAR-LEG CONTACT: foreground near leg extended forward LEFT, near heel touching floor ahead; far leg extended back RIGHT, far heel raised.
+2 NEAR-LEG DOWN: near planted ahead-left bearing weight with knee bent; far foot lifts behind-right.
+3 NEAR-LEG SUPPORT/PASS: foreground near boot planted directly under pelvis; darker far knee and far boot swing forward-left in the air.
+4 NEAR-LEG UP: foreground near leg trails back RIGHT, heel raised; darker far leg extends forward LEFT in air, toe up preparing contact.
+5 FAR-LEG CONTACT: darker far leg extends forward LEFT and far heel touches floor AHEAD of pelvis. Foreground near leg extends BACK RIGHT with raised heel. Near boot is rightmost, far boot leftmost. Clear opposite anatomical articulation from frame1.
+6 FAR-LEG DOWN: darker far boot stays ahead-left taking weight, far knee flexes; foreground near foot lifts BEHIND RIGHT, near thigh runs backward from pelvis.
+7 FAR-LEG SUPPORT/PASS: darker far boot planted under pelvis, foreground near knee/boot swings forward-left in air.
+8 FAR-LEG UP: darker far support leg trails right with raised heel; foreground near leg extends left in air, toe up about to become frame1.
+
+Both semicircles must be readable even at small display. Natural weight transfer, modest vertical bob, short walking stride rather than kick/run. Adult mature face/head size stays constant. Coat and saws move only subtly and must not hide leg alternation. Render the entire eight-frame sheet with real transparent RGBA. No words, labels, numbers, diagram lines, scene, floor, shadows or extra props. Do not mirror any finished image. Draw all eight complete poses independently.

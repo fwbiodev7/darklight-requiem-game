@@ -1,0 +1,119 @@
+{
+  "jobs": [
+    {
+      "name": "ReqFistsNormalWalkNE_SE20261102NaturalV2Selected",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261102\\punhos-walk\\ReqFistsNormalWalkNE_E_SE20261102NaturalV2Nposes-source.png",
+      "preservedSourceName": "ReqFistsNormalWalkNE_E_SE20261102NaturalV2Nposes-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 5000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 5,
+          "action": "Walk",
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "durationMs": [
+            100,
+            100,
+            100,
+            100
+          ],
+          "loop": true
+        },
+        {
+          "sourceRow": 1,
+          "direction": 7,
+          "action": "Walk",
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "durationMs": [
+            100,
+            100,
+            100,
+            100
+          ],
+          "loop": true
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            208,
+            364
+          ],
+          "method": "Measured pelvis/body-axis projection onto shared row ground plane, independent of which boot is raised; full source RGBA unchanged",
+          "uncertaintyPixels": 4
+        },
+        "1": {
+          "anchor": [
+            591,
+            364
+          ],
+          "method": "Measured pelvis/body-axis projection onto shared row ground plane, independent of which boot is raised; full source RGBA unchanged",
+          "uncertaintyPixels": 4
+        },
+        "2": {
+          "anchor": [
+            974,
+            364
+          ],
+          "method": "Measured pelvis/body-axis projection onto shared row ground plane, independent of which boot is raised; full source RGBA unchanged",
+          "uncertaintyPixels": 4
+        },
+        "3": {
+          "anchor": [
+            1357,
+            364
+          ],
+          "method": "Measured pelvis/body-axis projection onto shared row ground plane, independent of which boot is raised; full source RGBA unchanged",
+          "uncertaintyPixels": 4
+        },
+        "8": {
+          "anchor": [
+            209,
+            1009
+          ],
+          "method": "Measured pelvis/body-axis projection onto shared row ground plane, independent of which boot is raised; full source RGBA unchanged",
+          "uncertaintyPixels": 4
+        },
+        "9": {
+          "anchor": [
+            592,
+            1009
+          ],
+          "method": "Measured pelvis/body-axis projection onto shared row ground plane, independent of which boot is raised; full source RGBA unchanged",
+          "uncertaintyPixels": 4
+        },
+        "10": {
+          "anchor": [
+            976,
+            1009
+          ],
+          "method": "Measured pelvis/body-axis projection onto shared row ground plane, independent of which boot is raised; full source RGBA unchanged",
+          "uncertaintyPixels": 4
+        },
+        "11": {
+          "anchor": [
+            1360,
+            1009
+          ],
+          "method": "Measured pelvis/body-axis projection onto shared row ground plane, independent of which boot is raised; full source RGBA unchanged",
+          "uncertaintyPixels": 4
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "name": "ReqMotoNormalWalkNW_N_NE20261103ClosedV2",
+  "source": "ReqMotoNormalWalkNW_N_NE20261103V2-source.png",
+  "sourceRows": 3,
+  "directions": [
+    "NW",
+    "N",
+    "NE"
+  ],
+  "sourceIndices": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6,
+      7
+    ],
+    [
+      8,
+      9,
+      10,
+      11
+    ]
+  ],
+  "frameBodyHeightPixels": [],
+  "densityPixelsPerUnit": [
+    144,
+    144,
+    144,
+    144,
+    144,
+    144,
+    144,
+    144,
+    144,
+    144,
+    144,
+    144
+  ],
+  "densityCalibration": {
+    "method": "One uniform source density across all12 figures. Invariant crown-to-waist and compact head measure, never per-frame silhouette or leg flexion. No resampling.",
+    "reference": "ReqMotoNormalWalkS20261103ClosedV1",
+    "referenceCrownToWaistPixels": 178,
+    "referencePixelsPerUnit": 195.95959595959596,
+    "northCrownToWaistPixelsApprox": [
+      130,
+      132,
+      131
+    ],
+    "pixelsPerUnit": 144,
+    "uncertaintyPixels": 4
+  },
+  "nearestWholeFiguresSeen": true,
+  "staticContactSeen": true,
+  "reviewNotes": [
+    "Explicit viewer-left/viewer-right bottom heel alternation retained in three rear-camera rows. Uniform144PPU all12, not silhouette fit.",
+    "Native/worldscale contact and nearest2x full figures inspected: supports visibly alternate left-right, low passage, intact two saws/hands, rear belt and same camera throughout each row. One density144PPU for all12 preserves head/torso scale; no per-cell fit."
+  ],
+  "supportAnchors": {
+    "0": {
+      "anchor": [
+        184,
+        341
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "1": {
+      "anchor": [
+        547,
+        341
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "2": {
+      "anchor": [
+        907,
+        341
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "3": {
+      "anchor": [
+        1267,
+        341
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "4": {
+      "anchor": [
+        179,
+        697
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "5": {
+      "anchor": [
+        540,
+        697
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "6": {
+      "anchor": [
+        900,
+        697
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "7": {
+      "anchor": [
+        1263,
+        697
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "8": {
+      "anchor": [
+        187,
+        1057
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "9": {
+      "anchor": [
+        550,
+        1057
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "10": {
+      "anchor": [
+        906,
+        1057
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "11": {
+      "anchor": [
+        1273,
+        1057
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    }
+  },
+  "visualReviewed": true
+}

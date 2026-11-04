@@ -1,0 +1,458 @@
+{
+  "schemaVersion": 1,
+  "stagingOnly": true,
+  "jobs": [
+    {
+      "name": "ReqKatanaNormalCarregadoS_SW20261102V2",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261102\\normal-katana-completion\\ReqKatanaNormalCarregadoS_SW20261102V2-source.png",
+      "preservedSourceName": "ReqKatanaNormalCarregadoS_SW20261102V2-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Carregado",
+          "loop": false,
+          "durationMs": [
+            150,
+            140,
+            115,
+            115
+          ],
+          "startupFrames": 1,
+          "activeFrames": 1
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "Carregado",
+          "loop": false,
+          "durationMs": [
+            150,
+            140,
+            115,
+            115
+          ],
+          "startupFrames": 1,
+          "activeFrames": 1
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            190,
+            466
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "1": {
+          "anchor": [
+            576,
+            466
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "2": {
+          "anchor": [
+            994,
+            470
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "3": {
+          "anchor": [
+            1390,
+            466
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "4": {
+          "anchor": [
+            181,
+            942
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "5": {
+          "anchor": [
+            578,
+            944
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "6": {
+          "anchor": [
+            997,
+            954
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "7": {
+          "anchor": [
+            1395,
+            954
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        }
+      }
+    },
+    {
+      "name": "ReqKatanaNormalCarregadoW_NW20261102V2",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261102\\normal-katana-completion\\ReqKatanaNormalCarregadoW_NW20261102V2-source.png",
+      "preservedSourceName": "ReqKatanaNormalCarregadoW_NW20261102V2-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "Carregado",
+          "loop": false,
+          "durationMs": [
+            150,
+            140,
+            115,
+            115
+          ],
+          "startupFrames": 1,
+          "activeFrames": 1
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "Carregado",
+          "loop": false,
+          "durationMs": [
+            150,
+            140,
+            115,
+            115
+          ],
+          "startupFrames": 1,
+          "activeFrames": 1
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            191,
+            478
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "1": {
+          "anchor": [
+            580,
+            478
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "2": {
+          "anchor": [
+            998,
+            476
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "3": {
+          "anchor": [
+            1401,
+            485
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "4": {
+          "anchor": [
+            192,
+            951
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "5": {
+          "anchor": [
+            579,
+            944
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "6": {
+          "anchor": [
+            995,
+            955
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "7": {
+          "anchor": [
+            1399,
+            955
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        }
+      }
+    },
+    {
+      "name": "ReqKatanaNormalCarregadoN_NE20261102V3",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261102\\normal-katana-completion\\ReqKatanaNormalCarregadoN_NE20261102V3-source.png",
+      "preservedSourceName": "ReqKatanaNormalCarregadoN_NE20261102V3-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "Carregado",
+          "loop": false,
+          "durationMs": [
+            150,
+            140,
+            115,
+            115
+          ],
+          "startupFrames": 1,
+          "activeFrames": 1
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "Carregado",
+          "loop": false,
+          "durationMs": [
+            150,
+            140,
+            115,
+            115
+          ],
+          "startupFrames": 1,
+          "activeFrames": 1
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            176,
+            463
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "1": {
+          "anchor": [
+            537,
+            462
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "2": {
+          "anchor": [
+            910,
+            464
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "3": {
+          "anchor": [
+            1318,
+            464
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "4": {
+          "anchor": [
+            196,
+            947
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "5": {
+          "anchor": [
+            558,
+            946
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "6": {
+          "anchor": [
+            934,
+            949
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "7": {
+          "anchor": [
+            1327,
+            950
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        }
+      }
+    },
+    {
+      "name": "ReqKatanaNormalCarregadoE_SE20261102V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261102\\normal-katana-completion\\ReqKatanaNormalCarregadoE_SE20261102V1-source.png",
+      "preservedSourceName": "ReqKatanaNormalCarregadoE_SE20261102V1-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 10000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 6,
+          "action": "Attack",
+          "attackKey": "Carregado",
+          "loop": false,
+          "durationMs": [
+            150,
+            140,
+            115,
+            115
+          ],
+          "startupFrames": 1,
+          "activeFrames": 1
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 7,
+          "action": "Attack",
+          "attackKey": "Carregado",
+          "loop": false,
+          "durationMs": [
+            150,
+            140,
+            115,
+            115
+          ],
+          "startupFrames": 1,
+          "activeFrames": 1
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            211,
+            431
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "1": {
+          "anchor": [
+            679,
+            435
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "2": {
+          "anchor": [
+            1111,
+            435
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "3": {
+          "anchor": [
+            1577,
+            435
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "4": {
+          "anchor": [
+            216,
+            858
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "5": {
+          "anchor": [
+            685,
+            861
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "6": {
+          "anchor": [
+            1113,
+            861
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        },
+        "7": {
+          "anchor": [
+            1556,
+            861
+          ],
+          "method": "Manual midpoint of projected complete-figure boot support; original drawing unchanged"
+        }
+      }
+    }
+  ]
+}

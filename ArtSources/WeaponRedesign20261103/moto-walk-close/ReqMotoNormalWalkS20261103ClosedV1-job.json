@@ -1,0 +1,65 @@
+{
+  "name": "ReqMotoNormalWalkS20261103ClosedV1",
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261103\\moto-walk-close\\ReqMotoNormalWalkS_SW20261103V1-source.png",
+  "preservedSourceName": "ReqMotoNormalWalkS_SW20261103V1-source.png",
+  "skin": 0,
+  "weapon": 3,
+  "form": 0,
+  "columns": 4,
+  "sourceRows": 2,
+  "minimumArea": 5000,
+  "rows": [
+    {
+      "sourceRow": 0,
+      "sourceIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "direction": 0,
+      "action": "Walk",
+      "loop": true,
+      "durationMs": [
+        120,
+        120,
+        120,
+        120
+      ]
+    }
+  ],
+  "supportAnchors": {
+    "0": {
+      "anchor": [
+        221,
+        421
+      ],
+      "method": "Manually inspected pelvis projection at common planted sole ground",
+      "uncertaintyPixels": 4
+    },
+    "1": {
+      "anchor": [
+        665,
+        421
+      ],
+      "method": "Manually inspected pelvis projection at common planted sole ground",
+      "uncertaintyPixels": 4
+    },
+    "2": {
+      "anchor": [
+        1110,
+        421
+      ],
+      "method": "Manually inspected pelvis projection at common planted sole ground",
+      "uncertaintyPixels": 4
+    },
+    "3": {
+      "anchor": [
+        1552,
+        421
+      ],
+      "method": "Manually inspected pelvis projection at common planted sole ground",
+      "uncertaintyPixels": 4
+    }
+  }
+}

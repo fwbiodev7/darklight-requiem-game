@@ -1,0 +1,46 @@
+{
+  "status": "candidate-rejected-for-integration",
+  "scope": "Katana Normal only; NE/E/SE Walk unresolved",
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261026/katana-normal/ReqKatanaNormalWalkSW_W-v1-source.png",
+      "role": "identity",
+      "sha256": "233f498a8e69f2ed2b2fe3b06baf9b069a4df82a069bb930b616e6ec2eed00e5",
+      "expectedSha256": "233f498a8e69f2ed2b2fe3b06baf9b069a4df82a069bb930b616e6ec2eed00e5",
+      "unchanged": true
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261027/katana-normal/ReqKatanaNormalWalkNW_N20261027Selected-source.png",
+      "role": "identity/back view",
+      "sha256": "27cedecb25443d27c729a1a87f10b9196f44c2acd9759257d447f4e0d7c06452",
+      "expectedSha256": "27cedecb25443d27c729a1a87f10b9196f44c2acd9759257d447f4e0d7c06452",
+      "unchanged": true
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleE_SE20261025-source.png",
+      "role": "identity/east view",
+      "sha256": "5863115c5f1ba5b54d9cd8b2d387e203d3d1293b9724c576c2360c6e84bb8443",
+      "expectedSha256": "5863115c5f1ba5b54d9cd8b2d387e203d3d1293b9724c576c2360c6e84bb8443",
+      "unchanged": true
+    }
+  ],
+  "consumer": {
+    "bank": "Assets/Darklight/Runtime/Character/DarklightWeaponRedesignBank.cs",
+    "importer": "Assets/Darklight/Editor/DarklightWeaponRedesignImporter.cs",
+    "existingWalkMs": [
+      65,
+      65,
+      70,
+      65,
+      65,
+      70
+    ],
+    "loopMs": 400,
+    "worldVisualScale": 1.325
+  },
+  "wholeFiguresOnly": true,
+  "anatomicalAssembly": false,
+  "sourceEdits": false,
+  "unityImported": false,
+  "runtimeVerified": false
+}

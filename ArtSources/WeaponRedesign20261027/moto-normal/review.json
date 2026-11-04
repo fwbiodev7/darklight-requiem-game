@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-27",
+  "character": "Fabius",
+  "skin": "Requiem",
+  "form": "Normal",
+  "action": "MountedIdle",
+  "directions": [
+    "NW",
+    "N",
+    "NE"
+  ],
+  "figures": 12,
+  "generationCount": 1,
+  "source": "ArtSources/WeaponRedesign20261027/moto-normal/RequiemMotoNormalIdleNW_N_NE-v1-source.png",
+  "sourceSha256": "3d7f3b81b3b73b949c062229537b6f66f2b7b96091e529aeb0933a20defa3455",
+  "sourceWholeReviewed": true,
+  "packedContactReviewed": true,
+  "technicalReview": "passed-with-recorded-limitations",
+  "coordinatorReviewPending": true,
+  "humanApproval": false,
+  "findings": [
+    "Twelve complete rider-and-motorcycle figures, none touching an opaque extraction edge.",
+    "All four N phases show only rear head/nape and coat back; no face, nose, mouth or eyes.",
+    "NW and NE have coherent rear-quarter head, shoulders, torso, hip, hands and motorcycle orientation.",
+    "Short natural brown haircut retains reference volume and nape; long black Requiem sleeves/coat retained.",
+    "Four separately drawn breathing/weight/cloth phases per direction; eyes are not invented on rear geometry.",
+    "Wheel contact supports exclude metallic protruding blades; no anatomical cut, montage, scaling or alpha removal.",
+    "Selected source RGBA reconstructed exactly in the atlas; hashes of the prior24 source/atlas figures remain unchanged."
+  ],
+  "pixelsPerUnit": 127.27272727272727,
+  "pixelsPerUnitBasis": "Reused eight-view standing-rider anatomical calibration after matching whole-source seated proportions; no new standing figure is present",
+  "worldVisualScale": 1.325,
+  "worldScaleReviewPending": true,
+  "qaErrors": 0,
+  "qaWarnings": 13,
+  "qaWarningClasses": [
+    "Twelve color-count warnings above256",
+    "Partial alpha above the technical guideline"
+  ],
+  "motionPreviewGenerated": true,
+  "motionPreviewFiles": [
+    "clip-00.gif",
+    "clip-01.gif",
+    "clip-02.gif"
+  ],
+  "framesPerGif": 4,
+  "motionPreviewReviewedInPlayback": false,
+  "nativeIndexedPixelGridVerified": false,
+  "unityImported": false,
+  "runtimeVerified": false,
+  "consumerImplemented": false,
+  "sharedCatalogEdited": false,
+  "runtimeCodeEdited": false,
+  "gitModified": false,
+  "nextStep": "Coordinator reviews source/contact and world scale, extends the separate motorcycleIdle consumer/importer, then runs focused runtime verification. No second generation started.",
+  "latestStatus": "held-for-katana-identity-and-maturity-correction",
+  "latestHumanFeedback": "Canonical Katana character fidelity and adult maturity override earlier motorcycle technical acceptance",
+  "previousCoordinatorTechnicalAcceptanceSuperseded": true,
+  "promoteToDelivery": false,
+  "maturityHold": "ArtSources/WeaponRedesign20261027/moto-normal/maturity-hold-20261027.json"
+}

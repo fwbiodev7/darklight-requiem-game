@@ -1,0 +1,84 @@
+{
+  "jobs": [
+    {
+      "name": "ReqFistsNormalWalkSW20261103V17KatanaCycle",
+      "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a19ec6-c0b4-7d21-a3d7-251d4853cb81\\exec-f0819bdb-37e9-4997-8c0c-fd3002d55d1f.png",
+      "preservedSourceName": "ReqFistsNormalWalkSW20261103V17KatanaCycle-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 4000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 1,
+          "action": "Walk",
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6
+          ],
+          "durationMs": [
+            65,
+            65,
+            70,
+            65,
+            65,
+            70
+          ],
+          "loop": true
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            230,
+            402
+          ],
+          "method": "Manually inspected projected complete-figure boot-support anchor; no anatomical crop"
+        },
+        "1": {
+          "anchor": [
+            667,
+            400
+          ],
+          "method": "Manually inspected projected complete-figure boot-support anchor; no anatomical crop"
+        },
+        "2": {
+          "anchor": [
+            1111,
+            402
+          ],
+          "method": "Manually inspected projected complete-figure boot-support anchor; no anatomical crop"
+        },
+        "4": {
+          "anchor": [
+            218,
+            847
+          ],
+          "method": "Manually inspected projected complete-figure boot-support anchor; no anatomical crop"
+        },
+        "5": {
+          "anchor": [
+            664,
+            848
+          ],
+          "method": "Manually inspected projected complete-figure boot-support anchor; no anatomical crop"
+        },
+        "6": {
+          "anchor": [
+            1109,
+            849
+          ],
+          "method": "Manually inspected projected complete-figure boot-support anchor; no anatomical crop"
+        }
+      },
+      "excludedReason": "Source indices3and7 optional idle guards excluded. First3columns map exactly to six approved KatanaSWphase references."
+    }
+  ]
+}

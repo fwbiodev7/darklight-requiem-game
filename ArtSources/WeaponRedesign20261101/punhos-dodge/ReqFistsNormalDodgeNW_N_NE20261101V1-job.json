@@ -1,0 +1,115 @@
+{
+  "jobs": [
+    {
+      "name": "ReqFistsNormalDodgeNW_N_NE20261101V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261101\\punhos-dodge\\ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+      "preservedSourceName": "ReqFistsNormalDodgeNW_N_NE20261101V1-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 3,
+      "sourceRows": 3,
+      "minimumArea": 8000,
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            283,
+            320
+          ],
+          "method": "Whole-source visual midpoint of two supporting boots/heels, projected ground plane, uncertainty6px; excludes coat/gauntlet bounds"
+        },
+        "1": {
+          "anchor": [
+            768,
+            323
+          ],
+          "method": "Whole-source visual midpoint of two supporting boots/heels, projected ground plane, uncertainty6px; excludes coat/gauntlet bounds"
+        },
+        "2": {
+          "anchor": [
+            1252,
+            324
+          ],
+          "method": "Whole-source visual midpoint of two supporting boots/heels, projected ground plane, uncertainty6px; excludes coat/gauntlet bounds"
+        },
+        "3": {
+          "anchor": [
+            278,
+            655
+          ],
+          "method": "Whole-source visual midpoint of two supporting boots/heels, projected ground plane, uncertainty6px; excludes coat/gauntlet bounds"
+        },
+        "4": {
+          "anchor": [
+            764,
+            653
+          ],
+          "method": "Whole-source visual midpoint of two supporting boots/heels, projected ground plane, uncertainty6px; excludes coat/gauntlet bounds"
+        },
+        "5": {
+          "anchor": [
+            1267,
+            653
+          ],
+          "method": "Whole-source visual midpoint of two supporting boots/heels, projected ground plane, uncertainty6px; excludes coat/gauntlet bounds"
+        },
+        "6": {
+          "anchor": [
+            256,
+            974
+          ],
+          "method": "Whole-source visual midpoint of two supporting boots/heels, projected ground plane, uncertainty6px; excludes coat/gauntlet bounds"
+        },
+        "7": {
+          "anchor": [
+            745,
+            981
+          ],
+          "method": "Whole-source visual midpoint of two supporting boots/heels, projected ground plane, uncertainty6px; excludes coat/gauntlet bounds"
+        },
+        "8": {
+          "anchor": [
+            1265,
+            975
+          ],
+          "method": "Whole-source visual midpoint of two supporting boots/heels, projected ground plane, uncertainty6px; excludes coat/gauntlet bounds"
+        }
+      },
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 3,
+          "action": "Dodge",
+          "durationMs": [
+            40,
+            150,
+            40
+          ],
+          "loop": false
+        },
+        {
+          "sourceRow": 1,
+          "direction": 4,
+          "action": "Dodge",
+          "durationMs": [
+            40,
+            150,
+            40
+          ],
+          "loop": false
+        },
+        {
+          "sourceRow": 2,
+          "direction": 5,
+          "action": "Dodge",
+          "durationMs": [
+            40,
+            150,
+            40
+          ],
+          "loop": false
+        }
+      ]
+    }
+  ]
+}

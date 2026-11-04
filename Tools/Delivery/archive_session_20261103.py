@@ -1,7 +1,7 @@
 """Preserve today's external handoff losslessly; candidates stay outside Assets.
 
 Run from the original workspace. --verify checks the portable archive without it.
-Repeated payloads reference a repository file or one SHA256 object. Large text is
+Repeated payloads reference one self-contained SHA256 object. Large text is
 gzip-compressed; original bytes, paths and hashes are recoverable from manifest.
 """
 from pathlib import Path
@@ -47,12 +47,8 @@ def build():
         if len(p.relative_to(work).parts)==1 and p.suffix not in ('.py','.json'):continue
         if p.name in ('tree-api.json',):continue
         paths.append(p)
-    # Reuse exact source/asset payloads already present in this repository.
+    # Self-contained objects survive future source/asset replacements.
     existing={}
-    candidates=[ROOT/p.decode('utf-8') for p in git('ls-files','-z').split(b'\0') if p]
-    candidates.extend(p for parent in (ROOT/'Assets/Darklight',ROOT/'ArtSources/ReviewedDeliveries',ROOT/'ArtSources/WeaponRedesign20261103') for p in parent.rglob('*') if p.is_file())
-    for p in candidates:
-        if p.is_file() and not p.is_relative_to(ARCHIVE) and p.suffix.lower() in ('.png','.jpg','.jpeg','.gif','.apng'):existing.setdefault(digest(p.read_bytes()),p.relative_to(ROOT).as_posix())
     (ARCHIVE/'objects').mkdir(parents=True,exist_ok=True)
     records=[]
     for p in sorted(set(paths)):

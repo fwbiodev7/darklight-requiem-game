@@ -126,3 +126,18 @@ Verificar branch/remoto/HEAD/status/index e usar allowlist explícita. Não incl
 Entregar recibo com arquivos aplicados/existentes/rejeitados/adaptados, hashes, testes realmente executados, falhas, commit/push e próxima prioridade. Encerrar sua posse dos arquivos no controle de integração.
 
 Ordem posterior continua: concluir e validar Fabius → Gothic Eclipse → Lucius Normal → transformações → Combate IA2.0 → QA/build Windows final. Os pacotes Antigravity anteriores exigem nova comparação com o código atual e `git apply --check`; não aplicá-los todos nem sobrescrever melhorias mais recentes.
+
+
+## Atualização de 03/11/2026 — retorno conferido
+
+Antes de integrar, ler `Docs/Darklight/RETORNO-ANTIGRAVITY-E-RETOMADA-20261103.md`. Uma tentativa com uma só folha também parou por RAM no refresh de áudio, com 7.69 GiB de commit disponível. Não repetir aberturas apenas reduzindo a lista de sprites. As 16 folhas essenciais preservam seus hashes; as três caminhadas continuam pendentes e os candidatos novos não foram promovidos. Faíscas Moto continuam aguardando gameplay. Plano do prólogo salvo no GDD, para depois de Lucius Normal e antes das transformações. O arquivo de controle continua sendo a autoridade para troca de responsável.
+
+
+## Importação e QA concluídos posteriormente em 03/11/2026
+
+Ler `Docs/Darklight/FABIUS-IMPORTACAO-E-QA-20261103.md` antes dos relatos anteriores: 167 clips/492 figuras/52 folhas ativas agora importados; 3 PlayMode isolados passaram para os 15 clips iniciais. Três atlas Hurt têm substitutos LayoutV2 com RGBA integral preservado; não reintegrar suas versões antigas do snapshot congelado. Fontes e pacote anterior permanecem preservados. Fabius ainda requer Punhos SW, Moto W/E e QA dos estados/faíscas. Respeitar controle de responsabilidade; nenhuma aprovação global ou build nova.
+
+
+## QA essencial posterior — sete testes aprovados
+
+Ler `Docs/Darklight/FABIUS-ESTADOS-QA-20261103.md`: 72 clips/144 figuras de estados essenciais passaram em isolamento, junto dos 15 clips iniciais. Despacho/contato/oclusão das faíscas Moto passou nas oito direções; renderização da malha na campanha permanece pendente. Três caminhadas continuam sem arte aprovada. Exceção de RAM autorizada pelo usuário aplica-se somente ao filtro isolado; padrões de importação/build não foram reduzidos. Usar os recibos mais recentes e conferir controle antes de escrever.

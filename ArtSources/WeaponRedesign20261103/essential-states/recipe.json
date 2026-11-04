@@ -1,0 +1,3031 @@
+{
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoS_SW20261102V2-source.png",
+      "sha256": "5205a9673d20fe2703b5d6057960c457d61138e0b0dc5862c77099d2ff9827f1",
+      "role": "Current approved compact proportions, identity, outfit and katana"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoW_NW20261102V2-source.png",
+      "sha256": "1cd4551daa59d049b46e8e4c93ff95588e0341ed053e8e02a368a5760b05d417",
+      "role": "Current approved left/back clothing and anatomy"
+    }
+  ],
+  "sheets": [
+    {
+      "name": "ReqKatanaNormalParry8Dirs20261103V3",
+      "source": "ReqKatanaNormalParry8Dirs20261103V3-source.png",
+      "weapon": 0,
+      "action": "Parry",
+      "status": "visual-reviewed",
+      "pixelsPerUnit": 178.6,
+      "figures": [
+        {
+          "rect": [
+            93,
+            38,
+            265,
+            365
+          ],
+          "anchor": [
+            227,
+            391
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "S",
+          "phase": "braced-contact-hold",
+          "durationMs": 260
+        },
+        {
+          "rect": [
+            529,
+            39,
+            251,
+            367
+          ],
+          "anchor": [
+            650,
+            394
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "SW",
+          "phase": "braced-contact-hold",
+          "durationMs": 260
+        },
+        {
+          "rect": [
+            960,
+            35,
+            274,
+            371
+          ],
+          "anchor": [
+            1093,
+            394
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "W",
+          "phase": "braced-contact-hold",
+          "durationMs": 260
+        },
+        {
+          "rect": [
+            1380,
+            38,
+            303,
+            366
+          ],
+          "anchor": [
+            1546,
+            392
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "NW",
+          "phase": "braced-contact-hold",
+          "durationMs": 260
+        },
+        {
+          "rect": [
+            104,
+            484,
+            249,
+            366
+          ],
+          "anchor": [
+            229,
+            838
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "N",
+          "phase": "braced-contact-hold",
+          "durationMs": 260
+        },
+        {
+          "rect": [
+            511,
+            483,
+            281,
+            366
+          ],
+          "anchor": [
+            662,
+            837
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "NE",
+          "phase": "braced-contact-hold",
+          "durationMs": 260
+        },
+        {
+          "rect": [
+            947,
+            483,
+            287,
+            368
+          ],
+          "anchor": [
+            1096,
+            839
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "E",
+          "phase": "braced-contact-hold",
+          "durationMs": 260
+        },
+        {
+          "rect": [
+            1383,
+            485,
+            278,
+            369
+          ],
+          "anchor": [
+            1525,
+            842
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "SE",
+          "phase": "braced-contact-hold",
+          "durationMs": 260
+        }
+      ],
+      "review": {
+        "staticVisualReviewed": true,
+        "wholeFigures": true,
+        "loop": false,
+        "allowStatic": true,
+        "timing": "Single intentionally held260ms defensive contact pose, not a multi-phase animation.",
+        "correction": "All eight full figures redrawn in V3 with compact torso/legs faithful to approved Hurt; V1/V2 superseded. No source anatomy resized.",
+        "density": "Constant178.6PPU, cranial/native-trunk density matched to approved Hurt reference168.18PPU (approx154px versus145px cranial width); not current pose AABB height.",
+        "expressionAuthority": "User-approved expressive Hurt face identity carried into focused defensive expressions.",
+        "alpha": "Source composed on light background and reviewed; hidden RGB under alpha0 is not rendered artwork.",
+        "nativePixelResampling": false,
+        "imported": false,
+        "runtimeVerified": false
+      },
+      "generationReferences": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtS_SW_W_NW20261103V2-source.png",
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalParry8Dirs20261103V2-source.png"
+      ]
+    },
+    {
+      "name": "ReqKatanaNormalHurtS_SW_W_NW20261103V2",
+      "source": "ReqKatanaNormalHurtS_SW_W_NW20261103V2-source.png",
+      "weapon": 0,
+      "action": "Hurt",
+      "status": "visual-reviewed",
+      "pixelsPerUnit": 168.1818181818182,
+      "figures": [
+        {
+          "rect": [
+            77,
+            23,
+            355,
+            361
+          ],
+          "anchor": [
+            289,
+            372
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "S",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            549,
+            14,
+            373,
+            370
+          ],
+          "anchor": [
+            774,
+            372
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "S",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            63,
+            408,
+            386,
+            357
+          ],
+          "anchor": [
+            272,
+            752
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "SW",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            545,
+            397,
+            393,
+            364
+          ],
+          "anchor": [
+            764,
+            749
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "SW",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            73,
+            788,
+            373,
+            358
+          ],
+          "anchor": [
+            271,
+            1133
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "W",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            543,
+            775,
+            377,
+            363
+          ],
+          "anchor": [
+            749,
+            1126
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "W",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            85,
+            1167,
+            369,
+            363
+          ],
+          "anchor": [
+            274,
+            1518
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "NW",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            547,
+            1157,
+            369,
+            370
+          ],
+          "anchor": [
+            751,
+            1515
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "NW",
+          "phase": "reaction",
+          "durationMs": 120
+        }
+      ],
+      "review": {
+        "staticVisualReviewed": true,
+        "wholeFigures": true,
+        "expressionAuthority": "User explicitly approved these expressive charming Hurt faces; source PNGs are preserved without recoloring, facial edits or anatomical resampling.",
+        "timing": "Contact60ms then reaction120ms =180ms; reaction is already visible during shortened120ms ResistsStagger hurt. Runtime owns return to neutral.",
+        "loop": false,
+        "density": "Constant168.181818PPU across both phases; matched skull/trunk native density to current approved compact Carregado figures. Never normalized by bent-body bounding height.",
+        "nativePixelResampling": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "motionReview": "Consecutive full-figure phases inspected statically; finite GIF previews authored, runtime playback deferred."
+      },
+      "generationReferences": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtS_SW_W_NW20261103V1-source.png",
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalParry8Dirs20261103V2-source.png"
+      ]
+    },
+    {
+      "name": "ReqKatanaNormalHurtN_NE_E_SE20261103V1",
+      "source": "ReqKatanaNormalHurtN_NE_E_SE20261103V1-source.png",
+      "weapon": 0,
+      "action": "Hurt",
+      "status": "visual-reviewed",
+      "pixelsPerUnit": 168.1818181818182,
+      "figures": [
+        {
+          "rect": [
+            118,
+            42,
+            332,
+            347
+          ],
+          "anchor": [
+            251,
+            377
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "N",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            545,
+            13,
+            367,
+            376
+          ],
+          "anchor": [
+            702,
+            377
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "N",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            116,
+            423,
+            333,
+            353
+          ],
+          "anchor": [
+            240,
+            763
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "NE",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            569,
+            396,
+            353,
+            379
+          ],
+          "anchor": [
+            717,
+            762
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "NE",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            117,
+            801,
+            319,
+            351
+          ],
+          "anchor": [
+            245,
+            1139
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "E",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            596,
+            777,
+            323,
+            377
+          ],
+          "anchor": [
+            738,
+            1141
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "E",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            107,
+            1178,
+            254,
+            352
+          ],
+          "anchor": [
+            240,
+            1518
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "SE",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            579,
+            1153,
+            301,
+            377
+          ],
+          "anchor": [
+            747,
+            1518
+          ],
+          "anchorMethod": "Manual projected support between grounded soles; body recoil is retained around this ground support.",
+          "direction": "SE",
+          "phase": "reaction",
+          "durationMs": 120
+        }
+      ],
+      "review": {
+        "staticVisualReviewed": true,
+        "wholeFigures": true,
+        "expressionAuthority": "User explicitly approved these expressive charming Hurt faces; source PNGs are preserved without recoloring, facial edits or anatomical resampling.",
+        "timing": "Contact60ms then reaction120ms =180ms; reaction is already visible during shortened120ms ResistsStagger hurt. Runtime owns return to neutral.",
+        "loop": false,
+        "density": "Constant168.181818PPU across both phases; matched skull/trunk native density to current approved compact Carregado figures. Never normalized by bent-body bounding height.",
+        "nativePixelResampling": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "motionReview": "Consecutive full-figure phases inspected statically; finite GIF previews authored, runtime playback deferred."
+      },
+      "generationReferences": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalParry8Dirs20261103V2-source.png",
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtS_SW_W_NW20261103V1-source.png"
+      ]
+    },
+    {
+      "name": "ReqKatanaNormalDeadS_SW_W_NW20261103V1",
+      "source": "ReqKatanaNormalDeadS_SW_W_NW20261103V1-source.png",
+      "weapon": 0,
+      "action": "Dead",
+      "status": "visual-reviewed",
+      "pixelsPerUnit": 139.5,
+      "figures": [
+        {
+          "rect": [
+            14,
+            18,
+            310,
+            295
+          ],
+          "anchor": [
+            215,
+            303
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "S",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            397,
+            78,
+            374,
+            236
+          ],
+          "anchor": [
+            600,
+            304
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "S",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            867,
+            171,
+            388,
+            138
+          ],
+          "anchor": [
+            1080,
+            299
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "S",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        },
+        {
+          "rect": [
+            14,
+            321,
+            323,
+            283
+          ],
+          "anchor": [
+            211,
+            594
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "SW",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            377,
+            374,
+            391,
+            233
+          ],
+          "anchor": [
+            588,
+            597
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "SW",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            853,
+            467,
+            405,
+            136
+          ],
+          "anchor": [
+            1070,
+            593
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "SW",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        },
+        {
+          "rect": [
+            24,
+            611,
+            322,
+            282
+          ],
+          "anchor": [
+            220,
+            883
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "W",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            369,
+            666,
+            409,
+            227
+          ],
+          "anchor": [
+            573,
+            883
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "W",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            855,
+            755,
+            448,
+            137
+          ],
+          "anchor": [
+            1080,
+            882
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "W",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        },
+        {
+          "rect": [
+            23,
+            895,
+            316,
+            282
+          ],
+          "anchor": [
+            230,
+            1167
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "NW",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            369,
+            946,
+            400,
+            227
+          ],
+          "anchor": [
+            580,
+            1163
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "NW",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            845,
+            1049,
+            460,
+            127
+          ],
+          "anchor": [
+            1070,
+            1166
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "NW",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        }
+      ],
+      "review": {
+        "staticVisualReviewed": true,
+        "wholeFigures": true,
+        "phases": "Three distinct complete poses: knees/torso collapse, hip/forearm ground contact, horizontal settled corpse. Last drawing is held indefinitely by non-looping consumer.",
+        "timing": "180ms collapse +220ms fall +1000ms final-frame hold; consumer clamps forever to final frame, never returns to Idle.",
+        "loop": false,
+        "density": "Constant139.5PPU across all three phases; native skull/trunk drawing density calibrated against approved Hurt/Carregado, never corpse AABB height.",
+        "densityGuide": {
+          "referenceHurtSkullNativeApprox": [
+            145,
+            128
+          ],
+          "sourceSkullNativeApprox": [
+            115,
+            111
+          ],
+          "referencePPU": 168.1818181818182,
+          "method": "Approximate cranial-area density comparison, same constant density through collapse/fall/corpse; corpse remains naturally low."
+        },
+        "nativePixelResampling": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "motionReview": "Consecutive full-figure phases inspected statically; finite GIF previews authored, runtime playback deferred."
+      },
+      "generationReferences": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalParry8Dirs20261103V2-source.png"
+      ]
+    },
+    {
+      "name": "ReqKatanaNormalDeadN_NE_E_SE20261103V1",
+      "source": "ReqKatanaNormalDeadN_NE_E_SE20261103V1-source.png",
+      "weapon": 0,
+      "action": "Dead",
+      "status": "visual-reviewed",
+      "pixelsPerUnit": 139.5,
+      "figures": [
+        {
+          "rect": [
+            160,
+            10,
+            246,
+            257
+          ],
+          "anchor": [
+            255,
+            263
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "N",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            530,
+            61,
+            328,
+            209
+          ],
+          "anchor": [
+            682,
+            266
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "N",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            989,
+            138,
+            385,
+            123
+          ],
+          "anchor": [
+            1171,
+            257
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "N",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        },
+        {
+          "rect": [
+            151,
+            280,
+            241,
+            255
+          ],
+          "anchor": [
+            256,
+            531
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "NE",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            530,
+            327,
+            339,
+            209
+          ],
+          "anchor": [
+            685,
+            532
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "NE",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            992,
+            415,
+            388,
+            116
+          ],
+          "anchor": [
+            1175,
+            527
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "NE",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        },
+        {
+          "rect": [
+            139,
+            542,
+            224,
+            238
+          ],
+          "anchor": [
+            237,
+            776
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "E",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            525,
+            589,
+            324,
+            194
+          ],
+          "anchor": [
+            669,
+            779
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "E",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            986,
+            663,
+            382,
+            118
+          ],
+          "anchor": [
+            1170,
+            777
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "E",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        },
+        {
+          "rect": [
+            136,
+            782,
+            203,
+            235
+          ],
+          "anchor": [
+            237,
+            1013
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "SE",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            513,
+            832,
+            267,
+            189
+          ],
+          "anchor": [
+            651,
+            1017
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "SE",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            978,
+            906,
+            380,
+            115
+          ],
+          "anchor": [
+            1165,
+            1017
+          ],
+          "anchorMethod": "Manual projected pelvis/torso support on ground; collapse, fall and corpse use distinct intentional support anchors, never automated feet-bottom alignment.",
+          "direction": "SE",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        }
+      ],
+      "review": {
+        "staticVisualReviewed": true,
+        "wholeFigures": true,
+        "phases": "Three distinct complete poses: knees/torso collapse, hip/forearm ground contact, horizontal settled corpse. Last drawing is held indefinitely by non-looping consumer.",
+        "timing": "180ms collapse +220ms fall +1000ms final-frame hold; consumer clamps forever to final frame, never returns to Idle.",
+        "loop": false,
+        "density": "Constant139.5PPU across all three phases; native skull/trunk drawing density calibrated against approved Hurt/Carregado, never corpse AABB height.",
+        "densityGuide": {
+          "referenceHurtSkullNativeApprox": [
+            145,
+            128
+          ],
+          "sourceSkullNativeApprox": [
+            115,
+            111
+          ],
+          "referencePPU": 168.1818181818182,
+          "method": "Approximate cranial-area density comparison, same constant density through collapse/fall/corpse; corpse remains naturally low."
+        },
+        "nativePixelResampling": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "motionReview": "Consecutive full-figure phases inspected statically; finite GIF previews authored, runtime playback deferred."
+      },
+      "generationReferences": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalDeadS_SW_W_NW20261103V1-source.png",
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtN_NE_E_SE20261103V1-source.png"
+      ]
+    },
+    {
+      "name": "ReqFistsNormalParry8Dirs20261103V1",
+      "source": "ReqFistsNormalParry8Dirs20261103V1-source.png",
+      "weapon": 2,
+      "action": "Parry",
+      "status": "visual-reviewed",
+      "pixelsPerUnit": 184.91548134405275,
+      "figures": [
+        {
+          "rect": [
+            83,
+            27,
+            281,
+            391
+          ],
+          "anchor": [
+            233,
+            408
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "S",
+          "phase": "braced-contact-hold",
+          "durationMs": 260
+        },
+        {
+          "rect": [
+            540,
+            25,
+            273,
+            394
+          ],
+          "anchor": [
+            665,
+            409
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "SW",
+          "phase": "braced-contact-hold",
+          "durationMs": 260
+        },
+        {
+          "rect": [
+            997,
+            25,
+            239,
+            394
+          ],
+          "anchor": [
+            1108,
+            409
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "W",
+          "phase": "braced-contact-hold",
+          "durationMs": 260
+        },
+        {
+          "rect": [
+            1435,
+            25,
+            255,
+            387
+          ],
+          "anchor": [
+            1550,
+            402
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "NW",
+          "phase": "braced-contact-hold",
+          "durationMs": 260
+        },
+        {
+          "rect": [
+            84,
+            470,
+            280,
+            391
+          ],
+          "anchor": [
+            234,
+            851
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "N",
+          "phase": "braced-contact-hold",
+          "durationMs": 260
+        },
+        {
+          "rect": [
+            527,
+            470,
+            246,
+            383
+          ],
+          "anchor": [
+            653,
+            843
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "NE",
+          "phase": "braced-contact-hold",
+          "durationMs": 260
+        },
+        {
+          "rect": [
+            980,
+            470,
+            231,
+            393
+          ],
+          "anchor": [
+            1108,
+            853
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "E",
+          "phase": "braced-contact-hold",
+          "durationMs": 260
+        },
+        {
+          "rect": [
+            1408,
+            471,
+            269,
+            393
+          ],
+          "anchor": [
+            1541,
+            854
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "SE",
+          "phase": "braced-contact-hold",
+          "durationMs": 260
+        }
+      ],
+      "generationReferences": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtS_SW_W_NW20261103V2-source.png",
+        "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkS20261101V2Selected.png"
+      ],
+      "review": {
+        "staticVisualReviewed": true,
+        "wholeFigures": true,
+        "loop": false,
+        "expressionDirection": "Retain user-approved expressive charming Hurt identity consistently; no facial recolor, head/torso redesign or anatomical assembly.",
+        "equipment": "Two silver claw gauntlets and two silver layered clawed greaves, all complete figures newly drawn; no concealed incompatible katana/saw equipment reused.",
+        "densityGuide": {
+          "referenceCranialWidth": 147,
+          "referencePPU": 170.95959595959596,
+          "sourceCranialWidth": 159,
+          "method": "Native cranial-width guide within complete figure, checked against torso density. Same fixed density through every phase; never normalized by current crouch/corpse AABB height."
+        },
+        "timing": "Intentional single260ms guard hold.",
+        "nativePixelResampling": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "motionReview": "Consecutive complete poses inspected statically; finite GIF authored; Unity/runtime review deferred."
+      }
+    },
+    {
+      "name": "ReqFistsNormalHurtS_SW_W_NW20261103V1",
+      "source": "ReqFistsNormalHurtS_SW_W_NW20261103V1-source.png",
+      "weapon": 2,
+      "action": "Hurt",
+      "status": "visual-reviewed",
+      "pixelsPerUnit": 186.0784717927575,
+      "figures": [
+        {
+          "rect": [
+            141,
+            21,
+            279,
+            371
+          ],
+          "anchor": [
+            286,
+            382
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "S",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            598,
+            15,
+            295,
+            377
+          ],
+          "anchor": [
+            741,
+            382
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "S",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            161,
+            409,
+            289,
+            360
+          ],
+          "anchor": [
+            276,
+            759
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "SW",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            606,
+            396,
+            323,
+            372
+          ],
+          "anchor": [
+            760,
+            758
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "SW",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            155,
+            783,
+            295,
+            366
+          ],
+          "anchor": [
+            253,
+            1139
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "W",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            624,
+            774,
+            273,
+            372
+          ],
+          "anchor": [
+            741,
+            1136
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "W",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            158,
+            1164,
+            297,
+            368
+          ],
+          "anchor": [
+            254,
+            1522
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "NW",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            616,
+            1155,
+            276,
+            377
+          ],
+          "anchor": [
+            737,
+            1522
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "NW",
+          "phase": "reaction",
+          "durationMs": 120
+        }
+      ],
+      "generationReferences": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtS_SW_W_NW20261103V2-source.png",
+        "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkS20261101V2Selected.png"
+      ],
+      "review": {
+        "staticVisualReviewed": true,
+        "wholeFigures": true,
+        "loop": false,
+        "expressionDirection": "Retain user-approved expressive charming Hurt identity consistently; no facial recolor, head/torso redesign or anatomical assembly.",
+        "equipment": "Two silver claw gauntlets and two silver layered clawed greaves, all complete figures newly drawn; no concealed incompatible katana/saw equipment reused.",
+        "densityGuide": {
+          "referenceCranialWidth": 147,
+          "referencePPU": 170.95959595959596,
+          "sourceCranialWidth": 160,
+          "method": "Native cranial-width guide within complete figure, checked against torso density. Same fixed density through every phase; never normalized by current crouch/corpse AABB height."
+        },
+        "timing": "60ms contact then120ms reaction; reaction visible during shortened120ms stagger.",
+        "nativePixelResampling": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "motionReview": "Consecutive complete poses inspected statically; finite GIF authored; Unity/runtime review deferred."
+      }
+    },
+    {
+      "name": "ReqFistsNormalHurtN_NE_E_SE20261103V1",
+      "source": "ReqFistsNormalHurtN_NE_E_SE20261103V1-source.png",
+      "weapon": 2,
+      "action": "Hurt",
+      "status": "visual-reviewed",
+      "pixelsPerUnit": 186.0784717927575,
+      "figures": [
+        {
+          "rect": [
+            120,
+            43,
+            246,
+            345
+          ],
+          "anchor": [
+            247,
+            378
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "N",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            520,
+            10,
+            295,
+            379
+          ],
+          "anchor": [
+            679,
+            379
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "N",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            106,
+            420,
+            260,
+            355
+          ],
+          "anchor": [
+            249,
+            765
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "NE",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            552,
+            395,
+            269,
+            381
+          ],
+          "anchor": [
+            710,
+            766
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "NE",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            105,
+            795,
+            274,
+            357
+          ],
+          "anchor": [
+            240,
+            1142
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "E",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            578,
+            776,
+            250,
+            377
+          ],
+          "anchor": [
+            723,
+            1143
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "E",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            106,
+            1174,
+            258,
+            357
+          ],
+          "anchor": [
+            234,
+            1521
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "SE",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            561,
+            1152,
+            309,
+            379
+          ],
+          "anchor": [
+            739,
+            1521
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles, retaining in-place recoil.",
+          "direction": "SE",
+          "phase": "reaction",
+          "durationMs": 120
+        }
+      ],
+      "generationReferences": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtN_NE_E_SE20261103V1-source.png",
+        "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkS20261101V2Selected.png"
+      ],
+      "review": {
+        "staticVisualReviewed": true,
+        "wholeFigures": true,
+        "loop": false,
+        "expressionDirection": "Retain user-approved expressive charming Hurt identity consistently; no facial recolor, head/torso redesign or anatomical assembly.",
+        "equipment": "Two silver claw gauntlets and two silver layered clawed greaves, all complete figures newly drawn; no concealed incompatible katana/saw equipment reused.",
+        "densityGuide": {
+          "referenceCranialWidth": 147,
+          "referencePPU": 170.95959595959596,
+          "sourceCranialWidth": 160,
+          "method": "Native cranial-width guide within complete figure, checked against torso density. Same fixed density through every phase; never normalized by current crouch/corpse AABB height."
+        },
+        "timing": "60ms contact then120ms reaction; reaction visible during shortened120ms stagger.",
+        "nativePixelResampling": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "motionReview": "Consecutive complete poses inspected statically; finite GIF authored; Unity/runtime review deferred."
+      }
+    },
+    {
+      "name": "ReqFistsNormalDeadS_SW_W_NW20261103V1",
+      "source": "ReqFistsNormalDeadS_SW_W_NW20261103V1-source.png",
+      "weapon": 2,
+      "action": "Dead",
+      "status": "visual-reviewed",
+      "pixelsPerUnit": 140.72184429327285,
+      "figures": [
+        {
+          "rect": [
+            100,
+            15,
+            222,
+            300
+          ],
+          "anchor": [
+            214,
+            309
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "S",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            450,
+            78,
+            303,
+            238
+          ],
+          "anchor": [
+            581,
+            310
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "S",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            842,
+            171,
+            396,
+            142
+          ],
+          "anchor": [
+            1057,
+            307
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "S",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        },
+        {
+          "rect": [
+            110,
+            322,
+            228,
+            283
+          ],
+          "anchor": [
+            217,
+            599
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "SW",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            448,
+            368,
+            286,
+            242
+          ],
+          "anchor": [
+            577,
+            604
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "SW",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            816,
+            470,
+            412,
+            134
+          ],
+          "anchor": [
+            1053,
+            598
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "SW",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        },
+        {
+          "rect": [
+            97,
+            613,
+            251,
+            282
+          ],
+          "anchor": [
+            225,
+            889
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "W",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            431,
+            663,
+            322,
+            231
+          ],
+          "anchor": [
+            576,
+            888
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "W",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            812,
+            755,
+            462,
+            140
+          ],
+          "anchor": [
+            1050,
+            889
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "W",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        },
+        {
+          "rect": [
+            84,
+            897,
+            261,
+            280
+          ],
+          "anchor": [
+            220,
+            1171
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "NW",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            414,
+            947,
+            330,
+            224
+          ],
+          "anchor": [
+            574,
+            1165
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "NW",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            809,
+            1049,
+            469,
+            130
+          ],
+          "anchor": [
+            1046,
+            1173
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "NW",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        }
+      ],
+      "generationReferences": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalDeadS_SW_W_NW20261103V1-source.png",
+        "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkS20261101V2Selected.png"
+      ],
+      "review": {
+        "staticVisualReviewed": true,
+        "wholeFigures": true,
+        "loop": false,
+        "expressionDirection": "Retain user-approved expressive charming Hurt identity consistently; no facial recolor, head/torso redesign or anatomical assembly.",
+        "equipment": "Two silver claw gauntlets and two silver layered clawed greaves, all complete figures newly drawn; no concealed incompatible katana/saw equipment reused.",
+        "densityGuide": {
+          "referenceCranialWidth": 147,
+          "referencePPU": 170.95959595959596,
+          "sourceCranialWidth": 121,
+          "method": "Native cranial-width guide within complete figure, checked against torso density. Same fixed density through every phase; never normalized by current crouch/corpse AABB height."
+        },
+        "timing": "180ms collapse,220ms ground fall, final corpse1000ms authored hold then clamped indefinitely by consumer; no return to Idle.",
+        "nativePixelResampling": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "motionReview": "Consecutive complete poses inspected statically; finite GIF authored; Unity/runtime review deferred."
+      }
+    },
+    {
+      "name": "ReqFistsNormalDeadN_NE_E_SE20261103V1",
+      "source": "ReqFistsNormalDeadN_NE_E_SE20261103V1-source.png",
+      "weapon": 2,
+      "action": "Dead",
+      "status": "visual-reviewed",
+      "pixelsPerUnit": 140.72184429327285,
+      "figures": [
+        {
+          "rect": [
+            160,
+            8,
+            180,
+            262
+          ],
+          "anchor": [
+            255,
+            266
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "N",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            530,
+            61,
+            236,
+            210
+          ],
+          "anchor": [
+            653,
+            267
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "N",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            987,
+            139,
+            354,
+            124
+          ],
+          "anchor": [
+            1155,
+            259
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "N",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        },
+        {
+          "rect": [
+            151,
+            279,
+            193,
+            257
+          ],
+          "anchor": [
+            257,
+            532
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "NE",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            526,
+            325,
+            235,
+            212
+          ],
+          "anchor": [
+            650,
+            533
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "NE",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            988,
+            415,
+            370,
+            118
+          ],
+          "anchor": [
+            1160,
+            529
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "NE",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        },
+        {
+          "rect": [
+            136,
+            542,
+            216,
+            239
+          ],
+          "anchor": [
+            243,
+            777
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "E",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            525,
+            587,
+            247,
+            196
+          ],
+          "anchor": [
+            650,
+            779
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "E",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            983,
+            667,
+            383,
+            115
+          ],
+          "anchor": [
+            1160,
+            778
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "E",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        },
+        {
+          "rect": [
+            134,
+            782,
+            206,
+            236
+          ],
+          "anchor": [
+            237,
+            1014
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "SE",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            511,
+            833,
+            262,
+            184
+          ],
+          "anchor": [
+            650,
+            1013
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "SE",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            977,
+            905,
+            383,
+            110
+          ],
+          "anchor": [
+            1150,
+            1011
+          ],
+          "anchorMethod": "Manual grounded pelvis/torso support; distinct collapse/fall/corpse origins, never feet-bottom autoalignment.",
+          "direction": "SE",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        }
+      ],
+      "generationReferences": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalDeadN_NE_E_SE20261103V1-source.png",
+        "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkS20261101V2Selected.png"
+      ],
+      "review": {
+        "staticVisualReviewed": true,
+        "wholeFigures": true,
+        "loop": false,
+        "expressionDirection": "Retain user-approved expressive charming Hurt identity consistently; no facial recolor, head/torso redesign or anatomical assembly.",
+        "equipment": "Two silver claw gauntlets and two silver layered clawed greaves, all complete figures newly drawn; no concealed incompatible katana/saw equipment reused.",
+        "densityGuide": {
+          "referenceCranialWidth": 147,
+          "referencePPU": 170.95959595959596,
+          "sourceCranialWidth": 121,
+          "method": "Native cranial-width guide within complete figure, checked against torso density. Same fixed density through every phase; never normalized by current crouch/corpse AABB height."
+        },
+        "timing": "180ms collapse,220ms ground fall, final corpse1000ms authored hold then clamped indefinitely by consumer; no return to Idle.",
+        "nativePixelResampling": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "motionReview": "Consecutive complete poses inspected statically; finite GIF authored; Unity/runtime review deferred."
+      }
+    },
+    {
+      "name": "ReqMotoNormalParry8Dirs20261103V1",
+      "source": "ReqMotoNormalParry8Dirs20261103V1-source.png",
+      "weapon": 3,
+      "action": "Parry",
+      "status": "visual-reviewed",
+      "pixelsPerUnit": 176.99314574314573,
+      "figures": [
+        {
+          "rect": [
+            76,
+            2,
+            296,
+            420
+          ],
+          "anchor": [
+            224,
+            412
+          ],
+          "anchorMethod": "Manual projected support midpoint between grounded soles; guard posture preserved.",
+          "direction": "S",
+          "phase": "dual-saw-braced-contact-hold",
+          "durationMs": 260,
+          "guardContactSource": [
+            222,
+            185
+          ],
+          "guardContactVisibility": "visible-tooth-junction"
+        },
+        {
+          "rect": [
+            505,
+            5,
+            319,
+            419
+          ],
+          "anchor": [
+            654,
+            414
+          ],
+          "anchorMethod": "Manual projected support midpoint between grounded soles; guard posture preserved.",
+          "direction": "SW",
+          "phase": "dual-saw-braced-contact-hold",
+          "durationMs": 260,
+          "guardContactSource": [
+            612,
+            152
+          ],
+          "guardContactVisibility": "visible-tooth-junction"
+        },
+        {
+          "rect": [
+            938,
+            5,
+            331,
+            417
+          ],
+          "anchor": [
+            1100,
+            412
+          ],
+          "anchorMethod": "Manual projected support midpoint between grounded soles; guard posture preserved.",
+          "direction": "W",
+          "phase": "dual-saw-braced-contact-hold",
+          "durationMs": 260,
+          "guardContactSource": [
+            1017,
+            131
+          ],
+          "guardContactVisibility": "visible-tooth-junction"
+        },
+        {
+          "rect": [
+            1380,
+            3,
+            340,
+            419
+          ],
+          "anchor": [
+            1544,
+            412
+          ],
+          "anchorMethod": "Manual projected support midpoint between grounded soles; guard posture preserved.",
+          "direction": "NW",
+          "phase": "dual-saw-braced-contact-hold",
+          "durationMs": 260,
+          "guardContactSource": [
+            1465,
+            133
+          ],
+          "guardContactVisibility": "visible-tooth-junction"
+        },
+        {
+          "rect": [
+            75,
+            455,
+            295,
+            417
+          ],
+          "anchor": [
+            224,
+            862
+          ],
+          "anchorMethod": "Manual projected support midpoint between grounded soles; guard posture preserved.",
+          "direction": "N",
+          "phase": "dual-saw-braced-contact-hold",
+          "durationMs": 260,
+          "guardContactSource": [
+            227,
+            598
+          ],
+          "guardContactVisibility": "occluded-projected-in-front-of-torso"
+        },
+        {
+          "rect": [
+            499,
+            451,
+            322,
+            421
+          ],
+          "anchor": [
+            663,
+            862
+          ],
+          "anchorMethod": "Manual projected support midpoint between grounded soles; guard posture preserved.",
+          "direction": "NE",
+          "phase": "dual-saw-braced-contact-hold",
+          "durationMs": 260,
+          "guardContactSource": [
+            755,
+            577
+          ],
+          "guardContactVisibility": "visible-tooth-junction"
+        },
+        {
+          "rect": [
+            948,
+            453,
+            327,
+            420
+          ],
+          "anchor": [
+            1104,
+            863
+          ],
+          "anchorMethod": "Manual projected support midpoint between grounded soles; guard posture preserved.",
+          "direction": "E",
+          "phase": "dual-saw-braced-contact-hold",
+          "durationMs": 260,
+          "guardContactSource": [
+            1192,
+            575
+          ],
+          "guardContactVisibility": "visible-tooth-junction"
+        },
+        {
+          "rect": [
+            1397,
+            453,
+            317,
+            420
+          ],
+          "anchor": [
+            1545,
+            863
+          ],
+          "anchorMethod": "Manual projected support midpoint between grounded soles; guard posture preserved.",
+          "direction": "SE",
+          "phase": "dual-saw-braced-contact-hold",
+          "durationMs": 260,
+          "guardContactSource": [
+            1620,
+            593
+          ],
+          "guardContactVisibility": "visible-tooth-junction"
+        }
+      ],
+      "generationReferences": [
+        "ArtSources/WeaponRedesign20261102/normal-moto-completion/ReqMotoNormalSerraEntradaS_SW_W20261102V1-source.png",
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtS_SW_W_NW20261103V2-source.png"
+      ],
+      "review": {
+        "wholeFigures": true,
+        "staticVisualReviewed": true,
+        "userVisualApproved": true,
+        "userApproval": "User explicitly said Moto defense is being made and looks beautiful; preserve current approved appearance. No regeneration or pixel modification after approval.",
+        "equipment": "Both black/silver circular saws present, plain black strapped boots, compact Requiem identity.",
+        "densityGuide": {
+          "referenceNativeCranialWidth": 140,
+          "referencePPU": 157.82828282828282,
+          "sourceNativeCranialWidth": 157,
+          "method": "Native cranial/trunk raster-density comparison; constant density across directions, never guard/body/weapon AABB normalization."
+        },
+        "guardContact": "Manual tooth-tooth encounter point; normalized per SPRITE RECT with Unity bottom-left origin. N contact is hidden by torso and explicitly marked projected/occluded, not falsely measured as visible.",
+        "timing": "Single intentional braced contact guard held260ms, non-looping, not a multi-phase animation.",
+        "loop": false,
+        "nativePixelResampling": false,
+        "imported": false,
+        "runtimeVerified": false
+      }
+    },
+    {
+      "name": "ReqMotoNormalHurtS_SW_W_NW20261103V1",
+      "source": "ReqMotoNormalHurtS_SW_W_NW20261103V1-source.png",
+      "weapon": 3,
+      "action": "Hurt",
+      "status": "visual-reviewed",
+      "pixelsPerUnit": 181.50252525252523,
+      "figures": [
+        {
+          "rect": [
+            74,
+            21,
+            408,
+            360
+          ],
+          "anchor": [
+            279,
+            371
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles; torso/head recoil retained.",
+          "direction": "S",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            540,
+            5,
+            397,
+            373
+          ],
+          "anchor": [
+            732,
+            368
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles; torso/head recoil retained.",
+          "direction": "S",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            80,
+            400,
+            390,
+            364
+          ],
+          "anchor": [
+            267,
+            754
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles; torso/head recoil retained.",
+          "direction": "SW",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            552,
+            387,
+            390,
+            374
+          ],
+          "anchor": [
+            743,
+            751
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles; torso/head recoil retained.",
+          "direction": "SW",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            93,
+            782,
+            373,
+            365
+          ],
+          "anchor": [
+            269,
+            1137
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles; torso/head recoil retained.",
+          "direction": "W",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            549,
+            768,
+            362,
+            378
+          ],
+          "anchor": [
+            731,
+            1136
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles; torso/head recoil retained.",
+          "direction": "W",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            86,
+            1160,
+            355,
+            370
+          ],
+          "anchor": [
+            254,
+            1520
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles; torso/head recoil retained.",
+          "direction": "NW",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            550,
+            1152,
+            383,
+            378
+          ],
+          "anchor": [
+            732,
+            1520
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles; torso/head recoil retained.",
+          "direction": "NW",
+          "phase": "reaction",
+          "durationMs": 120
+        }
+      ],
+      "generationReferences": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtS_SW_W_NW20261103V2-source.png",
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalParry8Dirs20261103V1-source.png"
+      ],
+      "review": {
+        "wholeFigures": true,
+        "staticVisualReviewed": true,
+        "loop": false,
+        "expressionDirection": "Preserve approved expressive charming Hurt identity across equipment. Moto Parry user-approved equipment/appearance authority retained.",
+        "equipment": "Two separate black/silver circular saws safely outboard of body throughout contact and recoil, black gloves and plain black strapped boots; no incompatible sword/gauntlets reused.",
+        "densityGuide": {
+          "referencePPU": 157.82828282828282,
+          "referenceNativeCranialWidth": 140,
+          "sourceNativeCranialWidth": 161,
+          "method": "Native skull/trunk density, same fixed PPU across both phases; never crouch/weapon AABB height."
+        },
+        "timing": "Contact60ms, reaction120ms; default180ms Hurt and shortened120ms resistance both show reaction. Consumer owns neutral return.",
+        "nativePixelResampling": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "motionReview": "Consecutive complete poses inspected statically; finite GIF authored; runtime/Unity review deferred."
+      }
+    },
+    {
+      "name": "ReqMotoNormalHurtN_NE_E_SE20261103V1",
+      "source": "ReqMotoNormalHurtN_NE_E_SE20261103V1-source.png",
+      "weapon": 3,
+      "action": "Hurt",
+      "status": "visual-reviewed",
+      "pixelsPerUnit": 181.50252525252523,
+      "figures": [
+        {
+          "rect": [
+            90,
+            67,
+            349,
+            323
+          ],
+          "anchor": [
+            256,
+            380
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles; torso/head recoil retained.",
+          "direction": "N",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            544,
+            11,
+            359,
+            380
+          ],
+          "anchor": [
+            713,
+            381
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles; torso/head recoil retained.",
+          "direction": "N",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            91,
+            438,
+            338,
+            328
+          ],
+          "anchor": [
+            244,
+            756
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles; torso/head recoil retained.",
+          "direction": "NE",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            573,
+            388,
+            356,
+            380
+          ],
+          "anchor": [
+            724,
+            758
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles; torso/head recoil retained.",
+          "direction": "NE",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            109,
+            812,
+            286,
+            333
+          ],
+          "anchor": [
+            247,
+            1135
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles; torso/head recoil retained.",
+          "direction": "E",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            591,
+            767,
+            296,
+            377
+          ],
+          "anchor": [
+            726,
+            1134
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles; torso/head recoil retained.",
+          "direction": "E",
+          "phase": "reaction",
+          "durationMs": 120
+        },
+        {
+          "rect": [
+            116,
+            1189,
+            322,
+            343
+          ],
+          "anchor": [
+            256,
+            1522
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles; torso/head recoil retained.",
+          "direction": "SE",
+          "phase": "contact",
+          "durationMs": 60
+        },
+        {
+          "rect": [
+            569,
+            1152,
+            337,
+            381
+          ],
+          "anchor": [
+            739,
+            1523
+          ],
+          "anchorMethod": "Manual support midpoint between grounded soles; torso/head recoil retained.",
+          "direction": "SE",
+          "phase": "reaction",
+          "durationMs": 120
+        }
+      ],
+      "generationReferences": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtN_NE_E_SE20261103V1-source.png",
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalParry8Dirs20261103V1-source.png"
+      ],
+      "review": {
+        "wholeFigures": true,
+        "staticVisualReviewed": true,
+        "loop": false,
+        "expressionDirection": "Preserve approved expressive charming Hurt identity across equipment. Moto Parry user-approved equipment/appearance authority retained.",
+        "equipment": "Two separate black/silver circular saws safely outboard of body throughout contact and recoil, black gloves and plain black strapped boots; no incompatible sword/gauntlets reused.",
+        "densityGuide": {
+          "referencePPU": 157.82828282828282,
+          "referenceNativeCranialWidth": 140,
+          "sourceNativeCranialWidth": 161,
+          "method": "Native skull/trunk density, same fixed PPU across both phases; never crouch/weapon AABB height."
+        },
+        "timing": "Contact60ms, reaction120ms; default180ms Hurt and shortened120ms resistance both show reaction. Consumer owns neutral return.",
+        "nativePixelResampling": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "motionReview": "Consecutive complete poses inspected statically; finite GIF authored; runtime/Unity review deferred."
+      }
+    },
+    {
+      "name": "ReqMotoNormalDeadS_SW_W20261103V1Selected",
+      "source": "ReqMotoNormalDeadS_SW_W20261103V1Selected-source.png",
+      "weapon": 3,
+      "action": "Dead",
+      "status": "visual-reviewed",
+      "pixelsPerUnit": 142.04545454545453,
+      "figures": [
+        {
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchor": [
+            256,
+            350
+          ],
+          "anchorMethod": "Manual projected pelvis/torso ground support; collapse/fall/rest have distinct intentional origins. Not automated feet-bottom alignment.",
+          "direction": "S",
+          "phase": "collapse",
+          "durationMs": 180,
+          "pixelsPerUnit": 142.04545454545453,
+          "originalSourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png",
+          "originalSourceRect": [
+            58,
+            15,
+            310,
+            297
+          ],
+          "originalSourceAnchor": [
+            214,
+            304
+          ],
+          "sourceRGBAEqualityVerified": true
+        },
+        {
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchor": [
+            768,
+            350
+          ],
+          "anchorMethod": "Manual projected pelvis/torso ground support; collapse/fall/rest have distinct intentional origins. Not automated feet-bottom alignment.",
+          "direction": "S",
+          "phase": "fall-ground-contact",
+          "durationMs": 220,
+          "pixelsPerUnit": 142.04545454545453,
+          "originalSourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png",
+          "originalSourceRect": [
+            430,
+            72,
+            372,
+            248
+          ],
+          "originalSourceAnchor": [
+            602,
+            312
+          ],
+          "sourceRGBAEqualityVerified": true
+        },
+        {
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchor": [
+            1280,
+            350
+          ],
+          "anchorMethod": "Manual projected pelvis/torso ground support; collapse/fall/rest have distinct intentional origins. Not automated feet-bottom alignment.",
+          "direction": "S",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000,
+          "pixelsPerUnit": 142.04545454545453,
+          "originalSourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png",
+          "originalSourceRect": [
+            871,
+            162,
+            409,
+            159
+          ],
+          "originalSourceAnchor": [
+            1080,
+            313
+          ],
+          "sourceRGBAEqualityVerified": true
+        },
+        {
+          "rect": [
+            0,
+            384,
+            512,
+            384
+          ],
+          "anchor": [
+            256,
+            734
+          ],
+          "anchorMethod": "Manual projected pelvis/torso ground support; collapse/fall/rest have distinct intentional origins. Not automated feet-bottom alignment.",
+          "direction": "SW",
+          "phase": "collapse",
+          "durationMs": 180,
+          "pixelsPerUnit": 142.04545454545453,
+          "originalSourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png",
+          "originalSourceRect": [
+            53,
+            322,
+            288,
+            282
+          ],
+          "originalSourceAnchor": [
+            216,
+            596
+          ],
+          "sourceRGBAEqualityVerified": true
+        },
+        {
+          "rect": [
+            512,
+            384,
+            512,
+            384
+          ],
+          "anchor": [
+            768,
+            734
+          ],
+          "anchorMethod": "Manual projected pelvis/torso ground support; collapse/fall/rest have distinct intentional origins. Not automated feet-bottom alignment.",
+          "direction": "SW",
+          "phase": "fall-ground-contact",
+          "durationMs": 220,
+          "pixelsPerUnit": 142.04545454545453,
+          "originalSourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png",
+          "originalSourceRect": [
+            390,
+            371,
+            366,
+            241
+          ],
+          "originalSourceAnchor": [
+            581,
+            604
+          ],
+          "sourceRGBAEqualityVerified": true
+        },
+        {
+          "rect": [
+            1024,
+            384,
+            512,
+            384
+          ],
+          "anchor": [
+            1280,
+            734
+          ],
+          "anchorMethod": "Manual projected pelvis/torso ground support; collapse/fall/rest have distinct intentional origins. Not automated feet-bottom alignment.",
+          "direction": "SW",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000,
+          "pixelsPerUnit": 142.04545454545453,
+          "originalSourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png",
+          "originalSourceRect": [
+            838,
+            457,
+            441,
+            158
+          ],
+          "originalSourceAnchor": [
+            1070,
+            607
+          ],
+          "sourceRGBAEqualityVerified": true
+        },
+        {
+          "rect": [
+            0,
+            768,
+            512,
+            384
+          ],
+          "anchor": [
+            256,
+            1118
+          ],
+          "anchorMethod": "Manual projected pelvis/torso ground support; collapse/fall/rest have distinct intentional origins. Not automated feet-bottom alignment.",
+          "direction": "W",
+          "phase": "collapse",
+          "durationMs": 180,
+          "pixelsPerUnit": 142.04545454545453,
+          "originalSourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png",
+          "originalSourceRect": [
+            52,
+            612,
+            288,
+            285
+          ],
+          "originalSourceAnchor": [
+            221,
+            889
+          ],
+          "sourceRGBAEqualityVerified": true
+        },
+        {
+          "rect": [
+            512,
+            768,
+            512,
+            384
+          ],
+          "anchor": [
+            768,
+            1118
+          ],
+          "anchorMethod": "Manual projected pelvis/torso ground support; collapse/fall/rest have distinct intentional origins. Not automated feet-bottom alignment.",
+          "direction": "W",
+          "phase": "fall-ground-contact",
+          "durationMs": 220,
+          "pixelsPerUnit": 142.04545454545453,
+          "originalSourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png",
+          "originalSourceRect": [
+            390,
+            665,
+            360,
+            244
+          ],
+          "originalSourceAnchor": [
+            575,
+            901
+          ],
+          "sourceRGBAEqualityVerified": true
+        },
+        {
+          "rect": [
+            1024,
+            768,
+            512,
+            384
+          ],
+          "anchor": [
+            1280,
+            1118
+          ],
+          "anchorMethod": "Manual projected pelvis/torso ground support; collapse/fall/rest have distinct intentional origins. Not automated feet-bottom alignment.",
+          "direction": "W",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000,
+          "pixelsPerUnit": 142.04545454545453,
+          "originalSourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png",
+          "originalSourceRect": [
+            834,
+            755,
+            453,
+            149
+          ],
+          "originalSourceAnchor": [
+            1060,
+            896
+          ],
+          "sourceRGBAEqualityVerified": true
+        }
+      ],
+      "review": {
+        "wholeFigures": true,
+        "staticVisualReviewed": true,
+        "loop": false,
+        "expressionDirection": "Approved expressive charming character identity preserved, no speculative face redesign.",
+        "equipment": "Both black/silver circular saws, black gloves and plain strapped boots. NW fall/rest repaired because original corpse saws were cut at native canvas bottom.",
+        "densityGuide": {
+          "referencePPU": 157.82828282828282,
+          "referenceNativeCranialWidth": 140,
+          "originalSourceNativeCranialWidth": 126,
+          "method": "Skull/trunk native raster-density comparison, never normalized by bent/lying body height. Selected repair uses its own native density; no source pixel resampling."
+        },
+        "timing": "180ms collapse,220ms ground fall,1000ms final corpse authored hold; consumer clamps final frame indefinitely, no return Idle/no death loop.",
+        "nativePixelResampling": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "motionReview": "Whole consecutive poses inspected statically, finite GIF authored; Unity/runtime validation deferred."
+      },
+      "sourceArtifacts": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png"
+      ],
+      "generationReferences": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png"
+      ]
+    },
+    {
+      "name": "ReqMotoNormalDeadNW20261103V2Selected",
+      "source": "ReqMotoNormalDeadNW20261103V2Selected-source.png",
+      "weapon": 3,
+      "action": "Dead",
+      "status": "visual-reviewed",
+      "pixelsPerUnit": 142.04545454545453,
+      "figures": [
+        {
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchor": [
+            256,
+            350
+          ],
+          "anchorMethod": "Manual projected pelvis/torso ground support; collapse/fall/rest have distinct intentional origins. Not automated feet-bottom alignment.",
+          "direction": "NW",
+          "phase": "collapse",
+          "durationMs": 180,
+          "pixelsPerUnit": 142.04545454545453,
+          "originalSourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png",
+          "originalSourceRect": [
+            43,
+            894,
+            288,
+            280
+          ],
+          "originalSourceAnchor": [
+            224,
+            1166
+          ],
+          "sourceRGBAEqualityVerified": true
+        },
+        {
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchor": [
+            768,
+            350
+          ],
+          "anchorMethod": "Manual projected pelvis/torso ground support; collapse/fall/rest have distinct intentional origins. Not automated feet-bottom alignment.",
+          "direction": "NW",
+          "phase": "fall-ground-contact",
+          "durationMs": 220,
+          "pixelsPerUnit": 157.82828282828282,
+          "originalSourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadRepair8Figures20261103V2-source.png",
+          "originalSourceRect": [
+            59,
+            446,
+            375,
+            288
+          ],
+          "originalSourceAnchor": [
+            255,
+            726
+          ],
+          "sourceRGBAEqualityVerified": true
+        },
+        {
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchor": [
+            1280,
+            350
+          ],
+          "anchorMethod": "Manual projected pelvis/torso ground support; collapse/fall/rest have distinct intentional origins. Not automated feet-bottom alignment.",
+          "direction": "NW",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000,
+          "pixelsPerUnit": 157.82828282828282,
+          "originalSourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadRepair8Figures20261103V2-source.png",
+          "originalSourceRect": [
+            510,
+            533,
+            468,
+            200
+          ],
+          "originalSourceAnchor": [
+            744,
+            725
+          ],
+          "sourceRGBAEqualityVerified": true
+        }
+      ],
+      "review": {
+        "wholeFigures": true,
+        "staticVisualReviewed": true,
+        "loop": false,
+        "expressionDirection": "Approved expressive charming character identity preserved, no speculative face redesign.",
+        "equipment": "Both black/silver circular saws, black gloves and plain strapped boots. NW fall/rest repaired because original corpse saws were cut at native canvas bottom.",
+        "densityGuide": {
+          "referencePPU": 157.82828282828282,
+          "referenceNativeCranialWidth": 140,
+          "originalSourceNativeCranialWidth": 126,
+          "method": "Skull/trunk native raster-density comparison, never normalized by bent/lying body height. Selected repair uses its own native density; no source pixel resampling."
+        },
+        "timing": "180ms collapse,220ms ground fall,1000ms final corpse authored hold; consumer clamps final frame indefinitely, no return Idle/no death loop.",
+        "nativePixelResampling": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "motionReview": "Whole consecutive poses inspected statically, finite GIF authored; Unity/runtime validation deferred."
+      },
+      "sourceArtifacts": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png",
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadRepair8Figures20261103V2-source.png"
+      ],
+      "generationReferences": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png",
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadRepair8Figures20261103V2-source.png"
+      ]
+    },
+    {
+      "name": "ReqMotoNormalDeadN_NE_E_SE20261103V1",
+      "source": "ReqMotoNormalDeadN_NE_E_SE20261103V1-source.png",
+      "weapon": 3,
+      "action": "Dead",
+      "status": "visual-reviewed",
+      "pixelsPerUnit": 142.04545454545453,
+      "figures": [
+        {
+          "rect": [
+            118,
+            6,
+            274,
+            262
+          ],
+          "anchor": [
+            255,
+            262
+          ],
+          "anchorMethod": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints.",
+          "direction": "N",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            562,
+            55,
+            325,
+            215
+          ],
+          "anchor": [
+            699,
+            264
+          ],
+          "anchorMethod": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints.",
+          "direction": "N",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            1039,
+            136,
+            407,
+            142
+          ],
+          "anchor": [
+            1220,
+            272
+          ],
+          "anchorMethod": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints.",
+          "direction": "N",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        },
+        {
+          "rect": [
+            122,
+            275,
+            247,
+            243
+          ],
+          "anchor": [
+            245,
+            512
+          ],
+          "anchorMethod": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints.",
+          "direction": "NE",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            545,
+            312,
+            329,
+            208
+          ],
+          "anchor": [
+            692,
+            514
+          ],
+          "anchorMethod": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints.",
+          "direction": "NE",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            1040,
+            391,
+            413,
+            138
+          ],
+          "anchor": [
+            1220,
+            523
+          ],
+          "anchorMethod": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints.",
+          "direction": "NE",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        },
+        {
+          "rect": [
+            127,
+            520,
+            214,
+            243
+          ],
+          "anchor": [
+            238,
+            757
+          ],
+          "anchorMethod": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints.",
+          "direction": "E",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            551,
+            559,
+            296,
+            203
+          ],
+          "anchor": [
+            690,
+            756
+          ],
+          "anchorMethod": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints.",
+          "direction": "E",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            1034,
+            631,
+            411,
+            139
+          ],
+          "anchor": [
+            1210,
+            764
+          ],
+          "anchorMethod": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints.",
+          "direction": "E",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        },
+        {
+          "rect": [
+            122,
+            768,
+            223,
+            249
+          ],
+          "anchor": [
+            239,
+            1011
+          ],
+          "anchorMethod": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints.",
+          "direction": "SE",
+          "phase": "collapse",
+          "durationMs": 180
+        },
+        {
+          "rect": [
+            537,
+            805,
+            304,
+            216
+          ],
+          "anchor": [
+            685,
+            1015
+          ],
+          "anchorMethod": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints.",
+          "direction": "SE",
+          "phase": "fall-ground-contact",
+          "durationMs": 220
+        },
+        {
+          "rect": [
+            1028,
+            879,
+            399,
+            138
+          ],
+          "anchor": [
+            1205,
+            1011
+          ],
+          "anchorMethod": "Manual pelvis/torso support on ground, distinct from aerial/sole endpoints.",
+          "direction": "SE",
+          "phase": "corpse-rest-hold",
+          "durationMs": 1000
+        }
+      ],
+      "review": {
+        "wholeFigures": true,
+        "staticVisualReviewed": true,
+        "loop": false,
+        "expressionDirection": "Approved expressive charming character identity preserved, no speculative face redesign.",
+        "equipment": "Both black/silver circular saws, black gloves and plain strapped boots. NW fall/rest repaired because original corpse saws were cut at native canvas bottom.",
+        "densityGuide": {
+          "referencePPU": 157.82828282828282,
+          "referenceNativeCranialWidth": 140,
+          "originalSourceNativeCranialWidth": 126,
+          "method": "Skull/trunk native raster-density comparison, never normalized by bent/lying body height. Selected repair uses its own native density; no source pixel resampling."
+        },
+        "timing": "180ms collapse,220ms ground fall,1000ms final corpse authored hold; consumer clamps final frame indefinitely, no return Idle/no death loop.",
+        "nativePixelResampling": false,
+        "imported": false,
+        "runtimeVerified": false,
+        "motionReview": "Whole consecutive poses inspected statically, finite GIF authored; Unity/runtime validation deferred."
+      },
+      "generationReferences": [
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalDeadN_NE_E_SE20261103V1-source.png",
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalParry8Dirs20261103V1-source.png",
+        "ArtSources/WeaponRedesign20261103/essential-states/ReqMotoNormalDeadS_SW_W_NW20261103V1-source.png"
+      ]
+    }
+  ]
+}

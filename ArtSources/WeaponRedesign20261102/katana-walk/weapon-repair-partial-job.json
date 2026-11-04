@@ -1,0 +1,159 @@
+{
+  "jobs": [
+    {
+      "name": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairPartial",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261102\\katana-walk\\ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairPartial-source.png",
+      "preservedSourceName": "ReqKatanaNormalWalkNE_E_SE20261102WeaponRepairPartial-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 5000,
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            299,
+            438
+          ],
+          "method": "Manual whole-figure pelvis origin and common row ground plane, native integer coordinates"
+        },
+        "1": {
+          "anchor": [
+            892,
+            443
+          ],
+          "method": "Manual whole-figure pelvis origin and common row ground plane, native integer coordinates"
+        },
+        "2": {
+          "anchor": [
+            1525,
+            440
+          ],
+          "method": "Manual whole-figure pelvis origin and common row ground plane, native integer coordinates"
+        },
+        "3": {
+          "anchor": [
+            2114,
+            440
+          ],
+          "method": "Manual whole-figure pelvis origin and common row ground plane, native integer coordinates"
+        },
+        "4": {
+          "anchor": [
+            238,
+            912
+          ],
+          "method": "Manual whole-figure pelvis origin and common row ground plane, native integer coordinates"
+        },
+        "5": {
+          "anchor": [
+            863,
+            971
+          ],
+          "method": "Manual whole-figure pelvis origin and common row ground plane, native integer coordinates"
+        },
+        "6": {
+          "anchor": [
+            1454,
+            969
+          ],
+          "method": "Manual whole-figure pelvis origin and common row ground plane, native integer coordinates"
+        },
+        "7": {
+          "anchor": [
+            2084,
+            971
+          ],
+          "method": "Manual whole-figure pelvis origin and common row ground plane, native integer coordinates"
+        },
+        "8": {
+          "anchor": [
+            244,
+            1496
+          ],
+          "method": "Manual whole-figure pelvis origin and common row ground plane, native integer coordinates"
+        },
+        "9": {
+          "anchor": [
+            871,
+            1502
+          ],
+          "method": "Manual whole-figure pelvis origin and common row ground plane, native integer coordinates"
+        },
+        "10": {
+          "anchor": [
+            1451,
+            1502
+          ],
+          "method": "Manual whole-figure pelvis origin and common row ground plane, native integer coordinates"
+        },
+        "11": {
+          "anchor": [
+            2057,
+            1500
+          ],
+          "method": "Manual whole-figure pelvis origin and common row ground plane, native integer coordinates"
+        }
+      },
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "direction": 5,
+          "action": "Walk",
+          "loop": true,
+          "durationMs": [
+            100,
+            100,
+            100,
+            100
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 6,
+          "action": "Walk",
+          "loop": true,
+          "durationMs": [
+            100,
+            100,
+            100,
+            100
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 7,
+          "action": "Walk",
+          "loop": true,
+          "durationMs": [
+            100,
+            100,
+            100,
+            100
+          ]
+        }
+      ]
+    }
+  ],
+  "stagingOnly": true,
+  "neverAutoImport": true
+}

@@ -1,0 +1,69 @@
+{
+  "jobs": [
+    {
+      "name": "ReqFistsNormalWalkNW20261102NaturalV2Selected",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261102\\punhos-walk\\ReqFistsNormalWalkNW_W_SW20261102NaturalV2Nposes-source.png",
+      "preservedSourceName": "ReqFistsNormalWalkNW_W_SW20261102NaturalV2Nposes-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 5000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 3,
+          "action": "Walk",
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "durationMs": [
+            100,
+            100,
+            100,
+            100
+          ],
+          "loop": true
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            180,
+            367
+          ],
+          "method": "Measured pelvis/body-axis projection onto shared row ground plane, independent of which boot is raised; full source RGBA unchanged",
+          "uncertaintyPixels": 4
+        },
+        "1": {
+          "anchor": [
+            544,
+            367
+          ],
+          "method": "Measured pelvis/body-axis projection onto shared row ground plane, independent of which boot is raised; full source RGBA unchanged",
+          "uncertaintyPixels": 4
+        },
+        "2": {
+          "anchor": [
+            907,
+            367
+          ],
+          "method": "Measured pelvis/body-axis projection onto shared row ground plane, independent of which boot is raised; full source RGBA unchanged",
+          "uncertaintyPixels": 4
+        },
+        "3": {
+          "anchor": [
+            1270,
+            367
+          ],
+          "method": "Measured pelvis/body-axis projection onto shared row ground plane, independent of which boot is raised; full source RGBA unchanged",
+          "uncertaintyPixels": 4
+        }
+      }
+    }
+  ]
+}

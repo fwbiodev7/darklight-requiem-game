@@ -1,0 +1,19 @@
+{
+  "status": "rejected-for-integration",
+  "direction": "S",
+  "action": "Walk",
+  "attempts": 2,
+  "v1": "ReqFistsNormalWalkS20261028V1-source.png",
+  "v2": "ReqFistsNormalWalkS20261028V2-source.png",
+  "diagnosis": [
+    "V1: all eight poses lead with anatomical left/viewer-right boot; no opposite contact.",
+    "V2 focal repair: same boot still leads, and chain changes side in second half; torso asymmetry mirrored.",
+    "Correct identity/equipment does not make these a completed gait cycle. Neither source is in a catalog fragment or staged active image."
+  ],
+  "legacyPoseSearch": [
+    "RequiemLivingMotionCardinal20261017 inspected whole: one opposed step only, no full gait.",
+    "RequiemWalkConsistentKatanaCardinal20261017 inspected whole: South repeats same leading boot.",
+    "RockWalkKatanaYoung inspected whole: South repeats same leading boot."
+  ],
+  "next": "Walk8 remains pending; seek an anatomically valid complete-figure pose guide before another generation. No legacy material reactivated."
+}

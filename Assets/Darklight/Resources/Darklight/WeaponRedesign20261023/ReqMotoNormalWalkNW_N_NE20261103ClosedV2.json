@@ -1,0 +1,729 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqMotoNormalWalkNW_N_NE20261103ClosedV2.png",
+  "imageSha256": "841b8d3663229b05d98bc57e916432eef6b730dd34b7f7f2994004e34a18a5f1",
+  "nativeSize": [
+    1700,
+    1176
+  ],
+  "sourceSize": [
+    1442,
+    1091
+  ],
+  "pixelsPerUnit": 144,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261103/moto-walk-close/ReqMotoNormalWalkNW_N_NE20261103V2-source.png",
+  "sourceSha256": "2a42ec990bc9ed2c0e1c3cd79c43079a061d5f02685eb6786e0ef31ae2d15657",
+  "frames": [
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_00",
+      "rect": [
+        0,
+        0,
+        425,
+        392
+      ],
+      "pivot": [
+        0.5388235294117647,
+        0.1096938775510204
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        9,
+        361,
+        359
+      ],
+      "sourceAnchor": [
+        184,
+        341
+      ],
+      "sourcePackingAnchor": [
+        167,
+        339
+      ],
+      "supportGuide": {
+        "anchor": [
+          184,
+          341
+        ],
+        "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        45,
+        17
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 144
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_01",
+      "rect": [
+        425,
+        0,
+        425,
+        392
+      ],
+      "pivot": [
+        0.5552941176470588,
+        0.1096938775510204
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A_low",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        361,
+        0,
+        360,
+        370
+      ],
+      "sourceAnchor": [
+        547,
+        341
+      ],
+      "sourcePackingAnchor": [
+        523,
+        339
+      ],
+      "supportGuide": {
+        "anchor": [
+          547,
+          341
+        ],
+        "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        50,
+        8
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 144
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_02",
+      "rect": [
+        850,
+        0,
+        425,
+        392
+      ],
+      "pivot": [
+        0.46352941176470586,
+        0.1096938775510204
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B_opposite",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        721,
+        9,
+        358,
+        360
+      ],
+      "sourceAnchor": [
+        907,
+        341
+      ],
+      "sourcePackingAnchor": [
+        922,
+        339
+      ],
+      "supportGuide": {
+        "anchor": [
+          907,
+          341
+        ],
+        "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        11,
+        17
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 144
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_03",
+      "rect": [
+        1275,
+        0,
+        425,
+        392
+      ],
+      "pivot": [
+        0.46588235294117647,
+        0.1096938775510204
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "NW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B_low",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1079,
+        0,
+        363,
+        371
+      ],
+      "sourceAnchor": [
+        1267,
+        341
+      ],
+      "sourcePackingAnchor": [
+        1281,
+        339
+      ],
+      "supportGuide": {
+        "anchor": [
+          1267,
+          341
+        ],
+        "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        10,
+        8
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 144
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_04",
+      "rect": [
+        0,
+        392,
+        425,
+        392
+      ],
+      "pivot": [
+        0.5458823529411765,
+        0.11224489795918367
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 4,
+      "sourceRect": [
+        0,
+        366,
+        360,
+        366
+      ],
+      "sourceAnchor": [
+        179,
+        697
+      ],
+      "sourcePackingAnchor": [
+        159,
+        696
+      ],
+      "supportGuide": {
+        "anchor": [
+          179,
+          697
+        ],
+        "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        53,
+        17
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 144
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_05",
+      "rect": [
+        425,
+        392,
+        425,
+        392
+      ],
+      "pivot": [
+        0.5458823529411765,
+        0.11224489795918367
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A_low",
+      "sourceFrameIndex": 5,
+      "sourceRect": [
+        360,
+        367,
+        360,
+        365
+      ],
+      "sourceAnchor": [
+        540,
+        697
+      ],
+      "sourcePackingAnchor": [
+        520,
+        696
+      ],
+      "supportGuide": {
+        "anchor": [
+          540,
+          697
+        ],
+        "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        52,
+        18
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 144
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_06",
+      "rect": [
+        850,
+        392,
+        425,
+        392
+      ],
+      "pivot": [
+        0.4423529411764706,
+        0.11224489795918367
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B_opposite",
+      "sourceFrameIndex": 6,
+      "sourceRect": [
+        720,
+        364,
+        362,
+        367
+      ],
+      "sourceAnchor": [
+        900,
+        697
+      ],
+      "sourcePackingAnchor": [
+        924,
+        696
+      ],
+      "supportGuide": {
+        "anchor": [
+          900,
+          697
+        ],
+        "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        8,
+        15
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 144
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_07",
+      "rect": [
+        1275,
+        392,
+        425,
+        392
+      ],
+      "pivot": [
+        0.44941176470588234,
+        0.11224489795918367
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B_low",
+      "sourceFrameIndex": 7,
+      "sourceRect": [
+        1082,
+        366,
+        360,
+        361
+      ],
+      "sourceAnchor": [
+        1263,
+        697
+      ],
+      "sourcePackingAnchor": [
+        1284,
+        696
+      ],
+      "supportGuide": {
+        "anchor": [
+          1263,
+          697
+        ],
+        "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        10,
+        17
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 144
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_08",
+      "rect": [
+        0,
+        784,
+        425,
+        392
+      ],
+      "pivot": [
+        0.5552941176470588,
+        0.11479591836734694
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        0,
+        730,
+        361,
+        361
+      ],
+      "sourceAnchor": [
+        187,
+        1057
+      ],
+      "sourcePackingAnchor": [
+        163,
+        1057
+      ],
+      "supportGuide": {
+        "anchor": [
+          187,
+          1057
+        ],
+        "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        49,
+        20
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 144
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_09",
+      "rect": [
+        425,
+        784,
+        425,
+        392
+      ],
+      "pivot": [
+        0.5741176470588235,
+        0.11479591836734694
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A_low",
+      "sourceFrameIndex": 9,
+      "sourceRect": [
+        360,
+        726,
+        363,
+        365
+      ],
+      "sourceAnchor": [
+        550,
+        1057
+      ],
+      "sourcePackingAnchor": [
+        518,
+        1057
+      ],
+      "supportGuide": {
+        "anchor": [
+          550,
+          1057
+        ],
+        "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        54,
+        16
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 144
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_10",
+      "rect": [
+        850,
+        784,
+        425,
+        392
+      ],
+      "pivot": [
+        0.4776470588235294,
+        0.11479591836734694
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B_opposite",
+      "sourceFrameIndex": 10,
+      "sourceRect": [
+        721,
+        730,
+        363,
+        361
+      ],
+      "sourceAnchor": [
+        906,
+        1057
+      ],
+      "sourcePackingAnchor": [
+        915,
+        1057
+      ],
+      "supportGuide": {
+        "anchor": [
+          906,
+          1057
+        ],
+        "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        18,
+        20
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 144
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_11",
+      "rect": [
+        1275,
+        784,
+        425,
+        392
+      ],
+      "pivot": [
+        0.48,
+        0.10714285714285714
+      ],
+      "durationMs": 120,
+      "action": "walk",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B_low",
+      "sourceFrameIndex": 11,
+      "sourceRect": [
+        1081,
+        723,
+        360,
+        368
+      ],
+      "sourceAnchor": [
+        1273,
+        1057
+      ],
+      "sourcePackingAnchor": [
+        1281,
+        1054
+      ],
+      "supportGuide": {
+        "anchor": [
+          1273,
+          1057
+        ],
+        "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+        "uncertaintyPixels": 4
+      },
+      "sourceOffsetInFrame": [
+        12,
+        16
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 144
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_NW",
+      "frames": [
+        "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_00",
+        "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_01",
+        "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_02",
+        "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "walk_N",
+      "frames": [
+        "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_04",
+        "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_05",
+        "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_06",
+        "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_07"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "walk_NE",
+      "frames": [
+        "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_08",
+        "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_09",
+        "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_10",
+        "Redesign_ReqMotoNormalWalkNW_N_NE20261103ClosedV2_11"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "walk_NW",
+    "walk_N",
+    "walk_NE"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 830170,
+  "packedPixels": 830170,
+  "originalSourcePixels": 830170,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "excludedSourceFrameIndices": [],
+  "excludedSourceReason": "",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 743052,
+    "farBeyond16pxPixels": 93790,
+    "farBeyond16pxMaxAlpha": 2,
+    "farBeyond16pxOpaqueEquivalent": 368.16470588235296,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Action phases are complete authored figures; legacy contact timing is preserved by exact source-name mappings.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ],
+  "presentation": "OnFoot",
+  "worldVisualScale": 1.325,
+  "motorcycleContext": "onFoot-DualSaws",
+  "framePixelsPerUnit": [
+    144,
+    144,
+    144,
+    144,
+    144,
+    144,
+    144,
+    144,
+    144,
+    144,
+    144,
+    144
+  ],
+  "pixelsPerUnitCalibration": {
+    "method": "One uniform source density across all12 figures. Invariant crown-to-waist and compact head measure, never per-frame silhouette or leg flexion. No resampling.",
+    "reference": "ReqMotoNormalWalkS20261103ClosedV1",
+    "referenceCrownToWaistPixels": 178,
+    "referencePixelsPerUnit": 195.95959595959596,
+    "northCrownToWaistPixelsApprox": [
+      130,
+      132,
+      131
+    ],
+    "pixelsPerUnit": 144,
+    "uncertaintyPixels": 4
+  },
+  "review": {
+    "wholeSourceSeen": true,
+    "nearestWholeFiguresSeen": true,
+    "staticContactSeen": true,
+    "continuousMotionViewed": false,
+    "imported": false,
+    "runtimeVerified": false,
+    "humanApproved": false
+  },
+  "reviewNotes": [
+    "Explicit viewer-left/viewer-right bottom heel alternation retained in three rear-camera rows. Uniform144PPU all12, not silhouette fit.",
+    "Native/worldscale contact and nearest2x full figures inspected: supports visibly alternate left-right, low passage, intact two saws/hands, rear belt and same camera throughout each row. One density144PPU for all12 preserves head/torso scale; no per-cell fit."
+  ],
+  "integrationBlocked": false,
+  "phases": [
+    "contact_A",
+    "passing_A_low",
+    "contact_B_opposite",
+    "passing_B_low"
+  ]
+}

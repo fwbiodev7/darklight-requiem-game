@@ -1,0 +1,165 @@
+{
+  "name": "ReqMotoNormalWalkNW_N_NE20261103ClosedV2",
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261103\\moto-walk-close\\ReqMotoNormalWalkNW_N_NE20261103V2-source.png",
+  "preservedSourceName": "ReqMotoNormalWalkNW_N_NE20261103V2-source.png",
+  "skin": 0,
+  "weapon": 3,
+  "form": 0,
+  "columns": 4,
+  "sourceRows": 3,
+  "minimumArea": 5000,
+  "rows": [
+    {
+      "sourceRow": 0,
+      "sourceIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "direction": 3,
+      "action": "Walk",
+      "loop": true,
+      "durationMs": [
+        120,
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "sourceRow": 1,
+      "sourceIndices": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "direction": 4,
+      "action": "Walk",
+      "loop": true,
+      "durationMs": [
+        120,
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "sourceRow": 2,
+      "sourceIndices": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "direction": 5,
+      "action": "Walk",
+      "loop": true,
+      "durationMs": [
+        120,
+        120,
+        120,
+        120
+      ]
+    }
+  ],
+  "supportAnchors": {
+    "0": {
+      "anchor": [
+        184,
+        341
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "1": {
+      "anchor": [
+        547,
+        341
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "2": {
+      "anchor": [
+        907,
+        341
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "3": {
+      "anchor": [
+        1267,
+        341
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "4": {
+      "anchor": [
+        179,
+        697
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "5": {
+      "anchor": [
+        540,
+        697
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "6": {
+      "anchor": [
+        900,
+        697
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "7": {
+      "anchor": [
+        1263,
+        697
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "8": {
+      "anchor": [
+        187,
+        1057
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "9": {
+      "anchor": [
+        550,
+        1057
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "10": {
+      "anchor": [
+        906,
+        1057
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    },
+    "11": {
+      "anchor": [
+        1273,
+        1057
+      ],
+      "method": "Common ground, manually projected waist/root for each entire figure; no pixels moved inside drawing",
+      "uncertaintyPixels": 4
+    }
+  }
+}

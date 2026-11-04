@@ -1,0 +1,11 @@
+# Retomar DARKLIGHT
+
+1. Ler `CONTINUIDADE-DARKLIGHT-PVP.md`; não refazer inventário completo nem descartar fontes aprovadas.
+2. **Minecraft PAUSADO; prioridade atual: jogo Unity.** O último pedido explícito substituiu a ordem anterior Minecraft32x→Unity. Prompt Minecraft para retomada futura: `C:/Users/Usuario/.codex/attachments/9b9661af-d431-4978-8f29-2cd857947e6e/Texto colado.txt`. Prompt Unity ativo: `C:/Users/Usuario/.codex/attachments/7562e94d-dd4b-4695-85de-4f56fc25c19d/Texto colado.txt`.
+3. Produção existente em `work/minecraft-darklight-v6/`. Primeiro corrigir cinco PNGs das espadas para ponta superior esquerda e tamanho equipado maior, mantendo o cabo à direita e sem quebrar o modelo. Preservar originais. Arco deve manter os quatro estados alinhados.
+4. Minecraft1.8.9 usa texturas `wood_sword.png` e `gold_sword.png`, embora modelos se chamem `wooden_sword.json` e `golden_sword.json`; não criar PNGs ignorados pelo cliente para reproduzir literalmente o nome do prompt.
+5. Revisar os refinamentos já existentes de HUD/partículas, a compatibilidade UV e a cobertura32x. Atualizar os checkpoints a cada etapa. Renders simulados devem continuar identificados.
+6. Validar com o Python que possui Pillow/numpy: `C:/Users/Usuario/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe`, script `work/minecraft-darklight-v6/src/validate_pack.py`. Não usar `--write-models` em scripts de prévia sem conferir se seus presets incorporam as correções mais recentes.
+7. Gerar ZIPs em `outputs/minecraft-darklight-v6/`, com `pack.mcmeta` na raiz e `pack_format:1`. Exportar fontes, scripts, manifesto, relatório, prévias e créditos. Nunca incluir `qa/client-isolated`, binários Minecraft/Java ou V5 como arte nova.
+8. O teste final no cliente está pendente após Esc do usuário. Não substituir essa evidência por mockup. Não executar música nem alterar o perfil principal.
+9. Retomar Unity agora pelas pendências/matriz existentes e pelo prompt preservado, sem contar clips de seleção/recolorações como animações novas. Planejamento futuro deve usar Fabius/Lucius; nenhuma renomeação de scripts/saves/cenas agora. Os passos3–8 deste documento ficam reservados ao Minecraft pausado.

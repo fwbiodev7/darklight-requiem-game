@@ -1,0 +1,83 @@
+{
+  "jobs": [
+    {
+      "name": "ReqFistsNormalDodgeE_SE20261101V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261101\\punhos-dodge\\ReqFistsNormalDodgeE_SE20261101V1-source.png",
+      "preservedSourceName": "ReqFistsNormalDodgeE_SE20261101V1-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 3,
+      "sourceRows": 2,
+      "minimumArea": 8000,
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            302,
+            487
+          ],
+          "method": "Whole-source visual midpoint of two complete supporting claw-boots, projected ground plane, uncertainty6px; excludes coat/gauntlet bounds"
+        },
+        "1": {
+          "anchor": [
+            801,
+            482
+          ],
+          "method": "Whole-source visual midpoint of two complete supporting claw-boots, projected ground plane, uncertainty6px; excludes coat/gauntlet bounds"
+        },
+        "2": {
+          "anchor": [
+            1325,
+            487
+          ],
+          "method": "Whole-source visual midpoint of two complete supporting claw-boots, projected ground plane, uncertainty6px; excludes coat/gauntlet bounds"
+        },
+        "3": {
+          "anchor": [
+            282,
+            979
+          ],
+          "method": "Whole-source visual midpoint of two complete supporting claw-boots, projected ground plane, uncertainty6px; excludes coat/gauntlet bounds"
+        },
+        "4": {
+          "anchor": [
+            803,
+            971
+          ],
+          "method": "Whole-source visual midpoint of two complete supporting claw-boots, projected ground plane, uncertainty6px; excludes coat/gauntlet bounds"
+        },
+        "5": {
+          "anchor": [
+            1315,
+            979
+          ],
+          "method": "Whole-source visual midpoint of two complete supporting claw-boots, projected ground plane, uncertainty6px; excludes coat/gauntlet bounds"
+        }
+      },
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 6,
+          "action": "Dodge",
+          "durationMs": [
+            40,
+            150,
+            40
+          ],
+          "loop": false
+        },
+        {
+          "sourceRow": 1,
+          "direction": 7,
+          "action": "Dodge",
+          "durationMs": [
+            40,
+            150,
+            40
+          ],
+          "loop": false
+        }
+      ]
+    }
+  ]
+}

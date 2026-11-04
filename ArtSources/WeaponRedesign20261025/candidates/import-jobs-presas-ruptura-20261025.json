@@ -1,0 +1,138 @@
+{
+  "jobs": [
+    {
+      "name": "ReqDaggersRupturaPresas1S_SW_W20261025V4",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261025\\candidates\\ReqDaggersRupturaPresas1S_SW_W20261025V4-source.png",
+      "skin": 0,
+      "weapon": 1,
+      "form": 1,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 15000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 0,
+          "action": "Attack",
+          "attackKey": "Presas1",
+          "sourceSpriteNames": [
+            "Today_RequiemAttackDaggersYoungCardinal_0",
+            "Today_RequiemAttackDaggersYoungCardinal_1",
+            "Today_RequiemAttackDaggersYoungCardinal_2",
+            "Today_RequiemAttackDaggersYoungCardinal_3"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "direction": 1,
+          "action": "Attack",
+          "attackKey": "Presas1",
+          "sourceSpriteNames": [
+            "Today_RequiemAttackDaggersYoungDiagonal_0",
+            "Today_RequiemAttackDaggersYoungDiagonal_1",
+            "Today_RequiemAttackDaggersYoungDiagonal_2",
+            "Today_RequiemAttackDaggersYoungDiagonal_3"
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "direction": 2,
+          "action": "Attack",
+          "attackKey": "Presas1",
+          "sourceSpriteNames": [
+            "Today_RequiemAttackDaggersYoungCardinal_4",
+            "Today_RequiemAttackDaggersYoungCardinal_5",
+            "Today_RequiemAttackDaggersYoungCardinal_6",
+            "Today_RequiemAttackDaggersYoungCardinal_7"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            202,
+            355
+          ],
+          "method": "Inspected projected midpoint between both boot supports; baseline at lower boot sole, not raised blade bounds."
+        },
+        "1": {
+          "anchor": [
+            591,
+            356
+          ],
+          "method": "Inspected projected midpoint between both boot supports; baseline at lower boot sole, not raised blade bounds."
+        },
+        "2": {
+          "anchor": [
+            954,
+            355
+          ],
+          "method": "Inspected projected midpoint between both boot supports; baseline at lower boot sole, not raised blade bounds."
+        },
+        "3": {
+          "anchor": [
+            1335,
+            356
+          ],
+          "method": "Inspected projected midpoint between both boot supports; baseline at lower boot sole, not raised blade bounds."
+        },
+        "4": {
+          "anchor": [
+            201,
+            684
+          ],
+          "method": "Inspected projected midpoint between both boot supports; baseline at lower boot sole, not raised blade bounds."
+        },
+        "5": {
+          "anchor": [
+            604,
+            674
+          ],
+          "method": "Inspected projected midpoint between both boot supports; baseline at lower boot sole, not raised blade bounds."
+        },
+        "6": {
+          "anchor": [
+            968,
+            678
+          ],
+          "method": "Inspected projected midpoint between both boot supports; baseline at lower boot sole, not raised blade bounds."
+        },
+        "7": {
+          "anchor": [
+            1370,
+            678
+          ],
+          "method": "Inspected projected midpoint between both boot supports; baseline at lower boot sole, not raised blade bounds."
+        },
+        "8": {
+          "anchor": [
+            201,
+            995
+          ],
+          "method": "Inspected projected midpoint between both boot supports; baseline at lower boot sole, not raised blade bounds."
+        },
+        "9": {
+          "anchor": [
+            591,
+            983
+          ],
+          "method": "Inspected projected midpoint between both boot supports; baseline at lower boot sole, not raised blade bounds."
+        },
+        "10": {
+          "anchor": [
+            998,
+            990
+          ],
+          "method": "Inspected projected midpoint between both boot supports; baseline at lower boot sole, not raised blade bounds."
+        },
+        "11": {
+          "anchor": [
+            1350,
+            985
+          ],
+          "method": "Inspected projected midpoint between both boot supports; baseline at lower boot sole, not raised blade bounds."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "ReqMotoNormalWalkWE20261103V3Candidate",
+  "source": "ReqMotoNormalWalkWE20261103V3-source.png",
+  "sourceRows": 2,
+  "directions": [
+    "W",
+    "E"
+  ],
+  "sourceIndices": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6,
+      7
+    ]
+  ],
+  "frameBodyHeightPixels": [],
+  "densityPixelsPerUnit": [
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200
+  ],
+  "densityCalibration": {
+    "method": "Candidate REVIEW ONLY, one uniform200PPU from compact head and crown-to-waist approximately182px versus S178px/195.96PPU. No per-pose silhouette fit.",
+    "provisional": true,
+    "integrationBlocked": true
+  },
+  "nearestWholeFiguresSeen": false,
+  "staticContactSeen": true,
+  "reviewNotes": [
+    "Whole-source visual review: true side camera and uniform source scale improved. Contact0/2 repeats dominant leg; passing1/3 differ but do not substitute missing opposite contact. Candidate only, do not integrate."
+  ]
+}

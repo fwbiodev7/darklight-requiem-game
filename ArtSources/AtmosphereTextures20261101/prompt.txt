@@ -1,0 +1,12 @@
+Use case: stylized-concept.
+Asset type: a production atlas of SIX separate standalone atmospheric overlay textures for a dark fantasy 2D game, TRUE TRANSPARENT RGBA, no scene.
+Input images: the two supplied forest / gothic ruins images are STYLE REFERENCES ONLY. Extract their cold blue-gray moonlight, subtle teal-gray mist, luminous soft volumetric quality and cinematic dark-fantasy mood. Do not reproduce their scenery.
+Primary request: create one transparent 3 columns by 2 rows atlas of six COMPLETE isolated SOFT effects. Each effect stays entirely inside its own cell with generous fully transparent margins and clear transparent gutters. Canvas landscape 1536x1024 if possible, each cell 512x512; no drawn grid.
+TOP ROW left: low thin elongated ground-mist ribbon, drifting layered delicate pale cold blue-gray wisps.
+TOP ROW center: layered gently dense fogbank, wide soft irregular elongated curls, still translucent with no white opaque core.
+TOP ROW right: delicate wispy drifting veil, airy blue-gray tendrils and gaps.
+BOTTOM ROW left: broad DIAGONAL cold moonbeam, angled upper-left to lower-right, a translucent softly feathered volumetric shaft fading completely at both ends.
+BOTTOM ROW center: several NARROW parallel angled moon rays, each soft fading at both ends, complete rays inside the cell.
+BOTTOM ROW right: faint pale-blue luminous atmospheric haze, a broad irregular diffused veil with delicate subtle streaks.
+Style: deliberately SMOOTH diffuse atmosphere textures, NOT pixel sprites and NOT hard-edged particles. Quiet mature gothic atmosphere. Cool desaturated palette inspired by references, slate blue #537580, moon blue #9ABCC8, pale moonlight #C7E0E8, with wispy translucent alpha. These layers will be drawn at low opacity beneath gameplay actors. Need actual internal opacity variation, airy readable effects with almost no fully opaque pixels.
+Constraints: six whole distinct motifs only; ALL outside regions and gutters are fully transparent alpha zero; soft edges become transparent before each cell boundary. NO full-frame wash, NO dark or colored background, NO painted checkerboard, NO giant opaque white patches, NO hard rectangles, NO frames, NO panel labels, NO text, NO scenery, NO moon disk, NO trees, NO castle, NO rocks, NO characters. Keep each effect entirely self-contained; do not bridge the six cells.

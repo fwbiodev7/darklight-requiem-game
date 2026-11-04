@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqMotoNormalWalkE20261103EquipmentEditV1.png",
+  "imageSha256": "ede066acdc6e1ccf8a69505cb52d790fcd8d392f37027707e997e8296e1be83e",
+  "nativeSize": [
+    1860,
+    423
+  ],
+  "sourceSize": [
+    1860,
+    846
+  ],
+  "pixelsPerUnit": 172.72727272727272,
+  "framePixelsPerUnit": [
+    172.72727272727272,
+    172.72727272727272,
+    172.72727272727272,
+    172.72727272727272
+  ],
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261103/moto-e-equipment-edit/ReqMotoNormalWalkE20261103EquipmentEditV1-source.png",
+  "sourceSha256": "9ba68c4250ebeba948cd7a1447062b81bbf22161b090e993787f416880addb15",
+  "worldVisualScale": 1.325,
+  "frames": [
+    {
+      "id": "Redesign_ReqMotoNormalWalkE20261103EquipmentEditV1_00",
+      "rect": [
+        0,
+        0,
+        465,
+        423
+      ],
+      "pivot": [
+        0.40860215053763443,
+        0.09692671394799057
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        0,
+        465,
+        423
+      ],
+      "sourceAnchor": [
+        190,
+        382
+      ],
+      "sourcePackingAnchor": [
+        190,
+        382
+      ],
+      "sourceScale": 1,
+      "visibleAlphaBoundsInFrame": [
+        27,
+        40,
+        278,
+        383
+      ],
+      "supportGuide": {
+        "anchor": [
+          190,
+          382
+        ],
+        "method": "Manual vertical projection of pelvis to grounded-sole line; no anatomy/pixels changed."
+      },
+      "legReview": "Near leg leads; far leg trails; both contact low."
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkE20261103EquipmentEditV1_01",
+      "rect": [
+        465,
+        0,
+        465,
+        423
+      ],
+      "pivot": [
+        0.421505376344086,
+        0.09692671394799057
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        465,
+        0,
+        465,
+        423
+      ],
+      "sourceAnchor": [
+        661,
+        382
+      ],
+      "sourcePackingAnchor": [
+        661,
+        382
+      ],
+      "sourceScale": 1,
+      "visibleAlphaBoundsInFrame": [
+        34,
+        37,
+        286,
+        383
+      ],
+      "supportGuide": {
+        "anchor": [
+          661,
+          382
+        ],
+        "method": "Manual vertical projection of pelvis to grounded-sole line; no anatomy/pixels changed."
+      },
+      "legReview": "Near leg planted; far leg passes low behind."
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkE20261103EquipmentEditV1_02",
+      "rect": [
+        930,
+        0,
+        465,
+        423
+      ],
+      "pivot": [
+        0.6451612903225806,
+        0.10874704491725773
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        930,
+        0,
+        465,
+        423
+      ],
+      "sourceAnchor": [
+        1230,
+        377
+      ],
+      "sourcePackingAnchor": [
+        1230,
+        377
+      ],
+      "sourceScale": 1,
+      "visibleAlphaBoundsInFrame": [
+        100,
+        36,
+        380,
+        378
+      ],
+      "supportGuide": {
+        "anchor": [
+          1230,
+          377
+        ],
+        "method": "Manual vertical projection of pelvis to grounded-sole line; no anatomy/pixels changed."
+      },
+      "legReview": "Near leg trails; far leg leads; contact opposite half."
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkE20261103EquipmentEditV1_03",
+      "rect": [
+        1395,
+        0,
+        465,
+        423
+      ],
+      "pivot": [
+        0.46881720430107526,
+        0.10401891252955087
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1395,
+        0,
+        465,
+        423
+      ],
+      "sourceAnchor": [
+        1613,
+        379
+      ],
+      "sourcePackingAnchor": [
+        1613,
+        379
+      ],
+      "sourceScale": 1,
+      "visibleAlphaBoundsInFrame": [
+        20,
+        36,
+        288,
+        380
+      ],
+      "supportGuide": {
+        "anchor": [
+          1613,
+          379
+        ],
+        "method": "Manual vertical projection of pelvis to grounded-sole line; no anatomy/pixels changed."
+      },
+      "legReview": "Far leg planted; near leg passes low behind."
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_E",
+      "frames": [
+        "Redesign_ReqMotoNormalWalkE20261103EquipmentEditV1_00",
+        "Redesign_ReqMotoNormalWalkE20261103EquipmentEditV1_01",
+        "Redesign_ReqMotoNormalWalkE20261103EquipmentEditV1_02",
+        "Redesign_ReqMotoNormalWalkE20261103EquipmentEditV1_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "walk_E"
+  ],
+  "quality": {
+    "alphaThreshold": 8,
+    "maxColors": 200000,
+    "maxHeightRatio": 1.1
+  },
+  "logicalResolution": "Native generated raster; logical pixel grid unverified",
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "notes": [
+    "All selected figures are whole source cells; RGBA unchanged including low-alpha source dust.",
+    "Four source target poses retained by integrated image edit; zero resampling, mirror or anatomical assembly.",
+    "Uniform PPU calibrated to median native crown-to-ground body height342px / canonical1.98; WorldVisualScale1.325 preserved.",
+    "Second saw partially occluded by body/coat during arm-back phases, handle remains hand-held.",
+    "Not imported or runtime-verified."
+  ],
+  "visualReview": {
+    "wholeFigures": true,
+    "nativeContactSeen": true,
+    "integerZoomSeen": true,
+    "continuousPlaybackSeen": false,
+    "gaitChainReviewed": true,
+    "camera": "E head consistent; natural original shoulder swing retained",
+    "eyes": "Dark-red visible, skin clean",
+    "equipment": "Two hand-held saws; rear saw partly occluded in B phases",
+    "anatomy": "Compact body and low foot clearance; no resampling or member assembly",
+    "approval": "Agent static review; no human approval implied"
+  }
+}

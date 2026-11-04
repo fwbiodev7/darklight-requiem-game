@@ -1,0 +1,131 @@
+{
+  "jobs": [
+    {
+      "name": "ReqKatanaNormalDodgeS_SW_W20261101V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261101\\katana-dodge\\ReqKatanaNormalDodgeS_SW_W20261101V1-source.png",
+      "preservedSourceName": "ReqKatanaNormalDodgeS_SW_W20261101V1-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 3,
+      "sourceRows": 3,
+      "minimumArea": 10000,
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            281,
+            343
+          ],
+          "method": "Manual midpoint of two complete boot supports; south anticipation"
+        },
+        "1": {
+          "anchor": [
+            810,
+            353
+          ],
+          "method": "Manual support midpoint; south foreshortened low lunge, front boot grounded"
+        },
+        "2": {
+          "anchor": [
+            1311,
+            340
+          ],
+          "method": "Manual midpoint of two complete boot supports; south recovery"
+        },
+        "3": {
+          "anchor": [
+            286,
+            673
+          ],
+          "method": "Manual midpoint of two complete boot supports; southwest anticipation"
+        },
+        "4": {
+          "anchor": [
+            786,
+            673
+          ],
+          "method": "Manual midpoint front planted heel and rear pushing toe; southwest low lunge"
+        },
+        "5": {
+          "anchor": [
+            1323,
+            676
+          ],
+          "method": "Manual midpoint of two complete boot supports; southwest recovery"
+        },
+        "6": {
+          "anchor": [
+            241,
+            986
+          ],
+          "method": "Manual midpoint of two complete boot supports; west anticipation"
+        },
+        "7": {
+          "anchor": [
+            778,
+            985
+          ],
+          "method": "Manual midpoint front planted heel and rear pushing toe; west low lunge"
+        },
+        "8": {
+          "anchor": [
+            1295,
+            981
+          ],
+          "method": "Manual midpoint of two complete boot supports; west recovery"
+        }
+      },
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2
+          ],
+          "direction": 0,
+          "action": "Dodge",
+          "loop": false,
+          "durationMs": [
+            40,
+            150,
+            40
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            3,
+            4,
+            5
+          ],
+          "direction": 1,
+          "action": "Dodge",
+          "loop": false,
+          "durationMs": [
+            40,
+            150,
+            40
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            6,
+            7,
+            8
+          ],
+          "direction": 2,
+          "action": "Dodge",
+          "loop": false,
+          "durationMs": [
+            40,
+            150,
+            40
+          ]
+        }
+      ]
+    }
+  ],
+  "stagingOnly": true
+}

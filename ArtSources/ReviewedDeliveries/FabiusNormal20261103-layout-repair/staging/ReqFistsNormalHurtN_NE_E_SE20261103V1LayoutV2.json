@@ -1,0 +1,513 @@
+{
+  "imageSha256": "47a9919d5bc14e984fea464012a622bb7fe35a7a828dda3010a4a4b91651fe1a",
+  "sourcePath": "ArtSources/WeaponRedesign20261103/essential-states/ReqFistsNormalHurtN_NE_E_SE20261103V1-source.png",
+  "sourceSha256": "ac2c3ab156dfdd2a230831294e9a0cb3be054c66773b5542d9dc0d6645c4a9ea",
+  "nativeSize": [
+    650,
+    1588
+  ],
+  "sourceSize": [
+    1024,
+    1536
+  ],
+  "pixelsPerUnit": 186.0784717927575,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "schemaVersion": 1,
+  "image": "ReqFistsNormalHurtN_NE_E_SE20261103V1LayoutV2.png",
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_00",
+      "rect": [
+        8,
+        8,
+        246,
+        345
+      ],
+      "pivot": [
+        0.516260162601626,
+        0.02898550724637683
+      ],
+      "durationMs": 60,
+      "action": "hurt",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceRect": [
+        120,
+        43,
+        246,
+        345
+      ],
+      "sourceAnchor": [
+        247,
+        378
+      ],
+      "sourcePackingAnchor": [
+        247,
+        378
+      ],
+      "sourceFrameIndex": 0,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          247,
+          378
+        ],
+        "method": "Manual support midpoint between grounded soles, retaining in-place recoil."
+      },
+      "pixelsPerUnit": 186.0784717927575,
+      "visibleAlphaBoundsInFrame": [
+        8,
+        8,
+        238,
+        337
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_01",
+      "rect": [
+        333,
+        8,
+        295,
+        379
+      ],
+      "pivot": [
+        0.5389830508474577,
+        0.02638522427440637
+      ],
+      "durationMs": 120,
+      "action": "hurt",
+      "direction": "N",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "reaction",
+      "sourceRect": [
+        520,
+        10,
+        295,
+        379
+      ],
+      "sourceAnchor": [
+        679,
+        379
+      ],
+      "sourcePackingAnchor": [
+        679,
+        379
+      ],
+      "sourceFrameIndex": 1,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          679,
+          379
+        ],
+        "method": "Manual support midpoint between grounded soles, retaining in-place recoil."
+      },
+      "pixelsPerUnit": 186.0784717927575,
+      "visibleAlphaBoundsInFrame": [
+        8,
+        8,
+        287,
+        371
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_02",
+      "rect": [
+        8,
+        405,
+        260,
+        355
+      ],
+      "pivot": [
+        0.55,
+        0.028169014084507005
+      ],
+      "durationMs": 60,
+      "action": "hurt",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceRect": [
+        106,
+        420,
+        260,
+        355
+      ],
+      "sourceAnchor": [
+        249,
+        765
+      ],
+      "sourcePackingAnchor": [
+        249,
+        765
+      ],
+      "sourceFrameIndex": 2,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          249,
+          765
+        ],
+        "method": "Manual support midpoint between grounded soles, retaining in-place recoil."
+      },
+      "pixelsPerUnit": 186.0784717927575,
+      "visibleAlphaBoundsInFrame": [
+        8,
+        8,
+        252,
+        347
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_03",
+      "rect": [
+        333,
+        405,
+        269,
+        381
+      ],
+      "pivot": [
+        0.587360594795539,
+        0.026246719160105014
+      ],
+      "durationMs": 120,
+      "action": "hurt",
+      "direction": "NE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "reaction",
+      "sourceRect": [
+        552,
+        395,
+        269,
+        381
+      ],
+      "sourceAnchor": [
+        710,
+        766
+      ],
+      "sourcePackingAnchor": [
+        710,
+        766
+      ],
+      "sourceFrameIndex": 3,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          710,
+          766
+        ],
+        "method": "Manual support midpoint between grounded soles, retaining in-place recoil."
+      },
+      "pixelsPerUnit": 186.0784717927575,
+      "visibleAlphaBoundsInFrame": [
+        8,
+        8,
+        261,
+        373
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_04",
+      "rect": [
+        8,
+        802,
+        274,
+        357
+      ],
+      "pivot": [
+        0.4927007299270073,
+        0.02801120448179273
+      ],
+      "durationMs": 60,
+      "action": "hurt",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceRect": [
+        105,
+        795,
+        274,
+        357
+      ],
+      "sourceAnchor": [
+        240,
+        1142
+      ],
+      "sourcePackingAnchor": [
+        240,
+        1142
+      ],
+      "sourceFrameIndex": 4,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          240,
+          1142
+        ],
+        "method": "Manual support midpoint between grounded soles, retaining in-place recoil."
+      },
+      "pixelsPerUnit": 186.0784717927575,
+      "visibleAlphaBoundsInFrame": [
+        8,
+        8,
+        266,
+        349
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_05",
+      "rect": [
+        333,
+        802,
+        250,
+        377
+      ],
+      "pivot": [
+        0.58,
+        0.02652519893899208
+      ],
+      "durationMs": 120,
+      "action": "hurt",
+      "direction": "E",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "reaction",
+      "sourceRect": [
+        578,
+        776,
+        250,
+        377
+      ],
+      "sourceAnchor": [
+        723,
+        1143
+      ],
+      "sourcePackingAnchor": [
+        723,
+        1143
+      ],
+      "sourceFrameIndex": 5,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          723,
+          1143
+        ],
+        "method": "Manual support midpoint between grounded soles, retaining in-place recoil."
+      },
+      "pixelsPerUnit": 186.0784717927575,
+      "visibleAlphaBoundsInFrame": [
+        8,
+        8,
+        242,
+        369
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_06",
+      "rect": [
+        8,
+        1199,
+        258,
+        357
+      ],
+      "pivot": [
+        0.49612403100775193,
+        0.02801120448179273
+      ],
+      "durationMs": 60,
+      "action": "hurt",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceRect": [
+        106,
+        1174,
+        258,
+        357
+      ],
+      "sourceAnchor": [
+        234,
+        1521
+      ],
+      "sourcePackingAnchor": [
+        234,
+        1521
+      ],
+      "sourceFrameIndex": 6,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          234,
+          1521
+        ],
+        "method": "Manual support midpoint between grounded soles, retaining in-place recoil."
+      },
+      "pixelsPerUnit": 186.0784717927575,
+      "visibleAlphaBoundsInFrame": [
+        8,
+        8,
+        250,
+        349
+      ]
+    },
+    {
+      "id": "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_07",
+      "rect": [
+        333,
+        1199,
+        309,
+        379
+      ],
+      "pivot": [
+        0.5760517799352751,
+        0.02638522427440637
+      ],
+      "durationMs": 120,
+      "action": "hurt",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "reaction",
+      "sourceRect": [
+        561,
+        1152,
+        309,
+        379
+      ],
+      "sourceAnchor": [
+        739,
+        1521
+      ],
+      "sourcePackingAnchor": [
+        739,
+        1521
+      ],
+      "sourceFrameIndex": 7,
+      "sourceScale": 1,
+      "supportGuide": {
+        "anchor": [
+          739,
+          1521
+        ],
+        "method": "Manual support midpoint between grounded soles, retaining in-place recoil."
+      },
+      "pixelsPerUnit": 186.0784717927575,
+      "visibleAlphaBoundsInFrame": [
+        8,
+        5,
+        301,
+        371
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "name": "Hurt_N",
+      "frames": [
+        "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_00",
+        "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_01"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": false,
+      "intentionalStaticReason": ""
+    },
+    {
+      "name": "Hurt_NE",
+      "frames": [
+        "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_02",
+        "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_03"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": false,
+      "intentionalStaticReason": ""
+    },
+    {
+      "name": "Hurt_E",
+      "frames": [
+        "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_04",
+        "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_05"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": false,
+      "intentionalStaticReason": ""
+    },
+    {
+      "name": "Hurt_SE",
+      "frames": [
+        "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_06",
+        "Redesign_ReqFistsNormalHurtN_NE_E_SE20261103V1_07"
+      ],
+      "loop": false,
+      "allowStatic": false,
+      "holdLastFrame": false,
+      "intentionalStaticReason": ""
+    }
+  ],
+  "requiredClips": [
+    "Hurt_N",
+    "Hurt_NE",
+    "Hurt_E",
+    "Hurt_SE"
+  ],
+  "worldVisualScale": 1.325,
+  "sourcePixelResampling": false,
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoS_SW20261102V2-source.png",
+      "sha256": "5205a9673d20fe2703b5d6057960c457d61138e0b0dc5862c77099d2ff9827f1",
+      "role": "Current approved compact proportions, identity, outfit and katana"
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261102/normal-katana-completion/ReqKatanaNormalCarregadoW_NW20261102V2-source.png",
+      "sha256": "1cd4551daa59d049b46e8e4c93ff95588e0341ed053e8e02a368a5760b05d417",
+      "role": "Current approved left/back clothing and anatomy"
+    }
+  ],
+  "review": {
+    "staticVisualReviewed": true,
+    "wholeFigures": true,
+    "loop": false,
+    "expressionDirection": "Retain user-approved expressive charming Hurt identity consistently; no facial recolor, head/torso redesign or anatomical assembly.",
+    "equipment": "Two silver claw gauntlets and two silver layered clawed greaves, all complete figures newly drawn; no concealed incompatible katana/saw equipment reused.",
+    "densityGuide": {
+      "referenceCranialWidth": 147,
+      "referencePPU": 170.95959595959596,
+      "sourceCranialWidth": 160,
+      "method": "Native cranial-width guide within complete figure, checked against torso density. Same fixed density through every phase; never normalized by current crouch/corpse AABB height."
+    },
+    "timing": "60ms contact then120ms reaction; reaction visible during shortened120ms stagger.",
+    "nativePixelResampling": false,
+    "imported": false,
+    "runtimeVerified": false,
+    "motionReview": "Consecutive complete poses inspected statically; finite GIF authored; Unity/runtime review deferred."
+  },
+  "quality": {
+    "alphaThreshold": 16,
+    "maxColors": 65536,
+    "maxHeightRatio": 2.5
+  },
+  "generationReferences": [
+    {
+      "path": "ArtSources/WeaponRedesign20261103/essential-states/ReqKatanaNormalHurtN_NE_E_SE20261103V1-source.png",
+      "sha256": "219e531d1b5ddcc109c847fb6f24a9e591cc8ed5b4da0cdf274393c4c7dd7ef1"
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkS20261101V2Selected.png",
+      "sha256": "6cbbc2e1694e37a0d50ad32c680635bc6d14c07ea2bca06927e532e5bee7c94d"
+    }
+  ],
+  "layoutRepairOf": "ReqFistsNormalHurtN_NE_E_SE20261103V1",
+  "layoutRepair": "Repacked whole rectangles with 8px margins. No figure edits, resampling, pivot or density changes."
+}

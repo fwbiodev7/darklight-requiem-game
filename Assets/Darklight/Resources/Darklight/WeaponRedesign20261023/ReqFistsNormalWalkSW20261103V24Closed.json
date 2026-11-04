@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqFistsNormalWalkSW20261103V24Closed.png",
+  "imageSha256": "5e56a1df0df5c0fda3c482d6bf845cee9a584238013d6c32227f615fe1db7b6f",
+  "nativeSize": [
+    2360,
+    376
+  ],
+  "sourceSize": [
+    2172,
+    724
+  ],
+  "pixelsPerUnit": 164.8989898989899,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261103/fists-sw-pose-transfer/ReqFistsNormalWalkSW20261103V24MotoPose-source.png",
+  "sourceSha256": "6387490f3aaacf54e051e37b9a0449cfe81f6c617d6851bdbf3dfd7d9eac7a44",
+  "frames": [
+    {
+      "id": "Redesign_ReqFistsNormalWalkSW20261103V24Closed_00",
+      "rect": [
+        0,
+        0,
+        590,
+        376
+      ],
+      "pivot": [
+        0.5067796610169492,
+        0.0797872340425532
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        47,
+        9,
+        574,
+        360
+      ],
+      "sourceAnchor": [
+        338,
+        347
+      ],
+      "sourcePackingAnchor": [
+        295,
+        347
+      ],
+      "supportGuide": {
+        "anchor": [
+          338,
+          347
+        ],
+        "method": "Pelvis/body-axis projection onto each authored sole support plane, translation-only, no anatomy edits",
+        "uncertaintyPixels": 3
+      },
+      "sourceOffsetInFrame": [
+        8,
+        8
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 164.8989898989899
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkSW20261103V24Closed_01",
+      "rect": [
+        590,
+        0,
+        590,
+        376
+      ],
+      "pivot": [
+        0.47966101694915253,
+        0.0797872340425532
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A_low",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        621,
+        14,
+        490,
+        348
+      ],
+      "sourceAnchor": [
+        823,
+        344
+      ],
+      "sourcePackingAnchor": [
+        796,
+        344
+      ],
+      "supportGuide": {
+        "anchor": [
+          823,
+          344
+        ],
+        "method": "Pelvis/body-axis projection onto each authored sole support plane, translation-only, no anatomy edits",
+        "uncertaintyPixels": 3
+      },
+      "sourceOffsetInFrame": [
+        81,
+        16
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 164.8989898989899
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkSW20261103V24Closed_02",
+      "rect": [
+        1180,
+        0,
+        590,
+        376
+      ],
+      "pivot": [
+        0.3898305084745763,
+        0.0797872340425532
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B_opposite",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        1111,
+        15,
+        490,
+        348
+      ],
+      "sourceAnchor": [
+        1315,
+        343
+      ],
+      "sourcePackingAnchor": [
+        1341,
+        343
+      ],
+      "supportGuide": {
+        "anchor": [
+          1315,
+          343
+        ],
+        "method": "Pelvis/body-axis projection onto each authored sole support plane, translation-only, no anatomy edits",
+        "uncertaintyPixels": 3
+      },
+      "sourceOffsetInFrame": [
+        26,
+        18
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 164.8989898989899
+    },
+    {
+      "id": "Redesign_ReqFistsNormalWalkSW20261103V24Closed_03",
+      "rect": [
+        1770,
+        0,
+        590,
+        376
+      ],
+      "pivot": [
+        0.4067796610169492,
+        0.0797872340425532
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "SW",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B_low",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1601,
+        15,
+        523,
+        347
+      ],
+      "sourceAnchor": [
+        1808,
+        340
+      ],
+      "sourcePackingAnchor": [
+        1824,
+        340
+      ],
+      "supportGuide": {
+        "anchor": [
+          1808,
+          340
+        ],
+        "method": "Pelvis/body-axis projection onto each authored sole support plane, translation-only, no anatomy edits",
+        "uncertaintyPixels": 3
+      },
+      "sourceOffsetInFrame": [
+        33,
+        21
+      ],
+      "sourceScale": 1,
+      "pixelsPerUnit": 164.8989898989899
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_SW",
+      "frames": [
+        "Redesign_ReqFistsNormalWalkSW20261103V24Closed_00",
+        "Redesign_ReqFistsNormalWalkSW20261103V24Closed_01",
+        "Redesign_ReqFistsNormalWalkSW20261103V24Closed_02",
+        "Redesign_ReqFistsNormalWalkSW20261103V24Closed_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "walk_SW"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 188077,
+  "packedPixels": 188077,
+  "originalSourcePixels": 376185,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "excludedSourceFrameIndices": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "excludedSourceReason": "Second alternative complete four-phase cycle not selected; top four already coherent and coordinator visually reviewed.",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 1196343,
+    "farBeyond16pxPixels": 12244,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 48.015686274509804,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "ImageGen equipment conversion of four complete approved Moto SW target figures. Top row selected whole, bottom alternate row excluded.",
+    "Coordinator inspected V24 and accepted coherent SW camera, opposite A/B supports, compact adult identity/hair, single canonical chain and discreet toe-out.",
+    "Four 100ms phases retain real Fists Walk consumer timing; one PPU for entire clip, WorldVisualScale1.325.",
+    "All selected RGBA pixels preserved exactly with translation-only packing, original 2172x724 source preserved; no resampling/mirroring/anatomy assembly.",
+    "Native generated raster pixel-grid unverified; generated colors and partial alpha retained and reported by QA.",
+    "Motion continuous preview not viewed by this agent: local file:// browser policy blocked earlier; coordinator will inspect real loop and Idle transition after import.",
+    "Imported/runtimeVerified remain false; no Assets, catalog, Runtime, Unity or Git edited by this worker."
+  ],
+  "visualReviewed": true,
+  "coordinatorVisualReviewed": true,
+  "visualReviewDecision": "accepted-top-four-SW-cycle-camera-identity-gait-equipment",
+  "imported": false,
+  "runtimeVerified": false,
+  "worldVisualScale": 1.325
+}

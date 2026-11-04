@@ -1,0 +1,95 @@
+{
+  "jobs": [
+    {
+      "name": "ReqKatanaNormalDodgeE_SE20261101V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261101\\katana-dodge\\ReqKatanaNormalDodgeE_SE20261101V1-source.png",
+      "preservedSourceName": "ReqKatanaNormalDodgeE_SE20261101V1-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 3,
+      "sourceRows": 2,
+      "minimumArea": 10000,
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            230,
+            474
+          ],
+          "method": "Manual midpoint of two whole boot supports,E anticipation"
+        },
+        "1": {
+          "anchor": [
+            757,
+            471
+          ],
+          "method": "Manual midpoint rear pushing toe and front planted boot,E low lunge"
+        },
+        "2": {
+          "anchor": [
+            1310,
+            475
+          ],
+          "method": "Manual midpoint of two whole boot supports,E recovery"
+        },
+        "3": {
+          "anchor": [
+            213,
+            962
+          ],
+          "method": "Manual midpoint of two whole boot supports,SE anticipation"
+        },
+        "4": {
+          "anchor": [
+            757,
+            943
+          ],
+          "method": "Manual midpoint rear pushing toe and front planted boot,SE low lunge"
+        },
+        "5": {
+          "anchor": [
+            1318,
+            965
+          ],
+          "method": "Manual midpoint of two whole boot supports,SE recovery"
+        }
+      },
+      "excludedReason": "Only declared complete direction rows selected; other source rows preserved but excluded.",
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2
+          ],
+          "direction": 6,
+          "action": "Dodge",
+          "loop": false,
+          "durationMs": [
+            40,
+            150,
+            40
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "sourceIndices": [
+            3,
+            4,
+            5
+          ],
+          "direction": 7,
+          "action": "Dodge",
+          "loop": false,
+          "durationMs": [
+            40,
+            150,
+            40
+          ]
+        }
+      ]
+    }
+  ],
+  "stagingOnly": true
+}

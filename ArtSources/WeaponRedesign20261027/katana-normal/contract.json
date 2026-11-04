@@ -1,0 +1,57 @@
+{
+  "name": "ReqKatanaNormalWalkNW_N20261027V1",
+  "status": "visual-reviewed-staging",
+  "figureCount": 12,
+  "skin": 0,
+  "weapon": 0,
+  "form": 0,
+  "action": "Walk",
+  "directions": [
+    3,
+    4
+  ],
+  "phasesPerDirection": 6,
+  "durationMs": [
+    65,
+    65,
+    70,
+    65,
+    65,
+    70
+  ],
+  "loopMs": 400,
+  "worldVisualScale": 1.325,
+  "wholeFiguresOnly": true,
+  "anatomicalAssembly": false,
+  "references": [
+    {
+      "path": "ArtSources/WeaponRedesign20261026/katana-normal/ReqKatanaNormalWalkSW_W-v1-source.png",
+      "sha256": "233f498a8e69f2ed2b2fe3b06baf9b069a4df82a069bb930b616e6ec2eed00e5",
+      "size": [
+        1098,
+        1433
+      ]
+    },
+    {
+      "path": "ArtSources/WeaponRedesign20261025/candidates/ReqKatanaNormalNeutralIdleNW_N_NE20261025-source.png",
+      "sha256": "e631dd7fec0bd0d89851fb9ceb9dfe72f193fc22f227f113431b0825d3051387",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "ArtSources/PlayerEyeReference20261020/referencia-olhos-player.png",
+      "sha256": "82ce8cb4761757ba6f3f1809fd4bf603d67eac5b7a8a7cec056c1ce178fcd949",
+      "size": [
+        189,
+        167
+      ]
+    }
+  ],
+  "approvedV1NotRegenerated": true,
+  "resultName": "ReqKatanaNormalWalkNW_N20261027Selected",
+  "sourcePreparation": "9complete figuresV1+3complete repairedfiguresV2; no anatomical assembly",
+  "unityImported": false,
+  "runtimeVerified": false
+}

@@ -7,8 +7,8 @@ PunhosW com apoio incorreto e demais rejeitadas permanecem apenas como históric
 Nunca promover o arquivo inteiro para Assets.
 
 `manifest.json` relaciona cada caminho original ao SHA256, tamanho e conteúdo
-armazenado. Duplicatas apontam para o mesmo objeto ou um arquivo exato já presente
-no repositório. Textos grandes usam gzip sem perda. Nenhuma imagem foi recomprimida
+armazenado. Duplicatas apontam para o mesmo objeto autocontido nesta pasta.
+Textos grandes usam gzip sem perda. Nenhuma imagem foi recomprimida
 ou redimensionada neste arquivo de preservação.
 
 Validação portátil, a partir da raiz do repositório:
@@ -24,10 +24,15 @@ Os caminhos locais absolutos dentro de documentos são proveniência histórica;
 use os caminhos relativos do manifesto para localizar o material portátil.
 
 O relatório legível atual está em `Docs/Darklight/FECHAMENTO-20261103.md`.
+Esse relatório descreve a cópia da escola ANTES da sincronização com a versão de
+casa601a62a. O fechamento posterior está em
+`Docs/Darklight/FABIUS-NORMAL-FECHAMENTO-20261103.md`.
+Na publicação, os assets/GUIDs/catálogo novos de casa prevaleceram nos conflitos;
+o material anterior continua íntegro neste arquivo e no commit3b4eeb4.
 CONTROLE-LOCAL e RETOMADA arquivados são snapshots anteriores ao commit/push;
 declarações antigas de "sem commit" descrevem o instante do snapshot.
 
-Resumo de estado:23folhas/83clips/188frames aplicados localmente; importação Unity
+Resumo HISTÓRICO da cópia de escola:23folhas/83clips/188frames aplicados; importação Unity
 e runtime não certificados. Correções de anatomia/cabelo recentes são candidatas,
 não aplicadas. Gothic Eclipse recebeu primeiro incremento de4arquivos, com sintaxe
 verificada, sem compilação/avaliação Unity. V3 lateral Moto permanece preservada.

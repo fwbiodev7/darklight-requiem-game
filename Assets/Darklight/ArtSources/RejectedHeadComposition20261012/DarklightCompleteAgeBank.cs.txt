@@ -1,0 +1,40 @@
+using System.Collections.Generic;
+using UnityEngine;
+namespace Darklight
+{
+    public static class DarklightCompleteAgeBank
+    {
+        static Dictionary<(Sprite,int),CompleteAgeFrame> lookup;
+        static readonly Dictionary<string,Sprite[]> pages=new();
+        static readonly Dictionary<Texture2D,Texture2D> masks=new();
+        static readonly Dictionary<Texture2D,string> nativePalettes=new();
+        static void Initialize()
+        {
+            if(lookup!=null)return;
+            lookup=new();var catalog=Resources.Load<DarklightCompleteAgeCatalog>("Darklight/CompleteAgeCatalog");
+            if(catalog==null)return;
+            foreach(var frame in catalog.frames)lookup[(frame.source,frame.age)]=frame;
+            if(catalog.nativePalettes!=null)foreach(var entry in catalog.nativePalettes)nativePalettes[entry.source]=entry.mask;
+        }
+        public static Sprite Resolve(Sprite source,int age)
+        {
+            if(source==null||age<1||age>4)return null;
+            Initialize();if(!lookup.TryGetValue((source,age),out var frame))return null;
+            if(!pages.TryGetValue(frame.page,out var sprites))
+            {
+                sprites=Resources.LoadAll<Sprite>("Darklight/CompleteAgeBodies/"+frame.page);
+                System.Array.Sort(sprites,(a,b)=>int.Parse(a.name.Substring(a.name.LastIndexOf('_')+1)).CompareTo(int.Parse(b.name.Substring(b.name.LastIndexOf('_')+1))));
+                pages[frame.page]=sprites;
+            }
+            return frame.index<sprites.Length?sprites[frame.index]:null;
+        }
+        public static Texture2D Mask(Sprite sprite)
+        {
+            if(sprite==null)return null;Initialize();
+            bool baked=sprite.name.StartsWith("CompleteAge_");if(!baked&&!nativePalettes.ContainsKey(sprite.texture))return null;
+            if(!masks.TryGetValue(sprite.texture,out var mask))
+            {mask=Resources.Load<Texture2D>("Darklight/CompleteAgeBodies/"+(baked?sprite.texture.name+"_Mask":nativePalettes[sprite.texture]));masks[sprite.texture]=mask;}
+            return mask;
+        }
+    }
+}

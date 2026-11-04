@@ -1,0 +1,147 @@
+{
+  "name": "ReqFistsNormalHeavySSWWNW20261027V1",
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261027\\punhos-heavy\\ReqFistsNormalHeavySSWWNW20261027V1-source.png",
+  "preservedSourceName": "ReqFistsNormalHeavySSWWNW20261027V1-source.png",
+  "skin": 0,
+  "weapon": 2,
+  "form": 0,
+  "columns": 3,
+  "sourceRows": 4,
+  "minimumArea": 10000,
+  "rows": [
+    {
+      "sourceRow": 0,
+      "direction": 0,
+      "action": "Attack",
+      "attackKey": "Ascensão da Ruína",
+      "loop": false,
+      "sourceSpriteNames": [
+        "Ruin_Requiem_Normal_S_Combat_07",
+        "Ruin_Requiem_Normal_S_Combat_08",
+        "Ruin_Requiem_Normal_S_Combat_11"
+      ]
+    },
+    {
+      "sourceRow": 1,
+      "direction": 1,
+      "action": "Attack",
+      "attackKey": "Ascensão da Ruína",
+      "loop": false,
+      "sourceSpriteNames": [
+        "Ruin_Requiem_Normal_SW_Combat_07",
+        "Ruin_Requiem_Normal_SW_Combat_08",
+        "Ruin_Requiem_Normal_SW_Combat_11"
+      ]
+    },
+    {
+      "sourceRow": 2,
+      "direction": 2,
+      "action": "Attack",
+      "attackKey": "Ascensão da Ruína",
+      "loop": false,
+      "sourceSpriteNames": [
+        "Ruin_Requiem_Normal_W_Combat_07",
+        "Ruin_Requiem_Normal_W_Combat_08",
+        "Ruin_Requiem_Normal_W_Combat_11"
+      ]
+    },
+    {
+      "sourceRow": 3,
+      "direction": 3,
+      "action": "Attack",
+      "attackKey": "Ascensão da Ruína",
+      "loop": false,
+      "sourceSpriteNames": [
+        "Ruin_Requiem_Normal_NW_Combat_07",
+        "Ruin_Requiem_Normal_NW_Combat_08",
+        "Ruin_Requiem_Normal_NW_Combat_11"
+      ]
+    }
+  ],
+  "supportAnchors": {
+    "0": {
+      "anchor": [
+        219,
+        368
+      ],
+      "method": "Whole-body stance center over ground plane; manual full-figure review; no arm/weapon anchoring."
+    },
+    "1": {
+      "anchor": [
+        567,
+        369
+      ],
+      "method": "Whole-body stance center over ground plane; manual full-figure review; no arm/weapon anchoring."
+    },
+    "2": {
+      "anchor": [
+        925,
+        369
+      ],
+      "method": "Whole-body stance center over ground plane; manual full-figure review; no arm/weapon anchoring."
+    },
+    "3": {
+      "anchor": [
+        224,
+        721
+      ],
+      "method": "Whole-body stance center over ground plane; manual full-figure review; no arm/weapon anchoring."
+    },
+    "4": {
+      "anchor": [
+        574,
+        719
+      ],
+      "method": "Whole-body stance center over ground plane; manual full-figure review; no arm/weapon anchoring."
+    },
+    "5": {
+      "anchor": [
+        928,
+        727
+      ],
+      "method": "Whole-body stance center over ground plane; manual full-figure review; no arm/weapon anchoring."
+    },
+    "6": {
+      "anchor": [
+        220,
+        1073
+      ],
+      "method": "Whole-body stance center over ground plane; manual full-figure review; no arm/weapon anchoring."
+    },
+    "7": {
+      "anchor": [
+        565,
+        1073
+      ],
+      "method": "Whole-body stance center over ground plane; manual full-figure review; no arm/weapon anchoring."
+    },
+    "8": {
+      "anchor": [
+        936,
+        1074
+      ],
+      "method": "Whole-body stance center over ground plane; manual full-figure review; no arm/weapon anchoring."
+    },
+    "9": {
+      "anchor": [
+        215,
+        1417
+      ],
+      "method": "Whole-body stance center over ground plane; manual full-figure review; no arm/weapon anchoring."
+    },
+    "10": {
+      "anchor": [
+        568,
+        1419
+      ],
+      "method": "Whole-body stance center over ground plane; manual full-figure review; no arm/weapon anchoring."
+    },
+    "11": {
+      "anchor": [
+        934,
+        1404
+      ],
+      "method": "Whole-body stance center over ground plane; manual full-figure review; no arm/weapon anchoring."
+    }
+  }
+}

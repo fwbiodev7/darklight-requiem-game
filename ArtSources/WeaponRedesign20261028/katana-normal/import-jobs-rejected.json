@@ -1,0 +1,103 @@
+{
+  "jobs": [
+    {
+      "name": "ReqKatanaNormalWalkE20261028V2Rejected",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261028\\katana-normal\\ReqKatanaNormalWalkE-v2-source.png",
+      "preservedSourceName": "ReqKatanaNormalWalkE-v2-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 10000,
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            242,
+            435
+          ],
+          "method": "Canonical east idle head-axis offset scaled by intact body height; lower boot sole y. Gait remains rejected."
+        },
+        "1": {
+          "anchor": [
+            678,
+            434
+          ],
+          "method": "Canonical east idle head-axis offset scaled by intact body height; lower boot sole y. Gait remains rejected."
+        },
+        "2": {
+          "anchor": [
+            1089,
+            435
+          ],
+          "method": "Canonical east idle head-axis offset scaled by intact body height; lower boot sole y. Gait remains rejected."
+        },
+        "3": {
+          "anchor": [
+            1536,
+            436
+          ],
+          "method": "Canonical east idle head-axis offset scaled by intact body height; lower boot sole y. Gait remains rejected."
+        },
+        "4": {
+          "anchor": [
+            254,
+            857
+          ],
+          "method": "Canonical east idle head-axis offset scaled by intact body height; lower boot sole y. Gait remains rejected."
+        },
+        "5": {
+          "anchor": [
+            681,
+            858
+          ],
+          "method": "Canonical east idle head-axis offset scaled by intact body height; lower boot sole y. Gait remains rejected."
+        },
+        "6": {
+          "anchor": [
+            1095,
+            858
+          ],
+          "method": "Canonical east idle head-axis offset scaled by intact body height; lower boot sole y. Gait remains rejected."
+        },
+        "7": {
+          "anchor": [
+            1538,
+            858
+          ],
+          "method": "Canonical east idle head-axis offset scaled by intact body height; lower boot sole y. Gait remains rejected."
+        }
+      },
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 6,
+          "action": "Walk",
+          "loop": true,
+          "durationMs": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50
+          ]
+        }
+      ]
+    }
+  ],
+  "status": "candidate-rejected-for-integration",
+  "activationAllowed": false
+}

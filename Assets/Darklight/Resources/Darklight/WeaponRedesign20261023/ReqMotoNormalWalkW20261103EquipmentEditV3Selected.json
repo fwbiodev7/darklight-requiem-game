@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqMotoNormalWalkW20261103EquipmentEditV3Selected.png",
+  "imageSha256": "57a98a33ea8e1a4c8173d797450f775a98f4c2c9ebbe61c277753e5272065d12",
+  "nativeSize": [
+    1860,
+    423
+  ],
+  "sourceSize": [
+    1859,
+    846
+  ],
+  "pixelsPerUnit": 184.84848484848484,
+  "framePixelsPerUnit": [
+    184.84848484848484,
+    184.84848484848484,
+    184.84848484848484,
+    184.84848484848484
+  ],
+  "worldVisualScale": 1.325,
+  "status": "visual-reviewed",
+  "visualReviewScope": "Static whole figures, gait phase contact/passing alternation, mature identity, both held saws. Continuous motion preview remains pending.",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261103/moto-w-equipment-edit/ReqMotoNormalWalkW20261103EquipmentEditV3Selected-source.png",
+  "sourceSha256": "440e6b25c63583180ba56f28067a7e3df1578b9f6e20c28bbb962760a7904616",
+  "frames": [
+    {
+      "id": "Redesign_ReqMotoNormalWalkW20261103EquipmentEditV3Selected_00",
+      "rect": [
+        0,
+        0,
+        465,
+        423
+      ],
+      "pivot": [
+        0.4043010752688172,
+        0.07801418439716312
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_A",
+      "sourceRect": [
+        0,
+        0,
+        465,
+        423
+      ],
+      "sourceAnchor": [
+        188,
+        390
+      ],
+      "sourcePackingAnchor": [
+        188,
+        390
+      ],
+      "sourceFrameIndex": 0,
+      "sourceScale": 1,
+      "pixelsPerUnit": 184.84848484848484,
+      "supportGuide": {
+        "anchor": [
+          188,
+          390
+        ],
+        "method": "Manual projection of pelvis to grounded-sole line; same source raster, no anatomical changes."
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW20261103EquipmentEditV3Selected_01",
+      "rect": [
+        465,
+        0,
+        465,
+        423
+      ],
+      "pivot": [
+        0.410752688172043,
+        0.07801418439716312
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_A",
+      "sourceRect": [
+        465,
+        0,
+        465,
+        423
+      ],
+      "sourceAnchor": [
+        656,
+        390
+      ],
+      "sourcePackingAnchor": [
+        656,
+        390
+      ],
+      "sourceFrameIndex": 1,
+      "sourceScale": 1,
+      "pixelsPerUnit": 184.84848484848484,
+      "supportGuide": {
+        "anchor": [
+          656,
+          390
+        ],
+        "method": "Manual projection of pelvis to grounded-sole line; same source raster, no anatomical changes."
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW20261103EquipmentEditV3Selected_02",
+      "rect": [
+        930,
+        0,
+        465,
+        423
+      ],
+      "pivot": [
+        0.4129032258064516,
+        0.07801418439716312
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact_B",
+      "sourceRect": [
+        930,
+        0,
+        465,
+        423
+      ],
+      "sourceAnchor": [
+        1122,
+        390
+      ],
+      "sourcePackingAnchor": [
+        1122,
+        390
+      ],
+      "sourceFrameIndex": 2,
+      "sourceScale": 1,
+      "pixelsPerUnit": 184.84848484848484,
+      "supportGuide": {
+        "anchor": [
+          1122,
+          390
+        ],
+        "method": "Manual projection of pelvis to grounded-sole line; same source raster, no anatomical changes."
+      }
+    },
+    {
+      "id": "Redesign_ReqMotoNormalWalkW20261103EquipmentEditV3Selected_03",
+      "rect": [
+        1395,
+        0,
+        465,
+        423
+      ],
+      "pivot": [
+        0.4129032258064516,
+        0.07801418439716312
+      ],
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "W",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "passing_B",
+      "sourceRect": [
+        1395,
+        0,
+        465,
+        423
+      ],
+      "sourceAnchor": [
+        1587,
+        390
+      ],
+      "sourcePackingAnchor": [
+        1587,
+        390
+      ],
+      "sourceFrameIndex": 3,
+      "sourceScale": 1,
+      "pixelsPerUnit": 184.84848484848484,
+      "supportGuide": {
+        "anchor": [
+          1587,
+          390
+        ],
+        "method": "Manual projection of pelvis to grounded-sole line; same source raster, no anatomical changes."
+      }
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_W",
+      "frames": [
+        "Redesign_ReqMotoNormalWalkW20261103EquipmentEditV3Selected_00",
+        "Redesign_ReqMotoNormalWalkW20261103EquipmentEditV3Selected_01",
+        "Redesign_ReqMotoNormalWalkW20261103EquipmentEditV3Selected_02",
+        "Redesign_ReqMotoNormalWalkW20261103EquipmentEditV3Selected_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "walk_W"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 1000000,
+    "maxHeightRatio": 1.1
+  },
+  "calibration": {
+    "method": "Manual crown-to-belt in all four selected whole figures; native redraw density only. No drawing resampling.",
+    "crownY": 30,
+    "beltY": 213,
+    "pixels": 183,
+    "canonicalWorldCrownToBelt": 0.99,
+    "pixelsPerUnit": 184.84848484848484
+  },
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "notes": [
+    "Source image is integrated-imagegen opposite-side full redraw from approved Moto E full cycle; no image flip.",
+    "Top four complete figures selected; bottom variants not used.",
+    "Uniform PPU; no artwork modification, rotation, resampling, alpha cleanup or anatomical assembly.",
+    "A/B opposite leg depth ownership follows shoulder/near-arm and boot occlusion; all heads remain W.",
+    "Saw far-side partial anatomical occlusion in B phases is intentional; both hands remain equipped.",
+    "Generated source includes low-alpha gutter residues preserved unchanged; no alpha stripping.",
+    "Unity, consumer import and continuous playback pending."
+  ]
+}

@@ -1,5 +1,13 @@
 # DARKLIGHT: REQUIEM — feito e pendente em 03/11/2026
 
+> Histórico da sessão na cópia da escola, anterior aos commits novos de casa.
+> Na publicação de04/11, o remoto601a62a trouxe o fechamento posterior de Fabius.
+> Consulte FABIUS-NORMAL-FECHAMENTO-20261103.md:170clips/504figuras/55folhas,
+> com9/9PlayMode finais relatados no trabalho de casa. Esses testes não foram
+> reexecutados nesta cópia durante o commit/push. Assets, GUIDs e catálogo de
+> casa prevaleceram nos conflitos; correções antigas desta sessão são histórico.
+> O primeiro incremento Gothic e todo o arquivo de preservação foram mantidos.
+
 ## Estado real
 
 Fabius Normal ainda não está concluído. Há 23 folhas, 83 clips e 188 frames aplicados em Assets/catálogo nesta cópia, mas a importação final na Unity e o funcionamento em gameplay não foram certificados. As novas gerações de correção da última rodada não substituíram os assets. Gothic Eclipse recebeu um primeiro incremento de código, ainda sem validação visual na Unity.

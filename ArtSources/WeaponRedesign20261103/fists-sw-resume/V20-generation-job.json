@@ -1,0 +1,50 @@
+{
+  "jobs": [
+    {
+      "name": "ReqFistsNormalWalkSW20261103V20",
+      "source": "C:/Users/Usuario/.codex/generated_images/01a1a347-8a3c-7cf2-aee0-7de7f97ac526/exec-41065675-5ff7-4ed2-b6d8-dd2a50201273.png",
+      "preservedSourceName": "ReqFistsNormalWalkSW20261103V20-source.png",
+      "skin": 0,
+      "weapon": 2,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 2,
+      "minimumArea": 5000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "direction": 1,
+          "action": "Walk",
+          "durationMs": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "phaseIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "loop": true
+        }
+      ]
+    }
+  ],
+  "tool": "built-in-imagegen"
+}

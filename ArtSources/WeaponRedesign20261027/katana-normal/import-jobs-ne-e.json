@@ -1,0 +1,147 @@
+{
+  "jobs": [
+    {
+      "name": "ReqKatanaNormalWalkNE_E20261027CandidateV1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261027\\katana-normal\\ReqKatanaNormalWalkNE_E-v1-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 3,
+      "sourceRows": 4,
+      "minimumArea": 10000,
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            185,
+            353
+          ],
+          "method": "Canonical whole-figure head-axis to support offset; complete source inspected; lower boot sole"
+        },
+        "1": {
+          "anchor": [
+            557,
+            355
+          ],
+          "method": "Canonical whole-figure head-axis to support offset; complete source inspected; lower boot sole"
+        },
+        "2": {
+          "anchor": [
+            903,
+            355
+          ],
+          "method": "Canonical whole-figure head-axis to support offset; complete source inspected; lower boot sole"
+        },
+        "3": {
+          "anchor": [
+            208,
+            697
+          ],
+          "method": "Canonical whole-figure head-axis to support offset; complete source inspected; lower boot sole"
+        },
+        "4": {
+          "anchor": [
+            562,
+            703
+          ],
+          "method": "Canonical whole-figure head-axis to support offset; complete source inspected; lower boot sole"
+        },
+        "5": {
+          "anchor": [
+            911,
+            703
+          ],
+          "method": "Canonical whole-figure head-axis to support offset; complete source inspected; lower boot sole"
+        },
+        "6": {
+          "anchor": [
+            202,
+            1049
+          ],
+          "method": "Canonical whole-figure head-axis to support offset; complete source inspected; lower boot sole"
+        },
+        "7": {
+          "anchor": [
+            565,
+            1053
+          ],
+          "method": "Canonical whole-figure head-axis to support offset; complete source inspected; lower boot sole"
+        },
+        "8": {
+          "anchor": [
+            916,
+            1049
+          ],
+          "method": "Canonical whole-figure head-axis to support offset; complete source inspected; lower boot sole"
+        },
+        "9": {
+          "anchor": [
+            200,
+            1405
+          ],
+          "method": "Canonical whole-figure head-axis to support offset; complete source inspected; lower boot sole"
+        },
+        "10": {
+          "anchor": [
+            558,
+            1406
+          ],
+          "method": "Canonical whole-figure head-axis to support offset; complete source inspected; lower boot sole"
+        },
+        "11": {
+          "anchor": [
+            916,
+            1397
+          ],
+          "method": "Canonical whole-figure head-axis to support offset; complete source inspected; lower boot sole"
+        }
+      },
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "direction": 5,
+          "action": "Walk",
+          "loop": true,
+          "durationMs": [
+            65,
+            65,
+            70,
+            65,
+            65,
+            70
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "sourceIndices": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "direction": 6,
+          "action": "Walk",
+          "loop": true,
+          "durationMs": [
+            65,
+            65,
+            70,
+            65,
+            65,
+            70
+          ]
+        }
+      ]
+    }
+  ],
+  "coordinatorReviewed": false
+}

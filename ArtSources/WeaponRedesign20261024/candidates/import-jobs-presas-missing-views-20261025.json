@@ -1,0 +1,138 @@
+{
+  "jobs": [
+    {
+      "name": "ReqDaggersNormalNeutralPresas1NW_N_NE20261025V1",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261024\\candidates\\ReqDaggersNormalPresas1NW_N_NE20261025v1-source.png",
+      "skin": 0,
+      "weapon": 1,
+      "form": 0,
+      "columns": 4,
+      "sourceRows": 3,
+      "minimumArea": 15000,
+      "rows": [
+        {
+          "sourceRow": 0,
+          "direction": 3,
+          "action": "Attack",
+          "attackKey": "Presas1",
+          "sourceSpriteNames": [
+            "Today_RequiemAttackDaggersYoungDiagonal_4",
+            "Today_RequiemAttackDaggersYoungDiagonal_5",
+            "Today_RequiemAttackDaggersYoungDiagonal_6",
+            "Today_RequiemAttackDaggersYoungDiagonal_7"
+          ]
+        },
+        {
+          "sourceRow": 1,
+          "direction": 4,
+          "action": "Attack",
+          "attackKey": "Presas1",
+          "sourceSpriteNames": [
+            "Today_RequiemAttackDaggersYoungCardinal_8",
+            "Today_RequiemAttackDaggersYoungCardinal_9",
+            "Today_RequiemAttackDaggersYoungCardinal_10",
+            "Today_RequiemAttackDaggersYoungCardinal_11"
+          ]
+        },
+        {
+          "sourceRow": 2,
+          "direction": 5,
+          "action": "Attack",
+          "attackKey": "Presas1",
+          "sourceSpriteNames": [
+            "Today_RequiemAttackDaggersYoungDiagonal_8",
+            "Today_RequiemAttackDaggersYoungDiagonal_9",
+            "Today_RequiemAttackDaggersYoungDiagonal_10",
+            "Today_RequiemAttackDaggersYoungDiagonal_11"
+          ]
+        }
+      ],
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            195,
+            353
+          ],
+          "method": "Projected midpoint between complete boot supports; lower sole baseline, visual source inspection."
+        },
+        "1": {
+          "anchor": [
+            622,
+            347
+          ],
+          "method": "Projected midpoint between complete boot supports; lower sole baseline, visual source inspection."
+        },
+        "2": {
+          "anchor": [
+            980,
+            346
+          ],
+          "method": "Projected midpoint between complete boot supports; lower sole baseline, visual source inspection."
+        },
+        "3": {
+          "anchor": [
+            1357,
+            348
+          ],
+          "method": "Projected midpoint between complete boot supports; lower sole baseline, visual source inspection."
+        },
+        "4": {
+          "anchor": [
+            200,
+            673
+          ],
+          "method": "Projected midpoint between complete boot supports; lower sole baseline, visual source inspection."
+        },
+        "5": {
+          "anchor": [
+            599,
+            668
+          ],
+          "method": "Projected midpoint between complete boot supports; lower sole baseline, visual source inspection."
+        },
+        "6": {
+          "anchor": [
+            963,
+            669
+          ],
+          "method": "Projected midpoint between complete boot supports; lower sole baseline, visual source inspection."
+        },
+        "7": {
+          "anchor": [
+            1362,
+            673
+          ],
+          "method": "Projected midpoint between complete boot supports; lower sole baseline, visual source inspection."
+        },
+        "8": {
+          "anchor": [
+            185,
+            990
+          ],
+          "method": "Projected midpoint between complete boot supports; lower sole baseline, visual source inspection."
+        },
+        "9": {
+          "anchor": [
+            568,
+            968
+          ],
+          "method": "Projected midpoint between complete boot supports; lower sole baseline, visual source inspection."
+        },
+        "10": {
+          "anchor": [
+            965,
+            989
+          ],
+          "method": "Projected midpoint between complete boot supports; lower sole baseline, visual source inspection."
+        },
+        "11": {
+          "anchor": [
+            1369,
+            971
+          ],
+          "method": "Projected midpoint between complete boot supports; lower sole baseline, visual source inspection."
+        }
+      }
+    }
+  ]
+}

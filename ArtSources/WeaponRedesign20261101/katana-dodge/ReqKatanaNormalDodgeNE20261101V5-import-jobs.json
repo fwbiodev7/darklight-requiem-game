@@ -1,0 +1,58 @@
+{
+  "jobs": [
+    {
+      "name": "ReqKatanaNormalDodgeNE20261101V5",
+      "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261101\\katana-dodge\\ReqKatanaNormalDodgeNE20261101V5-source.png",
+      "preservedSourceName": "ReqKatanaNormalDodgeNE20261101V5-source.png",
+      "skin": 0,
+      "weapon": 0,
+      "form": 0,
+      "columns": 3,
+      "sourceRows": 1,
+      "minimumArea": 10000,
+      "supportAnchors": {
+        "0": {
+          "anchor": [
+            330,
+            646
+          ],
+          "method": "Manual midpoint of two whole boot supports,NE anticipation"
+        },
+        "1": {
+          "anchor": [
+            1005,
+            639
+          ],
+          "method": "Manual midpoint rear pushing boot and front planted boot,NE low lunge"
+        },
+        "2": {
+          "anchor": [
+            1790,
+            643
+          ],
+          "method": "Manual midpoint of two whole boot supports,NE recovery"
+        }
+      },
+      "excludedReason": "Only declared complete direction rows selected; other source rows preserved but excluded.",
+      "rows": [
+        {
+          "sourceRow": 0,
+          "sourceIndices": [
+            0,
+            1,
+            2
+          ],
+          "direction": 5,
+          "action": "Dodge",
+          "loop": false,
+          "durationMs": [
+            40,
+            150,
+            40
+          ]
+        }
+      ]
+    }
+  ],
+  "stagingOnly": true
+}

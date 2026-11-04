@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 1,
+  "image": "ReqKatanaNormalSouth.png",
+  "imageSha256": "07ce5876045f548b6f4e295022005076cbe356842e6244b82ed4690f4efb4f28",
+  "nativeSize": [
+    2700,
+    808
+  ],
+  "sourceSize": [
+    1448,
+    1086
+  ],
+  "pixelsPerUnit": 174.24242424242425,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "sourcePath": "ArtSources/WeaponRedesign20261023/ReqKatanaNormalSouth-source.png",
+  "sourceSha256": "9d4c815978586b3f612e7c57ac7010e2bfddfa5877be8248c73ce97bf6909956",
+  "frames": [
+    {
+      "id": "Redesign_ReqKatanaNormalSouth_00",
+      "rect": [
+        0,
+        0,
+        675,
+        404
+      ],
+      "pivot": [
+        0.48444444444444446,
+        0.09405940594059406
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "neutral",
+      "sourceFrameIndex": 0,
+      "sourceRect": [
+        0,
+        5,
+        369,
+        360
+      ],
+      "sourceAnchor": [
+        194,
+        360
+      ],
+      "sourceOffsetInFrame": [
+        133,
+        11
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalSouth_01",
+      "rect": [
+        675,
+        0,
+        675,
+        404
+      ],
+      "pivot": [
+        0.48444444444444446,
+        0.09405940594059406
+      ],
+      "durationMs": 250,
+      "action": "idle",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "inhale",
+      "sourceFrameIndex": 1,
+      "sourceRect": [
+        368,
+        12,
+        341,
+        354
+      ],
+      "sourceAnchor": [
+        543,
+        360
+      ],
+      "sourceOffsetInFrame": [
+        152,
+        18
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalSouth_02",
+      "rect": [
+        1350,
+        0,
+        675,
+        404
+      ],
+      "pivot": [
+        0.48444444444444446,
+        0.09405940594059406
+      ],
+      "durationMs": 180,
+      "action": "idle",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "blink",
+      "sourceFrameIndex": 2,
+      "sourceRect": [
+        708,
+        9,
+        352,
+        357
+      ],
+      "sourceAnchor": [
+        875,
+        360
+      ],
+      "sourceOffsetInFrame": [
+        160,
+        15
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalSouth_03",
+      "rect": [
+        2025,
+        0,
+        675,
+        404
+      ],
+      "pivot": [
+        0.48444444444444446,
+        0.09405940594059406
+      ],
+      "durationMs": 350,
+      "action": "idle",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "return",
+      "sourceFrameIndex": 3,
+      "sourceRect": [
+        1061,
+        9,
+        358,
+        357
+      ],
+      "sourceAnchor": [
+        1248,
+        359
+      ],
+      "sourceOffsetInFrame": [
+        140,
+        16
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalSouth_04",
+      "rect": [
+        0,
+        404,
+        675,
+        404
+      ],
+      "pivot": [
+        0.48444444444444446,
+        0.09405940594059406
+      ],
+      "durationMs": 350,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "windup",
+      "sourceFrameIndex": 8,
+      "sourceRect": [
+        17,
+        703,
+        370,
+        369
+      ],
+      "sourceAnchor": [
+        256,
+        1061
+      ],
+      "sourceOffsetInFrame": [
+        88,
+        8
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalSouth_05",
+      "rect": [
+        675,
+        404,
+        675,
+        404
+      ],
+      "pivot": [
+        0.48444444444444446,
+        0.09405940594059406
+      ],
+      "durationMs": 250,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "contact",
+      "sourceFrameIndex": 9,
+      "sourceRect": [
+        387,
+        727,
+        330,
+        333
+      ],
+      "sourceAnchor": [
+        706,
+        1057
+      ],
+      "sourceOffsetInFrame": [
+        8,
+        36
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalSouth_06",
+      "rect": [
+        1350,
+        404,
+        675,
+        404
+      ],
+      "pivot": [
+        0.48444444444444446,
+        0.09405940594059406
+      ],
+      "durationMs": 180,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "recovery",
+      "sourceFrameIndex": 10,
+      "sourceRect": [
+        717,
+        713,
+        405,
+        349
+      ],
+      "sourceAnchor": [
+        782,
+        1035
+      ],
+      "sourceOffsetInFrame": [
+        262,
+        44
+      ],
+      "sourceScale": 1
+    },
+    {
+      "id": "Redesign_ReqKatanaNormalSouth_07",
+      "rect": [
+        2025,
+        404,
+        675,
+        404
+      ],
+      "pivot": [
+        0.48444444444444446,
+        0.09405940594059406
+      ],
+      "durationMs": 350,
+      "action": "attack",
+      "direction": "S",
+      "skin": "Requiem",
+      "form": "Normal",
+      "phase": "return",
+      "sourceFrameIndex": 11,
+      "sourceRect": [
+        1092,
+        716,
+        342,
+        350
+      ],
+      "sourceAnchor": [
+        1237,
+        1036
+      ],
+      "sourceOffsetInFrame": [
+        182,
+        46
+      ],
+      "sourceScale": 1
+    }
+  ],
+  "clips": [
+    {
+      "name": "idle_S",
+      "frames": [
+        "Redesign_ReqKatanaNormalSouth_00",
+        "Redesign_ReqKatanaNormalSouth_01",
+        "Redesign_ReqKatanaNormalSouth_02",
+        "Redesign_ReqKatanaNormalSouth_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_S",
+      "frames": [
+        "Redesign_ReqKatanaNormalSouth_04",
+        "Redesign_ReqKatanaNormalSouth_05",
+        "Redesign_ReqKatanaNormalSouth_06",
+        "Redesign_ReqKatanaNormalSouth_07"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "idle_S",
+    "attack_S"
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 256,
+    "maxHeightRatio": 1.12
+  },
+  "sourcePixels": 522579,
+  "packedPixels": 522579,
+  "originalSourcePixels": 765176,
+  "selectedSourceFrameIndices": [
+    0,
+    1,
+    2,
+    3,
+    8,
+    9,
+    10,
+    11
+  ],
+  "excludedSourceFrameIndices": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "excludedSourceReason": "Walking row1 rejected: legs do not alternate. Preserve complete source; retain legacy walk.",
+  "sourceRgbaExactReconstruction": true,
+  "anatomyEdits": false,
+  "sourceScale": 1,
+  "logicalResolution": "Native generated raster; indexed pixel grid unverified",
+  "alphaReview": {
+    "transparentPixels": 807352,
+    "farBeyond16pxPixels": 32,
+    "farBeyond16pxMaxAlpha": 1,
+    "farBeyond16pxOpaqueEquivalent": 0.12549019607843137,
+    "backgroundRemoved": false,
+    "everySelectedNonzeroAlphaPixelRetained": true
+  },
+  "notes": [
+    "Complete figures only; no anatomical component assembly or resizing.",
+    "Partial coverage: only declared directions/actions for this form/weapon.",
+    "Third authored idle pose is a blink, not a breathing in-between.",
+    "Source RGB beneath zero alpha is preserved in the original source file.",
+    "Point/uncompressed import required. Unity import/runtime still pending."
+  ]
+}

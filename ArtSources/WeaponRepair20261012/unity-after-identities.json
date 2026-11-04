@@ -1,0 +1,352 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "var path=\"Assets/Darklight/Resources/Darklight/AnimationCatalog/RequiemKatanaLightStage4.png\";var importer=(UnityEditor.TextureImporter)UnityEditor.AssetImporter.GetAtPath(path);var sprites=UnityEditor.AssetDatabase.LoadAllAssetsAtPath(path).OfType<UnityEngine.Sprite>().OrderBy(s=>s.name).Select(s=>{UnityEditor.AssetDatabase.TryGetGUIDAndLocalFileIdentifier(s,out string guid,out long id);return new{s.name,guid,id,ppu=s.pixelsPerUnit,pivotX=s.pivot.x,pivotY=s.pivot.y,minX=s.bounds.min.x,minY=s.bounds.min.y};}).ToArray();return new{sprites,filter=importer.filterMode.ToString(),mipmaps=importer.mipmapEnabled,compression=importer.textureCompression.ToString(),width=UnityEditor.AssetDatabase.LoadAssetAtPath<UnityEngine.Texture2D>(path).width,compiling=UnityEditor.EditorApplication.isCompiling,playing=UnityEditor.EditorApplication.isPlaying};"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": {
+        "sprites": [
+          {
+            "name": "RequiemKatanaLightStage4_0",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -7556939964801601000,
+            "ppu": 133.25,
+            "pivotX": 108,
+            "pivotY": 0,
+            "minX": -0.8105066,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_1",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -8571133990684847000,
+            "ppu": 133.25,
+            "pivotX": 111.5,
+            "pivotY": 0,
+            "minX": -0.8367729,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_10",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": 4495942824509249000,
+            "ppu": 133.25,
+            "pivotX": 236,
+            "pivotY": 0,
+            "minX": -1.771107,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_11",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -3241112834124139000,
+            "ppu": 133.25,
+            "pivotX": 129,
+            "pivotY": 0,
+            "minX": -0.968105,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_12",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": 7827837680504274000,
+            "ppu": 133.25,
+            "pivotX": 157.5,
+            "pivotY": 0,
+            "minX": -1.18198872,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_13",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": 1662013407051391200,
+            "ppu": 133.25,
+            "pivotX": 171,
+            "pivotY": 0,
+            "minX": -1.28330207,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_14",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": 7941511806038489000,
+            "ppu": 133.25,
+            "pivotX": 219.5,
+            "pivotY": 0,
+            "minX": -1.6472795,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_15",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -1495078206744453400,
+            "ppu": 133.25,
+            "pivotX": 93,
+            "pivotY": 0,
+            "minX": -0.6979363,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_16",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": 4202429856683110000,
+            "ppu": 133.25,
+            "pivotX": 151,
+            "pivotY": 0,
+            "minX": -1.13320827,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_17",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -4206994175391408000,
+            "ppu": 133.25,
+            "pivotX": 92.5,
+            "pivotY": 0,
+            "minX": -0.6941839,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_18",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": 768430858161480400,
+            "ppu": 133.25,
+            "pivotX": 95.99999,
+            "pivotY": 0,
+            "minX": -0.7204503,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_19",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -5632808982507489000,
+            "ppu": 133.25,
+            "pivotX": 125.499992,
+            "pivotY": 0,
+            "minX": -0.9418387,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_2",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": 8467748601058374000,
+            "ppu": 133.25,
+            "pivotX": 244.5,
+            "pivotY": 0,
+            "minX": -1.8348968,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_20",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -7016680410794967000,
+            "ppu": 133.25,
+            "pivotX": 108.5,
+            "pivotY": 0,
+            "minX": -0.814258933,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_21",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -886204217166986400,
+            "ppu": 133.25,
+            "pivotX": 115.5,
+            "pivotY": 0,
+            "minX": -0.8667917,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_22",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": 839573084237595800,
+            "ppu": 133.25,
+            "pivotX": 106.500008,
+            "pivotY": 0,
+            "minX": -0.799249649,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_23",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -8385748847694164000,
+            "ppu": 133.25,
+            "pivotX": 119.5,
+            "pivotY": 0,
+            "minX": -0.896810532,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_24",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": 7982478928729438000,
+            "ppu": 133.25,
+            "pivotX": 149,
+            "pivotY": 0,
+            "minX": -1.11819887,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_25",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": 5540320001626350000,
+            "ppu": 133.25,
+            "pivotX": 99,
+            "pivotY": 0,
+            "minX": -0.7429644,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_26",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -5660354232537324000,
+            "ppu": 133.25,
+            "pivotX": 108.5,
+            "pivotY": 0,
+            "minX": -0.814258933,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_27",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": 2235610042856238600,
+            "ppu": 133.25,
+            "pivotX": 120.5,
+            "pivotY": 0,
+            "minX": -0.9043152,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_28",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -1990008899895032600,
+            "ppu": 133.25,
+            "pivotX": 220,
+            "pivotY": 0,
+            "minX": -1.651032,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_29",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -4506803110472659500,
+            "ppu": 133.25,
+            "pivotX": 117,
+            "pivotY": 0,
+            "minX": -0.878048658,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_3",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": 9045784421619130000,
+            "ppu": 133.25,
+            "pivotX": 124.5,
+            "pivotY": 0,
+            "minX": -0.9343339,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_30",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -7809497801087860000,
+            "ppu": 133.25,
+            "pivotX": 126.5,
+            "pivotY": 0,
+            "minX": -0.9493433,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_31",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -1494521213772935700,
+            "ppu": 133.25,
+            "pivotX": 106,
+            "pivotY": 0,
+            "minX": -0.7954972,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_4",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -2767580923820826000,
+            "ppu": 133.25,
+            "pivotX": 104.5,
+            "pivotY": 0,
+            "minX": -0.7842402,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_5",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": 449206902814358660,
+            "ppu": 133.25,
+            "pivotX": 86.5,
+            "pivotY": 0,
+            "minX": -0.649155736,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_6",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -7193595102259582000,
+            "ppu": 133.25,
+            "pivotX": 230.000015,
+            "pivotY": 0,
+            "minX": -1.72607875,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_7",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -6442029240347494000,
+            "ppu": 133.25,
+            "pivotX": 150,
+            "pivotY": 0,
+            "minX": -1.12570357,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_8",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": 1890195970527771100,
+            "ppu": 133.25,
+            "pivotX": 148,
+            "pivotY": 0,
+            "minX": -1.11069417,
+            "minY": 0
+          },
+          {
+            "name": "RequiemKatanaLightStage4_9",
+            "guid": "35172600fcb56074ea966683c31f94b6",
+            "id": -7783936723995859000,
+            "ppu": 133.25,
+            "pivotX": 243,
+            "pivotY": 0,
+            "minX": -1.82363987,
+            "minY": 0
+          }
+        ],
+        "filter": "Point",
+        "mipmaps": false,
+        "compression": "Uncompressed",
+        "width": 2304,
+        "compiling": false,
+        "playing": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

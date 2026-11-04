@@ -1,0 +1,150 @@
+{
+  "name": "ReqMotoNormalSerraEntradaW_NW_N20261102Selected",
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\WeaponRedesign20261102\\normal-moto-completion\\ReqMotoNormalSerraEntradaW_NW_N20261102Selected-source.png",
+  "preservedSourceName": "ReqMotoNormalSerraEntradaW_NW_N20261102Selected-source.png",
+  "skin": 0,
+  "weapon": 3,
+  "form": 0,
+  "columns": 4,
+  "sourceRows": 3,
+  "minimumArea": 5000,
+  "rows": [
+    {
+      "sourceRow": 0,
+      "direction": 2,
+      "action": "Attack",
+      "attackKey": "Serra de Entrada",
+      "loop": false,
+      "durationMs": [
+        125,
+        125,
+        240,
+        370
+      ]
+    },
+    {
+      "sourceRow": 1,
+      "direction": 3,
+      "action": "Attack",
+      "attackKey": "Serra de Entrada",
+      "loop": false,
+      "durationMs": [
+        125,
+        125,
+        240,
+        370
+      ]
+    },
+    {
+      "sourceRow": 2,
+      "direction": 4,
+      "action": "Attack",
+      "attackKey": "Serra de Entrada",
+      "loop": false,
+      "durationMs": [
+        125,
+        125,
+        240,
+        370
+      ]
+    }
+  ],
+  "supportAnchors": {
+    "0": {
+      "anchor": [
+        221,
+        356
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "1": {
+      "anchor": [
+        662,
+        356
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "2": {
+      "anchor": [
+        1103,
+        356
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "3": {
+      "anchor": [
+        1544,
+        356
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "4": {
+      "anchor": [
+        221,
+        762
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "5": {
+      "anchor": [
+        662,
+        762
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "6": {
+      "anchor": [
+        1103,
+        762
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "7": {
+      "anchor": [
+        1544,
+        762
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "8": {
+      "anchor": [
+        221,
+        1168
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "9": {
+      "anchor": [
+        662,
+        1168
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "10": {
+      "anchor": [
+        1103,
+        1168
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    },
+    "11": {
+      "anchor": [
+        1544,
+        1168
+      ],
+      "method": "Retained measured source support midpoint",
+      "uncertaintyPixels": 8
+    }
+  }
+}

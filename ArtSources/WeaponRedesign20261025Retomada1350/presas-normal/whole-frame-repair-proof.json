@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "anatomicalAssembly": false,
+  "resizing": false,
+  "daggerTipRepair": {
+    "originalSource": "ReqDaggersNormalIdleE_SE1350V1-source.png",
+    "originalSha256": "72605eb72cc7ca3e025d9a5d389282aa3d7e8f27c57697a403125923de2ad0ff",
+    "integratedImageGenRepair": "ReqDaggersNormalIdleE_SE1350V2-repair-generated.png",
+    "repairSha256": "ede5331ce2e2bb29995cae03fcd224441a9ea07b7caa677c1e1c324149273417",
+    "wholeFrameRect": [
+      1180,
+      512,
+      356,
+      512
+    ],
+    "result": "ReqDaggersNormalIdleE_SE1350V2-source.png",
+    "resultSha256": "8a85814f19da964aeb25add48e5ea1e161e7cbd20a2a86bab10ae774a693aa9a",
+    "allPixelsOutsideWholeFrameUnchanged": true,
+    "sevenGoodFiguresPreserved": true
+  },
+  "backViews": {
+    "originalSource": "ReqDaggersNormalIdleNW_N_NE1350V1-source.png",
+    "originalSha256": "b4502b9b524386fe874b51ab4b65e03a6a0d9164b335610f2a24c151126f4cb1",
+    "result": "ReqDaggersNormalIdleNW_N1350V1-source.png",
+    "resultSha256": "bc187fb4e6167795dff85b6f5e43e01fe0dacb788db952f7af216b7c6e53fe3a",
+    "wholeFigureCrop": [
+      0,
+      0,
+      1536,
+      674
+    ],
+    "eightGoodFiguresPreserved": true,
+    "excluded": "Entire NE row, four figures: chain on wrong hip. Replaced by new full-figure NEV3 source."
+  }
+}

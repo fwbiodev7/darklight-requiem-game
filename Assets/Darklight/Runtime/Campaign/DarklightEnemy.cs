@@ -44,7 +44,7 @@ namespace Darklight
             if(Boss)speed=ExpandedBoss?ExpandedSpeed:phaseTwo?3.15f:2.4f;
             speed*=game.DifficultyProfile.speed;
             if(TickTactics(game,dt,delta,distance,range,speed,ranged))return;
-            art.sortingOrder=100-Mathf.RoundToInt(transform.position.y*10);
+            art.sortingOrder=DarklightSorting.OrderForY(transform.position.y);
             if(state==0)
             {
                 art.color=Color.white;

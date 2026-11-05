@@ -9,7 +9,7 @@ namespace Darklight
         bool TickVisitor(DarklightCampaign game,DarklightCombatLab lab,float dt)
         {
             if(Visitor==DarklightVisitor.None)return false;
-            art.flipX=false;art.sortingOrder=100-Mathf.RoundToInt(transform.position.y*10);
+            art.flipX=false;art.sortingOrder=DarklightSorting.OrderForY(transform.position.y);
             if(Airborne){body.linearVelocity=Vector2.zero;Show(3);return true;}
             if(stagger>0){body.linearVelocity=Vector2.zero;art.color=new Color(1,.75f,.75f);Show(3);warning?.Hide();return true;}
             Vector2 delta=(Vector2)lab.Player.transform.position-body.position;float distance=delta.magnitude;

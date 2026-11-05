@@ -108,10 +108,44 @@ namespace Darklight
             float slide=CircleTravel(body,origin+advanced,radius,residual,out _);
             body.position=origin+advanced+(residual.sqrMagnitude>.00000001f?residual.normalized*slide:Vector2.zero);
         }
+        public static void ResolvePenetration(Rigidbody2D body)
+        {
+            if(body==null)return;
+            var col=body.GetComponent<Collider2D>();
+            if(col==null)return;
+            int count=col.Overlap(new ContactFilter2D{useTriggers=false,useLayerMask=false},overlaps);
+            for(int i=0;i<count;i++)
+            {
+                var other=overlaps[i];
+                if(other==null||other.isTrigger||other.attachedRigidbody==body||other.GetComponentInParent<DarklightCombatant>()!=null)continue;
+                var dist=col.Distance(other);
+                if(dist.isOverlapped&&dist.distance<0)
+                {
+                    Vector2 push=dist.normal*(-dist.distance+0.003f);
+                    body.position+=push;
+                }
+            }
+        }
         static float BodyTravel(Rigidbody2D body,Vector2 delta,out Vector2 normal)
         {
             normal=Vector2.zero;float length=delta.magnitude,allowed=length;
             if(length<.00001f)return 0;var direction=delta/length;
+            var col=body.GetComponent<Collider2D>();
+            if(col!=null)
+            {
+                int overCount=col.Overlap(new ContactFilter2D{useTriggers=false,useLayerMask=false},overlaps);
+                for(int i=0;i<overCount;i++)
+                {
+                    var other=overlaps[i];
+                    if(other==null||other.isTrigger||other.attachedRigidbody==body||other.GetComponentInParent<DarklightCombatant>()!=null)continue;
+                    var dist=col.Distance(other);
+                    if(dist.isOverlapped&&Vector2.Dot(direction,dist.normal)<-.0001f)
+                    {
+                        normal=dist.normal;
+                        return 0;
+                    }
+                }
+            }
             int count=body.Cast(direction,new ContactFilter2D {useTriggers=false,useLayerMask=false},movementHits,length+CastSkin);
             for(int i=0;i<count;i++)
             {
@@ -124,9 +158,13 @@ namespace Darklight
         public static Vector2 SlidingVelocity(Rigidbody2D body,Vector2 velocity,float step)
         {
             if(body==null||step<=0||velocity.sqrMagnitude<.00000001f)return Vector2.zero;
+            ResolvePenetration(body);
             var delta=velocity*step;
             float travel=BodyTravel(body,delta,out var normal);
-            if(normal==Vector2.zero)return velocity;
+            if(normal==Vector2.zero)
+            {
+                return travel>=delta.magnitude?velocity:(delta.normalized*travel)/step;
+            }
             var advanced=delta.normalized*travel;
             var residual=delta-advanced;residual-=normal*Mathf.Min(0,Vector2.Dot(residual,normal));
             // Use the actual capsule and its existing offset for ordinary physics movement.

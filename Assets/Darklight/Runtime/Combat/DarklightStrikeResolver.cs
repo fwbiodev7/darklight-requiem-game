@@ -17,7 +17,9 @@ namespace Darklight
                 var enemy=target.GetComponent<DarklightEnemy>();
                 if(fighter.AirCombo?.AcceptTarget(enemy)==false)continue;
                 Vector2 point=contacts[i].ClosestPoint(body.position);
-                if(!DarklightHitGeometry.Contains(attack,body.position,model.Facing,point,extra,model.ContactProgress,model.ContactStartProgress))continue;
+                Vector2 targetPos=(Vector2)target.transform.position;
+                Vector2 samplePoint=Vector2.Lerp(point,targetPos,0.35f);
+                if(!DarklightHitGeometry.Contains(attack,body.position,model.Facing,samplePoint,extra,model.ContactProgress,model.ContactStartProgress))continue;
                 Vector2 delta=point-body.position;
                 int walls=Physics2D.Raycast(body.position,delta.normalized,new ContactFilter2D{useTriggers=false,useLayerMask=false},blockers,delta.magnitude);
                 bool blocked=walls>=blockers.Length;

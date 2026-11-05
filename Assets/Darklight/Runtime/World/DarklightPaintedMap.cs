@@ -24,13 +24,13 @@ namespace Darklight
                 if(details!=null)
                 {
                     var source=Rect.MinMaxRect(left,top,right,bottom);
-                    foreach(var part in details.Partition(source)){var sprite=details.Foreground(image,map,part);owner.temporary.Add(sprite);var piece=new GameObject("TrechoFrontal");piece.transform.SetParent(obj.transform,false);piece.transform.position=map.Art.World(new Vector2(part.center.x,part.yMax));var renderer=piece.AddComponent<SpriteRenderer>();renderer.sprite=sprite;renderer.sharedMaterial=material;renderer.sortingOrder=100-Mathf.RoundToInt(foot.y*10);}
+                    foreach(var part in details.Partition(source)){var sprite=details.Foreground(image,map,part);owner.temporary.Add(sprite);var piece=new GameObject("TrechoFrontal");piece.transform.SetParent(obj.transform,false);piece.transform.position=map.Art.World(new Vector2(part.center.x,part.yMax));var renderer=piece.AddComponent<SpriteRenderer>();renderer.sprite=sprite;renderer.sharedMaterial=material;renderer.sortingOrder=DarklightSorting.OrderForY(foot.y);}
                     var fade=obj.AddComponent<DarklightMapOcclusion>();fade.width=(right-left)/map.Art.pixelsPerUnit;fade.height=(bottom-top)/map.Art.pixelsPerUnit;
                 }
                 else
                 {
                     var crop=new Rect(image.rect.x+left,image.rect.y+map.Art.height-bottom,right-left,bottom-top);var pivot=new Vector2((region.foot.x-left)/crop.width,(bottom-region.foot.y)/crop.height);
-                    var sprite=Sprite.Create(image.texture,crop,pivot,map.Art.pixelsPerUnit,0,SpriteMeshType.FullRect);owner.temporary.Add(sprite);var renderer=obj.AddComponent<SpriteRenderer>();renderer.sprite=sprite;renderer.sharedMaterial=material;renderer.sortingOrder=100-Mathf.RoundToInt(foot.y*10);var fade=obj.AddComponent<DarklightMapOcclusion>();fade.width=renderer.bounds.size.x;fade.height=renderer.bounds.size.y;
+                    var sprite=Sprite.Create(image.texture,crop,pivot,map.Art.pixelsPerUnit,0,SpriteMeshType.FullRect);owner.temporary.Add(sprite);var renderer=obj.AddComponent<SpriteRenderer>();renderer.sprite=sprite;renderer.sharedMaterial=material;renderer.sortingOrder=DarklightSorting.OrderForY(foot.y);var fade=obj.AddComponent<DarklightMapOcclusion>();fade.width=renderer.bounds.size.x;fade.height=renderer.bounds.size.y;
                 }
             }
             DarklightBridgeVisibility.Attach(root,map);

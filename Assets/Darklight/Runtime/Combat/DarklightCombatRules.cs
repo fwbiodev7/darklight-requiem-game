@@ -65,9 +65,10 @@ namespace Darklight
             float angle=attack.angle;
             if(attack.hitShape==HitShape.Sweep)
             {
-                float signed=Vector2.SignedAngle(facing,delta),padding=Mathf.Atan2(attack.width*.5f,Mathf.Max(.1f,distance))*Mathf.Rad2Deg;
+                float signed=Vector2.SignedAngle(facing,delta),padding=Mathf.Min(12f,Mathf.Atan2(attack.width*.35f,Mathf.Max(.15f,distance))*Mathf.Rad2Deg);
                 float start=-angle*.5f+angle*previousProgress,end=-angle*.5f+angle*progress;
-                return signed>=start-padding&&signed<=end+padding;
+                float minArc=Mathf.Min(start,end)-padding,maxArc=Mathf.Max(start,end)+padding;
+                return signed>=minArc&&signed<=maxArc;
             }
             // A sweep covers the traversed arc; animation and contact share this phase.
             return Vector2.Angle(facing,delta)<=angle*.5f;

@@ -14,7 +14,7 @@ namespace Darklight
             if(delta.sqrMagnitude<36&&delta.sqrMagnitude>.1f)direction=DarklightCharacterView.DirectionIndex(delta);
             art.sprite=frames[direction];
             transform.position=foot+Vector3.up*((int)(clock*1.2f)%2)/48f;
-            art.sortingOrder=100-Mathf.RoundToInt(foot.y*10);
+            art.sortingOrder=DarklightSorting.OrderForY(foot.y);
         }
     }
 }

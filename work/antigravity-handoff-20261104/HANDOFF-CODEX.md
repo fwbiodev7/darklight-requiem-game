@@ -36,3 +36,22 @@ Todos os artefatos estão organizados sob o diretório `work/`.
   - Formas: Normal / Ruptura / Eclipse Absoluto
   - Armas: Katana / Punhos da Ruína / Moto
 - **Pipeline de Validacao**: DarklightWeaponRedesignBuild.Build executado com sucesso em modo batch headless via Tools/Delivery/retry_windows_build_20261101.py.
+
+## Status da Build Windows Standalone (05/11/2026 - Colisoes, Z-Sorting e Combate)
+
+- **Resultado**: `Succeeded` (0 erros)
+- **Executavel Local**: `outputs/retomada-20261101/Windows/DarklightRequiem.exe`
+- **Pacote Distribuivel Zip**: `outputs/retomada-20261101/DarklightRequiem-Windows-20261101-134858.zip` (1.53 GB)
+- **Tamanho Total Descompactado**: ~1.98 GB (1.988.125.242 bytes)
+- **Melhorias de Runtime Entregues**:
+  1. **Fisica Anti-Stuck e Despenetracao**:
+     - `DarklightNavigation.cs`: Implementado `ResolvePenetration(Rigidbody2D body)` que calcula o vetor de separacao com `col.Distance` e ejeta instantaneamente o corpo de qualquer colisor solido (`LimiteDoCenario`).
+     - Corrigido bug de `normal == Vector2.zero` em `SlidingVelocity`, impedindo que o jogador avance para dentro de quinas ou paredes quando o cast comeca em contato.
+     - `DarklightFighter.cs` e `DarklightAbyssRider.cs`: Integrada despenetracao preventiva a cada `FixedUpdate` e durante dashes da moto.
+  2. **Z-Sorting Milimetrico (Fim da Sobreposicao Invertida)**:
+     - `DarklightSorting.cs`: Novo sistema com resolucao de 100 camadas por metro (`BaseOrder = 3000`, `Precision = 100f`).
+     - Atualizados `DarklightCharacterView.cs`, `DarklightEnemy.cs`, `DarklightEnemyVisitors.cs`, `DarklightNPCView.cs` e `DarklightPaintedMap.cs`.
+     - Fim definitivo do Z-fighting entre Player, Inimigos e Cenarios.
+  3. **Calibracao de Hitboxes e Contato (Fim do 'Bater no Vento')**:
+     - `DarklightCombatRules.cs`: Contencao do arco angular de `Sweep` e `Sector`, limitando o padding angular excessivo a no maximo 12 graus.
+     - `DarklightStrikeResolver.cs`: Calculo de contato avaliado contra o volume real do alvo (`samplePoint` ponderado com o centro do inimigo), eliminando acertos fantasmas a longa distancia causados apenas pela borda da hurtbox.

@@ -171,6 +171,7 @@ namespace Darklight
         public Vector2 DashVelocity(Rigidbody2D body,Vector2 requested,float step)
         {
             if(!Dashing||!fighter.Model.ActiveThisTick||step<=0)return requested;
+            DarklightNavigation.ResolvePenetration(body);
             if(DashBlocked)return Vector2.zero;
             Vector2 delta;
             if(Drifting)

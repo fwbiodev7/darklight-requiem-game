@@ -112,7 +112,7 @@ namespace Darklight
             UsesWholeCharacterSprite=selected!=null&&!UsesUserWholeSprite;
             bool authored=DarklightWeaponRedesignBank.IsAuthored(display.sprite)||DarklightMotorcycleRedesignBank.IsAuthored(display.sprite);
             display.color=authored?Color.white:model.State==CombatState.Hurt?new Color(1,.4f,.4f):model.State==CombatState.Parry?new Color(.7f,.8f,1):Color.white;
-            display.sortingOrder=100-Mathf.RoundToInt(transform.position.y*10f);appearance?.Present(display,direction,skin,game?.Form??0,model);
+            display.sortingOrder=DarklightSorting.OrderForY(transform.position.y);appearance?.Present(display,direction,skin,game?.Form??0,model);
             originalForms??=GetComponent<DarklightOriginalVampireView>()??gameObject.AddComponent<DarklightOriginalVampireView>();
             originalForms.Present(display,skin,0,direction,previewing?previewForm:game?.PresentedForm??0,model.Clock,model.State==CombatState.Dead,UsesUserWholeSprite||UsesWholeCharacterSprite,model.State==CombatState.Dodge,!previewing);
             DarklightCanonicalComplexion.Apply(display,model.State!=CombatState.Dead);

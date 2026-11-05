@@ -42,6 +42,7 @@ namespace Darklight
         public void ResetModel() { Model = new CombatModel(loadout); body.linearVelocity = Vector2.zero; AirCombo?.ResetMotion();GetComponent<DarklightAbyssRider>()?.ResetMotion(); }
         void FixedUpdate()
         {
+            DarklightNavigation.ResolvePenetration(body);
             var requested=DarklightCombatLab.Instance?.CombatDelta > 0 && DarklightCampaign.Instance?.Transforming!=true ? Model.Motion * 4.5f * (DarklightCampaign.Instance?.MovementSpeed ?? 1) : Vector2.zero;
             var rider=DarklightCampaign.Instance?.AbyssRider;
             body.linearVelocity=rider?.Dashing==true&&Model.ActiveThisTick?rider.DashVelocity(body,requested,Time.fixedDeltaTime):DarklightNavigation.SlidingVelocity(body,requested,Time.fixedDeltaTime);

@@ -55,3 +55,33 @@ Todos os artefatos estão organizados sob o diretório `work/`.
   3. **Calibracao de Hitboxes e Contato (Fim do 'Bater no Vento')**:
      - `DarklightCombatRules.cs`: Contencao do arco angular de `Sweep` e `Sector`, limitando o padding angular excessivo a no maximo 12 graus.
      - `DarklightStrikeResolver.cs`: Calculo de contato avaliado contra o volume real do alvo (`samplePoint` ponderado com o centro do inimigo), eliminando acertos fantasmas a longa distancia causados apenas pela borda da hurtbox.
+
+
+---
+
+## 4. Plano de Recriação dos 10 Mapas em Camadas (Codex Protocol)
+
+O usuário aprovou a **recriação dos 10 mapas em 4 camadas estruturais isoladas**, montando **um mapa por vez**, na ordem:
+1. **Camada 1: Planta Baixa** (Piso limpo, sem itens, sem casas, apenas malha navegável e bounds de câmera).
+2. **Camada 2: Casas & Estruturas** (Paredes sólidas, fachadas, telhados, oclusão dinâmica DarklightMapOcclusion e Z-sorting milimétrico).
+3. **Camada 3: Itens & Interativos** (Spawn, NPC aliado, relíquia, baús/pickups, checkpoints e portal de saída).
+4. **Camada 4: Arenas & Inimigos** (Marcos dos selos, gatilhos de ondas de combate, chefe do capítulo e iluminação 2D).
+
+Documento mestre completo com especificações e coordenadas de cada fase:
+👉 Docs/Darklight/PLANO-RECRIACAO-10-MAPAS-EM-CAMADAS.md
+
+### Prompt Pronto para o Codex Executar a Montagem:
+`markdown
+Codex, continue a montagem dos 10 mapas do DARKLIGHT: REQUIEM seguindo estritamente o plano em camadas:
+Arquivo de referência: Docs/Darklight/PLANO-RECRIACAO-10-MAPAS-EM-CAMADAS.md
+
+Regras de execução obrigatórias:
+1. Trabalhe em UM MAPA POR VEZ (comece pelo Mapa 1: Rua das Cinzas).
+2. Para cada mapa, monte as camadas na ordem canônica:
+   - Passo 1: Planta Baixa (chão limpo transitável, sem nenhum obstáculo, bounds e walkmesh livre);
+   - Passo 2: Casas, Fachadas e Paredes (polígonos 'blocked', colliders BoxCollider2D, oclusão de telhados e Z-sorting com DarklightSorting);
+   - Passo 3: Itens, Relíquia, Checkpoints, Aliado e Portal (coordenadas seguras sem overlap em paredes);
+   - Passo 4: Arenas, Selos e Inimigos (waves de combate e chefe na Arena 4).
+3. Valide cada fase com testes de rota da cápsula antes de avançar para o próximo mapa.
+4. Ao concluir cada mapa, faça o commit correspondente e avance sequencialmente até o Mapa 10.
+`

@@ -144,3 +144,4 @@ Para cada mapa $N \in [1..10]$, executar o seguinte ciclo sem pular etapas:
 * Sistema de Z-Sorting Milimétrico: [`DarklightSorting.cs`](file:///c:/Users/Usuario/darklight-requiem-game/Assets/Darklight/Runtime/Character/DarklightSorting.cs)
 * Motor de Depenetração Anti-Stuck: [`DarklightNavigation.ResolvePenetration`](file:///c:/Users/Usuario/darklight-requiem-game/Assets/Darklight/Runtime/Character/DarklightNavigation.cs)
 * Validador de Build Windows Standalone: `Tools/Delivery/retry_windows_build_20261101.py`
+

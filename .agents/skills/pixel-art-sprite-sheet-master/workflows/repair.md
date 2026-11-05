@@ -1,0 +1,11 @@
+# Reconstrução e frames defeituosos
+
+1. Compare fonte, manifesto e consumo antes de alterar pixels. Erro de direção, tempo, escala, retângulo ou pivô pode estar só nos metadados.
+2. Classifique o problema: metadado, conteúdo visual, fonte incompleta ou renderização. Registre arquivo, frame, evidência e correção esperada.
+3. Para erro visual em alguns frames, corrija **somente esses sprites completos**, preservando os frames corretos pixel a pixel. Não regenerar a folha inteira por causa de poucas manchas. Identifique os IDs defeituosos antes da geração e use cada quadro inteiro, mais a referência aprovada, como entrada. Mantenha cabeça, corpo e arma no mesmo quadro. Nunca substituir apenas o rosto/cabelo, mascarar pele por heurística global ou montar partes. Essa preferência foi explicitamente reforçada pelo usuário de DARKLIGHT em 20/10/2026.
+4. Preserve referências e saídas anteriores. Substitua no manifesto somente o quadro completo validado; para folhas separadas, empacote quadros completos com `pack` ou o empacotador já existente do projeto. Fontes irregulares com efeitos sobrepostos exigem o sistema de ownership existente ou revisão manual; não cortar pela grade presumida.
+5. Confira todos os frames tocados e os vizinhos, arma, proporções, paleta e loop. Aumentar escala não corrige anatomia. Nova folha que degrada roupa, idade ou arma permanece rejeitada e fora da integração.
+
+Use `scripts/replace_frames.py` para substituições técnicas com retângulos conferidos e sem sobreposição com quadros não selecionados. O script aceita apenas imagens de sprites completos no mesmo canvas do frame ou em múltiplo inteiro uniforme, verifica ausência de recorte nas bordas e comprova que todos os pixels fora dos quadros selecionados permaneceram idênticos. Não usar para transplantar partes. Se os retângulos se sobrepõem, preservar o sistema de ownership do projeto ou entregar frames separados para integração; não apagar pixels vizinhos.
+
+Para defeitos recorrentes em muitos atlas, valide uma amostra representativa contra a referência antes de repetir a geração. Não propague uma correção sem inspeção. Se nenhuma rodada resolve o defeito, registre a candidata rejeitada e a pendência específica; não apresente trabalho parcial como pacote profissional finalizado.

@@ -1,0 +1,17 @@
+# Referências, identidade e paletas
+
+Priorize repouso aprovado → caminhada aprovada → ações aprovadas da mesma skin/forma → candidatas. Não use candidata como nova autoridade sem registrar isso. Inspecione as imagens inteiras antes de criar prompts; não preparar recortes de cabeça, olhos, roupa ou arma.
+
+Registre no contrato visual: proporção cabeça/corpo e torso/pernas, largura de cabeça e ombros, linha dos olhos, nariz/mandíbula, cor/posição dos olhos, desenho e comprimento do cabelo, envelhecimento, volumes da roupa e arma. Meça marcos em coordenadas sobre a referência completa; não confunda tamanho do efeito ou arma com altura anatômica. Oclusão e perspectiva mudam o que é visível, não a identidade.
+
+Extraia a paleta com o helper `palette`; ele mantém contagens RGBA, sem quantizar ou repintar a fonte. Para uma paleta semântica, anote manualmente rampas de pele, cabelo, tecido, metal e energia. Declare exceções emissivas. Compare pele nas áreas equivalentes e iluminação equivalente; mediana global não separa materiais. Preserve a mesma rampa entre frames e documente transformações de skin/forma deliberadas.
+
+Confira olhos e pele ao redor separadamente: a cor da íris não autoriza olheiras, lágrimas, maquiagem ou manchas na pele. Em DARKLIGHT, a referência principal dos olhos, expressamente indicada em 20/10/2026, é `ArtSources/PlayerEyeReference20261020/referencia-olhos-player.png` (captura de 19/10 às 20:10:51). Use o MESMO desenho dos olhos e a MESMA paleta em TODAS as formas do player, sem recolorir conforme energia, cabelo ou cristais. Esse arquivo prevalece sobre candidatas e sobre o repouso de uma transformação para olhos. Inspecione a imagem inteira; nunca extraia/transplante olhos. Preserve tom de pele aprovado, idade, cabelo/cristais, roupa, armas e Fábio/HUD aprovados. As restrições locais prevalecem sobre qualquer preset de estilo.
+
+Para variantes, faça uma matriz skin × forma × ação × direção, com referência e estado de cada célula. Célula ausente permanece ausente: nunca preencher escondido com outra arma, forma ou direção. Mostre comparações em escala anatômica comum, sem escala variável para caber uma arma maior.
+
+Na forma roxa de DARKLIGHT, mantenha as **mechas roxas do cabelo** e os cristais roxos, conforme reforço expresso em 20/10/2026. A captura de olhos com cabelo vermelho é autoridade dos olhos, não autorização para transferir cabelo vermelho para a forma roxa. Ao combinar referências, declare a função de cada imagem e confira contaminação entre materiais/estados.
+
+Refinamento mais recente em 20/10: o vinho ficou marrom e o bordô anterior ficou pouco vermelho. O usuário pediu **mais vermelho**, próximo à captura: base atual `#C40814`, sombra `#5A0000` (amostras e guia da referência, não quantização automática). Guias anteriores `#80172C`/`#450B18` foram superados. Use a mesma rampa nas formas; preserve pupila, branco/brilhos, desenho dos olhos e pele limpa. Não recolorir mechas, cristais, roupa ou armas junto da íris.
+
+A pele de todas as folhas do player usa o repouso aprovado da Requiem como autoridade, incluindo braços/mãos da Rock, todas as armas e formas. O pigmento-base medido no projeto é `[246,174,130]`; manter rampas e iluminação. Isso não autoriza apagar diversidade de NPCs. Uniformizar o estilo significa redesenhar clusters e contornos consistentes na resolução nativa, não aplicar blur/sharpen a toda a folha. Para lotes novos, gerar folhas de 8–12 sprites com a qualidade do exemplo separado, conforme preferência explícita posterior do usuário.

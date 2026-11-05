@@ -1,0 +1,332 @@
+trabaio do codex:# DARKLIGHT: REQUIEM — CODEX
+## Direção artística, skills especializadas, cinematografia e integração Unity
+*Ciclo iniciado em 04/11/2026*
+
+Retome o desenvolvimento de DARKLIGHT: REQUIEM no workspace principal, respeitando AGENTS.md, o escopo canônico, os checkpoints mais recentes e o estado real do projeto.
+
+Você será o agente responsável pela execução artística, criação de skills, integração Unity, desenvolvimento cinematográfico, testes visuais e builds.
+
+O Antigravity trabalhará paralelamente em um clone independente, produzindo componentes de engenharia de suporte. Não duplique as responsabilidades dele.
+
+## 1. ORDEM OBRIGATÓRIA DO DESENVOLVIMENTO
+
+Seguir esta sequência:
+
+1. Corrigir os problemas identificados na build de 03/11.
+2. Finalizar Lucius Normal.
+3. Melhorar radicalmente a atmosfera Gothic Eclipse.
+4. Integrar os menus novos e redesenhados.
+5. Finalizar as transformações reutilizando os sistemas existentes.
+6. Integrar o GDD às dez fases da campanha.
+7. Criar cutscenes, prólogo e transições narrativas.
+8. Realizar QA final, otimização e build Windows.
+
+As skills poderão ser preparadas e utilizadas durante as etapas correspondentes, sem interromper desnecessariamente o desenvolvimento principal.
+
+Não iniciar simultaneamente todas as frentes nem prejudicar a ordem estabelecida.
+
+## 2. RESPONSABILIDADE EXCLUSIVA — CRIAÇÃO E UTILIZAÇÃO DE SKILLS
+
+Você será responsável por pesquisar, instalar, criar, configurar, validar e utilizar skills apropriadas para o desenvolvimento do DARKLIGHT.
+
+O Antigravity não deverá criar nem instalar skills para você.
+
+### Skills e ferramentas externas a investigar
+
+*Unity Agent Plugin — oficial*
+https://github.com/Unity-Technologies/unity-agent-plugin
+
+*Unity Open MCP — Timeline*
+https://github.com/AlexeyPerov/Unity-Open-MCP/blob/master/skills/extensions/timeline/SKILL.md
+
+*Unity Open MCP — Cinemachine*
+https://github.com/AlexeyPerov/Unity-Open-MCP/blob/master/skills/extensions/cinemachine/SKILL.md
+
+*Unity Pixel Perfect — oficial*
+https://github.com/Unity-Technologies/skills/blob/main/skills/2d-pixel-perfect/SKILL.md
+
+*Pixel Art Fundamentals*
+https://github.com/ProkStudio/skills/blob/main/skills/game/2d/pixel-art-fundamentals/SKILL.md
+
+Antes de instalar:
+- Verificar se a ferramenta existe e está disponível.
+- Conferir licença e compatibilidade.
+- Consultar instruções atualizadas.
+- Verificar se já existe uma implementação equivalente.
+- Evitar servidores MCP concorrentes.
+- Não sobrescrever configurações funcionais.
+- Registrar dependências instaladas e resultados dos testes.
+
+Uma skill que descreve como utilizar Timeline não substitui o pacote Unity Timeline nem a configuração de sua integração.
+
+### Criação automática de skills próprias
+
+Utilizar o $skill-creator oficial quando disponível.
+
+Se não estiver disponível, consultar:
+https://github.com/openai/codex
+
+Identificar a documentação atual e o mecanismo oficial de criação de skills.
+
+As skills locais deverão ser organizadas em:
+
+.agents/skills/
+
+Criar as seguintes skills, conforme sua necessidade real:
+
+*darklight-cutscene-pipeline*
+Direção, criação e validação das cutscenes do jogo.
+
+*darklight-pixelart-animation*
+Criação, revisão e integração de sprites e animações nas oito direções.
+
+*darklight-animation-qa*
+Inspeção visual de animações e identificação de frames deslocados.
+
+*darklight-gothic-eclipse*
+Configuração e validação visual da atmosfera dark fantasy.
+
+*darklight-transformations*
+Integração artística e funcional das formas canônicas.
+
+*darklight-campaign-cinematics*
+Integração entre GDD, acontecimentos narrativos e cenas cinematográficas.
+
+*darklight-ui-integration*
+Integração dos novos menus pixel art.
+
+Não criar skills gigantes, redundantes ou com instruções conflitantes.
+
+### Como criar uma skill na hora
+
+Sempre que um procedimento especializado e reutilizável for necessário:
+
+1. Pesquisar uma skill compatível já existente.
+2. Reutilizá-la caso seja adequada.
+3. Se não existir, invocar $skill-creator ou o procedimento oficial correspondente.
+4. Criar a estrutura necessária em .agents/skills/<nome-da-skill>/.
+5. Adicionar SKILL.md, referências e scripts quando fizer sentido.
+6. Incluir frontmatter YAML com name e description.
+7. Documentar quando utilizar a skill e os procedimentos exatos.
+8. Executar o validador oficial disponível.
+9. Testar a skill em uma tarefa representativa.
+10. Corrigir falhas e utilizá-la no próprio trabalho.
+
+Exemplo:
+
+$skill-creator Crie uma skill chamada darklight-cutscene-pipeline, especializada em cutscenes 2D pixel art na Unity, utilizando Timeline, Cinemachine e os padrões do DARKLIGHT: REQUIEM.
+
+Se a descoberta automática não reconhecer a nova skill durante a sessão, abrir diretamente seu SKILL.md e seguir as instruções. Atualizar a sessão quando necessário.
+
+Não afirmar que uma skill está funcional sem realmente testá-la.
+
+## 3. DIREÇÃO ARTÍSTICA — FABIUS E LUCIUS
+
+Preservar o redesign aprovado de Fabius.
+
+Corrigir o frame deslocado da caminhada com Punhos/Grevas e aprimorar as partículas, especialmente a esquiva, que está pouco visível.
+
+Finalizar Lucius Normal com:
+- Mesmo padrão anatômico de Fabius.
+- Identidade facial própria.
+- Cabelo claro.
+- Sobretudo preto/azul.
+- Olhos azuis.
+- Espada grande.
+- Animações e ataques próprios.
+- Compatibilidade com o combate atual.
+
+Preservar as animações de Fabius que já foram aprovadas.
+
+### Regras para sprites
+
+- Manter identidade visual canônica.
+- Preservar escalas e proporções.
+- Não regenerar quadros corretos sem necessidade.
+- Nunca montar personagens usando recortes independentes de cabeça, corpo e arma.
+- Priorizar sprites completos.
+- Evitar filtros que tintem pele e olhos.
+- Manter pixel art nítida.
+- Garantir alinhamento e continuidade entre quadros.
+
+Usar as skills apropriadas para reduzir erros e retrabalho.
+
+## 4. GOTHIC ECLIPSE 2.0
+
+A atmosfera atual foi considerada insuficiente pelo usuário.
+
+Reformular radicalmente sua qualidade visual, aproximando-a da imagem de referência aprovada.
+
+Trabalhar com:
+- Luar azul-prateado.
+- Chuva em camadas.
+- Névoa profunda e rasteira.
+- Sombras e profundidade.
+- Reflexos em superfícies molhadas.
+- Iluminação dramática.
+- Partículas ambientais.
+- Relâmpagos controlados.
+- Materiais, shaders e URP 2D.
+
+*NÃO REFAZER OS MAPAS.*
+
+Utilizar a infraestrutura existente e aproveitar as ferramentas de análise e otimização que o Antigravity entregar.
+
+Preservar nitidez pixel art, desempenho e visibilidade do combate.
+
+## 5. MENUS 2.0
+
+Utilizar as referências visuais aprovadas.
+
+Integrar:
+- Menu principal com Fabius no canto.
+- Mapa redesenhado.
+- Configurações.
+- Arsenal com Katana, Punhos/Grevas e Moto.
+- Diário e missões existentes.
+
+Utilizar fontes pixel art e identidade gótica consistente.
+
+Remover Artefatos e Coleções dos menus, preservando dados ainda necessários ao jogo.
+
+Garantir navegação funcional por teclado, mouse e controle.
+
+## 6. TRANSFORMAÇÕES
+
+Reaproveitar sistemas e artes existentes.
+
+Formas autorizadas:
+
+Fabius:
+- Normal.
+- Ruptura.
+- Eclipse Absoluto.
+
+Lucius:
+- Normal.
+- Nexo Fenrir.
+
+Não recriar sistemas funcionais sem necessidade.
+
+Utilizar o suporte técnico preparado pelo Antigravity para estados, recursos, transições e testes.
+
+Sua responsabilidade será integrar animações, efeitos, habilidades, aparência e gameplay na Unity.
+
+## 7. CINEMATOGRAFIA — RESPONSABILIDADE DO CODEX
+
+Você será responsável pela produção das cutscenes, incluindo artes, personagens, cenários necessários, câmeras, animações e integração Unity.
+
+Utilizar Timeline e Cinemachine quando compatíveis, aproveitando a skill darklight-cutscene-pipeline.
+
+### CUTSCENE A — INFÂNCIA
+
+Criar Fabius e Lucius crianças, mantendo sua identidade visual.
+
+Os irmãos treinam com espadas de madeira.
+
+A sequência funciona como tutorial jogável:
+- Movimento.
+- Ataque.
+- Combos básicos.
+- Defesa.
+- Esquiva.
+- Fundamentos do combate.
+
+O jogador deve controlar Fabius durante o tutorial.
+
+### CUTSCENE B — CONFRONTO FINAL
+
+Após a infância, realizar uma transição cinematográfica para a batalha adulta entre Fabius e Lucius.
+
+Criar:
+- Confronto de espadas.
+- Planos cinematográficos.
+- Impactos.
+- Partículas.
+- Movimentação dramática.
+- Iluminação Gothic Eclipse.
+- Momento de suspense.
+
+Interromper a cena antes de confirmar se Fabius recebeu um golpe fatal.
+
+### CUTSCENE C — FLASHBACK
+
+Transportar o jogador ao passado, iniciando a campanha principal.
+
+A história deverá progredir até alcançar novamente o confronto mostrado na abertura.
+
+### CUTSCENES DA CAMPANHA
+
+Ler o GDD consolidado e identificar os acontecimentos que realmente necessitam de cenas.
+
+Criar somente cutscenes justificadas pela narrativa.
+
+### Regras técnicas das cinematics
+
+- Suporte a skip.
+- Bloqueio e restauração de controles.
+- Câmeras sem travamento.
+- Transições seguras.
+- Save/load.
+- Eventos narrativos sem repetição indevida.
+- Animações pixel perfect.
+- Integração com combate.
+- Legendas.
+- Compatibilidade com a campanha.
+
+O Antigravity poderá fornecer componentes técnicos, mas a construção das cenas, edição das Timelines e integração final são exclusivamente suas.
+
+## 8. TESTES E BUILDS
+
+Ao finalizar cada etapa relevante:
+- Executar testes focados.
+- Verificar animações e sprites.
+- Conferir regressões.
+- Registrar screenshots ou vídeos.
+- Validar integração real.
+- Gerar build intermediária quando viável.
+- Documentar falhas e pendências.
+
+Utilizar as ferramentas de QA fornecidas pelo Antigravity quando estiverem disponíveis e validadas.
+
+Não declarar aprovação visual baseada somente em compilação.
+
+## 9. COORDENAÇÃO COM ANTIGRAVITY
+
+O Antigravity fornecerá:
+- Componentes C#.
+- Arquiteturas.
+- Ferramentas de QA.
+- Testes.
+- Utilitários de desempenho.
+- Contratos de sistemas narrativos.
+- Documentação de integração.
+
+Antes de integrar cada pacote:
+1. Revisar o código.
+2. Verificar conflitos.
+3. Conferir compatibilidade.
+4. Executar testes.
+5. Incorporar somente o necessário.
+6. Preservar sistemas existentes.
+
+Não aguardar obrigatoriamente o Antigravity para trabalhos independentes.
+
+## 10. ENTREGA E PRESERVAÇÃO
+
+Registrar:
+- Skills utilizadas e criadas.
+- Artes produzidas.
+- Animações concluídas.
+- Cinematics integradas.
+- Funcionalidades implementadas.
+- Testes executados.
+- Builds produzidas.
+- Problemas encontrados.
+- Pendências restantes.
+
+Manter commits rastreáveis e respeitar o repositório/branch de integração autorizado.
+
+Não modificar outros projetos.
+
+*OBJETIVO FINAL:* completar o desenvolvimento visual, cinematográfico e funcional de DARKLIGHT: REQUIEM, utilizando skills especializadas e componentes técnicos reaproveitáveis, com fidelidade artística, estabilidade e builds jogáveis.

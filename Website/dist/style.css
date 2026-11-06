@@ -136,3 +136,27 @@ dialog button{font-size:12px}
  .overline{font-size:10px}
  .hero-bottom{font-size:9px}
 }
+
+/* Brand identity: official pixel-art logo, self-hosted and transparent.
+   Image rendering preserves deliberate pixel edges; no text-based imitation. */
+.brand.brand-image{display:inline-flex;align-items:center;justify-content:center;flex:none;max-width:100%;line-height:0}
+.brand.brand-image img{display:block;width:clamp(175px,16vw,248px);height:auto;max-width:100%;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 2px 5px #000b)}
+.hero h1.hero-logo{margin:14px 0 0;max-width:min(100%,825px);font-size:inherit;line-height:0;letter-spacing:normal}
+.hero h1.hero-logo img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 9px 20px #0008)}
+.hero .hero-statement{margin-top:32px}
+.hero .hero-caption{margin-bottom:9px}
+footer .brand.brand-image img{width:clamp(170px,15vw,230px)}
+@media(max-width:900px){
+  .site-header .brand.brand-image img{width:190px}
+}
+@media(max-width:700px){
+  .site-header .brand.brand-image img{width:clamp(134px,35vw,186px)}
+  .hero h1.hero-logo{max-width:100%;margin:12px 0 0}
+  .hero .hero-statement{margin-top:27px}
+  .hero .hero-caption{margin-top:34px}
+  footer .brand.brand-image img{width:200px}
+}
+@media(max-width:400px){
+  .site-header .brand.brand-image img{width:134px}
+  .hero .hero-statement{margin-top:22px}
+}

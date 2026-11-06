@@ -1,230 +1,101 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#09090d">
-  <meta name="description" content="DARKLIGHT: REQUIEM — RPG de ação 2D em pixel art dark fantasy. Conheça Fabius, o arsenal renovado, as novidades de desenvolvimento de novembro e o que vem a seguir.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="DARKLIGHT: REQUIEM — O Eclipse se aproxima">
-  <meta property="og:description" content="O combate evoluiu. A escuridão ganhou forma. Descubra as novidades e os próximos capítulos de DARKLIGHT: REQUIEM.">
-  <meta property="og:image" content="assets/menu-art.png">
-  <title>DARKLIGHT: REQUIEM — O Eclipse se aproxima</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
-  <script src="app.js" defer></script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08070b">
+<meta name="description" content="DARKLIGHT: REQUIEM é um RPG de ação 2D em pixel art dark fantasy. Descubra Fabius, Lucius, o arsenal e as próximas grandes revelações de Vespera.">
+<meta property="og:title" content="DARKLIGHT: REQUIEM | O Eclipse Absoluto se aproxima">
+<meta property="og:description" content="Um eclipse. Dois irmãos. O destino de Vespera. Descubra o que está por vir.">
+<meta property="og:type" content="website"><meta property="og:image" content="assets/menu-art.png">
+<title>DARKLIGHT: REQUIEM | O Eclipse Absoluto se aproxima</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
 </head>
 <body>
-<a class="skip" href="#historia">Pular para o conteúdo</a>
-<header>
-  <a class="wordmark" href="#inicio" aria-label="DARKLIGHT: REQUIEM — início">DARKLIGHT<span>R E Q U I E M</span></a>
-  <nav aria-label="Navegação principal">
-    <a href="#novidades">Novidades</a>
-    <a href="#historia">História</a>
-    <a href="#arsenal">Arsenal</a>
-    <a href="#futuro">Em breve</a>
-    <a class="nav-download" href="#download">JOGAR <span aria-hidden="true">↗</span></a>
-  </nav>
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+<div class="reading-progress" aria-hidden="true"><span id="reading-bar"></span></div>
+<header class="site-header" id="topbar">
+<a class="brand" href="#inicio" aria-label="DARKLIGHT: REQUIEM, início">DARKLIGHT<span>R E Q U I E M</span></a>
+<nav class="site-nav" id="nav" aria-label="Navegação principal"><a href="#universo">UNIVERSO</a><a href="#combate">COMBATE</a><a href="#formas">FORMAS</a><a href="#em-breve">EM BREVE</a><a href="#galeria">GALERIA</a></nav>
+<a class="nav-cta" href="#jogar">JOGUE AGORA ↗</a>
+<button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
 </header>
-<main>
-  <section class="hero" id="inicio" aria-labelledby="hero-title">
-    <img class="hero-scene" src="assets/menu-art.png" alt="Arquitetura gótica de Vespera sob um eclipse vermelho" fetchpriority="high">
-    <div class="hero-shade" aria-hidden="true"></div>
-    <div class="hero-content">
-      <p class="eyebrow"><span class="diamond" aria-hidden="true">✦</span> PIXEL ART · DARK FANTASY · HACK 'N' SLASH</p>
-      <p class="hero-kicker">DIÁRIO DE DESENVOLVIMENTO · 06.11.2026</p>
-      <h1 id="hero-title">DARKLIGHT<span>REQUIEM</span></h1>
-      <p class="hero-line">O combate evoluiu.<br><em>O Eclipse se aproxima.</em></p>
-      <p class="hero-intro">Uma cidade à beira da Ruptura. Dois irmãos separados pelo destino. Um combate que está sendo reconstruído golpe por golpe.</p>
-      <div class="hero-actions">
-        <a class="button" href="#novidades">DESCUBRA O QUE MUDOU <span aria-hidden="true">↓</span></a>
-        <a class="button button-ghost" href="#futuro">VEJA O QUE VEM AÍ <span aria-hidden="true">↗</span></a>
-      </div>
-      <p class="hero-note">EM DESENVOLVIMENTO ATIVO · WINDOWS · UNITY 2D</p>
-    </div>
-    <a class="scroll" href="#novidades">ENTRE NO NOVO CAPÍTULO <span aria-hidden="true">↓</span></a>
-  </section>
-
-  <section class="news section" id="novidades" aria-labelledby="news-title">
-    <div class="section-number">01 <span>TRANSMISSÃO DO VÉU · NOVEMBRO 2026</span></div>
-    <div class="section-heading">
-      <div><p class="eyebrow">DEPOIS DA ÚLTIMA ATUALIZAÇÃO DO SITE</p><h2 id="news-title">O Réquiem está<br><i>ganhando outra dimensão.</i></h2></div>
-      <p>Reunimos os avanços registrados no repositório desde outubro. São mudanças do desenvolvimento — não uma promessa de que tudo já está na versão pública.</p>
-    </div>
-    <div class="stat-grid" aria-label="Marcos documentados do projeto">
-      <div class="stat"><strong>170</strong><span>CLIPS DE FABIUS NORMAL</span><small>RECIBO ARTÍSTICO DE 03/11</small></div>
-      <div class="stat"><strong>504</strong><span>QUADROS DE FABIUS NORMAL</span><small>55 FOLHAS ATIVAS</small></div>
-      <div class="stat"><strong>8</strong><span>DIREÇÕES POR ARMA</span><small>KATANA · PUNHOS · MOTO</small></div>
-    </div>
-    <div class="news-grid">
-      <article class="news-card">
-        <p class="card-label"><span>01 / RENASCIMENTO</span><span class="status">INTEGRADO</span></p>
-        <h3>Fabius Réquiem Normal</h3>
-        <p>O protagonista recebeu um trabalho extenso de animações completas: caminhadas, esquivas, defesa, dano, morte e repertório de combate. Uma identidade única para a skin Réquiem, sem reutilizar a antiga Rock como visual ativo.</p>
-        <span class="card-foot">170 CLIPS · 504 QUADROS · 55 FOLHAS</span>
-      </article>
-      <article class="news-card">
-        <p class="card-label"><span>02 / MOVIMENTO</span><span class="status">NO CATÁLOGO</span></p>
-        <h3>Combate em oito direções</h3>
-        <p>Katana, Punhos da Ruína e Moto agora contam com caminhadas direcionais completas no catálogo do redesign. Silhueta, passos e transições foram refinados para manter o peso de cada arma.</p>
-        <span class="card-foot">24 COMBINAÇÕES DE CAMINHADA</span>
-      </article>
-      <article class="news-card">
-        <p class="card-label"><span>03 / PRECISÃO</span><span class="status">CÓDIGO ATUALIZADO</span></p>
-        <h3>Golpes com mais impacto</h3>
-        <p>Correções de hitbox e alcance, despenetração para reduzir travamentos em obstáculos e ajustes de profundidade entre personagens e cenários elevam a consistência da ação.</p>
-        <span class="card-foot">COLISÕES · CONTATO · Z-SORTING</span>
-      </article>
-      <article class="news-card">
-        <p class="card-label"><span>04 / FUNDAÇÃO</span><span class="status">BUILD INTERNA</span></p>
-        <h3>Uma base maior para o futuro</h3>
-        <p>Uma build Windows de desenvolvimento foi gerada com sucesso, com 946 figuras em 110 folhas do redesign e 151 recursos de áudio catalogados. O relatório registra 144 testes EditMode e 30 PlayMode aprovados, sem equivaler a uma certificação geral da campanha.</p>
-        <span class="card-foot">BUILD LOCAL · AINDA NÃO É NOVA RELEASE PÚBLICA</span>
-      </article>
-    </div>
-    <p class="source-line">Registros de desenvolvimento: <a href="https://github.com/fwbiodev7/darklight-requiem-game/blob/main/Docs/Darklight/FABIUS-NORMAL-FECHAMENTO-20261103.md" target="_blank" rel="noopener noreferrer">Fabius Normal</a> · <a href="https://github.com/fwbiodev7/darklight-requiem-game/blob/main/work/antigravity-handoff-20261104/HANDOFF-CODEX.md" target="_blank" rel="noopener noreferrer">build e melhorias técnicas</a>.</p>
-  </section>
-
-  <section class="story section" id="historia" aria-labelledby="story-title">
-    <div class="section-number">02 <span>O SANGUE QUE NOS UNE</span></div>
-    <div class="story-copy">
-      <p class="eyebrow">VESPERA, SOB A SOMBRA DO ECLIPSE</p>
-      <h2 id="story-title">Dois irmãos.<br>Um destino partido.</h2>
-      <p>Quando as fronteiras entre Vespera e o Véu começam a ruir, Fabius enfrenta criaturas e memórias que desafiam tudo o que conhece. A verdade sobre seu irmão gêmeo, Lucius, será descoberta ao longo da campanha.</p>
-      <p>O novo foco narrativo aproxima a jornada do combate: cada duelo é uma pista, cada vitória tem um custo, e a batalha mais importante começa muito antes do seu primeiro golpe.</p>
-      <p class="story-quote">“O primeiro adversário nem sempre é o último a ser esquecido.”<span>O CONFRONTO AINDA ESTÁ POR VIR</span></p>
-    </div>
-    <figure class="story-art production-art">
-      <img src="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalParry8Dirs20261103V3.png" alt="Folha de animação revisada de Fabius Réquiem Normal com a katana em oito direções" loading="lazy">
-      <figcaption>FABIUS · RÉQUIEM NORMAL<br><span>Arte de produção revisada em novembro; não representa uma captura da build pública.</span></figcaption>
-    </figure>
-  </section>
-
-  <section class="world section" id="vespera" aria-labelledby="world-title">
-    <div class="section-number">03 <span>O MUNDO DE VESPERA</span></div>
-    <div class="section-heading">
-      <div><p class="eyebrow">UM MUNDO QUE NÃO PARA DE EVOLUIR</p><h2 id="world-title">Dez mapas.<br>Sombras sem fim.</h2></div>
-      <p>A campanha conta com dez áreas no escopo do projeto. Conheça seis registros visuais anteriores; a revisão dos mapas em camadas está na próxima fase de desenvolvimento.</p>
-    </div>
-    <div class="world-layout">
-      <div class="chapters" role="tablist" aria-label="Galeria das regiões de Vespera">
-        <button role="tab" aria-selected="true" aria-controls="chapter-view" id="chapter-0" data-chapter="0"><span>01</span> Rua das Cinzas</button>
-        <button role="tab" aria-selected="false" aria-controls="chapter-view" id="chapter-1" data-chapter="1" tabindex="-1"><span>02</span> Distrito do Vinil</button>
-        <button role="tab" aria-selected="false" aria-controls="chapter-view" id="chapter-2" data-chapter="2" tabindex="-1"><span>03</span> Catedral do Sangue</button>
-        <button role="tab" aria-selected="false" aria-controls="chapter-view" id="chapter-3" data-chapter="3" tabindex="-1"><span>04</span> Laboratório Eclipse</button>
-        <button role="tab" aria-selected="false" aria-controls="chapter-view" id="chapter-4" data-chapter="4" tabindex="-1"><span>05</span> Jardim dos Ecos</button>
-        <button role="tab" aria-selected="false" aria-controls="chapter-view" id="chapter-5" data-chapter="5" tabindex="-1"><span>06</span> Observatório Vespera</button>
-      </div>
-      <div id="chapter-view" role="tabpanel" aria-labelledby="chapter-0">
-        <button class="screenshot" data-zoom="assets/map1.png" data-caption="Rua das Cinzas — registro visual anterior da cena no Unity" aria-label="Ampliar imagem da Rua das Cinzas">
-          <img id="chapter-image" src="assets/map1.png" alt="Rua das Cinzas — registro anterior no Unity" loading="lazy"><span class="expand" aria-hidden="true">⤢</span>
-        </button>
-        <div class="chapter-caption"><h3 id="chapter-title">A noite da Ruptura</h3><p id="chapter-description">Ruas abandonadas, arquitetura gótica e o primeiro passo rumo ao Véu.</p></div>
-      </div>
-    </div>
-    <p class="image-note">Estas seis imagens são registros históricos da direção visual do projeto, não capturas dos dez mapas após a revisão planejada.</p>
-  </section>
-
-  <section class="arsenal section" id="arsenal" aria-labelledby="arsenal-title">
-    <div class="section-number">04 <span>TRÊS ARMAS. TRÊS RITMOS.</span></div>
-    <div class="section-heading">
-      <div><p class="eyebrow">O ARSENAL CANÔNICO DE FABIUS</p><h2 id="arsenal-title">Escolha como<br>quebrar o silêncio.</h2></div>
-      <p>Velocidade, peso e agressividade. O arsenal ativo abandona as armas legadas e foca no combate próprio de Réquiem.</p>
-    </div>
-    <div class="weapons weapons-modern">
-      <article><span class="weapon-index">I / PRECISÃO</span><div class="weapon-mark" aria-hidden="true">刃</div><h3>Katana</h3><p>Cortes calculados, contra-ataques e parry. Técnica para quem transforma cada abertura em oportunidade.</p><small>LEVE · PESADO · CARREGADO</small></article>
-      <article><span class="weapon-index">II / FORÇA</span><div class="weapon-mark weapon-mark-fists" aria-hidden="true">✦</div><h3>Punhos da Ruína</h3><p>Combos corpo a corpo com golpes brutais, respostas rápidas e pressão constante sobre o inimigo.</p><small>IMPACTO · PRESSÃO · CONTRAGOLPE</small></article>
-      <article><span class="weapon-index">III / CAOS</span><div class="weapon-mark weapon-mark-moto" aria-hidden="true">∞</div><h3>Moto / Serras</h3><p>Uma arma tão brutal quanto imprevisível. Giros, esmagamentos, perseguições e finalizações motorizadas.</p><small>SERRAS · GIROS · EXECUÇÕES AÉREAS</small></article>
-    </div>
-  </section>
-
-  <section class="future section" id="futuro" aria-labelledby="future-title">
-    <div class="section-number">05 <span>O QUE SE MOVE NAS SOMBRAS</span></div>
-    <div class="future-heading">
-      <p class="eyebrow">PRÓXIMOS CAPÍTULOS DO DESENVOLVIMENTO</p>
-      <h2 id="future-title">O próximo eclipse<br><em>será diferente.</em></h2>
-      <p>O que vem a seguir não é apenas mais conteúdo. É uma evolução na atmosfera, na narrativa e na força de cada confronto. Estas frentes estão planejadas ou em preparação — ainda não fazem parte da nova release pública.</p>
-    </div>
-    <div class="future-grid">
-      <article class="future-card featured">
-        <span class="future-num">01 / ATMOSFERA</span>
-        <h3>GOTHIC ECLIPSE</h3>
-        <p>Névoa em camadas. Chuva cinematográfica. Reflexos frios sobre a pedra. A cidade de Vespera ganhará uma presença mais sombria, sem sacrificar a leitura do combate.</p>
-        <span class="future-tag">A NOVA FACE DO DARK FANTASY</span>
-      </article>
-      <article class="future-card">
-        <span class="future-num">02 / ANTAGONISTA</span>
-        <h3>LUCIUS NORMAL</h3>
-        <p>O irmão gêmeo de Fabius se prepara para entrar em cena com arte própria, sua espada e um estilo de combate que carregará o peso da história.</p>
-        <span class="future-tag">UM IRMÃO. UM ENIGMA.</span>
-      </article>
-      <article class="future-card">
-        <span class="future-num">03 / CHEFES</span>
-        <h3>BOSSES REIMAGINADOS</h3>
-        <p>As batalhas contra chefes estão na fila de revisão: animações de caminhada e ataque mais fluidas, poses de antecipação marcantes e golpes que realmente parecem perigosos.</p>
-        <span class="future-tag">CADA CHEFE, UM ESPETÁCULO</span>
-      </article>
-      <article class="future-card">
-        <span class="future-num">04 / CINEMÁTICAS</span>
-        <h3>ANTES DA RUPTURA</h3>
-        <p>Um prólogo jogável planejado para ensinar o combate por meio de um duelo de infância entre Fabius e Lucius — e provocar uma pergunta que só o fim poderá responder.</p>
-        <span class="future-tag">A HISTÓRIA COMEÇA ANTES DA HISTÓRIA</span>
-      </article>
-      <article class="future-card">
-        <span class="future-num">05 / NOVOS LIMITES</span>
-        <h3>FORMAS & IA 2.0</h3>
-        <p>Ruptura e Eclipse Absoluto para Fabius. Nexo Fenrir para Lucius. Inimigos com respostas mais inteligentes, janelas justas e combates intensos sem infinitos injustos.</p>
-        <span class="future-tag">LIBERE O QUE ESTÁ CONTIDO</span>
-      </article>
-      <article class="future-card">
-        <span class="future-num">06 / EXPLORAÇÃO</span>
-        <h3>DEZ MAPAS, NOVAS CAMADAS</h3>
-        <p>Revisão progressiva dos cenários, separando pisos, estruturas, interativos e arenas, para tornar o mundo mais legível, consistente e imersivo.</p>
-        <span class="future-tag">VESPERA AINDA TEM SEGREDOS</span>
-      </article>
-    </div>
-    <div class="teaser-line"><span>SEM DATA DE LANÇAMENTO ANUNCIADA</span><strong>A história dos irmãos ainda não terminou.</strong></div>
-  </section>
-
-  <section class="interface section" id="galeria" aria-labelledby="gallery-title">
-    <div class="section-number">06 <span>POR TRÁS DO VÉU</span></div>
-    <div class="section-heading"><div><p class="eyebrow">UMA OBRA EM TRANSFORMAÇÃO</p><h2 id="gallery-title">Pixels de uma<br>jornada maior.</h2></div><p>Uma visão do menu original e uma folha de produção de Fabius. A apresentação visual segue evoluindo.</p></div>
-    <div class="gallery">
-      <button class="screenshot" data-zoom="assets/menu.png" data-caption="Menu principal — registro visual anterior da Unity" aria-label="Ampliar menu principal">
-        <img src="assets/menu.png" alt="Menu principal de DARKLIGHT: REQUIEM em versão anterior" loading="lazy"><span>MENU · REGISTRO ANTERIOR <span aria-hidden="true">⤢</span></span>
-      </button>
-      <button class="screenshot" data-zoom="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/ArtSources/ReviewedDeliveries/FabiusFinalWalks20261103/staging/ReqMotoNormalWalkE20261103EquipmentEditV1.png" data-caption="Fabius Réquiem Normal — folha de produção revisada da caminhada Moto, novembro de 2026" aria-label="Ampliar spritesheet revisada de Fabius com Moto">
-        <img src="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/ArtSources/ReviewedDeliveries/FabiusFinalWalks20261103/staging/ReqMotoNormalWalkE20261103EquipmentEditV1.png" alt="Folha de sprites revisada da caminhada de Fabius com equipamento Moto" loading="lazy"><span>FABIUS · PRODUÇÃO NOV/26 <span aria-hidden="true">⤢</span></span>
-      </button>
-    </div>
-    <p class="image-note">Spritesheets são material de produção e podem ter enquadramento diferente do jogo em execução.</p>
-  </section>
-
-  <section class="download section" id="download" aria-labelledby="download-title">
-    <p class="eyebrow">A JORNADA PODE COMEÇAR AGORA</p>
-    <h2 id="download-title">Entre em Vespera.</h2>
-    <p>Jogue a <strong>última versão pública disponível: 1.0.13 para Windows 64 bits</strong>, lançada em 19 de outubro de 2026.</p>
-    <a class="button" href="https://github.com/fwbiodev7/darklight-requiem-game/releases/download/v1.0.13/DarklightRequiem-1.0.13-Windows-x64.zip">BAIXAR VERSÃO PÚBLICA 1.0.13 <span aria-hidden="true">↓</span></a>
-    <div class="download-links">
-      <a href="https://github.com/fwbiodev7/darklight-requiem-game/releases/latest" target="_blank" rel="noopener noreferrer">Ver releases no GitHub ↗</a>
-      <a href="https://github.com/fwbiodev7/darklight-requiem-game" target="_blank" rel="noopener noreferrer">Acompanhar o projeto ↗</a>
-      <a href="https://github.com/fwbiodev7/darklight-requiem-game/issues/new" target="_blank" rel="noopener noreferrer">Enviar feedback ↗</a>
-    </div>
-    <p class="alpha-note"><strong>Atenção:</strong> os avanços apresentados no diário de novembro estão no desenvolvimento do jogo e podem não estar nesta versão pública de outubro. A próxima atualização jogável ainda não tem data confirmada.</p>
-    <details>
-      <summary>Sobre a versão disponível</summary>
-      <div class="controls">
-        <p>O pacote 1.0.13 é a release pública de revisão de combate. Baixe o ZIP, extraia todos os arquivos e execute <kbd>Windows/DarklightRequiem.exe</kbd>.</p>
-        <p>O escopo e os comandos podem ter mudado desde esta versão. Confira as opções dentro do jogo e as notas oficiais da <a href="https://github.com/fwbiodev7/darklight-requiem-game/releases/tag/v1.0.13" target="_blank" rel="noopener noreferrer">release 1.0.13</a>.</p>
-      </div>
-    </details>
-  </section>
+<main id="principal">
+<section class="hero" id="inicio">
+<div class="hero-art"><img src="assets/reveal-eclipse.webp" data-fallback="assets/menu-art.png" alt="Arte promocional da cidade gótica de Vespera sob o eclipse vermelho" fetchpriority="high"></div>
+<div class="hero-overlay"></div>
+<div class="hero-inner">
+<p class="overline"><span class="signal"></span> UM RPG DE AÇÃO DARK FANTASY EM DESENVOLVIMENTO</p>
+<p class="hero-caption">DO SANGUE NASCE O DESTINO</p>
+<h1>DARKLIGHT<small>R E Q U I E M</small></h1>
+<div class="hero-statement"><h2>O FIM NÃO COMEÇA<br><em>NO FIM.</em></h2><p>Uma cidade à beira da Ruptura. Uma lâmina que desafia o impossível. Dois irmãos que o destino insiste em colocar frente a frente.</p></div>
+<div class="hero-actions"><a class="btn btn-primary" href="#universo">DESCUBRA A HISTÓRIA <span>↘</span></a><a class="btn btn-ghost" href="#em-breve">PRÓXIMAS REVELAÇÕES <span>→</span></a></div>
+</div>
+<div class="hero-bottom"><span>01 / O MUNDO DE VESPERA</span><a href="#universo">DESLIZE PARA EXPLORAR ↓</a><span>WINDOWS · PIXEL ART · UNITY 2D</span></div>
+</section>
+<section class="section manifesto" id="universo">
+<div class="section-tag">✦ &nbsp; 001 / O UNIVERSO</div>
+<div class="editorial"><div><p class="eyebrow">NÃO É APENAS UMA GUERRA CONTRA A ESCURIDÃO</p><h2>O MUNDO ESTÁ<br>SE PARTINDO.<br><em>VOCÊ TAMBÉM.</em></h2></div>
+<div class="editorial-copy"><p>Em Vespera, o eclipse rasgou a fronteira entre a realidade e o Véu. Criaturas conhecidas como Ecos tomam as ruas. Memórias tornam-se armas. E verdades enterradas começam a despertar.</p>
+<p>Você é <strong>Fabius</strong>. O poder que o mantém vivo também pode consumi-lo. Mas a maior ameaça tem um rosto familiar: o de seu irmão gêmeo, <strong>Lucius</strong>.</p>
+<a class="text-cta" href="#em-breve">A HISTÓRIA ESTÁ APENAS COMEÇANDO ↗</a></div></div>
+</section>
+<section class="atmosphere" id="gothic">
+<img class="atmosphere-image" src="assets/gothic-eclipse.webp" data-fallback="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/ArtSources/AtmosphereReference20261101/gothic-eclipse-approved-reference.png" alt="Conceito dark fantasy de uma rua sob chuva, névoa e luzes noturnas" loading="lazy">
+<div class="atmosphere-shade"></div>
+<div class="atmosphere-copy"><p class="section-tag">VISÃO DE FUTURO / EM DESENVOLVIMENTO</p><h2>A NOITE<br><em>VAI GANHAR VIDA.</em></h2><p>Chuva batendo nas pedras. Luz fria atravessando a névoa. Reflexos do fogo em um mundo molhado e silencioso. Conheça a direção de <strong>Gothic Eclipse</strong>, a futura evolução atmosférica de Vespera.</p><small>CONCEITO VISUAL · NÃO É CAPTURA DA VERSÃO PÚBLICA</small></div>
+</section>
+<section class="section combat" id="combate">
+<div class="section-tag">✦ &nbsp; 002 / A ARTE DE COMBATER</div>
+<div class="section-heading"><div><p class="eyebrow">TRÊS ARMAS. UMA IDENTIDADE.</p><h2>A VIOLÊNCIA<br>TEM <em>RITMO.</em></h2></div><p>Domine os oito ângulos do combate. Esquive, defenda, contra-ataque e transforme cada luta em uma sequência única de poder e precisão.</p></div>
+<div class="weapon-tabs" role="tablist" aria-label="Arsenal de Fabius">
+<button type="button" data-weapon="0" id="tab-0" role="tab" aria-selected="true" aria-controls="panel-0">01 &nbsp; KATANA</button>
+<button type="button" data-weapon="1" id="tab-1" role="tab" aria-selected="false" aria-controls="panel-1" tabindex="-1">02 &nbsp; PUNHOS DA RUÍNA</button>
+<button type="button" data-weapon="2" id="tab-2" role="tab" aria-selected="false" aria-controls="panel-2" tabindex="-1">03 &nbsp; MOTO / SERRAS</button>
+</div>
+<div class="weapon-panel" role="tabpanel" id="panel-0" aria-labelledby="tab-0"><div class="weapon-art"><img src="assets/katana-motion.webp" data-fallback="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalContraAtaqueS_SW_W20261102V1.png" alt="Quadros de animação de um golpe de katana de Fabius" loading="lazy"><small>ANIMAÇÃO DE KATANA · ARTE DE PRODUÇÃO</small></div><div class="weapon-description"><p class="eyebrow">ARSENAL / I</p><h3>UMA LÂMINA.<br>MIL RESPOSTAS.</h3><p>Precisão, velocidade, ataques carregados e parry. Para quem transforma uma abertura de defesa em um contra-ataque decisivo.</p><div class="weapon-chips"><span>PRECISÃO</span><span>PARRY</span><span>COMBATE AÉREO</span></div></div></div>
+<div class="weapon-panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1" hidden><div class="weapon-art fists"><img src="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqFistsNormalMarteloS_SW_W_NW20261102V1.png" alt="Quadros de produção de golpes dos Punhos da Ruína" loading="lazy"><small>PUNHOS DA RUÍNA · ARTE DE PRODUÇÃO</small></div><div class="weapon-description"><p class="eyebrow">ARSENAL / II</p><h3>QUANDO O AÇO<br>NÃO BASTA.</h3><p>Golpes devastadores de curta distância, pressão constante e força bruta para atravessar a resistência do inimigo.</p><div class="weapon-chips"><span>IMPACTO</span><span>PRESSÃO</span><span>CONTRAGOLPES</span></div></div></div>
+<div class="weapon-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden><div class="weapon-art moto"><img src="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqMotoNormalSerraEntradaS_SW20261102V1.png" alt="Quadros de produção de Fabius usando o equipamento Moto e Serras" loading="lazy"><small>MOTO / SERRAS · ARTE DE PRODUÇÃO</small></div><div class="weapon-description"><p class="eyebrow">ARSENAL / III</p><h3>FAÇA O CAOS<br>ACELERAR.</h3><p>Serra Infernal. Giro Devastador. Esmagamento Vertical. Uma motocicleta transformada em arma — incluindo execuções aéreas motorizadas.</p><div class="weapon-chips"><span>DESTRUIÇÃO</span><span>MOBILIDADE</span><span>EXECUÇÕES</span></div></div></div>
+<p class="dev-caption">ARSENAL CANÔNICO DE FABIUS: KATANA · PUNHOS DA RUÍNA · MOTO. MATERIAL EM EVOLUÇÃO.</p>
+</section>
+<section class="section transformations" id="formas">
+<div class="section-tag">✦ &nbsp; 003 / O PREÇO DO PODER</div>
+<div class="section-heading"><div><p class="eyebrow">TODO PODER COBRA ALGO EM TROCA</p><h2>TRÊS ESTADOS.<br><em>UM DESTINO.</em></h2></div><p>A trajetória de Fabius tem três estados canônicos. A energia violeta e a forma branca agora convergem em uma única transformação final: <strong>Eclipse Absoluto</strong>.</p></div>
+<div class="forms">
+<article class="form-card form-base"><span class="form-index">I / ORIGEM</span><img src="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/ArtSources/RuinFists20261021/references/Requiem_Normal_Whole.png" alt="Visual de referência de Fabius Réquiem Normal" loading="lazy"><div class="form-text"><small>O HOMEM POR TRÁS DA LÂMINA</small><h3>RÉQUIEM<br><span>NORMAL</span></h3><p>Antes da fúria, existe o controle. O primeiro estado de Fabius.</p></div></article>
+<article class="form-card form-rupture"><span class="form-index">II / DESPERTAR</span><img src="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/ArtSources/RuinFists20261021/references/Requiem_Ruptura_Whole.png" alt="Visual de referência da forma Ruptura de Fabius" loading="lazy"><div class="form-text"><small>QUANDO O SANGUE RESPONDE</small><h3>RUPTURA</h3><p>A energia carmesim rompe os limites. E cada golpe passa a ter outro peso.</p></div></article>
+<article class="form-card form-fusion"><span class="form-index">III / CONVERGÊNCIA</span><img src="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/ArtSources/RuinFists20261021/references/Requiem_Absoluto_Whole.png" alt="Referência da fase branca; a fusão definitiva Eclipse Absoluto ainda terá arte final" loading="lazy"><div class="form-text"><small>VIOLETA + PRATA · FUSÃO</small><h3>ECLIPSE<br><span>ABSOLUTO</span></h3><p>O despertar definitivo une as energias antes separadas. Uma única forma final.</p></div></article>
+</div>
+<p class="dev-caption">REFERÊNCIAS ARTÍSTICAS DE DESENVOLVIMENTO. A FUSÃO FINAL E SEUS EFEITOS AINDA PASSAM POR PRODUÇÃO.</p>
+</section>
+<section class="roadmap" id="em-breve">
+<div class="roadmap-opening"><p class="eyebrow">O QUE AINDA ESTÁ ESCONDIDO NO VÉU?</p><h2>O PRÓXIMO<br><em>ECLIPSE SERÁ</em><br>DIFERENTE.</h2><p>Uma nova atmosfera. Um irmão à sua espera. Chefes mais imponentes. Um passado que muda completamente a maneira de enxergar o futuro.</p><small>PRÓXIMAS REVELAÇÕES · CONTEÚDOS PLANEJADOS OU EM DESENVOLVIMENTO · SEM DATA ANUNCIADA</small></div>
+<div class="reveal-list">
+<article class="reveal-item rain-reveal"><div><span>REVELAÇÃO 01 · ATMOSFERA</span><h3>GOTHIC<br>ECLIPSE.</h3><p>O mundo vai respirar. Chuva cinematográfica, névoa e iluminação gótica transformarão a presença de Vespera.</p><small>EVOLUÇÃO VISUAL EM PREPARAÇÃO</small></div></article>
+<article class="reveal-item lucius-reveal"><div><span>REVELAÇÃO 02 · ANTAGONISTA</span><h3>O OUTRO<br>HERDEIRO.</h3><p>Lucius. O rosto de um irmão, o peso de uma espada e razões que Fabius ainda não compreende.</p><small>LUCIUS NORMAL · PRÓXIMA ETAPA</small></div></article>
+<article class="reveal-item prologue-reveal"><div><span>REVELAÇÃO 03 · NARRATIVA</span><h3>ANTES DO<br>PRIMEIRO GOLPE.</h3><p>Dois garotos. Espadas de madeira. Um duelo inocente que ensinará a jogar — antes de se tornar o centro da história.</p><small>PRÓLOGO CINEMATOGRÁFICO JOGÁVEL · PLANEJADO</small></div></article>
+<article class="reveal-item bosses-reveal"><div><span>REVELAÇÃO 04 · CHEFES</span><h3>TODO CHEFE<br>MERECE SER LENDA.</h3><p>Ataques com peso, movimento mais fluido, antecipações dramáticas e confrontos que exigirão domínio real do combate.</p><small>ANIMAÇÕES DE BOSSES · REVISÃO PLANEJADA</small></div></article>
+<article class="reveal-item power-reveal"><div><span>REVELAÇÃO 05 · PODER</span><h3>QUEBRE O<br>IMPOSSÍVEL.</h3><p>Ruptura. Eclipse Absoluto. Nexo Fenrir. A evolução das formas prepara novas possibilidades para Fabius e Lucius.</p><small>TRANSFORMAÇÕES · EM PLANEJAMENTO</small></div></article>
+<article class="reveal-item world-reveal"><div><span>REVELAÇÃO 06 · MUNDO & IA</span><h3>VESPERA<br>NÃO VAI ESPERAR.</h3><p>Dez mapas em revisão progressiva, encontros mais inteligentes e uma experiência de combate que reage às suas escolhas.</p><small>MAPAS E COMBATE IA 2.0 · PLANEJADOS</small></div></article>
+</div>
+<div class="roadmap-close"><span>SEM DATA DE LANÇAMENTO ANUNCIADA</span><p>O primeiro adversário<br>também será o último.</p><small>MAS O DESTINO DOS IRMÃOS AINDA É UM SEGREDO.</small></div>
+</section>
+<section class="section gallery-section" id="galeria">
+<div class="section-tag">✦ &nbsp; 004 / ALÉM DAS SOMBRAS</div>
+<div class="section-heading"><div><p class="eyebrow">PIXEL ART, CENÁRIOS E ANIMAÇÕES</p><h2>VEJA O QUE<br><em>ESTÁ NASCENDO.</em></h2></div><p>Artes promocionais, prévias de interface e material de produção. A direção visual continua sendo refinada.</p></div>
+<div class="gallery">
+<button class="shot" data-zoom type="button" data-caption="O eclipse sobre Vespera — arte promocional"><img src="assets/reveal-eclipse.webp" data-fallback="assets/menu-art.png" alt="Eclipse vermelho sobre uma cidade gótica" loading="lazy"><span><small>ARTE PROMOCIONAL</small>O ECLIPSE VERMELHO <b>↗</b></span></button>
+<button class="shot" data-zoom type="button" data-caption="Menu Réquiem — prévia de interface sujeita a mudanças"><img src="assets/menu-requiem.webp" data-fallback="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/Assets/Darklight/Resources/Darklight/Menu/Vespera.png" alt="Prévia de interface do menu principal de DARKLIGHT" loading="lazy"><span><small>PRÉVIA DE INTERFACE</small>MENU RÉQUIEM <b>↗</b></span></button>
+<button class="shot" data-zoom type="button" data-caption="Fabius — animação de katana em produção"><img src="assets/katana-motion.webp" data-fallback="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/ArtSources/ReviewedDeliveries/FabiusNormal20261103/staging/ReqKatanaNormalContraAtaqueS_SW_W20261102V1.png" alt="Sequência de animações de katana em pixel art" loading="lazy"><span><small>ARTE DE PRODUÇÃO</small>COMBATE DE KATANA <b>↗</b></span></button>
+<button class="shot" data-zoom type="button" data-caption="Gothic Eclipse — conceito visual de atmosfera"><img src="assets/gothic-eclipse.webp" data-fallback="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/ArtSources/AtmosphereReference20261101/gothic-eclipse-approved-reference.png" alt="Rua escura sob chuva com reflexos e névoa" loading="lazy"><span><small>CONCEITO DE ATMOSFERA</small>GOTHIC ECLIPSE <b>↗</b></span></button>
+</div>
+</section>
+<section class="section developer" id="desenvolvimento">
+<div class="section-tag">✦ &nbsp; 005 / BASTIDORES DO PROJETO</div>
+<div class="editorial"><div><p class="eyebrow">O PROJETO EVOLUI A CADA FRAME</p><h2>NÃO É APENAS<br>UMA <em>PROMESSA.</em></h2><p>O desenvolvimento documentou uma grande revisão das animações de Fabius, caminhadas nas oito direções e melhorias de contato, física e profundidade visual. Builds internas e testes seguem em andamento.</p><a class="text-cta" href="https://github.com/fwbiodev7/darklight-requiem-game" target="_blank" rel="noopener noreferrer">ACOMPANHE O PROJETO NO GITHUB ↗</a></div>
+<div class="metrics"><div><strong>170</strong><span>CLIPS DE FABIUS NORMAL</span></div><div><strong>504</strong><span>QUADROS IMPORTADOS / REVISADOS</span></div><div><strong>08</strong><span>DIREÇÕES POR ARMA</span></div><div><strong>03</strong><span>ARMAS ATIVAS</span></div><p>Valores documentados no fechamento de 03/11; desenvolvimento não é sinônimo de nova release pública.</p></div></div>
+</section>
+<section class="download" id="jogar"><div><p class="eyebrow">VESPERA ESPERA POR VOCÊ</p><h2>PRONTO PARA<br><em>ENTRAR NO VÉU?</em></h2><p>A última versão pública para Windows é a <strong>1.0.13</strong>, publicada em 19 de outubro de 2026. As revelações e melhorias mais recentes deste site não estão necessariamente disponíveis nessa versão.</p><div class="hero-actions center"><a class="btn btn-primary" href="https://github.com/fwbiodev7/darklight-requiem-game/releases/download/v1.0.13/DarklightRequiem-1.0.13-Windows-x64.zip">BAIXAR A VERSÃO 1.0.13 <span>↗</span></a><a class="btn btn-ghost" href="https://github.com/fwbiodev7/darklight-requiem-game/releases/latest" target="_blank" rel="noopener noreferrer">VER RELEASES <span>→</span></a></div><small>WINDOWS 64 BITS · EXTRAIA O ZIP COMPLETO · FUTURA ATUALIZAÇÃO SEM DATA ANUNCIADA</small></div></section>
 </main>
-<footer>
-  <a class="wordmark" href="#inicio">DARKLIGHT<span>R E Q U I E M</span></a>
-  <p>Um jogo de Fábio Ronaldo.<br><span>Desenvolvimento independente · 2026</span></p>
-  <div class="footer-links"><a href="https://github.com/fwbiodev7/darklight-requiem-game" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://devfabio.vercel.app" target="_blank" rel="noopener noreferrer">Portfólio ↗</a></div>
-</footer>
-<dialog id="lightbox" aria-label="Imagem ampliada"><button class="close" autofocus aria-label="Fechar imagem">FECHAR ×</button><img alt=""><p></p></dialog>
-</body>
-</html>
+<footer><a class="brand" href="#inicio">DARKLIGHT<span>R E Q U I E M</span></a><p>Um jogo original de Fábio Ronaldo.<br><small>DESENVOLVIMENTO INDEPENDENTE · 2026</small></p><div><a href="https://github.com/fwbiodev7/darklight-requiem-game" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><a href="https://github.com/fwbiodev7/darklight-requiem-game/issues/new" target="_blank" rel="noopener noreferrer">FEEDBACK ↗</a></div></footer>
+<dialog id="lightbox" aria-label="Imagem ampliada"><div><p id="lightbox-title"></p><button id="lightbox-close" type="button">FECHAR ×</button></div><img id="lightbox-img" alt=""></dialog>
+</body></html>

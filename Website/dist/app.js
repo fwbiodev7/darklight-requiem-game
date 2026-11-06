@@ -1,6 +1,6 @@
 'use strict';
 const q=(s,r=document)=>r.querySelector(s),qa=(s,r=document)=>[...r.querySelectorAll(s)];
-qa('img[data-fallback]').forEach(img=>img.addEventListener('error',()=>{const f=img.dataset.fallback;if(f&&img.getAttribute('src')!==f){img.removeAttribute('data-fallback');img.src=f}}));
+qa('img[data-fallback]').forEach(img=>{const fallback=()=>{const f=img.dataset.fallback;if(f&&img.getAttribute('src')!==f){img.removeAttribute('data-fallback');img.src=f}};img.addEventListener('error',fallback);if(img.complete&&img.naturalWidth===0)fallback()});
 const nav=q('#nav'),toggle=q('#menu-toggle'),bar=q('#reading-bar');
 function closeNav(){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Abrir menu')}
 toggle.addEventListener('click',()=>{let open=!nav.classList.contains('open');nav.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')});

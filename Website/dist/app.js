@@ -13,3 +13,11 @@ tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>selectWeapon(i));tab.add
 const modal=q('#lightbox'),modalImg=q('#lightbox-img'),title=q('#lightbox-title');let origin;
 qa('[data-zoom]').forEach(b=>b.addEventListener('click',()=>{origin=b;const i=q('img',b);modalImg.src=i.currentSrc||i.src;modalImg.alt=i.alt;title.textContent=b.dataset.caption||i.alt;modal.showModal();document.body.classList.add('locked')}));
 q('#lightbox-close').addEventListener('click',()=>modal.close());modal.addEventListener('click',e=>{if(e.target===modal)modal.close()});modal.addEventListener('close',()=>{document.body.classList.remove('locked');origin?.focus()});
+
+function updateHeader(){q('#topbar').classList.toggle('scrolled',scrollY>70)}
+addEventListener('scroll',updateHeader,{passive:true});updateHeader();
+if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+ const items=qa('.editorial,.section-heading,.atmosphere-copy,.form-card,.reveal-item>div,.roadmap-opening,.roadmap-close,.shot,.metrics');
+ const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');observer.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -18px 0px'});
+ items.forEach(el=>{el.classList.add('cinematic-reveal');observer.observe(el)});
+}

@@ -26,6 +26,7 @@ namespace Darklight
         public bool UsesWeaponRedesignSprite{get;private set;}
         public bool UsesPoseFallback{get;private set;}
         public bool UsesMotorcyclePoseFallback{get;private set;}
+        CombatModel pendingParticleModel;int pendingParticleWeapon;
         public static Bounds FallbackBodyBounds=>new Bounds(Vector3.up*1.315f,new Vector3(1.5f,2.63f,0));
         // Effects use normal frontal katana idle for this skin, independently
         // of the displayed attack, direction, weapon or transformation.
@@ -49,27 +50,39 @@ namespace Darklight
         }
         public void PresentPreview(CombatModel model,Vector2 movement,int skin,int ignoredAge,int form,WeaponDefinition weapon)
         {
-            var source=DarklightCombatLab.Instance.Player.GetComponent<DarklightCharacterView>();
-            if(baseIdle==null){idle=source.baseIdle??source.idle;walk=source.baseWalk??source.walk;slash=source.baseSlash??source.slash;actions=source.baseActions??source.actions;motion=source.baseMotion??source.motion;}
-            var game=DarklightCampaign.Instance;SetSkin(skin,game.rockIdle,game.rockMotion,game.rockActions,game.rockSlash);
-            appearance??=GetComponent<CharacterAppearanceSystem>()??gameObject.AddComponent<CharacterAppearanceSystem>();appearance.profile=game.Appearance.profile;
-            previewing=true;previewForm=form;previewWeapon=weapon;Present(model,movement);previewing=false;
+            var source=DarklightCombatLab.Instance?.Player?.GetComponent<DarklightCharacterView>();
+            if(baseIdle==null&&source!=null){idle=source.baseIdle??source.idle;walk=source.baseWalk??source.walk;slash=source.baseSlash??source.slash;actions=source.baseActions??source.actions;motion=source.baseMotion??source.motion;}
+            var game=DarklightCampaign.Instance;SetSkin(skin,game?.rockIdle,game?.rockMotion,game?.rockActions,game?.rockSlash);
+            if(game?.Appearance!=null)
+            {
+                appearance??=GetComponent<CharacterAppearanceSystem>()??gameObject.AddComponent<CharacterAppearanceSystem>();appearance.profile=game.Appearance.profile;
+            }
+            previewing=true;previewForm=form;previewWeapon=weapon;
+            try { Present(model,movement); }
+            finally { previewing=false; }
         }
         public static int DirectionIndex(Vector2 direction)=>Mathf.RoundToInt(Mathf.Atan2(-direction.x,-direction.y)*Mathf.Rad2Deg/45f+8f)%8;
         void LateUpdate()
         {
-            if(display==null||display.transform==transform)return;
+            if(display==null)return;
+            if(display.transform!=transform)
+            {
             var camera=DarklightCombatLab.Instance?.WorldCamera;
             float grid=camera==null?48f:(camera.targetTexture!=null?camera.targetTexture.height:720f)/(camera.orthographicSize*2f);
             var p=transform.position;
             if(DarklightCombatLab.Instance?.Paused!=true&&contactUntil>Time.unscaledTime)
             {float t=(contactUntil-Time.unscaledTime)/.14f;p+=(Vector3)contactOffset*(t*t);}
             display.transform.position=new Vector3(Mathf.Round(p.x*grid)/grid,Mathf.Round((p.y+airHeight)*grid)/grid,p.z);
+            }
+            if(pendingParticleModel!=null)
+            {
+                DarklightActionParticles.Observe(this,pendingParticleModel,display,pendingParticleWeapon);
+                pendingParticleModel=null;
+            }
         }
         public void Present(CombatModel model,Vector2 movement)
         {
             if(display==null)return;
-            if(!previewing)DarklightActionParticles.Observe(this,model);
             int direction=DirectionIndex(model.Facing),skin=rock?1:0;
             var game=DarklightCampaign.Instance;var equipped=previewing?previewWeapon:game?.Weapons?.Equipped;int weapon=equipped==null?0:(int)equipped.id;
             bool ruinFists=weapon==2&&DarklightRuinFistsBank.Ready;
@@ -117,6 +130,7 @@ namespace Darklight
             originalForms.Present(display,skin,0,direction,previewing?previewForm:game?.PresentedForm??0,model.Clock,model.State==CombatState.Dead,UsesUserWholeSprite||UsesWholeCharacterSprite,model.State==CombatState.Dodge,!previewing);
             DarklightCanonicalComplexion.Apply(display,model.State!=CombatState.Dead);
             if(model.State!=CombatState.Dead)DarklightAbyssSpriteBank.ApplyWholeOwnership(display);
+            if(!previewing){pendingParticleModel=model;pendingParticleWeapon=weapon;}
             DarklightWeaponRedesignBank.ApplyAuthoredOwnership(display);
             DarklightMotorcycleRedesignBank.ApplyOwnership(display);
             if(combatTrail==null){var obj=new GameObject("RastrosDeCombate");obj.transform.SetParent(transform,false);combatTrail=obj.AddComponent<DarklightCombatTrail>();}

@@ -23,6 +23,8 @@ namespace Darklight
         public int Capacity=>pool.Length;
         public int ActiveCount { get { int n=0;foreach(var b in pool)if(b!=null&&b.active)n++;return n; } }
         public int Count(DarklightActionParticleKind kind)=>counts[(int)kind];
+        public int MotorcycleGuardBursts {get;private set;}
+        public Vector3 LastMotorcycleGuardPoint {get;private set;}
         public Sprite LastPresentedSprite {get;private set;}
         public float LastOpacity {get;private set;}
         public float LastDiameter {get;private set;}
@@ -65,6 +67,8 @@ namespace Darklight
             return weaponReady=true;
         }
         public static void Observe(Component owner,CombatModel model)
+            =>Observe(owner,model,null,-1);
+        public static void Observe(Component owner,CombatModel model,SpriteRenderer art,int weapon)
         {
             if(owner==null||model==null)return;
             var fx=Get();if(fx==null)return;
@@ -80,6 +84,21 @@ namespace Darklight
                 case CombatState.Hurt:kind=DarklightActionParticleKind.Damage;break;
                 case CombatState.Dead:kind=DarklightActionParticleKind.Death;break;
                 default:return;
+            }
+            if(kind==DarklightActionParticleKind.Defense&&weapon==3&&art!=null&&
+                DarklightWeaponRedesignBank.TryMotorcycleGuardContact(DarklightCampaign.Instance?.PresentedForm??0,
+                    DarklightCharacterView.DirectionIndex(model.Facing),art.sprite,out var contact,out bool visible))
+            {
+                fx.LastMotorcycleGuardPoint=art.transform.TransformPoint(new Vector3(contact.x,contact.y,0));
+                // Count the defense entry even when its contact is hidden behind
+                // the torso. The generic defense sprite would obscure this art.
+                fx.counts[(int)kind]++;
+                if(visible)
+                {
+                    fx.MotorcycleGuardBursts++;
+                    DarklightCombatImpacts.EmitMotorcycle(fx.LastMotorcycleGuardPoint,model.Facing,DarklightMotorcycleImpact.Guard);
+                }
+                return;
             }
             float height=kind==DarklightActionParticleKind.Dodge?.12f:kind==DarklightActionParticleKind.Death?.4f:.85f;
             Emit(kind,owner.transform.position+Vector3.up*height,model.Facing);

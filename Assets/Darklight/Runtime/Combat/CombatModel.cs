@@ -59,7 +59,10 @@ namespace Darklight
                 Buffer(ref pendingAerial,ref aerialUntil,input.aerialPressed,delta);
                 Buffer(ref pendingWeaponSpecial,ref specialUntil,input.weaponSpecialPressed,delta);
             }
-            if (delta <= 0 || State == CombatState.Dead) { Motion = Vector2.zero; return; }
+            if (delta <= 0) { Motion = Vector2.zero; return; }
+            // Death keeps its authored presentation clock without advancing
+            // combat cooldowns, accepting inputs or moving the actor.
+            if (State == CombatState.Dead) { StateTime += delta; Motion = Vector2.zero; return; }
             Clock += delta;
             Expire(ref pendingDodge,dodgeUntil);Expire(ref pendingParry,parryUntil);Expire(ref pendingSkill,skillUntil);Expire(ref pendingAerial,aerialUntil);Expire(ref pendingWeaponSpecial,specialUntil);
             if (State == CombatState.Neutral && Clock > comboUntil) ComboCount = 0;

@@ -12,6 +12,9 @@ namespace Darklight
         public int[] sourceSize,nativeSize,durationMs;
         public float pixelsPerUnit;
         public float[] framePixelsPerUnit;
+        public float[] guardContact;
+        public string guardContactVisibility;
+        public string presentation;
         public bool wholeFigures,loop,fusedEclipse;
         public string[] spriteNames,sourceSpriteNames;
         [NonSerialized] internal Sprite[] frames;
@@ -71,6 +74,13 @@ namespace Darklight
                 foreach(float density in page.framePixelsPerUnit)
                     if(density<=0||float.IsNaN(density)||float.IsInfinity(density))return false;
             }
+            if(page.guardContact!=null)
+            {
+                if(page.guardContact.Length!=2||page.guardContactVisibility!="visible-tooth-junction"&&
+                    page.guardContactVisibility!="occluded-projected-in-front-of-torso")return false;
+                foreach(float coordinate in page.guardContact)
+                    if(float.IsNaN(coordinate)||float.IsInfinity(coordinate)||coordinate<0||coordinate>1)return false;
+            }
             foreach(string name in page.spriteNames)if(string.IsNullOrEmpty(name)||!name.StartsWith("Redesign_",StringComparison.Ordinal))return false;
             if(!string.IsNullOrEmpty(page.attackKey)&&page.action!="Attack")return false;
             if(page.sourceSpriteNames?.Length>0)
@@ -107,6 +117,7 @@ namespace Darklight
             if(!ValidCatalog(data)){Debug.LogError("Weapon redesign catalog rejected: invalid descriptor or duplicate context");return;}
             foreach(var page in data.pages)
             {
+                if(page.presentation=="Mounted")continue;
                 // Archived form 2 is the former Eclipse, not the fused violet/silver form.
                 // Its descriptors remain readable, but only explicitly authored fusion
                 // pages may enter the active resolver; gaps retain the new Normal art.
@@ -183,7 +194,7 @@ namespace Darklight
                 return TryCurrentPose(weapon,form,direction,requested,time,out sprite);
             }
             if(!contexts.TryGetValue(Context(skin,weapon,form,direction),out var entries))return false;
-            string action=Action(model,movement,livingClip),attack=model.Attack?.displayName??"";
+            string action=Action(model,movement,livingClip),attack=model.Attack==null?"":DarklightCombatProfiles.AttackAnimationKey(model.Attack);
             // Named contacts first, then an explicit mapping of an existing phase.
             for(int pass=0;pass<2;pass++)foreach(var page in entries)
             {
@@ -199,6 +210,30 @@ namespace Darklight
         public static Sprite CurrentIdle(int weapon,int direction,int form=0)
         {
             LoadCatalog();return TryCurrentPose(weapon,form,direction,"Idle",0,out var sprite)?sprite:null;
+        }
+        // Contact coordinates are authored in the complete sprite's normalized
+        // bottom-left space, not in texture/atlas space. Occluded guards retain
+        // their projected point for diagnostics, but never emit through the body.
+        public static bool TryMotorcycleGuardContact(int form,int direction,Sprite sprite,out Vector2 local,out bool visible)
+        {
+            local=default;visible=false;
+            if(sprite==null||form<0||form>3||direction<0||direction>7)return false;
+            LoadCatalog();
+            for(int pass=0;pass<(form==0?1:2);pass++)
+            {
+                int sourceForm=pass==0?form:0;
+                if(!contexts.TryGetValue(Context(0,3,sourceForm,direction),out var entries))continue;
+                foreach(var page in entries)
+                {
+                    if(page.action!="Parry"||page.guardContact?.Length!=2||!Load(page)||
+                        Array.IndexOf(page.frames,sprite)<0)continue;
+                    local=new Vector2((page.guardContact[0]*sprite.rect.width-sprite.pivot.x)/sprite.pixelsPerUnit,
+                        (page.guardContact[1]*sprite.rect.height-sprite.pivot.y)/sprite.pixelsPerUnit);
+                    visible=page.guardContactVisibility=="visible-tooth-junction";
+                    return true;
+                }
+            }
+            return false;
         }
         static bool TryCurrentPose(int weapon,int form,int direction,string requested,float time,out Sprite sprite)
         {
@@ -223,7 +258,7 @@ namespace Darklight
         }
         static bool TryResolveAttack(int weapon,int form,int direction,CombatModel model,out Sprite sprite)
         {
-            sprite=null;string key=model.Attack.displayName;
+            sprite=null;string key=DarklightCombatProfiles.AttackAnimationKey(model.Attack);
             // Prefer this technique, then the reviewed primary strike of this form.
             // Until all transformed directions are drawn, the new Normal figure
             // keeps the current identity; it is never recolored into a fake form.

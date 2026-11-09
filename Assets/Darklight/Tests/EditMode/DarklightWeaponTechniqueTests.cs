@@ -5,6 +5,23 @@ namespace Darklight.Tests
 {
     public sealed class DarklightWeaponTechniqueTests
     {
+        [Test] public void RenamedKatanaBranchesKeepTheirAuthoredAnimationIdentity()
+        {
+            var original=AssetDatabase.LoadAssetAtPath<WeaponDefinition>("Assets/Darklight/Data/Weapons/Requiem.asset");
+            string before=UnityEngine.JsonUtility.ToJson(original.loadout.lights[2]);
+            var profiles=new DarklightCombatProfiles();
+            try
+            {
+                var loadout=profiles.Create(new[]{original})[0].loadout;
+                Assert.That(loadout.pauseBranch.displayName,Is.EqualTo("Corte do Silencio"));
+                Assert.That(DarklightCombatProfiles.AttackAnimationKey(loadout.pauseBranch),Is.EqualTo("Leve3"));
+                Assert.That(DarklightCombatProfiles.AttackAnimationKey(loadout.lights[3]),Is.EqualTo("Leve3"));
+                Assert.That(DarklightCombatProfiles.AttackAnimationKey(loadout.heavyBranch),Is.EqualTo("Pesado"));
+                Assert.That(DarklightCombatProfiles.AttackAnimationKey(original.loadout.lights[2]),Is.EqualTo("Leve3"));
+                Assert.That(UnityEngine.JsonUtility.ToJson(original.loadout.lights[2]),Is.EqualTo(before));
+            }
+            finally { profiles.Dispose(); }
+        }
         [Test]public void KatanaAndDaggersGetDistinctSpecialsAndFinishersWithoutMutatingTheirAuthoredAssets()
         {
             var originals=new[]{AssetDatabase.LoadAssetAtPath<WeaponDefinition>("Assets/Darklight/Data/Weapons/Requiem.asset"),AssetDatabase.LoadAssetAtPath<WeaponDefinition>("Assets/Darklight/Data/Weapons/PresasDoVeu.asset")};

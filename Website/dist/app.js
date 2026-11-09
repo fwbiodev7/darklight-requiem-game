@@ -1,8 +1,23 @@
 'use strict';
-const chapters=[['Rua das Cinzas','A noite da Ruptura','Mercado abandonado, praças estreitas e um portão rasgado pelas fendas. Kael Voss guarda o caminho.'],['Distrito do Vinil','Vozes do Abismo','Lojas de discos, neon e um palco tomado pelos Ecos. Ícaro Nox conhece frequências que não deveriam existir.'],['Catedral do Sangue','Sangue desperto','Vitrais rubros, capelas e um altar de memórias. A Matriarca guarda os segredos da primeira Ruptura.'],['Laboratório Eclipse','O Projeto Eclipse','Servidores, câmaras de contenção e um núcleo proibido. A Sentinela protege a obra de Lucien.'],['Jardim dos Ecos','Além do Véu','Pontes suspensas, cristais e ruínas onde as memórias viram pedra. O Guardião exige um preço.'],['Observatório Vespera','O último eclipse','Órbitas, condutores e uma cúpula sobre o abismo. O destino da ponte espera uma escolha.']];
-const tabs=[...document.querySelectorAll('[data-chapter]')];
-function selectChapter(index,focus=false){const [place,title,description]=chapters[index];tabs.forEach((tab,i)=>{tab.setAttribute('aria-selected',String(i===index));tab.tabIndex=i===index?0:-1});document.querySelector('#chapter-title').textContent=title;document.querySelector('#chapter-description').textContent=description;document.querySelector('#chapter-image').src=`assets/map${index+1}.png`;document.querySelector('#chapter-image').alt=`${place}, cena do projeto na Unity`;document.querySelector('#chapter-view').setAttribute('aria-labelledby',tabs[index].id);const button=document.querySelector('#chapter-view .screenshot');button.dataset.zoom=`assets/map${index+1}.png`;button.dataset.caption=`${place} — captura da cena na Unity em modo de edição`;button.setAttribute('aria-label',`Ampliar imagem de ${place}`);if(focus)tabs[index].focus()}
-tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>selectChapter(index));tab.addEventListener('keydown',e=>{let next=index;if(e.key==='ArrowDown'||e.key==='ArrowRight')next=(index+1)%tabs.length;else if(e.key==='ArrowUp'||e.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;else if(e.key==='Home')next=0;else if(e.key==='End')next=tabs.length-1;else return;e.preventDefault();selectChapter(next,true)})});
-const lightbox=document.querySelector('#lightbox');let previousFocus;
-document.querySelectorAll('[data-zoom]').forEach(button=>button.addEventListener('click',()=>{previousFocus=button;lightbox.querySelector('img').src=button.dataset.zoom;lightbox.querySelector('img').alt=button.dataset.caption;lightbox.querySelector('p').textContent=button.dataset.caption;lightbox.showModal()}));
-lightbox.querySelector('.close').addEventListener('click',()=>lightbox.close());lightbox.addEventListener('click',event=>{if(event.target===lightbox){const r=lightbox.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)lightbox.close()}});lightbox.addEventListener('close',()=>previousFocus?.focus());
+const q=(s,r=document)=>r.querySelector(s),qa=(s,r=document)=>[...r.querySelectorAll(s)];
+qa('img[data-fallback]').forEach(img=>{const fallback=()=>{const f=img.dataset.fallback;if(f&&img.getAttribute('src')!==f){img.removeAttribute('data-fallback');img.src=f}};img.addEventListener('error',fallback);if(img.complete&&img.naturalWidth===0)fallback()});
+const nav=q('#nav'),toggle=q('#menu-toggle'),bar=q('#reading-bar');
+function closeNav(){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Abrir menu')}
+toggle.addEventListener('click',()=>{let open=!nav.classList.contains('open');nav.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')});
+qa('a',nav).forEach(a=>a.addEventListener('click',closeNav));
+addEventListener('keydown',e=>{if(e.key==='Escape')closeNav()});
+function onScroll(){const d=Math.max(1,document.documentElement.scrollHeight-innerHeight);bar.style.width=String(Math.min(100,scrollY/d*100))+'%'}addEventListener('scroll',onScroll,{passive:true});onScroll();
+const tabs=qa('[data-weapon]'),panels=qa('.weapon-panel');
+function selectWeapon(i,focus=false){tabs.forEach((t,n)=>{t.setAttribute('aria-selected',String(i===n));t.tabIndex=i===n?0:-1;panels[n].hidden=i!==n});if(focus)tabs[i].focus()}
+tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>selectWeapon(i));tab.addEventListener('keydown',e=>{let next=i;if(e.key==='ArrowRight'||e.key==='ArrowDown')next=(i+1)%3;else if(e.key==='ArrowLeft'||e.key==='ArrowUp')next=(i+2)%3;else if(e.key==='Home')next=0;else if(e.key==='End')next=2;else return;e.preventDefault();selectWeapon(next,true)})});
+const modal=q('#lightbox'),modalImg=q('#lightbox-img'),title=q('#lightbox-title');let origin;
+qa('[data-zoom]').forEach(b=>b.addEventListener('click',()=>{origin=b;const i=q('img',b);modalImg.src=i.currentSrc||i.src;modalImg.alt=i.alt;title.textContent=b.dataset.caption||i.alt;modal.showModal();document.body.classList.add('locked')}));
+q('#lightbox-close').addEventListener('click',()=>modal.close());modal.addEventListener('click',e=>{if(e.target===modal)modal.close()});modal.addEventListener('close',()=>{document.body.classList.remove('locked');origin?.focus()});
+
+function updateHeader(){q('#topbar').classList.toggle('scrolled',scrollY>70)}
+addEventListener('scroll',updateHeader,{passive:true});updateHeader();
+if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+ const items=qa('.editorial,.section-heading,.atmosphere-copy,.form-card,.reveal-item>div,.roadmap-opening,.roadmap-close,.shot,.metrics');
+ const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');observer.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -18px 0px'});
+ items.forEach(el=>{el.classList.add('cinematic-reveal');observer.observe(el)});
+}

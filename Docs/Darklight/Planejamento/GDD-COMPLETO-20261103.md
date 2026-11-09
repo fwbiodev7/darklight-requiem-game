@@ -1,6 +1,6 @@
 # DARKLIGHT: REQUIEM — GDD completo consolidado
 
-**Versão:** 03/11/2026. **Plataforma:** Windows. **Engine:** Unity 6000.6.0f1. **Gênero:** RPG de ação/hack and slash 2D em pixel art dark fantasy.
+**Versão:** 09/11/2026 (seção narrativa nova; planos anteriores preservados). **Plataforma:** Windows. **Engine:** Unity 6000.6.0f1. **Gênero:** RPG de ação/hack and slash 2D em pixel art dark fantasy.
 
 Este documento reúne o design principal e os planos completos aprovados de Gothic Eclipse, Lucius Normal e prólogo cinematográfico. Planejamento, implementação local, testes e publicação são estados diferentes. As regras desta abertura e as ordens diretas mais recentes prevalecem sobre datas e sequências históricas nos anexos.
 
@@ -106,6 +106,77 @@ XP, níveis, atributos, inventário e pequena árvore de habilidades com escolha
 
 Menus: novo jogo, continuar, opções, pausa, morte, vitória, créditos e retorno. HUD: vida, energia, habilidade/cooldown, rank, objetivo, chefe e indicador opcional de Dark Resonance. Não deixar nomes, textos ou progresso da campanha antiga aparecerem como conteúdo novo.
 
+
+## Identidade de Fabius e destino de Lucius — escolhas narrativas e finais (proposta de 09/11/2026)
+
+**Status:** direção narrativa nova para desenvolvimento futuro; documentada e ainda não implementada. Não altera o Gate de Fabius Normal, a ordem vigente de produção, os dez capítulos, o prólogo aprovado ou o escopo de combate. Este capítulo complementa a campanha e prevalece, quanto aos desfechos propostos, sobre pressupostos antigos de final único.
+
+### Premissa dramática e conflito de identidade
+
+A relação entre os irmãos gêmeos **Fabius** e **Lucius** deve ser o centro emocional de DARKLIGHT: REQUIEM. O jogador acompanha uma crise de identidade de Fabius: continuar enxergando o irmão que conheceu na infância e buscar uma forma de interromper o ciclo de violência, ou aceitar o ódio, condená-lo pelos atos cometidos e colocar a vingança acima do vínculo familiar.
+
+Referência de **estrutura de dilema**, não de enredo ou personagens: em *Ghost of Tsushima*, Jin Sakai confronta a identidade que herdou e a identidade que escolhe assumir. Aqui, a oposição é **laço fraterno e misericórdia versus rancor e execução**, com linguagem, consequências e justificativas próprias do universo de Vespera e do Véu. Não copiar falas, eventos ou o eixo samurai/Ghost.
+
+**Fabius não deve virar um santo por poupar, nem um vilão automático por matar.** Lucius não pode ser reduzido a um monstro sem motivo: seus objetivos, decisões e responsabilidades devem continuar próprios e compreensíveis, sem apagar o sofrimento causado por ele. O jogador decide que tipo de pessoa Fabius se torna diante do irmão, e essa identidade deve aparecer nas falas, nos silêncios, nas reações de NPCs e no epílogo.
+
+### Escolhas nos diálogos durante toda a campanha
+
+Introduzir, nos encontros narrativos relevantes, opções de resposta com tom e consequência diferentes. **Não** transformar todo diálogo em enquete: reservar escolhas para revelações, confrontos, memórias da infância, conflitos com aliados e decisões que expressem a personalidade de Fabius.
+
+- **Caminho do vínculo / compaixão:** Fabius pergunta, escuta, procura evidências, reconhece a responsabilidade de Lucius sem desumanizá-lo, enfrenta seus argumentos e acredita na possibilidade de mudança. Ele pode demonstrar raiva sem abandonar o desejo de salvá-lo.
+- **Caminho do rancor / vingança:** Fabius responde com hostilidade, acusa, despreza justificativas, recusa aproximações e passa a ver Lucius como alguém que precisa ser eliminado. O mundo e os aliados reagem a essa postura sem tratar a escolha como uma barra simplista de bem/mal.
+- **Respostas ponderadas ou ambíguas:** permitir dúvida e mudança de posição ao longo da jornada. Uma resposta isolada não deve decidir o final; escolhas anteriores influenciam a credibilidade das reconciliações, o tom de cenas posteriores e as reações de Lucius.
+
+**Exemplo de diálogo original — encontro intermediário:**
+
+> **Lucius:** “Você ainda acredita que eu poderia ter escolhido outro caminho?”
+>
+> **Fabius — resposta de vínculo:** “Acredito que você ainda pode escolher. Mas primeiro vai ter que responder pelo que fez.”
+>
+> **Fabius — resposta de rancor:** “Você fez suas escolhas. Não espere que eu carregue a culpa por elas.”
+>
+> **Fabius — resposta de dúvida:** “Eu não sei mais quem você é, Lucius. É isso que mais me assusta.”
+
+A personalidade de Lucius deve reagir: ele não concorda automaticamente com Fabius nem muda de lado por uma única fala gentil. Suas ações precisam sustentar qualquer aproximação futura.
+
+### Progressão dramática nos dez capítulos existentes
+
+| Faixa da campanha | Aplicação narrativa proposta |
+|---|---|
+| **Capítulos 1–3 — memória e ruptura** | Apresentar recordações contrastantes dos irmãos, consequências iniciais do conflito e primeiras respostas de Fabius sobre Lucius. |
+| **Capítulos 4–6 — verdades difíceis** | Revelar motivos e escolhas de Lucius por meio de encontros, investigações e NPCs; permitir compaixão crítica ou aprofundamento do rancor sem absolver suas ações. |
+| **Capítulos 7–9 — identidade em crise** | Intensificar consequências das escolhas: diálogos alternativos, reações de aliados, oportunidades de confrontar Lucius e indícios de sua possível mudança ou endurecimento. |
+| **Capítulo 10 — o Réquiem dos irmãos** | Retomar o duelo anunciado no prólogo, completar a bossfight final e oferecer uma decisão final explícita, com dois desfechos principais. |
+
+Usar cenas, diálogos, lembranças, interações e sistemas de missão já existentes; não exigir mapas extras ou duplicar os dez capítulos para suportar os ramos. Missões opcionais podem aprofundar o vínculo, mas não devem ser requisito oculto que impeça o jogador de compreender ou escolher o desfecho.
+
+### Duelo final e decisão do jogador
+
+**A batalha contra Lucius acontece em ambas as rotas.** O confronto mostrado no prólogo continua interrompido antes da revelação de seu resultado e só ganha significado no retorno ao final da campanha. O resultado moral não deve ser antecipado por HUD, prévia de missão, nome de conquista ou marketing.
+
+Após a resolução jogável do confronto e uma curta cena que preserve continuidade com a infância, **o jogador escolhe conscientemente**:
+
+1. **Poupar Lucius — “Ainda existe um caminho.”** Fabius interrompe a execução. Lucius sobrevive e, depois de reconhecer sua responsabilidade e agir para reparar parte do dano, assume o papel de **anti-herói aliado**. Os dois não precisam concordar: a aliança pode ser desconfortável, com limites, desconfiança e objetivos parcialmente diferentes. O epílogo mostra as consequências e abre espaço para uma futura participação de Lucius ao lado de Fabius, sem declarar que ele foi inocentado.
+2. **Matar Lucius — “Não haverá outra chance.”** Fabius escolhe a execução e encerra o confronto de forma definitiva. A cena enfatiza o custo emocional e o rompimento do elo com a infância. O epílogo reconhece a vitória e suas consequências, sem transformá-la em punição automática ao jogador ou em superioridade moral artificial da rota de misericórdia.
+
+As escolhas acumuladas mudam os **diálogos, a postura dos irmãos, a credibilidade do perdão e a reação do mundo**, mas o ato irreversível final exige confirmação clara do jogador: não decidir matar automaticamente por um placar oculto. Ambos são finais narrativos legítimos. Não adicionar um terceiro final obrigatório nesta proposta; desdobramentos futuros requerem nova aprovação.
+
+### Consequências e continuidade
+
+- **Rota de misericórdia:** finais e conversas próprios; Lucius permanece um personagem independente, potencial aliado em epílogo, pós-jogo ou expansão posterior. Qualquer assistência de IA, missão cooperativa ou moveset de aliado só entra no escopo técnico após a campanha e os sistemas principais estarem estáveis.
+- **Rota de execução:** falas e reações específicas de NPCs, lembranças que ganham outro significado e epílogo que trata da escolha feita. Não conceder ou negar arbitrariamente armas, transformações ou acesso à campanha principal com base no alinhamento.
+- As duas rotas podem alterar retratos, música, texto de encerramento e pequenas cenas, preferencialmente reutilizando cenário, personagens e animações existentes. Não exigir duas campanhas completamente diferentes.
+- O fim da campanha principal precisa ser completo e compreensível nas duas opções, mesmo sem conteúdo pós-jogo ou expansão.
+
+### Contrato de implementação futura na Unity
+
+Separar **estado narrativo** de lógica de combate e de representação visual. Registrar IDs estáveis para decisões importantes, consequências observadas, relação entre os irmãos e final escolhido; persistir os dados no save existente com migração segura, sem afetar arquivos antigos. Exemplo conceitual: `fabius_lucius_bond`, `fabius_lucius_grievance`, `lucius_truth_discovered`, `lucius_final_choice` (`spared` / `killed`), e `lucius_ally_unlocked`. Estes nomes **não** são contratos de código já existentes: validar a arquitetura real antes de criá-los.
+
+O sistema de diálogo deve suportar opções por mouse, teclado e controle, foco visível, texto legível, pré-condições explícitas e efeitos idempotentes (uma escolha não pode ser aplicada duas vezes por input repetido). Pular cutscenes não pode pular a escolha final nem gerar finais contraditórios. Bloquear combate enquanto decisões estiverem abertas. Salvar/carregar deve reconstituir o estado correto, inclusive antes e depois da decisão final.
+
+**Testes de aceitação futuros:** executar uma campanha com decisões de vínculo e final poupando Lucius; outra com decisões de rancor e execução; testar decisões mistas, reload, skip, confirmação, controle, checkpoints, pós-créditos e ausência de spoilers prematuros. Verificar que nenhuma rota impede a bossfight ou o encerramento da campanha.
+
+**Ordem:** escrever e revisar o roteiro ramificado após validar Lucius Normal e o prólogo; integrar gradualmente na fase de narrativa/campanha, sem interromper os gates de Fabius, Gothic Eclipse, transformações e Combate IA 2.0.
 
 ## Campanha, mapas e narrativa
 

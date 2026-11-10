@@ -76,7 +76,7 @@ namespace Darklight
             TrainingPassive=type==0;
             luciusDuelMode=type==6;
             luciusDuelEnemy=null;
-            var origin=Map.Spawn+Vector2.up*2.7f;
+            var origin=Map.Spawn+Vector2.up*(type==6?1.85f:2.7f);
             if(type==6)
             {
                 TrainingDamage=true;

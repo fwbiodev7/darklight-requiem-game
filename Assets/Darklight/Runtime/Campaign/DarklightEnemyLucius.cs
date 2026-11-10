@@ -22,22 +22,43 @@ namespace Darklight
             if (loadout == null)
             {
                 var game = DarklightCampaign.Instance;
-                if (game?.weaponDefinitions != null && game.weaponDefinitions.Length > 0 &&
+                var weaponController = game?.Weapons ?? DarklightCombatLab.Instance?.Player?.GetComponent<DarklightWeaponController>();
+                var equipped = weaponController?.Equipped;
+                if (equipped?.loadout?.lights?.Length == 3)
+                {
+                    loadout = DarklightLuciusCombatProfile.Create(equipped.loadout.lights, _ => { });
+                }
+                else if (game?.weaponDefinitions != null && game.weaponDefinitions.Length > 0 &&
                     game.weaponDefinitions[0]?.loadout?.lights?.Length == 3)
                 {
                     loadout = DarklightLuciusCombatProfile.Create(game.weaponDefinitions[0].loadout.lights, _ => { });
                 }
+                else if (DarklightCombatLab.Instance?.Player?.loadout?.lights?.Length == 3)
+                {
+                    loadout = DarklightLuciusCombatProfile.Create(DarklightCombatLab.Instance.Player.loadout.lights, _ => { });
+                }
             }
-            if (loadout != null)
+            if (loadout == null)
             {
-                CombatModel = new CombatModel(loadout);
+                var a1 = ScriptableObject.CreateInstance<AttackDefinition>();
+                a1.animationKey = DarklightLuciusCombatProfile.SwordHorizontal;
+                a1.hitShape = HitShape.Sweep; a1.range = 1.85f; a1.startup = 0.14f; a1.active = 0.12f; a1.recovery = 0.22f; a1.damage = 18f; a1.knockback = 2.5f;
+                var a2 = ScriptableObject.CreateInstance<AttackDefinition>();
+                a2.animationKey = DarklightLuciusCombatProfile.SwordVertical;
+                a2.hitShape = HitShape.Sector; a2.range = 1.85f; a2.startup = 0.16f; a2.active = 0.14f; a2.recovery = 0.24f; a2.damage = 22f; a2.knockback = 3.0f;
+                var a3 = ScriptableObject.CreateInstance<AttackDefinition>();
+                a3.animationKey = DarklightLuciusCombatProfile.SwordThrust;
+                a3.hitShape = HitShape.Thrust; a3.range = 2.10f; a3.startup = 0.18f; a3.active = 0.10f; a3.recovery = 0.20f; a3.damage = 24f; a3.knockback = 4.0f;
+                loadout = DarklightLuciusCombatProfile.Create(new[] { a1, a2, a3 }, _ => { });
             }
+            CombatModel = new CombatModel(loadout);
             if (art != null) art.enabled = false;
         }
 
         public bool TickLucius(DarklightCampaign game, DarklightCombatLab lab, float dt)
         {
-            if (!IsLucius || CombatModel == null) return false;
+            if (!IsLucius) return false;
+            if (CombatModel == null) InitializeLucius(null, LuciusView);
 
             if (Health != null && Health.IsDead)
             {

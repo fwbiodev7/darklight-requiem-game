@@ -31,7 +31,7 @@ namespace Darklight
             if(dt<=0){body.linearVelocity=Vector2.zero;return;}
             if(Health.IsDead)
             {
-                if(IsLucius&&TickLucius(game,lab,dt))return;
+                if(IsLucius){TickLucius(game,lab,dt);return;}
                 TickAerial(dt);
                 if(visitorDefeat!=null)art.sprite=visitorDefeat;
                 body.linearVelocity=Vector2.zero;
@@ -40,7 +40,7 @@ namespace Darklight
             }
             if(TickExpandedBoss(game,dt))return;
             clock+=dt;timer-=dt;stagger-=dt;TickAerial(dt);
-            if(IsLucius&&TickLucius(game,lab,dt))return;
+            if(IsLucius){TickLucius(game,lab,dt);return;}
             if(TickVisitor(game,lab,dt))return;
             Vector2 delta=(Vector2)lab.Player.transform.position-body.position;float distance=delta.magnitude;
             if(Boss&&!ExpandedBoss&&!phaseTwo&&Health.HealthPercent<.5f){phaseTwo=true;game.BossPhaseTwo();game.Notice("FASE 2: "+DarklightStory.Bosses[(int)kind-5]);timer=.85f;state=0;}

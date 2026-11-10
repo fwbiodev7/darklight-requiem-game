@@ -22,12 +22,33 @@ namespace Darklight
         }
         public bool PresentPose(string action,int direction,float time,string attackKey=null)
         {
-            if(!DarklightLuciusSpriteBank.TryPose(appearance,action,direction,time,out var sprite,out bool fallback,attackKey))return false;
+            if(!DarklightLuciusSpriteBank.TryPose(appearance,action,direction,time,out var sprite,out bool fallback,attackKey))
+            {
+                if(art==null)
+                {
+                    var child=new GameObject("LuciusVisual");child.transform.SetParent(transform,false);
+                    art=child.AddComponent<SpriteRenderer>();
+                }
+                if(art.sprite==null && DarklightCampaign.Instance!=null)
+                {
+                    var bFrames = DarklightCampaign.Instance.bossFrames;
+                    if(bFrames!=null && bFrames.Length>20) art.sprite = bFrames[20];
+                }
+                if(art.sprite!=null)
+                {
+                    if (art.sharedMaterial == null && DarklightCampaign.Instance != null) art.sharedMaterial = DarklightCampaign.Instance.pixelMaterial;
+                    art.sortingOrder=DarklightSorting.OrderForY(transform.position.y);
+                    return true;
+                }
+                return false;
+            }
             if(art==null)
             {
                 var child=new GameObject("LuciusVisual");child.transform.SetParent(transform,false);
                 art=child.AddComponent<SpriteRenderer>();
             }
+            if (art.sharedMaterial == null && DarklightCampaign.Instance != null)
+                art.sharedMaterial = DarklightCampaign.Instance.pixelMaterial;
             art.sprite=sprite;art.flipX=art.flipY=false;
             float scale=visualScale>0&&!float.IsNaN(visualScale)&&!float.IsInfinity(visualScale)?visualScale:1.325f;
             art.transform.localScale=Vector3.one*scale;

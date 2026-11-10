@@ -20,6 +20,11 @@ namespace Darklight
             {
                 var a=ScriptableObject.CreateInstance<AttackDefinition>();own(a);
                 a.name="RuinFists_"+name;a.displayName=name;a.kind=kind;a.ruinStrike=visual;
+                // Share compatible complete motions while preserving each move's
+                // own damage, contact pulses, aerial trajectory and combat clock.
+                a.animationKey=visual==DarklightRuinStrike.Cyclone||name=="Órbita Devastadora"?"Giro Devastador":
+                    name=="Sentença da Ruína"?"Juízo da Ruína":
+                    visual==DarklightRuinStrike.AerialSlam?"Martelo da Ruína":name;
                 a.damage=damage;a.startup=startup;a.active=active;a.recovery=recovery;
                 a.range=range;a.angle=angle;a.postureDamage=posture;a.hitPulses=1;
                 a.hitShape=visual==DarklightRuinStrike.Punch?HitShape.Thrust:

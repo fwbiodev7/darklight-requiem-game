@@ -77,6 +77,19 @@ namespace Darklight.Tests
         }
         [Test] public void DeathCancelsAttackAndFutureInputs()
         { Light();model.Hurt(true);model.Tick(1,new CombatInput { lightPressed=true,dodgePressed=true });Assert.That(model.State,Is.EqualTo(CombatState.Dead));Assert.That(model.RegisterHit(1),Is.False); }
+
+        [Test] public void DeathAdvancesOnlyPresentationTimeAndRespectsPause()
+        {
+            Light();float clock=model.Clock;model.Hurt(true);
+            model.Tick(.2f,new CombatInput { lightPressed=true,dodgePressed=true,move=Vector2.up });
+            Assert.That(model.StateTime,Is.EqualTo(.2f).Within(.0001f));
+            Assert.That(model.Clock,Is.EqualTo(clock));Assert.That(model.Motion,Is.EqualTo(Vector2.zero));
+            Assert.That(model.State,Is.EqualTo(CombatState.Dead));Assert.That(model.ActiveThisTick,Is.False);
+            model.Tick(0,default);model.Tick(-1,default);
+            Assert.That(model.StateTime,Is.EqualTo(.2f).Within(.0001f));
+            model.Tick(.3f,default);
+            Assert.That(model.StateTime,Is.EqualTo(.5f).Within(.0001f));Assert.That(model.Clock,Is.EqualTo(clock));
+        }
         [TestCase(0,-1,0)] [TestCase(-1,-1,1)] [TestCase(-1,0,2)] [TestCase(-1,1,3)]
         [TestCase(0,1,4)] [TestCase(1,1,5)] [TestCase(1,0,6)] [TestCase(1,-1,7)]
         public void DirectionMatchesTheEightViewContract(float x,float y,int index)

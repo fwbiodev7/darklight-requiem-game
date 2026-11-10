@@ -6,10 +6,13 @@ namespace Darklight
     public sealed class DarklightCombatProfiles
     {
         readonly List<Object> owned=new();
+        public static string AttackAnimationKey(AttackDefinition attack)=>attack==null?"":
+            string.IsNullOrEmpty(attack.animationKey)?attack.displayName:attack.animationKey;
         T Copy<T>(T source)where T:Object{if(source==null)return null;var copy=Object.Instantiate(source);owned.Add(copy);return copy;}
         AttackDefinition Attack(AttackDefinition source,int weapon,int variant)
         {
             var a=Copy(source);if(a==null)return null;
+            a.animationKey=AttackAnimationKey(source);
             a.name=source.name+"_Technical_"+weapon+"_"+variant;
             a.windupMove=weapon==1?.72f:.58f;a.recoveryMove=weapon==1?.82f:.66f;
             a.hitstop=a.kind==StrikeKind.Light?.022f:a.kind==StrikeKind.Charged?.055f:.038f;

@@ -23,6 +23,8 @@ namespace Darklight
         public int Capacity=>pool.Length;
         public int ActiveCount { get { int n=0;foreach(var b in pool)if(b!=null&&b.active)n++;return n; } }
         public int Count(DarklightActionParticleKind kind)=>counts[(int)kind];
+        public int MotorcycleGuardBursts {get;private set;}
+        public Vector3 LastMotorcycleGuardPoint {get;private set;}
         public Sprite LastPresentedSprite {get;private set;}
         public float LastOpacity {get;private set;}
         public float LastDiameter {get;private set;}
@@ -65,6 +67,8 @@ namespace Darklight
             return weaponReady=true;
         }
         public static void Observe(Component owner,CombatModel model)
+            =>Observe(owner,model,null,-1);
+        public static void Observe(Component owner,CombatModel model,SpriteRenderer art,int weapon)
         {
             if(owner==null||model==null)return;
             var fx=Get();if(fx==null)return;
@@ -81,10 +85,25 @@ namespace Darklight
                 case CombatState.Dead:kind=DarklightActionParticleKind.Death;break;
                 default:return;
             }
+            if(kind==DarklightActionParticleKind.Defense&&weapon==3&&art!=null&&
+                DarklightWeaponRedesignBank.TryMotorcycleGuardContact(DarklightCampaign.Instance?.PresentedForm??0,
+                    DarklightCharacterView.DirectionIndex(model.Facing),art.sprite,out var contact,out bool visible))
+            {
+                fx.LastMotorcycleGuardPoint=art.transform.TransformPoint(new Vector3(contact.x,contact.y,0));
+                // Count the defense entry even when its contact is hidden behind
+                // the torso. The generic defense sprite would obscure this art.
+                fx.counts[(int)kind]++;
+                if(visible)
+                {
+                    fx.MotorcycleGuardBursts++;
+                    DarklightCombatImpacts.EmitMotorcycle(fx.LastMotorcycleGuardPoint,model.Facing,DarklightMotorcycleImpact.Guard);
+                }
+                return;
+            }
             float height=kind==DarklightActionParticleKind.Dodge?.12f:kind==DarklightActionParticleKind.Death?.4f:.85f;
-            Emit(kind,owner.transform.position+Vector3.up*height,model.Facing);
+            Emit(kind,owner.transform.position+Vector3.up*height,model.Facing,owner.transform.position.y);
         }
-        public static void Emit(DarklightActionParticleKind kind,Vector3 point,Vector2 facing=default)
+        public static void Emit(DarklightActionParticleKind kind,Vector3 point,Vector2 facing=default,float? groundY=null)
         {
             int clip=(int)kind;if(clip<0||clip>3)return;
             var fx=Get();if(fx==null||!fx.Load())return;
@@ -102,12 +121,13 @@ namespace Darklight
                 var obj=new GameObject("ParticulaAcao");obj.transform.SetParent(fx.transform,false);
                 b=fx.pool[fx.cursor]=new Burst {art=obj.AddComponent<SpriteRenderer>()};
                 if(DarklightCampaign.Instance?.pixelMaterial!=null)b.art.sharedMaterial=DarklightCampaign.Instance.pixelMaterial;
-                b.art.sortingOrder=900;
-                var block=new MaterialPropertyBlock();block.SetFloat("_WholeSprite",1);block.SetTexture("_VampireMask",Texture2D.blackTexture);b.art.SetPropertyBlock(block);
+                var block=new MaterialPropertyBlock();block.SetFloat("_AlphaClip",.05f);block.SetFloat("_WholeSprite",1);block.SetTexture("_VampireMask",Texture2D.blackTexture);b.art.SetPropertyBlock(block);
             }
             fx.cursor=(fx.cursor+1)%fx.pool.Length;b.clip=clip;b.age=0;b.life=0;b.active=true;b.weapon=weapon;
             for(int i=0;i<3;i++)b.life+=timing[clip*3+i]/1000f;
             b.art.sprite=selected[clip*3];b.art.transform.position=point;b.art.enabled=true;
+            // Refresh pooled bursts at their ground contact, independently of effect height.
+            b.art.sortingOrder=DarklightSorting.OrderForY(groundY??point.y)+1;
             bool reduced=DarklightCampaign.Instance?.ReducedFlashes==true;
             float diameter=kind==DarklightActionParticleKind.Death?1.5f:kind==DarklightActionParticleKind.Dodge?1.15f:1.05f;
             if(reduced)diameter*=.55f;

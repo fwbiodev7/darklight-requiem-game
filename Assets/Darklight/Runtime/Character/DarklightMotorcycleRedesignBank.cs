@@ -27,7 +27,7 @@ namespace Darklight
         }
         [Serializable] sealed class Frame {public string id;public int durationMs;}
         [Serializable] sealed class Transition {public int skin,weapon,form,direction,dualSawModules;public bool onFootAndMounted;public string[] assemble,separate;}
-        sealed class TransitionPage {public Sprite[] assemble,separate;public int[] assembleMs,separateMs;}
+        sealed class TransitionPage {public Sprite[] assemble,separate;public int[] assembleMs,separateMs;public bool reusedPoses;}
         static readonly TransitionPage[] transitionPages=new TransitionPage[8];
         static readonly bool[] transitionAttempted=new bool[8];
         static readonly HashSet<Sprite> transitionSprites=new();
@@ -38,7 +38,10 @@ namespace Darklight
         {
             if(direction<0||direction>7)return null;
             if(transitionAttempted[direction])return transitionPages[direction];transitionAttempted[direction]=true;
-            string resource=TransitionResource(direction);var text=Resources.Load<TextAsset>(resource);if(text==null)return null;
+            string resource=TransitionResource(direction);var text=Resources.Load<TextAsset>(resource);
+            // Missing directional choreography may reuse the two reviewed whole
+            // endpoint figures. Never mask a malformed authored transition this way.
+            if(text==null)return LoadReusedTransition(direction);
             var sheet=JsonUtility.FromJson<Sheet>(text.text);var entry=sheet?.motorcycleTransition;
             if(sheet==null||!sheet.wholeFigures||sheet.nativeSize?.Length!=2||sheet.pixelsPerUnit<=0||
                 sheet.status!="visual-reviewed"&&sheet.status!="imported"&&sheet.status!="runtime-verified"||
@@ -64,9 +67,28 @@ namespace Darklight
             foreach(var sprite in page.assemble){authored.Add(sprite);transitionSprites.Add(sprite);}
             foreach(var sprite in page.separate){authored.Add(sprite);transitionSprites.Add(sprite);}return page;
         }
+        static TransitionPage LoadReusedTransition(int direction)
+        {
+            var onFoot=DualSawsPose(direction);var mounted=Riding(0,direction,0);
+            if(onFoot==null||mounted==null)return null;
+            var page=new TransitionPage{assemble=new[]{onFoot,mounted},separate=new[]{mounted,onFoot},reusedPoses=true};
+            transitionPages[direction]=page;
+            transitionSprites.Add(onFoot);transitionSprites.Add(mounted);
+            return page;
+        }
+        public static bool TransitionUsesReusedPoses(int direction)=>LoadTransition(direction)?.reusedPoses==true;
         public static Sprite TransitionPose(int direction,bool assemble,float progress)
         {
-            var page=LoadTransition(direction);if(page==null||float.IsNaN(progress)||float.IsInfinity(progress))return null;
+            if(float.IsNaN(progress)||float.IsInfinity(progress))return null;
+            var page=LoadTransition(direction);if(page==null)return null;
+            if(page.reusedPoses)
+            {
+                // Two intentional holds and one cut, in the existing attack window.
+                // Evaluate a canonical mount position so reversing at the midpoint
+                // returns the same figure. No anatomy interpolation or extra clock.
+                float mountedProgress=assemble?Mathf.Clamp01(progress):1-Mathf.Clamp01(progress);
+                return page.assemble[mountedProgress<.5f?0:1];
+            }
             var frames=assemble?page.assemble:page.separate;var timings=assemble?page.assembleMs:page.separateMs;
             int duration=0;foreach(int ms in timings)duration+=ms;
             float time=Mathf.Clamp01(progress)*duration;
@@ -223,7 +245,7 @@ namespace Darklight
                 var a=model.Attack;float t=model.StateTime;Sprite transition=null;
                 if(t<a.startup)transition=TransitionPose(direction,true,t/Mathf.Max(.001f,a.startup));
                 else if(t>=a.startup+a.active)transition=TransitionPose(direction,false,(t-a.startup-a.active)/Mathf.Max(.001f,a.recovery));
-                if(transition!=null){poseFallback=false;return transition;}
+                if(transition!=null){poseFallback=TransitionUsesReusedPoses(direction);return transition;}
             }
             if(!rider.MountedPresentation)
             {

@@ -8,6 +8,8 @@ namespace Darklight
     public sealed class AttackDefinition : ScriptableObject
     {
         public string displayName;
+        // Stable authored animation identity for session profiles with renamed moves.
+        public string animationKey;
         public StrikeKind kind;
         public float startup = .12f, active = .1f, recovery = .22f;
         public float damage = 15f, range = 1.6f, angle = 110f, knockback = .2f;

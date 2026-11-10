@@ -169,7 +169,11 @@ namespace Darklight
         public bool RegisterHit(object target){bool hit=target != null && ActiveThisTick && struck.Add(target);if(hit)AttackConnected=true;return hit;}
         public bool RegisterPulseHit(object target,int pulse)=>target!=null&&ActiveThisTick&&(ContactPulses&(1u<<pulse))!=0&&pulseTargets[pulse].Add(target);
         public void ConfirmHit()=>AttackConnected=true;
-        public void TriggerAttack(AttackDefinition attack)=>BeginAttack(attack);
+        public void TriggerAttack(AttackDefinition attack, Vector2 aim = default)
+        {
+            if (aim.sqrMagnitude > .04f) Facing = aim.normalized;
+            BeginAttack(attack);
+        }
         // Contextual air moves obey the same committed contact and recovery windows.
         public bool TryAirFollowup(AttackDefinition next, CombatInput input)
         {

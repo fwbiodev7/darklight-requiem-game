@@ -39,10 +39,10 @@ namespace Darklight
         {
             if (!IsLucius || CombatModel == null) return false;
 
-            if (Health.IsDead)
+            if (Health != null && Health.IsDead)
             {
                 warning?.Hide();
-                body.linearVelocity = Vector2.zero;
+                if (body != null) body.linearVelocity = Vector2.zero;
                 CombatModel.Hurt(true);
                 LuciusView?.Present(CombatModel, Vector2.zero);
                 return true;
@@ -51,7 +51,7 @@ namespace Darklight
             if (stagger > 0)
             {
                 warning?.Hide();
-                body.linearVelocity = Vector2.zero;
+                if (body != null) body.linearVelocity = Vector2.zero;
                 CombatModel.Hurt(false, stagger);
                 LuciusView?.Present(CombatModel, Vector2.zero);
                 return true;
@@ -202,8 +202,9 @@ namespace Darklight
             int idx = Mathf.Clamp(attackIndex % 3, 0, 2);
             var attack = loadout.lights[idx];
 
-            CombatModel.TriggerAttack(attack);
-            locked = aim;
+            CombatModel.TriggerAttack(attack, aim);
+            facing = aim.sqrMagnitude > 0.001f ? aim.normalized : facing;
+            locked = facing;
             game?.EnemyAudioWarning(this);
             serial++;
         }
@@ -213,10 +214,11 @@ namespace Darklight
             var player = lab?.Player;
             if (player == null) return;
             var combatant = player.GetComponent<DarklightCombatant>();
-            if (combatant == null || combatant.Health.IsDead) return;
+            if (combatant == null || (combatant.Health != null && combatant.Health.IsDead)) return;
 
             Vector2 playerPos = player.transform.position;
-            Vector2 toPlayer = playerPos - body.position;
+            Vector2 luciusPos = body != null ? body.position : (Vector2)transform.position;
+            Vector2 toPlayer = playerPos - luciusPos;
             float distance = toPlayer.magnitude;
             var attack = CombatModel?.Attack;
             if (attack == null) return;
@@ -227,7 +229,7 @@ namespace Darklight
 
             bool inRange = distance <= maxRange;
             bool inAngle = distance <= 0.3f || Vector2.Angle(CombatModel.Facing, toPlayer) <= maxAngle;
-            bool sight = DarklightNavigation.Clear(body.position, playerPos);
+            bool sight = DarklightNavigation.Clear(luciusPos, playerPos);
 
             if (inRange && inAngle && sight)
             {

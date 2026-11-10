@@ -69,6 +69,7 @@ namespace Darklight.Tests
             go.AddComponent<DarklightCharacterView>();
             var fighter = go.AddComponent<DarklightFighter>();
             fighter.loadout = CreateLuciusLoadout();
+            fighter.ResetModel();
             return (go, fighter, health, combatant);
         }
 
@@ -153,6 +154,7 @@ namespace Darklight.Tests
 
             // Phase 3: Recuperação (recovery)
             model.Tick(attack.active + 0.01f, default);
+            model.Tick(0.01f, default);
             Assert.That(model.ActiveThisTick, Is.False, "During recovery, attack must no longer be active");
             Assert.That(model.State, Is.EqualTo(CombatState.Attack));
 
@@ -268,8 +270,8 @@ namespace Darklight.Tests
             var lab = labGo.AddComponent<DarklightCombatLab>();
             lab.Player = fighter;
 
-            // Player enters parry state
-            fighter.Model.Tick(0.01f, new CombatInput { parryPressed = true });
+            // Player enters parry state facing Lucius
+            fighter.Model.Tick(0.01f, new CombatInput { parryPressed = true, aim = Vector2.left });
             Assert.That(fighter.Model.State, Is.EqualTo(CombatState.Parry));
 
             // Lucius attacks

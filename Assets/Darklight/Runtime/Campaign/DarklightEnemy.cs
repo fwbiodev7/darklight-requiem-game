@@ -5,8 +5,13 @@ namespace Darklight
     public sealed partial class DarklightEnemy : MonoBehaviour
     {
         public RequiemEnemyKind kind; public Sprite[] poses,attackFrames; public bool elite;
-        public HealthSystem Health {get;private set;} public bool Boss => (int)kind>=5;
-        SpriteRenderer art; Rigidbody2D body; float timer,stagger,clock,corpse,controlReady,staggerReady;
+        HealthSystem _health;
+        public HealthSystem Health => _health != null ? _health : (_health = GetComponent<HealthSystem>());
+        public bool Boss => (int)kind>=5;
+        SpriteRenderer art;
+        Rigidbody2D _body;
+        public Rigidbody2D body => _body != null ? _body : (_body = GetComponent<Rigidbody2D>());
+        float timer,stagger,clock,corpse,controlReady,staggerReady;
         public bool Vulnerable=>!Health.IsDead&&stagger>0;
         public bool Control(float duration){if(Boss||kind==RequiemEnemyKind.Armored||Health.IsDead||clock<controlReady)return false;controlReady=clock+2;stagger=Mathf.Max(stagger,Mathf.Clamp(duration,0,.65f));state=0;body.linearVelocity=Vector2.zero;return true;}
         readonly System.Collections.Generic.List<Vector2> route=new();float repath;Vector2 facing=Vector2.down;
@@ -15,7 +20,7 @@ namespace Darklight
         public bool AreaAttack=>ExpandedBoss?ExpandedArea:kind==RequiemEnemyKind.Armored||kind==RequiemEnemyKind.Matriarch||kind==RequiemEnemyKind.Sentinel;
         int state, serial; Vector2 locked, dash; bool rewarded,phaseTwo;
         public string StateName => Health.IsDead?"Derrotado":state==1?"Preparando":state==2?"Ataque":"Vigiando";
-        void Awake(){Health=GetComponent<HealthSystem>();art=GetComponentInChildren<SpriteRenderer>();body=GetComponent<Rigidbody2D>();Health.OnDeath+=Reward;}
+        void Awake(){_health=GetComponent<HealthSystem>();art=GetComponentInChildren<SpriteRenderer>();_body=GetComponent<Rigidbody2D>();Health.OnDeath+=Reward;}
         void Update()
         {
             var game=DarklightCampaign.Instance;var lab=DarklightCombatLab.Instance;if(game==null||lab==null)return;

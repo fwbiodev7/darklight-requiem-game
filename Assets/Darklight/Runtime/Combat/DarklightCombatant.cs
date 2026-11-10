@@ -6,9 +6,19 @@ namespace Darklight
     public sealed class DarklightCombatant : MonoBehaviour
     {
         public bool player;
-        public HealthSystem Health { get; private set; }
-        DarklightFighter fighter;
-        void Awake() { Health = GetComponent<HealthSystem>(); Health.SetInvincibilityDuration(player && DarklightCampaign.Instance!=null?.28f:0); fighter = GetComponent<DarklightFighter>(); }
+        HealthSystem _health;
+        public HealthSystem Health => _health != null ? _health : (_health = GetComponent<HealthSystem>());
+        DarklightFighter _fighter;
+        DarklightFighter fighter => _fighter != null ? _fighter : (_fighter = GetComponent<DarklightFighter>());
+        DarklightEnemy _enemy;
+        DarklightEnemy enemy => _enemy != null ? _enemy : (_enemy = GetComponent<DarklightEnemy>());
+        void Awake()
+        {
+            _health = GetComponent<HealthSystem>();
+            if (_health != null) _health.SetInvincibilityDuration(player && DarklightCampaign.Instance!=null?.28f:0);
+            _fighter = GetComponent<DarklightFighter>();
+            _enemy = GetComponent<DarklightEnemy>();
+        }
         public bool Receive(float damage, Vector2 force,bool unblockable=false)
         {
             if (Health.IsDead) return false;

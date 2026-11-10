@@ -7,6 +7,8 @@ namespace Darklight
         public bool TrainingPassive {get;private set;}=true;
         public bool TrainingDamage {get;private set;}
         public bool TrainingHitboxes {get;private set;}
+        bool luciusDuelMode;
+        DarklightEnemy luciusDuelEnemy;
         DarklightProgress suspendedProgress;
         Vector2 suspendedPosition;float suspendedHealth;
         bool trainingFromMain;
@@ -35,7 +37,7 @@ namespace Darklight
         public void ExitTraining()
         {
             if(!Training)return;
-            StopPower();Training=false;TrainingHitboxes=false;
+            StopPower();Training=false;TrainingHitboxes=false;luciusDuelMode=false;luciusDuelEnemy=null;
             Progress=suspendedProgress??new DarklightProgress();suspendedProgress=null;
             LoadMap(Progress.chapter);
             var safe=Map.SafeSpawn(suspendedPosition);lab.Player.transform.position=safe;lab.Player.GetComponent<Rigidbody2D>().position=safe;
@@ -47,17 +49,56 @@ namespace Darklight
         {
             Blood.Set(100);if(!TrainingDamage&&health.HealthPercent<1)health.FullHeal();
             if(Form>0)FormTime=Mathf.Max(FormTime,180);
-            if(trainingReadout!=null)trainingReadout.text="TREINO · "+DifficultyName+"\nCOMBO "+lab.Player.Model.ComboCount+" · "+Style.Rank+"\nPAUSA: ALVOS / ARMAS / FORMAS";
-            if(TrainingDamage&&health.IsDead){StopPower();health.SetMaxHealth(health.MaxHealth,false);lab.Player.ResetModel();lab.Player.GetComponent<Rigidbody2D>().position=Map.Spawn;Notice("TREINO: VIDA RESTAURADA");}
+            if(trainingReadout!=null)
+            {
+                if(luciusDuelMode)
+                {
+                    string luciusStatus=luciusDuelEnemy!=null&&!luciusDuelEnemy.Health.IsDead
+                        ? $"LUCIUS: {Mathf.CeilToInt(luciusDuelEnemy.Health.CurrentHealth)}/{Mathf.CeilToInt(luciusDuelEnemy.Health.MaxHealth)} HP"
+                        : "LUCIUS DERROTADO — PAUSA: REINICIAR X1";
+                    trainingReadout.text=$"X1: FABIUS VS LUCIUS\n{luciusStatus}\nCOMBO {lab.Player.Model.ComboCount} · {Style.Rank}";
+                }
+                else
+                {
+                    trainingReadout.text="TREINO · "+DifficultyName+"\nCOMBO "+lab.Player.Model.ComboCount+" · "+Style.Rank+"\nPAUSA: ALVOS / ARMAS / FORMAS";
+                }
+            }
+            if(TrainingDamage&&health.IsDead)
+            {
+                StopPower();health.SetMaxHealth(health.MaxHealth,false);health.FullHeal();lab.Player.ResetModel();lab.Player.GetComponent<Rigidbody2D>().position=Map.Spawn;
+                if(luciusDuelMode){Notice("X1: FABIUS CAIU — REINICIANDO");RestartLuciusDuel();}
+                else Notice("TREINO: VIDA RESTAURADA");
+            }
         }
         void SpawnTraining(int type)
         {
             foreach(var enemy in enemies)if(enemy!=null){enemy.gameObject.SetActive(false);Destroy(enemy.gameObject);}enemies.Clear();threats.Clear();
             TrainingPassive=type==0;
-            var origin=Map.Spawn+Vector2.up*2.7f;
+            luciusDuelMode=type==6;
+            luciusDuelEnemy=null;
+            var origin=Map.Spawn+Vector2.up*(type==6?1.85f:2.7f);
+            if(type==6)
+            {
+                TrainingDamage=true;
+                var foe=SpawnLucius(origin);
+                luciusDuelEnemy=foe;
+                Close();
+                Notice("X1 INICIADO: FABIUS VS LUCIUS");
+                return;
+            }
             var kinds=type==0?new[]{RequiemEnemyKind.Hunter}:type==1?new[]{RequiemEnemyKind.Hunter}:type==2?new[]{RequiemEnemyKind.Armored}:type==3?new[]{RequiemEnemyKind.Shooter}:type==4?new[]{RequiemEnemyKind.Hunter,RequiemEnemyKind.Armored,RequiemEnemyKind.Shooter}:new[]{RequiemEnemyKind.Kael};
             for(int i=0;i<kinds.Length;i++){Spawn(kinds[i],origin+Vector2.right*(i-(kinds.Length-1)*.5f)*2.3f,type==4&&i==0);if(TrainingPassive)enemies[enemies.Count-1].Health.SetMaxHealth(10000,false);}
             Close();
+        }
+        public void RestartLuciusDuel()
+        {
+            if(!Training)return;
+            health.FullHeal();
+            Blood.Set(100);
+            lab.Player.ResetModel();
+            lab.Player.GetComponent<Rigidbody2D>().position=Map.Spawn;
+            SpawnTraining(6);
+            Notice("X1 REINICIADO");
         }
         void SetTrainingForm(int form)
         {
@@ -68,7 +109,8 @@ namespace Darklight
         void BuildTraining()
         {
             heading.text="ARENA DE TREINAMENTO";
-            bodyText.text="O progresso real fica preservado.\nSangue e tempo de forma ilimitados.\n\nLeve repetido: sequencia\nLeve, pausa, leve: variacao\nDois leves + pesado: final\nTroca de arma apos acerto\nAereo: suspender alvo leve\n\nAlvo atual: "+(TrainingPassive?"PASSIVO":"ATIVO");
+            bodyText.text="O progresso real fica preservado.\nSangue e tempo de forma ilimitados.\n\nLeve repetido: sequencia\nLeve, pausa, leve: variacao\nDois leves + pesado: final\nTroca de arma apos acerto\nAereo: suspender alvo leve\n\nAlvo atual: "+(luciusDuelMode?"X1 LUCIUS":TrainingPassive?"PASSIVO":"ATIVO");
+            if(luciusDuelMode)Button("REINICIAR X1 LUCIUS",RestartLuciusDuel);
             Button("RETOMAR TREINO",Close);Button("ESCOLHER INIMIGOS",()=>Open("TrainingEnemies"));
             Button("ARMA: "+Weapons.Equipped.displayName,()=>{Weapons.RequestNext();Close();});
             Button("TESTAR CAVALEIRO · REQUIEM",StartAbyssPrototype);Button("GUIA DO CAVALEIRO",ShowAbyssHelp);Button("DESAFIOS DO CAVALEIRO",StartAbyssLessons);
@@ -80,7 +122,7 @@ namespace Darklight
         void BuildTrainingEnemies()
         {
             heading.text="ADVERSARIOS DO TREINO";bodyText.text="Alvo passivo para sequencias; inimigos ativos para praticar defesa, postura e pressao. Escolher outro encontro limpa o anterior.";
-            string[] labels={"ALVO PASSIVO","CACADOR","BLINDADO","ATIRADOR","GRUPO MISTO + ELITE","KAEL"};
+            string[] labels={"ALVO PASSIVO","CACADOR","BLINDADO","ATIRADOR","GRUPO MISTO + ELITE","KAEL","FABIUS VS LUCIUS"};
             for(int i=0;i<labels.Length;i++){int chosen=i;Button(labels[i],()=>SpawnTraining(chosen));}Button("VOLTAR",()=>Open("Training"));
         }
         void BuildTrainingForms()

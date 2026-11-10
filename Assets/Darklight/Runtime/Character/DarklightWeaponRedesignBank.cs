@@ -245,14 +245,40 @@ namespace Darklight
                 // Missing locomotion/transitions use new Walk or new Idle. Other
                 // missing actions hold new Idle rather than revive retired frames.
                 string motion=requested=="Run"||requested=="StartMove"||requested=="Brake"||requested=="Turn"?"Walk":"Idle";
-                for(int pass=0;pass<3;pass++)foreach(var page in entries)
+                for(int pass=0;pass<3;pass++)
                 {
-                    string action=pass==0?requested:pass==1?motion:"Idle";
-                    if(page.action!=action||!Load(page))continue;
-                    int index=page.durationMs?.Length==page.frames.Length?Frame(page,time):
-                        Mathf.FloorToInt(Mathf.Max(0,time)*10)%page.frames.Length;
-                    if(index<0)continue;sprite=page.frames[index];return true;
+                    if(pass==1&&requested=="Charging"&&TryChargingPose(entries,weapon,time,out sprite))return true;
+                    foreach(var page in entries)
+                    {
+                        string action=pass==0?requested:pass==1?motion:"Idle";
+                        if(page.action!=action||!Load(page))continue;
+                        int index=page.durationMs?.Length==page.frames.Length?Frame(page,time):
+                            Mathf.FloorToInt(Mathf.Max(0,time)*10)%page.frames.Length;
+                        if(index<0)continue;sprite=page.frames[index];return true;
+                    }
                 }
+            }
+            return false;
+        }
+        // Reuse the complete authored anticipation, then hold its last windup
+        // pose until release/cancel. Active strike frames never loop as charging.
+        static bool TryChargingPose(List<DarklightWeaponRedesignPage> entries,int weapon,float time,out Sprite sprite)
+        {
+            sprite=null;
+            string key=weapon==0?"Carregado":weapon==2?"Juízo da Ruína":"Serra de Entrada";
+            string fallback=weapon==0?"Leve3":weapon==2?"Ascensão da Ruína":"Dentes Cruzados";
+            for(int pass=0;pass<2;pass++)foreach(var page in entries)
+            {
+                if(page.action!="Attack"||page.attackKey!=(pass==0?key:fallback)||!Load(page))continue;
+                int windup=page.startupFrames>0?page.startupFrames:Mathf.Max(1,page.frames.Length-2);
+                int index=0;float elapsed=Mathf.Max(0,time)*1000;
+                while(index<windup-1)
+                {
+                    int duration=page.durationMs?.Length==page.frames.Length?page.durationMs[index]:80;
+                    if(elapsed<duration)break;
+                    elapsed-=duration;index++;
+                }
+                sprite=page.frames[index];return true;
             }
             return false;
         }

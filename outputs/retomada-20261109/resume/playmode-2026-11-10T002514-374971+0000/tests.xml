@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="11" result="Passed" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-10 00:25:51Z" end-time="2026-11-10 00:25:55Z" duration="3,5017093">
+  <test-suite type="TestSuite" id="1321" name="DARKLIGHT REQUIEM" fullname="DARKLIGHT REQUIEM" runstate="Runnable" testcasecount="253" result="Passed" start-time="2026-11-10 00:25:51Z" end-time="2026-11-10 00:25:55Z" duration="3.501709" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1315" name="Darklight.PlayModeTests.dll" fullname="C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/Library/ScriptAssemblies/Darklight.PlayModeTests.dll" runstate="Runnable" testcasecount="253" result="Passed" start-time="2026-11-10 00:25:51Z" end-time="2026-11-10 00:25:55Z" duration="3.487551" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="28220" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1316" name="Darklight" fullname="Darklight" runstate="Runnable" testcasecount="253" result="Passed" start-time="2026-11-10 00:25:51Z" end-time="2026-11-10 00:25:55Z" duration="3.482503" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1317" name="Tests" fullname="Darklight.Tests" runstate="Runnable" testcasecount="253" result="Passed" start-time="2026-11-10 00:25:51Z" end-time="2026-11-10 00:25:55Z" duration="3.477343" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1135" name="DarklightNovemberIsolatedGameplayTests" fullname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests" classname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-10 00:25:51Z" end-time="2026-11-10 00:25:55Z" duration="3.373617" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1147" name="NovemberActionParticlesTrackGroundDepthAndPreserveCharacterMaterial" fullname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests.NovemberActionParticlesTrackGroundDepthAndPreserveCharacterMaterial" methodname="NovemberActionParticlesTrackGroundDepthAndPreserveCharacterMaterial" classname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests" runstate="Runnable" seed="251105567" result="Passed" start-time="2026-11-10 00:25:51Z" end-time="2026-11-10 00:25:52Z" duration="0.176503" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1146" name="NovemberChargingAllWeaponsUsesWindupReleaseAndDodge" fullname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests.NovemberChargingAllWeaponsUsesWindupReleaseAndDodge" methodname="NovemberChargingAllWeaponsUsesWindupReleaseAndDodge" classname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests" runstate="Runnable" seed="1316111715" result="Passed" start-time="2026-11-10 00:25:52Z" end-time="2026-11-10 00:25:53Z" duration="1.266643" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1144" name="NovemberEightPesadoClipsPreservePhasesAndContactTiming" fullname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests.NovemberEightPesadoClipsPreservePhasesAndContactTiming" methodname="NovemberEightPesadoClipsPreservePhasesAndContactTiming" classname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests" runstate="Runnable" seed="1020781304" result="Passed" start-time="2026-11-10 00:25:53Z" end-time="2026-11-10 00:25:53Z" duration="0.124589" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1138" name="NovemberEssentialDeathAllWeaponsEightDirections" fullname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests.NovemberEssentialDeathAllWeaponsEightDirections" methodname="NovemberEssentialDeathAllWeaponsEightDirections" classname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests" runstate="Runnable" seed="1795310463" result="Passed" start-time="2026-11-10 00:25:53Z" end-time="2026-11-10 00:25:54Z" duration="0.548663" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1137" name="NovemberEssentialHurtAllWeaponsEightDirections" fullname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests.NovemberEssentialHurtAllWeaponsEightDirections" methodname="NovemberEssentialHurtAllWeaponsEightDirections" classname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests" runstate="Runnable" seed="1363757585" result="Passed" start-time="2026-11-10 00:25:54Z" end-time="2026-11-10 00:25:54Z" duration="0.190861" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1136" name="NovemberEssentialParryAllWeaponsEightDirections" fullname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests.NovemberEssentialParryAllWeaponsEightDirections" methodname="NovemberEssentialParryAllWeaponsEightDirections" classname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests" runstate="Runnable" seed="769291225" result="Passed" start-time="2026-11-10 00:25:54Z" end-time="2026-11-10 00:25:54Z" duration="0.186896" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1140" name="NovemberFinalThreeWalkDirectionsLoopWithStableScaleAndReturnToIdle" fullname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests.NovemberFinalThreeWalkDirectionsLoopWithStableScaleAndReturnToIdle" methodname="NovemberFinalThreeWalkDirectionsLoopWithStableScaleAndReturnToIdle" classname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests" runstate="Runnable" seed="744542716" result="Passed" start-time="2026-11-10 00:25:54Z" end-time="2026-11-10 00:25:54Z" duration="0.133499" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1142" name="NovemberIntegrationContainsExactlyFifteenClipsAndSixtyNativePoses" fullname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests.NovemberIntegrationContainsExactlyFifteenClipsAndSixtyNativePoses" methodname="NovemberIntegrationContainsExactlyFifteenClipsAndSixtyNativePoses" classname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests" runstate="Runnable" seed="255321652" result="Passed" start-time="2026-11-10 00:25:54Z" end-time="2026-11-10 00:25:54Z" duration="0.079668" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1139" name="NovemberMotorcycleGuardSparkDispatchContactOcclusionAndOncePerEntry" fullname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests.NovemberMotorcycleGuardSparkDispatchContactOcclusionAndOncePerEntry" methodname="NovemberMotorcycleGuardSparkDispatchContactOcclusionAndOncePerEntry" classname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests" runstate="Runnable" seed="276841038" result="Passed" start-time="2026-11-10 00:25:54Z" end-time="2026-11-10 00:25:54Z" duration="0.067960" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1145" name="NovemberSerraEntryEightDirectionsKeepsPhasesAndNativeFigures" fullname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests.NovemberSerraEntryEightDirectionsKeepsPhasesAndNativeFigures" methodname="NovemberSerraEntryEightDirectionsKeepsPhasesAndNativeFigures" classname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests" runstate="Runnable" seed="1296257021" result="Passed" start-time="2026-11-10 00:25:54Z" end-time="2026-11-10 00:25:54Z" duration="0.267866" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1143" name="NovemberSevenWalkClipsRepeatEveryPoseAndReturnToIdle" fullname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests.NovemberSevenWalkClipsRepeatEveryPoseAndReturnToIdle" methodname="NovemberSevenWalkClipsRepeatEveryPoseAndReturnToIdle" classname="Darklight.Tests.DarklightNovemberIsolatedGameplayTests" runstate="Runnable" seed="561049856" result="Passed" start-time="2026-11-10 00:25:54Z" end-time="2026-11-10 00:25:55Z" duration="0.291299" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Usuario/AppData/LocalLow/Fabio/DARKLIGHT REQUIEM\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

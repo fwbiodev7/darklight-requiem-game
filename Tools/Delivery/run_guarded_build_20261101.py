@@ -19,7 +19,7 @@ def memory():
         raise OSError('Unable to read memory pressure')
     return value
 
-def guarded_execute(name,args,timeout=900,xml=None,isolated_ram_reserve_gib=None):
+def guarded_execute(name,args,timeout=900,xml=None,isolated_ram_reserve_gib=None,fabius_test_reserve_gib=None):
     assert name in ('build-headless','import-reviewed','integration-play')
     reserve=2.5
     if isolated_ram_reserve_gib is not None:
@@ -31,6 +31,39 @@ def guarded_execute(name,args,timeout=900,xml=None,isolated_ram_reserve_gib=None
                 not 1.5<=isolated_ram_reserve_gib<=2.5):
             raise ValueError('RAM exception is restricted to isolated November tests with at least 1.5 GiB reserve')
         reserve=isolated_ram_reserve_gib
+    if fabius_test_reserve_gib is not None:
+        # User 2026-11-09, resumed session: explicitly allowed additional RAM
+        # for isolated Fabius validation. Imports/builds keep their default guard.
+        # Only test-runner options may accompany this narrow exception. Do not
+        # accept a second filter/platform or piggyback an execute/build method.
+        switches={'-runTests','-nographics','-force-d3d11'}
+        valued={'-testFilter','-testPlatform','-testResults'}
+        seen=set();position=0
+        while position<len(args):
+            option=args[position]
+            if option not in switches|valued or option in seen:
+                raise ValueError('Unexpected or duplicate option in isolated Fabius test command')
+            seen.add(option);position+=1
+            if option in valued:
+                if position>=len(args) or args[position].startswith('-'):
+                    raise ValueError('Missing value in isolated Fabius test command')
+                position+=1
+        index=args.index('-testFilter') if '-testFilter' in args else -1
+        platform=args.index('-testPlatform') if '-testPlatform' in args else -1
+        scopes=('Darklight.Tests.DarklightFabiusRecoveryTests',
+                'Darklight.Tests.DarklightMotorcycleRedesignTests',
+                'Darklight.Tests.DarklightCombatTests',
+                'Darklight.Tests.DarklightWeaponTechniqueTests',
+                'Darklight.Tests.DarklightNovemberIsolatedGameplayTests.November')
+        if (name not in ('import-reviewed','integration-play') or '-runTests' not in args or
+                index<0 or index+1>=len(args) or platform<0 or platform+1>=len(args) or
+                args[platform+1] not in ('EditMode','PlayMode') or
+                not all(any(part==scope or part.startswith(scope+'.') or
+                            scope.endswith('.November') and part.startswith(scope)
+                            for scope in scopes) for part in args[index+1].split(';')) or
+                not 1<=fabius_test_reserve_gib<=2.5):
+            raise ValueError('Additional RAM is restricted to isolated Fabius tests with at least 1 GiB reserve')
+        reserve=fabius_test_reserve_gib
     row=dict(stage='build-guarded' if name=='build-headless' else name,started=gate.now(),completed=False)
     gate.state['stages'].append(row);gate.save()
     log=gate.WORK/('build-guarded.log' if name=='build-headless' else name+'.log')
@@ -40,10 +73,12 @@ def guarded_execute(name,args,timeout=900,xml=None,isolated_ram_reserve_gib=None
     # Unity release notes UUM-90426: avoids concurrent compiler jobs exhausting commit.
     child_env=os.environ.copy();child_env['BEE_BUILD_THREADS']='1'
     state=dict(started=gate.now(),priority='BelowNormal',jobWorkers=1,beeBuildThreads=1,
-               minimumAvailableRAMBytes=int(reserve*1024**3),minimumAvailableCommitBytes=3*1024**3,
+               minimumAvailableRAMBytes=int(reserve*1024**3),minimumAvailableCommitBytes=(2 if fabius_test_reserve_gib is not None else 3)*1024**3,
                minimumFreeDiskBytes=1024**3,minimumObservedAvailableRAMBytes=memory().available)
     if isolated_ram_reserve_gib is not None:
         state['ramReserveAuthorization']='User 2026-11-03: pode utilizar quanto de ram precisar; isolated tests only'
+    if fabius_test_reserve_gib is not None:
+        state['ramReserveAuthorization']='User 2026-11-09 resumed session: RAM pode usar o quanto for preciso; isolated Fabius tests only'
     reason=None
     with (gate.WORK/'guarded-stdout.log').open('wb') as stream:
         process=subprocess.Popen(command,cwd=ROOT,stdout=stream,stderr=subprocess.STDOUT,

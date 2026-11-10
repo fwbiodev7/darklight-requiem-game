@@ -1,0 +1,42 @@
+{
+  "stages": [
+    {
+      "stage": "import-reviewed",
+      "started": "2026-11-10T00:57:59.109917+00:00",
+      "completed": true,
+      "exitCode": 0,
+      "ended": "2026-11-10T00:58:36.707138+00:00",
+      "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261109\\editmode-2026-11-10T005759-108776+0000\\import\\import-reviewed.log",
+      "stopReason": null
+    },
+    {
+      "stage": "import-reviewed",
+      "started": "2026-11-10T00:58:36.708781+00:00",
+      "completed": true,
+      "exitCode": 0,
+      "ended": "2026-11-10T00:59:07.778949+00:00",
+      "log": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\work\\retomada-20261109\\editmode-2026-11-10T005759-108776+0000\\edit\\import-reviewed.log",
+      "stopReason": null,
+      "cases": 18,
+      "passed": 18
+    }
+  ],
+  "scope": "Lucius first static kit only",
+  "playMode": false,
+  "audio": false,
+  "authorization": "User 2026-11-09: Autorizar testes isolados e mudos",
+  "campaignSceneValidated": false,
+  "testFilter": "Darklight.Tests.DarklightLuciusSpriteBankTests;Darklight.Tests.DarklightLuciusCombatProfileTests",
+  "testPlatform": "EditMode",
+  "graphicsRequested": false,
+  "character": "Lucius",
+  "testResult": {
+    "xml": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\outputs\\retomada-20261109\\resume\\editmode-2026-11-10T005759-108776+0000\\tests.xml",
+    "result": "Passed",
+    "cases": 18,
+    "passed": 18,
+    "skipped": 0,
+    "inconclusive": 0,
+    "failed": []
+  }
+}

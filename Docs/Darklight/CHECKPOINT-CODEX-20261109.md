@@ -1,5 +1,11 @@
 # Continuidade Codex — 09/11/2026
 
+**ENCERRAMENTO MAIS RECENTE:** ler `RELATORIO-COMPLETO-20261109.md`. FabiusNormalGate1funcional encerrado72Edit+12PlayPASS. LuciusNormalfinalaprovado importado/testado18EditPASS, kitparcial8vistasestáticas; perfil limitado3golpes-base, animações dosgolpespendentes. Encapuzadofinalgerado comespadaNAS COSTAS/mãosvazias conformeúltimacorreção; fonteemArtSources/LuciusHooded20261109/selected/,importaçãopendente. Novasartesencerradas porpedidoexpresso. Não confundir protótipos anteriores com a folha finalaprovada.
+
+**Retomada após renovação — estado mais recente:** Gate1funcional de Fabius Normal encerrado;72/72EditMode e12/12PlayMode isolados/mudos aprovados, incluindo1teste gráfico offscreen. Ler `GATE1-FABIUS-NORMAL-20261109.md` para escopo, fontes e XML. Catálogo280sequências/898quadrosreferenciados/101folhas. A continuação autorizada passou a Lucius Normal. O histórico abaixo preserva o corte anterior e não descreve o resultado final desta retomada. Usuário autorizou Playisoladomudo e uso adicionaldeRAM explicitamente nesta sessão.
+
+**Direção posterior prioritária para a retomada:** ler primeiro `RETOMADA-MESTRE-20261109-2046.md`, cópia integral conferida do prompt enviado pelo usuário após este fechamento. Ele atualiza o escopo futuro: transformações de Fabius reaproveitam animações Normal, alterando somente cabelo/aura; Lucius usa base técnica compatível, uma espada, Normal e Nexo Fenrir, preservando aparência própria. A retomada existente às20:49 foi atualizada para seguir esse documento, após conferir o reset das20:46:24. Não iniciar execução custosa ao salvar este complemento.
+
 ## Base e escopo
 
 Pedido atual: atualizar pelo último commit Openbot, continuar Fabius, salvar os dois novos designs, parar novos lotes aos 10% restantes e fazer commit/push. Remoto conferido em `e57d956` (09/11, 16:07 Brasília). O checkout tinha o commit local `132aef4`; ambos os históricos foram preservados em `codex/retomada-fabius-20261109` por merge `526ca77`. A publicação usa índice isolado baseado em `origin/main`, sem reenviar caches/testes/mapas daquele commit local. Não há alteração nova de mapa, site ou narrativa nesta entrega.
@@ -24,6 +30,8 @@ Integração no JSON e compilação não certificam fluidez, contato renderizado
 ## Referências e trabalho concorrente preservados
 
 Novos designs originais salvos sem edição em `ArtSources/FabiusForms20261109/references/`; procedência/hashes em `ArtSources/FabiusForms20261109/README.md`. Carmesim identifica Ruptura; prata/violeta identifica Eclipse Absoluto de Fabius. São referências, não sprites aplicados. Manter maturidade/escala aprovadas; não transformar o Normal. Originais permanecem locais, fora da publicação pública de referências privadas.
+
+Complemento posterior do usuário: referências oficiais de **Lucius Normal e Lucius encapuzado no início** salvas em `ArtSources/LuciusDesign20261109/references/`, com hashes e direção em `ArtSources/LuciusDesign20261109/README.md`. Próxima etapa é **iniciar** a produção de Lucius após Fabius, não presumir animações já prontas. Manter a identidade do Encapuzado em mistério para o jogador até a revelação do roteiro. Este complemento e os originais são locais, posteriores ao commit de fechamento abaixo.
 
 Heartbeat concorrente produziu candidato de profundidade/alpha de partículas e o preservou em `outputs/retomada-20261109/heartbeat-skills/`. Sua fonte de teste foi restaurada pelo próprio heartbeat; os ajustes de `groundY`, ordenação e `_AlphaClip` no arquivo local não foram revertidos pelo coordenador. Esses ajustes não entram no commit desta integração: a cópia preparada para publicação preserva a versão anterior somente nesses trechos. `ProjectAuditorSettings.asset`, caches, builds, saves, logs brutos e alterações alheias ficam fora do commit.
 

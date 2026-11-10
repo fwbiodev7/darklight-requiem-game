@@ -101,9 +101,9 @@ namespace Darklight
                 return;
             }
             float height=kind==DarklightActionParticleKind.Dodge?.12f:kind==DarklightActionParticleKind.Death?.4f:.85f;
-            Emit(kind,owner.transform.position+Vector3.up*height,model.Facing);
+            Emit(kind,owner.transform.position+Vector3.up*height,model.Facing,owner.transform.position.y);
         }
-        public static void Emit(DarklightActionParticleKind kind,Vector3 point,Vector2 facing=default)
+        public static void Emit(DarklightActionParticleKind kind,Vector3 point,Vector2 facing=default,float? groundY=null)
         {
             int clip=(int)kind;if(clip<0||clip>3)return;
             var fx=Get();if(fx==null||!fx.Load())return;
@@ -121,12 +121,13 @@ namespace Darklight
                 var obj=new GameObject("ParticulaAcao");obj.transform.SetParent(fx.transform,false);
                 b=fx.pool[fx.cursor]=new Burst {art=obj.AddComponent<SpriteRenderer>()};
                 if(DarklightCampaign.Instance?.pixelMaterial!=null)b.art.sharedMaterial=DarklightCampaign.Instance.pixelMaterial;
-                b.art.sortingOrder=900;
-                var block=new MaterialPropertyBlock();block.SetFloat("_WholeSprite",1);block.SetTexture("_VampireMask",Texture2D.blackTexture);b.art.SetPropertyBlock(block);
+                var block=new MaterialPropertyBlock();block.SetFloat("_AlphaClip",.05f);block.SetFloat("_WholeSprite",1);block.SetTexture("_VampireMask",Texture2D.blackTexture);b.art.SetPropertyBlock(block);
             }
             fx.cursor=(fx.cursor+1)%fx.pool.Length;b.clip=clip;b.age=0;b.life=0;b.active=true;b.weapon=weapon;
             for(int i=0;i<3;i++)b.life+=timing[clip*3+i]/1000f;
             b.art.sprite=selected[clip*3];b.art.transform.position=point;b.art.enabled=true;
+            // Refresh pooled bursts at their ground contact, independently of effect height.
+            b.art.sortingOrder=DarklightSorting.OrderForY(groundY??point.y)+1;
             bool reduced=DarklightCampaign.Instance?.ReducedFlashes==true;
             float diameter=kind==DarklightActionParticleKind.Death?1.5f:kind==DarklightActionParticleKind.Dodge?1.15f:1.05f;
             if(reduced)diameter*=.55f;

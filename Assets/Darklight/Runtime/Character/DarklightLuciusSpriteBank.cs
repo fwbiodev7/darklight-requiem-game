@@ -4,6 +4,8 @@ using UnityEngine;
 
 namespace Darklight
 {
+    // Appearance is independent of form: the hood does not add a transformation.
+    public enum DarklightLuciusAppearance { Normal, Hooded }
     [Serializable] public sealed class DarklightLuciusSpritePage
     {
         public string id,action,resourcePath,imageSha256,sourceSha256,status;
@@ -19,7 +21,7 @@ namespace Darklight
     [Serializable] public sealed class DarklightLuciusSpriteCatalog
     {
         public int schemaVersion;
-        public string characterId,form,weapon;
+        public string characterId,form,weapon,appearance;
         public bool complete;
         public DarklightLuciusSpritePage[] pages;
     }
@@ -29,9 +31,12 @@ namespace Darklight
     public static class DarklightLuciusSpriteBank
     {
         public const string Root="Darklight/LuciusNormal20261109/";
-        static DarklightLuciusSpriteCatalog catalog;
-        static bool attempted;
+        public const string HoodedRoot="Darklight/LuciusHooded20261110/";
+        static readonly Dictionary<DarklightLuciusAppearance,DarklightLuciusSpriteCatalog> catalogs=new();
+        static readonly HashSet<DarklightLuciusAppearance> attempted=new();
         static readonly Dictionary<string,Dictionary<string,Sprite>> sheets=new(StringComparer.Ordinal);
+        static string ResourceRoot(DarklightLuciusAppearance appearance)=>appearance==DarklightLuciusAppearance.Normal?Root:
+            appearance==DarklightLuciusAppearance.Hooded?HoodedRoot:null;
         static bool Name(string name)
         {
             if(string.IsNullOrEmpty(name))return false;
@@ -42,14 +47,17 @@ namespace Darklight
         static bool Action(string action)=>action=="Idle"||action=="Walk"||action=="Run"||
             action=="Attack"||action=="Charging"||action=="Dodge"||action=="Parry"||action=="Hurt"||action=="Dead";
         public static bool ValidPage(DarklightLuciusSpritePage page)
+            =>ValidPage(page,DarklightLuciusAppearance.Normal);
+        public static bool ValidPage(DarklightLuciusSpritePage page,DarklightLuciusAppearance appearance)
         {
+            string root=ResourceRoot(appearance);if(root==null)return false;
             if(page==null||!Name(page.id)||!page.id.StartsWith("Lucius",StringComparison.Ordinal)||!Action(page.action)||page.direction<0||page.direction>7||
                 !page.wholeFigures||page.status!="visual-reviewed"&&page.status!="imported"&&page.status!="runtime-verified"||
                 !DarklightWeaponRedesignBank.Sha256(page.imageSha256)||!DarklightWeaponRedesignBank.Sha256(page.sourceSha256)||
                 page.nativeSize?.Length!=2||page.nativeSize[0]<=0||page.nativeSize[1]<=0||
                 page.pixelsPerUnit<=0||float.IsNaN(page.pixelsPerUnit)||float.IsInfinity(page.pixelsPerUnit)||
-                string.IsNullOrEmpty(page.resourcePath)||!page.resourcePath.StartsWith(Root,StringComparison.Ordinal)||
-                !Name(page.resourcePath.Substring(Root.Length))||
+                string.IsNullOrEmpty(page.resourcePath)||!page.resourcePath.StartsWith(root,StringComparison.Ordinal)||
+                !Name(page.resourcePath.Substring(root.Length))||
                 page.spriteNames==null||page.spriteNames.Length==0||page.durationMs?.Length!=page.spriteNames.Length)return false;
             var names=new HashSet<string>(StringComparer.Ordinal);
             foreach(string name in page.spriteNames)
@@ -59,14 +67,18 @@ namespace Darklight
             return true;
         }
         public static bool ValidCatalog(DarklightLuciusSpriteCatalog data)
+            =>ValidCatalog(data,DarklightLuciusAppearance.Normal);
+        public static bool ValidCatalog(DarklightLuciusSpriteCatalog data,DarklightLuciusAppearance appearance)
         {
+            if(ResourceRoot(appearance)==null)return false;
             if(data==null||data.schemaVersion!=1||data.characterId!="Lucius"||data.form!="Normal"||
                 data.weapon!="Sword"||data.pages==null)return false;
+            if(appearance==DarklightLuciusAppearance.Normal?!string.IsNullOrEmpty(data.appearance)&&data.appearance!="Normal":data.appearance!="Hooded")return false;
             var ids=new HashSet<string>(StringComparer.Ordinal);var contexts=new HashSet<string>(StringComparer.Ordinal);
             var idle=new HashSet<int>();
             foreach(var page in data.pages)
             {
-                if(!ValidPage(page)||!ids.Add(page.id)||!contexts.Add(page.action+":"+page.direction))return false;
+                if(!ValidPage(page,appearance)||!ids.Add(page.id)||!contexts.Add(page.action+":"+page.direction))return false;
                 if(page.action=="Idle")idle.Add(page.direction);
             }
             // complete is descriptive only: even a claimed complete kit must
@@ -74,19 +86,22 @@ namespace Darklight
             return idle.Count==8;
         }
         public static int Frame(DarklightLuciusSpritePage page,float seconds)
+            =>Frame(page,seconds,DarklightLuciusAppearance.Normal);
+        public static int Frame(DarklightLuciusSpritePage page,float seconds,DarklightLuciusAppearance appearance)
         {
-            if(!ValidPage(page))return -1;
+            if(!ValidPage(page,appearance))return -1;
             page.clock??=new DarklightWeaponRedesignPage{
                 spriteNames=page.spriteNames,durationMs=page.durationMs,loop=page.loop};
             return DarklightWeaponRedesignBank.Frame(page.clock,seconds);
         }
-        static void LoadCatalog()
+        static DarklightLuciusSpriteCatalog LoadCatalog(DarklightLuciusAppearance appearance)
         {
-            if(attempted)return;attempted=true;
-            var text=Resources.Load<TextAsset>(Root+"catalog");if(text==null)return;
+            string root=ResourceRoot(appearance);if(root==null)return null;
+            if(!attempted.Add(appearance))return catalogs.TryGetValue(appearance,out var cached)?cached:null;
+            var text=Resources.Load<TextAsset>(root+"catalog");if(text==null)return null;
             var loaded=JsonUtility.FromJson<DarklightLuciusSpriteCatalog>(text.text);
-            if(!ValidCatalog(loaded)){Debug.LogError("Lucius Normal catalog rejected: invalid whole-figure descriptor or duplicate context");return;}
-            catalog=loaded;
+            if(!ValidCatalog(loaded,appearance)){Debug.LogError("Lucius "+appearance+" catalog rejected: invalid whole-figure descriptor or duplicate context");return null;}
+            return catalogs[appearance]=loaded;
         }
         static bool Load(DarklightLuciusSpritePage page)
         {
@@ -111,19 +126,21 @@ namespace Darklight
         public static bool TryPose(string action,int direction,float time,out Sprite sprite)
             =>TryPose(action,direction,time,out sprite,out _);
         public static bool TryPose(string action,int direction,float time,out Sprite sprite,out bool fallback)
+            =>TryPose(DarklightLuciusAppearance.Normal,action,direction,time,out sprite,out fallback);
+        public static bool TryPose(DarklightLuciusAppearance appearance,string action,int direction,float time,out Sprite sprite,out bool fallback)
         {
             sprite=null;fallback=false;
             if(!Action(action)||direction<0||direction>7)return false;
-            LoadCatalog();if(catalog==null)return false;
+            var catalog=LoadCatalog(appearance);if(catalog==null)return false;
             for(int pass=0;pass<(action=="Idle"?1:2);pass++)foreach(var page in catalog.pages)
             {
                 if(page.direction!=direction||page.action!=(pass==0?action:"Idle"))continue;
-                int frame=Frame(page,time);
+                int frame=Frame(page,time,appearance);
                 if(frame<0||!Load(page))return false;
                 sprite=page.frames[frame];fallback=pass!=0;return true;
             }
             return false;
         }
-        public static void ClearCache(){catalog=null;attempted=false;sheets.Clear();}
+        public static void ClearCache(){catalogs.Clear();attempted.Clear();sheets.Clear();}
     }
 }

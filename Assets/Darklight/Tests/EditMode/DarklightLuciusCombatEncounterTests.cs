@@ -283,5 +283,35 @@ namespace Darklight.Tests
             // Player parried the strike, so HP was preserved!
             Assert.That(playerHealth.CurrentHealth, Is.EqualTo(initialPlayerHp), "Parried attack must deal 0 damage to player");
         }
+
+        [Test]
+        public void NavigationFollowsPursuitAndFlanking()
+        {
+            var (luciusObj, enemy, _, _, _) = CreateLuciusActor();
+            luciusObj.transform.position = Vector2.zero;
+            var (playerObj, fighter, _, _) = CreatePlayerActor(Vector2.right * 5.0f); // 5m away (beyond 1.85m engage range)
+
+            var labGo = new GameObject("Lab_Mock");
+            owned.Add(labGo);
+            var lab = labGo.AddComponent<DarklightCombatLab>();
+            lab.Player = fighter;
+
+            // Tick Lucius AI
+            enemy.TickLucius(null, lab, 0.05f);
+
+            var rb = luciusObj.GetComponent<Rigidbody2D>();
+            Assert.That(rb.linearVelocity.x, Is.GreaterThan(0f), "Lucius must move towards player when beyond engage range");
+        }
+
+        [Test]
+        public void SafeFallbackWhenTechniqueVisualNotImported()
+        {
+            var (_, _, _, _, view) = CreateLuciusActor();
+            // Presenting an action or technique with unimported key must safely fall back to idle
+            bool presented = view.PresentPose("Attack", 0, 0.15f, "SwordHorizontal");
+            Assert.That(presented, Is.True, "Presentation must succeed via safe idle fallback");
+            Assert.That(view.UsesIdleFallback, Is.True, "Missing candidate frames must report fallback = true without throwing or breaking state");
+        }
     }
 }
+

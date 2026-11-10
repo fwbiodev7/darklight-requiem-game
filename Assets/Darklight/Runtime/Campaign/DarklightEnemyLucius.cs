@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Darklight
 {
@@ -8,8 +8,11 @@ namespace Darklight
         public CombatModel CombatModel { get; private set; }
         public DarklightLuciusView LuciusView { get; private set; }
         public AttackDefinition CurrentLuciusAttack => CombatModel?.Attack;
+        public CombatLoadout LuciusLoadout => CombatModel?.Loadout;
         int luciusAttackStep;
         float luciusEngageRange = 1.85f;
+        float luciusDodgeCooldown;
+        float luciusGuardCooldown;
 
         public void InitializeLucius(CombatLoadout loadout = null, DarklightLuciusView view = null)
         {
@@ -63,7 +66,33 @@ namespace Darklight
             Vector2 aim = delta.sqrMagnitude > 0.0001f ? delta.normalized : facing;
             facing = aim;
 
-            float speed = (phaseTwo ? 2.8f : 2.2f) * (game?.DifficultyProfile.speed ?? 1f);
+            luciusDodgeCooldown = Mathf.Max(0, luciusDodgeCooldown - dt);
+            luciusGuardCooldown = Mathf.Max(0, luciusGuardCooldown - dt);
+
+            float speed = (phaseTwo ? 2.85f : 2.3f) * (game?.DifficultyProfile.speed ?? 1f);
+
+            // Defensive reaction: if player attacks and is close, Lucius can dodge or guard
+            var playerModel = player.Model;
+            bool playerThreat = playerModel != null && (playerModel.State == CombatState.Attack || playerModel.State == CombatState.Charging) && distance < 2.5f;
+
+            if (CombatModel.State == CombatState.Neutral && playerThreat)
+            {
+                if (luciusDodgeCooldown <= 0 && distance < 2.2f)
+                {
+                    // Agile tactical sidestep
+                    Vector2 flank = new Vector2(-delta.normalized.y, delta.normalized.x) * (serial % 2 == 0 ? 1f : -1f);
+                    DarklightNavigation.SafeStep(body, flank * 0.75f, 0.22f);
+                    luciusDodgeCooldown = 2.0f;
+                    timer = 0.22f;
+                    serial++;
+                }
+                else if (luciusGuardCooldown <= 0 && distance < 2.0f && Vector2.Angle(facing, delta) < 60f)
+                {
+                    // Raise defensive posture
+                    guardUntil = clock + 0.35f;
+                    luciusGuardCooldown = 2.5f;
+                }
+            }
 
             if (CombatModel.State == CombatState.Neutral)
             {
@@ -72,7 +101,13 @@ namespace Darklight
                 bool tooFar = distance > luciusEngageRange * 0.95f;
                 Vector2 desired = Vector2.zero;
 
-                if (tooFar)
+                if (clock < guardUntil)
+                {
+                    // Standing ground in defensive guard
+                    body.linearVelocity = Vector2.zero;
+                    CombatModel.Tick(dt, new CombatInput { aim = aim });
+                }
+                else if (tooFar)
                 {
                     if (!sight)
                     {
@@ -87,21 +122,33 @@ namespace Darklight
                     }
                     else
                     {
-                        desired = delta.normalized * speed;
+                        // Flank slightly while closing in for natural swordsman footwork
+                        Vector2 direct = delta.normalized;
+                        Vector2 perp = new Vector2(-direct.y, direct.x) * ((int)(clock * 1.5f) % 2 == 0 ? 0.3f : -0.3f);
+                        desired = (direct + perp).normalized * speed;
                     }
-                }
-                else if (distance < luciusEngageRange * 0.4f && sight)
-                {
-                    desired = -delta.normalized * (speed * 0.5f);
-                }
 
-                body.linearVelocity = DarklightNavigation.SlidingVelocity(body, desired, Time.fixedDeltaTime);
-                CombatModel.Tick(dt, new CombatInput { move = desired.normalized, aim = aim });
-
-                if (!tooFar && sight && timer <= 0 && (game == null || game.RequestAttack(this)))
+                    body.linearVelocity = DarklightNavigation.SlidingVelocity(body, desired, Time.fixedDeltaTime);
+                    CombatModel.Tick(dt, new CombatInput { move = desired.normalized, aim = aim });
+                }
+                else if (distance < luciusEngageRange * 0.45f && sight)
                 {
-                    ExecuteLuciusAttack(luciusAttackStep, aim, game);
-                    luciusAttackStep = (luciusAttackStep + 1) % 3;
+                    // Keep spacing
+                    desired = -delta.normalized * (speed * 0.55f);
+                    body.linearVelocity = DarklightNavigation.SlidingVelocity(body, desired, Time.fixedDeltaTime);
+                    CombatModel.Tick(dt, new CombatInput { move = desired.normalized, aim = aim });
+                }
+                else
+                {
+                    // In engagement pocket: stop and evaluate attack
+                    body.linearVelocity = Vector2.zero;
+                    CombatModel.Tick(dt, new CombatInput { aim = aim });
+
+                    if (sight && timer <= 0 && (game == null || game.RequestAttack(this)))
+                    {
+                        ExecuteLuciusAttack(luciusAttackStep, aim, game);
+                        luciusAttackStep = (luciusAttackStep + 1) % 3;
+                    }
                 }
             }
             else if (CombatModel.State == CombatState.Attack)
@@ -133,7 +180,7 @@ namespace Darklight
 
                 if (CombatModel.State == CombatState.Neutral)
                 {
-                    timer = (phaseTwo ? 0.35f : 0.6f) * (game?.DifficultyProfile.cooldown ?? 1f);
+                    timer = (phaseTwo ? 0.35f : 0.55f) * (game?.DifficultyProfile.cooldown ?? 1f);
                 }
             }
             else

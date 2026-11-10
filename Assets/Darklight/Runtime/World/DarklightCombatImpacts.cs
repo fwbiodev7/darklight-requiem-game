@@ -1,7 +1,7 @@
 using UnityEngine;
 namespace Darklight
 {
-    public enum DarklightMotorcycleImpact { Ground=1, Collision=2, RunOver=3, Finisher=4, AerialGround=5 }
+    public enum DarklightMotorcycleImpact { Ground=1, Collision=2, RunOver=3, Finisher=4, AerialGround=5, Guard=6 }
     [DefaultExecutionOrder(1750)]public sealed class DarklightCombatImpacts:MonoBehaviour
     {
         static DarklightCombatImpacts instance;
@@ -30,7 +30,7 @@ namespace Darklight
             }
             int form=game.PresentedForm;Color color=form==3?new Color(.55f,.86f,1):form==2?new Color(.7f,.19f,1):form==1?new Color(1,.08f,.15f):new Color(1,.49f,.19f);
             var direction=heading.sqrMagnitude>.001f?heading:(Vector2)(position-lab.Player.transform.position);if(direction.sqrMagnitude<.001f)direction=Vector2.right;
-            hits[cursor]=new Hit{p=position+Vector3.up*(motorcycle==0?.65f:.04f),direction=direction.normalized,color=color,life=motorcycle==5?1.25f:motorcycle==1?.5f:motorcycle!=0?.4f:heavy?.36f:.24f,form=form,weapon=(int)game.Weapons.Equipped.id,seed=serial++,motorcycle=motorcycle,heavy=heavy,active=true};cursor=(cursor+1)%hits.Length;
+            hits[cursor]=new Hit{p=position+Vector3.up*(motorcycle==(int)DarklightMotorcycleImpact.Guard?0:motorcycle==0?.65f:.04f),direction=direction.normalized,color=color,life=motorcycle==(int)DarklightMotorcycleImpact.Guard?.18f:motorcycle==5?1.25f:motorcycle==1?.5f:motorcycle!=0?.4f:heavy?.36f:.24f,form=form,weapon=(int)game.Weapons.Equipped.id,seed=serial++,motorcycle=motorcycle,heavy=heavy,active=true};cursor=(cursor+1)%hits.Length;
         }
         void LateUpdate()
         {
@@ -68,6 +68,10 @@ namespace Darklight
         // post-processing, spawned rigidbodies or per-impact collections are needed.
         void Motorcycle(Hit h,bool reduced,int quality)
         {
+            if(h.motorcycle==(int)DarklightMotorcycleImpact.Guard)
+            {
+                GuardContact(h,reduced,quality);return;
+            }
             if(h.motorcycle==5)
             {
                 GroundCracks(h,reduced,quality);
@@ -111,6 +115,23 @@ namespace Darklight
                     if(ground&&t<.5f&&i%2==0)
                         Segment(center+new Vector3(Mathf.Cos(a)*radius*.7f,Mathf.Sin(a)*radius*.28f),center+new Vector3(Mathf.Cos(b)*radius*.7f,Mathf.Sin(b)*radius*.28f),.018f,energy);
                 }
+            }
+        }
+        // A compact mesh spark at the authored saw junction. No dust ring,
+        // ground offset, sprite resampling or persistent objects are involved.
+        void GuardContact(Hit h,bool reduced,int quality)
+        {
+            float t=h.age/h.life,fade=(1-t)*(reduced?.35f:1);
+            Vector3 center=transform.InverseTransformPoint(h.p);
+            Color color=h.color;color.a=fade;
+            int rays=quality==0?4:quality==1?6:8;
+            float scale=reduced?.65f:1;
+            for(int i=0;i<rays;i++)
+            {
+                float angle=i*Mathf.PI*2/rays+h.seed*.37f;
+                Vector2 direction=new Vector2(Mathf.Cos(angle),Mathf.Sin(angle));
+                float start=(.015f+t*.07f)*scale,length=(.04f+(1-t)*.07f)*scale;
+                Segment(center+(Vector3)direction*start,center+(Vector3)direction*(start+length),.025f,color);
             }
         }
         void GroundCracks(Hit h,bool reduced,int quality)

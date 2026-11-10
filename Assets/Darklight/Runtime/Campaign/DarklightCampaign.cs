@@ -194,6 +194,17 @@ namespace Darklight
             hp.SetMaxHealth((foe.Boss?260+Progress.chapter*65:kind==RequiemEnemyKind.Armored?90:50+Progress.chapter*7)*(elite?1.45f:1),false);if(foe.ExpandedBoss)foe.RestorePhase(Progress.bossPhase);enemies.Add(foe);AddEnemyBar(foe);obj.AddComponent<TodayEnemyAudio>();if(Training)obj.AddComponent<DarklightCombatDebug>();
             if(foe.Boss&&!Training)ShowPresentationCue(DarklightStory.Bosses[Progress.chapter],"ENTER / A: DISPENSAR   ·   COMANDOS LIVRES",true);
         }
+        public DarklightEnemy SpawnLucius(Vector2 pos,CombatLoadout loadout=null)
+        {
+            pos=Map!=null?Map.SafeSpawn(pos,.32f):pos;
+            var obj=new GameObject("LuciusNormal");if(levelRoot!=null)obj.transform.SetParent(levelRoot,false);obj.transform.position=pos;
+            var rigid=obj.AddComponent<Rigidbody2D>();rigid.gravityScale=0;rigid.freezeRotation=true;rigid.collisionDetectionMode=CollisionDetectionMode2D.Continuous;
+            var collider=obj.AddComponent<CircleCollider2D>();collider.radius=.32f;collider.offset=Vector2.up*.18f;
+            var hp=obj.AddComponent<HealthSystem>();hp.SetMaxHealth(260+Progress.chapter*65,false);obj.AddComponent<DarklightCombatant>();
+            var view=obj.AddComponent<DarklightLuciusView>();view.appearance=DarklightLuciusAppearance.Normal;
+            var foe=obj.AddComponent<DarklightEnemy>();foe.InitializeLucius(loadout,view);enemies.Add(foe);AddEnemyBar(foe);
+            return foe;
+        }
         void ClearEncounter()
         {
             if(FinishNarrativeCombat())return;encounterStarted=false;BeginBattleSettle();

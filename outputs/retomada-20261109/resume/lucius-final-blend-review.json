@@ -1,0 +1,390 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-09",
+  "scope": "Lucius Normal final blended compact Idle, all eight whole figures",
+  "sourcePath": "ArtSources/LuciusNormal20261109/selected/LuciusNormalIdle8Final-source.png",
+  "sourceSha256Reviewed": "68947a7143047ed76221ef7038726fcc9fd3e9b8403727e697f6aee2e7cfb761",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "sourceMode": "RGBA",
+  "status": "visual-reviewed-static; import-ready",
+  "states": {
+    "produced": true,
+    "visualReviewed": true,
+    "importReady": true,
+    "allEightRealDirections": true,
+    "allEightCompleteFigures": true,
+    "siblingComparisonViewed": true,
+    "importedByReviewer": false,
+    "runtimeVerified": false,
+    "userVisualApproval": false,
+    "sourcePixelsEdited": false
+  },
+  "authority": {
+    "fabiusWholeFigure": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqKatanaNormalNeutralIdleS_SW_W20261025.png",
+    "fabiusImageSha256": "8a5c11fa94a9adef8706e32020776e34bb9c59ab09d24e1a44476357dd138379",
+    "fabiusSprite": "Redesign_ReqKatanaNormalNeutralIdleS_SW_W20261025_00",
+    "fabiusPpu": 157.57575757575756,
+    "fabiusBodyPx": 302,
+    "fabiusBodyPreScaleWorld": 1.9165384615384617,
+    "luciusIdentity": "original silver hair / blue eyes / black-navy clothing with single sheathed back sword; compact blend as latest coordinator/user direction"
+  },
+  "calibration": {
+    "pixelsPerUnit": 214.97090106361628,
+    "mainBodySHeightPx": 412,
+    "mainBodySHairTopY": 35,
+    "mainBodySSoleBoundaryY": 447,
+    "targetPreScaleBodyWorld": 1.9165384615384617,
+    "worldVisualScale": 1.325,
+    "targetRenderedBodyWorld": 2.539413461538462,
+    "basis": "actual Fabius approved Idle S body, not old assumed 2.63",
+    "singlePpuForSheet": true,
+    "bodyHeightRangePx": [
+      412,
+      431
+    ],
+    "largestDirectionalBodyHeightIncreaseFraction": 0.04611650485436902,
+    "warning": "Back/right lower-row views have higher hair tops and up to 4.6% greater hair-to-sole body span. Non-blocking static consistency warning; do not correct anatomy using per-direction PPU or stretching. Verify direction transitions at game size."
+  },
+  "frames": [
+    {
+      "index": 0,
+      "direction": "S",
+      "footPivotTopLeft": [
+        240,
+        447
+      ],
+      "footPivotUnityNormalized": [
+        0.625,
+        0.126953125
+      ],
+      "sourceRectTopLeft": [
+        0,
+        0,
+        384,
+        512
+      ],
+      "rgbaSha256": "f2953792cbe3f24efb58217182777386de7578c5eb2d31ef3ee76211cb1b8fd6",
+      "alpha128Bounds": [
+        106,
+        35,
+        364,
+        447
+      ],
+      "bodyHairTopY": 35,
+      "soleBoundaryY": 447,
+      "bodyHeightPx": 412,
+      "edgeMaxAlpha": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "completeFigure": true,
+      "visualReviewed": true,
+      "directionCorrect": true,
+      "pivotStatus": "manual proposal accepted for import; +/-6px, pending runtime contact validation"
+    },
+    {
+      "index": 1,
+      "direction": "SW",
+      "footPivotTopLeft": [
+        216,
+        447
+      ],
+      "footPivotUnityNormalized": [
+        0.5625,
+        0.126953125
+      ],
+      "sourceRectTopLeft": [
+        384,
+        0,
+        384,
+        512
+      ],
+      "rgbaSha256": "4570039630415909a00e17505fb0606006dea7f53125cb0288acea1fc55fc570",
+      "alpha128Bounds": [
+        93,
+        34,
+        349,
+        447
+      ],
+      "bodyHairTopY": 34,
+      "soleBoundaryY": 447,
+      "bodyHeightPx": 413,
+      "edgeMaxAlpha": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "completeFigure": true,
+      "visualReviewed": true,
+      "directionCorrect": true,
+      "pivotStatus": "manual proposal accepted for import; +/-6px, pending runtime contact validation"
+    },
+    {
+      "index": 2,
+      "direction": "W",
+      "footPivotTopLeft": [
+        185,
+        448
+      ],
+      "footPivotUnityNormalized": [
+        0.4817708333333333,
+        0.125
+      ],
+      "sourceRectTopLeft": [
+        768,
+        0,
+        384,
+        512
+      ],
+      "rgbaSha256": "052d90bb0f6a016213a7455ef879296177d1210aad6253cd83e4ad64c1fbaa64",
+      "alpha128Bounds": [
+        106,
+        35,
+        297,
+        448
+      ],
+      "bodyHairTopY": 35,
+      "soleBoundaryY": 448,
+      "bodyHeightPx": 413,
+      "edgeMaxAlpha": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "completeFigure": true,
+      "visualReviewed": true,
+      "directionCorrect": true,
+      "pivotStatus": "manual proposal accepted for import; +/-6px, pending runtime contact validation"
+    },
+    {
+      "index": 3,
+      "direction": "NW",
+      "footPivotTopLeft": [
+        149,
+        447
+      ],
+      "footPivotUnityNormalized": [
+        0.3880208333333333,
+        0.126953125
+      ],
+      "sourceRectTopLeft": [
+        1152,
+        0,
+        384,
+        512
+      ],
+      "rgbaSha256": "b62bee7858519736a0c03a0f84372a71981bd373fd4eab1f1c8e484a5a9eeb9d",
+      "alpha128Bounds": [
+        49,
+        35,
+        285,
+        447
+      ],
+      "bodyHairTopY": 35,
+      "soleBoundaryY": 447,
+      "bodyHeightPx": 412,
+      "edgeMaxAlpha": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "completeFigure": true,
+      "visualReviewed": true,
+      "directionCorrect": true,
+      "pivotStatus": "manual proposal accepted for import; +/-6px, pending runtime contact validation"
+    },
+    {
+      "index": 4,
+      "direction": "N",
+      "footPivotTopLeft": [
+        225,
+        448
+      ],
+      "footPivotUnityNormalized": [
+        0.5859375,
+        0.125
+      ],
+      "sourceRectTopLeft": [
+        0,
+        512,
+        384,
+        512
+      ],
+      "rgbaSha256": "e91b0d59b768679bf57c2e7a8ea78cdb34a3ec78c10690a739895a8678b1be6f",
+      "alpha128Bounds": [
+        96,
+        20,
+        351,
+        448
+      ],
+      "bodyHairTopY": 20,
+      "soleBoundaryY": 448,
+      "bodyHeightPx": 428,
+      "edgeMaxAlpha": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "completeFigure": true,
+      "visualReviewed": true,
+      "directionCorrect": true,
+      "pivotStatus": "manual proposal accepted for import; +/-6px, pending runtime contact validation"
+    },
+    {
+      "index": 5,
+      "direction": "NE",
+      "footPivotTopLeft": [
+        205,
+        448
+      ],
+      "footPivotUnityNormalized": [
+        0.5338541666666666,
+        0.125
+      ],
+      "sourceRectTopLeft": [
+        384,
+        512,
+        384,
+        512
+      ],
+      "rgbaSha256": "a6b979c8faddcc18eecd1eebbc395d8a71fd7102eddc88c5bf9936168888b8b7",
+      "alpha128Bounds": [
+        78,
+        19,
+        323,
+        448
+      ],
+      "bodyHairTopY": 19,
+      "soleBoundaryY": 448,
+      "bodyHeightPx": 429,
+      "edgeMaxAlpha": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "completeFigure": true,
+      "visualReviewed": true,
+      "directionCorrect": true,
+      "pivotStatus": "manual proposal accepted for import; +/-6px, pending runtime contact validation"
+    },
+    {
+      "index": 6,
+      "direction": "E",
+      "footPivotTopLeft": [
+        187,
+        448
+      ],
+      "footPivotUnityNormalized": [
+        0.4869791666666667,
+        0.125
+      ],
+      "sourceRectTopLeft": [
+        768,
+        512,
+        384,
+        512
+      ],
+      "rgbaSha256": "f69c1c5dbe821b9872123c05a344d227cca8b0c05defbeec1fee369cdfca417e",
+      "alpha128Bounds": [
+        55,
+        23,
+        261,
+        448
+      ],
+      "bodyHairTopY": 23,
+      "soleBoundaryY": 448,
+      "bodyHeightPx": 425,
+      "edgeMaxAlpha": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "completeFigure": true,
+      "visualReviewed": true,
+      "directionCorrect": true,
+      "pivotStatus": "manual proposal accepted for import; +/-6px, pending runtime contact validation"
+    },
+    {
+      "index": 7,
+      "direction": "SE",
+      "footPivotTopLeft": [
+        180,
+        450
+      ],
+      "footPivotUnityNormalized": [
+        0.46875,
+        0.12109375
+      ],
+      "sourceRectTopLeft": [
+        1152,
+        512,
+        384,
+        512
+      ],
+      "rgbaSha256": "20715f43131ba6d1fba46fe41a0d808666d706db6482dbe56d8661fd626999a2",
+      "alpha128Bounds": [
+        48,
+        19,
+        294,
+        450
+      ],
+      "bodyHairTopY": 19,
+      "soleBoundaryY": 450,
+      "bodyHeightPx": 431,
+      "edgeMaxAlpha": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "completeFigure": true,
+      "visualReviewed": true,
+      "directionCorrect": true,
+      "pivotStatus": "manual proposal accepted for import; +/-6px, pending runtime contact validation"
+    }
+  ],
+  "visualFindings": {
+    "orientation": "S front; SW front-left; W profile-left; NW back-left; N back; NE back-right; E profile-right; SE front-right. Distinct views, no repeated wrong NE/SE direction.",
+    "familyResemblance": "Larger head, broader short face, prominent eyes, compact torso/legs and heavier boots now share Fabius sprite language much more closely than the rejected elongated candidate. Silver canonical swept hair, blue eyes and navy equipment preserve Lucius identity. Static whole-figure comparison performed at actual matched body world height.",
+    "identityAndAge": "Stern expression and outfit retain intended mature character identity in compact sprite language. Agent review does not imply explicit user visual approval.",
+    "equipment": "One sheathed back sword, empty hands; straps and cloak read coherently around eight views.",
+    "fullFigures": "No alpha>=32 pixels on any cell edge; all feet/hair/coats/sword contained.",
+    "alpha": "RGBA real transparency, with residual alpha1/2 background retained; no automatic color or alpha deletion.",
+    "sharpness": "Detailed colored clusters retained; game-size head/eye sharpness still requires importer/runtime rendering check, not certified by source dimensions alone.",
+    "remainingFamilyDifference": "At matched BODY height, Lucius head remains slightly smaller and face narrower than Fabius; compact final is a credible closer family/style match, not an identical face. This is a non-blocking qualitative difference, not a certified exact anatomical equivalence."
+  },
+  "timing": {
+    "framesPerDirection": 1,
+    "durationMs": [
+      350
+    ],
+    "loop": true,
+    "meaning": "static hold, not breathing animation",
+    "provenance": "coordinator final isolated Lucius bank contract"
+  },
+  "preview": {
+    "path": "outputs/retomada-20261109/resume/lucius-final-blend-review.png",
+    "sha256": "d87fae5b0e9895b3c11a38ce3f1a40d82227e6406a11f1fb08b268ea44828294",
+    "wholeFiguresOnly": true,
+    "uniformScale": true,
+    "nearestNeighbor": true,
+    "sourceEdits": false,
+    "viewed": true
+  },
+  "pending": [
+    "Coordinator import and game-size direction transition/contact check.",
+    "Remaining Walk/Run/actions must follow approved Fabius mechanics and contacts while preserving final Lucius identity; this Idle audit does not validate them.",
+    "No new generation executed by reviewer."
+  ]
+}

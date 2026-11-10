@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-09T21:04:50.047917-03:00",
+  "scope": "Fabius Requiem Normal / Moto / montagem-desmontagem / 8 direcoes",
+  "implementation": "South: existing authored 6 assemble + 7 separate samples preserved; remaining 7 directions: two reviewed whole endpoint sprites with one cut at 50% of each existing attack window, mirrored time sampling for reversal. No pixel edit, new art, interpolation, mirroring, transform/pivot/PPU edit, additional clock or gameplay event.",
+  "states": {
+    "produced": "runtime reuse selection and 17 added EditMode cases",
+    "visualReviewed": "Complete three asset atlases seen; original mounted source seen; on-foot selected source hash-identical to inspected atlas. Existing identity accepted for reuse; no new human approval claimed.",
+    "integrated": "Assigned bank and EditMode test source modified only. Authored South preserved; reused poses retain poseFallback=true.",
+    "unityImported": "not executed by this worker",
+    "editMode": "17 new cases written, 0 executed by this worker; coordinator must run focused tests",
+    "playMode": "not executed; gameplay not certified",
+    "git": "not used by this worker"
+  },
+  "files": [
+    {
+      "path": "Assets/Darklight/Runtime/Character/DarklightMotorcycleRedesignBank.cs",
+      "sha256": "fbec3afc21de7f593357c717b8f5ee3347bfc46cd14be1bc06b5bf5717bff9c8"
+    },
+    {
+      "path": "Assets/Darklight/Tests/EditMode/DarklightMotorcycleRedesignTests.cs",
+      "sha256": "bbeea3fba6c16aaf9d303ba654359784c35dcec8bb3935295dd8c0a82865df58"
+    }
+  ],
+  "sources": [
+    {
+      "name": "ReqMotoNormalDualSaws8AttackS20261027V1",
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "size": [
+        1692,
+        1164
+      ],
+      "ppu": 157.57575757575756,
+      "frames": 12,
+      "sourcePath": "ArtSources/WeaponRedesign20261023/publication-selected/ReqMotoNormalDualSaws8AttackS20261027V1-source-only-approved.png",
+      "sourceSha256": "9b2be90d8fa2d748514c9b4d2bcff506138654fa8841eb3419fabae2cb51d965",
+      "assets": [
+        {
+          "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalDualSaws8AttackS20261027V1.json",
+          "sha256": "95ffcfc66a5e74670a2c6f7c1e40a3274e6f395e63d7bf26d896cefdf5be61f7"
+        },
+        {
+          "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalDualSaws8AttackS20261027V1.png",
+          "sha256": "9b2be90d8fa2d748514c9b4d2bcff506138654fa8841eb3419fabae2cb51d965"
+        },
+        {
+          "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalDualSaws8AttackS20261027V1.png.meta",
+          "sha256": "2adffceb7e1b5e2a8b380790f4a085a6eebd0c2d36bc343a1f69ac115c0e9689"
+        }
+      ]
+    },
+    {
+      "name": "RequiemMotoForm0Ride8SlamS20261027V3",
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "size": [
+        2956,
+        1263
+      ],
+      "ppu": 133.83838383838383,
+      "frames": 12,
+      "sourcePath": "ArtSources/WeaponRedesign20261027/moto-maturity/RequiemMotoNormalMaturity20261027V3-source.png",
+      "sourceSha256": "c3f55ad7c0235f3f22e4f382b88232f1582e2b40e8ea85aa0623c062e1f95210",
+      "assets": [
+        {
+          "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/RequiemMotoForm0Ride8SlamS20261027V3.json",
+          "sha256": "8dfe5e8c90fb148aa7cab77d92b21624fc92c7cf475233ea258f7a9b22b28ca8"
+        },
+        {
+          "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/RequiemMotoForm0Ride8SlamS20261027V3.png",
+          "sha256": "0ccbaba79fb57fd6de5cc295fa0c4a4e60b1bffe8618b143ef0af16ce104babe"
+        },
+        {
+          "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/RequiemMotoForm0Ride8SlamS20261027V3.png.meta",
+          "sha256": "328113a94b6fa71a2506e218a2bf8fb8e71a46f7e59b1251740b222eaee6a993"
+        }
+      ]
+    },
+    {
+      "name": "ReqMotoNormalJoinSeparateS20261028V1",
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "size": [
+        1632,
+        1224
+      ],
+      "ppu": 146.46464646464648,
+      "frames": 12,
+      "sourcePath": "ArtSources/WeaponRedesign20261023/publication-selected/ReqMotoNormalJoinSeparateS20261028V1-source-only-approved.png",
+      "sourceSha256": "4f63735225303a5aeb55d5ee64ebd44e17ab76bb7e59a66501bb7eff963abc49",
+      "assets": [
+        {
+          "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalJoinSeparateS20261028V1.json",
+          "sha256": "db38e576c83807e24fd319fa5aa7a483d0fbc5b01b61f8a90859e5cbde0cc4e3"
+        },
+        {
+          "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalJoinSeparateS20261028V1.png",
+          "sha256": "4f63735225303a5aeb55d5ee64ebd44e17ab76bb7e59a66501bb7eff963abc49"
+        },
+        {
+          "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqMotoNormalJoinSeparateS20261028V1.png.meta",
+          "sha256": "c8f98ae0fcaf825892e294facbd0b7dd6fbd2a26c946150f387fc0a82513f629"
+        }
+      ]
+    }
+  ],
+  "staticChecks": {
+    "sourceAndAtlasHashes": "pass, 3 sheets",
+    "metadataRectsPivotsPPU": "pass, 36 whole frames",
+    "directionOrder": "pass, 8 drawn directions in both endpoint sheets",
+    "missingDedicatedSevenResources": "confirmed",
+    "spriteOrRasterChanges": 0
+  },
+  "pending": [
+    "Coordinator compilation and 25 total class EditMode cases (8 existing + 17 new).",
+    "Runtime transition entry/exit and ground alignment at game scale; abrupt two-pose cut is intentional reuse, not a new movement cycle.",
+    "Contact/occlusion/spark review remains in coordinator scope; no particle event added.",
+    "Gate 1 remains pending validation, not certified by this receipt."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "unityLaunched": false,
+  "checks": [
+    {
+      "stage": "build-headless",
+      "filter": "Darklight.Tests.DarklightFabiusRecoveryTests",
+      "rejectedBeforeLaunch": true,
+      "reason": "Additional RAM is restricted to isolated Fabius tests with at least 1 GiB reserve"
+    },
+    {
+      "stage": "import-reviewed",
+      "filter": "Darklight.Tests.DarklightSceneTests",
+      "rejectedBeforeLaunch": true,
+      "reason": "Additional RAM is restricted to isolated Fabius tests with at least 1 GiB reserve"
+    },
+    {
+      "stage": "import-reviewed",
+      "filter": "Darklight.Tests.DarklightFabiusRecoveryTests",
+      "rejectedBeforeLaunch": true,
+      "reason": "Additional RAM is restricted to isolated Fabius tests with at least 1 GiB reserve"
+    }
+  ]
+}

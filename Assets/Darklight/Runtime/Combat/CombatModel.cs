@@ -26,7 +26,7 @@ namespace Darklight
         public float SkillRemaining => Mathf.Max(0, skillReady - Clock);
         public float AttackDamage => Attack == null ? 0 : Attack.damage * (Attack.kind == StrikeKind.Heavy ? 1 + ComboCount * .15f : 1);
         CombatLoadout loadout;
-        internal CombatLoadout Loadout=>loadout;
+        public CombatLoadout Loadout=>loadout;
         int hitPulse=-1;float aerialReady,weaponSpecialReady;bool contactFinished;
         bool pendingAerial,pendingWeaponSpecial;
         public bool CanEquip=>State==CombatState.Neutral||(State==CombatState.Attack&&!ActiveThisTick&&StateTime>=Attack.startup+Attack.active+Attack.recovery*(AttackConnected?(FormStyle>=2?0:.08f):Attack.recoveryChainFraction));
@@ -59,7 +59,10 @@ namespace Darklight
                 Buffer(ref pendingAerial,ref aerialUntil,input.aerialPressed,delta);
                 Buffer(ref pendingWeaponSpecial,ref specialUntil,input.weaponSpecialPressed,delta);
             }
-            if (delta <= 0 || State == CombatState.Dead) { Motion = Vector2.zero; return; }
+            if (delta <= 0) { Motion = Vector2.zero; return; }
+            // Death keeps its authored presentation clock without advancing
+            // combat cooldowns, accepting inputs or moving the actor.
+            if (State == CombatState.Dead) { StateTime += delta; Motion = Vector2.zero; return; }
             Clock += delta;
             Expire(ref pendingDodge,dodgeUntil);Expire(ref pendingParry,parryUntil);Expire(ref pendingSkill,skillUntil);Expire(ref pendingAerial,aerialUntil);Expire(ref pendingWeaponSpecial,specialUntil);
             if (State == CombatState.Neutral && Clock > comboUntil) ComboCount = 0;
@@ -166,6 +169,11 @@ namespace Darklight
         public bool RegisterHit(object target){bool hit=target != null && ActiveThisTick && struck.Add(target);if(hit)AttackConnected=true;return hit;}
         public bool RegisterPulseHit(object target,int pulse)=>target!=null&&ActiveThisTick&&(ContactPulses&(1u<<pulse))!=0&&pulseTargets[pulse].Add(target);
         public void ConfirmHit()=>AttackConnected=true;
+        public void TriggerAttack(AttackDefinition attack, Vector2 aim = default)
+        {
+            if (aim.sqrMagnitude > .04f) Facing = aim.normalized;
+            BeginAttack(attack);
+        }
         // Contextual air moves obey the same committed contact and recovery windows.
         public bool TryAirFollowup(AttackDefinition next, CombatInput input)
         {

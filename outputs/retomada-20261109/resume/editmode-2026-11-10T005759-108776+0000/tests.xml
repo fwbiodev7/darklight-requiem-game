@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="18" result="Passed" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0,3087352">
+  <test-suite type="TestSuite" id="1000" name="DARKLIGHT REQUIEM" fullname="DARKLIGHT REQUIEM" runstate="Runnable" testcasecount="375" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.308735" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1465" name="Darklight.EditModeTests.dll" fullname="C:/Users/Usuario/Documents/Codex/2026-10-10/f/darklight-requiem-main/Library/ScriptAssemblies/Darklight.EditModeTests.dll" runstate="Runnable" testcasecount="375" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.277674" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="25672" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1466" name="Darklight" fullname="Darklight" runstate="Runnable" testcasecount="375" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.257058" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1467" name="Tests" fullname="Darklight.Tests" runstate="Runnable" testcasecount="375" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.232180" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1221" name="DarklightLuciusCombatProfileTests" fullname="Darklight.Tests.DarklightLuciusCombatProfileTests" classname="Darklight.Tests.DarklightLuciusCombatProfileTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.114389" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1222" name="ExactlyThreeClonesServeEveryInputAlias" fullname="Darklight.Tests.DarklightLuciusCombatProfileTests.ExactlyThreeClonesServeEveryInputAlias" methodname="ExactlyThreeClonesServeEveryInputAlias" classname="Darklight.Tests.DarklightLuciusCombatProfileTests" runstate="Runnable" seed="180187224" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.051400" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1226" name="InvalidInputsFailBeforeAllocatingAttackDefinitions" fullname="Darklight.Tests.DarklightLuciusCombatProfileTests.InvalidInputsFailBeforeAllocatingAttackDefinitions" methodname="InvalidInputsFailBeforeAllocatingAttackDefinitions" classname="Darklight.Tests.DarklightLuciusCombatProfileTests" runstate="Runnable" seed="1164412933" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.007650" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1224" name="NativeFabiusSourcesStayIntactAndAllOtherCombatFieldsAreCopied" fullname="Darklight.Tests.DarklightLuciusCombatProfileTests.NativeFabiusSourcesStayIntactAndAllOtherCombatFieldsAreCopied" methodname="NativeFabiusSourcesStayIntactAndAllOtherCombatFieldsAreCopied" classname="Darklight.Tests.DarklightLuciusCombatProfileTests" runstate="Runnable" seed="2019733126" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.005093" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1225" name="RecreatingTheSameContractKeepsThreeKeysWithoutImplementingAnotherForm" fullname="Darklight.Tests.DarklightLuciusCombatProfileTests.RecreatingTheSameContractKeepsThreeKeysWithoutImplementingAnotherForm" methodname="RecreatingTheSameContractKeepsThreeKeysWithoutImplementingAnotherForm" classname="Darklight.Tests.DarklightLuciusCombatProfileTests" runstate="Runnable" seed="646061113" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.001422" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1223" name="StableKeysAndThreeSwordPatternsHaveNoFourthVariation" fullname="Darklight.Tests.DarklightLuciusCombatProfileTests.StableKeysAndThreeSwordPatternsHaveNoFourthVariation" methodname="StableKeysAndThreeSwordPatternsHaveNoFourthVariation" classname="Darklight.Tests.DarklightLuciusCombatProfileTests" runstate="Runnable" seed="1218100396" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.003286" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1227" name="DarklightLuciusSpriteBankTests" fullname="Darklight.Tests.DarklightLuciusSpriteBankTests" classname="Darklight.Tests.DarklightLuciusSpriteBankTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.091768" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="ParameterizedMethod" id="1233" name="CharacterFormAndWeaponCannotAddressOtherBanks" fullname="Darklight.Tests.DarklightLuciusSpriteBankTests.CharacterFormAndWeaponCannotAddressOtherBanks" classname="Darklight.Tests.DarklightLuciusSpriteBankTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.013811" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1230" name="CharacterFormAndWeaponCannotAddressOtherBanks(&quot;Lucien&quot;,&quot;Normal&quot;,&quot;Sword&quot;)" fullname="Darklight.Tests.DarklightLuciusSpriteBankTests.CharacterFormAndWeaponCannotAddressOtherBanks(&quot;Lucien&quot;,&quot;Normal&quot;,&quot;Sword&quot;)" methodname="CharacterFormAndWeaponCannotAddressOtherBanks" classname="Darklight.Tests.DarklightLuciusSpriteBankTests" runstate="Runnable" seed="2036892066" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.011260" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1231" name="CharacterFormAndWeaponCannotAddressOtherBanks(&quot;Lucius&quot;,&quot;Fenrir&quot;,&quot;Sword&quot;)" fullname="Darklight.Tests.DarklightLuciusSpriteBankTests.CharacterFormAndWeaponCannotAddressOtherBanks(&quot;Lucius&quot;,&quot;Fenrir&quot;,&quot;Sword&quot;)" methodname="CharacterFormAndWeaponCannotAddressOtherBanks" classname="Darklight.Tests.DarklightLuciusSpriteBankTests" runstate="Runnable" seed="993747849" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.000247" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1232" name="CharacterFormAndWeaponCannotAddressOtherBanks(&quot;Lucius&quot;,&quot;Normal&quot;,&quot;Katana&quot;)" fullname="Darklight.Tests.DarklightLuciusSpriteBankTests.CharacterFormAndWeaponCannotAddressOtherBanks(&quot;Lucius&quot;,&quot;Normal&quot;,&quot;Katana&quot;)" methodname="CharacterFormAndWeaponCannotAddressOtherBanks" classname="Darklight.Tests.DarklightLuciusSpriteBankTests" runstate="Runnable" seed="534505206" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.000146" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1240" name="DirectionsDensitiesTimingsAndActionsAreValidated" fullname="Darklight.Tests.DarklightLuciusSpriteBankTests.DirectionsDensitiesTimingsAndActionsAreValidated" methodname="DirectionsDensitiesTimingsAndActionsAreValidated" classname="Darklight.Tests.DarklightLuciusSpriteBankTests" runstate="Runnable" seed="546245460" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.005034" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1229" name="DuplicateContextsAndIdsAreRejected" fullname="Darklight.Tests.DarklightLuciusSpriteBankTests.DuplicateContextsAndIdsAreRejected" methodname="DuplicateContextsAndIdsAreRejected" classname="Darklight.Tests.DarklightLuciusSpriteBankTests" runstate="Runnable" seed="129221713" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.004354" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1228" name="EightReviewedIdleViewsActivateWithoutClaimingCompleteKit" fullname="Darklight.Tests.DarklightLuciusSpriteBankTests.EightReviewedIdleViewsActivateWithoutClaimingCompleteKit" methodname="EightReviewedIdleViewsActivateWithoutClaimingCompleteKit" classname="Darklight.Tests.DarklightLuciusSpriteBankTests" runstate="Runnable" seed="317652929" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.000680" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1242" name="InitialResourcesResolveEightNativeIdleViewsAndReportFallback" fullname="Darklight.Tests.DarklightLuciusSpriteBankTests.InitialResourcesResolveEightNativeIdleViewsAndReportFallback" methodname="InitialResourcesResolveEightNativeIdleViewsAndReportFallback" classname="Darklight.Tests.DarklightLuciusSpriteBankTests" runstate="Runnable" seed="1666767506" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.059495" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1238" name="ResourcePathsStayWithinTheirOwnNormalizedPacket" fullname="Darklight.Tests.DarklightLuciusSpriteBankTests.ResourcePathsStayWithinTheirOwnNormalizedPacket" classname="Darklight.Tests.DarklightLuciusSpriteBankTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.002614" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1234" name="ResourcePathsStayWithinTheirOwnNormalizedPacket(&quot;Darklight/SecondaryCharacters/Lucien&quot;)" fullname="Darklight.Tests.DarklightLuciusSpriteBankTests.ResourcePathsStayWithinTheirOwnNormalizedPacket(&quot;Darklight/SecondaryCharacters/Lucien&quot;)" methodname="ResourcePathsStayWithinTheirOwnNormalizedPacket" classname="Darklight.Tests.DarklightLuciusSpriteBankTests" runstate="Runnable" seed="2146285804" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.000589" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1235" name="ResourcePathsStayWithinTheirOwnNormalizedPacket(&quot;Darklight/LuciusNormal20261109/../Lucien&quot;)" fullname="Darklight.Tests.DarklightLuciusSpriteBankTests.ResourcePathsStayWithinTheirOwnNormalizedPacket(&quot;Darklight/LuciusNormal20261109/../Lucien&quot;)" methodname="ResourcePathsStayWithinTheirOwnNormalizedPacket" classname="Darklight.Tests.DarklightLuciusSpriteBankTests" runstate="Runnable" seed="1994906396" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.000137" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1236" name="ResourcePathsStayWithinTheirOwnNormalizedPacket(&quot;Darklight/LuciusNormal20261109/Sheet.png&quot;)" fullname="Darklight.Tests.DarklightLuciusSpriteBankTests.ResourcePathsStayWithinTheirOwnNormalizedPacket(&quot;Darklight/LuciusNormal20261109/Sheet.png&quot;)" methodname="ResourcePathsStayWithinTheirOwnNormalizedPacket" classname="Darklight.Tests.DarklightLuciusSpriteBankTests" runstate="Runnable" seed="1103814138" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.000105" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1237" name="ResourcePathsStayWithinTheirOwnNormalizedPacket(&quot;Darklight/LuciusNormal20261109/&quot;)" fullname="Darklight.Tests.DarklightLuciusSpriteBankTests.ResourcePathsStayWithinTheirOwnNormalizedPacket(&quot;Darklight/LuciusNormal20261109/&quot;)" methodname="ResourcePathsStayWithinTheirOwnNormalizedPacket" classname="Darklight.Tests.DarklightLuciusSpriteBankTests" runstate="Runnable" seed="1694405945" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.000100" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1239" name="ReviewHashesWholeFiguresAndNormalizedNamesAreRequired" fullname="Darklight.Tests.DarklightLuciusSpriteBankTests.ReviewHashesWholeFiguresAndNormalizedNamesAreRequired" methodname="ReviewHashesWholeFiguresAndNormalizedNamesAreRequired" classname="Darklight.Tests.DarklightLuciusSpriteBankTests" runstate="Runnable" seed="2040353816" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.000447" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1241" name="SharedFrameClockLoopsOrHoldsLastNativePose" fullname="Darklight.Tests.DarklightLuciusSpriteBankTests.SharedFrameClockLoopsOrHoldsLastNativePose" methodname="SharedFrameClockLoopsOrHoldsLastNativePose" classname="Darklight.Tests.DarklightLuciusSpriteBankTests" runstate="Runnable" seed="907402369" result="Passed" start-time="2026-11-10 00:59:03Z" end-time="2026-11-10 00:59:03Z" duration="0.000459" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Usuario/AppData/LocalLow/Fabio/DARKLIGHT REQUIEM\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/Fabio/DARKLIGHT REQUIEM\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -6,13 +6,16 @@ namespace Darklight
     public sealed class DarklightFighter : MonoBehaviour
     {
         public CombatLoadout loadout;
-        public CombatModel Model { get; private set; }
+        CombatModel _model;
+        public CombatModel Model { get => _model ??= new CombatModel(loadout); private set => _model = value; }
         public DarklightAirCombo AirCombo { get; private set; }
-        Rigidbody2D body;
-        DarklightCharacterView view;
+        Rigidbody2D _body;
+        Rigidbody2D body => _body != null ? _body : (_body = GetComponent<Rigidbody2D>());
+        DarklightCharacterView _view;
+        DarklightCharacterView view => _view != null ? _view : (_view = GetComponent<DarklightCharacterView>());
         DarklightWeaponController weapons;
         readonly Collider2D[] contacts = new Collider2D[128];
-        void Awake() { Model = new CombatModel(loadout); body = GetComponent<Rigidbody2D>(); view = GetComponent<DarklightCharacterView>();weapons=GetComponent<DarklightWeaponController>();gameObject.AddComponent<DarklightCombatDebug>(); var col=GetComponent<Collider2D>(); if(col!=null&&col.sharedMaterial==null) col.sharedMaterial=DarklightNavigation.Frictionless; }
+        void Awake() { _model = new CombatModel(loadout); _body = GetComponent<Rigidbody2D>(); _view = GetComponent<DarklightCharacterView>();weapons=GetComponent<DarklightWeaponController>();gameObject.AddComponent<DarklightCombatDebug>(); var col=GetComponent<Collider2D>(); if(col!=null&&col.sharedMaterial==null) col.sharedMaterial=DarklightNavigation.Frictionless; }
         void Update()
         {
             var lab = DarklightCombatLab.Instance;

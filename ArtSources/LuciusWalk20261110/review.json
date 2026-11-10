@@ -1,0 +1,773 @@
+{
+  "schemaVersion": 1,
+  "referenceSha256": "68947a7143047ed76221ef7038726fcc9fd3e9b8403727e697f6aee2e7cfb761",
+  "sheets": [
+    {
+      "name": "LuciusWalkS20261110V1",
+      "sourcePath": "ArtSources/LuciusWalk20261110/selected/LuciusWalkS20261110V1-source.png",
+      "sourceSha256": "94b014a4728031aba97c247133bb97518a2d97f67395504340d8e8240b1999f7",
+      "nativeSize": [
+        1536,
+        512
+      ],
+      "directions": [
+        "S"
+      ],
+      "frames": [
+        {
+          "direction": "S",
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            239,
+            456
+          ]
+        },
+        {
+          "direction": "S",
+          "index": 1,
+          "rect": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            208,
+            456
+          ]
+        },
+        {
+          "direction": "S",
+          "index": 2,
+          "rect": [
+            768,
+            0,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            181,
+            457
+          ]
+        },
+        {
+          "direction": "S",
+          "index": 3,
+          "rect": [
+            1152,
+            0,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            176,
+            457
+          ]
+        }
+      ],
+      "durationMs": [
+        140,
+        130,
+        140,
+        130
+      ],
+      "pixelsPerUnit": 214.97090106361628,
+      "status": "rejected-high-knee-march",
+      "importReady": false,
+      "wholeFigures": true,
+      "realAlternatingGait": true,
+      "nativeScaleConsistentWithReference": true,
+      "bodyHeightPixels": [
+        421,
+        421,
+        425,
+        425
+      ],
+      "notes": [
+        "Whole-frame technical assembly: original v1 complete cells0/1 retained bit-for-bit, corrected v2 complete cells2/3; no anatomical assembly or resampling.",
+        "Pivot x follows pelvis axis, y is actual lowest supporting sole boundary.",
+        "Low-alpha background residue in generated sources preserved; no destructive automatic alpha cleanup.",
+        "In-place preview required before release.",
+        "Contact sheet inspected on fixed floor: alternating front legs and lifted legs, pelvis axis registered; source columns2/3 retain very faint generated background alpha1-8, visible as a slight rectangle on dark contact preview. Flag for coordinator Unity review, no automatic destructive alpha cleanup performed."
+      ],
+      "wholeFrameSources": [
+        {
+          "sourcePath": "ArtSources/LuciusWalk20261110/sources/S_SW-v1.png",
+          "sourceSha256": "d186076467c4a3ec41cadaa7f47cde8e37968723d71148a7153639ea17762da4",
+          "sourceRect": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "selectedRect": [
+            0,
+            0,
+            384,
+            512
+          ]
+        },
+        {
+          "sourcePath": "ArtSources/LuciusWalk20261110/sources/S_SW-v1.png",
+          "sourceSha256": "d186076467c4a3ec41cadaa7f47cde8e37968723d71148a7153639ea17762da4",
+          "sourceRect": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "selectedRect": [
+            384,
+            0,
+            384,
+            512
+          ]
+        },
+        {
+          "sourcePath": "ArtSources/LuciusWalk20261110/sources/S_SW-v2.png",
+          "sourceSha256": "f3c017036eab781abdf2f2d5f261cee805d44cf8362b960f18202940fb45a70a",
+          "sourceRect": [
+            768,
+            0,
+            384,
+            512
+          ],
+          "selectedRect": [
+            768,
+            0,
+            384,
+            512
+          ]
+        },
+        {
+          "sourcePath": "ArtSources/LuciusWalk20261110/sources/S_SW-v2.png",
+          "sourceSha256": "f3c017036eab781abdf2f2d5f261cee805d44cf8362b960f18202940fb45a70a",
+          "sourceRect": [
+            1152,
+            0,
+            384,
+            512
+          ],
+          "selectedRect": [
+            1152,
+            0,
+            384,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "name": "LuciusWalkWE20261110V2",
+      "sourcePath": "ArtSources/LuciusWalk20261110/selected/LuciusWalkWE20261110V2-source.png",
+      "sourceSha256": "4b2b6053da33b703007ca8243fe837ac09f2ed3ae123e1025e9adc42d2ba372d",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "directions": [
+        "W",
+        "E"
+      ],
+      "frames": [
+        {
+          "direction": "W",
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            194,
+            449
+          ]
+        },
+        {
+          "direction": "W",
+          "index": 1,
+          "rect": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            199,
+            449
+          ]
+        },
+        {
+          "direction": "W",
+          "index": 2,
+          "rect": [
+            768,
+            0,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            184,
+            449
+          ]
+        },
+        {
+          "direction": "W",
+          "index": 3,
+          "rect": [
+            1152,
+            0,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            185,
+            458
+          ]
+        },
+        {
+          "direction": "E",
+          "index": 0,
+          "rect": [
+            0,
+            512,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            194,
+            441
+          ]
+        },
+        {
+          "direction": "E",
+          "index": 1,
+          "rect": [
+            384,
+            512,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            198,
+            444
+          ]
+        },
+        {
+          "direction": "E",
+          "index": 2,
+          "rect": [
+            768,
+            512,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            192,
+            449
+          ]
+        },
+        {
+          "direction": "E",
+          "index": 3,
+          "rect": [
+            1152,
+            512,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            174,
+            458
+          ]
+        }
+      ],
+      "wholeFrameSources": [
+        {
+          "sourcePath": "ArtSources/LuciusWalk20261110/sources/W_E-v1.png",
+          "sourceSha256": "284e09e5aff50d17daff3abb4aeea66fca06cbdcf06ebf0c1780452b2679d0fd",
+          "sourceRect": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "selectedRect": [
+            0,
+            0,
+            384,
+            512
+          ]
+        },
+        {
+          "sourcePath": "ArtSources/LuciusWalk20261110/sources/W_E-v1.png",
+          "sourceSha256": "284e09e5aff50d17daff3abb4aeea66fca06cbdcf06ebf0c1780452b2679d0fd",
+          "sourceRect": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "selectedRect": [
+            384,
+            0,
+            384,
+            512
+          ]
+        },
+        {
+          "sourcePath": "ArtSources/LuciusWalk20261110/sources/W_E_SW_NW-halfB-v2.png",
+          "sourceSha256": "e60c57bfff3d8c2dec047e2d22444241ec20c84c3ccf9da4c329f39ba8830569",
+          "sourceRect": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "selectedRect": [
+            768,
+            0,
+            384,
+            512
+          ]
+        },
+        {
+          "sourcePath": "ArtSources/LuciusWalk20261110/sources/W_E_SW_NW-halfB-v2.png",
+          "sourceSha256": "e60c57bfff3d8c2dec047e2d22444241ec20c84c3ccf9da4c329f39ba8830569",
+          "sourceRect": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "selectedRect": [
+            1152,
+            0,
+            384,
+            512
+          ]
+        },
+        {
+          "sourcePath": "ArtSources/LuciusWalk20261110/sources/W_E-v1.png",
+          "sourceSha256": "284e09e5aff50d17daff3abb4aeea66fca06cbdcf06ebf0c1780452b2679d0fd",
+          "sourceRect": [
+            0,
+            512,
+            384,
+            512
+          ],
+          "selectedRect": [
+            0,
+            512,
+            384,
+            512
+          ]
+        },
+        {
+          "sourcePath": "ArtSources/LuciusWalk20261110/sources/W_E-v1.png",
+          "sourceSha256": "284e09e5aff50d17daff3abb4aeea66fca06cbdcf06ebf0c1780452b2679d0fd",
+          "sourceRect": [
+            384,
+            512,
+            384,
+            512
+          ],
+          "selectedRect": [
+            384,
+            512,
+            384,
+            512
+          ]
+        },
+        {
+          "sourcePath": "ArtSources/LuciusWalk20261110/sources/W_E_SW_NW-halfB-v2.png",
+          "sourceSha256": "e60c57bfff3d8c2dec047e2d22444241ec20c84c3ccf9da4c329f39ba8830569",
+          "sourceRect": [
+            768,
+            0,
+            384,
+            512
+          ],
+          "selectedRect": [
+            768,
+            512,
+            384,
+            512
+          ]
+        },
+        {
+          "sourcePath": "ArtSources/LuciusWalk20261110/sources/W_E_SW_NW-halfB-v2.png",
+          "sourceSha256": "e60c57bfff3d8c2dec047e2d22444241ec20c84c3ccf9da4c329f39ba8830569",
+          "sourceRect": [
+            1152,
+            0,
+            384,
+            512
+          ],
+          "selectedRect": [
+            1152,
+            512,
+            384,
+            512
+          ]
+        }
+      ],
+      "durationMs": [
+        140,
+        130,
+        140,
+        130
+      ],
+      "pixelsPerUnit": 214.97090106361628,
+      "status": "candidate-high-knee-march",
+      "importReady": false,
+      "wholeFigures": true,
+      "realAlternatingGait": true,
+      "nativeScaleConsistentWithReference": false,
+      "notes": [
+        "Half B now has opposite visible arm/leg relationship. W hair-to-sole expands412 to422/431px; E416/420 to422/431px. In-place preview needed: do not compensate using PPU/resize."
+      ]
+    },
+    {
+      "name": "LuciusWalkSSW20261110V5",
+      "sourcePath": "ArtSources/LuciusWalk20261110/selected/LuciusWalkSSW20261110V5-source.png",
+      "sourceSha256": "d186076467c4a3ec41cadaa7f47cde8e37968723d71148a7153639ea17762da4",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "directions": [
+        "S",
+        "SW"
+      ],
+      "frames": [
+        {
+          "direction": "S",
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            239,
+            456
+          ]
+        },
+        {
+          "direction": "S",
+          "index": 1,
+          "rect": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            208,
+            456
+          ]
+        },
+        {
+          "direction": "S",
+          "index": 2,
+          "rect": [
+            768,
+            0,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            183,
+            456
+          ]
+        },
+        {
+          "direction": "S",
+          "index": 3,
+          "rect": [
+            1152,
+            0,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            176,
+            456
+          ]
+        },
+        {
+          "direction": "SW",
+          "index": 0,
+          "rect": [
+            0,
+            512,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            239,
+            450
+          ]
+        },
+        {
+          "direction": "SW",
+          "index": 1,
+          "rect": [
+            384,
+            512,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            208,
+            450
+          ]
+        },
+        {
+          "direction": "SW",
+          "index": 2,
+          "rect": [
+            768,
+            512,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            184,
+            450
+          ]
+        },
+        {
+          "direction": "SW",
+          "index": 3,
+          "rect": [
+            1152,
+            512,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            184,
+            450
+          ]
+        }
+      ],
+      "durationMs": [
+        140,
+        130,
+        140,
+        130
+      ],
+      "pixelsPerUnit": 214.97090106361628,
+      "status": "visual-reviewed",
+      "importReady": true,
+      "wholeFigures": true,
+      "realAlternatingGait": true,
+      "nativeScaleConsistentWithReference": true,
+      "userMechanicsReference": "ArtSources/LuciusWalk20261110/references/user-walk-20261110.png",
+      "userMechanicsReferenceSha256": "907f14fd6a70f44c8f97f0e61828a188a6b06888b7ad12a0d7de86fe63ec2857",
+      "gaitReviewBasis": "Direct user reference shows same eight poses of original S_SW-v1 sheet; preserve the exact user-approved amplitude instead of forcing exaggerated gait.",
+      "notes": [
+        "Selected source is original transparent PNG, not the Canva screenshot. Source PNG bytes identical.",
+        "S support line456px, SW heel/support projection450px. Pivot x reviewed on pelvis/spine axis, not coat/sword box.",
+        "Side view fore/aft foot projection extends a few pixels below root support line; root/head stays stable.",
+        "No resizing, anatomical assembly, mirrored direction, or repaint.",
+        "Coordinator confirms direct user screenshot approves these exact eight original poses. New SVG/AI repaint unnecessary. Assets frozen: staged only."
+      ],
+      "userMechanicsApproved": true
+    },
+    {
+      "name": "LuciusWalkWE20261110V6",
+      "sourcePath": "ArtSources/LuciusWalk20261110/sources/W_E-v1.png",
+      "sourceSha256": "284e09e5aff50d17daff3abb4aeea66fca06cbdcf06ebf0c1780452b2679d0fd",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "directions": [
+        "W",
+        "E"
+      ],
+      "frames": [
+        {
+          "direction": "W",
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            194,
+            449
+          ]
+        },
+        {
+          "direction": "W",
+          "index": 1,
+          "rect": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            184,
+            449
+          ]
+        },
+        {
+          "direction": "W",
+          "index": 2,
+          "rect": [
+            768,
+            0,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            177,
+            449
+          ]
+        },
+        {
+          "direction": "W",
+          "index": 3,
+          "rect": [
+            1152,
+            0,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            179,
+            449
+          ]
+        },
+        {
+          "direction": "E",
+          "index": 0,
+          "rect": [
+            0,
+            512,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            215,
+            442
+          ]
+        },
+        {
+          "direction": "E",
+          "index": 1,
+          "rect": [
+            384,
+            512,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            207,
+            442
+          ]
+        },
+        {
+          "direction": "E",
+          "index": 2,
+          "rect": [
+            768,
+            512,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            210,
+            442
+          ]
+        },
+        {
+          "direction": "E",
+          "index": 3,
+          "rect": [
+            1152,
+            512,
+            384,
+            512
+          ],
+          "footPivotTopLeft": [
+            204,
+            442
+          ]
+        }
+      ],
+      "durationMs": [
+        140,
+        130,
+        140,
+        130
+      ],
+      "pixelsPerUnit": 214.97090106361628,
+      "status": "visual-reviewed",
+      "importReady": true,
+      "wholeFigures": true,
+      "realAlternatingGait": true,
+      "nativeScaleConsistentWithReference": true,
+      "notes": [
+        "Original v1 gentle amplitude re-evaluated against direct user mechanics screenshot. New high-knee corrective halfB is not used.",
+        "All original transparent whole figures preserved; no drawing change.",
+        "W body412px, E416-420px; root support lines449/442 stable, no PPU/resize compensation.",
+        "Horizontal slot drift corrected with integer root-axis anchors verified against stable torso/head placement. Bright hair x medians W199/189/182/184 and E227/219/222/216 provide a rigid-axis cross-check; no pixels changed.",
+        "Whole-frame contact reviewed after root registration: source v1 cadence matches approved earlier walking amplitude, hands near hips; no high-knee corrective V2 figures used. This is autonomous review, not separate user approval of W/E."
+      ],
+      "userMechanicsApproved": false
+    }
+  ],
+  "candidateSources": [
+    {
+      "sourcePath": "ArtSources/LuciusWalk20261110/sources/NE_SE-v1.png",
+      "sourceSha256": "43c3f2ca5370e63470b52902f8e5a5f60d1fc8d1bba18630c626e76abaa3872a",
+      "status": "candidate-not-import-ready",
+      "fullFigures": 8
+    },
+    {
+      "sourcePath": "ArtSources/LuciusWalk20261110/sources/NW_N-v1.png",
+      "sourceSha256": "94e2963cd2c16a7afe44295d600e11eb5416aa88a61df0e38257d8785415ec06",
+      "status": "candidate-not-import-ready",
+      "fullFigures": 8
+    },
+    {
+      "sourcePath": "ArtSources/LuciusWalk20261110/sources/S_SW-v1.png",
+      "sourceSha256": "d186076467c4a3ec41cadaa7f47cde8e37968723d71148a7153639ea17762da4",
+      "status": "candidate-not-import-ready",
+      "fullFigures": 8
+    },
+    {
+      "sourcePath": "ArtSources/LuciusWalk20261110/sources/S_SW-v2.png",
+      "sourceSha256": "f3c017036eab781abdf2f2d5f261cee805d44cf8362b960f18202940fb45a70a",
+      "status": "candidate-not-import-ready",
+      "fullFigures": 8
+    },
+    {
+      "sourcePath": "ArtSources/LuciusWalk20261110/sources/W_E-v1.png",
+      "sourceSha256": "284e09e5aff50d17daff3abb4aeea66fca06cbdcf06ebf0c1780452b2679d0fd",
+      "status": "candidate-not-import-ready",
+      "fullFigures": 8
+    }
+  ],
+  "userMechanicsReference": {
+    "path": "ArtSources/LuciusWalk20261110/references/user-walk-20261110.png",
+    "sha256": "907f14fd6a70f44c8f97f0e61828a188a6b06888b7ad12a0d7de86fe63ec2857",
+    "authority": "latest direct user instruction; same low-step amplitude for all views and Walk/WalkArmed"
+  }
+}

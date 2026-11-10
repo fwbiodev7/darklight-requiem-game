@@ -13,6 +13,7 @@ namespace Darklight
         float luciusEngageRange = 1.85f;
         float luciusDodgeCooldown;
         float luciusGuardCooldown;
+        Vector2 luciusDodgeDirection;
 
         public void InitializeLucius(CombatLoadout loadout = null, DarklightLuciusView view = null)
         {
@@ -59,12 +60,14 @@ namespace Darklight
         {
             if (!IsLucius) return false;
             if (CombatModel == null) InitializeLucius(null, LuciusView);
+            if(dt<=0){if(body!=null)body.linearVelocity=Vector2.zero;return true;}
 
             if (Health != null && Health.IsDead)
             {
                 warning?.Hide();
                 if (body != null) body.linearVelocity = Vector2.zero;
-                CombatModel.Hurt(true);
+                if(CombatModel.State!=CombatState.Dead)CombatModel.Hurt(true);
+                CombatModel.Tick(dt,default);
                 LuciusView?.Present(CombatModel, Vector2.zero);
                 return true;
             }
@@ -73,7 +76,8 @@ namespace Darklight
             {
                 warning?.Hide();
                 if (body != null) body.linearVelocity = Vector2.zero;
-                CombatModel.Hurt(false, stagger);
+                if(CombatModel.State!=CombatState.Hurt)CombatModel.Hurt(false, stagger);
+                CombatModel.Tick(dt,default);
                 LuciusView?.Present(CombatModel, Vector2.zero);
                 return true;
             }
@@ -89,6 +93,7 @@ namespace Darklight
 
             luciusDodgeCooldown = Mathf.Max(0, luciusDodgeCooldown - dt);
             luciusGuardCooldown = Mathf.Max(0, luciusGuardCooldown - dt);
+            repath = Mathf.Max(0, repath - dt);
 
             float speed = (phaseTwo ? 2.85f : 2.3f) * (game?.DifficultyProfile.speed ?? 1f);
 
@@ -96,13 +101,18 @@ namespace Darklight
             var playerModel = player.Model;
             bool playerThreat = playerModel != null && (playerModel.State == CombatState.Attack || playerModel.State == CombatState.Charging) && distance < 2.5f;
 
+            bool dodgeStarted=false;
             if (CombatModel.State == CombatState.Neutral && playerThreat)
             {
                 if (luciusDodgeCooldown <= 0 && distance < 2.2f)
                 {
                     // Agile tactical sidestep
                     Vector2 flank = new Vector2(-delta.normalized.y, delta.normalized.x) * (serial % 2 == 0 ? 1f : -1f);
-                    DarklightNavigation.SafeStep(body, flank * 0.75f, 0.22f);
+                    // A dodge is a timed combat state, not an instantaneous
+                    // position jump followed by the stationary Idle pose.
+                    luciusDodgeDirection=flank;
+                    CombatModel.Tick(dt,new CombatInput{move=flank,aim=aim,dodgePressed=true});
+                    dodgeStarted=CombatModel.State==CombatState.Dodge;
                     luciusDodgeCooldown = 2.0f;
                     timer = 0.22f;
                     serial++;
@@ -175,7 +185,7 @@ namespace Darklight
             else if (CombatModel.State == CombatState.Attack)
             {
                 body.linearVelocity = Vector2.zero;
-                CombatModel.Tick(dt, new CombatInput { aim = aim });
+                CombatModel.Tick(dt, new CombatInput { aim = locked });
 
                 var attack = CombatModel.Attack;
                 if (attack != null && CombatModel.StateTime < attack.startup)
@@ -206,8 +216,10 @@ namespace Darklight
             }
             else
             {
-                body.linearVelocity = Vector2.zero;
-                CombatModel.Tick(dt, default);
+                if(!dodgeStarted)CombatModel.Tick(dt, default);
+                body.linearVelocity = CombatModel.State==CombatState.Dodge
+                    ?DarklightNavigation.SlidingVelocity(body,luciusDodgeDirection*2.8f,Time.fixedDeltaTime)
+                    :Vector2.zero;
             }
 
             LuciusView?.Present(CombatModel, body.linearVelocity);

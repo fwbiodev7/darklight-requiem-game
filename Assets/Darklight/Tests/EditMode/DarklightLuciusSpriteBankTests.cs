@@ -70,7 +70,9 @@ namespace Darklight.Tests
                 Assert.That(idle.texture.width,Is.EqualTo(page.nativeSize[0]));Assert.That(idle.texture.height,Is.EqualTo(page.nativeSize[1]));
                 Assert.That(idle.pixelsPerUnit,Is.EqualTo(page.pixelsPerUnit).Within(.001f));
                 Assert.That(DarklightLuciusSpriteBank.TryPose("Walk",page.direction,1,out var walk,out fallback),Is.True);
-                Assert.That(fallback,Is.True);Assert.That(walk,Is.SameAs(idle));
+                bool hasWalk=DarklightLuciusSpriteBank.TryActionPage(DarklightLuciusAppearance.Normal,"Walk",page.direction,null,out _);
+                Assert.That(fallback,Is.EqualTo(!hasWalk));
+                if(!hasWalk)Assert.That(walk,Is.SameAs(idle));
             }
         }
     }
@@ -94,6 +96,7 @@ namespace Darklight.Tests
             data=JsonUtility.FromJson<DarklightLuciusSpriteCatalog>(text.text);
             Assert.That(DarklightLuciusSpriteBank.ValidCatalog(data,appearance),Is.True);
             Assert.That(data.pages.Count(p=>p.action=="Idle"),Is.EqualTo(8));
+            data.pages=data.pages.Where(p=>p.action=="Idle").ToArray();
         }
         [TearDown] public void Dispose()
         {
@@ -247,6 +250,11 @@ namespace Darklight.Tests
                 else model.Hurt(action=="Dead");
                 Expect(view,model,page,0);
                 model.Tick(.15f,new CombatInput{heavyHeld=action=="Charging"});
+            }
+            if(action=="Walk")
+            {
+                Expect(view,model,page,0,movement);
+                view.transform.position+=Vector3.down*(.15f*2.3f);
             }
             Expect(view,model,page,1,movement);Expect(view,model,page,1,movement);
             model.Tick(0,new CombatInput{heavyHeld=action=="Charging"});Expect(view,model,page,1,movement);

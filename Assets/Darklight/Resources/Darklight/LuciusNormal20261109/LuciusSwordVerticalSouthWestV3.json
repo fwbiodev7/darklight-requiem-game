@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "image": "LuciusSwordVerticalSouthWestV3.png",
+  "imageSha256": "8847f41fa750cc55b7148eb89a481cb44600b376c8e885bf63fc21f501919bbd",
+  "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordVerticalSouthWestV3-source.png",
+  "sourceSha256": "8847f41fa750cc55b7148eb89a481cb44600b376c8e885bf63fc21f501919bbd",
+  "sourceSize": [
+    1800,
+    2000
+  ],
+  "nativeSize": [
+    1800,
+    2000
+  ],
+  "pixelsPerUnit": 135.6612482440297,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "allowStatic": false,
+  "frames": [
+    {
+      "id": "Redesign_LuciusSwordVerticalSouthWestV3_S_00",
+      "action": "Attack",
+      "attackKey": "SwordVertical",
+      "direction": "S",
+      "index": 0,
+      "rect": [
+        0,
+        0,
+        600,
+        500
+      ],
+      "pivot": [
+        0.5216666666666666,
+        0.03
+      ],
+      "durationMs": 140,
+      "phase": "startup"
+    },
+    {
+      "id": "Redesign_LuciusSwordVerticalSouthWestV3_S_01",
+      "action": "Attack",
+      "attackKey": "SwordVertical",
+      "direction": "S",
+      "index": 1,
+      "rect": [
+        600,
+        0,
+        600,
+        500
+      ],
+      "pivot": [
+        0.49333333333333335,
+        0.086
+      ],
+      "durationMs": 120,
+      "phase": "active"
+    },
+    {
+      "id": "Redesign_LuciusSwordVerticalSouthWestV3_S_02",
+      "action": "Attack",
+      "attackKey": "SwordVertical",
+      "direction": "S",
+      "index": 2,
+      "rect": [
+        1200,
+        0,
+        600,
+        500
+      ],
+      "pivot": [
+        0.48833333333333334,
+        0.068
+      ],
+      "durationMs": 220,
+      "phase": "recovery"
+    },
+    {
+      "id": "Redesign_LuciusSwordVerticalSouthWestV3_SW_00",
+      "action": "Attack",
+      "attackKey": "SwordVertical",
+      "direction": "SW",
+      "index": 0,
+      "rect": [
+        0,
+        500,
+        600,
+        500
+      ],
+      "pivot": [
+        0.53,
+        0.034
+      ],
+      "durationMs": 140,
+      "phase": "startup"
+    },
+    {
+      "id": "Redesign_LuciusSwordVerticalSouthWestV3_SW_01",
+      "action": "Attack",
+      "attackKey": "SwordVertical",
+      "direction": "SW",
+      "index": 1,
+      "rect": [
+        600,
+        500,
+        600,
+        500
+      ],
+      "pivot": [
+        0.49833333333333335,
+        0.062
+      ],
+      "durationMs": 120,
+      "phase": "active"
+    },
+    {
+      "id": "Redesign_LuciusSwordVerticalSouthWestV3_SW_02",
+      "action": "Attack",
+      "attackKey": "SwordVertical",
+      "direction": "SW",
+      "index": 2,
+      "rect": [
+        1200,
+        500,
+        600,
+        500
+      ],
+      "pivot": [
+        0.48833333333333334,
+        0.062
+      ],
+      "durationMs": 220,
+      "phase": "recovery"
+    },
+    {
+      "id": "Redesign_LuciusSwordVerticalSouthWestV3_W_00",
+      "action": "Attack",
+      "attackKey": "SwordVertical",
+      "direction": "W",
+      "index": 0,
+      "rect": [
+        0,
+        1000,
+        600,
+        500
+      ],
+      "pivot": [
+        0.5366666666666666,
+        0.032
+      ],
+      "durationMs": 140,
+      "phase": "startup"
+    },
+    {
+      "id": "Redesign_LuciusSwordVerticalSouthWestV3_W_01",
+      "action": "Attack",
+      "attackKey": "SwordVertical",
+      "direction": "W",
+      "index": 1,
+      "rect": [
+        600,
+        1000,
+        600,
+        500
+      ],
+      "pivot": [
+        0.495,
+        0.03
+      ],
+      "durationMs": 120,
+      "phase": "active"
+    },
+    {
+      "id": "Redesign_LuciusSwordVerticalSouthWestV3_W_02",
+      "action": "Attack",
+      "attackKey": "SwordVertical",
+      "direction": "W",
+      "index": 2,
+      "rect": [
+        1200,
+        1000,
+        600,
+        500
+      ],
+      "pivot": [
+        0.49333333333333335,
+        0.03
+      ],
+      "durationMs": 220,
+      "phase": "recovery"
+    },
+    {
+      "id": "Redesign_LuciusSwordVerticalSouthWestV3_NW_00",
+      "action": "Attack",
+      "attackKey": "SwordVertical",
+      "direction": "NW",
+      "index": 0,
+      "rect": [
+        0,
+        1500,
+        600,
+        500
+      ],
+      "pivot": [
+        0.535,
+        0.034
+      ],
+      "durationMs": 140,
+      "phase": "startup"
+    },
+    {
+      "id": "Redesign_LuciusSwordVerticalSouthWestV3_NW_01",
+      "action": "Attack",
+      "attackKey": "SwordVertical",
+      "direction": "NW",
+      "index": 1,
+      "rect": [
+        600,
+        1500,
+        600,
+        500
+      ],
+      "pivot": [
+        0.49333333333333335,
+        0.03
+      ],
+      "durationMs": 120,
+      "phase": "active"
+    },
+    {
+      "id": "Redesign_LuciusSwordVerticalSouthWestV3_NW_02",
+      "action": "Attack",
+      "attackKey": "SwordVertical",
+      "direction": "NW",
+      "index": 2,
+      "rect": [
+        1200,
+        1500,
+        600,
+        500
+      ],
+      "pivot": [
+        0.48833333333333334,
+        0.03
+      ],
+      "durationMs": 220,
+      "phase": "recovery"
+    }
+  ],
+  "clips": [
+    {
+      "name": "LuciusSwordVerticalSouthWestV3_S",
+      "frames": [
+        "Redesign_LuciusSwordVerticalSouthWestV3_S_00",
+        "Redesign_LuciusSwordVerticalSouthWestV3_S_01",
+        "Redesign_LuciusSwordVerticalSouthWestV3_S_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "LuciusSwordVerticalSouthWestV3_SW",
+      "frames": [
+        "Redesign_LuciusSwordVerticalSouthWestV3_SW_00",
+        "Redesign_LuciusSwordVerticalSouthWestV3_SW_01",
+        "Redesign_LuciusSwordVerticalSouthWestV3_SW_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "LuciusSwordVerticalSouthWestV3_W",
+      "frames": [
+        "Redesign_LuciusSwordVerticalSouthWestV3_W_00",
+        "Redesign_LuciusSwordVerticalSouthWestV3_W_01",
+        "Redesign_LuciusSwordVerticalSouthWestV3_W_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "LuciusSwordVerticalSouthWestV3_NW",
+      "frames": [
+        "Redesign_LuciusSwordVerticalSouthWestV3_NW_00",
+        "Redesign_LuciusSwordVerticalSouthWestV3_NW_01",
+        "Redesign_LuciusSwordVerticalSouthWestV3_NW_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "quality": {
+    "alphaThreshold": 15
+  },
+  "pivotMethod": "opaque boot contact band, full figure extraction, no root travel or anatomy resampling"
+}

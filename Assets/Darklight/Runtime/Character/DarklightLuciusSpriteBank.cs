@@ -9,7 +9,7 @@ namespace Darklight
     [Serializable] public sealed class DarklightLuciusSpritePage
     {
         public string id,action,attackKey,resourcePath,imageSha256,sourceSha256,status;
-        public int direction;
+        public int direction,startupFrames,activeFrames;
         public int[] nativeSize,durationMs;
         public float pixelsPerUnit;
         public string[] spriteNames;
@@ -63,6 +63,10 @@ namespace Darklight
                 page.spriteNames==null||page.spriteNames.Length==0||page.durationMs?.Length!=page.spriteNames.Length)return false;
             // Attack identity is exact; other states cannot carry a technique key.
             if(page.action=="Attack"?!SwordKey(page.attackKey):!string.IsNullOrEmpty(page.attackKey))return false;
+            if(page.startupFrames<0||page.activeFrames<0)return false;
+            if(page.startupFrames!=0||page.activeFrames!=0)
+                if(page.action!="Attack"||page.startupFrames<1||page.activeFrames<1||
+                    page.startupFrames+page.activeFrames>=page.spriteNames.Length)return false;
             var names=new HashSet<string>(StringComparer.Ordinal);
             foreach(string name in page.spriteNames)
                 if(!Name(name)||!name.StartsWith("Redesign_Lucius",StringComparison.Ordinal)||!names.Add(name))return false;
@@ -135,17 +139,41 @@ namespace Darklight
         {
             sprite=null;fallback=false;
             if(!Action(action)||direction<0||direction>7)return false;
-            var catalog=LoadCatalog(appearance);if(catalog==null)return false;
-            for(int pass=0;pass<(action=="Idle"?1:2);pass++)foreach(var page in catalog.pages)
+            if(!TryActionPage(appearance,action,direction,attackKey,out var page))
             {
-                if(page.direction!=direction||page.action!=(pass==0?action:"Idle"))continue;
-                // Missing exact technique falls back to this appearance's Idle.
-                if(pass==0&&action=="Attack"&&page.attackKey!=attackKey)continue;
-                int frame=Frame(page,time,appearance);
-                if(frame<0||!Load(page))return false;
-                sprite=page.frames[frame];fallback=pass!=0;return true;
+                if(action=="Idle"||!TryActionPage(appearance,"Idle",direction,null,out page))return false;
+                fallback=true;
             }
+            int frame=Frame(page,time,appearance);
+            if(frame<0||!Load(page))return false;
+            sprite=page.frames[frame];return true;
+        }
+        // Exact availability is separate from the safe Idle fallback, so a
+        // missing action cannot be mistaken for an integrated animation.
+        public static bool TryActionPage(DarklightLuciusAppearance appearance,string action,int direction,string attackKey,out DarklightLuciusSpritePage page)
+        {
+            page=null;if(!Action(action)||direction<0||direction>7)return false;
+            var data=LoadCatalog(appearance);if(data==null)return false;
+            foreach(var candidate in data.pages)
+                if(candidate.action==action&&candidate.direction==direction&&
+                    (action!="Attack"||candidate.attackKey==attackKey)){page=candidate;return true;}
             return false;
+        }
+        // The authored contact frame must coincide with gameplay contact even
+        // when the equipped base changes startup, active or recovery duration.
+        public static float AttackTime(DarklightLuciusSpritePage page,AttackDefinition attack,float stateTime)
+        {
+            if(page==null||attack==null||page.startupFrames<1||page.activeFrames<1)return stateTime;
+            int start=0,end=page.startupFrames;float elapsed=stateTime,duration=attack.startup;
+            if(stateTime>=attack.startup)
+            {
+                start=end;end+=page.activeFrames;elapsed-=attack.startup;duration=attack.active;
+                if(stateTime>=attack.startup+attack.active)
+                {start=end;end=page.durationMs.Length;elapsed-=attack.active;duration=attack.recovery;}
+            }
+            int offset=0,span=0;
+            for(int i=0;i<end;i++){if(i<start)offset+=page.durationMs[i];else span+=page.durationMs[i];}
+            return (offset+Mathf.Clamp(duration>0?elapsed/duration:1,0,.99999f)*span)/1000f;
         }
         public static void ClearCache(){catalogs.Clear();attempted.Clear();sheets.Clear();}
     }

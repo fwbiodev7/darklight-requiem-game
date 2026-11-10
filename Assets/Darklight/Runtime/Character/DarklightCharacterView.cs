@@ -10,13 +10,12 @@ namespace Darklight
         bool rock,previewing;int previewForm;WeaponDefinition previewWeapon;
         SpriteRenderer display;CharacterAppearanceSystem appearance;DarklightOriginalVampireView originalForms;
         int trailSerial=-1;float nextTrail,airHeight;
-        Vector2 contactOffset;float contactUntil;
         public int ConfirmedContactPresentations{get;private set;}
         public void ConfirmContactPose(Vector2 facing)
         {
             ConfirmedContactPresentations++;
-            if(DarklightCampaign.Instance?.ReducedFlashes==true){contactUntil=0;return;}
-            contactOffset=facing.normalized*.055f;contactUntil=Time.unscaledTime+.14f;
+            // Contact effects may react, but the whole figure stays on the
+            // gameplay root. A hit must not push only the rendered character.
         }
         DarklightCombatTrail combatTrail;DarklightAbyssLocomotion abyssLocomotion;
         readonly DarklightLivingPresentation living=new();
@@ -62,17 +61,19 @@ namespace Darklight
             finally { previewing=false; }
         }
         public static int DirectionIndex(Vector2 direction)=>Mathf.RoundToInt(Mathf.Atan2(-direction.x,-direction.y)*Mathf.Rad2Deg/45f+8f)%8;
+        public static Vector3 SnapRenderPosition(Vector3 position)
+        {
+            var camera=DarklightCombatLab.Instance?.WorldCamera;
+            float grid=camera==null||camera.orthographicSize<=0?48f:
+                (camera.targetTexture!=null?camera.targetTexture.height:camera.pixelHeight>0?camera.pixelHeight:720f)/(camera.orthographicSize*2f);
+            return new Vector3(Mathf.Round(position.x*grid)/grid,Mathf.Round(position.y*grid)/grid,position.z);
+        }
         void LateUpdate()
         {
             if(display==null)return;
             if(display.transform!=transform)
             {
-            var camera=DarklightCombatLab.Instance?.WorldCamera;
-            float grid=camera==null?48f:(camera.targetTexture!=null?camera.targetTexture.height:720f)/(camera.orthographicSize*2f);
-            var p=transform.position;
-            if(DarklightCombatLab.Instance?.Paused!=true&&contactUntil>Time.unscaledTime)
-            {float t=(contactUntil-Time.unscaledTime)/.14f;p+=(Vector3)contactOffset*(t*t);}
-            display.transform.position=new Vector3(Mathf.Round(p.x*grid)/grid,Mathf.Round((p.y+airHeight)*grid)/grid,p.z);
+            display.transform.position=SnapRenderPosition(transform.position+Vector3.up*airHeight);
             }
             if(pendingParticleModel!=null)
             {
@@ -86,7 +87,7 @@ namespace Darklight
             int direction=DirectionIndex(model.Facing),skin=rock?1:0;
             var game=DarklightCampaign.Instance;var equipped=previewing?previewWeapon:game?.Weapons?.Equipped;int weapon=equipped==null?0:(int)equipped.id;
             bool ruinFists=weapon==2&&DarklightRuinFistsBank.Ready;
-            airHeight=!ruinFists&&model.State==CombatState.Attack&&model.Attack.kind==StrikeKind.Aerial?Mathf.Sin(Mathf.Clamp01(model.StateTime/model.Attack.Duration)*Mathf.PI)*.35f:0;
+            airHeight=0;
             if(!previewing&&game?.AbyssRider?.Active==true)airHeight+=game.AbyssRider.JumpHeight+game.AbyssRider.RunOverLift;
             if(!previewing&&GetComponent<DarklightFighter>()?.AirCombo is {Active:true} air)airHeight=air.Height;
             UsesMotorcyclePoseFallback=false;

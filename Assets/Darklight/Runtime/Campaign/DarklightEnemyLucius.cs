@@ -1,155 +1,202 @@
-﻿// DarklightEnemyLucius.cs
-// Candidata - NAO INTEGRAR antes de Fabius Normal + Gothic Eclipse + sprites aprovados.
-// Destino proposto: Assets/Darklight/Runtime/Campaign/DarklightEnemyLucius.cs
-//
-// Extensao partial de DarklightEnemy para comportamento melee de Lucius.
-// Substitui o comportamento ranged hardcoded para RequiemEnemyKind.Lucien.
-//
-// REGRAS:
-// - Nao le input de teclado/mouse/controle de Fabius.
-// - Nao acessa DarklightCampaign.weaponDefinitions nem loadout de Fabius.
-// - Usa apenas campos observaveis: posicao, estado do CombatModel, distancia, relogio.
-// - Janelas de reacao com atraso (reaction delay) configuravel; sem reacao perfeita.
-// - Loadout proprio via DarklightLuciusLoadout.Get().
-
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Darklight
 {
     public sealed partial class DarklightEnemy
     {
-        // -- Estado Lucius --
-        float luciusReactionDelay = 0.28f;  // janela justa: nao reage no mesmo frame
-        float luciusSpecialCooldown;
-        float luciusHeavyCooldown;
-        int   luciusComboStep;
-        bool  luciusMeleeReady;
-        float luciusDistancePreference = 2.0f; // distancia de engajamento preferida
+        public bool IsLucius { get; private set; }
+        public CombatModel CombatModel { get; private set; }
+        public DarklightLuciusView LuciusView { get; private set; }
+        public AttackDefinition CurrentLuciusAttack => CombatModel?.Attack;
+        int luciusAttackStep;
+        float luciusEngageRange = 1.85f;
 
-        bool IsLucius => kind == RequiemEnemyKind.Lucien;
-
-        // Chamado por DarklightEnemy.Update() antes da logica ranged.
-        // Retorna true se consumiu o tick; o enemy principal nao deve continuar.
-        bool TickLuciusBoss(DarklightCampaign game, DarklightCombatLab lab, float dt,
-            Vector2 delta, float distance)
+        public void InitializeLucius(CombatLoadout loadout = null, DarklightLuciusView view = null)
         {
-            if (!IsLucius) return false;
-
-            // Posicao da fase 2 registrada em DarklightEnemy.phaseTwo (campo existente).
-            float engageRange = phaseTwo ? luciusDistancePreference * 0.85f : luciusDistancePreference;
-
-            // -- Cooldowns proprios --
-            luciusHeavyCooldown  = Mathf.Max(0, luciusHeavyCooldown - dt);
-            luciusSpecialCooldown= Mathf.Max(0, luciusSpecialCooldown - dt);
-
-            // -- Movimento: controle de distancia --
-            if (state == 0 && stagger <= 0 && !Health.IsDead)
+            IsLucius = true;
+            if (view == null) view = GetComponent<DarklightLuciusView>() ?? gameObject.AddComponent<DarklightLuciusView>();
+            LuciusView = view;
+            if (loadout == null)
             {
-                bool tooFar  = distance > engageRange * 1.3f;
-                bool tooClose= distance < engageRange * 0.55f;
-                Vector2 desired;
-                float speed = phaseTwo ? 3.0f : 2.4f;
-
-                if (tooClose)
-                    desired = -delta.normalized * speed * 0.7f;
-                else if (tooFar)
-                    desired = delta.normalized * speed;
-                else
+                var game = DarklightCampaign.Instance;
+                if (game?.weaponDefinitions != null && game.weaponDefinitions.Length > 0 &&
+                    game.weaponDefinitions[0]?.loadout?.lights?.Length == 3)
                 {
-                    // Flanquear lateralmente para evitar filas
-                    float sideSign = ((int)(clock * 0.4f) % 2 == 0) ? 1f : -1f;
-                    var perp = new Vector2(-delta.normalized.y, delta.normalized.x) * sideSign;
-                    desired = (delta.normalized * 0.5f + perp * 0.5f).normalized * speed * 0.6f;
+                    loadout = DarklightLuciusCombatProfile.Create(game.weaponDefinitions[0].loadout.lights, _ => { });
                 }
+            }
+            if (loadout != null)
+            {
+                CombatModel = new CombatModel(loadout);
+            }
+            if (art != null) art.enabled = false;
+        }
 
-                bool sight = DarklightNavigation.Clear(body.position, lab.Player.transform.position);
-                if (!sight)
-                {
-                    if (repath <= 0)
-                    {
-                        DarklightNavigation.Instance?.FindPath(body.position,
-                            lab.Player.transform.position, route);
-                        repath = 0.4f;
-                    }
-                    while (route.Count > 0 && Vector2.Distance(body.position, route[0]) < 0.35f)
-                        route.RemoveAt(0);
-                    if (route.Count > 0) desired = (route[0] - body.position).normalized * speed;
-                }
+        public bool TickLucius(DarklightCampaign game, DarklightCombatLab lab, float dt)
+        {
+            if (!IsLucius || CombatModel == null) return false;
 
-                body.linearVelocity = DarklightNavigation.SlidingVelocity(body, desired, Time.fixedDeltaTime);
-                facing = delta.normalized;
-                Show(tooFar || tooClose ? 1 + (int)(clock * 12) % 2 : 0);
+            if (Health.IsDead)
+            {
+                warning?.Hide();
+                body.linearVelocity = Vector2.zero;
+                CombatModel.Hurt(true);
+                LuciusView?.Present(CombatModel, Vector2.zero);
+                return true;
             }
 
-            // -- Decisao de ataque --
-            if (state == 0 && stagger <= 0 && timer <= 0 && !Health.IsDead)
+            if (stagger > 0)
             {
-                bool inRange = distance <= engageRange * 1.15f;
-                bool sight   = DarklightNavigation.Clear(body.position, lab.Player.transform.position);
-                bool permit  = game.RequestAttack(this);
-                var  player  = lab.Player.Model;
+                warning?.Hide();
+                body.linearVelocity = Vector2.zero;
+                CombatModel.Hurt(false, stagger);
+                LuciusView?.Present(CombatModel, Vector2.zero);
+                return true;
+            }
 
-                // Reacao defensiva com atraso justo (nao perfeito)
-                bool playerAttacking = (player.State == CombatState.Attack || player.State == CombatState.Charging)
-                    && distance < (player.Attack?.range ?? 2f) + 1.0f;
-                if (playerAttacking)
+            var player = lab?.Player;
+            if (player == null) return false;
+
+            Vector2 playerPos = player.transform.position;
+            Vector2 delta = playerPos - body.position;
+            float distance = delta.magnitude;
+            Vector2 aim = delta.sqrMagnitude > 0.0001f ? delta.normalized : facing;
+            facing = aim;
+
+            float speed = (phaseTwo ? 2.8f : 2.2f) * (game?.DifficultyProfile.speed ?? 1f);
+
+            if (CombatModel.State == CombatState.Neutral)
+            {
+                warning?.Hide();
+                bool sight = DarklightNavigation.Clear(body.position, playerPos);
+                bool tooFar = distance > luciusEngageRange * 0.95f;
+                Vector2 desired = Vector2.zero;
+
+                if (tooFar)
                 {
-                    if (!luciusMeleeReady) { luciusMeleeReady = true; }
-                    // Aplica atraso de reacao
-                    if (clock < dodgeReadAt || dodgeReadAt < 0)
+                    if (!sight)
                     {
-                        if (dodgeReadAt < 0) dodgeReadAt = clock + luciusReactionDelay;
-                    }
-                    else if (clock >= dodgeReadAt && clock >= guardReady)
-                    {
-                        // Esquiva lateral contextual (boss nao guarda sempre)
-                        if (phaseTwo || serial % 3 == 0)
+                        if (repath <= 0)
                         {
-                            var side = new Vector2(-delta.normalized.y, delta.normalized.x) *
-                                       (serial % 2 == 0 ? 1f : -1f);
-                            DarklightNavigation.SafeStep(body, side * 0.7f);
-                            guardReady = clock + (phaseTwo ? 1.4f : 2.0f);
-                            timer = 0.25f; serial++;
+                            DarklightNavigation.Instance?.FindPath(body.position, playerPos, route);
+                            repath = 0.45f;
                         }
-                        dodgeReadAt = -1;
-                    }
-                }
-                else { luciusMeleeReady = false; dodgeReadAt = -1; }
-
-                // Escolha de tecnica
-                if (inRange && sight && permit)
-                {
-                    StrikeKind chosen;
-                    if (luciusSpecialCooldown <= 0 && (phaseTwo || serial % 5 == 4))
-                    {
-                        chosen = StrikeKind.Skill;
-                        luciusSpecialCooldown = DarklightLuciusLoadout.SpecialCooldown;
-                    }
-                    else if (luciusHeavyCooldown <= 0 && serial % 3 == 2)
-                    {
-                        chosen = StrikeKind.Heavy;
-                        luciusHeavyCooldown = DarklightLuciusLoadout.HeavyCooldown;
+                        while (route.Count > 0 && Vector2.Distance(body.position, route[0]) < 0.35f)
+                            route.RemoveAt(0);
+                        desired = route.Count > 0 ? (route[0] - body.position).normalized * speed : delta.normalized * speed;
                     }
                     else
                     {
-                        chosen = StrikeKind.Light;
+                        desired = delta.normalized * speed;
                     }
+                }
+                else if (distance < luciusEngageRange * 0.4f && sight)
+                {
+                    desired = -delta.normalized * (speed * 0.5f);
+                }
 
-                    float windup = chosen == StrikeKind.Skill ? DarklightLuciusLoadout.SpecialStartup :
-                                   chosen == StrikeKind.Heavy  ? DarklightLuciusLoadout.HeavyStartup   :
-                                   DarklightLuciusLoadout.ComboStartup;
-                    windup = Mathf.Max(0.32f, windup * game.DifficultyProfile.windup);
+                body.linearVelocity = DarklightNavigation.SlidingVelocity(body, desired, Time.fixedDeltaTime);
+                CombatModel.Tick(dt, new CombatInput { move = desired.normalized, aim = aim });
 
-                    state  = 1;
-                    timer  = this.windup = windup;
-                    locked = delta.normalized;
-                    body.linearVelocity = Vector2.zero;
-                    game.EnemyAudioWarning(this);
-                    serial++;
+                if (!tooFar && sight && timer <= 0 && (game == null || game.RequestAttack(this)))
+                {
+                    ExecuteLuciusAttack(luciusAttackStep, aim, game);
+                    luciusAttackStep = (luciusAttackStep + 1) % 3;
                 }
             }
+            else if (CombatModel.State == CombatState.Attack)
+            {
+                body.linearVelocity = Vector2.zero;
+                CombatModel.Tick(dt, new CombatInput { aim = aim });
 
-            return true; // consumiu o tick
+                var attack = CombatModel.Attack;
+                if (attack != null && CombatModel.StateTime < attack.startup)
+                {
+                    if (warning == null)
+                    {
+                        warning = GetComponentInChildren<DarklightAttackWarning>() ??
+                                  new GameObject("AvisoAtaqueLucius").AddComponent<DarklightAttackWarning>();
+                        warning.transform.SetParent(transform, false);
+                    }
+                    float progress = Mathf.Clamp01(CombatModel.StateTime / Mathf.Max(0.001f, attack.startup));
+                    warning.Show(body.position, CombatModel.Facing, attack.range, DarklightThreat.Parryable, progress);
+                }
+                else
+                {
+                    warning?.Hide();
+                }
+
+                if (CombatModel.ActiveThisTick)
+                {
+                    ResolveLuciusStrike(lab, game);
+                }
+
+                if (CombatModel.State == CombatState.Neutral)
+                {
+                    timer = (phaseTwo ? 0.35f : 0.6f) * (game?.DifficultyProfile.cooldown ?? 1f);
+                }
+            }
+            else
+            {
+                body.linearVelocity = Vector2.zero;
+                CombatModel.Tick(dt, default);
+            }
+
+            LuciusView?.Present(CombatModel, body.linearVelocity);
+            return true;
+        }
+
+        public void ExecuteLuciusAttack(int attackIndex, Vector2 aim, DarklightCampaign game = null)
+        {
+            if (CombatModel == null) return;
+            var loadout = CombatModel.Loadout;
+            if (loadout?.lights == null || loadout.lights.Length < 3) return;
+
+            int idx = Mathf.Clamp(attackIndex % 3, 0, 2);
+            var attack = loadout.lights[idx];
+
+            CombatModel.TriggerAttack(attack);
+            locked = aim;
+            game?.EnemyAudioWarning(this);
+            serial++;
+        }
+
+        public void ResolveLuciusStrike(DarklightCombatLab lab, DarklightCampaign game)
+        {
+            var player = lab?.Player;
+            if (player == null) return;
+            var combatant = player.GetComponent<DarklightCombatant>();
+            if (combatant == null || combatant.Health.IsDead) return;
+
+            Vector2 playerPos = player.transform.position;
+            Vector2 toPlayer = playerPos - body.position;
+            float distance = toPlayer.magnitude;
+            var attack = CombatModel?.Attack;
+            if (attack == null) return;
+
+            float maxRange = attack.range;
+            float maxAngle = attack.hitShape == HitShape.Sweep ? 85f :
+                             attack.hitShape == HitShape.Sector ? 60f : 35f;
+
+            bool inRange = distance <= maxRange;
+            bool inAngle = distance <= 0.3f || Vector2.Angle(CombatModel.Facing, toPlayer) <= maxAngle;
+            bool sight = DarklightNavigation.Clear(body.position, playerPos);
+
+            if (inRange && inAngle && sight)
+            {
+                if (CombatModel.RegisterHit(combatant))
+                {
+                    float damage = CombatModel.AttackDamage;
+                    if (game != null) damage += game.Progress.chapter * 1.5f;
+                    Vector2 force = toPlayer.sqrMagnitude > 0.001f ? toPlayer.normalized : CombatModel.Facing;
+                    bool received = combatant.Receive(damage, force * attack.knockback);
+                    if (received)
+                    {
+                        CombatModel.ConfirmHit();
+                        DarklightCombatFX.Impact(playerPos, attack.kind != StrikeKind.Light);
+                    }
+                }
+            }
         }
     }
 }

@@ -55,6 +55,13 @@ namespace Darklight
             foreach(var enemy in enemies)if(enemy!=null){enemy.gameObject.SetActive(false);Destroy(enemy.gameObject);}enemies.Clear();threats.Clear();
             TrainingPassive=type==0;
             var origin=Map.Spawn+Vector2.up*2.7f;
+            if(type==6)
+            {
+                var foe=SpawnLucius(origin);
+                if(TrainingPassive)foe.Health.SetMaxHealth(10000,false);
+                Close();
+                return;
+            }
             var kinds=type==0?new[]{RequiemEnemyKind.Hunter}:type==1?new[]{RequiemEnemyKind.Hunter}:type==2?new[]{RequiemEnemyKind.Armored}:type==3?new[]{RequiemEnemyKind.Shooter}:type==4?new[]{RequiemEnemyKind.Hunter,RequiemEnemyKind.Armored,RequiemEnemyKind.Shooter}:new[]{RequiemEnemyKind.Kael};
             for(int i=0;i<kinds.Length;i++){Spawn(kinds[i],origin+Vector2.right*(i-(kinds.Length-1)*.5f)*2.3f,type==4&&i==0);if(TrainingPassive)enemies[enemies.Count-1].Health.SetMaxHealth(10000,false);}
             Close();
@@ -80,7 +87,7 @@ namespace Darklight
         void BuildTrainingEnemies()
         {
             heading.text="ADVERSARIOS DO TREINO";bodyText.text="Alvo passivo para sequencias; inimigos ativos para praticar defesa, postura e pressao. Escolher outro encontro limpa o anterior.";
-            string[] labels={"ALVO PASSIVO","CACADOR","BLINDADO","ATIRADOR","GRUPO MISTO + ELITE","KAEL"};
+            string[] labels={"ALVO PASSIVO","CACADOR","BLINDADO","ATIRADOR","GRUPO MISTO + ELITE","KAEL","LUCIUS NORMAL"};
             for(int i=0;i<labels.Length;i++){int chosen=i;Button(labels[i],()=>SpawnTraining(chosen));}Button("VOLTAR",()=>Open("Training"));
         }
         void BuildTrainingForms()

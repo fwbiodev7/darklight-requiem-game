@@ -26,7 +26,7 @@ namespace Darklight
         public float SkillRemaining => Mathf.Max(0, skillReady - Clock);
         public float AttackDamage => Attack == null ? 0 : Attack.damage * (Attack.kind == StrikeKind.Heavy ? 1 + ComboCount * .15f : 1);
         CombatLoadout loadout;
-        internal CombatLoadout Loadout=>loadout;
+        public CombatLoadout Loadout=>loadout;
         int hitPulse=-1;float aerialReady,weaponSpecialReady;bool contactFinished;
         bool pendingAerial,pendingWeaponSpecial;
         public bool CanEquip=>State==CombatState.Neutral||(State==CombatState.Attack&&!ActiveThisTick&&StateTime>=Attack.startup+Attack.active+Attack.recovery*(AttackConnected?(FormStyle>=2?0:.08f):Attack.recoveryChainFraction));
@@ -169,6 +169,7 @@ namespace Darklight
         public bool RegisterHit(object target){bool hit=target != null && ActiveThisTick && struck.Add(target);if(hit)AttackConnected=true;return hit;}
         public bool RegisterPulseHit(object target,int pulse)=>target!=null&&ActiveThisTick&&(ContactPulses&(1u<<pulse))!=0&&pulseTargets[pulse].Add(target);
         public void ConfirmHit()=>AttackConnected=true;
+        public void TriggerAttack(AttackDefinition attack)=>BeginAttack(attack);
         // Contextual air moves obey the same committed contact and recovery windows.
         public bool TryAirFollowup(AttackDefinition next, CombatInput input)
         {

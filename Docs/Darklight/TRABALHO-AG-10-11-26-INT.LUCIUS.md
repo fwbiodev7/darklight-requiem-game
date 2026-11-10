@@ -59,17 +59,19 @@ O personagem **Lucius Normal** opera de forma independente do boss Lucien (Capí
 Executados via Unity Batchmode Test Runner (`-runTests -testPlatform editmode`).  
 **Resultado:** 11 de 11 testes aprovados (100% de sucesso).
 
-1. `Encounter_LuciusMaintainsDistinctIdentityFromLucien` — **Passed**
-2. `Encounter_LuciusBindsThreeSwordsProfileToCombatModel` — **Passed**
-3. `Encounter_AttackKeyDirectionAndClockMatchPhases` — **Passed**
-4. `Encounter_AnticipationActiveRecoveryPhasesExecuteInOrder` — **Passed**
-5. `Encounter_GuaranteesSingleHitRegistrationPerAttackAcrossTicks` — **Passed**
-6. `Encounter_HitboxRangeAndAngleEnforceLineOfSight` — **Passed**
-7. `Encounter_DefenseAndParryInterruptAttackFlow` — **Passed**
-8. `Encounter_DamageInterruptStaggersLucius` — **Passed**
-9. `Encounter_DeathHaltsCombatAndPresentation` — **Passed**
-10. `Encounter_NavigationClosesDistanceAndEvades` — **Passed**
-11. `Encounter_VisualPresentationFallsBackSafelyToIdle` — **Passed**
+1. `LuciusIdentityIsIndependentFromLucienBoss` — **Passed** (resultado informado na entrega original).
+2. `LuciusUsesExactlyThreeSwordAttacksFromCombatProfile` — **Passed** (resultado informado na entrega original).
+3. `AttackExecutionBindsKeyDirectionAndClock` — **Passed** (resultado informado na entrega original).
+4. `AttackLifecycleFollowsAnticipationImpactRecovery` — **Passed** (resultado informado na entrega original).
+5. `SingleHitDamageApplicationAppliesDamageOnlyOncePerAttack` — **Passed** (resultado informado na entrega original).
+6. `HitboxRespectsRangeAndAngle` — **Passed** (resultado informado na entrega original).
+7. `DamageInterruptsLuciusAttack` — **Passed** (resultado informado na entrega original).
+8. `DeathHaltsLuciusAndEntersDeadState` — **Passed** (resultado informado na entrega original).
+9. `DefenseInterruptionBlocksDamage` — **Passed** (resultado informado na entrega original).
+10. `NavigationFollowsPursuitAndFlanking` — **Passed** (resultado informado na entrega original).
+11. `SafeFallbackWhenTechniqueVisualNotImported` — **Passed** (resultado informado na entrega original).
+
+Os nomes acima correspondem aos métodos reais da fixture. `HitboxRespectsRangeAndAngle` verifica alcance e ângulo; não cria obstáculo nem comprova linha de visão. O runtime consulta `DarklightNavigation.Clear`, e a prova com parede é registrada separadamente na retomada técnica de 10/11.
 
 ### 3.2 Build Standalone Windows
 - Script de automação: `Assets/Darklight/Editor/DarklightLuciusTestBuild.cs`

@@ -112,3 +112,4 @@ Conforme as diretrizes, todos os assets de Lucius foram classificados em 5 estad
 1. **Geração Artística de SwordThrust:** Utilizar a nova referência canônica salva em `ArtSources/LuciusAttacks20261110/references/lucius-canonical-attacks-master-reference.png` para produzir as 8 direções de estocada com 3 quadros por direção.
 2. **Finalização da Caminhada (NW, N, NE, SE):** Concluir as 4 direções restantes de passada baixa e alternância estrita de membros.
 3. **Animação de Saque (Draw):** Revisar as 4 folhas candidatas existentes em `ArtSources/LuciusDraw20261110/candidates/` e selecionar a folha final para integração de transição Idle → Draw → Combat.
+

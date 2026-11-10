@@ -8,7 +8,7 @@ namespace Darklight
     public enum DarklightLuciusAppearance { Normal, Hooded }
     [Serializable] public sealed class DarklightLuciusSpritePage
     {
-        public string id,action,resourcePath,imageSha256,sourceSha256,status;
+        public string id,action,attackKey,resourcePath,imageSha256,sourceSha256,status;
         public int direction;
         public int[] nativeSize,durationMs;
         public float pixelsPerUnit;
@@ -46,6 +46,8 @@ namespace Darklight
         }
         static bool Action(string action)=>action=="Idle"||action=="Walk"||action=="Run"||
             action=="Attack"||action=="Charging"||action=="Dodge"||action=="Parry"||action=="Hurt"||action=="Dead";
+        static bool SwordKey(string key)=>key==DarklightLuciusCombatProfile.SwordHorizontal||
+            key==DarklightLuciusCombatProfile.SwordVertical||key==DarklightLuciusCombatProfile.SwordThrust;
         public static bool ValidPage(DarklightLuciusSpritePage page)
             =>ValidPage(page,DarklightLuciusAppearance.Normal);
         public static bool ValidPage(DarklightLuciusSpritePage page,DarklightLuciusAppearance appearance)
@@ -59,6 +61,8 @@ namespace Darklight
                 string.IsNullOrEmpty(page.resourcePath)||!page.resourcePath.StartsWith(root,StringComparison.Ordinal)||
                 !Name(page.resourcePath.Substring(root.Length))||
                 page.spriteNames==null||page.spriteNames.Length==0||page.durationMs?.Length!=page.spriteNames.Length)return false;
+            // Attack identity is exact; other states cannot carry a technique key.
+            if(page.action=="Attack"?!SwordKey(page.attackKey):!string.IsNullOrEmpty(page.attackKey))return false;
             var names=new HashSet<string>(StringComparer.Ordinal);
             foreach(string name in page.spriteNames)
                 if(!Name(name)||!name.StartsWith("Redesign_Lucius",StringComparison.Ordinal)||!names.Add(name))return false;
@@ -78,7 +82,7 @@ namespace Darklight
             var idle=new HashSet<int>();
             foreach(var page in data.pages)
             {
-                if(!ValidPage(page,appearance)||!ids.Add(page.id)||!contexts.Add(page.action+":"+page.direction))return false;
+                if(!ValidPage(page,appearance)||!ids.Add(page.id)||!contexts.Add(page.action+":"+page.direction+":"+(page.attackKey??"")))return false;
                 if(page.action=="Idle")idle.Add(page.direction);
             }
             // complete is descriptive only: even a claimed complete kit must
@@ -125,9 +129,9 @@ namespace Darklight
         }
         public static bool TryPose(string action,int direction,float time,out Sprite sprite)
             =>TryPose(action,direction,time,out sprite,out _);
-        public static bool TryPose(string action,int direction,float time,out Sprite sprite,out bool fallback)
-            =>TryPose(DarklightLuciusAppearance.Normal,action,direction,time,out sprite,out fallback);
-        public static bool TryPose(DarklightLuciusAppearance appearance,string action,int direction,float time,out Sprite sprite,out bool fallback)
+        public static bool TryPose(string action,int direction,float time,out Sprite sprite,out bool fallback,string attackKey=null)
+            =>TryPose(DarklightLuciusAppearance.Normal,action,direction,time,out sprite,out fallback,attackKey);
+        public static bool TryPose(DarklightLuciusAppearance appearance,string action,int direction,float time,out Sprite sprite,out bool fallback,string attackKey=null)
         {
             sprite=null;fallback=false;
             if(!Action(action)||direction<0||direction>7)return false;
@@ -135,6 +139,8 @@ namespace Darklight
             for(int pass=0;pass<(action=="Idle"?1:2);pass++)foreach(var page in catalog.pages)
             {
                 if(page.direction!=direction||page.action!=(pass==0?action:"Idle"))continue;
+                // Missing exact technique falls back to this appearance's Idle.
+                if(pass==0&&action=="Attack"&&page.attackKey!=attackKey)continue;
                 int frame=Frame(page,time,appearance);
                 if(frame<0||!Load(page))return false;
                 sprite=page.frames[frame];fallback=pass!=0;return true;

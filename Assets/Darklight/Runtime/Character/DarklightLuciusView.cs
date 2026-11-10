@@ -17,11 +17,12 @@ namespace Darklight
             if(model==null)return false;
             string action=DarklightWeaponRedesignBank.Action(model,movement);
             float time=model.State==CombatState.Neutral?model.Clock:model.StateTime;
-            return PresentPose(action,DarklightCharacterView.DirectionIndex(model.Facing),time);
+            return PresentPose(action,DarklightCharacterView.DirectionIndex(model.Facing),time,
+                action=="Attack"?model.Attack?.animationKey:null);
         }
-        public bool PresentPose(string action,int direction,float time)
+        public bool PresentPose(string action,int direction,float time,string attackKey=null)
         {
-            if(!DarklightLuciusSpriteBank.TryPose(appearance,action,direction,time,out var sprite,out bool fallback))return false;
+            if(!DarklightLuciusSpriteBank.TryPose(appearance,action,direction,time,out var sprite,out bool fallback,attackKey))return false;
             if(art==null)
             {
                 var child=new GameObject("LuciusVisual");child.transform.SetParent(transform,false);

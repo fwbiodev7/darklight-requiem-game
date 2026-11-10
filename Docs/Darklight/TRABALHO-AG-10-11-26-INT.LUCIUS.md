@@ -1,4 +1,4 @@
-# Relatório Técnico: DARKLIGHT: REQUIEM — X1 Fabius vs Lucius & Integração de Combate
+# TRABALHO-AG-10/11/26-INT.LUCIUS: DARKLIGHT: REQUIEM — X1 Fabius vs Lucius & Integração de Combate
 
 **Data:** 10/11/2026  
 **Branch:** `antigravity/lucius-combat-link-20261110`  

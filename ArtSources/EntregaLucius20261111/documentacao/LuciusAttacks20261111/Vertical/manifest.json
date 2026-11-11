@@ -1,0 +1,624 @@
+{
+  "schemaVersion": 1,
+  "characterId": "Lucius",
+  "form": "Normal",
+  "action": "Attack",
+  "attackKey": "SwordVertical",
+  "tool": "integrated imagegen",
+  "requestedSize": [
+    1536,
+    2048
+  ],
+  "statesSeparated": true,
+  "timingIntentMs": [
+    140,
+    120,
+    220
+  ],
+  "phaseFrames": [
+    1,
+    1,
+    1
+  ],
+  "timingSources": [
+    "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusSwordVerticalSouthWestV3.json",
+    "Assets/Darklight/Runtime/Combat/DarklightLuciusCombatProfile.cs"
+  ],
+  "runtimeNote": "Runtime remaps phase spans to existing authored AttackDefinition; no timing or gameplay edits performed.",
+  "references": [
+    {
+      "path": "Docs/Darklight/References/LuciusAttackReference20261110/Lucius_Attack_Reference_Primary_20261110.png",
+      "sha256": "a8d17c24cebb4a1dadccddc54983f17068803fe10014dcfb1b0840cbda8dde17",
+      "size": [
+        1024,
+        682
+      ]
+    },
+    {
+      "path": "ArtSources/LuciusNormal20261109/selected/LuciusNormalIdle8Final-source.png",
+      "sha256": "68947a7143047ed76221ef7038726fcc9fd3e9b8403727e697f6aee2e7cfb761",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordHorizontalEastSouthEastV3-source.png",
+      "sha256": "0197ed55c90d4a916b7bf7b6177643baa8daea6913ca3bdeb4615181327f5a37",
+      "size": [
+        1800,
+        1100
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "ArtSources/LuciusAttacks20261111/Vertical/LuciusSwordVerticalSouthWest20261111V1-wrong-directions.png",
+      "sha256": "2ab064d167b6ec6f8c07dd7bb7ece2f6302bb1706aa9dfd99286a5cfa2eba2ad",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nominalGrid": [
+        3,
+        4
+      ],
+      "nominalCellSize": [
+        362,
+        362
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 898366,
+      "status": "rejected-wrong-directions",
+      "sourcePixelsChanged": false,
+      "imported": false,
+      "runtimeVerified": false,
+      "issues": [
+        "Requested SW/W/NW were generated facing right. Not a selected delivery."
+      ],
+      "frames": [
+        {
+          "direction": "S",
+          "phase": "startup",
+          "index": 0,
+          "nominalRectTopLeft": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 140,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "S",
+          "phase": "active",
+          "index": 1,
+          "nominalRectTopLeft": [
+            362,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "S",
+          "phase": "recovery",
+          "index": 2,
+          "nominalRectTopLeft": [
+            724,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 220,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "SE",
+          "phase": "startup",
+          "index": 0,
+          "nominalRectTopLeft": [
+            0,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 140,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "SE",
+          "phase": "active",
+          "index": 1,
+          "nominalRectTopLeft": [
+            362,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "SE",
+          "phase": "recovery",
+          "index": 2,
+          "nominalRectTopLeft": [
+            724,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 220,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "E",
+          "phase": "startup",
+          "index": 0,
+          "nominalRectTopLeft": [
+            0,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 140,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "E",
+          "phase": "active",
+          "index": 1,
+          "nominalRectTopLeft": [
+            362,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "E",
+          "phase": "recovery",
+          "index": 2,
+          "nominalRectTopLeft": [
+            724,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 220,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "NE",
+          "phase": "startup",
+          "index": 0,
+          "nominalRectTopLeft": [
+            0,
+            1086,
+            362,
+            362
+          ],
+          "durationMs": 140,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "NE",
+          "phase": "active",
+          "index": 1,
+          "nominalRectTopLeft": [
+            362,
+            1086,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "NE",
+          "phase": "recovery",
+          "index": 2,
+          "nominalRectTopLeft": [
+            724,
+            1086,
+            362,
+            362
+          ],
+          "durationMs": 220,
+          "wholeFigureExtractionApproved": false
+        }
+      ]
+    },
+    {
+      "path": "ArtSources/LuciusAttacks20261111/Vertical/LuciusSwordVerticalSouthWest20261111V2-source.png",
+      "sha256": "17fbc2ded68c94dff1efb8e001862e03297c82ec96a27fe58d0a3949b059640d",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nominalGrid": [
+        3,
+        4
+      ],
+      "nominalCellSize": [
+        362,
+        362
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 940418,
+      "status": "candidate-visual-reviewed-with-blocker",
+      "sourcePixelsChanged": false,
+      "imported": false,
+      "runtimeVerified": false,
+      "issues": [
+        "SW active: steel blade points down-left but arc/impact remains on right. Requires whole-figure correction before full-sheet integration.",
+        "Active effects extend near or across nominal cell boundaries; nominal grid is not certified safe slicing.",
+        "NW retains substantial visible face in startup/recovery, although back coat is readable; verify direction during integration."
+      ],
+      "frames": [
+        {
+          "direction": "S",
+          "phase": "startup",
+          "index": 0,
+          "nominalRectTopLeft": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 140,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "S",
+          "phase": "active",
+          "index": 1,
+          "nominalRectTopLeft": [
+            362,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "S",
+          "phase": "recovery",
+          "index": 2,
+          "nominalRectTopLeft": [
+            724,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 220,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "SW",
+          "phase": "startup",
+          "index": 0,
+          "nominalRectTopLeft": [
+            0,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 140,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "SW",
+          "phase": "active",
+          "index": 1,
+          "nominalRectTopLeft": [
+            362,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "SW",
+          "phase": "recovery",
+          "index": 2,
+          "nominalRectTopLeft": [
+            724,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 220,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "W",
+          "phase": "startup",
+          "index": 0,
+          "nominalRectTopLeft": [
+            0,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 140,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "W",
+          "phase": "active",
+          "index": 1,
+          "nominalRectTopLeft": [
+            362,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "W",
+          "phase": "recovery",
+          "index": 2,
+          "nominalRectTopLeft": [
+            724,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 220,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "NW",
+          "phase": "startup",
+          "index": 0,
+          "nominalRectTopLeft": [
+            0,
+            1086,
+            362,
+            362
+          ],
+          "durationMs": 140,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "NW",
+          "phase": "active",
+          "index": 1,
+          "nominalRectTopLeft": [
+            362,
+            1086,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "NW",
+          "phase": "recovery",
+          "index": 2,
+          "nominalRectTopLeft": [
+            724,
+            1086,
+            362,
+            362
+          ],
+          "durationMs": 220,
+          "wholeFigureExtractionApproved": false
+        }
+      ]
+    },
+    {
+      "path": "ArtSources/LuciusAttacks20261111/Vertical/LuciusSwordVerticalNorthEast20261111V1-source.png",
+      "sha256": "5338a28272e1cf17c09eddec9d9123ad34364050d4a93b0bdd17420ffcda0268",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nominalGrid": [
+        3,
+        4
+      ],
+      "nominalCellSize": [
+        362,
+        362
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroPixels": 617885,
+      "status": "candidate-visual-reviewed-with-reservations",
+      "sourcePixelsChanged": false,
+      "imported": false,
+      "runtimeVerified": false,
+      "issues": [
+        "Active blue effects are broad and can overlap nominal cell limits. Whole figures remain visible; exact extraction rectangles require audit.",
+        "Generated size differs from prompt; retain source without resampling and calibrate PPU from body at integration."
+      ],
+      "frames": [
+        {
+          "direction": "N",
+          "phase": "startup",
+          "index": 0,
+          "nominalRectTopLeft": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 140,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "N",
+          "phase": "active",
+          "index": 1,
+          "nominalRectTopLeft": [
+            362,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "N",
+          "phase": "recovery",
+          "index": 2,
+          "nominalRectTopLeft": [
+            724,
+            0,
+            362,
+            362
+          ],
+          "durationMs": 220,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "NE",
+          "phase": "startup",
+          "index": 0,
+          "nominalRectTopLeft": [
+            0,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 140,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "NE",
+          "phase": "active",
+          "index": 1,
+          "nominalRectTopLeft": [
+            362,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "NE",
+          "phase": "recovery",
+          "index": 2,
+          "nominalRectTopLeft": [
+            724,
+            362,
+            362,
+            362
+          ],
+          "durationMs": 220,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "E",
+          "phase": "startup",
+          "index": 0,
+          "nominalRectTopLeft": [
+            0,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 140,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "E",
+          "phase": "active",
+          "index": 1,
+          "nominalRectTopLeft": [
+            362,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "E",
+          "phase": "recovery",
+          "index": 2,
+          "nominalRectTopLeft": [
+            724,
+            724,
+            362,
+            362
+          ],
+          "durationMs": 220,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "SE",
+          "phase": "startup",
+          "index": 0,
+          "nominalRectTopLeft": [
+            0,
+            1086,
+            362,
+            362
+          ],
+          "durationMs": 140,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "SE",
+          "phase": "active",
+          "index": 1,
+          "nominalRectTopLeft": [
+            362,
+            1086,
+            362,
+            362
+          ],
+          "durationMs": 120,
+          "wholeFigureExtractionApproved": false
+        },
+        {
+          "direction": "SE",
+          "phase": "recovery",
+          "index": 2,
+          "nominalRectTopLeft": [
+            724,
+            1086,
+            362,
+            362
+          ],
+          "durationMs": 220,
+          "wholeFigureExtractionApproved": false
+        }
+      ]
+    }
+  ],
+  "checkpointReason": "Coordinator reported weekly98% usage; no further generations after in-flight sheet completed.",
+  "pending": [
+    "Correct SW active full figure so blue arc terminates at actual forward-left steel tip.",
+    "Audit effect containment/extraction rectangles for both sheets before integration.",
+    "Calibrate body-based PPU and stable world-space foot pivots without changing source pixels.",
+    "Integrate/test only after blockers resolved; no Unity execution performed."
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "characterId": "Lucius",
+  "form": "Normal",
+  "action": "WalkArmed",
+  "status": "visual-reviewed",
+  "sourcePath": "ArtSources/LuciusWalkArmed20261111/W-E/LuciusWalkArmedWE20261111V1-source.png",
+  "sourceSha256": "dbe17031db4485c28ff34b4bc28a6c3d25512e826eba9b8bcee34617f1f60763",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "sourcePixelsChanged": false,
+  "wholeFigures": true,
+  "directions": [
+    "W",
+    "E"
+  ],
+  "timingIntentMs": [
+    140,
+    130,
+    140,
+    130
+  ],
+  "timingSource": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusWalkPages20261110.json (Walk precedent; WalkArmed runtime loop pending)",
+  "imported": false,
+  "runtimeVerified": false,
+  "references": [
+    {
+      "path": "ArtSources/LuciusNormal20261109/selected/LuciusNormalIdle8Final-source.png",
+      "sha256": "68947a7143047ed76221ef7038726fcc9fd3e9b8403727e697f6aee2e7cfb761",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordHorizontalEastSouthEastV3-source.png",
+      "sha256": "0197ed55c90d4a916b7bf7b6177643baa8daea6913ca3bdeb4615181327f5a37",
+      "size": [
+        1800,
+        1100
+      ]
+    },
+    {
+      "path": "ArtSources/LuciusAttacks20261110/references/lucius-canonical-attacks-master-reference.png",
+      "sha256": "a8d17c24cebb4a1dadccddc54983f17068803fe10014dcfb1b0840cbda8dde17",
+      "size": [
+        1024,
+        682
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "direction": "W",
+      "index": 0,
+      "phase": "contact-A",
+      "durationMs": 140,
+      "rectTopLeft": [
+        0,
+        0,
+        384,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        29,
+        70,
+        343,
+        449
+      ],
+      "headRegionBoundsLocal": [
+        160,
+        70,
+        285,
+        180
+      ]
+    },
+    {
+      "direction": "W",
+      "index": 1,
+      "phase": "passing-A",
+      "durationMs": 130,
+      "rectTopLeft": [
+        384,
+        0,
+        384,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        29,
+        70,
+        328,
+        448
+      ],
+      "headRegionBoundsLocal": [
+        160,
+        70,
+        285,
+        180
+      ]
+    },
+    {
+      "direction": "W",
+      "index": 2,
+      "phase": "contact-B",
+      "durationMs": 140,
+      "rectTopLeft": [
+        768,
+        0,
+        384,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        30,
+        70,
+        344,
+        449
+      ],
+      "headRegionBoundsLocal": [
+        160,
+        70,
+        285,
+        180
+      ]
+    },
+    {
+      "direction": "W",
+      "index": 3,
+      "phase": "passing-B",
+      "durationMs": 130,
+      "rectTopLeft": [
+        1152,
+        0,
+        384,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        29,
+        70,
+        336,
+        447
+      ],
+      "headRegionBoundsLocal": [
+        160,
+        70,
+        285,
+        180
+      ]
+    },
+    {
+      "direction": "E",
+      "index": 0,
+      "phase": "contact-A",
+      "durationMs": 140,
+      "rectTopLeft": [
+        0,
+        512,
+        384,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        54,
+        68,
+        370,
+        448
+      ],
+      "headRegionBoundsLocal": [
+        111,
+        68,
+        240,
+        180
+      ]
+    },
+    {
+      "direction": "E",
+      "index": 1,
+      "phase": "passing-A",
+      "durationMs": 130,
+      "rectTopLeft": [
+        384,
+        512,
+        384,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        67,
+        68,
+        370,
+        446
+      ],
+      "headRegionBoundsLocal": [
+        111,
+        68,
+        240,
+        180
+      ]
+    },
+    {
+      "direction": "E",
+      "index": 2,
+      "phase": "contact-B",
+      "durationMs": 140,
+      "rectTopLeft": [
+        768,
+        512,
+        384,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        55,
+        68,
+        371,
+        448
+      ],
+      "headRegionBoundsLocal": [
+        112,
+        68,
+        240,
+        180
+      ]
+    },
+    {
+      "direction": "E",
+      "index": 3,
+      "phase": "passing-B",
+      "durationMs": 130,
+      "rectTopLeft": [
+        1152,
+        512,
+        384,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        66,
+        68,
+        371,
+        446
+      ],
+      "headRegionBoundsLocal": [
+        112,
+        68,
+        240,
+        180
+      ]
+    }
+  ]
+}

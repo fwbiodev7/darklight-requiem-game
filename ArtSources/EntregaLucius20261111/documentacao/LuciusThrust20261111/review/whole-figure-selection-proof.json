@@ -1,0 +1,35 @@
+{
+  "operation": "select whole three-frame SW row only; no anatomy assembly or resampling",
+  "preservedSource": "candidates/S-SW-W-NW-v1-reserved.png",
+  "correctionSource": "candidates/S-SW-W-NW-v2-repair.png",
+  "preservedRows": [
+    0,
+    2,
+    3
+  ],
+  "replacedRows": [
+    1
+  ],
+  "size": [
+    1086,
+    1448
+  ],
+  "rowProof": [
+    {
+      "row": 0,
+      "sameAsSelectedSource": true
+    },
+    {
+      "row": 1,
+      "sameAsSelectedSource": true
+    },
+    {
+      "row": 2,
+      "sameAsSelectedSource": true
+    },
+    {
+      "row": 3,
+      "sameAsSelectedSource": true
+    }
+  ]
+}

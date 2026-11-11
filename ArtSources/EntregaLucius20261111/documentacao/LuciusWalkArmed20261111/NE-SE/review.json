@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "character": "Lucius",
+  "form": "Normal",
+  "action": "WalkArmed",
+  "directions": [
+    "NE",
+    "SE"
+  ],
+  "status": "visual-reviewed-under-user-tolerance",
+  "approvedByUserSpecifically": false,
+  "authorization": "Coordinator relayed user tolerance for minor walk pose differences and requested one new armed lot. No extra human approval requested.",
+  "tool": "integrated image_gen.imagegen",
+  "callsExecuted": 1,
+  "sourcePath": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusWalkArmed20261111\\NE-SE\\LuciusWalkArmedNESE20261111V1-source.png",
+  "sourceSha256": "9cae270767aad100c2b62eefd5e4f5f0dddd8ed537685a1e3ad226eef530c2e5",
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "requestedCellSize": [
+    384,
+    512
+  ],
+  "requestedBodyHeightPx": 412,
+  "wholeFigures": true,
+  "swordCount": 1,
+  "equipment": "single broad sword held low in both hands; no back sword",
+  "minorDifferencesAccepted": true,
+  "graveDefectsObserved": false,
+  "reviewLimit": "Static full-sheet visual inspection; no game/runtime or animation playback certification.",
+  "sourcePixelsModified": false,
+  "resampled": false,
+  "mirrored": false,
+  "anatomicalAssembly": false,
+  "references": [
+    {
+      "path": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusNormal20261109\\selected\\LuciusNormalIdle8Final-source.png",
+      "sha256": "68947a7143047ed76221ef7038726fcc9fd3e9b8403727e697f6aee2e7cfb761"
+    },
+    {
+      "path": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusAttacks20261110\\selected\\LuciusSwordHorizontalEastSouthEastV3-source.png",
+      "sha256": "0197ed55c90d4a916b7bf7b6177643baa8daea6913ca3bdeb4615181327f5a37"
+    }
+  ],
+  "phases": [
+    {
+      "direction": "NE",
+      "index": 0,
+      "phase": "contact-A",
+      "candidateWholeCellRect": [
+        0,
+        0,
+        384,
+        512
+      ],
+      "visualReview": "Three-quarter back upper-right, low guard and both arms connected coherently; near forearm partly occludes other hand. Low short step.",
+      "finalPivot": null
+    },
+    {
+      "direction": "NE",
+      "index": 1,
+      "phase": "passing-A",
+      "candidateWholeCellRect": [
+        384,
+        0,
+        384,
+        512
+      ],
+      "visualReview": "Back upper-right passing pose with planted boot and discreet bent opposite knee; no severe defect.",
+      "finalPivot": null
+    },
+    {
+      "direction": "NE",
+      "index": 2,
+      "phase": "contact-B",
+      "candidateWholeCellRect": [
+        768,
+        0,
+        384,
+        512
+      ],
+      "visualReview": "Back upper-right second contact candidate; subtle leg/boot-overlap difference accepted under current tolerance.",
+      "finalPivot": null
+    },
+    {
+      "direction": "NE",
+      "index": 3,
+      "phase": "passing-B",
+      "candidateWholeCellRect": [
+        1152,
+        0,
+        384,
+        512
+      ],
+      "visualReview": "Back upper-right second passing pose; arm/sword guard continuous; minor similarity to passing A accepted.",
+      "finalPivot": null
+    },
+    {
+      "direction": "SE",
+      "index": 0,
+      "phase": "contact-A",
+      "candidateWholeCellRect": [
+        0,
+        512,
+        384,
+        512
+      ],
+      "visualReview": "Front three-quarter lower-right, blue eyes/closed mouth, two hands on one sword in low guard, low step.",
+      "finalPivot": null
+    },
+    {
+      "direction": "SE",
+      "index": 1,
+      "phase": "passing-A",
+      "candidateWholeCellRect": [
+        384,
+        512,
+        384,
+        512
+      ],
+      "visualReview": "Front lower-right passing pose with planted boot and modest front foot lift, relaxed low knee.",
+      "finalPivot": null
+    },
+    {
+      "direction": "SE",
+      "index": 2,
+      "phase": "contact-B",
+      "candidateWholeCellRect": [
+        768,
+        512,
+        384,
+        512
+      ],
+      "visualReview": "Front lower-right second contact candidate with small thigh/shoe variation; minor gait similarity accepted.",
+      "finalPivot": null
+    },
+    {
+      "direction": "SE",
+      "index": 3,
+      "phase": "passing-B",
+      "candidateWholeCellRect": [
+        1152,
+        512,
+        384,
+        512
+      ],
+      "visualReview": "Front lower-right second passing pose with distinct front shoe angle, continuous grip and body axis.",
+      "finalPivot": null
+    }
+  ],
+  "alphaBins": {
+    "zero": 1017026,
+    "1to15": 97278,
+    "16to127": 15883,
+    "128to254": 442677,
+    "255": 0
+  },
+  "timingContext": {
+    "existingWalkDurationMs": [
+      140,
+      130,
+      140,
+      130
+    ],
+    "loopMs": 540,
+    "WalkArmedRuntimeTimingNotAuthoredHere": true
+  },
+  "rootMotion": "IN-PLACE requested. Root/pelvis pivot alignment must be verified by Antigravity; no controller/root code changed.",
+  "assetsEdited": false,
+  "imported": false,
+  "unityExecuted": false,
+  "runtimeVerified": false,
+  "pending": [
+    "Antigravity: real intact-figure rectangles and pivots, source hash preservation, import and controller-driven in-place travel validation. No further minor cosmetic regeneration needed."
+  ]
+}

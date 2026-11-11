@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "characterId": "Lucius",
+  "form": "Normal",
+  "action": "WalkArmed",
+  "directions": [
+    "S",
+    "SW"
+  ],
+  "sourceFile": "LuciusWalkArmedSSW20261111V1-source.png",
+  "sourceSha256": "408cdcee26215286f6d8734c82433485ba5b219d59aa6e7656b5aa947afb65bf",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "generatedRasterSize": [
+    1536,
+    1024
+  ],
+  "nativePixelGrid": "Not independently established; source generated at1536x1024",
+  "mode": "RGBA",
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "status": {
+    "candidate": true,
+    "visualReviewed": true,
+    "selected": true,
+    "imported": false,
+    "runtimeVerified": false,
+    "userVisualApproval": false
+  },
+  "integrationReadiness": "Candidate reviewed; subtle foot alternation requires focused loop inspection by coordinator; no Runtime changes",
+  "consumer": "Assets/Darklight/Runtime/Character/DarklightLuciusSpriteBank.cs",
+  "existingWalkDurationMs": [
+    140,
+    130,
+    140,
+    130
+  ],
+  "consumerLimitation": "Loop=true is currently rejected for WalkArmed by line75 validator; coordination must resolve before importing as loop",
+  "pixelsPerUnit": "Not assigned; coordinator must match body-height calibration, never blade bbox",
+  "frames": [
+    {
+      "direction": "S",
+      "index": 0,
+      "phaseIntent": "contactA",
+      "rectTopLeft": [
+        0,
+        0,
+        384,
+        512
+      ],
+      "durationMs": 140,
+      "provisionalBodyAnchorLocal": [
+        192,
+        452
+      ]
+    },
+    {
+      "direction": "S",
+      "index": 1,
+      "phaseIntent": "passingA",
+      "rectTopLeft": [
+        384,
+        0,
+        384,
+        512
+      ],
+      "durationMs": 130,
+      "provisionalBodyAnchorLocal": [
+        192,
+        452
+      ]
+    },
+    {
+      "direction": "S",
+      "index": 2,
+      "phaseIntent": "contactB",
+      "rectTopLeft": [
+        768,
+        0,
+        384,
+        512
+      ],
+      "durationMs": 140,
+      "provisionalBodyAnchorLocal": [
+        192,
+        452
+      ]
+    },
+    {
+      "direction": "S",
+      "index": 3,
+      "phaseIntent": "passingB",
+      "rectTopLeft": [
+        1152,
+        0,
+        384,
+        512
+      ],
+      "durationMs": 130,
+      "provisionalBodyAnchorLocal": [
+        192,
+        452
+      ]
+    },
+    {
+      "direction": "SW",
+      "index": 0,
+      "phaseIntent": "contactA",
+      "rectTopLeft": [
+        0,
+        512,
+        384,
+        512
+      ],
+      "durationMs": 140,
+      "provisionalBodyAnchorLocal": [
+        192,
+        452
+      ]
+    },
+    {
+      "direction": "SW",
+      "index": 1,
+      "phaseIntent": "passingA",
+      "rectTopLeft": [
+        384,
+        512,
+        384,
+        512
+      ],
+      "durationMs": 130,
+      "provisionalBodyAnchorLocal": [
+        192,
+        452
+      ]
+    },
+    {
+      "direction": "SW",
+      "index": 2,
+      "phaseIntent": "contactB",
+      "rectTopLeft": [
+        768,
+        512,
+        384,
+        512
+      ],
+      "durationMs": 140,
+      "provisionalBodyAnchorLocal": [
+        192,
+        452
+      ]
+    },
+    {
+      "direction": "SW",
+      "index": 3,
+      "phaseIntent": "passingB",
+      "rectTopLeft": [
+        1152,
+        512,
+        384,
+        512
+      ],
+      "durationMs": 130,
+      "provisionalBodyAnchorLocal": [
+        192,
+        452
+      ]
+    }
+  ],
+  "references": [
+    {
+      "Path": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusNormal20261109\\selected\\LuciusNormalIdle8Final-source.png",
+      "Hash": "68947A7143047ED76221EF7038726FCC9FD3E9B8403727E697F6AEE2E7CFB761"
+    },
+    {
+      "Path": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusAttacks20261110\\selected\\LuciusSwordHorizontalEastSouthEastV3-source.png",
+      "Hash": "0197ED55C90D4A916B7BF7B6177643BAA8DAEA6913CA3BDEB4615181327F5A37"
+    },
+    {
+      "Path": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusAttacks20261110\\references\\lucius-canonical-attacks-master-reference.png",
+      "Hash": "A8D17C24CEBB4A1DADCCDDC54983F17068803FE10014DCFB1B0840CBDA8DDE17"
+    }
+  ],
+  "sourcePixelsModified": false,
+  "previewFiles": [
+    "preview-S.gif",
+    "preview-SW.gif"
+  ],
+  "previewNote": "GIFs are derived full-cell inspection copies with GIF palette quantization; source PNG authoritative. Static phases inspected; no runtime or motion playback claimed."
+}

@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "character": "Lucius",
+  "form": "Normal",
+  "action": "Attack",
+  "attackKey": "SwordThrust",
+  "directions": [
+    "N",
+    "NE",
+    "E",
+    "SE"
+  ],
+  "status": "visual-reviewed-under-user-tolerance",
+  "approvedByUserSpecifically": false,
+  "tool": "integrated image_gen.imagegen",
+  "callsExecuted": 1,
+  "sourcePath": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusThrust20261111\\N-NE-E-SE\\LuciusSwordThrustNNEESE20261111V1-source.png",
+  "sourceSha256": "9fc7141fefd00a022d468582513ccd7680926df5c09dff7ad1821705f92b04ea",
+  "requestedSize": [
+    2048,
+    2048
+  ],
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "nativeResolutionPreserved": true,
+  "sourcePixelsModified": false,
+  "resampled": false,
+  "wholeFigures": true,
+  "anatomicalAssembly": false,
+  "mirrored": false,
+  "swordCount": 1,
+  "graveDefectsObserved": false,
+  "minorVariationAccepted": true,
+  "rootMotion": "No root motion authored; source support stance and baseline stable by static visual review. Controller alone must move root. Accurate root pivots/runtime verification delegated to Antigravity.",
+  "durationContextMs": [
+    140,
+    120,
+    220
+  ],
+  "startupFrames": 1,
+  "activeFrames": 1,
+  "durationContextExplanation": "Existing attacks use1startup/1active/1recovery nominal140/120/220ms; runtime AttackTime remaps to actual combat definition. No runtime timings changed here.",
+  "phases": [
+    {
+      "direction": "N",
+      "index": 0,
+      "phase": "startup",
+      "candidateWholeCellRect": [
+        0,
+        0,
+        418,
+        314
+      ],
+      "opaque128BoundsLocal": [
+        125,
+        41,
+        285,
+        305
+      ],
+      "visualReview": "Direct back; sword withdrawn beside right shoulder/chest, elbows bent, boots planted. Blade projects upward in perspective.",
+      "finalPivot": null
+    },
+    {
+      "direction": "N",
+      "index": 1,
+      "phase": "active",
+      "candidateWholeCellRect": [
+        418,
+        0,
+        418,
+        314
+      ],
+      "opaque128BoundsLocal": [
+        123,
+        12,
+        290,
+        305
+      ],
+      "visualReview": "Direct back; two-arm thrust projected image-up, bright blue point above head, opaque sparkle has12px canvas margin. Entire blade/tip retained; no sweep crescent.",
+      "finalPivot": null
+    },
+    {
+      "direction": "N",
+      "index": 2,
+      "phase": "recovery",
+      "candidateWholeCellRect": [
+        836,
+        0,
+        418,
+        314
+      ],
+      "opaque128BoundsLocal": [
+        117,
+        42,
+        319,
+        305
+      ],
+      "visualReview": "Direct back; hands draw toward waist into low guard, feet remain on same baseline; sword diagonal low-right.",
+      "finalPivot": null
+    },
+    {
+      "direction": "NE",
+      "index": 0,
+      "phase": "startup",
+      "candidateWholeCellRect": [
+        0,
+        314,
+        418,
+        313
+      ],
+      "opaque128BoundsLocal": [
+        107,
+        31,
+        298,
+        292
+      ],
+      "visualReview": "Back three-quarter upper-right, hands close to chest and point withdrawn, firm stance.",
+      "finalPivot": null
+    },
+    {
+      "direction": "NE",
+      "index": 1,
+      "phase": "active",
+      "candidateWholeCellRect": [
+        418,
+        314,
+        418,
+        313
+      ],
+      "opaque128BoundsLocal": [
+        100,
+        33,
+        343,
+        291
+      ],
+      "visualReview": "Back three-quarter upper-right axial arm/blade extension with small point sparkle; no duplicate sword.",
+      "finalPivot": null
+    },
+    {
+      "direction": "NE",
+      "index": 2,
+      "phase": "recovery",
+      "candidateWholeCellRect": [
+        836,
+        314,
+        418,
+        313
+      ],
+      "opaque128BoundsLocal": [
+        102,
+        31,
+        347,
+        291
+      ],
+      "visualReview": "Back three-quarter upper-right low recovery; same boot-support line and costume.",
+      "finalPivot": null
+    },
+    {
+      "direction": "E",
+      "index": 0,
+      "phase": "startup",
+      "candidateWholeCellRect": [
+        0,
+        627,
+        418,
+        313
+      ],
+      "opaque128BoundsLocal": [
+        87,
+        19,
+        312,
+        285
+      ],
+      "visualReview": "Right profile, compact ready position, point forward close to flank/chest, both hands on handle.",
+      "finalPivot": null
+    },
+    {
+      "direction": "E",
+      "index": 1,
+      "phase": "active",
+      "candidateWholeCellRect": [
+        418,
+        627,
+        418,
+        313
+      ],
+      "opaque128BoundsLocal": [
+        76,
+        20,
+        391,
+        285
+      ],
+      "visualReview": "Right profile two-handed horizontal axial thrust, forward knee bent and rear leg extended in planted stance; tight tip sparkle.",
+      "finalPivot": null
+    },
+    {
+      "direction": "E",
+      "index": 2,
+      "phase": "recovery",
+      "candidateWholeCellRect": [
+        836,
+        627,
+        418,
+        313
+      ],
+      "opaque128BoundsLocal": [
+        93,
+        19,
+        332,
+        285
+      ],
+      "visualReview": "Right profile withdrawal/low guard, boots maintain support baseline.",
+      "finalPivot": null
+    },
+    {
+      "direction": "SE",
+      "index": 0,
+      "phase": "startup",
+      "candidateWholeCellRect": [
+        0,
+        940,
+        418,
+        314
+      ],
+      "opaque128BoundsLocal": [
+        100,
+        23,
+        300,
+        291
+      ],
+      "visualReview": "Front three-quarter lower-right, face/blue eyes and closed mouth preserved; point withdrawn with foreshortening.",
+      "finalPivot": null
+    },
+    {
+      "direction": "SE",
+      "index": 1,
+      "phase": "active",
+      "candidateWholeCellRect": [
+        418,
+        940,
+        418,
+        314
+      ],
+      "opaque128BoundsLocal": [
+        87,
+        26,
+        354,
+        291
+      ],
+      "visualReview": "Front lower-right two-handed axial extension with blue point sparkle, coherent shoulder-arm-blade line.",
+      "finalPivot": null
+    },
+    {
+      "direction": "SE",
+      "index": 2,
+      "phase": "recovery",
+      "candidateWholeCellRect": [
+        836,
+        940,
+        418,
+        314
+      ],
+      "opaque128BoundsLocal": [
+        96,
+        25,
+        320,
+        291
+      ],
+      "visualReview": "Front lower-right low diagonal guard, same adult compact proportions/stance.",
+      "finalPivot": null
+    }
+  ],
+  "references": [
+    {
+      "path": "C:\\Users\\Usuario\\darklight-requiem-game\\Docs\\Darklight\\References\\LuciusAttackReference20261110\\Lucius_Attack_Reference_Primary_20261110.png",
+      "sha256": "a8d17c24cebb4a1dadccddc54983f17068803fe10014dcfb1b0840cbda8dde17"
+    },
+    {
+      "path": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusNormal20261109\\selected\\LuciusNormalIdle8Final-source.png",
+      "sha256": "68947a7143047ed76221ef7038726fcc9fd3e9b8403727e697f6aee2e7cfb761"
+    },
+    {
+      "path": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusAttacks20261110\\selected\\LuciusSwordHorizontalEastSouthEastV3-source.png",
+      "sha256": "0197ed55c90d4a916b7bf7b6177643baa8daea6913ca3bdeb4615181327f5a37"
+    }
+  ],
+  "alphaBins": {
+    "zero": 1146844,
+    "1to15": 79407,
+    "16to127": 16063,
+    "128to254": 329215,
+    "255": 987
+  },
+  "alphaReview": "Native low-alpha magenta edge/fringe preserved. No source thresholding, alpha cleanup, palette modification or whole-figure repaint. Gray preview is QA composition only.",
+  "assetsEdited": false,
+  "imported": false,
+  "unityExecuted": false,
+  "runtimeVerified": false,
+  "pending": [
+    "Antigravity: measure whole-figure rectangles/support pivots and validate root stability without translating actor from animation.",
+    "Antigravity: preserve native1254x1254 source RGBA and calibrate pixel density from anatomy, no resampling or PPU changes to hide anatomy defects.",
+    "Antigravity: attach gameplay phases using existing attack definition and check startup/contact/recovery in consumer; no new technical test performed in art scope."
+  ]
+}

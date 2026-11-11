@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 1,
+  "character": "Lucius",
+  "form": "Normal",
+  "action": "Walk",
+  "equipment": "sword sheathed on back; empty hands",
+  "directions": [
+    "NE",
+    "SE"
+  ],
+  "status": "approved-by-user-art-only",
+  "importReady": false,
+  "attempts": 2,
+  "tool": "integrated image_gen.imagegen",
+  "scope": "ArtSources/LuciusWalk20261111/NE-SE only",
+  "requestedCellSize": [
+    384,
+    512
+  ],
+  "requestedBodyHeightPx": 412,
+  "durationMs": [
+    140,
+    130,
+    140,
+    130
+  ],
+  "loopMs": 540,
+  "rootMotion": "none requested; not runtime verified",
+  "references": [
+    {
+      "path": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusNormal20261109\\selected\\LuciusNormalIdle8Final-source.png",
+      "sha256": "68947a7143047ed76221ef7038726fcc9fd3e9b8403727e697f6aee2e7cfb761"
+    },
+    {
+      "path": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusWalk20261110\\references\\user-walk-20261110.png",
+      "sha256": "907f14fd6a70f44c8f97f0e61828a188a6b06888b7ad12a0d7de86fe63ec2857"
+    },
+    {
+      "path": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusWalk20261110\\sources\\NE_N-natural-v6.png",
+      "sha256": "fa2b385bf3c01b5c5860a4316fbf9a0ea6dcd4351ec16e6d09c3b7441b5476fe"
+    }
+  ],
+  "candidates": [
+    {
+      "path": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusWalk20261111\\NE-SE\\candidate-v1.png",
+      "sha256": "98d2088c97d0718cf0d155115b97e879b993a68eabd5d93c50038f385a0eb209",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaZero": 1108862,
+      "alpha1to15": 64998,
+      "alpha16to127": 14374,
+      "alpha128to254": 384630,
+      "alpha255": 0,
+      "status": "selected-approved-by-user-art-only",
+      "phases": [
+        {
+          "direction": "NE",
+          "index": 0,
+          "phase": "contact-A",
+          "candidateCellRect": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "wholeFigure": true,
+          "historicalAuditObservation": "Complete back three-quarter NE, low contact silhouette; use only as candidate contact A. Opposite contact not demonstrated in col3.",
+          "currentVisualDisposition": "Accepted by explicit user feedback for displayed walking batch; do not regenerate for prior minor gait concerns."
+        },
+        {
+          "direction": "NE",
+          "index": 1,
+          "phase": "passing-A",
+          "candidateCellRect": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "wholeFigure": true,
+          "historicalAuditObservation": "Complete NE passing A candidate; weight-bearing foreground boot is readable. Validate actual support with opposite passing phase.",
+          "currentVisualDisposition": "Accepted by explicit user feedback for displayed walking batch; do not regenerate for prior minor gait concerns."
+        },
+        {
+          "direction": "NE",
+          "index": 2,
+          "phase": "contact-B",
+          "candidateCellRect": [
+            768,
+            0,
+            384,
+            512
+          ],
+          "wholeFigure": true,
+          "historicalAuditObservation": "Contact B repeats the foreground lower-left boot/trailing silhouette from contact A. Anatomical leg alternation is not reliable; redraw whole figure.",
+          "currentVisualDisposition": "Accepted by explicit user feedback for displayed walking batch; do not regenerate for prior minor gait concerns."
+        },
+        {
+          "direction": "NE",
+          "index": 3,
+          "phase": "passing-B",
+          "candidateCellRect": [
+            1152,
+            0,
+            384,
+            512
+          ],
+          "wholeFigure": true,
+          "historicalAuditObservation": "V2 passing B retains similar planted/lifted boot relation as passing A, unlike requested opposite support; redraw whole figure.",
+          "currentVisualDisposition": "Accepted by explicit user feedback for displayed walking batch; do not regenerate for prior minor gait concerns."
+        },
+        {
+          "direction": "SE",
+          "index": 0,
+          "phase": "contact-A",
+          "candidateCellRect": [
+            0,
+            512,
+            384,
+            512
+          ],
+          "wholeFigure": true,
+          "historicalAuditObservation": "Complete front three-quarter SE, face and costume consistent, low step. Candidate contact A.",
+          "currentVisualDisposition": "Accepted by explicit user feedback for displayed walking batch; do not regenerate for prior minor gait concerns."
+        },
+        {
+          "direction": "SE",
+          "index": 1,
+          "phase": "passing-A",
+          "candidateCellRect": [
+            384,
+            512,
+            384,
+            512
+          ],
+          "wholeFigure": true,
+          "historicalAuditObservation": "Complete SE passing A, supporting foreground boot near vertical, trailing boot visible. Candidate only pending opposite phase.",
+          "currentVisualDisposition": "Accepted by explicit user feedback for displayed walking batch; do not regenerate for prior minor gait concerns."
+        },
+        {
+          "direction": "SE",
+          "index": 2,
+          "phase": "contact-B",
+          "candidateCellRect": [
+            768,
+            512,
+            384,
+            512
+          ],
+          "wholeFigure": true,
+          "historicalAuditObservation": "Contact B retains same leading screen-right boot as contact A; redraw whole figure with other anatomical leg leading and opposite arm.",
+          "currentVisualDisposition": "Accepted by explicit user feedback for displayed walking batch; do not regenerate for prior minor gait concerns."
+        },
+        {
+          "direction": "SE",
+          "index": 3,
+          "phase": "passing-B",
+          "candidateCellRect": [
+            1152,
+            512,
+            384,
+            512
+          ],
+          "wholeFigure": true,
+          "historicalAuditObservation": "V2 passing B extends screen-right boot forward rather than a clear opposite foot passing under pelvis; phase identity remains ambiguous; redraw whole figure.",
+          "currentVisualDisposition": "Accepted by explicit user feedback for displayed walking batch; do not regenerate for prior minor gait concerns."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusWalk20261111\\NE-SE\\candidate-v2.png",
+      "sha256": "fe58b2fee31218876c5e2d239c47f650edee48bbc5fc0f986a1dda9d3d7de5f4",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaZero": 1110399,
+      "alpha1to15": 59327,
+      "alpha16to127": 10958,
+      "alpha128to254": 392179,
+      "alpha255": 1,
+      "status": "superseded-candidate-preserved",
+      "phases": [
+        {
+          "direction": "NE",
+          "index": 0,
+          "phase": "contact-A",
+          "candidateCellRect": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "wholeFigure": true,
+          "historicalAuditObservation": "Complete back three-quarter NE, low contact silhouette; use only as candidate contact A. Opposite contact not demonstrated in col3.",
+          "currentVisualDisposition": "Accepted by explicit user feedback for displayed walking batch; do not regenerate for prior minor gait concerns."
+        },
+        {
+          "direction": "NE",
+          "index": 1,
+          "phase": "passing-A",
+          "candidateCellRect": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "wholeFigure": true,
+          "historicalAuditObservation": "Complete NE passing A candidate; weight-bearing foreground boot is readable. Validate actual support with opposite passing phase.",
+          "currentVisualDisposition": "Accepted by explicit user feedback for displayed walking batch; do not regenerate for prior minor gait concerns."
+        },
+        {
+          "direction": "NE",
+          "index": 2,
+          "phase": "contact-B",
+          "candidateCellRect": [
+            768,
+            0,
+            384,
+            512
+          ],
+          "wholeFigure": true,
+          "historicalAuditObservation": "Contact B repeats the foreground lower-left boot/trailing silhouette from contact A. Anatomical leg alternation is not reliable; redraw whole figure.",
+          "currentVisualDisposition": "Accepted by explicit user feedback for displayed walking batch; do not regenerate for prior minor gait concerns."
+        },
+        {
+          "direction": "NE",
+          "index": 3,
+          "phase": "passing-B",
+          "candidateCellRect": [
+            1152,
+            0,
+            384,
+            512
+          ],
+          "wholeFigure": true,
+          "historicalAuditObservation": "V2 passing B retains similar planted/lifted boot relation as passing A, unlike requested opposite support; redraw whole figure.",
+          "currentVisualDisposition": "Accepted by explicit user feedback for displayed walking batch; do not regenerate for prior minor gait concerns."
+        },
+        {
+          "direction": "SE",
+          "index": 0,
+          "phase": "contact-A",
+          "candidateCellRect": [
+            0,
+            512,
+            384,
+            512
+          ],
+          "wholeFigure": true,
+          "historicalAuditObservation": "Complete front three-quarter SE, face and costume consistent, low step. Candidate contact A.",
+          "currentVisualDisposition": "Accepted by explicit user feedback for displayed walking batch; do not regenerate for prior minor gait concerns."
+        },
+        {
+          "direction": "SE",
+          "index": 1,
+          "phase": "passing-A",
+          "candidateCellRect": [
+            384,
+            512,
+            384,
+            512
+          ],
+          "wholeFigure": true,
+          "historicalAuditObservation": "Complete SE passing A, supporting foreground boot near vertical, trailing boot visible. Candidate only pending opposite phase.",
+          "currentVisualDisposition": "Accepted by explicit user feedback for displayed walking batch; do not regenerate for prior minor gait concerns."
+        },
+        {
+          "direction": "SE",
+          "index": 2,
+          "phase": "contact-B",
+          "candidateCellRect": [
+            768,
+            512,
+            384,
+            512
+          ],
+          "wholeFigure": true,
+          "historicalAuditObservation": "Contact B retains same leading screen-right boot as contact A; redraw whole figure with other anatomical leg leading and opposite arm.",
+          "currentVisualDisposition": "Accepted by explicit user feedback for displayed walking batch; do not regenerate for prior minor gait concerns."
+        },
+        {
+          "direction": "SE",
+          "index": 3,
+          "phase": "passing-B",
+          "candidateCellRect": [
+            1152,
+            512,
+            384,
+            512
+          ],
+          "wholeFigure": true,
+          "historicalAuditObservation": "V2 passing B extends screen-right boot forward rather than a clear opposite foot passing under pelvis; phase identity remains ambiguous; redraw whole figure.",
+          "currentVisualDisposition": "Accepted by explicit user feedback for displayed walking batch; do not regenerate for prior minor gait concerns."
+        }
+      ]
+    }
+  ],
+  "preservation": "Selected source is byte-identical to candidate-v1. All candidates and prompts preserved. V2 modified every cell despite preservation request; no mixed-source cell assembly performed.",
+  "assetsEdited": false,
+  "unityExecuted": false,
+  "runtimeVerified": false,
+  "alphaReview": "Native PNGs have true alpha0 background. Inline tool rendering shows hidden RGB gradients; do not infer opacity from that. Low-alpha fringe remains and needs review on consumer. No threshold cleanup or source pixel alteration performed.",
+  "pending": [
+    "Antigravity: inspect real whole-figure rects and pelvis/support pivots, do not assume requested cell centre is a final pivot.",
+    "Antigravity: import existing approved whole-figure source without pixel modification; preserve gameplay timings and controller-driven travel.",
+    "Antigravity: verify looping/renderer root stability in consumer. No further cosmetic regeneration requested."
+  ],
+  "approvedByUser": true,
+  "approvalDate": "2026-11-11",
+  "approvalEvidence": "Coordinator relayed explicit user instruction: aprovado essa parte ai q vc disse q ficou ineqivoca ficou bom n precisa ficar criando a mesma coisa por erros minimos e q ngm vai perceber",
+  "approvalScope": "Visual walk batch only. User accepted the displayed walking motion and instructed stopping repeated cosmetic corrections. Does not imply Unity import or runtime verification.",
+  "selectedSource": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusWalk20261111\\NE-SE\\LuciusWalkNESE20261111V1-source.png",
+  "selectedSha256": "98d2088c97d0718cf0d155115b97e879b993a68eabd5d93c50038f385a0eb209",
+  "selectionReason": "V1 preserves the more natural passing-B shoe motion; V2 extends the SE passing shoe farther forward. Selected original copied byte-for-byte, no pixel processing.",
+  "thirdPromptWrittenButNotExecuted": true,
+  "furtherArtCorrectionsRequired": false,
+  "importReadinessReason": "Art approved; actual slicing, pivots, import and runtime/root stability delegated to Antigravity and not performed in this art scope."
+}

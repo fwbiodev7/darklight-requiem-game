@@ -1,0 +1,536 @@
+{
+  "schemaVersion": 1,
+  "characterId": "Lucius",
+  "form": "Normal",
+  "action": "Attack",
+  "attackKey": "SwordHorizontal",
+  "sourceRequestedSize": [
+    2048,
+    2048
+  ],
+  "actualGeneratedSize": [
+    1254,
+    1254
+  ],
+  "nativePixelGrid": "Not independently established; no resizing of1254x1254 source",
+  "layout": "3columns4rows; actual integer boundaries recorded perframe",
+  "timingsMs": [
+    140,
+    120,
+    220
+  ],
+  "startupFrames": 1,
+  "activeFrames": 1,
+  "loop": false,
+  "status": {
+    "candidate": true,
+    "visualReviewed": true,
+    "selected": true,
+    "imported": false,
+    "runtimeVerified": false,
+    "userVisualApproval": false
+  },
+  "sourcePixelsModified": false,
+  "generationCount": 3,
+  "generationReason": "InitialA then one severe direction correctionA; oneB. No minor-defect regeneration.",
+  "references": [
+    {
+      "Path": "C:\\Users\\Usuario\\darklight-requiem-game\\Docs\\Darklight\\References\\LuciusAttackReference20261110\\Lucius_Attack_Reference_Primary_20261110.png",
+      "Hash": "A8D17C24CEBB4A1DADCCDDC54983F17068803FE10014DCFB1B0840CBDA8DDE17"
+    },
+    {
+      "Path": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusNormal20261109\\selected\\LuciusNormalIdle8Final-source.png",
+      "Hash": "68947A7143047ED76221EF7038726FCC9FD3E9B8403727E697F6AEE2E7CFB761"
+    },
+    {
+      "Path": "C:\\Users\\Usuario\\darklight-requiem-game\\ArtSources\\LuciusAttacks20261110\\selected\\LuciusSwordHorizontalEastSouthEastV3-source.png",
+      "Hash": "0197ED55C90D4A916B7BF7B6177643BAA8DAEA6913CA3BDEB4615181327F5A37"
+    }
+  ],
+  "sheets": [
+    {
+      "sourceFile": "LuciusSwordHorizontalS-SW-W-NW20261111V2-source.png",
+      "sha256": "96e977da49de075fcb34932058be02aa058e7b96fed4d65427394b5a8ccd433f",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "directions": [
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ],
+      "frames": [
+        {
+          "direction": "S",
+          "phase": "startup",
+          "sourceRectTopLeft": [
+            0,
+            0,
+            418,
+            314
+          ],
+          "durationMs": 140,
+          "alpha128LocalBounds": [
+            78,
+            12,
+            353,
+            305
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "S",
+          "phase": "active",
+          "sourceRectTopLeft": [
+            418,
+            0,
+            418,
+            314
+          ],
+          "durationMs": 120,
+          "alpha128LocalBounds": [
+            48,
+            15,
+            386,
+            305
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "S",
+          "phase": "recovery",
+          "sourceRectTopLeft": [
+            836,
+            0,
+            418,
+            314
+          ],
+          "durationMs": 220,
+          "alpha128LocalBounds": [
+            59,
+            15,
+            296,
+            305
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "SW",
+          "phase": "startup",
+          "sourceRectTopLeft": [
+            0,
+            314,
+            418,
+            313
+          ],
+          "durationMs": 140,
+          "alpha128LocalBounds": [
+            94,
+            16,
+            383,
+            296
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "SW",
+          "phase": "active",
+          "sourceRectTopLeft": [
+            418,
+            314,
+            418,
+            313
+          ],
+          "durationMs": 120,
+          "alpha128LocalBounds": [
+            32,
+            18,
+            378,
+            296
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "SW",
+          "phase": "recovery",
+          "sourceRectTopLeft": [
+            836,
+            314,
+            418,
+            313
+          ],
+          "durationMs": 220,
+          "alpha128LocalBounds": [
+            14,
+            16,
+            296,
+            296
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "W",
+          "phase": "startup",
+          "sourceRectTopLeft": [
+            0,
+            627,
+            418,
+            314
+          ],
+          "durationMs": 140,
+          "alpha128LocalBounds": [
+            68,
+            2,
+            382,
+            288
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "W",
+          "phase": "active",
+          "sourceRectTopLeft": [
+            418,
+            627,
+            418,
+            314
+          ],
+          "durationMs": 120,
+          "alpha128LocalBounds": [
+            13,
+            3,
+            359,
+            288
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "W",
+          "phase": "recovery",
+          "sourceRectTopLeft": [
+            836,
+            627,
+            418,
+            314
+          ],
+          "durationMs": 220,
+          "alpha128LocalBounds": [
+            1,
+            2,
+            291,
+            288
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "NW",
+          "phase": "startup",
+          "sourceRectTopLeft": [
+            0,
+            941,
+            418,
+            313
+          ],
+          "durationMs": 140,
+          "alpha128LocalBounds": [
+            83,
+            2,
+            368,
+            288
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "NW",
+          "phase": "active",
+          "sourceRectTopLeft": [
+            418,
+            941,
+            418,
+            313
+          ],
+          "durationMs": 120,
+          "alpha128LocalBounds": [
+            9,
+            2,
+            418,
+            288
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "NW",
+          "phase": "recovery",
+          "sourceRectTopLeft": [
+            836,
+            941,
+            418,
+            313
+          ],
+          "durationMs": 220,
+          "alpha128LocalBounds": [
+            0,
+            1,
+            279,
+            289
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        }
+      ]
+    },
+    {
+      "sourceFile": "LuciusSwordHorizontalN-NE-E-SE20261111V1-source.png",
+      "sha256": "d0a617f8d79ecd769f3a04b6a7f64dc44c3d98d5bf7fced215e1ed2245ee147e",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "directions": [
+        "N",
+        "NE",
+        "E",
+        "SE"
+      ],
+      "frames": [
+        {
+          "direction": "N",
+          "phase": "startup",
+          "sourceRectTopLeft": [
+            0,
+            0,
+            418,
+            314
+          ],
+          "durationMs": 140,
+          "alpha128LocalBounds": [
+            76,
+            24,
+            323,
+            291
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "N",
+          "phase": "active",
+          "sourceRectTopLeft": [
+            418,
+            0,
+            418,
+            314
+          ],
+          "durationMs": 120,
+          "alpha128LocalBounds": [
+            60,
+            25,
+            359,
+            291
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "N",
+          "phase": "recovery",
+          "sourceRectTopLeft": [
+            836,
+            0,
+            418,
+            314
+          ],
+          "durationMs": 220,
+          "alpha128LocalBounds": [
+            93,
+            25,
+            325,
+            291
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "NE",
+          "phase": "startup",
+          "sourceRectTopLeft": [
+            0,
+            314,
+            418,
+            313
+          ],
+          "durationMs": 140,
+          "alpha128LocalBounds": [
+            62,
+            26,
+            341,
+            291
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "NE",
+          "phase": "active",
+          "sourceRectTopLeft": [
+            418,
+            314,
+            418,
+            313
+          ],
+          "durationMs": 120,
+          "alpha128LocalBounds": [
+            68,
+            26,
+            385,
+            290
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "NE",
+          "phase": "recovery",
+          "sourceRectTopLeft": [
+            836,
+            314,
+            418,
+            313
+          ],
+          "durationMs": 220,
+          "alpha128LocalBounds": [
+            90,
+            26,
+            327,
+            291
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "E",
+          "phase": "startup",
+          "sourceRectTopLeft": [
+            0,
+            627,
+            418,
+            314
+          ],
+          "durationMs": 140,
+          "alpha128LocalBounds": [
+            42,
+            21,
+            317,
+            291
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "E",
+          "phase": "active",
+          "sourceRectTopLeft": [
+            418,
+            627,
+            418,
+            314
+          ],
+          "durationMs": 120,
+          "alpha128LocalBounds": [
+            43,
+            21,
+            383,
+            291
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "E",
+          "phase": "recovery",
+          "sourceRectTopLeft": [
+            836,
+            627,
+            418,
+            314
+          ],
+          "durationMs": 220,
+          "alpha128LocalBounds": [
+            89,
+            21,
+            312,
+            291
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "SE",
+          "phase": "startup",
+          "sourceRectTopLeft": [
+            0,
+            941,
+            418,
+            313
+          ],
+          "durationMs": 140,
+          "alpha128LocalBounds": [
+            67,
+            24,
+            341,
+            288
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "SE",
+          "phase": "active",
+          "sourceRectTopLeft": [
+            418,
+            941,
+            418,
+            313
+          ],
+          "durationMs": 120,
+          "alpha128LocalBounds": [
+            50,
+            24,
+            374,
+            288
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        },
+        {
+          "direction": "SE",
+          "phase": "recovery",
+          "sourceRectTopLeft": [
+            836,
+            941,
+            418,
+            313
+          ],
+          "durationMs": 220,
+          "alpha128LocalBounds": [
+            93,
+            24,
+            313,
+            288
+          ],
+          "anchor": "Coordinator must annotate fixed body/pelvis floor support; do not center on VFX"
+        }
+      ]
+    }
+  ],
+  "rejectedFile": "LuciusSwordHorizontalS-SW-W-NW20261111V1-direction-rejected-source.png",
+  "rejectedSha256": "686464e9353932608bfd411648986e54b0627c0730aa96caefd56b9181194f76",
+  "rejectedReason": "SW/W/NW point right rather than left",
+  "previewStatus": "8GIF derived from intact fullcells; static source phases inspected; motion playback not observed",
+  "integrationLimits": [
+    "No Unity/catalog/Runtime modified",
+    "Body anchors and PPU must be calibrated by coordinator",
+    "Fixed body positioning is visually close; no subpixel stability or controller root-motion validation claimed",
+    "Actual size1254x1254 differs from prompt2048x2048; never upscale and call it native"
+  ]
+}

@@ -116,6 +116,89 @@ namespace Darklight.Tests
                 UnityEngine.Object.DestroyImmediate(host);
             }
         }
+
+        [Test]
+        public void NormalizedScalesEnforceConsistentTargetBounds()
+        {
+            var host = new GameObject("Test_VFX2_ScaleContract");
+            try
+            {
+                var vfx = host.AddComponent<DarklightCombatParticlesV2>();
+                Assert.That(vfx.Initialize(), Is.True);
+
+                // Contato normal: 48px target on 54px envelope -> scale ~0.8889
+                vfx.Emit(DarklightParticleV2Family.ContatoImpacto, Vector3.zero, Vector2.zero, 1.0f, 0f);
+                var burst = host.transform.GetChild(0).GetComponent<SpriteRenderer>();
+                Assert.That(burst.transform.localScale.x, Is.EqualTo(0.8889f).Within(0.01f));
+
+                // Katana normal: 96px target on 101px envelope -> scale ~0.9505
+                vfx.Emit(DarklightParticleV2Family.AtaqueKatana, Vector3.zero, Vector2.right, 1.0f, 0f);
+                burst = host.transform.GetChild(1).GetComponent<SpriteRenderer>();
+                Assert.That(burst.transform.localScale.x, Is.EqualTo(0.9505f).Within(0.01f));
+
+                // Punhos normal: 56px target on 71px envelope -> scale ~0.7887
+                vfx.Emit(DarklightParticleV2Family.AtaquePunhos, Vector3.zero, Vector2.right, 1.0f, 0f);
+                burst = host.transform.GetChild(2).GetComponent<SpriteRenderer>();
+                Assert.That(burst.transform.localScale.x, Is.EqualTo(0.7887f).Within(0.01f));
+            }
+            finally
+            {
+                UnityEngine.Object.DestroyImmediate(host);
+            }
+        }
+
+        [Test]
+        public void SortingOrderAlignsWithGroundAndSeparatesDodgeDust()
+        {
+            var host = new GameObject("Test_VFX2_SortingContract");
+            try
+            {
+                var vfx = host.AddComponent<DarklightCombatParticlesV2>();
+                Assert.That(vfx.Initialize(), Is.True);
+
+                float groundY = -1.5f;
+                int baseOrder = DarklightSorting.OrderForY(groundY);
+
+                // Attack slash renders in front (+2)
+                vfx.Emit(DarklightParticleV2Family.AtaqueKatana, new Vector3(0, groundY + 0.5f, 0), Vector2.right, 1.0f, groundY);
+                var attackRenderer = host.transform.GetChild(0).GetComponent<SpriteRenderer>();
+                Assert.That(attackRenderer.sortingOrder, Is.EqualTo(baseOrder + 2), "Attack slash must render in front of actor");
+
+                // Dodge dust renders behind feet on ground plane (-1)
+                vfx.Emit(DarklightParticleV2Family.EsquivaKatana, new Vector3(0, groundY, 0), Vector2.left, 1.0f, groundY);
+                var dodgeRenderer = host.transform.GetChild(1).GetComponent<SpriteRenderer>();
+                Assert.That(dodgeRenderer.sortingOrder, Is.EqualTo(baseOrder - 1), "Ground dodge puff must render behind feet");
+            }
+            finally
+            {
+                UnityEngine.Object.DestroyImmediate(host);
+            }
+        }
+
+        [Test]
+        public void GroundPuffIsDecoupledBackwardsAlongTrajectory()
+        {
+            var host = new GameObject("Test_VFX2_TrajectoryContract");
+            try
+            {
+                var vfx = host.AddComponent<DarklightCombatParticlesV2>();
+                Assert.That(vfx.Initialize(), Is.True);
+
+                Vector3 startPoint = new Vector3(2.0f, 1.0f, 0f);
+                Vector2 dodgeVelocity = new Vector2(1f, 0f);
+                Vector3 backwardsAnchor = startPoint - (Vector3)dodgeVelocity.normalized * 0.22f;
+                vfx.Emit(DarklightParticleV2Family.EsquivaKatana, backwardsAnchor, dodgeVelocity, 1.0f, startPoint.y);
+
+                // The burst should be placed behind movement direction
+                var activeBurst = host.GetComponentInChildren<SpriteRenderer>();
+                Assert.That(activeBurst, Is.Not.Null);
+                Assert.That(activeBurst.transform.position.x, Is.LessThan(startPoint.x), "Dodge puff should trail behind motion");
+            }
+            finally
+            {
+                UnityEngine.Object.DestroyImmediate(host);
+            }
+        }
     }
 }
 

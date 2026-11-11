@@ -53,12 +53,16 @@ namespace Darklight
         public static bool TryEmit(Vector3 position,bool heavy)
         {
             var lab=DarklightCombatLab.Instance;var game=DarklightCampaign.Instance;if(lab==null||game==null)return false;
+            int weaponId=(int)(game.Weapons?.Equipped?.id??DarklightWeaponId.Katana);
+            Vector3 contactPoint=position+Vector3.up*.55f;
+            if(DarklightCombatParticlesV2.TryEmitContact(contactPoint,heavy,weaponId))
+                return true;
+
             if(instance==null||!instance.transform.IsChildOf(lab.transform))
             {var obj=new GameObject("ContatosPixelArt");obj.transform.SetParent(lab.transform,false);instance=obj.AddComponent<DarklightPixelContactBurst>();}
             if(!instance.Load())return false;
-            int clip=heavy?2:game.Weapons?.Equipped?.id==DarklightWeaponId.Katana?1:0;
-            instance.Begin(position+Vector3.up*.65f,clip,game);
-            DarklightCombatParticlesV2.TryEmitContact(position+Vector3.up*.65f,heavy,clip);
+            int clip=heavy?2:weaponId==1?1:0;
+            instance.Begin(contactPoint,clip,game);
             return true;
         }
         void Begin(Vector3 point,int clip,DarklightCampaign game)
@@ -68,9 +72,10 @@ namespace Darklight
             {
                 var obj=new GameObject("ImpactoPixel");obj.transform.SetParent(transform,false);
                 burst=pool[cursor]=new Burst{art=obj.AddComponent<SpriteRenderer>()};
-                burst.art.sharedMaterial=game.pixelMaterial;burst.art.sortingOrder=901;
+                burst.art.sharedMaterial=game.pixelMaterial;
                 var block=new MaterialPropertyBlock();block.SetFloat("_WholeSprite",1);block.SetTexture("_VampireMask",Texture2D.blackTexture);burst.art.SetPropertyBlock(block);
             }
+            burst.art.sortingOrder=DarklightSorting.OrderForY(point.y-.55f)+2;
             cursor=(cursor+1)%pool.Length;burst.clip=clip;burst.age=0;burst.life=0;burst.active=true;
             for(int i=0;i<4;i++)burst.life+=milliseconds[clip*4+i]/1000f;
             burst.art.sprite=frames[clip*4];burst.art.enabled=true;burst.art.transform.position=point;

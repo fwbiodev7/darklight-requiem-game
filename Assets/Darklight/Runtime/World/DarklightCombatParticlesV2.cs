@@ -71,7 +71,10 @@ namespace Darklight
         readonly Burst[] pool = new Burst[24];
         readonly Sprite[][] familySprites = new Sprite[7][];
         readonly int[][] familyDurations = new int[7][];
-        readonly float[] familyScales = new float[7] { 1.0f, 1.0f, 1.0f, 1.1f, 1.0f, 1.0f, 1.15f };
+        // Normalized scales to match target visual pixel bounds:
+        // Contato: 48px/54px=0.8889, Katana: 96px/101px=0.9505, Punhos: 56px/71px=0.7887,
+        // Moto: 110px/101px=1.0891, EsquivaKatana: 96px/102px=0.9412, EsquivaPunhos: 56px/74px=0.7568, EsquivaMoto: 105px/99px=1.0606
+        readonly float[] familyScales = new float[7] { 0.8889f, 0.9505f, 0.7887f, 1.0891f, 0.9412f, 0.7568f, 1.0606f };
         readonly int[] familyCounts = new int[7];
 
         bool attempted;
@@ -86,13 +89,17 @@ namespace Darklight
 
         public int Count(DarklightParticleV2Family family) => familyCounts[(int)family];
 
+        void Awake()
+        {
+            if (instance == null) instance = this;
+        }
+
         public static DarklightCombatParticlesV2 GetOrCreate()
         {
             if (instance != null) return instance;
             var lab = DarklightCombatLab.Instance;
-            if (lab == null) return null;
             var obj = new GameObject("CombatParticlesV2");
-            obj.transform.SetParent(lab.transform, false);
+            if (lab != null) obj.transform.SetParent(lab.transform, false);
             instance = obj.AddComponent<DarklightCombatParticlesV2>();
             instance.Initialize();
             return instance;
@@ -215,8 +222,9 @@ namespace Darklight
             var system = GetOrCreate();
             if (system == null || !system.ready) return false;
 
-            float scale = heavy ? 1.35f : (weapon == 1 ? 1.1f : 0.95f);
-            system.Emit(DarklightParticleV2Family.ContatoImpacto, point, Vector2.zero, scale, point.y);
+            // Target visual dimensions: heavy=64px (1.33x), katana=48px (1.0x), fists=42px (0.875x)
+            float scaleMultiplier = heavy ? 1.3333f : (weapon == 1 ? 1.0f : weapon == 2 ? 0.875f : 0.95f);
+            system.Emit(DarklightParticleV2Family.ContatoImpacto, point, Vector2.zero, scaleMultiplier, point.y);
             return true;
         }
 
@@ -252,7 +260,9 @@ namespace Darklight
                 default: family = DarklightParticleV2Family.EsquivaKatana; break;
             }
 
-            system.Emit(family, point, facing, 1.0f, groundY ?? point.y);
+            // Ground dodge puff emits slightly behind motion trajectory
+            Vector3 anchor = facing.sqrMagnitude > 0.01f ? point - (Vector3)facing.normalized * 0.22f : point;
+            system.Emit(family, anchor, facing, 1.0f, groundY ?? point.y);
             return true;
         }
 
@@ -301,8 +311,11 @@ namespace Darklight
             burst.art.enabled = true;
             burst.art.transform.position = point;
 
-            // Sorting: slightly above character at the same ground plane
-            burst.art.sortingOrder = DarklightSorting.OrderForY(groundY) + 2;
+            // Ground dodge puff renders behind feet (-1); contact and attack sparks render in front (+2)
+            bool isGroundDodge = family == DarklightParticleV2Family.EsquivaKatana || 
+                                 family == DarklightParticleV2Family.EsquivaPunhos || 
+                                 family == DarklightParticleV2Family.EsquivaMoto;
+            burst.art.sortingOrder = DarklightSorting.OrderForY(groundY) + (isGroundDodge ? -1 : 2);
 
             // Direction & rotation
             if (facing.sqrMagnitude > 0.01f)
@@ -312,6 +325,17 @@ namespace Darklight
                     float angle = Mathf.Atan2(facing.y, facing.x) * Mathf.Rad2Deg;
                     burst.art.transform.localRotation = Quaternion.Euler(0, 0, angle);
                     burst.art.flipX = false;
+                }
+                else if (family == DarklightParticleV2Family.AtaqueMoto || family == DarklightParticleV2Family.EsquivaMoto)
+                {
+                    burst.art.transform.localRotation = Quaternion.identity;
+                    burst.art.flipX = facing.x < -0.01f;
+                }
+                else if (family == DarklightParticleV2Family.AtaquePunhos)
+                {
+                    float angle = Mathf.Atan2(facing.y, Mathf.Abs(facing.x)) * Mathf.Rad2Deg * 0.5f;
+                    burst.art.transform.localRotation = Quaternion.Euler(0, 0, facing.x < -0.01f ? -angle : angle);
+                    burst.art.flipX = facing.x < -0.01f;
                 }
                 else
                 {

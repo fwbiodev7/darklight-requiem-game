@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "image": "LuciusSwordThrustSSWWNW20261111.png",
+  "imageSha256": "00a5ddeacbab9e17e8c4e8ed5db16b40c5b250de70daea0f8d64beb73c07a25a",
+  "sourcePath": "ArtSources/EntregaLucius20261111/selecionadas/ataques/LuciusSwordThrustSSWWNW20261111-source.png",
+  "sourceSha256": "00a5ddeacbab9e17e8c4e8ed5db16b40c5b250de70daea0f8d64beb73c07a25a",
+  "sourceSize": [
+    1086,
+    1448
+  ],
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "pixelsPerUnit": 161.228248,
+  "wholeFigures": true,
+  "status": "visual-reviewed",
+  "allowStatic": false,
+  "pivotMethod": "pelvis-floor-ground",
+  "frames": [
+    {
+      "id": "Redesign_LuciusSwordThrustSSWWNW20261111_S_00",
+      "action": "Attack",
+      "direction": "S",
+      "index": 0,
+      "phase": "startup",
+      "rect": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "pivot": [
+        0.55548145,
+        0.03867403
+      ],
+      "durationMs": 140,
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "Redesign_LuciusSwordThrustSSWWNW20261111_S_01",
+      "action": "Attack",
+      "direction": "S",
+      "index": 1,
+      "phase": "active",
+      "rect": [
+        362,
+        0,
+        362,
+        362
+      ],
+      "pivot": [
+        0.53017229,
+        0.0441989
+      ],
+      "durationMs": 120,
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "Redesign_LuciusSwordThrustSSWWNW20261111_S_02",
+      "action": "Attack",
+      "direction": "S",
+      "index": 2,
+      "phase": "recovery",
+      "rect": [
+        724,
+        0,
+        362,
+        362
+      ],
+      "pivot": [
+        0.49367195,
+        0.0441989
+      ],
+      "durationMs": 220,
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "Redesign_LuciusSwordThrustSSWWNW20261111_SW_00",
+      "action": "Attack",
+      "direction": "SW",
+      "index": 0,
+      "phase": "startup",
+      "rect": [
+        0,
+        362,
+        362,
+        362
+      ],
+      "pivot": [
+        0.46190099,
+        0.04972376
+      ],
+      "durationMs": 140,
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "Redesign_LuciusSwordThrustSSWWNW20261111_SW_01",
+      "action": "Attack",
+      "direction": "SW",
+      "index": 1,
+      "phase": "active",
+      "rect": [
+        362,
+        362,
+        362,
+        362
+      ],
+      "pivot": [
+        0.46076792,
+        0.05248619
+      ],
+      "durationMs": 120,
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "Redesign_LuciusSwordThrustSSWWNW20261111_SW_02",
+      "action": "Attack",
+      "direction": "SW",
+      "index": 2,
+      "phase": "recovery",
+      "rect": [
+        724,
+        362,
+        362,
+        362
+      ],
+      "pivot": [
+        0.47422539,
+        0.05248619
+      ],
+      "durationMs": 220,
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "Redesign_LuciusSwordThrustSSWWNW20261111_W_00",
+      "action": "Attack",
+      "direction": "W",
+      "index": 0,
+      "phase": "startup",
+      "rect": [
+        0,
+        724,
+        362,
+        362
+      ],
+      "pivot": [
+        0.46346922,
+        0.08287293
+      ],
+      "durationMs": 140,
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "Redesign_LuciusSwordThrustSSWWNW20261111_W_01",
+      "action": "Attack",
+      "direction": "W",
+      "index": 1,
+      "phase": "active",
+      "rect": [
+        362,
+        724,
+        362,
+        362
+      ],
+      "pivot": [
+        0.44698487,
+        0.07734807
+      ],
+      "durationMs": 120,
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "Redesign_LuciusSwordThrustSSWWNW20261111_W_02",
+      "action": "Attack",
+      "direction": "W",
+      "index": 2,
+      "phase": "recovery",
+      "rect": [
+        724,
+        724,
+        362,
+        362
+      ],
+      "pivot": [
+        0.4594256,
+        0.0718232
+      ],
+      "durationMs": 220,
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "Redesign_LuciusSwordThrustSSWWNW20261111_NW_00",
+      "action": "Attack",
+      "direction": "NW",
+      "index": 0,
+      "phase": "startup",
+      "rect": [
+        0,
+        1086,
+        362,
+        362
+      ],
+      "pivot": [
+        0.49918813,
+        0.0801105
+      ],
+      "durationMs": 140,
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "Redesign_LuciusSwordThrustSSWWNW20261111_NW_01",
+      "action": "Attack",
+      "direction": "NW",
+      "index": 1,
+      "phase": "active",
+      "rect": [
+        362,
+        1086,
+        362,
+        362
+      ],
+      "pivot": [
+        0.49314728,
+        0.08287293
+      ],
+      "durationMs": 120,
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "Redesign_LuciusSwordThrustSSWWNW20261111_NW_02",
+      "action": "Attack",
+      "direction": "NW",
+      "index": 2,
+      "phase": "recovery",
+      "rect": [
+        724,
+        1086,
+        362,
+        362
+      ],
+      "pivot": [
+        0.49037136,
+        0.07458564
+      ],
+      "durationMs": 220,
+      "attackKey": "SwordThrust"
+    }
+  ]
+}

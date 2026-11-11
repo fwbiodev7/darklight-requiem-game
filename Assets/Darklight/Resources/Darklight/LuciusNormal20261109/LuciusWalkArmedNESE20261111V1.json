@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "image": "LuciusWalkArmedNESE20261111V1.png",
+  "imageSha256": "9cae270767aad100c2b62eefd5e4f5f0dddd8ed537685a1e3ad226eef530c2e5",
+  "sourcePath": "ArtSources/EntregaLucius20261111/selecionadas/caminhada-armada/LuciusWalkArmedNESE20261111V1-source.png",
+  "sourceSha256": "9cae270767aad100c2b62eefd5e4f5f0dddd8ed537685a1e3ad226eef530c2e5",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 214.97090106361628,
+  "wholeFigures": true,
+  "status": "visual-reviewed",
+  "allowStatic": false,
+  "pivotMethod": "pelvis-floor-ground",
+  "frames": [
+    {
+      "id": "Redesign_LuciusWalkArmedNESE20261111V1_NE_00",
+      "action": "WalkArmed",
+      "direction": "NE",
+      "index": 0,
+      "phase": "contact-A",
+      "rect": [
+        0,
+        0,
+        384,
+        512
+      ],
+      "pivot": [
+        0.4883183,
+        0.1015625
+      ],
+      "durationMs": 140
+    },
+    {
+      "id": "Redesign_LuciusWalkArmedNESE20261111V1_NE_01",
+      "action": "WalkArmed",
+      "direction": "NE",
+      "index": 1,
+      "phase": "passing-A",
+      "rect": [
+        384,
+        0,
+        384,
+        512
+      ],
+      "pivot": [
+        0.43481885,
+        0.10546875
+      ],
+      "durationMs": 130
+    },
+    {
+      "id": "Redesign_LuciusWalkArmedNESE20261111V1_NE_02",
+      "action": "WalkArmed",
+      "direction": "NE",
+      "index": 2,
+      "phase": "contact-B",
+      "rect": [
+        768,
+        0,
+        384,
+        512
+      ],
+      "pivot": [
+        0.54868184,
+        0.09960938
+      ],
+      "durationMs": 140
+    },
+    {
+      "id": "Redesign_LuciusWalkArmedNESE20261111V1_NE_03",
+      "action": "WalkArmed",
+      "direction": "NE",
+      "index": 3,
+      "phase": "passing-B",
+      "rect": [
+        1152,
+        0,
+        384,
+        512
+      ],
+      "pivot": [
+        0.45201426,
+        0.10351562
+      ],
+      "durationMs": 130
+    },
+    {
+      "id": "Redesign_LuciusWalkArmedNESE20261111V1_SE_00",
+      "action": "WalkArmed",
+      "direction": "SE",
+      "index": 0,
+      "phase": "contact-A",
+      "rect": [
+        0,
+        512,
+        384,
+        512
+      ],
+      "pivot": [
+        0.54376131,
+        0.08984375
+      ],
+      "durationMs": 140
+    },
+    {
+      "id": "Redesign_LuciusWalkArmedNESE20261111V1_SE_01",
+      "action": "WalkArmed",
+      "direction": "SE",
+      "index": 1,
+      "phase": "passing-A",
+      "rect": [
+        384,
+        512,
+        384,
+        512
+      ],
+      "pivot": [
+        0.44122962,
+        0.1171875
+      ],
+      "durationMs": 130
+    },
+    {
+      "id": "Redesign_LuciusWalkArmedNESE20261111V1_SE_02",
+      "action": "WalkArmed",
+      "direction": "SE",
+      "index": 2,
+      "phase": "contact-B",
+      "rect": [
+        768,
+        512,
+        384,
+        512
+      ],
+      "pivot": [
+        0.56253926,
+        0.09375
+      ],
+      "durationMs": 140
+    },
+    {
+      "id": "Redesign_LuciusWalkArmedNESE20261111V1_SE_03",
+      "action": "WalkArmed",
+      "direction": "SE",
+      "index": 3,
+      "phase": "passing-B",
+      "rect": [
+        1152,
+        512,
+        384,
+        512
+      ],
+      "pivot": [
+        0.44704651,
+        0.10351562
+      ],
+      "durationMs": 130
+    }
+  ]
+}

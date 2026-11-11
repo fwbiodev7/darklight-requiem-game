@@ -72,7 +72,7 @@ namespace Darklight
             foreach(string name in page.spriteNames)
                 if(!Name(name)||!name.StartsWith("Redesign_Lucius",StringComparison.Ordinal)||!names.Add(name))return false;
             foreach(int duration in page.durationMs)if(duration<=0)return false;
-            if(page.loop&&page.action!="Idle"&&page.action!="Walk"&&page.action!="Run"&&page.action!="Charging")return false;
+            if(page.loop&&page.action!="Idle"&&page.action!="Walk"&&page.action!="Run"&&page.action!="Charging"&&page.action!="WalkArmed")return false;
             return true;
         }
         public static bool ValidCatalog(DarklightLuciusSpriteCatalog data)
@@ -142,7 +142,7 @@ namespace Darklight
             if(!Action(action)||direction<0||direction>7)return false;
             if(!TryActionPage(appearance,action,direction,attackKey,out var page))
             {
-                if(action=="Attack"&&(attackKey==DarklightLuciusCombatProfile.SwordThrust||string.IsNullOrEmpty(attackKey)))
+                if(action=="Attack"&&attackKey==DarklightLuciusCombatProfile.SwordThrust)
                 {
                     if(TryActionPage(appearance,"Attack",direction,DarklightLuciusCombatProfile.SwordHorizontal,out page)||
                        TryActionPage(appearance,"Attack",direction,DarklightLuciusCombatProfile.SwordVertical,out page))

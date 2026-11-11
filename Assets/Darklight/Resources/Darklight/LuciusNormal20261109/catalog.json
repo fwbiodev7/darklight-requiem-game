@@ -3,6 +3,7 @@
   "characterId": "Lucius",
   "form": "Normal",
   "weapon": "Sword",
+  "appearance": "Normal",
   "complete": false,
   "pages": [
     {
@@ -306,246 +307,6 @@
       "status": "visual-reviewed"
     },
     {
-      "id": "LuciusSwordHorizontalSouthWestV3_Attack_S",
-      "action": "Attack",
-      "attackKey": "SwordHorizontal",
-      "direction": 0,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordHorizontalSouthWestV3",
-      "nativeSize": [
-        1800,
-        1800
-      ],
-      "pixelsPerUnit": 162.79349789283566,
-      "spriteNames": [
-        "Redesign_LuciusSwordHorizontalSouthWestV3_S_00",
-        "Redesign_LuciusSwordHorizontalSouthWestV3_S_01",
-        "Redesign_LuciusSwordHorizontalSouthWestV3_S_02"
-      ],
-      "durationMs": [
-        140,
-        120,
-        220
-      ],
-      "startupFrames": 1,
-      "activeFrames": 1,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed",
-      "imageSha256": "8f057fcd60fb8f77a8ea30d8a9ab182cafbd25fd8f09446f7368d6d4ecd96a45",
-      "sourceSha256": "8f057fcd60fb8f77a8ea30d8a9ab182cafbd25fd8f09446f7368d6d4ecd96a45",
-      "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordHorizontalSouthWestV3-source.png"
-    },
-    {
-      "id": "LuciusSwordHorizontalSouthWestV3_Attack_SW",
-      "action": "Attack",
-      "attackKey": "SwordHorizontal",
-      "direction": 1,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordHorizontalSouthWestV3",
-      "nativeSize": [
-        1800,
-        1800
-      ],
-      "pixelsPerUnit": 162.79349789283566,
-      "spriteNames": [
-        "Redesign_LuciusSwordHorizontalSouthWestV3_SW_00",
-        "Redesign_LuciusSwordHorizontalSouthWestV3_SW_01",
-        "Redesign_LuciusSwordHorizontalSouthWestV3_SW_02"
-      ],
-      "durationMs": [
-        140,
-        120,
-        220
-      ],
-      "startupFrames": 1,
-      "activeFrames": 1,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed",
-      "imageSha256": "8f057fcd60fb8f77a8ea30d8a9ab182cafbd25fd8f09446f7368d6d4ecd96a45",
-      "sourceSha256": "8f057fcd60fb8f77a8ea30d8a9ab182cafbd25fd8f09446f7368d6d4ecd96a45",
-      "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordHorizontalSouthWestV3-source.png"
-    },
-    {
-      "id": "LuciusSwordHorizontalSouthWestV3_Attack_W",
-      "action": "Attack",
-      "attackKey": "SwordHorizontal",
-      "direction": 2,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordHorizontalSouthWestV3",
-      "nativeSize": [
-        1800,
-        1800
-      ],
-      "pixelsPerUnit": 162.79349789283566,
-      "spriteNames": [
-        "Redesign_LuciusSwordHorizontalSouthWestV3_W_00",
-        "Redesign_LuciusSwordHorizontalSouthWestV3_W_01",
-        "Redesign_LuciusSwordHorizontalSouthWestV3_W_02"
-      ],
-      "durationMs": [
-        140,
-        120,
-        220
-      ],
-      "startupFrames": 1,
-      "activeFrames": 1,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed",
-      "imageSha256": "8f057fcd60fb8f77a8ea30d8a9ab182cafbd25fd8f09446f7368d6d4ecd96a45",
-      "sourceSha256": "8f057fcd60fb8f77a8ea30d8a9ab182cafbd25fd8f09446f7368d6d4ecd96a45",
-      "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordHorizontalSouthWestV3-source.png"
-    },
-    {
-      "id": "LuciusSwordHorizontalSouthWestV3_Attack_NW",
-      "action": "Attack",
-      "attackKey": "SwordHorizontal",
-      "direction": 3,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordHorizontalSouthWestV3",
-      "nativeSize": [
-        1800,
-        1800
-      ],
-      "pixelsPerUnit": 162.79349789283566,
-      "spriteNames": [
-        "Redesign_LuciusSwordHorizontalSouthWestV3_NW_00",
-        "Redesign_LuciusSwordHorizontalSouthWestV3_NW_01",
-        "Redesign_LuciusSwordHorizontalSouthWestV3_NW_02"
-      ],
-      "durationMs": [
-        140,
-        120,
-        220
-      ],
-      "startupFrames": 1,
-      "activeFrames": 1,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed",
-      "imageSha256": "8f057fcd60fb8f77a8ea30d8a9ab182cafbd25fd8f09446f7368d6d4ecd96a45",
-      "sourceSha256": "8f057fcd60fb8f77a8ea30d8a9ab182cafbd25fd8f09446f7368d6d4ecd96a45",
-      "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordHorizontalSouthWestV3-source.png"
-    },
-    {
-      "id": "LuciusSwordHorizontalNorthEastBackV3_Attack_N",
-      "action": "Attack",
-      "attackKey": "SwordHorizontal",
-      "direction": 4,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordHorizontalNorthEastBackV3",
-      "nativeSize": [
-        1800,
-        900
-      ],
-      "pixelsPerUnit": 162.79349789283566,
-      "spriteNames": [
-        "Redesign_LuciusSwordHorizontalNorthEastBackV3_N_00",
-        "Redesign_LuciusSwordHorizontalNorthEastBackV3_N_01",
-        "Redesign_LuciusSwordHorizontalNorthEastBackV3_N_02"
-      ],
-      "durationMs": [
-        140,
-        120,
-        220
-      ],
-      "startupFrames": 1,
-      "activeFrames": 1,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed",
-      "imageSha256": "99c16894ffae43beb743ef12212b3ccb938efc85591d966a121bf85696ec744d",
-      "sourceSha256": "99c16894ffae43beb743ef12212b3ccb938efc85591d966a121bf85696ec744d",
-      "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordHorizontalNorthEastBackV3-source.png"
-    },
-    {
-      "id": "LuciusSwordHorizontalNorthEastBackV3_Attack_NE",
-      "action": "Attack",
-      "attackKey": "SwordHorizontal",
-      "direction": 5,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordHorizontalNorthEastBackV3",
-      "nativeSize": [
-        1800,
-        900
-      ],
-      "pixelsPerUnit": 162.79349789283566,
-      "spriteNames": [
-        "Redesign_LuciusSwordHorizontalNorthEastBackV3_NE_00",
-        "Redesign_LuciusSwordHorizontalNorthEastBackV3_NE_01",
-        "Redesign_LuciusSwordHorizontalNorthEastBackV3_NE_02"
-      ],
-      "durationMs": [
-        140,
-        120,
-        220
-      ],
-      "startupFrames": 1,
-      "activeFrames": 1,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed",
-      "imageSha256": "99c16894ffae43beb743ef12212b3ccb938efc85591d966a121bf85696ec744d",
-      "sourceSha256": "99c16894ffae43beb743ef12212b3ccb938efc85591d966a121bf85696ec744d",
-      "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordHorizontalNorthEastBackV3-source.png"
-    },
-    {
-      "id": "LuciusSwordHorizontalEastSouthEastV3_Attack_E",
-      "action": "Attack",
-      "attackKey": "SwordHorizontal",
-      "direction": 6,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordHorizontalEastSouthEastV3",
-      "nativeSize": [
-        1800,
-        1100
-      ],
-      "pixelsPerUnit": 217.05799719044754,
-      "spriteNames": [
-        "Redesign_LuciusSwordHorizontalEastSouthEastV3_E_00",
-        "Redesign_LuciusSwordHorizontalEastSouthEastV3_E_01",
-        "Redesign_LuciusSwordHorizontalEastSouthEastV3_E_02"
-      ],
-      "durationMs": [
-        140,
-        120,
-        220
-      ],
-      "startupFrames": 1,
-      "activeFrames": 1,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed",
-      "imageSha256": "0197ed55c90d4a916b7bf7b6177643baa8daea6913ca3bdeb4615181327f5a37",
-      "sourceSha256": "0197ed55c90d4a916b7bf7b6177643baa8daea6913ca3bdeb4615181327f5a37",
-      "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordHorizontalEastSouthEastV3-source.png"
-    },
-    {
-      "id": "LuciusSwordHorizontalEastSouthEastV3_Attack_SE",
-      "action": "Attack",
-      "attackKey": "SwordHorizontal",
-      "direction": 7,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordHorizontalEastSouthEastV3",
-      "nativeSize": [
-        1800,
-        1100
-      ],
-      "pixelsPerUnit": 217.05799719044754,
-      "spriteNames": [
-        "Redesign_LuciusSwordHorizontalEastSouthEastV3_SE_00",
-        "Redesign_LuciusSwordHorizontalEastSouthEastV3_SE_01",
-        "Redesign_LuciusSwordHorizontalEastSouthEastV3_SE_02"
-      ],
-      "durationMs": [
-        140,
-        120,
-        220
-      ],
-      "startupFrames": 1,
-      "activeFrames": 1,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed",
-      "imageSha256": "0197ed55c90d4a916b7bf7b6177643baa8daea6913ca3bdeb4615181327f5a37",
-      "sourceSha256": "0197ed55c90d4a916b7bf7b6177643baa8daea6913ca3bdeb4615181327f5a37",
-      "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordHorizontalEastSouthEastV3-source.png"
-    },
-    {
       "id": "LuciusSwordVerticalSouthWestV3_Attack_S",
       "action": "Attack",
       "attackKey": "SwordVertical",
@@ -784,6 +545,830 @@
       "imageSha256": "28d9353d676c39edbbcad5a3dc17a8f33b2eefa75e0fe88eb840b9550781336f",
       "sourceSha256": "28d9353d676c39edbbcad5a3dc17a8f33b2eefa75e0fe88eb840b9550781336f",
       "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordVerticalNorthEastV3-source.png"
+    },
+    {
+      "id": "LuciusWalkNWNorth20261111_Walk_NW",
+      "action": "Walk",
+      "direction": 3,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusWalkNWNorth20261111",
+      "imageSha256": "8e257fedeceb86e619bf4a5dc5946ff07a4532c4dd547c28b01831f9d5bce3c7",
+      "sourceSha256": "8e257fedeceb86e619bf4a5dc5946ff07a4532c4dd547c28b01831f9d5bce3c7",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 214.97090106361628,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": true,
+      "durationMs": [
+        140,
+        130,
+        140,
+        130
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "spriteNames": [
+        "Redesign_LuciusWalkNWNorth20261111_NW_00",
+        "Redesign_LuciusWalkNWNorth20261111_NW_01",
+        "Redesign_LuciusWalkNWNorth20261111_NW_02",
+        "Redesign_LuciusWalkNWNorth20261111_NW_03"
+      ]
+    },
+    {
+      "id": "LuciusWalkNWNorth20261111_Walk_N",
+      "action": "Walk",
+      "direction": 4,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusWalkNWNorth20261111",
+      "imageSha256": "8e257fedeceb86e619bf4a5dc5946ff07a4532c4dd547c28b01831f9d5bce3c7",
+      "sourceSha256": "8e257fedeceb86e619bf4a5dc5946ff07a4532c4dd547c28b01831f9d5bce3c7",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 214.97090106361628,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": true,
+      "durationMs": [
+        140,
+        130,
+        140,
+        130
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "spriteNames": [
+        "Redesign_LuciusWalkNWNorth20261111_N_00",
+        "Redesign_LuciusWalkNWNorth20261111_N_01",
+        "Redesign_LuciusWalkNWNorth20261111_N_02",
+        "Redesign_LuciusWalkNWNorth20261111_N_03"
+      ]
+    },
+    {
+      "id": "LuciusWalkNESE20261111V1_Walk_NE",
+      "action": "Walk",
+      "direction": 5,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusWalkNESE20261111V1",
+      "imageSha256": "98d2088c97d0718cf0d155115b97e879b993a68eabd5d93c50038f385a0eb209",
+      "sourceSha256": "98d2088c97d0718cf0d155115b97e879b993a68eabd5d93c50038f385a0eb209",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 214.97090106361628,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": true,
+      "durationMs": [
+        140,
+        130,
+        140,
+        130
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "spriteNames": [
+        "Redesign_LuciusWalkNESE20261111V1_NE_00",
+        "Redesign_LuciusWalkNESE20261111V1_NE_01",
+        "Redesign_LuciusWalkNESE20261111V1_NE_02",
+        "Redesign_LuciusWalkNESE20261111V1_NE_03"
+      ]
+    },
+    {
+      "id": "LuciusWalkNESE20261111V1_Walk_SE",
+      "action": "Walk",
+      "direction": 7,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusWalkNESE20261111V1",
+      "imageSha256": "98d2088c97d0718cf0d155115b97e879b993a68eabd5d93c50038f385a0eb209",
+      "sourceSha256": "98d2088c97d0718cf0d155115b97e879b993a68eabd5d93c50038f385a0eb209",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 214.97090106361628,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": true,
+      "durationMs": [
+        140,
+        130,
+        140,
+        130
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "spriteNames": [
+        "Redesign_LuciusWalkNESE20261111V1_SE_00",
+        "Redesign_LuciusWalkNESE20261111V1_SE_01",
+        "Redesign_LuciusWalkNESE20261111V1_SE_02",
+        "Redesign_LuciusWalkNESE20261111V1_SE_03"
+      ]
+    },
+    {
+      "id": "LuciusWalkArmedSSW20261111V1_WalkArmed_S",
+      "action": "WalkArmed",
+      "direction": 0,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusWalkArmedSSW20261111V1",
+      "imageSha256": "408cdcee26215286f6d8734c82433485ba5b219d59aa6e7656b5aa947afb65bf",
+      "sourceSha256": "408cdcee26215286f6d8734c82433485ba5b219d59aa6e7656b5aa947afb65bf",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 214.97090106361628,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": true,
+      "durationMs": [
+        140,
+        130,
+        140,
+        130
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "spriteNames": [
+        "Redesign_LuciusWalkArmedSSW20261111V1_S_00",
+        "Redesign_LuciusWalkArmedSSW20261111V1_S_01",
+        "Redesign_LuciusWalkArmedSSW20261111V1_S_02",
+        "Redesign_LuciusWalkArmedSSW20261111V1_S_03"
+      ]
+    },
+    {
+      "id": "LuciusWalkArmedSSW20261111V1_WalkArmed_SW",
+      "action": "WalkArmed",
+      "direction": 1,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusWalkArmedSSW20261111V1",
+      "imageSha256": "408cdcee26215286f6d8734c82433485ba5b219d59aa6e7656b5aa947afb65bf",
+      "sourceSha256": "408cdcee26215286f6d8734c82433485ba5b219d59aa6e7656b5aa947afb65bf",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 214.97090106361628,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": true,
+      "durationMs": [
+        140,
+        130,
+        140,
+        130
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "spriteNames": [
+        "Redesign_LuciusWalkArmedSSW20261111V1_SW_00",
+        "Redesign_LuciusWalkArmedSSW20261111V1_SW_01",
+        "Redesign_LuciusWalkArmedSSW20261111V1_SW_02",
+        "Redesign_LuciusWalkArmedSSW20261111V1_SW_03"
+      ]
+    },
+    {
+      "id": "LuciusWalkArmedWE20261111V1_WalkArmed_W",
+      "action": "WalkArmed",
+      "direction": 2,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusWalkArmedWE20261111V1",
+      "imageSha256": "dbe17031db4485c28ff34b4bc28a6c3d25512e826eba9b8bcee34617f1f60763",
+      "sourceSha256": "dbe17031db4485c28ff34b4bc28a6c3d25512e826eba9b8bcee34617f1f60763",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 214.97090106361628,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": true,
+      "durationMs": [
+        140,
+        130,
+        140,
+        130
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "spriteNames": [
+        "Redesign_LuciusWalkArmedWE20261111V1_W_00",
+        "Redesign_LuciusWalkArmedWE20261111V1_W_01",
+        "Redesign_LuciusWalkArmedWE20261111V1_W_02",
+        "Redesign_LuciusWalkArmedWE20261111V1_W_03"
+      ]
+    },
+    {
+      "id": "LuciusWalkArmedNWNorth20261111_WalkArmed_NW",
+      "action": "WalkArmed",
+      "direction": 3,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusWalkArmedNWNorth20261111",
+      "imageSha256": "52c432c5cb8857d3879553ac8e32b4fe442c42bac875e9365f0c43fc609759d9",
+      "sourceSha256": "52c432c5cb8857d3879553ac8e32b4fe442c42bac875e9365f0c43fc609759d9",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 214.97090106361628,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": true,
+      "durationMs": [
+        140,
+        130,
+        140,
+        130
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "spriteNames": [
+        "Redesign_LuciusWalkArmedNWNorth20261111_NW_00",
+        "Redesign_LuciusWalkArmedNWNorth20261111_NW_01",
+        "Redesign_LuciusWalkArmedNWNorth20261111_NW_02",
+        "Redesign_LuciusWalkArmedNWNorth20261111_NW_03"
+      ]
+    },
+    {
+      "id": "LuciusWalkArmedNWNorth20261111_WalkArmed_N",
+      "action": "WalkArmed",
+      "direction": 4,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusWalkArmedNWNorth20261111",
+      "imageSha256": "52c432c5cb8857d3879553ac8e32b4fe442c42bac875e9365f0c43fc609759d9",
+      "sourceSha256": "52c432c5cb8857d3879553ac8e32b4fe442c42bac875e9365f0c43fc609759d9",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 214.97090106361628,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": true,
+      "durationMs": [
+        140,
+        130,
+        140,
+        130
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "spriteNames": [
+        "Redesign_LuciusWalkArmedNWNorth20261111_N_00",
+        "Redesign_LuciusWalkArmedNWNorth20261111_N_01",
+        "Redesign_LuciusWalkArmedNWNorth20261111_N_02",
+        "Redesign_LuciusWalkArmedNWNorth20261111_N_03"
+      ]
+    },
+    {
+      "id": "LuciusWalkArmedNESE20261111V1_WalkArmed_NE",
+      "action": "WalkArmed",
+      "direction": 5,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusWalkArmedNESE20261111V1",
+      "imageSha256": "9cae270767aad100c2b62eefd5e4f5f0dddd8ed537685a1e3ad226eef530c2e5",
+      "sourceSha256": "9cae270767aad100c2b62eefd5e4f5f0dddd8ed537685a1e3ad226eef530c2e5",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 214.97090106361628,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": true,
+      "durationMs": [
+        140,
+        130,
+        140,
+        130
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "spriteNames": [
+        "Redesign_LuciusWalkArmedNESE20261111V1_NE_00",
+        "Redesign_LuciusWalkArmedNESE20261111V1_NE_01",
+        "Redesign_LuciusWalkArmedNESE20261111V1_NE_02",
+        "Redesign_LuciusWalkArmedNESE20261111V1_NE_03"
+      ]
+    },
+    {
+      "id": "LuciusWalkArmedWE20261111V1_WalkArmed_E",
+      "action": "WalkArmed",
+      "direction": 6,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusWalkArmedWE20261111V1",
+      "imageSha256": "dbe17031db4485c28ff34b4bc28a6c3d25512e826eba9b8bcee34617f1f60763",
+      "sourceSha256": "dbe17031db4485c28ff34b4bc28a6c3d25512e826eba9b8bcee34617f1f60763",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 214.97090106361628,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": true,
+      "durationMs": [
+        140,
+        130,
+        140,
+        130
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "spriteNames": [
+        "Redesign_LuciusWalkArmedWE20261111V1_E_00",
+        "Redesign_LuciusWalkArmedWE20261111V1_E_01",
+        "Redesign_LuciusWalkArmedWE20261111V1_E_02",
+        "Redesign_LuciusWalkArmedWE20261111V1_E_03"
+      ]
+    },
+    {
+      "id": "LuciusWalkArmedNESE20261111V1_WalkArmed_SE",
+      "action": "WalkArmed",
+      "direction": 7,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusWalkArmedNESE20261111V1",
+      "imageSha256": "9cae270767aad100c2b62eefd5e4f5f0dddd8ed537685a1e3ad226eef530c2e5",
+      "sourceSha256": "9cae270767aad100c2b62eefd5e4f5f0dddd8ed537685a1e3ad226eef530c2e5",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 214.97090106361628,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": true,
+      "durationMs": [
+        140,
+        130,
+        140,
+        130
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "spriteNames": [
+        "Redesign_LuciusWalkArmedNESE20261111V1_SE_00",
+        "Redesign_LuciusWalkArmedNESE20261111V1_SE_01",
+        "Redesign_LuciusWalkArmedNESE20261111V1_SE_02",
+        "Redesign_LuciusWalkArmedNESE20261111V1_SE_03"
+      ]
+    },
+    {
+      "id": "LuciusSwordThrustSSWWNW20261111_Attack_SwordThrust_S",
+      "action": "Attack",
+      "direction": 0,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustSSWWNW20261111",
+      "imageSha256": "00a5ddeacbab9e17e8c4e8ed5db16b40c5b250de70daea0f8d64beb73c07a25a",
+      "sourceSha256": "00a5ddeacbab9e17e8c4e8ed5db16b40c5b250de70daea0f8d64beb73c07a25a",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 161.228248,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": false,
+      "durationMs": [
+        140,
+        120,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "spriteNames": [
+        "Redesign_LuciusSwordThrustSSWWNW20261111_S_00",
+        "Redesign_LuciusSwordThrustSSWWNW20261111_S_01",
+        "Redesign_LuciusSwordThrustSSWWNW20261111_S_02"
+      ],
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "LuciusSwordThrustSSWWNW20261111_Attack_SwordThrust_SW",
+      "action": "Attack",
+      "direction": 1,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustSSWWNW20261111",
+      "imageSha256": "00a5ddeacbab9e17e8c4e8ed5db16b40c5b250de70daea0f8d64beb73c07a25a",
+      "sourceSha256": "00a5ddeacbab9e17e8c4e8ed5db16b40c5b250de70daea0f8d64beb73c07a25a",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 161.228248,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": false,
+      "durationMs": [
+        140,
+        120,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "spriteNames": [
+        "Redesign_LuciusSwordThrustSSWWNW20261111_SW_00",
+        "Redesign_LuciusSwordThrustSSWWNW20261111_SW_01",
+        "Redesign_LuciusSwordThrustSSWWNW20261111_SW_02"
+      ],
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "LuciusSwordThrustSSWWNW20261111_Attack_SwordThrust_W",
+      "action": "Attack",
+      "direction": 2,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustSSWWNW20261111",
+      "imageSha256": "00a5ddeacbab9e17e8c4e8ed5db16b40c5b250de70daea0f8d64beb73c07a25a",
+      "sourceSha256": "00a5ddeacbab9e17e8c4e8ed5db16b40c5b250de70daea0f8d64beb73c07a25a",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 161.228248,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": false,
+      "durationMs": [
+        140,
+        120,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "spriteNames": [
+        "Redesign_LuciusSwordThrustSSWWNW20261111_W_00",
+        "Redesign_LuciusSwordThrustSSWWNW20261111_W_01",
+        "Redesign_LuciusSwordThrustSSWWNW20261111_W_02"
+      ],
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "LuciusSwordThrustSSWWNW20261111_Attack_SwordThrust_NW",
+      "action": "Attack",
+      "direction": 3,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustSSWWNW20261111",
+      "imageSha256": "00a5ddeacbab9e17e8c4e8ed5db16b40c5b250de70daea0f8d64beb73c07a25a",
+      "sourceSha256": "00a5ddeacbab9e17e8c4e8ed5db16b40c5b250de70daea0f8d64beb73c07a25a",
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 161.228248,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": false,
+      "durationMs": [
+        140,
+        120,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "spriteNames": [
+        "Redesign_LuciusSwordThrustSSWWNW20261111_NW_00",
+        "Redesign_LuciusSwordThrustSSWWNW20261111_NW_01",
+        "Redesign_LuciusSwordThrustSSWWNW20261111_NW_02"
+      ],
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "LuciusSwordThrustNNEESE20261111V1_Attack_SwordThrust_N",
+      "action": "Attack",
+      "direction": 4,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustNNEESE20261111V1",
+      "imageSha256": "9fc7141fefd00a022d468582513ccd7680926df5c09dff7ad1821705f92b04ea",
+      "sourceSha256": "9fc7141fefd00a022d468582513ccd7680926df5c09dff7ad1821705f92b04ea",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "pixelsPerUnit": 135.661248,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": false,
+      "durationMs": [
+        140,
+        120,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "spriteNames": [
+        "Redesign_LuciusSwordThrustNNEESE20261111V1_N_00",
+        "Redesign_LuciusSwordThrustNNEESE20261111V1_N_01",
+        "Redesign_LuciusSwordThrustNNEESE20261111V1_N_02"
+      ],
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "LuciusSwordThrustNNEESE20261111V1_Attack_SwordThrust_NE",
+      "action": "Attack",
+      "direction": 5,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustNNEESE20261111V1",
+      "imageSha256": "9fc7141fefd00a022d468582513ccd7680926df5c09dff7ad1821705f92b04ea",
+      "sourceSha256": "9fc7141fefd00a022d468582513ccd7680926df5c09dff7ad1821705f92b04ea",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "pixelsPerUnit": 135.661248,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": false,
+      "durationMs": [
+        140,
+        120,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "spriteNames": [
+        "Redesign_LuciusSwordThrustNNEESE20261111V1_NE_00",
+        "Redesign_LuciusSwordThrustNNEESE20261111V1_NE_01",
+        "Redesign_LuciusSwordThrustNNEESE20261111V1_NE_02"
+      ],
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "LuciusSwordThrustNNEESE20261111V1_Attack_SwordThrust_E",
+      "action": "Attack",
+      "direction": 6,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustNNEESE20261111V1",
+      "imageSha256": "9fc7141fefd00a022d468582513ccd7680926df5c09dff7ad1821705f92b04ea",
+      "sourceSha256": "9fc7141fefd00a022d468582513ccd7680926df5c09dff7ad1821705f92b04ea",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "pixelsPerUnit": 135.661248,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": false,
+      "durationMs": [
+        140,
+        120,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "spriteNames": [
+        "Redesign_LuciusSwordThrustNNEESE20261111V1_E_00",
+        "Redesign_LuciusSwordThrustNNEESE20261111V1_E_01",
+        "Redesign_LuciusSwordThrustNNEESE20261111V1_E_02"
+      ],
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "LuciusSwordThrustNNEESE20261111V1_Attack_SwordThrust_SE",
+      "action": "Attack",
+      "direction": 7,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustNNEESE20261111V1",
+      "imageSha256": "9fc7141fefd00a022d468582513ccd7680926df5c09dff7ad1821705f92b04ea",
+      "sourceSha256": "9fc7141fefd00a022d468582513ccd7680926df5c09dff7ad1821705f92b04ea",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "pixelsPerUnit": 135.661248,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": false,
+      "durationMs": [
+        140,
+        120,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "spriteNames": [
+        "Redesign_LuciusSwordThrustNNEESE20261111V1_SE_00",
+        "Redesign_LuciusSwordThrustNNEESE20261111V1_SE_01",
+        "Redesign_LuciusSwordThrustNNEESE20261111V1_SE_02"
+      ],
+      "attackKey": "SwordThrust"
+    },
+    {
+      "id": "LuciusSwordHorizontalSSWWNW20261111V2_Attack_SwordHorizontal_S",
+      "action": "Attack",
+      "direction": 0,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordHorizontalSSWWNW20261111V2",
+      "imageSha256": "96e977da49de075fcb34932058be02aa058e7b96fed4d65427394b5a8ccd433f",
+      "sourceSha256": "96e977da49de075fcb34932058be02aa058e7b96fed4d65427394b5a8ccd433f",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "pixelsPerUnit": 150.4796,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": false,
+      "durationMs": [
+        140,
+        120,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "spriteNames": [
+        "Redesign_LuciusSwordHorizontalSSWWNW20261111V2_S_00",
+        "Redesign_LuciusSwordHorizontalSSWWNW20261111V2_S_01",
+        "Redesign_LuciusSwordHorizontalSSWWNW20261111V2_S_02"
+      ],
+      "attackKey": "SwordHorizontal"
+    },
+    {
+      "id": "LuciusSwordHorizontalSSWWNW20261111V2_Attack_SwordHorizontal_SW",
+      "action": "Attack",
+      "direction": 1,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordHorizontalSSWWNW20261111V2",
+      "imageSha256": "96e977da49de075fcb34932058be02aa058e7b96fed4d65427394b5a8ccd433f",
+      "sourceSha256": "96e977da49de075fcb34932058be02aa058e7b96fed4d65427394b5a8ccd433f",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "pixelsPerUnit": 150.4796,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": false,
+      "durationMs": [
+        140,
+        120,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "spriteNames": [
+        "Redesign_LuciusSwordHorizontalSSWWNW20261111V2_SW_00",
+        "Redesign_LuciusSwordHorizontalSSWWNW20261111V2_SW_01",
+        "Redesign_LuciusSwordHorizontalSSWWNW20261111V2_SW_02"
+      ],
+      "attackKey": "SwordHorizontal"
+    },
+    {
+      "id": "LuciusSwordHorizontalSSWWNW20261111V2_Attack_SwordHorizontal_W",
+      "action": "Attack",
+      "direction": 2,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordHorizontalSSWWNW20261111V2",
+      "imageSha256": "96e977da49de075fcb34932058be02aa058e7b96fed4d65427394b5a8ccd433f",
+      "sourceSha256": "96e977da49de075fcb34932058be02aa058e7b96fed4d65427394b5a8ccd433f",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "pixelsPerUnit": 150.4796,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": false,
+      "durationMs": [
+        140,
+        120,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "spriteNames": [
+        "Redesign_LuciusSwordHorizontalSSWWNW20261111V2_W_00",
+        "Redesign_LuciusSwordHorizontalSSWWNW20261111V2_W_01",
+        "Redesign_LuciusSwordHorizontalSSWWNW20261111V2_W_02"
+      ],
+      "attackKey": "SwordHorizontal"
+    },
+    {
+      "id": "LuciusSwordHorizontalSSWWNW20261111V2_Attack_SwordHorizontal_NW",
+      "action": "Attack",
+      "direction": 3,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordHorizontalSSWWNW20261111V2",
+      "imageSha256": "96e977da49de075fcb34932058be02aa058e7b96fed4d65427394b5a8ccd433f",
+      "sourceSha256": "96e977da49de075fcb34932058be02aa058e7b96fed4d65427394b5a8ccd433f",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "pixelsPerUnit": 150.4796,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": false,
+      "durationMs": [
+        140,
+        120,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "spriteNames": [
+        "Redesign_LuciusSwordHorizontalSSWWNW20261111V2_NW_00",
+        "Redesign_LuciusSwordHorizontalSSWWNW20261111V2_NW_01",
+        "Redesign_LuciusSwordHorizontalSSWWNW20261111V2_NW_02"
+      ],
+      "attackKey": "SwordHorizontal"
+    },
+    {
+      "id": "LuciusSwordHorizontalNNEESE20261111V1_Attack_SwordHorizontal_N",
+      "action": "Attack",
+      "direction": 4,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordHorizontalNNEESE20261111V1",
+      "imageSha256": "d0a617f8d79ecd769f3a04b6a7f64dc44c3d98d5bf7fced215e1ed2245ee147e",
+      "sourceSha256": "d0a617f8d79ecd769f3a04b6a7f64dc44c3d98d5bf7fced215e1ed2245ee147e",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "pixelsPerUnit": 137.6837,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": false,
+      "durationMs": [
+        140,
+        120,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "spriteNames": [
+        "Redesign_LuciusSwordHorizontalNNEESE20261111V1_N_00",
+        "Redesign_LuciusSwordHorizontalNNEESE20261111V1_N_01",
+        "Redesign_LuciusSwordHorizontalNNEESE20261111V1_N_02"
+      ],
+      "attackKey": "SwordHorizontal"
+    },
+    {
+      "id": "LuciusSwordHorizontalNNEESE20261111V1_Attack_SwordHorizontal_NE",
+      "action": "Attack",
+      "direction": 5,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordHorizontalNNEESE20261111V1",
+      "imageSha256": "d0a617f8d79ecd769f3a04b6a7f64dc44c3d98d5bf7fced215e1ed2245ee147e",
+      "sourceSha256": "d0a617f8d79ecd769f3a04b6a7f64dc44c3d98d5bf7fced215e1ed2245ee147e",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "pixelsPerUnit": 137.6837,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": false,
+      "durationMs": [
+        140,
+        120,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "spriteNames": [
+        "Redesign_LuciusSwordHorizontalNNEESE20261111V1_NE_00",
+        "Redesign_LuciusSwordHorizontalNNEESE20261111V1_NE_01",
+        "Redesign_LuciusSwordHorizontalNNEESE20261111V1_NE_02"
+      ],
+      "attackKey": "SwordHorizontal"
+    },
+    {
+      "id": "LuciusSwordHorizontalNNEESE20261111V1_Attack_SwordHorizontal_E",
+      "action": "Attack",
+      "direction": 6,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordHorizontalNNEESE20261111V1",
+      "imageSha256": "d0a617f8d79ecd769f3a04b6a7f64dc44c3d98d5bf7fced215e1ed2245ee147e",
+      "sourceSha256": "d0a617f8d79ecd769f3a04b6a7f64dc44c3d98d5bf7fced215e1ed2245ee147e",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "pixelsPerUnit": 137.6837,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": false,
+      "durationMs": [
+        140,
+        120,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "spriteNames": [
+        "Redesign_LuciusSwordHorizontalNNEESE20261111V1_E_00",
+        "Redesign_LuciusSwordHorizontalNNEESE20261111V1_E_01",
+        "Redesign_LuciusSwordHorizontalNNEESE20261111V1_E_02"
+      ],
+      "attackKey": "SwordHorizontal"
+    },
+    {
+      "id": "LuciusSwordHorizontalNNEESE20261111V1_Attack_SwordHorizontal_SE",
+      "action": "Attack",
+      "direction": 7,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordHorizontalNNEESE20261111V1",
+      "imageSha256": "d0a617f8d79ecd769f3a04b6a7f64dc44c3d98d5bf7fced215e1ed2245ee147e",
+      "sourceSha256": "d0a617f8d79ecd769f3a04b6a7f64dc44c3d98d5bf7fced215e1ed2245ee147e",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "pixelsPerUnit": 137.6837,
+      "status": "visual-reviewed",
+      "wholeFigures": true,
+      "loop": false,
+      "durationMs": [
+        140,
+        120,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "spriteNames": [
+        "Redesign_LuciusSwordHorizontalNNEESE20261111V1_SE_00",
+        "Redesign_LuciusSwordHorizontalNNEESE20261111V1_SE_01",
+        "Redesign_LuciusSwordHorizontalNNEESE20261111V1_SE_02"
+      ],
+      "attackKey": "SwordHorizontal"
     }
   ]
 }

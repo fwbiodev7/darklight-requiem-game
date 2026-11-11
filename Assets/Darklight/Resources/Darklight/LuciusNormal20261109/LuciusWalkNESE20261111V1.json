@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "image": "LuciusWalkNESE20261111V1.png",
+  "imageSha256": "98d2088c97d0718cf0d155115b97e879b993a68eabd5d93c50038f385a0eb209",
+  "sourcePath": "ArtSources/EntregaLucius20261111/selecionadas/caminhada-costas/LuciusWalkNESE20261111V1-source.png",
+  "sourceSha256": "98d2088c97d0718cf0d155115b97e879b993a68eabd5d93c50038f385a0eb209",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 214.97090106361628,
+  "wholeFigures": true,
+  "status": "visual-reviewed",
+  "allowStatic": false,
+  "pivotMethod": "pelvis-floor-ground",
+  "frames": [
+    {
+      "id": "Redesign_LuciusWalkNESE20261111V1_NE_00",
+      "action": "Walk",
+      "direction": "NE",
+      "index": 0,
+      "phase": "contact-A",
+      "rect": [
+        0,
+        0,
+        384,
+        512
+      ],
+      "pivot": [
+        0.53829379,
+        0.12109375
+      ],
+      "durationMs": 140
+    },
+    {
+      "id": "Redesign_LuciusWalkNESE20261111V1_NE_01",
+      "action": "Walk",
+      "direction": "NE",
+      "index": 1,
+      "phase": "passing-A",
+      "rect": [
+        384,
+        0,
+        384,
+        512
+      ],
+      "pivot": [
+        0.47821798,
+        0.125
+      ],
+      "durationMs": 130
+    },
+    {
+      "id": "Redesign_LuciusWalkNESE20261111V1_NE_02",
+      "action": "Walk",
+      "direction": "NE",
+      "index": 2,
+      "phase": "contact-B",
+      "rect": [
+        768,
+        0,
+        384,
+        512
+      ],
+      "pivot": [
+        0.37076823,
+        0.12109375
+      ],
+      "durationMs": 140
+    },
+    {
+      "id": "Redesign_LuciusWalkNESE20261111V1_NE_03",
+      "action": "Walk",
+      "direction": "NE",
+      "index": 3,
+      "phase": "passing-B",
+      "rect": [
+        1152,
+        0,
+        384,
+        512
+      ],
+      "pivot": [
+        0.36409406,
+        0.140625
+      ],
+      "durationMs": 130
+    },
+    {
+      "id": "Redesign_LuciusWalkNESE20261111V1_SE_00",
+      "action": "Walk",
+      "direction": "SE",
+      "index": 0,
+      "phase": "contact-A",
+      "rect": [
+        0,
+        512,
+        384,
+        512
+      ],
+      "pivot": [
+        0.66294373,
+        0.14648438
+      ],
+      "durationMs": 140
+    },
+    {
+      "id": "Redesign_LuciusWalkNESE20261111V1_SE_01",
+      "action": "Walk",
+      "direction": "SE",
+      "index": 1,
+      "phase": "passing-A",
+      "rect": [
+        384,
+        512,
+        384,
+        512
+      ],
+      "pivot": [
+        0.52032404,
+        0.14648438
+      ],
+      "durationMs": 130
+    },
+    {
+      "id": "Redesign_LuciusWalkNESE20261111V1_SE_02",
+      "action": "Walk",
+      "direction": "SE",
+      "index": 2,
+      "phase": "contact-B",
+      "rect": [
+        768,
+        512,
+        384,
+        512
+      ],
+      "pivot": [
+        0.5239943,
+        0.14453125
+      ],
+      "durationMs": 140
+    },
+    {
+      "id": "Redesign_LuciusWalkNESE20261111V1_SE_03",
+      "action": "Walk",
+      "direction": "SE",
+      "index": 3,
+      "phase": "passing-B",
+      "rect": [
+        1152,
+        512,
+        384,
+        512
+      ],
+      "pivot": [
+        0.40317766,
+        0.15039062
+      ],
+      "durationMs": 130
+    }
+  ]
+}

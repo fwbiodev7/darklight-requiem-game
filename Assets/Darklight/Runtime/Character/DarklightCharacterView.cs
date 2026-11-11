@@ -140,7 +140,10 @@ namespace Darklight
             {
                 trailSerial=model.AttackSerial;
                 DarklightCombatFX.Echo(display,.10f);
-                DarklightCombatParticlesV2.TryEmitAttack(weapon,display.transform.position+(Vector3)model.Facing*.45f,model.Facing);
+                Vector3 attackAnchor = weapon==2 ? display.transform.position + Vector3.up*.40f + (Vector3)model.Facing*.40f :
+                                       weapon==3 ? display.transform.position + Vector3.up*.15f + (Vector3)model.Facing*.65f :
+                                       display.transform.position + Vector3.up*.45f + (Vector3)model.Facing*.58f;
+                DarklightCombatParticlesV2.TryEmitAttack(weapon, attackAnchor, model.Facing);
             }
             if(model.State==CombatState.Dodge&&model.Clock>=nextTrail){nextTrail=model.Clock+.05f;DarklightCombatFX.Echo(display,.12f);}
         }

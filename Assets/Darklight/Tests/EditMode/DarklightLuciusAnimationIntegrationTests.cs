@@ -179,5 +179,53 @@ namespace Darklight.Tests
             }
             finally { UnityEngine.Object.DestroyImmediate(actor); }
         }
+
+        [Test]
+        public void WalkAndWalkArmedResolveAllEightNativeDirectionsWithoutFallback()
+        {
+            var catalog = LoadNormalCatalog();
+            for (int dir = 0; dir < 8; dir++)
+            {
+                var walkPage = ExactPage("Walk", dir);
+                AssertFramesResolveWithoutFallback(walkPage, "Walk");
+
+                var walkArmedPage = ExactPage("WalkArmed", dir);
+                AssertFramesResolveWithoutFallback(walkArmedPage, "WalkArmed");
+            }
+        }
+
+        [Test]
+        public void ThrustHasExactEightNativePagesWithoutFallback()
+        {
+            for (int dir = 0; dir < 8; dir++)
+            {
+                var page = ExactPage("Attack", dir, DarklightLuciusCombatProfile.SwordThrust);
+                AssertFramesResolveWithoutFallback(page, "Attack", DarklightLuciusCombatProfile.SwordThrust);
+            }
+        }
+
+        [Test]
+        public void WalkArmedPresentationAdvancesByDistanceAndStopsWhenStill()
+        {
+            var page = ExactPage("WalkArmed", 0);
+            var actor = new GameObject("LuciusWalkArmedIntegration");
+            try
+            {
+                var view = actor.AddComponent<DarklightLuciusView>();
+                view.IsArmed = true;
+                var model = new CombatModel(new CombatLoadout());
+                var travel = Vector2.down;
+
+                Assert.That(view.Present(model, travel), Is.True);
+                Assert.That(view.UsesIdleFallback, Is.False);
+                Assert.That(view.Renderer.sprite.name, Is.EqualTo(page.spriteNames[0]));
+
+                // Still returns to idle and stops running walk in place
+                Assert.That(view.Present(model, Vector2.zero), Is.True);
+                Assert.That(view.UsesIdleFallback, Is.False);
+                Assert.That(view.Renderer.sprite.name, Does.Contain("Idle"));
+            }
+            finally { UnityEngine.Object.DestroyImmediate(actor); }
+        }
     }
 }

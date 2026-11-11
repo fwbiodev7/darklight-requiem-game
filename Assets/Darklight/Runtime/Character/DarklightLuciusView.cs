@@ -13,6 +13,8 @@ namespace Darklight
         Vector2 previousPosition;
         bool hasPosition,walking;
         float walkTime;
+        public bool IsArmed { get; set; }
+        int committedAttackDirection = -1;
         // One authored walk cycle covers the ground traversed at this speed.
         const float WalkReferenceSpeed=2.3f;
         public SpriteRenderer Renderer=>art;
@@ -27,22 +29,48 @@ namespace Darklight
             if(model==null)return false;
             string action=DarklightWeaponRedesignBank.Action(model,movement);
             int facingDirection=DarklightCharacterView.DirectionIndex(model.Facing);
+
+            // Armed sword stance tracks combat state and engagements
+            if(model.State==CombatState.Attack||model.State==CombatState.Dodge||model.State==CombatState.Parry||model.Attack!=null)
+                IsArmed=true;
+
             // Until a native evasive clip exists, a grounded sidestep uses the
-            // actual walk cycle, rather than moving a static resting sprite.
+            // armed walk cycle, rather than moving a static resting sprite.
             if(model.State==CombatState.Dodge&&movement.sqrMagnitude>.01f&&
-                !DarklightLuciusSpriteBank.TryActionPage(appearance,"Dodge",facingDirection,null,out _))action="Walk";
+                !DarklightLuciusSpriteBank.TryActionPage(appearance,"Dodge",facingDirection,null,out _))
+                action=IsArmed?"WalkArmed":"Walk";
+            else if(action=="Walk"&&IsArmed)
+                action="WalkArmed";
+
+            bool moving=(action=="Walk"||action=="WalkArmed")&&movement.sqrMagnitude>.001f;
+            if(!moving&&action=="WalkArmed")
+                action="Idle";
+
             float time=model.State==CombatState.Neutral?model.Clock:model.StateTime;
             Vector2 position=transform.position;
-            if(action=="Walk")
+            if(moving)
             {
                 if(!walking)walkTime=0;
                 else if(hasPosition)walkTime+=Vector2.Distance(position,previousPosition)/WalkReferenceSpeed;
                 time=walkTime;
             }
-            walking=action=="Walk";previousPosition=position;hasPosition=true;
+            walking=moving;previousPosition=position;hasPosition=true;
+
             // Pursuit aim can differ from actual travel (flanking/retreating).
             // Locomotion faces travel; a committed sword stroke keeps its aim.
-            int direction=walking?DarklightCharacterView.DirectionIndex(movement):facingDirection;
+            int direction;
+            if(action=="Attack")
+            {
+                if(committedAttackDirection<0||model.StateTime<=0.02f)
+                    committedAttackDirection=facingDirection;
+                direction=committedAttackDirection;
+            }
+            else
+            {
+                committedAttackDirection=-1;
+                direction=moving?DarklightCharacterView.DirectionIndex(movement):facingDirection;
+            }
+
             string key=action=="Attack"?model.Attack?.animationKey:null;
             if(action=="Attack"&&DarklightLuciusSpriteBank.TryActionPage(appearance,action,direction,key,out var page))
                 time=DarklightLuciusSpriteBank.AttackTime(page,model.Attack,

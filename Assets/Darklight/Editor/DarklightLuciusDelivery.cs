@@ -8,6 +8,7 @@ namespace Darklight.Editor
 {
     public static class DarklightLuciusDelivery
     {
+        [MenuItem("DARKLIGHT/Arte/Importar animações normais de Lucius")]
         public static void ImportNormalAnimations()
         {
             string folder="Assets/Darklight/Resources/"+DarklightLuciusSpriteBank.Root;

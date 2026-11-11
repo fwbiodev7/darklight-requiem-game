@@ -75,6 +75,33 @@ namespace Darklight.Tests
                 if(!hasWalk)Assert.That(walk,Is.SameAs(idle));
             }
         }
+        [Test] public void WalkArmedPageValidatesWithLoopAndRejectsInvalidContracts()
+        {
+            var page = new DarklightLuciusSpritePage
+            {
+                id = "LuciusWalkArmedSSW20261111V1_WalkArmed_S",
+                action = "WalkArmed",
+                direction = 0,
+                resourcePath = DarklightLuciusSpriteBank.Root + "LuciusWalkArmedSSW20261111V1",
+                imageSha256 = new string('a', 64),
+                sourceSha256 = new string('b', 64),
+                nativeSize = new[] { 1536, 1024 },
+                pixelsPerUnit = 214.97f,
+                spriteNames = new[] { "Redesign_LuciusWalkArmed_00", "Redesign_LuciusWalkArmed_01" },
+                durationMs = new[] { 140, 130 },
+                loop = true,
+                wholeFigures = true,
+                status = "visual-reviewed"
+            };
+            Assert.That(DarklightLuciusSpriteBank.ValidPage(page), Is.True, "WalkArmed must allow loop=true for continuous locomotion");
+
+            page.attackKey = "SwordHorizontal";
+            Assert.That(DarklightLuciusSpriteBank.ValidPage(page), Is.False, "Locomotion actions cannot carry an attackKey");
+            page.attackKey = null;
+
+            page.action = "WalkArmedInvalid";
+            Assert.That(DarklightLuciusSpriteBank.ValidPage(page), Is.False, "Unknown action must be rejected");
+        }
     }
 
     // Test-only marker sequences reuse imported whole Idle views. They are not
@@ -97,6 +124,12 @@ namespace Darklight.Tests
             Assert.That(DarklightLuciusSpriteBank.ValidCatalog(data,appearance),Is.True);
             Assert.That(data.pages.Count(p=>p.action=="Idle"),Is.EqualTo(8));
             data.pages=data.pages.Where(p=>p.action=="Idle").ToArray();
+            const System.Reflection.BindingFlags flags=System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Static;
+            var catalogs=(System.Collections.Generic.Dictionary<DarklightLuciusAppearance,DarklightLuciusSpriteCatalog>)
+                typeof(DarklightLuciusSpriteBank).GetField("catalogs",flags).GetValue(null);
+            var attempted=(System.Collections.Generic.HashSet<DarklightLuciusAppearance>)
+                typeof(DarklightLuciusSpriteBank).GetField("attempted",flags).GetValue(null);
+            catalogs[appearance]=data;attempted.Add(appearance);
         }
         [TearDown] public void Dispose()
         {

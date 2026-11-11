@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 UNITY = Path(r"C:\Program Files\Unity\Hub\Editor\6000.6.0f1\Editor\Unity.exe")
 
-def run(task_name, unity_args, timeout=600):
+def run(task_name, unity_args, timeout=1800):
     work = ROOT / "work"
     work.mkdir(parents=True, exist_ok=True)
     log = work / f"{task_name}.log"

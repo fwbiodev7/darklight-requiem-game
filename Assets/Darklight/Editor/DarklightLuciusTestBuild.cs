@@ -58,7 +58,13 @@ namespace Darklight.Editor
 
             if (summary.result != BuildResult.Succeeded)
             {
+                EditorApplication.Exit(1);
                 throw new InvalidOperationException("Build failed with result: " + summary.result + " (errors: " + summary.totalErrors + ")");
+            }
+
+            if (Application.isBatchMode)
+            {
+                EditorApplication.Exit(0);
             }
         }
     }

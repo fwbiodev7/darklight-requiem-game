@@ -45,7 +45,8 @@ namespace Darklight
             return true;
         }
         static bool Action(string action)=>action=="Idle"||action=="Walk"||action=="Run"||
-            action=="Attack"||action=="Charging"||action=="Dodge"||action=="Parry"||action=="Hurt"||action=="Dead";
+            action=="Attack"||action=="Charging"||action=="Dodge"||action=="Parry"||action=="Hurt"||action=="Dead"||
+            action=="Draw"||action=="WalkArmed";
         static bool SwordKey(string key)=>key==DarklightLuciusCombatProfile.SwordHorizontal||
             key==DarklightLuciusCombatProfile.SwordVertical||key==DarklightLuciusCombatProfile.SwordThrust;
         public static bool ValidPage(DarklightLuciusSpritePage page)
@@ -141,8 +142,19 @@ namespace Darklight
             if(!Action(action)||direction<0||direction>7)return false;
             if(!TryActionPage(appearance,action,direction,attackKey,out var page))
             {
-                if(action=="Idle"||!TryActionPage(appearance,"Idle",direction,null,out page))return false;
-                fallback=true;
+                if(action=="Attack"&&(attackKey==DarklightLuciusCombatProfile.SwordThrust||string.IsNullOrEmpty(attackKey)))
+                {
+                    if(TryActionPage(appearance,"Attack",direction,DarklightLuciusCombatProfile.SwordHorizontal,out page)||
+                       TryActionPage(appearance,"Attack",direction,DarklightLuciusCombatProfile.SwordVertical,out page))
+                    {
+                        fallback=true;
+                    }
+                }
+                if(page==null)
+                {
+                    if(action=="Idle"||!TryActionPage(appearance,"Idle",direction,null,out page))return false;
+                    fallback=true;
+                }
             }
             int frame=Frame(page,time,appearance);
             if(frame<0||!Load(page))return false;

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Darklight
 {
     // Appearance is independent of form: the hood does not add a transformation.
-    public enum DarklightLuciusAppearance { Normal, Hooded }
+    public enum DarklightLuciusAppearance { Normal, Hooded, Arconte }
     [Serializable] public sealed class DarklightLuciusSpritePage
     {
         public string id,action,attackKey,resourcePath,imageSha256,sourceSha256,status;
@@ -32,11 +32,13 @@ namespace Darklight
     {
         public const string Root="Darklight/LuciusNormal20261109/";
         public const string HoodedRoot="Darklight/LuciusHooded20261110/";
+        public const string ArconteRoot="Darklight/LuciusArconte20261111/";
         static readonly Dictionary<DarklightLuciusAppearance,DarklightLuciusSpriteCatalog> catalogs=new();
         static readonly HashSet<DarklightLuciusAppearance> attempted=new();
         static readonly Dictionary<string,Dictionary<string,Sprite>> sheets=new(StringComparer.Ordinal);
         static string ResourceRoot(DarklightLuciusAppearance appearance)=>appearance==DarklightLuciusAppearance.Normal?Root:
-            appearance==DarklightLuciusAppearance.Hooded?HoodedRoot:null;
+            appearance==DarklightLuciusAppearance.Hooded?HoodedRoot:
+            appearance==DarklightLuciusAppearance.Arconte?ArconteRoot:null;
         static bool Name(string name)
         {
             if(string.IsNullOrEmpty(name))return false;
@@ -46,7 +48,7 @@ namespace Darklight
         }
         static bool Action(string action)=>action=="Idle"||action=="Walk"||action=="Run"||
             action=="Attack"||action=="Charging"||action=="Dodge"||action=="Parry"||action=="Hurt"||action=="Dead"||
-            action=="Draw"||action=="WalkArmed";
+            action=="Draw"||action=="WalkArmed"||action=="Transformation";
         static bool SwordKey(string key)=>key==DarklightLuciusCombatProfile.SwordHorizontal||
             key==DarklightLuciusCombatProfile.SwordVertical||key==DarklightLuciusCombatProfile.SwordThrust;
         public static bool ValidPage(DarklightLuciusSpritePage page)
@@ -72,7 +74,7 @@ namespace Darklight
             foreach(string name in page.spriteNames)
                 if(!Name(name)||!name.StartsWith("Redesign_Lucius",StringComparison.Ordinal)||!names.Add(name))return false;
             foreach(int duration in page.durationMs)if(duration<=0)return false;
-            if(page.loop&&page.action!="Idle"&&page.action!="Walk"&&page.action!="Run"&&page.action!="Charging")return false;
+            if(page.loop&&page.action!="Idle"&&page.action!="Walk"&&page.action!="Run"&&page.action!="Charging"&&page.action!="WalkArmed")return false;
             return true;
         }
         public static bool ValidCatalog(DarklightLuciusSpriteCatalog data)
@@ -82,7 +84,8 @@ namespace Darklight
             if(ResourceRoot(appearance)==null)return false;
             if(data==null||data.schemaVersion!=1||data.characterId!="Lucius"||data.form!="Normal"||
                 data.weapon!="Sword"||data.pages==null)return false;
-            if(appearance==DarklightLuciusAppearance.Normal?!string.IsNullOrEmpty(data.appearance)&&data.appearance!="Normal":data.appearance!="Hooded")return false;
+            if(appearance==DarklightLuciusAppearance.Normal?!string.IsNullOrEmpty(data.appearance)&&data.appearance!="Normal":
+               appearance==DarklightLuciusAppearance.Hooded?data.appearance!="Hooded":data.appearance!="Arconte")return false;
             var ids=new HashSet<string>(StringComparer.Ordinal);var contexts=new HashSet<string>(StringComparer.Ordinal);
             var idle=new HashSet<int>();
             foreach(var page in data.pages)
@@ -142,19 +145,8 @@ namespace Darklight
             if(!Action(action)||direction<0||direction>7)return false;
             if(!TryActionPage(appearance,action,direction,attackKey,out var page))
             {
-                if(action=="Attack"&&(attackKey==DarklightLuciusCombatProfile.SwordThrust||string.IsNullOrEmpty(attackKey)))
-                {
-                    if(TryActionPage(appearance,"Attack",direction,DarklightLuciusCombatProfile.SwordHorizontal,out page)||
-                       TryActionPage(appearance,"Attack",direction,DarklightLuciusCombatProfile.SwordVertical,out page))
-                    {
-                        fallback=true;
-                    }
-                }
-                if(page==null)
-                {
-                    if(action=="Idle"||!TryActionPage(appearance,"Idle",direction,null,out page))return false;
-                    fallback=true;
-                }
+                if(action=="Idle"||!TryActionPage(appearance,"Idle",direction,null,out page))return false;
+                fallback=true;
             }
             int frame=Frame(page,time,appearance);
             if(frame<0||!Load(page))return false;

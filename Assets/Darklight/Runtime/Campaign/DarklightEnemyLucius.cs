@@ -82,6 +82,15 @@ namespace Darklight
                 return true;
             }
 
+            if (!phaseTwo && Health != null && Health.HealthPercent < 0.5f)
+            {
+                phaseTwo = true;
+                if (LuciusView != null) LuciusView.appearance = DarklightLuciusAppearance.Arconte;
+                game?.BossPhaseTwo();
+                game?.Notice("FASE 2: ARCONTE DO ABISMO");
+                timer = 0.85f;
+            }
+
             var player = lab?.Player;
             if (player == null) return false;
 

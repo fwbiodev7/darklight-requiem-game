@@ -7,7 +7,7 @@ Monitor: primary 92% usado/300min, secondary 76% usado/10080min. Janela resetsAt
 Caminhada: NW/NE/SE produzidos como candidatos; W/E receberam registro no lugar por metadados, mesmos pixels; N reaproveitado. S/SW seguem rejeitados. Esses estados são do recibo FRIDAY, sem nova aprovação visual pelo coordenador.
 Ações: 15 imagens (14 gerações e uma montagem), 7 candidatas, 8 rejeitadas, zero liberadas. Revisão FRIDAY abrangeu 31 PNGs únicos/215 quadros ou poses entre os estudos; não equivale a animações concluídas.
 Persistem variações de anatomia/escala, roupa, espada, assimetrias, contatos e limites entre células. Não compensar anatomia com resize/PPU.
-Aprovado novo: nada. Integrado novo: nada. Testado novo em Unity: nada. Nenhuma mudança runtime, catálogo, skin, input, campanha ou build neste fechamento. Seleção técnica dos três golpes publicada anteriormente permanece; não repetir os testes antigos como resultado desta rodada.
+Aprovado novo: nada. Integrado novo: nada. Testado novo em Unity: nada. Nenhuma mudança runtime, catálogo, skin, input, campanha ou build neste fechamento. Seleção técnica dos três golpes publicada anteriormente permanece; não repetir os testes antigos como resultado desta rao odada.
 
 ## Evidências preservadas fora do repositório
 Base local compartilhada: DARKLIGHT-20261109/friday/lucius-20261110/.

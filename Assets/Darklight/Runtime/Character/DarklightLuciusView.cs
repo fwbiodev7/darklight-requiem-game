@@ -87,10 +87,21 @@ namespace Darklight
             // Unity native objects cannot be created in MonoBehaviour field
             // initializers. Presentation is explicit and runs on the main thread.
             block??=new MaterialPropertyBlock();art.GetPropertyBlock(block);
-            block.SetFloat("_WholeSprite",1);block.SetFloat("_WholeFrameId",0);block.SetFloat("_VampireForm",0);
-            block.SetFloat("_DarkForm",0);block.SetFloat("_Physique",0);block.SetFloat("_LayerOcclusion",0);
+            block.SetFloat("_WholeSprite",1);block.SetFloat("_WholeFrameId",0);
+            if(appearance==DarklightLuciusAppearance.Arconte)
+            {
+                block.SetFloat("_DarkForm",1);
+                block.SetFloat("_VampireForm",0.5f);
+                block.SetVector("_CanonicalSkinShift",new Vector4(0.1f,0.9f,0.3f,1f));
+            }
+            else
+            {
+                block.SetFloat("_DarkForm",0);block.SetFloat("_VampireForm",0);
+                block.SetVector("_CanonicalSkinShift",Vector4.zero);
+            }
+            block.SetFloat("_Physique",0);block.SetFloat("_LayerOcclusion",0);
             block.SetFloat("_EraseHead",0);block.SetFloat("_RuinFists",0);
-            block.SetTexture("_VampireMask",Texture2D.blackTexture);block.SetVector("_CanonicalSkinShift",Vector4.zero);
+            block.SetTexture("_VampireMask",Texture2D.blackTexture);
             art.SetPropertyBlock(block);UsesIdleFallback=fallback;return true;
         }
     }

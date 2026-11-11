@@ -1,178 +1,213 @@
-# DARKLIGHT: REQUIEM — GDD consolidado
-
-Revisão de escopo: **26/10/2026**. O [contrato canônico atual](../ESCOPO-CANONICO-20261026.md) prevalece sobre descrições antigas: Fabius somente Réquiem, katana/Punhos da Ruína/moto, Normal/Ruptura/Eclipse Absoluto. Lucius tem somente Normal/Nexo Fenrir e aguarda o redesign de Fabius; O Encapuzado preserva a identidade oculta até Sangue do Abismo. Rock, Presas e formas substituídas permanecem como legado. Ver [cobertura e pendências reais](../PENDENCIAS-20261026.md) e [LDD vigente](LDD.md).
-
-A base de 10/10 contém seis capítulos com ampliações posteriores, famílias de inimigos/elites, chefes, RPG, menus, save e Dark Resonance. As descrições históricas abaixo não certificam o novo escopo implementado. Compilação, testes automatizados, abertura standalone, campanha humana e balanceamento são estados distintos. Fabius e HUD preservam as referências aprovadas.
-
-## Visão do jogo
-
-RPG de ação e hack and slash 2D topview, fantasia urbana sombria, exploração, combate expressivo e narrativa cinematográfica. Plataforma inicial: Windows. Teclado/mouse e controle devem permitir jogar e navegar por todos os menus. O desenvolvimento começa por uma experiência completa curta, seguida da campanha em seis capítulos.
-
-Vespera sofre Rupturas após um eclipse incomum: a realidade mistura-se à dimensão chamada O Véu e surgem criaturas conhecidas como Ecos. Fábio sobrevive a um ataque e desperta Réquiem, espada que canaliza luz e escuridão. Lucien Veyr e o Projeto Eclipse pretendem romper a barreira entre os mundos.
-
-Fábio é O Portador; Kael Voss é o rival de katana espectral azul; Lyra Moreau investiga as Rupturas; Lucien Veyr é O Arquiteto. Réquiem terá a forma de katana do concept aprovado. O protagonista preserva o rosto e cabelo das fotos, proporções adultas, sobretudo de couro preto, spikes discretos nos ombros e acessórios prateados. A versão sem óculos é a referência das vistas atuais; a alternativa com óculos ainda exige atualização ao figurino final.
-
-## Direção visual e apresentação
-
-Usar `$segredo-varginha-pixelart`: câmera de RPG topview, pixels quadrados, contorno escuro, sombras em grupos e identidade coerente em oito vistas. Preservar a mão dominante e a posição dos acessórios; não obter direções assimétricas apenas por espelhamento. Paleta do novo jogo: preto, carvão, vermelho profundo, violeta e luzes frias, com pele e cabelo naturais.
-
-A folha aprovada é uma fonte visual de 1536×1024, com oito figuras estáticas. Sua resolução não representa a resolução lógica final. Recortes, direções, pivôs, alpha e escala precisam de acabamento antes do uso definitivo. A folha não contém animações.
-
-Proposta de apresentação: mundo a 640×360, ampliação inteira 3× para 1920×1080; tiles novos de 32 pixels. Comparar corpos de 64 e 72 pixels de altura antes de fixar escala. Não converter automaticamente assets herdados com outros PPU. A auditoria detectou Built-in; instalação do pacote URP não comprova pipeline ativo. Escolha e correção do pipeline antecedem iluminação e configuração definitiva da câmera.
-
-## Ciclo principal
-
-Explorar → observar um encontro → combinar ataques e defesas → ganhar estilo e energia → transformar → vencer → recolher recompensa → conversar/investigar → abrir o próximo trecho. Checkpoints permitem repetir encontros sem atravessar diálogos já vistos. Missões secundárias acrescentam contexto e opções de combate.
-
-## Combate
-
-Movimento em oito direções, mira independente e leitura clara dos ataques. Arsenal ativo: katana, Punhos da Ruína e moto para Réquiem, preservando combate aéreo e suas finalizações. Katana oferece leve, pesado e carregado; combos iniciais: leve/leve/leve, leve/leve/pesado, leve/pesado, pesado carregado, esquiva/ataque, parry/contra-ataque e habilidade/ataque. Moto mantém Serra Infernal, Giro Devastador, Esmagamento Vertical, Roda Destruidora, Cavalgada Brutal e Execução Aérea Motorizada. A redução do seletor preserva timings, controles e mecânicas existentes; não renumerar IDs persistidos de forma destrutiva.
-
-Definir cada golpe por antecipação, contato, recuperação, alcance, dano, stagger e cancelamentos. Input buffering permite antecipar a próxima ação sem disparar ações durante pausa ou diálogo. Cada golpe acerta cada alvo uma vez, salvo ataques explicitamente definidos como múltiplos. Esquiva, parry perfeito, invulnerabilidade, hitstop e super armor precisam de janelas legíveis e verificáveis. Finalizadores e repertório ampliado entram após o núcleo estar estável.
-
-O rank D→SSS premia variedade e execução, perde valor com repetição e dano recebido e decai quando o combate fica inativo. Eventos de combate alimentam estilo, energia, áudio e HUD; a interface não calcula dano nem rank.
-
-## Inimigos e chefes
-
-Primeira experiência: Eco Rastejante, Eco Atirador e Eco Blindado. Depois: Eco Caçador, Eco Espectral e elites. Todos precisam de percepção, aproximação, preparação visível, ataque, recuperação, reação, morte e limites de coordenação para evitar ataques simultâneos injustos.
-
-Kael Voss é o primeiro chefe: fase 1 com combos, parry, esquivas, investidas e cortes de energia; fase 2 acrescenta teletransporte curto, projéteis e sequências agressivas. O encontro provoca o despertar de Ruptura. Barra de vida, introdução, transição, derrota e recompensa compõem o encontro; pular a cinematografia deve preservar o estado correto da luta.
-
-## Transformações
-
-Normal → Ruptura → Eclipse Absoluto. Normal mantém cabelo castanho natural. Ruptura tem mechas vermelhas intensas; Eclipse Absoluto funde a energia violeta de Eclipse com branco-prateado e elementos de Absoluto, preservando os poderes úteis e removendo redundâncias. As antigas Eclipse e Absoluto não são opções independentes. Energia ganha em combate, ativação, duração e retorno seguro continuam; modificadores devem ser removidos ao expirar, morrer ou transitar de cena, sem multiplicar permanentemente os atributos. Migrar progressão antiga sem apagar saves.
-
-Prioridade artística: concluir Normal antes de Ruptura e Eclipse Absoluto. Manter anatomia adulta, corte canônico e oito direções reais, `WorldVisualScale = 1.325`, PPU pelo corpo e olhos/pele preservados. Clips antigos de Eclipse/Absoluto são candidatos para revisão da fusão, não arte combinada aprovada. Substituir ações progressivamente com sequências completas; não misturar fases antigas e novas no mesmo golpe.
-
-## Dark Resonance — opcional, integrado à campanha
-
-Um MP3 sobrenatural transforma música em poderes temporários. A campanha principal deve funcionar integralmente sem desbloquear ou usar o aparelho. Os valores abaixo são hipóteses iniciais para testes, não balanceamento aprovado em gameplay.
-
-| Modo | Efeito inicial proposto | Duração | Linguagem visual |
-|---|---|---|---|
-| Love Metal | Cura 1,4% da vida máxima por segundo, até o limite | 18 s | Aura vermelha e ornamentos góticos discretos |
-| Thrash de Foco | +40% velocidade de ataque, +20% movimento, +20% energia de forma obtida | 14 s | Pulsos rápidos e faíscas acompanhando o ritmo |
-| Heavy de Força | +45% dano, impacto dobrado e recuperação menor ao sofrer dano | 12 s | Pulsos graves e contorno defensivo legível |
-
-Um modo ativo por vez. Recargas independentes: Love 32s, Força 28s, Foco 30s; custos 35/40/40 da energia própria do MP3. Trocar a seleção não elimina a recarga. A cura não ressuscita nem excede a vida máxima. Transformações permanecem independentes.
-
-O MP3 permite selecionar música ou estilo e mostra faixa, modo, efeito, duração e cooldown. Músicas do mesmo estilo compartilham o modificador; trocar de faixa é uma escolha musical. No single-player, abrir o painel pausa a ação; após confirmar e fechar, Fábio coloca os fones numa animação interrompível por dano, sem invulnerabilidade gratuita. O poder começa ao concluir a animação. Antes de concluir, a interrupção não concede buff nem consome a ativação.
-
-Teclado proposto: M abre o MP3, setas selecionam, Enter confirma, Esc volta. Controle: Back/Select abre, D-Pad seleciona, A confirma, B volta. Remapeamento e prompts acompanham o dispositivo; menus bloqueiam golpes. Não ocupar LB/RB/LT/RT já reservados ao combate. A seleção também deve permitir mouse.
-
-Integração: modificadores temporários separados dos atributos permanentes; recalcular timing de animação e hitboxes juntos ao acelerar ataques. Testar o acúmulo com Ruptura antes de definir limites. Morte encerra o efeito; salvar/carregar e trocar de cena não podem eliminar cooldown. O planejamento de save inclui tempo restante e estado do sistema, sem permitir duração infinita por pausa ou troca de música.
-
-VFX usam BPM e marcadores fornecidos pela faixa, com relógio de áudio e transições curtas. Não dependem de detectar automaticamente batidas no arquivo. Pulsos acompanham o ritmo sem mudar hitboxes, parry ou avisos dos inimigos. Volume zero não remove os poderes. Oferecer intensidade reduzida de flashes e efeitos para preservar leitura e conforto.
-
-Missão secundária proposta: **Frequência do Véu**. Na antiga loja de discos de Vespera, Fábio ajuda a recuperar componentes do aparelho e fragmentos sonoros, aprende a selecionar um modo e recebe o MP3. A missão tem versão curta de tutorial e pode ser concluída depois do primeiro encontro com Kael, sem bloquear a história.
-
-NPC original proposto: **Ícaro Nox**, técnico de som e colecionador de equipamentos antigos, com estética de rock gótico dos anos 2000. Criar rosto, figurino, voz e história próprios, sem reproduzir a identidade de artistas reais sem autorização.
-
-Planejamento de arte pela skill: MP3 fechado/aberto/ativo/em cooldown; botões de seleção/foco/confirmação; três ícones de modos; fones como acessório; sequência de colocar e retirar fones em oito direções; retrato e vistas do NPC; auras e pulsos em folhas separadas. Interface pode ocupar aproximadamente 224×128 pixels lógicos, aparelho 32×32 e ícones 16×16, como ponto de partida. Revisar a legibilidade antes de fixar tamanhos. Pivôs dos fones seguem a cabeça; katana e braços devem respeitar oclusão. Manter spikes, rosto e cabelo do protagonista aprovado.
-
-Trilha do protótipo pessoal: usar exclusivamente os cinco MP3 fornecidos pelo usuário. Love Metal: **Join Me in Death** e **Wings of a Butterfly**, de HIM. Thrash Metal: **Seek & Destroy** e **Creeping Death**, de Metallica. Heavy Metal: **Enter Sandman**, de Metallica. Right Here in My Arms e Sad But True saem da seleção. Essa associação é uma decisão de design dos modos, não uma classificação musical definitiva.
-
-Os cinco arquivos foram recebidos e copiados sem alteração para `AudioSources/Darklight/DarkResonance/`, fora de Assets. O manifesto registra IDs, caminhos, hashes, tamanho e propriedades reportadas pelo Windows. Os cinco arquivos também foram importados em Assets/Darklight/Audio/Music como estéreo com Streaming. Reprodução é implementada; sincronização fina e marcação de BPM ficam para avaliação manual. Não adicionar outras músicas nem baixar faixas. O protótipo é individual e sem publicação prevista no momento. O NPC permanece original, sem copiar artistas reais. Detalhes constam em `trilha-prototipo.md`.
-
-Entrega futura: protótipo dos modificadores após combate/Ruptura estáveis; interface e missão nas etapas de RPG/narrativa; sincronização e mixagem no polimento. Dark Resonance é uma extensão opcional e não bloqueia a primeira experiência jogável. Testes futuros: regeneração, dano/velocidade, redução defensiva, interrupção, duração/cooldown, morte, persistência, acumulação com Ruptura, áudio silenciado, sincronização e navegação sem mouse. O sistema foi implementado após a autorização posterior de montagem autônoma do jogo completo.
-
-## RPG, narrativa e persistência
-
-XP, níveis, atributos, inventário e pequena árvore de habilidades com escolhas úteis ao combate. Expandir equipamentos somente após a experiência inicial. Diálogos, objetivos e recompensas usam identificadores estáveis. Save próprio de DARKLIGHT, escrita temporária e substituição segura; isolar também chaves de configuração e remapeamento da campanha de Varginha.
-
-Menus: novo jogo, continuar, opções, pausa, morte, vitória, créditos e retorno. HUD: vida, energia, habilidade/cooldown, rank, objetivo, chefe e indicador opcional de Dark Resonance. Não deixar nomes, textos ou progresso da campanha antiga aparecerem como conteúdo novo.
-
-## Campanha de seis capítulos — integrada
-
-As funções de cada capítulo abaixo são propostas de montagem sobre os títulos originais. Novos chefes, mapas e diálogos serão detalhados em seus próprios marcos.
-
-| Capítulo | Função narrativa e jogável proposta | Dependências |
-|---|---|---|
-| 1. A Noite da Ruptura | Ataque em Vespera, Réquiem, investigação inicial, Kael e despertar | Núcleo completo da primeira experiência |
-| 2. Vozes do Abismo | Lyra conduz a investigação, exploração de novos distritos e pistas do Véu; missão do MP3 disponível | Missões, persistência, inimigos ampliados |
-| 3. Sangue Desperto | Revelar ligação de Fábio com o Véu e aprofundar Ruptura | Progressão e encontros que testem domínio do combate |
-| 4. O Projeto Eclipse | Investigar Lucien e a organização, novos conflitos e progressão da forma fundida | Eclipse Absoluto, ambientes e chefes próprios; migração compatível |
-| 5. Além do Véu | Explorar a dimensão e consequências das escolhas | Regras de exploração e progressão entre regiões |
-| 6. O Último Eclipse | Confronto final, domínio de Eclipse Absoluto e desfechos | Campanha integrada, estados narrativos e save verificados |
-
-Cada capítulo precisa de começo, objetivo, exploração, encontros, chefe/momento central, recompensa, transição e possibilidade de retomar o save. Não preencher a duração com repetição obrigatória. Nenhuma duração da campanha foi medida.
-
-## Controle, áudio e site
-
-Portar o suporte verificado de Varginha com prompts, remapeamento, navegação, sliders, recuperação após desconexão e vibração. O adaptador local depende de PixelButtonHover; copiar somente o arquivo de navegação deixa dependência faltante. Completar validação final no G808 quando disponível; teste simulado não comprova o aparelho físico.
-
-Separar música, efeitos, ambiente e interface. Música dinâmica acompanha fases de Kael e transformação. Planejar SFX para katana, defesa, impacto, passos e interface; medir custos antes de introduzir pooling indiscriminado.
-
-Site oficial após material real aprovado: apresentação, história, personagens, gameplay, galeria, trailer, devlog, download quando existir, FAQ e desenvolvedor. Link ao portfólio https://devfabio.vercel.app e rodapé “Desenvolvido por Fábio — devfabio.vercel.app”. SEO, acessibilidade, teclado, movimento reduzido e responsividade. Publicação e alterações no portfólio continuam exigindo autorização específica.
-
-## Critérios de produto
-
-A primeira entrega jogável deve conter arena noturna navegável, protagonista aprovado, oito direções, katana, combos, esquiva, parry, habilidade, três inimigos, rank, Ruptura, Kael em duas fases, HUD, áudio/efeitos, controle, menu/pausa, checkpoint e reinício. Meta de 10–15 minutos e 60 FPS depende de medição.
-
-A campanha completa exige, além disso, seis capítulos integrados, progressão e saves de longo prazo, transformações posteriores, chefes e narrativa próprios, conteúdo opcional e créditos. A preparação para publicação terá revisão própria da trilha. Não confundir a cópia auditada ou uma folha de arte com jogo completo.
-
-
-
-## Revisão aprovada de jogabilidade — 10/10/2026
-
-Seis layouts modulares com exploração e encontros posicionais, combos rápidos com buffer no hitstop, navegação/cancelamentos e colisões, 68 quadros complementares, três poderes próprios e HUD/menu compactos. GUIA ATUAL: outputs/melhorias/LEIA-ME.md. 35 testes de lógica e 9 de cena distintos aprovados. Compilação sem erros; áudio e controle físico não testados. NPCs, formas e algumas ações ainda usam poses individuais. Música de menu e configurações/cinemática adicionais aguardam aprovação do novo plano.
-
-## Correções autorizadas de sprites e menu — 11/10/2026
-
-Reconstruídas 16 folhas e 544 entradas de animação, preservando a arte aprovada. Células com pelo menos 24 pixels de margem, pivôs e escala corrigidos, importação sem compressão, filtro Point e vínculos de aparência atualizados. A captura do personagem de costas na Unity está livre dos fragmentos da pose vizinha.
-
-A música de menu agora é ES_Metal in the Night — Def Lev, arquivo enviado pelo usuário. Loop próprio, volume de música e parada ao iniciar/retomar campanha; testes automáticos silenciosos. A reprodução audível será verificada no teste manual solicitado.
-
-A pausa agora interrompe imediatamente o movimento e mantém a câmera parada. Ajustadas passagens e a base de um obstáculo do capítulo 3; navegação conecta pontos próximos à parede somente através de passagem física livre. Permanecem poses direcionais compartilhadas nas fontes com sete direções distintas.
-
-Verificação: 17/17 testes de importação e 12/13 testes de cena aprovados, total 29/30. Todos os 21 testes específicos de sprites, formas e configuração de música passaram. Há uma falha de navegação para uma arena do capítulo 4; corrigir antes de declarar a campanha validada. Nenhuma afirmação de balanceamento, 60 FPS, reprodução audível ou controle físico foi feita.
-
-O novo arco vampiresco e a campanha de dez capítulos estão descritos no documento PLANO-EXPANSAO-10-CAPITULOS.md e aguardam a aprovação exigida pelo prompt fornecido. Esta revisão registra somente as correções e a música autorizadas diretamente.
-
-
-# Revisão aprovada — menu, regiões e tamanho de Fábio
-
-11/10/2026. O usuário aprovou expressamente a substituição do menu, TROCAR SKIN e as duas poses. Cenário original de Vespera com eclipse vermelho, nuvens, névoa, luzes e partículas discretas. Interface à esquerda com bordas finas e seleção carmesim; personagem à direita troca entre Réquiem e Rock e possui quatro quadros de vento. A arte de Varginha serviu como referência de composição.
-
-Menu: CONTINUAR, NOVO JOGO, CARREGAR JOGO, CONFIGURAÇÕES, TROCAR SKIN, CRÉDITOS e SAIR. Continuar apresenta capítulo, local e progresso do save real e fica desabilitado sem save válido. Carregar oferece o save atual e a cópia anterior, usando a validação existente. Configurações mantém volume, controles/remapeamento e extras. Sons de navegação discretos; teclado, mouse e controle simulados verificados. A faixa ES_Metal in the Night — Def Lev permanece no loop do menu.
-
-A orientação acompanha o movimento. Cursor e alavanca direita não giram Fábio. O zoom de jogo usa meia altura de 5 unidades. Após nova solicitação do usuário, o tamanho visual de Fábio aumentou separadamente em 32,5%: aproximadamente 2,65 unidades de altura em vez de 2. Esse tamanho é comum às duas skins e aos estágios, sem progressão por escala. Pivô dos pés mantido, assim como atributos, tempos de combate e colisores existentes.
-
-Quatro cenários novos possuem quatro áreas descritivas, memórias e portal de retorno. Acesso por CONFIGURAÇÕES → EXTRAS → EXPLORAR NOVAS REGIÕES. A exploração preserva capítulo, checkpoint, armas, atributos e arquivos de save. As regiões correspondem às propostas 7–10; adicionar esses mapas não implementa a narrativa completa de dez capítulos. Descrições detalhadas estão em NOVOS-MAPAS-DESCRICOES.md.
-
-Na quarta fase existente, o ponto da primeira arena foi deslocado de (1157,507) para (1122,510) pixels, saindo da base física de um console. O teste de caminhos das seis fases passou após esse ajuste. As quatro regiões novas passaram na verificação de caminhos com raio físico, pontos de interação, limites, empurrões, pausa e preservação de progresso.
-
-Verificações específicas: três testes do menu, um teste das quatro regiões, um teste de orientação por movimento e quatro testes de apresentação de sprites aprovados. A apresentação percorreu 1.440 combinações de skins, armas, direções, estágios e estados, além das formas temporárias. Capturas reais registram as duas poses, o seletor e os quatro mapas com Fábio maior. O controle físico, o balanceamento e o desempenho sustentado não foram medidos.
-
-As cinco aparências completas das duas skins foram aprovadas. A produção de suas animações permanece em andamento: as variantes de repouso foram refeitas com maior separação; folhas com arma incorreta, cortes ou direções incompletas não foram integradas. As camadas antigas só serão removidas após cobertura válida de todas as ações. As correções de tamanho, controle, menu e mapas acima já estão integradas.
-
-
-## Atualização de gameplay e reconstrução visual — 11/10/2026
-
-Minimapa com exploração, objetivos, inimigos detectados, rotas conhecidas, destinos e persistência. SELECT abre o mapa completo; TAB e controles são configuráveis. Mapa e pausa congelam os temporizadores do combate. Navegação por teclado, mouse e Gamepad simulado verificada; o G808 físico ainda não foi testado.
-
-Interação E/A ou botão na tela em NPCs, itens, checkpoints e saídas. NPCs usam caixa inferior gótica com retrato, texto gradual, pausas de pontuação e paginação. Primeiro avanço completa a frase; o seguinte muda de página. Fechar o diálogo não dispara combate nem abre a interação novamente no mesmo frame. Props e marcadores compartilham posições acessíveis. Checkpoint possui pedestal com chama verde e o portal de saída conserva sua arte violeta distinta.
-
-Contra-ataques das armas têm funções diferentes: katana precisa, adagas rápidas com três pulsos e corrente com alcance e puxão. Avisos distinguem ataques aparáveis, perigos em área e projéteis. Buffers e cancelamentos foram corrigidos, ataques respeitam paredes e os acertos suportam grupos densos. Treino contextual pode ser desligado/reiniciado. Mira assistida foi dispensada pelo usuário; orientação continua pelo movimento.
-
-Os cinco estágios Rock possuem caminhada completa nas oito direções e três armas, com quatro passos por direção: 480 quadros separados, margem24, pivôs nos pés e filtro Point. O combate aprovado foi preservado. O restante do catálogo completo das aparências continua em produção; não considerar a remoção das camadas antigas concluída.
-
-Os dez mapas usam a composição e as colisões existentes, com quatro grandes regiões redesenhadas por mapa em densidade nativa2×. A entrada da primeira região contém dois detalhes adicionais4× aprovados. Manifestos de trechos alimentam solo e recortes frontais na mesma coordenada; áreas sem detalhes continuam com a composição original. Importação Point, sem mipmaps/sem compressão; originais preservados. A meia altura da câmera passou de5 para4,96875 para ampliar os pixels por uma razão inteira em720p, com alteração de enquadramento de0,6%.
-
-Validação desta revisão:58 testes de lógica e35 de gameplay aprovados, incluindo coordenadas/densidade de todos os dez mapas, rotas, recortes, animações, interações, controle simulado, saves e combate. Capturas e relatório da reconstrução permanecem na pasta map-rebuild-stage do chat.
-
-As quatro regiões posteriores continuam disponíveis para exploração. A narrativa dos capítulos7–10, chefes finais, habilidades/formas e finais ainda requer implementação; a reconstrução dos cenários não completa esse conteúdo.
-
-
-
-Ajuste final do HUD: minimapa no canto superior direito; Onda do Véu abaixo dele, seguida pelo objetivo acompanhado. Conferidos clique, controle e cinco resoluções após reposicionamento.
-
-HUD compacto inspirado nas referências do usuário: retrato em losango que acompanha a skin, barras de vida/energia, progresso, arma e atalhos, elixires e interação contextual. Minimap direito com comando TAB/SELECT, seguido por Onda do Véu e cartão do objetivo acompanhado. Dados reais de gameplay e bindings preservados; arte das molduras reaproveitada da folha fornecida, sem texto estático no atlas. Conferidas ambas as skins, cinco resoluções, diálogo, pausa, mapa completo e gamepad simulado. 58/58 testes de lógica e35/35 de gameplay aprovados. Sessão solicitada pode abrir no Jardim dos Ecos com --requiem-start-map=4; carregar essa sessão não sobrescreve a campanha no início.
-
-
-
-## Prólogo cinematográfico — planejamento de 03/11/2026
-
-Plano completo: [Prólogo cinematográfico jogável](PROLOGO-CINEMATOGRAFICO-20261103.md). Estado: planejado; implementação somente após Lucius Normal concluído e validado, antes de transformações e Combate IA 2.0. Ordem vigente: Fabius Normal → Gothic Eclipse → Lucius Normal → prólogo → transformações → Combate IA 2.0. A implementação do prólogo não foi iniciada.
-
-Estrutura narrativa: infância e duelo amistoso com espadas de madeira → transição para confronto futuro entre os irmãos → corte antes do resultado → campanha como flashback → retorno ao mesmo confronto no final. Tutorial não letal de 4–6 minutos; teaser de 60–120 segundos. Preservar mapas, progressão, saves e o mistério sobre o destino dos irmãos; sprites infantis próprios, sem reduzir os adultos.
+# DARKLIGHT: REQUIEM — GDD consolidado
+
+Revisão de escopo: **26/10/2026**. O [contrato canônico atual](../ESCOPO-CANONICO-20261026.md) prevalece sobre descrições antigas: Fabius somente Réquiem, katana/Punhos da Ruína/moto, Normal/Ruptura/Eclipse Absoluto. Lucius tem somente Normal/Nexo Fenrir e aguarda o redesign de Fabius; O Encapuzado preserva a identidade oculta até Sangue do Abismo. Rock, Presas e formas substituídas permanecem como legado. Ver [cobertura e pendências reais](../PENDENCIAS-20261026.md) e [LDD vigente](LDD.md).
+
+A base de 10/10 contém seis capítulos com ampliações posteriores, famílias de inimigos/elites, chefes, RPG, menus, save e Dark Resonance. As descrições históricas abaixo não certificam o novo escopo implementado. Compilação, testes automatizados, abertura standalone, campanha humana e balanceamento são estados distintos. Fabius e HUD preservam as referências aprovadas.
+
+## Visão do jogo
+
+RPG de ação e hack and slash 2D topview, fantasia urbana sombria, exploração, combate expressivo e narrativa cinematográfica. Plataforma inicial: Windows. Teclado/mouse e controle devem permitir jogar e navegar por todos os menus. O desenvolvimento começa por uma experiência completa curta, seguida da campanha em seis capítulos.
+
+Vespera sofre Rupturas após um eclipse incomum: a realidade mistura-se à dimensão chamada O Véu e surgem criaturas conhecidas como Ecos. Fábio sobrevive a um ataque e desperta Réquiem, espada que canaliza luz e escuridão. Lucien Veyr e o Projeto Eclipse pretendem romper a barreira entre os mundos.
+
+Fábio é O Portador; Kael Voss é o rival de katana espectral azul; Lyra Moreau investiga as Rupturas; Lucien Veyr é O Arquiteto. Réquiem terá a forma de katana do concept aprovado. O protagonista preserva o rosto e cabelo das fotos, proporções adultas, sobretudo de couro preto, spikes discretos nos ombros e acessórios prateados. A versão sem óculos é a referência das vistas atuais; a alternativa com óculos ainda exige atualização ao figurino final.
+
+## Direção visual e apresentação
+
+Usar `$segredo-varginha-pixelart`: câmera de RPG topview, pixels quadrados, contorno escuro, sombras em grupos e identidade coerente em oito vistas. Preservar a mão dominante e a posição dos acessórios; não obter direções assimétricas apenas por espelhamento. Paleta do novo jogo: preto, carvão, vermelho profundo, violeta e luzes frias, com pele e cabelo naturais.
+
+A folha aprovada é uma fonte visual de 1536×1024, com oito figuras estáticas. Sua resolução não representa a resolução lógica final. Recortes, direções, pivôs, alpha e escala precisam de acabamento antes do uso definitivo. A folha não contém animações.
+
+Proposta de apresentação: mundo a 640×360, ampliação inteira 3× para 1920×1080; tiles novos de 32 pixels. Comparar corpos de 64 e 72 pixels de altura antes de fixar escala. Não converter automaticamente assets herdados com outros PPU. A auditoria detectou Built-in; instalação do pacote URP não comprova pipeline ativo. Escolha e correção do pipeline antecedem iluminação e configuração definitiva da câmera.
+
+## Ciclo principal
+
+Explorar → observar um encontro → combinar ataques e defesas → ganhar estilo e energia → transformar → vencer → recolher recompensa → conversar/investigar → abrir o próximo trecho. Checkpoints permitem repetir encontros sem atravessar diálogos já vistos. Missões secundárias acrescentam contexto e opções de combate.
+
+## Combate
+
+Movimento em oito direções, mira independente e leitura clara dos ataques. Arsenal ativo: katana, Punhos da Ruína e moto para Réquiem, preservando combate aéreo e suas finalizações. Katana oferece leve, pesado e carregado; combos iniciais: leve/leve/leve, leve/leve/pesado, leve/pesado, pesado carregado, esquiva/ataque, parry/contra-ataque e habilidade/ataque. Moto mantém Serra Infernal, Giro Devastador, Esmagamento Vertical, Roda Destruidora, Cavalgada Brutal e Execução Aérea Motorizada. A redução do seletor preserva timings, controles e mecânicas existentes; não renumerar IDs persistidos de forma destrutiva.
+
+Definir cada golpe por antecipação, contato, recuperação, alcance, dano, stagger e cancelamentos. Input buffering permite antecipar a próxima ação sem disparar ações durante pausa ou diálogo. Cada golpe acerta cada alvo uma vez, salvo ataques explicitamente definidos como múltiplos. Esquiva, parry perfeito, invulnerabilidade, hitstop e super armor precisam de janelas legíveis e verificáveis. Finalizadores e repertório ampliado entram após o núcleo estar estável.
+
+O rank D→SSS premia variedade e execução, perde valor com repetição e dano recebido e decai quando o combate fica inativo. Eventos de combate alimentam estilo, energia, áudio e HUD; a interface não calcula dano nem rank.
+
+## Inimigos e chefes (Escopo Consolidado — 11/11/2026)
+
+O elenco de combate foi estruturado em quatro inimigos comuns e três grandes chefes antes do duelo final contra Lucius:
+
+### Quatro Inimigos Comuns
+
+1. **Crawler (Eco Rastejante):**
+   - **Comportamento:** Perseguição veloz em plano baixo, botes com saltos repentinos e sequências de golpes de garras.
+   - **Família visual:** Idle de espreita, locomoção rasteira, ataque em salto/garra, reação a impacto (*hurt*) e morte estirada.
+
+2. **Shooter (Eco Atirador):**
+   - **Comportamento:** Posicionamento tático à distância com recuo evasivo quando pressionado; conjuração de projéteis mágicos violetas e rajadas arcanas.
+   - **Família visual:** Postura com foco místico, passos de reposicionamento, carregamento e disparo de projétil, impacto e dissipação.
+
+3. **Armored (Eco Blindado):**
+   - **Comportamento:** Tanque pesado com armadura reforçada, maça de ferro massiva, investidas frontais que quebram postura e postura de bloqueio com escudo.
+   - **Família visual:** Postura firme, marcha pesada, golpe descendente de maça, investida com ombro/escudo e queda colossal ao solo.
+
+4. **Spectral (Eco Espectral):**
+   - **Comportamento:** Flutuação levitante com desvio de colisão terrestre; emissão de orbes teleguiados de energia sombria e pulsos de choque em área.
+   - **Família visual:** Ciclo contínuo de flutuação, emissão de orbes, ataque expansivo e dissipação em névoa espectral.
+
+### Três Bosses e Antagonista Final
+
+1. **Capítulo 1 — Kael Voss (O Cavaleiro Glacial):**
+   - **Identidade:** Armadura negra polida, capa azul-petróleo esvoaçante e montante zweihänder infundido com energia glacial.
+   - **Mecânicas:** Cortes circulares amplos (*sweep*), estocadas perfurantes com estilhaços de gelo, parry defensivo seguido de contra-ataque imediato e rastro de gelo desacelerador.
+
+2. **Capítulo 2 — Cantor do Abismo (O Hierofante do Véu):**
+   - **Identidade:** Entidade cerimonial flutuante, túnicas ornamentadas e cajado ressonante que amplifica frequências de distorção.
+   - **Mecânicas:** Flutuação mantida acima do alcance de rasteiras; invocação de ondas sonoras concêntricas violetas, pilares sônicos em erupção no solo e teletransporte espectral defensivo.
+
+3. **Capítulo 3 — Matriarca Rubra (A Soberana de Sangue):**
+   - **Identidade:** Vampira nobre aristocrática com asas de morcego expansivas, garras carmesins afiadas e manto régio.
+   - **Mecânicas:** Voo de reposicionamento tático, mergulhos em rasante cortante (*dive bomb*), rajadas de penas/espinhos escarlates e drenagem vampírica em combate corpo a corpo.
+
+4. **Boss Final — Lucius / Lucien Veyr:**
+   - **Fase 1 (Lucius Normal):** Duelo técnico de esgrima de altíssima precisão. Utiliza o trio canônico de espada: SwordHorizontal (varredura de 85°), SwordVertical (corte vertical descendente de 60°) e SwordThrust (estocada perfurante frontal de 2.10m), além de parry ativo, recuos e esquivas laterais ágeis.
+   - **Fase 2 (Arconte do Abismo — Nexo Fenrir Desperto):** Ao atingir 50% de vida, Lucius canaliza o Nexo Fenrir em uma transformação espectral em 8 fases (Transformation). Assume a forma suprema com mechas verdes intensas no cabelo branco-prateado, olhos luminescentes brancos puros (sem íris), aura verde-negra envolvente, lâminas espectrais estendidas e o devastador ataque supremo em área (Abyss Burst).
+   - **Decisão Narrativa e Destino:** O confronto final culmina na escolha moral do Portador (Fábio): canalizar a Luz para purificar o Nexo Fenrir e poupar Lucius — unindo suas forças para restaurar Vespera — ou consumir a escuridão do abismo para executá-lo definitivamente, selando um final sombrio como o novo senhor da Ruptura.
+
+## Transformações
+
+Normal → Ruptura → Eclipse Absoluto. Normal mantém cabelo castanho natural. Ruptura tem mechas vermelhas intensas; Eclipse Absoluto funde a energia violeta de Eclipse com branco-prateado e elementos de Absoluto, preservando os poderes úteis e removendo redundâncias. As antigas Eclipse e Absoluto não são opções independentes. Energia ganha em combate, ativação, duração e retorno seguro continuam; modificadores devem ser removidos ao expirar, morrer ou transitar de cena, sem multiplicar permanentemente os atributos. Migrar progressão antiga sem apagar saves.
+
+Prioridade artística: concluir Normal antes de Ruptura e Eclipse Absoluto. Manter anatomia adulta, corte canônico e oito direções reais, `WorldVisualScale = 1.325`, PPU pelo corpo e olhos/pele preservados. Clips antigos de Eclipse/Absoluto são candidatos para revisão da fusão, não arte combinada aprovada. Substituir ações progressivamente com sequências completas; não misturar fases antigas e novas no mesmo golpe.
+
+## Dark Resonance — opcional, integrado à campanha
+
+Um MP3 sobrenatural transforma música em poderes temporários. A campanha principal deve funcionar integralmente sem desbloquear ou usar o aparelho. Os valores abaixo são hipóteses iniciais para testes, não balanceamento aprovado em gameplay.
+
+| Modo | Efeito inicial proposto | Duração | Linguagem visual |
+|---|---|---|---|
+| Love Metal | Cura 1,4% da vida máxima por segundo, até o limite | 18 s | Aura vermelha e ornamentos góticos discretos |
+| Thrash de Foco | +40% velocidade de ataque, +20% movimento, +20% energia de forma obtida | 14 s | Pulsos rápidos e faíscas acompanhando o ritmo |
+| Heavy de Força | +45% dano, impacto dobrado e recuperação menor ao sofrer dano | 12 s | Pulsos graves e contorno defensivo legível |
+
+Um modo ativo por vez. Recargas independentes: Love 32s, Força 28s, Foco 30s; custos 35/40/40 da energia própria do MP3. Trocar a seleção não elimina a recarga. A cura não ressuscita nem excede a vida máxima. Transformações permanecem independentes.
+
+O MP3 permite selecionar música ou estilo e mostra faixa, modo, efeito, duração e cooldown. Músicas do mesmo estilo compartilham o modificador; trocar de faixa é uma escolha musical. No single-player, abrir o painel pausa a ação; após confirmar e fechar, Fábio coloca os fones numa animação interrompível por dano, sem invulnerabilidade gratuita. O poder começa ao concluir a animação. Antes de concluir, a interrupção não concede buff nem consome a ativação.
+
+Teclado proposto: M abre o MP3, setas selecionam, Enter confirma, Esc volta. Controle: Back/Select abre, D-Pad seleciona, A confirma, B volta. Remapeamento e prompts acompanham o dispositivo; menus bloqueiam golpes. Não ocupar LB/RB/LT/RT já reservados ao combate. A seleção também deve permitir mouse.
+
+Integração: modificadores temporários separados dos atributos permanentes; recalcular timing de animação e hitboxes juntos ao acelerar ataques. Testar o acúmulo com Ruptura antes de definir limites. Morte encerra o efeito; salvar/carregar e trocar de cena não podem eliminar cooldown. O planejamento de save inclui tempo restante e estado do sistema, sem permitir duração infinita por pausa ou troca de música.
+
+VFX usam BPM e marcadores fornecidos pela faixa, com relógio de áudio e transições curtas. Não dependem de detectar automaticamente batidas no arquivo. Pulsos acompanham o ritmo sem mudar hitboxes, parry ou avisos dos inimigos. Volume zero não remove os poderes. Oferecer intensidade reduzida de flashes e efeitos para preservar leitura e conforto.
+
+Missão secundária proposta: **Frequência do Véu**. Na antiga loja de discos de Vespera, Fábio ajuda a recuperar componentes do aparelho e fragmentos sonoros, aprende a selecionar um modo e recebe o MP3. A missão tem versão curta de tutorial e pode ser concluída depois do primeiro encontro com Kael, sem bloquear a história.
+
+NPC original proposto: **Ícaro Nox**, técnico de som e colecionador de equipamentos antigos, com estética de rock gótico dos anos 2000. Criar rosto, figurino, voz e história próprios, sem reproduzir a identidade de artistas reais sem autorização.
+
+Planejamento de arte pela skill: MP3 fechado/aberto/ativo/em cooldown; botões de seleção/foco/confirmação; três ícones de modos; fones como acessório; sequência de colocar e retirar fones em oito direções; retrato e vistas do NPC; auras e pulsos em folhas separadas. Interface pode ocupar aproximadamente 224×128 pixels lógicos, aparelho 32×32 e ícones 16×16, como ponto de partida. Revisar a legibilidade antes de fixar tamanhos. Pivôs dos fones seguem a cabeça; katana e braços devem respeitar oclusão. Manter spikes, rosto e cabelo do protagonista aprovado.
+
+Trilha do protótipo pessoal: usar exclusivamente os cinco MP3 fornecidos pelo usuário. Love Metal: **Join Me in Death** e **Wings of a Butterfly**, de HIM. Thrash Metal: **Seek & Destroy** e **Creeping Death**, de Metallica. Heavy Metal: **Enter Sandman**, de Metallica. Right Here in My Arms e Sad But True saem da seleção. Essa associação é uma decisão de design dos modos, não uma classificação musical definitiva.
+
+Os cinco arquivos foram recebidos e copiados sem alteração para `AudioSources/Darklight/DarkResonance/`, fora de Assets. O manifesto registra IDs, caminhos, hashes, tamanho e propriedades reportadas pelo Windows. Os cinco arquivos também foram importados em Assets/Darklight/Audio/Music como estéreo com Streaming. Reprodução é implementada; sincronização fina e marcação de BPM ficam para avaliação manual. Não adicionar outras músicas nem baixar faixas. O protótipo é individual e sem publicação prevista no momento. O NPC permanece original, sem copiar artistas reais. Detalhes constam em `trilha-prototipo.md`.
+
+Entrega futura: protótipo dos modificadores após combate/Ruptura estáveis; interface e missão nas etapas de RPG/narrativa; sincronização e mixagem no polimento. Dark Resonance é uma extensão opcional e não bloqueia a primeira experiência jogável. Testes futuros: regeneração, dano/velocidade, redução defensiva, interrupção, duração/cooldown, morte, persistência, acumulação com Ruptura, áudio silenciado, sincronização e navegação sem mouse. O sistema foi implementado após a autorização posterior de montagem autônoma do jogo completo.
+
+## RPG, narrativa e persistência
+
+XP, níveis, atributos, inventário e pequena árvore de habilidades com escolhas úteis ao combate. Expandir equipamentos somente após a experiência inicial. Diálogos, objetivos e recompensas usam identificadores estáveis. Save próprio de DARKLIGHT, escrita temporária e substituição segura; isolar também chaves de configuração e remapeamento da campanha de Varginha.
+
+Menus: novo jogo, continuar, opções, pausa, morte, vitória, créditos e retorno. HUD: vida, energia, habilidade/cooldown, rank, objetivo, chefe e indicador opcional de Dark Resonance. Não deixar nomes, textos ou progresso da campanha antiga aparecerem como conteúdo novo.
+
+## Campanha de seis capítulos — integrada
+
+As funções de cada capítulo abaixo são propostas de montagem sobre os títulos originais. Novos chefes, mapas e diálogos serão detalhados em seus próprios marcos.
+
+| Capítulo | Função narrativa e jogável proposta | Dependências |
+|---|---|---|
+| 1. A Noite da Ruptura | Ataque em Vespera, Réquiem, investigação inicial, Kael e despertar | Núcleo completo da primeira experiência |
+| 2. Vozes do Abismo | Lyra conduz a investigação, exploração de novos distritos e pistas do Véu; missão do MP3 disponível | Missões, persistência, inimigos ampliados |
+| 3. Sangue Desperto | Revelar ligação de Fábio com o Véu e aprofundar Ruptura | Progressão e encontros que testem domínio do combate |
+| 4. O Projeto Eclipse | Investigar Lucien e a organização, novos conflitos e progressão da forma fundida | Eclipse Absoluto, ambientes e chefes próprios; migração compatível |
+| 5. Além do Véu | Explorar a dimensão e consequências das escolhas | Regras de exploração e progressão entre regiões |
+| 6. O Último Eclipse | Confronto final, domínio de Eclipse Absoluto e desfechos | Campanha integrada, estados narrativos e save verificados |
+
+Cada capítulo precisa de começo, objetivo, exploração, encontros, chefe/momento central, recompensa, transição e possibilidade de retomar o save. Não preencher a duração com repetição obrigatória. Nenhuma duração da campanha foi medida.
+
+## Controle, áudio e site
+
+Portar o suporte verificado de Varginha com prompts, remapeamento, navegação, sliders, recuperação após desconexão e vibração. O adaptador local depende de PixelButtonHover; copiar somente o arquivo de navegação deixa dependência faltante. Completar validação final no G808 quando disponível; teste simulado não comprova o aparelho físico.
+
+Separar música, efeitos, ambiente e interface. Música dinâmica acompanha fases de Kael e transformação. Planejar SFX para katana, defesa, impacto, passos e interface; medir custos antes de introduzir pooling indiscriminado.
+
+Site oficial após material real aprovado: apresentação, história, personagens, gameplay, galeria, trailer, devlog, download quando existir, FAQ e desenvolvedor. Link ao portfólio https://devfabio.vercel.app e rodapé “Desenvolvido por Fábio — devfabio.vercel.app”. SEO, acessibilidade, teclado, movimento reduzido e responsividade. Publicação e alterações no portfólio continuam exigindo autorização específica.
+
+## Critérios de produto
+
+A primeira entrega jogável deve conter arena noturna navegável, protagonista aprovado, oito direções, katana, combos, esquiva, parry, habilidade, três inimigos, rank, Ruptura, Kael em duas fases, HUD, áudio/efeitos, controle, menu/pausa, checkpoint e reinício. Meta de 10–15 minutos e 60 FPS depende de medição.
+
+A campanha completa exige, além disso, seis capítulos integrados, progressão e saves de longo prazo, transformações posteriores, chefes e narrativa próprios, conteúdo opcional e créditos. A preparação para publicação terá revisão própria da trilha. Não confundir a cópia auditada ou uma folha de arte com jogo completo.
+
+
+
+## Revisão aprovada de jogabilidade — 10/10/2026
+
+Seis layouts modulares com exploração e encontros posicionais, combos rápidos com buffer no hitstop, navegação/cancelamentos e colisões, 68 quadros complementares, três poderes próprios e HUD/menu compactos. GUIA ATUAL: outputs/melhorias/LEIA-ME.md. 35 testes de lógica e 9 de cena distintos aprovados. Compilação sem erros; áudio e controle físico não testados. NPCs, formas e algumas ações ainda usam poses individuais. Música de menu e configurações/cinemática adicionais aguardam aprovação do novo plano.
+
+## Correções autorizadas de sprites e menu — 11/10/2026
+
+Reconstruídas 16 folhas e 544 entradas de animação, preservando a arte aprovada. Células com pelo menos 24 pixels de margem, pivôs e escala corrigidos, importação sem compressão, filtro Point e vínculos de aparência atualizados. A captura do personagem de costas na Unity está livre dos fragmentos da pose vizinha.
+
+A música de menu agora é ES_Metal in the Night — Def Lev, arquivo enviado pelo usuário. Loop próprio, volume de música e parada ao iniciar/retomar campanha; testes automáticos silenciosos. A reprodução audível será verificada no teste manual solicitado.
+
+A pausa agora interrompe imediatamente o movimento e mantém a câmera parada. Ajustadas passagens e a base de um obstáculo do capítulo 3; navegação conecta pontos próximos à parede somente através de passagem física livre. Permanecem poses direcionais compartilhadas nas fontes com sete direções distintas.
+
+Verificação: 17/17 testes de importação e 12/13 testes de cena aprovados, total 29/30. Todos os 21 testes específicos de sprites, formas e configuração de música passaram. Há uma falha de navegação para uma arena do capítulo 4; corrigir antes de declarar a campanha validada. Nenhuma afirmação de balanceamento, 60 FPS, reprodução audível ou controle físico foi feita.
+
+O novo arco vampiresco e a campanha de dez capítulos estão descritos no documento PLANO-EXPANSAO-10-CAPITULOS.md e aguardam a aprovação exigida pelo prompt fornecido. Esta revisão registra somente as correções e a música autorizadas diretamente.
+
+
+# Revisão aprovada — menu, regiões e tamanho de Fábio
+
+11/10/2026. O usuário aprovou expressamente a substituição do menu, TROCAR SKIN e as duas poses. Cenário original de Vespera com eclipse vermelho, nuvens, névoa, luzes e partículas discretas. Interface à esquerda com bordas finas e seleção carmesim; personagem à direita troca entre Réquiem e Rock e possui quatro quadros de vento. A arte de Varginha serviu como referência de composição.
+
+Menu: CONTINUAR, NOVO JOGO, CARREGAR JOGO, CONFIGURAÇÕES, TROCAR SKIN, CRÉDITOS e SAIR. Continuar apresenta capítulo, local e progresso do save real e fica desabilitado sem save válido. Carregar oferece o save atual e a cópia anterior, usando a validação existente. Configurações mantém volume, controles/remapeamento e extras. Sons de navegação discretos; teclado, mouse e controle simulados verificados. A faixa ES_Metal in the Night — Def Lev permanece no loop do menu.
+
+A orientação acompanha o movimento. Cursor e alavanca direita não giram Fábio. O zoom de jogo usa meia altura de 5 unidades. Após nova solicitação do usuário, o tamanho visual de Fábio aumentou separadamente em 32,5%: aproximadamente 2,65 unidades de altura em vez de 2. Esse tamanho é comum às duas skins e aos estágios, sem progressão por escala. Pivô dos pés mantido, assim como atributos, tempos de combate e colisores existentes.
+
+Quatro cenários novos possuem quatro áreas descritivas, memórias e portal de retorno. Acesso por CONFIGURAÇÕES → EXTRAS → EXPLORAR NOVAS REGIÕES. A exploração preserva capítulo, checkpoint, armas, atributos e arquivos de save. As regiões correspondem às propostas 7–10; adicionar esses mapas não implementa a narrativa completa de dez capítulos. Descrições detalhadas estão em NOVOS-MAPAS-DESCRICOES.md.
+
+Na quarta fase existente, o ponto da primeira arena foi deslocado de (1157,507) para (1122,510) pixels, saindo da base física de um console. O teste de caminhos das seis fases passou após esse ajuste. As quatro regiões novas passaram na verificação de caminhos com raio físico, pontos de interação, limites, empurrões, pausa e preservação de progresso.
+
+Verificações específicas: três testes do menu, um teste das quatro regiões, um teste de orientação por movimento e quatro testes de apresentação de sprites aprovados. A apresentação percorreu 1.440 combinações de skins, armas, direções, estágios e estados, além das formas temporárias. Capturas reais registram as duas poses, o seletor e os quatro mapas com Fábio maior. O controle físico, o balanceamento e o desempenho sustentado não foram medidos.
+
+As cinco aparências completas das duas skins foram aprovadas. A produção de suas animações permanece em andamento: as variantes de repouso foram refeitas com maior separação; folhas com arma incorreta, cortes ou direções incompletas não foram integradas. As camadas antigas só serão removidas após cobertura válida de todas as ações. As correções de tamanho, controle, menu e mapas acima já estão integradas.
+
+
+## Atualização de gameplay e reconstrução visual — 11/10/2026
+
+Minimapa com exploração, objetivos, inimigos detectados, rotas conhecidas, destinos e persistência. SELECT abre o mapa completo; TAB e controles são configuráveis. Mapa e pausa congelam os temporizadores do combate. Navegação por teclado, mouse e Gamepad simulado verificada; o G808 físico ainda não foi testado.
+
+Interação E/A ou botão na tela em NPCs, itens, checkpoints e saídas. NPCs usam caixa inferior gótica com retrato, texto gradual, pausas de pontuação e paginação. Primeiro avanço completa a frase; o seguinte muda de página. Fechar o diálogo não dispara combate nem abre a interação novamente no mesmo frame. Props e marcadores compartilham posições acessíveis. Checkpoint possui pedestal com chama verde e o portal de saída conserva sua arte violeta distinta.
+
+Contra-ataques das armas têm funções diferentes: katana precisa, adagas rápidas com três pulsos e corrente com alcance e puxão. Avisos distinguem ataques aparáveis, perigos em área e projéteis. Buffers e cancelamentos foram corrigidos, ataques respeitam paredes e os acertos suportam grupos densos. Treino contextual pode ser desligado/reiniciado. Mira assistida foi dispensada pelo usuário; orientação continua pelo movimento.
+
+Os cinco estágios Rock possuem caminhada completa nas oito direções e três armas, com quatro passos por direção: 480 quadros separados, margem24, pivôs nos pés e filtro Point. O combate aprovado foi preservado. O restante do catálogo completo das aparências continua em produção; não considerar a remoção das camadas antigas concluída.
+
+Os dez mapas usam a composição e as colisões existentes, com quatro grandes regiões redesenhadas por mapa em densidade nativa2×. A entrada da primeira região contém dois detalhes adicionais4× aprovados. Manifestos de trechos alimentam solo e recortes frontais na mesma coordenada; áreas sem detalhes continuam com a composição original. Importação Point, sem mipmaps/sem compressão; originais preservados. A meia altura da câmera passou de5 para4,96875 para ampliar os pixels por uma razão inteira em720p, com alteração de enquadramento de0,6%.
+
+Validação desta revisão:58 testes de lógica e35 de gameplay aprovados, incluindo coordenadas/densidade de todos os dez mapas, rotas, recortes, animações, interações, controle simulado, saves e combate. Capturas e relatório da reconstrução permanecem na pasta map-rebuild-stage do chat.
+
+As quatro regiões posteriores continuam disponíveis para exploração. A narrativa dos capítulos7–10, chefes finais, habilidades/formas e finais ainda requer implementação; a reconstrução dos cenários não completa esse conteúdo.
+
+
+
+Ajuste final do HUD: minimapa no canto superior direito; Onda do Véu abaixo dele, seguida pelo objetivo acompanhado. Conferidos clique, controle e cinco resoluções após reposicionamento.
+
+HUD compacto inspirado nas referências do usuário: retrato em losango que acompanha a skin, barras de vida/energia, progresso, arma e atalhos, elixires e interação contextual. Minimap direito com comando TAB/SELECT, seguido por Onda do Véu e cartão do objetivo acompanhado. Dados reais de gameplay e bindings preservados; arte das molduras reaproveitada da folha fornecida, sem texto estático no atlas. Conferidas ambas as skins, cinco resoluções, diálogo, pausa, mapa completo e gamepad simulado. 58/58 testes de lógica e35/35 de gameplay aprovados. Sessão solicitada pode abrir no Jardim dos Ecos com --requiem-start-map=4; carregar essa sessão não sobrescreve a campanha no início.
+
+
+
+## Prólogo cinematográfico — planejamento de 03/11/2026
+
+Plano completo: [Prólogo cinematográfico jogável](PROLOGO-CINEMATOGRAFICO-20261103.md). Estado: planejado; implementação somente após Lucius Normal concluído e validado, antes de transformações e Combate IA 2.0. Ordem vigente: Fabius Normal → Gothic Eclipse → Lucius Normal → prólogo → transformações → Combate IA 2.0. A implementação do prólogo não foi iniciada.
+
+Estrutura narrativa: infância e duelo amistoso com espadas de madeira → transição para confronto futuro entre os irmãos → corte antes do resultado → campanha como flashback → retorno ao mesmo confronto no final. Tutorial não letal de 4–6 minutos; teaser de 60–120 segundos. Preservar mapas, progressão, saves e o mistério sobre o destino dos irmãos; sprites infantis próprios, sem reduzir os adultos.

@@ -46,5 +46,18 @@ namespace Darklight.Editor
             DarklightLuciusSpriteBank.ClearCache();
             Debug.Log("Lucius: eight static views imported; no campaign/boss registration or animation completeness claimed");
         }
+        public static void ImportArconte()
+        {
+            string folder="Assets/Darklight/Resources/"+DarklightLuciusSpriteBank.ArconteRoot;
+            var catalog=JsonUtility.FromJson<DarklightLuciusSpriteCatalog>(File.ReadAllText(folder+"catalog.json"));
+            if(!DarklightLuciusSpriteBank.ValidCatalog(catalog,DarklightLuciusAppearance.Arconte))throw new InvalidDataException("Invalid Lucius Arconte catalog");
+            foreach(string resource in catalog.pages.Select(page=>page.resourcePath).Distinct())
+                DarklightWeaponRedesignImporter.ImportStandalone("Assets/Darklight/Resources/"+resource+".png");
+            AssetDatabase.SaveAssets();DarklightLuciusSpriteBank.ClearCache();
+            foreach(var page in catalog.pages)
+                if(!DarklightLuciusSpriteBank.TryPose(DarklightLuciusAppearance.Arconte,page.action,page.direction,0,out var sprite,out bool fallback,page.attackKey)||
+                    fallback||sprite.name!=page.spriteNames[0])throw new InvalidDataException("Missing imported Lucius Arconte action: "+page.id);
+            Debug.Log("Lucius Arconte reviewed action pages imported: "+catalog.pages.Length);
+        }
     }
 }

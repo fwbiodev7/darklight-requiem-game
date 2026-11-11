@@ -97,6 +97,7 @@ namespace Darklight.Tests
             Assert.That(DarklightLuciusSpriteBank.ValidCatalog(data,appearance),Is.True);
             Assert.That(data.pages.Count(p=>p.action=="Idle"),Is.EqualTo(8));
             data.pages=data.pages.Where(p=>p.action=="Idle").ToArray();
+            Install();
         }
         [TearDown] public void Dispose()
         {
@@ -291,6 +292,28 @@ namespace Darklight.Tests
             Assert.That(view.PresentPose("Attack",0,.15f,"Unknown"),Is.True);
             Assert.That(view.UsesIdleFallback,Is.True);
             Assert.That(view.Renderer.sprite.name,Does.StartWith("Redesign_LuciusHooded"));
+        }
+
+        [Test] public void ArconteAppearanceValidatesAndPresentsTransformationsAndAttacks()
+        {
+            DarklightLuciusSpriteBank.ClearCache();
+            var text=Resources.Load<TextAsset>(DarklightLuciusSpriteBank.ArconteRoot+"catalog");
+            Assert.That(text,Is.Not.Null);
+            var catalog=JsonUtility.FromJson<DarklightLuciusSpriteCatalog>(text.text);
+            Assert.That(DarklightLuciusSpriteBank.ValidCatalog(catalog,DarklightLuciusAppearance.Arconte),Is.True);
+            Assert.That(catalog.appearance,Is.EqualTo("Arconte"));
+            Assert.That(catalog.pages.Count(p=>p.action=="Idle"),Is.EqualTo(8));
+            Assert.That(catalog.pages.Count(p=>p.action=="Transformation"),Is.EqualTo(8));
+            var view=View();view.appearance=DarklightLuciusAppearance.Arconte;
+            Assert.That(view.PresentPose("Idle",0,0),Is.True);
+            Assert.That(view.UsesIdleFallback,Is.False);
+            Assert.That(view.Renderer.sprite.name,Does.StartWith("Redesign_LuciusArconteIdle"));
+            Assert.That(view.PresentPose("Transformation",0,0.2f),Is.True);
+            Assert.That(view.UsesIdleFallback,Is.False);
+            Assert.That(view.Renderer.sprite.name,Does.StartWith("Redesign_LuciusArconteAwakening"));
+            Assert.That(view.PresentPose("Attack",0,0.15f,DarklightLuciusCombatProfile.SwordHorizontal),Is.True);
+            Assert.That(view.UsesIdleFallback,Is.False);
+            Assert.That(view.Renderer.sprite.name,Does.StartWith("Redesign_LuciusArconteAttacks"));
         }
     }
 }

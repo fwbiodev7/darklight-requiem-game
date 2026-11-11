@@ -110,3 +110,4 @@ run-game.bat
 ### 7. Próximos Passos (Para o Codex quando a cota renovar)
 1. Dar sequência à integração das animações pendentes de Lucius (`Draw`, `WalkArmed`) utilizando o gabarito oficial em `Docs/Darklight/References/LuciusAttackReference20261110/Lucius_Attack_Reference_Primary_20261110.png`.
 2. As partículas de combate v2.0 já estão ativas e responderão nativamente aos novos ataques assim que conectados.
+

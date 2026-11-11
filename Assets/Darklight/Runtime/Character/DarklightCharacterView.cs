@@ -136,7 +136,12 @@ namespace Darklight
             DarklightMotorcycleRedesignBank.ApplyOwnership(display);
             if(combatTrail==null){var obj=new GameObject("RastrosDeCombate");obj.transform.SetParent(transform,false);combatTrail=obj.AddComponent<DarklightCombatTrail>();}
             combatTrail.Present(display,weapon,model,previewing?previewForm:game?.PresentedForm??0);
-            if(model.State==CombatState.Attack&&model.ActiveThisTick&&trailSerial!=model.AttackSerial){trailSerial=model.AttackSerial;DarklightCombatFX.Echo(display,.10f);}
+            if(model.State==CombatState.Attack&&model.ActiveThisTick&&trailSerial!=model.AttackSerial)
+            {
+                trailSerial=model.AttackSerial;
+                DarklightCombatFX.Echo(display,.10f);
+                DarklightCombatParticlesV2.TryEmitAttack(weapon,display.transform.position+(Vector3)model.Facing*.45f,model.Facing);
+            }
             if(model.State==CombatState.Dodge&&model.Clock>=nextTrail){nextTrail=model.Clock+.05f;DarklightCombatFX.Echo(display,.12f);}
         }
     }

@@ -150,6 +150,25 @@ namespace Darklight
                         fallback=true;
                     }
                 }
+                else if(action=="Draw"||action=="Dodge"||action=="Hurt"||action=="Dead")
+                {
+                    // Fallback to nearest cardinal direction if exact diagonal not provided natively
+                    int[] fallbacks=direction switch {
+                        1 => new[]{0, 2}, // SW -> S, W
+                        3 => new[]{4, 2}, // NW -> N, W
+                        5 => new[]{4, 6}, // NE -> N, E
+                        7 => new[]{0, 6}, // SE -> S, E
+                        _ => new[]{0, 4, 2, 6}
+                    };
+                    foreach(int altDir in fallbacks)
+                    {
+                        if(TryActionPage(appearance,action,altDir,attackKey,out page))
+                        {
+                            fallback=true;
+                            break;
+                        }
+                    }
+                }
                 if(page==null)
                 {
                     if(action=="Idle"||!TryActionPage(appearance,"Idle",direction,null,out page))return false;

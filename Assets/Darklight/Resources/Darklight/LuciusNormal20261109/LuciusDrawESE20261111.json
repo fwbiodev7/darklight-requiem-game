@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "image": "LuciusDrawESE20261111.png",
+  "imageSha256": "b82ce3644fb8aa2aaf434b871a2044c9ba89998da23e555ab817f50036d5ea0b",
+  "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusDrawESE20261111.png",
+  "sourceSha256": "b82ce3644fb8aa2aaf434b871a2044c9ba89998da23e555ab817f50036d5ea0b",
+  "sourceSize": [
+    1024,
+    682
+  ],
+  "nativeSize": [
+    1024,
+    682
+  ],
+  "pixelsPerUnit": 142.98064582370756,
+  "wholeFigures": true,
+  "status": "visual-reviewed",
+  "allowStatic": true,
+  "pivotMethod": "Reviewed sole anchors on complete figures; integer alignment, no resampling or pixel edits",
+  "frames": [
+    {
+      "id": "Redesign_LuciusDrawESE20261111_E_00",
+      "action": "Draw",
+      "direction": "E",
+      "index": 0,
+      "phase": "reach-hilt",
+      "rect": [
+        0,
+        341,
+        256,
+        341
+      ],
+      "pivot": [
+        0.464844,
+        0.085044
+      ],
+      "durationMs": 180
+    },
+    {
+      "id": "Redesign_LuciusDrawESE20261111_E_01",
+      "action": "Draw",
+      "direction": "E",
+      "index": 1,
+      "phase": "grasp-hilt",
+      "rect": [
+        256,
+        341,
+        256,
+        341
+      ],
+      "pivot": [
+        0.4375,
+        0.085044
+      ],
+      "durationMs": 160
+    },
+    {
+      "id": "Redesign_LuciusDrawESE20261111_E_02",
+      "action": "Draw",
+      "direction": "E",
+      "index": 2,
+      "phase": "extract-blade",
+      "rect": [
+        512,
+        341,
+        256,
+        341
+      ],
+      "pivot": [
+        0.429688,
+        0.085044
+      ],
+      "durationMs": 200
+    },
+    {
+      "id": "Redesign_LuciusDrawESE20261111_E_03",
+      "action": "Draw",
+      "direction": "E",
+      "index": 3,
+      "phase": "low-guard",
+      "rect": [
+        768,
+        341,
+        256,
+        341
+      ],
+      "pivot": [
+        0.371094,
+        0.085044
+      ],
+      "durationMs": 220
+    },
+    {
+      "id": "Redesign_LuciusDrawESE20261111_SE_00",
+      "action": "Draw",
+      "direction": "SE",
+      "index": 0,
+      "phase": "reach-hilt",
+      "rect": [
+        0,
+        0,
+        256,
+        341
+      ],
+      "pivot": [
+        0.46875,
+        0.067449
+      ],
+      "durationMs": 180
+    },
+    {
+      "id": "Redesign_LuciusDrawESE20261111_SE_01",
+      "action": "Draw",
+      "direction": "SE",
+      "index": 1,
+      "phase": "grasp-hilt",
+      "rect": [
+        256,
+        0,
+        256,
+        341
+      ],
+      "pivot": [
+        0.445312,
+        0.067449
+      ],
+      "durationMs": 160
+    },
+    {
+      "id": "Redesign_LuciusDrawESE20261111_SE_02",
+      "action": "Draw",
+      "direction": "SE",
+      "index": 2,
+      "phase": "extract-blade",
+      "rect": [
+        512,
+        0,
+        256,
+        341
+      ],
+      "pivot": [
+        0.425781,
+        0.067449
+      ],
+      "durationMs": 200
+    },
+    {
+      "id": "Redesign_LuciusDrawESE20261111_SE_03",
+      "action": "Draw",
+      "direction": "SE",
+      "index": 3,
+      "phase": "low-guard",
+      "rect": [
+        768,
+        0,
+        256,
+        341
+      ],
+      "pivot": [
+        0.359375,
+        0.067449
+      ],
+      "durationMs": 220
+    }
+  ]
+}

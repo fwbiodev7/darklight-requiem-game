@@ -761,8 +761,8 @@
       "action": "WalkArmed",
       "direction": 3,
       "resourcePath": "Darklight/LuciusNormal20261109/LuciusWalkArmedNWNorth20261111",
-      "imageSha256": "52c432c5cb8857d3879553ac8e32b4fe442c42bac875e9365f0c43fc609759d9",
-      "sourceSha256": "52c432c5cb8857d3879553ac8e32b4fe442c42bac875e9365f0c43fc609759d9",
+      "imageSha256": "38340e8fabaa24181025dd52bf785503af8928c96e608c71806ba2ca2b59bafa",
+      "sourceSha256": "38340e8fabaa24181025dd52bf785503af8928c96e608c71806ba2ca2b59bafa",
       "nativeSize": [
         1536,
         1024
@@ -791,8 +791,8 @@
       "action": "WalkArmed",
       "direction": 4,
       "resourcePath": "Darklight/LuciusNormal20261109/LuciusWalkArmedNWNorth20261111",
-      "imageSha256": "52c432c5cb8857d3879553ac8e32b4fe442c42bac875e9365f0c43fc609759d9",
-      "sourceSha256": "52c432c5cb8857d3879553ac8e32b4fe442c42bac875e9365f0c43fc609759d9",
+      "imageSha256": "38340e8fabaa24181025dd52bf785503af8928c96e608c71806ba2ca2b59bafa",
+      "sourceSha256": "38340e8fabaa24181025dd52bf785503af8928c96e608c71806ba2ca2b59bafa",
       "nativeSize": [
         1536,
         1024
@@ -1369,6 +1369,666 @@
         "Redesign_LuciusSwordHorizontalNNEESE20261111V1_SE_02"
       ],
       "attackKey": "SwordHorizontal"
+    },
+    {
+      "id": "LuciusDrawNNE20261111_Draw_N",
+      "action": "Draw",
+      "direction": 4,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusDrawNNE20261111",
+      "nativeSize": [
+        1024,
+        682
+      ],
+      "pixelsPerUnit": 142.98064582370756,
+      "spriteNames": [
+        "Redesign_LuciusDrawNNE20261111_N_00",
+        "Redesign_LuciusDrawNNE20261111_N_01",
+        "Redesign_LuciusDrawNNE20261111_N_02",
+        "Redesign_LuciusDrawNNE20261111_N_03"
+      ],
+      "durationMs": [
+        180,
+        160,
+        200,
+        220
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "30c9fe6e0e905e501f8b3d37447140b049466895bf61de4b20b1d28a3cfae1a1",
+      "sourceSha256": "30c9fe6e0e905e501f8b3d37447140b049466895bf61de4b20b1d28a3cfae1a1",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusDrawNNE20261111.png"
+    },
+    {
+      "id": "LuciusDrawNNE20261111_Draw_NE",
+      "action": "Draw",
+      "direction": 5,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusDrawNNE20261111",
+      "nativeSize": [
+        1024,
+        682
+      ],
+      "pixelsPerUnit": 142.98064582370756,
+      "spriteNames": [
+        "Redesign_LuciusDrawNNE20261111_NE_00",
+        "Redesign_LuciusDrawNNE20261111_NE_01",
+        "Redesign_LuciusDrawNNE20261111_NE_02",
+        "Redesign_LuciusDrawNNE20261111_NE_03"
+      ],
+      "durationMs": [
+        180,
+        160,
+        200,
+        220
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "30c9fe6e0e905e501f8b3d37447140b049466895bf61de4b20b1d28a3cfae1a1",
+      "sourceSha256": "30c9fe6e0e905e501f8b3d37447140b049466895bf61de4b20b1d28a3cfae1a1",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusDrawNNE20261111.png"
+    },
+    {
+      "id": "LuciusDrawESE20261111_Draw_E",
+      "action": "Draw",
+      "direction": 6,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusDrawESE20261111",
+      "nativeSize": [
+        1024,
+        682
+      ],
+      "pixelsPerUnit": 142.98064582370756,
+      "spriteNames": [
+        "Redesign_LuciusDrawESE20261111_E_00",
+        "Redesign_LuciusDrawESE20261111_E_01",
+        "Redesign_LuciusDrawESE20261111_E_02",
+        "Redesign_LuciusDrawESE20261111_E_03"
+      ],
+      "durationMs": [
+        180,
+        160,
+        200,
+        220
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "b82ce3644fb8aa2aaf434b871a2044c9ba89998da23e555ab817f50036d5ea0b",
+      "sourceSha256": "b82ce3644fb8aa2aaf434b871a2044c9ba89998da23e555ab817f50036d5ea0b",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusDrawESE20261111.png"
+    },
+    {
+      "id": "LuciusDrawESE20261111_Draw_SE",
+      "action": "Draw",
+      "direction": 7,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusDrawESE20261111",
+      "nativeSize": [
+        1024,
+        682
+      ],
+      "pixelsPerUnit": 142.98064582370756,
+      "spriteNames": [
+        "Redesign_LuciusDrawESE20261111_SE_00",
+        "Redesign_LuciusDrawESE20261111_SE_01",
+        "Redesign_LuciusDrawESE20261111_SE_02",
+        "Redesign_LuciusDrawESE20261111_SE_03"
+      ],
+      "durationMs": [
+        180,
+        160,
+        200,
+        220
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "b82ce3644fb8aa2aaf434b871a2044c9ba89998da23e555ab817f50036d5ea0b",
+      "sourceSha256": "b82ce3644fb8aa2aaf434b871a2044c9ba89998da23e555ab817f50036d5ea0b",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusDrawESE20261111.png"
+    },
+    {
+      "id": "LuciusParry8V20261111_Parry_S",
+      "action": "Parry",
+      "direction": 0,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusParry8V20261111",
+      "nativeSize": [
+        1024,
+        512
+      ],
+      "pixelsPerUnit": 112.48477381235736,
+      "spriteNames": [
+        "Redesign_LuciusParry8V20261111_S_00"
+      ],
+      "durationMs": [
+        120
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "b1655368af69e1c4d2c3ba7863e74a84886df60bc5342cc2ea69bbf5d789c992",
+      "sourceSha256": "b1655368af69e1c4d2c3ba7863e74a84886df60bc5342cc2ea69bbf5d789c992",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusParry8V20261111.png"
+    },
+    {
+      "id": "LuciusParry8V20261111_Parry_SW",
+      "action": "Parry",
+      "direction": 1,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusParry8V20261111",
+      "nativeSize": [
+        1024,
+        512
+      ],
+      "pixelsPerUnit": 112.48477381235736,
+      "spriteNames": [
+        "Redesign_LuciusParry8V20261111_SW_00"
+      ],
+      "durationMs": [
+        120
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "b1655368af69e1c4d2c3ba7863e74a84886df60bc5342cc2ea69bbf5d789c992",
+      "sourceSha256": "b1655368af69e1c4d2c3ba7863e74a84886df60bc5342cc2ea69bbf5d789c992",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusParry8V20261111.png"
+    },
+    {
+      "id": "LuciusParry8V20261111_Parry_W",
+      "action": "Parry",
+      "direction": 2,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusParry8V20261111",
+      "nativeSize": [
+        1024,
+        512
+      ],
+      "pixelsPerUnit": 112.48477381235736,
+      "spriteNames": [
+        "Redesign_LuciusParry8V20261111_W_00"
+      ],
+      "durationMs": [
+        120
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "b1655368af69e1c4d2c3ba7863e74a84886df60bc5342cc2ea69bbf5d789c992",
+      "sourceSha256": "b1655368af69e1c4d2c3ba7863e74a84886df60bc5342cc2ea69bbf5d789c992",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusParry8V20261111.png"
+    },
+    {
+      "id": "LuciusParry8V20261111_Parry_NW",
+      "action": "Parry",
+      "direction": 3,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusParry8V20261111",
+      "nativeSize": [
+        1024,
+        512
+      ],
+      "pixelsPerUnit": 112.48477381235736,
+      "spriteNames": [
+        "Redesign_LuciusParry8V20261111_NW_00"
+      ],
+      "durationMs": [
+        120
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "b1655368af69e1c4d2c3ba7863e74a84886df60bc5342cc2ea69bbf5d789c992",
+      "sourceSha256": "b1655368af69e1c4d2c3ba7863e74a84886df60bc5342cc2ea69bbf5d789c992",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusParry8V20261111.png"
+    },
+    {
+      "id": "LuciusParry8V20261111_Parry_N",
+      "action": "Parry",
+      "direction": 4,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusParry8V20261111",
+      "nativeSize": [
+        1024,
+        512
+      ],
+      "pixelsPerUnit": 112.48477381235736,
+      "spriteNames": [
+        "Redesign_LuciusParry8V20261111_N_00"
+      ],
+      "durationMs": [
+        120
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "b1655368af69e1c4d2c3ba7863e74a84886df60bc5342cc2ea69bbf5d789c992",
+      "sourceSha256": "b1655368af69e1c4d2c3ba7863e74a84886df60bc5342cc2ea69bbf5d789c992",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusParry8V20261111.png"
+    },
+    {
+      "id": "LuciusParry8V20261111_Parry_NE",
+      "action": "Parry",
+      "direction": 5,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusParry8V20261111",
+      "nativeSize": [
+        1024,
+        512
+      ],
+      "pixelsPerUnit": 112.48477381235736,
+      "spriteNames": [
+        "Redesign_LuciusParry8V20261111_NE_00"
+      ],
+      "durationMs": [
+        120
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "b1655368af69e1c4d2c3ba7863e74a84886df60bc5342cc2ea69bbf5d789c992",
+      "sourceSha256": "b1655368af69e1c4d2c3ba7863e74a84886df60bc5342cc2ea69bbf5d789c992",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusParry8V20261111.png"
+    },
+    {
+      "id": "LuciusParry8V20261111_Parry_E",
+      "action": "Parry",
+      "direction": 6,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusParry8V20261111",
+      "nativeSize": [
+        1024,
+        512
+      ],
+      "pixelsPerUnit": 112.48477381235736,
+      "spriteNames": [
+        "Redesign_LuciusParry8V20261111_E_00"
+      ],
+      "durationMs": [
+        120
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "b1655368af69e1c4d2c3ba7863e74a84886df60bc5342cc2ea69bbf5d789c992",
+      "sourceSha256": "b1655368af69e1c4d2c3ba7863e74a84886df60bc5342cc2ea69bbf5d789c992",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusParry8V20261111.png"
+    },
+    {
+      "id": "LuciusParry8V20261111_Parry_SE",
+      "action": "Parry",
+      "direction": 7,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusParry8V20261111",
+      "nativeSize": [
+        1024,
+        512
+      ],
+      "pixelsPerUnit": 112.48477381235736,
+      "spriteNames": [
+        "Redesign_LuciusParry8V20261111_SE_00"
+      ],
+      "durationMs": [
+        120
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "b1655368af69e1c4d2c3ba7863e74a84886df60bc5342cc2ea69bbf5d789c992",
+      "sourceSha256": "b1655368af69e1c4d2c3ba7863e74a84886df60bc5342cc2ea69bbf5d789c992",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusParry8V20261111.png"
+    },
+    {
+      "id": "LuciusHurt4V20261111_Hurt_S",
+      "action": "Hurt",
+      "direction": 0,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusHurt4V20261111",
+      "nativeSize": [
+        1024,
+        341
+      ],
+      "pixelsPerUnit": 129.9824052942796,
+      "spriteNames": [
+        "Redesign_LuciusHurt4V20261111_S_00"
+      ],
+      "durationMs": [
+        150
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "77e96529a2cfae7e2901f288f75bd2619f78fdc9c5aabd17a5046b23e6d41385",
+      "sourceSha256": "77e96529a2cfae7e2901f288f75bd2619f78fdc9c5aabd17a5046b23e6d41385",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusHurt4V20261111.png"
+    },
+    {
+      "id": "LuciusHurt4V20261111_Hurt_W",
+      "action": "Hurt",
+      "direction": 2,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusHurt4V20261111",
+      "nativeSize": [
+        1024,
+        341
+      ],
+      "pixelsPerUnit": 129.9824052942796,
+      "spriteNames": [
+        "Redesign_LuciusHurt4V20261111_W_00"
+      ],
+      "durationMs": [
+        150
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "77e96529a2cfae7e2901f288f75bd2619f78fdc9c5aabd17a5046b23e6d41385",
+      "sourceSha256": "77e96529a2cfae7e2901f288f75bd2619f78fdc9c5aabd17a5046b23e6d41385",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusHurt4V20261111.png"
+    },
+    {
+      "id": "LuciusHurt4V20261111_Hurt_E",
+      "action": "Hurt",
+      "direction": 6,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusHurt4V20261111",
+      "nativeSize": [
+        1024,
+        341
+      ],
+      "pixelsPerUnit": 129.9824052942796,
+      "spriteNames": [
+        "Redesign_LuciusHurt4V20261111_E_00"
+      ],
+      "durationMs": [
+        150
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "77e96529a2cfae7e2901f288f75bd2619f78fdc9c5aabd17a5046b23e6d41385",
+      "sourceSha256": "77e96529a2cfae7e2901f288f75bd2619f78fdc9c5aabd17a5046b23e6d41385",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusHurt4V20261111.png"
+    },
+    {
+      "id": "LuciusHurt4V20261111_Hurt_N",
+      "action": "Hurt",
+      "direction": 4,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusHurt4V20261111",
+      "nativeSize": [
+        1024,
+        341
+      ],
+      "pixelsPerUnit": 129.9824052942796,
+      "spriteNames": [
+        "Redesign_LuciusHurt4V20261111_N_00"
+      ],
+      "durationMs": [
+        150
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "77e96529a2cfae7e2901f288f75bd2619f78fdc9c5aabd17a5046b23e6d41385",
+      "sourceSha256": "77e96529a2cfae7e2901f288f75bd2619f78fdc9c5aabd17a5046b23e6d41385",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusHurt4V20261111.png"
+    },
+    {
+      "id": "LuciusDead2V20261111_Dead_S",
+      "action": "Dead",
+      "direction": 0,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusDead2V20261111",
+      "nativeSize": [
+        1024,
+        512
+      ],
+      "pixelsPerUnit": 107.48545053180814,
+      "spriteNames": [
+        "Redesign_LuciusDead2V20261111_S_00",
+        "Redesign_LuciusDead2V20261111_S_01",
+        "Redesign_LuciusDead2V20261111_S_02",
+        "Redesign_LuciusDead2V20261111_S_03"
+      ],
+      "durationMs": [
+        160,
+        160,
+        160,
+        1000
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "49b2bad5e9552ba5ba70ec4086d5a5f7aa98c55d7b3e72e3401472dfac3a06d4",
+      "sourceSha256": "49b2bad5e9552ba5ba70ec4086d5a5f7aa98c55d7b3e72e3401472dfac3a06d4",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusDead2V20261111.png"
+    },
+    {
+      "id": "LuciusDead2V20261111_Dead_N",
+      "action": "Dead",
+      "direction": 4,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusDead2V20261111",
+      "nativeSize": [
+        1024,
+        512
+      ],
+      "pixelsPerUnit": 107.48545053180814,
+      "spriteNames": [
+        "Redesign_LuciusDead2V20261111_N_00",
+        "Redesign_LuciusDead2V20261111_N_01",
+        "Redesign_LuciusDead2V20261111_N_02",
+        "Redesign_LuciusDead2V20261111_N_03"
+      ],
+      "durationMs": [
+        160,
+        160,
+        160,
+        1000
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "49b2bad5e9552ba5ba70ec4086d5a5f7aa98c55d7b3e72e3401472dfac3a06d4",
+      "sourceSha256": "49b2bad5e9552ba5ba70ec4086d5a5f7aa98c55d7b3e72e3401472dfac3a06d4",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusDead2V20261111.png"
+    },
+    {
+      "id": "LuciusDodgeSSW20261111_Dodge_S",
+      "action": "Dodge",
+      "direction": 0,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusDodgeSSW20261111",
+      "nativeSize": [
+        1024,
+        682
+      ],
+      "pixelsPerUnit": 142.98064582370756,
+      "spriteNames": [
+        "Redesign_LuciusDodgeSSW20261111_S_00",
+        "Redesign_LuciusDodgeSSW20261111_S_01",
+        "Redesign_LuciusDodgeSSW20261111_S_02"
+      ],
+      "durationMs": [
+        40,
+        150,
+        40
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "3b9b0999aff2a541caf72ba69e3729ef9c9e1cbe5cdad870ad8b648074502ad0",
+      "sourceSha256": "3b9b0999aff2a541caf72ba69e3729ef9c9e1cbe5cdad870ad8b648074502ad0",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusDodgeSSW20261111.png"
+    },
+    {
+      "id": "LuciusDodgeSSW20261111_Dodge_SW",
+      "action": "Dodge",
+      "direction": 1,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusDodgeSSW20261111",
+      "nativeSize": [
+        1024,
+        682
+      ],
+      "pixelsPerUnit": 142.98064582370756,
+      "spriteNames": [
+        "Redesign_LuciusDodgeSSW20261111_SW_00",
+        "Redesign_LuciusDodgeSSW20261111_SW_01",
+        "Redesign_LuciusDodgeSSW20261111_SW_02"
+      ],
+      "durationMs": [
+        40,
+        150,
+        40
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "3b9b0999aff2a541caf72ba69e3729ef9c9e1cbe5cdad870ad8b648074502ad0",
+      "sourceSha256": "3b9b0999aff2a541caf72ba69e3729ef9c9e1cbe5cdad870ad8b648074502ad0",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusDodgeSSW20261111.png"
+    },
+    {
+      "id": "LuciusDodgeNNE20261111_Dodge_N",
+      "action": "Dodge",
+      "direction": 4,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusDodgeNNE20261111",
+      "nativeSize": [
+        1024,
+        682
+      ],
+      "pixelsPerUnit": 142.98064582370756,
+      "spriteNames": [
+        "Redesign_LuciusDodgeNNE20261111_N_00",
+        "Redesign_LuciusDodgeNNE20261111_N_01",
+        "Redesign_LuciusDodgeNNE20261111_N_02"
+      ],
+      "durationMs": [
+        40,
+        150,
+        40
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "c2883430f17953eba40f5eceea6ca992803ca8d254c3adfd91993d36ae79e44b",
+      "sourceSha256": "c2883430f17953eba40f5eceea6ca992803ca8d254c3adfd91993d36ae79e44b",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusDodgeNNE20261111.png"
+    },
+    {
+      "id": "LuciusDodgeNNE20261111_Dodge_NE",
+      "action": "Dodge",
+      "direction": 5,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusDodgeNNE20261111",
+      "nativeSize": [
+        1024,
+        682
+      ],
+      "pixelsPerUnit": 142.98064582370756,
+      "spriteNames": [
+        "Redesign_LuciusDodgeNNE20261111_NE_00",
+        "Redesign_LuciusDodgeNNE20261111_NE_01",
+        "Redesign_LuciusDodgeNNE20261111_NE_02"
+      ],
+      "durationMs": [
+        40,
+        150,
+        40
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "c2883430f17953eba40f5eceea6ca992803ca8d254c3adfd91993d36ae79e44b",
+      "sourceSha256": "c2883430f17953eba40f5eceea6ca992803ca8d254c3adfd91993d36ae79e44b",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusDodgeNNE20261111.png"
+    },
+    {
+      "id": "LuciusDodgeLat20261111_Dodge_E",
+      "action": "Dodge",
+      "direction": 6,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusDodgeLat20261111",
+      "nativeSize": [
+        1024,
+        682
+      ],
+      "pixelsPerUnit": 142.98064582370756,
+      "spriteNames": [
+        "Redesign_LuciusDodgeLat20261111_E_00",
+        "Redesign_LuciusDodgeLat20261111_E_01",
+        "Redesign_LuciusDodgeLat20261111_E_02"
+      ],
+      "durationMs": [
+        40,
+        150,
+        40
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "81f0b63e9672c8704928a21f9285051fc72dbf3368789c1021d6b870702b77be",
+      "sourceSha256": "81f0b63e9672c8704928a21f9285051fc72dbf3368789c1021d6b870702b77be",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusDodgeLat20261111.png"
+    },
+    {
+      "id": "LuciusDodgeLat20261111_Dodge_W",
+      "action": "Dodge",
+      "direction": 2,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusDodgeLat20261111",
+      "nativeSize": [
+        1024,
+        682
+      ],
+      "pixelsPerUnit": 142.98064582370756,
+      "spriteNames": [
+        "Redesign_LuciusDodgeLat20261111_W_00",
+        "Redesign_LuciusDodgeLat20261111_W_01",
+        "Redesign_LuciusDodgeLat20261111_W_02"
+      ],
+      "durationMs": [
+        40,
+        150,
+        40
+      ],
+      "startupFrames": 0,
+      "activeFrames": 0,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "imageSha256": "81f0b63e9672c8704928a21f9285051fc72dbf3368789c1021d6b870702b77be",
+      "sourceSha256": "81f0b63e9672c8704928a21f9285051fc72dbf3368789c1021d6b870702b77be",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusNormal20261109/LuciusDodgeLat20261111.png"
     }
   ]
 }

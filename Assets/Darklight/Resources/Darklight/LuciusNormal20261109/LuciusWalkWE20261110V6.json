@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "image": "LuciusWalkWE20261110V6.png",
+  "imageSha256": "284e09e5aff50d17daff3abb4aeea66fca06cbdcf06ebf0c1780452b2679d0fd",
+  "sourcePath": "ArtSources/LuciusWalk20261110/sources/W_E-v1.png",
+  "sourceSha256": "284e09e5aff50d17daff3abb4aeea66fca06cbdcf06ebf0c1780452b2679d0fd",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 214.97090106361628,
+  "wholeFigures": true,
+  "status": "visual-reviewed",
+  "allowStatic": false,
+  "pivotMethod": "reviewed sole/support anchors on whole figures, integer coordinates; source pixels unchanged",
+  "frames": [
+    {
+      "id": "Redesign_LuciusWalkWE20261110V6_W_00",
+      "action": "Walk",
+      "direction": "W",
+      "index": 0,
+      "phase": "contact-A",
+      "rect": [
+        0,
+        0,
+        384,
+        512
+      ],
+      "pivot": [
+        0.5052083333333334,
+        0.123046875
+      ],
+      "durationMs": 140
+    },
+    {
+      "id": "Redesign_LuciusWalkWE20261110V6_W_01",
+      "action": "Walk",
+      "direction": "W",
+      "index": 1,
+      "phase": "passing-A",
+      "rect": [
+        384,
+        0,
+        384,
+        512
+      ],
+      "pivot": [
+        0.4791666666666667,
+        0.123046875
+      ],
+      "durationMs": 130
+    },
+    {
+      "id": "Redesign_LuciusWalkWE20261110V6_W_02",
+      "action": "Walk",
+      "direction": "W",
+      "index": 2,
+      "phase": "contact-B",
+      "rect": [
+        768,
+        0,
+        384,
+        512
+      ],
+      "pivot": [
+        0.4609375,
+        0.123046875
+      ],
+      "durationMs": 140
+    },
+    {
+      "id": "Redesign_LuciusWalkWE20261110V6_W_03",
+      "action": "Walk",
+      "direction": "W",
+      "index": 3,
+      "phase": "passing-B",
+      "rect": [
+        1152,
+        0,
+        384,
+        512
+      ],
+      "pivot": [
+        0.4661458333333333,
+        0.123046875
+      ],
+      "durationMs": 130
+    },
+    {
+      "id": "Redesign_LuciusWalkWE20261110V6_E_00",
+      "action": "Walk",
+      "direction": "E",
+      "index": 0,
+      "phase": "contact-A",
+      "rect": [
+        0,
+        512,
+        384,
+        512
+      ],
+      "pivot": [
+        0.5598958333333334,
+        0.13671875
+      ],
+      "durationMs": 140
+    },
+    {
+      "id": "Redesign_LuciusWalkWE20261110V6_E_01",
+      "action": "Walk",
+      "direction": "E",
+      "index": 1,
+      "phase": "passing-A",
+      "rect": [
+        384,
+        512,
+        384,
+        512
+      ],
+      "pivot": [
+        0.5390625,
+        0.13671875
+      ],
+      "durationMs": 130
+    },
+    {
+      "id": "Redesign_LuciusWalkWE20261110V6_E_02",
+      "action": "Walk",
+      "direction": "E",
+      "index": 2,
+      "phase": "contact-B",
+      "rect": [
+        768,
+        512,
+        384,
+        512
+      ],
+      "pivot": [
+        0.546875,
+        0.13671875
+      ],
+      "durationMs": 140
+    },
+    {
+      "id": "Redesign_LuciusWalkWE20261110V6_E_03",
+      "action": "Walk",
+      "direction": "E",
+      "index": 3,
+      "phase": "passing-B",
+      "rect": [
+        1152,
+        512,
+        384,
+        512
+      ],
+      "pivot": [
+        0.53125,
+        0.13671875
+      ],
+      "durationMs": 130
+    }
+  ]
+}

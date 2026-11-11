@@ -39,7 +39,9 @@ namespace Darklight
             if(delta>0)game?.AbyssRider?.AfterCombat();
             if(delta>0)weapons?.AfterTick();
             if (delta > 0 && Model.ActiveThisTick){game?.WeaponSwing(Model.Attack,Model.AttackSerial);ResolveStrike();}
-            view.Present(Model, Model.Motion);
+            // Animate the motion accepted by physics, including wall sliding,
+            // rather than walking in place against an obstacle from input alone.
+            view.Present(Model, body.linearVelocity);
             if (game == null && input.move.sqrMagnitude < .01f && lab.Input.Action("Interact").WasPressedThisFrame()) lab.ResetEncounter();
         }
         public void ResetModel() { Model = new CombatModel(loadout); body.linearVelocity = Vector2.zero; AirCombo?.ResetMotion();GetComponent<DarklightAbyssRider>()?.ResetMotion(); }

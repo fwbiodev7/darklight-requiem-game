@@ -310,7 +310,7 @@ namespace Darklight.Tests
         {
             var (_, _, _, _, view) = CreateLuciusActor();
             // Presenting an action or technique with unimported key must safely fall back to idle
-            bool presented = view.PresentPose("Attack", 0, 0.15f, "SwordHorizontal");
+            bool presented = view.PresentPose("Attack", 0, 0.15f, "SwordNotAuthored");
             Assert.That(presented, Is.True, "Presentation must succeed via safe idle fallback");
             Assert.That(view.UsesIdleFallback, Is.True, "Missing candidate frames must report fallback = true without throwing or breaking state");
         }

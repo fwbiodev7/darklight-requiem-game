@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "image": "LuciusSwordHorizontalEastSouthEastV3.png",
+  "imageSha256": "0197ed55c90d4a916b7bf7b6177643baa8daea6913ca3bdeb4615181327f5a37",
+  "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordHorizontalEastSouthEastV3-source.png",
+  "sourceSha256": "0197ed55c90d4a916b7bf7b6177643baa8daea6913ca3bdeb4615181327f5a37",
+  "sourceSize": [
+    1800,
+    1100
+  ],
+  "nativeSize": [
+    1800,
+    1100
+  ],
+  "pixelsPerUnit": 217.05799719044754,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "allowStatic": false,
+  "frames": [
+    {
+      "id": "Redesign_LuciusSwordHorizontalEastSouthEastV3_E_00",
+      "action": "Attack",
+      "attackKey": "SwordHorizontal",
+      "direction": "E",
+      "index": 0,
+      "rect": [
+        0,
+        0,
+        600,
+        550
+      ],
+      "pivot": [
+        0.5583333333333333,
+        0.03090909090909091
+      ],
+      "durationMs": 140,
+      "phase": "startup"
+    },
+    {
+      "id": "Redesign_LuciusSwordHorizontalEastSouthEastV3_E_01",
+      "action": "Attack",
+      "attackKey": "SwordHorizontal",
+      "direction": "E",
+      "index": 1,
+      "rect": [
+        600,
+        0,
+        600,
+        550
+      ],
+      "pivot": [
+        0.37166666666666665,
+        0.02909090909090909
+      ],
+      "durationMs": 120,
+      "phase": "active"
+    },
+    {
+      "id": "Redesign_LuciusSwordHorizontalEastSouthEastV3_E_02",
+      "action": "Attack",
+      "attackKey": "SwordHorizontal",
+      "direction": "E",
+      "index": 2,
+      "rect": [
+        1200,
+        0,
+        600,
+        550
+      ],
+      "pivot": [
+        0.5133333333333333,
+        0.02909090909090909
+      ],
+      "durationMs": 220,
+      "phase": "recovery"
+    },
+    {
+      "id": "Redesign_LuciusSwordHorizontalEastSouthEastV3_SE_00",
+      "action": "Attack",
+      "attackKey": "SwordHorizontal",
+      "direction": "SE",
+      "index": 0,
+      "rect": [
+        0,
+        550,
+        600,
+        550
+      ],
+      "pivot": [
+        0.5483333333333333,
+        0.02909090909090909
+      ],
+      "durationMs": 140,
+      "phase": "startup"
+    },
+    {
+      "id": "Redesign_LuciusSwordHorizontalEastSouthEastV3_SE_01",
+      "action": "Attack",
+      "attackKey": "SwordHorizontal",
+      "direction": "SE",
+      "index": 1,
+      "rect": [
+        600,
+        550,
+        600,
+        550
+      ],
+      "pivot": [
+        0.37333333333333335,
+        0.02909090909090909
+      ],
+      "durationMs": 120,
+      "phase": "active"
+    },
+    {
+      "id": "Redesign_LuciusSwordHorizontalEastSouthEastV3_SE_02",
+      "action": "Attack",
+      "attackKey": "SwordHorizontal",
+      "direction": "SE",
+      "index": 2,
+      "rect": [
+        1200,
+        550,
+        600,
+        550
+      ],
+      "pivot": [
+        0.52,
+        0.02909090909090909
+      ],
+      "durationMs": 220,
+      "phase": "recovery"
+    }
+  ],
+  "clips": [
+    {
+      "name": "LuciusSwordHorizontalEastSouthEastV3_E",
+      "frames": [
+        "Redesign_LuciusSwordHorizontalEastSouthEastV3_E_00",
+        "Redesign_LuciusSwordHorizontalEastSouthEastV3_E_01",
+        "Redesign_LuciusSwordHorizontalEastSouthEastV3_E_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "LuciusSwordHorizontalEastSouthEastV3_SE",
+      "frames": [
+        "Redesign_LuciusSwordHorizontalEastSouthEastV3_SE_00",
+        "Redesign_LuciusSwordHorizontalEastSouthEastV3_SE_01",
+        "Redesign_LuciusSwordHorizontalEastSouthEastV3_SE_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "quality": {
+    "alphaThreshold": 15
+  },
+  "pivotMethod": "opaque boot contact band, full figure extraction, no root travel or anatomy resampling"
+}

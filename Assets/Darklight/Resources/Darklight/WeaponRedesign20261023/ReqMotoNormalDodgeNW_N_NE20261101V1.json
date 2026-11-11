@@ -71,8 +71,8 @@
         419
       ],
       "pivot": [
-        0.6021505376344086,
-        0.1288782816229117
+        0.542002688172043,
+        0.12649164677804295
       ],
       "durationMs": 150,
       "action": "dodge",
@@ -118,7 +118,7 @@
       ],
       "pivot": [
         0.6303763440860215,
-        0.1288782816229117
+        0.12649164677804295
       ],
       "durationMs": 40,
       "action": "dodge",
@@ -164,7 +164,7 @@
       ],
       "pivot": [
         0.6061827956989247,
-        0.1288782816229117
+        0.12649164677804295
       ],
       "durationMs": 40,
       "action": "dodge",
@@ -210,7 +210,7 @@
       ],
       "pivot": [
         0.42338709677419356,
-        0.1288782816229117
+        0.12649164677804295
       ],
       "durationMs": 150,
       "action": "dodge",
@@ -503,7 +503,7 @@
   },
   "notes": [
     "Complete Fabius Requiem Normal on-foot Dodge figures with exactly two handheld saws. No anatomy assembly, mirroring, scale/recolor/alpha cleaning.",
-    "Dodge explicit durations40/150/40ms,230ms total; Normal invulnerability20–190ms is runtime-owned, not an animation event.",
+    "Dodge explicit durations40/150/40ms,230ms total; Normal invulnerability20\u2013190ms is runtime-owned, not an animation event.",
     "Native generated raster, indexed pixel grid unverified. One body-calibrated PPU for whole sheet; PPU does not repair anatomy.",
     "Native timed Dodge consumer support is coordinated by main; no Runtime/import/Unity claimed here."
   ],

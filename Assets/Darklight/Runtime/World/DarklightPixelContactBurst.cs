@@ -57,7 +57,9 @@ namespace Darklight
             {var obj=new GameObject("ContatosPixelArt");obj.transform.SetParent(lab.transform,false);instance=obj.AddComponent<DarklightPixelContactBurst>();}
             if(!instance.Load())return false;
             int clip=heavy?2:game.Weapons?.Equipped?.id==DarklightWeaponId.Katana?1:0;
-            instance.Begin(position+Vector3.up*.65f,clip,game);return true;
+            instance.Begin(position+Vector3.up*.65f,clip,game);
+            DarklightCombatParticlesV2.TryEmitContact(position+Vector3.up*.65f,heavy,clip);
+            return true;
         }
         void Begin(Vector3 point,int clip,DarklightCampaign game)
         {

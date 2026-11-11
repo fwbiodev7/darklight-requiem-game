@@ -8,6 +8,19 @@ namespace Darklight.Editor
 {
     public static class DarklightLuciusDelivery
     {
+        public static void ImportNormalAnimations()
+        {
+            string folder="Assets/Darklight/Resources/"+DarklightLuciusSpriteBank.Root;
+            var catalog=JsonUtility.FromJson<DarklightLuciusSpriteCatalog>(File.ReadAllText(folder+"catalog.json"));
+            if(!DarklightLuciusSpriteBank.ValidCatalog(catalog))throw new InvalidDataException("Invalid Lucius Normal catalog");
+            foreach(string resource in catalog.pages.Where(page=>page.action!="Idle").Select(page=>page.resourcePath).Distinct())
+                DarklightWeaponRedesignImporter.ImportStandalone("Assets/Darklight/Resources/"+resource+".png");
+            AssetDatabase.SaveAssets();DarklightLuciusSpriteBank.ClearCache();
+            foreach(var page in catalog.pages)
+                if(!DarklightLuciusSpriteBank.TryPose(page.action,page.direction,0,out var sprite,out bool fallback,page.attackKey)||
+                    fallback||sprite.name!=page.spriteNames[0])throw new InvalidDataException("Missing imported Lucius action: "+page.id);
+            Debug.Log("Lucius Normal reviewed action pages imported: "+catalog.pages.Count(page=>page.action!="Idle"));
+        }
         public static void ImportHoodedIdle()
         {
             const string path="Assets/Darklight/Resources/Darklight/LuciusHooded20261110/LuciusHoodedIdle8V1.png";

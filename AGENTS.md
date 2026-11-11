@@ -1,5 +1,12 @@
 # DARKLIGHT: REQUIEM — instruções do projeto
 
+## Handoff e Direção Vigente — 10/11/2026 (Estabilidade Concluída + Retomada do Codex)
+- **Consultar imediatamente:** `MENSAGEM-PARA-CODEX-RETOMADA.md` e `Docs/Darklight/HANDOFF-ANTIGRAVITY-ESTABILIDADE-20261110.md`.
+- **Tremor de Fabius:** 100% resolvido com calibração subpixel de pivôs em 95 folhas (522 frames). **Não alterar os pivôs nem regenerar artes de Fabius Normal.**
+- **Referência Canônica para Novos Ataques de Lucius:** Salva oficialmente em `Docs/Darklight/References/LuciusAttackReference20261110/Lucius_Attack_Reference_Primary_20261110.png`. Todos os novos ataques, combos e estocada (`SwordThrust`) devem seguir este gabarito aprovado pelo usuário.
+- **Build Windows x64:** Gerada, validada e funcional em `outputs/build-windows-estabilidade-20261110/Windows/DarklightRequiem.exe` (executável com launcher `run-game.bat` / `run-game.ps1`). Pacote distribuível em `DarklightRequiem-Windows-Estabilidade-20261110.zip`.
+- **Testes:** 132/132 testes EditMode/PlayMode passando. Preservar integridade do catálogo e dos sistemas.
+
 ## Direção vigente — 27/10/2026
 - Réquiem é a única skin ativa; Katana, Punhos e Moto; Normal, Ruptura e Eclipse Absoluto. Instruções históricas contrárias abaixo estão superadas pelo contrato ESCOPO-CANONICO-20261026.md.
 - O usuário exige revisão e correção autônomas das artes, sem pedir aprovação a cada lote. As animações aprovadas da Katana são a referência principal de identidade, desenho e maturidade, inclusive para o piloto da moto. PPU não corrige proporções ou rosto infantilizados.

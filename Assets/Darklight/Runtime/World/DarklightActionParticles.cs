@@ -136,6 +136,11 @@ namespace Darklight
                 Quaternion.Euler(0,0,Mathf.Atan2(facing.y,facing.x)*Mathf.Rad2Deg):Quaternion.identity;
             fx.LastOpacity=reduced?.33f:.85f;fx.LastDiameter=diameter;
             b.art.color=new Color(1,1,1,fx.LastOpacity);fx.LastPresentedSprite=b.art.sprite;fx.LastLifetime=b.life;fx.counts[(int)kind]++;
+            if(kind==DarklightActionParticleKind.Dodge)
+            {
+                int wId=(int)(DarklightCampaign.Instance?.Weapons?.Equipped?.id??DarklightWeaponId.Katana);
+                DarklightCombatParticlesV2.TryEmitDodge(wId,point,facing,groundY);
+            }
         }
         void Update()
         {

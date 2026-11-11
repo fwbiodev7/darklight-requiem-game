@@ -1,0 +1,955 @@
+{
+  "schemaVersion": 2,
+  "assetType": "combat-particles-v2",
+  "status": "visual-reviewed",
+  "totalFamilies": 7,
+  "totalFrames": 56,
+  "pixelsPerUnit": 128,
+  "families": [
+    {
+      "name": "Contato_Impacto",
+      "sheet": "Sheet_Contato_Impacto_v2",
+      "sheetFile": "Sheet_Contato_Impacto_v2.png",
+      "desc": "Flash estelar no ponto de impacto",
+      "action": "Contact",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "frameDurationMs": 35,
+      "recommendedScale": 1.0,
+      "frames": [
+        {
+          "id": "Contato_Impacto_01",
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            101,
+            53
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 35
+        },
+        {
+          "id": "Contato_Impacto_02",
+          "index": 1,
+          "rect": [
+            101,
+            0,
+            102,
+            53
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 35
+        },
+        {
+          "id": "Contato_Impacto_03",
+          "index": 2,
+          "rect": [
+            203,
+            0,
+            102,
+            53
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 35
+        },
+        {
+          "id": "Contato_Impacto_04",
+          "index": 3,
+          "rect": [
+            305,
+            0,
+            101,
+            53
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 35
+        },
+        {
+          "id": "Contato_Impacto_05",
+          "index": 4,
+          "rect": [
+            406,
+            0,
+            101,
+            53
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 35
+        },
+        {
+          "id": "Contato_Impacto_06",
+          "index": 5,
+          "rect": [
+            507,
+            0,
+            102,
+            53
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 35
+        },
+        {
+          "id": "Contato_Impacto_07",
+          "index": 6,
+          "rect": [
+            609,
+            0,
+            102,
+            53
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 35
+        },
+        {
+          "id": "Contato_Impacto_08",
+          "index": 7,
+          "rect": [
+            711,
+            0,
+            102,
+            53
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 35
+        }
+      ]
+    },
+    {
+      "name": "Ataque_Katana",
+      "sheet": "Sheet_Ataque_Katana_v2",
+      "sheetFile": "Sheet_Ataque_Katana_v2.png",
+      "desc": "Arco de corte crescente da lamina",
+      "action": "KatanaAttack",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "frameDurationMs": 40,
+      "recommendedScale": 1.0,
+      "frames": [
+        {
+          "id": "Ataque_Katana_01",
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            101,
+            54
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Ataque_Katana_02",
+          "index": 1,
+          "rect": [
+            101,
+            0,
+            102,
+            54
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Ataque_Katana_03",
+          "index": 2,
+          "rect": [
+            203,
+            0,
+            102,
+            54
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Ataque_Katana_04",
+          "index": 3,
+          "rect": [
+            305,
+            0,
+            101,
+            54
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Ataque_Katana_05",
+          "index": 4,
+          "rect": [
+            406,
+            0,
+            101,
+            54
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Ataque_Katana_06",
+          "index": 5,
+          "rect": [
+            507,
+            0,
+            102,
+            54
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Ataque_Katana_07",
+          "index": 6,
+          "rect": [
+            609,
+            0,
+            102,
+            54
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Ataque_Katana_08",
+          "index": 7,
+          "rect": [
+            711,
+            0,
+            102,
+            54
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 40
+        }
+      ]
+    },
+    {
+      "name": "Ataque_Punhos",
+      "sheet": "Sheet_Ataque_Punhos_v2",
+      "sheetFile": "Sheet_Ataque_Punhos_v2.png",
+      "desc": "Explosao seca e concentrada de punho/chute",
+      "action": "FistsAttack",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "frameDurationMs": 35,
+      "recommendedScale": 1.0,
+      "frames": [
+        {
+          "id": "Ataque_Punhos_01",
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            101,
+            54
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 35
+        },
+        {
+          "id": "Ataque_Punhos_02",
+          "index": 1,
+          "rect": [
+            101,
+            0,
+            102,
+            54
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 35
+        },
+        {
+          "id": "Ataque_Punhos_03",
+          "index": 2,
+          "rect": [
+            203,
+            0,
+            102,
+            54
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 35
+        },
+        {
+          "id": "Ataque_Punhos_04",
+          "index": 3,
+          "rect": [
+            305,
+            0,
+            101,
+            54
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 35
+        },
+        {
+          "id": "Ataque_Punhos_05",
+          "index": 4,
+          "rect": [
+            406,
+            0,
+            101,
+            54
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 35
+        },
+        {
+          "id": "Ataque_Punhos_06",
+          "index": 5,
+          "rect": [
+            507,
+            0,
+            102,
+            54
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 35
+        },
+        {
+          "id": "Ataque_Punhos_07",
+          "index": 6,
+          "rect": [
+            609,
+            0,
+            102,
+            54
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 35
+        },
+        {
+          "id": "Ataque_Punhos_08",
+          "index": 7,
+          "rect": [
+            711,
+            0,
+            102,
+            54
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 35
+        }
+      ]
+    },
+    {
+      "name": "Ataque_Moto",
+      "sheet": "Sheet_Ataque_Moto_v2",
+      "sheetFile": "Sheet_Ataque_Moto_v2.png",
+      "desc": "Fumaca e faiscas de atrito no chao",
+      "action": "MotoAttack",
+      "pivot": [
+        0.5,
+        0.2
+      ],
+      "frameDurationMs": 45,
+      "recommendedScale": 1.1,
+      "frames": [
+        {
+          "id": "Ataque_Moto_01",
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            101,
+            58
+          ],
+          "pivot": [
+            0.5,
+            0.2
+          ],
+          "durationMs": 45
+        },
+        {
+          "id": "Ataque_Moto_02",
+          "index": 1,
+          "rect": [
+            101,
+            0,
+            102,
+            58
+          ],
+          "pivot": [
+            0.5,
+            0.2
+          ],
+          "durationMs": 45
+        },
+        {
+          "id": "Ataque_Moto_03",
+          "index": 2,
+          "rect": [
+            203,
+            0,
+            102,
+            58
+          ],
+          "pivot": [
+            0.5,
+            0.2
+          ],
+          "durationMs": 45
+        },
+        {
+          "id": "Ataque_Moto_04",
+          "index": 3,
+          "rect": [
+            305,
+            0,
+            101,
+            58
+          ],
+          "pivot": [
+            0.5,
+            0.2
+          ],
+          "durationMs": 45
+        },
+        {
+          "id": "Ataque_Moto_05",
+          "index": 4,
+          "rect": [
+            406,
+            0,
+            101,
+            58
+          ],
+          "pivot": [
+            0.5,
+            0.2
+          ],
+          "durationMs": 45
+        },
+        {
+          "id": "Ataque_Moto_06",
+          "index": 5,
+          "rect": [
+            507,
+            0,
+            102,
+            58
+          ],
+          "pivot": [
+            0.5,
+            0.2
+          ],
+          "durationMs": 45
+        },
+        {
+          "id": "Ataque_Moto_07",
+          "index": 6,
+          "rect": [
+            609,
+            0,
+            102,
+            58
+          ],
+          "pivot": [
+            0.5,
+            0.2
+          ],
+          "durationMs": 45
+        },
+        {
+          "id": "Ataque_Moto_08",
+          "index": 7,
+          "rect": [
+            711,
+            0,
+            102,
+            58
+          ],
+          "pivot": [
+            0.5,
+            0.2
+          ],
+          "durationMs": 45
+        }
+      ]
+    },
+    {
+      "name": "Esquiva_Katana",
+      "sheet": "Sheet_Esquiva_Katana_v2",
+      "sheetFile": "Sheet_Esquiva_Katana_v2.png",
+      "desc": "Rastro azul-prateado de vento cortante",
+      "action": "KatanaDodge",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "frameDurationMs": 40,
+      "recommendedScale": 1.0,
+      "frames": [
+        {
+          "id": "Esquiva_Katana_01",
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            101,
+            48
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Esquiva_Katana_02",
+          "index": 1,
+          "rect": [
+            101,
+            0,
+            102,
+            48
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Esquiva_Katana_03",
+          "index": 2,
+          "rect": [
+            203,
+            0,
+            102,
+            48
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Esquiva_Katana_04",
+          "index": 3,
+          "rect": [
+            305,
+            0,
+            101,
+            48
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Esquiva_Katana_05",
+          "index": 4,
+          "rect": [
+            406,
+            0,
+            101,
+            48
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Esquiva_Katana_06",
+          "index": 5,
+          "rect": [
+            507,
+            0,
+            102,
+            48
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Esquiva_Katana_07",
+          "index": 6,
+          "rect": [
+            609,
+            0,
+            102,
+            48
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Esquiva_Katana_08",
+          "index": 7,
+          "rect": [
+            711,
+            0,
+            102,
+            48
+          ],
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "durationMs": 40
+        }
+      ]
+    },
+    {
+      "name": "Esquiva_Punhos",
+      "sheet": "Sheet_Esquiva_Punhos_v2",
+      "sheetFile": "Sheet_Esquiva_Punhos_v2.png",
+      "desc": "Poeira fisica e pedregulhos no chao",
+      "action": "FistsDodge",
+      "pivot": [
+        0.5,
+        0.25
+      ],
+      "frameDurationMs": 40,
+      "recommendedScale": 1.0,
+      "frames": [
+        {
+          "id": "Esquiva_Punhos_01",
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            101,
+            41
+          ],
+          "pivot": [
+            0.5,
+            0.25
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Esquiva_Punhos_02",
+          "index": 1,
+          "rect": [
+            101,
+            0,
+            102,
+            41
+          ],
+          "pivot": [
+            0.5,
+            0.25
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Esquiva_Punhos_03",
+          "index": 2,
+          "rect": [
+            203,
+            0,
+            102,
+            41
+          ],
+          "pivot": [
+            0.5,
+            0.25
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Esquiva_Punhos_04",
+          "index": 3,
+          "rect": [
+            305,
+            0,
+            101,
+            41
+          ],
+          "pivot": [
+            0.5,
+            0.25
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Esquiva_Punhos_05",
+          "index": 4,
+          "rect": [
+            406,
+            0,
+            101,
+            41
+          ],
+          "pivot": [
+            0.5,
+            0.25
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Esquiva_Punhos_06",
+          "index": 5,
+          "rect": [
+            507,
+            0,
+            102,
+            41
+          ],
+          "pivot": [
+            0.5,
+            0.25
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Esquiva_Punhos_07",
+          "index": 6,
+          "rect": [
+            609,
+            0,
+            102,
+            41
+          ],
+          "pivot": [
+            0.5,
+            0.25
+          ],
+          "durationMs": 40
+        },
+        {
+          "id": "Esquiva_Punhos_08",
+          "index": 7,
+          "rect": [
+            711,
+            0,
+            102,
+            41
+          ],
+          "pivot": [
+            0.5,
+            0.25
+          ],
+          "durationMs": 40
+        }
+      ]
+    },
+    {
+      "name": "Esquiva_Moto",
+      "sheet": "Sheet_Esquiva_Moto_v2",
+      "sheetFile": "Sheet_Esquiva_Moto_v2.png",
+      "desc": "Derrapagem violenta com faiscas",
+      "action": "MotoDodge",
+      "pivot": [
+        0.5,
+        0.2
+      ],
+      "frameDurationMs": 45,
+      "recommendedScale": 1.15,
+      "frames": [
+        {
+          "id": "Esquiva_Moto_01",
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            101,
+            46
+          ],
+          "pivot": [
+            0.5,
+            0.2
+          ],
+          "durationMs": 45
+        },
+        {
+          "id": "Esquiva_Moto_02",
+          "index": 1,
+          "rect": [
+            101,
+            0,
+            102,
+            46
+          ],
+          "pivot": [
+            0.5,
+            0.2
+          ],
+          "durationMs": 45
+        },
+        {
+          "id": "Esquiva_Moto_03",
+          "index": 2,
+          "rect": [
+            203,
+            0,
+            102,
+            46
+          ],
+          "pivot": [
+            0.5,
+            0.2
+          ],
+          "durationMs": 45
+        },
+        {
+          "id": "Esquiva_Moto_04",
+          "index": 3,
+          "rect": [
+            305,
+            0,
+            101,
+            46
+          ],
+          "pivot": [
+            0.5,
+            0.2
+          ],
+          "durationMs": 45
+        },
+        {
+          "id": "Esquiva_Moto_05",
+          "index": 4,
+          "rect": [
+            406,
+            0,
+            101,
+            46
+          ],
+          "pivot": [
+            0.5,
+            0.2
+          ],
+          "durationMs": 45
+        },
+        {
+          "id": "Esquiva_Moto_06",
+          "index": 5,
+          "rect": [
+            507,
+            0,
+            102,
+            46
+          ],
+          "pivot": [
+            0.5,
+            0.2
+          ],
+          "durationMs": 45
+        },
+        {
+          "id": "Esquiva_Moto_07",
+          "index": 6,
+          "rect": [
+            609,
+            0,
+            102,
+            46
+          ],
+          "pivot": [
+            0.5,
+            0.2
+          ],
+          "durationMs": 45
+        },
+        {
+          "id": "Esquiva_Moto_08",
+          "index": 7,
+          "rect": [
+            711,
+            0,
+            102,
+            46
+          ],
+          "pivot": [
+            0.5,
+            0.2
+          ],
+          "durationMs": 45
+        }
+      ]
+    }
+  ]
+}

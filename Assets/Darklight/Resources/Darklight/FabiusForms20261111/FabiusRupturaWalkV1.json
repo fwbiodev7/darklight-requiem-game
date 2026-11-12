@@ -1,0 +1,128 @@
+{
+  "name": "FabiusRupturaWalkV1",
+  "image": "FabiusRupturaWalkV1.png",
+  "imageSha256": "3918927ef45a0b2e639331dd663d0c371f2c4dfc43922e31209bf81e6bf68db8",
+  "nativeSize": [
+    1024,
+    341
+  ],
+  "frameSize": [
+    170,
+    341
+  ],
+  "pixelsPerUnit": 214.9709,
+  "rows": 1,
+  "cols": 6,
+  "form": "Ruptura",
+  "action": "Walk",
+  "frames": [
+    {
+      "id": "FabiusRupturaWalkV1_00",
+      "rect": [
+        0,
+        0,
+        170,
+        341
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "Walk",
+      "direction": "E",
+      "form": "Ruptura",
+      "frameIndex": 0
+    },
+    {
+      "id": "FabiusRupturaWalkV1_01",
+      "rect": [
+        170,
+        0,
+        170,
+        341
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "Walk",
+      "direction": "E",
+      "form": "Ruptura",
+      "frameIndex": 1
+    },
+    {
+      "id": "FabiusRupturaWalkV1_02",
+      "rect": [
+        340,
+        0,
+        170,
+        341
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "Walk",
+      "direction": "E",
+      "form": "Ruptura",
+      "frameIndex": 2
+    },
+    {
+      "id": "FabiusRupturaWalkV1_03",
+      "rect": [
+        510,
+        0,
+        170,
+        341
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "Walk",
+      "direction": "E",
+      "form": "Ruptura",
+      "frameIndex": 3
+    },
+    {
+      "id": "FabiusRupturaWalkV1_04",
+      "rect": [
+        680,
+        0,
+        170,
+        341
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "Walk",
+      "direction": "E",
+      "form": "Ruptura",
+      "frameIndex": 4
+    },
+    {
+      "id": "FabiusRupturaWalkV1_05",
+      "rect": [
+        850,
+        0,
+        170,
+        341
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "Walk",
+      "direction": "E",
+      "form": "Ruptura",
+      "frameIndex": 5
+    }
+  ]
+}

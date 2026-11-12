@@ -48,7 +48,8 @@ namespace Darklight
         }
         static bool Action(string action)=>action=="Idle"||action=="Walk"||action=="Run"||
             action=="Attack"||action=="Charging"||action=="Dodge"||action=="Parry"||action=="Hurt"||action=="Dead"||
-            action=="Draw"||action=="WalkArmed"||action=="Transformation";
+            action=="Draw"||action=="WalkArmed"||action=="Transformation"||action=="FloatFly"||action=="HurtDead"||
+            action=="FloatLateral"||action=="DashDiagS"||action=="DashDiagN"||action=="WalkNS";
         static bool SwordKey(string key)=>key==DarklightLuciusCombatProfile.SwordHorizontal||
             key==DarklightLuciusCombatProfile.SwordVertical||key==DarklightLuciusCombatProfile.SwordThrust;
         public static bool ValidPage(DarklightLuciusSpritePage page)

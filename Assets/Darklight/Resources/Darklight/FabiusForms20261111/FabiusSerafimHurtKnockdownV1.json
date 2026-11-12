@@ -1,0 +1,164 @@
+{
+  "name": "FabiusSerafimHurtKnockdownV1",
+  "image": "FabiusSerafimHurtKnockdownV1.png",
+  "imageSha256": "9f6776dba58bd3cf2af3e4da0dfe108d1de87bcd420f421844e3d7518beb8bd3",
+  "nativeSize": [
+    1024,
+    512
+  ],
+  "frameSize": [
+    256,
+    256
+  ],
+  "pixelsPerUnit": 214.9709,
+  "rows": 2,
+  "cols": 4,
+  "form": "Serafim",
+  "action": "HurtDead",
+  "frames": [
+    {
+      "id": "FabiusSerafimHurtKnockdownV1_00",
+      "rect": [
+        0,
+        256,
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "HurtDead",
+      "direction": "E",
+      "form": "Serafim",
+      "frameIndex": 0
+    },
+    {
+      "id": "FabiusSerafimHurtKnockdownV1_01",
+      "rect": [
+        256,
+        256,
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "HurtDead",
+      "direction": "E",
+      "form": "Serafim",
+      "frameIndex": 1
+    },
+    {
+      "id": "FabiusSerafimHurtKnockdownV1_02",
+      "rect": [
+        512,
+        256,
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "HurtDead",
+      "direction": "E",
+      "form": "Serafim",
+      "frameIndex": 2
+    },
+    {
+      "id": "FabiusSerafimHurtKnockdownV1_03",
+      "rect": [
+        768,
+        256,
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "HurtDead",
+      "direction": "E",
+      "form": "Serafim",
+      "frameIndex": 3
+    },
+    {
+      "id": "FabiusSerafimHurtKnockdownV1_04",
+      "rect": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "HurtDead",
+      "direction": "E",
+      "form": "Serafim",
+      "frameIndex": 4
+    },
+    {
+      "id": "FabiusSerafimHurtKnockdownV1_05",
+      "rect": [
+        256,
+        0,
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "HurtDead",
+      "direction": "E",
+      "form": "Serafim",
+      "frameIndex": 5
+    },
+    {
+      "id": "FabiusSerafimHurtKnockdownV1_06",
+      "rect": [
+        512,
+        0,
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "HurtDead",
+      "direction": "E",
+      "form": "Serafim",
+      "frameIndex": 6
+    },
+    {
+      "id": "FabiusSerafimHurtKnockdownV1_07",
+      "rect": [
+        768,
+        0,
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "HurtDead",
+      "direction": "E",
+      "form": "Serafim",
+      "frameIndex": 7
+    }
+  ]
+}

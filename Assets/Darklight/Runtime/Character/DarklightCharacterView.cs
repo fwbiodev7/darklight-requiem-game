@@ -115,6 +115,12 @@ namespace Darklight
             UsesPoseFallback=false;UsesUserWholeSprite=false;
             if(selected==null&&!currentOnly){selected=TodayCharacterBank.StablePose(skin,0,weapon,direction);UsesPoseFallback=selected!=null;}
             if(selected==null&&!currentOnly){selected=DarklightUserSpriteBank.Resolve(skin,0,weapon,model,movement);UsesUserWholeSprite=selected!=null;}
+            int activeForm = previewing ? previewForm : game?.PresentedForm ?? 0;
+            if(activeForm > 0 && DarklightFabiusFormsBank.TryResolveFormPose(activeForm, weapon, direction, model, movement, out var formSprite))
+            {
+                selected = formSprite;
+                UsesPoseFallback = UsesUserWholeSprite = false;
+            }
             Sprite redesigned=null;
             UsesWeaponRedesignSprite=(!riding||game?.AbyssRider?.MountedPresentation!=true)&&DarklightWeaponRedesignBank.TryResolve(skin,weapon,previewing?previewForm:game?.PresentedForm??0,
                 direction,model,movement,selected,out redesigned,previewing?null:living.Clip,

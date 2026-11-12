@@ -1,0 +1,164 @@
+{
+  "name": "FabiusRupturaHurtKnockdownV1",
+  "image": "FabiusRupturaHurtKnockdownV1.png",
+  "imageSha256": "da18c429ff79188cfccd19ba09e6cd964853e36357ffe170cc1ba1b474a07d52",
+  "nativeSize": [
+    1024,
+    512
+  ],
+  "frameSize": [
+    256,
+    256
+  ],
+  "pixelsPerUnit": 214.9709,
+  "rows": 2,
+  "cols": 4,
+  "form": "Ruptura",
+  "action": "HurtDead",
+  "frames": [
+    {
+      "id": "FabiusRupturaHurtKnockdownV1_00",
+      "rect": [
+        0,
+        256,
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "HurtDead",
+      "direction": "E",
+      "form": "Ruptura",
+      "frameIndex": 0
+    },
+    {
+      "id": "FabiusRupturaHurtKnockdownV1_01",
+      "rect": [
+        256,
+        256,
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "HurtDead",
+      "direction": "E",
+      "form": "Ruptura",
+      "frameIndex": 1
+    },
+    {
+      "id": "FabiusRupturaHurtKnockdownV1_02",
+      "rect": [
+        512,
+        256,
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "HurtDead",
+      "direction": "E",
+      "form": "Ruptura",
+      "frameIndex": 2
+    },
+    {
+      "id": "FabiusRupturaHurtKnockdownV1_03",
+      "rect": [
+        768,
+        256,
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "HurtDead",
+      "direction": "E",
+      "form": "Ruptura",
+      "frameIndex": 3
+    },
+    {
+      "id": "FabiusRupturaHurtKnockdownV1_04",
+      "rect": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "HurtDead",
+      "direction": "E",
+      "form": "Ruptura",
+      "frameIndex": 4
+    },
+    {
+      "id": "FabiusRupturaHurtKnockdownV1_05",
+      "rect": [
+        256,
+        0,
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "HurtDead",
+      "direction": "E",
+      "form": "Ruptura",
+      "frameIndex": 5
+    },
+    {
+      "id": "FabiusRupturaHurtKnockdownV1_06",
+      "rect": [
+        512,
+        0,
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "HurtDead",
+      "direction": "E",
+      "form": "Ruptura",
+      "frameIndex": 6
+    },
+    {
+      "id": "FabiusRupturaHurtKnockdownV1_07",
+      "rect": [
+        768,
+        0,
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "durationMs": 100,
+      "action": "HurtDead",
+      "direction": "E",
+      "form": "Ruptura",
+      "frameIndex": 7
+    }
+  ]
+}

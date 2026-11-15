@@ -23,7 +23,7 @@ namespace Darklight
         void BuildControls()
         {
             heading.text="CONTROLES";
-            bodyText.text="Escolha o dispositivo e o comando.\nOs comandos sao salvos automaticamente.\n\nESC / MENU cancela a captura.\nA / ENTER confirma; B / ESC volta.\n\nLT / L2 transforma por padrao.\nNormal, Ruptura e Eclipse Absoluto estão disponíveis.";
+            bodyText.text="Escolha o dispositivo e o comando.\nOs comandos sao salvos automaticamente.\n\nESC / MENU cancela a captura.\nA / ENTER confirma; B / ESC volta.\n\nLT / L2 transforma por padrao.\nNormal, Ruptura e Serafim Carmesim estão disponíveis.";
             Button("DISPOSITIVO: "+(controlsPad?"CONTROLE":"TECLADO / MOUSE"),()=>{controlsPad=!controlsPad;RefreshPanel();});
             Button("COMANDOS: "+(controlsMap?"MAPA":"JOGO"),()=>{controlsMap=!controlsMap;RefreshPanel();});
             foreach(string name in controlsMap?mapCommands:gameplayCommands)
@@ -104,7 +104,7 @@ namespace Darklight
         }
         void BuildTransformations()
         {
-            heading.text="TRANSFORMACOES";bodyText.text="Normal, Ruptura e Eclipse Absoluto estão disponíveis.\nEscolha a forma e pressione "+lab.Input.BindingLabel("Transform")+" durante o jogo.\nPressione novamente para voltar ao normal.\n\nCusto: 60 de sangue.\nDuracao minima: 3 minutos.\nDominio do Veu aumenta a duracao.";
+            heading.text="TRANSFORMACOES";bodyText.text="Normal, Ruptura e Serafim Carmesim estão disponíveis.\nEscolha a forma e pressione "+lab.Input.BindingLabel("Transform")+" durante o jogo.\nPressione novamente para voltar ao normal.\n\nCusto: 60 de sangue.\nDuracao minima: 3 minutos.\nDominio do Veu aumenta a duracao.";
             for(int i=1;i<=DarklightPlayableScope.FinalForm;i++){int form=i;Button(DarklightPlayableScope.FormName(i)+(Progress.preferredForm==i?" [EQUIPADA]":""),()=>{Progress.preferredForm=form;SaveCheckpoint();RefreshPanel();});}
             Button("VOLTAR",()=>Open("Pause"));
         }

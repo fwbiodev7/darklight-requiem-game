@@ -14,9 +14,14 @@ namespace Darklight
         Camera camera;Transform player,mapRoot;Volume volume;ParticleSystem embers;
         readonly List<Light2D> lamps=new();readonly List<DarklightWholeShadow> shadows=new();
         readonly Dictionary<Material,Material> clones=new();Material spriteTemplate,shadowMaterial;
+        readonly List<SpriteRenderer> boundSprites=new();
+        readonly List<SpriteRenderer> litActors=new();
+        MaterialPropertyBlock textureBinding;
+        static readonly int MainTexture=Shader.PropertyToID("_MainTex");
         float nextScan;int mapChapter=-1;Light2D weaponLight;
         public void Initialize(Camera camera,Transform player,Transform mapRoot,int chapter)
         {
+            textureBinding??=new MaterialPropertyBlock();
             this.camera=camera;this.player=player;this.mapRoot=mapRoot;mapChapter=chapter;
             spriteTemplate??=Resources.Load<Material>("Darklight/Rendering/SpriteLit");shadowMaterial??=Resources.Load<Material>("Darklight/Rendering/WholeShadow");
             if(spriteTemplate==null||shadowMaterial==null)return;
@@ -28,13 +33,18 @@ namespace Darklight
                 CreateEmbers();
             }
             foreach(var light in lamps)if(light!=null){light.enabled=false;Destroy(light.gameObject);}lamps.Clear();
-            Point("LuaAmbiente",player.position,chapter>=6&&DarklightCampaign.Instance?.Map?.Art?.revision>=2?DarklightRegionAtmosphere.Moon(chapter):new Color(.42f,.57f,.86f),.7f,0,true);
-            Point("LuzFria",player.position+new Vector3(4.5f,1.5f),new Color(.2f,.46f,1),1.1f,7);
-            Point("LuzQuente",player.position+new Vector3(-3.8f,2.3f),new Color(1,.52f,.2f),.85f,6.5f);
-            if(DarklightCampaign.Instance?.Map!=null)
+            bool day=chapter==4,interior=chapter==2||chapter==3||chapter==6||chapter==7||chapter==9;
+            Color ambient=day?new Color(.86f,.89f,.80f):interior?new Color(.63f,.61f,.60f):new Color(.55f,.65f,.81f);
+            Point("LuaAmbiente",player.position,ambient,day?.95f:interior?.82f:.78f,0,true);
+            if(mapRoot!=null&&mapRoot.name=="ArenaDeTreinamento")
+            {
+                foreach(Transform child in mapRoot)if(child.name=="BrasasDaArena")
+                    Point("Braseiro",child.position+Vector3.up*.45f,new Color(1,.55f,.23f),1.1f,4.5f);
+            }
+            else if(DarklightCampaign.Instance?.Map!=null)
             {
                 var map=DarklightCampaign.Instance.Map;
-                foreach(var p in map.Checkpoints)Point("Lamparina",p+new Vector2(.6f,-1.6f),new Color(1,.62f,.28f),1.4f,5);
+                foreach(var p in map.Checkpoints)Point("Lamparina",LampPosition(p),new Color(1,.62f,.28f),1.4f,5);
                 Point("Memoria",map.Ally+Vector2.up,new Color(.1f,.85f,.72f),.85f,4.5f);
                 Point("Portal",map.Portal,new Color(.58f,.16f,1),.8f,4);
             }
@@ -48,6 +58,8 @@ namespace Darklight
             if(!global){light.pointLightOuterRadius=radius;light.pointLightInnerRadius=.15f;light.shadowIntensity=.6f;}
             lamps.Add(light);return light;
         }
+        internal static Vector2 LampPosition(Vector2 checkpoint) => checkpoint + new Vector2(.6f,-1.6f);
+
         void CreateEmbers()
         {
             var go=new GameObject("ParticulasDoEclipse");go.transform.SetParent(transform,false);embers=go.AddComponent<ParticleSystem>();embers.Stop(true,ParticleSystemStopBehavior.StopEmittingAndClear);
@@ -70,9 +82,14 @@ namespace Darklight
         }
         public void SyncScene()
         {
+            boundSprites.Clear();litActors.Clear();
             foreach(var r in FindObjectsByType<SpriteRenderer>())
             {
-                if(r.sharedMaterial==null||r.sharedMaterial.shader.name!="Darklight/PixelSprite")continue;
+                if(r.sharedMaterial==null)continue;
+                bool actor=r.name=="FabioVisual"||r.GetComponentInParent<DarklightEnemy>()!=null||r.name=="IcaroNox"||r.name=="LyraMoreau"||r.name=="KaelAliado";
+                if(actor)litActors.Add(r);
+                if(r.sharedMaterial.shader.name=="Darklight/Remaster/SpriteLit") { boundSprites.Add(r);BindSpriteTexture(r);continue; }
+                if(r.sharedMaterial.shader.name!="Darklight/PixelSprite")continue;
                 var source=r.sharedMaterial;
                 if(!clones.TryGetValue(source,out var lit))
                 {
@@ -81,13 +98,50 @@ namespace Darklight
                     if(source.HasProperty("_Color"))lit.SetColor("_Color",source.GetColor("_Color"));if(source.HasProperty("_AlphaClip"))lit.SetFloat("_AlphaClip",source.GetFloat("_AlphaClip"));clones.Add(source,lit);
                 }
                 r.sharedMaterial=lit;
-                bool actor=r.name=="FabioVisual"||r.GetComponentInParent<DarklightEnemy>()!=null||r.name=="IcaroNox"||r.name=="LyraMoreau"||r.name=="KaelAliado";
+                boundSprites.Add(r);BindSpriteTexture(r);
                 if(actor&&r.GetComponent<DarklightWholeShadow>()==null){var shadow=r.gameObject.AddComponent<DarklightWholeShadow>();shadow.Initialize(r,shadowMaterial,this);shadows.Add(shadow);}
             }
             if(mapRoot!=null)foreach(var collider in mapRoot.GetComponentsInChildren<Collider2D>())
             {
                 if(collider.isTrigger||collider.GetComponent<ShadowCaster2D>()!=null)continue;
                 collider.gameObject.AddComponent<ShadowCaster2D>();
+            }
+        }
+        // Custom URP sprite materials can otherwise retain the preceding draw's texture.
+        // Bind the complete current sheet per renderer, preserving every other property.
+        void BindSpriteTexture(SpriteRenderer renderer)
+        {
+            if(renderer==null||renderer.sprite==null)return;
+            renderer.GetPropertyBlock(textureBinding);
+            if(textureBinding.GetTexture(MainTexture)==renderer.sprite.texture)return;
+            textureBinding.SetTexture(MainTexture,renderer.sprite.texture);renderer.SetPropertyBlock(textureBinding);
+        }
+        void UpdateActorLighting()
+        {
+            var atmosphere=DarklightAtmosphereController.Current;
+            float strength=QualityLevel>0&&atmosphere!=null&&atmosphere.isActiveAndEnabled&&atmosphere.EffectsEnabled?atmosphere.Intensity:0;
+            foreach(var actor in litActors)
+            {
+                if(actor==null||actor.sprite==null)continue;
+                var center=actor.bounds.center;Light2D key=null;float best=0;
+                if(strength>0)foreach(var light in lamps)
+                {
+                    if(light==null||!light.enabled||light==weaponLight||light.lightType==Light2D.LightType.Global)continue;
+                    float distance=Vector2.Distance(center,light.transform.position);
+                    float candidate=Mathf.Pow(Mathf.Clamp01(1-distance/Mathf.Max(.1f,light.pointLightOuterRadius)),2)*light.intensity;
+                    if(candidate>best){best=candidate;key=light;}
+                }
+                actor.GetPropertyBlock(textureBinding);
+                textureBinding.SetVector("_ActorTexel",new Vector4(1f/actor.sprite.texture.width,1f/actor.sprite.texture.height,0,0));
+                textureBinding.SetFloat("_ActorLightStrength",Mathf.Min(.65f,best*strength));
+                if(key!=null)
+                {
+                    Vector2 direction=((Vector2)(key.transform.position-center)).normalized;
+                    textureBinding.SetVector("_ActorLightDirection",new Vector4(direction.x,direction.y,actor.flipX?-direction.x:direction.x,actor.flipY?-direction.y:direction.y));
+                    textureBinding.SetColor("_ActorLightColor",key.color.linear);
+                    textureBinding.SetVector("_ActorLightBounds",new Vector4(center.x,center.y,Mathf.Max(.01f,actor.bounds.extents.x),Mathf.Max(.01f,actor.bounds.extents.y)));
+                }
+                actor.SetPropertyBlock(textureBinding);
             }
         }
         public Vector2 ShadowDirection(Vector2 foot,out float length)
@@ -104,6 +158,8 @@ namespace Darklight
         void LateUpdate()
         {
             if(spriteTemplate==null||player==null)return;
+            foreach(var renderer in boundSprites)BindSpriteTexture(renderer);
+            UpdateActorLighting();
             float time=DarklightCombatLab.Instance?.Player.Model.Clock??Time.time;
             if(weaponLight!=null)
             {
@@ -111,7 +167,7 @@ namespace Darklight
                 weaponLight.color=form==3?new Color(.72f,.9f,1):form==2?new Color(.64f,.15f,1):new Color(1,.08f,.16f);
                 weaponLight.intensity=form>0?.7f:.3f;
             }
-            for(int i=3;i<lamps.Count-1;i++)if(lamps[i]!=null)lamps[i].intensity=1.15f+Mathf.Sin(time*2.1f+i)*.055f;
+            for(int i=1;i<lamps.Count-1;i++)if(lamps[i]!=null&&(lamps[i].name=="Lamparina"||lamps[i].name=="Braseiro"))lamps[i].intensity=1.15f+Mathf.Sin(time*2.1f+i)*.035f;
             if(embers!=null){embers.transform.position=camera.transform.position+Vector3.forward*10;var main=embers.main;main.simulationSpeed=DarklightCampaign.Instance?.Active==true?1:0;}
             if(Time.unscaledTime>=nextScan){nextScan=Time.unscaledTime+.35f;SyncScene();}
         }

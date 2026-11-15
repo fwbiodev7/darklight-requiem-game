@@ -81,6 +81,7 @@ namespace Darklight
                 pendingParticleModel=null;
             }
         }
+        public void InterruptIdle() => living.InterruptIdle();
         public void Present(CombatModel model,Vector2 movement)
         {
             if(display==null)return;
@@ -102,6 +103,7 @@ namespace Darklight
                 livingHealth??=GetComponent<HealthSystem>();
                 living.Observe(model.Clock,model.State,movement,livingHealth!=null?livingHealth.HealthPercent:1,game?.Form??0,
                     game?.PresentationThreat??false,game?.Transforming==true);
+                if (!riding) direction = living.IdleLookDirection(direction);
                 if(!currentOnly&&model.State==CombatState.Neutral && game?.Transforming!=true && game?.AbyssRider?.Active!=true)
                     selected=TodayCharacterBank.LivingPose(skin,weapon,direction,living)??selected;
             }
@@ -116,21 +118,23 @@ namespace Darklight
             if(selected==null&&!currentOnly){selected=TodayCharacterBank.StablePose(skin,0,weapon,direction);UsesPoseFallback=selected!=null;}
             if(selected==null&&!currentOnly){selected=DarklightUserSpriteBank.Resolve(skin,0,weapon,model,movement);UsesUserWholeSprite=selected!=null;}
             int activeForm = previewing ? previewForm : game?.PresentedForm ?? 0;
-            if(activeForm > 0 && DarklightFabiusFormsBank.TryResolveFormPose(activeForm, weapon, direction, model, movement, out var formSprite))
-            {
-                selected = formSprite;
-                UsesPoseFallback = UsesUserWholeSprite = false;
-            }
             Sprite redesigned=null;
             UsesWeaponRedesignSprite=(!riding||game?.AbyssRider?.MountedPresentation!=true)&&DarklightWeaponRedesignBank.TryResolve(skin,weapon,previewing?previewForm:game?.PresentedForm??0,
                 direction,model,movement,selected,out redesigned,previewing?null:living.Clip,
                 previewing?-1:living.Clip=="Idle"?living.BreathClock:living.ClipTime);
             if(UsesWeaponRedesignSprite){selected=redesigned;UsesPoseFallback=UsesUserWholeSprite=false;}
+            // Resolve reviewed form art last, retaining the existing directional
+            // pose when this form has no authored clip. Mounted art owns riding.
+            if(skin == 0 && activeForm > 0 && (!riding || game?.AbyssRider?.MountedPresentation != true) && DarklightFabiusFormsBank.TryResolveFormPose(activeForm, weapon, direction, model, movement, out var formSprite))
+            {
+                selected = formSprite;
+                UsesWeaponRedesignSprite = UsesPoseFallback = UsesUserWholeSprite = false;
+            }
             if(selected!=null||currentOnly)display.sprite=selected;
             display.transform.localScale=RenderScale;display.flipX=!UsesWeaponRedesignSprite&&!DarklightMotorcycleRedesignBank.IsAuthored(selected)&&(locomotionSelected?abyssLocomotion.Mirror:!previewing&&game?.AbyssRider?.Active==true?DarklightAbyssSpriteBank.Mirror(model):UsesUserWholeSprite&&model.Facing.x<-.1f);
             display.transform.localRotation=model.State==CombatState.Dead&&(UsesPoseFallback||UsesUserWholeSprite)?Quaternion.Euler(0,0,-75):Quaternion.Euler(0,0,!previewing&&game?.AbyssRider?.MountedPresentation==true?game.AbyssRider.LeanAngle+game.AbyssRider.RunOverPitch:0);
             UsesWholeCharacterSprite=selected!=null&&!UsesUserWholeSprite;
-            bool authored=DarklightWeaponRedesignBank.IsAuthored(display.sprite)||DarklightMotorcycleRedesignBank.IsAuthored(display.sprite);
+            bool authored=DarklightWeaponRedesignBank.IsAuthored(display.sprite)||DarklightMotorcycleRedesignBank.IsAuthored(display.sprite)||DarklightFabiusFormsBank.IsAuthored(display.sprite);
             display.color=authored?Color.white:model.State==CombatState.Hurt?new Color(1,.4f,.4f):model.State==CombatState.Parry?new Color(.7f,.8f,1):Color.white;
             display.sortingOrder=DarklightSorting.OrderForY(transform.position.y);appearance?.Present(display,direction,skin,game?.Form??0,model);
             originalForms??=GetComponent<DarklightOriginalVampireView>()??gameObject.AddComponent<DarklightOriginalVampireView>();
@@ -140,6 +144,8 @@ namespace Darklight
             if(!previewing){pendingParticleModel=model;pendingParticleWeapon=weapon;}
             DarklightWeaponRedesignBank.ApplyAuthoredOwnership(display);
             DarklightMotorcycleRedesignBank.ApplyOwnership(display);
+            DarklightFabiusFormsBank.ApplyOwnership(display);
+            DarklightOfficialTransitionBank.ApplyOwnership(display);
             if(combatTrail==null){var obj=new GameObject("RastrosDeCombate");obj.transform.SetParent(transform,false);combatTrail=obj.AddComponent<DarklightCombatTrail>();}
             combatTrail.Present(display,weapon,model,previewing?previewForm:game?.PresentedForm??0);
             if(model.State==CombatState.Attack&&model.ActiveThisTick&&trailSerial!=model.AttackSerial)

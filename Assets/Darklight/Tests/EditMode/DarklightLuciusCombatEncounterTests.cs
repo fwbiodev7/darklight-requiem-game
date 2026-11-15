@@ -74,6 +74,45 @@ namespace Darklight.Tests
         }
 
         [Test]
+        public void LuciusTransformsBeforeTheFinalExchangeAndAllowsAResponse()
+        {
+            var (_, enemy, health, _, view) = CreateLuciusActor();
+            health.TakeDamage(health.MaxHealth*.8f);
+            enemy.TickLucius(null, null, .05f);
+            Assert.That(enemy.Phase, Is.EqualTo(2));
+            Assert.That(view.appearance, Is.EqualTo(DarklightLuciusAppearance.Normal));
+            Assert.That(enemy.LuciusTransforming, Is.True);
+            Assert.That(enemy.AcceptDamage, Is.False);
+            Assert.That(enemy.LuciusFinalExchange, Is.False);
+            enemy.TickLucius(null, null, 0f);
+            Assert.That(view.appearance, Is.EqualTo(DarklightLuciusAppearance.Normal),"Pause cannot release the form");
+            enemy.TickLucius(null, null, DarklightEnemy.LuciusTransformationDuration*.6f);
+            Assert.That(view.appearance, Is.EqualTo(DarklightLuciusAppearance.Arconte));
+            Assert.That(enemy.AcceptDamage, Is.False,"Ascent and stabilization retain the damage gate");
+            enemy.TickLucius(null, null, DarklightEnemy.LuciusTransformationDuration*.5f);
+            enemy.TickLucius(null, null, .02f);
+            Assert.That(enemy.Phase, Is.EqualTo(3));
+            Assert.That(enemy.AcceptDamage, Is.True);
+            Assert.That(enemy.CombatModel.State, Is.EqualTo(CombatState.Neutral));
+        }
+
+        [Test]
+        public void CancelArconteEntryCannotLeaveLevitationOrDamageGate()
+        {
+            var (obj,enemy,health,_,view)=CreateLuciusActor();
+            health.TakeDamage(health.MaxHealth*.5f);
+            enemy.TickLucius(null,null,DarklightEnemy.LuciusTransformationDuration*.5f);
+            var presentation=obj.GetComponent<DarklightTransformationPresentation>();
+            Assert.That(DarklightOfficialTransitionBank.IsAuthored(view.Renderer.sprite),Is.True);
+            if(presentation!=null)Assert.That(presentation.VisualHeight,Is.Zero,"Approved figures already contain flight");
+            enemy.CancelLuciusTransformation();
+            Assert.That(enemy.LuciusTransforming,Is.False);
+            if(presentation!=null)Assert.That(presentation.VisualHeight,Is.Zero);
+            Assert.That(DarklightOfficialTransitionBank.IsAuthored(view.Renderer.sprite),Is.False);
+            Assert.That(enemy.AcceptDamage,Is.True);
+        }
+
+        [Test]
         public void LuciusIdentityIsIndependentFromLucienBoss()
         {
             var (_, enemy, _, _, _) = CreateLuciusActor();

@@ -39,7 +39,34 @@ namespace Darklight.Editor
             public SheetMeta[] pages;
         }
 
+        [Serializable] sealed class WalkRepairPage { public string name; }
+        [Serializable] sealed class WalkRepairMap { public WalkRepairPage[] pages; }
+
         public static void ImportAll()
+        {
+            ImportMatching(null);
+        }
+
+        public static void ImportSession14()
+        {
+            ImportMatching("Session14");
+            ImportMatching("FabiusSerafimKatanaWalk");
+            ImportMatching("FabiusSerafimSawsWalk");
+        }
+
+        public static void ImportWalkRepair()
+        {
+            DarklightAutomation.Silent = true;
+            SessionState.SetBool("Darklight.SilentChecks", true);
+            AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
+            var map = JsonUtility.FromJson<WalkRepairMap>(File.ReadAllText("ArtSources/WalkRepair20261114/integration-map.json"));
+            if (map?.pages == null || map.pages.Length == 0)
+                throw new InvalidOperationException("Reviewed walk repair map is empty.");
+            foreach (var page in map.pages)
+                ImportMatching(page.name, true);
+        }
+
+        static void ImportMatching(string namePrefix, bool exactMatch = false)
         {
             string folder = "Assets/Darklight/Resources/Darklight/FabiusForms20261111/";
             string catFile = folder + "catalog.json";
@@ -58,6 +85,7 @@ namespace Darklight.Editor
 
             foreach (var page in cat.pages)
             {
+                if (namePrefix != null && (exactMatch ? page.name != namePrefix : !page.name.StartsWith(namePrefix, StringComparison.Ordinal))) continue;
                 string pngPath = folder + page.image;
                 if (!File.Exists(pngPath)) continue;
 
@@ -93,6 +121,11 @@ namespace Darklight.Editor
                 {
                     provider.InitSpriteEditorDataProvider();
                     var identity = provider.GetDataProvider<ISpriteNameFileIdDataProvider>();
+                    if (identity == null)
+                        throw new InvalidOperationException("Missing sprite name/fileID provider: " + pngPath);
+
+                    var existingIds = provider.GetSpriteRects()
+                        .ToDictionary(rect => rect.name, rect => rect.spriteID, StringComparer.Ordinal);
 
                     var rects = page.frames.Select(f => new SpriteRect
                     {
@@ -100,11 +133,11 @@ namespace Darklight.Editor
                         rect = new Rect(f.rect[0], f.rect[1], f.rect[2], f.rect[3]),
                         pivot = new Vector2(f.pivot[0], f.pivot[1]),
                         alignment = SpriteAlignment.Custom,
-                        spriteID = GUID.Generate()
+                        spriteID = existingIds.TryGetValue(f.id, out var existingId) ? existingId : GUID.Generate()
                     }).ToArray();
 
                     provider.SetSpriteRects(rects);
-                    identity?.SetNameFileIdPairs(rects.Select(r => new SpriteNameFileIdPair(r.name, r.spriteID)));
+                    identity.SetNameFileIdPairs(rects.Select(r => new SpriteNameFileIdPair(r.name, r.spriteID)));
                     provider.Apply();
                     importer.SaveAndReimport();
                     Debug.Log($"Sliced: {page.name} with {rects.Length} frames.");
@@ -113,7 +146,7 @@ namespace Darklight.Editor
 
             AssetDatabase.SaveAssets();
             DarklightFabiusFormsBank.ClearCache();
-            Debug.Log("DarklightFabiusFormsImporter: All 21 sheets sliced successfully.");
+            Debug.Log("DarklightFabiusFormsImporter: selected sheets sliced successfully.");
         }
     }
 }

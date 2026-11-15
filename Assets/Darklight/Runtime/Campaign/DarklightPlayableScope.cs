@@ -7,7 +7,7 @@ namespace Darklight
         public const int FinalForm=2,WeaponMask=(1<<0)|(1<<2)|(1<<3);
         public static bool WeaponActive(int id)=>id==0||id==2||id==3;
         public static int Form(int legacy)=>Mathf.Clamp(legacy,0,FinalForm);
-        public static string FormName(int form)=>Form(form)==1?"RUPTURA":Form(form)==2?"ECLIPSE ABSOLUTO":"NORMAL";
+        public static string FormName(int form)=>Form(form)==1?"RUPTURA":Form(form)==2?"SERAFIM CARMESIM":"NORMAL";
         public static void Migrate(DarklightProgress state)
         {
             if(state==null)return;

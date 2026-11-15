@@ -7,8 +7,9 @@ namespace Darklight
         Mesh mesh;MeshRenderer renderer;Material material;public Sprite PresentedFrame{get;private set;}
         DarklightCharacterView characterView;
         readonly Vector3[] vertices=new Vector3[576];readonly Color[] colors=new Color[576];readonly int[] indices=new int[864];
-        public void Present(SpriteRenderer body,int form,float clock,bool dead)
+        public void Present(SpriteRenderer body,int form,float clock,bool dead,Color? effectTint=null)
         {
+            if(form==2)form=1; // Serafim uses the current crimson aura.
             if(mesh==null)
             {
                 mesh=new Mesh{name="Small continuous transformation aura"};mesh.MarkDynamic();gameObject.AddComponent<MeshFilter>().sharedMesh=mesh;
@@ -88,6 +89,15 @@ namespace Darklight
                     Segment(start,end,h*.003f,new Color(.94f,.97f,1,.8f),ref quads);
                 }
             }
+            if(effectTint.HasValue)
+            {
+                Color palette=effectTint.Value;
+                for(int i=0;i<quads*4;i++)
+                {
+                    Color c=colors[i];float brightness=Mathf.Max(c.r,Mathf.Max(c.g,c.b));
+                    colors[i]=new Color(palette.r*brightness,palette.g*brightness,palette.b*brightness,c.a);
+                }
+            }
             mesh.Clear();mesh.SetVertices(vertices,0,quads*4);mesh.SetColors(colors,0,quads*4);mesh.SetTriangles(indices,0,quads*6,0,false);mesh.RecalculateBounds();
         }
         void Segment(Vector3 start,Vector3 end,float width,Color color,ref int quads)
@@ -102,6 +112,8 @@ namespace Darklight
             vertices[k+2]=center-Vector3.up*radius*1.8f;vertices[k+3]=center-Vector3.right*radius;
             colors[k]=colors[k+1]=colors[k+2]=colors[k+3]=color;
         }
+        public void Hide(){if(renderer!=null)renderer.enabled=false;PresentedFrame=null;}
+        void OnDisable()=>Hide();
         void OnDestroy(){if(mesh!=null)Destroy(mesh);}
     }
 }

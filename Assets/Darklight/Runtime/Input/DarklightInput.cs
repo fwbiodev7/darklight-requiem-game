@@ -8,6 +8,8 @@ namespace Darklight
     {
         public readonly InputActionAsset Asset;
         public readonly InputActionMap Gameplay, UI;
+        int lastGameplayCommandFrame = -1;
+        public bool GameplayCommandThisFrame => lastGameplayCommandFrame == Time.frameCount;
         public bool UsingGamepad { get; private set; }
         public InputAction Action(string name) => Gameplay.FindAction(name, true);
         public InputAction Menu(string name) => UI.FindAction(name, true);
@@ -72,6 +74,7 @@ namespace Darklight
         void Track(InputAction.CallbackContext context)
         {
             if (context.valueType == typeof(Vector2) && context.ReadValue<Vector2>().sqrMagnitude < .01f) return;
+            if (context.action.actionMap == Gameplay) lastGameplayCommandFrame = Time.frameCount;
             UsingGamepad = context.control.device is Gamepad;
         }
         void DeviceChanged(InputDevice device, InputDeviceChange change)

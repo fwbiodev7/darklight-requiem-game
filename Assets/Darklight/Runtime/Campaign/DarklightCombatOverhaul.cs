@@ -18,6 +18,7 @@ namespace Darklight
         {
             var view=lab.WorldCamera.WorldToViewportPoint(enemy.transform.position);
             bool visible=view.z>0&&view.x>.03f&&view.x<.97f&&view.y>.04f&&view.y<.96f;
+            if(enemy.IsLucius)return visible;
             bool ranged=enemy.kind==RequiemEnemyKind.Shooter||enemy.kind==RequiemEnemyKind.Spectral||enemy.kind==RequiemEnemyKind.Cantor||enemy.kind==RequiemEnemyKind.Lucien;
             return threats.Request(enemy,lab.Player.Model.Clock,Difficulty,ranged,visible);
         }

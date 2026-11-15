@@ -61,6 +61,10 @@ namespace Darklight.Editor
                 {
                     provider.InitSpriteEditorDataProvider();
                     var identity = provider.GetDataProvider<ISpriteNameFileIdDataProvider>();
+                    if (identity == null)
+                        throw new InvalidOperationException("Missing sprite name/fileID provider: " + pngPath);
+                    var existingIds = provider.GetSpriteRects()
+                        .ToDictionary(rect => rect.name, rect => rect.spriteID, StringComparer.Ordinal);
 
                     var rects = sheetMeta.frames.Select(f => new SpriteRect
                     {
@@ -68,11 +72,11 @@ namespace Darklight.Editor
                         rect = new Rect(f.rect[0], f.rect[1], f.rect[2], f.rect[3]),
                         pivot = new Vector2(f.pivot[0], f.pivot[1]),
                         alignment = SpriteAlignment.Custom,
-                        spriteID = GUID.Generate()
+                        spriteID = existingIds.TryGetValue(f.id, out var existingId) ? existingId : GUID.Generate()
                     }).ToArray();
 
                     provider.SetSpriteRects(rects);
-                    identity?.SetNameFileIdPairs(rects.Select(r => new SpriteNameFileIdPair(r.name, r.spriteID)));
+                    identity.SetNameFileIdPairs(rects.Select(r => new SpriteNameFileIdPair(r.name, r.spriteID)));
                     provider.Apply();
                     importer.SaveAndReimport();
                     Debug.Log($"Sliced Lucius Arconte sheet: {s} with {rects.Length} frames.");

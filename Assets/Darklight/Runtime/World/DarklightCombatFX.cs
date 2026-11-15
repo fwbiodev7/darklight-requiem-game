@@ -18,10 +18,10 @@ namespace Darklight
             DarklightCombatImpacts.EmitMotorcycle(position,direction,kind);
             lab.WorldCamera.GetComponent<DarklightLabCamera>()?.Impulse(game.ReducedFlashes?1:2);
         }
-        public static void Transformation(Vector3 position,int form,bool release)
+        public static void Transformation(Vector3 position,int form,bool release,Color? effectTint=null)
         {
             var game=DarklightCampaign.Instance;if(game==null||game.ReducedFlashes||game.extras?.Length<=5)return;
-            Color color=form==3?new Color(.95f,.96f,1):form==2?new Color(.65f,.22f,1):new Color(.95f,.12f,.24f);
+            Color color=effectTint??(form==3?new Color(.95f,.96f,1):form==2?new Color(.65f,.22f,1):new Color(.95f,.12f,.24f));
             for(int i=0;i<12;i++)
             {
                 Vector2 radial=Quaternion.Euler(0,0,i*30)*Vector2.up;

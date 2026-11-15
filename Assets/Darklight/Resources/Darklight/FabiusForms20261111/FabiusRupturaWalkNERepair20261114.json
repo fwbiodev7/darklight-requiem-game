@@ -1,0 +1,126 @@
+{
+  "name": "FabiusRupturaWalkNERepair20261114",
+  "image": "FabiusRupturaWalkNERepair20261114.png",
+  "imageSha256": "eb5d1d2898257a190883c9c7f900a7091d2faa6e7e98eb2db9b0f0c513981889",
+  "sources": [
+    {
+      "path": "ArtSources/WalkRepair20261114/raw/RupturaKatanaNE_fixed.png",
+      "sha256": "4dd730b272ac8eed877fdf22cac308a4e356149f8063742fc21b998b0a6eec1a"
+    }
+  ],
+  "nativeSize": [
+    1968,
+    951
+  ],
+  "pixelsPerUnit": 348.717949,
+  "rows": 1,
+  "cols": 3,
+  "form": "Ruptura",
+  "action": "Walk",
+  "weapon": "Katana",
+  "wholeFigures": true,
+  "status": "visual-reviewed",
+  "frames": [
+    {
+      "id": "FabiusRupturaWalkNONEV1_06",
+      "rect": [
+        0,
+        0,
+        656,
+        951
+      ],
+      "pivot": [
+        0.50609756,
+        0.14090431
+      ],
+      "durationMs": 125,
+      "action": "Walk",
+      "form": "Ruptura",
+      "direction": "NE",
+      "frameIndex": 0,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaKatanaNE_fixed.png",
+      "sourceRectTopLeft": [
+        0,
+        0,
+        591,
+        887
+      ],
+      "sourceSupportAnchor": [
+        300.0,
+        785
+      ],
+      "atlasSupportAnchor": [
+        332.0,
+        817
+      ]
+    },
+    {
+      "id": "FabiusRupturaWalkNONEV1_07",
+      "rect": [
+        656,
+        0,
+        656,
+        951
+      ],
+      "pivot": [
+        0.47103659,
+        0.13774974
+      ],
+      "durationMs": 100,
+      "action": "Walk",
+      "form": "Ruptura",
+      "direction": "NE",
+      "frameIndex": 1,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaKatanaNE_fixed.png",
+      "sourceRectTopLeft": [
+        591,
+        0,
+        592,
+        887
+      ],
+      "sourceSupportAnchor": [
+        868.0,
+        788
+      ],
+      "atlasSupportAnchor": [
+        965.0,
+        820
+      ]
+    },
+    {
+      "id": "FabiusRupturaWalkNONEV1_08",
+      "rect": [
+        1312,
+        0,
+        656,
+        951
+      ],
+      "pivot": [
+        0.49390244,
+        0.14195584
+      ],
+      "durationMs": 125,
+      "action": "Walk",
+      "form": "Ruptura",
+      "direction": "NE",
+      "frameIndex": 2,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaKatanaNE_fixed.png",
+      "sourceRectTopLeft": [
+        1183,
+        0,
+        591,
+        887
+      ],
+      "sourceSupportAnchor": [
+        1475.0,
+        784
+      ],
+      "atlasSupportAnchor": [
+        1636.0,
+        816
+      ]
+    }
+  ],
+  "phaseSynchronized": false,
+  "pixelPolicy": "Whole source cells packed 1:1; original RGBA unchanged; 32px extra padding."
+}

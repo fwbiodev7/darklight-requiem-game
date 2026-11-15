@@ -1,3 +1,3 @@
 @echo off
-cd /d "%~dp0outputs\build-windows-vfx2-20261110\Windows"
+cd /d "%~dp0outputs\build-windows-gothic-20261114-feedback\Windows"
 start "" "DarklightRequiem.exe" %*

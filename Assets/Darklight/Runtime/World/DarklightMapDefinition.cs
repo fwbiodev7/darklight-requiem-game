@@ -53,6 +53,8 @@ namespace Darklight
         }
         public Vector2 SafeSpawn(Vector2 point,float radius=.32f)
         {
+            // Map colliders are built from child transforms in this same frame.
+            Physics2D.SyncTransforms();
             bool ClearPoint(Vector2 p)
             {
                 if(!Walkable(new Vector2Int(Mathf.FloorToInt(p.x/CellSize),Mathf.FloorToInt(p.y/CellSize))))return false;
@@ -71,7 +73,16 @@ namespace Darklight
             return best;
         }
         public bool InArena(int index,Vector2 p)=>Vector2.Distance(p,Arenas[index])<3.8f*DarklightWorldScale.Environment;
-        public static DarklightMapDefinition TrainingArena()=>new DarklightMapDefinition(new[]{V(0,-3),V(-3,0),V(3,0),V(0,3),V(0,0),V(-3,3)},new[]{V(20,14),V(20,14),V(20,14),V(20,14),V(20,14),V(20,14)},new[,]{{0,1},{1,2},{2,3},{3,4},{4,5}},5);
+        static DarklightMapDefinition trainingArena;
+        public static DarklightMapDefinition TrainingArena()
+        {
+            if(trainingArena==null)
+            {
+                var layout=Resources.Load<TextAsset>("Darklight/Maps/TrainingCourtyardData");
+                trainingArena=new DarklightMapDefinition(JsonUtility.FromJson<DarklightMapArt>(layout.text));
+            }
+            return trainingArena;
+        }
         static Vector2Int V(int x,int y)=>new Vector2Int(x,y);
         public static DarklightMapDefinition ForChapter(int chapter)
         {

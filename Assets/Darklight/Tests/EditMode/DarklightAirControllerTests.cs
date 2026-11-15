@@ -17,9 +17,11 @@ namespace Darklight.Tests
             player.AddComponent<SpriteRenderer>();player.AddComponent<DarklightCombatant>();
             fighter=player.AddComponent<DarklightFighter>();fighter.loadout=new CombatLoadout{weapon=0,lights=new[]{launcher},heavy=launcher,aerial=launcher};
             typeof(DarklightFighter).GetField("body",BindingFlags.Instance|BindingFlags.NonPublic).SetValue(fighter,body);
-            typeof(DarklightFighter).GetProperty("Model").SetValue(fighter,new CombatModel(fighter.loadout));
+            var modelProp = typeof(DarklightFighter).GetProperty("Model", BindingFlags.Instance|BindingFlags.Public|BindingFlags.NonPublic);
+            modelProp.SetValue(fighter, new CombatModel(fighter.loadout));
             air=player.AddComponent<DarklightAirCombo>();AwakeIfNeeded(air,"chase");
-            typeof(DarklightFighter).GetProperty("AirCombo").SetValue(fighter,air);
+            var airField = typeof(DarklightFighter).GetField("<AirCombo>k__BackingField", BindingFlags.Instance|BindingFlags.NonPublic);
+            airField.SetValue(fighter, air);
             foe=new GameObject("AirTargetEditOnly");foe.transform.position=player.transform.position+Vector3.down*2;
             foe.AddComponent<Rigidbody2D>().gravityScale=0;foe.AddComponent<CircleCollider2D>().radius=.25f;foe.AddComponent<SpriteRenderer>();
             var hp=foe.AddComponent<HealthSystem>();hp.SetMaxHealth(100,false);foe.AddComponent<DarklightCombatant>();enemy=foe.AddComponent<DarklightEnemy>();

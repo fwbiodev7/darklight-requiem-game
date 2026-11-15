@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "image": "FabiusRupturaOfficial20261114.png",
+  "imageSha256": "60b180d44a2821e65b49ce975f9605f49198e15ee5bcdddafb7197f51546ea45",
+  "sourcePath": "ArtSources/OfficialTransformations20261114/raw/FabiusRupturaOfficial20261114-source.png",
+  "sourceSha256": "7e4b48a9d20cf38619eb8ccd7eca2de5e5046e6ff7332af637fcbd5a747520e1",
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "nativeSize": [
+    1774,
+    887
+  ],
+  "pixelsPerUnit": 184.102564,
+  "wholeFigures": true,
+  "status": "visual-reviewed",
+  "frames": [
+    {
+      "id": "Redesign_FabiusRupturaOfficial20261114_00",
+      "rect": [
+        0,
+        0,
+        444,
+        434
+      ],
+      "pivot": [
+        0.51351351,
+        0.12672811
+      ],
+      "durationMs": 100,
+      "sourceGroundAnchor": [
+        228,
+        379
+      ],
+      "groundAnchorMethod": "Floor energy-ring plane; standing sole/shadow for first frame. Baked aerial pose retained.",
+      "temporalIndex": 0
+    },
+    {
+      "id": "Redesign_FabiusRupturaOfficial20261114_01",
+      "rect": [
+        444,
+        0,
+        443,
+        434
+      ],
+      "pivot": [
+        0.51467269,
+        0.12672811
+      ],
+      "durationMs": 150,
+      "sourceGroundAnchor": [
+        672,
+        379
+      ],
+      "groundAnchorMethod": "Floor energy-ring plane; standing sole/shadow for first frame. Baked aerial pose retained.",
+      "temporalIndex": 1
+    },
+    {
+      "id": "Redesign_FabiusRupturaOfficial20261114_02",
+      "rect": [
+        887,
+        0,
+        443,
+        434
+      ],
+      "pivot": [
+        0.51467269,
+        0.12672811
+      ],
+      "durationMs": 150,
+      "sourceGroundAnchor": [
+        1115,
+        379
+      ],
+      "groundAnchorMethod": "Floor energy-ring plane; standing sole/shadow for first frame. Baked aerial pose retained.",
+      "temporalIndex": 2
+    },
+    {
+      "id": "Redesign_FabiusRupturaOfficial20261114_03",
+      "rect": [
+        1330,
+        0,
+        444,
+        434
+      ],
+      "pivot": [
+        0.51351351,
+        0.12672811
+      ],
+      "durationMs": 200,
+      "sourceGroundAnchor": [
+        1558,
+        379
+      ],
+      "groundAnchorMethod": "Floor energy-ring plane; standing sole/shadow for first frame. Baked aerial pose retained.",
+      "temporalIndex": 3
+    },
+    {
+      "id": "Redesign_FabiusRupturaOfficial20261114_04",
+      "rect": [
+        0,
+        434,
+        444,
+        453
+      ],
+      "pivot": [
+        0.51351351,
+        0.1611479
+      ],
+      "durationMs": 200,
+      "sourceGroundAnchor": [
+        228,
+        814
+      ],
+      "groundAnchorMethod": "Floor energy-ring plane; standing sole/shadow for first frame. Baked aerial pose retained.",
+      "temporalIndex": 4
+    },
+    {
+      "id": "Redesign_FabiusRupturaOfficial20261114_05",
+      "rect": [
+        444,
+        434,
+        443,
+        453
+      ],
+      "pivot": [
+        0.51467269,
+        0.1611479
+      ],
+      "durationMs": 150,
+      "sourceGroundAnchor": [
+        672,
+        814
+      ],
+      "groundAnchorMethod": "Floor energy-ring plane; standing sole/shadow for first frame. Baked aerial pose retained.",
+      "temporalIndex": 5
+    },
+    {
+      "id": "Redesign_FabiusRupturaOfficial20261114_06",
+      "rect": [
+        887,
+        434,
+        443,
+        453
+      ],
+      "pivot": [
+        0.51467269,
+        0.1611479
+      ],
+      "durationMs": 150,
+      "sourceGroundAnchor": [
+        1115,
+        814
+      ],
+      "groundAnchorMethod": "Floor energy-ring plane; standing sole/shadow for first frame. Baked aerial pose retained.",
+      "temporalIndex": 6
+    },
+    {
+      "id": "Redesign_FabiusRupturaOfficial20261114_07",
+      "rect": [
+        1330,
+        434,
+        444,
+        453
+      ],
+      "pivot": [
+        0.51351351,
+        0.1611479
+      ],
+      "durationMs": 150,
+      "sourceGroundAnchor": [
+        1558,
+        814
+      ],
+      "groundAnchorMethod": "Floor energy-ring plane; standing sole/shadow for first frame. Baked aerial pose retained.",
+      "temporalIndex": 7
+    }
+  ],
+  "rectOrigin": "top-left",
+  "temporalSequence": true,
+  "directionCoverage": "one cinematic view, not eight directions",
+  "backgroundExtraction": "Exterior-connected max(R,G,B)<=2 removed; connected black-matte fringe <=24 receives proportional alpha; RGB unchanged and enclosed blacks retained.",
+  "bakedLevitation": true,
+  "bakedAura": true,
+  "durationMs": 1250
+}

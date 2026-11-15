@@ -1,236 +1,229 @@
 {
   "name": "FabiusSerafimWalkNSV1",
   "image": "FabiusSerafimWalkNSV1.png",
-  "imageSha256": "ee6abfb5ac5209c0f44e52214d2b4956c3b495b31699d6fee8344f0efb9ff1e8",
+  "imageSha256": "0e81aa496bc7aa013867081b17440ba02981f355f9d523463fefceab69568aad",
+  "sources": [
+    {
+      "path": "ArtSources/WalkRepair20261114/raw/SerafimKatanaNorthWholeReference.png",
+      "sha256": "41b3b446c18de417ca492a1fd96a4040c880170651854bb5dde4460cae90bf25"
+    },
+    {
+      "path": "ArtSources/WalkRepair20261114/raw/SerafimKatanaSouthWholeReference.png",
+      "sha256": "28d7e176843c3029dfefa8199c0f573c77bbd22b1717b19d4c3e95ec3f2d643a"
+    }
+  ],
   "nativeSize": [
-    1024,
-    682
+    1218,
+    896
   ],
-  "frameSize": [
-    170,
-    341
-  ],
-  "pixelsPerUnit": 214.9709,
+  "pixelsPerUnit": 154.358974,
   "rows": 2,
-  "cols": 6,
+  "cols": 3,
   "form": "Serafim",
-  "action": "WalkNS",
+  "action": "Walk",
+  "weapon": "Katana",
+  "wholeFigures": true,
+  "status": "visual-reviewed",
   "frames": [
     {
       "id": "FabiusSerafimWalkNSV1_00",
       "rect": [
         0,
-        341,
-        170,
-        341
+        448,
+        406,
+        448
       ],
       "pivot": [
-        0.5,
-        0.15
+        0.53448276,
+        0.18080357
       ],
-      "durationMs": 100,
-      "action": "WalkNS",
-      "direction": "E",
+      "durationMs": 125,
+      "action": "Walk",
       "form": "Serafim",
-      "frameIndex": 0
+      "direction": "N",
+      "frameIndex": 0,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/SerafimKatanaNorthWholeReference.png",
+      "sourceRectTopLeft": [
+        0,
+        0,
+        341,
+        384
+      ],
+      "sourceSupportAnchor": [
+        185.0,
+        335
+      ],
+      "atlasSupportAnchor": [
+        217.0,
+        367
+      ]
     },
     {
       "id": "FabiusSerafimWalkNSV1_01",
       "rect": [
-        170,
-        341,
-        170,
-        341
+        406,
+        448,
+        406,
+        448
       ],
       "pivot": [
-        0.5,
-        0.15
+        0.50492611,
+        0.203125
       ],
       "durationMs": 100,
-      "action": "WalkNS",
-      "direction": "E",
+      "action": "Walk",
       "form": "Serafim",
-      "frameIndex": 1
+      "direction": "N",
+      "frameIndex": 1,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/SerafimKatanaNorthWholeReference.png",
+      "sourceRectTopLeft": [
+        341,
+        0,
+        342,
+        384
+      ],
+      "sourceSupportAnchor": [
+        514.0,
+        325
+      ],
+      "atlasSupportAnchor": [
+        611.0,
+        357
+      ]
     },
     {
       "id": "FabiusSerafimWalkNSV1_02",
       "rect": [
-        340,
-        341,
-        170,
-        341
+        812,
+        448,
+        406,
+        448
       ],
       "pivot": [
-        0.5,
-        0.15
+        0.45073892,
+        0.18080357
       ],
-      "durationMs": 100,
-      "action": "WalkNS",
-      "direction": "E",
+      "durationMs": 125,
+      "action": "Walk",
       "form": "Serafim",
-      "frameIndex": 2
-    },
-    {
-      "id": "FabiusSerafimWalkNSV1_03",
-      "rect": [
-        510,
+      "direction": "N",
+      "frameIndex": 2,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/SerafimKatanaNorthWholeReference.png",
+      "sourceRectTopLeft": [
+        683,
+        0,
         341,
-        170,
-        341
+        384
       ],
-      "pivot": [
-        0.5,
-        0.15
+      "sourceSupportAnchor": [
+        834.0,
+        335
       ],
-      "durationMs": 100,
-      "action": "WalkNS",
-      "direction": "E",
-      "form": "Serafim",
-      "frameIndex": 3
-    },
-    {
-      "id": "FabiusSerafimWalkNSV1_04",
-      "rect": [
-        680,
-        341,
-        170,
-        341
-      ],
-      "pivot": [
-        0.5,
-        0.15
-      ],
-      "durationMs": 100,
-      "action": "WalkNS",
-      "direction": "E",
-      "form": "Serafim",
-      "frameIndex": 4
-    },
-    {
-      "id": "FabiusSerafimWalkNSV1_05",
-      "rect": [
-        850,
-        341,
-        170,
-        341
-      ],
-      "pivot": [
-        0.5,
-        0.15
-      ],
-      "durationMs": 100,
-      "action": "WalkNS",
-      "direction": "E",
-      "form": "Serafim",
-      "frameIndex": 5
+      "atlasSupportAnchor": [
+        995.0,
+        367
+      ]
     },
     {
       "id": "FabiusSerafimWalkNSV1_06",
       "rect": [
         0,
         0,
-        170,
-        341
+        406,
+        448
       ],
       "pivot": [
-        0.5,
-        0.15
+        0.53694581,
+        0.16964286
       ],
-      "durationMs": 100,
-      "action": "WalkNS",
-      "direction": "E",
+      "durationMs": 125,
+      "action": "Walk",
       "form": "Serafim",
-      "frameIndex": 6
+      "direction": "S",
+      "frameIndex": 0,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/SerafimKatanaSouthWholeReference.png",
+      "sourceRectTopLeft": [
+        0,
+        0,
+        341,
+        384
+      ],
+      "sourceSupportAnchor": [
+        186.0,
+        340
+      ],
+      "atlasSupportAnchor": [
+        218.0,
+        820
+      ]
     },
     {
       "id": "FabiusSerafimWalkNSV1_07",
       "rect": [
-        170,
+        406,
         0,
-        170,
-        341
+        406,
+        448
       ],
       "pivot": [
-        0.5,
-        0.15
+        0.49261084,
+        0.171875
       ],
       "durationMs": 100,
-      "action": "WalkNS",
-      "direction": "E",
+      "action": "Walk",
       "form": "Serafim",
-      "frameIndex": 7
+      "direction": "S",
+      "frameIndex": 1,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/SerafimKatanaSouthWholeReference.png",
+      "sourceRectTopLeft": [
+        341,
+        0,
+        342,
+        384
+      ],
+      "sourceSupportAnchor": [
+        509.0,
+        339
+      ],
+      "atlasSupportAnchor": [
+        606.0,
+        819
+      ]
     },
     {
       "id": "FabiusSerafimWalkNSV1_08",
       "rect": [
-        340,
+        812,
         0,
-        170,
-        341
+        406,
+        448
       ],
       "pivot": [
-        0.5,
-        0.15
+        0.44581281,
+        0.171875
       ],
-      "durationMs": 100,
-      "action": "WalkNS",
-      "direction": "E",
+      "durationMs": 125,
+      "action": "Walk",
       "form": "Serafim",
-      "frameIndex": 8
-    },
-    {
-      "id": "FabiusSerafimWalkNSV1_09",
-      "rect": [
-        510,
+      "direction": "S",
+      "frameIndex": 2,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/SerafimKatanaSouthWholeReference.png",
+      "sourceRectTopLeft": [
+        683,
         0,
-        170,
-        341
+        341,
+        384
       ],
-      "pivot": [
-        0.5,
-        0.15
+      "sourceSupportAnchor": [
+        832.0,
+        339
       ],
-      "durationMs": 100,
-      "action": "WalkNS",
-      "direction": "E",
-      "form": "Serafim",
-      "frameIndex": 9
-    },
-    {
-      "id": "FabiusSerafimWalkNSV1_10",
-      "rect": [
-        680,
-        0,
-        170,
-        341
-      ],
-      "pivot": [
-        0.5,
-        0.15
-      ],
-      "durationMs": 100,
-      "action": "WalkNS",
-      "direction": "E",
-      "form": "Serafim",
-      "frameIndex": 10
-    },
-    {
-      "id": "FabiusSerafimWalkNSV1_11",
-      "rect": [
-        850,
-        0,
-        170,
-        341
-      ],
-      "pivot": [
-        0.5,
-        0.15
-      ],
-      "durationMs": 100,
-      "action": "WalkNS",
-      "direction": "E",
-      "form": "Serafim",
-      "frameIndex": 11
+      "atlasSupportAnchor": [
+        993.0,
+        819
+      ]
     }
-  ]
+  ],
+  "phaseSynchronized": false,
+  "pixelPolicy": "Whole source cells packed 1:1; original RGBA unchanged; 32px extra padding."
 }

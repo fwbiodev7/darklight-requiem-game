@@ -9,13 +9,20 @@ namespace Darklight.Tests
     public sealed class DarklightTransformationTests
     {
         DarklightCampaign game;DarklightCombatLab lab;
+        System.IDisposable storage;
         static object Invoke(object target,string name,params object[] args)=>target.GetType().GetMethod(name,BindingFlags.NonPublic|BindingFlags.Instance).Invoke(target,args);
         [UnitySetUp]public IEnumerator Setup()
         {
+            storage=DarklightProgress.IsolateStorageForTests(System.IO.Path.GetFullPath("work/session20261114/transformation-test-"+System.Guid.NewGuid().ToString("N")+".json"));
             DarklightAutomation.Silent=true;
             yield return SceneManager.LoadSceneAsync("Assets/Darklight/Scenes/DarklightCampaign.unity");yield return null;yield return null;
             game=DarklightCampaign.Instance;lab=DarklightCombatLab.Instance;game.PreviewChapter(4);yield return null;
             game.Progress.formsUnlocked=3;game.Progress.weaponUnlocks=7;
+        }
+        [UnityTearDown] public IEnumerator Teardown()
+        {
+            storage?.Dispose();storage=null;
+            yield return null;
         }
         [UnityTest]public IEnumerator TransitionPreservesCostPauseAndEndingWithoutRetrigger()
         {
@@ -35,11 +42,11 @@ namespace Darklight.Tests
         [UnityTest]public IEnumerator EveryFormHasThreeActiveMinutesAndMasteryStillAddsTime()
         {
             game.Progress.mastery=0;
-            for(int form=1;form<=3;form++)
+            for(int form=1;form<=2;form++)
             {
                 lab.Player.ResetModel();game.Progress.preferredForm=form;game.Blood.Set(100);
                 Assert.That(game.TryTransformPlayer(),Is.True);Assert.That(game.FormTime,Is.EqualTo(180f));
-                Invoke(game,"TickFormState",DarklightCampaign.TransformationEnterDuration);
+                Invoke(game,"TickFormState",DarklightCampaign.TransformationEntryDuration(form));
                 Assert.That(game.FormTime,Is.EqualTo(180f).Within(.001f));Assert.That(game.PresentedForm,Is.EqualTo(form));
                 Invoke(game,"TickFormState",179.9f);Assert.That(game.Form,Is.EqualTo(form));
                 Assert.That(game.FormTime,Is.GreaterThan(0));Invoke(game,"TickFormState",.11f);
@@ -50,10 +57,10 @@ namespace Darklight.Tests
             Assert.That(DarklightCampaign.TransformationDuration(-2),Is.EqualTo(180f));
             yield return null;
         }
-        [UnityTest]public IEnumerator BothSkinsThreeWeaponsAndEightDirectionsKeepScaleAndOneWingLayer()
+        [UnityTest]public IEnumerator ActiveSkinThreeWeaponsAndEightDirectionsKeepScaleAndOneWingLayer()
         {
             var view=lab.Player.GetComponent<DarklightCharacterView>();var art=lab.Player.transform.Find("FabioVisual").GetComponent<SpriteRenderer>();
-            for(int skin=0;skin<2;skin++)for(int weapon=0;weapon<3;weapon++)for(int form=1;form<=3;form++)
+            for(int skin=0;skin<1;skin++)for(int weapon=0;weapon<3;weapon++)for(int form=1;form<=2;form++)
             {
                 lab.Player.ResetModel();game.SelectSkin(skin,false);game.Progress.equippedWeapon=weapon;game.Weapons.Restore();game.Progress.preferredForm=form;game.Blood.Set(100);
                 Assert.That(game.TryTransformPlayer(),Is.True);Invoke(game,"TickFormPresentation",DarklightCampaign.TransformationEnterDuration+.01f);
@@ -67,6 +74,19 @@ namespace Darklight.Tests
                 Assert.That(game.TryTransformPlayer(),Is.True);Invoke(game,"TickFormPresentation",DarklightCampaign.TransformationExitDuration+.01f);
             }
             yield return null;
+        }
+        [UnityTest]public IEnumerator EntryOverrunConsumesOnlyActiveTimeAndInsufficientBloodStaysNormal()
+        {
+            game.Progress.preferredForm=2;game.Blood.Set(59);
+            Assert.That(game.TryTransformPlayer(),Is.False);Assert.That(game.Form,Is.Zero);
+            game.Blood.Set(100);Assert.That(game.TryTransformPlayer(),Is.True);
+            float duration=game.FormTime;
+            Invoke(game,"TickFormState",DarklightCampaign.TransformationEntryDuration(2)+.25f);
+            Assert.That(game.Transforming,Is.False);
+            Assert.That(game.FormTime,Is.EqualTo(duration-.25f).Within(.001f));
+            game.enabled=false;
+            Assert.That(game.Form,Is.Zero);Assert.That(game.Transforming,Is.False);
+            game.enabled=true;yield return null;
         }
         [UnityTest]public IEnumerator DamageDeathAndReloadCannotLeaveTransformationInputLocked()
         {

@@ -12,6 +12,7 @@ Shader "Darklight/Remaster/SpriteLit"
         _AlphaClip("Pixel alpha",Range(0,1))=.65
         _WholeFrameId("Complete figure identity",Float)=0
         _ResonanceTint("Spectral echo",Float)=0
+        _ActorLightStrength("Local actor edge light",Float)=0
     }
     SubShader
     {
@@ -37,6 +38,7 @@ Shader "Darklight/Remaster/SpriteLit"
             CBUFFER_START(UnityPerMaterial)
             half4 _Color;float _VampireForm,_WholeSprite,_AlphaClip,_WholeFrameId,_ResonanceTint,_BridgeForeground,_RuinFists;
             float4 _CanonicalSkinShift;
+            float _ActorLightStrength;float4 _ActorLightDirection,_ActorLightColor,_ActorLightBounds,_ActorTexel;
             CBUFFER_END
             float _BridgeActorVisible;float4 _BridgeActorBounds;
             Varyings LitVertex(Attributes input)
@@ -84,6 +86,17 @@ Shader "Darklight/Remaster/SpriteLit"
                     #endif
                 }
                 if(_ResonanceTint>.5)main.rgb=max(main.r,max(main.g,main.b));
+                if(_ActorLightStrength>0)
+                {
+                    float2 toward=_ActorLightDirection.zw;
+                    float2 texel=_ActorTexel.xy;
+                    float neighbor=SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,input.uv+toward*texel*1.5).a;
+                    float edge=1-smoothstep(.05,.65,neighbor);
+                    float2 relative=(input.bridgeWorld-_ActorLightBounds.xy)/_ActorLightBounds.zw;
+                    float facing=saturate(dot(relative,_ActorLightDirection.xy));
+                    float amount=(edge*.48+facing*facing*.12)*_ActorLightStrength;
+                    main.rgb+=_ActorLightColor.rgb*amount;
+                }
                 main*=input.color;SurfaceData2D surfaceData;InputData2D inputData;
                 InitializeSurfaceData(main.rgb,main.a,half4(1,1,1,1),half3(0,0,1),surfaceData);
                 InitializeInputData(input.uv,input.lightingUV,inputData);

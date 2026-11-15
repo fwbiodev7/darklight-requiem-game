@@ -1,128 +1,126 @@
 {
   "name": "FabiusRupturaWalkV1",
   "image": "FabiusRupturaWalkV1.png",
-  "imageSha256": "3918927ef45a0b2e639331dd663d0c371f2c4dfc43922e31209bf81e6bf68db8",
+  "imageSha256": "4508f70b0dc08d2853a321466ad2449266f7063774e0befadfa25096a666e39c",
+  "sources": [
+    {
+      "path": "ArtSources/WalkRepair20261114/raw/RupturaKatanaEWSE_reviewed.png",
+      "sha256": "abdfb6567bfce7c5d436b9ed9e5a18c8aece5cfcefbb5a3514ed5fe8beed29d6"
+    }
+  ],
   "nativeSize": [
-    1024,
-    341
+    1218,
+    448
   ],
-  "frameSize": [
-    170,
-    341
-  ],
-  "pixelsPerUnit": 214.9709,
+  "pixelsPerUnit": 158.461538,
   "rows": 1,
-  "cols": 6,
+  "cols": 3,
   "form": "Ruptura",
   "action": "Walk",
+  "weapon": "Katana",
+  "wholeFigures": true,
+  "status": "visual-reviewed",
   "frames": [
     {
       "id": "FabiusRupturaWalkV1_00",
       "rect": [
         0,
         0,
-        170,
-        341
+        406,
+        448
       ],
       "pivot": [
-        0.5,
-        0.15
+        0.52463054,
+        0.15625
       ],
-      "durationMs": 100,
+      "durationMs": 125,
       "action": "Walk",
-      "direction": "E",
       "form": "Ruptura",
-      "frameIndex": 0
+      "direction": "E",
+      "frameIndex": 0,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaKatanaEWSE_reviewed.png",
+      "sourceRectTopLeft": [
+        0,
+        0,
+        341,
+        384
+      ],
+      "sourceSupportAnchor": [
+        181.0,
+        346
+      ],
+      "atlasSupportAnchor": [
+        213.0,
+        378
+      ]
     },
     {
       "id": "FabiusRupturaWalkV1_01",
       "rect": [
-        170,
+        406,
         0,
-        170,
-        341
+        406,
+        448
       ],
       "pivot": [
-        0.5,
-        0.15
+        0.49014778,
+        0.15625
       ],
       "durationMs": 100,
       "action": "Walk",
-      "direction": "E",
       "form": "Ruptura",
-      "frameIndex": 1
+      "direction": "E",
+      "frameIndex": 1,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaKatanaEWSE_reviewed.png",
+      "sourceRectTopLeft": [
+        341,
+        0,
+        342,
+        384
+      ],
+      "sourceSupportAnchor": [
+        508.0,
+        346
+      ],
+      "atlasSupportAnchor": [
+        605.0,
+        378
+      ]
     },
     {
       "id": "FabiusRupturaWalkV1_02",
       "rect": [
-        340,
+        812,
         0,
-        170,
-        341
+        406,
+        448
       ],
       "pivot": [
-        0.5,
-        0.15
+        0.4729064,
+        0.15401786
       ],
-      "durationMs": 100,
+      "durationMs": 125,
       "action": "Walk",
-      "direction": "E",
       "form": "Ruptura",
-      "frameIndex": 2
-    },
-    {
-      "id": "FabiusRupturaWalkV1_03",
-      "rect": [
-        510,
+      "direction": "E",
+      "frameIndex": 2,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaKatanaEWSE_reviewed.png",
+      "sourceRectTopLeft": [
+        683,
         0,
-        170,
-        341
+        341,
+        384
       ],
-      "pivot": [
-        0.5,
-        0.15
+      "sourceSupportAnchor": [
+        843.0,
+        347
       ],
-      "durationMs": 100,
-      "action": "Walk",
-      "direction": "E",
-      "form": "Ruptura",
-      "frameIndex": 3
-    },
-    {
-      "id": "FabiusRupturaWalkV1_04",
-      "rect": [
-        680,
-        0,
-        170,
-        341
-      ],
-      "pivot": [
-        0.5,
-        0.15
-      ],
-      "durationMs": 100,
-      "action": "Walk",
-      "direction": "E",
-      "form": "Ruptura",
-      "frameIndex": 4
-    },
-    {
-      "id": "FabiusRupturaWalkV1_05",
-      "rect": [
-        850,
-        0,
-        170,
-        341
-      ],
-      "pivot": [
-        0.5,
-        0.15
-      ],
-      "durationMs": 100,
-      "action": "Walk",
-      "direction": "E",
-      "form": "Ruptura",
-      "frameIndex": 5
+      "atlasSupportAnchor": [
+        1004.0,
+        379
+      ]
     }
-  ]
+  ],
+  "phaseSynchronized": false,
+  "pixelPolicy": "Whole source cells packed 1:1; original RGBA unchanged; 32px extra padding."
 }

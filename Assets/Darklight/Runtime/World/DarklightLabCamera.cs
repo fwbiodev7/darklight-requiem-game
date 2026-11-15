@@ -7,6 +7,7 @@ namespace Darklight
     public sealed class DarklightLabCamera : MonoBehaviour
     {
         public Transform target;
+        public Transform duelOpponent;
         public Vector2 followOffset;
         public Rect bounds=new Rect(-10,-6,20,11.8f);
         public const float GameplayHalfHeight=4.96875f;
@@ -26,7 +27,8 @@ namespace Darklight
             view=GetComponent<Camera>();view.orthographic=true;
             Fit();if(target!=null) transform.position=Constrain(target.position+new Vector3(followOffset.x,followOffset.y,-10));
         }
-        void Fit() { view.orthographicSize=Mathf.Min(GameplayHalfHeight,Mathf.Min(bounds.height*.5f,bounds.width*.5f/Mathf.Max(.01f,view.aspect))); }
+        float FramingHeight => DarklightCampaign.Instance?.Training == true ? 5.5f : GameplayHalfHeight;
+        void Fit() { view.orthographicSize=Mathf.Min(FramingHeight,Mathf.Min(bounds.height*.5f,bounds.width*.5f/Mathf.Max(.01f,view.aspect))); }
         Vector3 Constrain(Vector3 p)
         {
             float height=view.orthographicSize,width=height*view.aspect;
@@ -37,6 +39,15 @@ namespace Darklight
         {
             if(target==null || DarklightCombatLab.Instance?.Paused == true)return;Fit();
             Vector3 focus=target.position+new Vector3(followOffset.x,followOffset.y,-10);
+            if(duelOpponent!=null && duelOpponent.gameObject.activeInHierarchy)
+            {
+                Vector3 separation=duelOpponent.position-target.position;
+                float halfHeight=Mathf.Max(FramingHeight,Mathf.Max(Mathf.Abs(separation.y)*.5f+1.5f,
+                    Mathf.Abs(separation.x)*.5f/Mathf.Max(.01f,view.aspect)+1.2f));
+                view.orthographicSize=Mathf.Min(halfHeight,Mathf.Min(bounds.height*.5f,bounds.width*.5f/Mathf.Max(.01f,view.aspect)));
+                focus.x=(target.position.x+duelOpponent.position.x)*.5f;
+                focus.y=(target.position.y+duelOpponent.position.y)*.5f+followOffset.y;
+            }
             if(ContactFocusActive){float t=(contactUntil-Time.unscaledTime)/.16f;focus+=Vector3.ClampMagnitude(new Vector3(contactFocus.x-target.position.x,contactFocus.y-target.position.y,0),1.5f)*(.18f*t);}
             Vector3 p=Vector3.SmoothDamp(transform.position,Constrain(focus),ref velocity,ContactFocusActive?.06f:.25f);
             float grid=(view.targetTexture!=null?view.targetTexture.height:720f)/(view.orthographicSize*2);

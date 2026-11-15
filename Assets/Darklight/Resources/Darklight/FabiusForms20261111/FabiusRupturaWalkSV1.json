@@ -1,128 +1,126 @@
 {
   "name": "FabiusRupturaWalkSV1",
   "image": "FabiusRupturaWalkSV1.png",
-  "imageSha256": "071c39dea90835835147f020df7a87f581e17ff6b8be94045b5378c0f919bb7f",
+  "imageSha256": "9c47c2950ad2794f11df6054f645cc29dde1e7559efc2293c4b31264aff6eb46",
+  "sources": [
+    {
+      "path": "ArtSources/WalkRepair20261114/raw/RupturaKatanaComplement_reviewed.png",
+      "sha256": "067c6913f22d372e3ebe6cd868aeeb5e0d78a193cc4413ee1522a0c1b6c466a8"
+    }
+  ],
   "nativeSize": [
-    1024,
-    341
+    1218,
+    448
   ],
-  "frameSize": [
-    170,
-    341
-  ],
-  "pixelsPerUnit": 214.9709,
+  "pixelsPerUnit": 166.153846,
   "rows": 1,
-  "cols": 6,
+  "cols": 3,
   "form": "Ruptura",
-  "action": "WalkS",
+  "action": "Walk",
+  "weapon": "Katana",
+  "wholeFigures": true,
+  "status": "visual-reviewed",
   "frames": [
     {
       "id": "FabiusRupturaWalkSV1_00",
       "rect": [
         0,
         0,
-        170,
-        341
+        406,
+        448
       ],
       "pivot": [
-        0.5,
-        0.15
+        0.55418719,
+        0.13616071
       ],
-      "durationMs": 100,
-      "action": "WalkS",
-      "direction": "E",
+      "durationMs": 125,
+      "action": "Walk",
       "form": "Ruptura",
-      "frameIndex": 0
+      "direction": "S",
+      "frameIndex": 0,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaKatanaComplement_reviewed.png",
+      "sourceRectTopLeft": [
+        0,
+        0,
+        341,
+        384
+      ],
+      "sourceSupportAnchor": [
+        193.0,
+        355
+      ],
+      "atlasSupportAnchor": [
+        225.0,
+        387
+      ]
     },
     {
       "id": "FabiusRupturaWalkSV1_01",
       "rect": [
-        170,
+        406,
         0,
-        170,
-        341
+        406,
+        448
       ],
       "pivot": [
-        0.5,
-        0.15
+        0.51724138,
+        0.13616071
       ],
       "durationMs": 100,
-      "action": "WalkS",
-      "direction": "E",
+      "action": "Walk",
       "form": "Ruptura",
-      "frameIndex": 1
+      "direction": "S",
+      "frameIndex": 1,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaKatanaComplement_reviewed.png",
+      "sourceRectTopLeft": [
+        341,
+        0,
+        342,
+        384
+      ],
+      "sourceSupportAnchor": [
+        519.0,
+        355
+      ],
+      "atlasSupportAnchor": [
+        616.0,
+        387
+      ]
     },
     {
       "id": "FabiusRupturaWalkSV1_02",
       "rect": [
-        340,
+        812,
         0,
-        170,
-        341
+        406,
+        448
       ],
       "pivot": [
-        0.5,
-        0.15
+        0.47536946,
+        0.13616071
       ],
-      "durationMs": 100,
-      "action": "WalkS",
-      "direction": "E",
+      "durationMs": 125,
+      "action": "Walk",
       "form": "Ruptura",
-      "frameIndex": 2
-    },
-    {
-      "id": "FabiusRupturaWalkSV1_03",
-      "rect": [
-        510,
+      "direction": "S",
+      "frameIndex": 2,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaKatanaComplement_reviewed.png",
+      "sourceRectTopLeft": [
+        683,
         0,
-        170,
-        341
+        341,
+        384
       ],
-      "pivot": [
-        0.5,
-        0.15
+      "sourceSupportAnchor": [
+        844.0,
+        355
       ],
-      "durationMs": 100,
-      "action": "WalkS",
-      "direction": "E",
-      "form": "Ruptura",
-      "frameIndex": 3
-    },
-    {
-      "id": "FabiusRupturaWalkSV1_04",
-      "rect": [
-        680,
-        0,
-        170,
-        341
-      ],
-      "pivot": [
-        0.5,
-        0.15
-      ],
-      "durationMs": 100,
-      "action": "WalkS",
-      "direction": "E",
-      "form": "Ruptura",
-      "frameIndex": 4
-    },
-    {
-      "id": "FabiusRupturaWalkSV1_05",
-      "rect": [
-        850,
-        0,
-        170,
-        341
-      ],
-      "pivot": [
-        0.5,
-        0.15
-      ],
-      "durationMs": 100,
-      "action": "WalkS",
-      "direction": "E",
-      "form": "Ruptura",
-      "frameIndex": 5
+      "atlasSupportAnchor": [
+        1005.0,
+        387
+      ]
     }
-  ]
+  ],
+  "phaseSynchronized": false,
+  "pixelPolicy": "Whole source cells packed 1:1; original RGBA unchanged; 32px extra padding."
 }

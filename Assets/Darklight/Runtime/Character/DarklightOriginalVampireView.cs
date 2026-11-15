@@ -9,16 +9,37 @@ namespace Darklight
         bool legacyCleaned;
         DarklightSmallTransformationAura smallAura;
         DarklightTransformationBurst burst;
+        DarklightTransformationPresentation transition;
+        SpriteRenderer officialBody;Sprite beforeOfficial;
         readonly DarklightDeathReversion deathReversion=new();
         public bool HasAgeHead=>false;
         public Sprite PresentedHead=>null;
         public Sprite PresentedAura=>smallAura!=null?smallAura.PresentedFrame:null;
         public void Present(SpriteRenderer body,int skin,int age,int direction,int form,float clock,bool dead,bool wholeCharacter=false,bool crouched=false,bool allowDeathTransition=true)
         {
+            var game=DarklightCampaign.Instance;
+            Sprite approved=null;
+            bool official=allowDeathTransition&&!dead&&game!=null&&game.enabled&&game.OfficialTransformationPresentation&&
+                DarklightOfficialTransitionBank.TryPose(game.TransformationForm,game.TransformationProgress,out approved);
+            if(official)
+            {
+                // This sheet already contains the floating figure, ground ring and energy.
+                if(officialBody!=body){officialBody=body;beforeOfficial=body.sprite;}
+                body.sprite=approved;DarklightOfficialTransitionBank.ApplyOwnership(body);
+                transition?.ResetPresentation();smallAura?.Hide();burst?.Hide();
+                return;
+            }
+            officialBody=null;beforeOfficial=null;
+            if(form>0&&!dead&&DarklightOfficialTransitionBank.IsAuthored(body.sprite))
+            {
+                DarklightOfficialTransitionBank.ApplyOwnership(body);
+                transition?.ResetPresentation();smallAura?.Hide();burst?.Hide();
+                return;
+            }
             int visualForm=allowDeathTransition?deathReversion.Observe(form,dead,Time.unscaledTime):dead?0:form;
             bodyBlock??=new MaterialPropertyBlock();
             if(!legacyCleaned){var legacy=body.transform.Find("IdadeOriginal");if(legacy!=null)legacy.gameObject.SetActive(false);legacyCleaned=true;}
-            bool reviewedWhole=DarklightWeaponRedesignBank.IsAuthored(body.sprite)||DarklightMotorcycleRedesignBank.IsAuthored(body.sprite);
+            bool reviewedWhole=DarklightWeaponRedesignBank.IsAuthored(body.sprite)||DarklightMotorcycleRedesignBank.IsAuthored(body.sprite)||DarklightFabiusFormsBank.IsAuthored(body.sprite)||DarklightOfficialTransitionBank.IsAuthored(body.sprite);
             if(reviewedWhole)
             {
                 // Reviewed whole figures own their pixels. Do not load the old
@@ -26,6 +47,8 @@ namespace Darklight
                 catalog=null;
                 DarklightWeaponRedesignBank.ApplyAuthoredOwnership(body);
                 DarklightMotorcycleRedesignBank.ApplyOwnership(body);
+                DarklightFabiusFormsBank.ApplyOwnership(body);
+                DarklightOfficialTransitionBank.ApplyOwnership(body);
             }
             else
             {
@@ -42,13 +65,31 @@ namespace Darklight
             if(smallAura==null){var old=body.transform.Find("AuraVampiraOriginal");if(old!=null)old.gameObject.SetActive(false);var obj=new GameObject("AuraPequenaContinua");obj.transform.SetParent(body.transform,false);smallAura=obj.AddComponent<DarklightSmallTransformationAura>();}
             smallAura.Present(body,visualForm,clock,dead);
             if(burst==null){var obj=new GameObject("TransicaoDoDespertar");obj.transform.SetParent(body.transform,false);burst=obj.AddComponent<DarklightTransformationBurst>();}
-            var game=DarklightCampaign.Instance;
             bool deathExit=allowDeathTransition&&dead&&deathReversion.Active;
+            if(allowDeathTransition&&!dead&&game?.enabled==true&&game.Transforming&&game.EnteringTransformation&&form==2&&
+                DarklightFabiusFormsBank.TryTransformationPose(form,(int)game.Weapons.Equipped.id,direction,
+                    Mathf.InverseLerp(.52f,1,game.TransformationProgress),out var awakening))
+            {
+                body.sprite=awakening;
+                DarklightFabiusFormsBank.ApplyOwnership(body);
+            }
+            transition??=GetComponent<DarklightTransformationPresentation>()??gameObject.AddComponent<DarklightTransformationPresentation>();
+            transition.Present(body,game?.TransformationProgress??1,
+                allowDeathTransition&&!dead&&game?.enabled==true&&game.Transforming&&game.EnteringTransformation&&game.TransformationForm==2);
             burst.Present(body,deathExit?deathReversion.SourceForm:game?.TransformationForm??form,
                 deathExit?deathReversion.Progress:game?.TransformationProgress??1,
                 deathExit?false:game?.EnteringTransformation??true,
                 deathExit||!dead&&game?.Transforming==true);
         }
+        public void ClearEffects()
+        {
+            if(officialBody!=null&&DarklightOfficialTransitionBank.IsAuthored(officialBody.sprite)&&beforeOfficial!=null)
+                officialBody.sprite=beforeOfficial;
+            officialBody=null;beforeOfficial=null;
+            transition?.ResetPresentation();
+            smallAura?.Hide();burst?.Hide();
+        }
+        void OnDisable()=>ClearEffects();
     }
 }
 

@@ -123,22 +123,22 @@ namespace Darklight
         void EnsureGeometry()
         {
             if(!Available)return;
-            int id=game.MapRegion;if(region==id&&geometry?.map==game.Map)return;
+            int id=game.Training?-1:game.MapRegion;if(region==id&&geometry?.map==game.Map)return;
             Flush();region=id;detected.Clear();route.Clear();routeCells.Clear();lastReveal=new Vector2(float.PositiveInfinity,0);
             if(!cache.TryGetValue(id,out geometry))
             {
                 var grid=game.Map.GridBounds;geometry=new Geometry{map=game.Map,width=grid.width,height=grid.height};
                 geometry.bounds=new Rect(grid.x*game.Map.CellSize,grid.y*game.Map.CellSize,grid.width*game.Map.CellSize,grid.height*game.Map.CellSize);
-                geometry.record=state.Region(id,grid.width,grid.height);geometry.seen=DarklightAtlasState.DecodeFog(geometry.record.fog,grid.width*grid.height);
+                geometry.record=id<0?new DarklightAtlasRegion{id=id,width=grid.width,height=grid.height}:state.Region(id,grid.width,grid.height);geometry.seen=DarklightAtlasState.DecodeFog(geometry.record.fog,grid.width*grid.height);
                 geometry.floor=new bool[geometry.seen.Length];geometry.pixels=new Color32[geometry.seen.Length];foreach(bool known in geometry.seen)if(known)geometry.discovered++;
                 for(int y=0;y<grid.height;y++)for(int x=0;x<grid.width;x++)geometry.floor[y*grid.width+x]=game.Map.Walkable(new Vector2Int(grid.x+x,grid.y+y));
                 geometry.texture=new Texture2D(grid.width,grid.height,TextureFormat.RGBA32,false){filterMode=FilterMode.Point,wrapMode=TextureWrapMode.Clamp,name="MapaConhecido_"+id};cache[id]=geometry;
             }
-            var previousMicroart=activeMicroart;activeMicroart=Resources.Load<Texture2D>("Darklight/Minimap/Map"+(id+1));
+            var previousMicroart=activeMicroart;activeMicroart=Resources.Load<Texture2D>(game.Training?"Darklight/Maps/TrainingCourtyard":"Darklight/Minimap/Map"+(id+1));
             miniArt.texture=fullArt.texture=activeMicroart;miniArt.enabled=fullArt.enabled=activeMicroart!=null;
             if(previousMicroart!=null&&previousMicroart!=activeMicroart)Resources.UnloadAsset(previousMicroart);
             miniTerrain.texture=fullTerrain.texture=geometry.texture;center=geometry.bounds.center;zoom=1;
-            fullTitle.text=id>=0&&id<DarklightStory.Places.Length?DarklightStory.Places[id].ToUpperInvariant():!string.IsNullOrWhiteSpace(game.Map.Art?.title)?game.Map.Art.title.ToUpperInvariant():"MAPA DA FASE";miniTitle.text="MAPA "+(id+1);
+            fullTitle.text=id>=0&&id<DarklightStory.Places.Length?DarklightStory.Places[id].ToUpperInvariant():!string.IsNullOrWhiteSpace(game.Map.Art?.title)?game.Map.Art.title.ToUpperInvariant():"MAPA DA FASE";miniTitle.text=game.Training?"ARENA":"MAPA "+(id+1);
             nextReveal=nextMarkers=nextRoute=0;geometry.dirty=true;focus=0;
         }
         int Index(Vector2 world)

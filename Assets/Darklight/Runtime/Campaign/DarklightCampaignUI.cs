@@ -15,6 +15,11 @@ namespace Darklight
         Text powerText,menuFooter;Image powerFill,powerFrame;int selection;float nextNav;int settingsDirection=1;
         RectTransform uiRoot,overlay,menuRoot;Text heading,bodyText,chapterText,energyText,objectiveText,bossText,messageText,statusText;
         Image energyFill,bossFill,portrait,menuBackdrop;Font font;
+        RectTransform luciusBossFrame;
+        Image luciusBossFill,luciusBossEcho;
+        Text luciusBossTitle,luciusBossPhase;
+        float luciusDisplayedHealth=1;
+        DarklightEnemy presentedLucius;
         Sprite UIArt(int index,Sprite fallback)=>uiArt!=null&&uiArt.Length>index?uiArt[index]:fallback;
         Sprite HUDArt(int index,Sprite fallback)=>hudArt!=null&&hudArt.Length>index?hudArt[index]:fallback;
         Sprite WeaponIcon(WeaponDefinition weapon)=>weapon==null?null:DarklightWeaponRedesignBank.Icon((int)weapon.id,PresentedForm,weapon.icon);
@@ -38,6 +43,7 @@ namespace Darklight
             statusText=TextAt(uiRoot,"Progresso",12,64,188,10,5);statusText.alignment=TextAnchor.UpperLeft;
             bossText=TextAt(uiRoot,"Chefe",210,66,220,12,6);bossText.alignment=TextAnchor.MiddleCenter;
             bossFill=ImageAt(uiRoot,"VidaChefe",210,80,220,3,null);bossFill.color=new Color(.7f,.03f,.15f);
+            CreateLuciusBossBar();
             messageText=TextAt(uiRoot,"Aviso",140,278,360,18,6);messageText.alignment=TextAnchor.MiddleCenter;
             var mode=uiRoot.Find("Modo");if(mode!=null)mode.GetComponent<Text>().text="";
             overlay=RectAt(uiRoot,"Menus",0,0,640,360);menuBackdrop=overlay.gameObject.AddComponent<Image>();menuBackdrop.color=new Color(.02f,.02f,.04f,.88f);menuBackdrop.raycastTarget=false;
@@ -69,7 +75,9 @@ namespace Darklight
             powerFrame.gameObject.SetActive(Active&&Progress.mp3Unlocked);powerFill.color=DarklightResonance.Colors[selected];powerFill.rectTransform.sizeDelta=new Vector2(145*Resonance.Energy/100,3);
             powerText.text=DarklightResonance.Names[selected]+"\n"+(Resonance.Active==selected?Resonance.Remaining.ToString("0.0")+"s ATIVO":cooldown>0?cooldown.ToString("0")+"s RECARGA":lab.Input.BindingLabel("Power")+": ATIVAR")+"   "+Resonance.Energy.ToString("0")+"%\n1/2 OU DIRECIONAL: MODO";
             messageText.text=noticeTime>0?notice:"";
-            var boss=CurrentBoss;bossText.text=boss==null?"":DarklightStory.Bosses[Progress.chapter];bossFill.gameObject.SetActive(boss!=null);
+            var boss=CurrentBoss;bossText.text=boss==null?"":boss.IsLucius?(boss.Phase==3?"LUCIUS - ULTIMO CONFRONTO":boss.Phase==2?"LUCIUS - ARCONTE":"LUCIUS"):DarklightStory.Bosses[Progress.chapter];bossFill.gameObject.SetActive(boss!=null&&!boss.IsLucius);
+            bossText.gameObject.SetActive(boss==null||!boss.IsLucius);
+            PresentLuciusBossBar(boss);
             if(boss!=null)bossFill.rectTransform.sizeDelta=new Vector2(220*boss.Health.HealthPercent,3);
             music.volume=MusicVolume;ambient.volume=AmbientVolume*(CurrentBoss!=null?.7f:1);TickMinimalHUD();TickPlaytestGuide();TickTechnicalHUD();TickFocusedHUD();
         }
@@ -215,9 +223,15 @@ namespace Darklight
                 case "BindingConflict":BuildBindingConflict();break;
                 case "Transformations":BuildTransformations();break;
                 case "Death":if(Training){health.SetMaxHealth(health.MaxHealth,false);lab.Player.ResetModel();Open("Training");return;}BuildGameOver();break;
+                case "LuciusStance":
+                    heading.text="O JURAMENTO DOS IRMAOS";
+                    bodyText.text=AllyName+" pergunta: quando encontrar Lucius, o que pretende fazer?";
+                    Button("OUVIR MEU IRMAO",()=>ChooseLuciusStance(1));
+                    Button("COBRAR A DIVIDA DE SANGUE",()=>ChooseLuciusStance(-1));
+                    break;
                 case "Ending":BuildEndings();break;
                 case "Victory":
-                    heading.text="REQUIEM CONCLUIDO";bodyText.text=EndingDescription;
+                    heading.text="REQUIEM CONCLUIDO";bodyText.text=EndingDescription+(Progress.luciusFate>0?"\nLucius sobreviveu e guarda a fronteira a seu modo.":Progress.luciusFate<0?"\nFabius enterrou a espada ao lado do irmao.":"");
                     bodyText.text+="\nMemorias: "+Progress.shards+"/10 | Nivel: "+Progress.level;if(Progress.legacyFinaleCompleted&&Progress.chapter<=5)Button("CONTINUAR: HERANÇA CARMESIM",ResumeLegacyExpansion);Button("CREDITOS",()=>Open("Credits"));Button("REVISITAR CAPITULOS",()=>Open("ChapterSelect"));Button("MENU PRINCIPAL",()=>Open("Main"));break;
                 case "ChapterSelect":heading.text="REVISITAR VESPERA";bodyText.text="Rejogue com seus atributos atuais.\nO save concluido e preservado ate escolher uma fase.";for(int i=0;i<DarklightStory.Chapters.Length;i++){int chapter=i;Button((i+1)+" - "+DarklightStory.Chapters[i],()=>TravelToChapter(chapter));}Button("VOLTAR",()=>Open("Victory"));break;
                 case "Credits":heading.text="CREDITOS";bodyText.text="Criacao e protagonista: Fabio\nDesenvolvimento assistido por Codex\nPixel art: segredo-varginha-pixelart + geracao assistida\nFonte: Press Start 2P, CodeMan38 (OFL)\nMP3 pessoais: HIM e Metallica | devfabio.vercel.app\nSFX CC0: Kenney, JaggedStone e Thimras\nLicenças: AUDIO-LICENSES.json";Button("VOLTAR",()=>Open(returnPanel));break;
@@ -225,9 +239,55 @@ namespace Darklight
             RefreshAppearancePortrait();LayoutCinematicPanel(front);if(panel=="Death")LayoutGameOver();selection=Mathf.Clamp(selection,0,Mathf.Max(0,buttons.Count-1));if(buttons.Count>0&&!buttons[selection].enabled)MoveSelection(1);
         }
         
+        void CreateLuciusBossBar()
+        {
+            luciusBossFrame=RectAt(uiRoot,"LuciusFinalBoss",174,53,292,40);
+            var gold=new Color(.55f,.43f,.29f);
+            var crimson=new Color(.63f,.045f,.12f);
+            ImageAt(luciusBossFrame,"Sombra",2,3,288,36,null).color=new Color(.025f,.018f,.03f,.94f);
+            ImageAt(luciusBossFrame,"BordaSuperior",12,1,268,1,null).color=gold;
+            ImageAt(luciusBossFrame,"BordaInferior",12,38,268,1,null).color=gold;
+            for(int side=0;side<2;side++)
+            {
+                float x=side==0?0:284;
+                ImageAt(luciusBossFrame,"SeloVertical",x+3,10,2,20,null).color=gold;
+                ImageAt(luciusBossFrame,"SeloHorizontal",x,18,8,3,null).color=crimson;
+                ImageAt(luciusBossFrame,"SeloTopo",x+2,8,4,2,null).color=crimson;
+                ImageAt(luciusBossFrame,"SeloBase",x+2,30,4,2,null).color=crimson;
+            }
+            luciusBossTitle=TextAt(luciusBossFrame,"Nome",16,4,260,12,7);
+            luciusBossTitle.alignment=TextAnchor.MiddleCenter;
+            luciusBossTitle.color=new Color(.93f,.86f,.72f);
+            ImageAt(luciusBossFrame,"Trilho",11,19,270,8,null).color=gold;
+            ImageAt(luciusBossFrame,"FundoVida",12,20,268,6,null).color=new Color(.12f,.025f,.045f);
+            luciusBossEcho=ImageAt(luciusBossFrame,"DanoRecente",12,20,268,6,null);
+            luciusBossEcho.color=new Color(.55f,.26f,.21f);
+            luciusBossFill=ImageAt(luciusBossFrame,"Vida",12,20,268,6,null);
+            luciusBossFill.color=crimson;
+            ImageAt(luciusBossFill.transform,"Luz",0,0,268,1,null).color=new Color(.92f,.15f,.22f);
+            luciusBossPhase=TextAt(luciusBossFrame,"Fase",20,29,252,7,4);
+            luciusBossPhase.alignment=TextAnchor.MiddleCenter;
+            luciusBossPhase.color=gold;
+            luciusBossFrame.gameObject.SetActive(false);
+        }
+        void PresentLuciusBossBar(DarklightEnemy boss)
+        {
+            bool visible=boss!=null&&boss.IsLucius;
+            luciusBossFrame.gameObject.SetActive(visible);
+            if(!visible){presentedLucius=null;return;}
+            float health=boss.Health.HealthPercent;
+            if(presentedLucius!=boss||health>luciusDisplayedHealth)luciusDisplayedHealth=health;
+            presentedLucius=boss;
+            luciusDisplayedHealth=Mathf.MoveTowards(luciusDisplayedHealth,health,Time.unscaledDeltaTime*.28f);
+            luciusBossFill.rectTransform.sizeDelta=new Vector2(268*health,6);
+            luciusBossFill.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta=new Vector2(268*health,1);
+            luciusBossEcho.rectTransform.sizeDelta=new Vector2(268*luciusDisplayedHealth,6);
+            luciusBossTitle.text=boss.Phase>=2?"LUCIUS  -  ARCONTE":"LUCIUS";
+            luciusBossPhase.text=boss.Phase==3?"III   ULTIMO CONFRONTO":boss.Phase==2?"II   O DESPERTAR":"I   DUELO DOS IRMAOS";
+        }
         void AddEnemyBar(DarklightEnemy enemy)
         {
-            if(enemy.Boss)return;var frame=ImageAt(uiRoot,"EcoVida",0,0,52,10,enemyBarFrame);
+            if(enemy.Boss||enemy.IsLucius)return;var frame=ImageAt(uiRoot,"EcoVida",0,0,52,10,enemyBarFrame);
             var fill=ImageAt(frame.transform,"Vida",6,4,40,3,null);fill.color=new Color(.7f,.06f,.15f);
             frame.transform.SetSiblingIndex(1);enemyBars.Add(enemy,(frame.rectTransform,fill));
         }

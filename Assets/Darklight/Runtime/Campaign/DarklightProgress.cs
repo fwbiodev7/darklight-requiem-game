@@ -6,6 +6,8 @@ namespace Darklight
 {
     [Serializable] public sealed partial class DarklightProgress
     {
+        // Zero is an undecided relationship in pre-duel saves.
+        public int luciusStance, luciusFate;
         public int difficulty; public bool extremeUnlocked;
         public int version=2, chapter, checkpoint, level=1, xp, points, attack, vitality, mastery, potions=3, shards;
         public int mp3Quest, ending, formsUnlocked; public int preferredForm=1; public bool mp3Unlocked, completed;

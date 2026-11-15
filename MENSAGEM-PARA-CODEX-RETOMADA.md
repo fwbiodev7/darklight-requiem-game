@@ -1,3 +1,5 @@
+> **Atualização vigente — 14/11/2026:** o usuário testou a entrega, aprovou a diversão e informou que as colisões estão arrumadas. Próxima ordem: **HUD/caixas de diálogo → dificuldade de Lucius → design dos inimigos/bosses → gráficos gerais → cutscenes cinematográficas pelo GDD**. Consultar `Docs/Darklight/DIRECAO-E-FEEDBACK-20261114.md` antes das prioridades históricas abaixo. Sugestões adicionais: orientação/referências no mapa e músicas existentes nas bossfights. Fechamento atual autorizado: commit/push, sem iniciar essas novas implementações.
+
 # DARKLIGHT: REQUIEM — Mensagem de Handoff Técnico para o CODEX
 **Data da Passagem:** 10/11/2026 (Sessão Noturna)  
 **Origem:** Antigravity  

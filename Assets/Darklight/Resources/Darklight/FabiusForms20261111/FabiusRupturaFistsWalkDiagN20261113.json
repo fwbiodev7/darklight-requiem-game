@@ -1,0 +1,229 @@
+{
+  "name": "FabiusRupturaFistsWalkDiagN20261113",
+  "image": "FabiusRupturaFistsWalkDiagN20261113.png",
+  "imageSha256": "51d69dfe61a46ec3339ec8a60027762caae9bcc6d6fc914793118f3c20a904cd",
+  "sources": [
+    {
+      "path": "ArtSources/WalkRepair20261114/raw/RupturaFistsComplement_reviewed.png",
+      "sha256": "844e5607c67b8ee29befce1f66662b028d53ac403cf1f1a90006bb79938e353d"
+    },
+    {
+      "path": "ArtSources/WalkRepair20261114/raw/RupturaFistsEN_approved.png",
+      "sha256": "40f583a90ea1f3296deea9fce38e1ff3e801973740d6b45a1ca96312bc9c36a4"
+    }
+  ],
+  "nativeSize": [
+    1218,
+    896
+  ],
+  "pixelsPerUnit": 159.230769,
+  "rows": 2,
+  "cols": 3,
+  "form": "Ruptura",
+  "action": "Walk",
+  "weapon": "Fists",
+  "wholeFigures": true,
+  "status": "visual-reviewed",
+  "frames": [
+    {
+      "id": "FabiusRupturaFistsWalkDiagN20261113_00",
+      "rect": [
+        0,
+        448,
+        406,
+        448
+      ],
+      "pivot": [
+        0.51477833,
+        0.14955357
+      ],
+      "durationMs": 125,
+      "action": "Walk",
+      "form": "Ruptura",
+      "direction": "NW",
+      "frameIndex": 0,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaFistsComplement_reviewed.png",
+      "sourceRectTopLeft": [
+        0,
+        1152,
+        341,
+        384
+      ],
+      "sourceSupportAnchor": [
+        177.0,
+        1501
+      ],
+      "atlasSupportAnchor": [
+        209.0,
+        381
+      ]
+    },
+    {
+      "id": "FabiusRupturaFistsWalkDiagN20261113_01",
+      "rect": [
+        406,
+        448,
+        406,
+        448
+      ],
+      "pivot": [
+        0.47536946,
+        0.16294643
+      ],
+      "durationMs": 100,
+      "action": "Walk",
+      "form": "Ruptura",
+      "direction": "NW",
+      "frameIndex": 1,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaFistsComplement_reviewed.png",
+      "sourceRectTopLeft": [
+        341,
+        1152,
+        342,
+        384
+      ],
+      "sourceSupportAnchor": [
+        502.0,
+        1495
+      ],
+      "atlasSupportAnchor": [
+        599.0,
+        375
+      ]
+    },
+    {
+      "id": "FabiusRupturaFistsWalkDiagN20261113_02",
+      "rect": [
+        812,
+        448,
+        406,
+        448
+      ],
+      "pivot": [
+        0.43103448,
+        0.14732143
+      ],
+      "durationMs": 125,
+      "action": "Walk",
+      "form": "Ruptura",
+      "direction": "NW",
+      "frameIndex": 2,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaFistsComplement_reviewed.png",
+      "sourceRectTopLeft": [
+        683,
+        1152,
+        341,
+        384
+      ],
+      "sourceSupportAnchor": [
+        826.0,
+        1502
+      ],
+      "atlasSupportAnchor": [
+        987.0,
+        382
+      ]
+    },
+    {
+      "id": "FabiusRupturaFistsWalkDiagN20261113_05",
+      "rect": [
+        0,
+        0,
+        406,
+        448
+      ],
+      "pivot": [
+        0.50738916,
+        0.15178571
+      ],
+      "durationMs": 125,
+      "action": "Walk",
+      "form": "Ruptura",
+      "direction": "NE",
+      "frameIndex": 0,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaFistsEN_approved.png",
+      "sourceRectTopLeft": [
+        0,
+        384,
+        341,
+        384
+      ],
+      "sourceSupportAnchor": [
+        174.0,
+        732
+      ],
+      "atlasSupportAnchor": [
+        206.0,
+        828
+      ]
+    },
+    {
+      "id": "FabiusRupturaFistsWalkDiagN20261113_06",
+      "rect": [
+        406,
+        0,
+        406,
+        448
+      ],
+      "pivot": [
+        0.50985222,
+        0.15178571
+      ],
+      "durationMs": 100,
+      "action": "Walk",
+      "form": "Ruptura",
+      "direction": "NE",
+      "frameIndex": 1,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaFistsEN_approved.png",
+      "sourceRectTopLeft": [
+        341,
+        384,
+        342,
+        384
+      ],
+      "sourceSupportAnchor": [
+        516.0,
+        732
+      ],
+      "atlasSupportAnchor": [
+        613.0,
+        828
+      ]
+    },
+    {
+      "id": "FabiusRupturaFistsWalkDiagN20261113_07",
+      "rect": [
+        812,
+        0,
+        406,
+        448
+      ],
+      "pivot": [
+        0.47660099,
+        0.15178571
+      ],
+      "durationMs": 125,
+      "action": "Walk",
+      "form": "Ruptura",
+      "direction": "NE",
+      "frameIndex": 2,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaFistsEN_approved.png",
+      "sourceRectTopLeft": [
+        683,
+        384,
+        341,
+        384
+      ],
+      "sourceSupportAnchor": [
+        844.5,
+        732
+      ],
+      "atlasSupportAnchor": [
+        1005.5,
+        828
+      ]
+    }
+  ],
+  "phaseSynchronized": false,
+  "pixelPolicy": "Whole source cells packed 1:1; original RGBA unchanged; 32px extra padding."
+}

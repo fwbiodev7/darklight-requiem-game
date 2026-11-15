@@ -1,0 +1,229 @@
+{
+  "name": "FabiusRupturaSawsWalkDiagS20261113",
+  "image": "FabiusRupturaSawsWalkDiagS20261113.png",
+  "imageSha256": "df1f1e31ce984f483418853e757530497e8b256646a5c8373137e7f6b117f13f",
+  "sources": [
+    {
+      "path": "ArtSources/WalkRepair20261114/raw/RupturaSawsComplement_approved.png",
+      "sha256": "7bf96b816228401f96d8f092855ec44ca785fd3e736865918f204a0e1a28415c"
+    },
+    {
+      "path": "ArtSources/WalkRepair20261114/raw/RupturaSawsEN_approved.png",
+      "sha256": "87deb18399997ac91bf4550f6d3112c05fc278704cb20194833b242a71e9be4b"
+    }
+  ],
+  "nativeSize": [
+    1218,
+    896
+  ],
+  "pixelsPerUnit": 157.179487,
+  "rows": 2,
+  "cols": 3,
+  "form": "Ruptura",
+  "action": "Walk",
+  "weapon": "Saws",
+  "wholeFigures": true,
+  "status": "visual-reviewed",
+  "frames": [
+    {
+      "id": "FabiusRupturaSawsWalkDiagS20261113_00",
+      "rect": [
+        0,
+        448,
+        406,
+        448
+      ],
+      "pivot": [
+        0.51477833,
+        0.15848214
+      ],
+      "durationMs": 125,
+      "action": "Walk",
+      "form": "Ruptura",
+      "direction": "SW",
+      "frameIndex": 0,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaSawsComplement_approved.png",
+      "sourceRectTopLeft": [
+        0,
+        768,
+        341,
+        384
+      ],
+      "sourceSupportAnchor": [
+        177.0,
+        1113
+      ],
+      "atlasSupportAnchor": [
+        209.0,
+        377
+      ]
+    },
+    {
+      "id": "FabiusRupturaSawsWalkDiagS20261113_01",
+      "rect": [
+        406,
+        448,
+        406,
+        448
+      ],
+      "pivot": [
+        0.51477833,
+        0.19866071
+      ],
+      "durationMs": 100,
+      "action": "Walk",
+      "form": "Ruptura",
+      "direction": "SW",
+      "frameIndex": 1,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaSawsComplement_approved.png",
+      "sourceRectTopLeft": [
+        341,
+        768,
+        342,
+        384
+      ],
+      "sourceSupportAnchor": [
+        518.0,
+        1095
+      ],
+      "atlasSupportAnchor": [
+        615.0,
+        359
+      ]
+    },
+    {
+      "id": "FabiusRupturaSawsWalkDiagS20261113_02",
+      "rect": [
+        812,
+        448,
+        406,
+        448
+      ],
+      "pivot": [
+        0.5,
+        0.16071429
+      ],
+      "durationMs": 125,
+      "action": "Walk",
+      "form": "Ruptura",
+      "direction": "SW",
+      "frameIndex": 2,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaSawsComplement_approved.png",
+      "sourceRectTopLeft": [
+        683,
+        768,
+        341,
+        384
+      ],
+      "sourceSupportAnchor": [
+        854.0,
+        1112
+      ],
+      "atlasSupportAnchor": [
+        1015.0,
+        376
+      ]
+    },
+    {
+      "id": "FabiusRupturaSawsWalkDiagS20261113_05",
+      "rect": [
+        0,
+        0,
+        406,
+        448
+      ],
+      "pivot": [
+        0.4729064,
+        0.15178571
+      ],
+      "durationMs": 125,
+      "action": "Walk",
+      "form": "Ruptura",
+      "direction": "SE",
+      "frameIndex": 0,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaSawsEN_approved.png",
+      "sourceRectTopLeft": [
+        0,
+        768,
+        341,
+        384
+      ],
+      "sourceSupportAnchor": [
+        160.0,
+        1116
+      ],
+      "atlasSupportAnchor": [
+        192.0,
+        828
+      ]
+    },
+    {
+      "id": "FabiusRupturaSawsWalkDiagS20261113_06",
+      "rect": [
+        406,
+        0,
+        406,
+        448
+      ],
+      "pivot": [
+        0.48029557,
+        0.15178571
+      ],
+      "durationMs": 100,
+      "action": "Walk",
+      "form": "Ruptura",
+      "direction": "SE",
+      "frameIndex": 1,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaSawsEN_approved.png",
+      "sourceRectTopLeft": [
+        341,
+        768,
+        342,
+        384
+      ],
+      "sourceSupportAnchor": [
+        504.0,
+        1116
+      ],
+      "atlasSupportAnchor": [
+        601.0,
+        828
+      ]
+    },
+    {
+      "id": "FabiusRupturaSawsWalkDiagS20261113_07",
+      "rect": [
+        812,
+        0,
+        406,
+        448
+      ],
+      "pivot": [
+        0.50246305,
+        0.15178571
+      ],
+      "durationMs": 125,
+      "action": "Walk",
+      "form": "Ruptura",
+      "direction": "SE",
+      "frameIndex": 2,
+      "sourcePath": "ArtSources/WalkRepair20261114/raw/RupturaSawsEN_approved.png",
+      "sourceRectTopLeft": [
+        683,
+        768,
+        341,
+        384
+      ],
+      "sourceSupportAnchor": [
+        855.0,
+        1116
+      ],
+      "atlasSupportAnchor": [
+        1016.0,
+        828
+      ]
+    }
+  ],
+  "phaseSynchronized": false,
+  "pixelPolicy": "Whole source cells packed 1:1; original RGBA unchanged; 32px extra padding."
+}

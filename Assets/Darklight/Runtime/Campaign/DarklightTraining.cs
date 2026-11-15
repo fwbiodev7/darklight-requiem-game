@@ -25,7 +25,9 @@ namespace Darklight
             Progress.weaponUnlocks=DarklightPlayableScope.WeaponMask;Progress.checkpoint=0;Progress.chapter=0;Progress.completed=false;
             LoadMap(0);levelRoot.gameObject.SetActive(false);Destroy(levelRoot.gameObject);
             levelRoot=new GameObject("ArenaDeTreinamento").transform;Map=DarklightMapDefinition.TrainingArena();
-            DarklightTrainingFloor.Build(levelRoot,Map,floorTiles[0],pixelMaterial);
+            DarklightTrainingFloor.Build(levelRoot,Map,pixelMaterial);
+            InitializeRemaster(0);
+            InitializeRegionAtmosphere(0);
             Physics2D.SyncTransforms();var start=Map.SafeSpawn(Map.Spawn);
             lab.Player.transform.position=start;lab.Player.GetComponent<Rigidbody2D>().position=start;
             var camera=lab.WorldCamera.GetComponent<DarklightLabCamera>();camera.bounds=Map.Bounds;
@@ -53,9 +55,9 @@ namespace Darklight
             {
                 if(luciusDuelMode)
                 {
-                    string luciusStatus=luciusDuelEnemy!=null&&!luciusDuelEnemy.Health.IsDead
+                    string luciusStatus=luciusDuelEnemy!=null&&!luciusDuelEnemy.Health.IsDead&&!luciusDuelEnemy.Resolved
                         ? $"LUCIUS: {Mathf.CeilToInt(luciusDuelEnemy.Health.CurrentHealth)}/{Mathf.CeilToInt(luciusDuelEnemy.Health.MaxHealth)} HP"
-                        : "LUCIUS DERROTADO — PAUSA: REINICIAR X1";
+                        : luciusDuelEnemy!=null && luciusDuelEnemy.Resolved ? "LUCIUS POUPADO - PAUSA: REINICIAR X1" : "LUCIUS CAIU - PAUSA: REINICIAR X1";
                     trainingReadout.text=$"X1: FABIUS VS LUCIUS\n{luciusStatus}\nCOMBO {lab.Player.Model.ComboCount} · {Style.Rank}";
                 }
                 else
@@ -80,6 +82,7 @@ namespace Darklight
             if(type==6)
             {
                 TrainingDamage=true;
+                if(Progress.luciusStance==0)Progress.luciusStance=1;
                 var foe=SpawnLucius(origin);
                 luciusDuelEnemy=foe;
                 Close();
@@ -110,10 +113,18 @@ namespace Darklight
         {
             heading.text="ARENA DE TREINAMENTO";
             bodyText.text="O progresso real fica preservado.\nSangue e tempo de forma ilimitados.\n\nLeve repetido: sequencia\nLeve, pausa, leve: variacao\nDois leves + pesado: final\nTroca de arma apos acerto\nAereo: suspender alvo leve\n\nAlvo atual: "+(luciusDuelMode?"X1 LUCIUS":TrainingPassive?"PASSIVO":"ATIVO");
-            if(luciusDuelMode)Button("REINICIAR X1 LUCIUS",RestartLuciusDuel);
+            if(luciusDuelMode)
+            {
+                Button("REINICIAR X1 LUCIUS",RestartLuciusDuel);
+                Button("HISTORICO: "+(Progress.luciusStance<0?"HOSTIL":"CONCILIADOR"),()=>
+                {
+                    Progress.luciusStance=Progress.luciusStance<0?1:-1;
+                    RefreshPanel();
+                });
+            }
             Button("RETOMAR TREINO",Close);Button("ESCOLHER INIMIGOS",()=>Open("TrainingEnemies"));
             Button("ARMA: "+Weapons.Equipped.displayName,()=>{Weapons.RequestNext();Close();});
-            Button("TESTAR CAVALEIRO · REQUIEM",StartAbyssPrototype);Button("GUIA DO CAVALEIRO",ShowAbyssHelp);Button("DESAFIOS DO CAVALEIRO",StartAbyssLessons);
+            Button("TESTAR CAVALEIRO · REQUIEM",StartAbyssPrototype);Button("GUIA DO CAVALEIRO",ShowAbyssHelp);Button("DESAFIOS DO CAVALEIRO",StartAbyssLessons);Button("TESTAR BOSSFIGHT",()=>SpawnTraining(6));
             Button("ESCOLHER TRANSFORMACAO",()=>Open("TrainingForms"));
             Button("RECEBER DANO: "+(TrainingDamage?"SIM":"NAO"),()=>{TrainingDamage=!TrainingDamage;RefreshPanel();});
             Button("VER HITBOXES: "+(TrainingHitboxes?"SIM":"NAO"),()=>{TrainingHitboxes=!TrainingHitboxes;RefreshPanel();});
@@ -128,25 +139,52 @@ namespace Darklight
         void BuildTrainingForms()
         {
             heading.text="FORMAS NO TREINO";bodyText.text="Teste Réquiem e suas armas com cada forma. A troca conserva as preferencias reais fora desta sessao.";
-            string[] labels={"NORMAL","RUPTURA","ECLIPSE ABSOLUTO"};
+            string[] labels={"NORMAL","RUPTURA","SERAFIM CARMESIM"};
             for(int i=0;i<labels.Length;i++){int chosen=i;Button(labels[i],()=>SetTrainingForm(chosen));}
             Button("VOLTAR",()=>Open("Training"));
         }
     }
     public static class DarklightTrainingFloor
     {
-        public static void Build(Transform root,DarklightMapDefinition map,Sprite floor,Material material)
+        public static void Build(Transform root,DarklightMapDefinition map,Material material)
         {
-            var grid=map.GridBounds;
-            for(int y=grid.yMin;y<grid.yMax;y++)for(int x=grid.xMin;x<grid.xMax;x++)
+            var artwork=Resources.Load<Sprite>("Darklight/Maps/TrainingCourtyard");
+            if(artwork==null)throw new System.InvalidOperationException("TrainingCourtyard sprite is missing.");
+            DarklightPaintedMap.Build(root,map,artwork,material,false);
+
+            if(DarklightRemaster.QualityLevel<=0)return;
+
+            var emberMaterial=Resources.Load<Material>("Darklight/SmallTransformationAura");
+            if(emberMaterial==null)return;
+            // The light pools are painted into the paving. Embers rise from the four perimeter braziers.
+            foreach(var pixel in new[]{new Vector2(199,285),new Vector2(1336,285),new Vector2(185,580),new Vector2(1352,580)})
             {
-                if(!map.Walkable(new Vector2Int(x,y)))continue;
-                var renderer=new GameObject("PisoTreino").AddComponent<SpriteRenderer>();renderer.transform.SetParent(root,false);
-                renderer.sprite=floor;renderer.sharedMaterial=material;renderer.sortingOrder=-200;
-                renderer.transform.localPosition=(Vector3)((new Vector2(x,y)+Vector2.one*.5f)*map.CellSize);
-                renderer.transform.localScale=Vector3.one*map.CellSize/floor.bounds.size.x;renderer.color=((x+y)&1)==0?new Color(.52f,.5f,.6f):new Color(.45f,.44f,.52f);
+                var brazier=new GameObject("BrasasDaArena");
+                brazier.transform.SetParent(root,false);
+                brazier.transform.localPosition=map.Art.World(pixel);
+                var embers=brazier.AddComponent<ParticleSystem>();
+                embers.Stop(true,ParticleSystemStopBehavior.StopEmittingAndClear);
+                var main=embers.main;
+                main.startLifetime=new ParticleSystem.MinMaxCurve(.45f,.9f);
+                main.startSpeed=0;
+                main.startSize=new ParticleSystem.MinMaxCurve(.025f,.06f);
+                main.startColor=new Color(1,.56f,.2f,.7f);
+                main.maxParticles=5;
+                var emission=embers.emission;
+                emission.rateOverTime=3;
+                var shape=embers.shape;
+                shape.shapeType=ParticleSystemShapeType.Circle;
+                shape.radius=.08f;
+                var drift=embers.velocityOverLifetime;
+                drift.enabled=true;
+                drift.x=new ParticleSystem.MinMaxCurve(-.1f,.1f);
+                drift.y=new ParticleSystem.MinMaxCurve(.45f,.8f);
+                drift.z=new ParticleSystem.MinMaxCurve(0f,0f);
+                var renderer=brazier.GetComponent<ParticleSystemRenderer>();
+                renderer.sharedMaterial=emberMaterial;
+                renderer.sortingOrder=-180;
+                embers.Play();
             }
-            DarklightPaintedMap.BuildGeometry(root,map);
         }
     }
 }

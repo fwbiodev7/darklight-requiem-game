@@ -35,6 +35,7 @@ namespace Darklight
             }
             else
             {
+                if(finalDuelOpponent!=null && !finalDuelOpponent.Resolved && !finalDuelOpponent.Health.IsDead)return false;
                 if(chapterCleared)Consider("portal","ATRAVESSAR PORTAL",Map.Portal,2.5f);
                 if(!Progress.relics[Progress.chapter])Consider("relic","RECOLHER MEMÓRIA",Map.Relic,2.3f);
                 if(NarrativeTarget(out var narrative))Consider(narrative.Id,narrative.Label,narrative.Point,2.7f);
@@ -66,6 +67,27 @@ namespace Darklight
             interactionBackground.color=hover?new Color(.22f,.025f,.07f,.96f):new Color(.025f,.022f,.03f,.92f);
             if(hover&&Mouse.current.leftButton.wasPressedThisFrame){interactionClickFrame=Time.frameCount;PerformInteraction(target);interactionButton.gameObject.SetActive(false);}
         }
+        DarklightEnemy finalDuelOpponent;
+        void BeginFinalDuel()
+        {
+            Speak(new[]{"LUCIUS|Quebrou o selo. Agora so resta a promessa que fizemos quando meninos.",
+                "FABIUS|Entao olha para mim quando erguer a espada."},()=>
+            {
+                Vector2 origin=Map.Arenas[3];
+                Vector2 stand=Map.SafeSpawn(origin+Vector2.down*1.8f);
+                lab.Player.transform.position=stand;
+                lab.Player.GetComponent<Rigidbody2D>().position=stand;
+                finalDuelOpponent=SpawnLucius(origin);
+                Objective="CONFRONTE LUCIUS";
+            });
+        }
+        void ChooseLuciusStance(int stance)
+        {
+            Progress.luciusStance=stance;
+            SaveCheckpoint();
+            Close();
+            if(Progress.chapter==DarklightStory.Chapters.Length-1 && chapterCleared)BeginFinalDuel();
+        }
         void PerformInteraction(DarklightInteractionTarget target)
         {
             if(InteractMultiverse(target.Id))return;
@@ -79,7 +101,13 @@ namespace Darklight
             if(InteractNarrative(target.Id))return;
             if(target.Id=="portal")
             {
-                if(Progress.chapter==DarklightStory.Chapters.Length-1){Open("Ending");return;}
+                if(Progress.chapter==DarklightStory.Chapters.Length-1)
+                {
+                    if(Progress.luciusFate!=0)Open("Ending");
+                    else if(Progress.luciusStance==0)Open("LuciusStance");
+                    else BeginFinalDuel();
+                    return;
+                }
                 TravelToChapter(Progress.chapter+1);return;
             }
             if(target.Id=="relic")
@@ -92,6 +120,11 @@ namespace Darklight
             {
                 health.FullHeal();Progress.RecordReturnPoint(Progress.chapter,Progress.checkpoint,Map.SafeSpawn(target.Point));
                 if(SaveCheckpoint()){PulseCheckpoint();Notice("CHECKPOINT SALVO - VIDA RESTAURADA");}return;
+            }
+            if(Progress.chapter>=2 && Progress.luciusStance==0)
+            {
+                Open("LuciusStance");
+                return;
             }
             if(Progress.chapter==1)
             {

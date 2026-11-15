@@ -33,10 +33,10 @@ SUPPORTS = {
 }
 
 
-def whole_owners(image):
+def whole_owners(image, *, rows=2, columns=6):
     """Use the existing complete-component ownership, including all soft alpha."""
     rgba = np.array(image)
-    figures, owner = identify(image, rows=2, columns=6, minimum_area=15000, alpha_threshold=128)
+    figures, owner = identify(image, rows=rows, columns=columns, minimum_area=15000, alpha_threshold=128)
     yy, xx = np.where((rgba[:, :, 3] > 0) & (owner == 0))
     best = np.full(xx.shape, np.inf)
     distance_only = np.full(xx.shape, np.inf)

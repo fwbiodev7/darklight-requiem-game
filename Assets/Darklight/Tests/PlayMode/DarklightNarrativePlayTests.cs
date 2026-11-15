@@ -55,6 +55,33 @@ namespace Darklight.Tests
             var saved=DarklightProgress.Decode(JsonUtility.ToJson(game.Progress));Assert.That(saved.missionWave,Is.EqualTo(1));Invoke(game,"LoadMap",7);Invoke(game,"BeginNarrativeEncounter");
             Assert.That(game.MapEnemies.Count(e=>e!=null&&!e.Health.IsDead),Is.EqualTo(4));yield return null;
         }
+        [UnityTest]public IEnumerator FinalPortalDuelRespectsBothRecordedStances()
+        {
+            var path=System.IO.Path.GetFullPath("work/lucius-finale/"+System.Guid.NewGuid().ToString("N")+".json");
+            using var storage=DarklightProgress.IsolateStorageForTests(path);
+            foreach(var stance in new[]{1,-1})
+            {
+                ResumeAt(9,4);
+                game.Progress.luciusStance=stance;
+                Move(game.Map.SafeSpawn(game.Map.Portal));
+                Assert.That(game.TryInteract(),Is.True);
+                Invoke(game,"NextDialogue");
+                Invoke(game,"NextDialogue");
+                var opponent=game.CurrentBoss;
+                Assert.That(opponent,Is.Not.Null);
+                Assert.That(opponent.IsLucius,Is.True);
+                opponent.GetComponent<DarklightCombatant>().Receive(opponent.Health.MaxHealth+1,Vector2.up);
+                Assert.That(opponent.Resolved,Is.EqualTo(stance>0));
+                Assert.That(opponent.Health.IsDead,Is.EqualTo(stance<0));
+                // A lethal hit is reported to the campaign by the enemy on its next update.
+                float deadline=Time.realtimeSinceStartup+2f;
+                while(game.Progress.luciusFate==0 && Time.realtimeSinceStartup<deadline)yield return null;
+                Assert.That(game.Progress.luciusFate,Is.EqualTo(stance));
+                Assert.That(DarklightProgress.Load().luciusFate,Is.EqualTo(stance));
+                yield return null;
+            }
+        }
+
         [UnityTest]public IEnumerator LucienPortalContinuesWhileLastPortalOpensFinalChoice()
         {
             ResumeAt(5,4);Move(game.Map.SafeSpawn(game.Map.Portal));Assert.That(game.TryInteract(),Is.True);Assert.That(game.PhaseLoading,Is.True);

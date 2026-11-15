@@ -66,6 +66,6 @@ namespace Darklight
             var fade=art.gameObject.AddComponent<DarklightMapOcclusion>();fade.width=art.bounds.size.x;fade.height=height;
         }
         static void Collider(Transform root,string name,Vector2 point,Vector2 size)
-        {var obj=new GameObject(name);obj.transform.SetParent(root,false);obj.transform.localPosition=point;obj.AddComponent<BoxCollider2D>().size=size;}
+        {var obj=new GameObject(name);obj.transform.SetParent(root,false);obj.transform.localPosition=point;var collider=obj.AddComponent<BoxCollider2D>();collider.size=size;collider.sharedMaterial=DarklightNavigation.Frictionless;}
     }
 }

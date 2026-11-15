@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Darklight
 {
-    // Scenery only. No asset edits, global grading, lights, audio, settings writes or actor scans.
+    // Scenery only. No asset edits, global grading, lights, audio or actor scans.
     [DefaultExecutionOrder(2100)]
     public sealed class DarklightAtmosphereController : MonoBehaviour
     {
@@ -14,33 +14,57 @@ namespace Darklight
         public string ActivePresetName => Presets[PresetIndex].Name;
         public int ActiveParticleCount { get; private set; }
         public int MaxParticles => 88;
-        public float Intensity { get => intensity; set { intensity = Mathf.Clamp01(value); Refresh(); } }
+        public const string IntensityPreferenceKey = "Darklight.AtmosphereIntensity";
+        public const float DefaultIntensity = .85f;
+        public float Intensity { get => intensity; set => SetIntensity(value, false); }
+        public int ActiveFogLayerCount { get; private set; }
+        public int ActiveRainPlaneCount { get; private set; }
+        public int ActiveBoundaryFogCount { get; private set; }
+        public static float SavedIntensity => SanitizeIntensity(PlayerPrefs.GetFloat(IntensityPreferenceKey, DefaultIntensity));
+        static float SanitizeIntensity(float value) => float.IsNaN(value) || float.IsInfinity(value) ? DefaultIntensity : Mathf.Clamp01(value);
+        // Preview is nonpersistent; settings explicitly opt in when accepting a value.
+        public void SetIntensity(float value, bool persist = true)
+        {
+            intensity = SanitizeIntensity(value);
+            if(persist) { PlayerPrefs.SetFloat(IntensityPreferenceKey, intensity); PlayerPrefs.Save(); }
+            Refresh();
+        }
 
         readonly struct Preset
         {
             public readonly string Name;
-            public readonly Color Fog, Ground;
+            public readonly Color Fog, Ground, Light;
             public readonly int Rain;
-            public readonly float Wind;
-            public Preset(string name, Color fog, Color ground, int rain, float wind)
-            { Name=name; Fog=fog; Ground=ground; Rain=rain; Wind=wind; }
+            public readonly float Wind, FogStrength, LightStrength, Wetness, FilterStrength;
+            public readonly bool Daylight;
+            public Preset(string name, Color fog, Color ground, int rain, float wind,
+                float fogStrength, Color light, float lightStrength, float wetness, float filterStrength, bool daylight=false)
+            { Name=name; Fog=fog; Ground=ground; Rain=rain; Wind=wind; FogStrength=fogStrength; Light=light;
+              LightStrength=lightStrength; Wetness=wetness; FilterStrength=filterStrength; Daylight=daylight; }
         }
+        // Visual treatments of the existing Places, not new events or a day/night gameplay clock.
         static readonly Preset[] Presets = {
-            new Preset("Rua das Cinzas / chuva fria", new Color(.30f,.43f,.47f), new Color(.76f,.85f,.91f), 48,.32f),
-            new Preset("Distrito do Vinil / nevoa urbana", new Color(.32f,.40f,.46f), new Color(.80f,.86f,.92f), 34,.38f),
-            new Preset("Catedral do Sangue / pedra umida", new Color(.32f,.42f,.41f), new Color(.80f,.87f,.87f), 8,.14f),
-            new Preset("Laboratorio Eclipse / bruma mineral", new Color(.30f,.42f,.46f), new Color(.83f,.90f,.94f), 0,.12f),
-            new Preset("Jardim dos Ecos / luar entre folhas", new Color(.32f,.47f,.45f), new Color(.78f,.88f,.89f), 28,.26f),
-            new Preset("Observatorio Vespera / vento lunar", new Color(.34f,.44f,.56f), new Color(.77f,.85f,.95f), 20,.48f),
-            new Preset("Cripta dos Primeiros / nevoa baixa", new Color(.31f,.43f,.44f), new Color(.78f,.87f,.90f), 0,.12f),
-            new Preset("Catedral do Crepusculo / pedra azul", new Color(.33f,.44f,.47f), new Color(.79f,.87f,.92f), 8,.18f),
-            new Preset("Veu Profundo / chuva velada", new Color(.30f,.43f,.46f), new Color(.77f,.86f,.91f), 56,.38f),
-            new Preset("Coracao do Eclipse / luar palido", new Color(.35f,.43f,.49f), new Color(.80f,.87f,.94f), 12,.28f)
+            new Preset("Rua das Cinzas / noite chuvosa", new Color(.45f,.57f,.60f), new Color(.76f,.85f,.91f),66,.32f,1f,new Color(.70f,.82f,.96f),.105f,1f,.48f),
+            new Preset("Distrito do Vinil / noite urbana",new Color(.47f,.52f,.57f),new Color(.83f,.87f,.92f),28,.28f,.7f,new Color(.74f,.82f,.94f),.07f,.7f,.35f),
+            new Preset("Catedral do Sangue / interior",new Color(.52f,.56f,.53f),new Color(.89f,.92f,.89f),0,.08f,.38f,new Color(.88f,.85f,.73f),0,.18f,.24f),
+            new Preset("Laboratorio Eclipse / luz artificial",new Color(.50f,.60f,.61f),new Color(.90f,.96f,.97f),0,.05f,.15f,new Color(.71f,.90f,.95f),0,0,.16f),
+            new Preset("Jardim dos Ecos / dia encoberto",new Color(.65f,.72f,.64f),new Color(.97f,.99f,.94f),0,.19f,.40f,new Color(1f,.96f,.79f),.075f,.12f,.12f,true),
+            new Preset("Observatorio Vespera / crepusculo",new Color(.56f,.56f,.65f),new Color(.88f,.87f,.97f),12,.42f,.6f,new Color(.89f,.81f,.95f),.065f,.4f,.26f),
+            new Preset("Cripta dos Primeiros / subterraneo",new Color(.44f,.54f,.51f),new Color(.84f,.90f,.88f),0,.05f,.55f,new Color(.58f,.72f,.71f),0,.22f,.30f),
+            new Preset("Catedral do Crepusculo / interior",new Color(.59f,.54f,.51f),new Color(.95f,.89f,.85f),0,.06f,.32f,new Color(.97f,.83f,.66f),0,.08f,.20f),
+            new Preset("Veu Profundo / frio sobrenatural",new Color(.42f,.55f,.62f),new Color(.77f,.86f,.94f),48,.34f,.95f,new Color(.66f,.80f,1f),.08f,.8f,.42f),
+            new Preset("Coracao do Eclipse / interior ritual",new Color(.57f,.48f,.55f),new Color(.91f,.85f,.92f),0,.05f,.30f,new Color(.84f,.71f,.84f),0,0,.24f)
         };
-        struct Mote { public SpriteRenderer View; public Vector2 Position; public bool Rain; public float Speed; }
+        struct Mote { public SpriteRenderer View; public Vector2 Position; public bool Rain; public float Speed, Depth; }
         readonly Dictionary<SpriteRenderer,Color> originals = new Dictionary<SpriteRenderer,Color>();
         readonly SpriteRenderer[] fog = new SpriteRenderer[3];
+        readonly SpriteRenderer[] boundaryFog = new SpriteRenderer[12];
         readonly SpriteRenderer[] moon = new SpriteRenderer[3];
+        readonly SpriteRenderer[] lampReflections = new SpriteRenderer[4];
+        readonly Vector2[] reflectionPoints = new Vector2[4];
+        int reflectionCount;
+        static readonly int Wetness = Shader.PropertyToID("_Wetness");
+        static readonly int SurfaceClock = Shader.PropertyToID("_SurfaceClock");
         readonly Sprite[] fogArt = new Sprite[3], moonArt = new Sprite[3];
         readonly List<Sprite> atlasSlices = new List<Sprite>();
         readonly Dictionary<SpriteRenderer,SpriteRenderer> filters = new Dictionary<SpriteRenderer,SpriteRenderer>();
@@ -48,13 +72,15 @@ namespace Darklight
         DarklightCampaign game;
         Transform mapRoot, effectsRoot;
         Camera view;
-        Material material, filterMaterial;
+        Material material, filterMaterial, reflectionMaterial;
         Texture2D texture;
         Sprite soft, drop;
         bool built, visible;
         int quality=-1;
         bool reduced;
         float intensity=.85f, clock;
+        Rect boundaryBounds;
+        bool hasBoundary;
         [System.Serializable] sealed class Atlas { public string origin; public Frame[] frames; }
         [System.Serializable] sealed class Frame { public string name; public int x,y,width,height; }
 
@@ -64,20 +90,42 @@ namespace Darklight
             controller.Initialize(owner,root,camera,region);
             return controller;
         }
-        void Awake() { Current=this; EffectsEnabled=PlayerPrefs.GetInt("Darklight.Atmosphere",1)==1; }
+        void Awake() { Current=this; EffectsEnabled=PlayerPrefs.GetInt("Darklight.Atmosphere",1)==1; intensity=SavedIntensity; }
         public void Initialize(DarklightCampaign owner, Transform root, Camera camera, int region)
         {
             RestoreGround();
             game=owner; mapRoot=root; view=camera;
+            var boundaryMap=root!=null&&root.name=="ArenaDeTreinamento"
+                ? DarklightMapDefinition.TrainingArena() : owner?.Map;
+            hasBoundary=boundaryMap!=null;
+            if(hasBoundary)
+            {
+                boundaryBounds=boundaryMap.Bounds;
+                if(root!=null)boundaryBounds.position+=(Vector2)root.position;
+            }
             if(!built) Build();
             // Capture only explicit ground renderers, never NPCs, props, actors or UI.
             if(mapRoot!=null)
             {
                 var painted=mapRoot.Find("MapaIlustrado");
                 if(painted!=null) Capture(painted.GetComponent<SpriteRenderer>());
+                foreach(Transform child in mapRoot)
+                    if(child.name.StartsWith("TrechoDetalhado_"))Capture(child.GetComponent<SpriteRenderer>());
                 var floors=mapRoot.Find("Pisos_64px");
                 if(floors!=null) foreach(var renderer in floors.GetComponentsInChildren<SpriteRenderer>(true)) Capture(renderer);
             }
+            reflectionCount=0;
+            if(mapRoot!=null && mapRoot.name=="ArenaDeTreinamento")
+            {
+                // Reuse actual arena braziers; never invent lamps at campaign coordinates.
+                foreach(Transform child in mapRoot)
+                    if(child.name=="BrasasDaArena" && reflectionCount<reflectionPoints.Length)
+                        reflectionPoints[reflectionCount++]=child.position;
+            }
+            else if(game?.Map?.Checkpoints!=null)
+                foreach(var checkpoint in game.Map.Checkpoints)
+                    if(reflectionCount<reflectionPoints.Length)
+                        reflectionPoints[reflectionCount++]=DarklightRemaster.LampPosition(checkpoint);
             ApplyRegion(region);
         }
         void Capture(SpriteRenderer renderer)
@@ -87,10 +135,17 @@ namespace Darklight
             if(!built || renderer.sprite==null) return;
             var filter=Create("DarkFantasyFilter_"+renderer.name,renderer.sprite,renderer.sortingOrder+1);
             filter.sharedMaterial=filterMaterial;
+            var textureBinding=new MaterialPropertyBlock();
+            textureBinding.SetTexture("_MainTex",renderer.sprite.texture);filter.SetPropertyBlock(textureBinding);
             filter.sortingLayerID=renderer.sortingLayerID;
             filter.flipX=renderer.flipX; filter.flipY=renderer.flipY;
+            filter.drawMode=renderer.drawMode; filter.size=renderer.size;
+            filter.tileMode=renderer.tileMode;
+            filter.spriteSortPoint=renderer.spriteSortPoint;
             filter.transform.SetPositionAndRotation(renderer.transform.position,renderer.transform.rotation);
-            filter.transform.localScale=renderer.transform.lossyScale;
+            var sourceScale=renderer.transform.lossyScale;
+            var parentScale=effectsRoot.lossyScale;
+            filter.transform.localScale=new Vector3(sourceScale.x/parentScale.x,sourceScale.y/parentScale.y,sourceScale.z/parentScale.z);
             filters[renderer]=filter;
         }
         public void ApplyRegion(int region)
@@ -108,7 +163,7 @@ namespace Darklight
         static float Fraction(int seed) => (seed%101)/101f;
         public void SetEffectsEnabled(bool enabled) { EffectsEnabled=enabled; Refresh(); }
         public void SetAllRegionsEnabled(bool enabled) { AllRegionsEnabled=enabled; Refresh(); }
-        bool Allowed => EffectsEnabled && isActiveAndEnabled && (PresetIndex==0 || AllRegionsEnabled) && intensity>0 && built && mapRoot!=null && view!=null;
+        bool Allowed => EffectsEnabled && isActiveAndEnabled && (PresetIndex==0 || AllRegionsEnabled) && intensity>0 && DarklightRemaster.QualityLevel>0 && built && mapRoot!=null && view!=null;
 
         void Build()
         {
@@ -118,6 +173,8 @@ namespace Darklight
             material=new Material(shader) { name="RuntimeAtmosphereOnly" };
             filterMaterial=new Material(shader) { name="DarkFantasyFilter_MapGroundOnly" };
             filterMaterial.SetFloat("_GroundFilter",1);
+            reflectionMaterial=new Material(shader) { name="GothicEclipseLampReflection" };
+            reflectionMaterial.SetFloat("_LampReflection",1);
             texture=new Texture2D(64,64,TextureFormat.RGBA32,false) { name="RuntimePixelAtmosphere", filterMode=FilterMode.Point, wrapMode=TextureWrapMode.Clamp };
             var colors=new Color[64*64];
             for(int y=0;y<64;y++) for(int x=0;x<64;x++)
@@ -133,7 +190,14 @@ namespace Darklight
             effectsRoot.SetParent(transform,false);
             LoadAtlas();
             for(int i=0;i<fog.Length;i++) fog[i]=Create("NevoaBaixa"+i,soft,-195+i);
+            for(int i=0;i<boundaryFog.Length;i++) boundaryFog[i]=Create("NevoaSombriaDaBorda"+i,soft,-180);
             for(int i=0;i<moon.Length;i++) moon[i]=Create("LuarFrioIndependente"+i,moonArt[i]!=null?moonArt[i]:soft,-192+i);
+            for(int i=0;i<lampReflections.Length;i++)
+            {
+                var reflection=Create("ReflexoLamparina"+i,soft,-196);
+                reflection.sharedMaterial=reflectionMaterial;
+                lampReflections[i]=reflection;
+            }
             for(int i=0;i<particles.Length;i++) particles[i].View=Create("ChuvaOuVento"+i,soft,-190);
             built=true;
         }
@@ -188,43 +252,67 @@ namespace Darklight
             if(filterMaterial!=null)
             {
                 filterMaterial.SetColor("_FilterColor",preset.Ground);
-                filterMaterial.SetFloat("_Strength",.28f*intensity);
+                filterMaterial.SetFloat("_Strength",preset.FilterStrength*intensity);
+                filterMaterial.SetFloat(Wetness,quality>0 ? preset.Wetness : 0);
+            }
+            for(int i=0;i<lampReflections.Length;i++)
+            {
+                var reflection=lampReflections[i];
+                if(reflection==null) continue;
+                reflection.enabled=visible && quality>0 && preset.Rain>0 && i<reflectionCount;
+                if(!reflection.enabled) continue;
+                reflection.transform.position=reflectionPoints[i]+Vector2.down*.72f;
+                Fit(reflection,1.05f,1.85f);
+                reflection.color=new Color(1f,.55f,.19f,.32f*intensity*Mathf.Clamp01(preset.Rain/28f));
             }
             foreach(var item in filters) if(item.Value!=null)
             {
                 item.Value.enabled=visible && item.Key!=null && item.Key.enabled;
                 if(item.Key!=null) item.Value.color=originals[item.Key];
             }
-            int rain=quality==0 ? preset.Rain/4 : quality==1 ? preset.Rain/2 : preset.Rain;
+            int rain=quality==0 ? 0 : quality==1 ? preset.Rain/2 : preset.Rain;
             int motes=quality==0 ? 4 : quality==1 ? 8 : 14;
             ActiveParticleCount=visible ? Mathf.Min(MaxParticles,Mathf.RoundToInt((rain+motes)*intensity)) : 0;
+            ActiveRainPlaneCount=visible && rain>0 ? (quality==1?2:3) : 0;
             for(int i=0;i<particles.Length;i++)
             {
                 var p=particles[i];
-                p.Rain=i<Mathf.RoundToInt(rain*intensity); p.Speed=.85f+Fraction(i*11+5)*.65f;
+                p.Depth=quality==1 ? (i%2==0?.42f:.78f) : (.36f+(i%3)*.32f);
+                p.Rain=i<Mathf.RoundToInt(rain*intensity); p.Speed=(.72f+Fraction(i*11+5)*.38f)*(.7f+p.Depth*.65f);
                 if(p.View!=null)
                 {
                     p.View.enabled=i<ActiveParticleCount;
                     p.View.sprite=p.Rain?drop:soft;
-                    p.View.color=p.Rain ? new Color(.66f,.79f,.83f,.13f*intensity) : new Color(.60f,.74f,.73f,.09f*intensity);
-                    p.View.transform.localScale=p.Rain ? new Vector3(.13f,.22f,1) : new Vector3(.035f,.035f,1);
-                    p.View.transform.localRotation=Quaternion.Euler(0,0,p.Rain?-16:0);
+                    p.View.color=p.Rain ? new Color(.67f,.81f,.94f,(.16f+.14f*p.Depth)*intensity) : new Color(.60f,.74f,.73f,.09f*intensity);
+                    p.View.transform.localScale=p.Rain ? new Vector3(.07f+.035f*p.Depth,.22f+.26f*p.Depth,1) : new Vector3(.035f,.035f,1);
+                    p.View.transform.localRotation=Quaternion.Euler(0,0,p.Rain?16:0);
+                    p.View.sortingOrder=-190+(i%3);
                 }
                 particles[i]=p;
             }
+            ActiveFogLayerCount=visible ? (quality==1?2:3) : 0;
             for(int i=0;i<fog.Length;i++) if(fog[i]!=null)
             {
-                // One low veil per map; atlas variants are alternatives, never stacked.
-                fog[i].enabled=visible && i==PresetIndex%fog.Length;
-                fog[i].sprite=fogArt[i]!=null ? fogArt[i] : soft;
-                var color=fogArt[i]!=null ? new Color(.66f,.79f,.81f) : preset.Fog;
-                color.a=.045f*intensity; fog[i].color=color;
+                // Three sparse low veils occupy different depth bands, always below actors.
+                fog[i].enabled=visible && i<ActiveFogLayerCount;
+                // The supplied fog atlas has bright filaments; a sparse soft veil avoids
+                // horizontal silver ribbons and preserves pavement texture.
+                fog[i].sprite=soft;
+                var color=preset.Fog;
+                color.a=(i==0?.065f:i==1?.042f:.026f)*preset.FogStrength*intensity; fog[i].color=color;
+            }
+            ActiveBoundaryFogCount=visible&&hasBoundary ? boundaryFog.Length : 0;
+            foreach(var edge in boundaryFog) if(edge!=null)
+            {
+                edge.enabled=visible&&hasBoundary;
+                edge.color=new Color(.085f,.055f,.13f,.78f*intensity);
             }
             for(int i=0;i<moon.Length;i++) if(moon[i]!=null)
             {
-                moon[i].enabled=visible && quality>0 && i==(PresetIndex+1)%moon.Length;
-                bool enclosed=PresetIndex==2 || PresetIndex==3 || PresetIndex==6 || PresetIndex==7 || PresetIndex==9;
-                moon[i].color=new Color(.67f,.83f,.98f,(enclosed?.015f:.04f)*intensity);
+                moon[i].enabled=visible && preset.LightStrength>0 && i<(quality==1?1:2);
+                moon[i].sprite=preset.Daylight ? soft : (moonArt[i]!=null?moonArt[i]:soft);
+                var light=preset.Light; light.a=preset.LightStrength*(i==0?1f:.5f)*intensity;
+                moon[i].color=light;
             }
         }
         void LateUpdate()
@@ -233,23 +321,37 @@ namespace Darklight
             if(active!=visible || quality!=DarklightRemaster.QualityLevel || reduced!=(game!=null && game.ReducedFlashes)) Refresh();
             if(!visible) return;
             float dt=DarklightCombatLab.Instance!=null ? DarklightCombatLab.Instance.CombatDelta : Time.deltaTime;
+            AdvanceAtmosphere(dt);
+        }
+        // One bounded simulation step shared by runtime and deterministic motion checks.
+        void AdvanceAtmosphere(float dt)
+        {
+            if(!visible) return;
             dt=Mathf.Clamp(dt,0,.05f);
             clock+=dt;
+            if(quality>0 && dt>0 && !reduced)
+            {
+                filterMaterial.SetFloat(SurfaceClock,clock);
+                reflectionMaterial.SetFloat(SurfaceClock,clock);
+            }
             float height=view.orthographicSize*2, width=height*view.aspect;
             Vector3 center=view.transform.position; center.z=0;
             var preset=Presets[PresetIndex];
+            UpdateBoundaryFog();
             for(int i=0;i<fog.Length;i++)
             {
+                if(!fog[i].enabled) continue;
                 // Fog stays behind every actor and prop. Slow drift has no flashes or opacity pulse.
                 float drift=reduced ? 0 : Mathf.Sin(clock*.045f+i*2)*.15f;
-                fog[i].transform.position=center+new Vector3(width*drift*.2f,-height*.36f,0);
-                Fit(fog[i],width*1.45f,height*.42f);
+                fog[i].transform.position=center+new Vector3(width*(drift*.2f+(i-1)*.18f),height*(-.39f+i*.20f),0);
+                Fit(fog[i],width*(.85f-i*.13f),height*(.28f+i*.045f));
             }
             for(int i=0;i<moon.Length;i++)
             {
-                moon[i].transform.position=center+new Vector3(-width*.32f,height*.28f,0);
-                moon[i].transform.rotation=Quaternion.Euler(0,0,moonArt[i]!=null?0:-24);
-                Fit(moon[i],width*(moonArt[i]!=null?.72f:.16f),height*1.15f);
+                if(!moon[i].enabled) continue;
+                moon[i].transform.position=center+new Vector3(width*(i==0?-.31f:.24f),height*(i==0?.25f:.36f),0);
+                moon[i].transform.rotation=Quaternion.Euler(0,0,preset.Daylight?-22:moonArt[i]!=null?0:-24);
+                Fit(moon[i],width*(preset.Daylight?.48f:moonArt[i]!=null?(i==0?.53f:.32f):.16f),height*(preset.Daylight?.9f:1.15f));
             }
             for(int i=0;i<ActiveParticleCount;i++)
             {
@@ -261,6 +363,28 @@ namespace Darklight
                 if(p.Position.x > 1.1f) p.Position.x-=2.2f;
                 p.View.transform.position=center+new Vector3(p.Position.x*width*.5f,p.Position.y*height*.5f,0);
                 particles[i]=p;
+            }
+        }
+        void UpdateBoundaryFog()
+        {
+            if(!hasBoundary||ActiveBoundaryFogCount==0)return;
+            // World-space perimeter, not a camera vignette. The dense portion
+            // stays outside the map; only its soft inner fringe meets the floor.
+            float depth=Mathf.Clamp(Mathf.Min(boundaryBounds.width,boundaryBounds.height)*.10f,2.5f,5f);
+            for(int i=0;i<boundaryFog.Length;i++)
+            {
+                var edge=boundaryFog[i];if(edge==null||!edge.enabled)continue;
+                int side=i/3,segment=i%3;
+                bool vertical=side<2;
+                float drift=reduced?0:Mathf.Sin(clock*.035f+i*1.7f)*.022f;
+                float t=(segment+.5f)/3f+drift;
+                Vector2 point=vertical
+                    ? new Vector2(side==0?boundaryBounds.xMin:boundaryBounds.xMax,Mathf.LerpUnclamped(boundaryBounds.yMin,boundaryBounds.yMax,t))
+                    : new Vector2(Mathf.LerpUnclamped(boundaryBounds.xMin,boundaryBounds.xMax,t),side==2?boundaryBounds.yMin:boundaryBounds.yMax);
+                Vector2 outward=side==0?Vector2.left:side==1?Vector2.right:side==2?Vector2.down:Vector2.up;
+                edge.transform.position=point+outward*depth*.5f;
+                float length=(vertical?boundaryBounds.height:boundaryBounds.width)/3f*2.25f;
+                Fit(edge,vertical?depth*1.6f:length,vertical?length:depth*1.6f);
             }
         }
         void RestoreGround()
@@ -285,6 +409,7 @@ namespace Darklight
             if(soft!=null) Destroy(soft); if(drop!=null) Destroy(drop);
             if(texture!=null) Destroy(texture); if(material!=null) Destroy(material);
             if(filterMaterial!=null) Destroy(filterMaterial);
+            if(reflectionMaterial!=null) Destroy(reflectionMaterial);
             foreach(var sprite in atlasSlices) if(sprite!=null) Destroy(sprite);
         }
     }

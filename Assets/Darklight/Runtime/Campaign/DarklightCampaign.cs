@@ -30,7 +30,7 @@ namespace Darklight
         public bool WearingHeadphones => phonesTime>0;
         public bool Active => panel==""&&!deathMenuPending&&!screenTransitionBusy;
         public string Objective {get;private set;}="";
-        public DarklightEnemy CurrentBoss => enemies.Find(e=>e!=null&&!e.Health.IsDead&&!e.Resolved&&e.Boss);
+        public DarklightEnemy CurrentBoss => enemies.Find(e=>e!=null&&!e.Health.IsDead&&!e.Resolved&&(e.Boss||e.IsLucius));
         readonly List<DarklightEnemy> enemies=new();
         DarklightCombatLab lab; HealthSystem health; Transform levelRoot; SpriteRenderer aura;
         AudioSource music,sfx,ambient; SpriteRenderer headphones; AudioClip[] tones;
@@ -203,6 +203,7 @@ namespace Darklight
             var hp=obj.AddComponent<HealthSystem>();hp.SetMaxHealth(260+Progress.chapter*65,false);obj.AddComponent<DarklightCombatant>();
             var view=obj.AddComponent<DarklightLuciusView>();view.appearance=DarklightLuciusAppearance.Normal;
             var foe=obj.AddComponent<DarklightEnemy>();foe.InitializeLucius(loadout,view);enemies.Add(foe);AddEnemyBar(foe);
+            if(lab?.WorldCamera!=null)lab.WorldCamera.GetComponent<DarklightLabCamera>().duelOpponent=foe.transform;
             return foe;
         }
         void ClearEncounter()
@@ -219,8 +220,24 @@ namespace Darklight
         void Interact(){if(!TryInteract())Notice("APROXIME-SE DE UM NPC, MEMÓRIA OU CHECKPOINT");}
         public bool RequestAttack(DarklightEnemy enemy)
         {return TechnicalAttackPermit(enemy);}
+        internal void FinishLuciusDuel(DarklightEnemy enemy)
+        {
+            if(lab?.WorldCamera!=null)lab.WorldCamera.GetComponent<DarklightLabCamera>().duelOpponent=null;
+            if(Training || enemy!=finalDuelOpponent || Progress.luciusFate!=0)return;
+            Progress.luciusFate=enemy.Resolved ? 1 : -1;
+            SaveCheckpoint();
+            Speak(Progress.luciusFate>0 ?
+                new[]{"FABIUS|Larga a espada. Ainda tem um lugar ao meu lado.","LUCIUS|Ao seu lado, sim. Sob suas ordens, nunca."} :
+                new[]{"LUCIUS|Vai guardar minha espada tambem?","FABIUS|Vou lembrar de quem me ensinou a segura-la."},
+                ()=>Open("Ending"));
+        }
         public void EnemyDefeated(DarklightEnemy enemy)
         {
+            if(enemy.IsLucius)
+            {
+                FinishLuciusDuel(enemy);
+                return;
+            }
             if(RewardVisitor(enemy))return;
             if(Training)return;StageStats.Kill();int previous=Progress.level;Progress.Award(enemy.Boss?150:18+Progress.chapter*4);kills++;
             Energy=Mathf.Min(100,Energy+(enemy.Boss?30:8));Resonance.Gain(enemy.Boss?20:5);if(Progress.chapter==1&&Progress.mp3Quest>0&&Progress.mp3Quest<4)Progress.mp3Quest++;
@@ -295,6 +312,7 @@ namespace Darklight
             if(aura==null)return;
             if(headphones==null){headphones=new GameObject("Fones").AddComponent<SpriteRenderer>();headphones.transform.SetParent(lab.Player.transform,false);headphones.sprite=extras[8];headphones.sharedMaterial=pixelMaterial;headphones.transform.localScale=Vector3.one*(.37f*DarklightCharacterView.WorldVisualScale)/headphones.sprite.bounds.size.y;}
             headphones.enabled=phonesTime>0||resonance>=0;headphones.sortingOrder=lab.Player.GetComponentInChildren<SpriteRenderer>().sortingOrder+1;headphones.transform.localPosition=Vector3.up*DarklightCharacterView.WorldVisualScale*Mathf.Lerp(.75f,1.65f,1-Mathf.Clamp01(phonesTime/.28f));aura.enabled=resonance>=0||phonesTime>0;
+            if(OfficialTransformationPresentation){aura.enabled=false;headphones.enabled=false;}
             float bpm=beatsPerMinute[selectedTrack];
             float beat=music.isPlaying?Mathf.Sin((music.time-beatOffsets[selectedTrack])*bpm/60*Mathf.PI*2):Mathf.Sin(lab.Player.Model.Clock*5);
             if(music.isPlaying && !DarklightAutomation.Silent)

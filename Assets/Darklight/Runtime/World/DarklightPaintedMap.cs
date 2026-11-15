@@ -7,12 +7,12 @@ namespace Darklight
     public sealed class DarklightPaintedMap : MonoBehaviour
     {
         readonly List<Sprite> temporary=new();
-        public static void Build(Transform root,DarklightMapDefinition map,Sprite image,Material material)
+        public static void Build(Transform root,DarklightMapDefinition map,Sprite image,Material material,bool chapterScenery=true)
         {
             var owner=root.gameObject.AddComponent<DarklightPaintedMap>();
             var ground=new GameObject("MapaIlustrado").AddComponent<SpriteRenderer>();ground.transform.SetParent(root,false);
             ground.sprite=image;ground.transform.localScale=Vector3.one*(image.pixelsPerUnit/map.Art.pixelsPerUnit);ground.sharedMaterial=material;ground.sortingOrder=-200;
-            var details=DarklightMapDetails.Create(root,map,image,material);
+            var details=chapterScenery?DarklightMapDetails.Create(root,map,image,material):null;
             foreach(var region in map.Art.foreground)
             {
                 var foot=map.Art.World(region.foot);var obj=new GameObject(region.name);obj.transform.SetParent(root,false);obj.transform.localPosition=foot;
@@ -33,11 +33,21 @@ namespace Darklight
                     var sprite=Sprite.Create(image.texture,crop,pivot,map.Art.pixelsPerUnit,0,SpriteMeshType.FullRect);owner.temporary.Add(sprite);var renderer=obj.AddComponent<SpriteRenderer>();renderer.sprite=sprite;renderer.sharedMaterial=material;renderer.sortingOrder=DarklightSorting.OrderForY(foot.y);var fade=obj.AddComponent<DarklightMapOcclusion>();fade.width=renderer.bounds.size.x;fade.height=renderer.bounds.size.y;
                 }
             }
-            DarklightBridgeVisibility.Attach(root,map);
+            if(chapterScenery)DarklightBridgeVisibility.Attach(root,map);
             BuildGeometry(root,map);
         }
         internal static void BuildGeometry(Transform root,DarklightMapDefinition map)
         {
+            var geometry=new GameObject("ColisaoUnificadaDoMapa").transform;
+            geometry.SetParent(root,false);
+            var rigidbody=geometry.gameObject.AddComponent<Rigidbody2D>();
+            rigidbody.bodyType=RigidbodyType2D.Static;
+            var composite=geometry.gameObject.AddComponent<CompositeCollider2D>();
+            composite.geometryType=CompositeCollider2D.GeometryType.Polygons;
+            composite.generationType=CompositeCollider2D.GenerationType.Manual;
+            composite.vertexDistance=.005f;
+            composite.edgeRadius=.012f;
+            composite.sharedMaterial=WallMaterial;
             // Merge closed navigation cells into runs, then merge identical runs vertically.
             // This keeps collision aligned to the image while avoiding one object per blocked cell.
             var active=new Dictionary<(int x,int width),RectInt>();var grid=map.GridBounds;
@@ -52,25 +62,27 @@ namespace Darklight
                 }
                 var completed=new List<(int x,int width)>();
                 foreach(var key in active.Keys)if(!runs.Contains(key))completed.Add(key);
-                foreach(var key in completed){Collider(root,active[key],map.CellSize);active.Remove(key);}
+                foreach(var key in completed){Collider(geometry,active[key],map.CellSize);active.Remove(key);}
                 foreach(var key in runs)
                 {
                     if(active.TryGetValue(key,out var rect)){rect.height++;active[key]=rect;}
                     else active[key]=new RectInt(key.x,y,key.width,1);
                 }
             }
-            foreach(var rect in active.Values)Collider(root,rect,map.CellSize);
+            foreach(var rect in active.Values)Collider(geometry,rect,map.CellSize);
             float s=map.CellSize;var b=map.Bounds;
-            Wall(root,new Vector2(b.xMin-s,b.center.y),new Vector2(s*2,b.height+s*4));
-            Wall(root,new Vector2(b.xMax+s,b.center.y),new Vector2(s*2,b.height+s*4));
-            Wall(root,new Vector2(b.center.x,b.yMin-s),new Vector2(b.width,s*2));
-            Wall(root,new Vector2(b.center.x,b.yMax+s),new Vector2(b.width,s*2));
+            Wall(geometry,new Vector2(b.xMin-s,b.center.y),new Vector2(s*2,b.height+s*4));
+            Wall(geometry,new Vector2(b.xMax+s,b.center.y),new Vector2(s*2,b.height+s*4));
+            Wall(geometry,new Vector2(b.center.x,b.yMin-s),new Vector2(b.width,s*2));
+            Wall(geometry,new Vector2(b.center.x,b.yMax+s),new Vector2(b.width,s*2));
+            Physics2D.SyncTransforms();
+            composite.GenerateGeometry();
             var nav=root.gameObject.AddComponent<DarklightNavigation>();nav.Initialize(map);
         }
         static void Collider(Transform root,RectInt rect,float size)=>Wall(root,(new Vector2(rect.x,rect.y)+new Vector2(rect.width,rect.height)*.5f)*size,new Vector2(rect.width,rect.height)*size);
         static PhysicsMaterial2D WallMaterial => DarklightNavigation.Frictionless;
         static void Wall(Transform root,Vector2 point,Vector2 size)
-        {var obj=new GameObject("LimiteDoCenario");obj.transform.SetParent(root,false);obj.transform.localPosition=point;var box=obj.AddComponent<BoxCollider2D>();box.size=size;box.sharedMaterial=WallMaterial;}
+        {var obj=new GameObject("LimiteDoCenario");obj.transform.SetParent(root,false);obj.transform.localPosition=point;var box=obj.AddComponent<BoxCollider2D>();box.size=size;box.sharedMaterial=WallMaterial;box.compositeOperation=Collider2D.CompositeOperation.Merge;}
         void OnDestroy(){foreach(var sprite in temporary)if(sprite!=null){if(Application.isPlaying)Destroy(sprite);else DestroyImmediate(sprite);}}
     }
 }

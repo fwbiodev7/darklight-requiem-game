@@ -8,7 +8,7 @@ namespace Darklight
         public int Phase {get;private set;}=1;
         float phaseTransition;bool purificationReady;
         public bool PurificationReady=>kind==RequiemEnemyKind.KaelFractured&&purificationReady&&!Resolved;
-        public bool AcceptDamage=>!Resolved&&!purificationReady&&phaseTransition<=0;
+        public bool AcceptDamage=>!Resolved&&!purificationReady&&phaseTransition<=0&&luciusTransformationTime<=0;
         public void RestorePhase(int phase)
         {
             if(!ExpandedBoss)return;
@@ -18,6 +18,18 @@ namespace Darklight
         }
         public float ProtectPurification(float damage)
         {
+            var campaign=DarklightCampaign.Instance;
+            if(IsLucius && campaign!=null && campaign.Progress!=null && campaign.Progress.luciusStance>0 &&
+                Health.CurrentHealth-damage<=1f)
+            {
+                Resolved=true;
+                body.linearVelocity=Vector2.zero;
+                warning?.Hide();
+                GetComponent<Collider2D>().enabled=false;
+                LuciusView?.PresentPose("Hurt",DarklightCharacterView.DirectionIndex(facing),0);
+                campaign.FinishLuciusDuel(this);
+                return Mathf.Max(0,Health.CurrentHealth-1f);
+            }
             if(kind!=RequiemEnemyKind.KaelFractured)return damage;
             float floor=Health.MaxHealth*.08f;
             if(Health.CurrentHealth-damage>floor)return damage;

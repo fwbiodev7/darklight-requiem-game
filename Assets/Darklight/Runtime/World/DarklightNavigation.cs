@@ -99,6 +99,24 @@ namespace Darklight
         public static void SafeStep(Rigidbody2D body,Vector2 delta,float radius=.3f)
         {
             if(body==null||delta.sqrMagnitude<.00000001f)return;
+            ResolvePenetration(body);
+            // Dash/pull use the same actual capsule and offset as ordinary movement.
+            // A circle around the actor root could overlap a wall while its feet
+            // collider was clear, making every escape direction stop immediately.
+            var shape=body.GetComponent<Collider2D>();
+            if(shape!=null&&shape.enabled)
+            {
+                float distance=BodyTravel(body,delta,out var wallNormal);
+                var first=delta.normalized*distance;
+                body.position+=first;
+                var remainder=delta-first;
+                if(wallNormal!=Vector2.zero)
+                    remainder-=wallNormal*Mathf.Min(0,Vector2.Dot(remainder,wallNormal));
+                else remainder=Vector2.zero;
+                if(remainder.sqrMagnitude>.00000001f)
+                    body.position+=remainder.normalized*BodyTravel(body,remainder,out _);
+                return;
+            }
             var origin=body.position;float travel=CircleTravel(body,origin,radius,delta,out var normal);
             var advanced=delta.normalized*travel;
             var residual=delta-advanced;
@@ -113,17 +131,23 @@ namespace Darklight
             if(body==null)return;
             var col=body.GetComponent<Collider2D>();
             if(col==null)return;
-            int count=col.Overlap(new ContactFilter2D{useTriggers=false,useLayerMask=false},overlaps);
-            for(int i=0;i<count;i++)
+            // Requery after each correction; contacts from before a corner
+            // correction are stale and can push the capsule into the next wall.
+            for(int pass=0;pass<4;pass++)
             {
-                var other=overlaps[i];
-                if(other==null||other.isTrigger||other.attachedRigidbody==body||other.GetComponentInParent<DarklightCombatant>()!=null)continue;
-                var dist=col.Distance(other);
-                if(dist.isOverlapped&&dist.distance<0)
+                int count=col.Overlap(new ContactFilter2D{useTriggers=false,useLayerMask=false},overlaps);
+                var deepest=default(ColliderDistance2D);
+                for(int i=0;i<count;i++)
                 {
-                    Vector2 push=dist.normal*(-dist.distance+0.003f);
-                    body.position+=push;
+                    var other=overlaps[i];
+                    if(other==null||other.isTrigger||other.attachedRigidbody==body||other.GetComponentInParent<DarklightCombatant>()!=null)continue;
+                    var dist=col.Distance(other);
+                    if(dist.isValid&&dist.isOverlapped&&dist.distance<deepest.distance)deepest=dist;
                 }
+                if(!deepest.isValid||!deepest.isOverlapped)break;
+                // Signed negative distance separates this collider. Negating it
+                // pushed an overlapping actor farther into solid scenery.
+                body.position+=deepest.normal*(deepest.distance-.003f);
             }
         }
         static float BodyTravel(Rigidbody2D body,Vector2 delta,out Vector2 normal)
@@ -139,14 +163,15 @@ namespace Darklight
                     var other=overlaps[i];
                     if(other==null||other.isTrigger||other.attachedRigidbody==body||other.GetComponentInParent<DarklightCombatant>()!=null)continue;
                     var dist=col.Distance(other);
-                    if(dist.isOverlapped&&Vector2.Dot(direction,dist.normal)<-.0001f)
+                    if(dist.isValid&&dist.isOverlapped&&Vector2.Dot(direction,dist.normal)>.0001f)
                     {
-                        normal=dist.normal;
+                        normal=-dist.normal;
                         return 0;
                     }
                 }
             }
             int count=body.Cast(direction,new ContactFilter2D {useTriggers=false,useLayerMask=false},movementHits,length+CastSkin);
+            if(count>=movementHits.Length){normal=-direction;return 0;}
             for(int i=0;i<count;i++)
             {
                 var hit=movementHits[i];

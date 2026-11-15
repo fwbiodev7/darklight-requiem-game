@@ -24,6 +24,8 @@ namespace Darklight
             var game = DarklightCampaign.Instance;
             var input = !lab.Paused && game?.MenuDismissedThisFrame!=true ? lab.Input.Read(body.position, lab.WorldCamera, lab.Viewport) : default;
             if(game?.AbyssRider?.Active==true&&!lab.Paused&&game.MenuDismissedThisFrame!=true)input=lab.Input.ReadAbyss(input,game.AbyssRider);
+            if (lab.Input.GameplayCommandThisFrame || input.move.sqrMagnitude > .01f || input.lightHeld || input.heavyHeld || lab.Paused || game?.MenuDismissedThisFrame == true)
+                view.InterruptIdle();
             bool mapPointer=game?.Atlas?.CapturesPointer==true;
             if(mapPointer){input.lightPressed=input.lightHeld=input.lightReleased=input.heavyPressed=input.heavyHeld=input.weaponSpecialPressed=false;}
             if(game?.InteractionClickConsumed==true){input.lightPressed=false;if(game.AbyssRider?.Active==true)input.weaponSpecialPressed=false;}

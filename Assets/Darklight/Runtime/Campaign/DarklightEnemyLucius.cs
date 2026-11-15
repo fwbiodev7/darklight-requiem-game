@@ -9,6 +9,8 @@ namespace Darklight
         public DarklightLuciusView LuciusView { get; private set; }
         public AttackDefinition CurrentLuciusAttack => CombatModel?.Attack;
         public CombatLoadout LuciusLoadout => CombatModel?.Loadout;
+        public bool LuciusFinalExchange { get; private set; }
+        float luciusTransformationTime;
         int luciusAttackStep;
         float luciusEngageRange = 1.85f;
         float luciusDodgeCooldown;
@@ -53,17 +55,20 @@ namespace Darklight
                 loadout = DarklightLuciusCombatProfile.Create(new[] { a1, a2, a3 }, _ => { });
             }
             CombatModel = new CombatModel(loadout);
+            timer = .85f;
             if (art != null) art.enabled = false;
         }
 
         public bool TickLucius(DarklightCampaign game, DarklightCombatLab lab, float dt)
         {
             if (!IsLucius) return false;
+            if (Resolved) { CancelLuciusTransformation(); body.linearVelocity=Vector2.zero; return true; }
             if (CombatModel == null) InitializeLucius(null, LuciusView);
             if(dt<=0){if(body!=null)body.linearVelocity=Vector2.zero;return true;}
 
             if (Health != null && Health.IsDead)
             {
+                CancelLuciusTransformation();
                 warning?.Hide();
                 if (body != null) body.linearVelocity = Vector2.zero;
                 if(CombatModel.State!=CombatState.Dead)CombatModel.Hurt(true);
@@ -79,16 +84,49 @@ namespace Darklight
                 if(CombatModel.State!=CombatState.Hurt)CombatModel.Hurt(false, stagger);
                 CombatModel.Tick(dt,default);
                 LuciusView?.Present(CombatModel, Vector2.zero);
+                PresentLuciusAura();
                 return true;
             }
 
-            if (!phaseTwo && Health != null && Health.HealthPercent < 0.5f)
+            if (CombatModel.State == CombatState.Neutral && !phaseTwo && Health != null && Health.HealthPercent <= .60f)
             {
                 phaseTwo = true;
-                if (LuciusView != null) LuciusView.appearance = DarklightLuciusAppearance.Arconte;
+                Phase = 2;
+                CombatModel.SuspendInput();
+                luciusFormReleased=false;
+                luciusOfficialTransition=DarklightOfficialTransitionBank.TryPose(3,0,out _);
+                if(!luciusOfficialTransition)DarklightCombatFX.Transformation(transform.position,3,false,ArconteEnergy);
                 game?.BossPhaseTwo();
-                game?.Notice("FASE 2: ARCONTE DO ABISMO");
-                timer = 0.85f;
+                game?.Notice("LUCIUS | Voce ainda reconhece seu irmao?");
+                luciusTransformationTime = LuciusTransformationDuration;
+                timer = luciusTransformationTime + .45f;
+            }
+            if (luciusTransformationTime > 0)
+            {
+                luciusTransformationTime = Mathf.Max(0,luciusTransformationTime-dt);
+                float progress=1-luciusTransformationTime/LuciusTransformationDuration;
+                if(!luciusFormReleased&&progress>=.52f)
+                {
+                    luciusFormReleased=true;
+                    if(LuciusView!=null)LuciusView.appearance=DarklightLuciusAppearance.Arconte;
+                    if(!luciusOfficialTransition)DarklightCombatFX.Transformation(transform.position,3,true,ArconteEnergy);
+                }
+                body.linearVelocity = Vector2.zero;
+                warning?.Hide();
+                // Complete existing authored poses; no procedural facial/body edits.
+                LuciusView?.PresentPose(progress<.76f?"Transformation":"FloatFly",0,
+                    progress<.52f?0:progress<.76f?Mathf.Lerp(.2f,.6f,Mathf.InverseLerp(.52f,.76f,progress)):(progress-.76f)*2);
+                PresentLuciusTransition(progress);
+                return true;
+            }
+            if (phaseTwo && !LuciusFinalExchange && CombatModel.State == CombatState.Neutral &&
+                Health != null && Health.HealthPercent <= .25f)
+            {
+                LuciusFinalExchange = true;
+                Phase = 3;
+                luciusAttackStep = 0;
+                timer = .7f;
+                game?.Notice("FABIUS | A primeira espada era de madeira. Lembra?");
             }
 
             var player = lab?.Player;
@@ -220,7 +258,7 @@ namespace Darklight
 
                 if (CombatModel.State == CombatState.Neutral)
                 {
-                    timer = (phaseTwo ? 0.35f : 0.55f) * (game?.DifficultyProfile.cooldown ?? 1f);
+                    timer = (LuciusFinalExchange ? (luciusAttackStep == 0 ? .75f : .15f) : phaseTwo ? .35f : .55f) * (game?.DifficultyProfile.cooldown ?? 1f);
                 }
             }
             else
@@ -231,7 +269,10 @@ namespace Darklight
                     :Vector2.zero;
             }
 
-            LuciusView?.Present(CombatModel, body.linearVelocity);
+            if (Guarding && CombatModel.State == CombatState.Neutral)
+                LuciusView?.PresentPose("Parry", DarklightCharacterView.DirectionIndex(aim), clock);
+            else LuciusView?.Present(CombatModel, body.linearVelocity);
+            PresentLuciusAura();
             return true;
         }
 
@@ -281,6 +322,16 @@ namespace Darklight
                     if (game != null) damage += game.Progress.chapter * 1.5f;
                     Vector2 force = toPlayer.sqrMagnitude > 0.001f ? toPlayer.normalized : CombatModel.Facing;
                     bool received = combatant.Receive(damage, force * attack.knockback);
+                    if (!received && player.Model != null && player.Model.PerfectParry &&
+                        Vector2.Angle(player.Model.Facing, -force) <= 70f)
+                    {
+                        stagger = Mathf.Max(stagger, .52f);
+                        timer = Mathf.Max(timer, .65f);
+                        warning?.Hide();
+                        var clash = (playerPos + luciusPos) * .5f;
+                        lab.WorldCamera?.GetComponent<DarklightLabCamera>()?.ConfirmContact(clash);
+                        DarklightCombatFX.Impact(clash, true);
+                    }
                     if (received)
                     {
                         CombatModel.ConfirmHit();

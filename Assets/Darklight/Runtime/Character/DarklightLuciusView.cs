@@ -49,9 +49,12 @@ namespace Darklight
                     model.State==CombatState.Neutral&&model.ActiveThisTick?model.Attack.startup:model.StateTime);
             return PresentPose(action,direction,time,key);
         }
-        public bool PresentPose(string action,int direction,float time,string attackKey=null)
+        public bool PresentPose(string action,int direction,float time,string attackKey=null,bool allowOfficialIdle=true)
         {
-            if(!DarklightLuciusSpriteBank.TryPose(appearance,action,direction,time,out var sprite,out bool fallback,attackKey))
+            Sprite sprite=null;bool fallback=false;
+            bool officialIdle=allowOfficialIdle&&appearance==DarklightLuciusAppearance.Arconte&&action=="Idle"&&direction==0&&
+                DarklightOfficialTransitionBank.TryPose(3,1,out sprite);
+            if(!officialIdle&&!DarklightLuciusSpriteBank.TryPose(appearance,action,direction,time,out sprite,out fallback,attackKey))
             {
                 if(art==null)
                 {
@@ -88,21 +91,16 @@ namespace Darklight
             // initializers. Presentation is explicit and runs on the main thread.
             block??=new MaterialPropertyBlock();art.GetPropertyBlock(block);
             block.SetFloat("_WholeSprite",1);block.SetFloat("_WholeFrameId",0);
-            if(appearance==DarklightLuciusAppearance.Arconte)
-            {
-                block.SetFloat("_DarkForm",1);
-                block.SetFloat("_VampireForm",0.5f);
-                block.SetVector("_CanonicalSkinShift",new Vector4(0.1f,0.9f,0.3f,1f));
-            }
-            else
-            {
-                block.SetFloat("_DarkForm",0);block.SetFloat("_VampireForm",0);
-                block.SetVector("_CanonicalSkinShift",Vector4.zero);
-            }
+            // Both appearances are complete authored figures with their own colors.
+            block.SetFloat("_DarkForm",0);block.SetFloat("_VampireForm",0);
+            block.SetFloat("_AlphaClip",.1f);
+            block.SetVector("_CanonicalSkinShift",Vector4.zero);
             block.SetFloat("_Physique",0);block.SetFloat("_LayerOcclusion",0);
             block.SetFloat("_EraseHead",0);block.SetFloat("_RuinFists",0);
             block.SetTexture("_VampireMask",Texture2D.blackTexture);
-            art.SetPropertyBlock(block);UsesIdleFallback=fallback;return true;
+            art.SetPropertyBlock(block);
+            if(officialIdle)DarklightOfficialTransitionBank.ApplyOwnership(art);
+            UsesIdleFallback=fallback;return true;
         }
     }
 }

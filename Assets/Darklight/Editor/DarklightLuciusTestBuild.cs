@@ -25,6 +25,10 @@ namespace Darklight.Editor
             string[] args=Environment.GetCommandLineArgs();
             int outputArg=Array.IndexOf(args,"-darklightLuciusOutput");
             if(outputArg>=0&&outputArg+1<args.Length)destination=args[outputArg+1];
+            BuildTo(destination);
+        }
+        public static void BuildTo(string destination)
+        {
             string outputDir = Path.GetFullPath(destination);
             Directory.CreateDirectory(outputDir);
             string exePath = Path.Combine(outputDir, "DarklightRequiem.exe");
@@ -38,7 +42,9 @@ namespace Darklight.Editor
                 },
                 locationPathName = exePath,
                 target = BuildTarget.StandaloneWindows64,
-                options = BuildOptions.CompressWithLz4
+                options = (Array.IndexOf(Environment.GetCommandLineArgs(),"-darklightUncompressedPlayer")>=0 ? BuildOptions.None : BuildOptions.CompressWithLz4) |
+                    (Array.IndexOf(Environment.GetCommandLineArgs(),"-darklightFinalizeStagedPlayer")>=0 ? BuildOptions.BuildScriptsOnly : BuildOptions.None) |
+                    (Array.IndexOf(Environment.GetCommandLineArgs(),"-darklightCleanBuildCache")>=0 ? BuildOptions.CleanBuildCache : BuildOptions.None)
             };
 
             EditorUtility.UnloadUnusedAssetsImmediate();
@@ -58,7 +64,7 @@ namespace Darklight.Editor
 
             if (summary.result != BuildResult.Succeeded)
             {
-                EditorApplication.Exit(1);
+                if(Application.isBatchMode)EditorApplication.Exit(1);
                 throw new InvalidOperationException("Build failed with result: " + summary.result + " (errors: " + summary.totalErrors + ")");
             }
 

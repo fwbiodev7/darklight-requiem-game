@@ -4,7 +4,7 @@ namespace Darklight
 {
     /// <summary>
     /// Canonical Form & Resonance Controller for Fabius Requiem.
-    /// Canonical forms strictly: 0: Normal, 1: Ruptura (Crimson), 2: Eclipse Absoluto (Violet).
+    /// Canonical forms strictly: 0: Normal, 1: Ruptura, 2: Serafim Carmesim (serialized legacy Eclipse).
     /// Zero-GC presentation via MaterialPropertyBlock.
     /// </summary>
     public sealed class DarklightFormController : MonoBehaviour
@@ -36,10 +36,13 @@ namespace Darklight
 
         public void TransformTo(FormKind targetForm, float duration = 12f)
         {
+            // Serialized legacy indices outside the two authored transformations stay inert.
+            if ((int)targetForm < 0 || (int)targetForm > 2 || float.IsNaN(duration) || float.IsInfinity(duration)) return;
+            if (targetForm != FormKind.Normal && duration <= 0) return;
             if (CurrentForm == targetForm) return;
 
             CurrentForm = targetForm;
-            FormDurationRemaining = duration;
+            FormDurationRemaining = targetForm == FormKind.Normal ? 0 : duration;
 
             DarklightCombatFX.Transformation(transform.position, (int)CurrentForm, release: true);
 
@@ -81,10 +84,17 @@ namespace Darklight
                 _ => ColorNormal
             };
 
-            float intensity = CurrentForm == FormKind.Normal ? 0f : 0.65f;
+            // Authored complete sprites own skin and eyes; energy belongs to separate effects.
+            float intensity = 0f;
             propertyBlock.SetColor(FormColorId, tint);
             propertyBlock.SetFloat(FormIntensityId, intensity);
             spriteRenderer.SetPropertyBlock(propertyBlock);
+        }
+
+        void OnDisable()
+        {
+            CurrentForm=FormKind.Normal;FormDurationRemaining=0;
+            ApplyVisuals();
         }
 
         public float DamageMultiplier => CurrentForm switch

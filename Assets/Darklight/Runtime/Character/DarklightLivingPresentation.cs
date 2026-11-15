@@ -54,6 +54,24 @@ namespace Darklight
             SetClip("Idle");
         }
 
+        // Turn the complete idle figure to glance over either shoulder.
+        // Combat facing and targeting continue to use the player's actual aim.
+        public int IdleLookDirection(int facing)
+        {
+            if (Clip != "IdleImpatient" && Clip != "IdleInspect" && Clip != "IdleFatigued") return facing;
+            int side = Clip == "IdleInspect" ? -1 : 1;
+            if (ClipTime >= .16f && ClipTime < .55f) return (facing + side + 8) % 8;
+            if (ClipTime >= .65f && ClipTime < .95f) return (facing - side + 8) % 8;
+            return facing;
+        }
+
+        public void InterruptIdle()
+        {
+            idleTime = variationRemaining = 0;
+            nextVariation = 8;
+            if (Clip.StartsWith("Idle", System.StringComparison.Ordinal)) SetClip("Idle");
+        }
+
         void SetClip(string value) { if (Clip == value) return; Clip = value; ClipTime = 0; }
         public void Reset()
         {

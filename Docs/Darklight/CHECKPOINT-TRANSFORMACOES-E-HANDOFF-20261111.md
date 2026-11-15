@@ -76,3 +76,4 @@ Hoje foi realizada a integração completa do acervo de sprites recuperados e co
    - Integrar partículas de combate v2.0 (56 quadros aprovados) especificamente nos instantes de corte da Katana de Ruptura e nas asas de Serafim Carmesim.
 4. **Execução Completa da Suite de Testes em Ambiente Gráfico**:
    - Rodar a suite com dispositivo gráfico ativo para os testes de shader de paleta/pixel que requerem RenderTexture.
+

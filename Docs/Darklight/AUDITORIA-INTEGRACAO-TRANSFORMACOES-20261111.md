@@ -22,3 +22,9 @@
   5. 05_Lucius_Arconte_Float_Fly.jpg (6 quadros)
   6. 06_Lucius_Arconte_Hurt_Dissipate.jpg (8 quadros)
 
+## Revisão executada em 12/11/2026
+
+A conferência atual encontrou 21 folhas/198 quadros no catálogo de Fabius e 40 páginas canônicas no catálogo Arconte. As seis folhas complementares de Lucius continuam fora desse catálogo. Arquivo presente em Resources não equivale a ação integrada.
+
+Correções de seleção, duração, propriedade de shader e preservação de IDs, resultados da auditoria de alpha e novo lote de 48 quadros estão em `AUDITORIA-ARTES-E-INTEGRACAO-20261112.md`. Compilação independente passou; as duas tentativas da Unity encerraram na inicialização, sem XML de testes. Não transferir resultados históricos para esta rodada.
+

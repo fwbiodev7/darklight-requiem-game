@@ -17,8 +17,10 @@ parser=argparse.ArgumentParser()
 parser.add_argument("--auto-run",action="store_true")
 parser.add_argument("--output",type=Path)
 parser.add_argument("--executable",type=Path)
+parser.add_argument("--capture-mode",choices=["hud","standard"],default="hud")
 args=parser.parse_args()
 OUT = args.output or ROOT / "outputs/retomada-20261027" / ("standalone-auto-"+time.strftime("%H%M%S") if args.auto_run else "standalone")
+OUT = OUT.resolve()
 OUT.mkdir(parents=True, exist_ok=True)
 REG = r"Software\Fabio\DARKLIGHT REQUIEM"
 SAVE = Path(os.environ["USERPROFILE"]) / "AppData/LocalLow/Fabio/DARKLIGHT REQUIEM"
@@ -54,11 +56,11 @@ private=ROOT/"work/qa-storage"/uuid.uuid4().hex
 private.mkdir(parents=True)
 snapshot={k:{"kind":kind,"value":value.hex() if isinstance(value,bytes) else value,"hex":isinstance(value,bytes)} for k,(value,kind) in before_prefs.items()}
 (private/"preferences-before.json").write_text(json.dumps(snapshot),encoding="utf-8")
-exe = args.executable or ROOT / "outputs/retomada-20261027/Windows/DarklightRequiem.exe"
+exe = (args.executable or ROOT / "outputs/retomada-20261027/Windows/DarklightRequiem.exe").resolve()
 command = [str(exe), "-darklightSilent", "-screen-fullscreen", "0", "-screen-width", "1280",
            "-screen-height", "720", "-logFile", str(OUT / "player.log"),
            "--darklight-isolated-session", str(OUT / "saves"),
-           "--requiem-hud-performance-capture", str(OUT)]
+           "--requiem-capture" if args.capture_mode=="standard" else "--requiem-hud-performance-capture", str(OUT)]
 startup=None
 if args.auto_run:
     (OUT/"run.request").write_text("Explicit automatic Player validation; no UI input automation",encoding="utf-8")

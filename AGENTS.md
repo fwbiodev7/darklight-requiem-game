@@ -1,5 +1,10 @@
 # DARKLIGHT: REQUIEM — instruções do projeto
 
+## Direção vigente pós-reset semanal — 15/11/2026
+- Antes de trabalhar após o reset, ler `Docs/Darklight/ORIENTACAO-REINICIO-SEMANAL-20261115.md`, `weekly_reset_prompt.md` e o último checkpoint/relatório técnico.
+- Seguir Fase 1 → Fase 2 → … → Fase 8; preservar pelo menos 20% da cota semanal. Não avançar sem conclusão, validação e autorização da fase corrente. Esta orientação supera ordens históricas conflitantes.
+
+
 ## Handoff e Direção Vigente — 10/11/2026 (Estabilidade Concluída + Retomada do Codex)
 - **Consultar imediatamente:** `MENSAGEM-PARA-CODEX-RETOMADA.md` e `Docs/Darklight/HANDOFF-ANTIGRAVITY-ESTABILIDADE-20261110.md`.
 - **Tremor de Fabius:** 100% resolvido com calibração subpixel de pivôs em 95 folhas (522 frames). **Não alterar os pivôs nem regenerar artes de Fabius Normal.**

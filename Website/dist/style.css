@@ -18,3 +18,23 @@
 @media(max-width:800px){.wrap{width:min(100% - 36px,650px)}.header{height:76px;padding:10px 18px}.brand img{width:138px}.menu-toggle{display:block;margin-left:auto}.header nav{display:none;position:absolute;top:76px;left:0;right:0;background:#0d0a14;flex-direction:column;align-items:stretch;margin:0;gap:0;border-bottom:1px solid #7b406b;padding:9px 20px}.header nav.open{display:flex}.header nav a{padding:11px 6px;border-bottom:1px solid #2d2133;font-size:17px}.nav-download{display:none}.hero{min-height:710px}.hero-content{padding:75px 0}.hero-bg{background-position:70% center}.hero-foot{gap:10px}.hero-foot span:not(:last-child){padding-right:10px}.section{padding:75px 0}.section-head,.intro-grid{grid-template-columns:1fr;gap:24px}.section-head{margin-bottom:30px}.section-head>p{font-size:18px;margin-top:0}.weapon-grid,.interface-grid,.news-grid{grid-template-columns:1fr}.interface-card.wide{grid-column:span 1;display:block}.interface-card.wide img{height:260px}.forms-grid{grid-template-columns:1fr 1fr}.form-card.serafim{grid-column:1/-1}.form-card.serafim .form-art{height:390px}.form-art{height:330px}.lucius-layout{gap:13px}.world-band{min-height:620px}.world-content{padding:70px 0}.roadmap-list li{grid-template-columns:40px 1fr;gap:9px}.roadmap-list li>span,.roadmap-list .status{grid-column:2;justify-self:start}.gallery{grid-template-columns:1fr 1fr}.footer-inner{flex-wrap:wrap}.footer-inner>div{width:100%}}
 @media(max-width:520px){body{font-size:16px}.wrap{width:calc(100% - 28px)}.header{padding:8px 12px}.hero{min-height:660px}.hero-content{padding:65px 0}.hero-logo{width:min(380px,90vw)}.hero h1{font-size:clamp(39px,11vw,58px)}.lead{font-size:20px}.hero-sub{font-size:17px}.hero-foot span{display:none}.actions{flex-direction:column;align-items:stretch}.btn{min-width:100%;gap:12px;font-size:15px}.section h2{font-size:38px}.form-card.serafim{grid-column:auto}.forms-grid{grid-template-columns:1fr}.form-art{height:320px!important}.lucius-layout{grid-template-columns:1fr}.character-figure{min-height:350px}.character-figure img{min-height:350px;max-height:410px}.lucius-center{grid-column:auto;order:unset;padding:25px 2px}.character-figure.arconte{order:4}.news-card{padding:23px}.gallery{grid-template-columns:1fr}.download{padding:62px 0}.download-panel{padding:30px 20px}.footer-inner{flex-direction:column;align-items:start;gap:14px}.footer-inner>div{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+
+/* Revisão aprovada de 15/11 — menus e cartas com as artes anexadas */
+.shot-feature img{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;image-rendering:auto;background:#090713}
+.shot-feature{align-self:center}
+.weapon-visual{display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 46%,#4b2050 0%,#150e21 65%,#090711 100%)}
+.weapon-visual img{height:100%;width:100%;max-width:600px;object-fit:contain;image-rendering:auto;padding:14px 24px 29px}
+.form-art img[src$="ruptura.webp"],.form-art img[src$="serafim-transparente.webp"]{object-fit:contain;background:transparent;image-rendering:pixelated}
+.character-figure img[src$="lucius-normal.webp"]{object-fit:contain;background:transparent;image-rendering:pixelated;padding:24px 12px 55px}
+.menu-preview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.menu-preview-card{overflow:hidden;background:linear-gradient(#1a1023,#0d0a14);border:1px solid #694a78;box-shadow:0 14px 32px #0005}
+.menu-preview-zoom{width:100%;position:relative;display:block;border:0;padding:0;background:#08060f;color:#eee;overflow:hidden;cursor:zoom-in}
+.menu-preview-zoom img{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;image-rendering:auto;display:block}
+.menu-preview-zoom>span{position:absolute;bottom:0;right:0;padding:7px 11px;background:#170b24d9;border-top:1px solid #94507f;border-left:1px solid #94507f;color:#f0c1e5;letter-spacing:.07em;font-size:12px}
+.menu-preview-zoom:hover img{filter:brightness(1.09)}
+.menu-preview-copy{padding:19px 22px 24px}
+.menu-preview-copy h3{font-size:26px;line-height:1.12;margin:13px 0 6px}
+.menu-preview-copy p{font-size:17px;margin:0;color:var(--muted)}
+@media(max-width:800px){.menu-preview-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.menu-preview-copy{padding:16px 17px 20px}.menu-preview-copy h3{font-size:23px}}

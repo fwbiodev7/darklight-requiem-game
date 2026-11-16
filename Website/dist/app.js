@@ -10,3 +10,11 @@ document.getElementById("lightbox-close").addEventListener("click",()=>modal.clo
 modal.addEventListener("click",e=>{if(e.target===modal)modal.close()});
 modal.addEventListener("close",()=>{modalImage.removeAttribute("src");previousFocus?.focus()});
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMenu()});
+
+// Fallback caso a hospedagem sirva uma versão antiga dos assets locais.
+const fabiusNormalArt=document.getElementById("fabius-normal-oficial");
+if(fabiusNormalArt) fabiusNormalArt.addEventListener("error",()=>{
+  if(fabiusNormalArt.dataset.fallbackAttempted==="1") return;
+  fabiusNormalArt.dataset.fallbackAttempted="1";
+  fabiusNormalArt.src="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/Website/dist/assets/fabius-normal-oficial-20261116.webp";
+});

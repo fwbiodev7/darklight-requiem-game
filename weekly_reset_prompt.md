@@ -1,5 +1,7 @@
 # DARKLIGHT: REQUIEM — PROMPT MESTRE DE RETOMADA APÓS RESET SEMANAL
 
+> **Prioridade registrada em 17/11/2026 — Map Remaster 2.0:** ler `Docs/Darklight/MAP-REMASTER-2-PRIORIDADE-20261119.md` na próxima sessão. Não iniciar essa frente antes de **19/11/2026 às 21:11 America/Sao_Paulo** e da conferência da cota real (reservas: 20% semanal e 10% da janela). Planejar a frente prioritária de mapas dentro da sequência oficial de oito fases, sem antecipar fases ou dispensar autorizações. Primeiro estudar as referências e diagnosticar os dez mapas; depois piloto Rua das Cinzas, correções sistêmicas e avanço sequencial. Nenhuma remasterização de mapa foi iniciada ao salvar este pedido.
+
 **Engine:** Unity 6000.6.0f1  
 **Workspace:** `C:\Users\Usuario\Documents\Codex\2026-10-10\f\darklight-requiem-main`
 

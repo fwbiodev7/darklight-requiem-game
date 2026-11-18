@@ -31,7 +31,7 @@ namespace Darklight
             if(dt<=0){body.linearVelocity=Vector2.zero;return;}
             if(Health.IsDead)
             {
-                if(IsLucius){TickLucius(game,lab,dt);return;}
+                if(IsLucius){TickAerial(dt);TickLucius(game,lab,dt);return;}
                 TickAerial(dt);
                 if(visitorDefeat!=null)art.sprite=visitorDefeat;
                 body.linearVelocity=Vector2.zero;

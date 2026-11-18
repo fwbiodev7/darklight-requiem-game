@@ -238,6 +238,7 @@ namespace Darklight
         static bool TryCurrentPose(int weapon,int form,int direction,string requested,float time,out Sprite sprite)
         {
             sprite=null;
+            if(weapon==2&&form==0&&DarklightFistsCombatStanceBank.TryPose(requested,direction,time,out sprite))return true;
             for(int sourceFormPass=0;sourceFormPass<(form==0?1:2);sourceFormPass++)
             {
                 int sourceForm=sourceFormPass==0?form:0;
@@ -337,7 +338,7 @@ namespace Darklight
             }
             wholeMappings[(page,attack)]=valid;return valid;
         }
-        public static bool IsAuthored(Sprite sprite)=>sprite!=null&&authored.Contains(sprite);
+        public static bool IsAuthored(Sprite sprite)=>sprite!=null&&(authored.Contains(sprite)||DarklightFistsCombatStanceBank.IsAuthored(sprite));
         public static Sprite Icon(int weapon,int form,Sprite fallback)
         {
             if(weapon<0||weapon>2||form<0||form>3)return fallback;
@@ -365,6 +366,7 @@ namespace Darklight
         }
         public static void ClearCache()
         {
+            DarklightFistsCombatStanceBank.ClearCache();
             foreach(var sprite in densitySprites.Values)if(sprite!=null)
             {
                 if(Application.isPlaying)UnityEngine.Object.Destroy(sprite);

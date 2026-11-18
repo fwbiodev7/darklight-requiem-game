@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "image": "FistsCombatSW20261118.png",
+  "imageSha256": "678c074b4b77b8b0a996d116d5e2920dc49b8c4499358934df97d3daef03b4e4",
+  "sourcePath": "ArtSources/FistsCombatStance20261118/selected/FabiusFistsCombatSW-selected-v1.png",
+  "sourceSha256": "678c074b4b77b8b0a996d116d5e2920dc49b8c4499358934df97d3daef03b4e4",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 208.7096127152318,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "frames": [
+    {
+      "id": "Redesign_FabiusFistsCombat_SW_Idle_00",
+      "direction": "SW",
+      "action": "Idle",
+      "phase": 0,
+      "rect": [
+        0,
+        0,
+        384,
+        512
+      ],
+      "ground": [
+        175,
+        443
+      ],
+      "pivot": [
+        0.4557291666666667,
+        0.134765625
+      ],
+      "durationMs": 180
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_SW_Idle_01",
+      "direction": "SW",
+      "action": "Idle",
+      "phase": 1,
+      "rect": [
+        384,
+        0,
+        384,
+        512
+      ],
+      "ground": [
+        559,
+        443
+      ],
+      "pivot": [
+        0.4557291666666667,
+        0.134765625
+      ],
+      "durationMs": 120
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_SW_Idle_02",
+      "direction": "SW",
+      "action": "Idle",
+      "phase": 2,
+      "rect": [
+        768,
+        0,
+        384,
+        512
+      ],
+      "ground": [
+        943,
+        443
+      ],
+      "pivot": [
+        0.4557291666666667,
+        0.134765625
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_SW_Idle_03",
+      "direction": "SW",
+      "action": "Idle",
+      "phase": 3,
+      "rect": [
+        1152,
+        0,
+        384,
+        512
+      ],
+      "ground": [
+        1327,
+        443
+      ],
+      "pivot": [
+        0.4557291666666667,
+        0.134765625
+      ],
+      "durationMs": 150
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_SW_Walk_00",
+      "direction": "SW",
+      "action": "Walk",
+      "phase": 0,
+      "rect": [
+        0,
+        512,
+        384,
+        512
+      ],
+      "ground": [
+        175,
+        955
+      ],
+      "pivot": [
+        0.4557291666666667,
+        0.134765625
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_SW_Walk_01",
+      "direction": "SW",
+      "action": "Walk",
+      "phase": 1,
+      "rect": [
+        384,
+        512,
+        384,
+        512
+      ],
+      "ground": [
+        559,
+        955
+      ],
+      "pivot": [
+        0.4557291666666667,
+        0.134765625
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_SW_Walk_02",
+      "direction": "SW",
+      "action": "Walk",
+      "phase": 2,
+      "rect": [
+        768,
+        512,
+        384,
+        512
+      ],
+      "ground": [
+        943,
+        955
+      ],
+      "pivot": [
+        0.4557291666666667,
+        0.134765625
+      ],
+      "durationMs": 100
+    }
+  ],
+  "clips": [
+    {
+      "name": "Idle_SW",
+      "frames": [
+        "Redesign_FabiusFistsCombat_SW_Idle_00",
+        "Redesign_FabiusFistsCombat_SW_Idle_01",
+        "Redesign_FabiusFistsCombat_SW_Idle_02",
+        "Redesign_FabiusFistsCombat_SW_Idle_03"
+      ],
+      "durationMs": [
+        180,
+        120,
+        100,
+        150
+      ],
+      "loop": true
+    },
+    {
+      "name": "Walk_SW",
+      "frames": [
+        "Redesign_FabiusFistsCombat_SW_Walk_00",
+        "Redesign_FabiusFistsCombat_SW_Walk_01",
+        "Redesign_FabiusFistsCombat_SW_Walk_02",
+        "Redesign_FabiusFistsCombat_SW_Walk_01"
+      ],
+      "durationMs": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true
+    }
+  ],
+  "calibration": {
+    "bodyHeightPx": 400,
+    "bodyMeasurement": "Ready originalSW hair42 to sole442=400px; fixed projected floor443. Original aerial sole428 gives15px3.75%, accepted as natural small rebound after coordinator clarified1-3%approximate guide. No pose translation to manufacture lift.",
+    "bodyWorldPreScale": 1.9165384612436094,
+    "visualScale": 1.325,
+    "densityScope": "one PPU per source PNG/TextureImporter"
+  },
+  "groundMethod": "Reviewed projected support/ground; never alpha recentering or airborne sole reanchoring",
+  "states": {
+    "importConfigured": true,
+    "imported": false,
+    "runtimeVerified": false
+  }
+}

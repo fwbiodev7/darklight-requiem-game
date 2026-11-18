@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "image": "FistsCombatStanceS20261117.png",
+  "imageSha256": "202f33f42d937ab55cc5cc2162b41c8d1881ea3ea329e8d18e04c895de70740e",
+  "sourcePath": "ArtSources/FistsCombatStance20261117/selected/FabiusFistsCombatS-selected-v1.png",
+  "sourceSha256": "202f33f42d937ab55cc5cc2162b41c8d1881ea3ea329e8d18e04c895de70740e",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 201.40477627019868,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "frames": [
+    {
+      "id": "Redesign_FabiusFistsCombat_S_Idle_00",
+      "direction": "S",
+      "action": "Idle",
+      "phase": 0,
+      "rect": [
+        0,
+        0,
+        384,
+        512
+      ],
+      "ground": [
+        192,
+        441
+      ],
+      "pivot": [
+        0.5,
+        0.138671875
+      ],
+      "durationMs": 180
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_S_Idle_01",
+      "direction": "S",
+      "action": "Idle",
+      "phase": 1,
+      "rect": [
+        384,
+        0,
+        384,
+        512
+      ],
+      "ground": [
+        576,
+        441
+      ],
+      "pivot": [
+        0.5,
+        0.138671875
+      ],
+      "durationMs": 120
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_S_Idle_02",
+      "direction": "S",
+      "action": "Idle",
+      "phase": 2,
+      "rect": [
+        768,
+        0,
+        384,
+        512
+      ],
+      "ground": [
+        960,
+        441
+      ],
+      "pivot": [
+        0.5,
+        0.138671875
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_S_Idle_03",
+      "direction": "S",
+      "action": "Idle",
+      "phase": 3,
+      "rect": [
+        1152,
+        0,
+        384,
+        512
+      ],
+      "ground": [
+        1344,
+        441
+      ],
+      "pivot": [
+        0.5,
+        0.138671875
+      ],
+      "durationMs": 150
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_S_Walk_00",
+      "direction": "S",
+      "action": "Walk",
+      "phase": 0,
+      "rect": [
+        0,
+        512,
+        384,
+        512
+      ],
+      "ground": [
+        191,
+        969
+      ],
+      "pivot": [
+        0.4973958333333333,
+        0.107421875
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_S_Walk_01",
+      "direction": "S",
+      "action": "Walk",
+      "phase": 1,
+      "rect": [
+        384,
+        512,
+        384,
+        512
+      ],
+      "ground": [
+        575,
+        959
+      ],
+      "pivot": [
+        0.4973958333333333,
+        0.126953125
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_S_Walk_02",
+      "direction": "S",
+      "action": "Walk",
+      "phase": 2,
+      "rect": [
+        768,
+        512,
+        384,
+        512
+      ],
+      "ground": [
+        928,
+        961
+      ],
+      "pivot": [
+        0.4166666666666667,
+        0.123046875
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_S_Walk_03",
+      "direction": "S",
+      "action": "Walk",
+      "phase": 3,
+      "rect": [
+        1152,
+        512,
+        384,
+        512
+      ],
+      "ground": [
+        1312,
+        954
+      ],
+      "pivot": [
+        0.4166666666666667,
+        0.13671875
+      ],
+      "durationMs": 100
+    }
+  ],
+  "clips": [
+    {
+      "name": "Idle_S",
+      "frames": [
+        "Redesign_FabiusFistsCombat_S_Idle_00",
+        "Redesign_FabiusFistsCombat_S_Idle_01",
+        "Redesign_FabiusFistsCombat_S_Idle_02",
+        "Redesign_FabiusFistsCombat_S_Idle_03"
+      ],
+      "durationMs": [
+        180,
+        120,
+        100,
+        150
+      ],
+      "loop": true
+    },
+    {
+      "name": "Walk_S",
+      "frames": [
+        "Redesign_FabiusFistsCombat_S_Walk_00",
+        "Redesign_FabiusFistsCombat_S_Walk_01",
+        "Redesign_FabiusFistsCombat_S_Walk_02",
+        "Redesign_FabiusFistsCombat_S_Walk_03"
+      ],
+      "durationMs": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true
+    }
+  ],
+  "calibration": {
+    "bodyHeightPx": 386,
+    "bodyMeasurement": "ready hair54â†’sole440; not airborne AABB",
+    "bodyWorldPreScale": 1.9165384612436094,
+    "visualScale": 1.325,
+    "densityScope": "one PPU per source PNG/TextureImporter"
+  },
+  "groundMethod": "Reviewed projected support/ground; never alpha recentering or airborne sole reanchoring",
+  "states": {
+    "importConfigured": true,
+    "imported": false,
+    "runtimeVerified": false
+  }
+}

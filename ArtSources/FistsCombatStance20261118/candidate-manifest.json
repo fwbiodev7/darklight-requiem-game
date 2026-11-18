@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-18",
+  "scope": "Additional Fabius Fists combat stance paired atlases only; user changed production to16figures per pair",
+  "pairs": [
+    {
+      "id": "S-protected",
+      "state": "original17 unchanged, Walk4 explicit user approval; all8 sourceRGBA kept",
+      "sourcePath": "ArtSources/FistsCombatStance20261117/selected/FabiusFistsCombatS-selected-v1.png",
+      "sourceSha256": "202f33f42d937ab55cc5cc2162b41c8d1881ea3ea329e8d18e04c895de70740e"
+    },
+    {
+      "id": "SW",
+      "state": "selected/static-reviewed; seven originalwholeframes exact, one oppositecontact repaired; original modest bounce retained",
+      "sourcePath": "ArtSources/FistsCombatStance20261118/selected/FabiusFistsCombatSW-selected-v1.png",
+      "sourceSha256": "678c074b4b77b8b0a996d116d5e2920dc49b8c4499358934df97d3daef03b4e4",
+      "proof": "selected/SW-selection-proof.json",
+      "playback": "Idle4,Walk3 unique with sequence0,1,2,1; fourth original Walk figure preserved inPNG unused"
+    },
+    {
+      "id": "N_NE",
+      "state": "selected/static-reviewed; tenwholefigures, eight sourcecells preserved and twoNEcompletefigures repaired; no resample",
+      "sourcePath": "ArtSources/FistsCombatStance20261118/selected/FabiusFistsPairNNE-selected-v1.png",
+      "sourceSha256": "4c58b0e116de6fa93b96d07d695cc67ecf10015021545aae91f278b8fb5109f8",
+      "proof": "selected/NNE-selection-proof.json",
+      "sourceSize": [
+        1920,
+        1024
+      ],
+      "actualRects": "recipe.json (real307/308/384px widths,512px heights)"
+    },
+    {
+      "id": "W_E",
+      "state": "candidate only; static-inspected, not accepted or included inrecipe",
+      "sourcePath": "ArtSources/FistsCombatStance20261118/candidates/FabiusFistsPair-W-E-v1-source.png",
+      "sourceSha256": "274f1f931ff8749b956e593bb7a74d7fa2361a5d49ca2003eed0e3e88182bedc",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "alpha": {
+        "extrema": [
+          0,
+          254
+        ],
+        "zeroFraction": 0.6616172790527344,
+        "1to31Fraction": 0.03631464640299479,
+        "cornerAlpha": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "completeWholeFiguresWithRealRects": true,
+      "reviewPath": "review/PairWE-v1.json",
+      "pending": "Opposite contactA/B leg support not confidently distinguishable in profiles; no inference of valid cycle. Ground/pivots/body calibration pending. Real last-column boundary1207 recovers full cloak tips without pixel editing; do not slice nominalgrid blindly."
+    },
+    {
+      "id": "NW_SE",
+      "state": "not produced; no generation started"
+    }
+  ],
+  "SApprovedSource": "ArtSources/FistsCombatStance20261117/selected/FabiusFistsCombatS-selected-v1.png",
+  "SApprovedSha256": "202f33f42d937ab55cc5cc2162b41c8d1881ea3ea329e8d18e04c895de70740e",
+  "recipe": "ArtSources/FistsCombatStance20261118/recipe.json",
+  "newGenerationInFlight": false,
+  "runtimeUnityGitAssetsChanges": false,
+  "lastQuotaCoordinatorSignal": {
+    "windowRemainingPercent": 30,
+    "weeklyRemainingPercent": 76,
+    "pauseAtWindowRemainingPercent": 30,
+    "weeklyReservePercent": 20
+  },
+  "stoppedForTechnicalDecision": false,
+  "productionSchema": "5columns x2rows: each row one direction, Idle0 grounded/compressed +Idle1 tinyair +Walk0contactA +Walk1neutralpassing +Walk2contactB",
+  "nextPairs": [
+    [
+      "N",
+      "NE"
+    ],
+    [
+      "W",
+      "E"
+    ],
+    [
+      "NW",
+      "SE"
+    ]
+  ],
+  "old16slotGenerationStopped": true,
+  "SWPendingSelectiveCorrectionIndices": [],
+  "playback": {
+    "newIdle": [
+      450,
+      100
+    ],
+    "newWalkSequence": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "newWalkDurations": [
+      100,
+      100,
+      100,
+      100
+    ],
+    "SOriginal4plus4Unchanged": true
+  },
+  "selectedDirections": [
+    "S",
+    "SW",
+    "N",
+    "NE"
+  ],
+  "selectedSources": [
+    {
+      "name": "FistsCombatStanceS20261117",
+      "sourcePath": "ArtSources/FistsCombatStance20261117/selected/FabiusFistsCombatS-selected-v1.png",
+      "sourceSha256": "202f33f42d937ab55cc5cc2162b41c8d1881ea3ea329e8d18e04c895de70740e",
+      "reviewState": "visual-reviewed",
+      "referencedFigures": 8,
+      "bodyHeightPx": 386,
+      "importOrRuntimeByArtist": false
+    },
+    {
+      "name": "FistsCombatSW20261118",
+      "sourcePath": "ArtSources/FistsCombatStance20261118/selected/FabiusFistsCombatSW-selected-v1.png",
+      "sourceSha256": "678c074b4b77b8b0a996d116d5e2920dc49b8c4499358934df97d3daef03b4e4",
+      "reviewState": "visual-reviewed",
+      "referencedFigures": 7,
+      "bodyHeightPx": 400,
+      "importOrRuntimeByArtist": false
+    },
+    {
+      "name": "FistsCombatNNE20261118",
+      "sourcePath": "ArtSources/FistsCombatStance20261118/selected/FabiusFistsPairNNE-selected-v1.png",
+      "sourceSha256": "4c58b0e116de6fa93b96d07d695cc67ecf10015021545aae91f278b8fb5109f8",
+      "reviewState": "visual-reviewed",
+      "referencedFigures": 10,
+      "bodyHeightPx": 421,
+      "importOrRuntimeByArtist": false
+    }
+  ],
+  "recipeSha256": "0ce1ce0df3a9e214df32d5a22b4d19cf48a483512da3e2747afcb93c8fb3dabc",
+  "nextStep": "Wait for user decision; do not generate, repair, configure, test, build, publish or run Unity/Git.",
+  "reviewNotes": [
+    "SW originalair small natural rebound retained after approximate guide clarified; new belowfloor correction rejected.",
+    "SW7/8sourceRGBA preserved; only opposite contactB selected fromrepair.",
+    "NNE original8correctcells exact; twoNEwholefigures repaired and registered horizontally via real whole-figure ROIs, noYshift/resample.",
+    "No continuous playback/Unity/test suites/build/Git by artist."
+  ],
+  "status": "paused by user/coordinator at30%; state saved; no new generation or repair",
+  "pausedByExplicitRequest": true,
+  "recipeReferencedFigures": 25,
+  "recipeClipContexts": 8,
+  "recipeDirections": [
+    "N",
+    "NE",
+    "S",
+    "SW"
+  ],
+  "allEightDirectionsComplete": false,
+  "candidateOnlyDirections": [
+    "W",
+    "E"
+  ],
+  "unproducedDirections": [
+    "NW",
+    "SE"
+  ],
+  "previewFilesExisting": {
+    "selectedSW": [
+      "qa/SelectedSW/SW-idle.gif",
+      "qa/SelectedSW/SW-walk.gif",
+      "qa/SelectedSW/white.png",
+      "qa/SelectedSW/dark.png"
+    ],
+    "selectedNNE": [
+      "qa/SelectedNNE/N-idle.gif",
+      "qa/SelectedNNE/N-walk.gif",
+      "qa/SelectedNNE/NE-idle.gif",
+      "qa/SelectedNNE/NE-walk.gif",
+      "qa/SelectedNNE/white.png",
+      "qa/SelectedNNE/dark.png"
+    ],
+    "candidateWE": [
+      "qa/PairWE/v1-realrects-W-idle.gif",
+      "qa/PairWE/v1-realrects-W-walk.gif",
+      "qa/PairWE/v1-realrects-E-idle.gif",
+      "qa/PairWE/v1-realrects-E-walk.gif",
+      "qa/PairWE/v1-white.png",
+      "qa/PairWE/v1-dark.png"
+    ]
+  },
+  "limits": [
+    "Original16figure request returned1086x1448 and289pxNbody vs386pxS, rejected as density reduction; raw candidate retained, no upscaling.",
+    "New10figure paired sources retained1536x1024; NNEselected1920x1024 only by technical wholefigure packing without resampling.",
+    "Source-native pixel grid unverified; PNGdimensions are generated source dimensions.",
+    "Continuous live playback not inspected; GIFs generated and ordered full figures static-reviewed; no Unity/test suites/runtime claims.",
+    "No Assets/catalog/oldpivots/Git/build modifications by artist.",
+    "S originalSHA202f33f42d937ab55cc5cc2162b41c8d1881ea3ea329e8d18e04c895de70740e remains exact."
+  ]
+}

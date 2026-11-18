@@ -16,11 +16,13 @@ namespace Darklight
         // One authored walk cycle covers the ground traversed at this speed.
         const float WalkReferenceSpeed=2.3f;
         public SpriteRenderer Renderer=>art;
+        // Presentation offset only; the Rigidbody and ground-plane sorting stay put.
+        public float AirHeight {get;set;}
         public bool UsesIdleFallback {get;private set;}
         void LateUpdate()
         {
             if(art!=null&&art.transform!=transform)
-                art.transform.position=DarklightCharacterView.SnapRenderPosition(transform.position);
+                art.transform.position=DarklightCharacterView.SnapRenderPosition(transform.position+Vector3.up*Mathf.Max(0,AirHeight));
         }
         public bool Present(CombatModel model,Vector2 movement=default)
         {

@@ -4,17 +4,23 @@ namespace Darklight
     public sealed partial class DarklightEnemy
     {
         float guardUntil,guardReady,dodgeReadAt=-1,tacticalRecovery,posture,postureIdle;
+        float luciusLaunchWindowUntil;
         int chainRemaining;
         public readonly DarklightAirBody AirBody=new();
         public bool Airborne=>AirBody.Airborne;
         public float AirHeight=>AirBody.Height;
         public float Posture=>posture;
         public bool Guarding=>clock<guardUntil;
+        public bool LuciusLaunchExposed=>IsLucius&&clock<luciusLaunchWindowUntil;
+        void OpenLuciusLaunchWindow(float duration)
+        {if(IsLucius)luciusLaunchWindowUntil=clock+Mathf.Clamp(duration,0,.65f);}
         void TickAerial(float dt)
         {
-            if(!AirBody.Tick(dt))return;
+            bool landed=AirBody.Tick(dt);
+            if(IsLucius&&LuciusView!=null)LuciusView.AirHeight=AirBody.Height;
+            if(!landed)return;
             stagger=Mathf.Max(stagger,AirBody.SlamPending?.48f:.2f);state=0;timer=.6f;
-            if(art!=null)art.transform.localPosition=Vector3.zero;
+            if(!IsLucius&&art!=null&&art.transform!=transform)art.transform.localPosition=Vector3.zero;
             if(AirBody.SlamPending)DarklightCombatFX.MotorcycleImpact(transform.position,Vector2.down,DarklightMotorcycleImpact.AerialGround);
         }
         bool TickTactics(DarklightCampaign game,float dt,Vector2 delta,float distance,float range,float speed,bool ranged)
@@ -55,9 +61,9 @@ namespace Darklight
             Vector2 toward=DarklightCombatLab.Instance.Player.transform.position-transform.position;
             if(Vector2.Angle(facing,toward)>75)return false;
             bool breaker=model.Attack.kind==StrikeKind.Charged||model.Attack.postureDamage*(game.AbyssRider?.Posture??1)>=3;
-            if(breaker){guardUntil=0;posture=0;stagger=Mathf.Max(stagger,.65f);state=0;timer=.8f;return false;}
+            if(breaker){guardUntil=0;posture=0;stagger=Mathf.Max(stagger,.65f);state=0;timer=.8f;OpenLuciusLaunchWindow(.55f);return false;}
             posture+=model.Attack.postureDamage*(game.AbyssRider?.Posture??1);
-            if(posture>=3){guardUntil=0;stagger=.5f;state=0;posture=0;timer=.65f;}
+            if(posture>=3){guardUntil=0;stagger=.5f;state=0;posture=0;timer=.65f;OpenLuciusLaunchWindow(.5f);}
             DarklightCombatFX.Impact(transform.position,false);return true;
         }
         public void TechnicalImpact(AttackDefinition attack,int form)
@@ -65,7 +71,7 @@ namespace Darklight
             postureIdle=0;posture+=attack.postureDamage*(form==1?1.55f:form>=2?1.25f:1)*(DarklightCampaign.Instance?.AbyssRider?.Posture??1);
             float threshold=Boss?8:kind==RequiemEnemyKind.Armored?4.5f:3;
             if(posture>=threshold&&clock>=tacticalRecovery)
-            {posture=0;stagger=Boss?.28f:.65f;tacticalRecovery=clock+(Boss?2.2f:1);state=0;timer=.65f;guardUntil=0;}
+            {posture=0;stagger=Boss?.28f:.65f;tacticalRecovery=clock+(Boss?2.2f:1);state=0;timer=.65f;guardUntil=0;OpenLuciusLaunchWindow(.55f);}
             // Air reactions are applied once per accepted contact by the strike resolver.
             if(attack.finisher&&attack.airReaction!=DarklightAirReaction.Slam&&!Airborne&&!Boss&&Vulnerable&&Health.HealthPercent<=.12f)
             {DarklightCampaign.Instance?.TechnicalFinisher(transform.position);Health.TakeDamage(Health.CurrentHealth);DarklightCombatFX.Impact(transform.position,true);}
@@ -73,7 +79,11 @@ namespace Darklight
         public bool ReactAir(AttackDefinition attack,DarklightAirReaction reaction)
         {
             if(Health.IsDead||!AcceptDamage)return false;
-            bool accepted=AirBody.React(reaction,attack.launchSpeed,Boss||kind==RequiemEnemyKind.Armored);
+            // Lucius yields only to an earned posture/parry opening. Once in
+            // flight, the shared juggle cap and landing immunity own recovery.
+            bool resistant=(Boss||IsLucius||kind==RequiemEnemyKind.Armored)&&
+                !(IsLucius&&(LuciusLaunchExposed||Airborne));
+            bool accepted=AirBody.React(reaction,attack.launchSpeed,resistant);
             if(accepted)
             {
                 state=0;timer=.6f;guardUntil=0;warning?.Hide();body.linearVelocity=Vector2.zero;
@@ -81,7 +91,13 @@ namespace Darklight
             }
             return accepted;
         }
-        void LateUpdate(){if(art!=null&&Airborne)art.transform.localPosition=Vector3.up*AirBody.Height;}
+        void LateUpdate()
+        {
+            // LuciusView owns its visual offset. A renderer on the actor root
+            // must never move the Rigidbody/colliders to represent air height.
+            if(!IsLucius&&art!=null&&art.transform!=transform&&Airborne)
+                art.transform.localPosition=Vector3.up*AirBody.Height;
+        }
         void BeginTacticalSequence(DarklightCampaign game)
         {chainRemaining=game.DifficultyProfile.comboLength-1;if(elite)chainRemaining++;if(Boss&&phaseTwo)chainRemaining++;}
         bool ContinueTacticalSequence(DarklightCampaign game)

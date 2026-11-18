@@ -1,5 +1,9 @@
 # DARKLIGHT: REQUIEM — PROMPT MESTRE DE RETOMADA APÓS RESET SEMANAL
 
+> **Direção final18/11:** suspender novas artes/guardas dePunhos por custo/tempo, mantê-las apenas FabiusNormal e seguir Lucius2.0. Não retomar lotes W/E/NW/SE automaticamente nem declarar pacoteparcial concluído. Sem testes/build/push. Ver `Docs/Darklight/RELATORIO-FINAL-20261118.md`; encerramento seguro medido10%janela/73%semanal. Esta ordem supera a continuação artística pós-checkpoint30% descrita abaixo.
+
+> **Ordem mais recente,18/11:** continuar desde `d704ddb`; parar novos lotes aos **30% restantes da janela real**, apresentar progresso/pendências e esperar decisão do usuário sobre continuar ou build. Sem novos testes/build/push automáticos. Usar folhas pareadas de16quadros (2direções×8), preservando S aprovado; ver `Docs/Darklight/CHECKPOINT-RETOMADA-20261118.md`. Esta instrução supera o encerramento aos15% e qualquer build automática descritos abaixo. Reserva semanal20% preservada.
+
 > **Atualização final sobre build, 17/11:** usuário **cancelou a build nesta sessão**, para continuar nela amanhã. Prosseguir nas artes de Punhos com máxima fidelidade e preservar WalkS frontal aprovado; encerrar lotes e fazer commit local/relatório aos **15% restantes da janela**. **Sem novos testes e sem push.** Não executar a antiga instrução de build aos25% nem incluir build inexistente no relatório.
 
 > **Restrição mais recente, 17/11:** usuário pediu **sem testes em tudo** nesta rodada. Não executar novas suítes/Play/smoke tests; parar a rodada pendente própria e preservar evidências anteriores. A build Windows explicitamente pedida aos25% permanece autorizada e terá a compilação necessária, sem alegar validação de gameplay/menus. Relatório deve distinguir implementado, revisado, compilado e testado anteriormente.

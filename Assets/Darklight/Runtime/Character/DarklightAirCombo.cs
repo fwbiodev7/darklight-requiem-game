@@ -14,7 +14,9 @@ namespace Darklight
         public DarklightEnemy Target { get; private set; }
         Vector2 TargetPosition=>Target.GetComponent<Rigidbody2D>().position;
         public bool Active => Height > .01f || Chasing;
-        readonly Dictionary<AttackDefinition, AttackDefinition[]> banks=new();
+        readonly Dictionary<CombatLoadout, AttackDefinition[]> banks=new();
+        static readonly string[] KatanaMoves={"Cortes Suspensos","Corte Ascendente","Corte de Projecao","Queda do Crepusculo"};
+        static readonly string[] FistMoves={"Direto Suspenso","Chute de Ruptura","Arremesso Celeste","Impacto Descendente"};
         readonly List<Object> owned=new();
         DarklightFighter fighter;Rigidbody2D body;SpriteRenderer art;
         AttackDefinition chase;float chaseAge,idle,echo,commandLife;int queuedMove=-1;bool thrown,diving,chaseQueued;
@@ -26,15 +28,19 @@ namespace Darklight
         }
         AttackDefinition Move(int index)
         {
-            if(index==3&&fighter.loadout.airFinisher!=null)return fighter.loadout.airFinisher;
-            var l=fighter.loadout;var source=index==0?l.lights[0]:l.heavy??l.lights[0];
-            if(!banks.TryGetValue(source,out var moves))
+            var l=fighter.loadout;
+            if(index==3&&l.airFinisher!=null)return l.airFinisher;
+            if(!banks.TryGetValue(l,out var moves))
             {
-                moves=new AttackDefinition[4];banks.Add(source,moves);
+                moves=new AttackDefinition[4];banks.Add(l,moves);
                 for(int i=0;i<4;i++)
                 {
+                    if(i==3&&l.airFinisher!=null){moves[i]=l.airFinisher;continue;}
+                    // A fist kick reuses its complete authored kick, rather than
+                    // the uppercut's animation key. Weapon swaps keep separate banks.
+                    var source=l.weapon==2&&i<3?l.lights[Mathf.Min(i,l.lights.Length-1)]:i==0?l.lights[0]:l.heavy??l.lights[0];
                     var a=moves[i]=Instantiate(source);owned.Add(a);a.name="Air_"+source.name+"_"+i;
-                    a.displayName=new[]{"Sequência Suspensa","Chute de Ruptura","Arremesso Celeste","Impacto Descendente"}[i];
+                    a.displayName=(l.weapon==2?FistMoves:KatanaMoves)[i];
                     a.kind=i==0?StrikeKind.Light:StrikeKind.Heavy;a.startup=i==3?.18f:.08f;a.active=i==0?.16f:.12f;a.recovery=i==3?.3f:.18f;
                     a.damage=source.damage*(i==0?.6f:i==3?1.4f:.85f);a.range=Mathf.Clamp(source.range,1.4f,2.4f);
                     a.hitPulses=i==0&&l.weapon==3?3:1;a.damage/=a.hitPulses;

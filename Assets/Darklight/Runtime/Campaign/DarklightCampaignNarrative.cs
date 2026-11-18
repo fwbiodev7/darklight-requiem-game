@@ -74,12 +74,12 @@ namespace Darklight
             {encounterStarted=false;NarrativeCombatDone=true;Objective=MissionTitle+" — INTERAJA";return true;}
             if(Progress.chapter==9&&encounter==2&&(Progress.missionWeaponHits&DarklightPlayableScope.WeaponMask)!=DarklightPlayableScope.WeaponMask)
             {
-                encounterStarted=false;Notice("USE AS TRÊS ARMAS — "+WeaponTrialCount+" / 3");BeginNarrativeEncounter();return true;
+                encounterStarted=false;Notice("USE KATANA E PUNHOS — "+WeaponTrialCount+" / 2");BeginNarrativeEncounter();return true;
             }
             if(Progress.chapter==9&&encounter==2)Progress.expansionFlags|=WeaponsMastered;
             return false;
         }
-        public int WeaponTrialCount=>((Progress.missionWeaponHits&1)!=0?1:0)+((Progress.missionWeaponHits&8)!=0?1:0)+((Progress.missionWeaponHits&4)!=0?1:0);
+        public int WeaponTrialCount=>((Progress.missionWeaponHits&1)!=0?1:0)+((Progress.missionWeaponHits&4)!=0?1:0);
         void RecordWeaponTrial()
         {if(ExpandedChapter&&Progress.chapter==9&&encounter==2)Progress.missionWeaponHits|=1<<(int)Weapons.Equipped.id;}
         bool NarrativeTarget(out DarklightInteractionTarget target)

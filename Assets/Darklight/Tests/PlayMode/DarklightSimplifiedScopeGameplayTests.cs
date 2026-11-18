@@ -24,24 +24,45 @@ namespace Darklight.Tests
         }
         [UnityTearDown] public IEnumerator Cleanup()
         {storage?.Dispose();AudioListener.pause=oldPause;AudioListener.volume=oldVolume;DarklightAutomation.Silent=oldSilent;yield return null;}
-        [UnityTest] public IEnumerator ActiveSelectorsMigrateRockAndSkipRemovedWeapon()
+        void ForceRetainedMotorForSystemRegression()
+        {
+            // The player selector must never grant weapon 3. Inject the retained
+            // implementation only so these legacy mechanics tests remain meaningful.
+            var legacy=game.weaponDefinitions[3];
+            typeof(DarklightWeaponController).GetProperty("Equipped").SetValue(game.Weapons,legacy);
+            lab.Player.loadout=legacy.loadout;lab.Player.ResetModel();
+        }
+        [UnityTest] public IEnumerator ActiveSelectorsKeepOnlyKatanaAndRuinFistsAndMigrateLegacyBike()
         {
             game.SelectSkin(1,false);Assert.That(game.SelectedSkin,Is.Zero);
             Assert.That(game.Weapons.Unlocked(0),Is.True);Assert.That(game.Weapons.Unlocked(1),Is.False);
-            Assert.That(game.Weapons.Unlocked(2),Is.True);Assert.That(game.Weapons.Unlocked(3),Is.True);
-            game.Progress.equippedWeapon=0;game.Weapons.Restore();game.Weapons.RequestNext();game.Weapons.BeforeTick(.2f,true);
+            Assert.That(game.Weapons.Unlocked(2),Is.True);Assert.That(game.Weapons.Unlocked(3),Is.False);
+            for(int chapter=0;chapter<DarklightProgress.ChapterCapacity;chapter++)
+            {
+                game.Progress.chapter=chapter;game.Progress.checkpoint=0;game.Progress.weaponUnlocks=1;game.Progress.equippedWeapon=3;
+                game.Weapons.Restore();
+                Assert.That(game.Progress.equippedWeapon,Is.Zero,"Restore must migrate the old bike at chapter "+chapter);
+                Assert.That(game.Progress.legacyEquippedWeapon,Is.EqualTo(3));Assert.That(game.Weapons.Unlocked(3),Is.False);
+                Assert.That(game.Progress.weaponUnlocks&8,Is.Zero,"Restore must not add the retired unlock bit at chapter "+chapter);
+            }
+            game.Progress.weaponUnlocks=15;game.Progress.equippedWeapon=3;game.Weapons.Restore();
+            Assert.That(game.Progress.equippedWeapon,Is.Zero);Assert.That(game.Progress.legacyEquippedWeapon,Is.EqualTo(3));
+            Assert.That(game.Progress.weaponUnlocks,Is.EqualTo(15),"Disabled legacy IDs remain in save history");
+            game.Weapons.RequestNext();game.Weapons.BeforeTick(.2f,true);
             Assert.That(game.Weapons.Equipped.id,Is.EqualTo(DarklightWeaponId.Chain));
             game.Weapons.RequestNext();game.Weapons.BeforeTick(.2f,true);
-            Assert.That(game.Weapons.Equipped.id,Is.EqualTo(DarklightWeaponId.AbyssRider));
-            Assert.That(game.AbyssRider.Active,Is.True);Assert.That(game.AbyssRider.ExpandedMoves.Length,Is.EqualTo(6));
+            Assert.That(game.Weapons.Equipped.id,Is.EqualTo(DarklightWeaponId.Katana));
+            game.Weapons.Request(3);game.Weapons.BeforeTick(.2f,true);
+            Assert.That(game.Weapons.Equipped.id,Is.EqualTo(DarklightWeaponId.Katana));Assert.That(game.Progress.equippedWeapon,Is.Zero);
+            Assert.That(game.AbyssRider.Active,Is.False);
             Call(game,"SetTrainingForm",3);Assert.That(game.Form,Is.EqualTo(2));
             Call(game,"TickFormState",2f);Assert.That(game.PresentedForm,Is.EqualTo(2));
             Assert.That(game.IncomingMultiplier,Is.LessThan(1));Assert.That(game.StrikeRangeBonus,Is.GreaterThan(0));
             yield return null;
         }
-        [UnityTest] public IEnumerator RequiemMotorcycleUsesEightAuthoredViewsWithoutBorrowingRock()
+        [UnityTest] public IEnumerator RetainedMotorcycleBankProvidesEightLegacyViewsWithoutBorrowingRock()
         {
-            game.Weapons.Request(3);game.Weapons.BeforeTick(.2f,true);Call(game,"SetTrainingForm",0);
+            ForceRetainedMotorForSystemRegression();Call(game,"SetTrainingForm",0);
             var fighter=lab.Player;var view=fighter.GetComponent<DarklightCharacterView>();var art=fighter.transform.Find("FabioVisual").GetComponent<SpriteRenderer>();
             var seen=new System.Collections.Generic.HashSet<Sprite>();DarklightMotorcycleRedesignBank.ClearCache();
             for(int d=0;d<8;d++)
@@ -56,9 +77,9 @@ namespace Darklight.Tests
             }
             yield return null;
         }
-        [UnityTest] public IEnumerator RequiemMountedIdleAnimatesEightAuthoredDirectionsAndStopsWhenMoving()
+        [UnityTest] public IEnumerator RetainedMountedIdleAnimatesEightLegacyDirectionsAndStopsWhenMoving()
         {
-            game.Weapons.Request(3);game.Weapons.BeforeTick(.2f,true);Call(game,"SetTrainingForm",0);
+            ForceRetainedMotorForSystemRegression();Call(game,"SetTrainingForm",0);
             var fighter=lab.Player;var view=fighter.GetComponent<DarklightCharacterView>();
             var art=fighter.transform.Find("FabioVisual").GetComponent<SpriteRenderer>();
             DarklightMotorcycleRedesignBank.ClearCache();
@@ -81,9 +102,9 @@ namespace Darklight.Tests
             Assert.That(DarklightMotorcycleRedesignBank.Idle(1,0,.1f),Is.Null,"Normal idle is not transformed art");
             yield return null;
         }
-        [UnityTest] public IEnumerator RealWeaponSpecialMountsDuringDashThenReturnsToDualSaws()
+        [UnityTest] public IEnumerator RetainedRiderSpecialUsesLegacyRuntimeAndReturnsToDualSaws()
         {
-            game.Weapons.Request(3);game.Weapons.BeforeTick(.2f,true);Call(game,"SetTrainingForm",0);
+            ForceRetainedMotorForSystemRegression();Call(game,"SetTrainingForm",0);
             var fighter=lab.Player;var view=fighter.GetComponent<DarklightCharacterView>();
             var art=fighter.transform.Find("FabioVisual").GetComponent<SpriteRenderer>();
             DarklightMotorcycleRedesignBank.ClearCache();fighter.ResetModel();

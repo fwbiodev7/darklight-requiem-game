@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Darklight.Tests
 {
     // Isolated EditMode component checks; no campaign Awake, audio, Play or saves.
-    public sealed class DarklightAirControllerTests
+    public sealed partial class DarklightAirControllerTests
     {
         GameObject player,foe,wall;AttackDefinition launcher;DarklightFighter fighter;DarklightAirCombo air;DarklightEnemy enemy;
         static void AwakeIfNeeded(Component component,string field)
@@ -16,7 +16,7 @@ namespace Darklight.Tests
             var body=player.AddComponent<Rigidbody2D>();body.gravityScale=0;player.AddComponent<CircleCollider2D>().radius=.25f;
             player.AddComponent<SpriteRenderer>();player.AddComponent<DarklightCombatant>();
             fighter=player.AddComponent<DarklightFighter>();fighter.loadout=new CombatLoadout{weapon=0,lights=new[]{launcher},heavy=launcher,aerial=launcher};
-            typeof(DarklightFighter).GetField("body",BindingFlags.Instance|BindingFlags.NonPublic).SetValue(fighter,body);
+            typeof(DarklightFighter).GetField("_body",BindingFlags.Instance|BindingFlags.NonPublic).SetValue(fighter,body);
             var modelProp = typeof(DarklightFighter).GetProperty("Model", BindingFlags.Instance|BindingFlags.Public|BindingFlags.NonPublic);
             modelProp.SetValue(fighter, new CombatModel(fighter.loadout));
             air=player.AddComponent<DarklightAirCombo>();AwakeIfNeeded(air,"chase");

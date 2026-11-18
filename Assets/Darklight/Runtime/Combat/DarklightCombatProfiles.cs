@@ -61,6 +61,9 @@ namespace Darklight
                 l.heavyBranch.damage*=w==1?.52f:1.15f;weapon.loadout=l;
                 if(w==0)
                 {
+                    // Two confirmed light inputs into heavy now open the same
+                    // interactive launch/chase route already used by the fists.
+                    l.heavyBranch.launch=true;l.heavyBranch.airReaction=DarklightAirReaction.Launch;l.heavyBranch.launchSpeed=4;
                     var finisher=Attack(old.lights[old.lights.Length-1],w,30);finisher.displayName="Corte do Crepúsculo";
                     finisher.damage*=.6f;finisher.hitPulses=2;finisher.startup=.12f;finisher.active=.16f;finisher.recovery=.25f;
                     finisher.finisher=true;finisher.hitShape=HitShape.Sweep;finisher.angle=155;finisher.postureDamage=1.8f;
@@ -68,6 +71,9 @@ namespace Darklight
                     var special=l.weaponSpecial=Attack(old.heavy,w,31);special.kind=StrikeKind.WeaponSpecial;special.displayName="Eclipse Partido";
                     special.damage=17;special.hitPulses=2;special.startup=.16f;special.active=.22f;special.recovery=.30f;special.range=2.15f;
                     special.hitShape=HitShape.Sweep;special.angle=190;special.cooldown=6.5f;special.lungeSpeed=.5f;special.finisher=true;special.pullTarget=special.blink=false;
+                    var dive=l.airFinisher=Attack(old.aerial,w,32);dive.displayName="Queda do Crepusculo";
+                    dive.launch=false;dive.airReaction=DarklightAirReaction.Slam;dive.finisher=true;dive.cooldown=0;
+                    dive.damage=28;dive.startup=.18f;dive.active=.12f;dive.recovery=.3f;dive.knockback=.55f;dive.hitPulses=1;
                 }
                 else if(w==1&&l.weaponSpecial!=null)
                 {

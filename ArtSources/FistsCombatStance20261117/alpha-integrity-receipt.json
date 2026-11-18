@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-17",
+  "kind": "PNG channel inspection and visual contrast review, no test suite or Unity",
+  "sourcePath": "ArtSources/FistsCombatStance20261117/selected/FabiusFistsCombatS-selected-v1.png",
+  "sourceSha256": "202f33f42d937ab55cc5cc2162b41c8d1881ea3ea329e8d18e04c895de70740e",
+  "sourceUnchanged": true,
+  "mode": "RGBA",
+  "resolution": [
+    1536,
+    1024
+  ],
+  "alphaExtrema": [
+    0,
+    254
+  ],
+  "alphaFractions": {
+    "zero": 0.6392002105712891,
+    "1to31": 0.08044624328613281,
+    "32to223": 0.016564051310221355,
+    "224to255": 0.26378949483235675
+  },
+  "backgroundRgbaSamples": [
+    {
+      "xy": [
+        20,
+        200
+      ],
+      "rgba": [
+        39,
+        30,
+        28,
+        0
+      ]
+    },
+    {
+      "xy": [
+        30,
+        300
+      ],
+      "rgba": [
+        59,
+        36,
+        37,
+        0
+      ]
+    },
+    {
+      "xy": [
+        60,
+        200
+      ],
+      "rgba": [
+        54,
+        42,
+        40,
+        0
+      ]
+    },
+    {
+      "xy": [
+        80,
+        130
+      ],
+      "rgba": [
+        46,
+        33,
+        31,
+        0
+      ]
+    },
+    {
+      "xy": [
+        100,
+        80
+      ],
+      "rgba": [
+        45,
+        34,
+        32,
+        0
+      ]
+    },
+    {
+      "xy": [
+        350,
+        250
+      ],
+      "rgba": [
+        52,
+        38,
+        38,
+        0
+      ]
+    },
+    {
+      "xy": [
+        340,
+        400
+      ],
+      "rgba": [
+        70,
+        44,
+        46,
+        0
+      ]
+    },
+    {
+      "xy": [
+        192,
+        20
+      ],
+      "rgba": [
+        54,
+        40,
+        38,
+        0
+      ]
+    },
+    {
+      "xy": [
+        192,
+        480
+      ],
+      "rgba": [
+        68,
+        58,
+        56,
+        0
+      ]
+    },
+    {
+      "xy": [
+        192,
+        500
+      ],
+      "rgba": [
+        64,
+        54,
+        53,
+        0
+      ]
+    },
+    {
+      "xy": [
+        400,
+        500
+      ],
+      "rgba": [
+        29,
+        21,
+        20,
+        0
+      ]
+    },
+    {
+      "xy": [
+        1000,
+        500
+      ],
+      "rgba": [
+        62,
+        47,
+        45,
+        0
+      ]
+    }
+  ],
+  "gutters": [
+    {
+      "rectTopLeft": [
+        0,
+        470,
+        1536,
+        512
+      ],
+      "alphaMax": 1,
+      "alphaZeroFraction": 0.9895523313492064
+    },
+    {
+      "rectTopLeft": [
+        0,
+        995,
+        1536,
+        1024
+      ],
+      "alphaMax": 1,
+      "alphaZeroFraction": 0.9888424928160919
+    }
+  ],
+  "spatialAlphaInspection": [
+    {
+      "distanceBeyondAlpha128SilhouettePx": 2,
+      "maxAlpha": 59,
+      "countAlpha4Plus": 6615,
+      "countAlpha16Plus": 115
+    },
+    {
+      "distanceBeyondAlpha128SilhouettePx": 4,
+      "maxAlpha": 12,
+      "countAlpha4Plus": 982,
+      "countAlpha16Plus": 0
+    },
+    {
+      "distanceBeyondAlpha128SilhouettePx": 8,
+      "maxAlpha": 3,
+      "countAlpha4Plus": 0,
+      "countAlpha16Plus": 0
+    },
+    {
+      "distanceBeyondAlpha128SilhouettePx": 16,
+      "maxAlpha": 2,
+      "countAlpha4Plus": 0,
+      "countAlpha16Plus": 0
+    }
+  ],
+  "visualContrast": {
+    "white": "qa/pilot-S-selected-white.png",
+    "dark24": "qa/pilot-S-selected-dark.png",
+    "bothViewed": true,
+    "finding": "The correct alpha composites show clean flat backgrounds, no opaque brown rectangle or broad visible brown gradient. RGB brown data survives in transparent pixels; RGB-only display exposes that hidden data and is not evidence of an opaque PNG. There are very low alpha1/2/3 residuals outside figures and partially transparent silhouette edges, not a perfectly binary mask.",
+    "alphaOnlyDiagnostic": "ArtSources/FistsCombatStance20261117/qa/pilot-S-selected-alpha-channel.png",
+    "alphaChannelViewed": true
+  },
+  "decision": {
+    "realTransparencyAlreadyAvailable": true,
+    "newImageGenerationNeededForTransparency": false,
+    "automaticColorOrAlphaDeletion": false,
+    "reason": "Meaningful background samples are alpha0; wide gutters max alpha1; >8px beyond opaque silhouette alpha max3. Regeneration is unnecessary and could compromise approved identity. Existing selected PNG is already the transparent asset.",
+    "perfectAlphaMaskCertified": false,
+    "unityRenderingCertified": false
+  },
+  "walkApproval": {
+    "source": "candidates/FabiusFistsCombatS-v3-source.png",
+    "sourceSha256": "8b81e12bc81d1d617cff9afa96584f406400a8a4458bdb2b17c2ae929e300fe8",
+    "fourWholeRgbaFramesUnchangedInSelection": true,
+    "approvalScope": "visual approval of WalkS only; not imported/runtime-certified"
+  },
+  "remaining": [
+    "Continuous-loop inspection remains unavailable in browser due local file policy; this alpha receipt does not claim playback verification.",
+    "Seven directions remain unproduced; no new generation started with quota at27%.",
+    "No new PNG version created, no approved original/pivot/Assets changed."
+  ]
+}

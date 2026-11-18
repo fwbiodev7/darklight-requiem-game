@@ -4,6 +4,32 @@ namespace Darklight.Tests
 {
     public sealed class DarklightSimplifiedScopeTests
     {
+        [Test] public void EveryLegacyWeaponSelectionMigratesIdempotentlyAcrossEveryChapter()
+        {
+            Assert.That(DarklightPlayableScope.WeaponMask,Is.EqualTo((1<<0)|(1<<2)));
+            for(int id=0;id<4;id++)
+            {
+                Assert.That(DarklightPlayableScope.WeaponActive(id),Is.EqualTo(id==0||id==2),"weapon id "+id);
+                for(int chapter=0;chapter<DarklightProgress.ChapterCapacity;chapter++)
+                {
+                    var source=new DarklightProgress{chapter=chapter,checkpoint=4,level=17,xp=341,attack=4,weaponUnlocks=15,equippedWeapon=id};
+                    string sourceJson=JsonUtility.ToJson(source);
+                    var migrated=DarklightProgress.Decode(sourceJson);
+                    int expected=id==2?2:0;
+                    int expectedLegacy=id==1||id==3?id:-1;
+                    Assert.That(migrated.equippedWeapon,Is.EqualTo(expected),$"chapter {chapter}, weapon {id}");
+                    Assert.That(migrated.legacyEquippedWeapon,Is.EqualTo(expectedLegacy),$"chapter {chapter}, weapon {id}");
+                    Assert.That(migrated.weaponUnlocks,Is.EqualTo(15),$"legacy unlock bits lost at chapter {chapter}, weapon {id}");
+                    Assert.That(migrated.chapter,Is.EqualTo(chapter));Assert.That(migrated.level,Is.EqualTo(17));Assert.That(migrated.xp,Is.EqualTo(341));Assert.That(migrated.attack,Is.EqualTo(4));
+                    DarklightPlayableScope.Migrate(migrated);
+                    var again=DarklightProgress.Decode(JsonUtility.ToJson(migrated));
+                    Assert.That(again.equippedWeapon,Is.EqualTo(expected));Assert.That(again.legacyEquippedWeapon,Is.EqualTo(expectedLegacy));
+                    Assert.That(again.weaponUnlocks,Is.EqualTo(15));
+                    Assert.That(source.equippedWeapon,Is.EqualTo(id),"Migration must not mutate its source save");
+                }
+            }
+        }
+
         [Test] public void OldRemovedSelectionsMigrateWithoutLosingProgressOrUnlockHistory()
         {
             var old=new DarklightProgress{chapter=8,checkpoint=3,level=17,attack=4,mastery=3,weaponUnlocks=15,equippedWeapon=1,preferredForm=3,missionWeaponHits=7,formsUnlocked=3};

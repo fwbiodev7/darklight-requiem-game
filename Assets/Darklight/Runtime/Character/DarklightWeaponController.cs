@@ -9,21 +9,19 @@ namespace Darklight
         public bool Swapping=>swapClock>0;
         public void Initialize(DarklightCampaign campaign)
         {game=campaign;fighter=GetComponent<DarklightFighter>();body=GetComponent<Rigidbody2D>();Equipped=game.weaponDefinitions[0];}
-        public bool Unlocked(int index)=>index>=0&&index<game.weaponDefinitions.Length&&DarklightPlayableScope.WeaponActive(index)&&((game.Progress.weaponUnlocks&(1<<index))!=0||index==3&&game.Training);
+        public bool Unlocked(int index)=>index>=0&&index<game.weaponDefinitions.Length&&DarklightPlayableScope.WeaponActive(index)&&(game.Progress.weaponUnlocks&(1<<index))!=0;
         public void Restore()
         {
             pending=-1;swapClock=0;lastSerial=-1;game.Progress.weaponUnlocks|=1;DarklightPlayableScope.Migrate(game.Progress);
             if(game.Progress.chapter>0||(game.Progress.chapter==0&&game.Progress.checkpoint==4))game.Progress.weaponUnlocks|=2;
             if(game.Progress.chapter>2||(game.Progress.chapter==2&&game.Progress.checkpoint==4))game.Progress.weaponUnlocks|=4;
-            // The final three-weapon trial must remain completable if the optional motor was missed.
-            if(game.Progress.chapter>=9)game.Progress.weaponUnlocks|=8;
             int index=Unlocked(game.Progress.equippedWeapon)?game.Progress.equippedWeapon:0;
             game.Progress.equippedWeapon=index;if(index<3)lastCompatible=index;
             Equipped=game.weaponDefinitions[index];fighter.loadout=Equipped.loadout;fighter.ResetModel();game.AbyssRider?.ResetMotion();
         }
         public void Request(int index)
         {
-            if(!Unlocked(index)){game.Notice(index==3?"CAVALEIRO: MOTOR SELADO NA CRIPTA":index==1?"ARMA DE LEGADO INDISPONIVEL":(DarklightRuinFistsBank.Ready?"PUNHOS DA RUÍNA: DERROTE A MATRIARCA":"CORRENTE: DERROTE A MATRIARCA"));return;}
+            if(!Unlocked(index)){game.Notice(index==1||index==3?"ARMA LEGADA INDISPONIVEL":(DarklightRuinFistsBank.Ready?"PUNHOS DA RUÍNA: DERROTE A MATRIARCA":"CORRENTE: DERROTE A MATRIARCA"));return;}
             if(Equipped==game.weaponDefinitions[index])return;
             pending=index;pendingUntil=fighter.Model.Clock+.8f;
         }

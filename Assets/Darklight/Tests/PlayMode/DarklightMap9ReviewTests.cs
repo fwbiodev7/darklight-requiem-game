@@ -73,11 +73,13 @@ namespace Darklight.Tests
             var views=new[]{new Vector2(220,440),new Vector2(795,700),new Vector2(1325,455)};
             for(int i=0;i<views.Length;i++){var p=game.Map.SafeSpawn(game.Map.Art.World(views[i]));Move(p);lab.WorldCamera.transform.position=(Vector3)p+new Vector3(0,.75f,-10);yield return null;Capture(Folder+"after/map9-extra"+i+".png");}
         }
-        [UnityTest]public IEnumerator Map9KaelThreePhasesPurificationAliveAndPause()
+        [UnityTest]public IEnumerator Map9NeroThreePhasesPurificationAliveAndPause()
         {
             game.PreviewChapter(8);game.Progress.checkpoint=3;Call(game,"LoadMap",8);Call(game,"Close");Move(game.Map.SafeSpawn(game.Map.Arenas[3]+Vector2.down));yield return null;yield return null;
             for(int i=0;i<8&&!game.Active;i++){Call(game,"NextDialogue");yield return null;}
             Assert.That(game.MapEnemies.Count(e=>e.Boss),Is.EqualTo(1));var boss=game.CurrentBoss;Assert.That(boss.kind,Is.EqualTo(RequiemEnemyKind.KaelFractured));
+            float deadline=Time.realtimeSinceStartup+5;while(!boss.AcceptDamage&&Time.realtimeSinceStartup<deadline)yield return null;
+            Assert.That(boss.AcceptDamage,Is.True,"Nero's entry protection did not finish");
             boss.Health.TakeDamage(boss.Health.MaxHealth*.4f);yield return new WaitForSeconds(.06f);Assert.That(boss.Phase,Is.EqualTo(2));Assert.That(boss.AcceptDamage,Is.False);
             game.PreviewPanel("Pause");float clock=lab.Player.Model.Clock;yield return new WaitForSeconds(.05f);Assert.That(lab.Player.Model.Clock,Is.EqualTo(clock));Call(game,"Close");yield return new WaitForSeconds(.95f);
             boss.Health.TakeDamage(boss.Health.MaxHealth*.35f);yield return new WaitForSeconds(.06f);Assert.That(boss.Phase,Is.EqualTo(3));yield return new WaitForSeconds(.95f);

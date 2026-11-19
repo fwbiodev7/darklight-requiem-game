@@ -119,11 +119,11 @@ namespace Darklight.Tests
                 }
             }
 
-            Assert.That(game.AllyName, Is.EqualTo("LYRA MOREAU"), "Map 1 canonical ally must be Lyra Moreau");
+            Assert.That(game.AllyName, Is.EqualTo("LADY"), "Lady investigates Vespera alongside Fabius from the first map");
         }
 
         [UnityTest]
-        public IEnumerator Map1Layer4_ArenasAndBossKaelVossEncounter()
+        public IEnumerator Map1Layer4_ArenasLeadToTheThreeSealRitual()
         {
             game.PreviewChapter(0);
             yield return null;
@@ -137,7 +137,10 @@ namespace Darklight.Tests
                 Assert.That(game.Map.InArena(i, arena), Is.True, "Arena center must be inside arena bounds: " + i);
             }
 
-            Assert.That(DarklightStory.Bosses[0], Does.Contain("Kael Voss").IgnoreCase.Or.EqualTo("Kael Voss"), "Boss 1 must be Kael Voss");
+            Assert.That(DarklightCampaignRoute.TryBoss(0, out _), Is.False);
+            Assert.That(DarklightCampaignRoute.GateTitle(0), Is.EqualTo("RITUAL DOS TRÊS SELOS"));
+            Assert.That(DarklightCampaignRoute.TryBoss(2, out var firstBoss), Is.True);
+            Assert.That(firstBoss, Is.EqualTo(RequiemEnemyKind.Matriarch));
         }
 
         [UnityTest]

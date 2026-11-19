@@ -192,9 +192,11 @@ namespace Darklight
             if(transformed!=null){ShowFinalForm(index+4);return;}
             if(attackFrames?.Length!=4){Show(3);return;}
             art.sprite=attackFrames[index];
-            float target=DarklightWorldScale.EnemyHeight(kind);
-            art.transform.localScale=Visitor!=DarklightVisitor.None?Vector3.one:Vector3.one*target/poses[0].bounds.size.y;
+            art.transform.localScale=Vector3.one*PresentationScale;
         }
+        internal bool UsesOfficialCombatArt {get;set;}
+        internal float PresentationScale=>Visitor!=DarklightVisitor.None?1f:
+            UsesOfficialCombatArt?DarklightCharacterView.WorldVisualScale:DarklightWorldScale.EnemyHeight(kind)/poses[0].bounds.size.y;
         bool ShowEnemyPilot(string name)
         {
             var frames=DarklightSecondaryStyleBank.Load(name);
@@ -206,7 +208,7 @@ namespace Darklight
         void Show(int index)
         {
             if(FinalFormFrames!=null){ShowFinalForm(index);return;}
-            art.transform.localScale=Visitor!=DarklightVisitor.None?Vector3.one:Vector3.one*DarklightWorldScale.EnemyHeight(kind)/poses[0].bounds.size.y;
+            art.transform.localScale=Vector3.one*PresentationScale;
             if(poses!=null&&poses.Length>index)art.sprite=poses[index];
         }
         void Reward(){if(rewarded)return;rewarded=true;DarklightCampaign.Instance?.EnemyDefeated(this);GetComponent<Collider2D>().enabled=false;}

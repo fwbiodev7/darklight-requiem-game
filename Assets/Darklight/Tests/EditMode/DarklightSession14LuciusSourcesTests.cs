@@ -45,7 +45,9 @@ namespace Darklight.Tests
             Assert.That(DarklightLuciusSpriteBank.ValidCatalog(catalog,appearance),Is.True);
             Assert.That(catalog.pages.Count(page=>page.action=="Walk"&&!page.directionalFallback),Is.EqualTo(8));
             var dodges=catalog.pages.Where(page=>page.action=="Dodge").ToArray();
-            Assert.That(dodges.All(page=>!page.loop&&!page.directionalFallback&&page.spriteNames.Length==3&&
+            Assert.That(dodges.All(page=>!page.loop&&!page.directionalFallback&&
+                (page.spriteNames.Length==3||page.spriteNames.Length==5)&&
+                page.spriteNames.Distinct().Count()==page.spriteNames.Length&&
                 page.durationMs.Sum()==230),Is.True);
             if(appearance==DarklightLuciusAppearance.Normal)
                 Assert.That(catalog.pages.Count(page=>page.action=="Parry"&&page.spriteNames.Length>=3&&!page.directionalFallback),Is.EqualTo(8));

@@ -64,42 +64,42 @@ namespace Darklight
     {
         public static readonly string[] Chapters=new[]{"A NOITE DA RUPTURA","VOZES DO ABISMO","SANGUE DESPERTO","O PROJETO ECLIPSE","ALEM DO VEU","O ULTIMO ECLIPSE","HERANÇA CARMESIM","A CIDADE SEM AMANHECER","O TRONO DO VAZIO","DARKLIGHT: REQUIEM"};
         public static readonly string[] Places=new[]{"Rua das Cinzas","Distrito do Vinil","Catedral do Sangue","Laboratorio Eclipse","Jardim dos Ecos","Observatorio Vespera","Cripta dos Primeiros","Catedral do Crepúsculo","Véu Profundo","Coração do Eclipse"};
-        public static readonly string[] Bosses=new[]{"KAEL VOSS","CANTOR DO ABISMO","MATRIARCA RUBRA","SENTINELA ECLIPSE","GUARDIAO DO VEU","LUCIEN VEYR","VALTHERION — PRIMEIRO GUARDIÃO","SERAPHINE — RAINHA DA NOITE","KAEL — CAVALEIRO FRATURADO","NOCTHAR — REI DO VAZIO"};
+        public static readonly string[] Bosses=new[]{"NERO","CANTOR DO ABISMO","MATRIARCA RUBRA","SENTINELA ECLIPSE","GUARDIAO DO VEU","LUCIEN VEYR","VALTHERION — PRIMEIRO GUARDIÃO","SERAPHINE — RAINHA DA NOITE","NERO FRATURADO","NOCTHAR — REI DO VAZIO"};
         public static readonly string[][] Introductions={
-            new[]{"FABIO|O eclipse apagou as luzes. Mas algo continua brilhando na minha mao...","LYRA|Sou Lyra. As criaturas vieram das fendas. Siga a rua; Kael sabe o que e essa espada.","FABIO|Requiem. Se voce me escolheu, vamos tirar essas pessoas daqui."},
-            new[]{"LYRA|Os Ecos repetem vozes de pessoas desaparecidas. A origem esta no distrito do vinil.","FABIO|Vou procurar os sinais. Ninguem merece ser esquecido no escuro.","LYRA|Icaro Nox tem uma loja a esquerda da praca. Ele entende frequencias que nao deviam existir."},
-            new[]{"LYRA|Seu sangue reagiu aos registros da catedral. Voce nasceu com uma ponte para o Veu.","FABIO|Entao essa escuridao tambem e minha. Mas eu escolho o que fazer com ela.","LYRA|A Matriarca guarda a memoria da primeira Ruptura. Quebre seus selos."},
-            new[]{"KAEL|Lucien criou o Projeto Eclipse para domesticar o Veu. Eu fui sua primeira arma.","FABIO|Voce pode escolher de novo. Abra o caminho e eu desligo o nucleo.","LYRA|Tres servidores sustentam o laboratorio. A Sentinela protege o ultimo."},
-            new[]{"FABIO|A cidade esta do outro lado... Aqui as memorias viram pedra.","LYRA|O sinal esta fraco. Procure os fragmentos e mantenha o portal aberto.","KAEL|O Guardiao exige um preco. Nao entregue a ele o que faz de voce humano."},
-            new[]{"LUCIEN|Voce trouxe todos os fragmentos. Finalmente o ultimo eclipse sera eterno.","FABIO|Eu nao sou seu recipiente. Vespera vai ver o sol outra vez.","LYRA|Desative os condutores. Quando Lucien cair, descubra quem alimenta o eclipse."},
-            new[]{"LYRA|Lucien caiu, mas o eclipse não terminou. Os registros apontam para uma cripta muito mais antiga que o projeto.","FÁBIO|Não vamos confundir silêncio com vitória. Quero saber quem deixou essas inscrições.","LYRA|A linhagem que protegia a fronteira usava o mesmo símbolo da sua espada. Entre na cripta e procure a memória ancestral."},
-            new[]{"KAEL|O sol desapareceu. Há sobreviventes cercados na praça e um abrigo que ainda resiste.","FÁBIO|Primeiro tiramos as pessoas daqui. Depois entramos na catedral.","LYRA|Seraphine está usando o eclipse para despertar algo além do Véu. Não deixe que ela decida por você."},
-            new[]{"LYRA|Os três selos antigos abrem o caminho para o trono. O Véu Profundo guarda versões distorcidas das nossas memórias.","KAEL|Há uma voz dentro dessas pedras. Se ela me alcançar, lembre quem eu era.","FÁBIO|Eu não vou abandonar você. Lucien servia a uma coisa maior: Nocthar."},
-            new[]{"KAEL|A corrupção se foi, mas ainda consigo ouvir Nocthar. O Coração do Eclipse está tentando fundir os mundos.","LYRA|Leve nossas memórias. Você não precisa destruir metade de si para salvar a outra.","FÁBIO|Katana, punhos e motocicleta. Tudo o que aprendi me trouxe até aqui. Agora a escolha é minha."}
+            new[]{"FABIUS|O eclipse apagou as luzes. Mas algo continua brilhando na minha mão...","LADY|As fendas cercaram a rua. Vamos fechar os três selos e tirar as pessoas daqui.","FABIUS|Réquiem. Se você me escolheu, vamos abrir esse caminho juntos."},
+            new[]{"LADY|Os Ecos repetem vozes de pessoas desaparecidas. A origem está no distrito do vinil.","FABIUS|Vou procurar os sinais. Ninguém merece ser esquecido no escuro.","LADY|Ícaro Nox tem uma loja à esquerda da praça. Ele entende frequências que não deviam existir."},
+            new[]{"LADY|Seu sangue reagiu aos registros da catedral. Você nasceu com uma ponte para o Véu.","FABIUS|Então essa escuridão também é minha. Mas eu escolho o que fazer com ela.","LADY|A Matriarca guarda a memória da primeira Ruptura. Quebre seus selos."},
+            new[]{"LADY|Estes registros ligam o Projeto Eclipse ao observatório. Três servidores mantêm a passagem fechada.","FABIUS|Vou desligar o núcleo e descobrir quem ainda o controla.","LADY|Eu acompanho os sinais daqui. Volte inteiro."},
+            new[]{"FABIUS|A cidade está do outro lado... Aqui as memórias viram pedra.","LADY|O sinal está fraco. Procure os fragmentos e mantenha o portal aberto.","FABIUS|Ainda consigo ouvir você. Vou seguir esse caminho."},
+            new[]{"LADY|Os condutores levam a energia da cidade para o Véu. A assinatura de Lucius aparece em cada registro.","FABIUS|Ele conhecia esta espada antes de mim. Quero ouvir o que tem a dizer.","LADY|Abra a passagem pelo observatório. Eu procuro os registros que faltam."},
+            new[]{"LADY|Os registros do observatório apontam para uma cripta mais antiga que o projeto.","FABIUS|Quero saber quem deixou essas inscrições.","LADY|A linhagem que protegia a fronteira usava o símbolo da sua espada. Procure a memória ancestral."},
+            new[]{"LADY|Há sobreviventes cercados na praça e um abrigo que ainda resiste.","FABIUS|Primeiro tiramos as pessoas daqui. Depois entramos na catedral.","LADY|Vou conduzir quem conseguir atravessar. Proteja a entrada."},
+            new[]{"LADY|Os três selos abrem o caminho para Nero. Ele procura uma saída desde que a corrupção tomou o Véu Profundo.","NERO|Há uma voz dentro dessas pedras. Se ela me alcançar, lembre quem eu era.","FABIUS|Vou quebrar essa corrupção. Você sai daqui comigo."},
+            new[]{"NERO|A corrupção se foi. As fendas do Coração do Eclipse continuam alimentando a passagem.","LADY|Leve nossas memórias. Você não precisa enfrentar Lucius sozinho.","FABIUS|Vou encerrar o eclipse. A escolha será nossa."}
         };
         public static readonly string[][] BossLines={
-            new[]{"KAEL|Nao e a espada que decide quem voce e. Mostre que consegue enfrenta-la.","FABIO|Entao pare de falar e venha."},
-            new[]{"CANTOR|Cada voz perdida canta dentro de mim. Voce tambem vai cantar.","FABIO|Eu vou devolver essas vozes."},
-            new[]{"MATRIARCA|Seu sangue lembra o caminho. Fique comigo, filho da Ruptura.","FABIO|Meu sangue nao decide o meu futuro."},
-            new[]{"SENTINELA|Portador nao autorizado. Protocolo Eclipse: erradicacao.","KAEL|Ele preve sua primeira investida. Varie seus ataques."},
-            new[]{"GUARDIAO|A ponte pede uma memoria. Qual delas voce abandonara?","FABIO|Nenhuma. Eu vou abrir passagem com Requiem."},
-            new[]{"LUCIEN|Sem mim, o Veu vai devorar tudo!","FABIO|Voce confundiu controle com salvacao. Acabou."},
-            new[]{"VALTHERION|Eu vi guardiões virarem tiranos. Prove que sua linhagem ainda sabe conter o próprio sangue.","FÁBIO|Meu sangue não me obriga a repetir seus erros."},
-            new[]{"SERAPHINE|A humanidade é uma fome sem fim. Entregue-se e verá como o sangue é simples.","FÁBIO|Meu sangue não decide quem eu sou."},
-            new[]{"KAEL|A voz... ela já está aqui. Não deixe que me transforme em mais uma arma.","FÁBIO|Vou quebrar a corrupção. Você volta comigo."},
-            new[]{"NOCTHAR|Você é apenas uma aberração entre dois mundos.","FÁBIO|Não. Eu sou a prova de que eles podem coexistir."}
+            new[]{"LADY|Os símbolos da rua mostram a ordem. Vamos fechar estes selos.","FABIUS|Eu protejo a passagem."},
+            new[]{"ÍCARO NOX|A frequência certa enfraquece a fenda. Afaste os Ecos do mecanismo.","FABIUS|Vou devolver essas vozes."},
+            new[]{"MATRIARCA|Seu sangue lembra o caminho. Fique comigo, filho da Ruptura.","FABIUS|Meu sangue não decide o meu futuro."},
+            new[]{"LADY|A última patrulha protege os condutores. Desative o circuito.","FABIUS|Vamos abrir a passagem."},
+            new[]{"LADY|Observe o caminho entre os fragmentos. O Véu esconde a saída à vista de todos.","FABIUS|Vou encontrar a passagem."},
+            new[]{"LADY|As criaturas se juntaram no último condutor.","FABIUS|Então soltamos a cidade desse circuito."},
+            new[]{"LADY|Estes guardiões foram tomados pela fenda. Liberte a passagem para a memória.","FABIUS|Meu sangue não me obriga a repetir os erros deles."},
+            new[]{"LADY|O abrigo está quase livre. Há uma última patrulha na catedral.","FABIUS|Ninguém vai ficar para trás."},
+            new[]{"NERO|A voz... ela já está aqui. Não deixe que me transforme em mais uma arma.","FABIUS|Vou quebrar a corrupção. Você volta comigo."},
+            new[]{"NERO|Eu seguro a passagem. Feche as fendas antes de entrar.","LADY|Depois delas, só resta Lucius."}
         };
         public static readonly string[][] Conclusions={
-            new[]{"KAEL|A Ruptura despertou. Controle-a antes que ela controle voce.","LYRA|Ha registros no distrito. Agora temos uma chance."},
-            new[]{"LYRA|As vozes apontaram para a catedral. O projeto comecou muito antes de Lucien.","FABIO|Entao vamos descobrir quem abriu a primeira porta."},
-            new[]{"FABIO|A memoria era minha mae protegendo a cidade... Ela nao fugiu.","LYRA|E voce nao precisa repetir o sacrificio dela."},
-            new[]{"KAEL|O nucleo caiu. Voce aprendeu a unir luz e sombra: Eclipse.","LYRA|Lucien atravessou. Sigam-no antes que o portal feche."},
-            new[]{"FABIO|O Guardiao deixou a ponte aberta. Equilibrio ainda nao e poder absoluto.","KAEL|Volte para casa. Eu mantenho o caminho."},
-            new[]{"LUCIEN|Eu... so queria que a perda deixasse de existir.","FABIO|Apagar a vida nao cura a perda. Mas o eclipse continua. Lyra, precisamos dos registros dele."},
-            new[]{"VALTHERION|Você escolheu quando a força parecia mais fácil. A memória da linhagem agora é sua.","LYRA|Vespera precisa desse equilíbrio. O eclipse avançou sobre a catedral."},
-            new[]{"FÁBIO|Ela tentou transformar cada pessoa em combustível. Nós ainda estamos aqui.","KAEL|A última Ruptura está aberta. Vamos juntos. Não quero que você carregue isso sozinho."},
-            new[]{"KAEL|Eu ouvi você no escuro. Você podia ter terminado a luta... e escolheu me trazer de volta.","FÁBIO|Nenhum de nós nasceu para ser uma arma. Abra o caminho. Vamos acabar com isso."},
-            new[]{"NOCTHAR|Sem a fusão, os mundos voltarão a se ferir.","LYRA|Equilíbrio não é ausência de escolha. Fábio, este futuro pertence a quem vai vivê-lo."}
+            new[]{"LADY|Os selos responderam ao seu sangue. Os registros do distrito podem explicar isso.","FABIUS|Primeiro uma rua segura. Agora temos uma chance."},
+            new[]{"LADY|As vozes apontaram para a catedral. O projeto começou muito antes do eclipse.","FABIUS|Então vamos descobrir quem abriu a primeira porta."},
+            new[]{"FABIUS|A memória era minha mãe protegendo a cidade... Ela não fugiu.","LADY|E você pode continuar o que ela começou."},
+            new[]{"LADY|O núcleo caiu. Os sinais do observatório ficaram claros.","FABIUS|Vamos seguir a energia antes que outra fenda se abra."},
+            new[]{"FABIUS|A ponte continua aberta. Equilíbrio ainda exige escolha.","LADY|Volte para casa. Eu mantenho o sinal aceso."},
+            new[]{"LADY|Os condutores desligaram, mas a origem está além do observatório.","FABIUS|Vamos levar estes registros à cripta."},
+            new[]{"FABIUS|A memória da linhagem atravessou o eclipse.","LADY|Vespera precisa desse equilíbrio. A passagem para o abrigo está aberta."},
+            new[]{"FABIUS|Todos chegaram ao abrigo. Agora podemos entrar no Véu Profundo.","LADY|Há um espadachim preso do outro lado. A corrupção ainda pode ser rompida."},
+            new[]{"NERO|Eu ouvi você no escuro. Você podia ter terminado a luta... e escolheu me trazer de volta.","FABIUS|Nenhum de nós nasceu para ser uma arma. Abra o caminho. Vamos acabar com isso."},
+            new[]{"NERO|As fendas fecharam. O caminho até Lucius está livre.","LADY|Você tem a nossa confiança, Fabius. Volte para nós."}
         };
     }
 }

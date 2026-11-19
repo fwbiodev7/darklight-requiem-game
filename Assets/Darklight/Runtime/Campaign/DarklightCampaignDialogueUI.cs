@@ -44,7 +44,7 @@ namespace Darklight
             dialogueRoot.gameObject.SetActive(true);dialogueRoot.SetAsLastSibling();
             string line=dialogue[dialogueIndex];int separator=line.IndexOf('|');string speaker=separator<0?"VESPERA":line.Substring(0,separator);
             string key=speaker.ToUpperInvariant().Replace("Í","I").Replace("Á","A").Replace("Ó","O").Replace("É","E");
-            Sprite art=key.Contains("ICARO")?extras[0]:key.StartsWith("LYRA")?extras[1]:key=="FABIO"?lab.Player.GetComponent<DarklightCharacterView>().idle[0]:key.Contains("KAEL")?bossFrames[0]:key.StartsWith("MEMORIA")?null:bossFrames[Mathf.Clamp(Progress.chapter*4,0,bossFrames.Length-1)];
+            Sprite art=DialoguePortrait(key);
             dialogueName.text=speaker.ToUpperInvariant();dialoguePortrait.gameObject.SetActive(art!=null);
             if(art!=null){var r=art.rect;float height=r.height*.56f;float width=Mathf.Min(100,90*r.width/height);dialoguePortrait.texture=art.texture;dialoguePortrait.uvRect=new Rect(r.x/art.texture.width,(r.y+r.height-height)/art.texture.height,r.width/art.texture.width,height/art.texture.height);dialoguePortrait.rectTransform.anchoredPosition=new Vector2(19+(100-width)*.5f,-241);dialoguePortrait.rectTransform.sizeDelta=new Vector2(width,90);}
             dialogueReveal=new DarklightDialogueReveal(separator<0?line:line.Substring(separator+1));dialogueText.text="";dialogueInputReady=Time.unscaledTime+.15f;
@@ -52,6 +52,17 @@ namespace Darklight
             var advance=lab.Input.Menu("DialogueAdvance");var interaction=lab.Input.Action("Interact");
             for(int i=0;i<interaction.bindings.Count;i++){string path=interaction.bindings[i].effectivePath;if(path?.StartsWith("<Keyboard>")==true)advance.ApplyBindingOverride(2,path);else if(path?.StartsWith("<Gamepad>")==true)advance.ApplyBindingOverride(3,path);}
             RefreshDialogueCue();
+        }
+        static Sprite OfficialCastSprite(string name)=>Resources.Load<Sprite>("Darklight/OfficialCast/"+name);
+        Sprite DialoguePortrait(string key)
+        {
+            if(key.Contains("ICARO"))return extras[0];
+            if(key.StartsWith("LADY")||key.StartsWith("LYRA"))return OfficialCastSprite("Lady")??extras[1];
+            if(key=="FABIO"||key=="FABIUS")return DarklightWeaponRedesignBank.CurrentIdle(0,0)??lab.Player.GetComponent<DarklightCharacterView>().idle[0];
+            if(key.Contains("NERO")||key.Contains("KAEL"))return OfficialCastSprite("Nero")??bossFrames[0];
+            if(key.Contains("MATRIARCA"))return OfficialCastSprite("MatriarcaRubra")??bossFrames[8];
+            if(key=="LUCIUS"&&DarklightLuciusSpriteBank.TryPose("Idle",0,0,out var lucius))return lucius;
+            return null;
         }
         void RefreshDialogueCue(){dialogueCue.text=(lab.Input.UsingGamepad?lab.Input.BindingLabel("Interact"):lab.Input.BindingLabel("Interact")+" / ENTER / ESPACO")+": "+(DialogueTyping?"REVELAR":"CONTINUAR")+"    "+(dialogueIndex+1)+"/"+dialogue.Length+"    "+(lab.Input.UsingGamepad?"B":"ESC")+": PULAR";}
         public void AdvanceDialogue()

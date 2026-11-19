@@ -22,7 +22,7 @@ namespace Darklight
             if(!Active||MenuDismissedThisFrame||health.IsDead||Transforming||VampireCasting||WearingHeadphones||Weapons.Swapping||lab.Player.Model.State!=CombatState.Neutral)return false;
             if(Form>0){EndForm();return true;}
             int unlocked=Progress.FormUnlocked;
-            if(unlocked==0){Notice("RUPTURA DESPERTA APOS KAEL");return false;}
+            if(unlocked==0){Notice("RUPTURA DESPERTA NA CAMPANHA");return false;}
             if(Energy<60){Notice("TRANSFORMACAO: PRECISA 60 DE SANGUE");return false;}
             Form=Progress.preferredForm>0?Mathf.Min(unlocked,DarklightPlayableScope.Form(Progress.preferredForm)):unlocked;
             Energy-=60;FormTime=TransformationDuration(Progress.mastery);BeginFormPresentation(Form,true);

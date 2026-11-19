@@ -34,7 +34,7 @@ namespace Darklight
             float floor=Health.MaxHealth*.08f;
             if(Health.CurrentHealth-damage>floor)return damage;
             purificationReady=true;state=0;timer=1;dash=Vector2.zero;body.linearVelocity=Vector2.zero;warning?.Hide();
-            DarklightCampaign.Instance.Notice("KAEL AJOELHOU — APROXIME-SE E INTERAJA");
+            DarklightCampaign.Instance.Notice("NERO AJOELHOU — APROXIME-SE E INTERAJA");
             return Mathf.Max(0,Health.CurrentHealth-floor);
         }
         public void Purify()

@@ -85,7 +85,9 @@ namespace Darklight
         public float VampireDamage(StrikeKind kind)=>kind==StrikeKind.Counter&&(Progress.progressionNodes&1)!=0?1.2f:1;
         public float ProtectAwakening(float damage)
         {
-            if(Progress.chapter!=0||Progress.awakeningState!=0||CurrentBoss==null||CurrentBoss.kind!=RequiemEnemyKind.Kael||health.CurrentHealth-damage>health.MaxHealth*.25f)return damage;
+            bool facingRitualGuard=encounter==3&&encounterStarted&&!chapterCleared;
+            bool legacyTraining=Training&&CurrentBoss?.kind==RequiemEnemyKind.Kael;
+            if(Progress.chapter!=0||Progress.awakeningState!=0||(!facingRitualGuard&&!legacyTraining)||health.CurrentHealth-damage>health.MaxHealth*.25f)return damage;
             Progress.awakeningState=1;Progress.CompleteMilestone(0,1);Progress.vampireSkills|=1;Progress.formsUnlocked=Mathf.Max(Progress.formsUnlocked,1);
             Form=1;FormTime=TransformationDuration(Progress.mastery);BeginFormPresentation(1,true);Blood.Set(Mathf.Max(Blood.Amount,40));health.Heal(health.MaxHealth*.18f);Notice("SANGUE DESPERTO — H / RS CIMA: GARRAS");AudioDirector?.Awakening();ScheduleFirstAwakeningMusic();SaveCheckpoint();
             return Mathf.Min(damage,Mathf.Max(0,health.CurrentHealth-health.MaxHealth*.15f));

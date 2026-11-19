@@ -70,12 +70,12 @@ namespace Darklight
             energyFill.rectTransform.sizeDelta=new Vector2(132*Mathf.Clamp01(Energy/100),2);
             Vector2 goal=ExploringNewRegion?RegionGoal:chapterCleared?Map.Portal:Map.Arenas[encounter];Vector2 delta=goal-(Vector2)lab.Player.transform.position;
             string compass=new[]{"S","SO","O","NO","N","NE","L","SE"}[DarklightCharacterView.DirectionIndex(delta)];
-            objectiveText.text=ExploringNewRegion?"MEMÓRIAS "+VisitedRegionAreas+"/"+Map.Art.areas.Length+"  "+compass+"  "+delta.magnitude.ToString("0")+"m":encounterStarted?Objective:(chapterCleared?"PORTAL":encounter==3?"CHEFE":"SELO "+(encounter+1)+"/3")+"  "+compass+"  "+delta.magnitude.ToString("0")+"m";statusText.text="NV "+Progress.level+"  XP "+Progress.xp+"/"+Progress.NeededXP+"  "+lab.Input.BindingLabel("Potion")+":"+Progress.potions;
+            objectiveText.text=ExploringNewRegion?"MEMÓRIAS "+VisitedRegionAreas+"/"+Map.Art.areas.Length+"  "+compass+"  "+delta.magnitude.ToString("0")+"m":encounterStarted?Objective:(chapterCleared?"PORTAL":encounter==3?DarklightCampaignRoute.GateTitle(Progress.chapter):"SELO "+(encounter+1)+"/3")+"  "+compass+"  "+delta.magnitude.ToString("0")+"m";statusText.text="NV "+Progress.level+"  XP "+Progress.xp+"/"+Progress.NeededXP+"  "+lab.Input.BindingLabel("Potion")+":"+Progress.potions;
             int selected=Resonance.Selected;float cooldown=Resonance.Recovery[selected];
             powerFrame.gameObject.SetActive(Active&&Progress.mp3Unlocked);powerFill.color=DarklightResonance.Colors[selected];powerFill.rectTransform.sizeDelta=new Vector2(145*Resonance.Energy/100,3);
             powerText.text=DarklightResonance.Names[selected]+"\n"+(Resonance.Active==selected?Resonance.Remaining.ToString("0.0")+"s ATIVO":cooldown>0?cooldown.ToString("0")+"s RECARGA":lab.Input.BindingLabel("Power")+": ATIVAR")+"   "+Resonance.Energy.ToString("0")+"%\n1/2 OU DIRECIONAL: MODO";
             messageText.text=noticeTime>0?notice:"";
-            var boss=CurrentBoss;bossText.text=boss==null?"":boss.IsLucius?(boss.Phase==3?"LUCIUS - ULTIMO CONFRONTO":boss.Phase==2?"LUCIUS - ARCONTE":"LUCIUS"):DarklightStory.Bosses[Progress.chapter];bossFill.gameObject.SetActive(boss!=null&&!boss.IsLucius);
+            var boss=CurrentBoss;bossText.text=boss==null?"":boss.IsLucius?(boss.Phase==3?"LUCIUS - ULTIMO CONFRONTO":boss.Phase==2?"LUCIUS - ARCONTE":"LUCIUS"):DarklightStory.Bosses[(int)boss.kind-5];bossFill.gameObject.SetActive(boss!=null&&!boss.IsLucius);
             bossText.gameObject.SetActive(boss==null||!boss.IsLucius);
             PresentLuciusBossBar(boss);
             if(boss!=null)bossFill.rectTransform.sizeDelta=new Vector2(220*boss.Health.HealthPercent,3);

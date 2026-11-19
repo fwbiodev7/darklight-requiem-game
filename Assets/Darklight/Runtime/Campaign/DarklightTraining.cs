@@ -132,7 +132,7 @@ namespace Darklight
         void BuildTrainingEnemies()
         {
             heading.text="ADVERSARIOS DO TREINO";bodyText.text="Alvo passivo para sequencias; inimigos ativos para praticar defesa, postura e pressao. Escolher outro encontro limpa o anterior.";
-            string[] labels={"ALVO PASSIVO","CACADOR","BLINDADO","ATIRADOR","GRUPO MISTO + ELITE","KAEL","FABIUS VS LUCIUS"};
+            string[] labels={"ALVO PASSIVO","CACADOR","BLINDADO","ATIRADOR","GRUPO MISTO + ELITE","NERO","FABIUS VS LUCIUS"};
             for(int i=0;i<labels.Length;i++){int chosen=i;Button(labels[i],()=>SpawnTraining(chosen));}Button("VOLTAR",()=>Open("Training"));
         }
         void BuildTrainingForms()

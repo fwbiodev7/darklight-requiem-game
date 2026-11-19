@@ -9,11 +9,11 @@ namespace Darklight
     [Serializable] public sealed class DarklightLuciusSpritePage
     {
         public string id,action,attackKey,resourcePath,imageSha256,sourceSha256,status;
-        public int direction,startupFrames,activeFrames;
+        public int direction,startupFrames,activeFrames,sourceDirection;
         public int[] nativeSize,durationMs;
         public float pixelsPerUnit;
         public string[] spriteNames;
-        public bool loop,wholeFigures;
+        public bool loop,wholeFigures,directionalFallback;
         [NonSerialized] internal Sprite[] frames;
         [NonSerialized] internal bool attempted;
         [NonSerialized] internal DarklightWeaponRedesignPage clock;
@@ -67,6 +67,7 @@ namespace Darklight
                 page.spriteNames==null||page.spriteNames.Length==0||page.durationMs?.Length!=page.spriteNames.Length)return false;
             // Attack identity is exact; other states cannot carry a technique key.
             if(page.action=="Attack"?!SwordKey(page.attackKey):!string.IsNullOrEmpty(page.attackKey))return false;
+            if(page.directionalFallback&&(page.sourceDirection<0||page.sourceDirection>7||page.sourceDirection==page.direction))return false;
             if(page.startupFrames<0||page.activeFrames<0)return false;
             if(page.startupFrames!=0||page.activeFrames!=0)
                 if(page.action!="Attack"||page.startupFrames<1||page.activeFrames<1||
@@ -179,6 +180,13 @@ namespace Darklight
             int offset=0,span=0;
             for(int i=0;i<end;i++){if(i<start)offset+=page.durationMs[i];else span+=page.durationMs[i];}
             return (offset+Mathf.Clamp(duration>0?elapsed/duration:1,0,.99999f)*span)/1000f;
+        }
+        internal static float FitStateTime(DarklightLuciusSpritePage page,float elapsed,float duration)
+        {
+            if(page?.durationMs==null||duration<=0)return elapsed;
+            float total=0;
+            foreach(int frameDuration in page.durationMs)total+=frameDuration;
+            return Mathf.Clamp(elapsed/duration,0,.99999f)*total/1000f;
         }
         public static void ClearCache(){catalogs.Clear();attempted.Clear();sheets.Clear();}
     }

@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\LadyDesignCanon20261119\\Lady-Idle-S-candidate-v2.png",
+  "sourceSha256": "06a88b75b7a2ebf57b4332a29b71d50baa680bf952b1ddd03981d6717cfcb340",
+  "errors": [],
+  "warnings": [
+    "More than 10% of visible samples have partial alpha; inspect halos/native pixel rendering",
+    "Unity text inspection only: import, platform overrides and runtime not verified"
+  ],
+  "frames": [
+    {
+      "id": "Lady_Idle_S_00",
+      "rect": [
+        0,
+        0,
+        548,
+        1057
+      ],
+      "bbox": [
+        18,
+        16,
+        532,
+        1041
+      ],
+      "visiblePixels": 343173,
+      "colors": 134576,
+      "partialAlphaPixels": 343008,
+      "pixelSha256": "e6d2452c81dd50820e87ed458ac46c1a0c46862b881c94911855b1f4262a4156"
+    }
+  ],
+  "clips": [
+    {
+      "name": "Lady_Idle_S",
+      "frames": 1,
+      "distinctPoses": 1
+    }
+  ],
+  "overlaps": [],
+  "visualApproval": false,
+  "runtimeVerified": false
+}

@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "scope": "Only one full static Idle-S pilot per character; no attack/directional expansion",
+  "tool": "Integrated image_gen; one generation per character",
+  "referenceRoot": "Docs/Darklight/References/CampanhaOficial20261119",
+  "fabiusReference": {
+    "path": "../work/lyra-piloto-20261119/Fabius-Normal-S.png",
+    "sha256": "ce5c79d346c7ba7cbceb0eacfa69f2107d9543a66855b82071edb511657c891a",
+    "bodyHeightNative": 302,
+    "pixelsPerUnit": 157.5757576,
+    "visualScale": 1.325
+  },
+  "pilots": [
+    {
+      "name": "MatriarcaRubra",
+      "reference": "Matriarca-Rubra.png",
+      "hairTopY": 286,
+      "groundY": 1118,
+      "groundX": 660,
+      "heightRatio": 1.08,
+      "identity": "Cabelo longo prateado/lavanda, olhos rubros, vestido Edwardian preto/carmesim, dourado, rosas/crânios, asas e halo de espinhos com rosa/crânio; espada rubi na mão direita.",
+      "nativeSize": [
+        1309,
+        1201
+      ],
+      "bodyHeightNative": 832,
+      "pixelsPerUnit": 401.9592541182242,
+      "visualScale": 1.325,
+      "worldBodyHeight": 2.742566538039605,
+      "pivotBottomLeftNormalized": [
+        0.5042016806722689,
+        0.06910907577019151
+      ],
+      "source": "sources/MatriarcaRubra-Idle-S-generated-v1.png",
+      "staging": "staging/Resources/Darklight/CampaignDesignCanon20261119/MatriarcaRubraIdleS20261119.png",
+      "sourceSha256": "a7ecda7321a18afcdffca7eb14d98153524dfeab55178266e9304d75a175250d",
+      "stagingSha256": "a7ecda7321a18afcdffca7eb14d98153524dfeab55178266e9304d75a175250d",
+      "metaSha256": "e356262d1393b02ab10ac799b0f717176ba3e01d013eb91f8ad49b2d6bb15021",
+      "guid": "63cd5a7413544f7b867628ec4ca4084e",
+      "referenceSha256": "74deb837579871e04b08ea654416a79a7a63170928e852a8f43096fc5fd50a26",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "nonZeroAlphaBBox": [
+        0,
+        19,
+        1306,
+        1201
+      ],
+      "alphaAtLeast8BBox": [
+        302,
+        36,
+        998,
+        1120
+      ],
+      "faintAlphaPixels1To7": 72953,
+      "states": {
+        "produced": true,
+        "visuallyReviewed": true,
+        "staged": true,
+        "copiedToAssets": false,
+        "unityImported": false,
+        "runtimeVerified": false
+      },
+      "frames": 1,
+      "direction": "S",
+      "action": "Idle",
+      "durationMs": null,
+      "loop": null,
+      "events": [],
+      "calibrationMethod": "Manual hair-top and sole-contact landmarks in entire source; halo/sword excluded. No sprite raster edits or resampling in staged PNG."
+    },
+    {
+      "name": "Nero",
+      "reference": "Nero.png",
+      "hairTopY": 78,
+      "groundY": 1028,
+      "groundX": 810,
+      "heightRatio": 1.0,
+      "identity": "Cabelo prateado, olhos azuis, cicatriz facial, ombro esquerdo exposto/tatuado à direita do observador, casaco azul/preto com dourado e caudas, espada azul na mão direita; identidade distinta de Lucius.",
+      "nativeSize": [
+        1415,
+        1112
+      ],
+      "bodyHeightNative": 950,
+      "pixelsPerUnit": 495.6853301986755,
+      "visualScale": 1.325,
+      "worldBodyHeight": 2.5394134611477823,
+      "pivotBottomLeftNormalized": [
+        0.5724381625441696,
+        0.07553956834532374
+      ],
+      "source": "sources/Nero-Idle-S-generated-v1.png",
+      "staging": "staging/Resources/Darklight/CampaignDesignCanon20261119/NeroIdleS20261119.png",
+      "sourceSha256": "2ab68dc6e55ed08e2d3df8b867b2bb514e3ee4176f6a2b352b786b74a5fbbb1f",
+      "stagingSha256": "2ab68dc6e55ed08e2d3df8b867b2bb514e3ee4176f6a2b352b786b74a5fbbb1f",
+      "metaSha256": "8f6b861b7d3c77788160a2da3ff0f88d25e3125e60f1a5339c4af94aaac0a3be",
+      "guid": "37bf94fa13f54e2eb52629a85eafbac9",
+      "referenceSha256": "daa4f2084cdb1012ebd7cf94bec444ae26b12728fde27cec68ac1d0c9dc22a65",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "nonZeroAlphaBBox": [
+        0,
+        21,
+        1395,
+        1088
+      ],
+      "alphaAtLeast8BBox": [
+        265,
+        77,
+        1107,
+        1030
+      ],
+      "faintAlphaPixels1To7": 35440,
+      "states": {
+        "produced": true,
+        "visuallyReviewed": true,
+        "staged": true,
+        "copiedToAssets": false,
+        "unityImported": false,
+        "runtimeVerified": false
+      },
+      "frames": 1,
+      "direction": "S",
+      "action": "Idle",
+      "durationMs": null,
+      "loop": null,
+      "events": [],
+      "calibrationMethod": "Manual hair-top and sole-contact landmarks in entire source; halo/sword excluded. No sprite raster edits or resampling in staged PNG."
+    }
+  ],
+  "consumer": {
+    "path": "Assets/Darklight/Runtime/Campaign/DarklightEnemy.cs",
+    "methods": [
+      "Show",
+      "ShowAttack",
+      "ShowEnemyPilot"
+    ],
+    "risk": "Existing renderer normalizes by poses[0].bounds.size.y. Integrator must account for calibrated body PPU and visualScale 1.325 instead of normalizing total halo/sword/canvas bounds.",
+    "timingSource": "Assets/Darklight/Runtime/Campaign/DarklightEnemyAttacks.cs:EnemyAttackTiming",
+    "currentBossTimingSeconds": [
+      0.6,
+      0.25,
+      0.22
+    ],
+    "note": "Static idle pilots author no animation durations/events; existing attacks and their timings are preserved. No Unity execution."
+  },
+  "limits": [
+    "Full generated native RGBA preserved byte-for-byte in staging. Low alpha 1..7 noise from generator retained; inspect under intended shader and backdrop during authorized import.",
+    "Landmarks manually measured; visual comparison uses only uniform nearest-neighbor display scaling, never edits staged raster.",
+    "No Unity import/runtime validation; meta validity is static only."
+  ]
+}

@@ -7,33 +7,37 @@ namespace Darklight
     {
         public const int AncestralMemory=1,SurvivorsSaved=2,KaelPurified=4,WeaponsMastered=8;
         public bool ExpandedChapter=>!ExploringNewRegion&&Progress.chapter>=6;
-        Sprite[] expandedBossFrames;
-        Sprite[] ExpandedBossFrames
+        readonly Dictionary<RequiemEnemyKind,Sprite[]> expandedBossSheets=new();
+        Sprite[] ExpandedBossFramesFor(RequiemEnemyKind kind)
         {
-            get
+            if(expandedBossSheets.TryGetValue(kind,out var cached))return cached;
+            string sheet=kind switch
             {
-                if(expandedBossFrames==null)
-                {
-                    expandedBossFrames=new Sprite[32];int offset=0;foreach(var name in new[]{"Valtherion","Seraphine","KaelFractured","Nocthar"}){var frames=DarklightSecondaryStyleBank.Load(name);if(frames.Length!=8)throw new InvalidOperationException("Secondary boss sheet incomplete: "+name);Array.Copy(frames,0,expandedBossFrames,offset,8);offset+=8;}
-                    Array.Sort(expandedBossFrames,(a,b)=>int.Parse(a.name[(a.name.LastIndexOf('_')+1)..]).CompareTo(int.Parse(b.name[(b.name.LastIndexOf('_')+1)..])));
-                }
-                if(expandedBossFrames.Length!=32)throw new InvalidOperationException("Expansion boss catalog requires 32 validated frames");
-                return expandedBossFrames;
-            }
+                RequiemEnemyKind.Valtherion=>"Valtherion",
+                RequiemEnemyKind.Seraphine=>"Seraphine",
+                RequiemEnemyKind.KaelFractured=>"KaelFractured",
+                RequiemEnemyKind.Nocthar=>"Nocthar",
+                _=>throw new ArgumentOutOfRangeException(nameof(kind),kind,"Expected an expansion boss")
+            };
+            var frames=DarklightSecondaryStyleBank.Load(sheet);
+            if(frames.Length!=8)throw new InvalidOperationException("Secondary boss sheet incomplete: "+sheet);
+            expandedBossSheets.Add(kind,frames);
+            return frames;
         }
-        public string AllyName=>Progress.chapter==1?"ÍCARO NOX":Progress.chapter==3||Progress.chapter==4||Progress.chapter==7||Progress.chapter==9?"KAEL":"LYRA MOREAU";
+        public string AllyName=>Progress.chapter==1?"ÍCARO NOX":
+            Progress.chapter==9||Progress.chapter==8&&chapterCleared?"NERO":"LADY";
         public bool SecretEndingAvailable=>Progress.SecretEndingAvailable;
         static readonly string[][] MissionTitles={
-            new[]{"DECIFRE AS INSCRIÇÕES","RECUPERE A MEMÓRIA ANCESTRAL","LIBERTE OS GUARDIÕES","CONFRONTE VALTHERION"},
-            new[]{"RESGATE OS SOBREVIVENTES","DEFENDA O ABRIGO","INVADE A CATEDRAL","ENFRENTE SERAPHINE"},
-            new[]{"RECUPERE O SELO DA MEMÓRIA","RECUPERE O SELO DO SANGUE","RECUPERE O SELO DO VÉU","QUEBRE A CORRUPÇÃO DE KAEL"},
-            new[]{"INVADE O CORAÇÃO DO ECLIPSE","REVISITE A ÚLTIMA MEMÓRIA","DOMINE AS TRÊS ARMAS","ENFRENTE NOCTHAR"}
+            new[]{"DECIFRE AS INSCRIÇÕES","RECUPERE A MEMÓRIA ANCESTRAL","LIBERTE OS GUARDIÕES","LIBERTE O SALÃO DOS JURAMENTOS"},
+            new[]{"RESGATE OS SOBREVIVENTES","DEFENDA O ABRIGO","INVADE A CATEDRAL","ABRA A PASSAGEM DA CATEDRAL"},
+            new[]{"RECUPERE O SELO DA MEMÓRIA","RECUPERE O SELO DO SANGUE","RECUPERE O SELO DO VÉU","QUEBRE A CORRUPÇÃO DE NERO"},
+            new[]{"INVADE O CORAÇÃO DO ECLIPSE","REVISITE A ÚLTIMA MEMÓRIA","DOMINE KATANA E PUNHOS","FECHE AS ÚLTIMAS FENDAS"}
         };
         static readonly string[][] MissionDescriptions={
-            new[]{"Os registros de Lucien levam à cripta. Aproxime-se da inscrição e interaja para descobrir a origem da linhagem.","Recupere a memória após enfrentar os guardiões. Interaja com o vestígio para ouvir o ancestral.","Os antigos guardiões foram corrompidos. Liberte a passagem para o salão dos juramentos.","Valtherion alterna peso, sangue e velocidade. Leia seus sinais e aproveite a recuperação dos golpes."},
-            new[]{"Proteja o grupo encurralado derrotando a patrulha. Interaja com os sobreviventes para conduzi-los ao abrigo.","Defenda o abrigo em três ondas. O checkpoint registra cada onda concluída.","Abra caminho pela fortaleza para interromper a origem do eclipse permanente.","Seraphine alterna investidas, invocações e ataques amplos. Sua vida não precisa ser sacrificada ao sangue."},
-            new[]{"Enfrente as criaturas da fortaleza e recolha o primeiro selo antigo.","O selo do sangue guarda uma versão distorcida dos caçadores de Vespera.","O último selo revela a influência de Nocthar. Recupere-o para alcançar o trono.","Enfraqueça a corrupção até Kael ajoelhar. Aproxime-se e interaja para purificá-lo. Kael deve sobreviver."},
-            new[]{"Atravesse os últimos guardiões do Coração do Eclipse.","Leia a memória de Lyra para reunir as energias humana e ancestral.","Use katana, Punhos da Ruína e motocicleta contra os guardiões. Cada arma deve acertar um alvo durante este desafio.","Rei do Vazio, Eclipse Vivo e Réquiem Final: três fases com sinais próprios. O despertar de Eclipse Absoluto continua sob seu controle."}
+            new[]{"Os registros do observatório levam à cripta. Aproxime-se da inscrição e interaja para descobrir a origem da linhagem.","Recupere a memória após enfrentar os guardiões. Interaja com o vestígio para ouvir o ancestral.","Os antigos guardiões foram corrompidos. Liberte a passagem para o salão dos juramentos.","Libere o salão dos juramentos enfrentando os guardiões corrompidos e abra a passagem para o abrigo."},
+            new[]{"Proteja o grupo encurralado derrotando a patrulha. Interaja com os sobreviventes para conduzi-los ao abrigo.","Defenda o abrigo em três ondas. O checkpoint registra cada onda concluída.","Abra caminho pela fortaleza para interromper a origem do eclipse permanente.","Atravesse a última patrulha da catedral e libere a passagem para o Véu Profundo."},
+            new[]{"Enfrente as criaturas da fortaleza e recolha o primeiro selo antigo.","O selo do sangue guarda uma versão distorcida dos caçadores de Vespera.","O último selo revela a origem da corrupção. Recupere-o para alcançar Nero.","Enfraqueça a corrupção até Nero ajoelhar. Aproxime-se e interaja para purificá-lo. Nero deve sobreviver."},
+            new[]{"Atravesse os últimos guardiões do Coração do Eclipse.","Leia a memória de Lady para reunir as energias humana e ancestral.","Use katana e Punhos da Ruína contra os guardiões. Cada arma deve acertar um alvo durante este desafio.","Feche as últimas fendas enfrentando os grupos de criaturas. A passagem leva ao duelo final contra Lucius."}
         };
         string MissionTitle=>ExpandedChapter?MissionTitles[Progress.chapter-6][Mathf.Clamp(encounter,0,3)]:Goal();
         string MissionDescription=>ExpandedChapter?MissionDescriptions[Progress.chapter-6][Mathf.Clamp(encounter,0,3)]:"Liberte o selo marcado e elimine seus guardiões.";
@@ -74,12 +78,12 @@ namespace Darklight
             {encounterStarted=false;NarrativeCombatDone=true;Objective=MissionTitle+" — INTERAJA";return true;}
             if(Progress.chapter==9&&encounter==2&&(Progress.missionWeaponHits&DarklightPlayableScope.WeaponMask)!=DarklightPlayableScope.WeaponMask)
             {
-                encounterStarted=false;Notice("USE AS TRÊS ARMAS — "+WeaponTrialCount+" / 3");BeginNarrativeEncounter();return true;
+                encounterStarted=false;Notice("USE KATANA E PUNHOS — "+WeaponTrialCount+" / 2");BeginNarrativeEncounter();return true;
             }
             if(Progress.chapter==9&&encounter==2)Progress.expansionFlags|=WeaponsMastered;
             return false;
         }
-        public int WeaponTrialCount=>((Progress.missionWeaponHits&1)!=0?1:0)+((Progress.missionWeaponHits&8)!=0?1:0)+((Progress.missionWeaponHits&4)!=0?1:0);
+        public int WeaponTrialCount=>((Progress.missionWeaponHits&1)!=0?1:0)+((Progress.missionWeaponHits&4)!=0?1:0);
         void RecordWeaponTrial()
         {if(ExpandedChapter&&Progress.chapter==9&&encounter==2)Progress.missionWeaponHits|=1<<(int)Weapons.Equipped.id;}
         bool NarrativeTarget(out DarklightInteractionTarget target)
@@ -87,7 +91,7 @@ namespace Darklight
             target=default;if(!ExpandedChapter)return false;
             var boss=CurrentBoss;
             if(boss!=null&&boss.kind==RequiemEnemyKind.KaelFractured&&boss.PurificationReady)
-            {target=new("purify_kael","PURIFICAR KAEL",boss.transform.position);return true;}
+            {target=new("purify_kael","PURIFICAR NERO",boss.transform.position);return true;}
             if(!NarrativeInteractionStage||chapterCleared||encounterStarted)return false;
             if(Progress.chapter==6&&encounter==1||Progress.chapter==7&&encounter==0)
                 if(!NarrativeCombatDone)return false;
@@ -99,11 +103,18 @@ namespace Darklight
             {
                 var boss=CurrentBoss;if(boss==null||!boss.PurificationReady)return true;
                 boss.Purify();Progress.expansionFlags|=KaelPurified;
+                var restored=OfficialCastSprite("Nero");
+                if(restored!=null)
+                {
+                    var sprite=boss.transform.Find("Sprite");
+                    if(sprite!=null)sprite.gameObject.SetActive(false);
+                    AddProp("KaelPurificado",restored,Map.Arenas[3],1.8f);
+                }
                 ClearEncounter();return true;
             }
             if(id!="narrative")return false;
             int chapter=Progress.chapter,step=encounter;
-            string[] lines=chapter==6&&step==0?new[]{"LYRA|Essas inscrições são anteriores a Lucien. Os híbridos protegiam a fronteira entre os mundos.","FÁBIO|Meu sangue não é um acidente. Vamos descobrir o que eles deixaram para nós."}:chapter==6?new[]{"ANCESTRAL|O Véu não precisa de um senhor. Precisa de alguém que ainda saiba escolher.","FÁBIO|Eu lembro dessa voz. Minha mãe protegia essa mesma ponte."}:chapter==7?new[]{"SOBREVIVENTE|A praça caiu. Há crianças no abrigo e criaturas vindo da catedral.","KAEL|Eu abro a passagem. Fábio, proteja a entrada até todos chegarem."}:new[]{"LYRA|Você nunca esteve sozinho. Tudo o que perdeu continua nas escolhas que faz.","FÁBIO|Vou levar essas memórias comigo. Agora posso encarar o eclipse inteiro."};
+            string[] lines=chapter==6&&step==0?new[]{"LADY|Essas inscrições são anteriores ao Projeto Eclipse. Os híbridos protegiam a fronteira entre os mundos.","FABIUS|Meu sangue não é um acidente. Vamos descobrir o que eles deixaram para nós."}:chapter==6?new[]{"ANCESTRAL|O Véu não precisa de um senhor. Precisa de alguém que ainda saiba escolher.","FABIUS|Eu lembro dessa voz. Minha mãe protegia essa mesma ponte."}:chapter==7?new[]{"SOBREVIVENTE|A praça caiu. Há crianças no abrigo e criaturas vindo da catedral.","LADY|Eu conduzo os sobreviventes. Fabius, proteja a entrada até todos chegarem."}:new[]{"LADY|Você nunca esteve sozinho. Tudo o que perdeu continua nas escolhas que faz.","FABIUS|Vou levar essas memórias comigo. Agora posso encarar o eclipse inteiro."};
             if(chapter==6&&step==1)Progress.expansionFlags|=AncestralMemory;
             if(chapter==7&&step==0)Progress.expansionFlags|=SurvivorsSaved;
             // Complete the checkpoint before the dialogue: reloading cannot repeat its reward.
@@ -127,11 +138,11 @@ namespace Darklight
         void BuildEndings()
         {
             heading.text="O DESTINO DOS DOIS MUNDOS";
-            bodyText.text="Nocthar caiu. Kael e Lyra esperam sua escolha.\n\nAmanhecer restaura a barreira.\nGuardião preserva a ponte sob sua proteção.\n\n"+(SecretEndingAvailable?"As memórias permitem uma terceira solução.":"Réquiem Carmesim: reúna as dez memórias, salve os sobreviventes, ouça o ancestral, purifique Kael e domine as três armas.");
+            bodyText.text="O duelo com Lucius terminou. Nero e Lady esperam sua escolha.\n\nAmanhecer restaura a barreira.\nGuardião preserva a ponte sob sua proteção.\n\n"+(SecretEndingAvailable?"As memórias permitem uma terceira solução.":"Réquiem Carmesim: reúna as dez memórias, salve os sobreviventes, ouça o ancestral, purifique Nero e domine katana e punhos.");
             Button("AMANHECER",()=>Finish(1));Button("GUARDIÃO DO VÉU",()=>Finish(2));
             if(SecretEndingAvailable)Button("RÉQUIEM CARMESIM",()=>Finish(3));
         }
-        string EndingDescription=>Progress.ending==3?"Fábio uniu as energias sem apagar nenhum dos mundos.\nA fronteira vive em equilíbrio. Kael e Lyra permanecem ao seu lado.":Progress.ending==1?"O sol voltou a Vespera. A barreira foi restaurada.\nFábio guardou Réquiem para quem vier depois.":"Vespera voltou a respirar. A ponte permaneceu.\nFábio, Lyra e Kael guardam o caminho entre os mundos.";
+        string EndingDescription=>Progress.ending==3?"Fabius uniu as energias sem apagar nenhum dos mundos.\nA fronteira vive em equilíbrio. Nero e Lady permanecem ao seu lado.":Progress.ending==1?"O sol voltou a Vespera. A barreira foi restaurada.\nFabius guardou Réquiem para quem vier depois.":"Vespera voltou a respirar. A ponte permaneceu.\nFabius, Lady e Nero guardam o caminho entre os mundos.";
         public void FinalAwakening()
         {
             Progress.formsUnlocked=Mathf.Max(Progress.formsUnlocked,3);Progress.CompleteMilestone(9,3);

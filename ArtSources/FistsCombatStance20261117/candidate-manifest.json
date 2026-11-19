@@ -1,0 +1,771 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-17",
+  "scope": "Additional Fabius Requiem Normal Fists combat stance only; pilot SOUTH first, 4 Idle + 4 Walk whole figures. Never edit existing approved art or pivots.",
+  "owner": "lucius_art_review",
+  "status": "S pilot selected; Walk explicitly user-approved; Idle static-reviewed; continuous playback not inspected; no expansion or integration",
+  "references": [
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleS_SW_W20261025V1.png",
+      "sha256": "6a15d28a66cef8b5f6bf579afa1c02d0f5d57047b6fe4ca65c3e370e36c778af",
+      "sourceSize": [
+        2340,
+        1245
+      ],
+      "wholeImageInspected": true
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalParry8Dirs20261103V1.png",
+      "sha256": "0740ef48d6714f72d7e452c9d9c9d7c289b6b5dd4a2460d4533a6f813a425def",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "wholeImageInspected": true
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkS20261101V2Selected.png",
+      "sha256": "6cbbc2e1694e37a0d50ad32c680635bc6d14c07ea2bca06927e532e5bee7c94d",
+      "sourceSize": [
+        1880,
+        365
+      ],
+      "wholeImageInspected": true
+    }
+  ],
+  "consumer": {
+    "catalog": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/catalog.json",
+    "skin": 0,
+    "weapon": 2,
+    "form": 0,
+    "directions": [
+      "S",
+      "SW",
+      "W",
+      "NW",
+      "N",
+      "NE",
+      "E",
+      "SE"
+    ],
+    "idleDurationMs": [
+      350,
+      250,
+      180,
+      350
+    ],
+    "walkDurationMs": [
+      100,
+      100,
+      100,
+      100
+    ],
+    "worldVisualScale": 1.325,
+    "oldPivotsProtected": true,
+    "newCandidatePivots": "pending measured support; not automatically normalized",
+    "events": "none authored for Idle/Walk; preserve runtime unchanged",
+    "proposedNewIdleDurationMs": [
+      180,
+      120,
+      100,
+      150
+    ],
+    "proposedNewWalkDurationMs": [
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "generation": {
+    "method": "builtin image_gen",
+    "promptPath": "ArtSources/FistsCombatStance20261117/prompts/FabiusFistsCombatS-v1.txt",
+    "requestedSourceSize": [
+      1536,
+      1024
+    ],
+    "requestedGrid": [
+      4,
+      2
+    ],
+    "requestedCellSize": [
+      384,
+      512
+    ],
+    "nativePixelGrid": "unknown until inspected; high resolution source is not native-grid proof",
+    "nextPromptPath": "ArtSources/FistsCombatStance20261117/prompts/FabiusFistsCombatS-v4-airborne-repair.txt",
+    "latestUserDirection": "Four Idle professional fighter bounce phases with fixed floor pivot and 1-3% genuine foot lift; never reanchor raised soles to erase bounce."
+  },
+  "states": {
+    "produced": true,
+    "reviewed": true,
+    "importReady": false,
+    "imported": false,
+    "runtimeVerified": false,
+    "walkSExplicitUserApproved": true,
+    "idleSReviewed": true,
+    "idleSExplicitUserApproved": false,
+    "continuousPreviewViewed": false,
+    "allEightDirectionsComplete": false
+  },
+  "directionsProduced": [
+    "S"
+  ],
+  "pending": [
+    "Live continuous preview inspection of new Idle bounce remains unexecuted (browser local-file protocol denied); static sequence/identity/lift reviewed.",
+    "Coordinator may review local GIF/HTML; do not change user-approved Walk V3 frames.",
+    "Seven directions remain unproduced; no new generation in flight.",
+    "New candidate pivots/PPU/timings are proposals only, all old Fabius art/pivots preserved.",
+    "Transparency concern resolved by actual alpha channel and white/dark compositing; do not regenerate approved WalkS for hidden RGB background."
+  ],
+  "candidates": [
+    {
+      "id": "S-v1",
+      "path": "ArtSources/FistsCombatStance20261117/candidates/FabiusFistsCombatS-v1-source.png",
+      "sha256": "ff15da21abbbd1b5706bfe30382b9dac51bffdf191c388e75eada3a732efe83b",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "produced": true,
+      "visuallyReviewed": true,
+      "importReady": false,
+      "identity": "whole-reference contact shows retained face/hair/outfit/equipment; no gross redesign found",
+      "motionDefects": [
+        "Walk repeats viewer-left leading/support contact in frames0,2,3; requires correct alternating contact/passing phases.",
+        "Latest user request now requires restrained genuine preparatory bounce Idle instead of planted-feet breathing. All four new Idle complete figures require new motion."
+      ],
+      "qaWholeFigureContact": "ArtSources/FistsCombatStance20261117/qa/pilot-S-v1-reference-contact.png",
+      "preservedSource": true
+    }
+  ],
+  "walkSApproval": {
+    "sourcePath": "ArtSources/FistsCombatStance20261117/candidates/FabiusFistsCombatS-v3-source.png",
+    "sourceSha256": "8b81e12bc81d1d617cff9afa96584f406400a8a4458bdb2b17c2ae929e300fe8",
+    "displayedImagegenOriginal": "C:/Users/Usuario/.codex/generated_images/01a1c2e0-f842-7ef3-8c8a-cb2a84af5895/exec-7a86da8c-eea0-459f-82c6-abaec2bbe354.png",
+    "approvalQuote": "esta aprovado essa caminhada frontal com guarda alta",
+    "provenance": "coordinator relay of explicit user approval, received after V3 was last image displayed; no V4 existed or was in flight at that time",
+    "scope": "ONLY four SOUTH Walk full-figure frames indices4–7; not Idle and not other directions",
+    "identityAuthorityForExpansion": true,
+    "frames": [
+      {
+        "index": 4,
+        "action": "Walk",
+        "direction": "S",
+        "frame": 0,
+        "sourceRectTopLeft": [
+          0,
+          512,
+          384,
+          512
+        ],
+        "rgbaDecodedSha256": "bd2ab338498b2cae6073808a9f2822a2412e80154dde55564c566dd39e2f026e",
+        "explicitUserApproval": true,
+        "preservePixelForPixel": true
+      },
+      {
+        "index": 5,
+        "action": "Walk",
+        "direction": "S",
+        "frame": 1,
+        "sourceRectTopLeft": [
+          384,
+          512,
+          384,
+          512
+        ],
+        "rgbaDecodedSha256": "bf13a7c9b9ea947a7d53a284cf96c7f032a11391993c1788f76f83c132ca89d6",
+        "explicitUserApproval": true,
+        "preservePixelForPixel": true
+      },
+      {
+        "index": 6,
+        "action": "Walk",
+        "direction": "S",
+        "frame": 2,
+        "sourceRectTopLeft": [
+          768,
+          512,
+          384,
+          512
+        ],
+        "rgbaDecodedSha256": "4941b7891164572711a2495124a4d10b96922c3a1a032bc77a7021c480298df0",
+        "explicitUserApproval": true,
+        "preservePixelForPixel": true
+      },
+      {
+        "index": 7,
+        "action": "Walk",
+        "direction": "S",
+        "frame": 3,
+        "sourceRectTopLeft": [
+          1152,
+          512,
+          384,
+          512
+        ],
+        "rgbaDecodedSha256": "68b75fe508b5710a630013cb3aaf851f3ba5f8c32170821b87b4f89666a0daaa",
+        "explicitUserApproval": true,
+        "preservePixelForPixel": true
+      }
+    ]
+  },
+  "latestCandidate": {
+    "path": "ArtSources/FistsCombatStance20261117/candidates/FabiusFistsCombatS-v3-source.png",
+    "sha256": "8b81e12bc81d1d617cff9afa96584f406400a8a4458bdb2b17c2ae929e300fe8",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "grid": [
+      4,
+      2
+    ],
+    "cellSize": [
+      384,
+      512
+    ]
+  },
+  "directionsPending": [
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+  ],
+  "stopReason": "coordinator quota27% five-hour /89%weekly; build canceled by user until tomorrow; art may continue only this existing S scope, no new direction, local commit/report15% by coordinator",
+  "selected": {
+    "path": "ArtSources/FistsCombatStance20261117/selected/FabiusFistsCombatS-selected-v1.png",
+    "sha256": "202f33f42d937ab55cc5cc2162b41c8d1881ea3ea329e8d18e04c895de70740e",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "grid": [
+      4,
+      2
+    ],
+    "cellSize": [
+      384,
+      512
+    ],
+    "nativePixelGrid": "not verified; source resolution does not establish native grid",
+    "frames": [
+      {
+        "index": 0,
+        "action": "Idle",
+        "frame": 0,
+        "direction": "S",
+        "sourceVersion": "v2",
+        "sourcePath": "ArtSources/FistsCombatStance20261117/candidates/FabiusFistsCombatS-v2-source.png",
+        "sourceRectTopLeft": [
+          0,
+          0,
+          384,
+          512
+        ],
+        "destinationRectTopLeft": [
+          0,
+          0,
+          384,
+          512
+        ],
+        "rgbaDecodedSha256": "413d0e1559a7cdf421cd10f8f9ac1bf29f8c5949ab371aa483fdc7f02ac1b0ce",
+        "alpha128Bounds": [
+          72,
+          54,
+          312,
+          440
+        ],
+        "edgeMaxAlpha": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "fullFigureComplete": true,
+        "explicitUserApproved": false,
+        "wholeFigureOnly": true,
+        "resampled": false
+      },
+      {
+        "index": 1,
+        "action": "Idle",
+        "frame": 1,
+        "direction": "S",
+        "sourceVersion": "v2",
+        "sourcePath": "ArtSources/FistsCombatStance20261117/candidates/FabiusFistsCombatS-v2-source.png",
+        "sourceRectTopLeft": [
+          384,
+          0,
+          384,
+          512
+        ],
+        "destinationRectTopLeft": [
+          384,
+          0,
+          384,
+          512
+        ],
+        "rgbaDecodedSha256": "8521ad348b362b4ed9c88195fe26953812a0431c4733bed80503928256d66de0",
+        "alpha128Bounds": [
+          60,
+          72,
+          323,
+          440
+        ],
+        "edgeMaxAlpha": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "fullFigureComplete": true,
+        "explicitUserApproved": false,
+        "wholeFigureOnly": true,
+        "resampled": false
+      },
+      {
+        "index": 2,
+        "action": "Idle",
+        "frame": 2,
+        "direction": "S",
+        "sourceVersion": "v4",
+        "sourcePath": "ArtSources/FistsCombatStance20261117/candidates/FabiusFistsCombatS-v4-source.png",
+        "sourceRectTopLeft": [
+          736,
+          0,
+          384,
+          512
+        ],
+        "destinationRectTopLeft": [
+          768,
+          0,
+          384,
+          512
+        ],
+        "rgbaDecodedSha256": "58074dadfb554fb7caeb8dbe09f5ed38f2734af0ee99b3987ea10e2f9a036e43",
+        "alpha128Bounds": [
+          61,
+          65,
+          324,
+          435
+        ],
+        "edgeMaxAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "fullFigureComplete": true,
+        "explicitUserApproved": false,
+        "wholeFigureOnly": true,
+        "resampled": false
+      },
+      {
+        "index": 3,
+        "action": "Idle",
+        "frame": 3,
+        "direction": "S",
+        "sourceVersion": "v2",
+        "sourcePath": "ArtSources/FistsCombatStance20261117/candidates/FabiusFistsCombatS-v2-source.png",
+        "sourceRectTopLeft": [
+          1152,
+          0,
+          384,
+          512
+        ],
+        "destinationRectTopLeft": [
+          1152,
+          0,
+          384,
+          512
+        ],
+        "rgbaDecodedSha256": "474bcf6fec999a2e3e7aedf4ec32859dff42683e0f304c50bef01af91b968fc4",
+        "alpha128Bounds": [
+          63,
+          62,
+          317,
+          441
+        ],
+        "edgeMaxAlpha": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "fullFigureComplete": true,
+        "explicitUserApproved": false,
+        "wholeFigureOnly": true,
+        "resampled": false
+      },
+      {
+        "index": 4,
+        "action": "Walk",
+        "frame": 0,
+        "direction": "S",
+        "sourceVersion": "v3",
+        "sourcePath": "ArtSources/FistsCombatStance20261117/candidates/FabiusFistsCombatS-v3-source.png",
+        "sourceRectTopLeft": [
+          0,
+          512,
+          384,
+          512
+        ],
+        "destinationRectTopLeft": [
+          0,
+          512,
+          384,
+          512
+        ],
+        "rgbaDecodedSha256": "bd2ab338498b2cae6073808a9f2822a2412e80154dde55564c566dd39e2f026e",
+        "alpha128Bounds": [
+          62,
+          52,
+          316,
+          457
+        ],
+        "edgeMaxAlpha": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "fullFigureComplete": true,
+        "explicitUserApproved": true,
+        "wholeFigureOnly": true,
+        "resampled": false
+      },
+      {
+        "index": 5,
+        "action": "Walk",
+        "frame": 1,
+        "direction": "S",
+        "sourceVersion": "v3",
+        "sourcePath": "ArtSources/FistsCombatStance20261117/candidates/FabiusFistsCombatS-v3-source.png",
+        "sourceRectTopLeft": [
+          384,
+          512,
+          384,
+          512
+        ],
+        "destinationRectTopLeft": [
+          384,
+          512,
+          384,
+          512
+        ],
+        "rgbaDecodedSha256": "bf13a7c9b9ea947a7d53a284cf96c7f032a11391993c1788f76f83c132ca89d6",
+        "alpha128Bounds": [
+          62,
+          52,
+          315,
+          447
+        ],
+        "edgeMaxAlpha": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "fullFigureComplete": true,
+        "explicitUserApproved": true,
+        "wholeFigureOnly": true,
+        "resampled": false
+      },
+      {
+        "index": 6,
+        "action": "Walk",
+        "frame": 2,
+        "direction": "S",
+        "sourceVersion": "v3",
+        "sourcePath": "ArtSources/FistsCombatStance20261117/candidates/FabiusFistsCombatS-v3-source.png",
+        "sourceRectTopLeft": [
+          768,
+          512,
+          384,
+          512
+        ],
+        "destinationRectTopLeft": [
+          768,
+          512,
+          384,
+          512
+        ],
+        "rgbaDecodedSha256": "4941b7891164572711a2495124a4d10b96922c3a1a032bc77a7021c480298df0",
+        "alpha128Bounds": [
+          30,
+          52,
+          285,
+          449
+        ],
+        "edgeMaxAlpha": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "fullFigureComplete": true,
+        "explicitUserApproved": true,
+        "wholeFigureOnly": true,
+        "resampled": false
+      },
+      {
+        "index": 7,
+        "action": "Walk",
+        "frame": 3,
+        "direction": "S",
+        "sourceVersion": "v3",
+        "sourcePath": "ArtSources/FistsCombatStance20261117/candidates/FabiusFistsCombatS-v3-source.png",
+        "sourceRectTopLeft": [
+          1152,
+          512,
+          384,
+          512
+        ],
+        "destinationRectTopLeft": [
+          1152,
+          512,
+          384,
+          512
+        ],
+        "rgbaDecodedSha256": "68b75fe508b5710a630013cb3aaf851f3ba5f8c32170821b87b4f89666a0daaa",
+        "alpha128Bounds": [
+          26,
+          51,
+          287,
+          442
+        ],
+        "edgeMaxAlpha": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fullFigureComplete": true,
+        "explicitUserApproved": true,
+        "wholeFigureOnly": true,
+        "resampled": false
+      }
+    ],
+    "wholeFiguresOnly": true,
+    "resampled": false,
+    "anatomyAssembly": false,
+    "colorOrAlphaCleanup": false,
+    "walkApprovedFramesPreservedByteForByte": true,
+    "proofPath": "ArtSources/FistsCombatStance20261117/selected/FabiusFistsCombatS-selection-proof.json"
+  },
+  "sourcesGenerated": [
+    {
+      "version": "v1",
+      "path": "ArtSources/FistsCombatStance20261117/candidates/FabiusFistsCombatS-v1-source.png",
+      "sha256": "ff15da21abbbd1b5706bfe30382b9dac51bffdf191c388e75eada3a732efe83b",
+      "size": [
+        1536,
+        1024
+      ],
+      "preserved": true,
+      "finalUse": "not selected; early breathing Idle and repeated walk support rejected"
+    },
+    {
+      "version": "v2",
+      "path": "ArtSources/FistsCombatStance20261117/candidates/FabiusFistsCombatS-v2-source.png",
+      "sha256": "779b98a863f8c02fea0011cd31bca464e1d8a393de5c9911ba3d263a9a394fee",
+      "size": [
+        1536,
+        1024
+      ],
+      "preserved": true,
+      "finalUse": "selected whole Idle frames0,1,3"
+    },
+    {
+      "version": "v3",
+      "path": "ArtSources/FistsCombatStance20261117/candidates/FabiusFistsCombatS-v3-source.png",
+      "sha256": "8b81e12bc81d1d617cff9afa96584f406400a8a4458bdb2b17c2ae929e300fe8",
+      "size": [
+        1536,
+        1024
+      ],
+      "preserved": true,
+      "finalUse": "four Walk frames explicitly user-approved, selected pixel-exact; its airborne Idle too high"
+    },
+    {
+      "version": "v4",
+      "path": "ArtSources/FistsCombatStance20261117/candidates/FabiusFistsCombatS-v4-source.png",
+      "sha256": "03fa08c07c8792cd2e188b221b7542163887e514dffb22753fb844a1f0511be9",
+      "size": [
+        1536,
+        1024
+      ],
+      "preserved": true,
+      "finalUse": "selected ONLY complete airborne Idle figure from source ROI [736,0,384,512]; all other v4 figures ignored to preserve user approval"
+    }
+  ],
+  "idleSReview": {
+    "produced": true,
+    "visuallyReviewedStatic": true,
+    "agentStaticArtAcceptable": true,
+    "explicitUserApproved": false,
+    "wholeFramePosePhases": [
+      "ready guarded stance",
+      "visible knee compression",
+      "tiny uncoiled rebound with raised soles",
+      "soft landing with light opposite heel/support exchange"
+    ],
+    "groundPivotTopLeftPx": [
+      [
+        192,
+        441
+      ],
+      [
+        192,
+        441
+      ],
+      [
+        192,
+        441
+      ],
+      [
+        192,
+        441
+      ]
+    ],
+    "groundAnchorConstantAcrossClip": true,
+    "soleBoundaryYAlpha128": [
+      440,
+      440,
+      435,
+      441
+    ],
+    "airborneLiftPx": 6,
+    "mainReadyBodyPx": 386,
+    "airborneLiftFraction": 0.015544041450777202,
+    "headTopY": [
+      54,
+      72,
+      65,
+      62
+    ],
+    "liftNotErasedBySoleReanchor": true,
+    "mechanics": "Compression lowers head/hips with soles planted; rebound raises soles6px from fixed floor and head rises7px from compressed pose; landing touches ground and restores support. Complete joint/coat drawings differ, not translated copies.",
+    "limits": "Static whole-figure ordered phases inspected; live continuous playback unavailable due browser protocol policy. Do not claim live loop QA or runtime approval."
+  },
+  "walkSReview": {
+    "produced": true,
+    "explicitUserApproved": true,
+    "authority": "walk-S-user-approval.json; V3 original whole sheet last displayed before explicit approval",
+    "framesPreservedPixelForPixel": true,
+    "staticPhases": [
+      "viewer-left contact",
+      "viewer-left support/right passing",
+      "viewer-right contact",
+      "viewer-right support/left passing"
+    ],
+    "newPivotProposalsOnly": [
+      [
+        191,
+        457
+      ],
+      [
+        191,
+        447
+      ],
+      [
+        160,
+        449
+      ],
+      [
+        160,
+        442
+      ]
+    ],
+    "pivotMeaning": "manual proposed ground/support anchors on new frames, not edits to approved historical metadata. Physical rendering verification remains coordinator responsibility.",
+    "noAnatomicalMontage": true
+  },
+  "fidelity": {
+    "wholeApprovedReferencesCompared": true,
+    "wholeFigureContactViewed": "qa/pilot-S-v1-reference-contact.png",
+    "selectedWholeSheetContrastViewed": "qa/pilot-S-selected-white.png",
+    "faceAge": "Same approved mature Fabius sprite identity, stern face and dark-red eyes; no UI miniature reference used.",
+    "hair": "Same canonical natural brown cut and compact volume, no transformation highlights.",
+    "outfitEquipment": "Black/burgundy coat, shoulder ornaments, chain and neutral silver gauntlets/greaves retained; new fists clenched in high guard, no sword, flames or aura.",
+    "approvedAssetsOrPivotsTouched": false
+  },
+  "calibrationProposed": {
+    "pixelsPerUnit": 195.53143374038893,
+    "reference": "approved Punhos Normal Idle S, same current catalog; body323px / PPU163.61827227498867",
+    "referenceBodyPreScaleWorld": 1.974107142857143,
+    "mainBodySHeightPx": 386,
+    "worldVisualScale": 1.325,
+    "state": "provisional only; no import or catalog change; poses/feet depth affect bounding heights"
+  },
+  "preview": {
+    "html": "qa/pilot-S-selected-preview.html",
+    "gifs": [
+      "qa/pilot-S-selected-idle-bounce.gif",
+      "qa/pilot-S-selected-walk-approved.gif"
+    ],
+    "orderedIdleContact": "qa/pilot-S-selected-idle-floor-contact.png",
+    "nearest2xContact": "qa/pilot-S-selected-idle-floor-contact-2x.png",
+    "controls": [
+      "play/pause",
+      "next frame",
+      "0.5x/1x/2x playback",
+      "1x/2x nearest zoom"
+    ],
+    "audio": false,
+    "continuousMotionViewed": false,
+    "staticOrderedFrameSequenceViewed": true,
+    "browserAttempt": "iab unavailable; Chrome file:// blocked by browser security protocol policy. No workaround attempted.",
+    "runtimeVerification": false,
+    "gifColorNote": "GIF quantizes colors; source PNG and decoded RGBA frame hashes are authoritative"
+  },
+  "prompts": [
+    {
+      "path": "ArtSources/FistsCombatStance20261117/prompts/FabiusFistsCombatS-v1.txt",
+      "sha256": "b27afcc14fb9807c85052798e25b298698f6e406d9d5f2a058018fb76405ecda",
+      "builtinImageGen": true
+    },
+    {
+      "path": "ArtSources/FistsCombatStance20261117/prompts/FabiusFistsCombatS-v2.txt",
+      "sha256": "208a80227fe7beebf618c30b52be4e9f5d88b7c68b862fbbeb73eca14e0d4d2b",
+      "builtinImageGen": true
+    },
+    {
+      "path": "ArtSources/FistsCombatStance20261117/prompts/FabiusFistsCombatS-v3-repair.txt",
+      "sha256": "f1e378f825eeca20dcd3544c624b145ee2bc4388b09e83e6fc5374db0498b906",
+      "builtinImageGen": true
+    },
+    {
+      "path": "ArtSources/FistsCombatStance20261117/prompts/FabiusFistsCombatS-v4-airborne-repair.txt",
+      "sha256": "c4072e3811b63aca6aaddc687b694c98f6baea6045db74de8f93629f90942e2e",
+      "builtinImageGen": true
+    }
+  ],
+  "preservationCheck": [
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalIdleS_SW_W20261025V1.png",
+      "sha256Now": "6a15d28a66cef8b5f6bf579afa1c02d0f5d57047b6fe4ca65c3e370e36c778af",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalParry8Dirs20261103V1.png",
+      "sha256Now": "0740ef48d6714f72d7e452c9d9c9d7c289b6b5dd4a2460d4533a6f813a425def",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Darklight/Resources/Darklight/WeaponRedesign20261023/ReqFistsNormalWalkS20261101V2Selected.png",
+      "sha256Now": "6cbbc2e1694e37a0d50ad32c680635bc6d14c07ea2bca06927e532e5bee7c94d",
+      "unchanged": true
+    }
+  ],
+  "alphaInspectionReceipt": {
+    "path": "ArtSources/FistsCombatStance20261117/alpha-integrity-receipt.json",
+    "sha256": "24c752b44fc46daeb38715ec160d79aa7429f7e34cb9965faba9e97eb3436ab7",
+    "realTransparencyAlreadyAvailable": true,
+    "newGenerationRequired": false,
+    "approvedWalkStillExact": true
+  }
+}

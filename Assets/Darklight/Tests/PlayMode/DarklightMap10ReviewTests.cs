@@ -73,17 +73,29 @@ namespace Darklight.Tests
             var views=new[]{new Vector2(565,480),new Vector2(574,625),new Vector2(216,500)};
             for(int i=0;i<views.Length;i++){var p=game.Map.SafeSpawn(game.Map.Art.World(views[i]));Move(p);lab.WorldCamera.transform.position=(Vector3)p+new Vector3(0,.75f,-10);yield return null;Capture(Folder+"after/map10-extra"+i+".png");}
         }
-        [UnityTest]public IEnumerator Map10NoctharThreePhasesPauseAndFinalPortal()
+        [UnityTest]public IEnumerator Map10TwoGuardWavesPauseAndOpenTheFinalPortal()
         {
             game.PreviewChapter(9);game.Progress.checkpoint=3;Call(game,"LoadMap",9);Call(game,"Close");Move(game.Map.SafeSpawn(game.Map.Arenas[3]+Vector2.down));yield return null;yield return null;
             for(int i=0;i<8&&!game.Active;i++){Call(game,"NextDialogue");yield return null;}
-            Assert.That(game.MapEnemies.Count(e=>e.Boss),Is.EqualTo(1));var boss=game.CurrentBoss;Assert.That(boss.kind,Is.EqualTo(RequiemEnemyKind.Nocthar));
-            boss.Health.TakeDamage(boss.Health.MaxHealth*.4f);yield return new WaitForSeconds(.06f);Assert.That(boss.Phase,Is.EqualTo(2));Assert.That(boss.AcceptDamage,Is.False);
-            game.PreviewPanel("Pause");float clock=lab.Player.Model.Clock;yield return new WaitForSeconds(.05f);Assert.That(lab.Player.Model.Clock,Is.EqualTo(clock));Call(game,"Close");yield return new WaitForSeconds(.95f);
-            boss.Health.TakeDamage(boss.Health.MaxHealth*.35f);yield return new WaitForSeconds(.06f);Assert.That(boss.Phase,Is.EqualTo(3));Assert.That(game.Progress.FormUnlocked,Is.EqualTo(3));Call(game,"Close");yield return new WaitForSeconds(.95f);
-            boss.Health.TakeDamage(99999);for(int i=0;i<20&&game.Progress.checkpoint!=4;i++)yield return null;Assert.That(game.Progress.checkpoint,Is.EqualTo(4));Call(game,"Close");
+            Assert.That(game.CurrentBoss,Is.Null);
+            var first=game.MapEnemies.Where(e=>e!=null&&!e.Health.IsDead).ToArray();
+            Assert.That(first.Length,Is.EqualTo(3));Assert.That(first.All(e=>(int)e.kind<5),Is.True);
+            game.PreviewPanel("Pause");float clock=lab.Player.Model.Clock;
+            yield return new WaitForSeconds(.05f);
+            Assert.That(lab.Player.Model.Clock,Is.EqualTo(clock));Assert.That(game.Progress.missionWave,Is.Zero);
+            Call(game,"Close");
+            foreach(var guard in first)guard.Health.TakeDamage(99999);
+            for(int i=0;i<30&&game.Progress.missionWave==0;i++)yield return null;
+            Assert.That(game.Progress.missionWave,Is.EqualTo(1));Assert.That(game.Progress.checkpoint,Is.EqualTo(3));
+            var second=game.MapEnemies.Where(e=>e!=null&&!e.Health.IsDead).ToArray();
+            Assert.That(second.Length,Is.EqualTo(3));Assert.That(second.All(e=>(int)e.kind<5),Is.True);
+            Assert.That(second.All(e=>!first.Contains(e)),Is.True);
+            Assert.That(game.CurrentBoss,Is.Null);
+            foreach(var guard in second)guard.Health.TakeDamage(99999);
+            for(int i=0;i<30&&game.Progress.checkpoint!=4;i++)yield return null;
+            Assert.That(game.Progress.checkpoint,Is.EqualTo(4));Assert.That(game.Progress.FormUnlocked,Is.EqualTo(2));Call(game,"Close");
             Move(game.Map.SafeSpawn(game.Map.Portal));Assert.That(game.TryInteract(),Is.True);Assert.That(lab.Paused,Is.True);Assert.That(game.Progress.chapter,Is.EqualTo(9));Assert.That(game.Progress.completed,Is.False);
-            File.WriteAllText(Folder+"finale-evidence.json","{\"phases\":3,\"checkpoint\":4,\"finalChoiceOpened\":true,\"endingNotForced\":true}");
+            File.WriteAllText(Folder+"finale-evidence.json","{\"guardWaves\":2,\"noctharSpawned\":false,\"checkpoint\":4,\"finalChoiceOpened\":true,\"endingNotForced\":true}");
         }
         [UnityTest]public IEnumerator Map10AtmosphereIsOptionalBoundedSilentAndPauses()
         {

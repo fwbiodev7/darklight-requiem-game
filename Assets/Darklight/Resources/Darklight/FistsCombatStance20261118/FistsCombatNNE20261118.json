@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "image": "FistsCombatNNE20261118.png",
+  "imageSha256": "4c58b0e116de6fa93b96d07d695cc67ecf10015021545aae91f278b8fb5109f8",
+  "sourcePath": "ArtSources/FistsCombatStance20261118/selected/FabiusFistsPairNNE-selected-v1.png",
+  "sourceSha256": "4c58b0e116de6fa93b96d07d695cc67ecf10015021545aae91f278b8fb5109f8",
+  "sourceSize": [
+    1920,
+    1024
+  ],
+  "nativeSize": [
+    1920,
+    1024
+  ],
+  "pixelsPerUnit": 219.66686738278148,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "frames": [
+    {
+      "id": "Redesign_FabiusFistsCombat_N_Idle_00",
+      "direction": "N",
+      "action": "Idle",
+      "phase": 0,
+      "rect": [
+        38,
+        0,
+        307,
+        512
+      ],
+      "ground": [
+        205,
+        462
+      ],
+      "pivot": [
+        0.5439739413680782,
+        0.09765625
+      ],
+      "durationMs": 450
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_N_Idle_01",
+      "direction": "N",
+      "action": "Idle",
+      "phase": 1,
+      "rect": [
+        422,
+        0,
+        307,
+        512
+      ],
+      "ground": [
+        589,
+        462
+      ],
+      "pivot": [
+        0.5439739413680782,
+        0.09765625
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_N_Walk_00",
+      "direction": "N",
+      "action": "Walk",
+      "phase": 0,
+      "rect": [
+        806,
+        0,
+        308,
+        512
+      ],
+      "ground": [
+        973,
+        462
+      ],
+      "pivot": [
+        0.5422077922077922,
+        0.09765625
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_N_Walk_01",
+      "direction": "N",
+      "action": "Walk",
+      "phase": 1,
+      "rect": [
+        1190,
+        0,
+        307,
+        512
+      ],
+      "ground": [
+        1357,
+        462
+      ],
+      "pivot": [
+        0.5439739413680782,
+        0.09765625
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_N_Walk_02",
+      "direction": "N",
+      "action": "Walk",
+      "phase": 2,
+      "rect": [
+        1574,
+        0,
+        307,
+        512
+      ],
+      "ground": [
+        1741,
+        462
+      ],
+      "pivot": [
+        0.5439739413680782,
+        0.09765625
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_NE_Idle_00",
+      "direction": "NE",
+      "action": "Idle",
+      "phase": 0,
+      "rect": [
+        38,
+        512,
+        307,
+        512
+      ],
+      "ground": [
+        192,
+        983
+      ],
+      "pivot": [
+        0.501628664495114,
+        0.080078125
+      ],
+      "durationMs": 450
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_NE_Idle_01",
+      "direction": "NE",
+      "action": "Idle",
+      "phase": 1,
+      "rect": [
+        384,
+        512,
+        384,
+        512
+      ],
+      "ground": [
+        576,
+        983
+      ],
+      "pivot": [
+        0.5,
+        0.080078125
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_NE_Walk_00",
+      "direction": "NE",
+      "action": "Walk",
+      "phase": 0,
+      "rect": [
+        806,
+        512,
+        308,
+        512
+      ],
+      "ground": [
+        960,
+        983
+      ],
+      "pivot": [
+        0.5,
+        0.080078125
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_NE_Walk_01",
+      "direction": "NE",
+      "action": "Walk",
+      "phase": 1,
+      "rect": [
+        1190,
+        512,
+        307,
+        512
+      ],
+      "ground": [
+        1344,
+        983
+      ],
+      "pivot": [
+        0.501628664495114,
+        0.080078125
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_FabiusFistsCombat_NE_Walk_02",
+      "direction": "NE",
+      "action": "Walk",
+      "phase": 2,
+      "rect": [
+        1536,
+        512,
+        384,
+        512
+      ],
+      "ground": [
+        1728,
+        983
+      ],
+      "pivot": [
+        0.5,
+        0.080078125
+      ],
+      "durationMs": 100
+    }
+  ],
+  "clips": [
+    {
+      "name": "Idle_N",
+      "frames": [
+        "Redesign_FabiusFistsCombat_N_Idle_00",
+        "Redesign_FabiusFistsCombat_N_Idle_01"
+      ],
+      "durationMs": [
+        450,
+        100
+      ],
+      "loop": true
+    },
+    {
+      "name": "Walk_N",
+      "frames": [
+        "Redesign_FabiusFistsCombat_N_Walk_00",
+        "Redesign_FabiusFistsCombat_N_Walk_01",
+        "Redesign_FabiusFistsCombat_N_Walk_02",
+        "Redesign_FabiusFistsCombat_N_Walk_01"
+      ],
+      "durationMs": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true
+    },
+    {
+      "name": "Idle_NE",
+      "frames": [
+        "Redesign_FabiusFistsCombat_NE_Idle_00",
+        "Redesign_FabiusFistsCombat_NE_Idle_01"
+      ],
+      "durationMs": [
+        450,
+        100
+      ],
+      "loop": true
+    },
+    {
+      "name": "Walk_NE",
+      "frames": [
+        "Redesign_FabiusFistsCombat_NE_Walk_00",
+        "Redesign_FabiusFistsCombat_NE_Walk_01",
+        "Redesign_FabiusFistsCombat_NE_Walk_02",
+        "Redesign_FabiusFistsCombat_NE_Walk_01"
+      ],
+      "durationMs": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true
+    }
+  ],
+  "calibration": {
+    "bodyHeightPx": 421,
+    "bodyMeasurement": "Representative readyN hair41 to ground462=421px. NEready435px (+3.33%diagonal boot depth), onePPUforPNG. Nair451 vs462=11px2.61%; NEair465 vs471=6px1.38%. Horizontal whole-figure ROI registration aligns belt/root; noYshift/resampling.",
+    "bodyWorldPreScale": 1.9165384612436094,
+    "visualScale": 1.325,
+    "densityScope": "one PPU per source PNG/TextureImporter"
+  },
+  "groundMethod": "Reviewed projected support/ground; never alpha recentering or airborne sole reanchoring",
+  "states": {
+    "importConfigured": true,
+    "imported": false,
+    "runtimeVerified": false
+  }
+}

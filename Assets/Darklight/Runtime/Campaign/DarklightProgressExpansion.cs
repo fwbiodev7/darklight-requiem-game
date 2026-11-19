@@ -37,6 +37,8 @@ namespace Darklight
             }
             s.version=CurrentVersion;
             s.expansionFlags&=15;s.missionWeaponHits&=15;s.missionWave=Mathf.Clamp(s.missionWave,0,2);s.bossPhase=Mathf.Clamp(s.bossPhase,1,3);
+            if(!DarklightCampaignRoute.TryBoss(s.chapter,out _))s.bossPhase=1;
+            if(s.chapter==DarklightCampaignRoute.FinalChapter)s.missionWave=Mathf.Min(1,s.missionWave);
             s.weaponUnlocks=(s.weaponUnlocks&15)|1;s.equippedWeapon=Mathf.Clamp(s.equippedWeapon,0,3);
             if((s.weaponUnlocks&(1<<s.equippedWeapon))==0)s.equippedWeapon=0;
             s.appearanceStage=0;s.narrativeDays=Mathf.Clamp(s.narrativeDays,0,36500);s.appearanceChapter=Mathf.Clamp(s.appearanceChapter,0,ChapterCapacity-1);

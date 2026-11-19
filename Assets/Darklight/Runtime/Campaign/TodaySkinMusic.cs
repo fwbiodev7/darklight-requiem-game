@@ -4,7 +4,7 @@ namespace Darklight
     public sealed partial class DarklightCampaign
     {
         public AudioSource EventMusicSource => music;
-        public bool EventMusicHasPriority => firstAwakeningMusicPending || HasFirstAwakeningMusic && music.isPlaying;
+        public bool EventMusicHasPriority => firstAwakeningMusicPending || HasFirstAwakeningMusic && music.isPlaying || LuciusBossMusicHasPriority;
         public TodaySkinMusic SkinMusic { get; private set; }
         public TodayTransformationMusic TransformationMusic { get; private set; }
         void FinishMusicEvent() { if (SkinMusic != null) SkinMusic.FinishEvent(); else music.Stop(); }
@@ -78,10 +78,12 @@ namespace Darklight
         public void EvaluateMix(float dt)
         {
             if (game == null || rock == null || requiem == null) return;
+            game.EvaluateLuciusBossMusic(dt);
+            if(game.LuciusBossMusicHasPriority)eventEnding=false;
             var source = game.EventMusicSource;
             
             // Menus freeze all playheads and weights; closing resumes the same sample.
-            if (!game.Active) { rock.Pause(); requiem.Pause(); source.volume = game.MusicVolume * eventWeight; return; }
+            if (!game.Active) { rock.Pause(); requiem.Pause(); source.volume = DarklightAutomation.Silent ? 0 : game.MusicVolume * eventWeight; return; }
             dt = Mathf.Max(0, dt);
             if (source.clip != lastEvent) { lastEvent = source.clip; eventEnding = false; eventWeight = 0; }
             bool priority = !eventEnding && (game.Resonance.Active >= 0 || game.EventMusicHasPriority);
@@ -104,6 +106,6 @@ namespace Darklight
             if (track.weight > .0001f) track.Tick(dt, gain * track.weight);
             else { track.main.volume = track.tail.volume = 0; track.Pause(); }
         }
-        void OnDisable() { rock?.Stop(); requiem?.Stop(); }
+        void OnDisable() { game?.ReleaseLuciusBossMusic();rock?.Stop(); requiem?.Stop(); }
     }
 }

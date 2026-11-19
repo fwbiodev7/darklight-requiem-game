@@ -97,7 +97,7 @@ namespace Darklight
             if(lab.Input.Action("Interact").WasPressedThisFrame())Interact();
             if(Training){TickTraining(dt);UpdateAura();return;}
             if(ExploringNewRegion){UpdateRegionExploration();UpdateAura();return;}
-            if(!encounterStarted&&!chapterCleared&&Map.InArena(encounter,lab.Player.transform.position)){StartEncounter();return;}
+            if(!encounterStarted&&!chapterCleared&&!FinalRitualReady&&Map.InArena(encounter,lab.Player.transform.position)){StartEncounter();return;}
             if(encounterStarted&&enemies.TrueForAll(e=>e==null||e.Health.IsDead||e.Resolved))ClearEncounter();
             UpdateAura();
             // Walking contacts are emitted in TodayCampaignSoundDesign after movement presentation.
@@ -134,24 +134,48 @@ namespace Darklight
             AddProp("Checkpoint",Resources.Load<Sprite>("Darklight/Props/CheckpointShrine")??extras[3],Map.Spawn+Vector2.up*1.8f,1.3f);
             if(!Progress.relics[chapter])AddProp("Fragmento",extras[5],Map.Relic,.7f);
             if(chapter==1)AddProp("IcaroNox",extras[0],Map.Ally,1.8f);
-            if(chapter==0||chapter==2||chapter==5||chapter==6||chapter==8)AddProp("LyraMoreau",extras[1],Map.Ally,1.8f);
-            if(chapter==3||chapter==4||chapter==7||chapter==9)AddProp("KaelAliado",bossFrames[0],Map.Ally,1.8f);
+            else if(chapter==DarklightCampaignRoute.FinalChapter)
+                AddProp("KaelAliado",bossFrames[0],Map.Ally,1.8f);
+            else if(chapter!=DarklightCampaignRoute.NeroChapter||!chapterCleared)
+                AddProp("LyraMoreau",extras[1],Map.Ally,1.8f);
             if(chapterCleared)AddProp("Portal",extras[3],Map.Portal,2.5f);
             SetLoadingProgress(.88f,"PREPARANDO OBJETIVOS E ATMOSFERA");yield return null;
-            PrepareNarrativeMap();Objective=Goal();firstAwakeningMusicPending=false;music.Stop();ambient.clip=null;ambient.volume=0;AudioDirector?.Region(chapter);InitializeRemaster(chapter);InitializeRegionAtmosphere(chapter);
+            PrepareNarrativeMap();PrepareFinalRitual();Objective=Goal();firstAwakeningMusicPending=false;music.Stop();ambient.clip=null;ambient.volume=0;AudioDirector?.Region(chapter);InitializeRemaster(chapter);InitializeRegionAtmosphere(chapter);
             BuildMultiverse(chapter);
             SetLoadingProgress(.99f,"CONCLUINDO A PASSAGEM");yield return null;
         }
         void InitializeRemaster(int chapter){var view=GetComponent<DarklightRemaster>()??gameObject.AddComponent<DarklightRemaster>();view.Initialize(lab.WorldCamera,lab.Player.transform,levelRoot,chapter);}
-        void AddProp(string name,Sprite sprite,Vector2 position,float height)
+        GameObject AddProp(string name,Sprite sprite,Vector2 position,float height)
         {
             if(name=="Checkpoint")height=2.3f;else if(name=="Portal"||name=="SaidaDaRegiao")height=4.2f;
+            Sprite officialActor=name=="LyraMoreau"?OfficialCastSprite("Lady"):
+                name=="KaelAliado"||name=="KaelPurificado"?OfficialCastSprite("Nero"):
+                name=="MatriarcaApresentacao"?sprite:null;
             if(name=="IcaroNox"&&icaroFrames?.Length==8)sprite=icaroFrames[0];
             else if(name=="LyraMoreau"&&lyraFrames?.Length==8)sprite=lyraFrames[0];
+            if(officialActor!=null)sprite=officialActor;
             position=InteractionAnchor(position);
             height=name=="LyraMoreau"?2.5f:name=="IcaroNox"?2.7f:name=="KaelAliado"?2.85f:height*DarklightWorldScale.Environment;
-            var obj=new GameObject(name);obj.transform.SetParent(levelRoot,false);obj.transform.position=position;var r=obj.AddComponent<SpriteRenderer>();r.sprite=sprite;r.sharedMaterial=pixelMaterial;DarklightSecondaryStyleBank.Attach(r);obj.transform.localScale=Vector3.one*height/sprite.bounds.size.y;r.sortingOrder=100-Mathf.RoundToInt(position.y*10);if(name=="IcaroNox"||name=="LyraMoreau"){var view=obj.AddComponent<DarklightNPCView>();view.frames=name=="IcaroNox"?icaroFrames:lyraFrames;}else if(name=="KaelAliado")obj.AddComponent<DarklightActorIdle>();}
-        string Goal()=>chapterCleared?"PORTAL LIBERTO - INTERAGIR PARA AVANCAR":ExpandedChapter?MissionTitle:(encounter==3?"ENFRENTE "+DarklightStory.Bosses[Progress.chapter]:"ENCONTRE O SELO "+(encounter+1)+" / 3");
+            var obj=new GameObject(name);obj.transform.SetParent(levelRoot,false);obj.transform.position=position;
+            var r=obj.AddComponent<SpriteRenderer>();r.sprite=sprite;r.sharedMaterial=pixelMaterial;DarklightSecondaryStyleBank.Attach(r);
+            const float ladyHeightRatio=.96f;
+            float officialScale=DarklightCharacterView.WorldVisualScale*(name=="LyraMoreau"?ladyHeightRatio:1f);
+            obj.transform.localScale=Vector3.one*(officialActor!=null?officialScale:height/sprite.bounds.size.y);
+            r.sortingOrder=100-Mathf.RoundToInt(position.y*10);
+            if(name=="IcaroNox"||(name=="LyraMoreau"&&officialActor==null))
+            {
+                var view=obj.AddComponent<DarklightNPCView>();view.frames=name=="IcaroNox"?icaroFrames:lyraFrames;
+            }
+            else if(name=="KaelAliado")obj.AddComponent<DarklightActorIdle>();
+            return obj;
+        }
+        string Goal()
+        {
+            if(chapterCleared)return "PORTAL LIBERTO - INTERAGIR PARA AVANCAR";
+            if(FinalRitualReady)return "LEIA A INSCRIÇÃO E ATIVE OS TRÊS SELOS";
+            if(ExpandedChapter)return MissionTitle;
+            return encounter==3?DarklightCampaignRoute.GateTitle(Progress.chapter):"ENCONTRE O SELO "+(encounter+1)+" / 3";
+        }
         public void PreviewCampaign() { Progress=new DarklightProgress();LoadMap(0);Close(); }
         public void PreviewChapter(int chapter) { Progress=new DarklightProgress{chapter=Mathf.Clamp(chapter,0,DarklightStory.Chapters.Length-1)};LoadMap(Progress.chapter);Close(); }
         public void NewGame()
@@ -167,32 +191,66 @@ namespace Darklight
         void StopMenuMusic(){if(MenuMusicSource!=null)MenuMusicSource.Stop();}
         void StartEncounter()
         {
-            if(BeginNarrativeEncounter())return;encounterStarted=true;Objective=encounter==3?"DERROTE "+DarklightStory.Bosses[Progress.chapter]:"LIMPE O SELO "+(encounter+1)+" / 3";
-            if(encounter==3)Speak(DarklightStory.BossLines[Progress.chapter],()=>{ambient.clip=null;Spawn((RequiemEnemyKind)(5+Progress.chapter),Map.Arenas[3],false);});
-            else
+            if(FinalRitualReady||BeginNarrativeEncounter())return;
+            if(encounter==3)
             {
-                int count=3+Mathf.Min(Progress.chapter,3);
-                for(int i=0;i<count;i++)
-                {int kind=(i+encounter+Progress.chapter)%Mathf.Min(5,3+Progress.chapter);Vector2 pos=Map.Arenas[encounter]+new Vector2((i%3-1)*1.2f,(i/3==0?1:-1)*(1.1f+(i%2)*.6f));Spawn((RequiemEnemyKind)kind,pos,Progress.chapter>2&&i==0);}
-                Notice("O SELO SE FECHOU");
+                if(DarklightCampaignRoute.TryBoss(Progress.chapter,out var kind))
+                {
+                    encounterStarted=true;Objective="ENFRENTE "+DarklightCampaignRoute.GateTitle(Progress.chapter);
+                    var design=kind==RequiemEnemyKind.Matriarch?OfficialCastSprite("MatriarcaRubra"):null;
+                    var introduction=design!=null?AddProp("MatriarcaApresentacao",design,Map.Arenas[3],1):null;
+                    Speak(DarklightStory.BossLines[Progress.chapter],()=>
+                    {
+                        if(introduction!=null)Destroy(introduction);
+                        ambient.clip=null;
+                        Spawn(kind,Map.Arenas[3],false);
+                    });
+                }
+                else StartChapterGuardWave();
+                return;
             }
+            encounterStarted=true;Objective="LIMPE O SELO "+(encounter+1)+" / 3";
+            int count=3+Mathf.Min(Progress.chapter,3);
+            for(int i=0;i<count;i++)
+            {int kind=(i+encounter+Progress.chapter)%Mathf.Min(5,3+Progress.chapter);Vector2 pos=Map.Arenas[encounter]+new Vector2((i%3-1)*1.2f,(i/3==0?1:-1)*(1.1f+(i%2)*.6f));Spawn((RequiemEnemyKind)kind,pos,Progress.chapter>2&&i==0);}
+            Notice("O SELO SE FECHOU");
         }
         void Spawn(RequiemEnemyKind kind,Vector2 pos,bool elite)
         {
             pos=Map.SafeSpawn(pos,kind==RequiemEnemyKind.Armored?.45f:.32f);
             var obj=new GameObject(kind.ToString());obj.transform.SetParent(levelRoot,false);obj.transform.position=pos;
             Sprite[] frames=new Sprite[4];
-            if((int)kind>=11)Array.Copy(ExpandedBossFrames,((int)kind-11)*8,frames,0,4);
+            var officialFrames=OfficialBossCombatSprites(kind);
+            var fullSheet=officialFrames??((int)kind>=11?ExpandedBossFramesFor(kind):null);
+            if(fullSheet!=null)Array.Copy(fullSheet,0,frames,0,4);
             else Array.Copy((int)kind<5?enemyFrames:bossFrames,((int)kind<5?(int)kind:(int)kind-5)*4,frames,0,4);
+            if(officialFrames!=null)
+                frames[0]=OfficialCastSprite(kind==RequiemEnemyKind.Matriarch?"MatriarcaRubra":"Nero")??frames[0];
             var art=new GameObject("Sprite").AddComponent<SpriteRenderer>();art.transform.SetParent(obj.transform,false);art.sprite=frames[0];art.sharedMaterial=pixelMaterial;DarklightSecondaryStyleBank.Attach(art);
-            float height=DarklightWorldScale.EnemyHeight(kind);
-            art.transform.localScale=Vector3.one*height/frames[0].bounds.size.y;
             var rigid=obj.AddComponent<Rigidbody2D>();rigid.gravityScale=0;rigid.freezeRotation=true;rigid.collisionDetectionMode=CollisionDetectionMode2D.Continuous;
             var collider=obj.AddComponent<CircleCollider2D>();collider.radius=kind==RequiemEnemyKind.Armored?.42f:.28f;collider.offset=Vector2.up*.18f;
             var hp=obj.AddComponent<HealthSystem>();obj.AddComponent<DarklightCombatant>();
-            var foe=obj.AddComponent<DarklightEnemy>();foe.kind=kind;foe.elite=elite;foe.poses=frames;foe.attackFrames=new Sprite[4];if((int)kind>=11)Array.Copy(ExpandedBossFrames,((int)kind-11)*8+4,foe.attackFrames,0,4);else Array.Copy(foe.Boss?bossAttacks:enemyAttacks,(foe.Boss?(int)kind-5:(int)kind)*4,foe.attackFrames,0,4);
+            var foe=obj.AddComponent<DarklightEnemy>();foe.kind=kind;foe.elite=elite;
+            foe.poses=frames;foe.attackFrames=new Sprite[4];foe.UsesOfficialCombatArt=officialFrames!=null;
+            art.transform.localScale=Vector3.one*foe.PresentationScale;
+            if(fullSheet!=null)Array.Copy(fullSheet,4,foe.attackFrames,0,4);
+            else Array.Copy(foe.Boss?bossAttacks:enemyAttacks,(foe.Boss?(int)kind-5:(int)kind)*4,foe.attackFrames,0,4);
             hp.SetMaxHealth((foe.Boss?260+Progress.chapter*65:kind==RequiemEnemyKind.Armored?90:50+Progress.chapter*7)*(elite?1.45f:1),false);if(foe.ExpandedBoss)foe.RestorePhase(Progress.bossPhase);enemies.Add(foe);AddEnemyBar(foe);obj.AddComponent<TodayEnemyAudio>();if(Training)obj.AddComponent<DarklightCombatDebug>();
-            if(foe.Boss&&!Training)ShowPresentationCue(DarklightStory.Bosses[Progress.chapter],"ENTER / A: DISPENSAR   ·   COMANDOS LIVRES",true);
+            if(foe.Boss&&!Training)ShowPresentationCue(DarklightStory.Bosses[(int)kind-5],"ENTER / A: DISPENSAR   ·   COMANDOS LIVRES",true);
+        }
+        static Sprite[] OfficialBossCombatSprites(RequiemEnemyKind kind)
+        {
+            string name=kind switch
+            {
+                RequiemEnemyKind.Matriarch=>"MatriarcaRubraCombat",
+                RequiemEnemyKind.KaelFractured=>"NeroFraturadoCombat",
+                _=>null
+            };
+            if(name==null)return null;
+            var frames=Resources.LoadAll<Sprite>("Darklight/OfficialCast/"+name);
+            if(frames.Length!=8)return null;
+            Array.Sort(frames,(left,right)=>string.CompareOrdinal(left.name,right.name));
+            return frames;
         }
         public DarklightEnemy SpawnLucius(Vector2 pos,CombatLoadout loadout=null)
         {
@@ -208,18 +266,18 @@ namespace Darklight
         }
         void ClearEncounter()
         {
-            if(FinishNarrativeCombat())return;encounterStarted=false;BeginBattleSettle();
+            if(FinishNarrativeCombat()||AdvanceFinalGuardWave())return;encounterStarted=false;BeginBattleSettle();
             if(encounter==3)
             {
-                chapterCleared=true;Progress.checkpoint=4;Progress.formsUnlocked=Mathf.Max(Progress.formsUnlocked,Progress.chapter>=9?3:Progress.chapter>=3?2:1);Progress.potions=Mathf.Min(9,Progress.potions+2);Progress.points++;Energy=100;health.FullHeal();
+                chapterCleared=true;Progress.checkpoint=4;Progress.missionWave=0;Progress.formsUnlocked=Mathf.Max(Progress.formsUnlocked,Progress.chapter>=9?3:Progress.chapter>=3?2:1);Progress.potions=Mathf.Min(9,Progress.potions+2);Progress.points++;Energy=100;health.FullHeal();
                 AddProp("Portal",extras[3],Map.Portal,2.5f);Objective=Goal();
                 ExpandedChapterReward();Progress.bossPhase=1;VampireChapterReward();UnlockWeaponReward();StageStats.Finish(Style);SaveCheckpoint();Speak(DarklightStory.Conclusions[Progress.chapter],()=>Open("StageResults"));if(Progress.chapter!=0&&Progress.chapter!=2)Notice("CAPITULO CONCLUIDO");
             }
-            else {encounter++;Progress.checkpoint=encounter;Progress.missionWave=0;health.Heal(health.MaxHealth*.18f);Energy=Mathf.Min(100,Energy+15);Objective=Goal();SaveCheckpoint();Notice("SELO LIBERTO - CHECKPOINT SALVO");}
+            else {encounter++;Progress.checkpoint=encounter;Progress.missionWave=0;health.Heal(health.MaxHealth*.18f);Energy=Mathf.Min(100,Energy+15);if(FinalRitualReady)PrepareFinalRitual();Objective=Goal();SaveCheckpoint();Notice("SELO LIBERTO - CHECKPOINT SALVO");}
         }
         void Interact(){if(!TryInteract())Notice("APROXIME-SE DE UM NPC, MEMÓRIA OU CHECKPOINT");}
-        public bool RequestAttack(DarklightEnemy enemy)
-        {return TechnicalAttackPermit(enemy);}
+        public bool RequestAttack(DarklightEnemy enemy, bool followUp = false)
+        {return TechnicalAttackPermit(enemy, followUp);}
         internal void FinishLuciusDuel(DarklightEnemy enemy)
         {
             if(lab?.WorldCamera!=null)lab.WorldCamera.GetComponent<DarklightLabCamera>().duelOpponent=null;
@@ -337,7 +395,7 @@ namespace Darklight
                 Vector2 anchor=Progress.checkpoint==4?Map.Arenas[3]:Map.Checkpoints[Mathf.Clamp(Progress.checkpoint,0,3)];
                 Progress.RecordReturnPoint(Progress.chapter,Progress.checkpoint,Map.SafeSpawn(anchor));
             }
-            if(DarklightAutomation.Silent||ExploringNewRegion||PlaytestSession)return !ExploringNewRegion;
+            if((DarklightAutomation.Silent&&!DarklightProgress.HasIsolatedTestStorage)||ExploringNewRegion||PlaytestSession)return !ExploringNewRegion;
             Resonance.Store(Progress);Blood.Store(Progress);try{Progress.Save();return true;}catch(Exception e){Notice("NAO FOI POSSIVEL SALVAR");Debug.LogError(e);return false;}
         }
         void Speak(string[] lines,Action done=null){dialogue=PrepareDialogueLines(lines);dialogueIndex=0;dialogueDone=done;Open("Dialogue");}

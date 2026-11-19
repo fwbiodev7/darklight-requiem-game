@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "image": "LuciusNormalDodgeCanonicalSSE20261119V1.png",
+  "imageSha256": "6b755f985e3523a66162dcfa2ec952403aaade1671f421c6cc08823af86f6bf8",
+  "sourcePath": "canonical-dodge-source.png",
+  "sourceSha256": "6b755f985e3523a66162dcfa2ec952403aaade1671f421c6cc08823af86f6bf8",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 230.0,
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "visualApproval": false,
+  "frames": [
+    {
+      "id": "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_S_00",
+      "action": "Dodge",
+      "direction": "S",
+      "index": 0,
+      "phase": "preparation",
+      "rect": [
+        0,
+        0,
+        490,
+        512
+      ],
+      "pivot": [
+        0.6877551020408164,
+        0.12109375
+      ],
+      "durationMs": 60,
+      "bodyAnchorPx": [
+        337,
+        450
+      ]
+    },
+    {
+      "id": "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_S_01",
+      "action": "Dodge",
+      "direction": "S",
+      "index": 1,
+      "phase": "evasive-step",
+      "rect": [
+        490,
+        0,
+        545,
+        512
+      ],
+      "pivot": [
+        0.5779816513761468,
+        0.12109375
+      ],
+      "durationMs": 100,
+      "bodyAnchorPx": [
+        805,
+        450
+      ]
+    },
+    {
+      "id": "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_S_02",
+      "action": "Dodge",
+      "direction": "S",
+      "index": 2,
+      "phase": "recovery",
+      "rect": [
+        1035,
+        0,
+        501,
+        512
+      ],
+      "pivot": [
+        0.6187624750499002,
+        0.12109375
+      ],
+      "durationMs": 70,
+      "bodyAnchorPx": [
+        1345,
+        450
+      ]
+    },
+    {
+      "id": "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_SE_00",
+      "action": "Dodge",
+      "direction": "SE",
+      "index": 0,
+      "phase": "preparation",
+      "rect": [
+        0,
+        512,
+        465,
+        512
+      ],
+      "pivot": [
+        0.7397849462365591,
+        0.140625
+      ],
+      "durationMs": 60,
+      "bodyAnchorPx": [
+        344,
+        952
+      ]
+    },
+    {
+      "id": "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_SE_01",
+      "action": "Dodge",
+      "direction": "SE",
+      "index": 1,
+      "phase": "evasive-step",
+      "rect": [
+        465,
+        512,
+        570,
+        512
+      ],
+      "pivot": [
+        0.6105263157894737,
+        0.140625
+      ],
+      "durationMs": 100,
+      "bodyAnchorPx": [
+        813,
+        952
+      ]
+    },
+    {
+      "id": "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_SE_02",
+      "action": "Dodge",
+      "direction": "SE",
+      "index": 2,
+      "phase": "recovery",
+      "rect": [
+        1035,
+        512,
+        501,
+        512
+      ],
+      "pivot": [
+        0.6307385229540918,
+        0.140625
+      ],
+      "durationMs": 70,
+      "bodyAnchorPx": [
+        1351,
+        952
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "name": "Dodge_S",
+      "frames": [
+        "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_S_00",
+        "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_S_01",
+        "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_S_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "Dodge_SE",
+      "frames": [
+        "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_SE_00",
+        "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_SE_01",
+        "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_SE_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "quality": {
+    "alphaThreshold": 25,
+    "maxHeightRatio": 1.5
+  },
+  "pivotMethod": "Manual projected pelvis on ground, blade and coat excluded; source pixels unchanged",
+  "referencePath": "C:\\Users\\Usuario\\Pictures\\Screenshots\\Captura de tela 2026-11-13 230438.png",
+  "referenceSha256": "784a4204897aa7d74af9fe00ee4eae8032d91c8c81414f2ef8b1e2fbe3610d5d",
+  "calibrationStatus": "provisional PPU230; no Unity comparison executed"
+}

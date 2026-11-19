@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 1,
+  "pair": [
+    "W",
+    "E"
+  ],
+  "sourcePath": "ArtSources/FistsCombatStance20261118/candidates/FabiusFistsPair-W-E-v1-source.png",
+  "sourceSha256": "274f1f931ff8749b956e593bb7a74d7fa2361a5d49ca2003eed0e3e88182bedc",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "actualColumnBoundaries": [
+    0,
+    307,
+    614,
+    922,
+    1229,
+    1536
+  ],
+  "actualRowBoundaries": [
+    0,
+    512,
+    1024
+  ],
+  "frames": [
+    {
+      "index": 0,
+      "direction": "W",
+      "action": "Idle",
+      "phase": 0,
+      "rect": [
+        0,
+        0,
+        307,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        65,
+        65,
+        295,
+        452
+      ],
+      "bodySpanPx": 387,
+      "edgeMaxAlpha": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "completeAtAlpha32": true,
+      "rgbaDecodedSha256": "24125b88c5fc3a280417035f95ccfb7b278283c8a52a42cbe563bc271a07d2ae",
+      "durationMs": 450,
+      "groundState": "not calibrated; no integration recipe until motion phase acceptance"
+    },
+    {
+      "index": 1,
+      "direction": "W",
+      "action": "Idle",
+      "phase": 1,
+      "rect": [
+        307,
+        0,
+        307,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        68,
+        60,
+        273,
+        435
+      ],
+      "bodySpanPx": 375,
+      "edgeMaxAlpha": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "completeAtAlpha32": true,
+      "rgbaDecodedSha256": "6af802bf9c3841b569454c2d0b22a56e058a1bce770202ec5c2fdc0763c54c66",
+      "durationMs": 100,
+      "groundState": "not calibrated; no integration recipe until motion phase acceptance"
+    },
+    {
+      "index": 2,
+      "direction": "W",
+      "action": "Walk",
+      "phase": 0,
+      "rect": [
+        614,
+        0,
+        308,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        6,
+        66,
+        264,
+        445
+      ],
+      "bodySpanPx": 379,
+      "edgeMaxAlpha": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "completeAtAlpha32": true,
+      "rgbaDecodedSha256": "027fa625b77a5d4ec6e59686e2492cb0df14e255adca05a806b905ee035ff1fc",
+      "durationMs": 100,
+      "groundState": "not calibrated; no integration recipe until motion phase acceptance"
+    },
+    {
+      "index": 3,
+      "direction": "W",
+      "action": "Walk",
+      "phase": 1,
+      "rect": [
+        922,
+        0,
+        285,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        41,
+        65,
+        233,
+        442
+      ],
+      "bodySpanPx": 380,
+      "edgeMaxAlpha": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "completeAtAlpha32": true,
+      "rgbaDecodedSha256": "a3da4dc27ea269750e95471dd3e4bc4b79f98650a3761b06797abb7ccab78e14",
+      "durationMs": 100,
+      "groundState": "not calibrated; no integration recipe until motion phase acceptance",
+      "nominalGridRect": [
+        922,
+        0,
+        307,
+        512
+      ],
+      "rectangleNote": "Actual whole-figure border between columns3/4 is1207, not nominal1229; excludes neighboring coat tip and retains complete own figure without resample/pixel edit."
+    },
+    {
+      "index": 4,
+      "direction": "W",
+      "action": "Walk",
+      "phase": 2,
+      "rect": [
+        1207,
+        0,
+        307,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        7,
+        67,
+        266,
+        447
+      ],
+      "bodySpanPx": 380,
+      "edgeMaxAlpha": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "completeAtAlpha32": true,
+      "rgbaDecodedSha256": "75edf190ad9ac3ac0f3fb6e972e98f9ab1918edd8475d568ba53408d2be3c851",
+      "durationMs": 100,
+      "groundState": "not calibrated; no integration recipe until motion phase acceptance",
+      "nominalGridRect": [
+        1229,
+        0,
+        307,
+        512
+      ],
+      "rectangleNote": "Actual whole-figure border between columns3/4 is1207, not nominal1229; excludes neighboring coat tip and retains complete own figure without resample/pixel edit."
+    },
+    {
+      "index": 5,
+      "direction": "E",
+      "action": "Idle",
+      "phase": 0,
+      "rect": [
+        0,
+        512,
+        307,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        59,
+        66,
+        290,
+        453
+      ],
+      "bodySpanPx": 387,
+      "edgeMaxAlpha": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "completeAtAlpha32": true,
+      "rgbaDecodedSha256": "479e41467e468408b694af9cc63dcbbbfca2c84d2dc14049d82d4ea8316bf973",
+      "durationMs": 450,
+      "groundState": "not calibrated; no integration recipe until motion phase acceptance"
+    },
+    {
+      "index": 6,
+      "direction": "E",
+      "action": "Idle",
+      "phase": 1,
+      "rect": [
+        307,
+        512,
+        307,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        46,
+        56,
+        244,
+        428
+      ],
+      "bodySpanPx": 372,
+      "edgeMaxAlpha": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "completeAtAlpha32": true,
+      "rgbaDecodedSha256": "91a41dfa99b6d068a8ccf2ac75b7e508bdc979587f9863c821014a1ced317f8f",
+      "durationMs": 100,
+      "groundState": "not calibrated; no integration recipe until motion phase acceptance"
+    },
+    {
+      "index": 7,
+      "direction": "E",
+      "action": "Walk",
+      "phase": 0,
+      "rect": [
+        614,
+        512,
+        308,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        11,
+        69,
+        293,
+        448
+      ],
+      "bodySpanPx": 379,
+      "edgeMaxAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "completeAtAlpha32": true,
+      "rgbaDecodedSha256": "121a0f5d8d316f49d8c9d4cc53dee7d137ba58eb67e90b970b8031badbefb194",
+      "durationMs": 100,
+      "groundState": "not calibrated; no integration recipe until motion phase acceptance"
+    },
+    {
+      "index": 8,
+      "direction": "E",
+      "action": "Walk",
+      "phase": 1,
+      "rect": [
+        922,
+        512,
+        285,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        28,
+        68,
+        220,
+        445
+      ],
+      "bodySpanPx": 377,
+      "edgeMaxAlpha": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "completeAtAlpha32": true,
+      "rgbaDecodedSha256": "4c089c188ebe6478b6fbd90575923c2cd2772729baa68d2425f9b980dfab3d34",
+      "durationMs": 100,
+      "groundState": "not calibrated; no integration recipe until motion phase acceptance",
+      "nominalGridRect": [
+        922,
+        512,
+        307,
+        512
+      ],
+      "rectangleNote": "Actual whole-figure border between columns3/4 is1207, not nominal1229; excludes neighboring coat tip and retains complete own figure without resample/pixel edit."
+    },
+    {
+      "index": 9,
+      "direction": "E",
+      "action": "Walk",
+      "phase": 2,
+      "rect": [
+        1207,
+        512,
+        307,
+        512
+      ],
+      "alpha128BoundsLocal": [
+        15,
+        70,
+        288,
+        449
+      ],
+      "bodySpanPx": 379,
+      "edgeMaxAlpha": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "completeAtAlpha32": true,
+      "rgbaDecodedSha256": "398c4289e771381ca09cc2c305460919ced6ec9ea2dfd59b9a569631dedc1259",
+      "durationMs": 100,
+      "groundState": "not calibrated; no integration recipe until motion phase acceptance",
+      "nominalGridRect": [
+        1229,
+        512,
+        307,
+        512
+      ],
+      "rectangleNote": "Whole figure source ROI moved22px left relative to nominal5column boundary; recovers cloak tips, no resampling or pixel edits."
+    }
+  ],
+  "alpha": {
+    "extrema": [
+      0,
+      254
+    ],
+    "zeroFraction": 0.6616172790527344,
+    "1to31Fraction": 0.03631464640299479,
+    "cornerAlpha": [
+      0,
+      0,
+      1,
+      0
+    ]
+  },
+  "states": {
+    "produced": true,
+    "staticInspected": true,
+    "visualReviewedAccepted": false,
+    "selected": false,
+    "importReady": false,
+    "imported": false,
+    "runtimeVerified": false,
+    "userVisualApproval": false
+  },
+  "visualFindings": {
+    "identity": "Recognizable mature Fabius high guard, brown canonical hair, red eyes/clean warm skin, black/burgundy coat and neutral silver gauntlets/greaves. No obvious gross redesign.",
+    "views": "Real left W/right E side profiles; both arms raised.",
+    "completeFigures": true,
+    "pendingPhases": "ContactA/ContactB in each profile are excessively similar in support/near-far leg arrangement at static inspection. Real alternating leg support not confidently established; no acceptance or recipe inclusion by inference. Passing is distinct but does not prove opposite contacts.",
+    "idle": "Small drawn rebound present; amplitude and constant-ground registration should be reviewed alongside contact correction. No rigid1-3% gate; judge natural restrained preparatory bounce.",
+    "preview": "GIFs generated, continuous playback not inspected; static whole-sheet contrast review only."
+  },
+  "stopReason": "coordinator signaled35%window/77%weekly; no new NW/SE or repair generation before user30%decision",
+  "pending": [
+    "Inspect/correct only full contact figures if opposite support remains unclear; preserve full source and correct figures.",
+    "Manual ground/pivots and ready bodyHeightPx required before recipe.",
+    "Do not activate W/E as reviewed.",
+    "NW/SE not produced; no new image generation in flight."
+  ],
+  "actualCellsVariable": true,
+  "previewRealRects": "qa/PairWE/v1-realrects-{W|E}-{idle|walk}.gif"
+}

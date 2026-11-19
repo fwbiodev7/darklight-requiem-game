@@ -35,14 +35,14 @@ namespace Darklight
             bool paused=CinematicPause;
             pauseBlur.Show(paused);pauseSceneRoot.gameObject.SetActive(paused);
             bool skin=panel=="Skins";skinPreview.gameObject.SetActive(skin);skinDescription.gameObject.SetActive(skin);skinEquipped.gameObject.SetActive(skin);
-            pauseLocation.gameObject.SetActive(panel=="Pause");
-            menuRoot.Find("ContextoDaFase").gameObject.SetActive(panel=="Pause");
-            if(panel=="Pause"){bodyText.gameObject.SetActive(false);pauseLocation.text=(ExploringNewRegion?Map.Art.title:DarklightStory.Chapters[Progress.chapter])+"\n"+(ExploringNewRegion?Map.Art.title:DarklightStory.Places[Progress.chapter])+"\n\n"+Objective;}
+            pauseLocation.gameObject.SetActive(panel=="Pause"&&!PlaytestSession);
+            menuRoot.Find("ContextoDaFase").gameObject.SetActive(panel=="Pause"&&!PlaytestSession);
+            if(panel=="Pause"){bodyText.gameObject.SetActive(false);pauseLocation.text=(ExploringNewRegion?Map.Art.title:DarklightStory.Places[Progress.chapter])+"\n"+Objective;}
             if(skin)
             {
                 int preview=0;
                 skinPreview.sprite=TodayCharacterBank.YoungIdle(preview,0,0,Time.unscaledTime)??TodayCharacterBank.StablePose(preview,0,0,0);
-                skinDescription.text="REQUIEM\n\nSobretudo escuro e katana ancestral. Katana, Punhos da Ruína e motocicleta.";
+                skinDescription.text="REQUIEM\n\nSobretudo escuro e katana ancestral.\n\nKatana e Punhos/Grevas Abissais.";
                 skinEquipped.text=SelectedSkin==preview?"EQUIPADO":"ENTER / A: EQUIPAR";skinEquipped.color=SelectedSkin==preview?new Color(.72f,.08f,.15f):new Color(.84f,.82f,.78f);
             }
             foreach(var row in settingsSliders.Values)if(row.slider!=null){int percent=VolumePercent(row.read());row.slider.SetValueWithoutNotify(percent);row.percent.text=percent+"%";}

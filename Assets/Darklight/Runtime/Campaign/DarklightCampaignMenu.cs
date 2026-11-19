@@ -16,7 +16,7 @@ namespace Darklight
         float menuSoundAt;
         bool CinematicFront=>panel=="Main"||panel=="Skins"&&returnPanel=="Main"||panel=="ConfirmNew"||panel=="LoadGames"||panel=="Extras"||panel=="Regions"||panel=="RegionDetails"||((panel=="Options"||panel=="Controls"||panel=="Credits"||panel=="BindingDevice"||panel=="BindingSlot"||panel=="BindingConflict")&&returnPanel=="Main");
 
-        bool CinematicPause=>panel=="Skins"&&returnPanel=="Pause"||panel=="Pause"||panel=="Transformations"||panel=="Skills"||panel=="VampireSkills"||panel=="Inventory"||panel=="Weapons"||panel=="AbyssHelp"||panel=="Journal"||panel=="MP3"||panel=="Playtest"||((panel=="Options"||panel=="Controls"||panel=="BindingDevice"||panel=="BindingSlot"||panel=="BindingConflict")&&returnPanel=="Pause");
+        bool CinematicPause=>!CinematicFront&&panel!=""&&panel!="Dialogue"&&panel!="Death"&&panel!="Loading";
 
         void CreateCinematicMenu()
         {
@@ -31,6 +31,7 @@ namespace Darklight
             menuTagline.text="Entre o sangue e o eclipse.";
             menuVersion=TextAt(menuRoot,"Versao",553,339,75,10,5);menuVersion.text="BETA 1.0";menuVersion.alignment=TextAnchor.MiddleRight;
             menuFade=menuRoot.gameObject.AddComponent<CanvasGroup>();
+            CreateGothicMenuChrome();
         }
         public static int MenuProgressPercent(DarklightProgress saved)
         {
@@ -50,7 +51,6 @@ namespace Darklight
             Button("CARREGAR JOGO",()=>Open("LoadGames"));
             Button("ARENA DE TREINAMENTO",EnterTraining);
             Button("CONFIGURAÇÕES",()=>Open("Options"));
-            Button("TROCAR SKIN",()=>Open("Skins"));
             Button("CRÉDITOS",()=>Open("Credits"));
             Button("SAIR",()=>Application.Quit());
         }
@@ -82,7 +82,7 @@ namespace Darklight
         }
         void AddCinematicBorder(UnityEngine.UI.Image image,UnityEngine.UI.Text label,int i)
         {
-            image.sprite=null;image.material=null;image.type=UnityEngine.UI.Image.Type.Simple;
+            image.sprite=UIArt(1,extras[7]);image.material=null;image.type=UnityEngine.UI.Image.Type.Sliced;image.pixelsPerUnitMultiplier=8.333333f;
             image.color=new Color(.025f,.03f,.045f,.8f);
             var edges=new UnityEngine.UI.Image[4];
             for(int n=0;n<4;n++){edges[n]=ImageAt(image.transform,"Borda"+n,0,0,1,1,null);edges[n].color=new Color(.27f,.3f,.32f);}
@@ -124,6 +124,7 @@ namespace Darklight
                 cinematicBackdrop.SetSkin(SelectedSkin);
             }
             for(int i=0;i<buttons.Count;i++)StyleCinematicButton(i,Mathf.Max(0,selection-7));
+            LayoutGothicMenuChrome();
         }
         void StyleCinematicButton(int i,int first)
         {
@@ -134,28 +135,29 @@ namespace Darklight
                 b.rect.anchoredPosition=new Vector2(22,-(62+(i-first)*28));b.image.sprite=UIArt(!b.enabled?3:i==selection?2:1,extras[7]);b.image.color=Color.white;b.text.color=b.enabled?new Color(.96f,.9f,.86f):Color.gray;return;
             }
             bool tall=panel=="Main"&&i==0||panel=="LoadGames"&&i<2;
-            float y=CinematicPause?96+(i-first)*20:panel=="Main"?(i==0?137:176+(i-1)*22):panel=="LoadGames"?116+(i-first)*41:116+(i-first)*27;
-            float width=panel=="Pause"?214:260;float h=panel=="Pause"?20:tall?34:22;
+            float y=panel=="Pause"?126+(i-first)*24:CinematicPause?98+(i-first)*28:panel=="Main"?(i==0?130:166+(i-1)*24):panel=="LoadGames"?116+(i-first)*41:116+(i-first)*27;
+            float width=panel=="Main"?256:panel=="Pause"?248:CinematicPause?270:260;float h=panel=="Pause"?22:tall?34:24;
             if(panel=="Options"){width=i<6?178:372;y=i<6?101+i*27:101+(i-6)*(optionsCategory==1?29:30);if(settingsSliders.ContainsKey(i))h=26;}
             if(panel=="Skins"){width=208;y=108+(i-first)*32;h=26;}
-            b.rect.anchoredPosition=new Vector2(panel=="Options"&&i>=6?236:28,-y);b.rect.sizeDelta=new Vector2(width,h);
+            b.rect.anchoredPosition=new Vector2(panel=="Main"?192:panel=="Pause"?196:panel=="Options"&&i>=6?236:28,-y);b.rect.sizeDelta=new Vector2(width,h);
             b.text.rectTransform.sizeDelta=new Vector2(width-28,tall?20:h);LayoutAudioSlider(i,width);
             if(panel=="Controls"||panel=="BindingSlot"||panel=="BindingConflict"){b.text.fontSize=5;bodyText.rectTransform.anchoredPosition=new Vector2(328,-137);bodyText.rectTransform.sizeDelta=new Vector2(250,175);menuFooter.text="SETAS / LS / RODA: ESCOLHER    ENTER / A: OK    ESC / B: VOLTAR";}
             bool focused=b.enabled&&(i==selection||panel=="Options"&&i==optionsCategory);
-            b.image.color=Color.Lerp(b.image.color,focused?new Color(.19f,.035f,.06f,.76f):new Color(.025f,.03f,.045f,.8f),Mathf.Min(1,Time.unscaledDeltaTime*14));
+            b.image.sprite=UIArt(!b.enabled?3:focused?2:1,extras[7]);b.image.color=focused?Color.white:b.enabled?new Color(.83f,.65f,.98f):new Color(.46f,.42f,.51f);
             b.text.color=b.enabled?new Color(.91f,.89f,.83f):new Color(.38f,.4f,.42f);
             if(!menuBorders.TryGetValue(b.image,out var style))return;
             Color target=!b.enabled?new Color(.17f,.19f,.22f):focused?new Color(.63f,.08f,.15f):new Color(.27f,.3f,.32f);
             for(int n=0;n<4;n++)
             {
                 var edge=style.edges[n];edge.color=Color.Lerp(edge.color,target,Mathf.Min(1,Time.unscaledDeltaTime*14));
+                edge.enabled=false;
                 edge.rectTransform.anchoredPosition=n==0?Vector2.zero:n==1?new Vector2(0,-(h-.5f)):n==2?Vector2.zero:new Vector2(width-.5f,0);
                 edge.rectTransform.sizeDelta=n<2?new Vector2(width,.5f):new Vector2(.5f,h);
             }
             style.cursor.color=focused?new Color(.78f,.1f,.18f):new Color(.38f,.42f,.44f,b.enabled?.8f:.25f);
             style.cursor.rectTransform.sizeDelta=new Vector2(10,h);
         }
-        void TickCinematicMenu(){if(CinematicFront||CinematicPause)menuFade.alpha=Mathf.MoveTowards(menuFade.alpha,1,Time.unscaledDeltaTime*3);}
+        void TickCinematicMenu(){if(CinematicFront||CinematicPause)menuFade.alpha=Mathf.MoveTowards(menuFade.alpha,1,Time.unscaledDeltaTime*3);UpdateGothicArsenal();if(font.material.mainTexture!=null)font.material.mainTexture.filterMode=FilterMode.Point;}
         void MenuSound()
         {
             if(DarklightAutomation.Silent||tones==null||InterfaceVolume<=0||Time.unscaledTime<menuSoundAt)return;

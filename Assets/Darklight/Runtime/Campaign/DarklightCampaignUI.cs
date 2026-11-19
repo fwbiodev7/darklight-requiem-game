@@ -70,12 +70,12 @@ namespace Darklight
             energyFill.rectTransform.sizeDelta=new Vector2(132*Mathf.Clamp01(Energy/100),2);
             Vector2 goal=ExploringNewRegion?RegionGoal:chapterCleared?Map.Portal:Map.Arenas[encounter];Vector2 delta=goal-(Vector2)lab.Player.transform.position;
             string compass=new[]{"S","SO","O","NO","N","NE","L","SE"}[DarklightCharacterView.DirectionIndex(delta)];
-            objectiveText.text=ExploringNewRegion?"MEMÓRIAS "+VisitedRegionAreas+"/"+Map.Art.areas.Length+"  "+compass+"  "+delta.magnitude.ToString("0")+"m":encounterStarted?Objective:(chapterCleared?"PORTAL":encounter==3?"CHEFE":"SELO "+(encounter+1)+"/3")+"  "+compass+"  "+delta.magnitude.ToString("0")+"m";statusText.text="NV "+Progress.level+"  XP "+Progress.xp+"/"+Progress.NeededXP+"  "+lab.Input.BindingLabel("Potion")+":"+Progress.potions;
+            objectiveText.text=ExploringNewRegion?"MEMÓRIAS "+VisitedRegionAreas+"/"+Map.Art.areas.Length+"  "+compass+"  "+delta.magnitude.ToString("0")+"m":encounterStarted?Objective:(chapterCleared?"PORTAL":encounter==3?DarklightCampaignRoute.GateTitle(Progress.chapter):"SELO "+(encounter+1)+"/3")+"  "+compass+"  "+delta.magnitude.ToString("0")+"m";statusText.text="NV "+Progress.level+"  XP "+Progress.xp+"/"+Progress.NeededXP+"  "+lab.Input.BindingLabel("Potion")+":"+Progress.potions;
             int selected=Resonance.Selected;float cooldown=Resonance.Recovery[selected];
             powerFrame.gameObject.SetActive(Active&&Progress.mp3Unlocked);powerFill.color=DarklightResonance.Colors[selected];powerFill.rectTransform.sizeDelta=new Vector2(145*Resonance.Energy/100,3);
             powerText.text=DarklightResonance.Names[selected]+"\n"+(Resonance.Active==selected?Resonance.Remaining.ToString("0.0")+"s ATIVO":cooldown>0?cooldown.ToString("0")+"s RECARGA":lab.Input.BindingLabel("Power")+": ATIVAR")+"   "+Resonance.Energy.ToString("0")+"%\n1/2 OU DIRECIONAL: MODO";
             messageText.text=noticeTime>0?notice:"";
-            var boss=CurrentBoss;bossText.text=boss==null?"":boss.IsLucius?(boss.Phase==3?"LUCIUS - ULTIMO CONFRONTO":boss.Phase==2?"LUCIUS - ARCONTE":"LUCIUS"):DarklightStory.Bosses[Progress.chapter];bossFill.gameObject.SetActive(boss!=null&&!boss.IsLucius);
+            var boss=CurrentBoss;bossText.text=boss==null?"":boss.IsLucius?(boss.Phase==3?"LUCIUS - ULTIMO CONFRONTO":boss.Phase==2?"LUCIUS - ARCONTE":"LUCIUS"):DarklightStory.Bosses[(int)boss.kind-5];bossFill.gameObject.SetActive(boss!=null&&!boss.IsLucius);
             bossText.gameObject.SetActive(boss==null||!boss.IsLucius);
             PresentLuciusBossBar(boss);
             if(boss!=null)bossFill.rectTransform.sizeDelta=new Vector2(220*boss.Health.HealthPercent,3);
@@ -142,6 +142,7 @@ namespace Darklight
         void Activate(int i){if(i<0||i>=buttons.Count||!buttons[i].enabled)return;MenuSound();buttons[i].action();}
         void Open(string value)
         {
+            if(!DarklightPlayableScope.WeaponActive(3)&&(value=="AbyssHelp"||value=="MotorcycleExpansion"))value="Weapons";
             if(value=="Main")StartMenuMusic();
             if(value=="Regions"&&panel!="RegionDetails")regionMenuReturn=panel=="Extras"?"Extras":"Pause";
             if(value=="Skins"&&panel!="Skins")returnPanel=panel=="Main"?"Main":"Pause";
@@ -182,6 +183,7 @@ namespace Darklight
                 case "Main":BuildCinematicMain();break;
                 case "Difficulty":BuildDifficulty();break;
                 case "CombatOptions":BuildCombatOptions();break;
+                case "Character":BuildCharacterMenu();break;
                 case "AirCombat":BuildAirGuide();break;
                 case "MotorcycleExpansion":BuildMotorcycleExpansionGuide();break;
                 case "Training":BuildTraining();break;
@@ -197,7 +199,7 @@ namespace Darklight
                 case "Pause":
                     if(ExploringNewRegion){heading.text="EXPLORAÇÃO";bodyText.text=Map.Art.title;Button("RETOMAR",Close);Button("ESCOLHER REGIÃO",()=>Open("Regions"));Button("MAPA DA FASE",()=>atlas.TryOpen());Button("OPÇÕES",()=>Open("Options"));Button("MENU PRINCIPAL",()=>Open("Main"));break;}
                     heading.text="PAUSA";bodyText.text=DarklightStory.Chapters[Progress.chapter]+"\n"+DarklightStory.Places[Progress.chapter];
-                    Button("RETOMAR",Close);Button("COMBATE E TREINO",()=>Open(Training?"Training":"CombatOptions"));Button("ESTATÍSTICAS DA FASE",()=>Open("StageResults"));Button("TRANSFORMACOES",()=>Open("Transformations"));Button("HABILIDADES",()=>Open("Skills"));Button("ARMAS",()=>Open("Weapons"));Button("INVENTARIO",()=>Open("Inventory"));Button("DIARIO",()=>Open("Journal"));Button("DARK RESONANCE",()=>Open("MP3"));Button("TROCAR SKIN",()=>Open("Skins"));Button("MAPA DA FASE",()=>atlas.TryOpen());Button("OPCOES",()=>Open("Options"));Button("MENU PRINCIPAL",()=>{if(Training){trainingFromMain=true;ExitTraining();}else{StopPower();SaveCheckpoint();Open("Main");}});if(PlaytestSession)Button("FERRAMENTAS DE TESTE",()=>Open("Playtest"));break;
+                    Button("CONTINUAR",Close);Button("ARSENAL",()=>Open("Weapons"));Button("MAPA",()=>atlas.TryOpen());Button("PERSONAGEM E REGISTRO",()=>Open("Character"));Button("COMBATE E TREINO",()=>Open(Training?"Training":"CombatOptions"));Button("CONFIGURAÇÕES",()=>Open("Options"));Button("MENU PRINCIPAL",()=>{if(Training){trainingFromMain=true;ExitTraining();}else{StopPower();SaveCheckpoint();Open("Main");}});if(PlaytestSession)Button("FERRAMENTAS DE TESTE",()=>Open("Playtest"));break;
                 case "StageResults":BuildStageResults();break;
                 case "WeaponCombos":BuildWeaponComboGuide();break;
                 case "Playtest":BuildPlaytestTools();break;
@@ -206,8 +208,8 @@ namespace Darklight
                 case "Weapons":BuildWeaponGuides();break;
                 case "AbyssHelp":BuildAbyssHelp();break;
                 case "Inventory":
-                    heading.text="INVENTARIO";bodyText.text="V / LS: trocar armas\nPunhos: após Matriarca | Moto: Cripta dos Primeiros\nELIXIRES: "+Progress.potions+" | MEMORIAS: "+Progress.shards+"/10\nMP3: "+(Progress.mp3Unlocked?"DESBLOQUEADO":"MISSAO FREQUENCIA DO VEU");
-                    Button("USAR ELIXIR (+45% VIDA)",()=>{UsePotion();RefreshPanel();},Progress.potions>0&&health.HealthPercent<1&&!health.IsDead);for(int i=0;i<weaponDefinitions.Length;i++){if(!DarklightPlayableScope.WeaponActive(i))continue;int index=i;Button(weaponDefinitions[i].displayName+(Weapons.Equipped==weaponDefinitions[i]?" - EQUIPADA":""),()=>{Weapons.Request(index);Close();},Weapons.Unlocked(i),WeaponIcon(weaponDefinitions[i]));}Button("VOLTAR",()=>Open("Pause"));break;
+                    heading.text="INVENTARIO";bodyText.text="V / LS: trocar Katana e Punhos/Grevas\nELIXIRES: "+Progress.potions+" | MEMORIAS: "+Progress.shards+"/10\nMP3: "+(Progress.mp3Unlocked?"DESBLOQUEADO":"MISSAO FREQUENCIA DO VEU");
+                    Button("USAR ELIXIR (+45% VIDA)",()=>{UsePotion();RefreshPanel();},Progress.potions>0&&health.HealthPercent<1&&!health.IsDead);for(int i=0;i<weaponDefinitions.Length;i++){if(i!=0&&i!=2)continue;int index=i;Button((i==0?"KATANA":"PUNHOS / GREVAS")+(Weapons.Equipped==weaponDefinitions[i]?" - EQUIPADA":""),()=>{Weapons.Request(index);Close();},Weapons.Unlocked(i),WeaponIcon(weaponDefinitions[i]));}Button("VOLTAR",()=>Open("Pause"));break;
                 case "Journal":
                     heading.text="DIARIO";bodyText.text=Objective+"\n\n"+(Progress.mp3Unlocked?"Frequencia do Veu concluida.":Progress.mp3Quest>0?"Frequencia do Veu: "+Mathf.Min(3,Progress.mp3Quest-1)+"/3 componentes. Volte a Icaro.":"Icaro Nox espera no distrito do vinil (cap. 2).")+"\nMemorias opcionais: aproxime-se dos fragmentos e use E / A.";
                     Button("VOLTAR",()=>Open("Pause"));break;

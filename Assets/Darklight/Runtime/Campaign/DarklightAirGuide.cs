@@ -12,7 +12,7 @@ namespace Darklight
                 air+" após arremesso: alcançar por cima.\n"+heavy+" por cima: golpe descendente.\n\n"+
                 "Direcione cada golpe e troque de arma na recuperação.\nSem novos comandos, o combo termina e você aterrissa.\nEsquiva, dano e morte interrompem a perseguição.\nChefes e blindados resistem ao lançamento.\n\n"+
                 "Moto: a roda mantém a suspensão; o golpe por cima executa a finalização motorizada. Continue o combo após cair.";
-            GuideLayout();Button("COMBOS DAS ARMAS",()=>Open("WeaponCombos"));Button("CAVALEIRO DO ABISMO",ShowAbyssHelp);Button("VOLTAR",()=>Open("CombatOptions"));
+            GuideLayout();Button("COMBOS DAS ARMAS",()=>Open("WeaponCombos"));Button("VOLTAR",()=>Open("CombatOptions"));
         }
         void GuideLayout()
         {bodyText.rectTransform.anchoredPosition=new UnityEngine.Vector2(312,-59);bodyText.rectTransform.sizeDelta=new UnityEngine.Vector2(260,240);bodyText.fontSize=7;bodyText.lineSpacing=1.35f;}

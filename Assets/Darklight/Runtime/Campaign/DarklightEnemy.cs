@@ -7,83 +7,184 @@ namespace Darklight
         public RequiemEnemyKind kind; public Sprite[] poses,attackFrames; public bool elite;
         HealthSystem _health;
         public HealthSystem Health => _health != null ? _health : (_health = GetComponent<HealthSystem>());
-        public bool Boss => (int)kind>=5;
+        public bool Boss => IsLucius || (int)kind>=5;
         SpriteRenderer art;
         Rigidbody2D _body;
         public Rigidbody2D body => _body != null ? _body : (_body = GetComponent<Rigidbody2D>());
         float timer,stagger,clock,corpse,controlReady,staggerReady;
+        float damageTintUntil;
         public bool Vulnerable=>!Health.IsDead&&stagger>0;
         public bool Control(float duration){if(Boss||kind==RequiemEnemyKind.Armored||Health.IsDead||clock<controlReady)return false;controlReady=clock+2;stagger=Mathf.Max(stagger,Mathf.Clamp(duration,0,.65f));state=0;body.linearVelocity=Vector2.zero;return true;}
         readonly System.Collections.Generic.List<Vector2> route=new();float repath;Vector2 facing=Vector2.down;
+        float walkedDistance;
+        bool presentingWalk;
+        Vector2 walkSample;
         DarklightAttackWarning warning;
         float windup;
-        public bool AreaAttack=>ExpandedBoss?ExpandedArea:kind==RequiemEnemyKind.Armored||kind==RequiemEnemyKind.Matriarch||kind==RequiemEnemyKind.Sentinel;
         int state, serial; Vector2 locked, dash; bool rewarded,phaseTwo;
         public string StateName => Health.IsDead?"Derrotado":state==1?"Preparando":state==2?"Ataque":"Vigiando";
-        void Awake(){_health=GetComponent<HealthSystem>();art=GetComponentInChildren<SpriteRenderer>();_body=GetComponent<Rigidbody2D>();Health.OnDeath+=Reward;}
+        void Awake()
+        {
+            _health=GetComponent<HealthSystem>();art=GetComponentInChildren<SpriteRenderer>();_body=GetComponent<Rigidbody2D>();
+            Health.OnDeath+=Reward;Health.OnDamageReceived+=MarkEnemyDamage;
+        }
+        void OnDestroy()
+        {
+            if(_health==null)return;
+            _health.OnDeath-=Reward;_health.OnDamageReceived-=MarkEnemyDamage;
+        }
         void Update()
         {
             var game=DarklightCampaign.Instance;var lab=DarklightCombatLab.Instance;if(game==null||lab==null)return;
             float dt=lab.CombatDelta*game.EnemyTimeScale;
-            if(warning!=null&&state!=1)warning.Hide();
+            if(!IsLucius&&warning!=null&&state!=1)warning.Hide();
             if(Health.IsDead&&warning!=null)warning.Hide();
             if(Health.IsDead&&!rewarded){rewarded=true;game.EnemyDefeated(this);GetComponent<Collider2D>().enabled=false;}
             if(dt<=0){body.linearVelocity=Vector2.zero;return;}
             if(Health.IsDead)
             {
-                if(IsLucius){TickLucius(game,lab,dt);return;}
+                if(IsLucius){TickAerial(dt);TickLucius(game,lab,dt);return;}
                 TickAerial(dt);
-                if(visitorDefeat!=null)art.sprite=visitorDefeat;
-                body.linearVelocity=Vector2.zero;
-                if(!rewarded){rewarded=true;game.EnemyDefeated(this);GetComponent<Collider2D>().enabled=false;}
-                corpse+=dt;art.color=new Color(.35f,.2f,.3f,Mathf.Clamp01(1-corpse/1.3f));if(corpse>1.4f)Destroy(gameObject);return;
+                PresentEnemyDefeat(dt);
+                return;
+            }
+            if(!IsLucius&&Visitor==DarklightVisitor.None&&(lab.Player==null||lab.Player.Model.State==CombatState.Dead))
+            {
+                TickAerial(dt);
+                StopEnemyAttack();
+                ResetEnemyStride();
+                art.color=Color.white;
+                Show(0);
+                return;
             }
             if(TickExpandedBoss(game,dt))return;
             clock+=dt;timer-=dt;stagger-=dt;TickAerial(dt);
             if(IsLucius){TickLucius(game,lab,dt);return;}
             if(TickVisitor(game,lab,dt))return;
-            Vector2 delta=(Vector2)lab.Player.transform.position-body.position;float distance=delta.magnitude;
-            if(Boss&&!ExpandedBoss&&!phaseTwo&&Health.HealthPercent<.5f){phaseTwo=true;game.BossPhaseTwo();game.Notice("FASE 2: "+DarklightStory.Bosses[(int)kind-5]);timer=.85f;state=0;}
-            if(stagger>0){warning?.Hide();body.linearVelocity=Vector2.zero;art.color=new Color(1,.7f,.7f);Show(0);return;}
-            bool ranged=ExpandedBoss?ExpandedRanged:kind==RequiemEnemyKind.Shooter||kind==RequiemEnemyKind.Spectral||kind==RequiemEnemyKind.Cantor||kind==RequiemEnemyKind.Lucien;
-            float range=ranged?6:ExpandedBoss&&ExpandedArea?3.8f:Boss?2.5f:1.45f;
+            Vector2 playerPosition=lab.Player.transform.position;
+            Vector2 delta=playerPosition-body.position;float distance=delta.magnitude;
+            art.sortingOrder=DarklightSorting.OrderForY(transform.position.y);
+            if(Boss&&!ExpandedBoss&&!phaseTwo&&Health.HealthPercent<.5f)
+            {
+                phaseTwo=true;game.BossPhaseTwo();game.Notice("FASE 2: "+DarklightStory.Bosses[(int)kind-5]);
+                StopEnemyAttack();timer=.85f;
+            }
+            if(stagger>0){warning?.Hide();body.linearVelocity=Vector2.zero;SetEnemyTint(new Color(1,.7f,.7f));Show(0);ResetEnemyStride();return;}
+            var threat=NextEnemyThreat;
+            bool ranged=threat==DarklightThreat.Projectile;
+            float range=EnemyAttackRange(threat);
             float speed=kind==RequiemEnemyKind.Hunter?3.3f:kind==RequiemEnemyKind.Armored?1.25f:2.15f;
             if(Boss)speed=ExpandedBoss?ExpandedSpeed:phaseTwo?3.15f:2.4f;
-            speed*=game.DifficultyProfile.speed;
-            if(TickTactics(game,dt,delta,distance,range,speed,ranged))return;
-            art.sortingOrder=DarklightSorting.OrderForY(transform.position.y);
-            if(state==0)
+            speed*=game.DifficultyProfile.speed*game.EnemyTimeScale;
+            bool sight=state==0&&DarklightNavigation.Clear(body.position,playerPosition);
+            if(TickTactics(game,dt,delta,distance,range,speed,ranged,sight))return;
+            if(state!=0)
             {
-                art.color=Color.white;
-                if(kind==RequiemEnemyKind.Spectral&&serial>0&&serial%3==0&&timer<=0){DarklightNavigation.SafeStep(body,(Vector2)(Quaternion.Euler(0,0,90)*delta.normalized)*1.6f);timer=.5f;serial++;}
-                bool walk=distance>range*.8f;
-                repath-=dt;
-                Vector2 direction=delta.normalized;
-                bool sight=DarklightNavigation.Clear(body.position,lab.Player.transform.position);
-                if(walk&&!sight)
-                {
-                    if(repath<=0){DarklightNavigation.Instance?.FindPath(body.position,lab.Player.transform.position,route);repath=.45f;}
-                    while(route.Count>0 && Vector2.Distance(body.position,route[0])<.35f)route.RemoveAt(0);
-                    direction=route.Count>0?(route[0]-body.position).normalized:Vector2.zero;
-                }
-                facing=delta.normalized;art.flipX=facing.x<-.15f;
-                body.linearVelocity=ranged&&distance<2.1f&&sight?-delta.normalized*speed*.7f:walk?direction*speed*game.EnemyTimeScale:Vector2.zero;
-                Show(walk?1+(int)(clock*12)%2:0);art.transform.localPosition=Vector3.up*((int)(clock*1.5f)%2)/48f;
-                if(distance<range&&DarklightNavigation.Clear(body.position,lab.Player.transform.position)&&timer<=0&&game.RequestAttack(this))
-                {BeginTacticalSequence(game);PrepareExpandedAttack();state=1;game.EnemyAudioWarning(this);timer=windup=Mathf.Max(.32f,(ExpandedBoss?ExpandedWindup:Boss?.6f:kind==RequiemEnemyKind.Hunter?.4f:.52f)*game.DifficultyProfile.windup);locked=delta.normalized;body.linearVelocity=Vector2.zero;}
+                TickEnemyAttack(game,lab);
+                return;
             }
-            else if(state==1)
+            if(sight&&distance<range&&timer<=0&&game.RequestAttack(this))
             {
-                body.linearVelocity=Vector2.zero;ShowAttack(timer>(Boss?.25f:.2f)?0:1);art.color=Color.Lerp(Color.white,AreaAttack?new Color(1,.15f,.18f):ranged?new Color(.72f,.45f,1):new Color(1,.82f,.4f),.28f+.25f*Mathf.Clamp01(1-timer/windup));
-                if(warning==null){warning=new GameObject("AvisoDoAtaque").AddComponent<DarklightAttackWarning>();warning.transform.SetParent(transform,false);}
-                warning.Show(body.position,locked,range,ranged?DarklightThreat.Projectile:AreaAttack?DarklightThreat.Area:DarklightThreat.Parryable,1-timer/windup);
-                if(timer<=0){warning.Hide();state=2;timer=.25f;serial++;ShowAttack(2);Perform(game,lab,range,ranged);}
+                BeginTacticalSequence(game);
+                StartEnemyAttack(game,delta,threat,range);
+                return;
+            }
+            MoveEnemy(dt,playerPosition,delta,distance,range,speed,ranged,sight);
+        }
+
+        void MarkEnemyDamage(float amount)
+        {
+            if (amount > 0 && !Health.IsDead && !IsLucius && Visitor == DarklightVisitor.None)
+                damageTintUntil = clock + .12f;
+        }
+
+        void SetEnemyTint(Color baseColor)
+        {
+            float pulse = Mathf.Clamp01((damageTintUntil - clock) / .12f);
+            if (pulse > 0)
+            {
+                float strength = DarklightCampaign.Instance?.ReducedFlashes == true ? .12f : .40f;
+                baseColor = Color.Lerp(baseColor, new Color(1f, .48f, .44f), pulse * strength);
+            }
+            art.color = baseColor;
+        }
+
+        void PresentEnemyDefeat(float dt)
+        {
+            body.linearVelocity = Vector2.zero;
+            if (visitorDefeat != null) art.sprite = visitorDefeat;
+            else if (corpse == 0 && Visitor == DarklightVisitor.None)
+            {
+                if (HoldsGroundAttack) ShowAttack(3);
+                if (!Airborne) ResetEnemyStride();
+            }
+            corpse += dt;
+            if (Visitor != DarklightVisitor.None)
+                art.color = new Color(.35f,.2f,.3f,Mathf.Clamp01(1f-corpse/1.3f));
+            else
+            {
+                // Let the authentic silhouette read briefly before the existing fade removes it.
+                float fade = Mathf.InverseLerp(.12f, 1.3f, corpse);
+                art.color = Color.Lerp(Color.white, new Color(.35f, .2f, .3f, 0f), fade);
+            }
+            if (corpse > 1.4f) Destroy(gameObject);
+        }
+
+        void MoveEnemy(float dt, Vector2 playerPosition, Vector2 delta, float distance, float range, float speed, bool ranged, bool sight)
+        {
+            SetEnemyTint(Color.white);
+            bool pursue = !sight || distance > range * .8f;
+            Vector2 direction = delta.normalized;
+            repath -= dt;
+            if (!sight)
+            {
+                if (repath <= 0)
+                {
+                    DarklightNavigation.Instance?.FindPath(body.position, playerPosition, route);
+                    repath = .45f;
+                }
+                while (route.Count > 0 && Vector2.Distance(body.position, route[0]) < .35f) route.RemoveAt(0);
+                direction = route.Count > 0 ? (route[0] - body.position).normalized : Vector2.zero;
+            }
+            SetEnemyFacing(sight ? delta : direction);
+            if (ranged && sight && distance < 2.1f) direction *= -.7f;
+            else if (!pursue) direction = Vector2.zero;
+            body.linearVelocity = DarklightNavigation.SlidingVelocity(body, direction * speed, Time.fixedDeltaTime);
+            PresentEnemyLocomotion();
+        }
+
+        void ResetEnemyStride()
+        {
+            presentingWalk = false;
+            walkedDistance = 0;
+            if (art.transform != transform) art.transform.localPosition = Vector3.zero;
+        }
+
+        void PresentEnemyLocomotion()
+        {
+            Vector2 position = body.position;
+            if (body.linearVelocity.sqrMagnitude < .01f)
+            {
+                ResetEnemyStride();
+                Show(0);
             }
             else
             {
-                body.linearVelocity=dash;ShowAttack(timer>.13f?2:3);art.color=Color.white;
-                if(timer<=0){if(ContinueTacticalSequence(game))return;state=0;dash=Vector2.zero;timer=(phaseTwo?.5f:Boss?.7f:.8f)*game.DifficultyProfile.cooldown;}
+                float stepLength = kind switch
+                {
+                    RequiemEnemyKind.Armored => .29f,
+                    RequiemEnemyKind.Hunter => .34f,
+                    RequiemEnemyKind.Kael or RequiemEnemyKind.KaelFractured => .36f,
+                    _ => .28f
+                };
+                if (presentingWalk)
+                    walkedDistance = Mathf.Repeat(walkedDistance + Vector2.Distance(position, walkSample), stepLength * 2f);
+                walkSample = position;
+                presentingWalk = true;
+                Show(walkedDistance < stepLength ? 1 : 2);
             }
+            if (art.transform != transform && kind == RequiemEnemyKind.Spectral)
+                art.transform.localPosition = Vector3.up * Mathf.PingPong(clock * .08f, .05f);
         }
         void ShowAttack(int index)
         {
@@ -91,42 +192,24 @@ namespace Darklight
             if(transformed!=null){ShowFinalForm(index+4);return;}
             if(attackFrames?.Length!=4){Show(3);return;}
             art.sprite=attackFrames[index];
-            float target=DarklightWorldScale.EnemyHeight(kind);
-            art.transform.localScale=Visitor!=DarklightVisitor.None?Vector3.one:Vector3.one*target/poses[0].bounds.size.y;
+            art.transform.localScale=Vector3.one*PresentationScale;
+        }
+        internal bool UsesOfficialCombatArt {get;set;}
+        internal float PresentationScale=>Visitor!=DarklightVisitor.None?1f:
+            UsesOfficialCombatArt?DarklightCharacterView.WorldVisualScale:DarklightWorldScale.EnemyHeight(kind)/poses[0].bounds.size.y;
+        bool ShowEnemyPilot(string name)
+        {
+            var frames=DarklightSecondaryStyleBank.Load(name);
+            if(frames.Length!=1)return false;
+            art.sprite=frames[0];
+            art.transform.localScale=Vector3.one*DarklightWorldScale.EnemyHeight(kind)/poses[0].bounds.size.y;
+            return true;
         }
         void Show(int index)
         {
             if(FinalFormFrames!=null){ShowFinalForm(index);return;}
-            art.transform.localScale=Visitor!=DarklightVisitor.None?Vector3.one:Vector3.one*DarklightWorldScale.EnemyHeight(kind)/poses[0].bounds.size.y;
+            art.transform.localScale=Vector3.one*PresentationScale;
             if(poses!=null&&poses.Length>index)art.sprite=poses[index];
-        }
-        void Perform(DarklightCampaign game,DarklightCombatLab lab,float range,bool ranged)
-        {
-            float damage=(Boss?14:kind==RequiemEnemyKind.Armored?15:8)+game.Progress.chapter*1.3f;
-            if(elite)damage*=1.3f;game.AudioDirector?.EnemyIdentity(kind,AreaAttack?"heavy":"attack",transform.position);
-            if(PerformExpanded(game,lab,damage,range))return;
-            if(ranged)
-            {
-                int shots=Boss?(phaseTwo?7:3):kind==RequiemEnemyKind.Spectral?3:1;
-                if(!Boss)shots=Mathf.Min(5,shots+game.Difficulty+(elite?1:0));
-                for(int i=0;i<shots;i++){float angle=(i-(shots-1)*.5f)*18;Vector2 direction=Quaternion.Euler(0,0,angle)*locked;
-                    game.Fire(transform.position+Vector3.up*.35f,direction,damage,phaseTwo?5:3.8f);}
-            }
-            else
-            {
-                bool area=AreaAttack;
-                Vector2 delta=lab.Player.transform.position-transform.position;
-                if(delta.magnitude<range &&(area||Vector2.Angle(locked,delta)<70)&&DarklightNavigation.Clear(body.position,lab.Player.transform.position))
-                    lab.Player.GetComponent<DarklightCombatant>().Receive(damage,delta.normalized,area);
-                if(kind==RequiemEnemyKind.Hunter||kind==RequiemEnemyKind.Kael||kind==RequiemEnemyKind.Warden)dash=locked*(phaseTwo?5:3);
-                if(Boss&&phaseTwo)
-                {
-                    if(kind==RequiemEnemyKind.Kael||kind==RequiemEnemyKind.Warden)
-                        for(int i=-1;i<=1;i++)game.Fire(transform.position,Quaternion.Euler(0,0,i*24)*locked,damage*.65f,4.7f);
-                    if(kind==RequiemEnemyKind.Sentinel||kind==RequiemEnemyKind.Matriarch)
-                        for(int i=0;i<8;i++)game.Fire(transform.position,Quaternion.Euler(0,0,i*45)*Vector2.up,damage*.6f,3);
-                }
-            }
         }
         void Reward(){if(rewarded)return;rewarded=true;DarklightCampaign.Instance?.EnemyDefeated(this);GetComponent<Collider2D>().enabled=false;}
         public bool EvadeStrike()
@@ -135,14 +218,31 @@ namespace Darklight
             if(game==null||(game.Training&&game.TrainingPassive)||dodgeReadAt<0||clock<dodgeReadAt||clock<guardReady)return false;
             if((kind!=RequiemEnemyKind.Kael&&kind!=RequiemEnemyKind.Hunter)||state!=0||serial%3!=1||timer>.3f)return false;
             Vector2 side=(Vector2)(Quaternion.Euler(0,0,90)*((Vector2)DarklightCombatLab.Instance.Player.transform.position-body.position).normalized);
-            DarklightNavigation.SafeStep(body,side*.6f);timer=.6f;serial++;guardReady=clock+1.8f;return true;
+            if(!TryEnemyEvasiveStep(side*.6f))return false;
+            timer=.6f;serial++;guardReady=clock+1.8f;ResetEnemyStride();return true;
+        }
+        bool TryEnemyEvasiveStep(Vector2 offset)
+        {
+            if (offset.sqrMagnitude <= .0001f) return false;
+            Vector2 start = body.position;
+            if (!DarklightNavigation.Clear(start, start + offset))
+            {
+                offset = -offset;
+                if (!DarklightNavigation.Clear(start, start + offset)) return false;
+            }
+            DarklightNavigation.SafeStep(body, offset);
+            return (body.position - start).sqrMagnitude >= .04f;
         }
         public void Struck(float force,bool heavy)
         {
-            if(IsLucius)CombatModel?.Hurt(Health.IsDead);
+            if(IsLucius)return;
             bool armor=kind==RequiemEnemyKind.Armored||kind==RequiemEnemyKind.Sentinel;
             if((!armor||heavy)&&clock>=staggerReady&&(!Boss||heavy)) {stagger=Mathf.Max(stagger,Boss?.10f:.24f);staggerReady=clock+(Boss?2f:.55f);state=0;timer=Mathf.Max(timer,.45f);}
-            if(!Boss)DarklightNavigation.SafeStep(body,DarklightCombatLab.Instance.Player.Model.Facing*Mathf.Min(.8f,force));
+            if(!Boss)
+            {
+                float travel=armor?Mathf.Min(.32f,force*.4f):Mathf.Min(.8f,force);
+                DarklightNavigation.SafeStep(body,DarklightCombatLab.Instance.Player.Model.Facing*travel);
+            }
         }
         public void PullToward(Vector2 point,float distance)
         {

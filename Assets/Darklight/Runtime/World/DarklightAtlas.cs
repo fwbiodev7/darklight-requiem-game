@@ -77,27 +77,27 @@ namespace Darklight
             routeHint=Text(trackedRoot,"Orientacao","",21,35,98,11,4);
             trackedHUD.gameObject.SetActive(false);routeHint.gameObject.SetActive(false);trackedIcon.gameObject.SetActive(false);routeArrow.rectTransform.anchoredPosition=new Vector2(7,-7);
             overlay.SetAsLastSibling();
-            fullRoot=Rect(overlay,"MapaDaFase",0,0,640,360);fullFadeGroup=fullRoot.gameObject.AddComponent<UnityEngine.CanvasGroup>();fullFadeGroup.alpha=0;Panel(fullRoot,new Color(.012f,.012f,.019f,1));
+            fullRoot=Rect(overlay,"MapaDaFase",0,0,640,360);fullFadeGroup=fullRoot.gameObject.AddComponent<UnityEngine.CanvasGroup>();fullFadeGroup.alpha=0;Panel(fullRoot,new Color(.012f,.008f,.021f,1));
             MapPanel(Rect(fullRoot,"MolduraDoAtlas",8,6,624,348),0);
-            Text(fullRoot,"Identidade","DARKLIGHT: REQUIEM  /  ATLAS DE VESPERA",24,14,490,12,4);
-            fullTitle=Text(fullRoot,"Local","MAPA DA FASE",24,29,490,22,8);
-            MapPanel(Rect(fullRoot,"MolduraDoTerritorio",16,64,412,242),0);
-            Text(fullRoot,"TerritorioTitulo","TERRITORIO",25,54,200,10,4);
-            fullViewport=Rect(fullRoot,"Territorio",24,74,396,224);Panel(fullViewport,Color.black);
+            var identity=Text(fullRoot,"Identidade","DARKLIGHT: REQUIEM  /  ATLAS DO ECLIPSE",24,14,490,12,4);identity.color=new Color(.77f,.66f,.9f);
+            MapPanel(Rect(fullRoot,"PainelDaJornada",16,49,190,261),0);
+            fullTitle=Text(fullRoot,"Local","MAPA DA FASE",24,29,174,19,7);fullTitle.resizeTextForBestFit=true;fullTitle.resizeTextMinSize=5;fullTitle.resizeTextMaxSize=7;fullTitle.color=new Color(.96f,.92f,.88f);
+            var objectivesHeading=Text(fullRoot,"ObjetivosTitulo","OBJETIVOS DA REGIAO",24,52,174,10,4);objectivesHeading.color=new Color(.73f,.48f,.93f);
+            MapPanel(Rect(fullRoot,"MolduraDoTerritorio",216,42,408,258),0);
+            // Keep the established 396x224 viewport so map/world coordinate projection stays identical.
+            fullViewport=Rect(fullRoot,"Territorio",222,58,396,224);Panel(fullViewport,new Color(.018f,.012f,.026f,1));
             fullViewport.gameObject.AddComponent<UnityEngine.UI.RectMask2D>();fullArt=Raw(fullViewport,"Microarte",0,0,396,224,null);fullTerrain=Raw(fullViewport,"Geometria",0,0,396,224,null);MakeIcons(fullViewport,fullIcons,8);
             cursor=Raw(fullViewport,"CursorDoControle",194,108,8,8,symbols[(int)DarklightMapSymbol.Waypoint]);cursor.color=Color.white;
-            zoomOut=SmallButton("Menos","-",300,47,22);zoomIn=SmallButton("Mais","+",325,47,22);centerButton=SmallButton("Centrar","CENTRAR",350,47,70);closeButton=SmallButton("Fechar","FECHAR",552,19,65);
-            MapPanel(Rect(fullRoot,"PainelDaJornada",438,51,186,274),0);
-            Text(fullRoot,"ObjetivosTitulo","OBJETIVOS",450,61,162,12,5);
-            for(int i=0;i<3;i++){objectiveRows[i]=Rect(fullRoot,"Objetivo"+i,448,77+i*19,168,17);MapPanel(objectiveRows[i],1);objectiveRows[i].gameObject.AddComponent<UnityEngine.UI.RectMask2D>();objectiveLabels[i]=Text(objectiveRows[i],"Rotulo","",7,2,154,13,5);objectiveLabels[i].resizeTextForBestFit=true;objectiveLabels[i].resizeTextMinSize=4;objectiveLabels[i].resizeTextMaxSize=5;objectiveLabels[i].lineSpacing=1.1f;}
-            MapPanel(Rect(fullRoot,"MolduraDaDescricao",448,138,168,60),0);
-            description=Text(fullRoot,"Descricao","",455,145,154,46,5);description.lineSpacing=1.5f;description.resizeTextForBestFit=true;description.resizeTextMinSize=4;description.resizeTextMaxSize=5;
-            Text(fullRoot,"LegendaTitulo","LEGENDA",450,204,162,10,4);
+            zoomOut=SmallButton("Menos","-",514,45,22);zoomIn=SmallButton("Mais","+",540,45,22);centerButton=SmallButton("Centrar","CENTRAR",566,45,54);closeButton=SmallButton("Fechar","FECHAR",552,14,65);
+            for(int i=0;i<3;i++){objectiveRows[i]=Rect(fullRoot,"Objetivo"+i,24,67+i*18,174,16);MapPanel(objectiveRows[i],1);objectiveRows[i].gameObject.AddComponent<UnityEngine.UI.RectMask2D>();objectiveLabels[i]=Text(objectiveRows[i],"Rotulo","",7,1,160,14,5);objectiveLabels[i].resizeTextForBestFit=true;objectiveLabels[i].resizeTextMinSize=4;objectiveLabels[i].resizeTextMaxSize=5;objectiveLabels[i].lineSpacing=1.1f;}
+            MapPanel(Rect(fullRoot,"MolduraDaDescricao",24,126,174,50),0);
+            description=Text(fullRoot,"Descricao","",31,132,160,38,5);description.lineSpacing=1.35f;description.resizeTextForBestFit=true;description.resizeTextMinSize=4;description.resizeTextMaxSize=5;
+            var legendHeading=Text(fullRoot,"LegendaTitulo","LEGENDA",24,181,174,10,4);legendHeading.color=new Color(.73f,.48f,.93f);
             string[] legend={"Jogador","Objetivo principal","Objetivo secundário","Inimigo detectado","Chefe conhecido","Checkpoint","Saída liberada"};
-            for(int i=0;i<legend.Length;i++){var icon=Raw(fullRoot,"LegendaIcone"+i,449,218+i*15,14,14,artSymbols[i]);icon.color=Color.white;Text(fullRoot,"Legenda"+i,legend[i],469,219+i*15,145,12,5);}
-            status=Text(fullRoot,"Estado","",24,309,396,12,4);
-            MapPanel(Rect(fullRoot,"RodapeDoAtlas",16,328,608,24),1);
-            Text(fullRoot,"Navegacao","TAB / SELECT: FECHAR   WASD / LS: MOVER   +/- / LT-RT: ZOOM\nMOUSE DIR.: ARRASTAR   SETAS / D-PAD: OBJETIVO   ENTER / A: SEGUIR   X: DESTINO   Y: LIMPAR",25,333,590,18,4);
+            for(int i=0;i<legend.Length;i++){var icon=Raw(fullRoot,"LegendaIcone"+i,24,197+i*15,14,14,artSymbols[i]);icon.color=Color.white;Text(fullRoot,"Legenda"+i,legend[i],42,198+i*15,156,12,5);}
+            status=Text(fullRoot,"Estado","",222,284,396,12,4);status.color=new Color(.88f,.69f,.94f);
+            MapPanel(Rect(fullRoot,"RodapeDoAtlas",16,320,608,31),1);
+            var navigation=Text(fullRoot,"Navegacao","TAB / SELECT: FECHAR   WASD / LS: MOVER   +/- / LT-RT: ZOOM\nMOUSE DIR.: ARRASTAR   SETAS / D-PAD: OBJETIVO   ENTER / A: SEGUIR   X: DESTINO   Y: LIMPAR",25,324,590,23,4);navigation.color=new Color(.84f,.82f,.88f);
             padCursor=new Vector2(198,112);fullRoot.gameObject.SetActive(false);miniRoot.gameObject.SetActive(false);
         }
         RectTransform SmallButton(string name,string label,float x,float y,float w)
@@ -105,9 +105,9 @@ namespace Darklight
         void MapPanel(RectTransform rect,int index)
         {
             // Native HUD frame has actual slice borders; never stretch a complete decorated menu bitmap.
-            DarklightHUDTheme.Frame(rect,index==2?new Color(.75f,.32f,.35f):new Color(.48f,.47f,.46f));
+            DarklightHUDTheme.Frame(rect,index==2?new Color(.9f,.2f,.39f):index==1?new Color(.58f,.34f,.78f):new Color(.66f,.53f,.82f));
             var image=rect.GetComponent<UnityEngine.UI.Image>();image.sprite=null;image.type=UnityEngine.UI.Image.Type.Simple;
-            image.color=index==2?new Color(.12f,.035f,.045f,1):new Color(.015f,.019f,.024f,1);
+            image.color=index==2?new Color(.085f,.018f,.039f,1):index==1?new Color(.035f,.018f,.052f,1):new Color(.018f,.012f,.03f,1);
 
         }
         public void UseStorage(string path){Flush();storage=path;state=DarklightAtlasState.Load(path);cache.Clear();geometry=null;region=-1;}

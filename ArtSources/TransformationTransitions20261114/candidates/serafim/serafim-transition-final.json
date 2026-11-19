@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 1,
+  "image": "serafim-transition-atlas-final.png",
+  "imageSha256": "7dba4cd4afc3b37008df16922fac4945e575679e51c2140c3fa895cf2cabe1ed",
+  "nativeSize": [
+    2480,
+    1240
+  ],
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "logicalPixelResolution": "not established; source is generated raster",
+  "pixelsPerUnit": 157.57575757575756,
+  "ppuStatus": "preview placeholder inherited from Normal; NOT calibrated for import",
+  "status": "approved-design-preview-pending-temporal",
+  "visualReview": "All eight full figures and final light contact inspected; temporal playback pending root review",
+  "visualApproval": true,
+  "wholeFigures": true,
+  "sourceImage": "serafim-transition-candidate-approved-design.png",
+  "sourceSha256": "ca71d7ece5f71518dc30c8e60c1217df392e8c405158f84b108154a2908e34fe",
+  "references": [
+    {
+      "path": "references\\serafim-transition.png",
+      "sha256": "039893fd31a6c6d2bbef6f15311eb65b525e4fa48f4c4e3deaa96fa9f7257f0c"
+    },
+    {
+      "path": "references\\ruptura-transition.png",
+      "sha256": "0ad6674b6a0f426b5ba55a5cd836ca2177a9fb6121acbeb198a2f237ba30aeca"
+    }
+  ],
+  "frames": [
+    {
+      "id": "serafim_enter_SE_00",
+      "rect": [
+        0,
+        0,
+        620,
+        620
+      ],
+      "pivot": [
+        0.5,
+        0.17741935483870963
+      ],
+      "durationMs": 350,
+      "action": "transformation_enter",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "NormalToSerafimCarmesim",
+      "phase": "concentracao",
+      "sourceRect": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "sourceBodyAnchor": [
+        225,
+        373
+      ],
+      "sourceToCellTranslation": [
+        85,
+        137
+      ],
+      "presentationMidpointLiftPixels": 0
+    },
+    {
+      "id": "serafim_enter_SE_01",
+      "rect": [
+        620,
+        0,
+        620,
+        620
+      ],
+      "pivot": [
+        0.5,
+        0.17741935483870963
+      ],
+      "durationMs": 200,
+      "action": "transformation_enter",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "NormalToSerafimCarmesim",
+      "phase": "flexao",
+      "sourceRect": [
+        443,
+        0,
+        444,
+        443
+      ],
+      "sourceBodyAnchor": [
+        229,
+        373
+      ],
+      "sourceToCellTranslation": [
+        81,
+        137
+      ],
+      "presentationMidpointLiftPixels": 0
+    },
+    {
+      "id": "serafim_enter_SE_02",
+      "rect": [
+        1240,
+        0,
+        620,
+        620
+      ],
+      "pivot": [
+        0.5,
+        0.17741935483870963
+      ],
+      "durationMs": 1000,
+      "action": "transformation_enter",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "NormalToSerafimCarmesim",
+      "phase": "ascensao",
+      "sourceRect": [
+        887,
+        0,
+        443,
+        443
+      ],
+      "sourceBodyAnchor": [
+        224,
+        361
+      ],
+      "sourceToCellTranslation": [
+        86,
+        149
+      ],
+      "presentationMidpointLiftPixels": 31
+    },
+    {
+      "id": "serafim_enter_SE_03",
+      "rect": [
+        1860,
+        0,
+        620,
+        620
+      ],
+      "pivot": [
+        0.5,
+        0.17741935483870963
+      ],
+      "durationMs": 700,
+      "action": "transformation_enter",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "NormalToSerafimCarmesim",
+      "phase": "recepcao",
+      "sourceRect": [
+        1330,
+        0,
+        444,
+        443
+      ],
+      "sourceBodyAnchor": [
+        238,
+        342
+      ],
+      "sourceToCellTranslation": [
+        72,
+        168
+      ],
+      "presentationMidpointLiftPixels": 64
+    },
+    {
+      "id": "serafim_enter_SE_04",
+      "rect": [
+        0,
+        620,
+        620,
+        620
+      ],
+      "pivot": [
+        0.5,
+        0.17741935483870963
+      ],
+      "durationMs": 450,
+      "action": "transformation_enter",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "NormalToSerafimCarmesim",
+      "phase": "manifestacao_asas",
+      "sourceRect": [
+        0,
+        443,
+        443,
+        444
+      ],
+      "sourceBodyAnchor": [
+        224,
+        344
+      ],
+      "sourceToCellTranslation": [
+        86,
+        166
+      ],
+      "presentationMidpointLiftPixels": 64
+    },
+    {
+      "id": "serafim_enter_SE_05",
+      "rect": [
+        620,
+        620,
+        620,
+        620
+      ],
+      "pivot": [
+        0.5,
+        0.17741935483870963
+      ],
+      "durationMs": 800,
+      "action": "transformation_enter",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "NormalToSerafimCarmesim",
+      "phase": "consolidacao",
+      "sourceRect": [
+        443,
+        443,
+        444,
+        444
+      ],
+      "sourceBodyAnchor": [
+        241,
+        345
+      ],
+      "sourceToCellTranslation": [
+        69,
+        165
+      ],
+      "presentationMidpointLiftPixels": 64
+    },
+    {
+      "id": "serafim_enter_SE_06",
+      "rect": [
+        1240,
+        620,
+        620,
+        620
+      ],
+      "pivot": [
+        0.5,
+        0.17741935483870963
+      ],
+      "durationMs": 800,
+      "action": "transformation_enter",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "NormalToSerafimCarmesim",
+      "phase": "descida",
+      "sourceRect": [
+        887,
+        443,
+        443,
+        444
+      ],
+      "sourceBodyAnchor": [
+        244,
+        380
+      ],
+      "sourceToCellTranslation": [
+        66,
+        130
+      ],
+      "presentationMidpointLiftPixels": 45
+    },
+    {
+      "id": "serafim_enter_SE_07",
+      "rect": [
+        1860,
+        620,
+        620,
+        620
+      ],
+      "pivot": [
+        0.5,
+        0.17741935483870963
+      ],
+      "durationMs": 300,
+      "action": "transformation_enter",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "NormalToSerafimCarmesim",
+      "phase": "postura_final",
+      "sourceRect": [
+        1330,
+        443,
+        444,
+        444
+      ],
+      "sourceBodyAnchor": [
+        233,
+        383
+      ],
+      "sourceToCellTranslation": [
+        77,
+        127
+      ],
+      "presentationMidpointLiftPixels": 3
+    }
+  ],
+  "clips": [
+    {
+      "name": "NormalToSerafimCarmesim",
+      "frames": [
+        "serafim_enter_SE_00",
+        "serafim_enter_SE_01",
+        "serafim_enter_SE_02",
+        "serafim_enter_SE_03",
+        "serafim_enter_SE_04",
+        "serafim_enter_SE_05",
+        "serafim_enter_SE_06",
+        "serafim_enter_SE_07"
+      ],
+      "loop": false,
+      "allowStatic": true
+    }
+  ],
+  "quality": {
+    "alphaThreshold": 0,
+    "maxColors": 1000000,
+    "maxHeightRatio": 1.3
+  },
+  "consumer": {
+    "path": "Assets/Darklight/Runtime/Campaign/DarklightCampaignTransformations.cs",
+    "durationMs": 4600,
+    "releaseAtProgress": 0.52,
+    "liftWorldUnits": 0.62,
+    "presentationPath": "Assets/Darklight/Runtime/Character/DarklightTransformationPresentation.cs",
+    "envelope": {
+      "start": 0.12,
+      "full": 0.34,
+      "descent": 0.76,
+      "land": 1
+    }
+  },
+  "preview": {
+    "durationMs": 4600,
+    "sourcePoseCount": 8,
+    "interpolatedPoseCount": 0,
+    "presentationTranslationOnly": true,
+    "liftPixels": 64,
+    "sourcePixelsPreserved": true,
+    "rectOrigin": "top-left",
+    "noRuntimeIntegration": true
+  },
+  "limitations": [
+    "Source has subpixel alpha and many colors; native pixel grid is not established.",
+    "Eight key poses use timed holds. Smooth aerial travel is presentation translation, not newly drawn animation.",
+    "No Unity import, runtime or gameplay event validation; design approved, temporal preview still pending review."
+  ],
+  "approval": {
+    "userQuote": "serafim tambem curti pode manter essa versão",
+    "selectedGeneration": "v2",
+    "selectionNote": "v3 was in flight during explicit user approval and is not selected",
+    "normalCorrection": "Full first cell [0,0,443,443] from v1 preserved pixel-for-pixel; all seven v2 transformed cells unchanged",
+    "integrationApproval": false
+  }
+}

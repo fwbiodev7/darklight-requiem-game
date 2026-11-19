@@ -6,12 +6,15 @@ namespace Darklight
     /// <summary>One combat clock, independent of rendering, UI, coroutines and global timeScale.</summary>
     public sealed class CombatModel
     {
+        internal const float DodgeDuration = .23f;
         public CombatState State { get; private set; }
         public AttackDefinition Attack { get; private set; }
         public Vector2 Facing { get; private set; } = Vector2.down;
         public Vector2 Motion { get; private set; }
         public float Clock { get; private set; }
         public float StateTime { get; private set; }
+        internal float HurtDuration => hurtDuration;
+        internal Vector2 DodgeDirection => dodgeDirection;
         public int AttackSerial { get; private set; }
         public int ComboCount { get; private set; }
         public bool ActiveThisTick { get; private set; }
@@ -103,7 +106,7 @@ namespace Darklight
             }
             StateTime += delta;
             if (State == CombatState.Dodge)
-            { Motion = dodgeDirection * 2.8f; if (StateTime >= .23f) EnterNeutral(); return; }
+            { Motion = dodgeDirection * 2.8f; if (StateTime >= DodgeDuration) EnterNeutral(); return; }
             if (State == CombatState.Parry || State == CombatState.Hurt)
             { Motion = Vector2.zero; if (StateTime >= (State == CombatState.Parry ? .26f : hurtDuration)) EnterNeutral(); return; }
             if (State == CombatState.Charging)

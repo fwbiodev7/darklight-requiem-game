@@ -1,0 +1,341 @@
+{
+  "image": "FabiusSerafim_Walk_Defense_12f.png",
+  "imageSha256": "271ee3f2b3b76c4ddcaf324bdea39f2f8ed267c510023663672b8eea761dc4e3",
+  "character": "Fabius",
+  "form": "Serafim Carmesim",
+  "nativeSize": [
+    1086,
+    1448
+  ],
+  "gridColumnsRows": [
+    3,
+    4
+  ],
+  "status": "visual-reviewed",
+  "imported": false,
+  "runtimeVerified": false,
+  "userApproval": false,
+  "reference": "User character attachments, 2026-11-12",
+  "direction": "unassigned-single-view",
+  "timings": "provisional",
+  "pending": [
+    "direction and foot-pivot calibration",
+    "cell-edge VFX review",
+    "Unity import preserving existing IDs",
+    "render and state-transition tests"
+  ],
+  "frames": [
+    {
+      "id": "FabiusSerafim_Walk_Defense_12f_00",
+      "action": "Walk",
+      "frameIndex": 0,
+      "sourceRectTopLeft": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "unityRect": [
+        0,
+        1086,
+        362,
+        362
+      ],
+      "durationMs": 100,
+      "loop": true,
+      "alphaBoundsInCell": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "alphaTouchesCellEdge": true
+    },
+    {
+      "id": "FabiusSerafim_Walk_Defense_12f_01",
+      "action": "Walk",
+      "frameIndex": 1,
+      "sourceRectTopLeft": [
+        362,
+        0,
+        362,
+        362
+      ],
+      "unityRect": [
+        362,
+        1086,
+        362,
+        362
+      ],
+      "durationMs": 100,
+      "loop": true,
+      "alphaBoundsInCell": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "alphaTouchesCellEdge": true
+    },
+    {
+      "id": "FabiusSerafim_Walk_Defense_12f_02",
+      "action": "Walk",
+      "frameIndex": 2,
+      "sourceRectTopLeft": [
+        724,
+        0,
+        362,
+        362
+      ],
+      "unityRect": [
+        724,
+        1086,
+        362,
+        362
+      ],
+      "durationMs": 100,
+      "loop": true,
+      "alphaBoundsInCell": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "alphaTouchesCellEdge": true
+    },
+    {
+      "id": "FabiusSerafim_Walk_Defense_12f_03",
+      "action": "Walk",
+      "frameIndex": 3,
+      "sourceRectTopLeft": [
+        0,
+        362,
+        362,
+        362
+      ],
+      "unityRect": [
+        0,
+        724,
+        362,
+        362
+      ],
+      "durationMs": 100,
+      "loop": true,
+      "alphaBoundsInCell": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "alphaTouchesCellEdge": true
+    },
+    {
+      "id": "FabiusSerafim_Walk_Defense_12f_04",
+      "action": "Walk",
+      "frameIndex": 4,
+      "sourceRectTopLeft": [
+        362,
+        362,
+        362,
+        362
+      ],
+      "unityRect": [
+        362,
+        724,
+        362,
+        362
+      ],
+      "durationMs": 100,
+      "loop": true,
+      "alphaBoundsInCell": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "alphaTouchesCellEdge": true
+    },
+    {
+      "id": "FabiusSerafim_Walk_Defense_12f_05",
+      "action": "Walk",
+      "frameIndex": 5,
+      "sourceRectTopLeft": [
+        724,
+        362,
+        362,
+        362
+      ],
+      "unityRect": [
+        724,
+        724,
+        362,
+        362
+      ],
+      "durationMs": 100,
+      "loop": true,
+      "alphaBoundsInCell": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "alphaTouchesCellEdge": true
+    },
+    {
+      "id": "FabiusSerafim_Walk_Defense_12f_06",
+      "action": "Guard",
+      "frameIndex": 0,
+      "sourceRectTopLeft": [
+        0,
+        724,
+        362,
+        362
+      ],
+      "unityRect": [
+        0,
+        362,
+        362,
+        362
+      ],
+      "durationMs": 100,
+      "loop": false,
+      "alphaBoundsInCell": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "alphaTouchesCellEdge": true
+    },
+    {
+      "id": "FabiusSerafim_Walk_Defense_12f_07",
+      "action": "Guard",
+      "frameIndex": 1,
+      "sourceRectTopLeft": [
+        362,
+        724,
+        362,
+        362
+      ],
+      "unityRect": [
+        362,
+        362,
+        362,
+        362
+      ],
+      "durationMs": 100,
+      "loop": false,
+      "alphaBoundsInCell": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "alphaTouchesCellEdge": true
+    },
+    {
+      "id": "FabiusSerafim_Walk_Defense_12f_08",
+      "action": "Guard",
+      "frameIndex": 2,
+      "sourceRectTopLeft": [
+        724,
+        724,
+        362,
+        362
+      ],
+      "unityRect": [
+        724,
+        362,
+        362,
+        362
+      ],
+      "durationMs": 100,
+      "loop": false,
+      "alphaBoundsInCell": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "alphaTouchesCellEdge": true
+    },
+    {
+      "id": "FabiusSerafim_Walk_Defense_12f_09",
+      "action": "Guard",
+      "frameIndex": 3,
+      "sourceRectTopLeft": [
+        0,
+        1086,
+        362,
+        362
+      ],
+      "unityRect": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "durationMs": 100,
+      "loop": false,
+      "alphaBoundsInCell": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "alphaTouchesCellEdge": true
+    },
+    {
+      "id": "FabiusSerafim_Walk_Defense_12f_10",
+      "action": "Guard",
+      "frameIndex": 4,
+      "sourceRectTopLeft": [
+        362,
+        1086,
+        362,
+        362
+      ],
+      "unityRect": [
+        362,
+        0,
+        362,
+        362
+      ],
+      "durationMs": 100,
+      "loop": false,
+      "alphaBoundsInCell": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "alphaTouchesCellEdge": true
+    },
+    {
+      "id": "FabiusSerafim_Walk_Defense_12f_11",
+      "action": "Guard",
+      "frameIndex": 5,
+      "sourceRectTopLeft": [
+        724,
+        1086,
+        362,
+        362
+      ],
+      "unityRect": [
+        724,
+        0,
+        362,
+        362
+      ],
+      "durationMs": 100,
+      "loop": false,
+      "alphaBoundsInCell": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "alphaTouchesCellEdge": true
+    }
+  ]
+}

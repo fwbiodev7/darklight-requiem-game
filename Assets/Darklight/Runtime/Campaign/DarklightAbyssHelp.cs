@@ -14,9 +14,9 @@ namespace Darklight
         public void ShowAbyssHelp()=>Open("AbyssHelp");
         void BuildWeaponGuides()
         {
-            heading.text="ARMAS";bodyText.text="Escolha uma arma ou consulte o guia.\n\nCavaleiro do Abismo: motocicleta de Réquiem.\n\nNa campanha, desperte o motor selado junto à memória da Cripta dos Primeiros.\n\nA arena permite testar a arma e suas formas sem alterar a campanha.";
-            for(int i=0;i<weaponDefinitions.Length;i++){if(!DarklightPlayableScope.WeaponActive(i))continue;int index=i;Button(weaponDefinitions[i].displayName,()=>{Weapons.Request(index);Close();},Weapons.Unlocked(i),WeaponIcon(weaponDefinitions[i]));}
-            Button("COMBOS E ESPECIAIS",()=>{guideWeapon=Mathf.Clamp((int)(Weapons?.Equipped?.id??DarklightWeaponId.Katana),0,2);Open("WeaponCombos");});Button("CAVALEIRO DO ABISMO · GUIA",ShowAbyssHelp);Button("VOLTAR",()=>Open("Pause"));
+            gothicWeaponSelection=-1;heading.text="ARSENAL";bodyText.text="Katana e Punhos/Grevas Abissais.\n\nEscolha o equipamento ou consulte os combos existentes.";
+            foreach(int index in new[]{0,2}){int selected=index;Button(index==0?"KATANA":"PUNHOS / GREVAS",()=>{Weapons.Request(selected);Close();},Weapons.Unlocked(index),WeaponIcon(weaponDefinitions[index]));}
+            Button("COMBOS E ESPECIAIS",()=>{guideWeapon=(int)(Weapons?.Equipped?.id??DarklightWeaponId.Katana)==2?2:0;Open("WeaponCombos");});Button("VOLTAR",()=>Open("Pause"));
         }
         void BuildAbyssHelp()
         {

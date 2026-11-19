@@ -4,11 +4,18 @@ using UnityEngine;
 namespace Darklight.Tests
 {
     // Isolated EditMode component checks; no campaign Awake, audio, Play or saves.
-    public sealed class DarklightAirControllerTests
+    public sealed partial class DarklightAirControllerTests
     {
         GameObject player,foe,wall;AttackDefinition launcher;DarklightFighter fighter;DarklightAirCombo air;DarklightEnemy enemy;
         static void AwakeIfNeeded(Component component,string field)
-        {if(component.GetType().GetField(field,BindingFlags.Instance|BindingFlags.NonPublic)?.GetValue(component)==null)component.GetType().GetMethod("Awake",BindingFlags.Instance|BindingFlags.NonPublic).Invoke(component,null);}
+        {
+            var fieldInfo = component.GetType().GetField(field, BindingFlags.Instance | BindingFlags.NonPublic);
+            if (fieldInfo != null && fieldInfo.GetValue(component) == null)
+            {
+                var awakeMethod = component.GetType().GetMethod("Awake", BindingFlags.Instance | BindingFlags.NonPublic);
+                awakeMethod?.Invoke(component, null);
+            }
+        }
         [SetUp]public void Create()
         {
             launcher=ScriptableObject.CreateInstance<AttackDefinition>();launcher.launch=true;launcher.range=2;
@@ -16,7 +23,7 @@ namespace Darklight.Tests
             var body=player.AddComponent<Rigidbody2D>();body.gravityScale=0;player.AddComponent<CircleCollider2D>().radius=.25f;
             player.AddComponent<SpriteRenderer>();player.AddComponent<DarklightCombatant>();
             fighter=player.AddComponent<DarklightFighter>();fighter.loadout=new CombatLoadout{weapon=0,lights=new[]{launcher},heavy=launcher,aerial=launcher};
-            typeof(DarklightFighter).GetField("body",BindingFlags.Instance|BindingFlags.NonPublic).SetValue(fighter,body);
+            typeof(DarklightFighter).GetField("_body",BindingFlags.Instance|BindingFlags.NonPublic).SetValue(fighter,body);
             var modelProp = typeof(DarklightFighter).GetProperty("Model", BindingFlags.Instance|BindingFlags.Public|BindingFlags.NonPublic);
             modelProp.SetValue(fighter, new CombatModel(fighter.loadout));
             air=player.AddComponent<DarklightAirCombo>();AwakeIfNeeded(air,"chase");
@@ -25,7 +32,7 @@ namespace Darklight.Tests
             foe=new GameObject("AirTargetEditOnly");foe.transform.position=player.transform.position+Vector3.down*2;
             foe.AddComponent<Rigidbody2D>().gravityScale=0;foe.AddComponent<CircleCollider2D>().radius=.25f;foe.AddComponent<SpriteRenderer>();
             var hp=foe.AddComponent<HealthSystem>();hp.SetMaxHealth(100,false);foe.AddComponent<DarklightCombatant>();enemy=foe.AddComponent<DarklightEnemy>();
-            if(enemy.Health==null)typeof(DarklightEnemy).GetMethod("Awake",BindingFlags.Instance|BindingFlags.NonPublic).Invoke(enemy,null);
+            typeof(DarklightEnemy).GetMethod("Awake", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(enemy, null);
             Assert.That(enemy.ReactAir(launcher,DarklightAirReaction.Launch),Is.True);enemy.AirBody.Tick(.2f);air.ConfirmContact(enemy,launcher);Physics2D.SyncTransforms();
         }
         [TearDown]public void Destroy()

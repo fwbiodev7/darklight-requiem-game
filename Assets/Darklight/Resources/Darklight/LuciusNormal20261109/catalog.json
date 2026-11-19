@@ -873,7 +873,9 @@
       ],
       "loop": false,
       "wholeFigures": true,
-      "status": "visual-reviewed"
+      "status": "visual-reviewed",
+      "directionalFallback": true,
+      "sourceDirection": 0
     },
     {
       "id": "LuciusDeadV1_Dead_W",
@@ -902,7 +904,9 @@
       ],
       "loop": false,
       "wholeFigures": true,
-      "status": "visual-reviewed"
+      "status": "visual-reviewed",
+      "directionalFallback": true,
+      "sourceDirection": 0
     },
     {
       "id": "LuciusDeadV1_Dead_NW",
@@ -931,7 +935,9 @@
       ],
       "loop": false,
       "wholeFigures": true,
-      "status": "visual-reviewed"
+      "status": "visual-reviewed",
+      "directionalFallback": true,
+      "sourceDirection": 4
     },
     {
       "id": "LuciusDeadV1_Dead_N",
@@ -989,7 +995,9 @@
       ],
       "loop": false,
       "wholeFigures": true,
-      "status": "visual-reviewed"
+      "status": "visual-reviewed",
+      "directionalFallback": true,
+      "sourceDirection": 4
     },
     {
       "id": "LuciusDeadV1_Dead_E",
@@ -1018,7 +1026,9 @@
       ],
       "loop": false,
       "wholeFigures": true,
-      "status": "visual-reviewed"
+      "status": "visual-reviewed",
+      "directionalFallback": true,
+      "sourceDirection": 4
     },
     {
       "id": "LuciusDeadV1_Dead_SE",
@@ -1047,262 +1057,238 @@
       ],
       "loop": false,
       "wholeFigures": true,
-      "status": "visual-reviewed"
+      "status": "visual-reviewed",
+      "directionalFallback": true,
+      "sourceDirection": 0
     },
     {
-      "id": "LuciusSwordThrustV1_Attack_S",
+      "id": "LuciusSwordThrustSWN20261119V1_Attack_S",
       "action": "Attack",
       "attackKey": "SwordThrust",
       "direction": 0,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustV1",
-      "imageSha256": "4983497337c2b28a39ec2aee38923b85685ef31733ef60feb07bb41a17cc9907",
-      "sourceSha256": "4983497337c2b28a39ec2aee38923b85685ef31733ef60feb07bb41a17cc9907",
-      "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordThrustV1-source.png",
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustSWN20261119V1",
+      "imageSha256": "63574b48be00c3d6830b66d3c55d995537b4d373d7450f39a8af5e1342488ce4",
+      "sourceSha256": "63574b48be00c3d6830b66d3c55d995537b4d373d7450f39a8af5e1342488ce4",
+      "sourcePath": "ArtSources/LuciusThrustSWN20261119/LuciusSwordThrustSWN20261119V1-source.png",
       "nativeSize": [
-        1536,
-        1024
+        1254,
+        1254
       ],
-      "pixelsPerUnit": 167.782167,
+      "pixelsPerUnit": 159.917377648,
       "spriteNames": [
-        "Redesign_LuciusSwordThrustV1_00",
-        "Redesign_LuciusSwordThrustV1_01",
-        "Redesign_LuciusSwordThrustV1_02",
-        "Redesign_LuciusSwordThrustV1_03",
-        "Redesign_LuciusSwordThrustV1_04",
-        "Redesign_LuciusSwordThrustV1_05"
+        "Redesign_LuciusSwordThrustSWN20261119V1_S_00",
+        "Redesign_LuciusSwordThrustSWN20261119V1_S_01",
+        "Redesign_LuciusSwordThrustSWN20261119V1_S_02"
       ],
       "durationMs": [
-        100,
-        100,
-        90,
-        90,
-        120,
-        140
+        200,
+        180,
+        260
       ],
-      "startupFrames": 2,
-      "activeFrames": 2,
-      "loop": false,
+      "startupFrames": 1,
+      "activeFrames": 1,
       "wholeFigures": true,
+      "loop": false,
       "status": "visual-reviewed"
     },
     {
-      "id": "LuciusSwordThrustV1_Attack_SW",
+      "imageSha256": "c8871bcd62a5823b7aa1980f3518eade03bf2da3cff7a2789e8aa67cd8e86694",
+      "sourcePath": "ArtSources/LuciusNormalThrustRemaining20261119/LuciusNormalSwordThrustDiagonalsE20261119-source.png",
+      "sourceSha256": "c8871bcd62a5823b7aa1980f3518eade03bf2da3cff7a2789e8aa67cd8e86694",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 149.1688326,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalSwordThrustDiagonalsE20261119_SwordThrust_SW",
       "action": "Attack",
       "attackKey": "SwordThrust",
+      "startupFrames": 1,
+      "activeFrames": 1,
       "direction": 1,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustV1",
-      "imageSha256": "4983497337c2b28a39ec2aee38923b85685ef31733ef60feb07bb41a17cc9907",
-      "sourceSha256": "4983497337c2b28a39ec2aee38923b85685ef31733ef60feb07bb41a17cc9907",
-      "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordThrustV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 167.782167,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalSwordThrustDiagonalsE20261119",
       "spriteNames": [
-        "Redesign_LuciusSwordThrustV1_00",
-        "Redesign_LuciusSwordThrustV1_01",
-        "Redesign_LuciusSwordThrustV1_02",
-        "Redesign_LuciusSwordThrustV1_03",
-        "Redesign_LuciusSwordThrustV1_04",
-        "Redesign_LuciusSwordThrustV1_05"
+        "Redesign_LuciusNormalSwordThrustDiagonalsE20261119_00",
+        "Redesign_LuciusNormalSwordThrustDiagonalsE20261119_01",
+        "Redesign_LuciusNormalSwordThrustDiagonalsE20261119_02"
       ],
       "durationMs": [
-        100,
-        100,
-        90,
-        90,
-        120,
-        140
+        200,
+        180,
+        260
       ],
-      "startupFrames": 2,
-      "activeFrames": 2,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "loop": false
     },
     {
-      "id": "LuciusSwordThrustV1_Attack_W",
+      "id": "LuciusSwordThrustSWN20261119V1_Attack_W",
       "action": "Attack",
       "attackKey": "SwordThrust",
       "direction": 2,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustV1",
-      "imageSha256": "4983497337c2b28a39ec2aee38923b85685ef31733ef60feb07bb41a17cc9907",
-      "sourceSha256": "4983497337c2b28a39ec2aee38923b85685ef31733ef60feb07bb41a17cc9907",
-      "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordThrustV1-source.png",
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustSWN20261119V1",
+      "imageSha256": "63574b48be00c3d6830b66d3c55d995537b4d373d7450f39a8af5e1342488ce4",
+      "sourceSha256": "63574b48be00c3d6830b66d3c55d995537b4d373d7450f39a8af5e1342488ce4",
+      "sourcePath": "ArtSources/LuciusThrustSWN20261119/LuciusSwordThrustSWN20261119V1-source.png",
       "nativeSize": [
-        1536,
-        1024
+        1254,
+        1254
       ],
-      "pixelsPerUnit": 167.782167,
+      "pixelsPerUnit": 159.917377648,
       "spriteNames": [
-        "Redesign_LuciusSwordThrustV1_00",
-        "Redesign_LuciusSwordThrustV1_01",
-        "Redesign_LuciusSwordThrustV1_02",
-        "Redesign_LuciusSwordThrustV1_03",
-        "Redesign_LuciusSwordThrustV1_04",
-        "Redesign_LuciusSwordThrustV1_05"
+        "Redesign_LuciusSwordThrustSWN20261119V1_W_00",
+        "Redesign_LuciusSwordThrustSWN20261119V1_W_01",
+        "Redesign_LuciusSwordThrustSWN20261119V1_W_02"
       ],
       "durationMs": [
-        100,
-        100,
-        90,
-        90,
-        120,
-        140
+        200,
+        180,
+        260
       ],
-      "startupFrames": 2,
-      "activeFrames": 2,
-      "loop": false,
+      "startupFrames": 1,
+      "activeFrames": 1,
       "wholeFigures": true,
+      "loop": false,
       "status": "visual-reviewed"
     },
     {
-      "id": "LuciusSwordThrustV1_Attack_NW",
+      "imageSha256": "c8871bcd62a5823b7aa1980f3518eade03bf2da3cff7a2789e8aa67cd8e86694",
+      "sourcePath": "ArtSources/LuciusNormalThrustRemaining20261119/LuciusNormalSwordThrustDiagonalsE20261119-source.png",
+      "sourceSha256": "c8871bcd62a5823b7aa1980f3518eade03bf2da3cff7a2789e8aa67cd8e86694",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 149.1688326,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalSwordThrustDiagonalsE20261119_SwordThrust_NW",
       "action": "Attack",
       "attackKey": "SwordThrust",
+      "startupFrames": 1,
+      "activeFrames": 1,
       "direction": 3,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustV1",
-      "imageSha256": "4983497337c2b28a39ec2aee38923b85685ef31733ef60feb07bb41a17cc9907",
-      "sourceSha256": "4983497337c2b28a39ec2aee38923b85685ef31733ef60feb07bb41a17cc9907",
-      "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordThrustV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 167.782167,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalSwordThrustDiagonalsE20261119",
       "spriteNames": [
-        "Redesign_LuciusSwordThrustV1_00",
-        "Redesign_LuciusSwordThrustV1_01",
-        "Redesign_LuciusSwordThrustV1_02",
-        "Redesign_LuciusSwordThrustV1_03",
-        "Redesign_LuciusSwordThrustV1_04",
-        "Redesign_LuciusSwordThrustV1_05"
+        "Redesign_LuciusNormalSwordThrustDiagonalsE20261119_03",
+        "Redesign_LuciusNormalSwordThrustDiagonalsE20261119_04",
+        "Redesign_LuciusNormalSwordThrustDiagonalsE20261119_05"
       ],
       "durationMs": [
-        100,
-        100,
-        90,
-        90,
-        120,
-        140
+        200,
+        180,
+        260
       ],
-      "startupFrames": 2,
-      "activeFrames": 2,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "loop": false
     },
     {
-      "id": "LuciusSwordThrustV1_Attack_N",
+      "id": "LuciusSwordThrustSWN20261119V1_Attack_N",
       "action": "Attack",
       "attackKey": "SwordThrust",
       "direction": 4,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustV1",
-      "imageSha256": "4983497337c2b28a39ec2aee38923b85685ef31733ef60feb07bb41a17cc9907",
-      "sourceSha256": "4983497337c2b28a39ec2aee38923b85685ef31733ef60feb07bb41a17cc9907",
-      "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordThrustV1-source.png",
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustSWN20261119V1",
+      "imageSha256": "63574b48be00c3d6830b66d3c55d995537b4d373d7450f39a8af5e1342488ce4",
+      "sourceSha256": "63574b48be00c3d6830b66d3c55d995537b4d373d7450f39a8af5e1342488ce4",
+      "sourcePath": "ArtSources/LuciusThrustSWN20261119/LuciusSwordThrustSWN20261119V1-source.png",
       "nativeSize": [
-        1536,
-        1024
+        1254,
+        1254
       ],
-      "pixelsPerUnit": 167.782167,
+      "pixelsPerUnit": 159.917377648,
       "spriteNames": [
-        "Redesign_LuciusSwordThrustV1_00",
-        "Redesign_LuciusSwordThrustV1_01",
-        "Redesign_LuciusSwordThrustV1_02",
-        "Redesign_LuciusSwordThrustV1_03",
-        "Redesign_LuciusSwordThrustV1_04",
-        "Redesign_LuciusSwordThrustV1_05"
+        "Redesign_LuciusSwordThrustSWN20261119V1_N_00",
+        "Redesign_LuciusSwordThrustSWN20261119V1_N_01",
+        "Redesign_LuciusSwordThrustSWN20261119V1_N_02"
       ],
       "durationMs": [
-        100,
-        100,
-        90,
-        90,
-        120,
-        140
+        200,
+        180,
+        260
       ],
-      "startupFrames": 2,
-      "activeFrames": 2,
-      "loop": false,
+      "startupFrames": 1,
+      "activeFrames": 1,
       "wholeFigures": true,
+      "loop": false,
       "status": "visual-reviewed"
     },
     {
-      "id": "LuciusSwordThrustV1_Attack_NE",
+      "imageSha256": "c8871bcd62a5823b7aa1980f3518eade03bf2da3cff7a2789e8aa67cd8e86694",
+      "sourcePath": "ArtSources/LuciusNormalThrustRemaining20261119/LuciusNormalSwordThrustDiagonalsE20261119-source.png",
+      "sourceSha256": "c8871bcd62a5823b7aa1980f3518eade03bf2da3cff7a2789e8aa67cd8e86694",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 149.1688326,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalSwordThrustDiagonalsE20261119_SwordThrust_NE",
       "action": "Attack",
       "attackKey": "SwordThrust",
+      "startupFrames": 1,
+      "activeFrames": 1,
       "direction": 5,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustV1",
-      "imageSha256": "4983497337c2b28a39ec2aee38923b85685ef31733ef60feb07bb41a17cc9907",
-      "sourceSha256": "4983497337c2b28a39ec2aee38923b85685ef31733ef60feb07bb41a17cc9907",
-      "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordThrustV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 167.782167,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalSwordThrustDiagonalsE20261119",
       "spriteNames": [
-        "Redesign_LuciusSwordThrustV1_00",
-        "Redesign_LuciusSwordThrustV1_01",
-        "Redesign_LuciusSwordThrustV1_02",
-        "Redesign_LuciusSwordThrustV1_03",
-        "Redesign_LuciusSwordThrustV1_04",
-        "Redesign_LuciusSwordThrustV1_05"
+        "Redesign_LuciusNormalSwordThrustDiagonalsE20261119_06",
+        "Redesign_LuciusNormalSwordThrustDiagonalsE20261119_07",
+        "Redesign_LuciusNormalSwordThrustDiagonalsE20261119_08"
       ],
       "durationMs": [
-        100,
-        100,
-        90,
-        90,
-        120,
-        140
+        200,
+        180,
+        260
       ],
-      "startupFrames": 2,
-      "activeFrames": 2,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "loop": false
     },
     {
-      "id": "LuciusSwordThrustV1_Attack_E",
+      "imageSha256": "c8871bcd62a5823b7aa1980f3518eade03bf2da3cff7a2789e8aa67cd8e86694",
+      "sourcePath": "ArtSources/LuciusNormalThrustRemaining20261119/LuciusNormalSwordThrustDiagonalsE20261119-source.png",
+      "sourceSha256": "c8871bcd62a5823b7aa1980f3518eade03bf2da3cff7a2789e8aa67cd8e86694",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 149.1688326,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalSwordThrustDiagonalsE20261119_SwordThrust_E",
       "action": "Attack",
       "attackKey": "SwordThrust",
+      "startupFrames": 1,
+      "activeFrames": 1,
       "direction": 6,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusSwordThrustV1",
-      "imageSha256": "4983497337c2b28a39ec2aee38923b85685ef31733ef60feb07bb41a17cc9907",
-      "sourceSha256": "4983497337c2b28a39ec2aee38923b85685ef31733ef60feb07bb41a17cc9907",
-      "sourcePath": "ArtSources/LuciusAttacks20261110/selected/LuciusSwordThrustV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 167.782167,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalSwordThrustDiagonalsE20261119",
       "spriteNames": [
-        "Redesign_LuciusSwordThrustV1_00",
-        "Redesign_LuciusSwordThrustV1_01",
-        "Redesign_LuciusSwordThrustV1_02",
-        "Redesign_LuciusSwordThrustV1_03",
-        "Redesign_LuciusSwordThrustV1_04",
-        "Redesign_LuciusSwordThrustV1_05"
+        "Redesign_LuciusNormalSwordThrustDiagonalsE20261119_09",
+        "Redesign_LuciusNormalSwordThrustDiagonalsE20261119_10",
+        "Redesign_LuciusNormalSwordThrustDiagonalsE20261119_11"
       ],
       "durationMs": [
-        100,
-        100,
-        90,
-        90,
-        120,
-        140
+        200,
+        180,
+        260
       ],
-      "startupFrames": 2,
-      "activeFrames": 2,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "loop": false
     },
     {
-      "id": "LuciusSwordThrustV1_Attack_SE",
+      "id": "LuciusSwordThrustV1_RealContact_SE",
       "action": "Attack",
       "attackKey": "SwordThrust",
       "direction": 7,
@@ -1317,136 +1303,146 @@
       "pixelsPerUnit": 167.782167,
       "spriteNames": [
         "Redesign_LuciusSwordThrustV1_00",
-        "Redesign_LuciusSwordThrustV1_01",
-        "Redesign_LuciusSwordThrustV1_02",
-        "Redesign_LuciusSwordThrustV1_03",
         "Redesign_LuciusSwordThrustV1_04",
         "Redesign_LuciusSwordThrustV1_05"
       ],
       "durationMs": [
-        100,
-        100,
-        90,
-        90,
-        120,
-        140
+        200,
+        180,
+        260
       ],
-      "startupFrames": 2,
-      "activeFrames": 2,
+      "startupFrames": 1,
+      "activeFrames": 1,
       "loop": false,
       "wholeFigures": true,
       "status": "visual-reviewed"
     },
     {
-      "id": "LuciusParryV1_Parry_S",
+      "imageSha256": "37e72a1b0c2db2bd81f6cc19e6e4b9d26ddbebc6147221c9964070e4e099514d",
+      "sourcePath": "ArtSources/LuciusNormalGuard20261119/LuciusNormalGuardFront20261119-source.png",
+      "sourceSha256": "37e72a1b0c2db2bd81f6cc19e6e4b9d26ddbebc6147221c9964070e4e099514d",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "nativeSize": [
+        1024,
+        1536
+      ],
+      "pixelsPerUnit": 210.2520276,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalGuardFront20261119_Parry_S",
       "action": "Parry",
       "direction": 0,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusParryV1",
-      "imageSha256": "4adbacc6925125d48e38bdd1c3b954c7b152d787a08e479a0eb2eea9ddd02bae",
-      "sourceSha256": "4adbacc6925125d48e38bdd1c3b954c7b152d787a08e479a0eb2eea9ddd02bae",
-      "sourcePath": "ArtSources/LuciusNormal20261109/selected/LuciusParryV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 214.97090106361628,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalGuardFront20261119",
       "spriteNames": [
-        "Redesign_LuciusParryV1_00",
-        "Redesign_LuciusParryV1_01",
-        "Redesign_LuciusParryV1_02"
+        "Redesign_LuciusNormalGuardFront20261119_00",
+        "Redesign_LuciusNormalGuardFront20261119_01",
+        "Redesign_LuciusNormalGuardFront20261119_02"
       ],
       "durationMs": [
-        80,
-        120,
-        150
+        90,
+        140,
+        120
       ],
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "loop": false
     },
     {
-      "id": "LuciusParryV1_Parry_SW",
+      "imageSha256": "37e72a1b0c2db2bd81f6cc19e6e4b9d26ddbebc6147221c9964070e4e099514d",
+      "sourcePath": "ArtSources/LuciusNormalGuard20261119/LuciusNormalGuardFront20261119-source.png",
+      "sourceSha256": "37e72a1b0c2db2bd81f6cc19e6e4b9d26ddbebc6147221c9964070e4e099514d",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "nativeSize": [
+        1024,
+        1536
+      ],
+      "pixelsPerUnit": 210.2520276,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalGuardFront20261119_Parry_SW",
       "action": "Parry",
       "direction": 1,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusParryV1",
-      "imageSha256": "4adbacc6925125d48e38bdd1c3b954c7b152d787a08e479a0eb2eea9ddd02bae",
-      "sourceSha256": "4adbacc6925125d48e38bdd1c3b954c7b152d787a08e479a0eb2eea9ddd02bae",
-      "sourcePath": "ArtSources/LuciusNormal20261109/selected/LuciusParryV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 214.97090106361628,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalGuardFront20261119",
       "spriteNames": [
-        "Redesign_LuciusParryV1_00",
-        "Redesign_LuciusParryV1_01",
-        "Redesign_LuciusParryV1_02"
+        "Redesign_LuciusNormalGuardFront20261119_03",
+        "Redesign_LuciusNormalGuardFront20261119_04",
+        "Redesign_LuciusNormalGuardFront20261119_05"
       ],
       "durationMs": [
-        80,
-        120,
-        150
+        90,
+        140,
+        120
       ],
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "loop": false
     },
     {
-      "id": "LuciusParryV1_Parry_W",
+      "imageSha256": "4d46bbaeaccd55f7e0416f8f8ead08bcb7bef33cc78ef92b1a75a70bdd35c25c",
+      "sourcePath": "ArtSources/LuciusNormalGuard20261119/LuciusNormalGuardBack20261119-source.png",
+      "sourceSha256": "4d46bbaeaccd55f7e0416f8f8ead08bcb7bef33cc78ef92b1a75a70bdd35c25c",
+      "sourceSize": [
+        1295,
+        1215
+      ],
+      "nativeSize": [
+        1295,
+        1215
+      ],
+      "pixelsPerUnit": 179.3171906,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalGuardBack20261119_Parry_W",
       "action": "Parry",
       "direction": 2,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusParryV1",
-      "imageSha256": "4adbacc6925125d48e38bdd1c3b954c7b152d787a08e479a0eb2eea9ddd02bae",
-      "sourceSha256": "4adbacc6925125d48e38bdd1c3b954c7b152d787a08e479a0eb2eea9ddd02bae",
-      "sourcePath": "ArtSources/LuciusNormal20261109/selected/LuciusParryV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 214.97090106361628,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalGuardBack20261119",
       "spriteNames": [
-        "Redesign_LuciusParryV1_00",
-        "Redesign_LuciusParryV1_01",
-        "Redesign_LuciusParryV1_02"
+        "Redesign_LuciusNormalGuardBack20261119_00",
+        "Redesign_LuciusNormalGuardBack20261119_01",
+        "Redesign_LuciusNormalGuardBack20261119_02"
       ],
       "durationMs": [
-        80,
-        120,
-        150
+        90,
+        140,
+        120
       ],
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "loop": false
     },
     {
-      "id": "LuciusParryV1_Parry_NW",
+      "imageSha256": "4d46bbaeaccd55f7e0416f8f8ead08bcb7bef33cc78ef92b1a75a70bdd35c25c",
+      "sourcePath": "ArtSources/LuciusNormalGuard20261119/LuciusNormalGuardBack20261119-source.png",
+      "sourceSha256": "4d46bbaeaccd55f7e0416f8f8ead08bcb7bef33cc78ef92b1a75a70bdd35c25c",
+      "sourceSize": [
+        1295,
+        1215
+      ],
+      "nativeSize": [
+        1295,
+        1215
+      ],
+      "pixelsPerUnit": 179.3171906,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalGuardBack20261119_Parry_NW",
       "action": "Parry",
       "direction": 3,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusParryV1",
-      "imageSha256": "4adbacc6925125d48e38bdd1c3b954c7b152d787a08e479a0eb2eea9ddd02bae",
-      "sourceSha256": "4adbacc6925125d48e38bdd1c3b954c7b152d787a08e479a0eb2eea9ddd02bae",
-      "sourcePath": "ArtSources/LuciusNormal20261109/selected/LuciusParryV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 214.97090106361628,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalGuardBack20261119",
       "spriteNames": [
-        "Redesign_LuciusParryV1_03",
-        "Redesign_LuciusParryV1_04",
-        "Redesign_LuciusParryV1_05"
+        "Redesign_LuciusNormalGuardBack20261119_03",
+        "Redesign_LuciusNormalGuardBack20261119_04",
+        "Redesign_LuciusNormalGuardBack20261119_05"
       ],
       "durationMs": [
-        80,
-        120,
-        150
+        90,
+        140,
+        120
       ],
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "loop": false
     },
     {
-      "id": "LuciusParryV1_Parry_N",
+      "id": "LuciusParryV1_Parry_TrueN",
       "action": "Parry",
       "direction": 4,
       "resourcePath": "Darklight/LuciusNormal20261109/LuciusParryV1",
@@ -1459,9 +1455,9 @@
       ],
       "pixelsPerUnit": 214.97090106361628,
       "spriteNames": [
-        "Redesign_LuciusParryV1_03",
-        "Redesign_LuciusParryV1_04",
-        "Redesign_LuciusParryV1_05"
+        "Redesign_LuciusParryV1_00",
+        "Redesign_LuciusParryV1_01",
+        "Redesign_LuciusParryV1_02"
       ],
       "durationMs": [
         80,
@@ -1473,31 +1469,35 @@
       "status": "visual-reviewed"
     },
     {
-      "id": "LuciusParryV1_Parry_NE",
+      "imageSha256": "4d46bbaeaccd55f7e0416f8f8ead08bcb7bef33cc78ef92b1a75a70bdd35c25c",
+      "sourcePath": "ArtSources/LuciusNormalGuard20261119/LuciusNormalGuardBack20261119-source.png",
+      "sourceSha256": "4d46bbaeaccd55f7e0416f8f8ead08bcb7bef33cc78ef92b1a75a70bdd35c25c",
+      "sourceSize": [
+        1295,
+        1215
+      ],
+      "nativeSize": [
+        1295,
+        1215
+      ],
+      "pixelsPerUnit": 179.3171906,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalGuardBack20261119_Parry_NE",
       "action": "Parry",
       "direction": 5,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusParryV1",
-      "imageSha256": "4adbacc6925125d48e38bdd1c3b954c7b152d787a08e479a0eb2eea9ddd02bae",
-      "sourceSha256": "4adbacc6925125d48e38bdd1c3b954c7b152d787a08e479a0eb2eea9ddd02bae",
-      "sourcePath": "ArtSources/LuciusNormal20261109/selected/LuciusParryV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 214.97090106361628,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalGuardBack20261119",
       "spriteNames": [
-        "Redesign_LuciusParryV1_03",
-        "Redesign_LuciusParryV1_04",
-        "Redesign_LuciusParryV1_05"
+        "Redesign_LuciusNormalGuardBack20261119_06",
+        "Redesign_LuciusNormalGuardBack20261119_07",
+        "Redesign_LuciusNormalGuardBack20261119_08"
       ],
       "durationMs": [
-        80,
-        120,
-        150
+        90,
+        140,
+        120
       ],
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "loop": false
     },
     {
       "id": "LuciusParryV1_Parry_E",
@@ -1527,31 +1527,35 @@
       "status": "visual-reviewed"
     },
     {
-      "id": "LuciusParryV1_Parry_SE",
+      "imageSha256": "37e72a1b0c2db2bd81f6cc19e6e4b9d26ddbebc6147221c9964070e4e099514d",
+      "sourcePath": "ArtSources/LuciusNormalGuard20261119/LuciusNormalGuardFront20261119-source.png",
+      "sourceSha256": "37e72a1b0c2db2bd81f6cc19e6e4b9d26ddbebc6147221c9964070e4e099514d",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "nativeSize": [
+        1024,
+        1536
+      ],
+      "pixelsPerUnit": 210.2520276,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalGuardFront20261119_Parry_SE",
       "action": "Parry",
       "direction": 7,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusParryV1",
-      "imageSha256": "4adbacc6925125d48e38bdd1c3b954c7b152d787a08e479a0eb2eea9ddd02bae",
-      "sourceSha256": "4adbacc6925125d48e38bdd1c3b954c7b152d787a08e479a0eb2eea9ddd02bae",
-      "sourcePath": "ArtSources/LuciusNormal20261109/selected/LuciusParryV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 214.97090106361628,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalGuardFront20261119",
       "spriteNames": [
-        "Redesign_LuciusParryV1_00",
-        "Redesign_LuciusParryV1_01",
-        "Redesign_LuciusParryV1_02"
+        "Redesign_LuciusNormalGuardFront20261119_06",
+        "Redesign_LuciusNormalGuardFront20261119_07",
+        "Redesign_LuciusNormalGuardFront20261119_08"
       ],
       "durationMs": [
-        80,
-        120,
-        150
+        90,
+        140,
+        120
       ],
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "loop": false
     },
     {
       "id": "LuciusWalkArmed8V1_WalkArmed_S",
@@ -1738,236 +1742,260 @@
       "status": "visual-reviewed"
     },
     {
-      "id": "LuciusHurtV1_Hurt_S",
+      "imageSha256": "bbc19e270ce33766e748ae18b78506844a45d96688ce69706980fdc779ef4c04",
+      "sourceSha256": "bbc19e270ce33766e748ae18b78506844a45d96688ce69706980fdc779ef4c04",
+      "sourcePath": "ArtSources/LuciusReview20261119/LuciusNormalHurt4V-source.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 159.3930583,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalHurt4V20261119_Hurt_S",
       "action": "Hurt",
       "direction": 0,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusHurtV1",
-      "imageSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
-      "sourceSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
-      "sourcePath": "ArtSources/LuciusNormal20261109/selected/LuciusHurtV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 152.052589,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalHurt4V20261119",
       "spriteNames": [
-        "Redesign_LuciusHurtV1_00",
-        "Redesign_LuciusHurtV1_01",
-        "Redesign_LuciusHurtV1_02",
-        "Redesign_LuciusHurtV1_03"
+        "Redesign_LuciusNormalHurt4V20261119_00",
+        "Redesign_LuciusNormalHurt4V20261119_01",
+        "Redesign_LuciusNormalHurt4V20261119_02"
       ],
       "durationMs": [
-        90,
-        100,
+        85,
         120,
-        150
+        110
       ],
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "loop": false
     },
     {
+      "imageSha256": "bbc19e270ce33766e748ae18b78506844a45d96688ce69706980fdc779ef4c04",
+      "sourceSha256": "bbc19e270ce33766e748ae18b78506844a45d96688ce69706980fdc779ef4c04",
+      "sourcePath": "ArtSources/LuciusReview20261119/LuciusNormalHurt4V-source.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 159.3930583,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
       "id": "LuciusHurtV1_Hurt_SW",
       "action": "Hurt",
       "direction": 1,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusHurtV1",
-      "imageSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
-      "sourceSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
-      "sourcePath": "ArtSources/LuciusNormal20261109/selected/LuciusHurtV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 152.052589,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalHurt4V20261119",
       "spriteNames": [
-        "Redesign_LuciusHurtV1_00",
-        "Redesign_LuciusHurtV1_01",
-        "Redesign_LuciusHurtV1_02",
-        "Redesign_LuciusHurtV1_03"
+        "Redesign_LuciusNormalHurt4V20261119_00",
+        "Redesign_LuciusNormalHurt4V20261119_01",
+        "Redesign_LuciusNormalHurt4V20261119_02"
       ],
       "durationMs": [
-        90,
-        100,
+        85,
         120,
-        150
+        110
       ],
       "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "directionalFallback": true,
+      "sourceDirection": 0
     },
     {
-      "id": "LuciusHurtV1_Hurt_W",
+      "imageSha256": "bbc19e270ce33766e748ae18b78506844a45d96688ce69706980fdc779ef4c04",
+      "sourceSha256": "bbc19e270ce33766e748ae18b78506844a45d96688ce69706980fdc779ef4c04",
+      "sourcePath": "ArtSources/LuciusReview20261119/LuciusNormalHurt4V-source.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 159.3930583,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalHurt4V20261119_Hurt_W",
       "action": "Hurt",
       "direction": 2,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusHurtV1",
-      "imageSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
-      "sourceSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
-      "sourcePath": "ArtSources/LuciusNormal20261109/selected/LuciusHurtV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 152.052589,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalHurt4V20261119",
       "spriteNames": [
-        "Redesign_LuciusHurtV1_00",
-        "Redesign_LuciusHurtV1_01",
-        "Redesign_LuciusHurtV1_02",
-        "Redesign_LuciusHurtV1_03"
+        "Redesign_LuciusNormalHurt4V20261119_03",
+        "Redesign_LuciusNormalHurt4V20261119_04",
+        "Redesign_LuciusNormalHurt4V20261119_05"
       ],
       "durationMs": [
-        90,
-        100,
+        85,
         120,
-        150
+        110
       ],
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "loop": false
     },
     {
+      "imageSha256": "bbc19e270ce33766e748ae18b78506844a45d96688ce69706980fdc779ef4c04",
+      "sourceSha256": "bbc19e270ce33766e748ae18b78506844a45d96688ce69706980fdc779ef4c04",
+      "sourcePath": "ArtSources/LuciusReview20261119/LuciusNormalHurt4V-source.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 159.3930583,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
       "id": "LuciusHurtV1_Hurt_NW",
       "action": "Hurt",
       "direction": 3,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusHurtV1",
-      "imageSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
-      "sourceSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
-      "sourcePath": "ArtSources/LuciusNormal20261109/selected/LuciusHurtV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 152.052589,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalHurt4V20261119",
       "spriteNames": [
-        "Redesign_LuciusHurtV1_00",
-        "Redesign_LuciusHurtV1_01",
-        "Redesign_LuciusHurtV1_02",
-        "Redesign_LuciusHurtV1_03"
+        "Redesign_LuciusNormalHurt4V20261119_06",
+        "Redesign_LuciusNormalHurt4V20261119_07",
+        "Redesign_LuciusNormalHurt4V20261119_08"
       ],
       "durationMs": [
-        90,
-        100,
+        85,
         120,
-        150
+        110
       ],
       "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "directionalFallback": true,
+      "sourceDirection": 4
     },
     {
-      "id": "LuciusHurtV1_Hurt_N",
+      "imageSha256": "bbc19e270ce33766e748ae18b78506844a45d96688ce69706980fdc779ef4c04",
+      "sourceSha256": "bbc19e270ce33766e748ae18b78506844a45d96688ce69706980fdc779ef4c04",
+      "sourcePath": "ArtSources/LuciusReview20261119/LuciusNormalHurt4V-source.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 159.3930583,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalHurt4V20261119_Hurt_N",
       "action": "Hurt",
       "direction": 4,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusHurtV1",
-      "imageSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
-      "sourceSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
-      "sourcePath": "ArtSources/LuciusNormal20261109/selected/LuciusHurtV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 152.052589,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalHurt4V20261119",
       "spriteNames": [
-        "Redesign_LuciusHurtV1_00",
-        "Redesign_LuciusHurtV1_01",
-        "Redesign_LuciusHurtV1_02",
-        "Redesign_LuciusHurtV1_03"
+        "Redesign_LuciusNormalHurt4V20261119_06",
+        "Redesign_LuciusNormalHurt4V20261119_07",
+        "Redesign_LuciusNormalHurt4V20261119_08"
       ],
       "durationMs": [
-        90,
-        100,
+        85,
         120,
-        150
+        110
       ],
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "loop": false
     },
     {
+      "imageSha256": "bbc19e270ce33766e748ae18b78506844a45d96688ce69706980fdc779ef4c04",
+      "sourceSha256": "bbc19e270ce33766e748ae18b78506844a45d96688ce69706980fdc779ef4c04",
+      "sourcePath": "ArtSources/LuciusReview20261119/LuciusNormalHurt4V-source.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 159.3930583,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
       "id": "LuciusHurtV1_Hurt_NE",
       "action": "Hurt",
       "direction": 5,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusHurtV1",
-      "imageSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
-      "sourceSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
-      "sourcePath": "ArtSources/LuciusNormal20261109/selected/LuciusHurtV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 152.052589,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalHurt4V20261119",
       "spriteNames": [
-        "Redesign_LuciusHurtV1_00",
-        "Redesign_LuciusHurtV1_01",
-        "Redesign_LuciusHurtV1_02",
-        "Redesign_LuciusHurtV1_03"
+        "Redesign_LuciusNormalHurt4V20261119_06",
+        "Redesign_LuciusNormalHurt4V20261119_07",
+        "Redesign_LuciusNormalHurt4V20261119_08"
       ],
       "durationMs": [
-        90,
-        100,
+        85,
         120,
-        150
+        110
       ],
       "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "directionalFallback": true,
+      "sourceDirection": 4
     },
     {
-      "id": "LuciusHurtV1_Hurt_E",
+      "imageSha256": "bbc19e270ce33766e748ae18b78506844a45d96688ce69706980fdc779ef4c04",
+      "sourceSha256": "bbc19e270ce33766e748ae18b78506844a45d96688ce69706980fdc779ef4c04",
+      "sourcePath": "ArtSources/LuciusReview20261119/LuciusNormalHurt4V-source.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 159.3930583,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalHurt4V20261119_Hurt_E",
       "action": "Hurt",
       "direction": 6,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusHurtV1",
-      "imageSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
-      "sourceSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
-      "sourcePath": "ArtSources/LuciusNormal20261109/selected/LuciusHurtV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 152.052589,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalHurt4V20261119",
       "spriteNames": [
-        "Redesign_LuciusHurtV1_00",
-        "Redesign_LuciusHurtV1_01",
-        "Redesign_LuciusHurtV1_02",
-        "Redesign_LuciusHurtV1_03"
+        "Redesign_LuciusNormalHurt4V20261119_09",
+        "Redesign_LuciusNormalHurt4V20261119_10",
+        "Redesign_LuciusNormalHurt4V20261119_11"
       ],
       "durationMs": [
-        90,
-        100,
+        85,
         120,
-        150
+        110
       ],
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "loop": false
     },
     {
+      "imageSha256": "bbc19e270ce33766e748ae18b78506844a45d96688ce69706980fdc779ef4c04",
+      "sourceSha256": "bbc19e270ce33766e748ae18b78506844a45d96688ce69706980fdc779ef4c04",
+      "sourcePath": "ArtSources/LuciusReview20261119/LuciusNormalHurt4V-source.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 159.3930583,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
       "id": "LuciusHurtV1_Hurt_SE",
       "action": "Hurt",
       "direction": 7,
-      "resourcePath": "Darklight/LuciusNormal20261109/LuciusHurtV1",
-      "imageSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
-      "sourceSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
-      "sourcePath": "ArtSources/LuciusNormal20261109/selected/LuciusHurtV1-source.png",
-      "nativeSize": [
-        1536,
-        1024
-      ],
-      "pixelsPerUnit": 152.052589,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalHurt4V20261119",
       "spriteNames": [
-        "Redesign_LuciusHurtV1_00",
-        "Redesign_LuciusHurtV1_01",
-        "Redesign_LuciusHurtV1_02",
-        "Redesign_LuciusHurtV1_03"
+        "Redesign_LuciusNormalHurt4V20261119_00",
+        "Redesign_LuciusNormalHurt4V20261119_01",
+        "Redesign_LuciusNormalHurt4V20261119_02"
       ],
       "durationMs": [
-        90,
-        100,
+        85,
         120,
-        150
+        110
       ],
       "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed"
+      "directionalFallback": true,
+      "sourceDirection": 0
     },
     {
       "imageSha256": "7994318578cd5e664340924b39478e9cee10bca66009c74fd5693d565879c161",
@@ -2042,6 +2070,225 @@
         95
       ],
       "loop": true
+    },
+    {
+      "id": "LuciusDrawRecovered_N",
+      "action": "Draw",
+      "direction": 4,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusHurtV1",
+      "imageSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
+      "sourceSha256": "3946992309e6ec310d8c4ac668dba13533db496c18b58697381a00d0ac120ef5",
+      "sourcePath": "ArtSources/LuciusNormal20261109/selected/LuciusHurtV1-source.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 152.052589,
+      "spriteNames": [
+        "Redesign_LuciusHurtV1_00",
+        "Redesign_LuciusHurtV1_01",
+        "Redesign_LuciusHurtV1_02",
+        "Redesign_LuciusHurtV1_03"
+      ],
+      "durationMs": [
+        90,
+        100,
+        120,
+        150
+      ],
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed"
+    },
+    {
+      "imageSha256": "9f82a3659a1cb2b9bb9f1db9edaf4775e1c1c8c93049f36432827586faf1e378",
+      "sourceSha256": "9f82a3659a1cb2b9bb9f1db9edaf4775e1c1c8c93049f36432827586faf1e378",
+      "sourcePath": "ArtSources/LuciusNormalWalkNWNE20261119/LuciusNormalWalkNWNE20261119-selected.png",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "pixelsPerUnit": 213.135784,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalWalkNWNE20261119_Walk_NW",
+      "action": "Walk",
+      "direction": 3,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalWalkNWNE20261119",
+      "spriteNames": [
+        "Redesign_LuciusNormalWalkNWNE20261119_00",
+        "Redesign_LuciusNormalWalkNWNE20261119_01",
+        "Redesign_LuciusNormalWalkNWNE20261119_02",
+        "Redesign_LuciusNormalWalkNWNE20261119_03"
+      ],
+      "durationMs": [
+        142,
+        142,
+        142,
+        142
+      ],
+      "loop": true
+    },
+    {
+      "imageSha256": "9f82a3659a1cb2b9bb9f1db9edaf4775e1c1c8c93049f36432827586faf1e378",
+      "sourceSha256": "9f82a3659a1cb2b9bb9f1db9edaf4775e1c1c8c93049f36432827586faf1e378",
+      "sourcePath": "ArtSources/LuciusNormalWalkNWNE20261119/LuciusNormalWalkNWNE20261119-selected.png",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "pixelsPerUnit": 213.135784,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalWalkNWNE20261119_Walk_NE",
+      "action": "Walk",
+      "direction": 5,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalWalkNWNE20261119",
+      "spriteNames": [
+        "Redesign_LuciusNormalWalkNWNE20261119_04",
+        "Redesign_LuciusNormalWalkNWNE20261119_05",
+        "Redesign_LuciusNormalWalkNWNE20261119_06",
+        "Redesign_LuciusNormalWalkNWNE20261119_07"
+      ],
+      "durationMs": [
+        142,
+        142,
+        142,
+        142
+      ],
+      "loop": true
+    },
+    {
+      "id": "LuciusNormalDodgeCanonicalSSE20261119V1_Dodge_S",
+      "action": "Dodge",
+      "direction": 0,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalDodgeCanonicalSSE20261119V1",
+      "imageSha256": "6b755f985e3523a66162dcfa2ec952403aaade1671f421c6cc08823af86f6bf8",
+      "sourceSha256": "6b755f985e3523a66162dcfa2ec952403aaade1671f421c6cc08823af86f6bf8",
+      "sourcePath": "ArtSources/LuciusNormalDodgeCanonical20261119/LuciusNormalDodgeCanonicalSSE20261119V1-source.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 230.0,
+      "spriteNames": [
+        "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_S_00",
+        "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_S_01",
+        "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_S_02"
+      ],
+      "durationMs": [
+        60,
+        100,
+        70
+      ],
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed"
+    },
+    {
+      "id": "LuciusNormalDodgeCanonicalSSE20261119V1_Dodge_SE",
+      "action": "Dodge",
+      "direction": 7,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalDodgeCanonicalSSE20261119V1",
+      "imageSha256": "6b755f985e3523a66162dcfa2ec952403aaade1671f421c6cc08823af86f6bf8",
+      "sourceSha256": "6b755f985e3523a66162dcfa2ec952403aaade1671f421c6cc08823af86f6bf8",
+      "sourcePath": "ArtSources/LuciusNormalDodgeCanonical20261119/LuciusNormalDodgeCanonicalSSE20261119V1-source.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 230.0,
+      "spriteNames": [
+        "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_SE_00",
+        "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_SE_01",
+        "Redesign_LuciusNormalDodgeCanonicalSSE20261119V1_SE_02"
+      ],
+      "durationMs": [
+        60,
+        100,
+        70
+      ],
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed"
+    },
+    {
+      "imageSha256": "1255fa6ef5c3314acc1f2362d5d646510fe5c43274db1ab6b562705a79d6348a",
+      "sourceSha256": "1255fa6ef5c3314acc1f2362d5d646510fe5c43274db1ab6b562705a79d6348a",
+      "sourcePath": "ArtSources/LuciusDodge20261119/LuciusNormalDodgeCanonicalNorth520261119-source.png",
+      "nativeSize": [
+        1620,
+        971
+      ],
+      "sourceSize": [
+        1620,
+        971
+      ],
+      "pixelsPerUnit": 143.1,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalDodgeCanonicalNorth520261119_Dodge_N",
+      "action": "Dodge",
+      "direction": 4,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalDodgeCanonicalNorth520261119",
+      "spriteNames": [
+        "Redesign_LuciusNormalDodgeCanonicalNorth520261119_05",
+        "Redesign_LuciusNormalDodgeCanonicalNorth520261119_06",
+        "Redesign_LuciusNormalDodgeCanonicalNorth520261119_07",
+        "Redesign_LuciusNormalDodgeCanonicalNorth520261119_08",
+        "Redesign_LuciusNormalDodgeCanonicalNorth520261119_09"
+      ],
+      "durationMs": [
+        35,
+        35,
+        65,
+        45,
+        50
+      ],
+      "loop": false
+    },
+    {
+      "imageSha256": "1255fa6ef5c3314acc1f2362d5d646510fe5c43274db1ab6b562705a79d6348a",
+      "sourceSha256": "1255fa6ef5c3314acc1f2362d5d646510fe5c43274db1ab6b562705a79d6348a",
+      "sourcePath": "ArtSources/LuciusDodge20261119/LuciusNormalDodgeCanonicalNorth520261119-source.png",
+      "nativeSize": [
+        1620,
+        971
+      ],
+      "sourceSize": [
+        1620,
+        971
+      ],
+      "pixelsPerUnit": 143.1,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusNormalDodgeCanonicalNorth520261119_Dodge_NW",
+      "action": "Dodge",
+      "direction": 3,
+      "resourcePath": "Darklight/LuciusNormal20261109/LuciusNormalDodgeCanonicalNorth520261119",
+      "spriteNames": [
+        "Redesign_LuciusNormalDodgeCanonicalNorth520261119_10",
+        "Redesign_LuciusNormalDodgeCanonicalNorth520261119_11",
+        "Redesign_LuciusNormalDodgeCanonicalNorth520261119_12",
+        "Redesign_LuciusNormalDodgeCanonicalNorth520261119_13",
+        "Redesign_LuciusNormalDodgeCanonicalNorth520261119_14"
+      ],
+      "durationMs": [
+        35,
+        35,
+        65,
+        45,
+        50
+      ],
+      "loop": false
     }
   ]
 }

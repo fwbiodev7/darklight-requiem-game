@@ -123,8 +123,7 @@ namespace Darklight
                 });
             }
             Button("RETOMAR TREINO",Close);Button("ESCOLHER INIMIGOS",()=>Open("TrainingEnemies"));
-            Button("ARMA: "+Weapons.Equipped.displayName,()=>{Weapons.RequestNext();Close();});
-            Button("TESTAR CAVALEIRO · REQUIEM",StartAbyssPrototype);Button("GUIA DO CAVALEIRO",ShowAbyssHelp);Button("DESAFIOS DO CAVALEIRO",StartAbyssLessons);Button("TESTAR BOSSFIGHT",()=>SpawnTraining(6));
+            Button("ESCOLHER ARMA",()=>Open("Weapons"));Button("TESTAR BOSSFIGHT",()=>SpawnTraining(6));
             Button("ESCOLHER TRANSFORMACAO",()=>Open("TrainingForms"));
             Button("RECEBER DANO: "+(TrainingDamage?"SIM":"NAO"),()=>{TrainingDamage=!TrainingDamage;RefreshPanel();});
             Button("VER HITBOXES: "+(TrainingHitboxes?"SIM":"NAO"),()=>{TrainingHitboxes=!TrainingHitboxes;RefreshPanel();});
@@ -133,7 +132,7 @@ namespace Darklight
         void BuildTrainingEnemies()
         {
             heading.text="ADVERSARIOS DO TREINO";bodyText.text="Alvo passivo para sequencias; inimigos ativos para praticar defesa, postura e pressao. Escolher outro encontro limpa o anterior.";
-            string[] labels={"ALVO PASSIVO","CACADOR","BLINDADO","ATIRADOR","GRUPO MISTO + ELITE","KAEL","FABIUS VS LUCIUS"};
+            string[] labels={"ALVO PASSIVO","CACADOR","BLINDADO","ATIRADOR","GRUPO MISTO + ELITE","NERO","FABIUS VS LUCIUS"};
             for(int i=0;i<labels.Length;i++){int chosen=i;Button(labels[i],()=>SpawnTraining(chosen));}Button("VOLTAR",()=>Open("Training"));
         }
         void BuildTrainingForms()

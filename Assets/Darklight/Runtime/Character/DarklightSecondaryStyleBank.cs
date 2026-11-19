@@ -36,7 +36,7 @@ namespace Darklight
         {
             if(art.sprite==null)return;var page=Page(art.sprite.texture.name);if(page==null)return;
             int index=Array.IndexOf(page.spriteNames,art.sprite.name);if(index<0)return;
-            page.mask??=Resources.Load<Texture2D>(page.paletteResourcePath);
+            page.mask??=string.IsNullOrEmpty(page.paletteResourcePath)?Texture2D.blackTexture:Resources.Load<Texture2D>(page.paletteResourcePath);
             var block=new MaterialPropertyBlock();art.GetPropertyBlock(block);block.SetTexture("_VampireMask",page.mask);block.SetFloat("_WholeFrameId",index+1);art.SetPropertyBlock(block);
         }
         public static void Clear(){catalog=null;attempted=false;}

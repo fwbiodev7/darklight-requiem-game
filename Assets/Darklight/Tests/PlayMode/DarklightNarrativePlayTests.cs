@@ -16,19 +16,32 @@ namespace Darklight.Tests
         [UnitySetUp]public IEnumerator Setup(){DarklightAutomation.Silent=true;yield return SceneManager.LoadSceneAsync("Assets/Darklight/Scenes/DarklightCampaign.unity");yield return null;yield return null;game=DarklightCampaign.Instance;lab=DarklightCombatLab.Instance;}
         void Move(Vector2 point){lab.Player.ResetModel();lab.Player.GetComponent<Rigidbody2D>().position=point;lab.Player.transform.position=point;Physics2D.SyncTransforms();}
         void ResumeAt(int chapter,int checkpoint){game.PreviewChapter(chapter);game.Progress.checkpoint=checkpoint;Invoke(game,"LoadMap",chapter);Invoke(game,"Close");}
-        [UnityTest]public IEnumerator NewBossCatalogAndThreePhasesWorkInEveryNewChapter()
+        [UnityTest]public IEnumerator NeroKeepsThreePhasesWhileOtherCombatGatesUseCommonEnemies()
         {
-            for(int chapter=6;chapter<10;chapter++)
+            foreach(int chapter in new[]{1,3,4,5,6,7,8,9})
             {
-                ResumeAt(chapter,3);var kind=(RequiemEnemyKind)(5+chapter);Invoke(game,"Spawn",kind,game.Map.SafeSpawn(game.Map.Arenas[3]),false);yield return null;
-                var boss=game.CurrentBoss;Assert.That(boss.kind,Is.EqualTo(kind));Assert.That(boss.poses.Length,Is.EqualTo(4));Assert.That(boss.attackFrames.Length,Is.EqualTo(4));Assert.That(boss.poses[0].name,Does.StartWith("ExpansionBosses_"));
+                ResumeAt(chapter,3);Invoke(game,"StartEncounter");
+                for(int line=0;line<12&&!game.Active;line++){Invoke(game,"NextDialogue");yield return null;}
+                Assert.That(game.Active,Is.True,"Chapter gate dialogue did not finish");
+                yield return null;
+                if(chapter!=DarklightCampaignRoute.NeroChapter)
+                {
+                    Assert.That(game.CurrentBoss,Is.Null,$"Chapter {chapter+1} should use common enemies");
+                    var guards=game.MapEnemies.Where(e=>e!=null&&!e.Health.IsDead).ToArray();
+                    Assert.That(guards.Length,Is.GreaterThan(0));
+                    Assert.That(guards.All(e=>(int)e.kind<5),Is.True);
+                    continue;
+                }
+                var boss=game.CurrentBoss;Assert.That(boss.kind,Is.EqualTo(RequiemEnemyKind.KaelFractured));Assert.That(boss.poses.Length,Is.EqualTo(4));Assert.That(boss.attackFrames.Length,Is.EqualTo(4));
+                Assert.That(boss.attackFrames[2].name,Is.EqualTo("NeroFraturadoCombatS20261119_06"));
+                float deadline=Time.realtimeSinceStartup+5;while(!boss.AcceptDamage&&Time.realtimeSinceStartup<deadline)yield return null;
+                Assert.That(boss.AcceptDamage,Is.True,"Nero's entry protection did not finish");
                 Assert.That(boss.Phase,Is.EqualTo(1));boss.Health.TakeDamage(boss.Health.MaxHealth*.4f);yield return new WaitForSeconds(.05f);Assert.That(boss.Phase,Is.EqualTo(2));Assert.That(boss.AcceptDamage,Is.False,"No phase-transition invulnerability");
                 game.PreviewPanel("Pause");float clock=lab.Player.Model.Clock;yield return new WaitForSeconds(.05f);Assert.That(lab.Player.Model.Clock,Is.EqualTo(clock));Assert.That(boss.Phase,Is.EqualTo(2));Invoke(game,"Close");
                 yield return new WaitForSeconds(.95f);boss.Health.TakeDamage(boss.Health.MaxHealth*.35f);yield return new WaitForSeconds(.05f);Assert.That(boss.Phase,Is.EqualTo(3));Assert.That(game.Progress.bossPhase,Is.EqualTo(3));
-                if(chapter==9)Assert.That(game.Progress.FormUnlocked,Is.EqualTo(3));
             }
         }
-        [UnityTest]public IEnumerator KaelIsPurifiedThroughInteractionAndRemainsAlive()
+        [UnityTest]public IEnumerator NeroIsPurifiedThroughInteractionAndRemainsAlive()
         {
             ResumeAt(8,3);Invoke(game,"Spawn",RequiemEnemyKind.KaelFractured,game.Map.SafeSpawn(game.Map.Arenas[3]),false);
             var boss=game.CurrentBoss;float deadline=Time.realtimeSinceStartup+5;
@@ -38,6 +51,9 @@ namespace Darklight.Tests
             Assert.That(boss.Health.IsDead,Is.False);Assert.That(boss.Health.HealthPercent,Is.EqualTo(.08f).Within(.001f));Assert.That(boss.PurificationReady,Is.True);
             Move(game.Map.SafeSpawn((Vector2)boss.transform.position+Vector2.down));Assert.That(game.TryGetInteraction(out var target),Is.True);Assert.That(target.Id,Is.EqualTo("purify_kael"));Assert.That(game.TryInteract(),Is.True);
             Assert.That(boss.Resolved,Is.True);Assert.That(boss.Health.IsDead,Is.False);Assert.That(game.CurrentBoss,Is.Null);Assert.That(game.Progress.checkpoint,Is.EqualTo(4));Assert.That(game.Progress.expansionFlags&4,Is.EqualTo(4));
+            var ally=GameObject.Find("KaelPurificado");
+            Assert.That(ally,Is.Not.Null);
+            Assert.That(ally.GetComponent<SpriteRenderer>().sprite,Is.SameAs(Resources.Load<Sprite>("Darklight/OfficialCast/Nero")));
             yield return null;Assert.That(boss.Health.IsDead,Is.False);
         }
         [UnityTest]public IEnumerator InscriptionAndAncestorMemoryAdvanceDistinctCheckpoints()
@@ -82,12 +98,17 @@ namespace Darklight.Tests
             }
         }
 
-        [UnityTest]public IEnumerator LucienPortalContinuesWhileLastPortalOpensFinalChoice()
+        [UnityTest]public IEnumerator ObservatoryPortalContinuesWhileLastPortalOpensFinalChoice()
         {
             ResumeAt(5,4);Move(game.Map.SafeSpawn(game.Map.Portal));Assert.That(game.TryInteract(),Is.True);Assert.That(game.PhaseLoading,Is.True);
-            float deadline=Time.realtimeSinceStartup+10;while(game.PhaseLoading&&Time.realtimeSinceStartup<deadline)yield return null;
+            var veil=typeof(DarklightCampaign).GetField("screenTransitionBusy",BindingFlags.Instance|BindingFlags.NonPublic);
+            float deadline=Time.realtimeSinceStartup+10;
+            while((game.PhaseLoading||(bool)veil.GetValue(game))&&Time.realtimeSinceStartup<deadline)yield return null;
             Assert.That(game.PhaseLoading,Is.False);Assert.That(game.Progress.chapter,Is.EqualTo(6));Assert.That(game.Progress.completed,Is.False);
-            ResumeAt(9,4);Move(game.Map.SafeSpawn(game.Map.Portal));Assert.That(game.TryInteract(),Is.True);Assert.That(game.Progress.chapter,Is.EqualTo(9));Assert.That(lab.Paused,Is.True);yield return null;
+            Assert.That(veil.GetValue(game),Is.False,"The observatory portal veil did not finish");
+            ResumeAt(9,4);yield return null;Move(game.Map.SafeSpawn(game.Map.Portal));
+            Assert.That(game.TryInteract(),Is.True,"The chapter 10 portal did not open the final choice");
+            Assert.That(game.Progress.chapter,Is.EqualTo(9));Assert.That(lab.Paused,Is.True);yield return null;
         }
 
         [UnityTest]public IEnumerator AudioPlaybackIsBoundedMutedAndStopsWhenAutomationReturnsToSilence()

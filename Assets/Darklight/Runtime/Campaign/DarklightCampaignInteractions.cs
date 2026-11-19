@@ -39,8 +39,15 @@ namespace Darklight
                 if(chapterCleared)Consider("portal","ATRAVESSAR PORTAL",Map.Portal,2.5f);
                 if(!Progress.relics[Progress.chapter])Consider("relic","RECOLHER MEMÓRIA",Map.Relic,2.3f);
                 if(NarrativeTarget(out var narrative))Consider(narrative.Id,narrative.Label,narrative.Point,2.7f);
+                if(FinalRitualReady)
+                {
+                    Consider(RitualClue,"LER A INSCRIÇÃO",RitualCluePoint,1.55f);
+                    for(int i=0;i<RitualSeals.Length;i++)
+                        Consider(RitualSealPrefix+i,"ATIVAR SELO: "+RitualSeals[i],RitualSealPoint(i),1.55f);
+                }
                 if(RegionAtmosphereTarget(out var environmental))Consider(environmental.Id,environmental.Label,environmental.Point,2.2f);
-                Consider("ally","FALAR: "+AllyName,Map.Ally,2.7f);
+                Vector2 allyPoint=Progress.chapter==DarklightCampaignRoute.NeroChapter&&chapterCleared?Map.Arenas[3]:Map.Ally;
+                Consider("ally","FALAR: "+AllyName,allyPoint,2.7f);
                 if(!encounterStarted)Consider("checkpoint","SALVAR E RECUPERAR VIDA",CheckpointPoint,2.3f);
             }
             ConsiderMultiverse(Consider);
@@ -98,6 +105,7 @@ namespace Darklight
                 int area=int.Parse(target.Id.Substring(7));Speak(new[]{"MEMÓRIA DO VÉU|"+Map.Art.areas[area].description});return;
             }
             if(InteractRegionAtmosphere(target.Id))return;
+            if(InteractFinalRitual(target.Id))return;
             if(InteractNarrative(target.Id))return;
             if(target.Id=="portal")
             {
@@ -133,7 +141,7 @@ namespace Darklight
                 else if(Progress.mp3Quest>=4){Progress.mp3Unlocked=true;Speak(new[]{"ÍCARO NOX|Aqui está. Escolha a frequência: Love regenera, Thrash concentra, Heavy fortalece.","FÁBIO|Vou usar o que me fortalece sem deixar de ser eu."});SaveCheckpoint();Sound(3);}
                 else Speak(new[]{"ÍCARO NOX|Ainda faltam "+(4-Progress.mp3Quest)+" componentes. Os Ecos desta rua carregam as peças."});return;
             }
-            if(Progress.chapter==0)Speak(new[]{"LYRA|Fábio, as rupturas tomaram Vespera. Siga os selos para abrir a passagem.","LYRA|O mapa revela os caminhos que você explora. Procure as memórias e volte aos checkpoints para recuperar vida.","LYRA|Golpes dourados aceitam parry. O anel vermelho exige esquiva. "+Objective});
+            if(Progress.chapter==0)Speak(new[]{"LADY|Fabius, encontrei inscrições ligando as rupturas aos selos de Vespera. Procure a pedra junto ao altar.","LADY|O mapa revela o que você explorou. Procure as memórias e volte ao checkpoint para recuperar vida.","LADY|Golpes dourados aceitam parry. O anel vermelho exige esquiva. "+Objective});
             else Speak(new[]{AllyName+"|"+(ExpandedChapter?MissionDescription+" "+Objective:"Siga os selos. "+Objective)});
         }
     }

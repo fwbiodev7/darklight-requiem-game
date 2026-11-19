@@ -1,5 +1,11 @@
-# DARKLIGHT: REQUIEM — GDD consolidado
-
+# DARKLIGHT: REQUIEM — GDD consolidado
+
+## Campanha oficial desde 19/11/2026
+
+Os dez mapas existentes compõem a campanha de Fabius. Lady investiga as rupturas ao lado dele desde a Rua das Cinzas. Matriarca Rubra é a primeira chefe, Nero é o segundo, e Lucius encerra a campanha em Normal e Arconte. A corrupção de Nero e sua purificação fazem parte do segundo encontro. O duelo abre a aliança posterior. As arenas dos antigos confrontos extras recebem desafios com inimigos comuns ou exploração. As decisões de rota, arte e compatibilidade estão no [checkpoint da campanha](../CAMPANHA-OFICIAL-20261119.md) e prevalecem sobre descrições históricas neste documento.
+
+
+
 Revisão de escopo: **26/10/2026**. O [contrato canônico atual](../ESCOPO-CANONICO-20261026.md) prevalece sobre descrições antigas: Fabius somente Réquiem, katana/Punhos da Ruína/moto, Normal/Ruptura/Eclipse Absoluto. Lucius tem somente Normal/Nexo Fenrir e aguarda o redesign de Fabius; O Encapuzado preserva a identidade oculta até Sangue do Abismo. Rock, Presas e formas substituídas permanecem como legado. Ver [cobertura e pendências reais](../PENDENCIAS-20261026.md) e [LDD vigente](LDD.md).
 
 A base de 10/10 contém seis capítulos com ampliações posteriores, famílias de inimigos/elites, chefes, RPG, menus, save e Dark Resonance. As descrições históricas abaixo não certificam o novo escopo implementado. Compilação, testes automatizados, abertura standalone, campanha humana e balanceamento são estados distintos. Fabius e HUD preservam as referências aprovadas.

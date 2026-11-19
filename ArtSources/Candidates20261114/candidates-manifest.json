@@ -1,0 +1,219 @@
+{
+  "sessionDate": "2026-11-14",
+  "status": "auditadas_substituidas_por_fontes_aprovadas_WalkRepair20261114",
+  "description": "Quatro folhas de sprites geradas pelo usuario na sessao de 14/11/2026 para preencher lacunas de locomocao e combate com Punhos e Serras nas formas Serafim e Ruptura. Fundo precisa ser recortado/isolado e quadros fatiados em celulas 256x256.",
+  "candidates": [
+    {
+      "file": "Candidate_SerafimFistsWalk_20261114.jpg",
+      "form": "Serafim",
+      "weapon": "Fists",
+      "action": "Walk",
+      "grid": "4 rows x 3 cols (12 frames, 256x256 per cell, total 768x1024)",
+      "background": "Grey mottled background (needs chroma/segmentation keying)",
+      "directions": [
+        {
+          "row": 0,
+          "direction": "E",
+          "frames": [
+            "00",
+            "01",
+            "02"
+          ]
+        },
+        {
+          "row": 1,
+          "direction": "NE",
+          "frames": [
+            "03",
+            "04",
+            "05"
+          ]
+        },
+        {
+          "row": 2,
+          "direction": "SE",
+          "frames": [
+            "06",
+            "07",
+            "08"
+          ]
+        },
+        {
+          "row": 3,
+          "direction": "W",
+          "frames": [
+            "09",
+            "10",
+            "11"
+          ]
+        }
+      ],
+      "purpose": "Resolve a caminhada da Serafim Carmesim com os Punhos da Ruina (socos/chutes), evitando que o personagem segure a katana ao andar desarmado.",
+      "review20261114": {
+        "status": "REPROVADA_PARA_INTEGRACAO",
+        "reason": "Fundo JPEG sem alpha e equipamento/recorte superados pelas novas folhas aprovadas.",
+        "sourceSha256": "2babdbafd0d4d6b956dc0d8beec9aa18ac64f40f6c3d184fd1830fdfaf6c4e69",
+        "integrated": false
+      }
+    },
+    {
+      "file": "Candidate_RupturaFistsWalk_20261114.png",
+      "form": "Ruptura",
+      "weapon": "Fists",
+      "action": "Walk",
+      "grid": "4 rows x 3 cols (12 frames, ~256x256 per cell, total 767x1024)",
+      "background": "Alpha transparent (70.37% transparent already)",
+      "directions": [
+        {
+          "row": 0,
+          "direction": "E",
+          "frames": [
+            "00",
+            "01",
+            "02"
+          ]
+        },
+        {
+          "row": 1,
+          "direction": "NE",
+          "frames": [
+            "03",
+            "04",
+            "05"
+          ]
+        },
+        {
+          "row": 2,
+          "direction": "SE",
+          "frames": [
+            "06",
+            "07",
+            "08"
+          ]
+        },
+        {
+          "row": 3,
+          "direction": "W",
+          "frames": [
+            "09",
+            "10",
+            "11"
+          ]
+        }
+      ],
+      "purpose": "Resolve as falhas historicas de teste da Ruptura (FabiusRupturaFistsWalkLateral, FabiusRupturaFistsWalkDiagS, FabiusRupturaFistsWalkDiagN).",
+      "review20261114": {
+        "status": "SUPERADA_NAO_INTEGRADA",
+        "reason": "Substituida por folhas novas de figuras completas, aprovadas nesta sessao, com as Manoplas/Grevas Abissais.",
+        "sourceSha256": "35fd2d40857e9cc6d20bc2cdb39fb4ada94cfbc7633c3d04062ff39b34741aa7",
+        "integrated": false
+      }
+    },
+    {
+      "file": "Candidate_SawsWalk_RupturaSerafim_20261114.jpg",
+      "form": "Ruptura / Serafim",
+      "weapon": "Saws",
+      "action": "Walk",
+      "grid": "4 rows x 3 cols (12 frames, 256x256 per cell, total 768x1024)",
+      "background": "Black background (needs black background removal/alpha isolation)",
+      "directions": [
+        {
+          "row": 0,
+          "direction": "E",
+          "frames": [
+            "00",
+            "01",
+            "02"
+          ]
+        },
+        {
+          "row": 1,
+          "direction": "SE",
+          "frames": [
+            "03",
+            "04",
+            "05"
+          ]
+        },
+        {
+          "row": 2,
+          "direction": "NE",
+          "frames": [
+            "06",
+            "07",
+            "08"
+          ]
+        },
+        {
+          "row": 3,
+          "direction": "W",
+          "frames": [
+            "09",
+            "10",
+            "11"
+          ]
+        }
+      ],
+      "purpose": "Resolve FabiusRupturaSawsWalkLateral e complementa a caminhada a pe com serras circulares acopladas aos bracos.",
+      "review20261114": {
+        "status": "SUPERADA_NAO_INTEGRADA",
+        "reason": "Sem asas para Serafim; substituida por caminhadas separadas por forma com as serras mecanicas da referencia fornecida.",
+        "sourceSha256": "0f34d17b9d43b5ea8bc8c0b2aa1226d955680d5359cf839e19b051f05c8bd4f4",
+        "integrated": false
+      }
+    },
+    {
+      "file": "Candidate_SerafimSawsAttackCross_20261114.jpg",
+      "form": "Serafim",
+      "weapon": "Saws",
+      "action": "MotoToSaws",
+      "grid": "4 rows x 3 cols (12 frames, 256x256 per cell, total 768x1024)",
+      "background": "White background (needs white background removal/alpha isolation)",
+      "directions": [
+        {
+          "row": 0,
+          "direction": "S",
+          "frames": [
+            "00",
+            "01",
+            "02"
+          ]
+        },
+        {
+          "row": 1,
+          "direction": "SW",
+          "frames": [
+            "03",
+            "04",
+            "05"
+          ]
+        },
+        {
+          "row": 2,
+          "direction": "W",
+          "frames": [
+            "06",
+            "07",
+            "08"
+          ]
+        },
+        {
+          "row": 3,
+          "direction": "NW",
+          "frames": [
+            "09",
+            "10",
+            "11"
+          ]
+        }
+      ],
+      "purpose": "Ataques adicionais com corte em cruz (X-slash) das motosserras para Serafim Carmesim.",
+      "review20261114": {
+        "status": "NAO_INTEGRADA",
+        "reason": "JPEG opaco, sem alpha. Ataques de Serras ja possuem cobertura no catalogo; preservar fonte extra sem ativar uma duplicata.",
+        "sourceSha256": "6f822ec138c08f8f85a168102bcc0deb22ae174e33351ed83ac9123fd63501b2",
+        "integrated": false
+      }
+    }
+  ]
+}

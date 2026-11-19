@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 1,
+  "image": "MatriarcaRubraCombat-staging-v1.png",
+  "imageSha256": "7e7e83d1fbdfbc114b11394734b487cad0033591383708ac9c9d3d9194f03c74",
+  "nativeSize": [
+    1536,
+    1216
+  ],
+  "sourceNativeSize": [
+    1448,
+    1086
+  ],
+  "pixelsPerUnit": 169.576346273751,
+  "worldVisualScale": 1.325,
+  "targetBodyWorldHeight": 2.74257,
+  "calibrationBodyPixels": 351,
+  "status": "visual-reviewed-candidate",
+  "imported": false,
+  "runtimeVerified": false,
+  "userApproved": false,
+  "originalIdlePreserved": true,
+  "integrationNote": "Use approved OfficialCast idle as base[0]; generated BaseIdle is inspection/reference only. All new frames use localScale 1.325.",
+  "references": [
+    {
+      "path": "Assets/Darklight/Resources/Darklight/OfficialCast/MatriarcaRubra.png",
+      "sha256": "a7ecda7321a18afcdffca7eb14d98153524dfeab55178266e9304d75a175250d"
+    },
+    {
+      "path": "Docs/Darklight/References/CampanhaOficial20261119/Matriarca-Rubra.png",
+      "sha256": "74deb837579871e04b08ea654416a79a7a63170928e852a8f43096fc5fd50a26"
+    }
+  ],
+  "source": {
+    "image": "MatriarcaRubraCombat-source-v1.png",
+    "sha256": "48fe3c450c8d0275a8ee2926c55ddd5f51f35189656b51a4edb277c4a2d77952",
+    "generationCalls": 1,
+    "correctionCalls": 0,
+    "resampling": "none",
+    "anatomicalAssembly": false
+  },
+  "frames": [
+    {
+      "id": "MatriarcaRubraCombat_BaseIdle_S_00",
+      "plannedSpriteName": "MatriarcaRubraCombat_BaseIdle_S_00",
+      "rect": [
+        0,
+        0,
+        384,
+        608
+      ],
+      "pivot": [
+        0.5,
+        0.14473684210526316
+      ],
+      "durationMs": 300,
+      "action": "idle",
+      "direction": "S-front-slight-angle",
+      "skin": "MatriarcaRubra",
+      "form": "Normal",
+      "sourceRect": [
+        0,
+        0,
+        362,
+        543
+      ],
+      "integrate": false
+    },
+    {
+      "id": "MatriarcaRubraCombat_BaseStepA_S_01",
+      "plannedSpriteName": "MatriarcaRubraCombat_BaseStepA_S_01",
+      "rect": [
+        384,
+        0,
+        384,
+        608
+      ],
+      "pivot": [
+        0.5,
+        0.14473684210526316
+      ],
+      "durationMs": 180,
+      "action": "stepA",
+      "direction": "S-front-slight-angle",
+      "skin": "MatriarcaRubra",
+      "form": "Normal",
+      "sourceRect": [
+        362,
+        0,
+        362,
+        543
+      ],
+      "integrate": true
+    },
+    {
+      "id": "MatriarcaRubraCombat_BaseStepB_S_02",
+      "plannedSpriteName": "MatriarcaRubraCombat_BaseStepB_S_02",
+      "rect": [
+        768,
+        0,
+        384,
+        608
+      ],
+      "pivot": [
+        0.5,
+        0.14473684210526316
+      ],
+      "durationMs": 180,
+      "action": "stepB",
+      "direction": "S-front-slight-angle",
+      "skin": "MatriarcaRubra",
+      "form": "Normal",
+      "sourceRect": [
+        724,
+        0,
+        362,
+        543
+      ],
+      "integrate": true
+    },
+    {
+      "id": "MatriarcaRubraCombat_BaseGuard_S_03",
+      "plannedSpriteName": "MatriarcaRubraCombat_BaseGuard_S_03",
+      "rect": [
+        1152,
+        0,
+        384,
+        608
+      ],
+      "pivot": [
+        0.5,
+        0.14473684210526316
+      ],
+      "durationMs": 300,
+      "action": "guard",
+      "direction": "S-front-slight-angle",
+      "skin": "MatriarcaRubra",
+      "form": "Normal",
+      "sourceRect": [
+        1086,
+        0,
+        362,
+        543
+      ],
+      "integrate": true
+    },
+    {
+      "id": "MatriarcaRubraCombat_AttackPreparation_S_00",
+      "plannedSpriteName": "MatriarcaRubraCombat_AttackPreparation_S_00",
+      "rect": [
+        0,
+        608,
+        384,
+        608
+      ],
+      "pivot": [
+        0.5,
+        0.14473684210526316
+      ],
+      "durationMs": 600,
+      "action": "preparation",
+      "direction": "S-front-slight-angle",
+      "skin": "MatriarcaRubra",
+      "form": "Normal",
+      "sourceRect": [
+        0,
+        543,
+        362,
+        543
+      ],
+      "integrate": true
+    },
+    {
+      "id": "MatriarcaRubraCombat_AttackContact_S_01",
+      "plannedSpriteName": "MatriarcaRubraCombat_AttackContact_S_01",
+      "rect": [
+        384,
+        608,
+        384,
+        608
+      ],
+      "pivot": [
+        0.5,
+        0.14473684210526316
+      ],
+      "durationMs": 125,
+      "action": "contact",
+      "direction": "S-front-slight-angle",
+      "skin": "MatriarcaRubra",
+      "form": "Normal",
+      "sourceRect": [
+        362,
+        543,
+        362,
+        543
+      ],
+      "integrate": true
+    },
+    {
+      "id": "MatriarcaRubraCombat_AttackFollowthrough_S_02",
+      "plannedSpriteName": "MatriarcaRubraCombat_AttackFollowthrough_S_02",
+      "rect": [
+        768,
+        608,
+        384,
+        608
+      ],
+      "pivot": [
+        0.5,
+        0.14473684210526316
+      ],
+      "durationMs": 125,
+      "action": "followthrough",
+      "direction": "S-front-slight-angle",
+      "skin": "MatriarcaRubra",
+      "form": "Normal",
+      "sourceRect": [
+        724,
+        543,
+        362,
+        543
+      ],
+      "integrate": true
+    },
+    {
+      "id": "MatriarcaRubraCombat_AttackRecovery_S_03",
+      "plannedSpriteName": "MatriarcaRubraCombat_AttackRecovery_S_03",
+      "rect": [
+        1152,
+        608,
+        384,
+        608
+      ],
+      "pivot": [
+        0.5,
+        0.14473684210526316
+      ],
+      "durationMs": 220,
+      "action": "recovery",
+      "direction": "S-front-slight-angle",
+      "skin": "MatriarcaRubra",
+      "form": "Normal",
+      "sourceRect": [
+        1086,
+        543,
+        362,
+        543
+      ],
+      "integrate": true
+    }
+  ],
+  "clips": [
+    {
+      "name": "base_inspection",
+      "frames": [
+        "MatriarcaRubraCombat_BaseIdle_S_00",
+        "MatriarcaRubraCombat_BaseStepA_S_01",
+        "MatriarcaRubraCombat_BaseStepB_S_02",
+        "MatriarcaRubraCombat_BaseGuard_S_03"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "walk",
+      "frames": [
+        "MatriarcaRubraCombat_BaseStepA_S_01",
+        "MatriarcaRubraCombat_BaseStepB_S_02"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "attack",
+      "frames": [
+        "MatriarcaRubraCombat_AttackPreparation_S_00",
+        "MatriarcaRubraCombat_AttackContact_S_01",
+        "MatriarcaRubraCombat_AttackFollowthrough_S_02",
+        "MatriarcaRubraCombat_AttackRecovery_S_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "walk",
+    "attack"
+  ],
+  "quality": {
+    "alphaThreshold": 8,
+    "requireTransparency": true,
+    "maxHeightRatio": 1.3
+  },
+  "timingEvidence": {
+    "consumer": "Assets/Darklight/Runtime/Campaign/DarklightEnemyAttacks.cs",
+    "windupMs": 600,
+    "windupNote": "multiplied by actual difficulty windup; follow-up can reduce preparation",
+    "contactMs": 250,
+    "contactFrameMs": [
+      125,
+      125
+    ],
+    "recoveryMs": 220,
+    "locomotionNote": "Show(1/2) alternates by traveled distance, .28 world units per step for Matriarch; preview 180ms is illustrative."
+  },
+  "colorCritiques": [
+    "Silver/lavender hair, warm pale skin, red eyes, ruby dress and gold trim match the approved material identities.",
+    "No large slash/ground VFX; blade and halo retain intrinsic luminous red.",
+    "Source has 256 alpha values and faint disconnected red emission in gutters; all pixels preserved without thresholding.",
+    "Generated small-scale detail is more compact than the large idle; game-scale continuity still requires coordinator inspection in engine."
+  ],
+  "pending": [
+    "Unity import and runtime visual review",
+    "Confirm intro idle-to-combat transition at actual camera size",
+    "Consumer has automatic flipX; opposite-view asymmetry remains existing runtime limitation, not separately authored coverage."
+  ]
+}

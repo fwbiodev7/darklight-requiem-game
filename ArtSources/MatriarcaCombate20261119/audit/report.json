@@ -1,0 +1,185 @@
+{
+  "ok": true,
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\MatriarcaCombate20261119\\MatriarcaRubraCombat-staging-v1.png",
+  "sourceSha256": "7e7e83d1fbdfbc114b11394734b487cad0033591383708ac9c9d3d9194f03c74",
+  "errors": [],
+  "warnings": [
+    "More than 10% of visible samples have partial alpha; inspect halos/native pixel rendering",
+    "Unity PPU missing/differs from manifest",
+    "Unity text inspection only: import, platform overrides and runtime not verified"
+  ],
+  "frames": [
+    {
+      "id": "MatriarcaRubraCombat_BaseIdle_S_00",
+      "rect": [
+        0,
+        0,
+        384,
+        608
+      ],
+      "bbox": [
+        45,
+        69,
+        335,
+        521
+      ],
+      "visiblePixels": 77977,
+      "colors": 71260,
+      "partialAlphaPixels": 77827,
+      "pixelSha256": "57a318d6bb4d41d34060fc8d7dd2f9db9925008a097bc200100ba617af11edbc"
+    },
+    {
+      "id": "MatriarcaRubraCombat_BaseStepA_S_01",
+      "rect": [
+        384,
+        0,
+        384,
+        608
+      ],
+      "bbox": [
+        32,
+        59,
+        331,
+        521
+      ],
+      "visiblePixels": 81180,
+      "colors": 73586,
+      "partialAlphaPixels": 81054,
+      "pixelSha256": "a79039e6d36118efe502c704e243bffb156dd7601d5b91b70ba2f044a5ea9924"
+    },
+    {
+      "id": "MatriarcaRubraCombat_BaseStepB_S_02",
+      "rect": [
+        768,
+        0,
+        384,
+        608
+      ],
+      "bbox": [
+        28,
+        58,
+        327,
+        520
+      ],
+      "visiblePixels": 79795,
+      "colors": 72756,
+      "partialAlphaPixels": 79685,
+      "pixelSha256": "779666289902823e238f900e4fae01dc30362e934031c933da0ccb2a841005f4"
+    },
+    {
+      "id": "MatriarcaRubraCombat_BaseGuard_S_03",
+      "rect": [
+        1152,
+        0,
+        384,
+        608
+      ],
+      "bbox": [
+        36,
+        64,
+        320,
+        521
+      ],
+      "visiblePixels": 80772,
+      "colors": 71955,
+      "partialAlphaPixels": 80644,
+      "pixelSha256": "2644d8de9d443950dfd780732462843872bb4e0504a40bceadeabdde75ee3f76"
+    },
+    {
+      "id": "MatriarcaRubraCombat_AttackPreparation_S_00",
+      "rect": [
+        0,
+        608,
+        384,
+        608
+      ],
+      "bbox": [
+        39,
+        49,
+        338,
+        523
+      ],
+      "visiblePixels": 86906,
+      "colors": 77406,
+      "partialAlphaPixels": 86794,
+      "pixelSha256": "921984c2cdc5d83cd86785e2fd265c76f7e1f8a812404de56185b1d39ca941fa"
+    },
+    {
+      "id": "MatriarcaRubraCombat_AttackContact_S_01",
+      "rect": [
+        384,
+        608,
+        384,
+        608
+      ],
+      "bbox": [
+        35,
+        50,
+        358,
+        520
+      ],
+      "visiblePixels": 88953,
+      "colors": 78642,
+      "partialAlphaPixels": 88846,
+      "pixelSha256": "aa5cdf00d73bfb2edaf883157d7b5746af5d02f71c79e11d314af01e83c957fa"
+    },
+    {
+      "id": "MatriarcaRubraCombat_AttackFollowthrough_S_02",
+      "rect": [
+        768,
+        608,
+        384,
+        608
+      ],
+      "bbox": [
+        38,
+        48,
+        355,
+        520
+      ],
+      "visiblePixels": 86827,
+      "colors": 77520,
+      "partialAlphaPixels": 86734,
+      "pixelSha256": "a4ce1d027920933d88369382ef10862d5ebac7bff9bb7a44b8b8e91febecf666"
+    },
+    {
+      "id": "MatriarcaRubraCombat_AttackRecovery_S_03",
+      "rect": [
+        1152,
+        608,
+        384,
+        608
+      ],
+      "bbox": [
+        41,
+        58,
+        336,
+        520
+      ],
+      "visiblePixels": 81834,
+      "colors": 74236,
+      "partialAlphaPixels": 81706,
+      "pixelSha256": "a9e0b3f6bafe3a9b86c8bd342469b36eb5be343ac8a76b7efa1bdd806bf732e1"
+    }
+  ],
+  "clips": [
+    {
+      "name": "base_inspection",
+      "frames": 4,
+      "distinctPoses": 4
+    },
+    {
+      "name": "walk",
+      "frames": 2,
+      "distinctPoses": 2
+    },
+    {
+      "name": "attack",
+      "frames": 4,
+      "distinctPoses": 4
+    }
+  ],
+  "overlaps": [],
+  "visualApproval": false,
+  "runtimeVerified": false
+}

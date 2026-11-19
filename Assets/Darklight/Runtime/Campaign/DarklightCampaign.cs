@@ -218,8 +218,8 @@ namespace Darklight
             else {encounter++;Progress.checkpoint=encounter;Progress.missionWave=0;health.Heal(health.MaxHealth*.18f);Energy=Mathf.Min(100,Energy+15);Objective=Goal();SaveCheckpoint();Notice("SELO LIBERTO - CHECKPOINT SALVO");}
         }
         void Interact(){if(!TryInteract())Notice("APROXIME-SE DE UM NPC, MEMÓRIA OU CHECKPOINT");}
-        public bool RequestAttack(DarklightEnemy enemy)
-        {return TechnicalAttackPermit(enemy);}
+        public bool RequestAttack(DarklightEnemy enemy, bool followUp = false)
+        {return TechnicalAttackPermit(enemy, followUp);}
         internal void FinishLuciusDuel(DarklightEnemy enemy)
         {
             if(lab?.WorldCamera!=null)lab.WorldCamera.GetComponent<DarklightLabCamera>().duelOpponent=null;
@@ -337,7 +337,7 @@ namespace Darklight
                 Vector2 anchor=Progress.checkpoint==4?Map.Arenas[3]:Map.Checkpoints[Mathf.Clamp(Progress.checkpoint,0,3)];
                 Progress.RecordReturnPoint(Progress.chapter,Progress.checkpoint,Map.SafeSpawn(anchor));
             }
-            if(DarklightAutomation.Silent||ExploringNewRegion||PlaytestSession)return !ExploringNewRegion;
+            if((DarklightAutomation.Silent&&!DarklightProgress.HasIsolatedTestStorage)||ExploringNewRegion||PlaytestSession)return !ExploringNewRegion;
             Resonance.Store(Progress);Blood.Store(Progress);try{Progress.Save();return true;}catch(Exception e){Notice("NAO FOI POSSIVEL SALVAR");Debug.LogError(e);return false;}
         }
         void Speak(string[] lines,Action done=null){dialogue=PrepareDialogueLines(lines);dialogueIndex=0;dialogueDone=done;Open("Dialogue");}

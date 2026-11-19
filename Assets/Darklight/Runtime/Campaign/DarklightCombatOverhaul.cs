@@ -14,13 +14,13 @@ namespace Darklight
         public string DifficultyName=>new[]{"NORMAL","DIFICIL","EXTREMA"}[Difficulty];
         void InitializeTechnicalCombat()
         {combatProfiles=new DarklightCombatProfiles();weaponDefinitions=combatProfiles.Create(weaponDefinitions);}
-        bool TechnicalAttackPermit(DarklightEnemy enemy)
+        bool TechnicalAttackPermit(DarklightEnemy enemy, bool followUp)
         {
             var view=lab.WorldCamera.WorldToViewportPoint(enemy.transform.position);
             bool visible=view.z>0&&view.x>.03f&&view.x<.97f&&view.y>.04f&&view.y<.96f;
             if(enemy.IsLucius)return visible;
-            bool ranged=enemy.kind==RequiemEnemyKind.Shooter||enemy.kind==RequiemEnemyKind.Spectral||enemy.kind==RequiemEnemyKind.Cantor||enemy.kind==RequiemEnemyKind.Lucien;
-            return threats.Request(enemy,lab.Player.Model.Clock,Difficulty,ranged,visible);
+            bool ranged=enemy.NextEnemyThreat==DarklightThreat.Projectile;
+            return threats.Request(enemy,lab.Player.Model.Clock,Difficulty,ranged,visible,followUp);
         }
         void BuildCombatOptions()
         {

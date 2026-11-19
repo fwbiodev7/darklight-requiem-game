@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "image": "LuciusArconteDodgeCanonSSE20261119V1.png",
+  "imageSha256": "524488dcab58704b8cb3328229b728f297303fea91c85aad03c14d20e42dcf07",
+  "sourcePath": "ArtSources/ArconteDodgeCanonPilot20261119/source.png",
+  "sourceSha256": "524488dcab58704b8cb3328229b728f297303fea91c85aad03c14d20e42dcf07",
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 212.873623914,
+  "frames": [
+    {
+      "id": "Redesign_LuciusArconteDodgeCanonSSE20261119V1_00",
+      "action": "Dodge",
+      "direction": "S",
+      "index": 0,
+      "phase": "preparation",
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "pivot": [
+        0.55859375,
+        0.18359375
+      ],
+      "bodyAnchorPx": [
+        286,
+        418
+      ],
+      "durationMs": 60
+    },
+    {
+      "id": "Redesign_LuciusArconteDodgeCanonSSE20261119V1_01",
+      "action": "Dodge",
+      "direction": "S",
+      "index": 1,
+      "phase": "step",
+      "rect": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "pivot": [
+        0.544921875,
+        0.15625
+      ],
+      "bodyAnchorPx": [
+        791,
+        432
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_LuciusArconteDodgeCanonSSE20261119V1_02",
+      "action": "Dodge",
+      "direction": "S",
+      "index": 2,
+      "phase": "recovery",
+      "rect": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "pivot": [
+        0.53515625,
+        0.18359375
+      ],
+      "bodyAnchorPx": [
+        1298,
+        418
+      ],
+      "durationMs": 70
+    },
+    {
+      "id": "Redesign_LuciusArconteDodgeCanonSSE20261119V1_03",
+      "action": "Dodge",
+      "direction": "SE",
+      "index": 0,
+      "phase": "preparation",
+      "rect": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "pivot": [
+        0.5703125,
+        0.150390625
+      ],
+      "bodyAnchorPx": [
+        292,
+        947
+      ],
+      "durationMs": 60
+    },
+    {
+      "id": "Redesign_LuciusArconteDodgeCanonSSE20261119V1_04",
+      "action": "Dodge",
+      "direction": "SE",
+      "index": 1,
+      "phase": "step",
+      "rect": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "pivot": [
+        0.552734375,
+        0.125
+      ],
+      "bodyAnchorPx": [
+        795,
+        960
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_LuciusArconteDodgeCanonSSE20261119V1_05",
+      "action": "Dodge",
+      "direction": "SE",
+      "index": 2,
+      "phase": "recovery",
+      "rect": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "pivot": [
+        0.544921875,
+        0.1484375
+      ],
+      "bodyAnchorPx": [
+        1303,
+        948
+      ],
+      "durationMs": 70
+    }
+  ],
+  "clips": [
+    {
+      "name": "Dodge_S",
+      "frames": [
+        "Redesign_LuciusArconteDodgeCanonSSE20261119V1_00",
+        "Redesign_LuciusArconteDodgeCanonSSE20261119V1_01",
+        "Redesign_LuciusArconteDodgeCanonSSE20261119V1_02"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "Dodge_SE",
+      "frames": [
+        "Redesign_LuciusArconteDodgeCanonSSE20261119V1_03",
+        "Redesign_LuciusArconteDodgeCanonSSE20261119V1_04",
+        "Redesign_LuciusArconteDodgeCanonSSE20261119V1_05"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "status": "visual-reviewed",
+  "wholeFigures": true,
+  "quality": {
+    "alphaThreshold": 15
+  },
+  "calibration": {
+    "neutralBodyHeightPx": 406,
+    "neutralBodyMeasurements": [
+      403,
+      409
+    ],
+    "worldHeight": 1.9072348773673038
+  },
+  "unityImported": false,
+  "runtimeVerified": false
+}

@@ -4,6 +4,8 @@ namespace Darklight
     public sealed partial class DarklightEnemy
     {
         float guardUntil,guardReady,dodgeReadAt=-1,tacticalRecovery,posture,postureIdle;
+        int enemyReadSerial;
+        CombatState enemyReadState;
         float luciusLaunchWindowUntil;
         int chainRemaining;
         public readonly DarklightAirBody AirBody=new();
@@ -13,7 +15,7 @@ namespace Darklight
         public bool Guarding=>clock<guardUntil;
         public bool LuciusLaunchExposed=>IsLucius&&clock<luciusLaunchWindowUntil;
         void OpenLuciusLaunchWindow(float duration)
-        {if(IsLucius)luciusLaunchWindowUntil=clock+Mathf.Clamp(duration,0,.65f);}
+        {if(IsLucius&&!Airborne)luciusLaunchWindowUntil=Mathf.Max(luciusLaunchWindowUntil,clock+Mathf.Clamp(duration,0,.65f));}
         void TickAerial(float dt)
         {
             bool landed=AirBody.Tick(dt);
@@ -23,35 +25,78 @@ namespace Darklight
             if(!IsLucius&&art!=null&&art.transform!=transform)art.transform.localPosition=Vector3.zero;
             if(AirBody.SlamPending)DarklightCombatFX.MotorcycleImpact(transform.position,Vector2.down,DarklightMotorcycleImpact.AerialGround);
         }
-        bool TickTactics(DarklightCampaign game,float dt,Vector2 delta,float distance,float range,float speed,bool ranged)
+        void TickPosture(float dt)
         {
-            postureIdle+=dt;if(postureIdle>1.5f)posture=Mathf.Max(0,posture-dt*.7f);
-            if(game.Training&&game.TrainingPassive){body.linearVelocity=Vector2.zero;Show(0);return true;}
+            postureIdle+=dt;
+            if(postureIdle>1.5f)posture=Mathf.Max(0,posture-dt*.7f);
+        }
+        bool TickTactics(DarklightCampaign game, float dt, Vector2 delta, float distance, float range, float speed, bool ranged, bool sight)
+        {
+            TickPosture(dt);
+            if(game.Training&&game.TrainingPassive)
+            {
+                if(HoldsGroundAttack)timer=.35f;
+                StopEnemyAttack();ResetEnemyStride();art.color=Color.white;Show(0);return true;
+            }
             if(Airborne){body.linearVelocity=Vector2.zero;warning?.Hide();ShowAttack(0);return true;}
             if(state!=0||stagger>0)return false;
             var profile=game.DifficultyProfile;
-            if(clock<guardUntil){body.linearVelocity=Vector2.zero;Show(0);art.color=new Color(.7f,.85f,1);return true;}
+            if(Guarding){PresentEnemyGuard();return true;}
             var model=DarklightCombatLab.Instance.Player.Model;
-            bool threatened=(model.State==CombatState.Charging||model.State==CombatState.Attack)&&distance<(model.Attack?.range??2)+.8f;
-            if(!threatened)dodgeReadAt=-1;else if(dodgeReadAt<0)dodgeReadAt=clock+profile.reaction;
+            var attack=model.State==CombatState.Charging?model.Loadout?.charged??model.Loadout?.heavy:model.Attack;
+            bool startupOrContact=model.State==CombatState.Charging||
+                (model.State==CombatState.Attack&&attack!=null&&model.StateTime<attack.startup+attack.active);
+            bool threatened=sight&&startupOrContact&&attack!=null&&distance<attack.range+.65f&&
+                Vector2.Angle(model.Facing,-delta)<=85f;
+            if(!threatened)dodgeReadAt=-1;
+            else if(dodgeReadAt<0||enemyReadSerial!=model.AttackSerial||enemyReadState!=model.State)
+            {
+                enemyReadSerial=model.AttackSerial;enemyReadState=model.State;
+                dodgeReadAt=clock+profile.reaction;
+            }
+            Vector2 side = new Vector2(-delta.y, delta.x).normalized;
             if(threatened&&clock>=dodgeReadAt&&clock>=guardReady)
             {
                 bool defender=kind==RequiemEnemyKind.Armored||kind==RequiemEnemyKind.Sentinel||Boss;
-                if(defender){guardUntil=clock+.3f;guardReady=clock+(game.Difficulty>0?1.7f:2.6f);timer=Mathf.Max(timer,.25f);return true;}
-                if(game.Difficulty>0&&(kind==RequiemEnemyKind.Hunter||kind==RequiemEnemyKind.Spectral||elite))
-                {var side=(Vector2)(Quaternion.Euler(0,0,serial%2==0?90:-90)*delta.normalized);DarklightNavigation.SafeStep(body,side*.65f);guardReady=clock+1.8f;timer=.2f;serial++;return true;}
+                if(defender)
+                {
+                    SetEnemyFacing(delta);
+                    guardUntil=clock+(kind==RequiemEnemyKind.Armored?.36f:.30f);
+                    guardReady=clock+(game.Difficulty>0?1.7f:2.6f);
+                    timer=Mathf.Max(timer,.25f);
+                    PresentEnemyGuard();
+                    return true;
+                }
+                if(game.Difficulty>0&&(kind==RequiemEnemyKind.Hunter||kind==RequiemEnemyKind.Spectral||elite)&&
+                    TryEnemyEvasiveStep(side*(serial%2==0?.65f:-.65f)))
+                {
+                    guardReady=clock+1.8f;timer=.2f;serial++;
+                    body.linearVelocity=Vector2.zero;ResetEnemyStride();
+                    return true;
+                }
+            }
+            if(kind==RequiemEnemyKind.Spectral&&serial>0&&serial%3==0&&timer<=0&&sight&&TryEnemyEvasiveStep(side*1.6f))
+            {
+                timer=.5f;serial++;body.linearVelocity=Vector2.zero;ResetEnemyStride();
+                return true;
             }
             // A role-based sidestep prevents every pursuer from forming the same queue.
-            if(!ranged&&distance>range*.9f&&distance<6&&timer>.18f&&clock>tacticalRecovery)
+            if(sight&&!ranged&&kind!=RequiemEnemyKind.Armored&&distance>range*1.05f&&distance<6&&timer>.18f&&clock>tacticalRecovery)
             {
-                float sideSign=(GetEntityId().GetHashCode()&1)==0?1:-1;
-                var flank=(delta.normalized+(Vector2)(Quaternion.Euler(0,0,90)*delta.normalized)*sideSign*profile.flank).normalized;
-                var desired=flank*speed;
-                body.linearVelocity=DarklightNavigation.SlidingVelocity(body,desired,Time.fixedDeltaTime);
-                facing=delta.normalized;Show(1+(int)(clock*12)%2);
-                if(distance>range*1.05f)return true;
+                float sideSign=(GetEntityId().GetHashCode()&1)==0?1f:-1f;
+                Vector2 flank=(delta.normalized+side*sideSign*profile.flank).normalized;
+                body.linearVelocity=DarklightNavigation.SlidingVelocity(body,flank*speed,Time.fixedDeltaTime);
+                SetEnemyFacing(delta);SetEnemyTint(Color.white);PresentEnemyLocomotion();
+                return true;
             }
             return false;
+        }
+        void PresentEnemyGuard()
+        {
+            body.linearVelocity=Vector2.zero;
+            ResetEnemyStride();
+            if(kind!=RequiemEnemyKind.Armored||!ShowEnemyPilot("ArmoredGuard20261119"))Show(0);
+            SetEnemyTint(new Color(.7f,.85f,1));
         }
         public bool TryGuardHit(Vector2 force)
         {
@@ -62,16 +107,24 @@ namespace Darklight
             if(Vector2.Angle(facing,toward)>75)return false;
             bool breaker=model.Attack.kind==StrikeKind.Charged||model.Attack.postureDamage*(game.AbyssRider?.Posture??1)>=3;
             if(breaker){guardUntil=0;posture=0;stagger=Mathf.Max(stagger,.65f);state=0;timer=.8f;OpenLuciusLaunchWindow(.55f);return false;}
-            posture+=model.Attack.postureDamage*(game.AbyssRider?.Posture??1);
+            postureIdle=0;posture+=model.Attack.postureDamage*(game.AbyssRider?.Posture??1);
             if(posture>=3){guardUntil=0;stagger=.5f;state=0;posture=0;timer=.65f;OpenLuciusLaunchWindow(.5f);}
             DarklightCombatFX.Impact(transform.position,false);return true;
         }
         public void TechnicalImpact(AttackDefinition attack,int form)
         {
             postureIdle=0;posture+=attack.postureDamage*(form==1?1.55f:form>=2?1.25f:1)*(DarklightCampaign.Instance?.AbyssRider?.Posture??1);
-            float threshold=Boss?8:kind==RequiemEnemyKind.Armored?4.5f:3;
+            bool heavyBoss=Boss&&!IsLucius;
+            float threshold=heavyBoss?8:kind==RequiemEnemyKind.Armored?4.5f:3;
             if(posture>=threshold&&clock>=tacticalRecovery)
-            {posture=0;stagger=Boss?.28f:.65f;tacticalRecovery=clock+(Boss?2.2f:1);state=0;timer=.65f;guardUntil=0;OpenLuciusLaunchWindow(.55f);}
+            {
+                posture=0;
+                float breakDuration=heavyBoss?.28f:.65f;
+                stagger=IsLucius?Mathf.Max(stagger,breakDuration):breakDuration;
+                tacticalRecovery=clock+(heavyBoss?2.2f:1);
+                state=0;timer=.65f;guardUntil=0;
+                OpenLuciusLaunchWindow(.55f);
+            }
             // Air reactions are applied once per accepted contact by the strike resolver.
             if(attack.finisher&&attack.airReaction!=DarklightAirReaction.Slam&&!Airborne&&!Boss&&Vulnerable&&Health.HealthPercent<=.12f)
             {DarklightCampaign.Instance?.TechnicalFinisher(transform.position);Health.TakeDamage(Health.CurrentHealth);DarklightCombatFX.Impact(transform.position,true);}
@@ -81,11 +134,16 @@ namespace Darklight
             if(Health.IsDead||!AcceptDamage)return false;
             // Lucius yields only to an earned posture/parry opening. Once in
             // flight, the shared juggle cap and landing immunity own recovery.
-            bool resistant=(Boss||IsLucius||kind==RequiemEnemyKind.Armored)&&
+            bool resistant=(Boss||kind==RequiemEnemyKind.Armored)&&
                 !(IsLucius&&(LuciusLaunchExposed||Airborne));
             bool accepted=AirBody.React(reaction,attack.launchSpeed,resistant);
             if(accepted)
             {
+                if(IsLucius&&reaction==DarklightAirReaction.Launch)
+                {
+                    luciusLaunchWindowUntil=0;
+                    CombatModel?.Hurt(false,.3f);
+                }
                 state=0;timer=.6f;guardUntil=0;warning?.Hide();body.linearVelocity=Vector2.zero;
                 if(reaction==DarklightAirReaction.Throw)DarklightNavigation.SafeStep(body,(DarklightCombatLab.Instance?.Player.Model.Facing??Vector2.down)*1.8f,.3f);
             }
@@ -100,16 +158,17 @@ namespace Darklight
         }
         void BeginTacticalSequence(DarklightCampaign game)
         {chainRemaining=game.DifficultyProfile.comboLength-1;if(elite)chainRemaining++;if(Boss&&phaseTwo)chainRemaining++;}
-        bool ContinueTacticalSequence(DarklightCampaign game)
+        bool ContinueTacticalSequence(DarklightCampaign game, DarklightCombatLab lab)
         {
             if(chainRemaining<=0||Health.IsDead||stagger>0)return false;
-            var player=DarklightCombatLab.Instance.Player;
-            if(Vector2.Distance(body.position,player.transform.position)>7)return false;
-            var viewport=DarklightCombatLab.Instance.WorldCamera.WorldToViewportPoint(transform.position);
-            if(viewport.x<.02f||viewport.x>.98f||viewport.y<.02f||viewport.y>.98f)return false;
-            chainRemaining--;state=1;timer=windup=Mathf.Max(.32f,.48f*game.DifficultyProfile.windup);
-            locked=((Vector2)player.transform.position-body.position).normalized;dash=Vector2.zero;
-            PrepareExpandedAttack();game.EnemyAudioWarning(this);return true;
+            Vector2 playerPosition=lab.Player.transform.position;
+            Vector2 delta=playerPosition-body.position;
+            var threat=NextEnemyThreat;
+            float range=EnemyAttackRange(threat);
+            if(!CanPrepareEnemyAttack(playerPosition,delta,range)||!game.RequestAttack(this,true))return false;
+            chainRemaining--;
+            StartEnemyAttack(game,delta,threat,range,true);
+            return true;
         }
     }
 }

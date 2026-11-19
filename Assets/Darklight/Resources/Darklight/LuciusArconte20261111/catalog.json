@@ -335,106 +335,108 @@
       ]
     },
     {
-      "id": "LuciusArconteAttacksV1_SwordHorizontal_S",
+      "imageSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
+      "sourceSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusArconte20261111/LuciusArconteAttacksV1.png",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "nativeSize": [
+        1448,
+        1086
+      ],
+      "pixelsPerUnit": 156.2471427,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusArconteCutsRecovered20261119_SwordHorizontal_S",
       "action": "Attack",
-      "attackKey": "SwordHorizontal",
       "direction": 0,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteAttacksV1",
-      "imageSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourceSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteAttacksV1-source.png",
-      "nativeSize": [
-        1448,
-        1086
-      ],
-      "pixelsPerUnit": 183.511745,
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteCutsRecovered20261119",
       "spriteNames": [
-        "Redesign_LuciusArconteAttacksV1_00",
-        "Redesign_LuciusArconteAttacksV1_01",
-        "Redesign_LuciusArconteAttacksV1_02"
+        "Redesign_LuciusArconteCutsRecovered20261119_00",
+        "Redesign_LuciusArconteCutsRecovered20261119_01",
+        "Redesign_LuciusArconteCutsRecovered20261119_02"
       ],
       "durationMs": [
         110,
         100,
         180
       ],
-      "startupFrames": 1,
-      "activeFrames": 1,
       "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed",
-      "sourceSize": [
-        1448,
-        1086
-      ]
+      "attackKey": "SwordHorizontal",
+      "startupFrames": 1,
+      "activeFrames": 1
     },
     {
-      "id": "LuciusArconteAttacksV1_SwordHorizontal_SW",
+      "imageSha256": "be84ed27eacc31f08007acc67dc62ac3bf9e2a1f1a854e65f0cc5d95af0b9fee",
+      "sourcePath": "ArtSources/LuciusArconteCombat20261119/LuciusArconteHorizontalSW_NE20261119-source.png",
+      "sourceSha256": "be84ed27eacc31f08007acc67dc62ac3bf9e2a1f1a854e65f0cc5d95af0b9fee",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "pixelsPerUnit": 167.520007,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusArconteHorizontalSW_NE20261119_SwordHorizontal_SW",
       "action": "Attack",
       "attackKey": "SwordHorizontal",
+      "startupFrames": 2,
+      "activeFrames": 1,
       "direction": 1,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteAttacksV1",
-      "imageSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourceSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteAttacksV1-source.png",
-      "nativeSize": [
-        1448,
-        1086
-      ],
-      "pixelsPerUnit": 183.511745,
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteHorizontalSW_NE20261119",
       "spriteNames": [
-        "Redesign_LuciusArconteAttacksV1_00",
-        "Redesign_LuciusArconteAttacksV1_01",
-        "Redesign_LuciusArconteAttacksV1_02"
+        "Redesign_LuciusArconteHorizontalSW_NE20261119_00",
+        "Redesign_LuciusArconteHorizontalSW_NE20261119_01",
+        "Redesign_LuciusArconteHorizontalSW_NE20261119_02",
+        "Redesign_LuciusArconteHorizontalSW_NE20261119_03"
       ],
       "durationMs": [
-        110,
-        100,
-        180
+        70,
+        75,
+        105,
+        160
       ],
-      "startupFrames": 1,
-      "activeFrames": 1,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed",
-      "sourceSize": [
-        1448,
-        1086
-      ]
+      "loop": false
     },
     {
-      "id": "LuciusArconteAttacksV1_SwordHorizontal_W",
+      "imageSha256": "c593a8e67480d48bd36badb2f36bd146a71a8e7b8902f0786226728c8bc539aa",
+      "sourcePath": "ArtSources/LuciusArconteCombat20261119/LuciusArconteHorizontalWNE20261119-source.png",
+      "sourceSha256": "c593a8e67480d48bd36badb2f36bd146a71a8e7b8902f0786226728c8bc539aa",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "pixelsPerUnit": 129.5068599,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusArconteHorizontalWNE20261119_SwordHorizontal_W",
       "action": "Attack",
       "attackKey": "SwordHorizontal",
+      "startupFrames": 1,
+      "activeFrames": 1,
       "direction": 2,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteAttacksV1",
-      "imageSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourceSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteAttacksV1-source.png",
-      "nativeSize": [
-        1448,
-        1086
-      ],
-      "pixelsPerUnit": 183.511745,
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteHorizontalWNE20261119",
       "spriteNames": [
-        "Redesign_LuciusArconteAttacksV1_00",
-        "Redesign_LuciusArconteAttacksV1_01",
-        "Redesign_LuciusArconteAttacksV1_02"
+        "Redesign_LuciusArconteHorizontalWNE20261119_00",
+        "Redesign_LuciusArconteHorizontalWNE20261119_01",
+        "Redesign_LuciusArconteHorizontalWNE20261119_02"
       ],
       "durationMs": [
         110,
         100,
         180
       ],
-      "startupFrames": 1,
-      "activeFrames": 1,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed",
-      "sourceSize": [
-        1448,
-        1086
-      ]
+      "loop": false
     },
     {
       "imageSha256": "347f8606cdd331b5c6d1fcdc2bbb810875984176a20a629ad8101108842db9f6",
@@ -471,106 +473,108 @@
       "activeFrames": 1
     },
     {
-      "id": "LuciusArconteAttacksV1_SwordHorizontal_N",
+      "imageSha256": "c593a8e67480d48bd36badb2f36bd146a71a8e7b8902f0786226728c8bc539aa",
+      "sourcePath": "ArtSources/LuciusArconteCombat20261119/LuciusArconteHorizontalWNE20261119-source.png",
+      "sourceSha256": "c593a8e67480d48bd36badb2f36bd146a71a8e7b8902f0786226728c8bc539aa",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "pixelsPerUnit": 129.5068599,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusArconteHorizontalWNE20261119_SwordHorizontal_N",
       "action": "Attack",
       "attackKey": "SwordHorizontal",
+      "startupFrames": 1,
+      "activeFrames": 1,
       "direction": 4,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteAttacksV1",
-      "imageSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourceSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteAttacksV1-source.png",
-      "nativeSize": [
-        1448,
-        1086
-      ],
-      "pixelsPerUnit": 183.511745,
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteHorizontalWNE20261119",
       "spriteNames": [
-        "Redesign_LuciusArconteAttacksV1_00",
-        "Redesign_LuciusArconteAttacksV1_01",
-        "Redesign_LuciusArconteAttacksV1_02"
+        "Redesign_LuciusArconteHorizontalWNE20261119_03",
+        "Redesign_LuciusArconteHorizontalWNE20261119_04",
+        "Redesign_LuciusArconteHorizontalWNE20261119_05"
       ],
       "durationMs": [
         110,
         100,
         180
       ],
-      "startupFrames": 1,
-      "activeFrames": 1,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed",
-      "sourceSize": [
-        1448,
-        1086
-      ]
+      "loop": false
     },
     {
-      "id": "LuciusArconteAttacksV1_SwordHorizontal_NE",
+      "imageSha256": "be84ed27eacc31f08007acc67dc62ac3bf9e2a1f1a854e65f0cc5d95af0b9fee",
+      "sourcePath": "ArtSources/LuciusArconteCombat20261119/LuciusArconteHorizontalSW_NE20261119-source.png",
+      "sourceSha256": "be84ed27eacc31f08007acc67dc62ac3bf9e2a1f1a854e65f0cc5d95af0b9fee",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "nativeSize": [
+        1774,
+        887
+      ],
+      "pixelsPerUnit": 167.520007,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusArconteHorizontalSW_NE20261119_SwordHorizontal_NE",
       "action": "Attack",
       "attackKey": "SwordHorizontal",
+      "startupFrames": 2,
+      "activeFrames": 1,
       "direction": 5,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteAttacksV1",
-      "imageSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourceSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteAttacksV1-source.png",
-      "nativeSize": [
-        1448,
-        1086
-      ],
-      "pixelsPerUnit": 183.511745,
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteHorizontalSW_NE20261119",
       "spriteNames": [
-        "Redesign_LuciusArconteAttacksV1_00",
-        "Redesign_LuciusArconteAttacksV1_01",
-        "Redesign_LuciusArconteAttacksV1_02"
+        "Redesign_LuciusArconteHorizontalSW_NE20261119_04",
+        "Redesign_LuciusArconteHorizontalSW_NE20261119_05",
+        "Redesign_LuciusArconteHorizontalSW_NE20261119_06",
+        "Redesign_LuciusArconteHorizontalSW_NE20261119_07"
       ],
       "durationMs": [
-        110,
-        100,
-        180
+        70,
+        75,
+        105,
+        160
       ],
-      "startupFrames": 1,
-      "activeFrames": 1,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed",
-      "sourceSize": [
-        1448,
-        1086
-      ]
+      "loop": false
     },
     {
-      "id": "LuciusArconteAttacksV1_SwordHorizontal_E",
+      "imageSha256": "c593a8e67480d48bd36badb2f36bd146a71a8e7b8902f0786226728c8bc539aa",
+      "sourcePath": "ArtSources/LuciusArconteCombat20261119/LuciusArconteHorizontalWNE20261119-source.png",
+      "sourceSha256": "c593a8e67480d48bd36badb2f36bd146a71a8e7b8902f0786226728c8bc539aa",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "pixelsPerUnit": 129.5068599,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusArconteHorizontalWNE20261119_SwordHorizontal_E",
       "action": "Attack",
       "attackKey": "SwordHorizontal",
+      "startupFrames": 1,
+      "activeFrames": 1,
       "direction": 6,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteAttacksV1",
-      "imageSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourceSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteAttacksV1-source.png",
-      "nativeSize": [
-        1448,
-        1086
-      ],
-      "pixelsPerUnit": 183.511745,
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteHorizontalWNE20261119",
       "spriteNames": [
-        "Redesign_LuciusArconteAttacksV1_00",
-        "Redesign_LuciusArconteAttacksV1_01",
-        "Redesign_LuciusArconteAttacksV1_02"
+        "Redesign_LuciusArconteHorizontalWNE20261119_06",
+        "Redesign_LuciusArconteHorizontalWNE20261119_07",
+        "Redesign_LuciusArconteHorizontalWNE20261119_08"
       ],
       "durationMs": [
         110,
         100,
         180
       ],
-      "startupFrames": 1,
-      "activeFrames": 1,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed",
-      "sourceSize": [
-        1448,
-        1086
-      ]
+      "loop": false
     },
     {
       "imageSha256": "93081f89d79c4a7a80638a884fa008c7c5fb79fe3f707886a6aa4bdacaceefbf",
@@ -641,38 +645,38 @@
       "activeFrames": 1
     },
     {
-      "id": "LuciusArconteAttacksV1_SwordVertical_SW",
-      "action": "Attack",
-      "attackKey": "SwordVertical",
-      "direction": 1,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteAttacksV1",
-      "imageSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourceSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteAttacksV1-source.png",
+      "imageSha256": "3a82cc04b4a71be78f044447e9faf40cb36dc4044138558a58cca2d1fdf4aada",
+      "sourcePath": "ArtSources/LuciusArconteCombat20261119/LuciusArconteVerticalDiagonals20261119-source.png",
+      "sourceSha256": "3a82cc04b4a71be78f044447e9faf40cb36dc4044138558a58cca2d1fdf4aada",
+      "sourceSize": [
+        1086,
+        1448
+      ],
       "nativeSize": [
-        1448,
-        1086
+        1086,
+        1448
       ],
-      "pixelsPerUnit": 183.511745,
-      "spriteNames": [
-        "Redesign_LuciusArconteAttacksV1_03",
-        "Redesign_LuciusArconteAttacksV1_04",
-        "Redesign_LuciusArconteAttacksV1_05"
-      ],
-      "durationMs": [
-        120,
-        110,
-        190
-      ],
-      "startupFrames": 1,
-      "activeFrames": 1,
-      "loop": false,
+      "pixelsPerUnit": 133.7014141,
       "wholeFigures": true,
       "status": "visual-reviewed",
-      "sourceSize": [
-        1448,
-        1086
-      ]
+      "id": "LuciusArconteVerticalDiagonals20261119_SwordVertical_SW",
+      "action": "Attack",
+      "attackKey": "SwordVertical",
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "direction": 1,
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteVerticalDiagonals20261119",
+      "spriteNames": [
+        "Redesign_LuciusArconteVerticalDiagonals20261119_00",
+        "Redesign_LuciusArconteVerticalDiagonals20261119_01",
+        "Redesign_LuciusArconteVerticalDiagonals20261119_02"
+      ],
+      "durationMs": [
+        110,
+        100,
+        180
+      ],
+      "loop": false
     },
     {
       "imageSha256": "347f8606cdd331b5c6d1fcdc2bbb810875984176a20a629ad8101108842db9f6",
@@ -709,38 +713,38 @@
       "activeFrames": 1
     },
     {
-      "id": "LuciusArconteAttacksV1_SwordVertical_NW",
-      "action": "Attack",
-      "attackKey": "SwordVertical",
-      "direction": 3,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteAttacksV1",
-      "imageSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourceSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteAttacksV1-source.png",
+      "imageSha256": "3a82cc04b4a71be78f044447e9faf40cb36dc4044138558a58cca2d1fdf4aada",
+      "sourcePath": "ArtSources/LuciusArconteCombat20261119/LuciusArconteVerticalDiagonals20261119-source.png",
+      "sourceSha256": "3a82cc04b4a71be78f044447e9faf40cb36dc4044138558a58cca2d1fdf4aada",
+      "sourceSize": [
+        1086,
+        1448
+      ],
       "nativeSize": [
-        1448,
-        1086
+        1086,
+        1448
       ],
-      "pixelsPerUnit": 183.511745,
-      "spriteNames": [
-        "Redesign_LuciusArconteAttacksV1_03",
-        "Redesign_LuciusArconteAttacksV1_04",
-        "Redesign_LuciusArconteAttacksV1_05"
-      ],
-      "durationMs": [
-        120,
-        110,
-        190
-      ],
-      "startupFrames": 1,
-      "activeFrames": 1,
-      "loop": false,
+      "pixelsPerUnit": 133.7014141,
       "wholeFigures": true,
       "status": "visual-reviewed",
-      "sourceSize": [
-        1448,
-        1086
-      ]
+      "id": "LuciusArconteVerticalDiagonals20261119_SwordVertical_NW",
+      "action": "Attack",
+      "attackKey": "SwordVertical",
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "direction": 3,
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteVerticalDiagonals20261119",
+      "spriteNames": [
+        "Redesign_LuciusArconteVerticalDiagonals20261119_03",
+        "Redesign_LuciusArconteVerticalDiagonals20261119_04",
+        "Redesign_LuciusArconteVerticalDiagonals20261119_05"
+      ],
+      "durationMs": [
+        110,
+        100,
+        180
+      ],
+      "loop": false
     },
     {
       "imageSha256": "347f8606cdd331b5c6d1fcdc2bbb810875984176a20a629ad8101108842db9f6",
@@ -777,38 +781,38 @@
       "activeFrames": 1
     },
     {
-      "id": "LuciusArconteAttacksV1_SwordVertical_NE",
-      "action": "Attack",
-      "attackKey": "SwordVertical",
-      "direction": 5,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteAttacksV1",
-      "imageSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourceSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteAttacksV1-source.png",
+      "imageSha256": "3a82cc04b4a71be78f044447e9faf40cb36dc4044138558a58cca2d1fdf4aada",
+      "sourcePath": "ArtSources/LuciusArconteCombat20261119/LuciusArconteVerticalDiagonals20261119-source.png",
+      "sourceSha256": "3a82cc04b4a71be78f044447e9faf40cb36dc4044138558a58cca2d1fdf4aada",
+      "sourceSize": [
+        1086,
+        1448
+      ],
       "nativeSize": [
-        1448,
-        1086
+        1086,
+        1448
       ],
-      "pixelsPerUnit": 183.511745,
-      "spriteNames": [
-        "Redesign_LuciusArconteAttacksV1_03",
-        "Redesign_LuciusArconteAttacksV1_04",
-        "Redesign_LuciusArconteAttacksV1_05"
-      ],
-      "durationMs": [
-        120,
-        110,
-        190
-      ],
-      "startupFrames": 1,
-      "activeFrames": 1,
-      "loop": false,
+      "pixelsPerUnit": 133.7014141,
       "wholeFigures": true,
       "status": "visual-reviewed",
-      "sourceSize": [
-        1448,
-        1086
-      ]
+      "id": "LuciusArconteVerticalDiagonals20261119_SwordVertical_NE",
+      "action": "Attack",
+      "attackKey": "SwordVertical",
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "direction": 5,
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteVerticalDiagonals20261119",
+      "spriteNames": [
+        "Redesign_LuciusArconteVerticalDiagonals20261119_06",
+        "Redesign_LuciusArconteVerticalDiagonals20261119_07",
+        "Redesign_LuciusArconteVerticalDiagonals20261119_08"
+      ],
+      "durationMs": [
+        110,
+        100,
+        180
+      ],
+      "loop": false
     },
     {
       "imageSha256": "93081f89d79c4a7a80638a884fa008c7c5fb79fe3f707886a6aa4bdacaceefbf",
@@ -845,74 +849,72 @@
       "activeFrames": 1
     },
     {
-      "id": "LuciusArconteAttacksV1_SwordVertical_SE",
+      "imageSha256": "3a82cc04b4a71be78f044447e9faf40cb36dc4044138558a58cca2d1fdf4aada",
+      "sourcePath": "ArtSources/LuciusArconteCombat20261119/LuciusArconteVerticalDiagonals20261119-source.png",
+      "sourceSha256": "3a82cc04b4a71be78f044447e9faf40cb36dc4044138558a58cca2d1fdf4aada",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "nativeSize": [
+        1086,
+        1448
+      ],
+      "pixelsPerUnit": 133.7014141,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "id": "LuciusArconteVerticalDiagonals20261119_SwordVertical_SE",
       "action": "Attack",
       "attackKey": "SwordVertical",
-      "direction": 7,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteAttacksV1",
-      "imageSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourceSha256": "382e9dd568192357f87b3d64b872e00f9accab88f39f49773186e41fe3158ce9",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteAttacksV1-source.png",
-      "nativeSize": [
-        1448,
-        1086
-      ],
-      "pixelsPerUnit": 183.511745,
-      "spriteNames": [
-        "Redesign_LuciusArconteAttacksV1_03",
-        "Redesign_LuciusArconteAttacksV1_04",
-        "Redesign_LuciusArconteAttacksV1_05"
-      ],
-      "durationMs": [
-        120,
-        110,
-        190
-      ],
       "startupFrames": 1,
       "activeFrames": 1,
-      "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed",
-      "sourceSize": [
-        1448,
-        1086
-      ]
-    },
-    {
-      "id": "LuciusArconteUltimateV1_SwordThrust_S",
-      "action": "Attack",
-      "attackKey": "SwordThrust",
-      "direction": 0,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteUltimateV1",
-      "imageSha256": "18578b6fde986e78e48d8160ace68655736cff01ea45e944e12175d1e9b138b3",
-      "sourceSha256": "18578b6fde986e78e48d8160ace68655736cff01ea45e944e12175d1e9b138b3",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteUltimateV1-source.png",
-      "nativeSize": [
-        1254,
-        1254
-      ],
-      "pixelsPerUnit": 220.214094,
+      "direction": 7,
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteVerticalDiagonals20261119",
       "spriteNames": [
-        "Redesign_LuciusArconteUltimateV1_00",
-        "Redesign_LuciusArconteUltimateV1_01",
-        "Redesign_LuciusArconteUltimateV1_02",
-        "Redesign_LuciusArconteUltimateV1_03"
+        "Redesign_LuciusArconteVerticalDiagonals20261119_09",
+        "Redesign_LuciusArconteVerticalDiagonals20261119_10",
+        "Redesign_LuciusArconteVerticalDiagonals20261119_11"
       ],
       "durationMs": [
-        120,
+        110,
         100,
-        100,
-        220
+        180
       ],
-      "startupFrames": 1,
-      "activeFrames": 2,
-      "loop": false,
+      "loop": false
+    },
+    {
+      "imageSha256": "783a1f19f70f82e14c5e7c013640b0f058fc9e275d7cc2eb0dce9b6154aa36b9",
+      "sourcePath": "ArtSources/LuciusArconteCombat20261119/LuciusArconteThrustS_W_SE20261119-source.png",
+      "sourceSha256": "783a1f19f70f82e14c5e7c013640b0f058fc9e275d7cc2eb0dce9b6154aa36b9",
+      "sourceSize": [
+        1312,
+        1199
+      ],
+      "nativeSize": [
+        1312,
+        1199
+      ],
+      "pixelsPerUnit": 148.9066729,
       "wholeFigures": true,
       "status": "visual-reviewed",
-      "sourceSize": [
-        1254,
-        1254
-      ]
+      "id": "LuciusArconteThrustS_W_SE20261119_SwordThrust_S",
+      "action": "Attack",
+      "attackKey": "SwordThrust",
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "direction": 0,
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteThrustS_W_SE20261119",
+      "spriteNames": [
+        "Redesign_LuciusArconteThrustS_W_SE20261119_00",
+        "Redesign_LuciusArconteThrustS_W_SE20261119_01",
+        "Redesign_LuciusArconteThrustS_W_SE20261119_02"
+      ],
+      "durationMs": [
+        110,
+        100,
+        180
+      ],
+      "loop": false
     },
     {
       "imageSha256": "347f8606cdd331b5c6d1fcdc2bbb810875984176a20a629ad8101108842db9f6",
@@ -949,220 +951,208 @@
       "activeFrames": 1
     },
     {
-      "id": "LuciusArconteUltimateV1_SwordThrust_W",
-      "action": "Attack",
-      "attackKey": "SwordThrust",
-      "direction": 2,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteUltimateV1",
-      "imageSha256": "18578b6fde986e78e48d8160ace68655736cff01ea45e944e12175d1e9b138b3",
-      "sourceSha256": "18578b6fde986e78e48d8160ace68655736cff01ea45e944e12175d1e9b138b3",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteUltimateV1-source.png",
+      "imageSha256": "783a1f19f70f82e14c5e7c013640b0f058fc9e275d7cc2eb0dce9b6154aa36b9",
+      "sourcePath": "ArtSources/LuciusArconteCombat20261119/LuciusArconteThrustS_W_SE20261119-source.png",
+      "sourceSha256": "783a1f19f70f82e14c5e7c013640b0f058fc9e275d7cc2eb0dce9b6154aa36b9",
+      "sourceSize": [
+        1312,
+        1199
+      ],
       "nativeSize": [
-        1254,
-        1254
+        1312,
+        1199
       ],
-      "pixelsPerUnit": 220.214094,
-      "spriteNames": [
-        "Redesign_LuciusArconteUltimateV1_00",
-        "Redesign_LuciusArconteUltimateV1_01",
-        "Redesign_LuciusArconteUltimateV1_02",
-        "Redesign_LuciusArconteUltimateV1_03"
-      ],
-      "durationMs": [
-        120,
-        100,
-        100,
-        220
-      ],
-      "startupFrames": 1,
-      "activeFrames": 2,
-      "loop": false,
+      "pixelsPerUnit": 148.9066729,
       "wholeFigures": true,
       "status": "visual-reviewed",
-      "sourceSize": [
-        1254,
-        1254
-      ]
+      "id": "LuciusArconteThrustS_W_SE20261119_SwordThrust_W",
+      "action": "Attack",
+      "attackKey": "SwordThrust",
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "direction": 2,
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteThrustS_W_SE20261119",
+      "spriteNames": [
+        "Redesign_LuciusArconteThrustS_W_SE20261119_03",
+        "Redesign_LuciusArconteThrustS_W_SE20261119_04",
+        "Redesign_LuciusArconteThrustS_W_SE20261119_05"
+      ],
+      "durationMs": [
+        110,
+        100,
+        180
+      ],
+      "loop": false
     },
     {
-      "id": "LuciusArconteUltimateV1_SwordThrust_NW",
+      "id": "LuciusArconteSwordThrustBack20261119V1_SwordThrust_NW",
       "action": "Attack",
       "attackKey": "SwordThrust",
       "direction": 3,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteUltimateV1",
-      "imageSha256": "18578b6fde986e78e48d8160ace68655736cff01ea45e944e12175d1e9b138b3",
-      "sourceSha256": "18578b6fde986e78e48d8160ace68655736cff01ea45e944e12175d1e9b138b3",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteUltimateV1-source.png",
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteSwordThrustBack20261119V1",
+      "imageSha256": "c74c5b2c8834bcd1eb7d11b6b4844c7bae82045168c051b619f9cb598c7397a8",
+      "sourceSha256": "c74c5b2c8834bcd1eb7d11b6b4844c7bae82045168c051b619f9cb598c7397a8",
+      "sourcePath": "ArtSources/LuciusArconteThrustBack20261119/source-v1.png",
       "nativeSize": [
-        1254,
-        1254
+        1247,
+        1261
       ],
-      "pixelsPerUnit": 220.214094,
+      "sourceSize": [
+        1247,
+        1261
+      ],
+      "pixelsPerUnit": 147.85803439,
       "spriteNames": [
-        "Redesign_LuciusArconteUltimateV1_00",
-        "Redesign_LuciusArconteUltimateV1_01",
-        "Redesign_LuciusArconteUltimateV1_02",
-        "Redesign_LuciusArconteUltimateV1_03"
+        "Redesign_LuciusArconteSwordThrustBack20261119V1_00",
+        "Redesign_LuciusArconteSwordThrustBack20261119V1_01",
+        "Redesign_LuciusArconteSwordThrustBack20261119V1_02"
       ],
       "durationMs": [
         120,
-        100,
-        100,
+        200,
         220
       ],
       "startupFrames": 1,
-      "activeFrames": 2,
+      "activeFrames": 1,
       "loop": false,
       "wholeFigures": true,
-      "status": "visual-reviewed",
-      "sourceSize": [
-        1254,
-        1254
-      ]
+      "status": "visual-reviewed"
     },
     {
-      "id": "LuciusArconteUltimateV1_SwordThrust_N",
+      "id": "LuciusArconteSwordThrustBack20261119V1_SwordThrust_N",
       "action": "Attack",
       "attackKey": "SwordThrust",
       "direction": 4,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteUltimateV1",
-      "imageSha256": "18578b6fde986e78e48d8160ace68655736cff01ea45e944e12175d1e9b138b3",
-      "sourceSha256": "18578b6fde986e78e48d8160ace68655736cff01ea45e944e12175d1e9b138b3",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteUltimateV1-source.png",
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteSwordThrustBack20261119V1",
+      "imageSha256": "c74c5b2c8834bcd1eb7d11b6b4844c7bae82045168c051b619f9cb598c7397a8",
+      "sourceSha256": "c74c5b2c8834bcd1eb7d11b6b4844c7bae82045168c051b619f9cb598c7397a8",
+      "sourcePath": "ArtSources/LuciusArconteThrustBack20261119/source-v1.png",
       "nativeSize": [
-        1254,
-        1254
+        1247,
+        1261
       ],
-      "pixelsPerUnit": 220.214094,
+      "sourceSize": [
+        1247,
+        1261
+      ],
+      "pixelsPerUnit": 147.85803439,
       "spriteNames": [
-        "Redesign_LuciusArconteUltimateV1_00",
-        "Redesign_LuciusArconteUltimateV1_01",
-        "Redesign_LuciusArconteUltimateV1_02",
-        "Redesign_LuciusArconteUltimateV1_03"
+        "Redesign_LuciusArconteSwordThrustBack20261119V1_03",
+        "Redesign_LuciusArconteSwordThrustBack20261119V1_04",
+        "Redesign_LuciusArconteSwordThrustBack20261119V1_05"
       ],
       "durationMs": [
         120,
-        100,
-        100,
+        200,
         220
       ],
       "startupFrames": 1,
-      "activeFrames": 2,
+      "activeFrames": 1,
       "loop": false,
       "wholeFigures": true,
-      "status": "visual-reviewed",
-      "sourceSize": [
-        1254,
-        1254
-      ]
+      "status": "visual-reviewed"
     },
     {
-      "id": "LuciusArconteUltimateV1_SwordThrust_NE",
+      "id": "LuciusArconteSwordThrustBack20261119V1_SwordThrust_NE",
       "action": "Attack",
       "attackKey": "SwordThrust",
       "direction": 5,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteUltimateV1",
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteSwordThrustBack20261119V1",
+      "imageSha256": "c74c5b2c8834bcd1eb7d11b6b4844c7bae82045168c051b619f9cb598c7397a8",
+      "sourceSha256": "c74c5b2c8834bcd1eb7d11b6b4844c7bae82045168c051b619f9cb598c7397a8",
+      "sourcePath": "ArtSources/LuciusArconteThrustBack20261119/source-v1.png",
+      "nativeSize": [
+        1247,
+        1261
+      ],
+      "sourceSize": [
+        1247,
+        1261
+      ],
+      "pixelsPerUnit": 147.85803439,
+      "spriteNames": [
+        "Redesign_LuciusArconteSwordThrustBack20261119V1_06",
+        "Redesign_LuciusArconteSwordThrustBack20261119V1_07",
+        "Redesign_LuciusArconteSwordThrustBack20261119V1_08"
+      ],
+      "durationMs": [
+        120,
+        200,
+        220
+      ],
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed"
+    },
+    {
       "imageSha256": "18578b6fde986e78e48d8160ace68655736cff01ea45e944e12175d1e9b138b3",
       "sourceSha256": "18578b6fde986e78e48d8160ace68655736cff01ea45e944e12175d1e9b138b3",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteUltimateV1-source.png",
+      "sourcePath": "Assets/Darklight/Resources/Darklight/LuciusArconte20261111/LuciusArconteUltimateV1.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
       "nativeSize": [
         1254,
         1254
       ],
-      "pixelsPerUnit": 220.214094,
-      "spriteNames": [
-        "Redesign_LuciusArconteUltimateV1_00",
-        "Redesign_LuciusArconteUltimateV1_01",
-        "Redesign_LuciusArconteUltimateV1_02",
-        "Redesign_LuciusArconteUltimateV1_03"
-      ],
-      "durationMs": [
-        120,
-        100,
-        100,
-        220
-      ],
-      "startupFrames": 1,
-      "activeFrames": 2,
-      "loop": false,
+      "pixelsPerUnit": 187.706299,
       "wholeFigures": true,
       "status": "visual-reviewed",
-      "sourceSize": [
-        1254,
-        1254
-      ]
-    },
-    {
-      "id": "LuciusArconteUltimateV1_SwordThrust_E",
+      "id": "LuciusArconteThrustRecovered20261119_SwordThrust_E",
       "action": "Attack",
-      "attackKey": "SwordThrust",
       "direction": 6,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteUltimateV1",
-      "imageSha256": "18578b6fde986e78e48d8160ace68655736cff01ea45e944e12175d1e9b138b3",
-      "sourceSha256": "18578b6fde986e78e48d8160ace68655736cff01ea45e944e12175d1e9b138b3",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteUltimateV1-source.png",
-      "nativeSize": [
-        1254,
-        1254
-      ],
-      "pixelsPerUnit": 220.214094,
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteThrustRecovered20261119",
       "spriteNames": [
-        "Redesign_LuciusArconteUltimateV1_00",
-        "Redesign_LuciusArconteUltimateV1_01",
-        "Redesign_LuciusArconteUltimateV1_02",
-        "Redesign_LuciusArconteUltimateV1_03"
+        "Redesign_LuciusArconteThrustRecovered20261119_06",
+        "Redesign_LuciusArconteThrustRecovered20261119_07",
+        "Redesign_LuciusArconteThrustRecovered20261119_08"
       ],
       "durationMs": [
-        120,
+        110,
         100,
-        100,
-        220
+        180
       ],
-      "startupFrames": 1,
-      "activeFrames": 2,
       "loop": false,
-      "wholeFigures": true,
-      "status": "visual-reviewed",
-      "sourceSize": [
-        1254,
-        1254
-      ]
+      "attackKey": "SwordThrust",
+      "startupFrames": 1,
+      "activeFrames": 1
     },
     {
-      "id": "LuciusArconteUltimateV1_SwordThrust_SE",
-      "action": "Attack",
-      "attackKey": "SwordThrust",
-      "direction": 7,
-      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteUltimateV1",
-      "imageSha256": "18578b6fde986e78e48d8160ace68655736cff01ea45e944e12175d1e9b138b3",
-      "sourceSha256": "18578b6fde986e78e48d8160ace68655736cff01ea45e944e12175d1e9b138b3",
-      "sourcePath": "ArtSources/LuciusArconte20261111/selected/LuciusArconteUltimateV1-source.png",
+      "imageSha256": "783a1f19f70f82e14c5e7c013640b0f058fc9e275d7cc2eb0dce9b6154aa36b9",
+      "sourcePath": "ArtSources/LuciusArconteCombat20261119/LuciusArconteThrustS_W_SE20261119-source.png",
+      "sourceSha256": "783a1f19f70f82e14c5e7c013640b0f058fc9e275d7cc2eb0dce9b6154aa36b9",
+      "sourceSize": [
+        1312,
+        1199
+      ],
       "nativeSize": [
-        1254,
-        1254
+        1312,
+        1199
       ],
-      "pixelsPerUnit": 220.214094,
-      "spriteNames": [
-        "Redesign_LuciusArconteUltimateV1_00",
-        "Redesign_LuciusArconteUltimateV1_01",
-        "Redesign_LuciusArconteUltimateV1_02",
-        "Redesign_LuciusArconteUltimateV1_03"
-      ],
-      "durationMs": [
-        120,
-        100,
-        100,
-        220
-      ],
-      "startupFrames": 1,
-      "activeFrames": 2,
-      "loop": false,
+      "pixelsPerUnit": 148.9066729,
       "wholeFigures": true,
       "status": "visual-reviewed",
-      "sourceSize": [
-        1254,
-        1254
-      ]
+      "id": "LuciusArconteThrustS_W_SE20261119_SwordThrust_SE",
+      "action": "Attack",
+      "attackKey": "SwordThrust",
+      "startupFrames": 1,
+      "activeFrames": 1,
+      "direction": 7,
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteThrustS_W_SE20261119",
+      "spriteNames": [
+        "Redesign_LuciusArconteThrustS_W_SE20261119_06",
+        "Redesign_LuciusArconteThrustS_W_SE20261119_07",
+        "Redesign_LuciusArconteThrustS_W_SE20261119_08"
+      ],
+      "durationMs": [
+        110,
+        100,
+        180
+      ],
+      "loop": false
     },
     {
       "imageSha256": "660f879ce3790f0559511573d17a815ef585dc5a956604ed041e02a2236898e1",
@@ -2417,6 +2407,66 @@
         180
       ],
       "loop": false
+    },
+    {
+      "id": "LuciusArconteDodgeCanonSSE20261119V1_Dodge_S",
+      "action": "Dodge",
+      "attackKey": "",
+      "direction": 0,
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteDodgeCanonSSE20261119V1",
+      "imageSha256": "524488dcab58704b8cb3328229b728f297303fea91c85aad03c14d20e42dcf07",
+      "sourceSha256": "524488dcab58704b8cb3328229b728f297303fea91c85aad03c14d20e42dcf07",
+      "sourcePath": "ArtSources/ArconteDodgeCanonPilot20261119/source.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 212.873623914,
+      "spriteNames": [
+        "Redesign_LuciusArconteDodgeCanonSSE20261119V1_00",
+        "Redesign_LuciusArconteDodgeCanonSSE20261119V1_01",
+        "Redesign_LuciusArconteDodgeCanonSSE20261119V1_02"
+      ],
+      "durationMs": [
+        60,
+        100,
+        70
+      ],
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "directionalFallback": false,
+      "sourceDirection": 0
+    },
+    {
+      "id": "LuciusArconteDodgeCanonSSE20261119V1_Dodge_SE",
+      "action": "Dodge",
+      "attackKey": "",
+      "direction": 7,
+      "resourcePath": "Darklight/LuciusArconte20261111/LuciusArconteDodgeCanonSSE20261119V1",
+      "imageSha256": "524488dcab58704b8cb3328229b728f297303fea91c85aad03c14d20e42dcf07",
+      "sourceSha256": "524488dcab58704b8cb3328229b728f297303fea91c85aad03c14d20e42dcf07",
+      "sourcePath": "ArtSources/ArconteDodgeCanonPilot20261119/source.png",
+      "nativeSize": [
+        1536,
+        1024
+      ],
+      "pixelsPerUnit": 212.873623914,
+      "spriteNames": [
+        "Redesign_LuciusArconteDodgeCanonSSE20261119V1_03",
+        "Redesign_LuciusArconteDodgeCanonSSE20261119V1_04",
+        "Redesign_LuciusArconteDodgeCanonSSE20261119V1_05"
+      ],
+      "durationMs": [
+        60,
+        100,
+        70
+      ],
+      "loop": false,
+      "wholeFigures": true,
+      "status": "visual-reviewed",
+      "directionalFallback": false,
+      "sourceDirection": 7
     }
   ]
 }

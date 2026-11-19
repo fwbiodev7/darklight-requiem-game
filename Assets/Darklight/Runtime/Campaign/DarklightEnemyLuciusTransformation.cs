@@ -48,6 +48,10 @@ namespace Darklight
                 LuciusView.PresentPose("Idle",0,0,null,false);
             luciusLift?.ResetPresentation();luciusBurst?.Hide();luciusAura?.Hide();
         }
-        void OnDisable()=>CancelLuciusTransformation();
+        void OnDisable()
+        {
+            warning?.Hide();
+            CancelLuciusTransformation();
+        }
     }
 }

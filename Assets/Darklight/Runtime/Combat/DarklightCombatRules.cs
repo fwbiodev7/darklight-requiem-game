@@ -79,14 +79,36 @@ namespace Darklight
     {
         struct Lease{public DarklightEnemy owner;public float until;public bool ranged;}
         readonly List<Lease> leases=new();
-        public bool Request(DarklightEnemy enemy,float now,int mode,bool ranged,bool visible)
+        public bool Request(DarklightEnemy enemy,float now,int mode,bool ranged,bool visible,bool followUp=false)
         {
-            for(int i=leases.Count-1;i>=0;i--)if(leases[i].owner==null||leases[i].owner.Health.IsDead||leases[i].until<=now)leases.RemoveAt(i);
-            if(!visible)return false;
-            int count=0;foreach(var lease in leases){if(lease.owner==enemy)return false;if(lease.ranged==ranged)count++;}
-            var p=DarklightDifficultyProfile.For(mode);int limit=ranged?p.projectileSlots:p.meleeSlots;
-            if(count>=limit)return false;
-            leases.Add(new Lease{owner=enemy,until=now+1.15f+(p.comboLength-1+(enemy.elite?1:0)+(enemy.Boss?1:0))*.8f,ranged=ranged});return true;
+            int current = -1, count = 0;
+            for (int i = leases.Count - 1; i >= 0; i--)
+            {
+                var lease = leases[i];
+                var owner = lease.owner;
+                if (owner == null || !owner.isActiveAndEnabled || owner.Health.IsDead || owner.Resolved ||
+                    (owner.Visitor == DarklightVisitor.None ? !owner.HoldsGroundAttack : lease.until <= now))
+                {
+                    leases.RemoveAt(i);
+                    if (current > i) current--;
+                }
+                else if (owner == enemy) current = i;
+                else if (lease.ranged == ranged) count++;
+            }
+            if (!visible || (current >= 0 && !followUp)) return false;
+
+            var profile = DarklightDifficultyProfile.For(mode);
+            int limit = ranged ? profile.projectileSlots : profile.meleeSlots;
+            if (count >= limit) return false;
+            var updated = new Lease
+            {
+                owner = enemy,
+                until = now + 1.15f + (profile.comboLength - 1 + (enemy.elite ? 1 : 0) + (enemy.Boss ? 1 : 0)) * .8f,
+                ranged = ranged
+            };
+            if (current >= 0) leases[current] = updated;
+            else leases.Add(updated);
+            return true;
         }
         public void Clear()=>leases.Clear();
     }

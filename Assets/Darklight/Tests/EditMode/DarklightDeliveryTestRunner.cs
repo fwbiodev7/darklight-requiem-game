@@ -37,6 +37,21 @@ namespace Darklight.Tests
         public static void FinalEdit(string output)=>Begin(output,new Filter{testMode=TestMode.EditMode,groupNames=new[]{"^Darklight.Tests\\."}});
         public static void FinalPlay(string output)=>Begin(output,new Filter{testMode=TestMode.PlayMode,groupNames=new[]{"^Darklight.Tests\\.","!^Darklight.Tests.DarklightFinalCaptureTests", "!^Darklight.Tests.DarklightRemasterPrototypeTests","!^Darklight.Tests.DarklightSoloTransformationTests", "!^Darklight.Tests.DarklightNarrativePlayTests.AudioPlaybackIsBoundedMutedAndStopsWhenAutomationReturnsToSilence$","!^Darklight.Tests.DarklightAwakeningMusicTests.AwakeningMusicPausesAndResumesPositionAndDoesNotOverlapMainMenu$"}});
         public static void Focused(string output,string pattern)=>Begin(output,new Filter{testMode=TestMode.PlayMode,groupNames=new[]{pattern}});
+        public static void FocusedFromCommandLine()
+        {
+            var args=Environment.GetCommandLineArgs();
+            string Option(string name)
+            {
+                int index=Array.IndexOf(args,name);
+                if(index<0||index+1>=args.Length)throw new ArgumentException($"Missing {name}");
+                return args[index+1];
+            }
+            string output=Path.GetFullPath(Option("-darklightTestOutput"));
+            string pattern=Option("-darklightTestPattern");
+            SessionState.SetBool("Darklight.Tests.ExitWhenDone",true);
+            if(Array.IndexOf(args,"-darklightEditMode")>=0)FocusedEdit(output,pattern);
+            else Focused(output,pattern);
+        }
         public static void FocusedEdit(string output,string pattern)=>Begin(output,new Filter{testMode=TestMode.EditMode,groupNames=new[]{pattern}});
         public static void Capture(string output)=>Begin(output,new Filter{testMode=TestMode.PlayMode,groupNames=new[]{"^Darklight.Tests.DarklightFinalCaptureTests\\."}},Path.Combine(Path.GetDirectoryName(output),"captures-final"));
         sealed class Callback:ICallbacks
@@ -54,6 +69,12 @@ namespace Darklight.Tests
                 // An independently running user's game may save during QA. Do not overwrite it blindly.
                 if(!savesPreserved)Debug.LogError("Protected QA detected a changed save. Backup retained; inspect before restoring because the user's game is open.");
                 SessionState.EraseString(OutputKey);SessionState.EraseString(BackupKey);DarklightAutomation.Silent=true;AudioListener.volume=0;
+                if(SessionState.GetBool("Darklight.Tests.ExitWhenDone",false))
+                {
+                    SessionState.EraseBool("Darklight.Tests.ExitWhenDone");
+                    int code=result.FailCount==0&&result.PassCount>0&&savesPreserved?0:1;
+                    EditorApplication.delayCall+=()=>EditorApplication.Exit(code);
+                }
             }
         }
     }

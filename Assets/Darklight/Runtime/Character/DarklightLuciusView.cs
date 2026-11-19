@@ -19,6 +19,7 @@ namespace Darklight
         // Presentation offset only; the Rigidbody and ground-plane sorting stay put.
         public float AirHeight {get;set;}
         public bool UsesIdleFallback {get;private set;}
+        public bool UsesDirectionalFallback {get;private set;}
         void LateUpdate()
         {
             if(art!=null&&art.transform!=transform)
@@ -28,32 +29,40 @@ namespace Darklight
         {
             if(model==null)return false;
             string action=DarklightWeaponRedesignBank.Action(model,movement);
-            int facingDirection=DarklightCharacterView.DirectionIndex(model.Facing);
-            // Until a native evasive clip exists, a grounded sidestep uses the
-            // actual walk cycle, rather than moving a static resting sprite.
-            if(model.State==CombatState.Dodge&&movement.sqrMagnitude>.01f&&
-                !DarklightLuciusSpriteBank.TryActionPage(appearance,"Dodge",facingDirection,null,out _))action="Walk";
+            int direction=DarklightCharacterView.DirectionIndex(model.Facing);
             float time=model.State==CombatState.Neutral?model.Clock:model.StateTime;
+            if(action=="Dodge")
+            {
+                int dodgeDirection=DarklightCharacterView.DirectionIndex(model.DodgeDirection);
+                if(DarklightLuciusSpriteBank.TryActionPage(appearance,action,dodgeDirection,null,out var dodge))
+                {
+                    direction=dodgeDirection;
+                    time=DarklightLuciusSpriteBank.FitStateTime(dodge,model.StateTime,CombatModel.DodgeDuration);
+                }
+                else if(movement.sqrMagnitude>.01f)action="Walk";
+            }
             Vector2 position=transform.position;
             if(action=="Walk")
             {
+                // Pursuit aim can differ from travel. Committed sword strokes keep their aim.
+                direction=DarklightCharacterView.DirectionIndex(movement);
                 if(!walking)walkTime=0;
                 else if(hasPosition)walkTime+=Vector2.Distance(position,previousPosition)/WalkReferenceSpeed;
                 time=walkTime;
             }
             walking=action=="Walk";previousPosition=position;hasPosition=true;
-            // Pursuit aim can differ from actual travel (flanking/retreating).
-            // Locomotion faces travel; a committed sword stroke keeps its aim.
-            int direction=walking?DarklightCharacterView.DirectionIndex(movement):facingDirection;
             string key=action=="Attack"?model.Attack?.animationKey:null;
             if(action=="Attack"&&DarklightLuciusSpriteBank.TryActionPage(appearance,action,direction,key,out var page))
                 time=DarklightLuciusSpriteBank.AttackTime(page,model.Attack,
                     model.State==CombatState.Neutral&&model.ActiveThisTick?model.Attack.startup:model.StateTime);
+            if(action=="Hurt"&&DarklightLuciusSpriteBank.TryActionPage(appearance,action,direction,null,out var hurt))
+                time=DarklightLuciusSpriteBank.FitStateTime(hurt,model.StateTime,model.HurtDuration);
             return PresentPose(action,direction,time,key);
         }
         public bool PresentPose(string action,int direction,float time,string attackKey=null,bool allowOfficialIdle=true)
         {
             Sprite sprite=null;bool fallback=false;
+            UsesDirectionalFallback=DarklightLuciusSpriteBank.TryActionPage(appearance,action,direction,attackKey,out var selected)&&selected.directionalFallback;
             bool officialIdle=allowOfficialIdle&&appearance==DarklightLuciusAppearance.Arconte&&action=="Idle"&&direction==0&&
                 DarklightOfficialTransitionBank.TryPose(3,1,out sprite);
             if(!officialIdle&&!DarklightLuciusSpriteBank.TryPose(appearance,action,direction,time,out sprite,out fallback,attackKey))

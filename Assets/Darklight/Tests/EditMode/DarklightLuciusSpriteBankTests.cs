@@ -235,6 +235,29 @@ namespace Darklight.Tests
             Assert.That(view.UsesIdleFallback,Is.True);
             Assert.That(view.Renderer.sprite.name,Is.EqualTo(data.pages.First(p=>p.action=="Idle"&&p.direction==0).spriteNames[0]));
         }
+
+        [Test]
+        public void DodgeUsesCommittedTravelDirectionEvenWhenBlocked()
+        {
+            int east = DarklightCharacterView.DirectionIndex(Vector2.right);
+            int west = DarklightCharacterView.DirectionIndex(Vector2.left);
+            var travel = Page("Dodge", west, offset: 2);
+            var aim = Page("Dodge", east, offset: 5);
+            travel.durationMs = new[] {60, 100, 70};
+            Install(travel, aim);
+
+            var model = new CombatModel(Loadout());
+            var view = View();
+            model.Tick(.1f, new CombatInput {aim = Vector2.right});
+            model.Tick(.01f, new CombatInput {move = Vector2.left, aim = Vector2.right, dodgePressed = true});
+            Expect(view, model, travel, 0, Vector2.left);
+
+            model.Tick(.17f, default);
+            model.Tick(0, default);
+            Expect(view, model, travel, 2);
+            Assert.That(model.Facing, Is.EqualTo(Vector2.right));
+        }
+
         [TestCase("Idle")][TestCase("Walk")][TestCase("Dodge")][TestCase("Parry")]
         [TestCase("Charging")][TestCase("Hurt")][TestCase("Dead")]
         public void EssentialStatesUseExistingClockAndNeverAdvanceItFromRendering(string action)
@@ -257,8 +280,10 @@ namespace Darklight.Tests
                 Expect(view,model,page,0,movement);
                 view.transform.position+=Vector3.down*(.15f*2.3f);
             }
-            Expect(view,model,page,1,movement);Expect(view,model,page,1,movement);
-            model.Tick(0,new CombatInput{heavyHeld=action=="Charging"});Expect(view,model,page,1,movement);
+            // The native hurt pose is compressed into the .18 s stun.
+            int advancedFrame=action=="Hurt"?2:1;
+            Expect(view,model,page,advancedFrame,movement);Expect(view,model,page,advancedFrame,movement);
+            model.Tick(0,new CombatInput{heavyHeld=action=="Charging"});Expect(view,model,page,advancedFrame,movement);
             if(action=="Dead")
             {
                 float clock=model.Clock;model.Tick(.5f,default);Expect(view,model,page,2);
@@ -307,13 +332,19 @@ namespace Darklight.Tests
             var view=View();view.appearance=DarklightLuciusAppearance.Arconte;
             Assert.That(view.PresentPose("Idle",0,0),Is.True);
             Assert.That(view.UsesIdleFallback,Is.False);
+            Assert.That(DarklightOfficialTransitionBank.TryPose(3,1,out var officialIdle),Is.True);
+            Assert.That(view.Renderer.sprite,Is.SameAs(officialIdle));
+            Assert.That(view.PresentPose("Idle",6,0),Is.True);
+            Assert.That(view.UsesIdleFallback,Is.False);
             Assert.That(view.Renderer.sprite.name,Does.StartWith("Redesign_LuciusArconteIdle"));
             Assert.That(view.PresentPose("Transformation",0,0.2f),Is.True);
             Assert.That(view.UsesIdleFallback,Is.False);
             Assert.That(view.Renderer.sprite.name,Does.StartWith("Redesign_LuciusArconteAwakening"));
             Assert.That(view.PresentPose("Attack",0,0.15f,DarklightLuciusCombatProfile.SwordHorizontal),Is.True);
             Assert.That(view.UsesIdleFallback,Is.False);
-            Assert.That(view.Renderer.sprite.name,Does.StartWith("Redesign_LuciusArconteAttacks"));
+            Assert.That(DarklightLuciusSpriteBank.TryPose(DarklightLuciusAppearance.Arconte,"Attack",0,.15f,
+                out var horizontal,out _,DarklightLuciusCombatProfile.SwordHorizontal),Is.True);
+            Assert.That(view.Renderer.sprite,Is.SameAs(horizontal));
         }
     }
 }

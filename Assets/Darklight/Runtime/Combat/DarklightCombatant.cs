@@ -35,7 +35,8 @@ namespace Darklight
             float before=Health.CurrentHealth;Health.TakeDamage(damage);float lost=before-Health.CurrentHealth;
             if(lost<=0)return false;
             if(player) { if(DarklightCampaign.Instance != null)Health.SetInvincibilityDuration(.28f); DarklightCampaign.Instance?.Damaged(lost); }
-            combatModel?.Hurt(Health.IsDead,DarklightCampaign.Instance?.ResistsStagger==true?.12f:.18f);
+            if(enemy?.IsLucius==true)enemy.ReactToLuciusDamage();
+            else combatModel?.Hurt(Health.IsDead,DarklightCampaign.Instance?.ResistsStagger==true?.12f:.18f);
             DarklightCombatLab.Instance?.Feedback(transform.position + Vector3.up, false);
             return true;
         }

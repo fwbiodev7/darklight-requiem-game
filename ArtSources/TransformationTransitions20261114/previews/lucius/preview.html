@@ -1,0 +1,21 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Lucius — revisão da transição</title>
+<style>body{background:#191c20;color:#eee;font:16px system-ui;margin:24px}canvas{display:block;image-rendering:pixelated;max-height:75vh;width:auto}button,select,input{margin:8px}input{width:320px}</style>
+<p>Lucius: desenho aprovado; prévia temporal candidata, sem importação no Unity.</p>
+<button id="play">Pausar</button><button id="prev">Pose anterior</button><button id="next">Próxima pose</button>
+<label>Velocidade<select id="speed"><option>.5</option><option selected>1</option><option>2</option></select></label>
+<input id="time" type="range" min="0" max="4200" value="0"><span id="label"></span><canvas width="512" height="672"></canvas>
+<script>const figures=[{"index": 0, "phase": "Normal", "sourceRectTopLeft": [0, 0, 384, 512], "supportAnchorInCell": [192, 457], "durationMs": 420}, {"index": 1, "phase": "Concentration", "sourceRectTopLeft": [384, 0, 384, 512], "supportAnchorInCell": [192, 457], "durationMs": 400}, {"index": 2, "phase": "Ascent", "sourceRectTopLeft": [768, 0, 384, 512], "supportAnchorInCell": [192, 454], "durationMs": 520}, {"index": 3, "phase": "Receiving power", "sourceRectTopLeft": [1152, 0, 384, 512], "supportAnchorInCell": [192, 435], "durationMs": 750}, {"index": 4, "phase": "Awakening", "sourceRectTopLeft": [0, 512, 384, 512], "supportAnchorInCell": [192, 430], "durationMs": 650}, {"index": 5, "phase": "Consolidation", "sourceRectTopLeft": [384, 512, 384, 512], "supportAnchorInCell": [192, 441], "durationMs": 650}, {"index": 6, "phase": "Descent", "sourceRectTopLeft": [768, 512, 384, 512], "supportAnchorInCell": [192, 449], "durationMs": 500}, {"index": 7, "phase": "Arconte", "sourceRectTopLeft": [1152, 512, 384, 512], "supportAnchorInCell": [192, 449], "durationMs": 310}],canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d'),image=new Image();
+image.src='../../candidates/lucius/LuciusNormalToArconte-v3-approved-design-source.png';let playing=true,time=0,clock=0,last=0;
+const slider=document.querySelector('#time'),label=document.querySelector('#label');
+function smooth(x){x=Math.max(0,Math.min(1,x));return x*x*(3-2*x)}
+function lift(p){return p<.12?0:p<.34?smooth((p-.12)/.22):p<.76?1:1-smooth((p-.76)/.24)}
+function pose(){let elapsed=0;for(let i=0;i<8;i++){elapsed+=figures[i].durationMs;if(time<elapsed)return i}return 7}
+function draw(){let f=figures[pose()],r=f.sourceRectTopLeft;ctx.fillStyle='#191c20';ctx.fillRect(0,0,512,672);ctx.imageSmoothingEnabled=false;
+ctx.drawImage(image,...r,64,Math.round(600-f.supportAnchorInCell[1]-.62*152*lift(time/4200)),384,512);slider.value=time;label.textContent=f.phase+' — '+Math.round(time)+' ms'}
+function pause(){playing=false;document.querySelector('#play').textContent='Reproduzir'}
+document.querySelector('#play').onclick=()=>{playing=!playing;document.querySelector('#play').textContent=playing?'Pausar':'Reproduzir'};
+slider.oninput=()=>{pause();time=+slider.value;draw()};
+function step(delta){pause();let index=Math.max(0,Math.min(7,pose()+delta));time=figures.slice(0,index).reduce((s,f)=>s+f.durationMs,0);draw()}
+document.querySelector('#prev').onclick=()=>step(-1);document.querySelector('#next').onclick=()=>step(1);
+function tick(now){if(last&&playing){clock=(clock+(now-last)*+document.querySelector('#speed').value)%5250;time=Math.min(4200,clock)}last=now;if(image.complete&&image.naturalWidth)draw();requestAnimationFrame(tick)}requestAnimationFrame(tick);
+</script></html>

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "image": "Lady-Idle-S-candidate-v1.png",
+  "imageSha256": "d8568a270af0896421c6be8b34e4de88a3da529149cbc5aa345619edf0a3dad6",
+  "nativeSize": [
+    549,
+    996
+  ],
+  "pixelsPerUnit": 502.9901666437086,
+  "status": "visual-reviewed-candidate",
+  "frames": [
+    {
+      "id": "Lady_Idle_S_00",
+      "rect": [
+        0,
+        0,
+        549,
+        996
+      ],
+      "pivot": [
+        0.5282331511839709,
+        0.01606425702811245
+      ],
+      "durationMs": 1000,
+      "action": "idle",
+      "direction": "S",
+      "skin": "Lady",
+      "form": "normal"
+    }
+  ],
+  "clips": [
+    {
+      "name": "Lady_Idle_S",
+      "frames": [
+        "Lady_Idle_S_00"
+      ],
+      "loop": true,
+      "allowStatic": true
+    }
+  ],
+  "requiredClips": [
+    "Lady_Idle_S"
+  ],
+  "quality": {
+    "alphaThreshold": 8,
+    "maxColors": 546804,
+    "maxHeightRatio": 1.3
+  },
+  "provenance": {
+    "referenceImage": "Lady-Reference-Exact.png",
+    "referenceSha256": "b21327f940c8c632358cec0a39f15f123b4d376d3e222825ad90414bc6f287bd",
+    "rawImage": "Lady-Idle-S-raw.png",
+    "rawSha256": "fd7fbe07b0a1b3b2aad351620c310ecf9b13152d66933242495d226102e5a0a7",
+    "tool": "integrated imagegen",
+    "operation": "background extraction; generated pixels differ from source; technical whole-figure crop only afterward",
+    "rawCropTopLeftXYXY": [
+      320,
+      160,
+      869,
+      1156
+    ],
+    "cropPixelsUnmodified": true
+  },
+  "calibration": {
+    "bodyVisibleAlphaThreshold": 8,
+    "bodyHeightPx": 964,
+    "fabiusBodyHeightPx": 302,
+    "fabiusPPU": 157.5757576,
+    "visualScale": 1.325,
+    "bodyWorldHeight": 2.5394134611477823,
+    "supportRawXY": [
+      610,
+      1140
+    ],
+    "rawSize": [
+      1199,
+      1312
+    ],
+    "rawVisibleBounds": [
+      336,
+      176,
+      853,
+      1140
+    ],
+    "previewBodyTargetPx": 302,
+    "note": "PPU calibrates whole figure uniformly; no anatomical resizing. Legacy AddProp rescales by entire canvas and must be handled separately."
+  },
+  "states": {
+    "produced": true,
+    "visualReviewed": true,
+    "integrated": false,
+    "imported": false,
+    "runtimeVerified": false,
+    "published": false
+  },
+  "limits": [
+    "single front-facing idle prototype, no movement or directional coverage",
+    "alpha 1..7 faint generated residue remains; visible bounds evaluated at alpha>=8",
+    "not exact source pixels: integrated background extraction repainted fine detail; exact original preserved",
+    "not Unity-imported or tested; no Assets/runtime/catalog edits"
+  ],
+  "selection": "superseded-by-v2"
+}

@@ -1,0 +1,2 @@
+# Lucius Normal — referência canônica de caminhada
+12/11/2026. Folha de oito poses anexada na mensagem “lucius normal é assim”. Esta é a referência visual para o personagem normal em caminhada frontal. Cabelo prateado curto, olhos azuis, sobretudo preto com pontas azuis, botas com fivelas e espada nas costas; mãos livres. Preservar altura e proporções da folha. Os oito quadros mostram a mesma vista e não representam oito direções. O capuz e o Arconte têm referências próprias.

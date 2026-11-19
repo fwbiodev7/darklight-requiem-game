@@ -1,0 +1,327 @@
+{
+  "schemaVersion": 1,
+  "image": "RequiemNormalToRuptura-v5-form-candidate.png",
+  "imageSha256": "b50543f988bb6cec707b79da84cf2ffbf9693861329d18ee2495bd3a5fe993ff",
+  "nativeSize": [
+    1774,
+    887
+  ],
+  "logicalPixelResolution": null,
+  "pixelsPerUnit": 157.57576,
+  "pixelsPerUnitStatus": "reference-only value from approved katana idle meta, not calibrated or integrated",
+  "status": "candidate",
+  "visualReviewed": true,
+  "imported": false,
+  "runtimeVerified": false,
+  "frames": [
+    {
+      "id": "ruptura_enter_00",
+      "phase": "normal",
+      "rect": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "pivot": [
+        0.5711060948081265,
+        0.09932279909706543
+      ],
+      "durationMs": 120,
+      "action": "TransformationEnter",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "NormalToRuptura",
+      "source": "RequiemNormalToRuptura-v2-source.png",
+      "sourceCellIndex": 0,
+      "significantAlphaBoundsLocal": [
+        115,
+        45,
+        361,
+        398
+      ],
+      "presentationAnchor": "manually observed body center / support plane; hover retained from actual drawing"
+    },
+    {
+      "id": "ruptura_enter_01",
+      "phase": "concentration",
+      "rect": [
+        443,
+        0,
+        444,
+        443
+      ],
+      "pivot": [
+        0.5720720720720721,
+        0.09932279909706543
+      ],
+      "durationMs": 160,
+      "action": "TransformationEnter",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "NormalToRuptura",
+      "source": "RequiemNormalToRuptura-v2-source.png",
+      "sourceCellIndex": 1,
+      "significantAlphaBoundsLocal": [
+        102,
+        46,
+        360,
+        398
+      ],
+      "presentationAnchor": "manually observed body center / support plane; hover retained from actual drawing"
+    },
+    {
+      "id": "ruptura_enter_02",
+      "phase": "gather",
+      "rect": [
+        887,
+        0,
+        443,
+        443
+      ],
+      "pivot": [
+        0.5688487584650113,
+        0.1128668171557562
+      ],
+      "durationMs": 150,
+      "action": "TransformationEnter",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "NormalToRuptura",
+      "source": "RequiemNormalToRuptura-v2-source.png",
+      "sourceCellIndex": 2,
+      "significantAlphaBoundsLocal": [
+        93,
+        55,
+        340,
+        394
+      ],
+      "presentationAnchor": "manually observed body center / support plane; hover retained from actual drawing"
+    },
+    {
+      "id": "ruptura_enter_03",
+      "phase": "first_flames",
+      "rect": [
+        1330,
+        0,
+        444,
+        443
+      ],
+      "pivot": [
+        0.5585585585585585,
+        0.11512415349887128
+      ],
+      "durationMs": 150,
+      "action": "TransformationEnter",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "NormalToRuptura",
+      "source": "RequiemNormalToRuptura-v4-form-source.png",
+      "sourceCellIndex": 3,
+      "significantAlphaBoundsLocal": [
+        93,
+        40,
+        352,
+        417
+      ],
+      "presentationAnchor": "manually observed body center / support plane; hover retained from actual drawing"
+    },
+    {
+      "id": "ruptura_enter_04",
+      "phase": "short_hover",
+      "rect": [
+        0,
+        443,
+        443,
+        444
+      ],
+      "pivot": [
+        0.5643340857787811,
+        0.09684684684684686
+      ],
+      "durationMs": 70,
+      "action": "TransformationEnter",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "NormalToRuptura",
+      "source": "RequiemNormalToRuptura-v4-form-source.png",
+      "sourceCellIndex": 4,
+      "significantAlphaBoundsLocal": [
+        103,
+        19,
+        351,
+        427
+      ],
+      "presentationAnchor": "manually observed body center / support plane; hover retained from actual drawing"
+    },
+    {
+      "id": "ruptura_enter_05",
+      "phase": "release",
+      "rect": [
+        443,
+        443,
+        444,
+        444
+      ],
+      "pivot": [
+        0.5630630630630631,
+        0.09684684684684686
+      ],
+      "durationMs": 140,
+      "action": "TransformationEnter",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "NormalToRuptura",
+      "source": "RequiemNormalToRuptura-v4-form-source.png",
+      "sourceCellIndex": 5,
+      "significantAlphaBoundsLocal": [
+        97,
+        18,
+        359,
+        427
+      ],
+      "presentationAnchor": "manually observed body center / support plane; hover retained from actual drawing"
+    },
+    {
+      "id": "ruptura_enter_06",
+      "phase": "descent",
+      "rect": [
+        887,
+        443,
+        443,
+        444
+      ],
+      "pivot": [
+        0.5665914221218962,
+        0.09684684684684686
+      ],
+      "durationMs": 140,
+      "action": "TransformationEnter",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "NormalToRuptura",
+      "source": "RequiemNormalToRuptura-v4-form-source.png",
+      "sourceCellIndex": 6,
+      "significantAlphaBoundsLocal": [
+        94,
+        40,
+        356,
+        428
+      ],
+      "presentationAnchor": "manually observed body center / support plane; hover retained from actual drawing"
+    },
+    {
+      "id": "ruptura_enter_07",
+      "phase": "ruptura_settle",
+      "rect": [
+        1330,
+        443,
+        444,
+        444
+      ],
+      "pivot": [
+        0.5585585585585585,
+        0.09684684684684686
+      ],
+      "durationMs": 320,
+      "action": "TransformationEnter",
+      "direction": "SE",
+      "skin": "Requiem",
+      "form": "NormalToRuptura",
+      "source": "RequiemNormalToRuptura-v4-form-source.png",
+      "sourceCellIndex": 7,
+      "significantAlphaBoundsLocal": [
+        100,
+        43,
+        363,
+        428
+      ],
+      "presentationAnchor": "manually observed body center / support plane; hover retained from actual drawing"
+    }
+  ],
+  "clips": [
+    {
+      "name": "NormalToRuptura",
+      "frames": [
+        "ruptura_enter_00",
+        "ruptura_enter_01",
+        "ruptura_enter_02",
+        "ruptura_enter_03",
+        "ruptura_enter_04",
+        "ruptura_enter_05",
+        "ruptura_enter_06",
+        "ruptura_enter_07"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "NormalToRuptura"
+  ],
+  "quality": {
+    "alphaThreshold": 16,
+    "maxColors": 1000000,
+    "maxHeightRatio": 1.3
+  },
+  "sources": [
+    {
+      "image": "RequiemNormalToRuptura-v2-source.png",
+      "sha256": "008dd9e140b5a2e95bec9d8318917268b5743aa1ce92bec9ed844cc19907d9c3"
+    },
+    {
+      "image": "RequiemNormalToRuptura-v4-form-source.png",
+      "sha256": "9a6d2336c7d184be0b96cf03e29d281ffc0d2872ee25bace9925126a46318013"
+    },
+    {
+      "image": "RequiemNormalToRuptura-v1-source.png",
+      "sha256": "71303babdb46a98d875be35e7a8eb047f4d559aeb837b9bdbb701d246348bbf8"
+    },
+    {
+      "image": "ruptura-fire-user-reference.png",
+      "sha256": "d95d61d0ef5c5412e086846d67f09dd3ef854f0ebc54107a35ff10ec1ff84440"
+    }
+  ],
+  "references": [
+    {
+      "path": "ArtSources\\TransformationTransitions20261114\\references\\ruptura-transition.png",
+      "sha256": "0ad6674b6a0f426b5ba55a5cd836ca2177a9fb6121acbeb198a2f237ba30aeca"
+    },
+    {
+      "path": "ArtSources\\TransformationTransitions20261114\\candidates\\ruptura\\ruptura-fire-user-reference.png",
+      "sha256": "d95d61d0ef5c5412e086846d67f09dd3ef854f0ebc54107a35ff10ec1ff84440"
+    },
+    {
+      "path": "ArtSources\\WeaponRedesign20261031\\katana\\references\\ReqKatanaNormalIdleSE-whole-frame.png",
+      "sha256": "2bd3cc1077f624647c80757ad24bf06f70caa261649069122e83afc768a13d53"
+    }
+  ],
+  "provenance": {
+    "tool": "integrated image_gen",
+    "originalSourcesPreserved": true,
+    "preservation": "Frames 0..2 preserve v2 RGBA byte-for-byte as complete cells. Frames 3..7 are complete v4 transformed figures. No anatomy montage, recoloring, alpha edits, rescaling, rotation, mirroring or artificial tween/bobbing."
+  },
+  "consumer": {
+    "path": "Assets/Darklight/Runtime/Campaign/DarklightCampaignTransformations.cs",
+    "durationMs": 1250,
+    "releaseProgress": 0.52,
+    "releaseMs": 650,
+    "binding": "No Ruptura transformation sprite entry in current TryTransformationPose; candidate only, not integrated."
+  },
+  "review": {
+    "findings": [
+      "8 complete figures; blade same hand aimed down-right throughout.",
+      "Visible external red-orange flames develop in frame3 and persist frames4..7. Ruptura has strong crimson fringe streaks, red collar/seams/cruciform embroidery, and red katana edge.",
+      "First 3 unaffected Normal/concentration figures preserved exactly.",
+      "Short hover is drawn in complete frames4..5, no fabricated motion.",
+      "Body/face and warm skin remain readable; no smoke wall or wings."
+    ],
+    "limitations": [
+      "Low-alpha generator residuals exist in transparent gutters; sources preserved unchanged.",
+      "Most character pixels alpha near253; visually checked on neutral and dark backgrounds, no global alpha threshold applied.",
+      "20% transparent safety margin is not met on every side of the source atlas; no figure/katana/flame is visibly cut.",
+      "One fixed SE/front view only; native logical pixel density and Unity import PPU not certified.",
+      "GIF palette is a presentation derivative; RGBA PNG is authoritative."
+    ]
+  }
+}

@@ -1,6 +1,14 @@
+notify = ['C:\Program Files\WindowsApps\OpenAI.Codex_26.1106.6628.0_x64__2p2nqsd0c76g0\app\resources\cua_node\bin\node_modules\@oai\sky\bin\windows\codex-computer-use.exe', "turn-ended"]
+
 [agents]
 enabled = true
 max_concurrent_threads_per_session = 3
 default_subagent_model = "gpt-6.1-sol"
 default_subagent_reasoning_effort = "medium"
 interrupt_message = true
+
+[mcp_servers.ai-game-developer]
+enabled = true
+startup_timeout_sec = 30
+tool_timeout_sec = 300
+url = "http://localhost:5140/mcp/p/3c53155e"

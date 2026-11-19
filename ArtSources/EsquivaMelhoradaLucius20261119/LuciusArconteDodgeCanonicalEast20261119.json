@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "image": "LuciusArconteDodgeCanonicalEast20261119.png",
+  "imageSha256": "7439fe33b426b64d9b5a25c1d41ae894843233abed7e145162279c720e47287f",
+  "sourceSha256": "7439fe33b426b64d9b5a25c1d41ae894843233abed7e145162279c720e47287f",
+  "sourcePath": "ArtSources/EsquivaMelhoradaLucius20261119/LuciusArconteDodgeCanonicalEast20261119.png",
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 204.0,
+  "wholeFigures": true,
+  "status": "candidate",
+  "frames": [
+    {
+      "id": "Redesign_LuciusArconteDodgeCanonicalEast20261119_00",
+      "action": "Dodge",
+      "direction": "E",
+      "phase": "load",
+      "index": 0,
+      "rect": [
+        0,
+        0,
+        504,
+        452
+      ],
+      "pivot": [
+        0.5416667,
+        0.0442478
+      ],
+      "bodyAnchorPx": [
+        273,
+        432
+      ],
+      "bodyHeightPx": 319,
+      "hairWidthPx": 135,
+      "opaqueBoundsPx": [
+        68,
+        109,
+        390,
+        437
+      ],
+      "durationMs": 60
+    },
+    {
+      "id": "Redesign_LuciusArconteDodgeCanonicalEast20261119_01",
+      "action": "Dodge",
+      "direction": "E",
+      "phase": "burst",
+      "index": 1,
+      "rect": [
+        504,
+        0,
+        556,
+        452
+      ],
+      "pivot": [
+        0.5503597,
+        0.0420354
+      ],
+      "bodyAnchorPx": [
+        810.0,
+        433
+      ],
+      "bodyHeightPx": 296,
+      "hairWidthPx": 146,
+      "opaqueBoundsPx": [
+        40,
+        132,
+        478,
+        434
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_LuciusArconteDodgeCanonicalEast20261119_02",
+      "action": "Dodge",
+      "direction": "E",
+      "phase": "recover",
+      "index": 2,
+      "rect": [
+        1060,
+        0,
+        476,
+        452
+      ],
+      "pivot": [
+        0.5,
+        0.0442478
+      ],
+      "bodyAnchorPx": [
+        1298.0,
+        432
+      ],
+      "bodyHeightPx": 390,
+      "hairWidthPx": 126,
+      "opaqueBoundsPx": [
+        67,
+        38,
+        347,
+        434
+      ],
+      "durationMs": 70
+    }
+  ],
+  "clips": [
+    {
+      "name": "Dodge_E",
+      "direction": "E",
+      "frames": [
+        "Redesign_LuciusArconteDodgeCanonicalEast20261119_00",
+        "Redesign_LuciusArconteDodgeCanonicalEast20261119_01",
+        "Redesign_LuciusArconteDodgeCanonicalEast20261119_02"
+      ],
+      "durationMs": [
+        60,
+        100,
+        70
+      ],
+      "loop": false
+    }
+  ],
+  "generatedSourceSha256": "d6ad88bd1e0a3e9e31c76f291780c6b8136cea60363bff5e161020a970316e00",
+  "requiredClips": [
+    "Dodge_E"
+  ],
+  "calibration": {
+    "method": "Hair widths of whole compressed/recovery figures compared against canonical Idle world scale. Ground anchors are torso axes projected on the neutral dark leather boot baseline.",
+    "estimatedPixelsPerUnit": 185.206913,
+    "bodyWorldHeightByFrame": [
+      1.564,
+      1.451,
+      1.912
+    ]
+  },
+  "unityImported": false,
+  "runtimeVerified": false
+}

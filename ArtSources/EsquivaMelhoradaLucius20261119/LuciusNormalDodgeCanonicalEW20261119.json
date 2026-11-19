@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "image": "LuciusNormalDodgeCanonicalEW20261119.png",
+  "imageSha256": "d213c691ea3281c7c2edac3b257c4a58bd90a9aea359235270ed74f1694737b0",
+  "sourceSha256": "d213c691ea3281c7c2edac3b257c4a58bd90a9aea359235270ed74f1694737b0",
+  "sourcePath": "ArtSources/EsquivaMelhoradaLucius20261119/LuciusNormalDodgeCanonicalEW20261119.png",
+  "nativeSize": [
+    1536,
+    1024
+  ],
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "pixelsPerUnit": 188.5,
+  "wholeFigures": true,
+  "status": "candidate",
+  "frames": [
+    {
+      "id": "Redesign_LuciusNormalDodgeCanonicalEW20261119_00",
+      "action": "Dodge",
+      "direction": "E",
+      "phase": "load",
+      "index": 0,
+      "rect": [
+        0,
+        0,
+        438,
+        526
+      ],
+      "pivot": [
+        0.4954338,
+        0.1920152
+      ],
+      "bodyAnchorPx": [
+        217.0,
+        425
+      ],
+      "bodyHeightPx": 327,
+      "hairWidthPx": 140,
+      "opaqueBoundsPx": [
+        50,
+        93,
+        418,
+        426
+      ],
+      "durationMs": 60
+    },
+    {
+      "id": "Redesign_LuciusNormalDodgeCanonicalEW20261119_01",
+      "action": "Dodge",
+      "direction": "E",
+      "phase": "burst",
+      "index": 1,
+      "rect": [
+        438,
+        0,
+        592,
+        526
+      ],
+      "pivot": [
+        0.5304054,
+        0.1958175
+      ],
+      "bodyAnchorPx": [
+        752.0,
+        423
+      ],
+      "bodyHeightPx": 291,
+      "hairWidthPx": 179,
+      "opaqueBoundsPx": [
+        97,
+        128,
+        559,
+        424
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_LuciusNormalDodgeCanonicalEW20261119_02",
+      "action": "Dodge",
+      "direction": "E",
+      "phase": "recover",
+      "index": 2,
+      "rect": [
+        1030,
+        0,
+        506,
+        526
+      ],
+      "pivot": [
+        0.4328063,
+        0.1958175
+      ],
+      "bodyAnchorPx": [
+        1249,
+        423
+      ],
+      "bodyHeightPx": 324,
+      "hairWidthPx": 126,
+      "opaqueBoundsPx": [
+        52,
+        95,
+        438,
+        424
+      ],
+      "durationMs": 70
+    },
+    {
+      "id": "Redesign_LuciusNormalDodgeCanonicalEW20261119_03",
+      "action": "Dodge",
+      "direction": "W",
+      "phase": "load",
+      "index": 0,
+      "rect": [
+        0,
+        526,
+        502,
+        498
+      ],
+      "pivot": [
+        0.5298805,
+        0.1706827
+      ],
+      "bodyAnchorPx": [
+        266.0,
+        939
+      ],
+      "bodyHeightPx": 328,
+      "hairWidthPx": 131,
+      "opaqueBoundsPx": [
+        79,
+        81,
+        439,
+        414
+      ],
+      "durationMs": 60
+    },
+    {
+      "id": "Redesign_LuciusNormalDodgeCanonicalEW20261119_04",
+      "action": "Dodge",
+      "direction": "W",
+      "phase": "burst",
+      "index": 1,
+      "rect": [
+        502,
+        526,
+        576,
+        498
+      ],
+      "pivot": [
+        0.4670139,
+        0.1746988
+      ],
+      "bodyAnchorPx": [
+        771.0,
+        937
+      ],
+      "bodyHeightPx": 291,
+      "hairWidthPx": 182,
+      "opaqueBoundsPx": [
+        25,
+        116,
+        481,
+        411
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "Redesign_LuciusNormalDodgeCanonicalEW20261119_05",
+      "action": "Dodge",
+      "direction": "W",
+      "phase": "recover",
+      "index": 2,
+      "rect": [
+        1078,
+        526,
+        458,
+        498
+      ],
+      "pivot": [
+        0.4836245,
+        0.1746988
+      ],
+      "bodyAnchorPx": [
+        1299.5,
+        937
+      ],
+      "bodyHeightPx": 327,
+      "hairWidthPx": 139,
+      "opaqueBoundsPx": [
+        22,
+        81,
+        389,
+        412
+      ],
+      "durationMs": 70
+    }
+  ],
+  "clips": [
+    {
+      "name": "Dodge_E",
+      "direction": "E",
+      "frames": [
+        "Redesign_LuciusNormalDodgeCanonicalEW20261119_00",
+        "Redesign_LuciusNormalDodgeCanonicalEW20261119_01",
+        "Redesign_LuciusNormalDodgeCanonicalEW20261119_02"
+      ],
+      "durationMs": [
+        60,
+        100,
+        70
+      ],
+      "loop": false
+    },
+    {
+      "name": "Dodge_W",
+      "direction": "W",
+      "frames": [
+        "Redesign_LuciusNormalDodgeCanonicalEW20261119_03",
+        "Redesign_LuciusNormalDodgeCanonicalEW20261119_04",
+        "Redesign_LuciusNormalDodgeCanonicalEW20261119_05"
+      ],
+      "durationMs": [
+        60,
+        100,
+        70
+      ],
+      "loop": false
+    }
+  ],
+  "generatedSourceSha256": "d213c691ea3281c7c2edac3b257c4a58bd90a9aea359235270ed74f1694737b0",
+  "requiredClips": [
+    "Dodge_E",
+    "Dodge_W"
+  ],
+  "calibration": {
+    "method": "Hair widths of whole compressed/recovery figures compared against canonical Idle world scale. Ground anchors are torso axes projected on the neutral dark leather boot baseline.",
+    "estimatedPixelsPerUnit": 171.484957,
+    "bodyWorldHeightByFrame": [
+      1.735,
+      1.544,
+      1.719,
+      1.74,
+      1.544,
+      1.735
+    ]
+  },
+  "unityImported": false,
+  "runtimeVerified": false
+}

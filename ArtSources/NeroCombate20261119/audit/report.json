@@ -1,0 +1,190 @@
+{
+  "ok": true,
+  "source": "C:\\Users\\Usuario\\Documents\\Codex\\2026-10-10\\f\\darklight-requiem-main\\ArtSources\\NeroCombate20261119\\staging\\NeroFraturadoCombatS20261119.png",
+  "sourceSha256": "6ab10e7b2947f7b5036b1bffb1afa2704833106652d3c10c6e7098b31fe6d350",
+  "errors": [],
+  "warnings": [
+    "More than 10% of visible samples have partial alpha; inspect halos/native pixel rendering",
+    "Unity PPU missing/differs from manifest",
+    "Unity text inspection only: import, platform overrides and runtime not verified"
+  ],
+  "frames": [
+    {
+      "id": "NeroFraturadoCombatS20261119_00",
+      "rect": [
+        0,
+        0,
+        512,
+        640
+      ],
+      "bbox": [
+        75,
+        137,
+        370,
+        559
+      ],
+      "visiblePixels": 62385,
+      "colors": 54583,
+      "partialAlphaPixels": 62116,
+      "pixelSha256": "e152bea17e8184aa5ea2189a5e3672d80c62ee132b7efea38b958b4b60f0bdfc"
+    },
+    {
+      "id": "NeroFraturadoCombatS20261119_01",
+      "rect": [
+        512,
+        0,
+        512,
+        640
+      ],
+      "bbox": [
+        81,
+        133,
+        362,
+        561
+      ],
+      "visiblePixels": 56854,
+      "colors": 48596,
+      "partialAlphaPixels": 56638,
+      "pixelSha256": "ab819ac62074d1ba83ee23c83c17ca3c867d41bb74f62efa112a856bd01016a4"
+    },
+    {
+      "id": "NeroFraturadoCombatS20261119_02",
+      "rect": [
+        1024,
+        0,
+        512,
+        640
+      ],
+      "bbox": [
+        63,
+        131,
+        349,
+        562
+      ],
+      "visiblePixels": 61407,
+      "colors": 53109,
+      "partialAlphaPixels": 61304,
+      "pixelSha256": "1a7ef978360adbaeb28d867af88b5012f628a5016f060646e03f7b57bcbc74d0"
+    },
+    {
+      "id": "NeroFraturadoCombatS20261119_03",
+      "rect": [
+        1536,
+        0,
+        512,
+        640
+      ],
+      "bbox": [
+        109,
+        154,
+        384,
+        561
+      ],
+      "visiblePixels": 58671,
+      "colors": 50128,
+      "partialAlphaPixels": 58444,
+      "pixelSha256": "216f58bcb4d2f5aef0d5bb73ff66cbceb46e4cfec1a64d1b4ca3a227c3364c5b"
+    },
+    {
+      "id": "NeroFraturadoCombatS20261119_04",
+      "rect": [
+        0,
+        640,
+        512,
+        640
+      ],
+      "bbox": [
+        115,
+        120,
+        388,
+        562
+      ],
+      "visiblePixels": 62393,
+      "colors": 53704,
+      "partialAlphaPixels": 62122,
+      "pixelSha256": "f880b40a684af79587c87174ea0deb6d5154ab83e5e4b51c00961742fcfa5db6"
+    },
+    {
+      "id": "NeroFraturadoCombatS20261119_05",
+      "rect": [
+        512,
+        640,
+        512,
+        640
+      ],
+      "bbox": [
+        118,
+        134,
+        376,
+        560
+      ],
+      "visiblePixels": 57571,
+      "colors": 49491,
+      "partialAlphaPixels": 57316,
+      "pixelSha256": "27daf47f3a403092b0959cc165b9430bd4098b51ac71062394928065ef48b15e"
+    },
+    {
+      "id": "NeroFraturadoCombatS20261119_06",
+      "rect": [
+        1024,
+        640,
+        512,
+        640
+      ],
+      "bbox": [
+        90,
+        175,
+        414,
+        560
+      ],
+      "visiblePixels": 57735,
+      "colors": 50826,
+      "partialAlphaPixels": 57521,
+      "pixelSha256": "b8d4f286606e34ef0450036eaf886a640cb9ea07b22b88311d20e41074fe42ac"
+    },
+    {
+      "id": "NeroFraturadoCombatS20261119_07",
+      "rect": [
+        1536,
+        640,
+        512,
+        640
+      ],
+      "bbox": [
+        72,
+        145,
+        389,
+        560
+      ],
+      "visiblePixels": 61651,
+      "colors": 52365,
+      "partialAlphaPixels": 61477,
+      "pixelSha256": "3bdc562e51686d848943d1a91b3cd2b9f4b313a6e5cf1a44598a84e446b90514"
+    }
+  ],
+  "clips": [
+    {
+      "name": "Idle_S",
+      "frames": 1,
+      "distinctPoses": 1
+    },
+    {
+      "name": "Walk_S",
+      "frames": 2,
+      "distinctPoses": 2
+    },
+    {
+      "name": "Guard_S",
+      "frames": 1,
+      "distinctPoses": 1
+    },
+    {
+      "name": "Attack_S",
+      "frames": 4,
+      "distinctPoses": 4
+    }
+  ],
+  "overlaps": [],
+  "visualApproval": false,
+  "runtimeVerified": false
+}

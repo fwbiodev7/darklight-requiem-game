@@ -1,0 +1,4 @@
+# Lucius Arconte — referência principal
+Decisão do usuário em 12/11/2026. A terceira imagem da mensagem que rejeitou as duas folhas é a autoridade para rosto, corpo, postura, proporções, traje, espada e aura. As primeiras duas imagens (dano/morte e repouso) são versões rejeitadas. Não usar como modelo nem integrar.
+O Arconte conserva a escala corporal de Lucius Normal. Copiar o modelo compacto da referência: cabelo prateado com mechas verdes, olhos verdes de expressão firme, fita azul, sobretudo preto com ouro e bordados verdes, botas pesadas. Espada reta de aço escuro com gumes prateados, guarda curta e brilho verde externo. Comparar a altura corporal sem a aura em poses equivalentes.
+Aprovação visual explícita do usuário: HurtDeathPrimary.png, 12 quadros de dano e morte. SHA-256 AF2C49939CED1F82724287E40DDE5E3A1140D27A70C83580C1D36328301819DA. Adotar esta folha junto da referência principal nas próximas animações. Validação em Unity pendente.

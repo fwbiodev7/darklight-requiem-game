@@ -1,0 +1,413 @@
+{
+  "schemaVersion": 1,
+  "image": "NeroFraturadoCombatS20261119.png",
+  "imageSha256": "6ab10e7b2947f7b5036b1bffb1afa2704833106652d3c10c6e7098b31fe6d350",
+  "nativeSize": [
+    2048,
+    1280
+  ],
+  "sourceSize": [
+    1448,
+    1086
+  ],
+  "pixelsPerUnit": 221.75396350993378,
+  "status": "visual-reviewed",
+  "frames": [
+    {
+      "id": "NeroFraturadoCombatS20261119_00",
+      "name": "NeroFraturadoCombatS20261119_00",
+      "rect": [
+        0,
+        0,
+        512,
+        640
+      ],
+      "pivot": [
+        0.5,
+        0.125
+      ],
+      "durationMs": 300,
+      "action": "Idle",
+      "direction": "S",
+      "form": "Fraturado",
+      "skin": "Nero",
+      "source": "sources/NeroFraturadoCombatS20261119-v1.png",
+      "sourceRectTopLeft": [
+        0,
+        0,
+        362,
+        543
+      ],
+      "sourceGroundTopLeft": [
+        207,
+        480
+      ],
+      "packOffset": [
+        49,
+        80
+      ],
+      "bodyHeightPx": 425
+    },
+    {
+      "id": "NeroFraturadoCombatS20261119_01",
+      "name": "NeroFraturadoCombatS20261119_01",
+      "rect": [
+        512,
+        0,
+        512,
+        640
+      ],
+      "pivot": [
+        0.5,
+        0.125
+      ],
+      "durationMs": 180,
+      "action": "StepA",
+      "direction": "S",
+      "form": "Fraturado",
+      "skin": "Nero",
+      "source": "sources/NeroFraturadoCombatS20261119-v1.png",
+      "sourceRectTopLeft": [
+        362,
+        0,
+        362,
+        543
+      ],
+      "sourceGroundTopLeft": [
+        563,
+        484
+      ],
+      "packOffset": [
+        55,
+        76
+      ],
+      "bodyHeightPx": null
+    },
+    {
+      "id": "NeroFraturadoCombatS20261119_02",
+      "name": "NeroFraturadoCombatS20261119_02",
+      "rect": [
+        1024,
+        0,
+        512,
+        640
+      ],
+      "pivot": [
+        0.5,
+        0.125
+      ],
+      "durationMs": 180,
+      "action": "StepB",
+      "direction": "S",
+      "form": "Fraturado",
+      "skin": "Nero",
+      "source": "sources/NeroFraturadoCombatS20261119-stepB-correction-v2.png",
+      "sourceRectTopLeft": [
+        724,
+        0,
+        362,
+        543
+      ],
+      "sourceGroundTopLeft": [
+        935,
+        484
+      ],
+      "packOffset": [
+        45,
+        76
+      ],
+      "bodyHeightPx": null
+    },
+    {
+      "id": "NeroFraturadoCombatS20261119_03",
+      "name": "NeroFraturadoCombatS20261119_03",
+      "rect": [
+        1536,
+        0,
+        512,
+        640
+      ],
+      "pivot": [
+        0.5,
+        0.125
+      ],
+      "durationMs": 300,
+      "action": "Guard",
+      "direction": "S",
+      "form": "Fraturado",
+      "skin": "Nero",
+      "source": "sources/NeroFraturadoCombatS20261119-v1.png",
+      "sourceRectTopLeft": [
+        1086,
+        0,
+        362,
+        543
+      ],
+      "sourceGroundTopLeft": [
+        1275,
+        478
+      ],
+      "packOffset": [
+        67,
+        82
+      ],
+      "bodyHeightPx": null
+    },
+    {
+      "id": "NeroFraturadoCombatS20261119_04",
+      "name": "NeroFraturadoCombatS20261119_04",
+      "rect": [
+        0,
+        640,
+        512,
+        640
+      ],
+      "pivot": [
+        0.5,
+        0.125
+      ],
+      "durationMs": 432,
+      "action": "Windup",
+      "direction": "S",
+      "form": "Fraturado",
+      "skin": "Nero",
+      "source": "sources/NeroFraturadoCombatS20261119-v1.png",
+      "sourceRectTopLeft": [
+        0,
+        543,
+        362,
+        543
+      ],
+      "sourceGroundTopLeft": [
+        190,
+        1020
+      ],
+      "packOffset": [
+        66,
+        83
+      ],
+      "bodyHeightPx": null
+    },
+    {
+      "id": "NeroFraturadoCombatS20261119_05",
+      "name": "NeroFraturadoCombatS20261119_05",
+      "rect": [
+        512,
+        640,
+        512,
+        640
+      ],
+      "pivot": [
+        0.5,
+        0.125
+      ],
+      "durationMs": 168,
+      "action": "LateAnticipation",
+      "direction": "S",
+      "form": "Fraturado",
+      "skin": "Nero",
+      "source": "sources/NeroFraturadoCombatS20261119-v1.png",
+      "sourceRectTopLeft": [
+        362,
+        543,
+        324,
+        543
+      ],
+      "sourceGroundTopLeft": [
+        535,
+        1020
+      ],
+      "packOffset": [
+        83,
+        83
+      ],
+      "bodyHeightPx": null
+    },
+    {
+      "id": "NeroFraturadoCombatS20261119_06",
+      "name": "NeroFraturadoCombatS20261119_06",
+      "rect": [
+        1024,
+        640,
+        512,
+        640
+      ],
+      "pivot": [
+        0.5,
+        0.125
+      ],
+      "durationMs": 250,
+      "action": "ContactFollowthrough",
+      "direction": "S",
+      "form": "Fraturado",
+      "skin": "Nero",
+      "source": "sources/NeroFraturadoCombatS20261119-v1.png",
+      "sourceRectTopLeft": [
+        686,
+        543,
+        400,
+        543
+      ],
+      "sourceGroundTopLeft": [
+        885,
+        1020
+      ],
+      "packOffset": [
+        57,
+        83
+      ],
+      "bodyHeightPx": null
+    },
+    {
+      "id": "NeroFraturadoCombatS20261119_07",
+      "name": "NeroFraturadoCombatS20261119_07",
+      "rect": [
+        1536,
+        640,
+        512,
+        640
+      ],
+      "pivot": [
+        0.5,
+        0.125
+      ],
+      "durationMs": 220,
+      "action": "Recovery",
+      "direction": "S",
+      "form": "Fraturado",
+      "skin": "Nero",
+      "source": "sources/NeroFraturadoCombatS20261119-v1.png",
+      "sourceRectTopLeft": [
+        1086,
+        543,
+        362,
+        543
+      ],
+      "sourceGroundTopLeft": [
+        1280,
+        1020
+      ],
+      "packOffset": [
+        62,
+        83
+      ],
+      "bodyHeightPx": null
+    }
+  ],
+  "clips": [
+    {
+      "name": "Idle_S",
+      "frames": [
+        "NeroFraturadoCombatS20261119_00"
+      ],
+      "loop": true,
+      "allowStatic": true
+    },
+    {
+      "name": "Walk_S",
+      "frames": [
+        "NeroFraturadoCombatS20261119_01",
+        "NeroFraturadoCombatS20261119_02"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "Guard_S",
+      "frames": [
+        "NeroFraturadoCombatS20261119_03"
+      ],
+      "loop": true,
+      "allowStatic": true
+    },
+    {
+      "name": "Attack_S",
+      "frames": [
+        "NeroFraturadoCombatS20261119_04",
+        "NeroFraturadoCombatS20261119_05",
+        "NeroFraturadoCombatS20261119_06",
+        "NeroFraturadoCombatS20261119_07"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "Idle_S",
+    "Walk_S",
+    "Guard_S",
+    "Attack_S"
+  ],
+  "quality": {
+    "alphaThreshold": 7,
+    "maxHeightRatio": 1.4
+  },
+  "visualScale": 1.325,
+  "worldBodyHeight": 2.5394134611477823,
+  "calibration": {
+    "method": "Manual hair-top to sole idle body, excludes sword and ribbons; one global PPU. Whole source RGBA crops translated at integer offsets only, never scaled or retouched.",
+    "idleHairTopSourceY": 55,
+    "idleGroundSourceY": 480,
+    "bodyHeightPx": 425,
+    "groundInCellTopLeft": [
+      256,
+      560
+    ]
+  },
+  "baseOrderedNames": [
+    "NeroFraturadoCombatS20261119_00",
+    "NeroFraturadoCombatS20261119_01",
+    "NeroFraturadoCombatS20261119_02",
+    "NeroFraturadoCombatS20261119_03"
+  ],
+  "attackOrderedNames": [
+    "NeroFraturadoCombatS20261119_04",
+    "NeroFraturadoCombatS20261119_05",
+    "NeroFraturadoCombatS20261119_06",
+    "NeroFraturadoCombatS20261119_07"
+  ],
+  "consumer": {
+    "runtimeKind": "KaelFractured",
+    "baseSlots": [
+      "idle",
+      "right-leg-forward step",
+      "left-leg-forward step",
+      "guard"
+    ],
+    "attackSlots": [
+      "initial windup",
+      "late anticipation",
+      "decisive contact/followthrough",
+      "recovery"
+    ],
+    "attackTimingSeconds": [
+      0.6,
+      0.25,
+      0.22
+    ],
+    "windupSplit": [
+      0.72,
+      0.28
+    ],
+    "walkMode": "distance driven at .36 world units per step; 180ms preview is illustrative only",
+    "events": "Existing runtime triggers damage at start of attack slot2, not authored by PNG/JSON.",
+    "rootInstruction": "Keep approved OfficialCast/Nero as runtime base[0]; atlas00 is only transition/reference candidate."
+  },
+  "states": {
+    "produced": true,
+    "visualReviewed": true,
+    "staged": true,
+    "copiedToAssets": false,
+    "unityImported": false,
+    "runtimeVerified": false
+  },
+  "limitations": [
+    "Projected blade length varies by pose, noticeably shorter in down-left idle/steps than across-body guard/contact. No recolor or clipping; exact rigid blade length across poses is NOT certified.",
+    "Two anticipation poses intentionally differ subtly; no added VFX/warning arcs.",
+    "Generator has low alpha1..7 specks; retained, not threshold-erased. Audit uses alphaThreshold7 for visible-geometry warnings.",
+    "Only a frontal pilot with slight combat turn, not eight-direction coverage.",
+    "Still contact review completed; movement preview generated, no Unity/runtime test.",
+    "Animated browser review blocked because file protocol is disallowed by browser URL policy; no workaround attempted. Contact sheet and each whole pose visually reviewed; temporal playback remains unreviewed.",
+    "StepB has more knee flexion than StepA; this is a two-contact pilot, not a complete four-phase locomotion cycle."
+  ]
+}

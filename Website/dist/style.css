@@ -64,3 +64,25 @@
 
 /* Zoom panorâmico dos pôsteres no celular */
 @media(max-width:800px){#lightbox.poster-view{width:96vw;max-height:95vh;overflow:auto}#lightbox.poster-view img{width:max(900px,100%);max-width:none;max-height:none;image-rendering:auto}}
+
+
+/* Destaque de atualização Gothic Eclipse 2.0 — estilo preservado do site */
+.gothic-update{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,1fr);gap:0;overflow:hidden;margin:6px 0 30px;border:1px solid #8b365d;background:linear-gradient(130deg,#1a0e1b,#100c17);box-shadow:0 0 0 1px #2c1727,0 16px 50px #0008}
+.gothic-update-art{min-width:0;display:flex;flex-direction:column;background:#0c0812}
+.gothic-update-art button{border:0;background:#100914;color:inherit;padding:0;width:100%;height:100%;min-height:310px;position:relative;overflow:hidden}
+.gothic-update-art img{width:100%;height:100%;object-fit:contain;image-rendering:auto}
+.gothic-update-art button span{position:absolute;right:12px;bottom:12px;padding:7px 11px;background:#100815e8;border:1px solid #a74a64;font-size:13px;letter-spacing:.05em}
+.gothic-update-art button:hover span{background:#66172c}
+.gothic-update-caption{margin:0;padding:9px 15px;background:#0c0812;border-top:1px solid #3b283c;color:#c8a9bd;font-size:12px;letter-spacing:.06em}
+.gothic-update-info{padding:clamp(24px,3vw,42px);display:flex;flex-direction:column;align-items:flex-start}
+.gothic-update-info .news-meta{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:center;gap:10px}
+.gothic-update-info h3{font-size:clamp(29px,3.5vw,48px);line-height:1.06;margin:20px 0 12px;letter-spacing:.02em}
+.gothic-update-info h3 em{font-style:normal;color:var(--red)}
+.gothic-update-info>p{font-size:17px;line-height:1.5;color:#e2d3e2;margin:8px 0}
+.gothic-update-info ul{padding-left:22px;margin:12px 0 17px;font-size:16px;color:#ddcbd9}
+.gothic-update-info li+li{margin-top:7px}
+.gothic-update-info li::marker{color:#f64266}
+.gothic-update-info .gothic-update-note{color:#bca9bc;font-size:14px}
+.gothic-update-info .text-link{margin-top:auto;padding-top:18px}
+@media(max-width:960px){.gothic-update{grid-template-columns:1fr}.gothic-update-art button{min-height:0}.gothic-update-art img{height:auto;aspect-ratio:16/9;object-fit:cover}.gothic-update-info{padding:24px}.gothic-update-info h3{font-size:clamp(29px,6vw,43px)}}
+@media(max-width:480px){.gothic-update-info .news-meta{flex-direction:column;align-items:flex-start}.gothic-update-info ul{font-size:15px}.gothic-update-art button span{font-size:11px;padding:5px 7px}}

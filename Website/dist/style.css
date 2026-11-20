@@ -38,3 +38,26 @@
 .menu-preview-copy p{font-size:17px;margin:0;color:var(--muted)}
 @media(max-width:800px){.menu-preview-grid{grid-template-columns:1fr}}
 @media(max-width:520px){.menu-preview-copy{padding:16px 17px 20px}.menu-preview-copy h3{font-size:23px}}
+
+/* Pôsteres oficiais enviados para a atualização de 19/11/2026 */
+.poster-feature{border:1px solid #713a59;margin:0 0 36px;background:linear-gradient(155deg,#1b0e1b,#08070e);box-shadow:0 18px 55px #0008;overflow:hidden}
+.poster-feature[hidden],.villain-grid[hidden],.forms-grid[hidden],.lucius-layout[hidden]{display:none!important}
+.poster-zoom{display:block;width:100%;position:relative;border:0;padding:0;background:#0c0a11;color:#f8e9f4;text-align:left;cursor:zoom-in}
+.poster-zoom img{display:block;width:100%;height:auto;object-fit:contain;image-rendering:auto}
+.poster-zoom>span{position:absolute;right:14px;bottom:14px;padding:9px 13px;background:#080611dc;border:1px solid #c85278;font-size:13px;letter-spacing:.1em}
+.poster-feature figcaption{padding:11px 17px;border-top:1px solid #5d3157;font-size:13px;letter-spacing:.08em;color:#d0aabf}
+.poster-lucius{border-color:#54706a}.poster-lucius figcaption{border-color:#41665a}
+.villains-section{background:radial-gradient(ellipse at 50% 20%,#45112655,transparent 70%),linear-gradient(#120b15,#090810)}
+.villain-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:21px}
+.villain-card{border:1px solid #694059;background:linear-gradient(180deg,#1d1421,#100d17);overflow:hidden;display:flex;flex-direction:column}
+.villain-art{min-height:330px;display:flex;align-items:center;justify-content:center;padding:18px;background:radial-gradient(ellipse at 50% 77%,#76284355,transparent 66%),#0e0a13}
+.villain-art img{width:100%;height:345px;object-fit:contain;image-rendering:pixelated}
+.villain-card.nero{border-color:#375887}.villain-card.nero .villain-art{background:radial-gradient(ellipse at 50% 77%,#243b7655,transparent 66%),#0b101c}
+.villain-card.arconte{border-color:#447a4b}.villain-card.arconte .villain-art{background:radial-gradient(ellipse at 50% 77%,#285d3155,transparent 66%),#0b1410}
+.villain-info{padding:22px 23px 29px;border-top:2px solid #d24363;flex:1}
+.villain-card.nero .villain-info{border-color:#538fe8}.villain-card.arconte .villain-info{border-color:#65bc69}
+.villain-eyebrow{font-size:13px;letter-spacing:.14em;color:#d8a4b9}
+.villain-info h3{font-size:clamp(25px,2.4vw,35px);line-height:1.1;margin:9px 0 12px}
+.villain-info p{font-size:17px;margin:0}
+@media(max-width:800px){.villain-grid{grid-template-columns:1fr 1fr}.villain-card.matriarca{grid-column:1/-1}.villain-card.matriarca .villain-art img{height:365px}}
+@media(max-width:520px){.villain-grid{grid-template-columns:1fr}.villain-card.matriarca{grid-column:auto}.villain-art{min-height:250px}.villain-art img,.villain-card.matriarca .villain-art img{height:290px}.poster-zoom>span{font-size:11px;right:7px;bottom:7px}.poster-feature figcaption{font-size:11px}}

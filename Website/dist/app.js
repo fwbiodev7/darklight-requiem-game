@@ -18,3 +18,15 @@ if(fabiusNormalArt) fabiusNormalArt.addEventListener("error",()=>{
   fabiusNormalArt.dataset.fallbackAttempted="1";
   fabiusNormalArt.src="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/Website/dist/assets/fabius-normal-oficial-20261116.webp";
 });
+
+// Exibe os novos pôsteres quando os assets estão disponíveis;
+// mantém as artes antigas como fallback sem mostrar imagens quebradas.
+document.querySelectorAll("img[data-poster]").forEach(img=>{
+  const poster=img.closest(".poster-feature");
+  const fallback=document.getElementById(img.dataset.posterTarget);
+  const activate=()=>{poster.hidden=false;if(fallback)fallback.hidden=true};
+  const restore=()=>{poster.hidden=true;if(fallback)fallback.hidden=false};
+  img.addEventListener("load",activate,{once:true});
+  img.addEventListener("error",restore,{once:true});
+  if(img.complete)(img.naturalWidth>0?activate:restore)();
+});

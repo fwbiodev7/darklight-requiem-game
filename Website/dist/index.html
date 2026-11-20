@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#090711">
-<meta name="description" content="DARKLIGHT: REQUIEM: hack and slash 2D de fantasia sombria em pixel art. Conheça Fabius, a Katana, os Punhos/Grevas Abissais e a evolução do projeto.">
+<meta name="description" content="DARKLIGHT: REQUIEM: hack and slash 2D de fantasia sombria em pixel art. Conheça as formas de Fabius, Lucius, Matriarca Rubra e Nero e acompanhe a evolução do projeto.">
 <meta property="og:title" content="DARKLIGHT: REQUIEM | O Véu desperta">
 <meta property="og:description" content="Domine a Katana e os Punhos Abissais em um hack and slash 2D de fantasia sombria.">
 <meta property="og:image" content="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/Website/dist/assets/menu-art.png">
@@ -22,7 +22,7 @@
 <a class="brand" href="#inicio" aria-label="DARKLIGHT: REQUIEM — Início"><img src="assets/darklight-logo-pixel.png" alt="DARKLIGHT: REQUIEM" width="186" height="62"></a>
 <button class="menu-toggle" id="menu-toggle" aria-controls="nav" aria-expanded="false" type="button">MENU <span aria-hidden="true">☰</span></button>
 <nav id="nav" aria-label="Navegação principal">
-<a href="#combate">ARSENAL</a><a href="#formas">FORMAS</a><a href="#lucius">LUCIUS</a><a href="#interface">INTERFACE</a><a href="#mundo">MUNDO</a><a href="#roadmap">ROADMAP</a>
+<a href="#formas">FABIUS</a><a href="#lucius">LUCIUS</a><a href="#viloes">VILÕES</a><a href="#interface">INTERFACE</a><a href="#mundo">MUNDO</a><a href="#roadmap">ROADMAP</a>
 </nav>
 <a class="nav-download" href="#jogar">JOGAR <span aria-hidden="true">↗</span></a>
 </header>
@@ -48,28 +48,19 @@
 </div>
 </section>
 
-<section class="section combat" id="combate">
-<div class="wrap">
-<div class="section-head"><div><p class="kicker">02 / ARSENAL</p><h2>DUAS ARMAS.<br><em>INFINITAS POSSIBILIDADES.</em></h2></div><p>O futuro do combate de Fabius se concentra em duas identidades: a precisão da lâmina e o impacto do corpo a corpo.</p></div>
-<div class="weapon-grid">
-<article class="weapon-card">
-<div class="weapon-visual"><img src="assets/katana-aprovada.webp" alt="Detalhe da Katana em prévia de arsenal" decoding="async" loading="lazy"><span class="image-label">ARTE DE PRODUÇÃO · KATANA</span></div>
-<div class="weapon-copy"><span class="number">01 / A LÂMINA</span><h3>KATANA</h3><p>Precisão, velocidade e alcance. Cortes encadeados, leitura de abertura e controle do ritmo definem o estilo da Katana.</p><div class="pills"><span>PRECISÃO</span><span>VELOCIDADE</span><span>ALCANCE</span></div></div>
-</article>
-<article class="weapon-card">
-<div class="weapon-visual"><img src="assets/punhos-grevas-aprovados.webp" alt="Punhos e Grevas Abissais em detalhe da prévia do arsenal" decoding="async" loading="lazy"><span class="image-label">ARTE DE PRODUÇÃO · PUNHOS</span></div>
-<div class="weapon-copy"><span class="number">02 / O IMPACTO</span><h3>PUNHOS / GREVAS<br>ABISSAIS</h3><p>Combate físico, socos e chutes agressivos, pressão de curta distância e finalizações que dão peso a cada sequência.</p><div class="pills"><span>IMPACTO</span><span>PRESSÃO</span><span>COMBATE FÍSICO</span></div></div>
-</article>
-</div>
-<div class="status-line"><span class="status planned">PLANEJADO</span> Novas posturas, sequências terrestres, lançamentos, perseguições aéreas e finalizadores. <span class="status study">EM ESTUDO</span> Trocar de arma dentro de combos aéreos.</div>
-<p class="fineprint">Moto e Serras não fazem parte do arsenal futuro. Registros e builds históricos ainda podem apresentá-las; sua retirada do gameplay é uma etapa planejada.</p>
-</div>
-</section>
-
 <section class="section forms-section" id="formas">
 <div class="wrap">
-<div class="section-head"><div><p class="kicker">03 / TRANSFORMAÇÕES</p><h2>TRÊS ESTADOS.<br><em>UMA VONTADE.</em></h2></div><p>De Fabius Normal ao despertar do Serafim Carmesim, cada forma reflete um novo estágio de sua identidade.</p></div>
-<div class="forms-grid">
+<div class="section-head"><div><p class="kicker">02 / TRANSFORMAÇÕES</p><h2>TRÊS ESTADOS.<br><em>UMA VONTADE.</em></h2></div><p>De Fabius Normal ao despertar do Serafim Carmesim, cada forma reflete um novo estágio de sua identidade.</p></div>
+
+<figure class="poster-feature poster-fabius" hidden>
+  <button type="button" class="poster-zoom" data-zoom data-caption="FABIUS — NORMAL, RUPTURA E SERAFIM CARMESIM" aria-label="Ampliar arte oficial das três formas de Fabius">
+    <img src="assets/fabius-formas-poster-20261119.avif" data-poster data-poster-target="fabius-formas-fallback" alt="Painel em pixel art de Fabius Normal, Ruptura e Serafim Carmesim com asas, oito vistas e Katana, Manoplas e Grevas Abissais" decoding="async" loading="eager">
+    <span aria-hidden="true">AMPLIAR ARTE ↗</span>
+  </button>
+  <figcaption>REFERÊNCIA DE PERSONAGEM · NORMAL · RUPTURA · SERAFIM CARMESIM</figcaption>
+</figure>
+
+<div class="forms-grid" id="fabius-formas-fallback">
 <article class="form-card"><div class="form-art"><img src="assets/fabius-normal-oficial-20261116.webp" id="fabius-normal-oficial" alt="Fabius Normal de cabelo escuro, com espada e sobretudo vermelho" loading="lazy"></div><div class="form-info"><span>01 · ORIGEM</span><h3>NORMAL</h3><p>O domínio começa com a própria técnica. A identidade de Fabius antes das transformações.</p></div></article>
 <article class="form-card rupture"><div class="form-art"><img src="assets/fabius-ruptura-limpo.webp" alt="Fabius Ruptura com energia carmesim e espada" loading="lazy"></div><div class="form-info"><span>02 · DESPERTAR</span><h3>RUPTURA</h3><p>O carmesim toma o protagonismo em uma evolução marcada por energia intensa e presença vampírica.</p></div></article>
 <article class="form-card serafim"><div class="form-art"><img src="assets/fabius-serafim-site.webp" alt="Arte de Fabius Serafim Carmesim com asas vermelhas" loading="lazy"></div><div class="form-info"><span>03 · ASCENSÃO</span><h3>SERAFIM CARMESIM</h3><p>Asas rubras e uma silhueta imponente definem o estágio mais dramático de Fabius.</p></div></article>
@@ -80,9 +71,50 @@
 
 <section class="section lucius-section" id="lucius">
 <div class="wrap">
-<p class="kicker">04 / O OUTRO LADO DO ESPELHO</p><div class="section-head"><div><h2>LUCIUS.<br><em>O ARCONTE.</em></h2></div><p>Um irmão. Uma espada. Um duelo que carrega o peso de tudo que aconteceu antes.</p></div>
-<div class="lucius-layout"><figure class="character-figure"><img src="assets/fabius-normal-site.webp" alt="Lucius Normal de cabelo prateado com espada e energia azul" loading="lazy"><figcaption>LUCIUS · NORMAL</figcaption></figure><div class="lucius-center"><p>Lucius não é apenas mais um adversário. Sua presença conduz o confronto central de DARKLIGHT: REQUIEM.</p><h3>UM DUELO QUE AINDA VAI EVOLUIR.</h3><p><span class="status integrated">INTEGRADO NO PROJETO</span> A sequência oficial de transformação Arconte faz parte do projeto.</p><p><span class="status planned">PLANEJADO</span> Lucius 2.0 trará IA mais inteligente, novas respostas defensivas, contra-ataques, adaptação ao combate aéreo e transições de fase refinadas.</p><a class="text-link" href="#roadmap">VEJA O CAMINHO DO DESENVOLVIMENTO ↗</a></div><figure class="character-figure arconte"><img src="assets/lucius-arconte-site.webp" alt="Arte de Lucius na transformação Arconte com aura verde" loading="lazy"><figcaption>LUCIUS · ARCONTE</figcaption></figure></div>
+<p class="kicker">03 / O OUTRO LADO DO ESPELHO</p><div class="section-head"><div><h2>LUCIUS.<br><em>O ARCONTE.</em></h2></div><p>Um irmão. Uma espada. Um duelo que carrega o peso de tudo que aconteceu antes.</p></div>
+
+<figure class="poster-feature poster-lucius" hidden>
+  <button type="button" class="poster-zoom" data-zoom data-caption="LUCIUS — NORMAL E ARCONTE" aria-label="Ampliar arte oficial das duas formas de Lucius">
+    <img src="assets/lucius-formas-poster-20261119.avif" data-poster data-poster-target="lucius-formas-fallback" alt="Ficha de personagem de Lucius Normal com olhos azuis e Lucius Arconte com energia espectral verde em vistas de demonstração" decoding="async" loading="eager">
+    <span aria-hidden="true">AMPLIAR ARTE ↗</span>
+  </button>
+  <figcaption>REFERÊNCIA DE PERSONAGEM · NORMAL · ARCONTE</figcaption>
+</figure>
+
+<div class="lucius-layout" id="lucius-formas-fallback"><figure class="character-figure"><img src="assets/lucius-normal.webp" alt="Lucius Normal de cabelo prateado com espada e energia azul" loading="lazy"><figcaption>LUCIUS · NORMAL</figcaption></figure><div class="lucius-center"><p>Lucius não é apenas mais um adversário. Sua presença conduz o confronto central de DARKLIGHT: REQUIEM.</p><h3>UM DUELO QUE AINDA VAI EVOLUIR.</h3><p><span class="status integrated">INTEGRADO NO PROJETO</span> A sequência oficial de transformação Arconte faz parte do projeto.</p><p><span class="status planned">PLANEJADO</span> Lucius 2.0 trará IA mais inteligente, novas respostas defensivas, contra-ataques, adaptação ao combate aéreo e transições de fase refinadas.</p><a class="text-link" href="#roadmap">VEJA O CAMINHO DO DESENVOLVIMENTO ↗</a></div><figure class="character-figure arconte"><img src="assets/lucius-arconte-site.webp" alt="Arte de Lucius na transformação Arconte com aura verde" loading="lazy"><figcaption>LUCIUS · ARCONTE</figcaption></figure></div>
 </div></section>
+
+
+<section class="section villains-section" id="viloes" aria-labelledby="viloes-titulo">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="kicker">04 / PRINCIPAIS ANTAGONISTAS</p><h2 id="viloes-titulo">A SOMBRA TEM<br><em>TRÊS ROSTOS.</em></h2></div>
+      <p>Além do duelo dos irmãos, o Véu se move por forças que perseguem, manipulam e desafiam Fabius. Conheça os rostos centrais do conflito.</p>
+    </div>
+    <figure class="poster-feature poster-villains" hidden>
+      <button type="button" class="poster-zoom" data-zoom data-caption="ANTAGONISTAS — MATRIARCA RUBRA, NERO E LUCIUS ARCONTE" aria-label="Ampliar arte dos antagonistas principais">
+        <img src="assets/viloes-principais-20261119.avif" data-poster data-poster-target="viloes-personagens-fallback" alt="Três antagonistas de DARKLIGHT REQUIEM em pixel art: Matriarca Rubra maior, Nero e Lucius Arconte de mesmo porte, com suas respectivas espadas" decoding="async" loading="eager">
+        <span aria-hidden="true">AMPLIAR ARTE ↗</span>
+      </button>
+      <figcaption>ARTE DE PERSONAGENS · MATRIARCA RUBRA · NERO · LUCIUS ARCONTE</figcaption>
+    </figure>
+    <div class="villain-grid" id="viloes-personagens-fallback">
+      <article class="villain-card matriarca">
+        <figure class="villain-art"><img src="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/Docs/Darklight/References/CampanhaOficial20261119/Matriarca-Rubra.png" alt="Matriarca Rubra, antagonista de destaque com roupas vermelhas, asas e espada carmesim" loading="lazy" decoding="async"></figure>
+        <div class="villain-info"><span class="villain-eyebrow">A RAINHA CARMESIM</span><h3>MATRIARCA RUBRA</h3><p>Uma figura dominante, maior e mais imponente que seus oponentes. Sua presença se impõe com a espada carmesim.</p></div>
+      </article>
+      <article class="villain-card nero">
+        <figure class="villain-art"><img src="https://raw.githubusercontent.com/fwbiodev7/darklight-requiem-game/main/Docs/Darklight/References/CampanhaOficial20261119/Nero.png" alt="Nero, antagonista de cabelos claros com lâmina de energia azul" loading="lazy" decoding="async"></figure>
+        <div class="villain-info"><span class="villain-eyebrow">A LÂMINA AZUL</span><h3>NERO</h3><p>Um espadachim marcado pela energia azul e pela precisão de seus golpes.</p></div>
+      </article>
+      <article class="villain-card arconte">
+        <figure class="villain-art"><img src="assets/lucius-arconte-site.webp" alt="Lucius Arconte de cabelos prateados, energia verde e espada espectral" loading="lazy" decoding="async"></figure>
+        <div class="villain-info"><span class="villain-eyebrow">O IRMÃO DESPERTO</span><h3>LUCIUS ARCONTE</h3><p>O despertar do poder espectral de Lucius. Olhos branco-esverdeados luminosos e uma força que conduz ao confronto decisivo.</p></div>
+      </article>
+    </div>
+    <p class="fineprint">Artes de referência dos personagens. A apresentação visual não representa uma captura de gameplay da build pública.</p>
+  </div>
+</section>
 
 <section class="section interface-section" id="interface">
 <div class="wrap">
@@ -153,7 +185,7 @@
 <div class="news-grid">
 <article class="news-card"><div class="news-meta"><time datetime="2026-11-15">15.11.2026</time><span class="status build">DISPONÍVEL EM BUILD DE TESTES</span></div><h3>UMA NOVA BUILD PARA WINDOWS</h3><p>A pré-release <strong>teste-20261115</strong> disponibiliza uma versão interna recente para testes. Inclui avanços de animações, transformações e atmosfera. O relatório registra 70 testes aprovados e 1 pendência de percurso automatizado.</p><a class="text-link" href="https://github.com/fwbiodev7/darklight-requiem-game/releases/tag/teste-20261115" target="_blank" rel="noopener noreferrer">VER VERSÃO E LIMITAÇÕES ↗</a></article>
 <article class="news-card"><div class="news-meta"><time datetime="2026-11-14">14.11.2026</time><span class="status integrated">INTEGRADO NO PROJETO</span></div><h3>AS FORMAS OFICIAIS AVANÇAM</h3><p>As sequências oficiais de Ruptura, Serafim Carmesim e Lucius Arconte foram integradas ao projeto. A cobertura completa de animações e as revisões visuais permanecem sujeitas a validação.</p><a class="text-link" href="#formas">CONHECER AS FORMAS ↗</a></article>
-<article class="news-card"><div class="news-meta"><time datetime="2026-11-15">15.11.2026</time><span class="status planned">PLANEJADO</span></div><h3>A NOVA DIREÇÃO DO COMBATE</h3><p>Katana e Punhos/Grevas Abissais serão as únicas armas do futuro. Moto e Serras sairão da seleção ativa, mas ainda podem aparecer na build de testes e em registros antigos.</p><a class="text-link" href="#combate">CONHECER O ARSENAL ↗</a></article>
+<article class="news-card"><div class="news-meta"><time datetime="2026-11-15">15.11.2026</time><span class="status planned">PLANEJADO</span></div><h3>A NOVA DIREÇÃO DO COMBATE</h3><p>Katana e Punhos/Grevas Abissais serão as únicas armas do futuro. Moto e Serras sairão da seleção ativa, mas ainda podem aparecer na build de testes e em registros antigos.</p><a class="text-link" href="#formas">CONHECER AS FORMAS DE FABIUS ↗</a></article>
 </div></div></section>
 
 <section class="download" id="jogar"><div class="wrap download-panel"><div><p class="kicker">09 / DISPONÍVEL PARA TESTES</p><h2>PRONTO PARA<br><em>ENTRAR NO VÉU?</em></h2><p>A edição mais recente disponível para baixar é uma <strong>pré-release de testes para Windows x64</strong>, publicada em 15/11/2026. Ainda pode conter conteúdos antigos, limitações e erros conhecidos. Não representa o arsenal futuro nem a conclusão do roadmap.</p><div class="actions"><a class="btn primary" href="https://github.com/fwbiodev7/darklight-requiem-game/releases/download/teste-20261115/DarklightRequiem-Windows-x64-Teste-20261115.zip">BAIXAR VERSÃO DE TESTES <span>↗</span></a><a class="btn" href="https://github.com/fwbiodev7/darklight-requiem-game/releases/tag/teste-20261115" target="_blank" rel="noopener noreferrer">NOTAS DA PRÉ-RELEASE <span>↗</span></a></div><p class="download-alt">Prefere o lançamento público anterior? <a href="https://github.com/fwbiodev7/darklight-requiem-game/releases/tag/v1.0.13" target="_blank" rel="noopener noreferrer">Versão 1.0.13 (19/10/2026)</a>.</p><small>WINDOWS X64 · EXTRAIA O ZIP INTEIRO · CONFIRA O SHA-256 NA RELEASE</small></div></div></section>

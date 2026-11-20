@@ -79,7 +79,7 @@ namespace Darklight
             if(previousPower>=0 && resonance<0){FinishMusicEvent();Notice("DARK RESONANCE: recarga do modo");}
             if(lab.Input.Action("PowerNext").WasPressedThisFrame())Resonance.Cycle(1);
             if(lab.Input.Action("PowerPrevious").WasPressedThisFrame())Resonance.Cycle(-1);
-            if(lab.Input.Action("Power").WasPressedThisFrame())TryActivatePower();
+            if(lab.Input.Action("Power").WasPerformedThisFrame())TryActivatePower();
             if(phonesTime>0)
             {
                 phonesTime-=dt;if(lab.Player.Model.State==CombatState.Hurt){phonesTime=0;Notice("Fones interrompidos");}
@@ -97,8 +97,9 @@ namespace Darklight
             if(lab.Input.Action("Interact").WasPressedThisFrame())Interact();
             if(Training){TickTraining(dt);UpdateAura();return;}
             if(ExploringNewRegion){UpdateRegionExploration();UpdateAura();return;}
-            if(!encounterStarted&&!chapterCleared&&!FinalRitualReady&&Map.InArena(encounter,lab.Player.transform.position)){StartEncounter();return;}
-            if(encounterStarted&&enemies.TrueForAll(e=>e==null||e.Health.IsDead||e.Resolved))ClearEncounter();
+            if(lab.Input.Action("LadyAssist").WasPressedThisFrame())CallLady();
+            if(!encounterStarted&&!chapterCleared&&Map.InArena(encounter,lab.Player.transform.position)){StartEncounter();return;}
+            if(encounterStarted&&enemies.TrueForAll(e=>e==null||e.ReadyForCampaignClear))ClearEncounter();
             UpdateAura();
             // Walking contacts are emitted in TodayCampaignSoundDesign after movement presentation.
         }
@@ -111,6 +112,7 @@ namespace Darklight
         {
             battleSettleUntil=cueDuration=0;if(cueRoot!=null)cueRoot.gameObject.SetActive(false);
             deathMenuPending=false;exploredRegion=-1;notice="";noticeTime=0;Style.Reset();threats.Clear();if(!Training)StageStats.Begin(Progress.StageResult(chapter));
+            StopCampaignAlly();
             if(levelRoot!=null){levelRoot.gameObject.SetActive(false);Destroy(levelRoot.gameObject);}
             foreach(var shot in FindObjectsByType<DarklightProjectile>())Destroy(shot.gameObject);
             enemies.Clear();levelRoot=new GameObject(DarklightStory.Places[chapter]).transform;
@@ -134,14 +136,14 @@ namespace Darklight
             AddProp("Checkpoint",Resources.Load<Sprite>("Darklight/Props/CheckpointShrine")??extras[3],Map.Spawn+Vector2.up*1.8f,1.3f);
             if(!Progress.relics[chapter])AddProp("Fragmento",extras[5],Map.Relic,.7f);
             if(chapter==1)AddProp("IcaroNox",extras[0],Map.Ally,1.8f);
-            else if(chapter==DarklightCampaignRoute.FinalChapter)
-                AddProp("KaelAliado",bossFrames[0],Map.Ally,1.8f);
-            else if(chapter!=DarklightCampaignRoute.NeroChapter||!chapterCleared)
+            else if(Progress.LadyAvailable&&chapter!=DarklightCampaignRoute.FinalChapter&&
+                (chapter!=DarklightCampaignRoute.NeroChapter||!chapterCleared))
                 AddProp("LyraMoreau",extras[1],Map.Ally,1.8f);
             if(chapterCleared)AddProp("Portal",extras[3],Map.Portal,2.5f);
             SetLoadingProgress(.88f,"PREPARANDO OBJETIVOS E ATMOSFERA");yield return null;
-            PrepareNarrativeMap();PrepareFinalRitual();Objective=Goal();firstAwakeningMusicPending=false;music.Stop();ambient.clip=null;ambient.volume=0;AudioDirector?.Region(chapter);InitializeRemaster(chapter);InitializeRegionAtmosphere(chapter);
+            PrepareNarrativeMap();Objective=Goal();firstAwakeningMusicPending=false;music.Stop();ambient.clip=null;ambient.volume=0;AudioDirector?.Region(chapter);InitializeRemaster(chapter);InitializeRegionAtmosphere(chapter);
             BuildMultiverse(chapter);
+            RegroupLady();
             SetLoadingProgress(.99f,"CONCLUINDO A PASSAGEM");yield return null;
         }
         void InitializeRemaster(int chapter){var view=GetComponent<DarklightRemaster>()??gameObject.AddComponent<DarklightRemaster>();view.Initialize(lab.WorldCamera,lab.Player.transform,levelRoot,chapter);}
@@ -161,7 +163,9 @@ namespace Darklight
             const float ladyHeightRatio=.96f;
             float officialScale=DarklightCharacterView.WorldVisualScale*(name=="LyraMoreau"?ladyHeightRatio:1f);
             obj.transform.localScale=Vector3.one*(officialActor!=null?officialScale:height/sprite.bounds.size.y);
-            r.sortingOrder=100-Mathf.RoundToInt(position.y*10);
+            bool actor=officialActor!=null||name=="IcaroNox"||name=="LyraMoreau";
+            r.sortingOrder=actor?DarklightSorting.OrderForY(position.y):100-Mathf.RoundToInt(position.y*10);
+            if(actor)DarklightRemaster.TrackVisibleActor(r);
             if(name=="IcaroNox"||(name=="LyraMoreau"&&officialActor==null))
             {
                 var view=obj.AddComponent<DarklightNPCView>();view.frames=name=="IcaroNox"?icaroFrames:lyraFrames;
@@ -172,16 +176,16 @@ namespace Darklight
         string Goal()
         {
             if(chapterCleared)return "PORTAL LIBERTO - INTERAGIR PARA AVANCAR";
-            if(FinalRitualReady)return "LEIA A INSCRIÇÃO E ATIVE OS TRÊS SELOS";
+            if(Progress.chapter==0&&encounter==3)return "VÁ AO PORTAL E DERROTE OS GUARDAS";
             if(ExpandedChapter)return MissionTitle;
             return encounter==3?DarklightCampaignRoute.GateTitle(Progress.chapter):"ENCONTRE O SELO "+(encounter+1)+" / 3";
         }
-        public void PreviewCampaign() { Progress=new DarklightProgress();LoadMap(0);Close(); }
-        public void PreviewChapter(int chapter) { Progress=new DarklightProgress{chapter=Mathf.Clamp(chapter,0,DarklightStory.Chapters.Length-1)};LoadMap(Progress.chapter);Close(); }
+        public void PreviewCampaign() { ladyFollowing=false;Progress=new DarklightProgress();LoadMap(0);Close(); }
+        public void PreviewChapter(int chapter) { ladyFollowing=false;Progress=new DarklightProgress{chapter=Mathf.Clamp(chapter,0,DarklightStory.Chapters.Length-1)};LoadMap(Progress.chapter);Close(); }
         public void NewGame()
-        {if(phaseLoading)return;var old=DarklightProgress.Load();StopMenuMusic();BeginPhaseTransition(0,()=>{atlas?.ResetCampaign();Progress=new DarklightProgress{difficulty=newGameDifficulty,extremeUnlocked=DarklightDifficultyProfile.ExtremeUnlocked(old)};LoadMap(0);},()=>{SaveCheckpoint();Speak(DarklightStory.Introductions[0]);});}
+        {if(phaseLoading)return;var old=DarklightProgress.Load();StopMenuMusic();BeginPhaseTransition(0,()=>{ladyFollowing=false;atlas?.ResetCampaign();Progress=new DarklightProgress{difficulty=newGameDifficulty,extremeUnlocked=DarklightDifficultyProfile.ExtremeUnlocked(old)};LoadMap(0);},()=>{SaveCheckpoint();Speak(DarklightStory.Introductions[0]);});}
         public void ContinueGame()
-        {if(phaseLoading)return;var data=DarklightProgress.Load();if(data==null){Notice("Nenhum save valido");return;}StopMenuMusic();if(data.completed){Progress=data;Open("Victory");return;}BeginPhaseTransition(data.chapter,()=>{Progress=data;LoadMap(Progress.chapter);},()=>SaveCheckpoint());}
+        {if(phaseLoading)return;var data=DarklightProgress.Load();if(data==null){Notice("Nenhum save valido");return;}StopMenuMusic();if(data.completed){Progress=data;Open("Victory");return;}BeginPhaseTransition(data.chapter,()=>{ladyFollowing=false;Progress=data;LoadMap(Progress.chapter);},()=>SaveCheckpoint());}
         void StartMenuMusic()
         {
             if(MenuMusicSource==null)return;
@@ -191,7 +195,7 @@ namespace Darklight
         void StopMenuMusic(){if(MenuMusicSource!=null)MenuMusicSource.Stop();}
         void StartEncounter()
         {
-            if(FinalRitualReady||BeginNarrativeEncounter())return;
+            if(BeginNarrativeEncounter())return;
             if(encounter==3)
             {
                 if(DarklightCampaignRoute.TryBoss(Progress.chapter,out var kind))
@@ -233,8 +237,11 @@ namespace Darklight
             var foe=obj.AddComponent<DarklightEnemy>();foe.kind=kind;foe.elite=elite;
             foe.poses=frames;foe.attackFrames=new Sprite[4];foe.UsesOfficialCombatArt=officialFrames!=null;
             art.transform.localScale=Vector3.one*foe.PresentationScale;
+            art.sortingOrder=DarklightSorting.OrderForY(pos.y);
+            DarklightRemaster.TrackVisibleActor(art);
             if(fullSheet!=null)Array.Copy(fullSheet,4,foe.attackFrames,0,4);
             else Array.Copy(foe.Boss?bossAttacks:enemyAttacks,(foe.Boss?(int)kind-5:(int)kind)*4,foe.attackFrames,0,4);
+            IgnoreCompanionContact(collider);
             hp.SetMaxHealth((foe.Boss?260+Progress.chapter*65:kind==RequiemEnemyKind.Armored?90:50+Progress.chapter*7)*(elite?1.45f:1),false);if(foe.ExpandedBoss)foe.RestorePhase(Progress.bossPhase);enemies.Add(foe);AddEnemyBar(foe);obj.AddComponent<TodayEnemyAudio>();if(Training)obj.AddComponent<DarklightCombatDebug>();
             if(foe.Boss&&!Training)ShowPresentationCue(DarklightStory.Bosses[(int)kind-5],"ENTER / A: DISPENSAR   ·   COMANDOS LIVRES",true);
         }
@@ -266,14 +273,15 @@ namespace Darklight
         }
         void ClearEncounter()
         {
-            if(FinishNarrativeCombat()||AdvanceFinalGuardWave())return;encounterStarted=false;BeginBattleSettle();
+            RegroupLady();
+            if(FinishNarrativeCombat()||AdvanceFinalGuardWave())return;StopNeroAlly();encounterStarted=false;BeginBattleSettle();
             if(encounter==3)
             {
                 chapterCleared=true;Progress.checkpoint=4;Progress.missionWave=0;Progress.formsUnlocked=Mathf.Max(Progress.formsUnlocked,Progress.chapter>=9?3:Progress.chapter>=3?2:1);Progress.potions=Mathf.Min(9,Progress.potions+2);Progress.points++;Energy=100;health.FullHeal();
                 AddProp("Portal",extras[3],Map.Portal,2.5f);Objective=Goal();
                 ExpandedChapterReward();Progress.bossPhase=1;VampireChapterReward();UnlockWeaponReward();StageStats.Finish(Style);SaveCheckpoint();Speak(DarklightStory.Conclusions[Progress.chapter],()=>Open("StageResults"));if(Progress.chapter!=0&&Progress.chapter!=2)Notice("CAPITULO CONCLUIDO");
             }
-            else {encounter++;Progress.checkpoint=encounter;Progress.missionWave=0;health.Heal(health.MaxHealth*.18f);Energy=Mathf.Min(100,Energy+15);if(FinalRitualReady)PrepareFinalRitual();Objective=Goal();SaveCheckpoint();Notice("SELO LIBERTO - CHECKPOINT SALVO");}
+            else {encounter++;Progress.checkpoint=encounter;Progress.missionWave=0;health.Heal(health.MaxHealth*.18f);Energy=Mathf.Min(100,Energy+15);Objective=Goal();SaveCheckpoint();Notice("SELO LIBERTO - CHECKPOINT SALVO");}
         }
         void Interact(){if(!TryInteract())Notice("APROXIME-SE DE UM NPC, MEMÓRIA OU CHECKPOINT");}
         public bool RequestAttack(DarklightEnemy enemy, bool followUp = false)
@@ -283,11 +291,12 @@ namespace Darklight
             if(lab?.WorldCamera!=null)lab.WorldCamera.GetComponent<DarklightLabCamera>().duelOpponent=null;
             if(Training || enemy!=finalDuelOpponent || Progress.luciusFate!=0)return;
             Progress.luciusFate=enemy.Resolved ? 1 : -1;
+            EndNeroTruce();
             SaveCheckpoint();
             Speak(Progress.luciusFate>0 ?
                 new[]{"FABIUS|Larga a espada. Ainda tem um lugar ao meu lado.","LUCIUS|Ao seu lado, sim. Sob suas ordens, nunca."} :
                 new[]{"LUCIUS|Vai guardar minha espada tambem?","FABIUS|Vou lembrar de quem me ensinou a segura-la."},
-                ()=>Open("Ending"));
+                FinishAllianceDialogue);
         }
         public void EnemyDefeated(DarklightEnemy enemy)
         {

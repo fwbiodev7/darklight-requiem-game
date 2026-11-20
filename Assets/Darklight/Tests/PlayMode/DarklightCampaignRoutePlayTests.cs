@@ -42,18 +42,8 @@ namespace Darklight.Tests
             Physics2D.SyncTransforms();
         }
 
-        void Activate(string id)
-        {
-            var marker = GameObject.Find(id);
-            Assert.That(marker, Is.Not.Null, id);
-            Move(marker.transform.position);
-            Assert.That(game.TryGetInteraction(out var target), Is.True, id);
-            Assert.That(target.Id, Is.EqualTo(id));
-            Assert.That(game.TryInteract(), Is.True);
-        }
-
         [UnityTest]
-        public IEnumerator LadyAndTheThreeSealRitualLeadToTheFirstPortal()
+        public IEnumerator DefeatingTheGuardsWithLadyOpensTheFirstPortal()
         {
             EnterLastCheckpoint(0);
             yield return null;
@@ -61,22 +51,38 @@ namespace Darklight.Tests
             var lady = GameObject.Find("LyraMoreau").GetComponent<SpriteRenderer>();
             Assert.That(lady.sprite, Is.SameAs(Resources.Load<Sprite>("Darklight/OfficialCast/Lady")));
             Assert.That(lady.transform.localScale.x, Is.EqualTo(DarklightCharacterView.WorldVisualScale * .96f).Within(.0001f));
-            Activate("ritual_clue");
-            Call("NextDialogue");
-            Activate("ritual_seal_0");
-            Activate("ritual_seal_2");
             Assert.That(game.MapEnemies, Is.Empty);
             Assert.That(game.Progress.checkpoint, Is.EqualTo(3));
-            Activate("ritual_seal_0");
-            Activate("ritual_seal_1");
-            Activate("ritual_seal_2");
+            Assert.That(GameObject.Find("ritual_seal_0"), Is.Null);
+            Move(game.Map.SafeSpawn(game.Map.Arenas[3]));
+            yield return null;
             CollectionAssert.AreEquivalent(new[] {RequiemEnemyKind.Crawler, RequiemEnemyKind.Hunter},
                 game.MapEnemies.Select(enemy => enemy.kind).ToArray());
             Assert.That(game.CurrentBoss, Is.Null);
+            Call("CallLady");
+            var ally = Object.FindFirstObjectByType<DarklightCampaignAlly>();
+            Assert.That(ally, Is.Not.Null);
+            Assert.That(ally.name, Is.EqualTo("LadyApoio"));
+            Assert.That(ally.GetComponentInChildren<SpriteRenderer>().sprite, Is.SameAs(lady.sprite));
+            var companion = ally.GetComponent<DarklightCombatant>();
+            Assert.That(companion.Receive(20, Vector2.right), Is.False);
+            Assert.That(Physics2D.GetIgnoreCollision(ally.GetComponent<Collider2D>(), lab.Player.GetComponent<Collider2D>()), Is.True);
+            Move(game.Map.SafeSpawn(game.Map.Arenas[3]));
+            float deadline = Time.realtimeSinceStartup + 8f;
+            while (Time.realtimeSinceStartup < deadline && game.MapEnemies.All(enemy => enemy.Health.HealthPercent >= 1f))
+                yield return null;
+            Assert.That(game.MapEnemies.Any(enemy => enemy.Health.HealthPercent < 1f), Is.True, "Lady must damage a guardian without player input");
+            ally.GetComponent<HealthSystem>().TakeDamage(9999);
+            yield return null;
+            Assert.That(ally.State, Is.EqualTo(DarklightCampaignAlly.AllyState.Incapacitated));
+            StringAssert.StartsWith("Lady_Defeat_", ally.GetComponentInChildren<SpriteRenderer>().sprite.name);
             foreach (var enemy in game.MapEnemies) enemy.Health.TakeDamage(enemy.Health.MaxHealth + 1);
             for (int i = 0; i < 20 && game.Progress.checkpoint != 4; i++) yield return null;
             Assert.That(game.Progress.checkpoint, Is.EqualTo(4));
             Assert.That(GameObject.Find("Portal"), Is.Not.Null);
+            Assert.That(Object.FindFirstObjectByType<DarklightCampaignAlly>(), Is.SameAs(ally));
+            Call("CallLady");
+            Assert.That(Object.FindFirstObjectByType<DarklightCampaignAlly>(), Is.Null);
             if (DarklightProgress.HasIsolatedTestStorage)
                 Assert.That(DarklightProgress.Load().checkpoint, Is.EqualTo(4));
         }
@@ -107,7 +113,10 @@ namespace Darklight.Tests
             Assert.That(boss.attackFrames[0].name, Is.EqualTo("MatriarcaRubraCombat_04"));
             Assert.That(boss.GetComponentInChildren<SpriteRenderer>().transform.localScale.y, Is.EqualTo(DarklightCharacterView.WorldVisualScale));
             boss.Health.TakeDamage(boss.Health.MaxHealth + 1);
-            for (int i = 0; i < 20 && game.Progress.checkpoint != 4; i++) yield return null;
+            yield return null;
+            StringAssert.StartsWith("MatriarcaRubra_Defeat_", boss.GetComponentInChildren<SpriteRenderer>().sprite.name);
+            float deadline = Time.realtimeSinceStartup + 3;
+            while (Time.realtimeSinceStartup < deadline && game.Progress.checkpoint != 4) yield return null;
             Assert.That(game.Progress.checkpoint, Is.EqualTo(4));
             Assert.That(GameObject.Find("Portal"), Is.Not.Null);
         }

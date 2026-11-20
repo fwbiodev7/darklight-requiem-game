@@ -4,13 +4,54 @@ namespace Darklight
     public sealed class DarklightCombatFX : MonoBehaviour
     {
         static readonly System.Collections.Generic.List<DarklightCombatFX> pool=new();
+        static Sprite ladyBullet;
+        static readonly int MainTexture=Shader.PropertyToID("_MainTex");
         SpriteRenderer art;Vector2 drift;float age,life;Color tint;MaterialPropertyBlock block;
-        public static void Impact(Vector3 position,bool heavy)
+        Vector3 flightStart,flightEnd;
+        DarklightMapDefinition flightMap;
+        bool bulletFlight,bulletImpact;
+        public static void Impact(Vector3 position,bool heavy,Color? contactTint=null)
         {
             var game=DarklightCampaign.Instance;if(game==null)return;
             DarklightPixelContactBurst.TryEmit(position,heavy);
             DarklightCombatImpacts.Emit(position,heavy);
+            if(contactTint.HasValue)
+                DarklightRemaster.ContactLight(position+Vector3.up*.55f,contactTint.Value,
+                    heavy?.93f:.62f,heavy?2.9f:2.1f,heavy?.20f:.13f);
             DarklightCombatLab.Instance.WorldCamera.GetComponent<DarklightLabCamera>().Impulse(heavy?2:1);
+        }
+        public static void LadyShot(Vector2 muzzle, Vector2 target, bool hit)
+        {
+            var game = DarklightCampaign.Instance;
+            if(game==null)return;
+            var travel = target - muzzle;
+            if (travel.sqrMagnitude < .01f) return;
+            bool reduced = game.ReducedFlashes;
+            DarklightRemaster.ContactLight(muzzle,new Color(1f,.61f,.24f),.82f,1.75f,.09f);
+            if(hit)DarklightRemaster.ContactLight(target,new Color(1f,.76f,.39f),.62f,1.65f,.13f);
+            if(!reduced&&game.extras?.Length>5&&game.extras[5]!=null)
+                Create(game.extras[5],game.pixelMaterial,muzzle,.20f,.065f,new Color(1f,.65f,.32f)).art.sortingOrder=31000;
+            var bullet=Create(LadyBulletSprite(),game.pixelMaterial,muzzle,.12f,
+                Mathf.Clamp(travel.magnitude/23f,.14f,.26f),new Color(1f,1f,1f,reduced?.74f:1f));
+            bullet.art.sortingOrder=31000;
+            bullet.transform.rotation=Quaternion.Euler(0f,0f,Mathf.Atan2(travel.y,travel.x)*Mathf.Rad2Deg);
+            bullet.block.SetTexture(MainTexture,bullet.art.sprite.texture);
+            bullet.art.SetPropertyBlock(bullet.block);
+            bullet.flightStart=muzzle;bullet.flightEnd=target;bullet.flightMap=game.Map;
+            bullet.bulletFlight=true;bullet.bulletImpact=hit&&!reduced;
+        }
+        static Sprite LadyBulletSprite()
+        {
+            if(ladyBullet!=null)return ladyBullet;
+            var texture=new Texture2D(9,3,TextureFormat.RGBA32,false){filterMode=FilterMode.Point,wrapMode=TextureWrapMode.Clamp};
+            var pixels=new Color32[27];
+            var hot=new Color32(255,219,126,255);
+            for(int x=0;x<9;x++)pixels[9+x]=x<3?new Color32(231,92,32,208):hot;
+            for(int x=4;x<8;x++){pixels[x]=hot;pixels[18+x]=hot;}
+            pixels[16]=new Color32(255,255,241,255);
+            texture.SetPixels32(pixels);texture.Apply(false,true);
+            ladyBullet=Sprite.Create(texture,new Rect(0,0,9,3),new Vector2(.76f,.5f),100,0,SpriteMeshType.FullRect);
+            return ladyBullet;
         }
         public static void MotorcycleImpact(Vector3 position,Vector2 direction,DarklightMotorcycleImpact kind)
         {
@@ -46,12 +87,25 @@ namespace Darklight
             if(fx==null){var created=new GameObject("EcoDeCombate");if(DarklightCombatLab.Instance!=null)created.transform.SetParent(DarklightCombatLab.Instance.transform,false);fx=created.AddComponent<DarklightCombatFX>();fx.art=created.AddComponent<SpriteRenderer>();fx.block=new MaterialPropertyBlock();pool.Add(fx);}
             var obj=fx.gameObject;obj.transform.position=position;obj.transform.rotation=Quaternion.identity;obj.transform.localScale=Vector3.one;fx.age=0;fx.drift=Vector2.zero;fx.art.flipX=false;fx.art.sprite=sprite;fx.art.sharedMaterial=material;fx.art.sortingOrder=160;
             fx.tint=color;fx.art.color=color;fx.life=duration;
+            fx.bulletFlight=fx.bulletImpact=false;fx.flightMap=null;
             fx.block.Clear();fx.block.SetFloat("_ResonanceTint",1);fx.art.SetPropertyBlock(fx.block);
             if(height>0)obj.transform.localScale=Vector3.one*height/sprite.bounds.size.y;obj.SetActive(true);return fx;
         }
         void Update()
         {
             float dt=DarklightCombatLab.Instance?.CombatDelta??Time.deltaTime;if(dt<=0)return;
+            if(bulletFlight)
+            {
+                if(DarklightCampaign.Instance?.Map!=flightMap){gameObject.SetActive(false);return;}
+                age+=dt;
+                transform.position=Vector3.Lerp(flightStart,flightEnd,Mathf.Clamp01(age/life));
+                if(age>=life)
+                {
+                    if(bulletImpact)DarklightPixelContactBurst.TryEmit(flightEnd,false);
+                    gameObject.SetActive(false);
+                }
+                return;
+            }
             age+=dt;transform.position+=(Vector3)(drift*dt);art.color=new Color(tint.r,tint.g,tint.b,tint.a*(1-age/life));
             if(age>=life)gameObject.SetActive(false);
         }

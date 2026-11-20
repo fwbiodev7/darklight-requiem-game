@@ -213,6 +213,39 @@ namespace Darklight.Tests
             File.WriteAllText(folder+"/contextual-presets-evidence.txt",evidence.ToString());AssertSilent();
         }
 
+        [UnityTest] public IEnumerator GothicEclipse20KeepsOneMoonAndReusesLadyContactLights()
+        {
+            Call(game,"LoadMap",0);
+            yield return null;
+            var remaster=game.GetComponent<DarklightRemaster>();
+            remaster.SetQuality(2,false);
+            game.ReducedFlashes=false;
+            var lights=remaster.GetComponentsInChildren<UnityEngine.Rendering.Universal.Light2D>();
+            var moon=lights.Single(light=>light.lightType==UnityEngine.Rendering.Universal.Light2D.LightType.Global);
+            var pool=lights.Where(light=>light.name=="LuzDeContato").ToArray();
+            Assert.That(pool.Length,Is.EqualTo(4));
+            Assert.That(pool.All(light=>!light.enabled),Is.True);
+            Vector2 position=fighter.transform.position;
+            DarklightCombatFX.LadyShot(position,position+Vector2.right,true);
+            Assert.That(pool.Count(light=>light.enabled),Is.EqualTo(2));
+            for(int i=0;i<4;i++)DarklightCombatFX.LadyShot(position,position+Vector2.right,true);
+            Assert.That(pool.Count(light=>light.enabled),Is.EqualTo(4));
+            yield return new WaitForSecondsRealtime(.24f);
+            Assert.That(pool.All(light=>!light.enabled),Is.True);
+            game.ReducedFlashes=true;
+            DarklightCombatFX.LadyShot(position,position+Vector2.right,true);
+            Assert.That(pool.All(light=>!light.enabled),Is.True);
+            Color previous=moon.color;
+            game.Progress.checkpoint=0;
+            Call(game,"LoadMap",9);
+            Assert.That(moon.color,Is.EqualTo(previous));
+            yield return new WaitForSecondsRealtime(.9f);
+            Assert.That(remaster.GetComponentsInChildren<UnityEngine.Rendering.Universal.Light2D>()
+                .Single(light=>light.lightType==UnityEngine.Rendering.Universal.Light2D.LightType.Global),Is.SameAs(moon));
+            Assert.That(moon.color,Is.Not.EqualTo(previous));
+            Assert.That(Enumerable.Range(0,10).Select(DarklightRemaster.AmbientPresetName).Distinct().Count(),Is.EqualTo(5));
+        }
+
         [UnityTest] public IEnumerator GothicEclipse20261114IntensityPreferenceIsSanitizedAndExplicitlyPersisted()
         {
             string key=DarklightAtmosphereController.IntensityPreferenceKey;

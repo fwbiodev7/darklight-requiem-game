@@ -6,6 +6,7 @@ namespace Darklight
     public sealed class DarklightCombatant : MonoBehaviour
     {
         public bool player;
+        public bool IsCampaignAlly => TryGetComponent<DarklightCampaignAlly>(out _);
         HealthSystem _health;
         public HealthSystem Health => _health != null ? _health : (_health = GetComponent<HealthSystem>());
         DarklightFighter _fighter;
@@ -21,7 +22,7 @@ namespace Darklight
         }
         public bool Receive(float damage, Vector2 force,bool unblockable=false)
         {
-            if (Health.IsDead) return false;
+            if (IsCampaignAlly || Health.IsDead) return false;
             var enemy=player?null:GetComponent<DarklightEnemy>();
             if(enemy!=null&&(!enemy.AcceptDamage||enemy.TryGuardHit(force)||enemy.EvadeStrike()))return false;
             var combatModel=fighter?.Model??enemy?.CombatModel;

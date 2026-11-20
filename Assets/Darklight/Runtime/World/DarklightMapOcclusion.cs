@@ -1,18 +1,30 @@
 using UnityEngine;
 namespace Darklight
 {
+    [DefaultExecutionOrder(1900)]
     public sealed class DarklightMapOcclusion : MonoBehaviour
     {
         public float width,height;
         SpriteRenderer[] art;
-        void Awake(){art=GetComponentsInChildren<SpriteRenderer>();}
+        int[] originalOrders;
+        bool bakedForeground;
+        public void UseBakedForeground() => bakedForeground=true;
+        void Awake()
+        {
+            art=GetComponentsInChildren<SpriteRenderer>();
+            originalOrders=System.Array.ConvertAll(art,piece=>piece.sortingOrder);
+        }
         void LateUpdate()
         {
-            var lab=DarklightCombatLab.Instance;if(lab==null||lab.Player==null)return;
-            var delta=lab.Player.transform.position-transform.position;
-            // Foreground furniture fades only when its upper silhouette would conceal the hero.
-            bool covers=delta.y>.15f&&delta.y<height&&Mathf.Abs(delta.x)<width*.5f+.25f;
-            foreach(var piece in art)piece.color=new Color(1,1,1,covers?.32f:1);
+            for(int i=0;i<art.Length;i++)
+            {
+                var piece=art[i];
+                if(piece==null)continue;
+                int order=DarklightRemaster.OrderBehindActors(piece.bounds,piece.sortingLayerID,originalOrders[i]);
+                // Painted crops repeat the ground, so hiding the overlap reveals the intact map.
+                if(bakedForeground)piece.forceRenderingOff=order!=originalOrders[i];
+                else piece.sortingOrder=order;
+            }
         }
     }
 }

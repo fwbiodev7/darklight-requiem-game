@@ -75,11 +75,17 @@ namespace Darklight.Tests
         }
         [UnityTest]public IEnumerator Map10TwoGuardWavesPauseAndOpenTheFinalPortal()
         {
-            game.PreviewChapter(9);game.Progress.checkpoint=3;Call(game,"LoadMap",9);Call(game,"Close");Move(game.Map.SafeSpawn(game.Map.Arenas[3]+Vector2.down));yield return null;yield return null;
+            game.PreviewChapter(9);game.Progress.RecordNeroSurvival();game.Progress.checkpoint=3;Call(game,"LoadMap",9);Call(game,"Close");Move(game.Map.SafeSpawn(game.Map.Arenas[3]+Vector2.down));yield return null;yield return null;
+            Assert.That(game.NeroTruceActive,Is.False);
+            Assert.That(game.MapEnemies,Is.Empty,"The truce conversation precedes combat");
             for(int i=0;i<8&&!game.Active;i++){Call(game,"NextDialogue");yield return null;}
+            Assert.That(game.NeroTruceActive,Is.True);
             Assert.That(game.CurrentBoss,Is.Null);
             var first=game.MapEnemies.Where(e=>e!=null&&!e.Health.IsDead).ToArray();
             Assert.That(first.Length,Is.EqualTo(3));Assert.That(first.All(e=>(int)e.kind<5),Is.True);
+            var nero=Object.FindFirstObjectByType<DarklightCampaignAlly>();
+            Assert.That(nero,Is.Not.Null);
+            Assert.That(nero.name,Is.EqualTo("NeroApoio"));
             game.PreviewPanel("Pause");float clock=lab.Player.Model.Clock;
             yield return new WaitForSeconds(.05f);
             Assert.That(lab.Player.Model.Clock,Is.EqualTo(clock));Assert.That(game.Progress.missionWave,Is.Zero);
@@ -91,9 +97,11 @@ namespace Darklight.Tests
             Assert.That(second.Length,Is.EqualTo(3));Assert.That(second.All(e=>(int)e.kind<5),Is.True);
             Assert.That(second.All(e=>!first.Contains(e)),Is.True);
             Assert.That(game.CurrentBoss,Is.Null);
+            Assert.That(Object.FindFirstObjectByType<DarklightCampaignAlly>(),Is.SameAs(nero));
             foreach(var guard in second)guard.Health.TakeDamage(99999);
             for(int i=0;i<30&&game.Progress.checkpoint!=4;i++)yield return null;
             Assert.That(game.Progress.checkpoint,Is.EqualTo(4));Assert.That(game.Progress.FormUnlocked,Is.EqualTo(2));Call(game,"Close");
+            Assert.That(Object.FindFirstObjectByType<DarklightCampaignAlly>(),Is.Null);
             Move(game.Map.SafeSpawn(game.Map.Portal));Assert.That(game.TryInteract(),Is.True);Assert.That(lab.Paused,Is.True);Assert.That(game.Progress.chapter,Is.EqualTo(9));Assert.That(game.Progress.completed,Is.False);
             File.WriteAllText(Folder+"finale-evidence.json","{\"guardWaves\":2,\"noctharSpawned\":false,\"checkpoint\":4,\"finalChoiceOpened\":true,\"endingNotForced\":true}");
         }

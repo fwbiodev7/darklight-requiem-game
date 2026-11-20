@@ -41,6 +41,7 @@ namespace Darklight
             if(string.IsNullOrEmpty(path))return "SEM BOTAO";
             string key=path.Substring(path.LastIndexOf('/')+1);
             string label=key switch {"buttonSouth"=>"A / CRUZ","buttonWest"=>"X / QUADRADO","buttonEast"=>"B / CIRCULO","buttonNorth"=>"Y / TRIANGULO","leftShoulder"=>"LB / L1","rightShoulder"=>"RB / R1","leftTrigger"=>"LT / L2","rightTrigger"=>"RT / R2","leftStickPress"=>"LS / L3","rightStickPress"=>"RS / R3","leftStick"=>"ANALOGICO ESQ.","rightStick"=>"ANALOGICO DIR.","dpad"=>"DIRECIONAL","start"=>"MENU","select"=>"SELECT / SHARE","leftButton"=>"MOUSE ESQ.","rightButton"=>"MOUSE DIR.","middleButton"=>"MOUSE CENTRAL",_=>slot.action.GetBindingDisplayString(slot.index,InputBinding.DisplayStringOptions.DontIncludeInteractions)};
+            if(key=="rightStickPress"&&slot.binding.effectiveInteractions?.StartsWith("hold")==true)label+=" (SEGURAR)";
             return label.ToUpperInvariant();
         }
         public static bool CanAssign(BindingSlot slot,string path)
@@ -79,7 +80,17 @@ namespace Darklight
             foreach(var action in Asset)
             {
                 if(action.name=="Aim"||action.name=="KeyboardActivity"||action.name=="PointerActivity"||action.name=="Navigate"||action.name=="Submit"||action.name=="Cancel"||action.name=="DialogueAdvance"||!SameContext(slot.action,action))continue;
-                for(int i=0;i<action.bindings.Count;i++)if(!(action==slot.action&&i==slot.index)&&!action.bindings[i].isComposite&&Overlap(action.bindings[i].effectivePath,path))result.Add(new BindingSlot(action,i));
+                for(int i=0;i<action.bindings.Count;i++)
+                {
+                    var binding=action.bindings[i];
+                    bool tapAndHold=path=="<Gamepad>/rightStickPress"&&
+                        (slot.action.name=="Skill"&&action.name=="Power"&&
+                         slot.binding.effectiveInteractions?.StartsWith("tap")==true&&binding.effectiveInteractions?.StartsWith("hold")==true||
+                         slot.action.name=="Power"&&action.name=="Skill"&&
+                         slot.binding.effectiveInteractions?.StartsWith("hold")==true&&binding.effectiveInteractions?.StartsWith("tap")==true);
+                    if(!tapAndHold&&!(action==slot.action&&i==slot.index)&&!binding.isComposite&&Overlap(binding.effectivePath,path))
+                        result.Add(new BindingSlot(action,i));
+                }
             }
             return result;
         }

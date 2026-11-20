@@ -5,6 +5,8 @@ namespace Darklight
     public sealed partial class DarklightCampaign
     {
         UnityEngine.UI.Image hudPortrait;
+        UnityEngine.UI.Image hudBloodFill;
+        UnityEngine.UI.Text hudLadyHint;
         UnityEngine.UI.Text hudSkillName,hudAttackName,hudSkillKey,hudPauseKey,hudAttackKey,hudDodgeKey,hudParryKey,hudCycleKey,hudPotionKey,hudPotionCount,hudWeaponHint;
         readonly Sprite[] hudPortraits=new Sprite[2];
         int hudPortraitSkin=-1;
@@ -16,13 +18,18 @@ namespace Darklight
         void CreateMinimalHUD()
         {
             // The existing health/skill objects remain connected to DarklightPixelHUD.
-            var life=uiRoot.Find("VidaMoldura") as RectTransform;HUDPlace(life,46,13,125,46);DarklightHUDTheme.Frame(life);
-            HUDPlace(uiRoot.Find("Nome"),58,17,102,11,7);uiRoot.Find("Nome").GetComponent<UnityEngine.UI.Text>().text="FÁBIO";
+            var life=uiRoot.Find("VidaMoldura") as RectTransform;HUDPlace(life,46,13,125,55);DarklightHUDTheme.Frame(life);
+            HUDPlace(uiRoot.Find("Nome"),58,17,102,11,7);uiRoot.Find("Nome").GetComponent<UnityEngine.UI.Text>().text="FABIUS";
             var healthBack=ImageAt(uiRoot,"FundoVida",56,31,108,10,null);healthBack.color=new Color(.12f,.018f,.033f);healthBack.transform.SetSiblingIndex(life.GetSiblingIndex()+1);
             HUDPlace(lab.PixelHUD.healthFill.transform,57,32,106,8);HUDPlace(lab.PixelHUD.healthText.transform,57,32,106,9,6);lab.PixelHUD.healthText.alignment=TextAnchor.MiddleCenter;
             var energyBack=ImageAt(uiRoot,"FundoEnergia",56,44,108,3,null);energyBack.color=new Color(.015f,.09f,.14f);energyBack.transform.SetSiblingIndex(life.GetSiblingIndex()+1);
             HUDPlace(energyFill.transform,57,45,106,1);energyFill.color=new Color(.1f,.71f,.87f);
-            HUDPlace(statusText.transform,57,51,110,9,5);energyText.gameObject.SetActive(false);
+            var bloodBack=ImageAt(uiRoot,"FundoSangue",56,49,108,6,null);
+            bloodBack.color=new Color(.14f,.055f,.22f);
+            hudBloodFill=ImageAt(bloodBack.transform,"SangueTransformacao",1,1,106,4,null);
+            ImageAt(bloodBack.transform,"LimiarTransformacao",65,0,1,6,null).color=new Color(.9f,.72f,1f);
+            HUDPlace(statusText.transform,57,58,110,9,5);energyText.gameObject.SetActive(false);
+            hudLadyHint=TextAt(uiRoot,"ApoioLady",58,74,124,9,5);
             var border=RectAt(uiRoot,"RetratoHUD",7,7,54,54).gameObject.AddComponent<DarklightHUDDiamond>();border.color=new Color(.39f,.36f,.35f);border.raycastTarget=false;
             var trim=RectAt(border.transform,"Sangue",1,1,52,52).gameObject.AddComponent<DarklightHUDDiamond>();trim.color=new Color(.25f,.035f,.055f);trim.raycastTarget=false;
             var mask=RectAt(trim.transform,"Recorte",1,1,50,50).gameObject.AddComponent<DarklightHUDDiamond>();mask.color=new Color(.018f,.022f,.03f);mask.raycastTarget=false;mask.gameObject.AddComponent<UnityEngine.UI.Mask>().showMaskGraphic=true;
@@ -61,7 +68,12 @@ namespace Darklight
             TickStyleHUD();
             if(hudPortrait==null)return;
             int skin=Mathf.Clamp(SelectedSkin,0,1);if(hudPortraitSkin!=skin){hudPortrait.sprite=hudPortraits[skin];hudPortraitSkin=skin;}
-            energyFill.rectTransform.sizeDelta=new Vector2(106*Mathf.Clamp01(Energy/100),1);
+            energyFill.rectTransform.sizeDelta=new Vector2(106*Mathf.Clamp01(Resonance.Energy/100),1);
+            hudBloodFill.rectTransform.sizeDelta=new Vector2(106*Mathf.Clamp01(Blood.Amount/100),4);
+            hudBloodFill.color=Blood.Amount>=60?new Color(.68f,.36f,.98f):new Color(.44f,.21f,.72f);
+            hudLadyHint.gameObject.SetActive(CanCallLady);
+            if(hudLadyHint.gameObject.activeSelf)
+                hudLadyHint.text=lab.Input.BindingLabel("LadyAssist")+(ladyFollowing?"  DISPENSAR LADY":"  CHAMAR LADY");
             statusText.resizeTextForBestFit=true;statusText.resizeTextMinSize=4;statusText.resizeTextMaxSize=5;
             statusText.text="NV "+Progress.level+" | XP "+Progress.xp+"/"+Progress.NeededXP+" | R "+Progress.potions;
             bool abyss=AbyssRider?.Active==true;hudSkillName.text=abyss?"ESMAGAMENTO":"ONDA DO VÉU";hudAttackName.text=abyss?"Serras":"Corte";

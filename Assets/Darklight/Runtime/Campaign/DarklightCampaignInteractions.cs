@@ -21,9 +21,11 @@ namespace Darklight
         {
             target=default;if(Training||!Active||Map==null||lab.Player.Model.State!=CombatState.Neutral||WearingHeadphones)return false;
             Vector2 player=lab.Player.transform.position;float best=float.MaxValue;DarklightInteractionTarget nearest=default;
-            void Consider(string id,string label,Vector2 authored,float range)
+            void Consider(string id,string label,Vector2 authored,float range) =>
+                ConsiderPoint(id,label,InteractionAnchor(authored),range);
+            void ConsiderPoint(string id,string label,Vector2 point,float range)
             {
-                Vector2 point=InteractionAnchor(authored);float distance=(point-player).sqrMagnitude;
+                float distance=(point-player).sqrMagnitude;
                 if(distance>range*range||distance>=best||!DarklightNavigation.Clear(player,point))return;
                 best=distance;nearest=new DarklightInteractionTarget(id,label,point);
             }
@@ -39,15 +41,13 @@ namespace Darklight
                 if(chapterCleared)Consider("portal","ATRAVESSAR PORTAL",Map.Portal,2.5f);
                 if(!Progress.relics[Progress.chapter])Consider("relic","RECOLHER MEMÓRIA",Map.Relic,2.3f);
                 if(NarrativeTarget(out var narrative))Consider(narrative.Id,narrative.Label,narrative.Point,2.7f);
-                if(FinalRitualReady)
-                {
-                    Consider(RitualClue,"LER A INSCRIÇÃO",RitualCluePoint,1.55f);
-                    for(int i=0;i<RitualSeals.Length;i++)
-                        Consider(RitualSealPrefix+i,"ATIVAR SELO: "+RitualSeals[i],RitualSealPoint(i),1.55f);
-                }
                 if(RegionAtmosphereTarget(out var environmental))Consider(environmental.Id,environmental.Label,environmental.Point,2.2f);
-                Vector2 allyPoint=Progress.chapter==DarklightCampaignRoute.NeroChapter&&chapterCleared?Map.Arenas[3]:Map.Ally;
-                Consider("ally","FALAR: "+AllyName,allyPoint,2.7f);
+                if(!encounterStarted)
+                {
+                    if(levelRoot.Find("IcaroNox")!=null)Consider("ally","FALAR: "+AllyName,Map.Ally,2.7f);
+                    else if(ladyAlly!=null)ConsiderPoint("ally","FALAR: LADY",ladyAlly.transform.position,2.7f);
+                    else if(levelRoot.Find("LyraMoreau")!=null)Consider("ally","FALAR: "+AllyName,Map.Ally,2.7f);
+                }
                 if(!encounterStarted)Consider("checkpoint","SALVAR E RECUPERAR VIDA",CheckpointPoint,2.3f);
             }
             ConsiderMultiverse(Consider);
@@ -77,8 +77,13 @@ namespace Darklight
         DarklightEnemy finalDuelOpponent;
         void BeginFinalDuel()
         {
-            Speak(new[]{"LUCIUS|Quebrou o selo. Agora so resta a promessa que fizemos quando meninos.",
-                "FABIUS|Entao olha para mim quando erguer a espada."},()=>
+            if(TryStartNeroTruce(BeginFinalDuel))return;
+            StopNeroAlly();
+            var lines=new System.Collections.Generic.List<string>();
+            if(NeroTruceActive)lines.Add("NERO|Eu seguro a passagem. Você veio até aqui para encarar Lucius.");
+            lines.Add("LUCIUS|Quebrou o selo. Agora só resta a promessa que fizemos quando meninos.");
+            lines.Add("FABIUS|Então olha para mim quando erguer a espada.");
+            Speak(lines.ToArray(),()=>
             {
                 Vector2 origin=Map.Arenas[3];
                 Vector2 stand=Map.SafeSpawn(origin+Vector2.down*1.8f);
@@ -105,7 +110,6 @@ namespace Darklight
                 int area=int.Parse(target.Id.Substring(7));Speak(new[]{"MEMÓRIA DO VÉU|"+Map.Art.areas[area].description});return;
             }
             if(InteractRegionAtmosphere(target.Id))return;
-            if(InteractFinalRitual(target.Id))return;
             if(InteractNarrative(target.Id))return;
             if(target.Id=="portal")
             {
@@ -141,7 +145,7 @@ namespace Darklight
                 else if(Progress.mp3Quest>=4){Progress.mp3Unlocked=true;Speak(new[]{"ÍCARO NOX|Aqui está. Escolha a frequência: Love regenera, Thrash concentra, Heavy fortalece.","FÁBIO|Vou usar o que me fortalece sem deixar de ser eu."});SaveCheckpoint();Sound(3);}
                 else Speak(new[]{"ÍCARO NOX|Ainda faltam "+(4-Progress.mp3Quest)+" componentes. Os Ecos desta rua carregam as peças."});return;
             }
-            if(Progress.chapter==0)Speak(new[]{"LADY|Fabius, encontrei inscrições ligando as rupturas aos selos de Vespera. Procure a pedra junto ao altar.","LADY|O mapa revela o que você explorou. Procure as memórias e volte ao checkpoint para recuperar vida.","LADY|Golpes dourados aceitam parry. O anel vermelho exige esquiva. "+Objective});
+            if(Progress.chapter==0)Speak(new[]{"LADY|Fabius, derrote os guardas no fim da rua. O portal abre quando o último cair.","LADY|O mapa revela o que você explorou. Procure as memórias e volte ao checkpoint para recuperar vida.","LADY|Golpes dourados aceitam parry. O anel vermelho exige esquiva. "+Objective});
             else Speak(new[]{AllyName+"|"+(ExpandedChapter?MissionDescription+" "+Objective:"Siga os selos. "+Objective)});
         }
     }

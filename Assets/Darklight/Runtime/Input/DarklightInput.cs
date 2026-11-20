@@ -27,13 +27,16 @@ namespace Darklight
             Add(Gameplay, "Heavy", "<Mouse>/rightButton", "<Gamepad>/buttonNorth");
             Add(Gameplay, "Dodge", "<Keyboard>/space", "<Gamepad>/buttonEast");
             Add(Gameplay, "Parry", "<Keyboard>/q", "<Gamepad>/leftShoulder");
-            Add(Gameplay, "Skill", "<Keyboard>/f", "<Gamepad>/rightShoulder");
+            Add(Gameplay, "Skill", "<Keyboard>/f");
+            Action("Skill").AddBinding("<Gamepad>/rightStickPress",interactions:"tap(duration=0.35)");
+            Add(Gameplay, "LadyAssist", "<Keyboard>/c", "<Gamepad>/rightShoulder");
             Add(Gameplay, "Interact", "<Keyboard>/e", "<Gamepad>/buttonSouth");
             Add(Gameplay, "Transform", "<Keyboard>/t", "<Gamepad>/leftTrigger");
             Add(Gameplay, "MP3", "<Keyboard>/m");
             Add(Gameplay, "Potion", "<Keyboard>/r", "<Gamepad>/rightTrigger");
             Add(Gameplay, "Journal", "<Keyboard>/j");
-            Add(Gameplay, "Power", "<Keyboard>/c", "<Gamepad>/rightStickPress");
+            Add(Gameplay, "Power", "<Keyboard>/b");
+            Action("Power").AddBinding("<Gamepad>/rightStickPress",interactions:"hold(duration=0.35)");
             Add(Gameplay, "PowerPrevious", "<Keyboard>/1", "<Gamepad>/dpad/left");
             Add(Gameplay, "PowerNext", "<Keyboard>/2", "<Gamepad>/dpad/right");
             Add(Gameplay,"WeaponNext","<Keyboard>/v","<Gamepad>/leftStickPress");
@@ -87,7 +90,7 @@ namespace Darklight
                 lightPressed = Action("Light").WasPressedThisFrame(),lightHeld=Action("Light").IsPressed(),lightReleased=Action("Light").WasReleasedThisFrame(), heavyPressed = Action("Heavy").WasPressedThisFrame(),
                 heavyHeld = Action("Heavy").IsPressed(), heavyReleased = Action("Heavy").WasReleasedThisFrame(),
                 dodgePressed = Action("Dodge").WasPressedThisFrame(), parryPressed = Action("Parry").WasPressedThisFrame(),
-                skillPressed = Action("Skill").WasPressedThisFrame(),aerialPressed=Action("Aerial").WasPressedThisFrame(),weaponSpecialPressed=Action("WeaponSpecial").WasPressedThisFrame() };
+                skillPressed = Action("Skill").WasPerformedThisFrame(),aerialPressed=Action("Aerial").WasPressedThisFrame(),weaponSpecialPressed=Action("WeaponSpecial").WasPressedThisFrame() };
         }
         public string BindingLabel(string name)
         {
@@ -99,6 +102,7 @@ namespace Darklight
                 string label=action.GetBindingDisplayString(i,InputBinding.DisplayStringOptions.DontIncludeInteractions);
                 if(UsingGamepad)label=path.EndsWith("/buttonSouth")?"A":path.EndsWith("/buttonWest")?"X":path.EndsWith("/buttonEast")?"B":path.EndsWith("/buttonNorth")?"Y":path.EndsWith("/leftShoulder")?"LB":path.EndsWith("/rightShoulder")?"RB":path.EndsWith("/select")?"SELECT":path.EndsWith("/start")?"START":path.EndsWith("/rightTrigger")?"RT":path.EndsWith("/leftTrigger")?"LT":path.EndsWith("/leftStickPress")?"LS":path.EndsWith("/rightStickPress")?"RS":path.EndsWith("/rightStick/up")?"RS CIMA":path.EndsWith("/rightStick/down")?"RS BAIXO":label;
                 if(!UsingGamepad)label=path.EndsWith("/leftButton")?"M1":path.EndsWith("/rightButton")?"M2":path.EndsWith("/escape")?"ESC":label;
+                if(UsingGamepad&&name=="Power"&&b.effectiveInteractions?.StartsWith("hold")==true)label="SEGURE "+label;
                 return label.ToUpperInvariant();
             }
             return name=="MP3"&&UsingGamepad?"PAUSA > MP3":name.ToUpperInvariant();

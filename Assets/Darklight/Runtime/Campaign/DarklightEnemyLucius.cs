@@ -310,6 +310,7 @@ namespace Darklight
             serial++;
         }
 
+        int luciusLitAttackSerial = -1;
         public void ResolveLuciusStrike(DarklightCombatLab lab, DarklightCampaign game)
         {
             if (CombatModel == null || !CombatModel.ActiveThisTick || luciusResolvedAttackSerial == CombatModel.AttackSerial) return;
@@ -324,6 +325,13 @@ namespace Darklight
             float distance = toPlayer.magnitude;
             var attack = CombatModel.Attack;
             if (attack == null) return;
+            bool arconte = LuciusView?.appearance == DarklightLuciusAppearance.Arconte;
+            if (arconte && luciusLitAttackSerial != CombatModel.AttackSerial)
+            {
+                luciusLitAttackSerial = CombatModel.AttackSerial;
+                DarklightRemaster.ContactLight(transform.position + (Vector3)CombatModel.Facing * .75f + Vector3.up * .6f,
+                    DarklightRemaster.ArconteViolet,.75f,2.8f,.18f);
+            }
 
             bool inRange = distance <= attack.range;
             bool inAngle = distance <= .3f || Vector2.Angle(CombatModel.Facing, toPlayer) <= LuciusStrikeHalfAngle(attack.hitShape);
@@ -339,7 +347,8 @@ namespace Darklight
             if (combatant.Receive(damage, force))
             {
                 CombatModel.ConfirmHit();
-                DarklightCombatFX.Impact(playerPos, attack.kind != StrikeKind.Light);
+                Color tint = arconte ? DarklightRemaster.ArconteLight : new Color(.65f,.78f,1f);
+                DarklightCombatFX.Impact(playerPos, attack.kind != StrikeKind.Light, tint);
             }
             else if (parried)
             {

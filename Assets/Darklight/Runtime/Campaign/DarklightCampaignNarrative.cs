@@ -24,8 +24,7 @@ namespace Darklight
             expandedBossSheets.Add(kind,frames);
             return frames;
         }
-        public string AllyName=>Progress.chapter==1?"ÍCARO NOX":
-            Progress.chapter==9||Progress.chapter==8&&chapterCleared?"NERO":"LADY";
+        public string AllyName=>Progress.chapter==1?"ÍCARO NOX":NeroTruceActive?"NERO":"LADY";
         public bool SecretEndingAvailable=>Progress.SecretEndingAvailable;
         static readonly string[][] MissionTitles={
             new[]{"DECIFRE AS INSCRIÇÕES","RECUPERE A MEMÓRIA ANCESTRAL","LIBERTE OS GUARDIÕES","LIBERTE O SALÃO DOS JURAMENTOS"},
@@ -49,7 +48,6 @@ namespace Darklight
             if(!ExpandedChapter)return;
             if(Progress.checkpoint<4&&NarrativeInteractionStage)AddProp("VestigioNarrativo",extras[5],Map.Arenas[encounter],.7f);
             if(Progress.chapter==7&&Progress.checkpoint<=1)AddProp("Sobreviventes",lyraFrames?.Length==8?lyraFrames[0]:extras[1],Map.Arenas[0]+Vector2.left*1.6f,1.8f);
-            if(Progress.chapter==8&&chapterCleared)AddProp("KaelPurificado",bossFrames[0],Map.Arenas[3],1.8f);
         }
         bool BeginNarrativeEncounter()
         {
@@ -103,13 +101,9 @@ namespace Darklight
             {
                 var boss=CurrentBoss;if(boss==null||!boss.PurificationReady)return true;
                 boss.Purify();Progress.expansionFlags|=KaelPurified;
-                var restored=OfficialCastSprite("Nero");
-                if(restored!=null)
-                {
-                    var sprite=boss.transform.Find("Sprite");
-                    if(sprite!=null)sprite.gameObject.SetActive(false);
-                    AddProp("KaelPurificado",restored,Map.Arenas[3],1.8f);
-                }
+                Progress.RecordNeroSurvival();
+                // Nero departs to recover; no friendly prop remains in the cleared arena.
+                boss.gameObject.SetActive(false);
                 ClearEncounter();return true;
             }
             if(id!="narrative")return false;
@@ -138,11 +132,11 @@ namespace Darklight
         void BuildEndings()
         {
             heading.text="O DESTINO DOS DOIS MUNDOS";
-            bodyText.text="O duelo com Lucius terminou. Nero e Lady esperam sua escolha.\n\nAmanhecer restaura a barreira.\nGuardião preserva a ponte sob sua proteção.\n\n"+(SecretEndingAvailable?"As memórias permitem uma terceira solução.":"Réquiem Carmesim: reúna as dez memórias, salve os sobreviventes, ouça o ancestral, purifique Nero e domine katana e punhos.");
+            bodyText.text="O duelo com Lucius terminou. A trégua com Nero chegou ao fim. Lady espera sua escolha.\n\nAmanhecer restaura a barreira.\nGuardião preserva a ponte sob sua proteção.\n\n"+(SecretEndingAvailable?"As memórias permitem uma terceira solução.":"Réquiem Carmesim: reúna as dez memórias, salve os sobreviventes, ouça o ancestral, purifique Nero e domine katana e punhos.");
             Button("AMANHECER",()=>Finish(1));Button("GUARDIÃO DO VÉU",()=>Finish(2));
             if(SecretEndingAvailable)Button("RÉQUIEM CARMESIM",()=>Finish(3));
         }
-        string EndingDescription=>Progress.ending==3?"Fabius uniu as energias sem apagar nenhum dos mundos.\nA fronteira vive em equilíbrio. Nero e Lady permanecem ao seu lado.":Progress.ending==1?"O sol voltou a Vespera. A barreira foi restaurada.\nFabius guardou Réquiem para quem vier depois.":"Vespera voltou a respirar. A ponte permaneceu.\nFabius, Lady e Nero guardam o caminho entre os mundos.";
+        string EndingDescription=>Progress.ending==3?"Fabius uniu as energias sem apagar nenhum dos mundos.\nLady permanece ao seu lado. Nero partiu: a rivalidade ainda não terminou.":Progress.ending==1?"O sol voltou a Vespera. A barreira foi restaurada.\nFabius guardou Réquiem para quem vier depois. Nero ainda exige sua revanche.":"Vespera voltou a respirar. A ponte permaneceu.\nFabius e Lady guardam o caminho entre os mundos. Nero não esqueceu sua promessa.";
         public void FinalAwakening()
         {
             Progress.formsUnlocked=Mathf.Max(Progress.formsUnlocked,3);Progress.CompleteMilestone(9,3);

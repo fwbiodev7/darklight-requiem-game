@@ -13,7 +13,7 @@ namespace Darklight
             for(int i=0;i<count;i++)
             {
                 var target=contacts[i].GetComponentInParent<DarklightCombatant>();
-                if(target==null||target.player||target.Health.IsDead||game?.AbyssRider?.AcceptStrikeTarget(target)==false)continue;
+                if(target==null||target.player||target.IsCampaignAlly||target.Health.IsDead||game?.AbyssRider?.AcceptStrikeTarget(target)==false)continue;
                 var enemy=target.GetComponent<DarklightEnemy>();
                 if(fighter.AirCombo?.AcceptTarget(enemy)==false)continue;
                 Vector2 point=contacts[i].ClosestPoint(body.position);
@@ -46,7 +46,16 @@ namespace Darklight
                     {enemy?.ReactAir(attack,reaction);fighter.AirCombo?.ConfirmContact(enemy,attack);}
                     game?.AbyssRider?.ConfirmRunOverHit(enemy,attack);
                     if(attack.pullTarget)enemy?.PullToward(body.position,game?.Form==2?2.1f:1.6f);
-                    DarklightCombatFX.Impact((Vector3)point+Vector3.up*(enemy?.AirHeight??0),attack.kind!=StrikeKind.Light);
+                    Color? contactTint=model.Loadout.weapon switch
+                    {
+                        0 => new Color(.66f,.84f,1f),
+                        DarklightRuinFistsProfile.WeaponIndex => new Color(1f,.34f,.16f),
+                        _ => null
+                    };
+                    if(contactTint.HasValue&&game?.Form>0)
+                        contactTint=Color.Lerp(contactTint.Value,DarklightFormController.ColorRuptura,.65f);
+                    DarklightCombatFX.Impact((Vector3)point+Vector3.up*(enemy?.AirHeight??0),
+                        attack.kind!=StrikeKind.Light,contactTint);
                 }
             }
             if(hitstop>0)DarklightCombatLab.Instance.Hitstop(Mathf.Min(.065f,hitstop));

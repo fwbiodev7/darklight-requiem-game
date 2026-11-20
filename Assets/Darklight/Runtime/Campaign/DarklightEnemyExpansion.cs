@@ -6,7 +6,7 @@ namespace Darklight
         public bool Resolved {get;private set;}
         public bool ExpandedBoss=>(int)kind>=11;
         public int Phase {get;private set;}=1;
-        float phaseTransition;bool purificationReady;
+        float phaseTransition,purificationFall;bool purificationReady;
         public bool PurificationReady=>kind==RequiemEnemyKind.KaelFractured&&purificationReady&&!Resolved;
         public bool AcceptDamage=>!Resolved&&!purificationReady&&phaseTransition<=0&&luciusTransformationTime<=0;
         public void RestorePhase(int phase)
@@ -45,7 +45,13 @@ namespace Darklight
         bool TickExpandedBoss(DarklightCampaign game,float dt)
         {
             if(!ExpandedBoss)return false;
-            if(Resolved||purificationReady){body.linearVelocity=Vector2.zero;warning?.Hide();Show(0);return true;}
+            if(Resolved||purificationReady)
+            {
+                body.linearVelocity=Vector2.zero;warning?.Hide();
+                purificationFall+=dt;
+                if(!UsesOfficialCombatArt||!ShowCastFall("Nero",purificationFall))Show(0);
+                return true;
+            }
             phaseTransition=Mathf.Max(0,phaseTransition-dt);
             if(phaseTransition>0){HoldExpandedBossTransition();return true;}
             int wanted=Health.HealthPercent<=.33f?3:Health.HealthPercent<=.66f?2:1;

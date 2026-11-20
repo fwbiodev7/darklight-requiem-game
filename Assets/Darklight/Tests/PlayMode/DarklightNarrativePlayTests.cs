@@ -51,9 +51,11 @@ namespace Darklight.Tests
             Assert.That(boss.Health.IsDead,Is.False);Assert.That(boss.Health.HealthPercent,Is.EqualTo(.08f).Within(.001f));Assert.That(boss.PurificationReady,Is.True);
             Move(game.Map.SafeSpawn((Vector2)boss.transform.position+Vector2.down));Assert.That(game.TryGetInteraction(out var target),Is.True);Assert.That(target.Id,Is.EqualTo("purify_kael"));Assert.That(game.TryInteract(),Is.True);
             Assert.That(boss.Resolved,Is.True);Assert.That(boss.Health.IsDead,Is.False);Assert.That(game.CurrentBoss,Is.Null);Assert.That(game.Progress.checkpoint,Is.EqualTo(4));Assert.That(game.Progress.expansionFlags&4,Is.EqualTo(4));
-            var ally=GameObject.Find("KaelPurificado");
-            Assert.That(ally,Is.Not.Null);
-            Assert.That(ally.GetComponent<SpriteRenderer>().sprite,Is.SameAs(Resources.Load<Sprite>("Darklight/OfficialCast/Nero")));
+            Assert.That(GameObject.Find("KaelPurificado"),Is.Null);
+            Assert.That(game.Progress.NeroDefeated&&game.Progress.NeroSurvived&&game.Progress.NeroRevenge,Is.True);
+            Assert.That(game.Progress.RivalryPending,Is.True);
+            Assert.That(game.Progress.TruceStarted,Is.False);
+            Assert.That(game.NeroTruceActive,Is.False);
             yield return null;Assert.That(boss.Health.IsDead,Is.False);
         }
         [UnityTest]public IEnumerator InscriptionAndAncestorMemoryAdvanceDistinctCheckpoints()
@@ -78,14 +80,15 @@ namespace Darklight.Tests
             foreach(var stance in new[]{1,-1})
             {
                 ResumeAt(9,4);
+                game.Progress.RecordNeroSurvival();
                 game.Progress.luciusStance=stance;
                 Move(game.Map.SafeSpawn(game.Map.Portal));
                 Assert.That(game.TryInteract(),Is.True);
-                Invoke(game,"NextDialogue");
-                Invoke(game,"NextDialogue");
+                for(int line=0;line<10&&!game.Active;line++)Invoke(game,"NextDialogue");
                 var opponent=game.CurrentBoss;
                 Assert.That(opponent,Is.Not.Null);
                 Assert.That(opponent.IsLucius,Is.True);
+                Assert.That(game.NeroTruceActive,Is.True);
                 opponent.GetComponent<DarklightCombatant>().Receive(opponent.Health.MaxHealth+1,Vector2.up);
                 Assert.That(opponent.Resolved,Is.EqualTo(stance>0));
                 Assert.That(opponent.Health.IsDead,Is.EqualTo(stance<0));
@@ -93,7 +96,10 @@ namespace Darklight.Tests
                 float deadline=Time.realtimeSinceStartup+2f;
                 while(game.Progress.luciusFate==0 && Time.realtimeSinceStartup<deadline)yield return null;
                 Assert.That(game.Progress.luciusFate,Is.EqualTo(stance));
-                Assert.That(DarklightProgress.Load().luciusFate,Is.EqualTo(stance));
+                var saved=DarklightProgress.Load();
+                Assert.That(saved.luciusFate,Is.EqualTo(stance));
+                Assert.That(saved.TruceEnded&&saved.RivalryPending,Is.True);
+                Assert.That(game.NeroTruceActive,Is.False);
                 yield return null;
             }
         }

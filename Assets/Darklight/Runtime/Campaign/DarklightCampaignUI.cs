@@ -15,11 +15,11 @@ namespace Darklight
         Text powerText,menuFooter;Image powerFill,powerFrame;int selection;float nextNav;int settingsDirection=1;
         RectTransform uiRoot,overlay,menuRoot;Text heading,bodyText,chapterText,energyText,objectiveText,bossText,messageText,statusText;
         Image energyFill,bossFill,portrait,menuBackdrop;Font font;
-        RectTransform luciusBossFrame;
-        Image luciusBossFill,luciusBossEcho;
-        Text luciusBossTitle,luciusBossPhase;
-        float luciusDisplayedHealth=1;
-        DarklightEnemy presentedLucius;
+        RectTransform featuredBossFrame;
+        Image featuredBossFill,featuredBossEcho;
+        Text featuredBossTitle,featuredBossPhase;
+        float featuredBossDisplayedHealth=1;
+        DarklightEnemy presentedBoss;
         Sprite UIArt(int index,Sprite fallback)=>uiArt!=null&&uiArt.Length>index?uiArt[index]:fallback;
         Sprite HUDArt(int index,Sprite fallback)=>hudArt!=null&&hudArt.Length>index?hudArt[index]:fallback;
         Sprite WeaponIcon(WeaponDefinition weapon)=>weapon==null?null:DarklightWeaponRedesignBank.Icon((int)weapon.id,PresentedForm,weapon.icon);
@@ -43,7 +43,7 @@ namespace Darklight
             statusText=TextAt(uiRoot,"Progresso",12,64,188,10,5);statusText.alignment=TextAnchor.UpperLeft;
             bossText=TextAt(uiRoot,"Chefe",210,66,220,12,6);bossText.alignment=TextAnchor.MiddleCenter;
             bossFill=ImageAt(uiRoot,"VidaChefe",210,80,220,3,null);bossFill.color=new Color(.7f,.03f,.15f);
-            CreateLuciusBossBar();
+            CreateFeaturedBossBar();
             messageText=TextAt(uiRoot,"Aviso",140,278,360,18,6);messageText.alignment=TextAnchor.MiddleCenter;
             var mode=uiRoot.Find("Modo");if(mode!=null)mode.GetComponent<Text>().text="";
             overlay=RectAt(uiRoot,"Menus",0,0,640,360);menuBackdrop=overlay.gameObject.AddComponent<Image>();menuBackdrop.color=new Color(.02f,.02f,.04f,.88f);menuBackdrop.raycastTarget=false;
@@ -75,9 +75,12 @@ namespace Darklight
             powerFrame.gameObject.SetActive(Active&&Progress.mp3Unlocked);powerFill.color=DarklightResonance.Colors[selected];powerFill.rectTransform.sizeDelta=new Vector2(145*Resonance.Energy/100,3);
             powerText.text=DarklightResonance.Names[selected]+"\n"+(Resonance.Active==selected?Resonance.Remaining.ToString("0.0")+"s ATIVO":cooldown>0?cooldown.ToString("0")+"s RECARGA":lab.Input.BindingLabel("Power")+": ATIVAR")+"   "+Resonance.Energy.ToString("0")+"%\n1/2 OU DIRECIONAL: MODO";
             messageText.text=noticeTime>0?notice:"";
-            var boss=CurrentBoss;bossText.text=boss==null?"":boss.IsLucius?(boss.Phase==3?"LUCIUS - ULTIMO CONFRONTO":boss.Phase==2?"LUCIUS - ARCONTE":"LUCIUS"):DarklightStory.Bosses[(int)boss.kind-5];bossFill.gameObject.SetActive(boss!=null&&!boss.IsLucius);
-            bossText.gameObject.SetActive(boss==null||!boss.IsLucius);
-            PresentLuciusBossBar(boss);
+            var boss=CurrentBoss;
+            bool standardBoss=boss!=null&&!boss.IsLucius&&boss.kind!=RequiemEnemyKind.Matriarch;
+            bossText.gameObject.SetActive(standardBoss);
+            bossFill.gameObject.SetActive(standardBoss);
+            if(standardBoss)bossText.text=DarklightStory.Bosses[(int)boss.kind-5];
+            PresentFeaturedBossBar(boss);
             if(boss!=null)bossFill.rectTransform.sizeDelta=new Vector2(220*boss.Health.HealthPercent,3);
             music.volume=MusicVolume;ambient.volume=AmbientVolume*(CurrentBoss!=null?.7f:1);TickMinimalHUD();TickPlaytestGuide();TickTechnicalHUD();TickFocusedHUD();
         }
@@ -214,7 +217,7 @@ namespace Darklight
                     heading.text="DIARIO";bodyText.text=Objective+"\n\n"+(Progress.mp3Unlocked?"Frequencia do Veu concluida.":Progress.mp3Quest>0?"Frequencia do Veu: "+Mathf.Min(3,Progress.mp3Quest-1)+"/3 componentes. Volte a Icaro.":"Icaro Nox espera no distrito do vinil (cap. 2).")+"\nMemorias opcionais: aproxime-se dos fragmentos e use E / A.";
                     Button("VOLTAR",()=>Open("Pause"));break;
                 case "MP3":
-                    heading.text="DARK RESONANCE";bodyText.text=!Progress.mp3Unlocked?"Recupere tres componentes para Icaro Nox\nno capitulo 2. A campanha funciona sem o MP3.":resonance>=0?"Modo ativo - "+resonanceTime.ToString("0")+"s restantes":resonanceCooldown>0?"RECARGA: "+resonanceCooldown.ToString("0")+"s":"LOVE: cura 1.4%/s, 18s\nFORCA: dano +45%, 12s\nFOCO: ataque +40%, 14s\nRecargas: 32/28/30s\nC/RS ativa; 1/2 escolhe";
+                    heading.text="DARK RESONANCE";bodyText.text=!Progress.mp3Unlocked?"Recupere tres componentes para Icaro Nox\nno capitulo 2. A campanha funciona sem o MP3.":resonance>=0?"Modo ativo - "+resonanceTime.ToString("0")+"s restantes":resonanceCooldown>0?"RECARGA: "+resonanceCooldown.ToString("0")+"s":"LOVE: cura 1.4%/s, 18s\nFORCA: dano +45%, 12s\nFOCO: ataque +40%, 14s\nRecargas: 32/28/30s\nB / segure RS para ativar; 1/2 escolhe";
                     portrait.gameObject.SetActive(true);portrait.sprite=extras[2];portrait.rectTransform.anchoredPosition=new Vector2(367,-62);
                     string[] names={"LOVE - JOIN ME IN DEATH","LOVE - WINGS OF A BUTTERFLY","THRASH - SEEK & DESTROY","THRASH - CREEPING DEATH","HEAVY - ENTER SANDMAN"};
                     for(int i=0;i<5;i++){int index=i;Button(names[i],()=>SelectSong(index),Progress.mp3Unlocked&&resonance<0&&phonesTime<=0&&Resonance.Recovery[index<2?0:index<4?2:1]<=0&&Resonance.Energy>=DarklightResonance.Costs[index<2?0:index<4?2:1]);}Button("VOLTAR",()=>Open("Pause"));break;
@@ -241,51 +244,63 @@ namespace Darklight
             RefreshAppearancePortrait();LayoutCinematicPanel(front);if(panel=="Death")LayoutGameOver();selection=Mathf.Clamp(selection,0,Mathf.Max(0,buttons.Count-1));if(buttons.Count>0&&!buttons[selection].enabled)MoveSelection(1);
         }
         
-        void CreateLuciusBossBar()
+        static Sprite luciusBossArt,matriarchBossArt;
+        Image featuredBossPlate,featuredBossHighlight;
+
+        static Sprite CreateBossPlate(string png,string name)
         {
-            luciusBossFrame=RectAt(uiRoot,"LuciusFinalBoss",174,53,292,40);
-            var gold=new Color(.55f,.43f,.29f);
-            var crimson=new Color(.63f,.045f,.12f);
-            ImageAt(luciusBossFrame,"Sombra",2,3,288,36,null).color=new Color(.025f,.018f,.03f,.94f);
-            ImageAt(luciusBossFrame,"BordaSuperior",12,1,268,1,null).color=gold;
-            ImageAt(luciusBossFrame,"BordaInferior",12,38,268,1,null).color=gold;
-            for(int side=0;side<2;side++)
-            {
-                float x=side==0?0:284;
-                ImageAt(luciusBossFrame,"SeloVertical",x+3,10,2,20,null).color=gold;
-                ImageAt(luciusBossFrame,"SeloHorizontal",x,18,8,3,null).color=crimson;
-                ImageAt(luciusBossFrame,"SeloTopo",x+2,8,4,2,null).color=crimson;
-                ImageAt(luciusBossFrame,"SeloBase",x+2,30,4,2,null).color=crimson;
-            }
-            luciusBossTitle=TextAt(luciusBossFrame,"Nome",16,4,260,12,7);
-            luciusBossTitle.alignment=TextAnchor.MiddleCenter;
-            luciusBossTitle.color=new Color(.93f,.86f,.72f);
-            ImageAt(luciusBossFrame,"Trilho",11,19,270,8,null).color=gold;
-            ImageAt(luciusBossFrame,"FundoVida",12,20,268,6,null).color=new Color(.12f,.025f,.045f);
-            luciusBossEcho=ImageAt(luciusBossFrame,"DanoRecente",12,20,268,6,null);
-            luciusBossEcho.color=new Color(.55f,.26f,.21f);
-            luciusBossFill=ImageAt(luciusBossFrame,"Vida",12,20,268,6,null);
-            luciusBossFill.color=crimson;
-            ImageAt(luciusBossFill.transform,"Luz",0,0,268,1,null).color=new Color(.92f,.15f,.22f);
-            luciusBossPhase=TextAt(luciusBossFrame,"Fase",20,29,252,7,4);
-            luciusBossPhase.alignment=TextAnchor.MiddleCenter;
-            luciusBossPhase.color=gold;
-            luciusBossFrame.gameObject.SetActive(false);
+            var texture=new Texture2D(292,38,TextureFormat.RGBA32,false) {
+                name=name,filterMode=FilterMode.Point,wrapMode=TextureWrapMode.Clamp
+            };
+            texture.LoadImage(System.Convert.FromBase64String(png),true);
+            return Sprite.Create(texture,new Rect(0,0,292,38),new Vector2(.5f,.5f),100,0,SpriteMeshType.FullRect);
         }
-        void PresentLuciusBossBar(DarklightEnemy boss)
+
+        void CreateFeaturedBossBar()
         {
-            bool visible=boss!=null&&boss.IsLucius;
-            luciusBossFrame.gameObject.SetActive(visible);
-            if(!visible){presentedLucius=null;return;}
+            // Embed the UI plates to reuse the campaign data in the Windows player.
+            luciusBossArt??=CreateBossPlate("iVBORw0KGgoAAAANSUhEUgAAASQAAAAmCAYAAABtRuZTAAAC3klEQVR42u3dzUsUcRzH8Y/rQHpzkUChS0EGSkaRFAsJCZbJSooZVCDRHhP6A7rkoT+h40KIWfSAiKJSoPSABImSUdAWLYGwkdEWHfQgTIfcaXXnaZ2ptXy/Tq4rI3wd38z8mNmRgID6ei6YTAFhiDACBI1RbCpFlACU3lB1k2k+e2gOVTcRJARW5vZmZUWUnQyOEh3tik2lrNczLXVKjo4zGLhaXsmWFR2kyoqoefzwIaYHW3tqa9bFKD9KHzKfGBAcTc/OOUbJcIvRxbMdkqT9B3YxRRS4oeGCI6TLfV0MBrZevVzMj5JpFyXDLUbJgQfW95sO7mWiWKeqakfB61uDnLKh0Iv5d79P9Xu7HaNkuMXoyes31nv5XwPWzhVvU2wq9Wv9aHCEgcDbgHOUyv3ECHAyn3qvnSePKDk2yTDgy8elJX3NfNGl8536nv2hxc/frq2urvRLa4vaxAjA39bcUK9Eb7du3h21FrrLiRGArXKkxJXaAMStIwBAkAAQJAAgSAD+myAl4m1MCYDCuIjWi+HnKlzF2xwvfDtVu5tJA5AkTWTSm26Ja5CsDUieG3qb5e5uYLvbF60J3BLPU7ZzI9eZNIDA/LQk4lW026evWmVjPQmANnHztd+WROw20NXaaPvDXa2NRAmA7xgV25KCNaTcuV3MZiPDjxa4qxuAL35a0txQ733Klhyb1ExLnTZ+NCkxAlBslIppiRHGL73SeYLJA9vc5OOFwNswXA+38j8N0KFoE5m0Ju6k+WsACNQSzyOk3IY4VQMQRpS8WhLxuzAFAGEscnNzLYB/gvEnN95z7CgTdnHv6XOGsAWx35ZuvzX4hwPYb7fMEdLySrZsenbOlNaelTTAM9gAqCRPHTEkiSgBKHWM1p2yESUApYxRwRqSXZQk6Ux7jCkCCOT++IxybbGLkbT25NqN8h8eCQBhcoqRY5DyowQAYXKKkWuQclFifADC5BQjSfoJJKmFxTWiklEAAAAASUVORK5CYII=","BarraLucius");
+            matriarchBossArt??=CreateBossPlate("iVBORw0KGgoAAAANSUhEUgAAASQAAAAmCAYAAABtRuZTAAAC80lEQVR42u3dz0vTcRzH8dd+wIQOybxIBJURRkKEBxd0sAgZBYHRwbx1s/Xr5KlTEXiSLhW5vyB2CDwZI8J2CFqQhJAsKmMwoctCy2gSsg76/fr96vf73b77rlzs+bjovuCUt1+efH/49SMBAY0cOlVlCmiGKCNA0Ahd7eiSLK8zX16FmBAaEWYECBwjy0eOmPBXj5DisU52LuxgBCgxntzaOJmVJE1Vyuw3cPRtbTnUcJDisc7qyOBRpoitHepjxPzcGqP8ZFaJ8aTym1Ea2ten+JF1BgabTK5Q9YpStFaMLp07btt+Yug0U21j1y88sr02AmSNkeHe/VsMrM29e/7SV5RCtWL0IP2GqcKmY22P4ylb3nLKVon9ZFDY4ebYgJ4+m1cmV3A8fYvWilG+WGKKsBns7tVUpSzrdSMjRGac2G/gJL0RJbcjpRAxQpAwSRsXuI0Y5b5+YDDwlDiw3/VIKUqM0CgzPt29hAh1yxdLrkdKEWKEoIqrZYYAX5ZWvmvp0w9dudyv8O91LZZW7/xar9yNECMArRIl/lIbgHh0BAAIEgCCBACNBOnJ7TPysx0AmtESx2fZRidmzS9YTq+oc2yvuX2788f6mDoASdLMwvuGW+L5cO3oxKwed/Wbb5Qqz7n+EPnPi/wmgDaXONwTuCWu15CMNxjO3rC9BgA//LQk7PUGkjSdfOi4HQDqjVG9LXEMktshldehFgAEbYnrXbbtX5Aqz3GXDYD83mXz05Jwrbts1jd2uzIOAM1oieddNuNcL1Wekybcv+m1iweZPNDm3s4Hb0m00XNAWf7uYGaBXwaAYC3h0REA4lk2ACBIAPQ/r1wbxPDJASbsYfo1S0y1Ivbb3dtvQxL/UxuAWmL1kai0sd52JleoSpsrAaRZVwvAv18KyTxlI0oAWmZdNqIEYDdj5HhR2ylKVsNne5gqgLpMv7D/rzSvGEnbltKWy7LaANAMXjHyDJI1SgDQDF4xqhkkI0qMEUAzeMVIkv4ANbCng3+P/KwAAAAASUVORK5CYII=","BarraMatriarcaRubra");
+            featuredBossFrame=RectAt(uiRoot,"LuciusFinalBoss",174,32,292,38);
+            featuredBossPlate=ImageAt(featuredBossFrame,"Placa",0,0,292,38,luciusBossArt);
+            featuredBossPlate.material=null;
+            featuredBossTitle=TextAt(featuredBossFrame,"Nome",17,8,258,8,7);
+            featuredBossTitle.alignment=TextAnchor.MiddleCenter;
+            featuredBossEcho=ImageAt(featuredBossFrame,"DanoRecente",17,18,258,6,null);
+            featuredBossFill=ImageAt(featuredBossFrame,"Vida",17,18,258,6,null);
+            featuredBossHighlight=ImageAt(featuredBossFill.transform,"Luz",0,0,258,1,null);
+            featuredBossPhase=TextAt(featuredBossFrame,"Fase",94,26,104,7,4);
+            featuredBossPhase.alignment=TextAnchor.MiddleCenter;
+            featuredBossFrame.gameObject.SetActive(false);
+        }
+
+        void PresentFeaturedBossBar(DarklightEnemy boss)
+        {
+            bool matriarch=boss!=null&&boss.kind==RequiemEnemyKind.Matriarch&&!boss.IsLucius;
+            bool visible=boss!=null&&(boss.IsLucius||matriarch);
+            featuredBossFrame.gameObject.SetActive(visible);
+            if(!visible){presentedBoss=null;return;}
             float health=boss.Health.HealthPercent;
-            if(presentedLucius!=boss||health>luciusDisplayedHealth)luciusDisplayedHealth=health;
-            presentedLucius=boss;
-            luciusDisplayedHealth=Mathf.MoveTowards(luciusDisplayedHealth,health,Time.unscaledDeltaTime*.28f);
-            luciusBossFill.rectTransform.sizeDelta=new Vector2(268*health,6);
-            luciusBossFill.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta=new Vector2(268*health,1);
-            luciusBossEcho.rectTransform.sizeDelta=new Vector2(268*luciusDisplayedHealth,6);
-            luciusBossTitle.text=boss.Phase>=2?"LUCIUS  -  ARCONTE":"LUCIUS";
-            luciusBossPhase.text=boss.Phase==3?"III   ULTIMO CONFRONTO":boss.Phase==2?"II   O DESPERTAR":"I   DUELO DOS IRMAOS";
+            if(presentedBoss!=boss)
+            {
+                presentedBoss=boss;
+                featuredBossFrame.name=matriarch?"MatriarchBoss":"LuciusFinalBoss";
+                featuredBossPlate.sprite=matriarch?matriarchBossArt:luciusBossArt;
+                featuredBossTitle.color=matriarch?new Color(.99f,.85f,.68f):new Color(.95f,.87f,.82f);
+                featuredBossEcho.color=matriarch?new Color(.68f,.34f,.24f):new Color(.53f,.29f,.35f);
+                featuredBossFill.color=matriarch?new Color(.68f,.04f,.19f):new Color(.76f,.025f,.13f);
+                featuredBossHighlight.color=matriarch?new Color(.99f,.38f,.46f):new Color(.87f,.32f,.40f);
+                featuredBossPhase.color=matriarch?new Color(.90f,.72f,.56f):new Color(.74f,.58f,.57f);
+                featuredBossDisplayedHealth=health;
+            }
+            if(health>featuredBossDisplayedHealth)featuredBossDisplayedHealth=health;
+            featuredBossDisplayedHealth=Mathf.MoveTowards(featuredBossDisplayedHealth,health,Time.unscaledDeltaTime*.28f);
+            featuredBossFill.rectTransform.sizeDelta=new Vector2(258*health,6);
+            featuredBossHighlight.rectTransform.sizeDelta=new Vector2(258*health,1);
+            featuredBossEcho.rectTransform.sizeDelta=new Vector2(258*featuredBossDisplayedHealth,6);
+            featuredBossTitle.text=matriarch?"MATRIARCA RUBRA":boss.Phase>=2?"LUCIUS  -  ARCONTE":"LUCIUS";
+            featuredBossPhase.text=matriarch?$"{Mathf.CeilToInt(boss.Health.CurrentHealth)} / {Mathf.CeilToInt(boss.Health.MaxHealth)}":
+                boss.Phase==3?"III  ÚLTIMO CONFRONTO":boss.Phase==2?"II  O DESPERTAR":"I  DUELO DOS IRMÃOS";
         }
         void AddEnemyBar(DarklightEnemy enemy)
         {
@@ -310,7 +325,7 @@ namespace Darklight
         void Upgrade(int stat)
         {if(Progress.points<=0)return;Progress.points--;if(stat==0)Progress.attack++;else if(stat==1){Progress.vitality++;health.SetMaxHealth(Progress.MaxHealth);}else Progress.mastery++;SaveCheckpoint();RefreshPanel();}
         void Finish(int ending){StopPower();Progress.ending=ending;Progress.completed=true;SaveCheckpoint();Open("Victory");Sound(3);}
-        string ActionLabel(string name)=>name switch{"AbyssHeavy"=>"CAVALEIRO: PESADO","AbyssSaw"=>"CAVALEIRO: SERRAS","AbyssBike"=>"CAVALEIRO: MOTO / FINAL","AbyssDrift"=>"CAVALEIRO: DERRAPAGEM","Move"=>"MOVER","Potion"=>"ELIXIR","Journal"=>"DIARIO","Pause"=>"PAUSAR","MapPan"=>"MOVER MAPA","MapCursor"=>"CURSOR DO MAPA","MapZoomIn"=>"APROXIMAR MAPA","MapZoomOut"=>"AFASTAR MAPA","MapCenter"=>"CENTRALIZAR MAPA","MapMark"=>"MARCAR MAPA","MapClear"=>"APAGAR MARCA","MapObjective"=>"OBJETIVO","Interact"=>"INTERAGIR","Light"=>"LEVE","Heavy"=>"PESADO","Dodge"=>"ESQUIVA","Parry"=>"PARRY","Skill"=>"ONDA","Transform"=>"TRANSFORMAR","MP3"=>"MP3","Map"=>"MAPA DA FASE","Power"=>"ATIVAR PODER","PowerNext"=>"PROXIMO PODER","PowerPrevious"=>"PODER ANTERIOR","WeaponNext"=>"TROCAR ARMA","Aerial"=>"ATAQUE AEREO","WeaponSpecial"=>"ESPECIAL DA ARMA","Vampire"=>"PODER DE SANGUE","VampireNext"=>"PROXIMO PODER DE SANGUE",_=>name};
+        string ActionLabel(string name)=>name switch{"AbyssHeavy"=>"CAVALEIRO: PESADO","AbyssSaw"=>"CAVALEIRO: SERRAS","AbyssBike"=>"CAVALEIRO: MOTO / FINAL","AbyssDrift"=>"CAVALEIRO: DERRAPAGEM","Move"=>"MOVER","Potion"=>"ELIXIR","Journal"=>"DIARIO","Pause"=>"PAUSAR","MapPan"=>"MOVER MAPA","MapCursor"=>"CURSOR DO MAPA","MapZoomIn"=>"APROXIMAR MAPA","MapZoomOut"=>"AFASTAR MAPA","MapCenter"=>"CENTRALIZAR MAPA","MapMark"=>"MARCAR MAPA","MapClear"=>"APAGAR MARCA","MapObjective"=>"OBJETIVO","Interact"=>"INTERAGIR","Light"=>"LEVE","Heavy"=>"PESADO","Dodge"=>"ESQUIVA","Parry"=>"PARRY","Skill"=>"ONDA","LadyAssist"=>"CHAMAR LADY","Transform"=>"TRANSFORMAR","MP3"=>"MP3","Map"=>"MAPA DA FASE","Power"=>"ATIVAR PODER","PowerNext"=>"PROXIMO PODER","PowerPrevious"=>"PODER ANTERIOR","WeaponNext"=>"TROCAR ARMA","Aerial"=>"ATAQUE AEREO","WeaponSpecial"=>"ESPECIAL DA ARMA","Vampire"=>"PODER DE SANGUE","VampireNext"=>"PROXIMO PODER DE SANGUE",_=>name};
         RectTransform RectAt(Transform parent,string name,float x,float y,float w,float h)
         {var rect=new GameObject(name,typeof(RectTransform)).GetComponent<RectTransform>();rect.SetParent(parent,false);rect.anchorMin=rect.anchorMax=rect.pivot=new Vector2(0,1);rect.anchoredPosition=new Vector2(x,-y);rect.sizeDelta=new Vector2(w,h);return rect;}
         Image ImageAt(Transform parent,string name,float x,float y,float w,float h,Sprite sprite)

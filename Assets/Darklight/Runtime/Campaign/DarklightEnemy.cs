@@ -119,12 +119,14 @@ namespace Darklight
                 if (!Airborne) ResetEnemyStride();
             }
             corpse += dt;
+            if (kind == RequiemEnemyKind.Matriarch && UsesOfficialCombatArt)
+                ShowCastFall("MatriarcaRubra", corpse);
             if (Visitor != DarklightVisitor.None)
                 art.color = new Color(.35f,.2f,.3f,Mathf.Clamp01(1f-corpse/1.3f));
             else
             {
                 // Let the authentic silhouette read briefly before the existing fade removes it.
-                float fade = Mathf.InverseLerp(.12f, 1.3f, corpse);
+                float fade = Mathf.InverseLerp(HasMatriarchFall ? .56f : .12f, 1.3f, corpse);
                 art.color = Color.Lerp(Color.white, new Color(.35f, .2f, .3f, 0f), fade);
             }
             if (corpse > 1.4f) Destroy(gameObject);
@@ -191,10 +193,39 @@ namespace Darklight
             var transformed=FinalFormFrames;
             if(transformed!=null){ShowFinalForm(index+4);return;}
             if(attackFrames?.Length!=4){Show(3);return;}
+            if (UsesOfficialCombatArt)
+            {
+                int direction = DarklightCharacterView.DirectionIndex(locked);
+                int phase = state == 1 ? 1 : index == 3 ? 4 : timer > recoveryDuration + impactDuration * .5f ? 2 : 3;
+                string actor = kind == RequiemEnemyKind.Matriarch ? "MatriarcaRubra" : "Nero";
+                Sprite authored = DarklightCastActionFrames.Get(actor, "Attack", direction, phase);
+                if (authored != null)
+                {
+                    art.sprite = authored;
+                    art.flipX = false;
+                    art.transform.localScale = Vector3.one * PresentationScale;
+                    return;
+                }
+                art.flipX = locked.x < -.15f;
+            }
             art.sprite=attackFrames[index];
             art.transform.localScale=Vector3.one*PresentationScale;
         }
         internal bool UsesOfficialCombatArt {get;set;}
+        bool HasMatriarchFall => kind == RequiemEnemyKind.Matriarch && UsesOfficialCombatArt;
+        internal bool ReadyForCampaignClear => Resolved || Health.IsDead && (!HasMatriarchFall || corpse >= .56f);
+        bool ShowCastFall(string actor, float elapsed)
+        {
+            int direction = DarklightCharacterView.DirectionIndex(facing);
+            int phase = DarklightCastActionFrames.FallPhase(elapsed);
+            Sprite sprite = DarklightCastActionFrames.Get(actor, "Defeat", direction, phase);
+            if (sprite == null) sprite = DarklightCastActionFrames.Get(actor, "Defeat", 0, phase);
+            if(sprite == null) return false;
+            art.sprite = sprite;
+            art.flipX = false;
+            art.transform.localScale = Vector3.one * PresentationScale;
+            return true;
+        }
         internal float PresentationScale=>Visitor!=DarklightVisitor.None?1f:
             UsesOfficialCombatArt?DarklightCharacterView.WorldVisualScale:DarklightWorldScale.EnemyHeight(kind)/poses[0].bounds.size.y;
         bool ShowEnemyPilot(string name)
@@ -208,6 +239,7 @@ namespace Darklight
         void Show(int index)
         {
             if(FinalFormFrames!=null){ShowFinalForm(index);return;}
+            if(UsesOfficialCombatArt)art.flipX=facing.x<-.15f;
             art.transform.localScale=Vector3.one*PresentationScale;
             if(poses!=null&&poses.Length>index)art.sprite=poses[index];
         }

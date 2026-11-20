@@ -6,12 +6,22 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 namespace Darklight
 {
     // Runs only when requested by the focused tests or the standalone QA flag.
     public sealed class DarklightIntegrationFixesCheck : MonoBehaviour
     {
+        [Serializable] sealed class LightingReceipt
+        {
+            public string region, preset, graphics;
+            public bool singleMoon, lantern, portal, ladyMuzzleAndHit, contactExpires;
+            public int samples, timingSamples;
+            public float averageFrameMs, p95FrameMs;
+            public double averageCpuFrameMs, averageGpuFrameMs;
+        }
         [Serializable] public sealed class Receipt
         {
             public bool passed, gothicArena, gothicMinimap, finalBossBar, spawnClear, movementAccepted, arconteAtSixty;
@@ -41,8 +51,76 @@ namespace Darklight
             Require(DarklightProgress.HasIsolatedTestStorage, "Standalone QA requires --darklight-isolated-session.");
             DarklightAutomation.Silent = true;
             AudioListener.volume = 0;
+            Application.runInBackground = true;
+            // AfterSceneLoad precedes Campaign.Start, which prepares health, menus and lights.
+            yield return null;
+            while (!SplashScreen.isFinished) yield return null;
+            yield return CheckLighting(output);
             yield return Run(output);
             Application.Quit(0);
+        }
+        static IEnumerator CheckLighting(string output)
+        {
+            var game=DarklightCampaign.Instance;
+            var lab=DarklightCombatLab.Instance;
+            Require(game!=null&&lab!=null,"Campaign must initialize before the standalone lighting check.");
+            typeof(DarklightCampaign).GetMethod("Close",BindingFlags.NonPublic|BindingFlags.Instance).Invoke(game,null);
+            var remaster=game.GetComponent<DarklightRemaster>();
+            remaster.SetQuality(2,false);
+            game.ReducedFlashes=false;
+            yield return null;
+            var lights=remaster.GetComponentsInChildren<Light2D>();
+            int moons=0;
+            var result=new LightingReceipt {
+                region=DarklightStory.Places[0],preset=DarklightRemaster.AmbientPresetName(0),
+                graphics=SystemInfo.graphicsDeviceName
+            };
+            foreach(var light in lights)
+            {
+                if(light.lightType==Light2D.LightType.Global&&light.enabled)moons++;
+                if(light.name=="Lamparina"&&light.enabled)result.lantern=true;
+                if(light.name=="Portal"&&light.enabled)result.portal=true;
+            }
+            result.singleMoon=moons==1;
+            Vector2 position=lab.Player.transform.position;
+            DarklightCombatFX.LadyShot(position+Vector2.up*.8f,position+new Vector2(1,.8f),true);
+            int ActiveContacts()
+            {
+                int count=0;
+                foreach(var light in lights)if(light.name=="LuzDeContato"&&light.enabled)count++;
+                return count;
+            }
+            result.ladyMuzzleAndHit=ActiveContacts()==2;
+            DarklightNativeCapture.Screen(Path.Combine(output,"gothic-map1-contact.png"));
+            yield return new WaitForSecondsRealtime(.25f);
+            result.contactExpires=ActiveContacts()==0;
+            var frames=new float[60];
+            var timings=new FrameTiming[1];
+            for(int i=0;i<frames.Length;i++)
+            {
+                FrameTimingManager.CaptureFrameTimings();
+                yield return null;
+                frames[i]=Time.unscaledDeltaTime*1000;
+                result.averageFrameMs+=frames[i];
+                if(FrameTimingManager.GetLatestTimings(1,timings)>0)
+                {
+                    result.timingSamples++;
+                    result.averageCpuFrameMs+=timings[0].cpuFrameTime;
+                    result.averageGpuFrameMs+=timings[0].gpuFrameTime;
+                }
+            }
+            Array.Sort(frames);
+            result.samples=frames.Length;
+            result.averageFrameMs/=frames.Length;
+            result.p95FrameMs=frames[56];
+            if(result.timingSamples>0)
+            {
+                result.averageCpuFrameMs/=result.timingSamples;
+                result.averageGpuFrameMs/=result.timingSamples;
+            }
+            File.WriteAllText(Path.Combine(output,"gothic-lighting.json"),JsonUtility.ToJson(result,true));
+            Require(result.singleMoon&&result.lantern&&result.portal&&result.ladyMuzzleAndHit&&result.contactExpires,
+                "Standalone lighting validation failed.");
         }
         public static IEnumerator Run(string output)
         {
@@ -107,7 +185,13 @@ namespace Darklight
                 view.Present(lab.Player.Model, Vector2.zero);
                 string name = renderer.sprite != null ? renderer.sprite.name : "";
                 Require(name.Length > 0 && name != previous, "Fabius transformation did not change the selected sprite.");
-                if (form > 0) Require(name.StartsWith(form == 1 ? "FabiusRuptura" : "FabiusSerafim"), "Wrong transformed identity.");
+                if (form > 0)
+                {
+                    string expected = form == 1 ? "FabiusRuptura" : "FabiusSerafim";
+                    Require(name.StartsWith(expected,StringComparison.Ordinal)||
+                        name.StartsWith("Redesign_"+expected,StringComparison.Ordinal),
+                        $"Wrong transformed identity: {name}.");
+                }
                 float height = renderer.sprite.rect.height / renderer.sprite.pixelsPerUnit;
                 if (form > 0) Require(height / heights[0] > .8f && height / heights[0] < 1.3f,
                     "Fabius transformed scale differs from Normal.");

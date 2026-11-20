@@ -5,7 +5,7 @@ menu.addEventListener("click",()=>{const isOpen=nav.classList.toggle("open");men
 nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeMenu));
 const modal=document.getElementById("lightbox"),modalImage=document.getElementById("lightbox-image"),modalTitle=document.getElementById("lightbox-title");
 let previousFocus=null;
-document.querySelectorAll("[data-zoom]").forEach(btn=>btn.addEventListener("click",()=>{previousFocus=btn;const img=btn.querySelector("img");modalImage.src=img.currentSrc||img.src;modalImage.alt=img.alt;modalTitle.textContent=btn.dataset.caption||img.alt;if(typeof modal.showModal==="function")modal.showModal()}));
+document.querySelectorAll("[data-zoom]").forEach(btn=>btn.addEventListener("click",()=>{previousFocus=btn;const img=btn.querySelector("img");modalImage.src=img.currentSrc||img.src;modalImage.alt=img.alt;modalTitle.textContent=btn.dataset.caption||img.alt;modal.classList.toggle("poster-view",img.hasAttribute("data-poster"));if(typeof modal.showModal==="function")modal.showModal()}));
 document.getElementById("lightbox-close").addEventListener("click",()=>modal.close());
 modal.addEventListener("click",e=>{if(e.target===modal)modal.close()});
 modal.addEventListener("close",()=>{modalImage.removeAttribute("src");previousFocus?.focus()});

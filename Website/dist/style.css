@@ -61,3 +61,6 @@
 .villain-info p{font-size:17px;margin:0}
 @media(max-width:800px){.villain-grid{grid-template-columns:1fr 1fr}.villain-card.matriarca{grid-column:1/-1}.villain-card.matriarca .villain-art img{height:365px}}
 @media(max-width:520px){.villain-grid{grid-template-columns:1fr}.villain-card.matriarca{grid-column:auto}.villain-art{min-height:250px}.villain-art img,.villain-card.matriarca .villain-art img{height:290px}.poster-zoom>span{font-size:11px;right:7px;bottom:7px}.poster-feature figcaption{font-size:11px}}
+
+/* Zoom panorâmico dos pôsteres no celular */
+@media(max-width:800px){#lightbox.poster-view{width:96vw;max-height:95vh;overflow:auto}#lightbox.poster-view img{width:max(900px,100%);max-width:none;max-height:none;image-rendering:auto}}
